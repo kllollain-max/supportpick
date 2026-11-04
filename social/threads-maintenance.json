@@ -24,14 +24,16 @@
     "41794361340",
     "41794243970",
     "41794233640",
-    "41792407656"
+    "41792407656",
+    "41805765326"
   ],
   "last_health": {
     "unresolved_publications": 0,
     "published_benefits": 1,
-    "source_run_id": "41796571195",
+    "source_run_id": "41805765326",
     "source_result": "success",
-    "source_count": 10942
+    "source_count": 10942,
+    "source_last_success_at": "2026-11-04T18:20:15.278790+09:00"
   },
   "incidents": {
     "41796747628": {
@@ -104,10 +106,17 @@
       "conclusion": "success",
       "updated_at": "2026-11-04T07:27:45Z",
       "head_sha": "2a7580de59f82baf7e9eb38940dd539df209c8eb"
+    },
+    "41805765326": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-04T09:20:48Z",
+      "head_sha": "1fccc8877387cbe9d3025395ee14484f65f4c20e"
     }
   },
   "last_check": {
-    "result": "healthy_no_new_incident",
+    "result": "healthy_source_refreshed_no_new_publication",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -122,15 +131,44 @@
       "artifact_contents_verified": true
     },
     "latest_source": {
-      "run_id": "41796571195",
-      "job_id": "126461980062",
-      "head_sha": "fba4f185941204bebe88afa48cbd37df3c6c4fc5",
+      "run_id": "41805765326",
+      "job_id": "126492278592",
+      "head_sha": "1fccc8877387cbe9d3025395ee14484f65f4c20e",
+      "event": "workflow_dispatch",
       "conclusion": "success",
       "count": 10942,
-      "generation": "gov24-41796571195-1",
-      "last_success_at": "2026-11-04T17:09:48.692586+09:00",
-      "artifact_metadata_verified": true,
-      "artifact_contents_reread": false
+      "generation": "gov24-41805765326-1",
+      "last_success_at": "2026-11-04T18:20:15.278790+09:00",
+      "artifact_id": "13310042236",
+      "artifact_sha256": "d7347d6cf920d5e24610ea968771aa350febb8c3e49f11344d5d612e9d91ab1f",
+      "artifact_contents_verified": true,
+      "manifest_files_verified": 36,
+      "endpoint_coverage": {
+        "serviceDetail": {
+          "completedPages": 110,
+          "duplicateCount": 0,
+          "expectedPages": 110,
+          "receivedCount": 10942,
+          "reportedTotal": 10942,
+          "uniqueCount": 10942
+        },
+        "serviceList": {
+          "completedPages": 110,
+          "duplicateCount": 0,
+          "expectedPages": 110,
+          "receivedCount": 10942,
+          "reportedTotal": 10942,
+          "uniqueCount": 10942
+        },
+        "supportConditions": {
+          "completedPages": 110,
+          "duplicateCount": 0,
+          "expectedPages": 110,
+          "receivedCount": 10942,
+          "reportedTotal": 10942,
+          "uniqueCount": 10942
+        }
+      }
     },
     "publication_ledger_sha": "ad9bee31b49eb2876ec406e7fcdb4b4cf5f01464",
     "workflow_blob_shas": {
@@ -139,6 +177,11 @@
     },
     "recovery_repeated": false,
     "posts_sent": 0,
-    "code_changes": 0
+    "code_changes": 0,
+    "checked_at": "2026-11-04T18:31:07+09:00",
+    "changed_run_ids": [
+      "41805765326"
+    ],
+    "current_main_sha": "1fccc8877387cbe9d3025395ee14484f65f4c20e"
   }
 }
