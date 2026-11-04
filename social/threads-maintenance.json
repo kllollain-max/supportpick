@@ -215,7 +215,7 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-04T22:06:32+09:00",
+    "checked_at": "2026-11-04T22:22:31+09:00",
     "changed_run_ids": [],
     "current_main_sha": "48e11224a566dc3287505ae5d197a026251306a5",
     "ranking_policy": {
@@ -280,7 +280,8 @@
       "publisher_script_blob_unchanged": true,
       "source_workflow_changed_by_existing_site_work": true,
       "source_workflow_change": "Added static release checks, content-change gating and deployment verification; collection, validated runtime bundle and failure reporting remain present. No new source run yet.",
-      "no_new_publication": true
+      "no_new_publication": true,
+      "current_main_unchanged": true
     }
   },
   "last_reported_publication": {
