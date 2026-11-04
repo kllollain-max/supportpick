@@ -283,7 +283,7 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-05T07:22:14.324671+09:00",
+    "checked_at": "2026-11-05T07:23:31.444579+09:00",
     "changed_run_ids": [],
     "current_main_sha": "1d835c70be865938c90e4c6a278dfbbd8f058669",
     "ranking_policy": {
@@ -339,9 +339,9 @@
       "source_snapshot_hashes_passed": true,
       "publication_artifact_digest_passed": true
     },
-    "next_step": "Continue the next natural publication slot (2026-11-05 08:00 KST with existing two-hour allowance). Do not create a manual test publication or rerun the classified source workflow.",
+    "next_step": "Await the next natural 2026-11-05 08:00 KST slot with existing two-hour allowance. No extra manual post or repeat recovery.",
     "evidence_recheck": {
-      "latest_jobs_and_logs_read": true,
+      "latest_jobs_and_logs_read": false,
       "artifact_metadata_and_digests_unchanged": true,
       "verified_artifact_contents_and_read_path_reused": true,
       "publication_ledger_unchanged": true,
@@ -350,7 +350,8 @@
       "image_rotation_retained": true,
       "natural_publication_after_policy_change_verified": false,
       "known_postdeploy_failure_not_retried": true,
-      "no_new_publication": true
+      "no_new_publication": true,
+      "exact_unchanged_run_and_artifact_evidence_reused_from": "2026-11-05T07:22:14.324671+09:00"
     },
     "latest_policy_change": {
       "applied_at": "2026-11-04T23:10:49+09:00",
