@@ -230,8 +230,8 @@ def editorial_html(row, guide):
                 + '</ul><h3>준비하는 순서</h3><ol>' + list_items(guide['steps'])
                 + '</ol><h3>자주 묻는 질문</h3>' + faqs
                 + '<h3>대조한 공식 안내</h3><ul class="reference-list">' + references
-                + '</ul><p class="source-meta">해설 검토 ' + escape(stamp(guide['reviewedAt']))
-                + ' · 공식 API 본문과 아래 자료를 대조한 준비 안내입니다. 개인의 자격·선정·현재 접수를 확정하지 않습니다.</p></section>')
+                + '</ul><p class="source-meta">AI 초안·공식자료 대조 ' + escape(stamp(guide['reviewedAt']))
+                + ' · 공식 API 본문과 아래 자료를 대조한 준비 안내입니다. 운영자의 사람 검토 완료는 별도 확인이 필요합니다. 개인의 자격·선정·현재 접수를 확정하지 않습니다.</p></section>')
     checks = []
     if '융자' in row.get('supportType', '') or '대출' in row['title']:
         checks.append('지원방식에 대출·융자가 포함된 안내입니다. 수령액만 보지 말고 이자, 상환 방식과 심사 조건을 공식 창구에서 함께 확인하세요.')
