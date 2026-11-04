@@ -62,6 +62,9 @@ def period(raw, kind=''):
         return {'periodKind':'budget_limited','startDate':None,'endDate':None}
     if re.search(r'상시|연중|수시', raw+' '+(kind or '')):
         return {'periodKind':'ongoing','startDate':None,'endDate':None}
+    # Two explicit years can be starts of different rounds, not one start/end pair.
+    if re.search(r'[12]차|상반기|하반기', raw):
+        return {'periodKind':'needs_check','startDate':None,'endDate':None}
     dates = []
     for y,m,d in re.findall(r'(20\d{2})\s*[.년/-]\s*(\d{1,2})\s*[.월/-]\s*(\d{1,2})', raw):
         try:

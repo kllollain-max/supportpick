@@ -27,7 +27,9 @@ class SearchMetadataTests(unittest.TestCase):
             self.assertEqual(result['benefits'], 103)
             tree = ET.parse(root / 'public/sitemap.xml')
             urls = [x.text for x in tree.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
-            self.assertEqual(set(urls), {BASE, BASE + 'about.html', BASE + 'privacy.html'})
+            # Fixture rows omit application methods, so detail indexing is correctly held.
+            self.assertEqual(set(urls), {BASE, BASE + 'about.html', BASE + 'privacy.html',
+                                         BASE + 'terms.html', BASE + 'contact.html', BASE + 'benefits/'})
             for name, url in [('index.html', BASE), ('about.html', BASE + 'about.html'), ('privacy.html', BASE + 'privacy.html')]:
                 text = (root / 'public' / name).read_text()
                 self.assertEqual(text.count('rel="canonical"'), 1)
