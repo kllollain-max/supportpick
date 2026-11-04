@@ -1,9 +1,11 @@
 """Public-page metadata and a sitemap of real, independently served pages."""
 import json
+import posixpath
 import re
-from html import escape
+from html import escape, unescape
 from html.parser import HTMLParser
 from xml.etree import ElementTree as ET
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 PUBLIC_PAGES = ('index.html', 'about.html', 'privacy.html', 'terms.html', 'contact.html')
 DESCRIPTIONS = {
@@ -13,6 +15,24 @@ DESCRIPTIONS = {
     'contact.html': '지원금픽의 사이트 오류·정보 정정 문의 방법과 공식 담당기관에 문의해야 할 내용을 안내합니다.',
 }
 VERIFICATION_NAMES = {'google': 'google-site-verification', 'naver': 'naver-site-verification'}
+
+
+def version_local_assets(source, page, hashes):
+    """Keep navigation URLs stable while binding assets to their actual bytes."""
+    def replace(match):
+        original=unescape(match.group(2))
+        parsed=urlsplit(original)
+        if parsed.scheme or parsed.netloc:
+            return match.group(0)
+        path=posixpath.normpath(posixpath.join(posixpath.dirname(page),parsed.path))
+        digest=hashes.get(path)
+        if not digest:
+            return match.group(0)
+        query=[(k,v) for k,v in parse_qsl(parsed.query,keep_blank_values=True) if k!='v']
+        query.append(('v',digest[:16]))
+        value=urlunsplit(('', '',parsed.path,urlencode(query),parsed.fragment))
+        return match.group(1)+escape(value,quote=True)+match.group(3)
+    return re.sub(r'((?:src|href)=")([^"]+)(")',replace,source)
 
 
 class PageHead(HTMLParser):

@@ -10,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
 from build import build
 from collect_full import collect
 from refresh import install_candidate
-from search_metadata import PageHead, public_metadata, read_verifications
+from search_metadata import PageHead, public_metadata, read_verifications, version_local_assets
 from test_collection import Client
 
 BASE = 'https://kllollain-max.github.io/supportpick/'
@@ -83,6 +83,24 @@ class SearchMetadataTests(unittest.TestCase):
         payload = result.split('<script type="application/ld+json">')[1].split('</script>')[0]
         self.assertEqual(json.loads(payload)['description'], '"><script>test</script>')
         self.assertNotIn('<script>', payload)
+
+    def test_deployed_assets_change_url_when_bytes_change_and_navigation_is_untouched(self):
+        html='<link href="../../styles.css" rel="stylesheet"><script src="../../app.js"></script><a href="../OTHER/">다른 혜택</a><a href="https://official.go.kr/file.js">공식</a><link rel="canonical" href="https://kllollain-max.github.io/supportpick/benefits/ID/">'
+        first=version_local_assets(html,'benefits/ID/index.html',{'styles.css':'a'*64,'app.js':'b'*64})
+        second=version_local_assets(html,'benefits/ID/index.html',{'styles.css':'c'*64,'app.js':'b'*64})
+        self.assertIn('../../styles.css?v='+'a'*16,first)
+        self.assertIn('../../styles.css?v='+'c'*16,second)
+        self.assertIn('../../app.js?v='+'b'*16,second)
+        self.assertIn('href="../OTHER/"',second)
+        self.assertIn('https://official.go.kr/file.js"',second)
+        self.assertIn('href="https://kllollain-max.github.io/supportpick/benefits/ID/"',second)
+        self.assertEqual(version_local_assets(first,'benefits/ID/index.html',{'styles.css':'a'*64,'app.js':'b'*64}),first)
+
+    def test_asset_queries_and_fragments_are_preserved_and_versions_are_not_duplicated(self):
+        result=version_local_assets('<script src="../../app.js?mode=a&amp;v=old#part"></script>',
+                                    'benefits/ID/index.html',{'app.js':'f'*64})
+        self.assertIn('?mode=a&amp;v='+'f'*16+'#part',result)
+        self.assertEqual(result.count('v='),1)
 
 
 if __name__ == '__main__':

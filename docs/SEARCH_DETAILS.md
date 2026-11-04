@@ -24,7 +24,7 @@ Multiple application rounds are no longer collapsed into a misleading single int
 
 ## Deletions and recovery
 
-A service missing from the current but present in the previous retained generation gets a noindex holding document. Older unknown addresses receive GitHub Pages' real 404 with the custom 404.html. Neither case deletes stored application or interest records. A valid collection snapshot remains required. Collection failure retains the last validated data and shows a failure/delay notice. Build or release validation failure prevents the Pages upload/deploy steps. Existing Git history, the prior deployed artifact and current/previous runtime-state backups remain the recovery path. Restore a known source SHA with deploy-approved.yml and its latest validated state; do not replace records or initialize a new store.
+A service missing from the current but present in the previous retained generation gets a noindex holding document. Older unknown addresses receive GitHub Pages' real 404 with the custom 404.html. Neither case deletes stored application or interest records. A valid collection snapshot remains required. Collection failure retains the last validated data and shows a failure/delay notice. Build or release validation failure prevents the Pages upload/deploy steps. Existing Git history, the prior deployed artifact and current/previous runtime-state backups remain the recovery path. For the pre-change rollback, select backup/pre-search-detail-20261104 as the workflow ref as well as its approved source SHA, so the old workflow does not call new tools missing from the old checkout. Restore its latest validated state; do not replace records or initialize a new store.
 
 ## robots.txt and console boundaries
 
@@ -33,3 +33,9 @@ Robots directives apply at https://kllollain-max.github.io/robots.txt, not /supp
 The Google URL-prefix property is https://kllollain-max.github.io/supportpick/. Ownership is verified. Homepage indexing was requested and accepted, which is not proof of indexing. After deployment submit the changed sitemap once, record its actual report status separately, and do not loop requests. Naver verification remains unset; SEO readiness does not mean Naver registration is complete.
 
 The site now has introduction/source, privacy, service-use and public correction/contact pages. It clearly identifies its independent operator and official application destinations. No AdSense code, application, policy acceptance, or approval guarantee is included.
+
+## Asset cache and transient transport checks
+
+CSS, JavaScript and image URLs receive a version derived from their actual SHA-256 bytes. HTML canonical/navigation addresses and record keys remain unchanged. This prevents previously cached assets from being mixed with new documents. A public browser had retained the old CSS while the server already served the new stylesheet; the computed detail width and H1 did not match the new rules. The correction is verified in the same browser after deployment.
+
+The first full public pass fetched 11,057 HTML documents; two requests returned HTTP 503 while the other 11,055 passed. The network verifier now retries each transient transport/408/429/5xx response once, sequentially after the full pass, and records the initial failure and actual recovery. Persistent failure, HTTP 404, content hash and metadata mismatches remain failures. No result is marked successful without a real valid response.

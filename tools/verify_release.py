@@ -7,7 +7,7 @@ from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
 from urllib.parse import unquote, urlsplit
 from urllib.request import Request, urlopen
 from urllib.robotparser import RobotFileParser
@@ -76,6 +76,51 @@ def verify(output):
             **{k: report[k] for k in ('detailPages', 'indexableDetails', 'heldDetails', 'reviewedGuides', 'blogLinks', 'directoryPages', 'retiredPages')}}
 
 
+def fetch_html(entry, url_set):
+    url, name, digest = entry
+    try:
+        with urlopen(Request(url, headers={'User-Agent': 'SupportPick-Release-Verification/1.0'}), timeout=30) as response:
+            raw = response.read()
+            if response.status != 200:
+                return url, 'http_' + str(response.status), response.status in (408,429,500,502,503,504)
+            if hashlib.sha256(raw).hexdigest() != digest:
+                return url, 'content_hash_mismatch', False
+            if url in url_set:
+                inspect(raw.decode('utf-8'), url)
+            return url, None, False
+    except HTTPError as error:
+        return url, str(error), error.code in (408,429,500,502,503,504)
+    except (URLError, TimeoutError) as error:
+        return url, str(error)[:180], True
+    except Exception as error:
+        return url, str(error)[:180], False
+
+
+def verify_targets(targets, url_set, workers):
+    failures=[];passed=0;by_url={entry[0]:entry for entry in targets}
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        jobs=[pool.submit(fetch_html,entry,url_set) for entry in targets]
+        for future in as_completed(jobs):
+            url,error,retryable=future.result()
+            if error:failures.append({'url':url,'error':error,'retryable':retryable})
+            else:passed+=1
+            if (passed+len(failures))%500==0:
+                print(json.dumps({'checked':passed+len(failures),'total':len(targets),'failed':len(failures)}),flush=True)
+    initial_failures=len(failures);remaining=[];recovered=[]
+    # Retry each transient transport/service response once, sequentially, after
+    # the full pass. Missing pages, metadata and content mismatches remain errors.
+    for failure in failures:
+        if failure['retryable']:
+            url,error,_=fetch_html(by_url[failure['url']],url_set)
+            if error is None:
+                passed+=1;recovered.append({'url':url,'initialError':failure['error'],'retryHttp':200})
+                continue
+            failure['retryError']=error
+        remaining.append({k:v for k,v in failure.items() if k!='retryable'})
+    return {'passed':passed,'failed':len(remaining),'initialFailures':initial_failures,
+            'recoveredAfterRetry':recovered,'failures':remaining}
+
+
 def live_check(output, workers=6, expected_revision=None, expected_generation=None):
     output = Path(output)
     local = json.loads((output / 'site-manifest.json').read_text())
@@ -99,26 +144,7 @@ def live_check(output, workers=6, expected_revision=None, expected_generation=No
     targets = [(BASE + name.removesuffix('index.html'), name, sha)
                for name, sha in expected['files'].items() if name.endswith('.html') and name != '404.html'
                and re.fullmatch(r'[A-Za-z0-9_/-]+\.html',name) and '..' not in name]
-    def get(entry):
-        url, name, digest = entry
-        try:
-            with urlopen(Request(url, headers={'User-Agent': 'SupportPick-Release-Verification/1.0'}), timeout=30) as response:
-                raw = response.read()
-                if response.status != 200: return (url, 'http_' + str(response.status))
-                if hashlib.sha256(raw).hexdigest() != digest: return (url, 'content_hash_mismatch')
-                if url in url_set: inspect(raw.decode('utf-8'), url)
-                return (url, None)
-        except Exception as error:
-            return (url, str(error)[:180])
-    url_set = set(urls); failures = []; passed = 0
-    with ThreadPoolExecutor(max_workers=workers) as pool:
-        jobs = [pool.submit(get, entry) for entry in targets]
-        for future in as_completed(jobs):
-            url, error = future.result()
-            if error: failures.append({'url': url, 'error': error})
-            else: passed += 1
-            if (passed + len(failures)) % 500 == 0:
-                print(json.dumps({'checked': passed + len(failures), 'total': len(targets), 'failed': len(failures)}), flush=True)
+    checked=verify_targets(targets,set(urls),workers)
     missing=BASE+'benefits/__supportpick_missing_release_check__/'
     try:
         with urlopen(missing,timeout=30) as response:
@@ -138,7 +164,7 @@ def live_check(output, workers=6, expected_revision=None, expected_generation=No
         if error.code!=404:raise
         robots={'http':404,'crawlAllowed':True,'scope':'host_root','note':'Absent robots file; no robots prohibition.'}
     return {'publicHtmlChecked': len(targets), 'sitemapUrls':len(urls), 'generation':expected['generation'],
-            'sourceRevision':expected.get('sourceRevision'),'robots':robots,'missingUrlHttp':404,'passed': passed, 'failed': len(failures), 'failures': failures}
+            'sourceRevision':expected.get('sourceRevision'),'robots':robots,'missingUrlHttp':404,**checked}
 
 
 if __name__ == '__main__':
