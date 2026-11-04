@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "brand": "supportpick",
+  "username": "hid_1004",
+  "automation_id": "6aeaefe5fd708191a3e8a67b3667fb8f",
+  "configured_at": "2026-11-04T08:42:15.764166+00:00",
+  "mode": "hourly_condition_watch",
+  "authorization": {
+    "date": "2026-11-04",
+    "routine_failure_diagnosis_and_repairs_preapproved": true,
+    "scope": "SupportPick Threads and required source collection only",
+    "daily_main_post_limit": 4,
+    "cta": "자세한 사항은 프로필링크 확인"
+  },
+  "lease": null,
+  "last_observed_run_ids": [
+    "41797892734",
+    "41797694009",
+    "41797111146",
+    "41796747628",
+    "41796571195",
+    "41795408519",
+    "41795294826",
+    "41794361340",
+    "41794243970",
+    "41794233640"
+  ],
+  "last_health": {
+    "unresolved_publications": 0,
+    "published_benefits": 1,
+    "source_run_id": "41796571195",
+    "source_result": "success",
+    "source_count": 10942
+  },
+  "incidents": {
+    "41796747628": {
+      "status": "resolved",
+      "reason": "Threads omitted the first brand hashtag hash after topic conversion; exact text comparison stopped after main receipt",
+      "repair_pr": 7,
+      "repair_commit": "e14b82cec9a181a6c671af280d136b0ba46dc86b",
+      "recovery_run_id": "41797892734",
+      "main_id": "18117107213092297",
+      "detail_id": "18103767143384959",
+      "links_id": "18104181926042417",
+      "publication_verified": true,
+      "regression_tests": "Python 44 and full release CI passed; exact brand hash conversion allowed, remaining text/CTA/ID/permalink still checked; ambiguous sends without receipts remain blocked"
+    }
+  },
+  "guardrails": {
+    "never_reset_publication_ledger": true,
+    "never_retry_ambiguous_post": true,
+    "retain_exact_content_hash": true,
+    "never_force_takeover": true,
+    "no_extra_test_publications": true,
+    "report_only_new_outcomes_or_status_changes": true
+  }
+}
