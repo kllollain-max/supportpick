@@ -23,7 +23,8 @@
     "41795294826",
     "41794361340",
     "41794243970",
-    "41794233640"
+    "41794233640",
+    "41792407656"
   ],
   "last_health": {
     "unresolved_publications": 0,
@@ -53,5 +54,91 @@
     "never_force_takeover": true,
     "no_extra_test_publications": true,
     "report_only_new_outcomes_or_status_changes": true
+  },
+  "observed_run_versions": {
+    "41797892734": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-04T08:15:36Z",
+      "head_sha": "e14b82cec9a181a6c671af280d136b0ba46dc86b"
+    },
+    "41797111146": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-04T08:07:51Z",
+      "head_sha": "fba4f185941204bebe88afa48cbd37df3c6c4fc5"
+    },
+    "41796747628": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "updated_at": "2026-11-04T08:05:41Z",
+      "head_sha": "fba4f185941204bebe88afa48cbd37df3c6c4fc5"
+    },
+    "41796571195": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-04T08:10:13Z",
+      "head_sha": "fba4f185941204bebe88afa48cbd37df3c6c4fc5"
+    },
+    "41795408519": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-04T07:53:51Z",
+      "head_sha": "d1869037ab0d988ec78a42b005c50c77ed4906a1"
+    },
+    "41794361340": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-04T07:44:42Z",
+      "head_sha": "df615c3159ad549cd0d856d3f67c67b69b97fa72"
+    },
+    "41792407656": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-04T07:27:45Z",
+      "head_sha": "2a7580de59f82baf7e9eb38940dd539df209c8eb"
+    }
+  },
+  "last_check": {
+    "result": "healthy_no_new_incident",
+    "unresolved_publications": 0,
+    "active_target_runs": [],
+    "latest_publisher": {
+      "run_id": "41797892734",
+      "job_id": "126466274672",
+      "head_sha": "e14b82cec9a181a6c671af280d136b0ba46dc86b",
+      "conclusion": "success",
+      "published": true,
+      "replies": 2,
+      "artifact_id": "13305608954",
+      "artifact_sha256": "7d53070d8d9d31417f634246ce09917f385559f85ddf14774840abae30c6e712",
+      "artifact_contents_verified": true
+    },
+    "latest_source": {
+      "run_id": "41796571195",
+      "job_id": "126461980062",
+      "head_sha": "fba4f185941204bebe88afa48cbd37df3c6c4fc5",
+      "conclusion": "success",
+      "count": 10942,
+      "generation": "gov24-41796571195-1",
+      "last_success_at": "2026-11-04T17:09:48.692586+09:00",
+      "artifact_metadata_verified": true,
+      "artifact_contents_reread": false
+    },
+    "publication_ledger_sha": "ad9bee31b49eb2876ec406e7fcdb4b4cf5f01464",
+    "workflow_blob_shas": {
+      "threads": "b9eca15d9b506189b513abb15281e77a5cdc3ab5",
+      "source": "b67ca68d09e7f156014138b6beb445f19b56b222"
+    },
+    "recovery_repeated": false,
+    "posts_sent": 0,
+    "code_changes": 0
   }
 }
