@@ -2,8 +2,8 @@
   "version": 1,
   "repository": "kllollain-max/supportpick",
   "mainSHA": "0b86a80ae23b60ddd95bcf37d57edf80963e7744",
-  "lastCheckedAt": "2026-11-04T12:34:20.230Z",
-  "lastSuccessAt": "2026-11-04T11:15:22.351Z",
+  "lastCheckedAt": "2026-11-04T12:39:02.606Z",
+  "lastSuccessAt": "2026-11-04T12:39:02.606Z",
   "rss": {
     "url": "https://rss.blog.naver.com/bible_el.xml",
     "itemsSeen": 22,
@@ -11,9 +11,9 @@
     "checkedAt": "2026-11-04T12:34:20.230Z"
   },
   "publicGeneration": "gov24-41814036806-1",
-  "latestSuccessfulDeploymentRun": 41814036806,
-  "lastEditorialDeploymentRun": 41813747268,
-  "deploymentHeadSHA": "749839cf237971cf17a23b54d2b6f3120da164d4",
+  "latestSuccessfulDeploymentRun": 41830603644,
+  "lastEditorialDeploymentRun": 41830603644,
+  "deploymentHeadSHA": "0b86a80ae23b60ddd95bcf37d57edf80963e7744",
   "results": {
     "newSupportPosts": 1,
     "publicBodiesVerified": 6,
@@ -157,7 +157,7 @@
       "bodySha256": "fad60d35089a9fce50df9ce53004fbcc293fa6114eb6af2f2e1e586fe522db0a",
       "sourceLinksSha256": "828a00de19363f9ac557282e41e2913f1b0677e95e7aa1cd719a9c1bc5f6d48f",
       "publicBodyConfirmed": true,
-      "verificationStatus": "merged_awaiting_deployment",
+      "verificationStatus": "maintained",
       "linkedBenefitId": "641000000138",
       "sourceKey": "[\"641000000138\",\"경기도청년기본소득\",\"경기도\",\"경기\",\"(26년 1분기) 3.3. ~ 4.1. (2분기) 6.1. ~ 6.30. (3분기) 9.1. ~ 10.2. (4분기) 11.2. ~ 12.01.\",\"만 24세 청년에게 지역화폐로 기본소득 지급\",\"20260814170555\",\"2026-08-14\"]",
       "scope": {
@@ -170,10 +170,14 @@
       "validUntil": "2026-11-18T12:31:47.322Z",
       "lastRegistrationPR": 17,
       "registrationMergeSHA": "0b86a80ae23b60ddd95bcf37d57edf80963e7744",
-      "deploymentRun": 41830603644
+      "deploymentRun": 41830603644,
+      "publicCardVerifiedAt": "2026-11-04T12:39:02.606Z",
+      "publicDetailVerifiedAt": "2026-11-04T12:39:02.606Z",
+      "publicDetailURL": "https://kllollain-max.github.io/supportpick/benefits/641000000138/",
+      "nextReviewAfter": "2026-11-15T12:31:47.322Z"
     }
   },
-  "nextResumeStep": "verify deploy run 41830603644 then public card/hash detail/static detail for PR17; do not duplicate registration or dispatch",
+  "nextResumeStep": "read_current_main_and_checkpoint_then_check_rss; preserve five verified links; no duplicate PR17 registration/deployment",
   "errors": [],
   "retryBudget": {
     "maxAttemptsPerFingerprint": 2,
@@ -181,31 +185,36 @@
   },
   "checks": {
     "publicRegistryMatchesMain": true,
-    "cardDetailPairsPassed": 4,
+    "cardDetailPairsPassed": 5,
     "sourceEditionKeysMatch": true,
     "threadsExposed": false,
-    "pythonTests": 56,
+    "pythonTests": 73,
     "nodeTests": 35,
     "publicBuild": true,
-    "latestOperationalCardDetailPairChecks": 4,
+    "latestOperationalCardDetailPairChecks": 5,
     "publicEditorialDataHash": "940ba045c9109b7eb95e535065e38b6cf369b5db19e60c916cf3ce24fb30af94",
     "publicDataContainsFourArticles": true,
     "newButtonVisibleInCurrentBrowser": true,
     "existingFluButtonVisible": true,
-    "publicManifestIntegrityVerified": true
+    "publicManifestIntegrityVerified": true,
+    "staticDetailPairsPassed": 5,
+    "publicSourceRevision": "0b86a80ae23b60ddd95bcf37d57edf80963e7744"
   },
-  "deployment": "no_change_public_render_verified",
+  "deployment": "success_public_card_and_static_detail_verified",
   "currentUpdate": {
     "pr": 17,
     "headSHA": "a6ea3afb2df4c66a3dca4376d13abef488bf8799",
     "ciRun": 41830234201,
-    "status": "deployment_in_progress",
+    "status": "completed",
     "approvedDataFiles": [
       "editorials.json",
       "editorial-data.js"
     ],
     "mergeSHA": "0b86a80ae23b60ddd95bcf37d57edf80963e7744",
-    "deployRun": 41830603644
+    "deployRun": 41830603644,
+    "deploymentStatus": "success",
+    "publicVerificationStatus": "verified",
+    "publicVerifiedAt": "2026-11-04T12:39:02.606Z"
   },
   "lastPartialRunAt": "2026-11-04T10:26:09.039Z",
   "errorHistory": [
