@@ -132,7 +132,7 @@
     }
   },
   "last_check": {
-    "result": "user_content_and_image_policy_applied",
+    "result": "healthy_no_new_incident",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -214,10 +214,10 @@
     },
     "recovery_repeated": false,
     "posts_sent": 0,
-    "code_changes": 1,
-    "checked_at": "2026-11-04T23:10:49+09:00",
+    "code_changes": 0,
+    "checked_at": "2026-11-04T23:35:02+09:00",
     "changed_run_ids": [],
-    "current_main_sha": "9c70d925e9374b1e3ba80c3bc2a436be8d876121",
+    "current_main_sha": "52d1744d4d1ec4655f0c3b1ed8583c4934ac2f88",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
       "basis": "보조금24 누적 조회수",
@@ -254,8 +254,8 @@
     "run_list_scan": {
       "pages": 1,
       "per_page": 100,
-      "total_count": 43,
-      "returned": 43,
+      "total_count": 47,
+      "returned": 47,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
@@ -271,17 +271,18 @@
       "source_snapshot_hashes_passed": true,
       "publication_artifact_digest_passed": true
     },
-    "next_step": "Verify on next natural scheduled slots; do not dispatch test or backfill posts.",
+    "next_step": "Continue next natural 08/12/16/20 KST slots. Verify link-free text and alternating images when a new publication actually occurs; no test post, recovery, or backfill required.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "artifact_metadata_and_digests_unchanged": true,
       "verified_artifact_contents_reused": true,
       "publication_ledger_unchanged": true,
       "publisher_script_blob_unchanged": true,
-      "source_workflow_changed_by_existing_site_work": true,
-      "source_workflow_change": "Added static release checks, content-change gating and deployment verification; collection, validated runtime bundle and failure reporting remain present. No new source run yet.",
-      "no_new_publication": true,
-      "current_main_unchanged": true
+      "content_policy_retained": true,
+      "image_rotation_retained": true,
+      "natural_publication_after_policy_change_verified": false,
+      "main_changed_outside_publisher": true,
+      "no_new_publication": true
     },
     "latest_policy_change": {
       "applied_at": "2026-11-04T23:10:49+09:00",
