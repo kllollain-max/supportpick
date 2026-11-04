@@ -178,9 +178,9 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-04T18:43:51+09:00",
+    "checked_at": "2026-11-04T19:15:35+09:00",
     "changed_run_ids": [],
-    "current_main_sha": "2d5ba498caa91bc1f709142a37f2e6f8613b2749",
+    "current_main_sha": "150ae839f9d6a122727dd9aac524f8c78bb40444",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
       "basis": "보조금24 누적 조회수",
@@ -194,6 +194,7 @@
       "pr": 9,
       "ci_run_id": "41809437757",
       "natural_publication_after_change_verified": false
-    }
+    },
+    "evidence_reused_for_unchanged_runs": true
   }
 }
