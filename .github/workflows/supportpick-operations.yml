@@ -74,6 +74,9 @@ jobs:
         if: vars.SUPPORTPICK_SITE_PUBLIC_UPDATE_APPROVED == '1' && steps.publish.outputs.publish == 'true'
         with:
           path: dist
+      - name: Preserve newer blog or code changes before publication
+        if: vars.SUPPORTPICK_SITE_PUBLIC_UPDATE_APPROVED == '1' && steps.publish.outputs.publish == 'true'
+        run: python tools/check_approved_head.py --approved-sha "$(git rev-parse HEAD)"
       - uses: actions/deploy-pages@v4
         if: vars.SUPPORTPICK_SITE_PUBLIC_UPDATE_APPROVED == '1' && steps.publish.outputs.publish == 'true'
       - name: Verify deployed source, generation and every public HTML URL

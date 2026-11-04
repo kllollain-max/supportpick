@@ -35,6 +35,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Reject stale source before building
+        run: python tools/check_approved_head.py --approved-sha "$APPROVED_SHA"
       - name: Restore latest validated data before a code-only deployment
         env:
           GITHUB_TOKEN: ${{ github.token }}
@@ -45,6 +47,8 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+      - name: Protect newer main changes before publication
+        run: python tools/check_approved_head.py --approved-sha "$APPROVED_SHA"
       - uses: actions/deploy-pages@v4
       - name: Verify the public HTML release and restored data generation
         run: python tools/verify_release.py --output dist --live --expect-sha "$APPROVED_SHA" --expect-generation "$(python -c 'import json;print(json.load(open("dist/data.json"))["generation"])')" --report public-verification.json
