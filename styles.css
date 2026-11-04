@@ -5,3 +5,21 @@ body{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sa
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 
 @media(max-width:360px){.hero{padding:22px 18px}.hero h1{font-size:22px;word-break:keep-all}.section-heading h2{font-size:18px;word-break:keep-all}}
+
+/* User-provided artwork stays intact; this viewport removes its outer white margin. */
+.brand .brand-badge{width:48px;height:48px;flex:none;object-fit:contain;border-radius:50%}
+.hero.hero-branded{display:block;min-height:0;padding:0;background:#fff;gap:0}
+.brand-banner{position:relative;overflow:hidden;aspect-ratio:1248/346;background:#fff}
+.brand-banner img{position:absolute;display:block;width:164.102564%;max-width:none;height:auto;left:-30.769231%;top:-60.693642%}
+.hero-branded .hero-content{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 30px 25px;border-top:1px solid var(--line)}
+.hero-branded h1{font-size:25px;line-height:1.45;margin:8px 0}
+.hero-branded p{margin:0;font-size:13px}
+.hero-branded .primary{flex:none;white-space:nowrap}
+@media(max-width:600px){
+  .brand .brand-badge{width:42px;height:42px}
+  .hero-branded .hero-content{display:block;padding:18px 20px 21px}
+  .hero-branded h1{font-size:23px;line-height:1.5}
+  .hero-branded p{font-size:12px}
+  .hero-branded .primary{margin-top:17px;max-width:100%;white-space:normal}
+}
+@media(max-width:360px){.hero-branded .hero-content{padding:17px 16px 20px}.hero-branded h1{font-size:21px}}
