@@ -38,6 +38,7 @@ def safe_path(name):
 
 def package(state,evidence,repo,output):
  state,evidence,repo,output=map(Path,(state,evidence,repo,output))
+ if not evidence.is_dir() or not any(p.is_file() for p in evidence.rglob('*')):raise ValueError('backup_evidence_missing')
  pointer,snapshot=read_current(state)
  if not pointer:raise ValueError('missing_valid_state')
  for p in (state/'snapshots').iterdir():verify_snapshot(p)
@@ -90,13 +91,14 @@ def restore(archive,destination,rebuild=True):
    safe_path(m.name)
    if not m.isfile():raise ValueError('backup_links_or_special_files')
   meta=json.load(tar.extractfile('backup-manifest.json'))
+  if not re.fullmatch(r'[a-f0-9]{40}',meta.get('sourceRevision','')):raise ValueError('source_revision_invalid')
   if meta.get('version')!=1 or meta.get('schemaVersion')!=1 or set(names)!={*meta['files'],'backup-manifest.json'}:raise ValueError('backup_manifest_set')
   for name,entry in meta['files'].items():
    raw=tar.extractfile(name).read()
    if len(raw)!=entry['bytes'] or hashlib.sha256(raw).hexdigest()!=entry['sha256']:raise ValueError('backup_file_hash_mismatch')
    target=dest/safe_path(name);target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(raw)
  pointer,_=read_current(dest/'runtime')
- if pointer['generation']!=meta['generation'] or pointer['count']!=meta['count']:raise ValueError('restored_state_identity')
+ if not pointer or pointer['generation']!=meta['generation'] or pointer['count']!=meta['count']:raise ValueError('restored_state_identity')
  if rebuild:
   code=dest/'code'
   subprocess.run(['git','clone','--no-checkout',str((dest/'code.bundle').resolve()),str(code)],check=True,capture_output=True)
@@ -136,6 +138,7 @@ def latest(client,bucket):
    if r.get('verified') and r.get('rebuildVerified') and r.get('version')==1:
     if not re.fullmatch(r'supportpick/v1/generations/[A-Za-z0-9_-]+/[a-f0-9]{64}\.tar\.gz',r.get('archiveKey','')):raise ValueError('receipt_key_invalid')
     receipts.append(r)
+    if len(receipts)>100000:raise ValueError('receipt_count_limit')
  if not receipts:raise ValueError('no_verified_backup')
  # No mutable latest pointer: a late old upload can never roll back this ordering.
  return max(receipts,key=lambda r:(datetime.fromisoformat(r['collectionSucceededAt']),r['generation'],r['sourceRevision']))
