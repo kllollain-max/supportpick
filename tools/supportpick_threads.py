@@ -128,10 +128,8 @@ def compose(row):
         '원문 기간: ' + excerpt(row.get('period') or '공식 안내 확인', 55),
         '신청방법 요약: ' + excerpt(row['method'], 85),
         '※ 자격 충족·선정·현재 접수를 보장하지 않습니다.\n공식 안내: ' + row['officialUrl']])
-    blog_url = row.get('publishedBlogUrl', '')
-    if not re.fullmatch(r'https://blog\.naver\.com/bible_el/[0-9]+', blog_url):
-        blog_url = BLOG
-    links = '지원금픽에서 관심 혜택을 저장하고 신청 준비를 관리하세요.\n\n홈페이지: ' + SITE + '\n블로그: ' + blog_url
+    detail_url = SITE + '?utm_source=threads&utm_medium=social&utm_campaign=benefit#benefit=' + urllib.parse.quote(str(row['id']), safe='')
+    links = '이 지원금의 대상·신청방법을 확인하고 관심 혜택으로 저장하세요.\n\n지원금 상세 안내: ' + detail_url
     if any(len(x) > 500 for x in (main, detail, links)):
         raise ValueError('post_or_reply_over_500_characters')
     return main, detail, links

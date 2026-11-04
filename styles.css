@@ -5,10 +5,6 @@ body{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sa
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 
 @media(max-width:360px){.hero{padding:22px 18px}.hero h1{font-size:22px;word-break:keep-all}.section-heading h2{font-size:18px;word-break:keep-all}}
-/* Owned channels remain separate from government application portals. */
-.supportpick-channels{display:flex;flex-wrap:wrap;gap:8px 16px;padding:10px 0;font-size:14px}
-.supportpick-channels a{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border:1px solid #b8d8cc;border-radius:12px;color:#075c46;background:#f2fbf6;text-decoration:none;max-width:100%;overflow-wrap:anywhere}
-.supportpick-channels a:focus-visible{outline:3px solid #0b7259;outline-offset:3px}
 
 /* User-provided artwork stays intact; this viewport removes its outer white margin. */
 .brand .brand-badge{width:48px;height:48px;flex:none;object-fit:contain;border-radius:50%}
@@ -27,3 +23,4 @@ body{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sa
   .hero-branded .primary{margin-top:17px;max-width:100%;white-space:normal}
 }
 @media(max-width:360px){.hero-branded .hero-content{padding:17px 16px 20px}.hero-branded h1{font-size:21px}}
+.editorial-note{margin:14px 0 0}.editorial-link{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border:1px solid #b8d8cc;border-radius:9px;color:#075c46;text-decoration:none;max-width:100%;overflow-wrap:anywhere;font-weight:650}.editorial-link:focus-visible{outline:3px solid #0b7259;outline-offset:3px}.editorial-block{border-left:4px solid #0b7259}.editorial-block p{margin:10px 0 16px}

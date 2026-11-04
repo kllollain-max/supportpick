@@ -60,7 +60,7 @@ class PublisherTests(unittest.TestCase):
         self.assertTrue(result['published'])
         self.assertEqual([x[1] for x in self.api.calls], [None, '1001', '1001'])
         self.assertEqual(self.store.state['records'][0]['status'], 'published')
-        self.assertIn(t.SITE, self.api.calls[2][0]); self.assertIn(t.BLOG, self.api.calls[2][0])
+        self.assertIn(t.SITE, self.api.calls[2][0]); self.assertIn('#benefit=benefit1', self.api.calls[2][0]); self.assertNotIn(t.BLOG, self.api.calls[2][0])
     def test_same_slot_cannot_post_twice(self):
         self.run_publish()
         with self.assertRaisesRegex(RuntimeError, 'slot_already_reserved'): self.run_publish()
@@ -115,7 +115,7 @@ class PublisherTests(unittest.TestCase):
         texts = t.compose(row)
         self.assertTrue(all(len(x) <= 500 for x in texts))
         self.assertIn('현재 접수를 보장하지 않습니다', texts[1])
-        self.assertIn(row['officialUrl'], texts[1]); self.assertIn(row['publishedBlogUrl'], texts[2])
+        self.assertIn(row['officialUrl'], texts[1]); self.assertIn('#benefit=benefit1', texts[2]); self.assertNotIn(row['publishedBlogUrl'], texts[2])
         row['officialUrl'] += 'a' * 600
         with self.assertRaises(ValueError): t.compose(row)
     def test_social_links_and_images_cannot_point_to_other_accounts(self):

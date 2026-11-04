@@ -7,7 +7,7 @@ from html import escape
 from refresh import read_current,verify_snapshot
 from bootstrap_state import ensure_bootstrap
 ROOT=Path(__file__).resolve().parents[1]
-STATIC=('index.html','privacy.html','about.html','icon.svg','careerpick-base.css','styles.css','core.js','app.js','supportpick-badge.png','supportpick-banner.png')
+STATIC=('index.html','privacy.html','about.html','icon.svg','careerpick-base.css','styles.css','core.js','app.js','supportpick-badge.png','supportpick-banner.png','editorials.js')
 class Links(HTMLParser):
     def __init__(self,output):super().__init__();self.output=output
     def handle_starttag(self,tag,attrs):
@@ -41,7 +41,11 @@ def build(destination,state=None,allow_sample=False,public_base=None):
             canonical=public_base+('' if name=='index.html' else name)
             text=text.replace('</head>','<link rel="canonical" href="'+escape(canonical,quote=True)+'"></head>')
             (output/name).write_text(text)
-    fields={'id','title','organization','category','region','regionBasis','audience','supportType','supportTypes','summary','targetPreview','period','periodKind','startDate','endDate','officialUrl','officialLinkStatus','source','sourceUpdatedAt','checkedAt','detailShard'}
+    registry=json.loads((ROOT/'editorials.json').read_text())
+    if registry.get('version')!=1 or not isinstance(registry.get('articles'),list):raise ValueError('invalid_editorial_registry')
+    registry_json=json.dumps(registry,ensure_ascii=False,separators=(',',':'))
+    (output/'editorial-data.js').write_text('window.SUPPORTPICK_EDITORIALS = '+registry_json.replace('<','\\u003c')+';\n')
+    fields={'id','title','organization','category','region','regionBasis','audience','supportType','supportTypes','summary','targetPreview','period','periodKind','startDate','endDate','officialUrl','officialLinkStatus','source','sourceUpdatedAt','checkedAt','detailShard','sourceConflicts'}
     public_feed={**feed,'items':[{k:v for k,v in row.items() if k in fields} for row in feed['items']]}
     public_json=json.dumps(public_feed,ensure_ascii=False,separators=(',',':'))
     (output/'data.json').write_text(public_json)
