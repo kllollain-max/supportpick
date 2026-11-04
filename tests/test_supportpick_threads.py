@@ -110,18 +110,87 @@ class PublisherTests(unittest.TestCase):
     def test_missed_or_unknown_slot_rejected(self):
         for now, cron in [(NOW + timedelta(hours=2),'0 23 * * *'), (NOW,'unknown')]:
             with self.assertRaises(ValueError): t.current_slot(now, cron)
-    def test_content_no_open_claim_and_whole_links(self):
+    def test_content_has_no_links_and_retains_profile_cta(self):
         row = feed()['items'][0]
         row['publishedBlogUrl'] = 'https://blog.naver.com/bible_el/123456'
         texts = t.compose(row)
         self.assertTrue(all(len(x) <= 500 for x in texts))
         self.assertIn('현재 접수를 보장하지 않습니다', texts[1])
-        self.assertIn(row['officialUrl'], texts[1])
+        self.assertTrue(all(not t.TEXT_LINK.search(x) for x in texts))
         self.assertTrue(all(x.endswith('자세한 사항은 프로필링크 확인') for x in texts))
         self.assertTrue(all('blog.naver.com' not in x and t.SITE not in x for x in texts))
         self.assertIn(row['title'], texts[2])
         row['officialUrl'] += 'a' * 600
-        with self.assertRaises(ValueError): t.compose(row)
+        self.assertEqual(t.compose(row), texts)
+
+    def test_source_addresses_removed_before_truncation_without_changing_source(self):
+        for address in ['https://plus.gov.kr/' + 'a' * 700, 'HTTP://example.com/a',
+                        'www.gov.kr/path', 'plus.gov.kr/path', 'https://t.co/abc',
+                        'ftp://example.com/a', '정책.한국/신청']:
+            with self.subTest(address=address[:35]):
+                row = feed()['items'][0]
+                for key in ['title', 'summary', 'organization', 'target', 'period', 'method', 'category']:
+                    row[key] = '안내 ' + address + ' 조건 확인'
+                original = copy.deepcopy(row)
+                texts = t.compose(row)
+                self.assertTrue(all(not t.TEXT_LINK.search(x) for x in texts))
+                self.assertTrue(all(x.endswith(t.CTA) for x in texts))
+                self.assertNotIn('example.com', '\n'.join(texts))
+                self.assertEqual(row, original)
+
+    def test_published_metadata_keeps_official_source_but_sent_texts_have_no_links(self):
+        self.run_publish()
+        self.assertEqual(self.store.state['records'][0]['official_url'], feed()['items'][0]['officialUrl'])
+        self.assertTrue(all(not t.TEXT_LINK.search(call[0]) for call in self.api.calls))
+
+    def test_image_rotation_alternates_and_preserves_exact_reserved_image(self):
+        urls = ['https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png',
+                'https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png']
+        assets = {'_rotation': urls}
+        expected = [None, urls[0], None, urls[1]]
+        for index, hour in enumerate([8, 12, 16, 20]):
+            f = feed(); f['items'][0]['id'] = 'benefit' + str(index)
+            cron = next(c for c,h in t.CRONS.items() if h == hour)
+            t.publish(f, self.store, self.api, NOW.replace(hour=hour), cron, '123', '1004', assets)
+            self.assertEqual(self.store.state['records'][-1]['image_url'], expected[index])
+        self.assertEqual([c[2] for c in self.api.calls[::3]], expected)
+        self.assertTrue(all(c[2] is None for i,c in enumerate(self.api.calls) if i % 3))
+        self.assertEqual(t.select_image(feed()['items'][0], [{'image_url':u} for u in expected] + [{}], assets), urls[0])
+
+    def test_unapproved_rotation_blocks_before_reservation_or_post(self):
+        self.run_publish()
+        f = feed(); f['items'][0]['id'] = 'second'
+        before = copy.deepcopy(self.store.state)
+        with self.assertRaisesRegex(ValueError, 'unapproved_image_rotation'):
+            t.publish(f, self.store, self.api, NOW.replace(hour=12), '0 3 * * *', '124', '1004',
+                      {'_rotation':['https://evil.test/image.png']})
+        self.assertEqual(self.store.state, before)
+        self.assertEqual(len(self.api.calls), 3)
+
+    def test_resume_keeps_reserved_image_when_rotation_changes(self):
+        self.store.state['records'].append({'benefit_id':'old', 'slot':NOW.replace(hour=7).isoformat(),
+            'run_id':'122', 'status':'published', 'verified':True, 'main_id':'9','detail_id':'8','links_id':'7'})
+        image = 'https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png'
+        self.api.verify_fail = True
+        with self.assertRaises(RuntimeError): self.run_publish(assets={'_rotation':[image]})
+        self.api.verify_fail = False
+        t.resume_publication(self.store,self.api,NOW,'1004','124','1001')
+        self.assertEqual(self.store.state['records'][-1]['image_url'], image)
+        self.assertEqual([c[2] for c in self.api.calls], [image,None,None])
+
+    def test_legacy_pending_link_is_held_without_rewriting_or_sending(self):
+        self.api.verify_fail = True
+        with self.assertRaises(RuntimeError): self.run_publish()
+        self.api.verify_fail = False
+        record = self.store.state['records'][0]
+        record['texts'][1] += '\nhttps://plus.gov.kr/benefit'
+        record['content_hash'] = t.hashlib.sha256(json.dumps(record['texts'], ensure_ascii=False).encode()).hexdigest()
+        original_texts = copy.deepcopy(record['texts'])
+        with self.assertRaisesRegex(ValueError, 'link_free_publication_required'):
+            t.resume_publication(self.store, self.api, NOW, '1004', '124', '1001')
+        self.assertEqual(len(self.api.calls), 1)
+        self.assertEqual(self.store.state['records'][0]['texts'], original_texts)
+        self.assertEqual(self.store.state['records'][0]['status'], 'pending')
     def test_social_links_and_images_cannot_point_to_other_accounts(self):
         row = feed()['items'][0]; row['publishedBlogUrl'] = 'https://blog.naver.com/other/123'
         self.assertNotIn('/other/', t.compose(row)[2])
@@ -279,3 +348,4 @@ class PopularityTests(unittest.TestCase):
         self.assertIn('실시간 검색량', result['selection']['note'])
 
 if __name__ == '__main__': unittest.main()
+
