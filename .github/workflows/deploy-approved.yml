@@ -40,8 +40,17 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: python tools/restore_latest_state.py
       - run: python tools/build.py --output dist --public-base https://kllollain-max.github.io/supportpick/
+      - run: python tools/verify_release.py --output dist
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
       - uses: actions/deploy-pages@v4
+      - name: Verify the public HTML release and restored data generation
+        run: python tools/verify_release.py --output dist --live --expect-sha "$APPROVED_SHA" --expect-generation "$(python -c 'import json;print(json.load(open("dist/data.json"))["generation"])')" --report public-verification.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: supportpick-public-verification
+          path: public-verification.json
+          retention-days: 7

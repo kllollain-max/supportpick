@@ -40,6 +40,8 @@ jobs:
       - name: Build current data with accurate delay or failure status
         id: build
         run: python tools/build.py --state collection-state --output dist --public-base https://kllollain-max.github.io/supportpick/
+      - name: Verify all static documents and advertised sitemap URLs
+        run: python tools/verify_release.py --output dist
       - name: Preserve current and previous validated generations
         id: bundle
         if: always() && steps.restore.outcome == 'success' && steps.build.outcome == 'success'
@@ -64,6 +66,15 @@ jobs:
           path: dist
       - uses: actions/deploy-pages@v4
         if: vars.SUPPORTPICK_SITE_PUBLIC_UPDATE_APPROVED == '1'
+      - name: Verify deployed source, generation and every public HTML URL
+        if: vars.SUPPORTPICK_SITE_PUBLIC_UPDATE_APPROVED == '1'
+        run: python tools/verify_release.py --output dist --live --expect-sha "$(git rev-parse HEAD)" --expect-generation "$(python -c 'import json;print(json.load(open("dist/data.json"))["generation"])')" --report output/public-verification.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: supportpick-public-verification
+          path: output/public-verification.json
+          retention-days: 7
       - name: Report collection failure after retaining last good data and status
         if: steps.collect.outcome == 'failure'
         run: exit 1

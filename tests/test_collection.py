@@ -80,6 +80,10 @@ class CollectionTests(unittest.TestCase):
     def test_central_agency_is_not_inferred_as_nationwide(self):
         self.assertEqual(region('기후에너지환경부','특정 세대 지원')[0],'확인 필요')
         self.assertEqual(region('강원특별자치도 춘천시','원문 확인')[1],'agency_jurisdiction')
+    def test_multiple_rounds_are_not_misread_as_one_application_interval(self):
+        p=period('(2026년 2학기) (1차) 2026년 5월 22일~6월 22일 (2차) 2026년 8월 12일~9월 9일')
+        self.assertEqual(p['periodKind'],'needs_check')
+        self.assertIsNone(p['startDate']);self.assertIsNone(p['endDate'])
     def test_promote_then_failure_preserves_data_and_success_time(self):
         with tempfile.TemporaryDirectory() as p:
             p=Path(p);collect(Client(),p/'run1','test1');installed=install_candidate(p/'run1',p/'state')

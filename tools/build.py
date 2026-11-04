@@ -1,21 +1,30 @@
 """Build an allowlisted site from an integrity-checked immutable generation."""
-import argparse,hashlib,json,os,re,shutil
+import argparse,hashlib,json,os,posixpath,re,shutil,subprocess
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote,quote
 from refresh import read_current,verify_snapshot
 from bootstrap_state import ensure_bootstrap
 from search_metadata import public_metadata, read_verifications, write_sitemap
+from detail_pages import write_details
+from collect_full import period
 ROOT=Path(__file__).resolve().parents[1]
-STATIC=('index.html','privacy.html','about.html','icon.svg','careerpick-base.css','styles.css','core.js','app.js','supportpick-badge.png','supportpick-banner.png','editorials.js')
+STATIC=('index.html','privacy.html','about.html','terms.html','contact.html','404.html','icon.svg','careerpick-base.css','styles.css','core.js','app.js','detail.js','supportpick-badge.png','supportpick-banner.png','editorials.js')
 class Links(HTMLParser):
-    def __init__(self,output):super().__init__();self.output=output
+    def __init__(self,output,page,available=None):super().__init__();self.output=output;self.page=page;self.available=available
     def handle_starttag(self,tag,attrs):
         for key,value in attrs:
             if key not in ('href','src') or not value or urlsplit(value).scheme or value.startswith('#'):continue
             path=urlsplit(value).path
-            target=(self.output/path).resolve() if path!='./' else self.output/'index.html'
-            if not target.is_file() or not target.is_relative_to(self.output):raise ValueError('missing_or_unsafe_local_asset')
+            if self.available is not None:
+                relative=posixpath.normpath(posixpath.join(str(self.page.parent.relative_to(self.output)),unquote(path)))
+                if relative=='.':relative='index.html'
+                if relative.startswith('../') or relative.startswith('/') or not (relative in self.available or relative+'/index.html' in self.available):
+                    raise ValueError('missing_or_unsafe_local_asset:'+str(self.page.relative_to(self.output))+':'+path)
+                continue
+            target=(self.page.parent/unquote(path)).resolve() if path else self.page
+            if target.is_dir():target=target/'index.html'
+            if not target.is_file() or not target.is_relative_to(self.output):raise ValueError('missing_or_unsafe_local_asset:'+str(self.page.relative_to(self.output))+':'+path)
 def build(destination,state=None,allow_sample=False,public_base=None):
     output=Path(destination).resolve()
     if output==ROOT or ROOT.is_relative_to(output) or (output.is_relative_to(ROOT) and output!=ROOT/'dist'):raise ValueError('unsafe_output_directory')
@@ -39,27 +48,28 @@ def build(destination,state=None,allow_sample=False,public_base=None):
         if public_base and name.endswith('.html'):
             text=(output/name).read_text().replace('content="noindex,nofollow"','content="index,follow"')
             text=text.replace('<span class="preview-tag">미리보기</span>','').replace(' · 공개 전 미리보기','')
-            text=public_metadata(text,name,public_base,verifications)
+            if name=='404.html':text=text.replace('content="index,follow"','content="noindex,follow"')
+            else:text=public_metadata(text,name,public_base,verifications)
             (output/name).write_text(text)
-    if public_base:write_sitemap(output,public_base)
     registry=json.loads((ROOT/'editorials.json').read_text())
     if registry.get('version')!=1 or not isinstance(registry.get('articles'),list):raise ValueError('invalid_editorial_registry')
     registry_json=json.dumps(registry,ensure_ascii=False,separators=(',',':'))
     (output/'editorial-data.js').write_text('window.SUPPORTPICK_EDITORIALS = '+registry_json.replace('<','\\u003c')+';\n')
     fields={'id','title','organization','category','region','regionBasis','audience','supportType','supportTypes','summary','targetPreview','period','periodKind','startDate','endDate','officialUrl','officialLinkStatus','source','sourceUpdatedAt','checkedAt','detailShard','sourceConflicts'}
     # Keep exact classification conflicts visible and reviewable in both cards and details.
-    source_differences={}
+    source_differences={};full_rows={}
     if snapshot:
         for shard_path in (snapshot/'details'/feed['generation']).glob('*.json'):
             shard=json.loads(shard_path.read_text())
             for sid,row in shard['items'].items():
                 raw=row.get('rawSource',{})
                 source_differences[sid]={key:{'list':raw.get('serviceList',{}).get(key),'detail':raw.get('serviceDetail',{}).get(key)} for key in row.get('sourceConflicts',[])}
-    public_feed={**feed,'items':[{**{k:v for k,v in row.items() if k in fields},'sourceDifferences':source_differences.get(row['id'],{})} for row in feed['items']]}
+                full_rows[sid]={**row,**period(row.get('period','')),'sourceDifferences':source_differences[sid]}
+    public_feed={**feed,'items':[{**{k:v for k,v in row.items() if k in fields},**period(row.get('period','')),'sourceDifferences':source_differences.get(row['id'],{})} for row in feed['items']]}
     public_json=json.dumps(public_feed,ensure_ascii=False,separators=(',',':'))
     (output/'data.json').write_text(public_json)
     (output/'data.js').write_text('window.SUPPORTPICK_DATA = '+public_json.replace('<','\\u003c')+';\n')
-    generations=[]
+    generations=[];previous_rows={}
     if snapshot:
         candidates=[snapshot]+sorted((state/'snapshots').iterdir(),key=lambda x:x.name,reverse=True)
         for candidate in candidates:
@@ -70,7 +80,8 @@ def build(destination,state=None,allow_sample=False,public_base=None):
                 for shard_path in details.rglob('*.json'):
                     shard=json.loads(shard_path.read_text());public_rows={}
                     for sid,row in shard['items'].items():
-                        public={k:v for k,v in row.items() if k!='rawSource'}
+                        if candidate!=snapshot:previous_rows[sid]=row
+                        public={**{k:v for k,v in row.items() if k!='rawSource'},**period(row.get('period',''))}
                         raw=row.get('rawSource',{})
                         public['sourceDifferences']={key:{'list':raw.get('serviceList',{}).get(key),'detail':raw.get('serviceDetail',{}).get(key)} for key in row.get('sourceConflicts',[])}
                         public_rows[sid]=public
@@ -79,11 +90,21 @@ def build(destination,state=None,allow_sample=False,public_base=None):
             if len(generations)==2:break
     status=json.loads((state/'status.json').read_text()) if (state/'status.json').exists() else {'status':'preview','generation':feed.get('generation'),'lastSuccessAt':feed.get('updatedAt'),'count':len(feed['items'])}
     (output/'status.json').write_text(json.dumps(status,ensure_ascii=False));(output/'.nojekyll').write_text('')
+    guides=json.loads((ROOT/'guides.json').read_text())
+    if guides.get('version')!=1 or not isinstance(guides.get('guides'),list):raise ValueError('invalid_own_guide_registry')
+    detail=write_details(output,full_rows,previous_rows,public_base,guides,registry,status['status'])
+    home=(output/'index.html').read_text()
+    home=home.replace('<!-- STATIC_DISCOVERY -->',detail['home'])
+    (output/'index.html').write_text(home)
+    if public_base:write_sitemap(output,public_base,detail['entries'])
+    (output/'search-report.json').write_text(json.dumps(detail['report'],ensure_ascii=False,indent=2))
     secret=os.environ.get('SUPPORTPICK_GOV24_SERVICE_KEY','')
     secret_variants={secret,unquote(secret),quote(unquote(secret),safe=''),quote(quote(unquote(secret),safe=''),safe='')}-{''}
     forbidden=re.compile(r'gh[pousr]_[A-Za-z0-9]{25,}|github_pat_[A-Za-z0-9_]{30,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|(?:servicekey|access_token|authorization)=',re.I)
     files={}
-    for p in sorted(output.rglob('*')):
+    public_paths=sorted(p for p in output.rglob('*') if p.is_file())
+    available={str(p.relative_to(output)) for p in public_paths}
+    for p in public_paths:
         if not p.is_file():continue
         if p.is_symlink() or p.stat().st_nlink!=1:raise ValueError('linked_public_file')
         raw=p.read_bytes()
@@ -93,13 +114,15 @@ def build(destination,state=None,allow_sample=False,public_base=None):
         if p.suffix=='.png' and not raw.startswith(b'\x89PNG\r\n\x1a\n'):raise ValueError('invalid_public_png')
         if p.suffix=='.html':
             text=raw.decode('utf-8')
-            Links(output).feed(text)
-            expected='index,follow' if public_base else 'noindex,nofollow'
-            if '<meta name="robots" content="'+expected+'">' not in text:raise ValueError('indexing_policy_mismatch')
+            # GitHub's custom 404 must work from arbitrary missing nested paths.
+            if p.name!='404.html':Links(output,p,available).feed(text)
+            allowed=('index,follow','noindex,follow') if public_base else ('noindex,nofollow',)
+            if not any('<meta name="robots" content="'+expected+'">' in text for expected in allowed):raise ValueError('indexing_policy_mismatch')
         files[str(p.relative_to(output))]=hashlib.sha256(raw).hexdigest()
     size=sum(p.stat().st_size for p in output.rglob('*') if p.is_file())
     if size>300*1024*1024:raise ValueError('public_size_budget')
-    report={'publicFiles':len(files)+1,'bytes':size,'benefits':len(feed['items']),'generation':feed.get('generation'),'isSample':not bool(pointer),'published':False,'status':status['status'],'files':files}
+    revision=subprocess.run(['git','rev-parse','HEAD'],cwd=ROOT,capture_output=True,text=True,check=True).stdout.strip()
+    report={'publicFiles':len(files)+1,'bytes':size,'benefits':len(feed['items']),'generation':feed.get('generation'),'sourceRevision':revision,'isSample':not bool(pointer),'published':False,'status':status['status'],**{k:v for k,v in detail['report'].items() if k in ('detailPages','indexableDetails','heldDetails','reviewedGuides','blogLinks','directoryPages','retiredPages')},'files':files}
     (output/'site-manifest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
     return {k:v for k,v in report.items() if k!='files'}
 if __name__=='__main__':

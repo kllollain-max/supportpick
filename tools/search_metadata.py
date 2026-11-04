@@ -5,10 +5,12 @@ from html import escape
 from html.parser import HTMLParser
 from xml.etree import ElementTree as ET
 
-PUBLIC_PAGES = ('index.html', 'about.html', 'privacy.html')
+PUBLIC_PAGES = ('index.html', 'about.html', 'privacy.html', 'terms.html', 'contact.html')
 DESCRIPTIONS = {
     'about.html': '지원금픽의 공식 정보 출처, 보조금24 자료 범위, 맞춤 혜택의 의미와 이용 방법을 안내합니다.',
     'privacy.html': '지원금픽의 브라우저 기록 보관, 저장한 혜택과 신청 메모의 백업·복원, 개인정보 취급 범위를 안내합니다.',
+    'terms.html': '지원금픽의 검색·맞춤·저장·내 신청 기능과 공식 신청 창구 이용 방법, 정보 확인 범위를 안내합니다.',
+    'contact.html': '지원금픽의 사이트 오류·정보 정정 문의 방법과 공식 담당기관에 문의해야 할 내용을 안내합니다.',
 }
 VERIFICATION_NAMES = {'google': 'google-site-verification', 'naver': 'naver-site-verification'}
 
@@ -89,13 +91,19 @@ def public_metadata(source, page, base, verifications):
     return source.replace('</head>', '\n' + '\n'.join(tags) + '\n</head>')
 
 
-def write_sitemap(output, base):
+def write_sitemap(output, base, extra=()):
     namespace = 'http://www.sitemaps.org/schemas/sitemap/0.9'
     ET.register_namespace('', namespace)
     root = ET.Element(f'{{{namespace}}}urlset')
-    for page in PUBLIC_PAGES:
-        if not (output / page).is_file():
+    seen=set()
+    for page, modified in [(('' if p=='index.html' else p),None if p=='index.html' else '2026-11-04') for p in PUBLIC_PAGES] + list(extra):
+        target=output/(page+'index.html' if page.endswith('/') or not page else page)
+        if not target.is_file():
             raise ValueError('sitemap_target_missing')
+        url=base+page
+        if url in seen:raise ValueError('sitemap_duplicate_url')
+        seen.add(url)
         entry = ET.SubElement(root, f'{{{namespace}}}url')
-        ET.SubElement(entry, f'{{{namespace}}}loc').text = base + ('' if page == 'index.html' else page)
+        ET.SubElement(entry, f'{{{namespace}}}loc').text = url
+        if modified:ET.SubElement(entry, f'{{{namespace}}}lastmod').text=modified
     ET.ElementTree(root).write(output / 'sitemap.xml', encoding='utf-8', xml_declaration=True)
