@@ -215,7 +215,7 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-05T01:52:38.806350+09:00",
+    "checked_at": "2026-11-05T03:11:30.732387+09:00",
     "changed_run_ids": [],
     "current_main_sha": "1d835c70be865938c90e4c6a278dfbbd8f058669",
     "ranking_policy": {
@@ -271,7 +271,7 @@
       "source_snapshot_hashes_passed": true,
       "publication_artifact_digest_passed": true
     },
-    "next_step": "Continue natural scheduled slots and the recurring watch. Verify no-link text and image alternation on actual future publication; no pending recovery, backfill or test post required.",
+    "next_step": "Continue recurring checks and natural 08/12/16/20 KST publication slots. No pending recovery, backfill or test post. Validate the new text/image policies when an actual new publication occurs.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "artifact_metadata_and_digests_unchanged": true,
