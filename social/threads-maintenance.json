@@ -27,15 +27,18 @@
     "41792407656",
     "41805765326",
     "41823025409",
-    "41814036806"
+    "41814036806",
+    "41921889569"
   ],
   "last_health": {
     "unresolved_publications": 0,
     "published_benefits": 2,
-    "source_run_id": "41814036806",
+    "source_run_id": "41921889569",
     "source_result": "success",
     "source_count": 10942,
-    "source_last_success_at": "2026-11-04T19:32:34.568318+09:00"
+    "source_last_success_at": "2026-11-05T07:11:51.033157+09:00",
+    "source_workflow_conclusion": "failure",
+    "source_failure_classification": "post_deployment_verification_only; no source collection or Threads publication failure"
   },
   "incidents": {
     "41796747628": {
@@ -49,6 +52,61 @@
       "links_id": "18104181926042417",
       "publication_verified": true,
       "regression_tests": "Python 44 and full release CI passed; exact brand hash conversion allowed, remaining text/CTA/ID/permalink still checked; ambiguous sends without receipts remain blocked"
+    },
+    "41921889569": {
+      "status": "classified_no_threads_recovery_required",
+      "fingerprint": {
+        "run_id": "41921889569",
+        "run_attempt": 1,
+        "stage": "Verify deployed source, generation and every public HTML URL",
+        "error": "public_generation_mismatch",
+        "head_sha": "1d835c70be865938c90e4c6a278dfbbd8f058669"
+      },
+      "confirmed_cause": "Collection, promotion, build, static verification, runtime/evidence upload and Pages deploy succeeded; subsequent immediate live-generation comparison failed.",
+      "hypothesis": "Transient public-generation propagation after deployment, supported by later GET matching the expected generation and code SHA; the original response body was not preserved.",
+      "classification": "post_deployment_verification_only; no source collection or Threads publication failure",
+      "source_generation": "gov24-41921889569-1",
+      "source_count": 10942,
+      "source_checked_at": "2026-11-05T07:11:51.033157+09:00",
+      "artifact_id": "13366524784",
+      "artifact_sha256": "f6606691d166c9d4d8437edba034989236a4568c2cb374aaa28f54ca6be85409",
+      "manifest_files_verified": 36,
+      "read_path_verified": {
+        "read_path": "current latest_completed_operations_run + read_current/verify_snapshot + Threads load_feed/candidates/compose",
+        "selected_run": 41921889569,
+        "overall_run_conclusion": "failure",
+        "generation": "gov24-41921889569-1",
+        "items": 10942,
+        "eligible": 10397,
+        "next_candidate": "105100000001",
+        "selection": {
+          "policy": "gov24_views_desc_v1",
+          "basis": "보조금24 누적 조회수",
+          "views": 2434939,
+          "source_checked_at": "2026-11-05T07:07:08.340921+09:00",
+          "note": "실시간 검색량·신청자 수가 아닌 공식 API 누적 조회수 기준"
+        },
+        "next_image": null,
+        "published": false,
+        "checked_at": "2026-11-05T07:16:42.232829+09:00"
+      },
+      "public_manifest_recheck": {
+        "http": 200,
+        "generation": "gov24-41921889569-1",
+        "sourceRevision": "1d835c70be865938c90e4c6a278dfbbd8f058669"
+      },
+      "publication_ledger_sha": "e0aa73a4770ec6f5dd87494ee7c53cba383a91cc",
+      "unresolved_publications": 0,
+      "code_changes": 0,
+      "repair_pr": null,
+      "repair_sha": null,
+      "no_code_repair_reason": "The existing trusted restore already selects completed operations runs regardless of overall conclusion and verifies immutable snapshot hashes. No required source or publisher defect reproduced. Site deployment/verification changes are outside this watch scope.",
+      "attempt_budget": {
+        "posts_sent": 0,
+        "workflow_retries": 0,
+        "recovery_attempts": 0
+      },
+      "next_step": "Allow next natural publication to use validated current source; do not rerun collection/deployment or create a test post. Reopen only for new attempt/status/error or actual source/publisher failure."
     }
   },
   "guardrails": {
@@ -129,10 +187,17 @@
       "conclusion": "success",
       "updated_at": "2026-11-04T10:33:02Z",
       "head_sha": "749839cf237971cf17a23b54d2b6f3120da164d4"
+    },
+    "41921889569": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "updated_at": "2026-11-04T22:13:48Z",
+      "head_sha": "1d835c70be865938c90e4c6a278dfbbd8f058669"
     }
   },
   "last_check": {
-    "result": "healthy_no_new_incident",
+    "result": "source_success_postdeploy_failure_classified",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -167,17 +232,19 @@
       "verification_completed_at": "2026-11-04T20:44:13.580205+09:00"
     },
     "latest_source": {
-      "run_id": "41814036806",
+      "run_id": "41921889569",
       "run_attempt": 1,
-      "job_id": "126520150258",
-      "head_sha": "749839cf237971cf17a23b54d2b6f3120da164d4",
+      "job_id": "126896198736",
+      "head_sha": "1d835c70be865938c90e4c6a278dfbbd8f058669",
       "event": "schedule",
-      "conclusion": "success",
+      "conclusion": "failure",
+      "collection_result": "success",
+      "failure_classification": "post_deployment_verification_only; no source collection or Threads publication failure",
       "count": 10942,
-      "generation": "gov24-41814036806-1",
-      "last_success_at": "2026-11-04T19:32:34.568318+09:00",
-      "artifact_id": "13313039780",
-      "artifact_sha256": "e52badfeae562a8fe113dd502e4084cbb968b1a7e466570c50e27ce5c6fcea2b",
+      "generation": "gov24-41921889569-1",
+      "last_success_at": "2026-11-05T07:11:51.033157+09:00",
+      "artifact_id": "13366524784",
+      "artifact_sha256": "f6606691d166c9d4d8437edba034989236a4568c2cb374aaa28f54ca6be85409",
       "artifact_contents_verified": true,
       "manifest_files_verified": 36,
       "endpoint_coverage": {
@@ -205,7 +272,8 @@
           "reportedTotal": 10942,
           "uniqueCount": 10942
         }
-      }
+      },
+      "actual_read_path_verified": true
     },
     "publication_ledger_sha": "e0aa73a4770ec6f5dd87494ee7c53cba383a91cc",
     "workflow_blob_shas": {
@@ -215,8 +283,10 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-05T05:54:49.694627+09:00",
-    "changed_run_ids": [],
+    "checked_at": "2026-11-05T07:16:42.232829+09:00",
+    "changed_run_ids": [
+      "41921889569"
+    ],
     "current_main_sha": "1d835c70be865938c90e4c6a278dfbbd8f058669",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
@@ -254,8 +324,8 @@
     "run_list_scan": {
       "pages": 1,
       "per_page": 100,
-      "total_count": 51,
-      "returned": 51,
+      "total_count": 53,
+      "returned": 53,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
@@ -271,16 +341,15 @@
       "source_snapshot_hashes_passed": true,
       "publication_artifact_digest_passed": true
     },
-    "next_step": "Continue natural scheduled source refresh and 08/12/16/20 KST publication slots. No pending recovery, test post, backfill or new incident. Verify the text/image policies upon actual future publication.",
+    "next_step": "Allow next natural publication to use validated current source; do not rerun collection/deployment or create a test post. Reopen only for new attempt/status/error or actual source/publisher failure.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
-      "artifact_metadata_and_digests_unchanged": true,
-      "verified_artifact_contents_reused": true,
+      "new_source_artifact_contents_verified": true,
+      "publisher_artifact_metadata_unchanged": true,
       "publication_ledger_unchanged": true,
       "publisher_script_blob_unchanged": true,
       "content_policy_retained": true,
       "image_rotation_retained": true,
-      "current_main_unchanged": true,
       "natural_publication_after_policy_change_verified": false,
       "no_new_publication": true
     },
@@ -384,5 +453,10 @@
     "stored_in_publication_reservation": true,
     "never_reselect_pending": true,
     "natural_publication_after_change_verified": false
+  },
+  "last_reported_operation_issue": {
+    "run_id": "41921889569",
+    "classification": "post_deployment_verification_only; no source collection or Threads publication failure",
+    "recorded_at": "2026-11-05T07:16:42.232829+09:00"
   }
 }
