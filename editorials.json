@@ -175,6 +175,42 @@
         ]
       },
       "status": "published"
+    },
+    {
+      "benefitId": "408000000419",
+      "title": "2026 의료급여 수급권자 일반건강검진, 짝수년생 대상·12월 31일 전 확인하세요",
+      "url": "https://m.blog.naver.com/bible_el/224465511206",
+      "sourceKey": "[\"408000000419\",\"의료급여수급권자 일반건강검진비 지원\",\"보건복지부\",\"확인 필요\",\"검진대상자로 통보받은 당해 연도 내\",\"20세이상 의료급여 수급권자 일반건강검진 서비스 지원\",\"20260513110442\",\"2026-05-13\"]",
+      "scope": {
+        "year": 2026,
+        "region": "확인 필요",
+        "round": "2026년 정기 일반건강검진"
+      },
+      "publishedAt": "2026-11-04T22:55:51.000Z",
+      "publicationObservedAt": "2026-11-04T23:51:20.191Z",
+      "verifiedAt": "2026-11-04T23:51:20.191Z",
+      "validUntil": "2026-11-18T23:51:20.191Z",
+      "publicationVerified": true,
+      "linkLabel": "의료급여 일반건강검진 해설",
+      "scopeNote": "이 해설은 2026년 20~64세 의료급여 수급권자의 정기 일반건강검진 안내입니다. 짝수년도 출생자 중심이며 개인별 대상 등록은 공단에서 확인하세요. 건강보험 가입자·66세 이상 생애전환기검진·추가 선택검사는 별도 범위입니다.",
+      "publicationEvidence": {
+        "method": "public_rss_and_page_read",
+        "title": "2026 의료급여 수급권자 일반건강검진, 짝수년생 대상·12월 31일 전 확인하세요",
+        "bodySha256": "9f528c1561b33d68defc032a556f420624123c372a7ce2bb6c2720a608546da8",
+        "sourceLinks": [
+          "https://paldal.suwon.go.kr/bbsplus/view.asp?bd_gubn=13&code=tbl_bbs_sub200510&menuid=sub200510&no=MTk3Nzcg&page=1",
+          "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999155&bnefType=all&svcId=408000000419",
+          "https://www.jejumed.com/checkup/program02",
+          "https://www.nhis.or.kr/nhis/index.do",
+          "https://www.nrc.go.kr/portal/html/content.do?depth=ph&menu_cd=03_02_00_01"
+        ],
+        "officialReview": [
+          "본문 공식 서비스 ID 408000000419, 보건복지부, 최신 목록·상세의 20~64세 의료급여 수급권자·당해연도·검진표/신분증 일치; sourceDifferences 없음",
+          "수원시 2026년 공식 안내에서 짝수년생·1962~2006년생·무료/추가비용 구분 대조",
+          "국립재활원·제주의료원에서 일반검진과 생애전환기검진, 연간기간·본인부담·확진검사 별도 일정 대조"
+        ]
+      },
+      "status": "published"
     }
   ]
 }
