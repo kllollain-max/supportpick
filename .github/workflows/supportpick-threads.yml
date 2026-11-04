@@ -1,0 +1,76 @@
+name: SupportPick Threads
+on:
+  schedule:
+    # KST 08, 12, 16, 20; missed slots never backfilled.
+    - cron: '0 23 * * *'
+    - cron: '0 3 * * *'
+    - cron: '0 7 * * *'
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        options: [preview, check-account]
+        default: preview
+        required: true
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: supportpick-threads-publisher
+  cancel-in-progress: false
+jobs:
+  threads:
+    if: github.event_name == 'workflow_dispatch' || (vars.SUPPORTPICK_THREADS_ENABLED == 'true' && vars.SUPPORTPICK_THREADS_CUTOVER_READY == 'true')
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    env:
+      TZ: Asia/Seoul
+      GITHUB_TOKEN: ${{ github.token }}
+      SUPPORTPICK_THREADS_ENABLED: ${{ vars.SUPPORTPICK_THREADS_ENABLED }}
+      SUPPORTPICK_THREADS_CUTOVER_READY: ${{ vars.SUPPORTPICK_THREADS_CUTOVER_READY }}
+      SUPPORTPICK_THREADS_CRON: ${{ github.event.schedule }}
+      SUPPORTPICK_THREADS_ACCESS_TOKEN: ${{ secrets.SUPPORTPICK_THREADS_ACCESS_TOKEN }}
+      SUPPORTPICK_THREADS_USER_ID: ${{ secrets.SUPPORTPICK_THREADS_USER_ID }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Restore latest validated data
+        if: github.event_name == 'schedule' || inputs.mode == 'preview'
+        # Workflow run numbers are not comparable across different workflows.
+        run: env -u GITHUB_RUN_NUMBER python tools/restore_latest_state.py
+      - name: Verify publisher safety
+        run: python -m unittest discover -s tests -p 'test_supportpick_threads.py' -v
+      - name: Preview without publishing
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'preview'
+        run: python tools/supportpick_threads.py preview
+      - name: Check account without publishing
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'check-account'
+        run: python tools/supportpick_threads.py check-account
+      - name: Publish one benefit in the current slot
+        if: github.event_name == 'schedule'
+        run: python tools/supportpick_threads.py publish
+      - name: Report failure
+        if: failure()
+        run: |
+          echo '## 지원금픽 Threads 실패' >> "$GITHUB_STEP_SUMMARY"
+          echo '자동 재게시하지 않습니다. 영구 원장과 실제 게시 상태를 대조해 원인을 확인하세요.' >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('threads-result.json')
+          if not p.exists():
+              p.write_text(json.dumps({'status':'failed','published':'unconfirmed','reason':'workflow_prerequisite_failed'}, indent=2))
+          PY
+      - name: Preserve result on success and failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: supportpick-threads-result-${{ github.run_id }}-${{ github.run_attempt }}
+          path: threads-result.json
+          if-no-files-found: warn
+          retention-days: 14
