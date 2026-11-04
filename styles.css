@@ -34,3 +34,12 @@ a.title-link{text-decoration:none;color:inherit;display:inline-block}.static-ben
 @media(max-width:600px){.header{flex-wrap:wrap;gap:12px}.header-actions{width:100%;justify-content:flex-start;gap:8px}.header-actions .quiet{font-size:12px;padding:8px 11px;min-height:44px}.feature-dialog{width:calc(100% - 28px);max-height:85dvh}.detail-actions button[data-share-benefit]{flex-basis:100%}}
 /* Installation handoff stays usable in narrow app-browser sheets. */
 .feature-dialog .install-actions{display:flex;flex-direction:column;gap:10px;margin:16px 0}.feature-dialog .install-actions a{display:flex;align-items:center;justify-content:center;text-decoration:none;min-height:44px;padding:10px 14px;border-radius:9px;text-align:center}.feature-dialog .install-actions button{width:100%}.feature-dialog .install-status{font-weight:650;color:var(--brand)}.feature-dialog input{min-width:0;box-sizing:border-box}.feature-dialog h2{overflow-wrap:anywhere}
+
+/* The existing native detail link covers its card body; sibling controls stay independent. */
+.benefit-card.is-linked .card-content{position:relative;border-radius:13px 13px 0 0;cursor:pointer}
+.card-detail-link::after{content:"";position:absolute;inset:0;border-radius:13px 13px 0 0}
+.benefit-card.is-linked .card-content:hover,.benefit-card.is-linked .card-content:focus-within{background:#f2f8f4}
+.card-detail-link:focus-visible::after{outline:3px solid var(--brand);outline-offset:-3px}
+.card-detail-link:active::after{background:#0b72590b}
+.benefit-card.is-linked .editorial-link{position:relative;z-index:1}
+.card-open-hint{display:block;margin-top:16px;color:var(--brand);font-size:12px;font-weight:700}
