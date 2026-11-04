@@ -14,7 +14,7 @@
   },
   "lease": {
     "owner": "threads-no-links-20261104",
-    "purpose": "Apply user link-free Threads text policy",
+    "purpose": "Apply user link-free text and alternating high-quality images",
     "started_at": "2026-11-04T22:50:00+09:00"
   },
   "last_observed_run_ids": [
@@ -294,5 +294,34 @@
     "url": "https://www.threads.com/@hid_1004/post/DfUX92OkcCd",
     "verification_completed_at": "2026-11-04T20:44:13.580205+09:00",
     "recorded_at": "2026-11-04T21:01:48+09:00"
+  },
+  "pending_change": {
+    "pr": 19,
+    "head_sha": "213cf9593e5b96670168d9f10713ec2a2b7b455b",
+    "status": "ci_in_progress",
+    "ci_run_id": "41844531799",
+    "scope": "Threads text, approved image assets, tests and operating documentation only",
+    "validation": {
+      "local_publisher_tests": 37,
+      "real_source_compositions": 10390,
+      "source_generation": "gov24-41814036806-1",
+      "image_raw_http_status": [
+        200,
+        200
+      ],
+      "image_dimensions": [
+        [
+          1254,
+          1254
+        ],
+        [
+          1254,
+          1254
+        ]
+      ]
+    },
+    "posts_sent": 0,
+    "site_deployment_requested": false,
+    "publication_ledger_modified": false
   }
 }
