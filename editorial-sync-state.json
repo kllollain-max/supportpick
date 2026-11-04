@@ -2,23 +2,23 @@
   "version": 1,
   "repository": "kllollain-max/supportpick",
   "mainSHA": "3eef9ec2aa199c375d22b6dfb5ee25cafaab5a41",
-  "lastCheckedAt": "2026-11-04T11:15:22.351Z",
+  "lastCheckedAt": "2026-11-04T12:34:20.230Z",
   "lastSuccessAt": "2026-11-04T11:15:22.351Z",
   "rss": {
     "url": "https://rss.blog.naver.com/bible_el.xml",
-    "itemsSeen": 21,
-    "sha256": "544635a5a74dffcf5df4903ae251f067b006b3f277ca9c7326a3d24a00449bc3",
-    "checkedAt": "2026-11-04T11:15:22.351Z"
+    "itemsSeen": 22,
+    "sha256": "842330218b3f6aaca659f79c1945dfad6b448a3e88d2ecbdeae0c8af3acf37d6",
+    "checkedAt": "2026-11-04T12:34:20.230Z"
   },
   "publicGeneration": "gov24-41814036806-1",
   "latestSuccessfulDeploymentRun": 41814036806,
   "lastEditorialDeploymentRun": 41813747268,
   "deploymentHeadSHA": "749839cf237971cf17a23b54d2b6f3120da164d4",
   "results": {
-    "newSupportPosts": 0,
-    "publicBodiesVerified": 5,
+    "newSupportPosts": 1,
+    "publicBodiesVerified": 6,
     "existingLinksMaintained": 4,
-    "linksAdded": 0,
+    "linksAdded": 1,
     "linksUpdated": 0,
     "held": 1,
     "unrelatedRssItemsExcluded": 16
@@ -28,7 +28,7 @@
       "postId": "224464854203",
       "url": "https://m.blog.naver.com/bible_el/224464854203",
       "title": "2026–2027 임신부 독감 무료접종, 산모수첩·신분증과 지정병원 확인하세요",
-      "lastSeenAt": "2026-11-04T11:15:22.351Z",
+      "lastSeenAt": "2026-11-04T12:34:20.230Z",
       "bodySha256": "dc085e6b52e9e4150c43603ab94ea3d9dbfe4efeae6d41027a6d9bdd987b1c0e",
       "sourceLinksSha256": "ec80f3f9f8291bfbdc378cc78b29636832a2e5635519693637021d7359b6951b",
       "publicBodyConfirmed": true,
@@ -53,7 +53,7 @@
       "postId": "224464673507",
       "url": "https://m.blog.naver.com/bible_el/224464673507",
       "title": "2026 문화누리카드 신청 대상·금액·방법, 11월 마감 전에 확인하세요",
-      "lastSeenAt": "2026-11-04T11:15:22.351Z",
+      "lastSeenAt": "2026-11-04T12:34:20.230Z",
       "bodySha256": "a113fdc9dd86c099c65b1c24f61c0c0fbccde25120e729489f55cc83a89dc71b",
       "sourceLinksSha256": "e207b7a269131adc2b4d1a4ae21e895fc2326fe515d6f580f72e8b39b436c7b8",
       "publicBodyConfirmed": true,
@@ -78,7 +78,7 @@
       "postId": "224464848565",
       "url": "https://m.blog.naver.com/bible_el/224464848565",
       "title": "2026 근로장려금 기한 후 신청, 12월 1일 마감·소득재산 조건 확인",
-      "lastSeenAt": "2026-11-04T11:15:22.351Z",
+      "lastSeenAt": "2026-11-04T12:34:20.230Z",
       "bodySha256": "854aece79753c0a3ae0ca8c666ad2bac9bdb0eadc449e0874f3c8208975bd449",
       "sourceLinksSha256": "1597b3b37463fee15db0d127f7f8efd9fb3808a095637848b39bf140d68d0c43",
       "publicBodyConfirmed": true,
@@ -103,7 +103,7 @@
       "postId": "224426296398",
       "url": "https://m.blog.naver.com/bible_el/224426296398",
       "title": "독감 무료접종 대상 확인법 + 병원별 가격 비교표",
-      "lastSeenAt": "2026-11-04T11:15:22.351Z",
+      "lastSeenAt": "2026-11-04T12:34:20.230Z",
       "bodySha256": "94fd36373bf48c75c690cc55bad0f26e86e2a934e86478edf2d88f6010fbb215",
       "sourceLinksSha256": "3f08a9ca409663e711f75ee55dd5a5d3c611c93cf2b61bd3cf17d38672066a6e",
       "publicBodyConfirmed": true,
@@ -122,7 +122,7 @@
       "postId": "224465029433",
       "url": "https://m.blog.naver.com/bible_el/224465029433",
       "title": "2026 에너지바우처 신청 대상·지원금액·준비서류, 두 가지 자격부터 확인하세요",
-      "lastSeenAt": "2026-11-04T11:15:22.351Z",
+      "lastSeenAt": "2026-11-04T12:34:20.230Z",
       "bodySha256": "79c9c2a620030098d49c173149f430ca5b868e870df64bbbaecff966916505c1",
       "publicBodyConfirmed": true,
       "verificationStatus": "maintained",
@@ -148,9 +148,30 @@
       ],
       "publicCardVerifiedAt": "2026-11-04T11:15:22.351Z",
       "publicDetailVerifiedAt": "2026-11-04T11:15:22.351Z"
+    },
+    "224465161051": {
+      "postId": "224465161051",
+      "url": "https://m.blog.naver.com/bible_el/224465161051",
+      "title": "2026 경기도 청년기본소득 4분기 신청, 12월 1일 마감·대상과 서류 확인",
+      "lastSeenAt": "2026-11-04T12:34:20.230Z",
+      "bodySha256": "fad60d35089a9fce50df9ce53004fbcc293fa6114eb6af2f2e1e586fe522db0a",
+      "sourceLinksSha256": "828a00de19363f9ac557282e41e2913f1b0677e95e7aa1cd719a9c1bc5f6d48f",
+      "publicBodyConfirmed": true,
+      "verificationStatus": "PR_open_CI_pending",
+      "linkedBenefitId": "641000000138",
+      "sourceKey": "[\"641000000138\",\"경기도청년기본소득\",\"경기도\",\"경기\",\"(26년 1분기) 3.3. ~ 4.1. (2분기) 6.1. ~ 6.30. (3분기) 9.1. ~ 10.2. (4분기) 11.2. ~ 12.01.\",\"만 24세 청년에게 지역화폐로 기본소득 지급\",\"20260814170555\",\"2026-08-14\"]",
+      "scope": {
+        "year": 2026,
+        "region": "경기",
+        "round": "2026년 4분기"
+      },
+      "publicationObservedAt": "2026-11-04T12:31:47.322Z",
+      "verifiedAt": "2026-11-04T12:31:47.322Z",
+      "validUntil": "2026-11-18T12:31:47.322Z",
+      "lastRegistrationPR": 17
     }
   },
-  "nextResumeStep": "read_current_main_and_checkpoint_then_check_rss; preserve four existing links; no duplicate PR12 registration/deployment",
+  "nextResumeStep": "inspect PR17 CI; merge exact head only after CI success, deploy merge SHA, verify public links",
   "errors": [],
   "retryBudget": {
     "maxAttemptsPerFingerprint": 2,
@@ -173,15 +194,14 @@
   },
   "deployment": "no_change_public_render_verified",
   "currentUpdate": {
-    "pr": 12,
-    "headSHA": "4cc43a1a6bd36840b5b4415bda4a8c517fe4ded1",
-    "mergeSHA": "749839cf237971cf17a23b54d2b6f3120da164d4",
-    "ciRun": 41813518023,
-    "deploymentStatus": "success",
-    "approvedSHA": "749839cf237971cf17a23b54d2b6f3120da164d4",
-    "deployRun": 41813747268,
-    "publicVerificationStatus": "verified",
-    "publicVerifiedAt": "2026-11-04T11:15:22.351Z"
+    "pr": 17,
+    "headSHA": "a6ea3afb2df4c66a3dca4376d13abef488bf8799",
+    "ciRun": 41830234201,
+    "status": "ci_build_pending",
+    "approvedDataFiles": [
+      "editorials.json",
+      "editorial-data.js"
+    ]
   },
   "lastPartialRunAt": "2026-11-04T10:26:09.039Z",
   "errorHistory": [
