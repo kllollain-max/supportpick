@@ -110,18 +110,52 @@ class PublisherTests(unittest.TestCase):
     def test_missed_or_unknown_slot_rejected(self):
         for now, cron in [(NOW + timedelta(hours=2),'0 23 * * *'), (NOW,'unknown')]:
             with self.assertRaises(ValueError): t.current_slot(now, cron)
-    def test_content_no_open_claim_and_whole_links(self):
+    def test_content_has_no_links_and_retains_profile_cta(self):
         row = feed()['items'][0]
         row['publishedBlogUrl'] = 'https://blog.naver.com/bible_el/123456'
         texts = t.compose(row)
         self.assertTrue(all(len(x) <= 500 for x in texts))
         self.assertIn('현재 접수를 보장하지 않습니다', texts[1])
-        self.assertIn(row['officialUrl'], texts[1])
+        self.assertTrue(all(not t.TEXT_LINK.search(x) for x in texts))
         self.assertTrue(all(x.endswith('자세한 사항은 프로필링크 확인') for x in texts))
         self.assertTrue(all('blog.naver.com' not in x and t.SITE not in x for x in texts))
         self.assertIn(row['title'], texts[2])
         row['officialUrl'] += 'a' * 600
-        with self.assertRaises(ValueError): t.compose(row)
+        self.assertEqual(t.compose(row), texts)
+
+    def test_source_addresses_removed_before_truncation_without_changing_source(self):
+        for address in ['https://plus.gov.kr/' + 'a' * 700, 'HTTP://example.com/a',
+                        'www.gov.kr/path', 'plus.gov.kr/path', 'https://t.co/abc',
+                        'ftp://example.com/a', '정책.한국/신청']:
+            with self.subTest(address=address[:35]):
+                row = feed()['items'][0]
+                for key in ['title', 'summary', 'organization', 'target', 'period', 'method', 'category']:
+                    row[key] = '안내 ' + address + ' 조건 확인'
+                original = copy.deepcopy(row)
+                texts = t.compose(row)
+                self.assertTrue(all(not t.TEXT_LINK.search(x) for x in texts))
+                self.assertTrue(all(x.endswith(t.CTA) for x in texts))
+                self.assertNotIn('example.com', '\n'.join(texts))
+                self.assertEqual(row, original)
+
+    def test_published_metadata_keeps_official_source_but_sent_texts_have_no_links(self):
+        self.run_publish()
+        self.assertEqual(self.store.state['records'][0]['official_url'], feed()['items'][0]['officialUrl'])
+        self.assertTrue(all(not t.TEXT_LINK.search(call[0]) for call in self.api.calls))
+
+    def test_legacy_pending_link_is_held_without_rewriting_or_sending(self):
+        self.api.verify_fail = True
+        with self.assertRaises(RuntimeError): self.run_publish()
+        self.api.verify_fail = False
+        record = self.store.state['records'][0]
+        record['texts'][1] += '\nhttps://plus.gov.kr/benefit'
+        record['content_hash'] = t.hashlib.sha256(json.dumps(record['texts'], ensure_ascii=False).encode()).hexdigest()
+        original_texts = copy.deepcopy(record['texts'])
+        with self.assertRaisesRegex(ValueError, 'link_free_publication_required'):
+            t.resume_publication(self.store, self.api, NOW, '1004', '124', '1001')
+        self.assertEqual(len(self.api.calls), 1)
+        self.assertEqual(self.store.state['records'][0]['texts'], original_texts)
+        self.assertEqual(self.store.state['records'][0]['status'], 'pending')
     def test_social_links_and_images_cannot_point_to_other_accounts(self):
         row = feed()['items'][0]; row['publishedBlogUrl'] = 'https://blog.naver.com/other/123'
         self.assertNotIn('/other/', t.compose(row)[2])
@@ -279,3 +313,4 @@ class PopularityTests(unittest.TestCase):
         self.assertIn('실시간 검색량', result['selection']['note'])
 
 if __name__ == '__main__': unittest.main()
+
