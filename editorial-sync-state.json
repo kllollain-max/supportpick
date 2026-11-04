@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "kllollain-max/supportpick",
-  "mainSHA": "3eef9ec2aa199c375d22b6dfb5ee25cafaab5a41",
+  "mainSHA": "0b86a80ae23b60ddd95bcf37d57edf80963e7744",
   "lastCheckedAt": "2026-11-04T12:34:20.230Z",
   "lastSuccessAt": "2026-11-04T11:15:22.351Z",
   "rss": {
@@ -157,7 +157,7 @@
       "bodySha256": "fad60d35089a9fce50df9ce53004fbcc293fa6114eb6af2f2e1e586fe522db0a",
       "sourceLinksSha256": "828a00de19363f9ac557282e41e2913f1b0677e95e7aa1cd719a9c1bc5f6d48f",
       "publicBodyConfirmed": true,
-      "verificationStatus": "PR_open_CI_pending",
+      "verificationStatus": "merged_awaiting_deployment",
       "linkedBenefitId": "641000000138",
       "sourceKey": "[\"641000000138\",\"경기도청년기본소득\",\"경기도\",\"경기\",\"(26년 1분기) 3.3. ~ 4.1. (2분기) 6.1. ~ 6.30. (3분기) 9.1. ~ 10.2. (4분기) 11.2. ~ 12.01.\",\"만 24세 청년에게 지역화폐로 기본소득 지급\",\"20260814170555\",\"2026-08-14\"]",
       "scope": {
@@ -168,10 +168,12 @@
       "publicationObservedAt": "2026-11-04T12:31:47.322Z",
       "verifiedAt": "2026-11-04T12:31:47.322Z",
       "validUntil": "2026-11-18T12:31:47.322Z",
-      "lastRegistrationPR": 17
+      "lastRegistrationPR": 17,
+      "registrationMergeSHA": "0b86a80ae23b60ddd95bcf37d57edf80963e7744",
+      "deploymentRun": 41830603644
     }
   },
-  "nextResumeStep": "inspect PR17 CI; merge exact head only after CI success, deploy merge SHA, verify public links",
+  "nextResumeStep": "verify deploy run 41830603644 then public card/hash detail/static detail for PR17; do not duplicate registration or dispatch",
   "errors": [],
   "retryBudget": {
     "maxAttemptsPerFingerprint": 2,
@@ -197,11 +199,13 @@
     "pr": 17,
     "headSHA": "a6ea3afb2df4c66a3dca4376d13abef488bf8799",
     "ciRun": 41830234201,
-    "status": "ci_build_pending",
+    "status": "deployment_in_progress",
     "approvedDataFiles": [
       "editorials.json",
       "editorial-data.js"
-    ]
+    ],
+    "mergeSHA": "0b86a80ae23b60ddd95bcf37d57edf80963e7744",
+    "deployRun": 41830603644
   },
   "lastPartialRunAt": "2026-11-04T10:26:09.039Z",
   "errorHistory": [
