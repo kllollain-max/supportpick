@@ -25,7 +25,8 @@ def main():
     except Exception:
         raise ValueError('latest_state_lookup_failed') from None
     for run in runs:
-        if run.get('head_branch')!='main' or run.get('event') not in ('schedule','workflow_dispatch') or run.get('run_number',0)>=int(os.environ.get('GITHUB_RUN_NUMBER','2147483647')):continue
+        # Run numbers are local to each workflow; deploy #2 may need operations #20.
+        if run.get('head_branch')!='main' or run.get('event') not in ('schedule','workflow_dispatch') or str(run.get('id'))==os.environ.get('GITHUB_RUN_ID'):continue
         artifacts=get('/actions/runs/'+str(run['id'])+'/artifacts')['artifacts']
         selected=next((a for a in artifacts if a['name']=='supportpick-runtime-state' and not a['expired']),None)
         if not selected:raise ValueError('latest_runtime_state_unavailable')
