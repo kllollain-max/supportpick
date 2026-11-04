@@ -46,7 +46,15 @@ def build(destination,state=None,allow_sample=False,public_base=None):
     registry_json=json.dumps(registry,ensure_ascii=False,separators=(',',':'))
     (output/'editorial-data.js').write_text('window.SUPPORTPICK_EDITORIALS = '+registry_json.replace('<','\\u003c')+';\n')
     fields={'id','title','organization','category','region','regionBasis','audience','supportType','supportTypes','summary','targetPreview','period','periodKind','startDate','endDate','officialUrl','officialLinkStatus','source','sourceUpdatedAt','checkedAt','detailShard','sourceConflicts'}
-    public_feed={**feed,'items':[{k:v for k,v in row.items() if k in fields} for row in feed['items']]}
+    # Keep exact classification conflicts visible and reviewable in both cards and details.
+    source_differences={}
+    if snapshot:
+        for shard_path in (snapshot/'details'/feed['generation']).glob('*.json'):
+            shard=json.loads(shard_path.read_text())
+            for sid,row in shard['items'].items():
+                raw=row.get('rawSource',{})
+                source_differences[sid]={key:{'list':raw.get('serviceList',{}).get(key),'detail':raw.get('serviceDetail',{}).get(key)} for key in row.get('sourceConflicts',[])}
+    public_feed={**feed,'items':[{**{k:v for k,v in row.items() if k in fields},'sourceDifferences':source_differences.get(row['id'],{})} for row in feed['items']]}
     public_json=json.dumps(public_feed,ensure_ascii=False,separators=(',',':'))
     (output/'data.json').write_text(public_json)
     (output/'data.js').write_text('window.SUPPORTPICK_DATA = '+public_json.replace('<','\\u003c')+';\n')

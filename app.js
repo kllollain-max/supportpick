@@ -4,8 +4,8 @@
   const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   function explanation(p,detail=false){
     const a=window.SupportPickEditorials?.find(p,window.SUPPORTPICK_EDITORIALS);if(!a)return '';
-    const link=`<a class="editorial-link" href="${esc(a.url)}" target="_blank" rel="noopener noreferrer">${detail?'지원금픽 해설 보기':'신청방법 해설'} ↗</a>`;
-    return detail?`<section class="detail-block editorial-block"><h3>지원금픽 해설</h3><p>대상 조건·준비 서류·신청 순서를 쉽게 풀어봤어요. 신청 전에는 위의 공식 안내를 확인하세요.</p><p>${esc(a.title)}</p>${link}</section>`:`<p class="editorial-note">${link}</p>`;
+    const link=`<a class="editorial-link" href="${esc(a.url)}" target="_blank" rel="noopener noreferrer">${esc(detail?'지원금픽 해설 보기':a.linkLabel||'신청방법 해설')} ↗</a>`;
+    return detail?`<section class="detail-block editorial-block"><h3>지원금픽 해설</h3><p>대상 조건·준비 서류·신청 순서를 쉽게 풀어봤어요. 신청 전에는 위의 공식 안내를 확인하세요.</p><p>${esc(a.title)}</p>${a.scopeNote?`<p class="context-note">${esc(a.scopeNote)}</p>`:''}${link}</section>`:`<p class="editorial-note">${link}</p>`;
   }
   const initial={tab:'all',query:'',category:'',region:'',audience:'',supportType:'',sort:'updated',scroll:0,limit:30};
   let view={...initial},snapshot={raw:null,data:C.blank()},writable=true,items=[],feedError='',toastTimer,detailFromList=false;

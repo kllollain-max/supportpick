@@ -29,3 +29,27 @@ test('registration CLI preserves history and refuses an unconfirmed draft',()=>{
   assert.throws(()=>cp.execFileSync(process.execPath,args,{stdio:'pipe'}));assert.equal(fs.readFileSync(output,'utf8'),before);
  }finally{fs.rmSync(dir,{recursive:true,force:true});}
 });
+test('only the exact reviewed classification difference permits an explanation',()=>{
+ const diff={'지원유형':{list:'서비스(의료)||의료지원',detail:'서비스(의료)'}};
+ const row={...item,sourceConflicts:['지원유형'],sourceDifferences:diff};
+ assert.equal(E.find(row,registry(),now),null);
+ const reviewed={...article,reviewedSourceDifferences:diff};
+ assert.equal(E.find(row,registry(reviewed),now).url,article.url);
+ const changed={...row,sourceDifferences:{'지원유형':{list:'현금',detail:'서비스(의료)'}}};
+ assert.equal(E.find(changed,registry(reviewed),now),null);
+ const incomplete={...row,sourceDifferences:{}};
+ assert.equal(E.find(incomplete,registry(reviewed),now),null);
+});
+test('a classification review never overrides eligibility or period conflicts',()=>{
+ const diff={'지원유형':{list:'문화/여가지원||이용권',detail:'이용권'}};
+ const a={...article,reviewedSourceDifferences:diff};
+ for(const key of ['지원대상','신청기한','지원내용']){
+  const row={...item,sourceConflicts:['지원유형',key],sourceDifferences:{...diff,[key]:{list:'one',detail:'two'}}};
+  assert.equal(E.find(row,registry(a),now),null);
+ }
+});
+test('public observation is preserved without inventing a publication timestamp',()=>{
+ const a={...article,publishedAt:null,publicationObservedAt:'2026-11-04T06:00:00+09:00'};
+ assert.equal(E.find(item,registry(a),now).url,article.url);
+ assert.equal(E.find(item,registry({...a,publicationObservedAt:null}),now),null);
+});
