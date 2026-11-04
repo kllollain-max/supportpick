@@ -178,7 +178,9 @@ def header(prefix):
             f'<img class="brand-badge" src="{prefix}supportpick-badge.png" width="48" height="48" alt="">'
             '<span><strong>지원금픽<span class="brand-dot">.</span></strong>'
             '<small>한눈에 보는 생활혜택</small></span></a>'
-            f'<a class="quiet" href="{prefix}?tab=apps">내 신청</a></header>')
+            '<div class="header-actions"><button class="quiet" type="button" data-share-site aria-label="지원금픽 공유하기">↗ 공유하기</button>'
+            '<button class="quiet" type="button" data-install-app>＋ 홈 화면에 추가</button>'
+            f'<a class="quiet" href="{prefix}?tab=apps">내 신청</a></div></header>')
 
 
 def footer(prefix):
@@ -201,7 +203,10 @@ def shell(title, description, body, path, prefix, base, indexable=True, structur
               f'<meta name="robots" content="{robots}"><title>{escape(title)}</title>'
               f'<meta name="description" content="{escape(description, quote=True)}">'
               f'<link rel="icon" href="{prefix}supportpick-badge.png"><link rel="stylesheet" href="{prefix}careerpick-base.css">'
-              f'<link rel="stylesheet" href="{prefix}styles.css">{data}</head><body>'
+              f'<link rel="stylesheet" href="{prefix}styles.css">'
+              f'<meta name="theme-color" content="#0b7259"><meta name="apple-mobile-web-app-title" content="지원금픽">'
+              f'<link rel="manifest" href="{prefix}manifest.webmanifest"><link rel="apple-touch-icon" href="{prefix}app-icon-180.png">'
+              f'<script src="{prefix}app-features.js" defer></script>{data}</head><body>'
               '<a class="skip" href="#main">본문 바로가기</a>'
               + '<div class="site-shell">' + header(prefix) + '<main id="main" class="static-benefit">'
               + body + '</main>' + footer(prefix) + '</div></body></html>')
@@ -259,7 +264,8 @@ def render_benefit(row, guide, blog, reasons, related, base, current, feed_statu
     actions = (f'<a class="primary" href="{escape(safe_url(row.get("officialUrl")) or "https://plus.gov.kr/", quote=True)}" '
                'target="_blank" rel="noopener noreferrer">정부24 공식 안내 확인 ↗</a>'
                '<button class="quiet" data-save disabled>☆ 관심 저장</button>'
-               '<button class="quiet" data-track disabled>내 신청에 기록</button>')
+               '<button class="quiet" data-track disabled>내 신청에 기록</button>'
+               '<button class="quiet" type="button" data-share-benefit>↗ 이 지원금 공유</button>')
     if safe_url(row.get('applicationUrl')):
         actions += ('<a class="quiet" href="' + escape(row['applicationUrl'], quote=True)
                     + '" target="_blank" rel="noopener noreferrer">공식 신청 창구 ↗</a>')
