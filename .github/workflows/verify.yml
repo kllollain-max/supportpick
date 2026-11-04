@@ -1,6 +1,7 @@
 name: Verify SupportPick release
 on:
   pull_request:
+    types: [opened, synchronize, reopened, labeled]
   workflow_dispatch:
     inputs:
       backup_probe:
@@ -35,7 +36,7 @@ jobs:
           retention-days: 3
 
   backup-probe:
-    if: github.event_name == 'workflow_dispatch' && inputs.backup_probe
+    if: (github.event_name == 'workflow_dispatch' && inputs.backup_probe) || (github.event_name == 'pull_request' && github.event.action == 'labeled' && github.event.label.name == 'r2-probe-approved-20261105' && github.event.pull_request.number == 26 && github.event.pull_request.head.repo.full_name == github.repository)
     needs: verify
     runs-on: ubuntu-latest
     timeout-minutes: 30
