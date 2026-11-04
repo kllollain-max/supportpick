@@ -178,4 +178,62 @@ class PublisherTests(unittest.TestCase):
         self.assertEqual(t.publication_context(scheduled), '0 23 * * *')
         with self.assertRaises(ValueError): t.publication_context({**scheduled, 'SUPPORTPICK_THREADS_CRON':'unknown'})
 
+    def test_resume_verifies_existing_main_and_only_posts_missing_replies(self):
+        self.api.verify_fail = True
+        with self.assertRaises(RuntimeError): self.run_publish()
+        self.api.verify_fail = False
+        result = t.resume_publication(self.store, self.api, NOW, '1004', '124', '1001')
+        self.assertTrue(result['resumed'])
+        self.assertEqual(len(self.store.state['records']), 1)
+        self.assertEqual([c[1] for c in self.api.calls], [None, '1001', '1001'])
+        self.assertEqual(self.store.state['records'][0]['status'], 'published')
+
+    def test_resume_cannot_clear_an_ambiguous_reply_without_receipt(self):
+        self.api.fail_at = 2
+        with self.assertRaises(RuntimeError): self.run_publish()
+        original = copy.deepcopy(self.store.state)
+        with self.assertRaisesRegex(RuntimeError, 'ambiguous_send'):
+            t.resume_publication(self.store, self.api, NOW, '1004', '124', '1001')
+        self.assertEqual(len(self.api.calls), 2)
+        self.assertEqual(original, self.store.state)
+
+    def test_resume_rejects_wrong_id_stale_source_and_content_tampering(self):
+        self.api.verify_fail = True
+        with self.assertRaises(RuntimeError): self.run_publish()
+        self.api.verify_fail = False
+        for main_id, now in [('9999', NOW), ('1001', NOW + timedelta(days=1))]:
+            with self.assertRaises(ValueError):
+                t.resume_publication(self.store, self.api, now, '1004', '124', main_id)
+        self.store.state['records'][0]['texts'][0] += 'altered'
+        with self.assertRaisesRegex(ValueError, 'content_hash'):
+            t.resume_publication(self.store, self.api, NOW, '1004', '124', '1001')
+        self.assertEqual(len(self.api.calls), 1)
+
+    def test_only_observed_brand_topic_hash_transformation_is_accepted(self):
+        text = t.compose(feed()['items'][0])[0]
+        class ReadAPI(t.Threads):
+            def call(self, method, path, params=None):
+                self.asserted_method = method
+                return self.result
+        api = ReadAPI('fake', pause=lambda _: None)
+        api.result = {'id':'1001', 'text':text.replace('\n\n#지원금픽 ', '\n\n지원금픽 ', 1),
+                      'permalink':'https://www.threads.com/@hid_1004/post/test'}
+        self.assertTrue(api.verify('1001', text))
+        self.assertEqual(api.asserted_method, 'GET')
+        for changed in [api.result['text'].replace(t.CTA, '다른 안내'),
+                        api.result['text'].replace('#생활안정', '생활안정'),
+                        api.result['text'] + 'changed']:
+            api.result['text'] = changed
+            with self.assertRaisesRegex(RuntimeError, 'verification_failed'):
+                api.verify('1001', text)
+
+    def test_id_and_permalink_still_required_after_topic_normalization(self):
+        text = t.compose(feed()['items'][0])[0]
+        class ReadAPI(t.Threads):
+            def call(self, *args): return self.result
+        api = ReadAPI('fake', pause=lambda _: None)
+        for result in [{'id':'wrong', 'text':text, 'permalink':'url'}, {'id':'1001', 'text':text}]:
+            api.result = result
+            with self.assertRaises(RuntimeError): api.verify('1001', text)
+
 if __name__ == '__main__': unittest.main()
