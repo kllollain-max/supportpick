@@ -121,13 +121,13 @@ class CollectionTests(unittest.TestCase):
             def __enter__(self):return self
             def __exit__(self,*args):pass
             def read(self,n):return json.dumps(self.value).encode()
-        opener=Mock();opener.open.side_effect=[Response({'workflow_runs':[{'id':1,'run_number':1,'head_branch':'main','event':'schedule'}]}),Response({'artifacts':[]})]
+        opener=Mock();opener.open.side_effect=[Response({'workflow_runs':[{'id':1,'run_number':1,'head_branch':'main','event':'schedule','path':'.github/workflows/supportpick-operations.yml','status':'completed','conclusion':'success'}]}),Response({'artifacts':[]})]
         with patch.object(restore_latest_state,'ensure_bootstrap'),patch.object(restore_latest_state,'build_opener',return_value=opener),patch.dict('os.environ',{'GITHUB_REPOSITORY':'owner/supportpick','GITHUB_TOKEN':'test-only-placeholder','GITHUB_RUN_NUMBER':'2'}):
             with self.assertRaisesRegex(ValueError,'latest_runtime_state_unavailable'):restore_latest_state.main()
     def test_code_deployment_restores_newest_operations_data_across_workflow_numbers(self):
         import io,os,zipfile,restore_latest_state
         with tempfile.TemporaryDirectory() as temp:
-            root=Path(temp);collect(Client(),root/'run','latest-data');install_candidate(root/'run',root/'state')
+            root=Path(temp);collect(Client(),root/'run','gov24-200-1');install_candidate(root/'run',root/'state')
             buf=io.BytesIO()
             with zipfile.ZipFile(buf,'w') as z:
                 for path in (root/'state').rglob('*'):
@@ -138,7 +138,7 @@ class CollectionTests(unittest.TestCase):
                 def __exit__(self,*args):pass
                 def read(self,n):return self.data
             opener=Mock();opener.open.side_effect=[
-                Response(json.dumps({'workflow_runs':[{'id':200,'run_number':20,'head_branch':'main','event':'schedule'}]}).encode()),
+                Response(json.dumps({'workflow_runs':[{'id':200,'run_number':20,'head_branch':'main','event':'schedule','path':'.github/workflows/supportpick-operations.yml','status':'completed','conclusion':'success'}]}).encode()),
                 Response(json.dumps({'artifacts':[{'id':300,'name':'supportpick-runtime-state','expired':False}]}).encode()),
                 Response(buf.getvalue())]
             previous=Path.cwd()
@@ -146,8 +146,30 @@ class CollectionTests(unittest.TestCase):
                 os.chdir(root)
                 with patch.object(restore_latest_state,'ensure_bootstrap'),patch.object(restore_latest_state,'build_opener',return_value=opener),patch.dict('os.environ',{'GITHUB_REPOSITORY':'owner/supportpick','GITHUB_TOKEN':'test-only-placeholder','GITHUB_RUN_NUMBER':'2','GITHUB_RUN_ID':'400'}):
                     restore_latest_state.main()
-                self.assertEqual(read_current(root/'collection-state')[0]['generation'],'latest-data')
+                self.assertEqual(read_current(root/'collection-state')[0]['generation'],'gov24-200-1')
+                before=(root/'collection-state/current.json').read_bytes()
+                opener.open.side_effect=[
+                    Response(json.dumps({'workflow_runs':[{'id':201,'head_branch':'main','event':'schedule','path':'.github/workflows/supportpick-operations.yml','status':'completed','conclusion':'success'}]}).encode()),
+                    Response(json.dumps({'artifacts':[{'id':301,'name':'supportpick-runtime-state','expired':False}]}).encode()),Response(buf.getvalue())]
+                with patch.object(restore_latest_state,'ensure_bootstrap'),patch.object(restore_latest_state,'build_opener',return_value=opener),patch.dict('os.environ',{'GITHUB_REPOSITORY':'owner/supportpick','GITHUB_TOKEN':'test-only-placeholder','GITHUB_RUN_ID':'400'}):
+                    with self.assertRaisesRegex(ValueError,'successful_run_generation_mismatch'):restore_latest_state.main()
+                self.assertEqual((root/'collection-state/current.json').read_bytes(),before)
             finally:os.chdir(previous)
+    def test_unfiltered_history_finds_newest_when_filtered_workflow_index_omits_it(self):
+        from restore_latest_state import latest_completed_operations_run
+        old={'id':100,'created_at':'2026-11-04T08:00:00Z','head_branch':'main','event':'schedule','path':'.github/workflows/supportpick-operations.yml','status':'completed'}
+        new={**old,'id':200,'created_at':'2026-11-04T09:00:00Z'}
+        others=[{**new,'id':500,'path':'.github/workflows/supportpick-threads.yml'},
+                {**new,'id':600,'head_branch':'untrusted'}, {**new,'id':700,'status':'in_progress'},
+                {**new,'id':800,'event':'pull_request'}]
+        def get(path):return {'workflow_runs':[old] if '/actions/workflows/' in path else [old,*others,new]}
+        self.assertEqual(latest_completed_operations_run(get,'900')['id'],200)
+    def test_operations_lookup_pages_past_unrelated_workflows(self):
+        from restore_latest_state import latest_completed_operations_run
+        other={'id':500,'path':'.github/workflows/supportpick-threads.yml','head_branch':'main','event':'schedule','status':'completed'}
+        latest={**other,'id':200,'path':'.github/workflows/supportpick-operations.yml'}
+        def get(path):return {'workflow_runs':[latest] if 'page=2' in path else [other]*100}
+        self.assertEqual(latest_completed_operations_run(get,'900')['id'],200)
     def test_runtime_bundle_bounds_size_without_deleting_source_history(self):
         with tempfile.TemporaryDirectory() as p:
             p=Path(p)
