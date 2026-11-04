@@ -124,6 +124,30 @@ class CollectionTests(unittest.TestCase):
         opener=Mock();opener.open.side_effect=[Response({'workflow_runs':[{'id':1,'run_number':1,'head_branch':'main','event':'schedule'}]}),Response({'artifacts':[]})]
         with patch.object(restore_latest_state,'ensure_bootstrap'),patch.object(restore_latest_state,'build_opener',return_value=opener),patch.dict('os.environ',{'GITHUB_REPOSITORY':'owner/supportpick','GITHUB_TOKEN':'test-only-placeholder','GITHUB_RUN_NUMBER':'2'}):
             with self.assertRaisesRegex(ValueError,'latest_runtime_state_unavailable'):restore_latest_state.main()
+    def test_code_deployment_restores_newest_operations_data_across_workflow_numbers(self):
+        import io,os,zipfile,restore_latest_state
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);collect(Client(),root/'run','latest-data');install_candidate(root/'run',root/'state')
+            buf=io.BytesIO()
+            with zipfile.ZipFile(buf,'w') as z:
+                for path in (root/'state').rglob('*'):
+                    if path.is_file():z.write(path,str(path.relative_to(root/'state')))
+            class Response:
+                def __init__(self,data):self.data=data
+                def __enter__(self):return self
+                def __exit__(self,*args):pass
+                def read(self,n):return self.data
+            opener=Mock();opener.open.side_effect=[
+                Response(json.dumps({'workflow_runs':[{'id':200,'run_number':20,'head_branch':'main','event':'schedule'}]}).encode()),
+                Response(json.dumps({'artifacts':[{'id':300,'name':'supportpick-runtime-state','expired':False}]}).encode()),
+                Response(buf.getvalue())]
+            previous=Path.cwd()
+            try:
+                os.chdir(root)
+                with patch.object(restore_latest_state,'ensure_bootstrap'),patch.object(restore_latest_state,'build_opener',return_value=opener),patch.dict('os.environ',{'GITHUB_REPOSITORY':'owner/supportpick','GITHUB_TOKEN':'test-only-placeholder','GITHUB_RUN_NUMBER':'2','GITHUB_RUN_ID':'400'}):
+                    restore_latest_state.main()
+                self.assertEqual(read_current(root/'collection-state')[0]['generation'],'latest-data')
+            finally:os.chdir(previous)
     def test_runtime_bundle_bounds_size_without_deleting_source_history(self):
         with tempfile.TemporaryDirectory() as p:
             p=Path(p)

@@ -3,9 +3,9 @@ import argparse,hashlib,json,os,re,shutil
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote,quote
-from html import escape
 from refresh import read_current,verify_snapshot
 from bootstrap_state import ensure_bootstrap
+from search_metadata import public_metadata, read_verifications, write_sitemap
 ROOT=Path(__file__).resolve().parents[1]
 STATIC=('index.html','privacy.html','about.html','icon.svg','careerpick-base.css','styles.css','core.js','app.js','supportpick-badge.png','supportpick-banner.png','editorials.js')
 class Links(HTMLParser):
@@ -30,6 +30,7 @@ def build(destination,state=None,allow_sample=False,public_base=None):
     source=snapshot or ROOT
     feed=verify_snapshot(snapshot) if snapshot else json.loads((ROOT/'data.json').read_text())
     if pointer and (feed.get('isSample') is not False or len(feed['items'])!=pointer['count']):raise ValueError('sample_not_operational')
+    verifications=read_verifications(ROOT/'search-verification.json') if public_base else {}
     output.mkdir(parents=True,exist_ok=True)
     for name in STATIC:
         p=ROOT/name
@@ -38,9 +39,9 @@ def build(destination,state=None,allow_sample=False,public_base=None):
         if public_base and name.endswith('.html'):
             text=(output/name).read_text().replace('content="noindex,nofollow"','content="index,follow"')
             text=text.replace('<span class="preview-tag">미리보기</span>','').replace(' · 공개 전 미리보기','')
-            canonical=public_base+('' if name=='index.html' else name)
-            text=text.replace('</head>','<link rel="canonical" href="'+escape(canonical,quote=True)+'"></head>')
+            text=public_metadata(text,name,public_base,verifications)
             (output/name).write_text(text)
+    if public_base:write_sitemap(output,public_base)
     registry=json.loads((ROOT/'editorials.json').read_text())
     if registry.get('version')!=1 or not isinstance(registry.get('articles'),list):raise ValueError('invalid_editorial_registry')
     registry_json=json.dumps(registry,ensure_ascii=False,separators=(',',':'))
