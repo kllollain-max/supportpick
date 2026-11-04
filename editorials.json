@@ -139,6 +139,42 @@
         ]
       },
       "status": "published"
+    },
+    {
+      "benefitId": "641000000138",
+      "title": "2026 경기도 청년기본소득 4분기 신청, 12월 1일 마감·대상과 서류 확인",
+      "url": "https://m.blog.naver.com/bible_el/224465161051",
+      "sourceKey": "[\"641000000138\",\"경기도청년기본소득\",\"경기도\",\"경기\",\"(26년 1분기) 3.3. ~ 4.1. (2분기) 6.1. ~ 6.30. (3분기) 9.1. ~ 10.2. (4분기) 11.2. ~ 12.01.\",\"만 24세 청년에게 지역화폐로 기본소득 지급\",\"20260814170555\",\"2026-08-14\"]",
+      "scope": {
+        "year": 2026,
+        "region": "경기",
+        "round": "2026년 4분기"
+      },
+      "publicationObservedAt": "2026-11-04T12:31:47.322Z",
+      "verifiedAt": "2026-11-04T12:31:47.322Z",
+      "validUntil": "2026-11-18T12:31:47.322Z",
+      "publicationVerified": true,
+      "linkLabel": "청년기본소득 4분기 신청 해설",
+      "scopeNote": "이 해설은 2026년 4분기 경기도 청년기본소득 안내입니다. 대상 출생일은 2001.10.2.~2002.10.1.이며 성남·고양은 제외됩니다. 접수는 12월 1일 18시에 마감하며 다른 분기와 구분해 확인하세요.",
+      "publicationEvidence": {
+        "method": "public_rss_and_page_read",
+        "title": "2026 경기도 청년기본소득 4분기 신청, 12월 1일 마감·대상과 서류 확인",
+        "sourceLinks": [
+          "https://apply.jobaba.net/special/gibon/main.do",
+          "https://www.hscity.go.kr/dongtan/user/bbs/BD_selectBbs.do?q_bbsCode=1048&q_bbscttSn=20261030140309373",
+          "https://yongin.go.kr/home/www/www18/www18_06/www18_06_02/www18_06_02_03.jsp",
+          "https://youth.gg.go.kr/gg/intro/notice.do?article.offset=0&articleLimit=10&articleNo=10501&mode=view",
+          "https://youth.yongin.go.kr/web/main/youthApply/view?bizId=A2026022600000000000057002&urlChk=applyList"
+        ],
+        "bodySha256": "fad60d35089a9fce50df9ce53004fbcc293fa6114eb6af2f2e1e586fe522db0a",
+        "officialReview": [
+          "경기청년포털 2026년 4분기 모집공고: 11.2.09시~12.1.18시, 분기25만원 지역화폐, 거주조건 대조",
+          "용인청년포털: 대상 출생일·성남/고양 제외·신규 재신청/기존 자동신청 구분 확인",
+          "화성시 공식 공고: 지역별 초본 발급일·대리/수급자 증빙 요구 확인; 전국 공통으로 확대하지 않음",
+          "최신 공개 목록·상세 서비스ID 641000000138, 경기도, 경기, 분기별 기간 및 지원 내용 대조; sourceDifferences 없음"
+        ]
+      },
+      "status": "published"
     }
   ]
 }
