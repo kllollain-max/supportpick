@@ -10,9 +10,14 @@ on:
     inputs:
       mode:
         type: choice
-        options: [preview, check-account, check-source, publish-one-now]
+        options: [preview, check-account, check-source, publish-one-now, resume-pending]
         default: preview
         required: true
+      resume_main_id:
+        description: 'Recovery only: exact existing main post ID; never republishes it'
+        type: string
+        default: ''
+        required: false
 permissions:
   contents: write
   actions: read
@@ -31,6 +36,7 @@ jobs:
       SUPPORTPICK_THREADS_CUTOVER_READY: ${{ vars.SUPPORTPICK_THREADS_CUTOVER_READY }}
       SUPPORTPICK_THREADS_CRON: ${{ github.event.schedule }}
       SUPPORTPICK_THREADS_MANUAL_MODE: ${{ inputs.mode }}
+      SUPPORTPICK_THREADS_RESUME_MAIN_ID: ${{ inputs.resume_main_id }}
       SUPPORTPICK_THREADS_ACCESS_TOKEN: ${{ secrets.SUPPORTPICK_THREADS_ACCESS_TOKEN }}
       SUPPORTPICK_THREADS_USER_ID: ${{ secrets.SUPPORTPICK_THREADS_USER_ID }}
     steps:
@@ -61,6 +67,7 @@ jobs:
           echo '## 보조금24 읽기 전용 연결 검사' >> "$GITHUB_STEP_SUMMARY"
           echo '```json' >> "$GITHUB_STEP_SUMMARY"
           cat threads-result.json >> "$GITHUB_STEP_SUMMARY"
+          echo >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
           exit "$probe_status"
       - name: Check account without publishing
@@ -69,6 +76,9 @@ jobs:
       - name: Publish one benefit in the current slot
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'publish-one-now')
         run: python tools/supportpick_threads.py publish
+      - name: Resume replies from an exact existing post receipt
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'resume-pending'
+        run: python tools/supportpick_threads.py resume
       - name: Report failure
         if: failure()
         run: |

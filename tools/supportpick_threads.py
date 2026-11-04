@@ -165,7 +165,7 @@ def publication_context(env):
         if cron not in CRONS:
             raise ValueError('known_scheduled_slot_required')
         return cron
-    if env.get('GITHUB_EVENT_NAME') == 'workflow_dispatch' and env.get('SUPPORTPICK_THREADS_MANUAL_MODE') == 'publish-one-now':
+    if env.get('GITHUB_EVENT_NAME') == 'workflow_dispatch' and env.get('SUPPORTPICK_THREADS_MANUAL_MODE') in ('publish-one-now', 'resume-pending'):
         return 'manual'
     raise ValueError('explicit_publication_context_required')
 
@@ -281,10 +281,65 @@ class Threads:
         return pid
 
     def verify(self, pid, text):
-        row = self.call('GET', '/' + pid, {'fields': 'id,text,permalink'})
-        if str(row.get('id')) != pid or row.get('text') != text or not row.get('permalink'):
-            raise RuntimeError('published_post_verification_failed')
-        return row['permalink']
+        # Threads converts the first brand hashtag to a topic and omits its '#'
+        # in returned text. Only this observed transformation is permitted;
+        # every other character (including the CTA) must still match exactly.
+        expected = {text, text.replace('\n\n#지원금픽 ', '\n\n지원금픽 ', 1)}
+        for attempt in range(3):
+            row = self.call('GET', '/' + pid, {'fields': 'id,text,permalink'})
+            if str(row.get('id')) == pid and row.get('text') in expected and row.get('permalink'):
+                return row['permalink']
+            if attempt < 2:
+                self.pause(2)
+        raise RuntimeError('published_post_verification_failed')
+
+
+def complete_record(store, api, sha, state, record, now):
+    keys = ('main_id', 'detail_id', 'links_id')
+    stage = record.get('stage', '')
+    # Inspect the original stage before changing it. A missing receipt after a
+    # sending stage is ambiguous and must never be retried, even during resume.
+    for key in keys:
+        if stage == key + '_sending' and not record.get(key):
+            raise RuntimeError('ambiguous_send_missing_receipt_do_not_resume')
+    for index, key in enumerate(keys):
+        pid = record.get(key)
+        if not pid:
+            record['stage'] = key + '_sending'
+            sha = store.save(sha, state)
+            pid = api.post(record['texts'][index], parent=record.get('main_id') if index else None,
+                           image=record.get('image_url') if index == 0 else None)
+            record[key] = pid
+            sha = store.save(sha, state)
+        record[key + '_url'] = api.verify(pid, record['texts'][index])
+        record['stage'] = key + '_verified'
+        sha = store.save(sha, state)
+    record.update(status='published', verified=True, published_at=now.isoformat(), stage='complete')
+    store.save(sha, state)
+    return {'status': 'published', 'published': True, 'benefit_id': record['benefit_id'],
+            'url': record['main_id_url'], 'replies': 2}
+
+
+def resume_publication(store, api, now, expected_id, run_id, expected_main_id):
+    if not run_id.isdigit() or not expected_main_id.isdigit():
+        raise ValueError('explicit_existing_main_receipt_required')
+    api.verify_account(expected_id)
+    sha, state = store.read()
+    validate_ledger(state)
+    pending = [r for r in state['records'] if r['status'] == 'pending']
+    if len(pending) != 1 or pending[0].get('main_id') != expected_main_id:
+        raise ValueError('exactly_one_matching_pending_receipt_required')
+    record = pending[0]
+    if stamp(record['slot']).date() != now.date() or not fresh(record.get('checked_at'), now):
+        raise ValueError('resume_requires_same_day_fresh_source')
+    texts = record.get('texts')
+    if (not isinstance(texts, list) or len(texts) != 3
+            or any(not isinstance(t, str) or len(t) > 500 for t in texts)
+            or record.get('content_hash') != hashlib.sha256(json.dumps(texts, ensure_ascii=False).encode()).hexdigest()):
+        raise ValueError('pending_content_hash_mismatch')
+    # Existing reservations count toward the daily cap; resume never appends one.
+    result = complete_record(store, api, sha, state, record, now)
+    return {**result, 'resumed': True, 'recovery_run_id': run_id}
 
 
 def publish(feed, store, api, now, cron, run_id, expected_id, assets=None):
@@ -311,28 +366,17 @@ def publish(feed, store, api, now, cron, run_id, expected_id, assets=None):
     if image and not image_url(image):
         raise ValueError('unapproved_image_url')
     record = {'benefit_id': row['id'], 'slot': slot, 'run_id': run_id, 'status': 'pending',
-              'texts': texts, 'image_url': image, 'generation': feed.get('generation'),
+              'texts': list(texts), 'image_url': image, 'generation': feed.get('generation'),
               'official_url': row['officialUrl'], 'checked_at': row['checkedAt']}
     record['content_hash'] = hashlib.sha256(json.dumps(texts, ensure_ascii=False).encode()).hexdigest()
     rows.append(record)
     sha = store.save(sha, state)  # CAS durable reservation before first side effect.
-    for index, key in enumerate(('main_id', 'detail_id', 'links_id')):
-        record['stage'] = key + '_sending'
-        sha = store.save(sha, state)  # Any ambiguous reply blocks the entire pipeline.
-        pid = api.post(texts[index], parent=record.get('main_id') if index else None,
-                       image=image if index == 0 else None)
-        record[key] = pid
-        sha = store.save(sha, state)
-        record[key + '_url'] = api.verify(pid, texts[index])
-        sha = store.save(sha, state)
-    record.update(status='published', verified=True, published_at=now.isoformat(), stage='complete')
-    store.save(sha, state)
-    return {'status': 'published', 'published': True, 'benefit_id': row['id'], 'url': record['main_id_url'], 'replies': 2}
+    return complete_record(store, api, sha, state, record, now)
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('command', choices=('preview', 'publish', 'check-account'))
+    parser.add_argument('command', choices=('preview', 'publish', 'check-account', 'resume'))
     parser.add_argument('--state', default='collection-state')
     args = parser.parse_args()
     now = datetime.now(KST)
@@ -343,6 +387,14 @@ def main():
         result = {'status': 'account_verified', 'username': USERNAME, 'published': False,
                   'profile_link_target': PROFILE_LINK, 'recent_posts': recent.get('data', []),
                   'more_history': bool(recent.get('paging', {}).get('next'))}
+    elif args.command == 'resume':
+        publication_context(os.environ)
+        if os.environ.get('GITHUB_EVENT_NAME') != 'workflow_dispatch' or os.environ.get('SUPPORTPICK_THREADS_MANUAL_MODE') != 'resume-pending':
+            raise ValueError('explicit_manual_resume_required')
+        result = resume_publication(Ledger(os.environ.get('GITHUB_TOKEN', '')),
+            Threads(os.environ.get('SUPPORTPICK_THREADS_ACCESS_TOKEN', '')), now,
+            os.environ.get('SUPPORTPICK_THREADS_USER_ID', ''), os.environ.get('GITHUB_RUN_ID', ''),
+            os.environ.get('SUPPORTPICK_THREADS_RESUME_MAIN_ID', ''))
     else:
         feed = load_feed(args.state)
         if args.command == 'preview':
