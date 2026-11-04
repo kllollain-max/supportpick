@@ -87,6 +87,24 @@ def require_link_free(text):
         raise ValueError('link_free_publication_required')
 
 
+def select_image(row, records, assets):
+    # New reservations alternate text / image. Resume uses the stored receipt
+    # and image URL, never this selector or a newly chosen asset.
+    if len(records) % 2 == 0:
+        return None
+    asset = assets.get(row['id'], {})
+    image = asset.get('imageUrl')
+    if not image:
+        rotation = assets.get('_rotation', [])
+        if not isinstance(rotation, list) or any(not image_url(u) for u in rotation):
+            raise ValueError('unapproved_image_rotation')
+        if rotation:
+            image = rotation[sum(bool(r.get('image_url')) for r in records) % len(rotation)]
+    if image and not image_url(image):
+        raise ValueError('unapproved_image_url')
+    return image
+
+
 def load_feed(state):
     from refresh import read_current, verify_snapshot
     pointer, snapshot = read_current(state)
@@ -410,11 +428,8 @@ def publish(feed, store, api, now, cron, run_id, expected_id, assets=None):
     if not eligible:
         return {'status': 'skipped', 'reason': 'no_fresh_eligible_benefit', 'published': False}
     row = copy.deepcopy(eligible[0])
-    asset = (assets or {}).get(row['id'], {})
     texts = compose(row)
-    image = asset.get('imageUrl') if len(rows) % 2 == 1 else None
-    if image and not image_url(image):
-        raise ValueError('unapproved_image_url')
+    image = select_image(row, rows, assets or {})
     record = {'benefit_id': row['id'], 'slot': slot, 'run_id': run_id, 'status': 'pending',
               'texts': list(texts), 'image_url': image, 'generation': feed.get('generation'),
               'official_url': row['officialUrl'], 'checked_at': row['checkedAt'],

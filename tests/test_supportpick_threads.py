@@ -143,6 +143,41 @@ class PublisherTests(unittest.TestCase):
         self.assertEqual(self.store.state['records'][0]['official_url'], feed()['items'][0]['officialUrl'])
         self.assertTrue(all(not t.TEXT_LINK.search(call[0]) for call in self.api.calls))
 
+    def test_image_rotation_alternates_and_preserves_exact_reserved_image(self):
+        urls = ['https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png',
+                'https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png']
+        assets = {'_rotation': urls}
+        expected = [None, urls[0], None, urls[1]]
+        for index, hour in enumerate([8, 12, 16, 20]):
+            f = feed(); f['items'][0]['id'] = 'benefit' + str(index)
+            cron = next(c for c,h in t.CRONS.items() if h == hour)
+            t.publish(f, self.store, self.api, NOW.replace(hour=hour), cron, '123', '1004', assets)
+            self.assertEqual(self.store.state['records'][-1]['image_url'], expected[index])
+        self.assertEqual([c[2] for c in self.api.calls[::3]], expected)
+        self.assertTrue(all(c[2] is None for i,c in enumerate(self.api.calls) if i % 3))
+        self.assertEqual(t.select_image(feed()['items'][0], [{'image_url':u} for u in expected] + [{}], assets), urls[0])
+
+    def test_unapproved_rotation_blocks_before_reservation_or_post(self):
+        self.run_publish()
+        f = feed(); f['items'][0]['id'] = 'second'
+        before = copy.deepcopy(self.store.state)
+        with self.assertRaisesRegex(ValueError, 'unapproved_image_rotation'):
+            t.publish(f, self.store, self.api, NOW.replace(hour=12), '0 3 * * *', '124', '1004',
+                      {'_rotation':['https://evil.test/image.png']})
+        self.assertEqual(self.store.state, before)
+        self.assertEqual(len(self.api.calls), 3)
+
+    def test_resume_keeps_reserved_image_when_rotation_changes(self):
+        self.store.state['records'].append({'benefit_id':'old', 'slot':NOW.replace(hour=7).isoformat(),
+            'run_id':'122', 'status':'published', 'verified':True, 'main_id':'9','detail_id':'8','links_id':'7'})
+        image = 'https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png'
+        self.api.verify_fail = True
+        with self.assertRaises(RuntimeError): self.run_publish(assets={'_rotation':[image]})
+        self.api.verify_fail = False
+        t.resume_publication(self.store,self.api,NOW,'1004','124','1001')
+        self.assertEqual(self.store.state['records'][-1]['image_url'], image)
+        self.assertEqual([c[2] for c in self.api.calls], [image,None,None])
+
     def test_legacy_pending_link_is_held_without_rewriting_or_sending(self):
         self.api.verify_fail = True
         with self.assertRaises(RuntimeError): self.run_publish()
