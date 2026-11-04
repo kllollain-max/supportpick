@@ -70,6 +70,23 @@ def excerpt(value, limit):
     return text if len(text) <= limit else text[:limit - 1] + '…'
 
 
+TEXT_LINK = re.compile(
+    r'(?:[a-z][a-z0-9+.-]*://|www\.|mailto:|tel:)[^\s<>]*'
+    r'|(?:[a-z0-9-]+\.)+(?:[a-z]{2,63}|xn--[a-z0-9-]+)(?:[/?#][^\s<>]*)?'
+    r'|(?:[가-힣a-z0-9-]+\.)+한국(?:[/?#][^\s<>]*)?', re.IGNORECASE)
+
+
+def post_excerpt(value, limit):
+    # Remove addresses before truncation so an incomplete URL cannot leak.
+    # Official raw sources and ledger provenance are preserved separately.
+    return excerpt(TEXT_LINK.sub('', str(value or '')), limit)
+
+
+def require_link_free(text):
+    if TEXT_LINK.search(text):
+        raise ValueError('link_free_publication_required')
+
+
 def load_feed(state):
     from refresh import read_current, verify_snapshot
     pointer, snapshot = read_current(state)
@@ -148,24 +165,26 @@ def candidates(feed, ledger, now):
 def compose(row):
     # No benefit amounts or eligibility decisions are inferred from summaries.
     main = '\n\n'.join([
-        '📌 ' + excerpt(row['title'], 65),
-        excerpt(row['summary'], 110),
-        '기관: ' + excerpt(row['organization'], 35),
+        '📌 ' + post_excerpt(row['title'], 65),
+        post_excerpt(row['summary'], 110),
+        '기관: ' + post_excerpt(row['organization'], 35),
         '대상·기간·신청방법은 답글에 정리했어요.\n신청 가능 여부와 세부 조건은 공식 원문을 확인하세요.',
-        '#지원금픽 #' + re.sub(r'[^가-힣A-Za-z0-9_]', '', excerpt(row.get('category') or '생활혜택', 15)),
+        '#지원금픽 #' + re.sub(r'[^가-힣A-Za-z0-9_]', '', post_excerpt(row.get('category') or '생활혜택', 15)),
         CTA])
     detail = '\n\n'.join([
-        '대상 요약: ' + excerpt(row['target'], 100),
-        '원문 기간: ' + excerpt(row.get('period') or '공식 안내 확인', 55),
-        '신청방법 요약: ' + excerpt(row['method'], 85),
-        '※ 자격 충족·선정·현재 접수를 보장하지 않습니다.\n공식 안내: ' + row['officialUrl'],
+        '대상 요약: ' + post_excerpt(row['target'], 100),
+        '원문 기간: ' + post_excerpt(row.get('period') or '공식 안내 확인', 55),
+        '신청방법 요약: ' + post_excerpt(row['method'], 85),
+        '※ 자격 충족·선정·현재 접수를 보장하지 않습니다.\n공식 원문과 세부 조건은 프로필링크에서 확인하세요.',
         CTA])
     # The profile link is the conversion route; do not divert readers to the blog.
     links = '\n\n'.join([
         '프로필링크에서 지원금픽을 열고 아래 혜택명을 검색해 보세요.',
-        '🔎 ' + excerpt(row['title'], 65),
+        '🔎 ' + post_excerpt(row['title'], 65),
         '대상·신청방법을 확인하고 관심 혜택을 저장해 신청 준비를 관리할 수 있어요.',
         CTA])
+    for text in (main, detail, links):
+        require_link_free(text)
     if any(len(x) > 500 for x in (main, detail, links)):
         raise ValueError('post_or_reply_over_500_characters')
     return main, detail, links
@@ -334,6 +353,8 @@ def complete_record(store, api, sha, state, record, now):
     for index, key in enumerate(keys):
         pid = record.get(key)
         if not pid:
+            # Legacy pending content must never be rewritten or sent with links.
+            require_link_free(record['texts'][index])
             record['stage'] = key + '_sending'
             sha = store.save(sha, state)
             pid = api.post(record['texts'][index], parent=record.get('main_id') if index else None,
@@ -460,3 +481,4 @@ if __name__ == '__main__':
         Path('threads-result.json').write_text(json.dumps(result, ensure_ascii=False, indent=2))
         print(json.dumps(result, ensure_ascii=False))
         raise SystemExit(1) from None
+
