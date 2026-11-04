@@ -142,7 +142,7 @@
       dialog.append(installStatus, row); linkField(links.address, '설치할 주소'); dialog.append(message);
       if (context.android) dialog.append(el('p', 'Chrome이 열리지 않으면 주소를 복사한 뒤 Chrome·삼성 인터넷 주소창에 붙여넣어 주세요. 앱 창 오른쪽 위 ⋯ 메뉴의 브라우저로 열기도 이용할 수 있어요.'));
       const list = el('ol'); steps.forEach(text => list.append(el('li', text))); dialog.append(list);
-      if (context.inApp) dialog.append(el('p', '다른 브라우저로 바꾸면 저장·신청 기록은 자동으로 옮겨지지 않아요. 기존 기록이 있다면 원래 화면의 기록 관리에서 먼저 백업하세요.'));
+      if (context.inApp || context.android) dialog.append(el('p', '다른 브라우저로 바꾸면 저장·신청 기록은 자동으로 옮겨지지 않아요. 기존 기록이 있다면 원래 화면의 기록 관리에서 먼저 백업하세요.'));
       dialog.append(el('p', '최신 지원정보를 보려면 인터넷 연결이 필요해요.'));
       syncInstall(installState);
     }
