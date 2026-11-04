@@ -10,7 +10,7 @@ on:
     inputs:
       mode:
         type: choice
-        options: [preview, check-account, publish-one-now]
+        options: [preview, check-account, check-source, publish-one-now]
         default: preview
         required: true
 permissions:
@@ -49,6 +49,20 @@ jobs:
       - name: Preview without publishing
         if: github.event_name == 'workflow_dispatch' && inputs.mode == 'preview'
         run: python tools/supportpick_threads.py preview
+      - name: Check Gov24 key without publishing
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'check-source'
+        env:
+          SUPPORTPICK_GOV24_SERVICE_KEY: ${{ secrets.SUPPORTPICK_GOV24_SERVICE_KEY }}
+        run: |
+          set +e
+          python tools/gov24_transport.py --output output/gov24-key-probe
+          probe_status=$?
+          cp output/gov24-key-probe/probe.json threads-result.json
+          echo '## 보조금24 읽기 전용 연결 검사' >> "$GITHUB_STEP_SUMMARY"
+          echo '```json' >> "$GITHUB_STEP_SUMMARY"
+          cat threads-result.json >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          exit "$probe_status"
       - name: Check account without publishing
         if: github.event_name == 'workflow_dispatch' && inputs.mode == 'check-account'
         run: python tools/supportpick_threads.py check-account
