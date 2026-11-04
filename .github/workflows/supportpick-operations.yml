@@ -58,16 +58,26 @@ jobs:
           name: supportpick-collection-evidence-${{ github.run_id }}-${{ github.run_attempt }}
           path: output/current-run/
           retention-days: 3
+      - name: Decide whether public content actually changed
+        id: publish
+        if: vars.SUPPORTPICK_SITE_PUBLIC_UPDATE_APPROVED == '1'
+        run: python tools/release_policy.py --output dist --report output/publish-decision.json
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.publish.outcome == 'success'
+        with:
+          name: supportpick-publish-decision
+          path: output/publish-decision.json
+          retention-days: 7
       - uses: actions/configure-pages@v5
-        if: vars.SUPPORTPICK_SITE_PUBLIC_UPDATE_APPROVED == '1'
+        if: vars.SUPPORTPICK_SITE_PUBLIC_UPDATE_APPROVED == '1' && steps.publish.outputs.publish == 'true'
       - uses: actions/upload-pages-artifact@v3
-        if: vars.SUPPORTPICK_SITE_PUBLIC_UPDATE_APPROVED == '1'
+        if: vars.SUPPORTPICK_SITE_PUBLIC_UPDATE_APPROVED == '1' && steps.publish.outputs.publish == 'true'
         with:
           path: dist
       - uses: actions/deploy-pages@v4
-        if: vars.SUPPORTPICK_SITE_PUBLIC_UPDATE_APPROVED == '1'
+        if: vars.SUPPORTPICK_SITE_PUBLIC_UPDATE_APPROVED == '1' && steps.publish.outputs.publish == 'true'
       - name: Verify deployed source, generation and every public HTML URL
-        if: vars.SUPPORTPICK_SITE_PUBLIC_UPDATE_APPROVED == '1'
+        if: vars.SUPPORTPICK_SITE_PUBLIC_UPDATE_APPROVED == '1' && steps.publish.outputs.publish == 'true'
         run: python tools/verify_release.py --output dist --live --expect-sha "$(git rev-parse HEAD)" --expect-generation "$(python -c 'import json;print(json.load(open("dist/data.json"))["generation"])')" --report output/public-verification.json
       - uses: actions/upload-artifact@v4
         if: always()

@@ -7,6 +7,7 @@ from refresh import read_current,verify_snapshot
 from bootstrap_state import ensure_bootstrap
 from search_metadata import public_metadata, read_verifications, write_sitemap, version_local_assets
 from detail_pages import write_details
+from release_policy import fingerprint
 from collect_full import period
 ROOT=Path(__file__).resolve().parents[1]
 STATIC=('index.html','privacy.html','about.html','terms.html','contact.html','404.html','icon.svg','careerpick-base.css','styles.css','core.js','app.js','detail.js','supportpick-badge.png','supportpick-banner.png','editorials.js')
@@ -129,6 +130,7 @@ def build(destination,state=None,allow_sample=False,public_base=None):
     if size>300*1024*1024:raise ValueError('public_size_budget')
     revision=subprocess.run(['git','rev-parse','HEAD'],cwd=ROOT,capture_output=True,text=True,check=True).stdout.strip()
     report={'publicFiles':len(files)+1,'bytes':size,'benefits':len(feed['items']),'generation':feed.get('generation'),'sourceRevision':revision,'isSample':not bool(pointer),'published':False,'status':status['status'],**{k:v for k,v in detail['report'].items() if k in ('detailPages','indexableDetails','heldDetails','reviewedGuides','blogLinks','directoryPages','retiredPages')},'files':files}
+    report['contentFingerprint']=fingerprint(ROOT,feed,full_rows,previous_rows,status,detail['report'],STATIC)
     (output/'site-manifest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
     return {k:v for k,v in report.items() if k!='files'}
 if __name__=='__main__':
