@@ -116,7 +116,7 @@
     }
   },
   "last_check": {
-    "result": "healthy_source_refreshed_no_new_publication",
+    "result": "healthy_no_new_incident",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -178,10 +178,22 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-04T18:31:07+09:00",
-    "changed_run_ids": [
-      "41805765326"
-    ],
-    "current_main_sha": "1fccc8877387cbe9d3025395ee14484f65f4c20e"
+    "checked_at": "2026-11-04T18:43:51+09:00",
+    "changed_run_ids": [],
+    "current_main_sha": "2d5ba498caa91bc1f709142a37f2e6f8613b2749",
+    "ranking_policy": {
+      "policy": "gov24_views_desc_v1",
+      "basis": "보조금24 누적 조회수",
+      "tie_breakers": [
+        "endDate",
+        "id"
+      ],
+      "unknown_values": "after_valid_zero",
+      "main_implementation_verified": true,
+      "script_blob_sha": "94d4c1838881924a63fad60ae2f4e9737b68e063",
+      "pr": 9,
+      "ci_run_id": "41809437757",
+      "natural_publication_after_change_verified": false
+    }
   }
 }
