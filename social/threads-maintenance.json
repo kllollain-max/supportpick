@@ -215,7 +215,7 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-05T04:21:45.819894+09:00",
+    "checked_at": "2026-11-05T05:54:49.694627+09:00",
     "changed_run_ids": [],
     "current_main_sha": "1d835c70be865938c90e4c6a278dfbbd8f058669",
     "ranking_policy": {
@@ -271,7 +271,7 @@
       "source_snapshot_hashes_passed": true,
       "publication_artifact_digest_passed": true
     },
-    "next_step": "Continue natural 08/12/16/20 KST slots and recurring checks. No pending recovery, test post, backfill or new incident; verify text/image policy when actual publication resumes.",
+    "next_step": "Continue natural scheduled source refresh and 08/12/16/20 KST publication slots. No pending recovery, test post, backfill or new incident. Verify the text/image policies upon actual future publication.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "artifact_metadata_and_digests_unchanged": true,
