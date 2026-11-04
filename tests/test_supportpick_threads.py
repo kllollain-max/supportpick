@@ -60,7 +60,8 @@ class PublisherTests(unittest.TestCase):
         self.assertTrue(result['published'])
         self.assertEqual([x[1] for x in self.api.calls], [None, '1001', '1001'])
         self.assertEqual(self.store.state['records'][0]['status'], 'published')
-        self.assertIn(t.SITE, self.api.calls[2][0]); self.assertIn('#benefit=benefit1', self.api.calls[2][0]); self.assertNotIn(t.BLOG, self.api.calls[2][0])
+        self.assertTrue(all(x[0].endswith(t.CTA) for x in self.api.calls))
+        self.assertIn('프로필링크', self.api.calls[2][0])
     def test_same_slot_cannot_post_twice(self):
         self.run_publish()
         with self.assertRaisesRegex(RuntimeError, 'slot_already_reserved'): self.run_publish()
@@ -115,7 +116,10 @@ class PublisherTests(unittest.TestCase):
         texts = t.compose(row)
         self.assertTrue(all(len(x) <= 500 for x in texts))
         self.assertIn('현재 접수를 보장하지 않습니다', texts[1])
-        self.assertIn(row['officialUrl'], texts[1]); self.assertIn('#benefit=benefit1', texts[2]); self.assertNotIn(row['publishedBlogUrl'], texts[2])
+        self.assertIn(row['officialUrl'], texts[1])
+        self.assertTrue(all(x.endswith('자세한 사항은 프로필링크 확인') for x in texts))
+        self.assertTrue(all('blog.naver.com' not in x and t.SITE not in x for x in texts))
+        self.assertIn(row['title'], texts[2])
         row['officialUrl'] += 'a' * 600
         with self.assertRaises(ValueError): t.compose(row)
     def test_social_links_and_images_cannot_point_to_other_accounts(self):
@@ -149,5 +153,29 @@ class PublisherTests(unittest.TestCase):
     def test_missing_state_never_initializes_itself(self):
         def missing(*args, **kw): raise OSError('404')
         with self.assertRaisesRegex(RuntimeError, 'ledger_unavailable'): t.Ledger('fake', opener=missing).read()
+
+    def test_manual_publication_uses_current_minute_and_same_daily_cap(self):
+        result = t.publish(feed(), self.store, self.api, NOW, 'manual', '123', '1004')
+        self.assertTrue(result['published'])
+        self.assertEqual(self.store.state['records'][0]['slot'], NOW.replace(second=0, microsecond=0).isoformat())
+        with self.assertRaisesRegex(RuntimeError, 'slot_already_reserved'):
+            t.publish(feed(), self.store, self.api, NOW, 'manual', '124', '1004')
+        self.assertEqual(len(self.api.calls), 3)
+
+    def test_explicit_manual_mode_main_repo_and_first_attempt_required(self):
+        env = {'SUPPORTPICK_THREADS_ENABLED':'true', 'SUPPORTPICK_THREADS_CUTOVER_READY':'true',
+               'GITHUB_REPOSITORY': t.REPO, 'GITHUB_REF':'refs/heads/main',
+               'GITHUB_RUN_ATTEMPT':'1', 'GITHUB_EVENT_NAME':'workflow_dispatch',
+               'SUPPORTPICK_THREADS_MANUAL_MODE':'publish-one-now'}
+        self.assertEqual(t.publication_context(env), 'manual')
+        for k,v in [('SUPPORTPICK_THREADS_ENABLED','false'), ('SUPPORTPICK_THREADS_CUTOVER_READY','false'),
+                    ('GITHUB_REPOSITORY','kllollain-max/careerpick'), ('GITHUB_REF','refs/heads/feature'),
+                    ('GITHUB_RUN_ATTEMPT','2'), ('GITHUB_EVENT_NAME','pull_request'),
+                    ('SUPPORTPICK_THREADS_MANUAL_MODE','preview'), ('SUPPORTPICK_THREADS_MANUAL_MODE','check-account')]:
+            with self.subTest(k=k, v=v), self.assertRaises(ValueError):
+                t.publication_context({**env, k:v})
+        scheduled = {**env, 'GITHUB_EVENT_NAME':'schedule', 'SUPPORTPICK_THREADS_CRON':'0 23 * * *'}
+        self.assertEqual(t.publication_context(scheduled), '0 23 * * *')
+        with self.assertRaises(ValueError): t.publication_context({**scheduled, 'SUPPORTPICK_THREADS_CRON':'unknown'})
 
 if __name__ == '__main__': unittest.main()

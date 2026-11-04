@@ -10,7 +10,7 @@ on:
     inputs:
       mode:
         type: choice
-        options: [preview, check-account]
+        options: [preview, check-account, publish-one-now]
         default: preview
         required: true
 permissions:
@@ -30,6 +30,7 @@ jobs:
       SUPPORTPICK_THREADS_ENABLED: ${{ vars.SUPPORTPICK_THREADS_ENABLED }}
       SUPPORTPICK_THREADS_CUTOVER_READY: ${{ vars.SUPPORTPICK_THREADS_CUTOVER_READY }}
       SUPPORTPICK_THREADS_CRON: ${{ github.event.schedule }}
+      SUPPORTPICK_THREADS_MANUAL_MODE: ${{ inputs.mode }}
       SUPPORTPICK_THREADS_ACCESS_TOKEN: ${{ secrets.SUPPORTPICK_THREADS_ACCESS_TOKEN }}
       SUPPORTPICK_THREADS_USER_ID: ${{ secrets.SUPPORTPICK_THREADS_USER_ID }}
     steps:
@@ -40,7 +41,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Restore latest validated data
-        if: github.event_name == 'schedule' || inputs.mode == 'preview'
+        if: github.event_name == 'schedule' || inputs.mode == 'preview' || inputs.mode == 'publish-one-now'
         # Workflow run numbers are not comparable across different workflows.
         run: env -u GITHUB_RUN_NUMBER python tools/restore_latest_state.py
       - name: Verify publisher safety
@@ -52,7 +53,7 @@ jobs:
         if: github.event_name == 'workflow_dispatch' && inputs.mode == 'check-account'
         run: python tools/supportpick_threads.py check-account
       - name: Publish one benefit in the current slot
-        if: github.event_name == 'schedule'
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'publish-one-now')
         run: python tools/supportpick_threads.py publish
       - name: Report failure
         if: failure()
