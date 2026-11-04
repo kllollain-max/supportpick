@@ -1,35 +1,38 @@
 {
   "version": 1,
   "repository": "kllollain-max/supportpick",
-  "mainSHA": "1d835c70be865938c90e4c6a278dfbbd8f058669",
-  "lastCheckedAt": "2026-11-04T22:30:32.880Z",
+  "mainSHA": "0db83684355af1f08f56ddac6461588dfc0bce39",
+  "lastCheckedAt": "2026-11-04T23:57:22.109Z",
   "lastSuccessAt": "2026-11-04T22:16:42.562Z",
   "rss": {
     "url": "https://rss.blog.naver.com/bible_el.xml",
-    "itemsSeen": 24,
-    "sha256": "e42650521ffaf0214a659771dc9d9079890f06d2201f770b1a696c3a71f09e4b",
-    "checkedAt": "2026-11-04T22:16:42.562Z"
+    "itemsSeen": 25,
+    "sha256": "5920841d5813edaf4fa36e7bef6289c962cf50289e6b36f0f9db09124b9c2763",
+    "checkedAt": "2026-11-04T23:57:22.109Z"
   },
   "publicGeneration": "gov24-41921889569-1",
-  "latestSuccessfulDeploymentRun": 41855878146,
+  "latestSuccessfulDeploymentRun": 41930788660,
   "lastEditorialDeploymentRun": 41830603644,
-  "deploymentHeadSHA": "1d835c70be865938c90e4c6a278dfbbd8f058669",
+  "deploymentHeadSHA": "a890695ccaf14ccea374710d5182030f0cfbd4b1",
   "results": {
-    "newSupportPosts": 0,
-    "publicBodiesVerified": 8,
+    "newSupportPosts": 1,
+    "publicBodiesVerified": 9,
     "existingLinksMaintained": 5,
-    "linksAdded": 0,
+    "linksAdded": 1,
     "linksUpdated": 0,
     "held": 3,
     "newlyHeld": 0,
-    "unrelatedRssItemsExcluded": 16
+    "unrelatedRssItemsExcluded": 16,
+    "registeredLinks": 6,
+    "publicLinks": 5,
+    "pendingDeployment": 1
   },
   "posts": {
     "224464854203": {
       "postId": "224464854203",
       "url": "https://m.blog.naver.com/bible_el/224464854203",
       "title": "2026–2027 임신부 독감 무료접종, 산모수첩·신분증과 지정병원 확인하세요",
-      "lastSeenAt": "2026-11-04T22:16:42.562Z",
+      "lastSeenAt": "2026-11-04T23:57:22.109Z",
       "bodySha256": "dc085e6b52e9e4150c43603ab94ea3d9dbfe4efeae6d41027a6d9bdd987b1c0e",
       "sourceLinksSha256": "ec80f3f9f8291bfbdc378cc78b29636832a2e5635519693637021d7359b6951b",
       "publicBodyConfirmed": true,
@@ -54,7 +57,7 @@
       "postId": "224464673507",
       "url": "https://m.blog.naver.com/bible_el/224464673507",
       "title": "2026 문화누리카드 신청 대상·금액·방법, 11월 마감 전에 확인하세요",
-      "lastSeenAt": "2026-11-04T22:16:42.562Z",
+      "lastSeenAt": "2026-11-04T23:57:22.109Z",
       "bodySha256": "a113fdc9dd86c099c65b1c24f61c0c0fbccde25120e729489f55cc83a89dc71b",
       "sourceLinksSha256": "e207b7a269131adc2b4d1a4ae21e895fc2326fe515d6f580f72e8b39b436c7b8",
       "publicBodyConfirmed": true,
@@ -79,7 +82,7 @@
       "postId": "224464848565",
       "url": "https://m.blog.naver.com/bible_el/224464848565",
       "title": "2026 근로장려금 기한 후 신청, 12월 1일 마감·소득재산 조건 확인",
-      "lastSeenAt": "2026-11-04T22:16:42.562Z",
+      "lastSeenAt": "2026-11-04T23:57:22.109Z",
       "bodySha256": "854aece79753c0a3ae0ca8c666ad2bac9bdb0eadc449e0874f3c8208975bd449",
       "sourceLinksSha256": "1597b3b37463fee15db0d127f7f8efd9fb3808a095637848b39bf140d68d0c43",
       "publicBodyConfirmed": true,
@@ -104,7 +107,7 @@
       "postId": "224426296398",
       "url": "https://m.blog.naver.com/bible_el/224426296398",
       "title": "독감 무료접종 대상 확인법 + 병원별 가격 비교표",
-      "lastSeenAt": "2026-11-04T22:16:42.562Z",
+      "lastSeenAt": "2026-11-04T23:57:22.109Z",
       "bodySha256": "94fd36373bf48c75c690cc55bad0f26e86e2a934e86478edf2d88f6010fbb215",
       "sourceLinksSha256": "3f08a9ca409663e711f75ee55dd5a5d3c611c93cf2b61bd3cf17d38672066a6e",
       "publicBodyConfirmed": true,
@@ -123,7 +126,7 @@
       "postId": "224465029433",
       "url": "https://m.blog.naver.com/bible_el/224465029433",
       "title": "2026 에너지바우처 신청 대상·지원금액·준비서류, 두 가지 자격부터 확인하세요",
-      "lastSeenAt": "2026-11-04T22:16:42.562Z",
+      "lastSeenAt": "2026-11-04T23:57:22.109Z",
       "bodySha256": "79c9c2a620030098d49c173149f430ca5b868e870df64bbbaecff966916505c1",
       "publicBodyConfirmed": true,
       "verificationStatus": "maintained",
@@ -154,7 +157,7 @@
       "postId": "224465161051",
       "url": "https://m.blog.naver.com/bible_el/224465161051",
       "title": "2026 경기도 청년기본소득 4분기 신청, 12월 1일 마감·대상과 서류 확인",
-      "lastSeenAt": "2026-11-04T22:16:42.562Z",
+      "lastSeenAt": "2026-11-04T23:57:22.109Z",
       "bodySha256": "fad60d35089a9fce50df9ce53004fbcc293fa6114eb6af2f2e1e586fe522db0a",
       "sourceLinksSha256": "828a00de19363f9ac557282e41e2913f1b0677e95e7aa1cd719a9c1bc5f6d48f",
       "publicBodyConfirmed": true,
@@ -181,7 +184,7 @@
       "postId": "224465169160",
       "url": "https://m.blog.naver.com/bible_el/224465169160",
       "title": "2026–2027 어린이 독감 무료접종, 9~14세는 1회·지정병원과 준비물 확인",
-      "lastSeenAt": "2026-11-04T22:16:42.562Z",
+      "lastSeenAt": "2026-11-04T23:57:22.109Z",
       "bodySha256": "fc6fb2dd38b76b834d184e0345926c4638f1b8b68605939cfba39de9dda2a2d7",
       "sourceLinksSha256": "9b76cafc264928e26617d4ce163c6a58d1a00214e1e838f1f40fd7063c084d1d",
       "publicBodyConfirmed": true,
@@ -203,7 +206,7 @@
       "postId": "224465165315",
       "url": "https://m.blog.naver.com/bible_el/224465165315",
       "title": "2026 성동구 청년 응시료 지원, 11월 15일 마감·생애 누적 10만원 한도 확인",
-      "lastSeenAt": "2026-11-04T22:16:42.562Z",
+      "lastSeenAt": "2026-11-04T23:57:22.109Z",
       "bodySha256": "67d52233d4a0fb14ee8472cc7c55f3123cc3cb1f66830e1b43e7ea17947314fd",
       "sourceLinksSha256": "d50a3ddf27dea2297fa8b36b5bfc05d7d4575f28559332d8b95c7950752baaa8",
       "publicBodyConfirmed": true,
@@ -222,41 +225,47 @@
         "서울시 공식 안내 공개 확인. 성동구 두 페이지는 이번 조회에서 시간초과. 대응 서비스 미존재 판정은 최신 운영 목록 기준이며 사업 자체가 없다는 뜻이 아님"
       ],
       "nextResumeStep": "retry_mapping_only_when_new_service_or_relevant_source_changes; do not invent a service ID"
+    },
+    "224465511206": {
+      "postId": "224465511206",
+      "url": "https://m.blog.naver.com/bible_el/224465511206",
+      "title": "2026 의료급여 수급권자 일반건강검진, 짝수년생 대상·12월 31일 전 확인하세요",
+      "lastSeenAt": "2026-11-04T23:57:22.109Z",
+      "bodySha256": "9f528c1561b33d68defc032a556f420624123c372a7ce2bb6c2720a608546da8",
+      "sourceLinksSha256": "feaa9682da0f4a770337cc13bc31660fda63fd633e265736ae0605b2cf91ed58",
+      "publicBodyConfirmed": true,
+      "verificationStatus": "registered_pending_deployment",
+      "linkedBenefitId": "408000000419",
+      "sourceKey": "[\"408000000419\",\"의료급여수급권자 일반건강검진비 지원\",\"보건복지부\",\"확인 필요\",\"검진대상자로 통보받은 당해 연도 내\",\"20세이상 의료급여 수급권자 일반건강검진 서비스 지원\",\"20260513110442\",\"2026-05-13\"]",
+      "scope": {
+        "year": 2026,
+        "region": "확인 필요",
+        "round": "2026년 정기 일반건강검진"
+      },
+      "publicationObservedAt": "2026-11-04T23:51:20.191Z",
+      "publishedAt": "2026-11-04T22:55:51.000Z",
+      "verifiedAt": "2026-11-04T23:51:20.191Z",
+      "validUntil": "2026-11-18T23:51:20.191Z",
+      "lastRegistrationPR": 27,
+      "registrationMergeSHA": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "deploymentRun": null,
+      "publicCardVerifiedAt": null,
+      "publicDetailVerifiedAt": null,
+      "publicDetailURL": "https://kllollain-max.github.io/supportpick/benefits/408000000419/",
+      "nextReviewAfter": "2026-11-15T23:51:20.191Z"
     }
   },
-  "nextResumeStep": "Inspect remote workflow and any final full-public-verification report before retrying; resume bounded public verification with per-URL diagnostics and transport backoff. Existing editorial links and validation timestamps remain unchanged; no duplicate deployment.",
+  "nextResumeStep": "PR #27 is merged; do not register or merge again. Verify remote main and public registry, then dispatch deploy-approved.yml with approved_sha 0db83684355af1f08f56ddac6461588dfc0bce39 and approval DEPLOY_SUPPORTPICK after browser authentication is available. Confirm all six links publicly and save final success.",
   "errors": [
     {
-      "fingerprint": "41921889569:public_generation_mismatch",
-      "stage": "external_operational_public_verification",
-      "run": 41921889569,
-      "observedAt": "2026-11-04T22:16:42.562Z",
-      "confirmedCause": "Workflow post-deploy check raised public_generation_mismatch immediately after successful Pages deployment",
-      "hypothesis": "Possible propagation delay; not proven",
-      "recovery": "Current public manifest/data generation matches new collection; five editorial card/detail/static links and relevant manifest hashes verified",
-      "remaining": "External workflow remains failed; all-site live URL verification not repeated in editorial-only run",
-      "retryBudget": 1
-    },
-    {
-      "fingerprint": "public-full-recheck:environment-interruption:20261105",
-      "stage": "full_public_verification_followup",
-      "observedAt": "2026-11-04T22:30:32.880Z",
-      "confirmedCause": "Initial execution environment disconnected and scratch working directory was lost. Recovery run has no final report available.",
-      "observedProgress": {
-        "targetHtml": 11058,
-        "lastProgressChecked": 11000,
-        "initialPassedAtLastProgress": 1499,
-        "initialFailuresAtLastProgress": 9501,
-        "finalReportAvailable": false
-      },
-      "hypotheses": [
-        "Transport errors or service throttling may account for initial failures; no diagnostic error breakdown was retained, so site defects are not established."
-      ],
-      "recovery": "Restored verifier from exact deployed main, reran with identical manifest/hash/metadata checks and keep-alive HTTP transport; single individual postcheck returned HTTP 200. No repository implementation or deployment changes.",
-      "remaining": "Need a bounded, checkpointed follow-up public verification with per-URL diagnostics; do not treat initial failures as 404 or confirmed site defects.",
+      "fingerprint": "deploy-approved:github-browser-sign-in-required",
+      "stage": "dispatch_approved_deployment",
+      "observedAt": "2026-11-04T23:57:22.109Z",
+      "confirmedCause": "GitHub workflow page redirected to Sign in to GitHub; connector does not expose workflow dispatch. No credential request in this non-interactive run.",
+      "approved_sha": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "approval": "DEPLOY_SUPPORTPICK",
       "retryBudget": 0,
-      "sourceRevision": "1d835c70be865938c90e4c6a278dfbbd8f058669",
-      "generation": "gov24-41921889569-1"
+      "nextStep": "When authenticated workflow access is available, recheck remote state and deploy exact merged SHA only if still approved current main; do not duplicate registration/PR."
     }
   ],
   "retryBudget": {
@@ -264,39 +273,35 @@
     "used": 0
   },
   "checks": {
-    "publicRegistryMatchesMain": true,
+    "publicRegistryMatchesMain": false,
     "cardDetailPairsPassed": 5,
     "sourceEditionKeysMatch": true,
     "threadsExposed": false,
-    "pythonTests": 73,
-    "nodeTests": 35,
+    "pythonTests": 89,
+    "nodeTests": 56,
     "publicBuild": true,
-    "latestOperationalCardDetailPairChecks": 5,
+    "latestOperationalCardDetailPairChecks": 6,
     "publicEditorialDataHash": "940ba045c9109b7eb95e535065e38b6cf369b5db19e60c916cf3ce24fb30af94",
     "publicDataContainsFourArticles": true,
     "newButtonVisibleInCurrentBrowser": true,
     "existingFluButtonVisible": true,
     "publicManifestIntegrityVerified": true,
     "staticDetailPairsPassed": 5,
-    "publicSourceRevision": "1d835c70be865938c90e4c6a278dfbbd8f058669"
+    "publicSourceRevision": "a890695ccaf14ccea374710d5182030f0cfbd4b1",
+    "localCardDetailStaticPairs": 6,
+    "publicFullVerificationRun": 41930788660
   },
-  "deployment": "not_required_no_editorial_data_change",
+  "deployment": "blocked_browser_sign_in_required",
   "currentUpdate": {
-    "pr": 17,
-    "headSHA": "a6ea3afb2df4c66a3dca4376d13abef488bf8799",
-    "ciRun": 41830234201,
-    "status": "completed",
-    "approvedDataFiles": [
-      "editorials.json",
-      "editorial-data.js"
-    ],
-    "mergeSHA": "0b86a80ae23b60ddd95bcf37d57edf80963e7744",
-    "deployRun": 41830603644,
-    "deploymentStatus": "success",
-    "publicVerificationStatus": "verified",
-    "publicVerifiedAt": "2026-11-04T12:39:02.606Z"
+    "postId": "224465511206",
+    "benefitId": "408000000419",
+    "pr": 27,
+    "headSHA": "36a93ce37f4de11bf0639dcfbbf421ddfe1bd3c6",
+    "mergeSHA": "0db83684355af1f08f56ddac6461588dfc0bce39",
+    "ciRun": 41937230686,
+    "status": "merged_pending_deployment"
   },
-  "lastPartialRunAt": "2026-11-04T22:30:32.880Z",
+  "lastPartialRunAt": "2026-11-04T23:57:22.109Z",
   "errorHistory": [
     {
       "fingerprint": "energy_button_not_visible_after_successful_data_deployment",
@@ -342,20 +347,60 @@
       "retryBudget": 0,
       "sourceRevision": "1d835c70be865938c90e4c6a278dfbbd8f058669",
       "generation": "gov24-41921889569-1"
+    },
+    {
+      "fingerprint": "41921889569:public_generation_mismatch",
+      "stage": "external_operational_public_verification",
+      "run": 41921889569,
+      "observedAt": "2026-11-04T22:16:42.562Z",
+      "confirmedCause": "Workflow post-deploy check raised public_generation_mismatch immediately after successful Pages deployment",
+      "hypothesis": "Possible propagation delay; not proven",
+      "recovery": "Current public manifest/data generation matches new collection; five editorial card/detail/static links and relevant manifest hashes verified",
+      "remaining": "External workflow remains failed; all-site live URL verification not repeated in editorial-only run",
+      "retryBudget": 1,
+      "status": "superseded_by_later_verified_release",
+      "resolvedAt": "2026-11-04T23:57:22.109Z",
+      "resolutionRun": 41930788660
+    },
+    {
+      "fingerprint": "public-full-recheck:environment-interruption:20261105",
+      "stage": "full_public_verification_followup",
+      "observedAt": "2026-11-04T22:30:32.880Z",
+      "confirmedCause": "Initial execution environment disconnected and scratch working directory was lost. Recovery run has no final report available.",
+      "observedProgress": {
+        "targetHtml": 11058,
+        "lastProgressChecked": 11000,
+        "initialPassedAtLastProgress": 1499,
+        "initialFailuresAtLastProgress": 9501,
+        "finalReportAvailable": false
+      },
+      "hypotheses": [
+        "Transport errors or service throttling may account for initial failures; no diagnostic error breakdown was retained, so site defects are not established."
+      ],
+      "recovery": "Restored verifier from exact deployed main, reran with identical manifest/hash/metadata checks and keep-alive HTTP transport; single individual postcheck returned HTTP 200. No repository implementation or deployment changes.",
+      "remaining": "Need a bounded, checkpointed follow-up public verification with per-URL diagnostics; do not treat initial failures as 404 or confirmed site defects.",
+      "retryBudget": 0,
+      "sourceRevision": "1d835c70be865938c90e4c6a278dfbbd8f058669",
+      "generation": "gov24-41921889569-1",
+      "status": "superseded_by_later_verified_release",
+      "resolvedAt": "2026-11-04T23:57:22.109Z",
+      "resolutionRun": 41930788660
     }
   ],
   "lastRun": {
-    "checkedAt": "2026-11-04T22:30:32.880Z",
-    "status": "partial_full_public_verification",
-    "dataChanged": false,
-    "newRegistrationPR": null,
+    "checkedAt": "2026-11-04T23:57:22.109Z",
+    "status": "partial_merged_pending_deployment",
+    "dataChanged": true,
+    "newRegistrationPR": 27,
     "newDeploymentRun": null,
-    "fullPublicVerification": {
-      "targetHtml": 11058,
-      "lastProgressChecked": 11000,
-      "initialPassedAtLastProgress": 1499,
-      "initialFailuresAtLastProgress": 9501,
-      "finalReportAvailable": false
+    "checks": {
+      "pythonTests": 89,
+      "nodeTests": 56,
+      "publicBuild": true,
+      "localSitemapUrls": 11050,
+      "localCardDetailStaticPairs": 6,
+      "existingPublicLinks": 5,
+      "threadsExposed": false
     }
   },
   "latestObservedOperationalDeployment": {
@@ -368,5 +413,16 @@
     "generation": "gov24-41921889569-1",
     "sourceRevision": "1d835c70be865938c90e4c6a278dfbbd8f058669",
     "checkedAt": "2026-11-04T22:16:42.562Z"
+  },
+  "latestObservedDeploymentRun": 41937121741,
+  "fullPublicVerificationRecovery": {
+    "run": 41930788660,
+    "sourceRevision": "c2dab2fcae21399e0d15805d7cb26989c753af86",
+    "generation": "gov24-41921889569-1",
+    "publicHtmlChecked": 11058,
+    "passed": 11058,
+    "failed": 0,
+    "observedAt": "2026-11-04T23:57:22.109Z",
+    "note": "Later successful deployment supersedes prior interrupted verification; original failed run is not rewritten as success."
   }
 }
