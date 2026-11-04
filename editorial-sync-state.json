@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "repository": "kllollain-max/supportpick",
+  "mainSHA": "1fccc8877387cbe9d3025395ee14484f65f4c20e",
+  "lastCheckedAt": "2026-11-04T09:40:39.923896+00:00",
+  "lastSuccessAt": "2026-11-04T09:40:39.923896+00:00",
+  "rss": {
+    "url": "https://rss.blog.naver.com/bible_el.xml",
+    "itemsSeen": 20,
+    "sha256": "65d15874a44460601f5e1e82bcffd808d2183673ee496f62bb64ff936aabfd40"
+  },
+  "publicGeneration": "gov24-41805765326-1",
+  "latestSuccessfulDeploymentRun": 41805765326,
+  "lastEditorialDeploymentRun": 41804431599,
+  "deploymentHeadSHA": "1fccc8877387cbe9d3025395ee14484f65f4c20e",
+  "results": {
+    "newSupportPosts": 0,
+    "publicBodiesVerified": 4,
+    "existingLinksMaintained": 3,
+    "linksAdded": 0,
+    "linksUpdated": 0,
+    "held": 1,
+    "unrelatedRssItemsExcluded": 16
+  },
+  "posts": {
+    "224464854203": {
+      "postId": "224464854203",
+      "url": "https://m.blog.naver.com/bible_el/224464854203",
+      "title": "2026–2027 임신부 독감 무료접종, 산모수첩·신분증과 지정병원 확인하세요",
+      "lastSeenAt": "2026-11-04T09:40:39.923896+00:00",
+      "bodySha256": "dc085e6b52e9e4150c43603ab94ea3d9dbfe4efeae6d41027a6d9bdd987b1c0e",
+      "sourceLinksSha256": "ec80f3f9f8291bfbdc378cc78b29636832a2e5635519693637021d7359b6951b",
+      "publicBodyConfirmed": true,
+      "rssPublishedAt": "Wed, 04 Nov 2026 16:29:21 +0900",
+      "verificationStatus": "maintained",
+      "linkedBenefitId": "135200000115",
+      "publicationObservedAt": "2026-11-04T09:01:01.736Z",
+      "verifiedAt": "2026-11-04T09:01:01.736Z",
+      "validUntil": "2026-11-18T09:01:01.736Z",
+      "sourceKey": "[\"135200000115\",\"인플루엔자 국가예방접종 지원\",\"질병관리청\",\"확인 필요\",\"접종 대상자 및 연령별 지원 기간 상이\",\"어린이, 임신부, 어르신 등 대상으로 인플루엔자 3가백신 1회 예방접종 지원\",\"20261020161004\",\"2026-10-20\"]",
+      "scope": {
+        "year": 2026,
+        "region": "확인 필요",
+        "round": "2026–2027절기 임신부"
+      },
+      "lastRegistrationPR": 8,
+      "registrationMergeSHA": "1fccc8877387cbe9d3025395ee14484f65f4c20e",
+      "bodyUnchangedSinceRegistration": true,
+      "nextReviewAfter": "2026-11-15T09:01:01.736Z"
+    },
+    "224464673507": {
+      "postId": "224464673507",
+      "url": "https://m.blog.naver.com/bible_el/224464673507",
+      "title": "2026 문화누리카드 신청 대상·금액·방법, 11월 마감 전에 확인하세요",
+      "lastSeenAt": "2026-11-04T09:40:39.923896+00:00",
+      "bodySha256": "a113fdc9dd86c099c65b1c24f61c0c0fbccde25120e729489f55cc83a89dc71b",
+      "sourceLinksSha256": "e207b7a269131adc2b4d1a4ae21e895fc2326fe515d6f580f72e8b39b436c7b8",
+      "publicBodyConfirmed": true,
+      "rssPublishedAt": "Wed, 04 Nov 2026 14:09:04 +0900",
+      "verificationStatus": "maintained",
+      "linkedBenefitId": "137100000236",
+      "publicationObservedAt": "2026-11-04T09:01:01.736Z",
+      "verifiedAt": "2026-11-04T09:01:01.736Z",
+      "validUntil": "2026-11-18T09:01:01.736Z",
+      "sourceKey": "[\"137100000236\",\"통합문화이용권(문화누리카드)\",\"문화체육관광부\",\"확인 필요\",\"2026.2.2.~2026.11.30. (예산 소진 시 발급 마감)\",\"국내 문화예술·관광·체육 관련 가맹점에서 이용 가능한 문화누리카드 발급 \",\"20260727210651\",\"2026-07-27\"]",
+      "scope": {
+        "year": 2026,
+        "region": "확인 필요",
+        "round": "2026년 연간 발급·재충전"
+      },
+      "lastRegistrationPR": 8,
+      "registrationMergeSHA": "1fccc8877387cbe9d3025395ee14484f65f4c20e",
+      "bodyUnchangedSinceRegistration": true,
+      "nextReviewAfter": "2026-11-15T09:01:01.736Z"
+    },
+    "224464848565": {
+      "postId": "224464848565",
+      "url": "https://m.blog.naver.com/bible_el/224464848565",
+      "title": "2026 근로장려금 기한 후 신청, 12월 1일 마감·소득재산 조건 확인",
+      "lastSeenAt": "2026-11-04T09:40:39.923896+00:00",
+      "bodySha256": "854aece79753c0a3ae0ca8c666ad2bac9bdb0eadc449e0874f3c8208975bd449",
+      "sourceLinksSha256": "1597b3b37463fee15db0d127f7f8efd9fb3808a095637848b39bf140d68d0c43",
+      "publicBodyConfirmed": true,
+      "rssPublishedAt": "Wed, 04 Nov 2026 16:24:59 +0900",
+      "verificationStatus": "maintained",
+      "linkedBenefitId": "105100000001",
+      "publicationObservedAt": "2026-11-04T09:01:01.736Z",
+      "verifiedAt": "2026-11-04T09:01:01.736Z",
+      "validUntil": "2026-11-18T09:01:01.736Z",
+      "sourceKey": "[\"105100000001\",\"근로·자녀장려금\",\"국세청\",\"확인 필요\",\"○ 정기신청 : 5.1.~5.31.○ 반기신청 - 상반기분 신청 : 9.1.~9.15. - 하반기분 신청 : 3.1.~3.15.\",\"소득과 재산이 적은 근로소득자에게 근로장려금을, 자녀가 있을 경우 자녀장려금 지급\",\"20260430093900\",\"2026-04-30\"]",
+      "scope": {
+        "year": 2026,
+        "region": "확인 필요",
+        "round": "2025년 귀속·2026년 기한 후 신청"
+      },
+      "lastRegistrationPR": 8,
+      "registrationMergeSHA": "1fccc8877387cbe9d3025395ee14484f65f4c20e",
+      "bodyUnchangedSinceRegistration": true,
+      "nextReviewAfter": "2026-11-15T09:01:01.736Z"
+    },
+    "224426296398": {
+      "postId": "224426296398",
+      "url": "https://m.blog.naver.com/bible_el/224426296398",
+      "title": "독감 무료접종 대상 확인법 + 병원별 가격 비교표",
+      "lastSeenAt": "2026-11-04T09:40:39.923896+00:00",
+      "bodySha256": "94fd36373bf48c75c690cc55bad0f26e86e2a934e86478edf2d88f6010fbb215",
+      "sourceLinksSha256": "3f08a9ca409663e711f75ee55dd5a5d3c611c93cf2b61bd3cf17d38672066a6e",
+      "publicBodyConfirmed": true,
+      "rssPublishedAt": "Tue, 29 Sep 2026 20:17:37 +0900",
+      "verificationStatus": "HOLD",
+      "linkedBenefitId": null,
+      "candidateBenefitId": "135200000115",
+      "holdReasons": [
+        "전체 무료접종 대상과 비급여 가격 혼합 글: 기존 임신부 한정 해설과 범위가 다름",
+        "동일 사업에 두 published 해설을 등록하면 현재 검증 함수가 복수 연결을 차단함",
+        "추가 공식 근거·가격 정보 검토가 완료되지 않아 임의 등록하지 않음"
+      ],
+      "nextResumeStep": "review_scope_and_official_sources_before_any_registration"
+    }
+  },
+  "nextResumeStep": "read_current_main_and_checkpoint_then_check_rss; do not redeploy unchanged links",
+  "errors": [],
+  "retryBudget": {
+    "maxAttemptsPerFingerprint": 2,
+    "used": 0
+  },
+  "checks": {
+    "publicRegistryMatchesMain": true,
+    "cardDetailPairsPassed": 3,
+    "sourceEditionKeysMatch": true,
+    "threadsExposed": false
+  },
+  "deployment": "not_required_no_editorial_data_change"
+}
+
