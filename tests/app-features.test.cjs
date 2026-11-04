@@ -1,6 +1,6 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
-const { HOME, shareData, installSteps, createActions } = require('../app-features.js');
+const { HOME, shareData, installContext, installSteps, installLinks, createActions } = require('../app-features.js');
 function fixture(nav = {}, standalone) {
   const calls = [];
   const ui = Object.fromEntries(['share','copied','manualCopy','install','requested','installed'].map(name => [name, value => calls.push({ name, value })]));
@@ -68,4 +68,38 @@ test('dismissal is quiet and failed install gives manual guidance', async () => 
 test('installed or standalone app never prompts again', async () => {
   const {actions,calls}=fixture();actions.installed();await actions.install();assert.deepEqual(calls.map(x=>x.name),['installed','installed']);
   const f=fixture({},()=>true);await f.actions.install();assert.equal(f.calls[0].name,'installed');
+});
+test('Threads and Android WebView use browser handoff while ordinary Chrome keeps its own menu', () => {
+  for (const userAgent of ['Android Threads 999', 'Android Barcelona 12', 'Mozilla/5.0 (Linux; Android 14; phone; wv) Chrome/130']) {
+    assert.equal(installContext({userAgent}).inApp, true);
+    assert.match(installSteps({userAgent}).join(' '), /브라우저로 열기.*Chrome/);
+  }
+  assert.equal(installContext({userAgent:'Mozilla/5.0 (Linux; Android 14) Chrome/130 Mobile Safari/537.36'}).inApp, false);
+});
+test('Chrome handoff has an HTTPS fallback and never transfers private filters or foreign URLs', () => {
+  const links=installLinks(HOME+'benefits/149200000026/?tab=apps&note=private#memo');
+  assert.equal(links.address, HOME+'benefits/149200000026/?install=1');
+  assert.equal(links.chrome, 'intent://kllollain-max.github.io/supportpick/benefits/149200000026/?install=1#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url='+encodeURIComponent(links.address)+';end;');
+  for(const url of ['javascript:alert(1)', 'https://evil.test/supportpick/benefits/123/', HOME+'../careerpick/']) {
+    const result=installLinks(url);
+    assert.equal(result.address, HOME+'?install=1');
+    assert(!result.chrome.includes('evil.test'));
+  }
+});
+test('an install event arriving after instructions notifies the open UI without automatic prompting', async () => {
+  const states=[], f=fixture({userAgent:'Android Chrome'});let prompts=0;
+  const actions=createActions({}, {install:steps=>f.calls.push({name:'install',steps}),installState:s=>states.push(s),requested(){}});
+  await actions.install();assert.equal(f.calls[0].name,'install');
+  actions.capture({preventDefault(){},prompt(){prompts++;},userChoice:Promise.resolve({outcome:'dismissed'})});
+  assert.deepEqual(states.at(-1),{ready:true,busy:false});assert.equal(prompts,0);
+  await actions.install();assert.equal(prompts,1);
+  assert.deepEqual(states.at(-1),{ready:false,busy:false});
+});
+test('install failures clear the consumed event and preserve a newly arriving event', async () => {
+  const states=[],calls=[];
+  const actions=createActions({}, {install:()=>calls.push('help'),installState:s=>states.push(s)});
+  actions.capture({preventDefault(){},prompt(){throw Error('blocked');}});
+  await actions.install();assert.deepEqual(calls,['help']);assert.deepEqual(states.at(-1),{ready:false,busy:false});
+  actions.capture({preventDefault(){},prompt(){},userChoice:Promise.resolve({outcome:'dismissed'})});
+  assert.deepEqual(states.at(-1),{ready:true,busy:false});
 });
