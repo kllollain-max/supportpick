@@ -1,24 +1,24 @@
 {
   "version": 1,
   "repository": "kllollain-max/supportpick",
-  "mainSHA": "749839cf237971cf17a23b54d2b6f3120da164d4",
-  "lastCheckedAt": "2026-11-04T10:26:09.039Z",
-  "lastSuccessAt": "2026-11-04T09:40:39.923896+00:00",
+  "mainSHA": "3eef9ec2aa199c375d22b6dfb5ee25cafaab5a41",
+  "lastCheckedAt": "2026-11-04T11:15:22.351Z",
+  "lastSuccessAt": "2026-11-04T11:15:22.351Z",
   "rss": {
     "url": "https://rss.blog.naver.com/bible_el.xml",
     "itemsSeen": 21,
-    "sha256": "3d4d077393e130f03b632f06544046ff350e16cd3cad463e1754f757685caf01",
-    "checkedAt": "2026-11-04T10:22:36.204Z"
+    "sha256": "544635a5a74dffcf5df4903ae251f067b006b3f277ca9c7326a3d24a00449bc3",
+    "checkedAt": "2026-11-04T11:15:22.351Z"
   },
-  "publicGeneration": "gov24-41805765326-1",
-  "latestSuccessfulDeploymentRun": 41813747268,
+  "publicGeneration": "gov24-41814036806-1",
+  "latestSuccessfulDeploymentRun": 41814036806,
   "lastEditorialDeploymentRun": 41813747268,
   "deploymentHeadSHA": "749839cf237971cf17a23b54d2b6f3120da164d4",
   "results": {
-    "newSupportPosts": 1,
+    "newSupportPosts": 0,
     "publicBodiesVerified": 5,
-    "existingLinksMaintained": 3,
-    "linksAdded": 1,
+    "existingLinksMaintained": 4,
+    "linksAdded": 0,
     "linksUpdated": 0,
     "held": 1,
     "unrelatedRssItemsExcluded": 16
@@ -28,7 +28,7 @@
       "postId": "224464854203",
       "url": "https://m.blog.naver.com/bible_el/224464854203",
       "title": "2026–2027 임신부 독감 무료접종, 산모수첩·신분증과 지정병원 확인하세요",
-      "lastSeenAt": "2026-11-04T10:22:36.204Z",
+      "lastSeenAt": "2026-11-04T11:15:22.351Z",
       "bodySha256": "dc085e6b52e9e4150c43603ab94ea3d9dbfe4efeae6d41027a6d9bdd987b1c0e",
       "sourceLinksSha256": "ec80f3f9f8291bfbdc378cc78b29636832a2e5635519693637021d7359b6951b",
       "publicBodyConfirmed": true,
@@ -53,7 +53,7 @@
       "postId": "224464673507",
       "url": "https://m.blog.naver.com/bible_el/224464673507",
       "title": "2026 문화누리카드 신청 대상·금액·방법, 11월 마감 전에 확인하세요",
-      "lastSeenAt": "2026-11-04T10:22:36.204Z",
+      "lastSeenAt": "2026-11-04T11:15:22.351Z",
       "bodySha256": "a113fdc9dd86c099c65b1c24f61c0c0fbccde25120e729489f55cc83a89dc71b",
       "sourceLinksSha256": "e207b7a269131adc2b4d1a4ae21e895fc2326fe515d6f580f72e8b39b436c7b8",
       "publicBodyConfirmed": true,
@@ -78,7 +78,7 @@
       "postId": "224464848565",
       "url": "https://m.blog.naver.com/bible_el/224464848565",
       "title": "2026 근로장려금 기한 후 신청, 12월 1일 마감·소득재산 조건 확인",
-      "lastSeenAt": "2026-11-04T10:22:36.204Z",
+      "lastSeenAt": "2026-11-04T11:15:22.351Z",
       "bodySha256": "854aece79753c0a3ae0ca8c666ad2bac9bdb0eadc449e0874f3c8208975bd449",
       "sourceLinksSha256": "1597b3b37463fee15db0d127f7f8efd9fb3808a095637848b39bf140d68d0c43",
       "publicBodyConfirmed": true,
@@ -103,7 +103,7 @@
       "postId": "224426296398",
       "url": "https://m.blog.naver.com/bible_el/224426296398",
       "title": "독감 무료접종 대상 확인법 + 병원별 가격 비교표",
-      "lastSeenAt": "2026-11-04T10:22:36.204Z",
+      "lastSeenAt": "2026-11-04T11:15:22.351Z",
       "bodySha256": "94fd36373bf48c75c690cc55bad0f26e86e2a934e86478edf2d88f6010fbb215",
       "sourceLinksSha256": "3f08a9ca409663e711f75ee55dd5a5d3c611c93cf2b61bd3cf17d38672066a6e",
       "publicBodyConfirmed": true,
@@ -122,10 +122,10 @@
       "postId": "224465029433",
       "url": "https://m.blog.naver.com/bible_el/224465029433",
       "title": "2026 에너지바우처 신청 대상·지원금액·준비서류, 두 가지 자격부터 확인하세요",
-      "lastSeenAt": "2026-11-04T10:22:36.204Z",
+      "lastSeenAt": "2026-11-04T11:15:22.351Z",
       "bodySha256": "79c9c2a620030098d49c173149f430ca5b868e870df64bbbaecff966916505c1",
       "publicBodyConfirmed": true,
-      "verificationStatus": "deployed_public_data_verified_render_pending",
+      "verificationStatus": "maintained",
       "linkedBenefitId": "B55353000001",
       "sourceKey": "[\"B55353000001\",\"에너지바우처\",\"기후에너지환경부\",\"확인 필요\",\"2026. 6. 15.(월) ~ 2026. 12. 31.(목)\",\"에너지이용 소외계층에게 냉ㆍ난방에너지를 구입할 수 있는 바우처 지급\",\"20260805210422\",\"2026-08-05\"]",
       "scope": {
@@ -145,11 +145,46 @@
         "https://www.energyv.or.kr/info/support_info.do",
         "https://www.energyv.or.kr/info/apl_info.do",
         "https://www.bokjiro.go.kr/ssis-tbu/cms/pc/customer/notice/1309896_1141.html"
-      ]
+      ],
+      "publicCardVerifiedAt": "2026-11-04T11:15:22.351Z",
+      "publicDetailVerifiedAt": "2026-11-04T11:15:22.351Z"
     }
   },
-  "nextResumeStep": "check_public_energy_card_and_detail_button_for_existing_PR12_deploy41813747268; do not duplicate registration/PR/deploy",
-  "errors": [
+  "nextResumeStep": "read_current_main_and_checkpoint_then_check_rss; preserve four existing links; no duplicate PR12 registration/deployment",
+  "errors": [],
+  "retryBudget": {
+    "maxAttemptsPerFingerprint": 2,
+    "used": 0
+  },
+  "checks": {
+    "publicRegistryMatchesMain": true,
+    "cardDetailPairsPassed": 4,
+    "sourceEditionKeysMatch": true,
+    "threadsExposed": false,
+    "pythonTests": 56,
+    "nodeTests": 35,
+    "publicBuild": true,
+    "latestOperationalCardDetailPairChecks": 4,
+    "publicEditorialDataHash": "940ba045c9109b7eb95e535065e38b6cf369b5db19e60c916cf3ce24fb30af94",
+    "publicDataContainsFourArticles": true,
+    "newButtonVisibleInCurrentBrowser": true,
+    "existingFluButtonVisible": true,
+    "publicManifestIntegrityVerified": true
+  },
+  "deployment": "no_change_public_render_verified",
+  "currentUpdate": {
+    "pr": 12,
+    "headSHA": "4cc43a1a6bd36840b5b4415bda4a8c517fe4ded1",
+    "mergeSHA": "749839cf237971cf17a23b54d2b6f3120da164d4",
+    "ciRun": 41813518023,
+    "deploymentStatus": "success",
+    "approvedSHA": "749839cf237971cf17a23b54d2b6f3120da164d4",
+    "deployRun": 41813747268,
+    "publicVerificationStatus": "verified",
+    "publicVerifiedAt": "2026-11-04T11:15:22.351Z"
+  },
+  "lastPartialRunAt": "2026-11-04T10:26:09.039Z",
+  "errorHistory": [
     {
       "fingerprint": "energy_button_not_visible_after_successful_data_deployment",
       "observedAt": "2026-11-04T10:26:09.039Z",
@@ -159,36 +194,9 @@
         "maxImmediateRetries": 2,
         "used": 2
       },
-      "nextStep": "다음 회차에 공개 표시부터 재검증; 중복 PR/재배포 금지"
+      "nextStep": "다음 회차에 공개 표시부터 재검증; 중복 PR/재배포 금지",
+      "resolvedAt": "2026-11-04T11:15:22.351Z",
+      "resolution": "기존 PR #12의 중복 등록·재배포 없이 신규 해설이 공개 카드와 상세에 표시되는 것을 확인했습니다. 이전 미표시의 근본 원인은 확정하지 않았습니다."
     }
-  ],
-  "retryBudget": {
-    "maxAttemptsPerFingerprint": 2,
-    "used": 0
-  },
-  "checks": {
-    "publicRegistryMatchesMain": true,
-    "cardDetailPairsPassed": 3,
-    "sourceEditionKeysMatch": true,
-    "threadsExposed": false,
-    "pythonTests": 56,
-    "nodeTests": 35,
-    "publicBuild": true,
-    "latestOperationalCardDetailPairChecks": 4,
-    "publicEditorialDataHash": "940ba045c9109b7eb95e535065e38b6cf369b5db19e60c916cf3ce24fb30af94",
-    "publicDataContainsFourArticles": true,
-    "newButtonVisibleInCurrentBrowser": false,
-    "existingFluButtonVisible": true
-  },
-  "deployment": "success_public_data_confirmed_render_pending",
-  "currentUpdate": {
-    "pr": 12,
-    "headSHA": "4cc43a1a6bd36840b5b4415bda4a8c517fe4ded1",
-    "mergeSHA": "749839cf237971cf17a23b54d2b6f3120da164d4",
-    "ciRun": 41813518023,
-    "deploymentStatus": "success",
-    "approvedSHA": "749839cf237971cf17a23b54d2b6f3120da164d4",
-    "deployRun": 41813747268
-  },
-  "lastPartialRunAt": "2026-11-04T10:26:09.039Z"
+  ]
 }
