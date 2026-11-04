@@ -12,11 +12,7 @@
     "daily_main_post_limit": 4,
     "cta": "자세한 사항은 프로필링크 확인"
   },
-  "lease": {
-    "owner": "threads-no-links-20261104",
-    "purpose": "Apply user link-free text and alternating high-quality images",
-    "started_at": "2026-11-04T22:50:00+09:00"
-  },
+  "lease": null,
   "last_observed_run_ids": [
     "41797892734",
     "41797694009",
@@ -136,7 +132,7 @@
     }
   },
   "last_check": {
-    "result": "healthy_no_new_incident",
+    "result": "user_content_and_image_policy_applied",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -218,10 +214,10 @@
     },
     "recovery_repeated": false,
     "posts_sent": 0,
-    "code_changes": 0,
-    "checked_at": "2026-11-04T22:22:31+09:00",
+    "code_changes": 1,
+    "checked_at": "2026-11-04T23:10:49+09:00",
     "changed_run_ids": [],
-    "current_main_sha": "48e11224a566dc3287505ae5d197a026251306a5",
+    "current_main_sha": "9c70d925e9374b1e3ba80c3bc2a436be8d876121",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
       "basis": "보조금24 누적 조회수",
@@ -231,7 +227,7 @@
       ],
       "unknown_values": "after_valid_zero",
       "main_implementation_verified": true,
-      "script_blob_sha": "94d4c1838881924a63fad60ae2f4e9737b68e063",
+      "script_blob_sha": "fea65d49957dd5c05ae995edd5c7f5089e0edc63",
       "pr": 9,
       "ci_run_id": "41809437757",
       "natural_publication_after_change_verified": true,
@@ -275,7 +271,7 @@
       "source_snapshot_hashes_passed": true,
       "publication_artifact_digest_passed": true
     },
-    "next_step": "Continue hourly checks and the next natural scheduled publication; no recovery needed. Historical resolved incident and previous publication notification remain preserved.",
+    "next_step": "Verify on next natural scheduled slots; do not dispatch test or backfill posts.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "artifact_metadata_and_digests_unchanged": true,
@@ -286,6 +282,36 @@
       "source_workflow_change": "Added static release checks, content-change gating and deployment verification; collection, validated runtime bundle and failure reporting remain present. No new source run yet.",
       "no_new_publication": true,
       "current_main_unchanged": true
+    },
+    "latest_policy_change": {
+      "applied_at": "2026-11-04T23:10:49+09:00",
+      "pr": 19,
+      "commit_sha": "9c70d925e9374b1e3ba80c3bc2a436be8d876121",
+      "head_sha": "213cf9593e5b96670168d9f10713ec2a2b7b455b",
+      "ci_run_id": "41844531799",
+      "ci_result": "success",
+      "scope": "Threads link-free text and alternating approved illustrations",
+      "validation": {
+        "publisher_tests": 37,
+        "full_python_tests": 87,
+        "node_tests": 35,
+        "build_and_release_verification": "passed",
+        "source_generation": "gov24-41814036806-1",
+        "source_compositions_link_free": 10390,
+        "main_image_raw_get_status": [
+          200,
+          200
+        ],
+        "image_dimensions": [
+          1254,
+          1254
+        ],
+        "main_script_readback": true,
+        "publication_ledger_unchanged": true
+      },
+      "real_publication_performed": false,
+      "natural_publication_after_change_verified": false,
+      "next_step": "Verify on next natural scheduled slots; do not dispatch test or backfill posts."
     }
   },
   "last_reported_publication": {
@@ -295,33 +321,67 @@
     "verification_completed_at": "2026-11-04T20:44:13.580205+09:00",
     "recorded_at": "2026-11-04T21:01:48+09:00"
   },
-  "pending_change": {
-    "pr": 19,
-    "head_sha": "213cf9593e5b96670168d9f10713ec2a2b7b455b",
-    "status": "ci_in_progress",
-    "ci_run_id": "41844531799",
-    "scope": "Threads text, approved image assets, tests and operating documentation only",
-    "validation": {
-      "local_publisher_tests": 37,
-      "real_source_compositions": 10390,
-      "source_generation": "gov24-41814036806-1",
-      "image_raw_http_status": [
-        200,
-        200
-      ],
-      "image_dimensions": [
-        [
+  "policy_changes": [
+    {
+      "applied_at": "2026-11-04T23:10:49+09:00",
+      "pr": 19,
+      "commit_sha": "9c70d925e9374b1e3ba80c3bc2a436be8d876121",
+      "head_sha": "213cf9593e5b96670168d9f10713ec2a2b7b455b",
+      "ci_run_id": "41844531799",
+      "ci_result": "success",
+      "scope": "Threads link-free text and alternating approved illustrations",
+      "validation": {
+        "publisher_tests": 37,
+        "full_python_tests": 87,
+        "node_tests": 35,
+        "build_and_release_verification": "passed",
+        "source_generation": "gov24-41814036806-1",
+        "source_compositions_link_free": 10390,
+        "main_image_raw_get_status": [
+          200,
+          200
+        ],
+        "image_dimensions": [
           1254,
           1254
         ],
-        [
-          1254,
-          1254
-        ]
-      ]
-    },
-    "posts_sent": 0,
-    "site_deployment_requested": false,
-    "publication_ledger_modified": false
+        "main_script_readback": true,
+        "publication_ledger_unchanged": true
+      },
+      "real_publication_performed": false,
+      "natural_publication_after_change_verified": false,
+      "next_step": "Verify on next natural scheduled slots; do not dispatch test or backfill posts."
+    }
+  ],
+  "content_policy": {
+    "version": "profile_cta_no_links_v1",
+    "post_text_links_allowed": false,
+    "reply_text_links_allowed": false,
+    "cta": "자세한 사항은 프로필링크 확인",
+    "official_sources_preserved_internally": true,
+    "existing_published_unchanged": true,
+    "pending_texts_hashes_preserved": true,
+    "legacy_pending_links_action": "HOLD without rewriting or sending"
+  },
+  "image_policy": {
+    "version": "alternate_approved_illustrations_v1",
+    "new_main_sequence": [
+      "text",
+      "image"
+    ],
+    "rotation": [
+      "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+      "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png"
+    ],
+    "rotation_count": 2,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "per_benefit_approved_asset_preferred": true,
+    "only_repo_main_social_images": true,
+    "stored_in_publication_reservation": true,
+    "never_reselect_pending": true,
+    "natural_publication_after_change_verified": false
   }
 }
