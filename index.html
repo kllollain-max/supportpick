@@ -7,7 +7,7 @@
   <meta name="description" content="정부지원금, 생활혜택과 소상공인 지원정보를 공식 출처로 확인하고 관심 혜택과 신청 준비를 관리하세요.">
   <meta name="theme-color" content="#0b7259">
   <meta name="robots" content="noindex,nofollow">
-  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="icon" href="supportpick-badge.png" type="image/png">
   <link rel="stylesheet" href="careerpick-base.css">
   <link rel="stylesheet" href="styles.css">
   <script src="data.js" defer></script>
@@ -18,7 +18,7 @@
 <a class="skip" href="#main">본문 바로가기</a>
 <div class="site-shell">
   <header class="header">
-    <a class="brand" href="./" aria-label="지원금픽 처음으로"><img src="icon.svg" width="40" height="40" alt=""><span><strong>지원금픽<span class="brand-dot">.</span></strong><small>한눈에 보는 생활혜택</small></span></a>
+    <a class="brand" href="./" aria-label="지원금픽 처음으로"><img class="brand-badge" src="supportpick-badge.png" width="48" height="48" alt=""><span><strong>지원금픽<span class="brand-dot">.</span></strong><small>한눈에 보는 생활혜택</small></span></a>
     <div class="header-actions"><span class="preview-tag">미리보기</span><button class="quiet" id="recordsButton">기록 관리</button></div>
   </header>
   <nav class="main-nav" aria-label="주요 메뉴">
@@ -31,9 +31,10 @@
   <main id="main" tabindex="-1">
     <div id="storageWarning" class="warning" role="alert" hidden></div>
     <div id="feedWarning" class="warning" role="status" hidden></div>
-    <section class="hero" id="hero">
-      <div class="hero-content"><span class="eyebrow"><span class="status-dot"></span>공식 출처에서 시작하는 혜택 찾기</span><h1>생활에 보탬이 되는 혜택,<br>하나씩 챙겨보세요.</h1><p>나에게 필요한 지원정보를 찾고,<br class="mobile-only"> 신청 준비까지 한곳에서 관리하세요.</p><button class="primary" id="heroMatch">내 관심 조건 설정하기 <span aria-hidden="true">↗</span></button></div>
-      <div class="hero-visual" aria-hidden="true"><div class="hero-orbit"></div><div class="benefit-ticket"><span class="ticket-label">나의 생활혜택</span><span class="ticket-mark">P<span>ICK</span></span><span class="ticket-line"></span><span class="ticket-caption">필요한 정보를, 놓치지 않게</span><span class="ticket-stamp">✓</span></div><div class="float-tag">찾고 <b>＋</b></div><div class="float-tag second">챙기고 <b>✓</b></div></div>
+    <section class="hero hero-branded" id="hero">
+      <div class="brand-banner"><img src="supportpick-banner.png" width="2048" height="682" alt="지원금픽 — 정부지원금·환급금·생활혜택·신청방법" fetchpriority="high" decoding="async"></div>
+      <div class="hero-content"><div class="hero-copy"><span class="eyebrow"><span class="status-dot"></span>공식 출처에서 시작하는 혜택 찾기</span><h1>생활에 보탬이 되는 혜택,<br>하나씩 챙겨보세요.</h1><p>나에게 필요한 지원정보를 찾고,<br class="mobile-only"> 신청 준비까지 한곳에서 관리하세요.</p></div><button class="primary" id="heroMatch">내 관심 조건 설정하기 <span aria-hidden="true">↗</span></button></div>
+
     </section>
     <section id="browseSection" aria-labelledby="sectionTitle">
       <div class="section-heading"><div><span class="eyebrow" id="sectionEyebrow">BENEFITS</span><h2 id="sectionTitle">관심 있는 혜택을 찾아보세요</h2></div><button class="quiet" id="preferencesButton">맞춤 조건 설정 <span aria-hidden="true">↗</span></button></div>

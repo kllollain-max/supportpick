@@ -7,7 +7,7 @@ from html import escape
 from refresh import read_current,verify_snapshot
 from bootstrap_state import ensure_bootstrap
 ROOT=Path(__file__).resolve().parents[1]
-STATIC=('index.html','privacy.html','about.html','icon.svg','careerpick-base.css','styles.css','core.js','app.js')
+STATIC=('index.html','privacy.html','about.html','icon.svg','careerpick-base.css','styles.css','core.js','app.js','supportpick-badge.png','supportpick-banner.png')
 class Links(HTMLParser):
     def __init__(self,output):super().__init__();self.output=output
     def handle_starttag(self,tag,attrs):
@@ -73,9 +73,13 @@ def build(destination,state=None,allow_sample=False,public_base=None):
     for p in sorted(output.rglob('*')):
         if not p.is_file():continue
         if p.is_symlink() or p.stat().st_nlink!=1:raise ValueError('linked_public_file')
-        raw=p.read_bytes();text=raw.decode('utf-8')
+        raw=p.read_bytes()
+        # Scan ASCII secret patterns in binary images without treating PNG bytes as UTF-8 documents.
+        text=raw.decode('utf-8',errors='ignore')
         if forbidden.search(text) or any(s in text for s in secret_variants):raise ValueError('public_secret_pattern_detected')
+        if p.suffix=='.png' and not raw.startswith(b'\x89PNG\r\n\x1a\n'):raise ValueError('invalid_public_png')
         if p.suffix=='.html':
+            text=raw.decode('utf-8')
             Links(output).feed(text)
             expected='index,follow' if public_base else 'noindex,nofollow'
             if '<meta name="robots" content="'+expected+'">' not in text:raise ValueError('indexing_policy_mismatch')
