@@ -10,7 +10,7 @@ from detail_pages import write_details
 from release_policy import fingerprint
 from collect_full import period
 ROOT=Path(__file__).resolve().parents[1]
-STATIC=('index.html','privacy.html','about.html','terms.html','contact.html','404.html','icon.svg','careerpick-base.css','styles.css','core.js','app.js','detail.js','supportpick-badge.png','supportpick-banner.png','editorials.js')
+STATIC=('index.html','privacy.html','about.html','terms.html','contact.html','404.html','icon.svg','careerpick-base.css','styles.css','core.js','app.js','detail.js','supportpick-badge.png','supportpick-banner.png','editorials.js','app-features.js','manifest.webmanifest','sw.js','offline.html','app-icon-180.png','app-icon-192.png','app-icon-512.png')
 class Links(HTMLParser):
     def __init__(self,output,page,available=None):super().__init__();self.output=output;self.page=page;self.available=available
     def handle_starttag(self,tag,attrs):
@@ -49,7 +49,7 @@ def build(destination,state=None,allow_sample=False,public_base=None):
         if public_base and name.endswith('.html'):
             text=(output/name).read_text().replace('content="noindex,nofollow"','content="index,follow"')
             text=text.replace('<span class="preview-tag">미리보기</span>','').replace(' · 공개 전 미리보기','')
-            if name=='404.html':text=text.replace('content="index,follow"','content="noindex,follow"')
+            if name in ('404.html','offline.html'):text=text.replace('content="index,follow"','content="noindex,follow"')
             else:text=public_metadata(text,name,public_base,verifications)
             (output/name).write_text(text)
     registry=json.loads((ROOT/'editorials.json').read_text())
@@ -99,6 +99,10 @@ def build(destination,state=None,allow_sample=False,public_base=None):
     (output/'index.html').write_text(home)
     if public_base:write_sitemap(output,public_base,detail['entries'])
     (output/'search-report.json').write_text(json.dumps(detail['report'],ensure_ascii=False,indent=2))
+    # Invalidate only our generic offline shell when its actual assets change.
+    shell_hash=hashlib.sha256(b''.join((output/name).read_bytes() for name in ('offline.html','app-icon-192.png','app-icon-512.png'))).hexdigest()[:16]
+    worker=output/'sw.js'
+    worker.write_text(worker.read_text().replace('__SHELL_HASH__',shell_hash))
     secret=os.environ.get('SUPPORTPICK_GOV24_SERVICE_KEY','')
     secret_variants={secret,unquote(secret),quote(unquote(secret),safe=''),quote(quote(unquote(secret),safe=''),safe='')}-{''}
     forbidden=re.compile(r'gh[pousr]_[A-Za-z0-9]{25,}|github_pat_[A-Za-z0-9_]{30,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|(?:servicekey|access_token|authorization)=',re.I)
