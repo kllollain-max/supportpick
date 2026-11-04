@@ -12,7 +12,11 @@
     "daily_main_post_limit": 4,
     "cta": "자세한 사항은 프로필링크 확인"
   },
-  "lease": null,
+  "lease": {
+    "owner": "threads-no-links-20261104",
+    "purpose": "Apply user link-free Threads text policy",
+    "started_at": "2026-11-04T22:50:00+09:00"
+  },
   "last_observed_run_ids": [
     "41797892734",
     "41797694009",
