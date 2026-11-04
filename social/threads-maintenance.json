@@ -215,9 +215,9 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-04T23:35:02+09:00",
+    "checked_at": "2026-11-05T00:36:35.665485+09:00",
     "changed_run_ids": [],
-    "current_main_sha": "52d1744d4d1ec4655f0c3b1ed8583c4934ac2f88",
+    "current_main_sha": "1d835c70be865938c90e4c6a278dfbbd8f058669",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
       "basis": "보조금24 누적 조회수",
@@ -254,8 +254,8 @@
     "run_list_scan": {
       "pages": 1,
       "per_page": 100,
-      "total_count": 47,
-      "returned": 47,
+      "total_count": 51,
+      "returned": 51,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
@@ -271,7 +271,7 @@
       "source_snapshot_hashes_passed": true,
       "publication_artifact_digest_passed": true
     },
-    "next_step": "Continue next natural 08/12/16/20 KST slots. Verify link-free text and alternating images when a new publication actually occurs; no test post, recovery, or backfill required.",
+    "next_step": "Continue natural scheduled slots and existing hourly checks. No pending recovery, test post, backfill or new incident. Verify text/image policy upon the next actual publication.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "artifact_metadata_and_digests_unchanged": true,
