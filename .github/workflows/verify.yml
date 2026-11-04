@@ -1,0 +1,29 @@
+name: Verify SupportPick release
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - run: node --test tests/core.test.cjs
+      - run: python tools/build.py --output dist --public-base https://kllollain-max.github.io/supportpick/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: supportpick-verified-release
+          path: dist/
+          include-hidden-files: true
+          retention-days: 3
