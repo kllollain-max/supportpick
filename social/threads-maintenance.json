@@ -25,15 +25,17 @@
     "41794243970",
     "41794233640",
     "41792407656",
-    "41805765326"
+    "41805765326",
+    "41823025409",
+    "41814036806"
   ],
   "last_health": {
     "unresolved_publications": 0,
-    "published_benefits": 1,
-    "source_run_id": "41805765326",
+    "published_benefits": 2,
+    "source_run_id": "41814036806",
     "source_result": "success",
     "source_count": 10942,
-    "source_last_success_at": "2026-11-04T18:20:15.278790+09:00"
+    "source_last_success_at": "2026-11-04T19:32:34.568318+09:00"
   },
   "incidents": {
     "41796747628": {
@@ -113,34 +115,69 @@
       "conclusion": "success",
       "updated_at": "2026-11-04T09:20:48Z",
       "head_sha": "1fccc8877387cbe9d3025395ee14484f65f4c20e"
+    },
+    "41823025409": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-04T11:44:17Z",
+      "head_sha": "2654b39e464fa849afacbcc43585cf1fb6c07eab"
+    },
+    "41814036806": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-04T10:33:02Z",
+      "head_sha": "749839cf237971cf17a23b54d2b6f3120da164d4"
     }
   },
   "last_check": {
-    "result": "healthy_no_new_incident",
+    "result": "healthy_new_scheduled_publication_verified",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
-      "run_id": "41797892734",
-      "job_id": "126466274672",
-      "head_sha": "e14b82cec9a181a6c671af280d136b0ba46dc86b",
+      "run_id": "41823025409",
+      "run_attempt": 1,
+      "job_id": "126550652751",
+      "head_sha": "2654b39e464fa849afacbcc43585cf1fb6c07eab",
+      "event": "schedule",
       "conclusion": "success",
       "published": true,
       "replies": 2,
-      "artifact_id": "13305608954",
-      "artifact_sha256": "7d53070d8d9d31417f634246ce09917f385559f85ddf14774840abae30c6e712",
-      "artifact_contents_verified": true
+      "artifact_id": "13316504550",
+      "artifact_sha256": "d51fb59b21ccf075e00f2a564663fc7e74560e97cdf1eecaaabb903d39b98199",
+      "artifact_contents_verified": true,
+      "remote_receipt_verification": "All three exact IDs, permalinks and expected text verified by publisher GET reads before complete/verified ledger CAS; artifact agrees",
+      "benefit_id": "149200000026",
+      "main_id": "18071994527503646",
+      "main_id_url": "https://www.threads.com/@hid_1004/post/DfUX92OkcCd",
+      "detail_id": "18127604966296319",
+      "detail_id_url": "https://www.threads.com/@hid_1004/post/DfUYC02kUBA",
+      "links_id": "17972996886471165",
+      "links_id_url": "https://www.threads.com/@hid_1004/post/DfUYILGkf24",
+      "content_hash": "c51c96fbde8b34b3a1e4b6fe2143ee7873916e87650a044946a6e43a25373249",
+      "selection": {
+        "policy": "gov24_views_desc_v1",
+        "basis": "보조금24 누적 조회수",
+        "views": 5157133,
+        "source_checked_at": "2026-11-04T19:27:47.284189+09:00",
+        "note": "실시간 검색량·신청자 수가 아닌 공식 API 누적 조회수 기준"
+      },
+      "published_at": "2026-11-04T20:42:05.056756+09:00",
+      "verification_completed_at": "2026-11-04T20:44:13.580205+09:00"
     },
     "latest_source": {
-      "run_id": "41805765326",
-      "job_id": "126492278592",
-      "head_sha": "1fccc8877387cbe9d3025395ee14484f65f4c20e",
-      "event": "workflow_dispatch",
+      "run_id": "41814036806",
+      "run_attempt": 1,
+      "job_id": "126520150258",
+      "head_sha": "749839cf237971cf17a23b54d2b6f3120da164d4",
+      "event": "schedule",
       "conclusion": "success",
       "count": 10942,
-      "generation": "gov24-41805765326-1",
-      "last_success_at": "2026-11-04T18:20:15.278790+09:00",
-      "artifact_id": "13310042236",
-      "artifact_sha256": "d7347d6cf920d5e24610ea968771aa350febb8c3e49f11344d5d612e9d91ab1f",
+      "generation": "gov24-41814036806-1",
+      "last_success_at": "2026-11-04T19:32:34.568318+09:00",
+      "artifact_id": "13313039780",
+      "artifact_sha256": "e52badfeae562a8fe113dd502e4084cbb968b1a7e466570c50e27ce5c6fcea2b",
       "artifact_contents_verified": true,
       "manifest_files_verified": 36,
       "endpoint_coverage": {
@@ -170,17 +207,20 @@
         }
       }
     },
-    "publication_ledger_sha": "ad9bee31b49eb2876ec406e7fcdb4b4cf5f01464",
+    "publication_ledger_sha": "e0aa73a4770ec6f5dd87494ee7c53cba383a91cc",
     "workflow_blob_shas": {
       "threads": "b9eca15d9b506189b513abb15281e77a5cdc3ab5",
-      "source": "b67ca68d09e7f156014138b6beb445f19b56b222"
+      "source": "beccbf8bb348ef6127402f001c7e20ed08810112"
     },
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-04T19:15:35+09:00",
-    "changed_run_ids": [],
-    "current_main_sha": "150ae839f9d6a122727dd9aac524f8c78bb40444",
+    "checked_at": "2026-11-04T21:01:48+09:00",
+    "changed_run_ids": [
+      "41823025409",
+      "41814036806"
+    ],
+    "current_main_sha": "2654b39e464fa849afacbcc43585cf1fb6c07eab",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
       "basis": "보조금24 누적 조회수",
@@ -193,8 +233,54 @@
       "script_blob_sha": "94d4c1838881924a63fad60ae2f4e9737b68e063",
       "pr": 9,
       "ci_run_id": "41809437757",
-      "natural_publication_after_change_verified": false
+      "natural_publication_after_change_verified": true,
+      "selection_recomputed_from_exact_runtime_artifact": true,
+      "top_eligible": [
+        {
+          "id": "149200000026",
+          "title": "국민내일배움카드",
+          "views": 5157133
+        },
+        {
+          "id": "105100000001",
+          "title": "근로·자녀장려금",
+          "views": 2434939
+        },
+        {
+          "id": "149200005007",
+          "title": "국민취업지원제도",
+          "views": 1297328
+        }
+      ]
     },
-    "evidence_reused_for_unchanged_runs": true
+    "evidence_reused_for_unchanged_runs": true,
+    "run_list_scan": {
+      "pages": 1,
+      "per_page": 100,
+      "total_count": 35,
+      "returned": 35,
+      "complete_to_checkpoint": true,
+      "version_fields": [
+        "run_attempt",
+        "status",
+        "conclusion",
+        "updated_at",
+        "head_sha"
+      ]
+    },
+    "validation": {
+      "publisher_regression_tests_passed": 31,
+      "source_python_tests_passed": 56,
+      "source_snapshot_hashes_passed": true,
+      "publication_artifact_digest_passed": true
+    },
+    "next_step": "Continue hourly read-first checks and natural 08/12/16/20 KST slots; no pending recovery or extra posts required"
+  },
+  "last_reported_publication": {
+    "run_id": "41823025409",
+    "main_id": "18071994527503646",
+    "url": "https://www.threads.com/@hid_1004/post/DfUX92OkcCd",
+    "verification_completed_at": "2026-11-04T20:44:13.580205+09:00",
+    "recorded_at": "2026-11-04T21:01:48+09:00"
   }
 }
