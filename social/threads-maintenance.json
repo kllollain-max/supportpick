@@ -28,17 +28,19 @@
     "41805765326",
     "41823025409",
     "41814036806",
-    "41921889569"
+    "41921889569",
+    "41935189296"
   ],
   "last_health": {
     "unresolved_publications": 0,
-    "published_benefits": 2,
+    "published_benefits": 3,
     "source_run_id": "41921889569",
     "source_result": "success",
     "source_count": 10942,
     "source_last_success_at": "2026-11-05T07:11:51.033157+09:00",
     "source_workflow_conclusion": "failure",
-    "source_failure_classification": "post_deployment_verification_only; no source collection or Threads publication failure"
+    "source_failure_classification": "post_deployment_verification_only; no source collection or Threads publication failure",
+    "last_publisher_run_id": "41935189296"
   },
   "incidents": {
     "41796747628": {
@@ -106,7 +108,13 @@
         "workflow_retries": 0,
         "recovery_attempts": 0
       },
-      "next_step": "Allow next natural publication to use validated current source; do not rerun collection/deployment or create a test post. Reopen only for new attempt/status/error or actual source/publisher failure."
+      "next_step": "Allow next natural publication to use validated current source; do not rerun collection/deployment or create a test post. Reopen only for new attempt/status/error or actual source/publisher failure.",
+      "natural_publisher_consumption_verified": {
+        "run_id": "41935189296",
+        "generation": "gov24-41921889569-1",
+        "published": true,
+        "replies": 2
+      }
     }
   },
   "guardrails": {
@@ -194,42 +202,50 @@
       "conclusion": "failure",
       "updated_at": "2026-11-04T22:13:48Z",
       "head_sha": "1d835c70be865938c90e4c6a278dfbbd8f058669"
+    },
+    "41935189296": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-04T23:39:58Z",
+      "head_sha": "a890695ccaf14ccea374710d5182030f0cfbd4b1"
     }
   },
   "last_check": {
-    "result": "healthy_no_new_incident",
+    "result": "healthy_new_scheduled_publication_verified",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
-      "run_id": "41823025409",
+      "run_id": "41935189296",
       "run_attempt": 1,
-      "job_id": "126550652751",
-      "head_sha": "2654b39e464fa849afacbcc43585cf1fb6c07eab",
+      "job_id": "126941756590",
+      "head_sha": "a890695ccaf14ccea374710d5182030f0cfbd4b1",
       "event": "schedule",
       "conclusion": "success",
       "published": true,
       "replies": 2,
-      "artifact_id": "13316504550",
-      "artifact_sha256": "d51fb59b21ccf075e00f2a564663fc7e74560e97cdf1eecaaabb903d39b98199",
+      "artifact_id": "13373228913",
+      "artifact_sha256": "fcdd054c1bfa7189cba9fe187736a6d95f834bd24908b4d180762dadf4af428e",
       "artifact_contents_verified": true,
-      "remote_receipt_verification": "All three exact IDs, permalinks and expected text verified by publisher GET reads before complete/verified ledger CAS; artifact agrees",
-      "benefit_id": "149200000026",
-      "main_id": "18071994527503646",
-      "main_id_url": "https://www.threads.com/@hid_1004/post/DfUX92OkcCd",
-      "detail_id": "18127604966296319",
-      "detail_id_url": "https://www.threads.com/@hid_1004/post/DfUYC02kUBA",
-      "links_id": "17972996886471165",
-      "links_id_url": "https://www.threads.com/@hid_1004/post/DfUYILGkf24",
-      "content_hash": "c51c96fbde8b34b3a1e4b6fe2143ee7873916e87650a044946a6e43a25373249",
+      "remote_receipt_verification": "Publisher GET verification of IDs, text and permalinks completed before verified/complete ledger state; downloaded result artifact matches.",
+      "benefit_id": "105100000001",
+      "main_id": "18100684106644300",
+      "main_id_url": "https://www.threads.com/@hid_1004/post/DfVp3rUDrok",
+      "detail_id": "18163187488542435",
+      "detail_id_url": "https://www.threads.com/@hid_1004/post/DfVp8sUjvun",
+      "links_id": "17963612868229839",
+      "links_id_url": "https://www.threads.com/@hid_1004/post/DfVqB0XDuW4",
+      "content_hash": "e330e38dbefefcc96ba848320a29d678ea7b2f7c41687431b954c747877c85b2",
       "selection": {
         "policy": "gov24_views_desc_v1",
         "basis": "보조금24 누적 조회수",
-        "views": 5157133,
-        "source_checked_at": "2026-11-04T19:27:47.284189+09:00",
+        "views": 2434939,
+        "source_checked_at": "2026-11-05T07:07:08.340921+09:00",
         "note": "실시간 검색량·신청자 수가 아닌 공식 API 누적 조회수 기준"
       },
-      "published_at": "2026-11-04T20:42:05.056756+09:00",
-      "verification_completed_at": "2026-11-04T20:44:13.580205+09:00"
+      "published_at": "2026-11-05T08:37:45.282686+09:00",
+      "image_url": null,
+      "verification_completed_at": "2026-11-05T08:39:53.221301+09:00"
     },
     "latest_source": {
       "run_id": "41921889569",
@@ -275,7 +291,7 @@
       },
       "actual_read_path_verified": true
     },
-    "publication_ledger_sha": "e0aa73a4770ec6f5dd87494ee7c53cba383a91cc",
+    "publication_ledger_sha": "5c7b16d56d9b6e2a2b77dfdbc5c5a3c5b3dfcb3b",
     "workflow_blob_shas": {
       "threads": "b9eca15d9b506189b513abb15281e77a5cdc3ab5",
       "source": "ce74fe03afd06f59f1d38f2e297fe9a78bbcf604"
@@ -283,9 +299,11 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-05T07:52:15.606829+09:00",
-    "changed_run_ids": [],
-    "current_main_sha": "cfa292822a5357d26022f67e36eac942665c09f3",
+    "checked_at": "2026-11-05T08:54:59.237165+09:00",
+    "changed_run_ids": [
+      "41935189296"
+    ],
+    "current_main_sha": "a890695ccaf14ccea374710d5182030f0cfbd4b1",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
       "basis": "보조금24 누적 조회수",
@@ -316,14 +334,22 @@
           "title": "국민취업지원제도",
           "views": 1297328
         }
-      ]
+      ],
+      "latest_verified_run_id": "41935189296",
+      "latest_verified_selection": {
+        "policy": "gov24_views_desc_v1",
+        "basis": "보조금24 누적 조회수",
+        "views": 2434939,
+        "source_checked_at": "2026-11-05T07:07:08.340921+09:00",
+        "note": "실시간 검색량·신청자 수가 아닌 공식 API 누적 조회수 기준"
+      }
     },
     "evidence_reused_for_unchanged_runs": true,
     "run_list_scan": {
       "pages": 1,
       "per_page": 100,
-      "total_count": 60,
-      "returned": 60,
+      "total_count": 70,
+      "returned": 70,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
@@ -334,24 +360,23 @@
       ]
     },
     "validation": {
-      "publisher_regression_tests_passed": 31,
-      "source_python_tests_passed": 56,
-      "source_snapshot_hashes_passed": true,
-      "publication_artifact_digest_passed": true
+      "publisher_regression_tests_passed": 37,
+      "new_publication_artifact_digest_passed": true,
+      "source_artifact_digest_passed": true,
+      "source_manifest_files_verified": 36,
+      "popularity_top_candidate_recomputed": true,
+      "exact_content_hash_and_composition_verified": true,
+      "no_links_all_three_texts": true,
+      "cta_all_three_texts": true,
+      "expected_text_only_slot": true
     },
-    "next_step": "Await natural 2026-11-05 08:00 KST publication with existing two-hour allowance. No pending recovery or extra posts; verify new policy on actual publication.",
+    "next_step": "Continue natural 12/16/20 KST slots with daily cap and dedup unchanged. Next new main is the image slot; actual image transmission is not yet verified. No manual posts or recovery required.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
-      "artifact_metadata_and_digests_unchanged": true,
-      "verified_artifact_contents_and_read_path_reused": true,
-      "publication_ledger_unchanged": true,
-      "publisher_script_blob_unchanged": true,
-      "content_policy_retained": true,
-      "image_rotation_retained": true,
-      "main_changed_outside_publisher": true,
+      "source_postdeploy_failure_unchanged": true,
+      "source_consumed_by_natural_publisher": true,
       "known_postdeploy_failure_not_retried": true,
-      "natural_publication_after_policy_change_verified": false,
-      "no_new_publication": true
+      "no_in_scope_unresolved_failure": true
     },
     "latest_policy_change": {
       "applied_at": "2026-11-04T23:10:49+09:00",
@@ -385,11 +410,11 @@
     }
   },
   "last_reported_publication": {
-    "run_id": "41823025409",
-    "main_id": "18071994527503646",
-    "url": "https://www.threads.com/@hid_1004/post/DfUX92OkcCd",
-    "verification_completed_at": "2026-11-04T20:44:13.580205+09:00",
-    "recorded_at": "2026-11-04T21:01:48+09:00"
+    "run_id": "41935189296",
+    "main_id": "18100684106644300",
+    "url": "https://www.threads.com/@hid_1004/post/DfVp3rUDrok",
+    "verification_completed_at": "2026-11-05T08:39:53.221301+09:00",
+    "recorded_at": "2026-11-05T08:54:59.237165+09:00"
   },
   "policy_changes": [
     {
@@ -431,7 +456,9 @@
     "official_sources_preserved_internally": true,
     "existing_published_unchanged": true,
     "pending_texts_hashes_preserved": true,
-    "legacy_pending_links_action": "HOLD without rewriting or sending"
+    "legacy_pending_links_action": "HOLD without rewriting or sending",
+    "natural_publication_after_change_verified": true,
+    "verified_run_id": "41935189296"
   },
   "image_policy": {
     "version": "alternate_approved_illustrations_v1",
@@ -452,7 +479,9 @@
     "only_repo_main_social_images": true,
     "stored_in_publication_reservation": true,
     "never_reselect_pending": true,
-    "natural_publication_after_change_verified": false
+    "natural_publication_after_change_verified": false,
+    "text_only_slot_verified": true,
+    "next_new_main_type": "image"
   },
   "last_reported_operation_issue": {
     "run_id": "41921889569",
