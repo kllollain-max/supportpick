@@ -283,9 +283,9 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-05T07:23:31.444579+09:00",
+    "checked_at": "2026-11-05T07:52:15.606829+09:00",
     "changed_run_ids": [],
-    "current_main_sha": "1d835c70be865938c90e4c6a278dfbbd8f058669",
+    "current_main_sha": "cfa292822a5357d26022f67e36eac942665c09f3",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
       "basis": "보조금24 누적 조회수",
@@ -322,8 +322,8 @@
     "run_list_scan": {
       "pages": 1,
       "per_page": 100,
-      "total_count": 53,
-      "returned": 53,
+      "total_count": 60,
+      "returned": 60,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
@@ -339,19 +339,19 @@
       "source_snapshot_hashes_passed": true,
       "publication_artifact_digest_passed": true
     },
-    "next_step": "Await the next natural 2026-11-05 08:00 KST slot with existing two-hour allowance. No extra manual post or repeat recovery.",
+    "next_step": "Await natural 2026-11-05 08:00 KST publication with existing two-hour allowance. No pending recovery or extra posts; verify new policy on actual publication.",
     "evidence_recheck": {
-      "latest_jobs_and_logs_read": false,
+      "latest_jobs_and_logs_read": true,
       "artifact_metadata_and_digests_unchanged": true,
       "verified_artifact_contents_and_read_path_reused": true,
       "publication_ledger_unchanged": true,
-      "current_main_unchanged": true,
+      "publisher_script_blob_unchanged": true,
       "content_policy_retained": true,
       "image_rotation_retained": true,
-      "natural_publication_after_policy_change_verified": false,
+      "main_changed_outside_publisher": true,
       "known_postdeploy_failure_not_retried": true,
-      "no_new_publication": true,
-      "exact_unchanged_run_and_artifact_evidence_reused_from": "2026-11-05T07:22:14.324671+09:00"
+      "natural_publication_after_policy_change_verified": false,
+      "no_new_publication": true
     },
     "latest_policy_change": {
       "applied_at": "2026-11-04T23:10:49+09:00",
