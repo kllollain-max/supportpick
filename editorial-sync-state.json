@@ -2,7 +2,7 @@
   "version": 1,
   "repository": "kllollain-max/supportpick",
   "mainSHA": "1d835c70be865938c90e4c6a278dfbbd8f058669",
-  "lastCheckedAt": "2026-11-04T22:16:42.562Z",
+  "lastCheckedAt": "2026-11-04T22:30:32.880Z",
   "lastSuccessAt": "2026-11-04T22:16:42.562Z",
   "rss": {
     "url": "https://rss.blog.naver.com/bible_el.xml",
@@ -224,7 +224,7 @@
       "nextResumeStep": "retry_mapping_only_when_new_service_or_relevant_source_changes; do not invent a service ID"
     }
   },
-  "nextResumeStep": "Read latest main/RSS and checkpoint; verify current generation and five links; inspect new operational verification outcome without duplicate deployment. External run 41921889569 all-site verification remains failed; linked scope passed.",
+  "nextResumeStep": "Inspect remote workflow and any final full-public-verification report before retrying; resume bounded public verification with per-URL diagnostics and transport backoff. Existing editorial links and validation timestamps remain unchanged; no duplicate deployment.",
   "errors": [
     {
       "fingerprint": "41921889569:public_generation_mismatch",
@@ -236,6 +236,27 @@
       "recovery": "Current public manifest/data generation matches new collection; five editorial card/detail/static links and relevant manifest hashes verified",
       "remaining": "External workflow remains failed; all-site live URL verification not repeated in editorial-only run",
       "retryBudget": 1
+    },
+    {
+      "fingerprint": "public-full-recheck:environment-interruption:20261105",
+      "stage": "full_public_verification_followup",
+      "observedAt": "2026-11-04T22:30:32.880Z",
+      "confirmedCause": "Initial execution environment disconnected and scratch working directory was lost. Recovery run has no final report available.",
+      "observedProgress": {
+        "targetHtml": 11058,
+        "lastProgressChecked": 11000,
+        "initialPassedAtLastProgress": 1499,
+        "initialFailuresAtLastProgress": 9501,
+        "finalReportAvailable": false
+      },
+      "hypotheses": [
+        "Transport errors or service throttling may account for initial failures; no diagnostic error breakdown was retained, so site defects are not established."
+      ],
+      "recovery": "Restored verifier from exact deployed main, reran with identical manifest/hash/metadata checks and keep-alive HTTP transport; single individual postcheck returned HTTP 200. No repository implementation or deployment changes.",
+      "remaining": "Need a bounded, checkpointed follow-up public verification with per-URL diagnostics; do not treat initial failures as 404 or confirmed site defects.",
+      "retryBudget": 0,
+      "sourceRevision": "1d835c70be865938c90e4c6a278dfbbd8f058669",
+      "generation": "gov24-41921889569-1"
     }
   ],
   "retryBudget": {
@@ -275,7 +296,7 @@
     "publicVerificationStatus": "verified",
     "publicVerifiedAt": "2026-11-04T12:39:02.606Z"
   },
-  "lastPartialRunAt": "2026-11-04T10:26:09.039Z",
+  "lastPartialRunAt": "2026-11-04T22:30:32.880Z",
   "errorHistory": [
     {
       "fingerprint": "energy_button_not_visible_after_successful_data_deployment",
@@ -300,28 +321,41 @@
       "recovery": "Current public manifest/data generation matches new collection; five editorial card/detail/static links and relevant manifest hashes verified",
       "remaining": "External workflow remains failed; all-site live URL verification not repeated in editorial-only run",
       "retryBudget": 1
+    },
+    {
+      "fingerprint": "public-full-recheck:environment-interruption:20261105",
+      "stage": "full_public_verification_followup",
+      "observedAt": "2026-11-04T22:30:32.880Z",
+      "confirmedCause": "Initial execution environment disconnected and scratch working directory was lost. Recovery run has no final report available.",
+      "observedProgress": {
+        "targetHtml": 11058,
+        "lastProgressChecked": 11000,
+        "initialPassedAtLastProgress": 1499,
+        "initialFailuresAtLastProgress": 9501,
+        "finalReportAvailable": false
+      },
+      "hypotheses": [
+        "Transport errors or service throttling may account for initial failures; no diagnostic error breakdown was retained, so site defects are not established."
+      ],
+      "recovery": "Restored verifier from exact deployed main, reran with identical manifest/hash/metadata checks and keep-alive HTTP transport; single individual postcheck returned HTTP 200. No repository implementation or deployment changes.",
+      "remaining": "Need a bounded, checkpointed follow-up public verification with per-URL diagnostics; do not treat initial failures as 404 or confirmed site defects.",
+      "retryBudget": 0,
+      "sourceRevision": "1d835c70be865938c90e4c6a278dfbbd8f058669",
+      "generation": "gov24-41921889569-1"
     }
   ],
   "lastRun": {
-    "checkedAt": "2026-11-04T22:16:42.562Z",
-    "status": "success_with_external_verification_warning",
+    "checkedAt": "2026-11-04T22:30:32.880Z",
+    "status": "partial_full_public_verification",
     "dataChanged": false,
     "newRegistrationPR": null,
     "newDeploymentRun": null,
-    "checks": {
-      "rssItems": 24,
-      "publicBodies": 8,
-      "bodyAndSourceLinkFingerprintsUnchanged": true,
-      "publicCardDetailPairs": 5,
-      "staticDetailPages": 5,
-      "manifestHashesVerified": true,
-      "threadsExposed": false,
-      "latestCollectionRun": 41921889569,
-      "runtimeArtifact": 13366524784,
-      "collectionSnapshotIntegrity": "passed per job log",
-      "fullTestSuiteRun": false,
-      "fullTestSuiteReason": "No editorial data or implementation changes",
-      "fullSitePublicVerificationRerun": false
+    "fullPublicVerification": {
+      "targetHtml": 11058,
+      "lastProgressChecked": 11000,
+      "initialPassedAtLastProgress": 1499,
+      "initialFailuresAtLastProgress": 9501,
+      "finalReportAvailable": false
     }
   },
   "latestObservedOperationalDeployment": {
