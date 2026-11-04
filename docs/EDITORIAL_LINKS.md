@@ -7,9 +7,9 @@
 - 카드: `신청방법 해설`, 상세: 공식 안내·신청 링크 아래 `지원금픽 해설 보기`.
 - 발행된 `blog.naver.com/bible_el/숫자` 또는 `m.blog.naver.com/bible_el/숫자`만 허용한다. 블로그 첫 화면은 해설로 연결하지 않는다.
 - 서비스 ID, 지역, 연도, 모집 차수와 원문의 제목·기관·지역·기간·요약·수정일을 특정한 sourceKey가 일치해야 한다. 제목 유사도로 연결하지 않는다.
-- 원문 변경, 표본, 출처 불일치, 복수 연결 충돌, 검수 유효기간 경과 시 해설 버튼을 숨긴다. 확인 유효기간은 최대 30일이며, 발행글 삭제 여부를 실시간 감시한다고 주장하지 않는다.
+- 원문 변경, 표본, 미검토 출처 불일치, 복수 연결 충돌, 검수 유효기간 경과 시 해설 버튼을 숨긴다. 지원유형만 다른 경우는 검토한 목록/상세의 정확한 두 문자열을 함께 기록한 경우에만 허용한다. 대상·금액·기간 등 다른 차이는 계속 차단한다. 확인 유효기간은 최대 30일이며, 발행글 삭제 여부를 실시간 감시한다고 주장하지 않는다.
 - 원고 생성과 실제 네이버 발행은 별개다. 복사용 원고만 생성된 상태는 사이트 해설을 표시하지 않는다. 실제 발행 주소·발행 확인이 있어야 등록한다.
-- 현재 레지스트리는 0건이다. 확인되지 않은 발행 URL이나 복사용 HTML을 대체 링크로 넣지 않는다.
+- 사용자 제공 실제 발행 주소 3건을 읽고 등록했다. 임신부 글은 국가예방접종 중 임신부 범위, 근로장려금 글은 2025년 귀속 기한 후 신청 범위를 별도 표시한다. 확인되지 않은 발행 URL이나 복사용 HTML을 대체 링크로 넣지 않는다.
 
 ## 원고 자동화와의 연결
 
@@ -24,7 +24,7 @@
 - benefitId, title, url: 정확한 서비스 ID, 해설 제목, 실제 발행 URL
 - sourceKey: editorials.js의 sourceKey(현재 서비스 레코드)
 - scope: `{year: 2026, region: "현재 서비스의 region 값", round: "4분기 등 실제 차수"}`
-- publishedAt, verifiedAt, validUntil: 시간대 포함 ISO 시각. 검수 기한은 verifiedAt 후 최대 30일
+- publishedAt 또는 publicationObservedAt, verifiedAt, validUntil: 시간대 포함 ISO 시각. 정확한 발행시각을 읽지 못하면 발행시각을 추정하지 않고 처음 공개 상태를 확인한 publicationObservedAt을 기록한다. 검수 기한은 verifiedAt 후 최대 30일
 - publicationVerified: 실제 발행이 확인된 경우에만 true
 
 `node tools/register-editorial.cjs --input site-link-published.json --feed dist/data.json --output editorials.json`
