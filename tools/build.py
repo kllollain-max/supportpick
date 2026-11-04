@@ -5,7 +5,7 @@ from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote,quote
 from refresh import read_current,verify_snapshot
 from bootstrap_state import ensure_bootstrap
-from search_metadata import public_metadata, read_verifications, write_sitemap
+from search_metadata import public_metadata, read_verifications, write_sitemap, version_local_assets
 from detail_pages import write_details
 from collect_full import period
 ROOT=Path(__file__).resolve().parents[1]
@@ -104,10 +104,16 @@ def build(destination,state=None,allow_sample=False,public_base=None):
     files={}
     public_paths=sorted(p for p in output.rglob('*') if p.is_file())
     available={str(p.relative_to(output)) for p in public_paths}
+    assets={str(p.relative_to(output)):hashlib.sha256(p.read_bytes()).hexdigest()
+            for p in public_paths if p.suffix in ('.css','.js','.png','.svg')}
     for p in public_paths:
         if not p.is_file():continue
         if p.is_symlink() or p.stat().st_nlink!=1:raise ValueError('linked_public_file')
         raw=p.read_bytes()
+        if p.suffix=='.html':
+            versioned=version_local_assets(raw.decode('utf-8'),str(p.relative_to(output)),assets)
+            p.write_text(versioned,encoding='utf-8')
+            raw=versioned.encode('utf-8')
         # Scan ASCII secret patterns in binary images without treating PNG bytes as UTF-8 documents.
         text=raw.decode('utf-8',errors='ignore')
         if forbidden.search(text) or any(s in text for s in secret_variants):raise ValueError('public_secret_pattern_detected')
