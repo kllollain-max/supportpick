@@ -215,7 +215,7 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-05T00:36:35.665485+09:00",
+    "checked_at": "2026-11-05T01:52:38.806350+09:00",
     "changed_run_ids": [],
     "current_main_sha": "1d835c70be865938c90e4c6a278dfbbd8f058669",
     "ranking_policy": {
@@ -271,7 +271,7 @@
       "source_snapshot_hashes_passed": true,
       "publication_artifact_digest_passed": true
     },
-    "next_step": "Continue natural scheduled slots and existing hourly checks. No pending recovery, test post, backfill or new incident. Verify text/image policy upon the next actual publication.",
+    "next_step": "Continue natural scheduled slots and the recurring watch. Verify no-link text and image alternation on actual future publication; no pending recovery, backfill or test post required.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "artifact_metadata_and_digests_unchanged": true,
@@ -280,8 +280,8 @@
       "publisher_script_blob_unchanged": true,
       "content_policy_retained": true,
       "image_rotation_retained": true,
+      "current_main_unchanged": true,
       "natural_publication_after_policy_change_verified": false,
-      "main_changed_outside_publisher": true,
       "no_new_publication": true
     },
     "latest_policy_change": {
