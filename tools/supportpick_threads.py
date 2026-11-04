@@ -89,6 +89,35 @@ def load_feed(state):
     return {**feed, 'items': [details[i['id']] for i in feed['items']]}
 
 
+def popularity_views(row):
+    """Use Gov24's actual cumulative views, never infer demand from the title."""
+    raw = row.get('rawSource')
+    source = raw.get('serviceList') if isinstance(raw, dict) else None
+    if not isinstance(source, dict) or source.get('서비스ID') != row.get('id'):
+        return None
+    value = source.get('조회수')
+    if type(value) is int:
+        return value if 0 <= value <= 10**18 else None
+    if not isinstance(value, str):
+        return None
+    value = value.strip()
+    if len(value) > 30 or not re.fullmatch(r'(?:[0-9]+|[1-9][0-9]{0,2}(?:,[0-9]{3})+)', value):
+        return None
+    number = int(value.replace(',', ''))
+    return number if number <= 10**18 else None
+
+
+def priority_key(row):
+    views = popularity_views(row)
+    return (views is None, -(views or 0), row.get('endDate') or '9999', row['id'])
+
+
+def selection_info(row):
+    return {'policy': 'gov24_views_desc_v1', 'basis': '보조금24 누적 조회수',
+            'views': popularity_views(row), 'source_checked_at': row.get('checkedAt'),
+            'note': '실시간 검색량·신청자 수가 아닌 공식 API 누적 조회수 기준'}
+
+
 def candidates(feed, ledger, now):
     if feed.get('isSample') is not False or not fresh(feed.get('updatedAt') or feed.get('collectionSucceededAt'), now):
         return []
@@ -113,7 +142,7 @@ def candidates(feed, ledger, now):
             continue
         seen.add(sid)
         found.append(row)
-    return sorted(found, key=lambda r: (r.get('endDate') or '9999', r['id']))
+    return sorted(found, key=priority_key)
 
 
 def compose(row):
@@ -317,7 +346,7 @@ def complete_record(store, api, sha, state, record, now):
     record.update(status='published', verified=True, published_at=now.isoformat(), stage='complete')
     store.save(sha, state)
     return {'status': 'published', 'published': True, 'benefit_id': record['benefit_id'],
-            'url': record['main_id_url'], 'replies': 2}
+            'url': record['main_id_url'], 'replies': 2, 'selection': record.get('selection')}
 
 
 def resume_publication(store, api, now, expected_id, run_id, expected_main_id):
@@ -367,7 +396,8 @@ def publish(feed, store, api, now, cron, run_id, expected_id, assets=None):
         raise ValueError('unapproved_image_url')
     record = {'benefit_id': row['id'], 'slot': slot, 'run_id': run_id, 'status': 'pending',
               'texts': list(texts), 'image_url': image, 'generation': feed.get('generation'),
-              'official_url': row['officialUrl'], 'checked_at': row['checkedAt']}
+              'official_url': row['officialUrl'], 'checked_at': row['checkedAt'],
+              'selection': selection_info(row)}
     record['content_hash'] = hashlib.sha256(json.dumps(texts, ensure_ascii=False).encode()).hexdigest()
     rows.append(record)
     sha = store.save(sha, state)  # CAS durable reservation before first side effect.
@@ -402,6 +432,9 @@ def main():
             eligible = candidates(feed, state, now)
             result = {'status': 'preview', 'published': False, 'eligible': len(eligible),
                       'profile_link_target': PROFILE_LINK, 'cta': CTA,
+                      'selection': selection_info(eligible[0]) if eligible else None,
+                      'priority_preview': [{'benefit_id': r['id'], 'title': r['title'],
+                                            **selection_info(r)} for r in eligible[:5]],
                       'posts': list(compose(eligible[0])) if eligible else []}
         else:
             cron = publication_context(os.environ)

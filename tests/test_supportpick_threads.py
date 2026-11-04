@@ -236,4 +236,46 @@ class PublisherTests(unittest.TestCase):
             api.result = result
             with self.assertRaises(RuntimeError): api.verify('1001', text)
 
+class PopularityTests(unittest.TestCase):
+    def row(self, sid, views, **extra):
+        row = copy.deepcopy(feed()['items'][0])
+        row.update(id=sid, **extra)
+        row['rawSource'] = {'serviceList': {'서비스ID': sid, '조회수': views}}
+        return row
+
+    def test_actual_views_take_priority_over_deadline(self):
+        f = feed()
+        f['items'] = [self.row('low', '100', endDate='2026-11-05'),
+                      self.row('popular', '50,000', endDate='2026-12-01')]
+        self.assertEqual([r['id'] for r in t.candidates(f, empty(), NOW)], ['popular', 'low'])
+
+    def test_equal_views_use_deadline_then_stable_id(self):
+        f = feed(); f['items'] = [self.row('z', 100), self.row('b', '100', endDate='2026-11-05'),
+                                 self.row('a', 100, endDate='2026-11-05')]
+        self.assertEqual([r['id'] for r in t.candidates(f, empty(), NOW)], ['a', 'b', 'z'])
+
+    def test_missing_invalid_and_wrong_service_counts_are_not_invented(self):
+        for value in [None, '', True, -1, 1.5, 'NaN', '1,2', '-100', '1e6', '9'*100]:
+            with self.subTest(value=value): self.assertIsNone(t.popularity_views(self.row('x', value)))
+        bad = self.row('x', 9999); bad['rawSource']['serviceList']['서비스ID'] = 'other'
+        self.assertIsNone(t.popularity_views(bad))
+        f = feed(); f['items'] = [self.row('unknown', None), self.row('zero', 0)]
+        self.assertEqual([r['id'] for r in t.candidates(f, empty(), NOW)], ['zero', 'unknown'])
+
+    def test_popular_expired_conflicted_and_already_posted_still_excluded(self):
+        f = feed(); f['items'] = [self.row('expired', 9999, endDate='2026-11-03'),
+             self.row('conflict', 9999, sourceConflicts=['target']), self.row('posted', 9999),
+             self.row('valid', 10)]
+        ledger = empty(); ledger['records'] = [{'benefit_id':'posted'}]
+        self.assertEqual([r['id'] for r in t.candidates(f, ledger, NOW)], ['valid'])
+
+    def test_published_selection_retains_actual_views_and_basis(self):
+        f = feed(); f['items'] = [self.row('low', 1), self.row('high', '2,345')]
+        store = Store(); api = API(store)
+        result = t.publish(f, store, api, NOW, '0 23 * * *', '123', '1004')
+        self.assertEqual(result['benefit_id'], 'high')
+        self.assertEqual(store.state['records'][0]['selection']['views'], 2345)
+        self.assertEqual(result['selection']['basis'], '보조금24 누적 조회수')
+        self.assertIn('실시간 검색량', result['selection']['note'])
+
 if __name__ == '__main__': unittest.main()
