@@ -22,7 +22,8 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 KST = ZoneInfo('Asia/Seoul')
 SITE = 'https://kllollain-max.github.io/supportpick/'
-BLOG = 'https://blog.naver.com/bible_el'
+PROFILE_LINK = SITE + '?utm_source=threads&utm_medium=social&utm_content=link_in_bio'
+CTA = '자세한 사항은 프로필링크 확인'
 USERNAME = 'hid_1004'
 REPO = 'kllollain-max/supportpick'
 STATE_BRANCH = 'supportpick-threads-state'
@@ -122,28 +123,51 @@ def compose(row):
         excerpt(row['summary'], 110),
         '기관: ' + excerpt(row['organization'], 35),
         '대상·기간·신청방법은 답글에 정리했어요.\n신청 가능 여부와 세부 조건은 공식 원문을 확인하세요.',
-        '#지원금픽 #' + re.sub(r'[^가-힣A-Za-z0-9_]', '', excerpt(row.get('category') or '생활혜택', 15))])
+        '#지원금픽 #' + re.sub(r'[^가-힣A-Za-z0-9_]', '', excerpt(row.get('category') or '생활혜택', 15)),
+        CTA])
     detail = '\n\n'.join([
         '대상 요약: ' + excerpt(row['target'], 100),
         '원문 기간: ' + excerpt(row.get('period') or '공식 안내 확인', 55),
         '신청방법 요약: ' + excerpt(row['method'], 85),
-        '※ 자격 충족·선정·현재 접수를 보장하지 않습니다.\n공식 안내: ' + row['officialUrl']])
-    blog_url = row.get('publishedBlogUrl', '')
-    if not re.fullmatch(r'https://blog\.naver\.com/bible_el/[0-9]+', blog_url):
-        blog_url = BLOG
-    links = '지원금픽에서 관심 혜택을 저장하고 신청 준비를 관리하세요.\n\n홈페이지: ' + SITE + '\n블로그: ' + blog_url
+        '※ 자격 충족·선정·현재 접수를 보장하지 않습니다.\n공식 안내: ' + row['officialUrl'],
+        CTA])
+    # The profile link is the conversion route; do not divert readers to the blog.
+    links = '\n\n'.join([
+        '프로필링크에서 지원금픽을 열고 아래 혜택명을 검색해 보세요.',
+        '🔎 ' + excerpt(row['title'], 65),
+        '대상·신청방법을 확인하고 관심 혜택을 저장해 신청 준비를 관리할 수 있어요.',
+        CTA])
     if any(len(x) > 500 for x in (main, detail, links)):
         raise ValueError('post_or_reply_over_500_characters')
     return main, detail, links
 
 
 def current_slot(now, cron):
+    if cron == 'manual':
+        return now.replace(second=0, microsecond=0).isoformat()
     if cron not in CRONS:
         raise ValueError('known_scheduled_slot_required')
     slot = now.replace(hour=CRONS[cron], minute=0, second=0, microsecond=0)
     if not slot <= now < slot + timedelta(hours=2):
         raise ValueError('missed_slot_not_backfilled')
     return slot.isoformat()
+
+
+def publication_context(env):
+    if env.get('SUPPORTPICK_THREADS_ENABLED') != 'true' or env.get('SUPPORTPICK_THREADS_CUTOVER_READY') != 'true':
+        raise ValueError('supportpick_publishing_not_enabled')
+    if env.get('GITHUB_REPOSITORY') != REPO or env.get('GITHUB_REF') != 'refs/heads/main':
+        raise ValueError('approved_main_context_required')
+    if env.get('GITHUB_RUN_ATTEMPT') != '1':
+        raise ValueError('publication_reruns_blocked')
+    if env.get('GITHUB_EVENT_NAME') == 'schedule':
+        cron = env.get('SUPPORTPICK_THREADS_CRON', '')
+        if cron not in CRONS:
+            raise ValueError('known_scheduled_slot_required')
+        return cron
+    if env.get('GITHUB_EVENT_NAME') == 'workflow_dispatch' and env.get('SUPPORTPICK_THREADS_MANUAL_MODE') == 'publish-one-now':
+        return 'manual'
+    raise ValueError('explicit_publication_context_required')
 
 
 def validate_ledger(state):
@@ -282,7 +306,6 @@ def publish(feed, store, api, now, cron, run_id, expected_id, assets=None):
         return {'status': 'skipped', 'reason': 'no_fresh_eligible_benefit', 'published': False}
     row = copy.deepcopy(eligible[0])
     asset = (assets or {}).get(row['id'], {})
-    row['publishedBlogUrl'] = asset.get('publishedBlogUrl', '')
     texts = compose(row)
     image = asset.get('imageUrl') if len(rows) % 2 == 1 else None
     if image and not image_url(image):
@@ -316,25 +339,24 @@ def main():
     if args.command == 'check-account':
         api = Threads(os.environ.get('SUPPORTPICK_THREADS_ACCESS_TOKEN', ''))
         api.verify_account(os.environ.get('SUPPORTPICK_THREADS_USER_ID', ''))
-        result = {'status': 'account_verified', 'username': USERNAME, 'published': False}
+        recent = api.call('GET', '/me/threads', {'fields': 'id,text,permalink,timestamp', 'limit': 100})
+        result = {'status': 'account_verified', 'username': USERNAME, 'published': False,
+                  'profile_link_target': PROFILE_LINK, 'recent_posts': recent.get('data', []),
+                  'more_history': bool(recent.get('paging', {}).get('next'))}
     else:
         feed = load_feed(args.state)
         if args.command == 'preview':
             state = {'version': 1, 'brand': 'supportpick', 'username': USERNAME, 'records': []}
             eligible = candidates(feed, state, now)
             result = {'status': 'preview', 'published': False, 'eligible': len(eligible),
+                      'profile_link_target': PROFILE_LINK, 'cta': CTA,
                       'posts': list(compose(eligible[0])) if eligible else []}
         else:
-            if os.environ.get('SUPPORTPICK_THREADS_ENABLED') != 'true' or os.environ.get('SUPPORTPICK_THREADS_CUTOVER_READY') != 'true':
-                raise ValueError('supportpick_publishing_not_enabled')
-            if os.environ.get('GITHUB_REPOSITORY') != REPO or os.environ.get('GITHUB_REF') != 'refs/heads/main':
-                raise ValueError('approved_main_context_required')
-            if os.environ.get('GITHUB_EVENT_NAME') != 'schedule' or os.environ.get('GITHUB_RUN_ATTEMPT') != '1':
-                raise ValueError('manual_publish_and_reruns_blocked')
+            cron = publication_context(os.environ)
             assets = json.loads((ROOT / 'social/assets.json').read_text())
             result = publish(feed, Ledger(os.environ.get('GITHUB_TOKEN', '')),
                 Threads(os.environ.get('SUPPORTPICK_THREADS_ACCESS_TOKEN', '')), now,
-                os.environ.get('SUPPORTPICK_THREADS_CRON', ''), os.environ.get('GITHUB_RUN_ID', ''),
+                cron, os.environ.get('GITHUB_RUN_ID', ''),
                 os.environ.get('SUPPORTPICK_THREADS_USER_ID', ''), assets)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     Path('threads-result.json').write_text(json.dumps(result, ensure_ascii=False, indent=2))
