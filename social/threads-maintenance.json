@@ -132,7 +132,7 @@
     }
   },
   "last_check": {
-    "result": "healthy_new_scheduled_publication_verified",
+    "result": "healthy_no_new_incident",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -210,17 +210,14 @@
     "publication_ledger_sha": "e0aa73a4770ec6f5dd87494ee7c53cba383a91cc",
     "workflow_blob_shas": {
       "threads": "b9eca15d9b506189b513abb15281e77a5cdc3ab5",
-      "source": "beccbf8bb348ef6127402f001c7e20ed08810112"
+      "source": "ce74fe03afd06f59f1d38f2e297fe9a78bbcf604"
     },
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-04T21:01:48+09:00",
-    "changed_run_ids": [
-      "41823025409",
-      "41814036806"
-    ],
-    "current_main_sha": "2654b39e464fa849afacbcc43585cf1fb6c07eab",
+    "checked_at": "2026-11-04T22:06:32+09:00",
+    "changed_run_ids": [],
+    "current_main_sha": "48e11224a566dc3287505ae5d197a026251306a5",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
       "basis": "보조금24 누적 조회수",
@@ -257,8 +254,8 @@
     "run_list_scan": {
       "pages": 1,
       "per_page": 100,
-      "total_count": 35,
-      "returned": 35,
+      "total_count": 43,
+      "returned": 43,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
@@ -274,7 +271,17 @@
       "source_snapshot_hashes_passed": true,
       "publication_artifact_digest_passed": true
     },
-    "next_step": "Continue hourly read-first checks and natural 08/12/16/20 KST slots; no pending recovery or extra posts required"
+    "next_step": "Continue hourly checks and the next natural scheduled publication; no recovery needed. Historical resolved incident and previous publication notification remain preserved.",
+    "evidence_recheck": {
+      "latest_jobs_and_logs_read": true,
+      "artifact_metadata_and_digests_unchanged": true,
+      "verified_artifact_contents_reused": true,
+      "publication_ledger_unchanged": true,
+      "publisher_script_blob_unchanged": true,
+      "source_workflow_changed_by_existing_site_work": true,
+      "source_workflow_change": "Added static release checks, content-change gating and deployment verification; collection, validated runtime bundle and failure reporting remain present. No new source run yet.",
+      "no_new_publication": true
+    }
   },
   "last_reported_publication": {
     "run_id": "41823025409",
