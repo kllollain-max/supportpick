@@ -348,7 +348,7 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-06T00:23:21.789+09:00",
+    "checked_at": "2026-11-06T02:10:40.975+09:00",
     "changed_run_ids": [],
     "current_main_sha": "4bf3d3a6ad678a7c3616ed34bc1e17b10da87cfa",
     "ranking_policy": {
@@ -395,8 +395,8 @@
     "run_list_scan": {
       "pages": 1,
       "per_page": 100,
-      "total_count": 95,
-      "returned": 95,
+      "total_count": 97,
+      "returned": 97,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
