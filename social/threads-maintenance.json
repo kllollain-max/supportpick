@@ -34,7 +34,8 @@
     "41992548749",
     "42010247594",
     "42021189623",
-    "42117967226"
+    "42117967226",
+    "42131131069"
   ],
   "last_health": {
     "unresolved_publications": 0,
@@ -202,6 +203,40 @@
         "recovery_attempts": 0
       },
       "next_step": "Allow the next natural Threads slot to use the validated source. Recheck actual publication and report only verified new results. Reopen for a new attempt, restore failure, or publication hold. Public Pages verification is outside Threads repair scope."
+    },
+    "42131131069": {
+      "status": "hold_account_read_unclassified",
+      "fingerprint": {
+        "run_id": "42131131069",
+        "run_attempt": 1,
+        "head_sha": "5c4ecef4e4376d38a0422012de0b368ef341a191",
+        "stage": "GET /me before ledger reservation",
+        "error": "threads_request_failed_or_ambiguous_no_automatic_retry"
+      },
+      "confirmed_cause": "The exact publisher emits this reason on Threads API failure. GET /me is the first such call and the only one before durable reservation. Publication ledger and its file history show no reservation or write for this run. No receipt was logged.",
+      "hypothesis": "Authentication, permission, service or transport failure; the existing error handler suppresses HTTP status and exception class.",
+      "remote_history_verified": false,
+      "source_generation": "gov24-42117967226-1",
+      "source_restore": "success",
+      "artifact_id": "13463227014",
+      "artifact_sha256": "760a0c69c7c911c183a1e2f6c5275cbbb20feba097ba79a2407571f6961318fe",
+      "publication_ledger_sha": "d8ab0b3facc3de3321c28d483cf6dec05e808431",
+      "main_id": null,
+      "container_id": null,
+      "content_hash": null,
+      "last_success": {
+        "run_id": "42021189623",
+        "main_id": "18114999364875745",
+        "url": "https://www.threads.com/@hid_1004/post/DfW84ZbFQQ3",
+        "verification_completed_at": "2026-11-05T20:45:29.723518+09:00",
+        "recorded_at": "2026-11-05T20:55:00+09:00"
+      },
+      "attempt_budget": {
+        "posts_sent": 0,
+        "workflow_retries": 0,
+        "recovery_attempts": 0
+      },
+      "next_step": "Verify GET /me and exact recent remote history with a read-only route before any recovery POST. Do not rerun this workflow. Prepare sanitized account diagnostics."
     }
   },
   "guardrails": {
@@ -331,44 +366,33 @@
       "conclusion": "failure",
       "updated_at": "2026-11-05T22:11:00Z",
       "head_sha": "4bf3d3a6ad678a7c3616ed34bc1e17b10da87cfa"
+    },
+    "42131131069": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "updated_at": "2026-11-05T23:40:28Z",
+      "head_sha": "5c4ecef4e4376d38a0422012de0b368ef341a191"
     }
   },
   "last_check": {
-    "result": "operations_public_generation_mismatch_source_verified",
+    "result": "threads_account_read_failed",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
-      "run_id": "42021189623",
+      "run_id": "42131131069",
       "run_attempt": 1,
-      "job_id": "127224081807",
-      "head_sha": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "job_id": "127607724152",
+      "head_sha": "5c4ecef4e4376d38a0422012de0b368ef341a191",
       "event": "schedule",
-      "conclusion": "success",
-      "published": true,
-      "replies": 2,
-      "artifact_id": "13412225999",
-      "artifact_sha256": "94fab1b8e609ee7d7c5409213b4882cb7ae59afa5875eb98f6b7516e8455b4ea",
+      "conclusion": "failure",
+      "published": "unconfirmed",
+      "artifact_id": "13463227014",
+      "artifact_sha256": "760a0c69c7c911c183a1e2f6c5275cbbb20feba097ba79a2407571f6961318fe",
       "artifact_contents_verified": true,
-      "remote_receipt_verification": "All three emitted post receipts match durable ledger; publisher GET checked ID, exact text (only permitted brand topic conversion) and permalink before verified/complete state.",
-      "benefit_id": "SD0000015536",
-      "main_id": "18114999364875745",
-      "main_id_url": "https://www.threads.com/@hid_1004/post/DfW84ZbFQQ3",
-      "detail_id": "18135048433800841",
-      "detail_id_url": "https://www.threads.com/@hid_1004/post/DfW8_R0leur",
-      "links_id": "18197948905403990",
-      "links_id_url": "https://www.threads.com/@hid_1004/post/DfW9ESylfit",
-      "content_hash": "d2276db7b63534ab4de4596166d45724442da887ae4da9f867146dd9401bd95c",
-      "selection": {
-        "policy": "gov24_views_desc_v1",
-        "basis": "보조금24 누적 조회수",
-        "views": 796486,
-        "source_checked_at": "2026-11-05T19:27:06.705010+09:00",
-        "note": "실시간 검색량·신청자 수가 아닌 공식 API 누적 조회수 기준"
-      },
-      "published_at": "2026-11-05T20:43:05.808827+09:00",
-      "verification_completed_at": "2026-11-05T20:45:29.723518+09:00",
-      "image_url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-      "image_evidence": "Approved rotation image 2 reserved and passed through IMAGE container to the successful natural publisher path; no separate remote media-field GET."
+      "source_generation": "gov24-42117967226-1",
+      "failure_stage": "GET /me",
+      "reason": "threads_request_failed_or_ambiguous_no_automatic_retry"
     },
     "latest_source": {
       "run_id": "42117967226",
@@ -422,11 +446,11 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-06T07:47:59.290+09:00",
+    "checked_at": "2026-11-06T08:42:12.429+09:00",
     "changed_run_ids": [
-      "42117967226"
+      "42131131069"
     ],
-    "current_main_sha": "4bf3d3a6ad678a7c3616ed34bc1e17b10da87cfa",
+    "current_main_sha": "5c4ecef4e4376d38a0422012de0b368ef341a191",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
       "basis": "보조금24 누적 조회수",
@@ -469,10 +493,10 @@
     },
     "evidence_reused_for_unchanged_runs": true,
     "run_list_scan": {
-      "pages": 1,
+      "pages": 2,
       "per_page": 100,
-      "total_count": 99,
-      "returned": 99,
+      "total_count": 105,
+      "returned": 105,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
@@ -498,7 +522,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 4
     },
-    "next_step": "Allow the next natural Threads slot to use the validated source. Recheck actual publication and report only verified new results. Reopen for a new attempt, restore failure, or publication hold. Public Pages verification is outside Threads repair scope.",
+    "next_step": "Verify GET /me and exact recent remote history with a read-only route before any recovery POST. Do not rerun this workflow. Prepare sanitized account diagnostics.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
@@ -574,6 +598,39 @@
       "date_kst": "2026-11-06",
       "count": 0,
       "limit": 4
+    },
+    "previous_verified_publisher": {
+      "run_id": "42021189623",
+      "run_attempt": 1,
+      "job_id": "127224081807",
+      "head_sha": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "event": "schedule",
+      "conclusion": "success",
+      "published": true,
+      "replies": 2,
+      "artifact_id": "13412225999",
+      "artifact_sha256": "94fab1b8e609ee7d7c5409213b4882cb7ae59afa5875eb98f6b7516e8455b4ea",
+      "artifact_contents_verified": true,
+      "remote_receipt_verification": "All three emitted post receipts match durable ledger; publisher GET checked ID, exact text (only permitted brand topic conversion) and permalink before verified/complete state.",
+      "benefit_id": "SD0000015536",
+      "main_id": "18114999364875745",
+      "main_id_url": "https://www.threads.com/@hid_1004/post/DfW84ZbFQQ3",
+      "detail_id": "18135048433800841",
+      "detail_id_url": "https://www.threads.com/@hid_1004/post/DfW8_R0leur",
+      "links_id": "18197948905403990",
+      "links_id_url": "https://www.threads.com/@hid_1004/post/DfW9ESylfit",
+      "content_hash": "d2276db7b63534ab4de4596166d45724442da887ae4da9f867146dd9401bd95c",
+      "selection": {
+        "policy": "gov24_views_desc_v1",
+        "basis": "보조금24 누적 조회수",
+        "views": 796486,
+        "source_checked_at": "2026-11-05T19:27:06.705010+09:00",
+        "note": "실시간 검색량·신청자 수가 아닌 공식 API 누적 조회수 기준"
+      },
+      "published_at": "2026-11-05T20:43:05.808827+09:00",
+      "verification_completed_at": "2026-11-05T20:45:29.723518+09:00",
+      "image_url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+      "image_evidence": "Approved rotation image 2 reserved and passed through IMAGE container to the successful natural publisher path; no separate remote media-field GET."
     }
   },
   "last_reported_publication": {
