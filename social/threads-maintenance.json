@@ -31,7 +31,8 @@
     "41921889569",
     "41935189296",
     "41963079062",
-    "41992548749"
+    "41992548749",
+    "42010247594"
   ],
   "last_health": {
     "unresolved_publications": 0,
@@ -232,12 +233,21 @@
       "conclusion": "success",
       "updated_at": "2026-11-05T08:13:44Z",
       "head_sha": "0db83684355af1f08f56ddac6461588dfc0bce39"
+    },
+    "42010247594": {
+      "run_attempt": 1,
+      "status": "in_progress",
+      "conclusion": null,
+      "updated_at": "2026-11-05T10:23:10Z",
+      "head_sha": "0db83684355af1f08f56ddac6461588dfc0bce39"
     }
   },
   "last_check": {
-    "result": "healthy_no_new_incident",
+    "result": "source_collection_in_progress_no_competing_action",
     "unresolved_publications": 0,
-    "active_target_runs": [],
+    "active_target_runs": [
+      "42010247594"
+    ],
     "latest_publisher": {
       "run_id": "41992548749",
       "run_attempt": 1,
@@ -322,8 +332,10 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-05T18:21:48+09:00",
-    "changed_run_ids": [],
+    "checked_at": "2026-11-05T19:24:23+09:00",
+    "changed_run_ids": [
+      "42010247594"
+    ],
     "current_main_sha": "0db83684355af1f08f56ddac6461588dfc0bce39",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
@@ -369,8 +381,8 @@
     "run_list_scan": {
       "pages": 1,
       "per_page": 100,
-      "total_count": 88,
-      "returned": 88,
+      "total_count": 89,
+      "returned": 89,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
@@ -394,7 +406,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 3
     },
-    "next_step": "Continue natural 20 KST slot with maximum four mains per day and dedup unchanged. Next new main is image, using approved rotation image 2 unless an approved per-benefit image exists. No manual posts, rerun or recovery required.",
+    "next_step": "Re-query run 42010247594 even with same run_id and compare attempt/status/conclusion/updated_at/head_sha; inspect terminal logs and artifacts when available. Preserve last validated source and all publication records. Do not compete with active operations or dispatch extra posts. Observe natural 20 KST image slot within existing limits.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "source_postdeploy_failure_unchanged": true,
@@ -409,7 +421,10 @@
       "natural_image_publication_verified": true,
       "artifact_metadata_and_digests_unchanged": true,
       "previously_digest_verified_artifact_contents_reused": true,
-      "publication_ledger_unchanged": true
+      "publication_ledger_unchanged": true,
+      "latest_completed_publisher_and_source_jobs_and_logs_read": true,
+      "latest_source_job_metadata_read": true,
+      "latest_source_terminal_logs_pending": true
     },
     "latest_policy_change": {
       "applied_at": "2026-11-04T23:10:49+09:00",
@@ -453,6 +468,26 @@
         "completed/success"
       ],
       "transient_sending_stage_not_retried": true
+    },
+    "latest_source_execution": {
+      "run_id": "42010247594",
+      "run_attempt": 1,
+      "status": "in_progress",
+      "conclusion": null,
+      "updated_at": "2026-11-05T10:23:10Z",
+      "head_sha": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "event": "schedule",
+      "job_id": "127187136462",
+      "current_step": "Collect and promote only a complete generation",
+      "prior_steps_completed_successfully": [
+        "restore",
+        "completeness_and_data_preservation_checks"
+      ],
+      "result_artifacts_available": false,
+      "job_logs_available": false,
+      "job_logs_observation": "GitHub returned 404 BlobNotFound while job is running; terminal log and artifact inspection deferred until completion.",
+      "classification": "active_collection_not_failure",
+      "concurrent_mutations_started": false
     }
   },
   "last_reported_publication": {
