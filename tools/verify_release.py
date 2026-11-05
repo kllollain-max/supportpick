@@ -3,6 +3,7 @@ import argparse
 import hashlib
 import json
 import re
+import time
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from html.parser import HTMLParser
@@ -128,15 +129,39 @@ def verify_targets(targets, url_set, workers):
             'recoveredAfterRetry':recovered,'failures':remaining}
 
 
+def read_public_manifest():
+    request = Request(BASE + 'site-manifest.json', headers={'Cache-Control': 'no-cache'})
+    with urlopen(request, timeout=30) as response:
+        return json.load(response)
+
+
+def wait_for_public_manifest(local, expected_revision, expected_generation):
+    revision = expected_revision or local['sourceRevision']
+    generation = expected_generation or local['generation']
+    if (local['sourceRevision'], local['generation']) != (revision, generation):
+        raise ValueError('local_release_expectation_mismatch')
+
+    for attempt in (1, 2):
+        public = read_public_manifest()
+        observed = (public['sourceRevision'], public['generation'])
+        print(json.dumps({'manifestAttempt': attempt,
+                          'expectedRevision': revision, 'expectedGeneration': generation,
+                          'observedRevision': observed[0], 'observedGeneration': observed[1]}), flush=True)
+        if observed == (revision, generation):
+            if public['files'] != local['files']:
+                raise ValueError('public_manifest_files_mismatch')
+            return public
+        if attempt == 1:
+            # Pages may acknowledge deployment before the public edge serves it.
+            # Wait once before starting the crawl, without retrying page errors.
+            time.sleep(30)
+    raise ValueError('public_revision_mismatch' if observed[0] != revision else 'public_generation_mismatch')
+
+
 def live_check(output, workers=6, expected_revision=None, expected_generation=None):
     output = Path(output)
     local = json.loads((output / 'site-manifest.json').read_text())
-    with urlopen(BASE + 'site-manifest.json', timeout=30) as response:
-        expected=json.load(response)
-    if expected_revision and expected.get('sourceRevision')!=expected_revision:
-        raise ValueError('public_revision_mismatch')
-    if expected_generation and expected.get('generation')!=expected_generation:
-        raise ValueError('public_generation_mismatch')
+    expected = wait_for_public_manifest(local, expected_revision, expected_generation)
     for name in ('app.js','core.js','detail.js','styles.css'):
         if expected['files'].get(name)!=local['files'].get(name):
             raise ValueError('public_application_code_mismatch:'+name)
