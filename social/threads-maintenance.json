@@ -236,10 +236,10 @@
         "workflow_retries": 0,
         "recovery_attempts": 0
       },
-      "next_step": "Finish exact-head CI and merge diagnostic-only PR if green and main is unchanged. Use authorized check-account read-only dispatch when available; preserve HOLD until remote evidence is obtained. Never rerun this publication attempt.",
+      "next_step": "Use read-only check-account and inspect exact recent remote history when authorized workflow dispatch is available. Hold this attempt and do not replay. Verify next natural slot independently.",
       "repair_pr": 31,
       "repair_head_sha": "551b3611e7ff08669a26cb9039621b9582b92edd",
-      "repair_status": "pending_ci",
+      "repair_status": "diagnostics_merged_live_account_unverified",
       "validation": {
         "local_tests_passed": 38,
         "read_path": {
@@ -256,18 +256,20 @@
         },
         "ci_runs": [
           {
-            "id": 42131517059,
-            "status": "in_progress",
-            "conclusion": null
+            "id": 42131517048,
+            "status": "completed",
+            "conclusion": "success"
           },
           {
-            "id": 42131517048,
-            "status": "in_progress",
-            "conclusion": null
+            "id": 42131517059,
+            "status": "completed",
+            "conclusion": "success"
           }
         ],
-        "live_account_and_history_verified": false
-      }
+        "live_account_and_history_verified": false,
+        "merged_files_readback": true
+      },
+      "repair_sha": "a18f235b40a96fe24788dd883ffc149ed33e7164"
     }
   },
   "guardrails": {
@@ -407,7 +409,7 @@
     }
   },
   "last_check": {
-    "result": "threads_account_read_failed",
+    "result": "threads_account_read_hold_diagnostics_merged",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -476,12 +478,12 @@
     },
     "recovery_repeated": false,
     "posts_sent": 0,
-    "code_changes": 0,
-    "checked_at": "2026-11-06T08:42:12.429+09:00",
+    "code_changes": 2,
+    "checked_at": "2026-11-06T08:45:32.212+09:00",
     "changed_run_ids": [
       "42131131069"
     ],
-    "current_main_sha": "5c4ecef4e4376d38a0422012de0b368ef341a191",
+    "current_main_sha": "a18f235b40a96fe24788dd883ffc149ed33e7164",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
       "basis": "보조금24 누적 조회수",
@@ -553,7 +555,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 4
     },
-    "next_step": "Finish exact-head CI and merge diagnostic-only PR if green and main is unchanged. Use authorized check-account read-only dispatch when available; preserve HOLD until remote evidence is obtained. Never rerun this publication attempt.",
+    "next_step": "Use read-only check-account and inspect exact recent remote history when authorized workflow dispatch is available. Hold this attempt and do not replay. Verify next natural slot independently.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
@@ -748,5 +750,12 @@
     "run_id": "42117967226",
     "classification": "post_deployment_verification_only; complete collection and trusted Threads input verified",
     "recorded_at": "2026-11-06T07:47:59.290+09:00"
+  },
+  "last_reported_publication_issue": {
+    "run_id": "42131131069",
+    "classification": "hold_account_read_unclassified",
+    "repair_pr": 31,
+    "repair_sha": "a18f235b40a96fe24788dd883ffc149ed33e7164",
+    "recorded_at": "2026-11-06T08:45:32.212+09:00"
   }
 }
