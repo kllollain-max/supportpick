@@ -6,7 +6,7 @@ from unittest.mock import patch
 from urllib.error import HTTPError
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'tools'))
-from verify_release import verify_targets
+from verify_release import verify_targets, inspect
 
 URL='https://kllollain-max.github.io/supportpick/about.html'
 BODY=('<html><head><link rel="canonical" href="'+URL+'"><meta name="robots" content="index,follow">'
@@ -22,6 +22,24 @@ class Response:
 
 
 class PublicNetworkVerification(unittest.TestCase):
+    def test_bot_specific_and_duplicate_meta_cannot_hide_noindex(self):
+        for name, value in [('googlebot', 'noindex'), ('Googlebot', 'NONE'), ('robots', 'none')]:
+            text = BODY.decode().replace('</head>', '<meta name="'+name+'" content="'+value+'"></head>')
+            # A later permissive tag must not erase an earlier restriction.
+            text = text.replace('</head>', '<meta name="robots" content="index,follow"></head>')
+            with self.subTest(name=name, value=value), self.assertRaisesRegex(ValueError, 'conflicting_noindex'):
+                inspect(text, URL)
+
+    def test_header_noindex_is_failed_without_retry(self):
+        from email.message import Message
+        for value, blocked in [('noindex', True), ('googlebot: none', True), ('max-image-preview:none', False)]:
+            response = Response(); response.headers = Message()
+            response.headers.add_header('X-Robots-Tag', value)
+            with patch('verify_release.urlopen', return_value=response) as fetch:
+                report = verify_targets(self.target(), {URL}, 1)
+            self.assertEqual(fetch.call_count, 1)
+            self.assertEqual(report['failed'], int(blocked))
+
     def target(self,digest=None):
         return [(URL,'about.html',digest or hashlib.sha256(BODY).hexdigest())]
 

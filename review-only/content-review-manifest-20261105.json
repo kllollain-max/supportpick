@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-11-05T09:24:51+09:00",
+  "preparedAt": "2026-11-05T19:24:35+09:00",
   "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
   "humanReviewed": 0,
   "items": [
@@ -7,8 +7,8 @@
       "id": "supportpick:149200000026",
       "title": "국민내일배움카드",
       "url": "https://kllollain-max.github.io/supportpick/benefits/149200000026/",
-      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
-      "bodySha256": "39fda784b8c6d964f226f1f42f5708dc84cf04f8413bc6bec4247f32be6da501",
+      "sourceRevision": "candidate: see PR head",
+      "bodySha256": "0cce2cb64533a7a3206c66594ed7b631b0bfe58d4f1fb9b355fa5cd7c3d35cd0",
       "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
       "officialMaterialSha256": "99010bf63a4de63e062990431ae2cd86b1ab79f53740fec05f03e987cb76f430",
       "sourceHashMatches": true,
@@ -28,10 +28,13 @@
         "status": "pending",
         "reviewer": null,
         "reviewedAt": null,
-        "bodySha256": "39fda784b8c6d964f226f1f42f5708dc84cf04f8413bc6bec4247f32be6da501"
+        "bodySha256": "0cce2cb64533a7a3206c66594ed7b631b0bfe58d4f1fb9b355fa5cd7c3d35cd0"
       },
       "publicHttp": 200,
-      "publicHtmlSha256": "9b4cf38f23f251cdf7142e6bf29178755b3f8fa5227ca3c01e0450689f20c3ad"
+      "publicHtmlSha256": "9b4cf38f23f251cdf7142e6bf29178755b3f8fa5227ca3c01e0450689f20c3ad",
+      "candidateUpdatedAt": "2026-11-05T19:24:35+09:00",
+      "candidatePublicMatches": false,
+      "candidateChange": "훈련과정 비교 준비 FAQ 보완; 사실 대조 시각·유효기한 유지"
     },
     {
       "id": "supportpick:105100000001",

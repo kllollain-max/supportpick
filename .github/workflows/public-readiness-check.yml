@@ -1,0 +1,33 @@
+name: Read-only public readiness checks
+on:
+  schedule:
+    - cron: '35 22 * * *'
+  workflow_dispatch:
+  workflow_run:
+    workflows: [Deploy approved SupportPick snapshot, SupportPick full-data operations (approval gated)]
+    branches: [main]
+    types: [completed]
+permissions:
+  contents: read
+concurrency:
+  group: supportpick-public-readiness-audit
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/check_public_readiness.py --project supportpick
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: supportpick-public-readiness
+          path: public-readiness-report.json
+          retention-days: 14
