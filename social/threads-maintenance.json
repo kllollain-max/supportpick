@@ -348,7 +348,7 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-05T23:29:21+09:00",
+    "checked_at": "2026-11-06T00:23:21.789+09:00",
     "changed_run_ids": [],
     "current_main_sha": "4bf3d3a6ad678a7c3616ed34bc1e17b10da87cfa",
     "ranking_policy": {
@@ -395,8 +395,8 @@
     "run_list_scan": {
       "pages": 1,
       "per_page": 100,
-      "total_count": 93,
-      "returned": 93,
+      "total_count": 95,
+      "returned": 95,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
@@ -422,7 +422,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 4
     },
-    "next_step": "Daily maximum four mains reached for 2026-11-05. Do not create more posts or backfill. Continue next natural 08/12/16/20 KST slots with fresh data and dedup; next new main is text, subsequent generic image rotation returns to image 1 unless a per-benefit approved asset exists.",
+    "next_step": "Continue next natural 08/12/16/20 KST slots with fresh source and dedup, maximum four mains per KST day and two-hour grace. Next new main is text; subsequent generic image slot rotates to image 1 unless a benefit-specific approved asset exists. No backfill or test publication.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
@@ -494,6 +494,11 @@
       "classification": "collection_and_terminal_verification_success",
       "concurrent_mutations_started": false,
       "prior_in_progress_transition_rechecked": true
+    },
+    "current_day_publication_count": {
+      "date_kst": "2026-11-06",
+      "count": 0,
+      "limit": 4
     }
   },
   "last_reported_publication": {
