@@ -29,18 +29,19 @@
     "41823025409",
     "41814036806",
     "41921889569",
-    "41935189296"
+    "41935189296",
+    "41963079062"
   ],
   "last_health": {
     "unresolved_publications": 0,
-    "published_benefits": 3,
+    "published_benefits": 4,
     "source_run_id": "41921889569",
     "source_result": "success",
     "source_count": 10942,
     "source_last_success_at": "2026-11-05T07:11:51.033157+09:00",
     "source_workflow_conclusion": "failure",
     "source_failure_classification": "post_deployment_verification_only; no source collection or Threads publication failure",
-    "last_publisher_run_id": "41935189296"
+    "last_publisher_run_id": "41963079062"
   },
   "incidents": {
     "41796747628": {
@@ -114,6 +115,13 @@
         "generation": "gov24-41921889569-1",
         "published": true,
         "replies": 2
+      },
+      "latest_natural_publisher_consumption_verified": {
+        "run_id": "41963079062",
+        "generation": "gov24-41921889569-1",
+        "published": true,
+        "replies": 2,
+        "image_url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png"
       }
     }
   },
@@ -209,43 +217,51 @@
       "conclusion": "success",
       "updated_at": "2026-11-04T23:39:58Z",
       "head_sha": "a890695ccaf14ccea374710d5182030f0cfbd4b1"
+    },
+    "41963079062": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-05T03:43:08Z",
+      "head_sha": "0db83684355af1f08f56ddac6461588dfc0bce39"
     }
   },
   "last_check": {
-    "result": "healthy_no_new_incident",
+    "result": "healthy_new_scheduled_publication_verified",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
-      "run_id": "41935189296",
+      "run_id": "41963079062",
       "run_attempt": 1,
-      "job_id": "126941756590",
-      "head_sha": "a890695ccaf14ccea374710d5182030f0cfbd4b1",
+      "job_id": "127033745564",
+      "head_sha": "0db83684355af1f08f56ddac6461588dfc0bce39",
       "event": "schedule",
       "conclusion": "success",
       "published": true,
       "replies": 2,
-      "artifact_id": "13373228913",
-      "artifact_sha256": "fcdd054c1bfa7189cba9fe187736a6d95f834bd24908b4d180762dadf4af428e",
+      "artifact_id": "13386072671",
+      "artifact_sha256": "f38c660e2753a168e7ef8f6dfd81035e9200b9e0515273549f9bc2ea30c9acc3",
       "artifact_contents_verified": true,
-      "remote_receipt_verification": "Publisher GET verification of IDs, text and permalinks completed before verified/complete ledger state; downloaded result artifact matches.",
-      "benefit_id": "105100000001",
-      "main_id": "18100684106644300",
-      "main_id_url": "https://www.threads.com/@hid_1004/post/DfVp3rUDrok",
-      "detail_id": "18163187488542435",
-      "detail_id_url": "https://www.threads.com/@hid_1004/post/DfVp8sUjvun",
-      "links_id": "17963612868229839",
-      "links_id_url": "https://www.threads.com/@hid_1004/post/DfVqB0XDuW4",
-      "content_hash": "e330e38dbefefcc96ba848320a29d678ea7b2f7c41687431b954c747877c85b2",
+      "remote_receipt_verification": "All three emitted post receipts match the ledger; publisher GET verified each ID, exact text (only brand topic conversion allowed) and permalink before published/verified completion.",
+      "benefit_id": "149200005007",
+      "main_id": "18107885570634446",
+      "main_id_url": "https://www.threads.com/@hid_1004/post/DfWFtARFV_Q",
+      "detail_id": "18107724770222673",
+      "detail_id_url": "https://www.threads.com/@hid_1004/post/DfWFyGYFZJA",
+      "links_id": "18154790662551115",
+      "links_id_url": "https://www.threads.com/@hid_1004/post/DfWF2_2Fep9",
+      "content_hash": "67ec8e64ec53ef884a8caad3a96f82206bdb1a89dd5e394864838f63a0bd676b",
       "selection": {
         "policy": "gov24_views_desc_v1",
         "basis": "보조금24 누적 조회수",
-        "views": 2434939,
-        "source_checked_at": "2026-11-05T07:07:08.340921+09:00",
+        "views": 1297328,
+        "source_checked_at": "2026-11-05T07:07:13.742701+09:00",
         "note": "실시간 검색량·신청자 수가 아닌 공식 API 누적 조회수 기준"
       },
-      "published_at": "2026-11-05T08:37:45.282686+09:00",
-      "image_url": null,
-      "verification_completed_at": "2026-11-05T08:39:53.221301+09:00"
+      "published_at": "2026-11-05T12:40:58.039698+09:00",
+      "verification_completed_at": "2026-11-05T12:43:05.170774+09:00",
+      "image_url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+      "image_evidence": "Approved rotation image 1 was reserved and passed to the IMAGE container on the successful natural publisher path; existing main receipt verified. Separate remote media-type/media-url GET was not performed."
     },
     "latest_source": {
       "run_id": "41921889569",
@@ -291,7 +307,7 @@
       },
       "actual_read_path_verified": true
     },
-    "publication_ledger_sha": "5c7b16d56d9b6e2a2b77dfdbc5c5a3c5b3dfcb3b",
+    "publication_ledger_sha": "ff268f8d2ad5dc2105e9fa7fa438540dac5905fb",
     "workflow_blob_shas": {
       "threads": "b9eca15d9b506189b513abb15281e77a5cdc3ab5",
       "source": "ce74fe03afd06f59f1d38f2e297fe9a78bbcf604"
@@ -299,8 +315,10 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-05T11:24:03+09:00",
-    "changed_run_ids": [],
+    "checked_at": "2026-11-05T13:06:22+09:00",
+    "changed_run_ids": [
+      "41963079062"
+    ],
     "current_main_sha": "0db83684355af1f08f56ddac6461588dfc0bce39",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
@@ -333,12 +351,12 @@
           "views": 1297328
         }
       ],
-      "latest_verified_run_id": "41935189296",
+      "latest_verified_run_id": "41963079062",
       "latest_verified_selection": {
         "policy": "gov24_views_desc_v1",
         "basis": "보조금24 누적 조회수",
-        "views": 2434939,
-        "source_checked_at": "2026-11-05T07:07:08.340921+09:00",
+        "views": 1297328,
+        "source_checked_at": "2026-11-05T07:07:13.742701+09:00",
         "note": "실시간 검색량·신청자 수가 아닌 공식 API 누적 조회수 기준"
       }
     },
@@ -346,8 +364,8 @@
     "run_list_scan": {
       "pages": 1,
       "per_page": 100,
-      "total_count": 86,
-      "returned": 86,
+      "total_count": 87,
+      "returned": 87,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
@@ -363,26 +381,28 @@
       "source_artifact_digest_passed": true,
       "source_manifest_files_verified": 36,
       "popularity_top_candidate_recomputed": true,
+      "eligible_after_prior_duplicates": 10396,
       "exact_content_hash_and_composition_verified": true,
       "no_links_all_three_texts": true,
       "cta_all_three_texts": true,
-      "expected_text_only_slot": true
+      "expected_image_slot": true,
+      "approved_rotation_choice_verified": true,
+      "source_fresh_at_publication": true,
+      "daily_main_posts": 2
     },
-    "next_step": "Continue natural 12/16/20 KST slots with daily cap, link-free texts, cumulative-view ranking and dedup unchanged. Next new main is the approved image slot; actual image transmission remains unverified. No manual posts, retries or recovery required.",
+    "next_step": "Continue natural 16/20 KST slots with daily cap and dedup unchanged. Next new main is text; following image slot uses rotation image 2 unless an approved per-benefit image takes precedence. No manual posts or recovery required.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "source_postdeploy_failure_unchanged": true,
       "source_consumed_by_natural_publisher": true,
       "known_postdeploy_failure_not_retried": true,
       "no_in_scope_unresolved_failure": true,
-      "artifact_metadata_and_digests_unchanged": true,
-      "previously_digest_verified_artifact_contents_reused": true,
-      "publication_ledger_unchanged": true,
+      "previously_verified_source_revalidated": true,
       "publisher_script_and_workflows_unchanged": true,
       "approved_assets_manifest_unchanged": true,
-      "no_new_publication": true,
+      "no_new_publication": false,
       "no_pending_publications": true,
-      "natural_image_publication_verified": false
+      "natural_image_publication_verified": true
     },
     "latest_policy_change": {
       "applied_at": "2026-11-04T23:10:49+09:00",
@@ -416,11 +436,11 @@
     }
   },
   "last_reported_publication": {
-    "run_id": "41935189296",
-    "main_id": "18100684106644300",
-    "url": "https://www.threads.com/@hid_1004/post/DfVp3rUDrok",
-    "verification_completed_at": "2026-11-05T08:39:53.221301+09:00",
-    "recorded_at": "2026-11-05T08:54:59.237165+09:00"
+    "run_id": "41963079062",
+    "main_id": "18107885570634446",
+    "url": "https://www.threads.com/@hid_1004/post/DfWFtARFV_Q",
+    "verification_completed_at": "2026-11-05T12:43:05.170774+09:00",
+    "recorded_at": "2026-11-05T13:06:22+09:00"
   },
   "policy_changes": [
     {
@@ -464,7 +484,7 @@
     "pending_texts_hashes_preserved": true,
     "legacy_pending_links_action": "HOLD without rewriting or sending",
     "natural_publication_after_change_verified": true,
-    "verified_run_id": "41935189296"
+    "verified_run_id": "41963079062"
   },
   "image_policy": {
     "version": "alternate_approved_illustrations_v1",
@@ -485,9 +505,14 @@
     "only_repo_main_social_images": true,
     "stored_in_publication_reservation": true,
     "never_reselect_pending": true,
-    "natural_publication_after_change_verified": false,
+    "natural_publication_after_change_verified": true,
     "text_only_slot_verified": true,
-    "next_new_main_type": "image"
+    "next_new_main_type": "text",
+    "verified_run_id": "41963079062",
+    "verified_main_id": "18107885570634446",
+    "verified_image_url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+    "verification_completed_at": "2026-11-05T12:43:05.170774+09:00",
+    "remote_media_fields_independently_read": false
   },
   "last_reported_operation_issue": {
     "run_id": "41921889569",
