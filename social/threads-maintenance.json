@@ -212,7 +212,7 @@
     }
   },
   "last_check": {
-    "result": "healthy_new_scheduled_publication_verified",
+    "result": "healthy_no_new_incident",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -299,11 +299,9 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-05T08:54:59.237165+09:00",
-    "changed_run_ids": [
-      "41935189296"
-    ],
-    "current_main_sha": "a890695ccaf14ccea374710d5182030f0cfbd4b1",
+    "checked_at": "2026-11-05T09:40:25.000+09:00",
+    "changed_run_ids": [],
+    "current_main_sha": "0db83684355af1f08f56ddac6461588dfc0bce39",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
       "basis": "보조금24 누적 조회수",
@@ -348,8 +346,8 @@
     "run_list_scan": {
       "pages": 1,
       "per_page": 100,
-      "total_count": 70,
-      "returned": 70,
+      "total_count": 86,
+      "returned": 86,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
@@ -370,13 +368,21 @@
       "cta_all_three_texts": true,
       "expected_text_only_slot": true
     },
-    "next_step": "Continue natural 12/16/20 KST slots with daily cap and dedup unchanged. Next new main is the image slot; actual image transmission is not yet verified. No manual posts or recovery required.",
+    "next_step": "Continue natural 12/16/20 KST slots with daily cap, link-free texts, cumulative-view ranking and dedup unchanged. Next new main is the approved image slot; actual image transmission remains unverified. No manual posts, retries or recovery required.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "source_postdeploy_failure_unchanged": true,
       "source_consumed_by_natural_publisher": true,
       "known_postdeploy_failure_not_retried": true,
-      "no_in_scope_unresolved_failure": true
+      "no_in_scope_unresolved_failure": true,
+      "artifact_metadata_and_digests_unchanged": true,
+      "previously_digest_verified_artifact_contents_reused": true,
+      "publication_ledger_unchanged": true,
+      "publisher_script_and_workflows_unchanged": true,
+      "approved_assets_manifest_unchanged": true,
+      "no_new_publication": true,
+      "no_pending_publications": true,
+      "natural_image_publication_verified": false
     },
     "latest_policy_change": {
       "applied_at": "2026-11-04T23:10:49+09:00",
