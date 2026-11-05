@@ -236,7 +236,38 @@
         "workflow_retries": 0,
         "recovery_attempts": 0
       },
-      "next_step": "Verify GET /me and exact recent remote history with a read-only route before any recovery POST. Do not rerun this workflow. Prepare sanitized account diagnostics."
+      "next_step": "Finish exact-head CI and merge diagnostic-only PR if green and main is unchanged. Use authorized check-account read-only dispatch when available; preserve HOLD until remote evidence is obtained. Never rerun this publication attempt.",
+      "repair_pr": 31,
+      "repair_head_sha": "551b3611e7ff08669a26cb9039621b9582b92edd",
+      "repair_status": "pending_ci",
+      "validation": {
+        "local_tests_passed": 38,
+        "read_path": {
+          "generation": "gov24-42117967226-1",
+          "eligible": 10393,
+          "account_error": "HTTP 503 simulated",
+          "calls": [
+            [
+              "GET",
+              "https://graph.threads.net/v1.0/me"
+            ]
+          ],
+          "ledger_writes": 0
+        },
+        "ci_runs": [
+          {
+            "id": 42131517059,
+            "status": "in_progress",
+            "conclusion": null
+          },
+          {
+            "id": 42131517048,
+            "status": "in_progress",
+            "conclusion": null
+          }
+        ],
+        "live_account_and_history_verified": false
+      }
     }
   },
   "guardrails": {
@@ -522,7 +553,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 4
     },
-    "next_step": "Verify GET /me and exact recent remote history with a read-only route before any recovery POST. Do not rerun this workflow. Prepare sanitized account diagnostics.",
+    "next_step": "Finish exact-head CI and merge diagnostic-only PR if green and main is unchanged. Use authorized check-account read-only dispatch when available; preserve HOLD until remote evidence is obtained. Never rerun this publication attempt.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
