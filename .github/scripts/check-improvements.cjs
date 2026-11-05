@@ -18,7 +18,7 @@ const server=createServer((req,res)=>{
   for(const width of [320,390,1440]){
    const context=await browser.newContext({viewport:{width,height:900},timezoneId:'Asia/Seoul'});
    await context.route('**/*',route=>new URL(route.request().url()).origin===new URL(base).origin?route.continue():route.abort());
-   await context.addInitScript(()=>{if(!localStorage.getItem('supportpick:records:v1'))localStorage.setItem('supportpick:records:v1',JSON.stringify({version:1,revision:1,saved:['QA_OLD'],apps:{QA_OLD:{title:'검사용 이전 기록',note:'보존할 메모',stage:'서류 준비',updatedAt:'2026-11-04T00:00:00Z'}},prefs:{region:'',category:''}}));localStorage.setItem('careerpick:qa-sentinel','unchanged');});
+   await context.addInitScript(()=>{if(location.protocol!=='http:')return;if(!localStorage.getItem('supportpick:records:v1'))localStorage.setItem('supportpick:records:v1',JSON.stringify({version:1,revision:1,saved:['QA_OLD'],apps:{QA_OLD:{title:'검사용 이전 기록',note:'보존할 메모',stage:'서류 준비',updatedAt:'2026-11-04T00:00:00Z'}},prefs:{region:'',category:''}}));localStorage.setItem('careerpick:qa-sentinel','unchanged');});
    const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
    await page.goto(base);await page.locator('.benefit-card').first().waitFor();
    const check=label=>outcomes.push({width,check:label,status:'passed'});
@@ -43,7 +43,7 @@ const server=createServer((req,res)=>{
    assert.equal(await page.locator('[data-app-form="QA_OLD"] textarea').inputValue(),'보존할 메모');check('saved and application records');
    await page.locator('[data-tab=all]').click();const card=page.locator('.benefit-card').first();const href=await card.locator('h3 a').getAttribute('href');
    // Click the non-title summary, which is covered by the native stretched link.
-   await card.locator('.card-summary').evaluate(el=>el.scrollIntoView({block:'center'}));const hit=await card.locator('.card-summary').boundingBox();assert.ok(hit);await page.mouse.click(hit.x+hit.width/2,hit.y+hit.height/2);await page.waitForURL('**/'+href);await page.reload();assert.equal(await page.locator('h1').count(),1);assert.ok((await page.locator('main').innerText()).length>300);await page.goBack();await page.goBack();await page.goto(base);check('whole-card detail, direct URL and refresh');
+   await card.locator('.card-summary').evaluate(el=>el.scrollIntoView({block:'center'}));const hit=await card.locator('.card-summary').boundingBox();assert.ok(hit);await page.mouse.click(hit.x+hit.width/2,hit.y+hit.height/2);await page.waitForURL('**/'+href);await page.reload();assert.equal(await page.locator('h1').count(),1);assert.ok((await page.locator('main').innerText()).length>300);await page.goBack();await page.goto(base);check('whole-card detail, direct URL and refresh');
    await page.locator('#recordsButton').click();assert.match(await page.locator('#recordsTitle').innerText(),/백업·복원/);await page.locator('#backupFallback summary').click();await page.locator('#showBackupText').click();
    const backup=JSON.parse(await page.locator('#backupText').inputValue());assert.equal(backup.data.apps.QA_OLD.note,'보존할 메모');assert.equal(backup.data.prefs.city,'춘천시');
    const prior=await page.evaluate(()=>localStorage.getItem('supportpick:records:v1'));
