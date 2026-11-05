@@ -315,7 +315,7 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-05T14:50:08+09:00",
+    "checked_at": "2026-11-05T16:12:44+09:00",
     "changed_run_ids": [],
     "current_main_sha": "0db83684355af1f08f56ddac6461588dfc0bce39",
     "ranking_policy": {
@@ -388,7 +388,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 2
     },
-    "next_step": "Continue natural 16/20 KST slots with daily cap and dedup unchanged. Next new main is text; following image slot uses rotation image 2 unless an approved per-benefit image takes precedence. No manual posts or recovery required.",
+    "next_step": "Observe the natural 16 KST run within the existing 2-hour allowance, then 20 KST. No current 16 KST remote run or reservation exists; do not claim success, dispatch a duplicate/test post, or backfill after the window. Next new main is text; subsequent approved image rotation remains unchanged.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "source_postdeploy_failure_unchanged": true,
@@ -434,6 +434,13 @@
       "real_publication_performed": false,
       "natural_publication_after_change_verified": false,
       "next_step": "Verify on next natural scheduled slots; do not dispatch test or backfill posts."
+    },
+    "current_slot_observation": {
+      "slot": "2026-11-05T16:00:00+09:00",
+      "remote_run_started": false,
+      "publication_reserved": false,
+      "classification": "awaiting_natural_scheduler_within_2h_allowance",
+      "manual_dispatch_performed": false
     }
   },
   "last_reported_publication": {
