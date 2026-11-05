@@ -35,3 +35,11 @@ test('old backup unchanged; optional city/target survive validation and merging 
  assert.deepEqual(result.prefs,current.prefs);assert.equal(result.apps.a.note,'준비 메모');assert.deepEqual(result.saved,['a','b']);
  assert.throws(()=>C.validate({...old,prefs:{...old.prefs,city:'<script>'}}));
 });
+test('deadline sort uses the next preserved round; matched default favors explicit target evidence',()=>{
+ const multi={...fixed('multi','2026-10-01','2026-10-02'),applicationPeriods:[{start:'2026-10-01',end:'2026-10-02'},{start:'2026-11-01',end:'2026-11-06'}],targetGroups:[{label:'학생',evidence:'재학생'}]};
+ const later=fixed('later','2026-11-01','2026-11-10',{sourceUpdatedAt:'20261105'});
+ assert.deepEqual(C.filter([later,multi],{sort:'deadline',now},C.blank()).map(x=>x.id),['multi','later']);
+ const records={...C.blank(),prefs:{region:'',category:'',targetGroup:'학생'}};
+ assert.deepEqual(C.filter([later,multi],{sort:'updated',tab:'matched',now},records).map(x=>x.id),['multi','later']);
+ assert.equal(C.filter([later,multi],{tab:'matched',now},records).length,2);
+});

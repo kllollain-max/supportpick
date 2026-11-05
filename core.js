@@ -99,12 +99,25 @@
     if(prefs.targetGroup){const tag=(item.targetGroups||[]).find(t=>t.label===prefs.targetGroup);reasons.push(tag?prefs.targetGroup+' 원문 언급 · 연령·소득·중복 제한 확인':prefs.targetGroup+' 조건 미확정 · 대상 원문 확인');}
     return reasons;
   }
+  function deadline(item,now=new Date()){
+    if(item.applicationPeriodKind==='fixed'&&Array.isArray(item.applicationPeriods)){
+      const dates=item.applicationPeriods.map(p=>p.end).filter(validDate).sort();
+      return dates.find(d=>d>=day(now))||dates[dates.length-1]||'9999';
+    }
+    return validDate(item.endDate)?item.endDate:'9999';
+  }
+  function affinity(item,prefs){
+    let score=0;
+    if(prefs.targetGroup&&(item.targetGroups||[]).some(t=>t.label===prefs.targetGroup))score+=2;
+    if((prefs.region||prefs.city)&&item.eligibilityRegionStatus==='explicit'&&regionMatch(item,prefs.region,prefs.city))score+=1;
+    return score;
+  }
   function filter(items,view,records){
     const query=String(view.query||'').trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
     return items.filter(p=>{
       const text=[p.title,p.organization,p.summary,p.target||p.targetPreview,p.category,p.region,...(p.audience||[])].join(' ').toLocaleLowerCase();
       return !p.isSample&&query.every(q=>text.includes(q))&&(!view.category||p.category===view.category)&&(!view.region||regionMatch(p,view.region,view.city))&&(!view.city||regionMatch(p,view.region,view.city))&&(!view.targetGroup||(p.targetGroups||[]).some(t=>t.label===view.targetGroup))&&(!view.applicationStatus||({active:['접수 중','상시 신청'].includes(applicationState(p,view.now)),soon:closingSoon(p,view.now),not_closed:applicationState(p,view.now)!=='접수 종료',needs_check:applicationState(p,view.now)==='확인 필요'})[view.applicationStatus])&&(!view.audience||(p.audience||[]).includes(view.audience))&&(!view.supportType||(p.supportTypes||[p.supportType]).includes(view.supportType))&&(view.tab!=='saved'||records.saved.includes(p.id))&&(view.tab!=='matched'||matchReasons(p,records.prefs)!==null);
-    }).sort((a,b)=>view.sort==='title'?a.title.localeCompare(b.title,'ko'):view.sort==='deadline'?(validDate(a.endDate)?a.endDate:'9999').localeCompare(validDate(b.endDate)?b.endDate:'9999'):modified(b).localeCompare(modified(a)));
+    }).sort((a,b)=>view.sort==='title'?a.title.localeCompare(b.title,'ko'):view.sort==='deadline'?deadline(a,view.now).localeCompare(deadline(b,view.now)):(view.tab==='matched'?affinity(b,records.prefs)-affinity(a,records.prefs):0)||modified(b).localeCompare(modified(a)));
   }
   function modified(p){const s=p.sourceUpdatedAt;return String(s&&typeof s==='object'?s.list||s.detail||'':s||p.checkedAt||'').replace(/[^0-9]/g,'').padEnd(14,'0');}
   function parseFeed(feed){
