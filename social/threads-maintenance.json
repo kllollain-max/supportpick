@@ -235,7 +235,7 @@
     }
   },
   "last_check": {
-    "result": "healthy_new_scheduled_publication_verified",
+    "result": "healthy_no_new_incident",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -322,10 +322,8 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-05T17:15:35+09:00",
-    "changed_run_ids": [
-      "41992548749"
-    ],
+    "checked_at": "2026-11-05T17:56:36+09:00",
+    "changed_run_ids": [],
     "current_main_sha": "0db83684355af1f08f56ddac6461588dfc0bce39",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
@@ -406,9 +404,12 @@
       "artifact_metadata_digest_verified": true,
       "publisher_script_and_workflows_unchanged": true,
       "approved_assets_manifest_unchanged": true,
-      "no_new_publication": false,
+      "no_new_publication": true,
       "no_pending_publications": true,
-      "natural_image_publication_verified": true
+      "natural_image_publication_verified": true,
+      "artifact_metadata_and_digests_unchanged": true,
+      "previously_digest_verified_artifact_contents_reused": true,
+      "publication_ledger_unchanged": true
     },
     "latest_policy_change": {
       "applied_at": "2026-11-04T23:10:49+09:00",
