@@ -15,7 +15,7 @@ class PublicationTests(unittest.TestCase):
    self.assertEqual(caught.exception.report['expected']['generation'],'new');self.assertEqual(len(caught.exception.report['observations']),3)
  def test_data_and_current_shards_must_have_identical_ids_and_generation(self):
   files={'data.json':{'generation':'g','detailBase':'details/g/','items':[{'id':'1'}]},'details/g/00.json':{'generation':'g','items':{'1':{'id':'1','generation':'g'}}}}
-  raw={k:json.dumps(v).encode() for k,v in files.items()};m={'generation':'g','files':{k:hashlib.sha256(v).hexdigest() for k,v in raw.items()}}
+  raw={k:json.dumps(v).encode() for k,v in files.items()};raw['data.js']=b'window.SUPPORTPICK_DATA = '+raw['data.json']+b';';m={'generation':'g','files':{k:hashlib.sha256(v).hexdigest() for k,v in raw.items()}}
   self.assertEqual(verify_data_release(m,raw.__getitem__)['benefits'],1)
   files['details/g/00.json']['generation']='old';raw['details/g/00.json']=json.dumps(files['details/g/00.json']).encode();m['files']['details/g/00.json']=hashlib.sha256(raw['details/g/00.json']).hexdigest()
   with self.assertRaisesRegex(PublicationError,'mixed_detail_generation'):verify_data_release(m,raw.__getitem__)

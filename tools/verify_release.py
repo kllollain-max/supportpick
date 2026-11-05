@@ -130,7 +130,7 @@ def live_check(output, workers=6, expected_revision=None, expected_generation=No
     expected,observations=wait_manifest(local)
     consistency=verify_data_release(expected)
     for name in ('app.js','core.js','detail.js','styles.css'):
-        if expected['files'].get(name)!=local['files'].get(name):
+        if hashlib.sha256(read_public(name)).hexdigest()!=local['files'].get(name):
             raise ValueError('public_application_code_mismatch:'+name)
     with urlopen(BASE+'sitemap.xml',timeout=30) as response:
         raw=response.read()
@@ -177,11 +177,12 @@ if __name__ == '__main__':
     args = parser.parse_args()
     try:
         result = live_check(args.output, args.workers,args.expect_sha,args.expect_generation) if args.live else verify(args.output)
-    except PublicationError as error:
-        result={'error':str(error),**error.report}
+    except (PublicationError,ValueError,HTTPError,URLError,TimeoutError) as error:
+        result={'error':str(error)[:500], 'failed':1, **getattr(error,'report',{})}
         if args.report:
             Path(args.report).parent.mkdir(parents=True,exist_ok=True);Path(args.report).write_text(json.dumps(result,ensure_ascii=False,indent=2))
         print(json.dumps(result,ensure_ascii=False,indent=2));raise SystemExit(1)
-    if args.report: Path(args.report).write_text(json.dumps(result, ensure_ascii=False, indent=2))
+    if args.report:
+        Path(args.report).parent.mkdir(parents=True,exist_ok=True);Path(args.report).write_text(json.dumps(result, ensure_ascii=False, indent=2))
     print(json.dumps(result, ensure_ascii=False, indent=2))
     if result.get('failed'): raise SystemExit(1)

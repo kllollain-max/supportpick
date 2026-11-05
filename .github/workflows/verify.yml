@@ -59,6 +59,13 @@ jobs:
           python tools/restore_latest_state.py
           python tools/retrieve_evidence.py
           python tools/refresh.py --state collection-state --bundle-output runtime-state
+      - uses: actions/upload-artifact@v4
+        with:
+          name: supportpick-r2-pending-preservation
+          path: |
+            runtime-state/
+            output/current-run/
+          retention-days: 90
       - name: R2 upload, read-back, isolated restore and full rebuild
         env:
           SUPPORTPICK_R2_ACCESS_KEY_ID: ${{ secrets.SUPPORTPICK_R2_ACCESS_KEY_ID }}
@@ -76,3 +83,27 @@ jobs:
           name: supportpick-r2-probe
           path: output/r2-probe.json
           retention-days: 90
+
+  browser-regression:
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/download-artifact@v4
+        with:
+          name: supportpick-verified-release
+          path: dist
+      - run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - run: node .github/scripts/check-improvements.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: supportpick-responsive-regression
+          path: output/browser/
+          retention-days: 30
