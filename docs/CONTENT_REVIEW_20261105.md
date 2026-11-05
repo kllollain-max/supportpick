@@ -1,4 +1,4 @@
-# 自체 해설 20개 내용 후속 검토
+# 자체 해설 20개 내용 후속 검토
 
 확인일: 2026-11-05(KST). 기준 main: `1d835c70be865938c90e4c6a278dfbbd8f058669`.
 
@@ -43,3 +43,34 @@
 ## 유지·검증·운영
 
 나머지 19개 해설·보류 7개·블로그 정확 일치 연결·공식 데이터·ID·저장/내 신청/맞춤/백업과 수집·Threads·웹푸시 설정은 변경하지 않는다. 소개의 AI 점검과 사람 검토 구분도 유지한다. 생성기·기존 상세 검사와 빌드·정적 링크 검사를 재사용하며 새 결과는 PR에 기록한다. 병합·공개 배포·심사 신청·광고 활성화·네이버 블로그 접속은 없다.
+
+## 배포 후 사람 검토본과 현재 대조 — 2026-11-05T09:24:51+09:00
+
+기존 본문과 검토 기록을 재사용했다. [전체 본문 검토본](../review-only/content-review-reader-20261105.html)과 [버전·출처·미확인 사항 확인표](../review-only/content-review-manifest-20261105.json)를 함께 읽는다. 공개 빌드에는 포함하지 않는다. 사람 확인은 0건이며 계속 진행·배포 승인을 사람 검토로 기록하지 않았다.
+
+| 제목·공개 URL | 본문 SHA-256 | 확인할 문장·미확인 사항 | 사람 검토 |
+|---|---|---|---|
+| [국민내일배움카드](https://kllollain-max.github.io/supportpick/benefits/149200000026/) | `39fda784b8c6d964f226f1f42f5708dc84cf04f8413bc6bec4247f32be6da501` | 카드 발급·훈련 수강·본인부담·대상 제외를 분리. 금액은 카드 한도이며 현금 지급이 아님. 고용24 현재 발급 안내 추가 열람. | 대기 |
+| [근로·자녀장려금](https://kllollain-max.github.io/supportpick/benefits/105100000001/) | `0aedf88ec4cdaca75c30f009d2d80b74de87cde45310199b4831be1e1051f075` | 귀속연도·정기/반기/기한 후 절차를 구분. 총소득·총급여액·가구별 금액을 혼동하지 않는지 검토. | 대기 |
+| [국민취업지원제도](https://kllollain-max.github.io/supportpick/benefits/149200005007/) | `9acf9b063a0792cb676c406da72d70d304f1281392872c6097993e76a73a644c` | I/II유형, 구직촉진수당과 취업활동비용을 분리. 취업·다른 수당의 중복 제한은 고용센터 확인. | 대기 |
+| [구직급여](https://kllollain-max.github.io/supportpick/benefits/SD0000015536/) | `ddd0a9289032254e3de75e4ea4a225f7b7978e2efc98dd312e010b94706744be` | 재직기간과 피보험 단위기간을 혼동하지 않음. 이직 사유·최초 수급자격과 실업인정 후속 절차를 구분. | 대기 |
+| [긴급복지 생계지원](https://kllollain-max.github.io/supportpick/benefits/135200005003/) | `b47869b72a782db9c3d28f641e511420472f637b19967076e0169638bb28ef64` | 위기사유·소득·재산·가구별 지원을 함께 검토. 다른 복지급여와 중복 가능 여부를 확정하지 않음. | 대기 |
+| [장기전세 주택공급](https://kllollain-max.github.io/supportpick/benefits/999000000024/) | `ba0463e171e87f84c810438d0b4e6c0f09ce5afd5d56e4318b4ae0d43f7a239d` | 제도 안내와 현재 단지 모집을 분리. 세대·지역·면적·공고일·접수기간은 개별 모집공고 확인 필요. | 대기 |
+| [육아휴직급여](https://kllollain-max.github.io/supportpick/benefits/999000000008/) | `c18e503c549dbe3db5b954f3feb37dfe0c7925d1de2184e0669da666442b93aa` | 회사 휴직 승인과 고용보험 급여 신청을 분리. 기업·부모 사용상황·휴직 기간별 지급 차이를 담당기관 확인. | 대기 |
+| [노후준비서비스제공](https://kllollain-max.github.io/supportpick/benefits/WII000000310/) | `f7c6043780556753428cdcc64a30c9e7a7dc11b8e9b9aedd4b4db681a4acf472` | 현금 지원이 아닌 진단·상담·교육·연계 서비스임을 분명히 함. 해당 지역 상담 경로·일정 확인 필요. | 대기 |
+| [인플루엔자 국가예방접종 지원](https://kllollain-max.github.io/supportpick/benefits/135200000115/) | `6a8ad8ac8a110360848eb8588748d514c4c970baaebf5ec4d41da086eb7c5916` | 대상군·절기·연령별 접종 일정 분리. 과거 접종력과 의학적 판단은 의료진 확인. API 분류 불일치를 함께 보존. | 대기 |
+| [생계급여](https://kllollain-max.github.io/supportpick/benefits/WII000001410/) | `b67f54f026fcfe5dea6b30e194180c8ccf504c4d3a50c9cf04362fabb5c29b22` | 선정 기준액과 가구별 실제 급여액을 분리. 소득인정액·주민센터의 가구 확인이 필요. | 대기 |
+| [경기도 어린이청소년 교통비 지원](https://kllollain-max.github.io/supportpick/benefits/641000000139/) | `7e8dc87b9ba320ca98bc78c2a00d4d65adeeab06471bc24626eb06a15f647475` | 본인/대리인 거주 인증·본인 교통카드·지역화폐·분기 정정·자동신청을 검토. 공식 포털 직접 조회 도구는 400, 검색 저장 본문만 재대조. 동일 분기 다른 교통비 수혜·대리인 동일 거주 요건은 공식 현재 화면 추가 확인 필요. | 대기 |
+| [저소득층 에너지효율개선(난방지원)](https://kllollain-max.github.io/supportpick/benefits/424000000006/) | `c703d0689b04580457cdfe4e0c042bdf0e58d962129038b0ad821b7e96addef2` | 난방 시공 지원을 현금 환급으로 오해하지 않음. 과거 지원·공공임대·수선유지급여 제외와 소유주 동의 확인. | 대기 |
+| [상해보험 가입비 지원(만원의행복보험)](https://kllollain-max.github.io/supportpick/benefits/171000000005/) | `cbd9f648a055bcb2638a9f87c970b112ad8804ef647505084a8de72ec914fc43` | 가입비 지원과 보험금 지급·면책을 분리. 해당 우체국 현재 접수·약관·본인/세대원 서류 확인. | 대기 |
+| [주거급여 (맞춤형 급여)](https://kllollain-max.github.io/supportpick/benefits/336000000096/) | `30f4c3a45372a0c0b05248727082e680d813e0993dd13c33da02230c9d49ceee` | 자가/임차, 선정 기준/실제 지급, 지역·가구 예시를 분리. 지역별 최신 기준과 적용 연도 확인. | 대기 |
+| [지역사회서비스](https://kllollain-max.github.io/supportpick/benefits/SD0000016138/) | `7164283a561c60454c08d47a3ac8fbec3f892ba8c9a48fe6bf81e0b3ef3d83e7` | 전국 일반 제도와 거주지별 실제 서비스·모집 차수·본인부담을 분리. | 대기 |
+| [실업크레딧 지원](https://kllollain-max.github.io/supportpick/benefits/B55201500004/) | `a758ef0c6eadbfef0e5b41431751f8822b034e5539d35f4020ffacabbea874ea` | 구직급여 수령과 실업크레딧 신청·본인부담 납부·가입기간 산입은 별개. 종료일 기준 신청기한 확인. | 대기 |
+| [산림복지서비스이용권(바우처) 지급](https://kllollain-max.github.io/supportpick/benefits/140000000176/) | `d6ef51742bbdc7cfd45bda5ad62dfeb45c9246479c367ea2e2c2a9833511ca95` | 매년 신청 알림은 현재 모집이 아님. 해당 연도 신청·사용기간과 대리 신청 서류·사용처 확인. | 대기 |
+| [에너지바우처](https://kllollain-max.github.io/supportpick/benefits/B55353000001/) | `8ab619bf987ce5c8c61d2a23e05a10d7c8d1af79741ddb66439b50db859a23eb` | 일반/연탄전환, 신청/사용 기한을 분리. 가구별 지원액·연료·다른 에너지 지원 제한 추가 확인. | 대기 |
+| [운전면허 적성검사 간소화 서비스 제공](https://kllollain-max.github.io/supportpick/benefits/132000000006/) | `8832745dce0161c7bc3c30b0fded4745adabc5901855c5acb43e75825a595f62` | 검진 자료 활용과 면허 갱신 전체 절차를 분리. 면허 종류·검진 기록 기간·추가 검사 확인. | 대기 |
+| [출산전후(유산ㆍ사산)휴가 급여](https://kllollain-max.github.io/supportpick/benefits/WII000001460/) | `eedfa6ae8a437205e9cbfcd863612c014d36e464e7bb52c10af98454d684aa5b` | 회사 휴가와 정부 급여·대위 신청을 분리. 기업 규모·유형별 기간·회사 지급분·증빙 확인. | 대기 |
+
+본문 버전은 위 소스 SHA와 해시에 고정한다. 이후 본문이 바뀌면 해당 범위의 재검토가 필요하다. 공개 API 상세 20건의 material hash가 기존 sourceHash 20개와 일치한다. 기존 reviewedAt·validUntil·보류 7개를 변경하지 않았다. API가 현재 공개본과 일치함과 모든 외부 기관의 오늘 접수·예산·중복 제한을 확인함은 다르다. 외부 원문 실시간 재확인 범위는 별도 기록한다.
+
+기존 절의 병합·공개 배포 미실행은 최초 작성 당시 상태다. PR #25는 승인 후 이미 병합·배포됐고, 이번 추가 후보는 별도 Draft PR 대상이다. 최신 검색·계정 결과는 [배포 후 점검](ADSENSE_SEARCH_FINALIZATION_20261105.md)을 따른다.

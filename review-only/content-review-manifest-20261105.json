@@ -1,0 +1,610 @@
+{
+  "preparedAt": "2026-11-05T09:24:51+09:00",
+  "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+  "humanReviewed": 0,
+  "items": [
+    {
+      "id": "supportpick:149200000026",
+      "title": "국민내일배움카드",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/149200000026/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "39fda784b8c6d964f226f1f42f5708dc84cf04f8413bc6bec4247f32be6da501",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "99010bf63a4de63e062990431ae2cd86b1ab79f53740fec05f03e987cb76f430",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-04T10:49:53.141899+00:00",
+      "apiFetchedAt": "2026-11-05T07:07:13.742701+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=754680&bnefType=all&svcId=149200000026",
+        "https://www.work24.go.kr/hr/h/a/1100/selectIssuGudn.do"
+      ],
+      "keyCheck": "카드 발급·훈련 수강·본인부담·대상 제외를 분리. 금액은 카드 한도이며 현금 지급이 아님. 고용24 현재 발급 안내 추가 열람.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "39fda784b8c6d964f226f1f42f5708dc84cf04f8413bc6bec4247f32be6da501"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "9b4cf38f23f251cdf7142e6bf29178755b3f8fa5227ca3c01e0450689f20c3ad"
+    },
+    {
+      "id": "supportpick:105100000001",
+      "title": "근로·자녀장려금",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/105100000001/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "0aedf88ec4cdaca75c30f009d2d80b74de87cde45310199b4831be1e1051f075",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "7bf87fa2155b75d0ebc71248573a544257abf3bdd62fade7dac648b0c88462bb",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-04T10:49:53.141899+00:00",
+      "apiFetchedAt": "2026-11-05T07:07:08.340921+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=556551&bnefType=all&svcId=105100000001",
+        "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7783&mi=2449"
+      ],
+      "keyCheck": "귀속연도·정기/반기/기한 후 절차를 구분. 총소득·총급여액·가구별 금액을 혼동하지 않는지 검토.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "0aedf88ec4cdaca75c30f009d2d80b74de87cde45310199b4831be1e1051f075"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "dc4826dfeeb58c0036bbeb59ee56cc815d52bd23c3ea5b85304db25dba9c5f50"
+    },
+    {
+      "id": "supportpick:149200005007",
+      "title": "국민취업지원제도",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/149200005007/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "9acf9b063a0792cb676c406da72d70d304f1281392872c6097993e76a73a644c",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "4833daddc59ef8248872f5c4f0d5718adc9fc10b3c946bd4a201e24c3b4082e0",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-04T10:49:53.141899+00:00",
+      "apiFetchedAt": "2026-11-05T07:07:13.742701+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=797786&bnefType=all&svcId=149200005007",
+        "https://www.work24.go.kr/ua/z/z/1300/selectEmssRqutIntro.do"
+      ],
+      "keyCheck": "I/II유형, 구직촉진수당과 취업활동비용을 분리. 취업·다른 수당의 중복 제한은 고용센터 확인.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "9acf9b063a0792cb676c406da72d70d304f1281392872c6097993e76a73a644c"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "1ec9f8362fcf6336f638ad48a178d641a6b80aa427e87f4cb85d420873a4bffe"
+    },
+    {
+      "id": "supportpick:SD0000015536",
+      "title": "구직급여",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/SD0000015536/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "ddd0a9289032254e3de75e4ea4a225f7b7978e2efc98dd312e010b94706744be",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "f28ee03e40316a4dd84ca3317aecea1dab765076b6a98308c59965d713d4667c",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-04T10:49:53.141899+00:00",
+      "apiFetchedAt": "2026-11-05T07:09:34.674097+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=516503&bnefType=all&svcId=SD0000015536",
+        "https://www.work24.go.kr"
+      ],
+      "keyCheck": "재직기간과 피보험 단위기간을 혼동하지 않음. 이직 사유·최초 수급자격과 실업인정 후속 절차를 구분.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "ddd0a9289032254e3de75e4ea4a225f7b7978e2efc98dd312e010b94706744be"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "400d6424102f9023d7bd7e846dc34d4bfc3cb4f080c775454773b1e3f21e9ef2"
+    },
+    {
+      "id": "supportpick:135200005003",
+      "title": "긴급복지 생계지원",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/135200005003/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "b47869b72a782db9c3d28f641e511420472f637b19967076e0169638bb28ef64",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "f13d691a951f0f0cc2930cb24c3847bc060bd677dff885791994661903b616b6",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-04T10:49:53.141899+00:00",
+      "apiFetchedAt": "2026-11-05T07:07:09.701933+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900010&bnefType=all&svcId=135200005003",
+        "https://www.mohw.go.kr/gallery.es?act=view&bid=0003&list_no=379776&mid=a10606030000&tag="
+      ],
+      "keyCheck": "위기사유·소득·재산·가구별 지원을 함께 검토. 다른 복지급여와 중복 가능 여부를 확정하지 않음.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "b47869b72a782db9c3d28f641e511420472f637b19967076e0169638bb28ef64"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "238f41791f3f856af055de3a2c37c033f59cc44d89b4d47138afcd618be0965e"
+    },
+    {
+      "id": "supportpick:999000000024",
+      "title": "장기전세 주택공급",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/999000000024/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "ba0463e171e87f84c810438d0b4e6c0f09ce5afd5d56e4318b4ae0d43f7a239d",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "00abe05f38f01df37559a2b362a4c2a421b830a723f0800589e0b187ac4b82e6",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-04T10:49:53.141899+00:00",
+      "apiFetchedAt": "2026-11-05T07:09:02.020034+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999075&bnefType=all&svcId=999000000024",
+        "https://www.myhome.go.kr"
+      ],
+      "keyCheck": "제도 안내와 현재 단지 모집을 분리. 세대·지역·면적·공고일·접수기간은 개별 모집공고 확인 필요.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "ba0463e171e87f84c810438d0b4e6c0f09ce5afd5d56e4318b4ae0d43f7a239d"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "3dc2edb1ea333809876b9f524e2936ce423a6a78fa29f0ee06605968a2eede0f"
+    },
+    {
+      "id": "supportpick:999000000008",
+      "title": "육아휴직급여",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/999000000008/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "c18e503c549dbe3db5b954f3feb37dfe0c7925d1de2184e0669da666442b93aa",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "2aae77930e2670a98dfc2cdee08c580b912403101237315a00379d6606ed1c70",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-04T10:49:53.141899+00:00",
+      "apiFetchedAt": "2026-11-05T07:09:02.020034+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999029&bnefType=all&svcId=999000000008",
+        "https://www.work24.go.kr"
+      ],
+      "keyCheck": "회사 휴직 승인과 고용보험 급여 신청을 분리. 기업·부모 사용상황·휴직 기간별 지급 차이를 담당기관 확인.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "c18e503c549dbe3db5b954f3feb37dfe0c7925d1de2184e0669da666442b93aa"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "d3859c927c481ba8d3d1c40204206c2c21706890b4dcf8cfe23cd7fab9cc4aae"
+    },
+    {
+      "id": "supportpick:WII000000310",
+      "title": "노후준비서비스제공",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/WII000000310/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "f7c6043780556753428cdcc64a30c9e7a7dc11b8e9b9aedd4b4db681a4acf472",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "b1bf0a92b0a1b7c59b24f005d6b2cb96d8b167bc3bb655f58e36e11baf4b1cae",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-04T10:49:53.141899+00:00",
+      "apiFetchedAt": "2026-11-05T07:09:34.674097+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999132&bnefType=all&svcId=WII000000310",
+        "https://www.mohw.go.kr/menu.es?mid=a10711010100"
+      ],
+      "keyCheck": "현금 지원이 아닌 진단·상담·교육·연계 서비스임을 분명히 함. 해당 지역 상담 경로·일정 확인 필요.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "f7c6043780556753428cdcc64a30c9e7a7dc11b8e9b9aedd4b4db681a4acf472"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "0a647f3c2a7d6d54628fa4730328d1e7c7b99cb2bd55c8d42c3c5f1d1ae16f2d"
+    },
+    {
+      "id": "supportpick:135200000115",
+      "title": "인플루엔자 국가예방접종 지원",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/135200000115/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "6a8ad8ac8a110360848eb8588748d514c4c970baaebf5ec4d41da086eb7c5916",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "4445b4aeb12b91d5a0daf2aeeb3bfb71c0cd68244ef39aab5d0b71335de75063",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-04T10:49:53.141899+00:00",
+      "apiFetchedAt": "2026-11-05T07:07:09.701933+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=749131&bnefType=all&svcId=135200000115",
+        "https://nip.kdca.go.kr/irhp/infm/goVcntInfo.do?menuCd=134&menuLv=1"
+      ],
+      "keyCheck": "대상군·절기·연령별 접종 일정 분리. 과거 접종력과 의학적 판단은 의료진 확인. API 분류 불일치를 함께 보존.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [
+        "지원유형"
+      ],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "6a8ad8ac8a110360848eb8588748d514c4c970baaebf5ec4d41da086eb7c5916"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "dc35cb9aceaeee53346c61db0a06f4baecb0d73e1ff369fcb9a5d1bbd9659f67"
+    },
+    {
+      "id": "supportpick:WII000001410",
+      "title": "생계급여",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/WII000001410/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "b67f54f026fcfe5dea6b30e194180c8ccf504c4d3a50c9cf04362fabb5c29b22",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "fa61bdd5f2f44ad44ef4f5f5006b46be696a685155b703e1ce8d422cec1d710a",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-04T10:49:53.141899+00:00",
+      "apiFetchedAt": "2026-11-05T07:09:35.756319+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=575760&bnefType=all&svcId=WII000001410",
+        "https://www.mohw.go.kr/menu.es?mid=a10708010300"
+      ],
+      "keyCheck": "선정 기준액과 가구별 실제 급여액을 분리. 소득인정액·주민센터의 가구 확인이 필요.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "b67f54f026fcfe5dea6b30e194180c8ccf504c4d3a50c9cf04362fabb5c29b22"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "1ed32bf61497ecd28c16f4bcece2e23c537518be7b4fbc2c529bab550628f31b"
+    },
+    {
+      "id": "supportpick:641000000139",
+      "title": "경기도 어린이청소년 교통비 지원",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/641000000139/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "7e8dc87b9ba320ca98bc78c2a00d4d65adeeab06471bc24626eb06a15f647475",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "4ef44aa9d7a7f9ea424167eec9846447c5918a477f85230cd935d470267dc81a",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-05T07:29:23+09:00",
+      "apiFetchedAt": "2026-11-05T07:08:47.894364+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002200&bnefType=all&svcId=641000000139",
+        "https://www.gg.go.kr/bbs/boardView.do?bIdx=119939976&bsIdx=838&menuId=1534",
+        "https://www.gbuspb.kr/child/user/svc/userServiceInfoView.do"
+      ],
+      "keyCheck": "본인/대리인 거주 인증·본인 교통카드·지역화폐·분기 정정·자동신청을 검토. 공식 포털 직접 조회 도구는 400, 검색 저장 본문만 재대조. 동일 분기 다른 교통비 수혜·대리인 동일 거주 요건은 공식 현재 화면 추가 확인 필요.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "7e8dc87b9ba320ca98bc78c2a00d4d65adeeab06471bc24626eb06a15f647475"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "8551f98a0f58e6064abace21e01d6b745420682fa5efb9e6081f8a17f58d8079"
+    },
+    {
+      "id": "supportpick:424000000006",
+      "title": "저소득층 에너지효율개선(난방지원)",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/424000000006/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "c703d0689b04580457cdfe4e0c042bdf0e58d962129038b0ad821b7e96addef2",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "bc7a95cf4ae8f71cc3a42d83c27c7696a8d8b7d3a1b985287bd6024b3fd7fd36",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-04T10:49:53.141899+00:00",
+      "apiFetchedAt": "2026-11-05T07:07:48.085990+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=663171&bnefType=all&svcId=424000000006",
+        "https://min24.energy.or.kr/greenhome/contents/view004_02_01.do"
+      ],
+      "keyCheck": "난방 시공 지원을 현금 환급으로 오해하지 않음. 과거 지원·공공임대·수선유지급여 제외와 소유주 동의 확인.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "c703d0689b04580457cdfe4e0c042bdf0e58d962129038b0ad821b7e96addef2"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "ea754eb5e6105e7f838d91759deede9ba1162f67380ddb9a9cc846216aef65e1"
+    },
+    {
+      "id": "supportpick:171000000005",
+      "title": "상해보험 가입비 지원(만원의행복보험)",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/171000000005/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "cbd9f648a055bcb2638a9f87c970b112ad8804ef647505084a8de72ec914fc43",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "3d5019810749338bd84748949d8f356a32e9a5204be9990809f4ecfea09daf98",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-04T10:49:53.141899+00:00",
+      "apiFetchedAt": "2026-11-05T07:07:16.196200+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=748477&bnefType=all&svcId=171000000005"
+      ],
+      "keyCheck": "가입비 지원과 보험금 지급·면책을 분리. 해당 우체국 현재 접수·약관·본인/세대원 서류 확인.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "cbd9f648a055bcb2638a9f87c970b112ad8804ef647505084a8de72ec914fc43"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "6a5d7ac817d288d61728446ceb78d67fd9c35c78a8cdfd9e72e4333590efffa2"
+    },
+    {
+      "id": "supportpick:336000000096",
+      "title": "주거급여 (맞춤형 급여)",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/336000000096/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "30f4c3a45372a0c0b05248727082e680d813e0993dd13c33da02230c9d49ceee",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "dc65a02edc411622592bc1eb7e4bc836cfd72f0f56cfc5d4839e3a029b58496a",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-04T10:49:53.141899+00:00",
+      "apiFetchedAt": "2026-11-05T07:07:28.917663+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999076&bnefType=all&svcId=336000000096",
+        "https://www.mohw.go.kr/menu.es?mid=a10708010300"
+      ],
+      "keyCheck": "자가/임차, 선정 기준/실제 지급, 지역·가구 예시를 분리. 지역별 최신 기준과 적용 연도 확인.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "30f4c3a45372a0c0b05248727082e680d813e0993dd13c33da02230c9d49ceee"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "5e54abf5a566db1acc121335acca2b53533288c97b6d94dc21f477dfa52566c8"
+    },
+    {
+      "id": "supportpick:SD0000016138",
+      "title": "지역사회서비스",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/SD0000016138/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "7164283a561c60454c08d47a3ac8fbec3f892ba8c9a48fe6bf81e0b3ef3d83e7",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "aa12f03607b6f0548a3db00730458a3a5c2d2e7e42fa11b414dd20019baae10d",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-04T10:49:53.141899+00:00",
+      "apiFetchedAt": "2026-11-05T07:09:34.674097+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=75100&bnefType=all&svcId=SD0000016138"
+      ],
+      "keyCheck": "전국 일반 제도와 거주지별 실제 서비스·모집 차수·본인부담을 분리.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "7164283a561c60454c08d47a3ac8fbec3f892ba8c9a48fe6bf81e0b3ef3d83e7"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "1f2ce1302f500cb15692f135f6bc8504708d023bd193bd33524de7261c6099f3"
+    },
+    {
+      "id": "supportpick:B55201500004",
+      "title": "실업크레딧 지원",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/B55201500004/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "a758ef0c6eadbfef0e5b41431751f8822b034e5539d35f4020ffacabbea874ea",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "b5fafbc8bd9b8ace37a702cd5d1dd2bd7efdb4d438761cd6a09012d158813e85",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-04T10:49:53.141899+00:00",
+      "apiFetchedAt": "2026-11-05T07:09:05.791732+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999145&bnefType=all&svcId=B55201500004",
+        "https://www.nps.or.kr/pnsinfo/ntpsklg/getOHAF0097M0.do"
+      ],
+      "keyCheck": "구직급여 수령과 실업크레딧 신청·본인부담 납부·가입기간 산입은 별개. 종료일 기준 신청기한 확인.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "a758ef0c6eadbfef0e5b41431751f8822b034e5539d35f4020ffacabbea874ea"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "b903a6f8c0947f6341875b78ae27df366b73de6d3612b4133ca8a34c72211e3a"
+    },
+    {
+      "id": "supportpick:140000000176",
+      "title": "산림복지서비스이용권(바우처) 지급",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/140000000176/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "d6ef51742bbdc7cfd45bda5ad62dfeb45c9246479c367ea2e2c2a9833511ca95",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "b0a6efd6a1eba0560e273b8798a0ca5daee700c0e36ee805169fe41254c6d505",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-04T10:49:53.141899+00:00",
+      "apiFetchedAt": "2026-11-05T07:07:11.106327+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=753134&bnefType=all&svcId=140000000176",
+        "https://fowi.or.kr/user/bbs/bbsView.do?bbsId=8574&bbsManageId=12"
+      ],
+      "keyCheck": "매년 신청 알림은 현재 모집이 아님. 해당 연도 신청·사용기간과 대리 신청 서류·사용처 확인.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [
+        "지원유형"
+      ],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "d6ef51742bbdc7cfd45bda5ad62dfeb45c9246479c367ea2e2c2a9833511ca95"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "ec4b99ffd6b05932f5a37080f398c29026edcab96789557f374aaa61bc144c3c"
+    },
+    {
+      "id": "supportpick:B55353000001",
+      "title": "에너지바우처",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/B55353000001/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "8ab619bf987ce5c8c61d2a23e05a10d7c8d1af79741ddb66439b50db859a23eb",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "63d4bf9a474ac6232fe0de8af2deb2f7010a6c4d218b1fbb5d3364c3582538d5",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-04T10:49:53.141899+00:00",
+      "apiFetchedAt": "2026-11-05T07:09:08.191638+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999178&bnefType=all&svcId=B55353000001",
+        "https://www.energy.or.kr/front/board/View3.do?boardMngNo=3&boardNo=10025025"
+      ],
+      "keyCheck": "일반/연탄전환, 신청/사용 기한을 분리. 가구별 지원액·연료·다른 에너지 지원 제한 추가 확인.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "8ab619bf987ce5c8c61d2a23e05a10d7c8d1af79741ddb66439b50db859a23eb"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "3564f58f229b5134f4b7ef9edba2687d8bbbdcef80b1bfdd55881f1deabe74e8"
+    },
+    {
+      "id": "supportpick:132000000006",
+      "title": "운전면허 적성검사 간소화 서비스 제공",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/132000000006/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "8832745dce0161c7bc3c30b0fded4745adabc5901855c5acb43e75825a595f62",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "19c6ce546154b31eaf67a5c1d6aa41e94ba271a9569df9fc325cc00215360491",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-04T10:49:53.141899+00:00",
+      "apiFetchedAt": "2026-11-05T07:07:08.340921+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=761842&bnefType=all&svcId=132000000006",
+        "https://www.safedriving.or.kr/diGuide/selectDiGuide01.do?menuCode=MN-PO-1211"
+      ],
+      "keyCheck": "검진 자료 활용과 면허 갱신 전체 절차를 분리. 면허 종류·검진 기록 기간·추가 검사 확인.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "8832745dce0161c7bc3c30b0fded4745adabc5901855c5acb43e75825a595f62"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "605f35c485a399f0b20af082b7d0d1e2725cd29807a79b3b092572a97e0ad5b4"
+    },
+    {
+      "id": "supportpick:WII000001460",
+      "title": "출산전후(유산ㆍ사산)휴가 급여",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/WII000001460/",
+      "sourceRevision": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "bodySha256": "eedfa6ae8a437205e9cbfcd863612c014d36e464e7bb52c10af98454d684aa5b",
+      "hashFormat": "guide JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon)",
+      "officialMaterialSha256": "03e16aee6b99c5ac3bf65f1ef2345d8090cf1d36349ad9d8c143063263202397",
+      "sourceHashMatches": true,
+      "factCheckAt": "2026-11-04T10:49:53.141899+00:00",
+      "apiFetchedAt": "2026-11-05T07:09:35.756319+09:00",
+      "aiComparedAt": "2026-11-05T09:24:51+09:00",
+      "validUntil": "2026-11-18T10:49:53.141899+00:00",
+      "officialSources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=758582&bnefType=all&svcId=WII000001460",
+        "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000407"
+      ],
+      "keyCheck": "회사 휴가와 정부 급여·대위 신청을 분리. 기업 규모·유형별 기간·회사 지급분·증빙 확인.",
+      "unconfirmed": "개인별 자격·현재 접수·예산·중복 제한은 담당기관 확인. 20개 외부 원문 전체를 오늘 재열람한 결과가 아님.",
+      "sourceConflicts": [],
+      "aiCompared": true,
+      "humanReview": {
+        "status": "pending",
+        "reviewer": null,
+        "reviewedAt": null,
+        "bodySha256": "eedfa6ae8a437205e9cbfcd863612c014d36e464e7bb52c10af98454d684aa5b"
+      },
+      "publicHttp": 200,
+      "publicHtmlSha256": "23c8d21ec64b9176f771c780fc6ca79b8e187669f72fe8d1555b4894ba6f0b75"
+    }
+  ]
+}
