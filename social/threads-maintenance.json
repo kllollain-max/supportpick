@@ -348,9 +348,9 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-05T22:19:46+09:00",
+    "checked_at": "2026-11-05T23:29:21+09:00",
     "changed_run_ids": [],
-    "current_main_sha": "0db83684355af1f08f56ddac6461588dfc0bce39",
+    "current_main_sha": "4bf3d3a6ad678a7c3616ed34bc1e17b10da87cfa",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
       "basis": "보조금24 누적 조회수",
@@ -438,7 +438,8 @@
       "natural_image_publication_verified": true,
       "artifact_metadata_and_digests_unchanged": true,
       "previously_digest_verified_artifact_contents_reused": true,
-      "publication_ledger_unchanged": true
+      "publication_ledger_unchanged": true,
+      "restore_and_snapshot_validation_unchanged": true
     },
     "latest_policy_change": {
       "applied_at": "2026-11-04T23:10:49+09:00",
