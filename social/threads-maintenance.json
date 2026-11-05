@@ -30,18 +30,19 @@
     "41814036806",
     "41921889569",
     "41935189296",
-    "41963079062"
+    "41963079062",
+    "41992548749"
   ],
   "last_health": {
     "unresolved_publications": 0,
-    "published_benefits": 4,
+    "published_benefits": 5,
     "source_run_id": "41921889569",
     "source_result": "success",
     "source_count": 10942,
     "source_last_success_at": "2026-11-05T07:11:51.033157+09:00",
     "source_workflow_conclusion": "failure",
     "source_failure_classification": "post_deployment_verification_only; no source collection or Threads publication failure",
-    "last_publisher_run_id": "41963079062"
+    "last_publisher_run_id": "41992548749"
   },
   "incidents": {
     "41796747628": {
@@ -117,11 +118,11 @@
         "replies": 2
       },
       "latest_natural_publisher_consumption_verified": {
-        "run_id": "41963079062",
+        "run_id": "41992548749",
         "generation": "gov24-41921889569-1",
         "published": true,
         "replies": 2,
-        "image_url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png"
+        "image_url": null
       }
     }
   },
@@ -224,44 +225,50 @@
       "conclusion": "success",
       "updated_at": "2026-11-05T03:43:08Z",
       "head_sha": "0db83684355af1f08f56ddac6461588dfc0bce39"
+    },
+    "41992548749": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-05T08:13:44Z",
+      "head_sha": "0db83684355af1f08f56ddac6461588dfc0bce39"
     }
   },
   "last_check": {
-    "result": "healthy_no_new_incident",
+    "result": "healthy_new_scheduled_publication_verified",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
-      "run_id": "41963079062",
+      "run_id": "41992548749",
       "run_attempt": 1,
-      "job_id": "127033745564",
+      "job_id": "127127954184",
       "head_sha": "0db83684355af1f08f56ddac6461588dfc0bce39",
       "event": "schedule",
       "conclusion": "success",
       "published": true,
       "replies": 2,
-      "artifact_id": "13386072671",
-      "artifact_sha256": "f38c660e2753a168e7ef8f6dfd81035e9200b9e0515273549f9bc2ea30c9acc3",
+      "artifact_id": "13399275444",
+      "artifact_sha256": "508986b765bf6f735b4be71d79085c95e940c3c309ae544e20f8fc1ad015de92",
       "artifact_contents_verified": true,
-      "remote_receipt_verification": "All three emitted post receipts match the ledger; publisher GET verified each ID, exact text (only brand topic conversion allowed) and permalink before published/verified completion.",
-      "benefit_id": "149200005007",
-      "main_id": "18107885570634446",
-      "main_id_url": "https://www.threads.com/@hid_1004/post/DfWFtARFV_Q",
-      "detail_id": "18107724770222673",
-      "detail_id_url": "https://www.threads.com/@hid_1004/post/DfWFyGYFZJA",
-      "links_id": "18154790662551115",
-      "links_id_url": "https://www.threads.com/@hid_1004/post/DfWF2_2Fep9",
-      "content_hash": "67ec8e64ec53ef884a8caad3a96f82206bdb1a89dd5e394864838f63a0bd676b",
+      "remote_receipt_verification": "All three emitted post receipts match durable ledger; publisher GET checked ID, exact text with only permitted brand topic conversion, and permalink before complete/verified state.",
+      "benefit_id": "B55140800003",
+      "main_id": "17916193179493008",
+      "main_id_url": "https://www.threads.com/@hid_1004/post/DfWkq1YlXFQ",
+      "detail_id": "18149008246499065",
+      "detail_id_url": "https://www.threads.com/@hid_1004/post/DfWkvuMFTuO",
+      "links_id": "18104517593532604",
+      "links_id_url": "https://www.threads.com/@hid_1004/post/DfWk0uHlW4c",
+      "content_hash": "890ef8ff30f3ebcc3dc80af418eb4d40914d00a891e60fb6bad4bbfc8ed8f425",
       "selection": {
         "policy": "gov24_views_desc_v1",
         "basis": "보조금24 누적 조회수",
-        "views": 1297328,
-        "source_checked_at": "2026-11-05T07:07:13.742701+09:00",
+        "views": 1079343,
+        "source_checked_at": "2026-11-05T07:09:05.791732+09:00",
         "note": "실시간 검색량·신청자 수가 아닌 공식 API 누적 조회수 기준"
       },
-      "published_at": "2026-11-05T12:40:58.039698+09:00",
-      "verification_completed_at": "2026-11-05T12:43:05.170774+09:00",
-      "image_url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-      "image_evidence": "Approved rotation image 1 was reserved and passed to the IMAGE container on the successful natural publisher path; existing main receipt verified. Separate remote media-type/media-url GET was not performed."
+      "published_at": "2026-11-05T17:11:33.635851+09:00",
+      "verification_completed_at": "2026-11-05T17:13:39.690589+09:00",
+      "image_url": null
     },
     "latest_source": {
       "run_id": "41921889569",
@@ -307,7 +314,7 @@
       },
       "actual_read_path_verified": true
     },
-    "publication_ledger_sha": "ff268f8d2ad5dc2105e9fa7fa438540dac5905fb",
+    "publication_ledger_sha": "cdea8e46ce375c206667f144444ab35b5ed10dff",
     "workflow_blob_shas": {
       "threads": "b9eca15d9b506189b513abb15281e77a5cdc3ab5",
       "source": "ce74fe03afd06f59f1d38f2e297fe9a78bbcf604"
@@ -315,8 +322,10 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-05T16:12:44+09:00",
-    "changed_run_ids": [],
+    "checked_at": "2026-11-05T17:15:35+09:00",
+    "changed_run_ids": [
+      "41992548749"
+    ],
     "current_main_sha": "0db83684355af1f08f56ddac6461588dfc0bce39",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
@@ -349,12 +358,12 @@
           "views": 1297328
         }
       ],
-      "latest_verified_run_id": "41963079062",
+      "latest_verified_run_id": "41992548749",
       "latest_verified_selection": {
         "policy": "gov24_views_desc_v1",
         "basis": "보조금24 누적 조회수",
-        "views": 1297328,
-        "source_checked_at": "2026-11-05T07:07:13.742701+09:00",
+        "views": 1079343,
+        "source_checked_at": "2026-11-05T07:09:05.791732+09:00",
         "note": "실시간 검색량·신청자 수가 아닌 공식 API 누적 조회수 기준"
       }
     },
@@ -362,8 +371,8 @@
     "run_list_scan": {
       "pages": 1,
       "per_page": 100,
-      "total_count": 87,
-      "returned": 87,
+      "total_count": 88,
+      "returned": 88,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
@@ -376,34 +385,30 @@
     "validation": {
       "publisher_regression_tests_passed": 37,
       "new_publication_artifact_digest_passed": true,
-      "source_artifact_digest_passed": true,
-      "source_manifest_files_verified": 36,
+      "source_artifact_digest_previously_verified_and_unchanged": true,
+      "source_manifest_files_reverified": 36,
       "popularity_top_candidate_recomputed": true,
-      "eligible_after_prior_duplicates": 10396,
+      "eligible_after_prior_duplicates": 10395,
       "exact_content_hash_and_composition_verified": true,
       "no_links_all_three_texts": true,
       "cta_all_three_texts": true,
-      "expected_image_slot": true,
-      "approved_rotation_choice_verified": true,
+      "expected_text_only_slot": true,
       "source_fresh_at_publication": true,
-      "daily_main_posts": 2
+      "daily_main_posts": 3
     },
-    "next_step": "Observe the natural 16 KST run within the existing 2-hour allowance, then 20 KST. No current 16 KST remote run or reservation exists; do not claim success, dispatch a duplicate/test post, or backfill after the window. Next new main is text; subsequent approved image rotation remains unchanged.",
+    "next_step": "Continue natural 20 KST slot with maximum four mains per day and dedup unchanged. Next new main is image, using approved rotation image 2 unless an approved per-benefit image exists. No manual posts, rerun or recovery required.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "source_postdeploy_failure_unchanged": true,
       "source_consumed_by_natural_publisher": true,
       "known_postdeploy_failure_not_retried": true,
       "no_in_scope_unresolved_failure": true,
-      "previously_verified_source_revalidated": true,
+      "artifact_metadata_digest_verified": true,
       "publisher_script_and_workflows_unchanged": true,
       "approved_assets_manifest_unchanged": true,
-      "no_new_publication": true,
+      "no_new_publication": false,
       "no_pending_publications": true,
-      "natural_image_publication_verified": true,
-      "artifact_metadata_and_digests_unchanged": true,
-      "previously_digest_verified_artifact_contents_reused": true,
-      "publication_ledger_unchanged": true
+      "natural_image_publication_verified": true
     },
     "latest_policy_change": {
       "applied_at": "2026-11-04T23:10:49+09:00",
@@ -437,18 +442,24 @@
     },
     "current_slot_observation": {
       "slot": "2026-11-05T16:00:00+09:00",
-      "remote_run_started": false,
-      "publication_reserved": false,
-      "classification": "awaiting_natural_scheduler_within_2h_allowance",
-      "manual_dispatch_performed": false
+      "remote_run_started": true,
+      "run_id": "41992548749",
+      "publication_reserved": true,
+      "classification": "scheduled_publication_completed_verified",
+      "manual_dispatch_performed": false,
+      "observed_transition": [
+        "in_progress",
+        "completed/success"
+      ],
+      "transient_sending_stage_not_retried": true
     }
   },
   "last_reported_publication": {
-    "run_id": "41963079062",
-    "main_id": "18107885570634446",
-    "url": "https://www.threads.com/@hid_1004/post/DfWFtARFV_Q",
-    "verification_completed_at": "2026-11-05T12:43:05.170774+09:00",
-    "recorded_at": "2026-11-05T13:06:22+09:00"
+    "run_id": "41992548749",
+    "main_id": "17916193179493008",
+    "url": "https://www.threads.com/@hid_1004/post/DfWkq1YlXFQ",
+    "verification_completed_at": "2026-11-05T17:13:39.690589+09:00",
+    "recorded_at": "2026-11-05T17:15:35+09:00"
   },
   "policy_changes": [
     {
@@ -492,7 +503,7 @@
     "pending_texts_hashes_preserved": true,
     "legacy_pending_links_action": "HOLD without rewriting or sending",
     "natural_publication_after_change_verified": true,
-    "verified_run_id": "41963079062"
+    "verified_run_id": "41992548749"
   },
   "image_policy": {
     "version": "alternate_approved_illustrations_v1",
@@ -515,7 +526,7 @@
     "never_reselect_pending": true,
     "natural_publication_after_change_verified": true,
     "text_only_slot_verified": true,
-    "next_new_main_type": "text",
+    "next_new_main_type": "image",
     "verified_run_id": "41963079062",
     "verified_main_id": "18107885570634446",
     "verified_image_url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
