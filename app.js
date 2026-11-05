@@ -7,7 +7,7 @@
     const link=`<a class="editorial-link" href="${esc(a.url)}" target="_blank" rel="noopener noreferrer">${esc(detail?'지원금픽 해설 보기':a.linkLabel||'신청방법 해설')} ↗</a>`;
     return detail?`<section class="detail-block editorial-block"><h3>지원금픽 해설</h3><p>대상 조건·준비 서류·신청 순서를 쉽게 풀어봤어요. 신청 전에는 위의 공식 안내를 확인하세요.</p><p>${esc(a.title)}</p>${a.scopeNote?`<p class="context-note">${esc(a.scopeNote)}</p>`:''}${link}</section>`:`<p class="editorial-note">${link}</p>`;
   }
-  const initial={tab:'all',query:'',category:'',region:'',audience:'',supportType:'',sort:'updated',scroll:0,limit:30};
+  const initial={tab:'all',query:'',category:'',region:'',city:'',targetGroup:'',applicationStatus:'',audience:'',supportType:'',sort:'updated',scroll:0,limit:30};
   let view={...initial},snapshot={raw:null,data:C.blank()},writable=true,items=[],feedError='',toastTimer,detailFromList=false;
   const drafts=new Map();
   const shardCache=new Map();let detailRequest=0;
@@ -31,7 +31,7 @@
   function categories(){const all=['전체',...new Set([...C.CATEGORIES,...items.map(x=>x.category)])];$('categories').innerHTML=all.map(x=>`<button class="chip" type="button" data-category="${esc(x==='전체'?'':x)}" aria-pressed="${(x==='전체'?'':x)===view.category}">${esc(x)}</button>`).join('');}
   function card(p){
     const saved=snapshot.data.saved.includes(p.id),tracked=C.own(snapshot.data.apps,p.id),reason=view.tab==='matched'?C.matchReasons(p,snapshot.data.prefs):null;
-    return `<article class="benefit-card is-linked"><div class="card-content"><div class="card-top"><span class="category-badge">${esc(p.category)}</span><span class="badge">${esc(C.status(p))}</span></div><h3><a class="title-link card-detail-link" href="benefits/${encodeURIComponent(p.id)}/" data-detail="${esc(p.id)}">${esc(p.title)}</a></h3><p class="organization">${esc(p.organization)} · ${esc(p.regionBasis==='agency_jurisdiction'?'기관 지역 '+p.region:p.region)}</p><p class="card-summary">${esc(p.summary)}</p><dl class="card-meta"><dt>지원</dt><dd>${esc(p.supportType)}</dd><dt>기간</dt><dd>${esc(p.period||'공식 공고 확인')}</dd><dt>출처</dt><dd>${esc(p.source)} · ${esc(koreanTime(p.checkedAt))}</dd></dl><span class="card-open-hint" aria-hidden="true">상세 보기 →</span>${explanation(p)}${reason&&reason.length?`<p class="match-reason">${esc(reason.join(' · '))}</p>`:''}</div><div class="card-actions"><button data-save="${esc(p.id)}" aria-pressed="${saved}" class="${saved?'saved':''}">${saved?'★ 저장됨':'☆ 관심 저장'}</button><button data-track="${esc(p.id)}">${tracked?'신청 기록 보기':'신청 준비하기'}</button></div></article>`;
+    return `<article class="benefit-card is-linked"><div class="card-content"><div class="card-top"><span class="category-badge">${esc(p.category)}</span><span class="badge">${esc(C.status(p))}</span></div><h3><a class="title-link card-detail-link" href="benefits/${encodeURIComponent(p.id)}/" data-detail="${esc(p.id)}">${esc(p.title)}</a></h3><p class="organization">${esc(p.organization)} · ${esc(p.regionBasis==='agency_jurisdiction'?'기관 지역 '+p.region:p.region)}</p><p class="card-summary">${esc(p.summary)}</p><dl class="card-meta"><dt>지원</dt><dd>${esc(p.supportType)}</dd><dt>기간</dt><dd>${esc(p.period||'공식 공고 확인')}</dd><dt>지역 조건</dt><dd>${esc(p.eligibilityRegionStatus==='explicit'?(p.eligibilityRegions||[]).map(x=>x.scope==='nationwide'?'전국 대상 · 세부 조건 확인':(x.basis==='business'?'사업장 ':'거주 ')+[...(x.regions||[]),...(x.cities||[])].join(' ')+' · 원문 확인').join(' / '):'확인 필요 · 기관 소재지와 별개')}</dd><dt>출처</dt><dd>${esc(p.source)} · ${esc(koreanTime(p.checkedAt))}</dd></dl><span class="card-open-hint" aria-hidden="true">상세 보기 →</span>${explanation(p)}${reason&&reason.length?`<p class="match-reason">${esc(reason.join(' · '))}</p>`:''}</div><div class="card-actions"><button data-save="${esc(p.id)}" aria-pressed="${saved}" class="${saved?'saved':''}">${saved?'★ 저장됨':'☆ 관심 저장'}</button><button data-track="${esc(p.id)}">${tracked?'신청 기록 보기':'신청 준비하기'}</button></div></article>`;
   }
   function empty(title,text,action='reset'){return `<div class="empty-state"><span class="empty-mark" aria-hidden="true">◎</span><h3>${esc(title)}</h3><p>${esc(text)}</p>${action==='preferences'?'<button class="primary" data-open-preferences>관심 조건 설정하기</button>':action==='all'?'<button class="quiet" data-show-all>전체 혜택 보기</button>':action==='reset'?'<button class="quiet" data-reset>검색·필터 초기화</button>':''}</div>`;}
   function render(){
@@ -42,18 +42,18 @@
     $('detailSection').hidden=!isDetail;$('hero').hidden=isDetail||view.tab!=='all';$('browseSection').hidden=isDetail||view.tab==='guide';$('guideSection').hidden=isDetail||view.tab!=='guide';$('portals').hidden=isDetail;
     if(isDetail){renderDetail();return;}
     $('preferencesButton').hidden=view.tab==='apps';$('searchForm').hidden=view.tab==='apps';$('categories').hidden=view.tab==='apps';$('filterPanel').hidden=view.tab==='apps'||$('filterToggle').getAttribute('aria-expanded')!=='true';$('sort').closest('label').hidden=view.tab==='apps';
-    $('query').value=view.query;$('region').value=view.region;$('audience').value=view.audience;$('supportType').value=view.supportType;$('sort').value=view.sort;categories();
+    $('query').value=view.query;$('region').value=view.region;$('audience').value=view.audience;$('supportType').value=view.supportType;$('sort').value=view.sort;for(const id of ['city','targetGroup','applicationStatus'])$(id).value=view[id];categories();
     const titles={all:'관심 있는 혜택을 찾아보세요',matched:'내 관심 조건에 맞는 혜택',saved:'다시 보고 싶은 혜택',apps:'내가 챙기는 신청 기록'};
     $('sectionTitle').textContent=titles[view.tab]||titles.all;
     $('matchNotice').hidden=view.tab!=='matched';
     const prefs=snapshot.data.prefs;
-    $('matchNotice').textContent=`${prefs.region||'모든 지역'} · ${prefs.category||'모든 분야'}. 관심 조건이 비슷한 정보이며 실제 수급 자격을 판정하지 않습니다.`;
+    $('matchNotice').textContent=`${prefs.region||'모든 지역'} · ${prefs.city||'모든 시군구'} · ${prefs.category||'모든 분야'} · ${prefs.targetGroup||'모든 관심 대상'}. 조건이 불명확한 정보도 함께 표시합니다. 관심 조건이 비슷한 정보이며 실제 수급 자격을 판정하지 않습니다.`;
     $('dataNote').textContent=feedError||`${window.SUPPORTPICK_DATA.coverage} 수집 완료 ${koreanTime(window.SUPPORTPICK_DATA.collectionSucceededAt||window.SUPPORTPICK_DATA.updatedAt)} KST · 실제 신청 가능 여부는 원문 확인이 필요합니다.`;
     if(view.tab==='apps'){renderApps();return;}
     const rows=C.filter(items,view,snapshot.data);
     $('resultCount').textContent=`${view.tab==='saved'?'저장한 혜택':'혜택 정보'} ${rows.length}건`;
     if(feedError){$('list').innerHTML=empty('자료를 확인하지 못했어요',feedError,'none');return;}
-    if(view.tab==='matched'&&!prefs.region&&!prefs.category){$('list').innerHTML=empty('어떤 혜택에 관심 있으세요?','관심 지역과 분야를 선택하면 관련 정보를 먼저 볼 수 있어요.','preferences');return;}
+    if(view.tab==='matched'&&!Object.values(prefs).some(Boolean)){$('list').innerHTML=empty('어떤 혜택에 관심 있으세요?','관심 지역과 분야를 선택하면 관련 정보를 먼저 볼 수 있어요.','preferences');return;}
     let body=rows.slice(0,view.limit).map(card).join('');
     if(rows.length>view.limit)body+=`<div class="load-more" style="grid-column:1/-1;text-align:center;padding:16px"><button class="quiet" data-more>혜택 더 보기 (${view.limit.toLocaleString()} / ${rows.length.toLocaleString()})</button></div>`;
     if(view.tab==='saved'){
@@ -96,10 +96,10 @@
       return `<article class="tracker-card"><h3>${p?`<a class="title-link" href="benefits/${encodeURIComponent(id)}/" data-detail="${esc(id)}">${esc(a.title)}</a>`:esc(a.title)}</h3><p>마지막 저장 ${esc(koreanTime(a.updatedAt))} KST${p?'':' · 현재 자료 미확인'}</p><form data-app-form="${esc(id)}"><div class="tracker-grid"><label>신청 단계<select name="stage">${C.STAGES.map(s=>`<option${s===d.stage?' selected':''}>${s}</option>`).join('')}</select></label><label>나의 준비 메모<textarea name="note" maxlength="6000" placeholder="준비할 서류, 확인할 내용을 기록하세요">${esc(d.note)}</textarea></label><button class="primary" type="submit">기록 저장</button></div><span class="draft-indicator" data-draft="${esc(id)}">${drafts.has(id)?'저장하지 않은 변경이 있어요':''}</span></form></article>`;
     }).join(''):empty('아직 신청 기록이 없어요','혜택의 ‘신청 준비하기’를 눌러 준비할 내용을 챙겨보세요.','all');
   }
-  function openPreferences(){const p=snapshot.data.prefs;$('prefRegion').value=p.region;$('prefCategory').value=p.category;$('preferencesError').textContent='';$('preferencesDialog').showModal();}
+  function openPreferences(){const p=snapshot.data.prefs;$('prefRegion').value=p.region;$('prefCategory').value=p.category;$('prefCity').value=p.city||'';$('prefTargetGroup').value=p.targetGroup||'';$('preferencesError').textContent='';$('preferencesDialog').showModal();}
   function openDetail(id){view.scroll=window.scrollY;remember();detailFromList=true;history.pushState({supportpickDetail:true},'', '#benefit='+encodeURIComponent(id));render();window.scrollTo(0,0);$('detailTitle')?.focus({preventScroll:true});}
   function back(){if(detailFromList){history.back();return;}history.replaceState(null,'',location.pathname+location.search);render();window.scrollTo(0,view.scroll||0);}
-  function reset(){view={...view,query:'',category:'',region:'',supportType:'',audience:'',sort:'updated',scroll:0,limit:30};remember();render();}
+  function reset(){view={...view,query:'',category:'',region:'',city:'',targetGroup:'',applicationStatus:'',supportType:'',audience:'',sort:'updated',scroll:0,limit:30};remember();render();}
   document.addEventListener('click',e=>{
     const b=e.target.closest('button,a[data-detail]');if(!b)return;
     if(b.dataset.tab){document.title='지원금픽 · 한눈에 보는 생활혜택';setTab(b.dataset.tab);}
@@ -117,10 +117,10 @@
   });
   $('query').addEventListener('input',e=>{view.query=e.target.value;view.limit=30;remember();render();});
   $('searchForm').addEventListener('submit',e=>{e.preventDefault();render();});
-  for(const [id,key] of [['region','region'],['audience','audience'],['supportType','supportType'],['sort','sort']])$(id).addEventListener('change',e=>{view[key]=e.target.value;view.limit=30;remember();render();});
+  for(const [id,key] of [['city','city'],['targetGroup','targetGroup'],['applicationStatus','applicationStatus'],['region','region'],['audience','audience'],['supportType','supportType'],['sort','sort']])$(id).addEventListener('change',e=>{view[key]=e.target.value;view.limit=30;remember();render();});
   $('filterToggle').onclick=()=>{const expanded=$('filterToggle').getAttribute('aria-expanded')!=='true';$('filterToggle').setAttribute('aria-expanded',String(expanded));$('filterPanel').hidden=!expanded;};
   $('resetFilters').onclick=reset;$('heroMatch').onclick=openPreferences;$('preferencesButton').onclick=openPreferences;
-  $('preferencesForm').onsubmit=e=>{e.preventDefault();try{persist({...snapshot.data,prefs:{region:$('prefRegion').value,category:$('prefCategory').value}});$('preferencesDialog').close();setTab('matched');toast('관심 조건을 저장했어요.');}catch(error){$('preferencesError').textContent=error.message;}};
+  $('preferencesForm').onsubmit=e=>{e.preventDefault();try{persist({...snapshot.data,prefs:{region:$('prefRegion').value,category:$('prefCategory').value,city:$('prefCity').value,targetGroup:$('prefTargetGroup').value}});$('preferencesDialog').close();setTab('matched');toast('관심 조건을 저장했어요.');}catch(error){$('preferencesError').textContent=error.message;}};
   document.addEventListener('input',e=>{const form=e.target.closest('[data-app-form]');if(!form)return;drafts.set(form.dataset.appForm,{stage:form.elements.stage.value,note:form.elements.note.value});form.querySelector('[data-draft]').textContent='저장하지 않은 변경이 있어요';});
   document.addEventListener('submit',e=>{const form=e.target.closest('[data-app-form]');if(!form)return;e.preventDefault();const id=form.dataset.appForm,d={stage:form.elements.stage.value,note:form.elements.note.value};try{persist({...snapshot.data,apps:{...snapshot.data.apps,[id]:{...snapshot.data.apps[id],...d,updatedAt:new Date().toISOString()}}});drafts.delete(id);render();toast('신청 기록을 저장했어요.');}catch(error){toast(error.message);warn(error.message);}});
   $('recordsButton').onclick=()=>{$('recordsError').textContent='';$('recordsDialog').showModal();};

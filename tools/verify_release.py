@@ -3,6 +3,7 @@ import argparse
 import hashlib
 import json
 import re
+from publication import wait_manifest, verify_data_release, read_public, PublicationError
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from html.parser import HTMLParser
@@ -124,14 +125,12 @@ def verify_targets(targets, url_set, workers):
 def live_check(output, workers=6, expected_revision=None, expected_generation=None):
     output = Path(output)
     local = json.loads((output / 'site-manifest.json').read_text())
-    with urlopen(BASE + 'site-manifest.json', timeout=30) as response:
-        expected=json.load(response)
-    if expected_revision and expected.get('sourceRevision')!=expected_revision:
-        raise ValueError('public_revision_mismatch')
-    if expected_generation and expected.get('generation')!=expected_generation:
-        raise ValueError('public_generation_mismatch')
+    if expected_revision and local.get('sourceRevision')!=expected_revision: raise ValueError('local_revision_expectation_mismatch')
+    if expected_generation and local.get('generation')!=expected_generation: raise ValueError('local_generation_expectation_mismatch')
+    expected,observations=wait_manifest(local)
+    consistency=verify_data_release(expected)
     for name in ('app.js','core.js','detail.js','styles.css'):
-        if expected['files'].get(name)!=local['files'].get(name):
+        if hashlib.sha256(read_public(name)).hexdigest()!=local['files'].get(name):
             raise ValueError('public_application_code_mismatch:'+name)
     with urlopen(BASE+'sitemap.xml',timeout=30) as response:
         raw=response.read()
@@ -163,7 +162,9 @@ def live_check(output, workers=6, expected_revision=None, expected_generation=No
     except HTTPError as error:
         if error.code!=404:raise
         robots={'http':404,'crawlAllowed':True,'scope':'host_root','note':'Absent robots file; no robots prohibition.'}
-    return {'publicHtmlChecked': len(targets), 'sitemapUrls':len(urls), 'generation':expected['generation'],
+    final=json.loads(read_public('site-manifest.json'))
+    if final!=expected:raise PublicationError('public_release_changed_during_check',{'stage':'final_barrier','failed':1})
+    return {'publicationObservations':observations,'dataConsistency':consistency,'publicHtmlChecked': len(targets), 'sitemapUrls':len(urls), 'generation':expected['generation'],
             'sourceRevision':expected.get('sourceRevision'),'robots':robots,'missingUrlHttp':404,**checked}
 
 
@@ -174,7 +175,14 @@ if __name__ == '__main__':
     parser.add_argument('--expect-sha')
     parser.add_argument('--expect-generation')
     args = parser.parse_args()
-    result = live_check(args.output, args.workers,args.expect_sha,args.expect_generation) if args.live else verify(args.output)
-    if args.report: Path(args.report).write_text(json.dumps(result, ensure_ascii=False, indent=2))
+    try:
+        result = live_check(args.output, args.workers,args.expect_sha,args.expect_generation) if args.live else verify(args.output)
+    except (PublicationError,ValueError,HTTPError,URLError,TimeoutError) as error:
+        result={'error':str(error)[:500], 'failed':1, **getattr(error,'report',{})}
+        if args.report:
+            Path(args.report).parent.mkdir(parents=True,exist_ok=True);Path(args.report).write_text(json.dumps(result,ensure_ascii=False,indent=2))
+        print(json.dumps(result,ensure_ascii=False,indent=2));raise SystemExit(1)
+    if args.report:
+        Path(args.report).parent.mkdir(parents=True,exist_ok=True);Path(args.report).write_text(json.dumps(result, ensure_ascii=False, indent=2))
     print(json.dumps(result, ensure_ascii=False, indent=2))
     if result.get('failed'): raise SystemExit(1)

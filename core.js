@@ -4,6 +4,7 @@
   const KEY='supportpick:records:v1', RECOVERY='supportpick:recovery:v1';
   const CATEGORIES=['생활안정','주거·자립','보육·교육','고용·창업','소상공인','보건·의료'];
   const REGIONS=['강원','서울','경기','인천','부산','대구','광주','대전','울산','세종','충북','충남','전북','전남','경북','경남','제주'];
+  const TARGET_GROUPS=['청년','부모','학생','구직자','근로자','소상공인'];
   const STAGES=['관심','서류 준비','접수 완료','결과 확인','종료'];
   const plain=v=>!!v && typeof v==='object' && !Array.isArray(v) && Object.getPrototypeOf(v)===Object.prototype;
   const own=(o,k)=>Object.prototype.hasOwnProperty.call(o,k);
@@ -13,12 +14,15 @@
     if(!plain(data)||data.version!==1||!Number.isSafeInteger(data.revision)||data.revision<0||!Array.isArray(data.saved)||!plain(data.apps)||!plain(data.prefs))throw Error('지원금픽 기록 형식이 올바르지 않습니다.');
     if(data.saved.length>2000||Object.keys(data.apps).length>2000||data.saved.some(id=>!idOK(id)))throw Error('기록 항목을 확인할 수 없습니다.');
     if(!['',...REGIONS].includes(data.prefs.region)||typeof data.prefs.category!=='string'||data.prefs.category.length>80||/[\u0000-\u001f]/.test(data.prefs.category))throw Error('관심 조건이 올바르지 않습니다.');
+    const prefs={region:data.prefs.region,category:data.prefs.category};
+    if(own(data.prefs,'city')){if(typeof data.prefs.city!=='string'||data.prefs.city.length>30||!/^[가-힣\s]*$/.test(data.prefs.city))throw Error('시군구 조건을 확인하세요.');prefs.city=data.prefs.city.trim();}
+    if(own(data.prefs,'targetGroup')){if(!['',...TARGET_GROUPS].includes(data.prefs.targetGroup))throw Error('관심 대상을 확인하세요.');prefs.targetGroup=data.prefs.targetGroup;}
     const apps={};
     for(const [id,a] of Object.entries(data.apps)){
       if(!idOK(id)||!plain(a)||!STAGES.includes(a.stage)||typeof a.note!=='string'||a.note.length>6000||typeof a.title!=='string'||a.title.length>300||typeof a.updatedAt!=='string'||!Number.isFinite(Date.parse(a.updatedAt)))throw Error('신청 기록을 확인할 수 없습니다.');
       apps[id]={stage:a.stage,note:a.note,title:a.title,updatedAt:a.updatedAt};
     }
-    return {version:1,revision:data.revision,saved:[...new Set(data.saved)],apps,prefs:{region:data.prefs.region,category:data.prefs.category}};
+    return {version:1,revision:data.revision,saved:[...new Set(data.saved)],apps,prefs};
   }
   function load(storage){
     let raw;try{raw=storage.getItem(KEY);}catch(e){throw Error('브라우저의 기록 저장소에 접근할 수 없습니다.');}
@@ -40,7 +44,7 @@
   }
   function merge(existing,incoming){
     const a=validate(existing),b=validate(incoming),apps={...b.apps,...a.apps};
-    return validate({...a,saved:[...new Set([...a.saved,...b.saved])],apps,prefs:a.prefs.region||a.prefs.category?a.prefs:b.prefs});
+    return validate({...a,saved:[...new Set([...a.saved,...b.saved])],apps,prefs:Object.values(a.prefs).some(Boolean)?a.prefs:b.prefs});
   }
   function exportBackup(data){return JSON.stringify({format:'supportpick-backup',version:1,exportedAt:new Date().toISOString(),data:validate(data)},null,2);}
   function importBackup(text){if(typeof text!=='string'||new TextEncoder().encode(text).length>2*1024*1024)throw Error('백업은 2MB 이하의 JSON만 가져올 수 있습니다.');const b=JSON.parse(text);if(!plain(b)||b.format!=='supportpick-backup'||b.version!==1)throw Error('지원금픽 전용 백업을 선택하세요.');return validate(b.data);}
@@ -52,7 +56,28 @@
     if(!/^\d{4}-\d{2}-\d{2}$/.test(value||''))return false;
     const d=new Date(value+'T00:00:00+09:00');return Number.isFinite(+d)&&day(d)===value;
   }
+  function applicationState(item,now=new Date()){
+    if(item.applicationPeriodKind==='ongoing')return '상시 신청';
+    const periods=item.applicationPeriods;
+    if(item.applicationPeriodKind!=='fixed'||!Array.isArray(periods)||!periods.length||periods.some(p=>!validDate(p.start)||!validDate(p.end)||p.start>p.end||[p.startAt,p.endAt].some(v=>v&&(!/^20\d{2}-\d{2}-\d{2}T\d{2}:\d{2}:00\+09:00$/.test(v)||!Number.isFinite(Date.parse(v))))))return '확인 필요';
+    const today=day(now),states=periods.map(p=>p.end<today||(p.endAt&&+now>Date.parse(p.endAt))?'접수 종료':p.start>today||(p.startAt&&+now<Date.parse(p.startAt))?'접수 예정':'접수 중');
+    return states.includes('접수 중')?'접수 중':states.includes('접수 예정')?'접수 예정':'접수 종료';
+  }
+  function closingSoon(item,now=new Date()){
+    if(applicationState(item,now)!=='접수 중')return false;
+    const today=day(now);return item.applicationPeriods.some(p=>p.start<=today&&(!p.startAt||+now>=Date.parse(p.startAt))&&p.end>=today&&(!p.endAt||+now<=Date.parse(p.endAt))&&(Date.parse(p.end+'T00:00:00+09:00')-Date.parse(today+'T00:00:00+09:00'))/86400000<=7);
+  }
+  function regionMatch(item,region,city=''){
+    const conditions=item.eligibilityRegions;
+    // Agency jurisdiction is never used to reject an applicant's residence.
+    if(item.eligibilityRegionStatus!=='explicit'||!Array.isArray(conditions)||conditions.length!==1)return true;
+    const c=conditions[0];if(c.scope==='nationwide')return true;
+    if(region&&c.regions?.length&&!c.regions.includes(region))return false;
+    if(city&&c.cities?.length&&!c.cities.includes(city.trim()))return false;
+    return true;
+  }
   function status(item,now=new Date()){
+    if(item.applicationPeriodKind)return applicationState(item,now)+' · 공식 접수 확인';
     if(validDate(item.endDate)&&item.endDate<day(now))return '안내 기한 경과';
     if(validDate(item.startDate)&&item.startDate>day(now))return '안내 기간 전';
     // A listed future end date or API success is not proof that applications are open.
@@ -63,16 +88,36 @@
   }
   function matchReasons(item,prefs){
     const reasons=[];
-    if(prefs.region){if(!['전국','확인 필요',prefs.region].includes(item.region))return null;reasons.push(item.region==='전국'?'전국 대상 안내 · 지역별 조건 확인':item.region==='확인 필요'?'지역 미제공 · 공식 조건 확인':item.regionBasis==='agency_jurisdiction'?prefs.region+' 소관기관 · 거주 조건 원문 확인':prefs.region+' 지역 정보');}
+    if(!regionMatch(item,prefs.region,prefs.city))return null;
+    if(prefs.region||prefs.city){
+      const c=item.eligibilityRegionStatus==='explicit'&&item.eligibilityRegions?.length===1?item.eligibilityRegions[0]:null;
+      if(c)reasons.push(c.scope==='nationwide'?'전국 대상 표기 · 세부 거주 조건 확인':(c.basis==='business'?'사업장':'거주')+' 조건: '+[...(c.regions||[]),...(c.cities||[])].join(' ')+' · 거주기간 등 원문 확인');
+      else reasons.push(item.region==='전국'?'전국 대상 안내 · 지역별 조건 확인':'지역 미제공 · 공식 조건 확인');
+      if(item.regionBasis==='agency_jurisdiction')reasons.push('기관 지역 '+item.region+' · 신청 지역과 별개');
+    }
     if(prefs.category){if(item.category!==prefs.category)return null;reasons.push(prefs.category+' 관심 분야');}
+    if(prefs.targetGroup){const tag=(item.targetGroups||[]).find(t=>t.label===prefs.targetGroup);reasons.push(tag?prefs.targetGroup+' 원문 언급 · 연령·소득·중복 제한 확인':prefs.targetGroup+' 조건 미확정 · 대상 원문 확인');}
     return reasons;
+  }
+  function deadline(item,now=new Date()){
+    if(item.applicationPeriodKind==='fixed'&&Array.isArray(item.applicationPeriods)){
+      const dates=item.applicationPeriods.map(p=>p.end).filter(validDate).sort();
+      return dates.find(d=>d>=day(now))||dates[dates.length-1]||'9999';
+    }
+    return validDate(item.endDate)?item.endDate:'9999';
+  }
+  function affinity(item,prefs){
+    let score=0;
+    if(prefs.targetGroup&&(item.targetGroups||[]).some(t=>t.label===prefs.targetGroup))score+=2;
+    if((prefs.region||prefs.city)&&item.eligibilityRegionStatus==='explicit'&&regionMatch(item,prefs.region,prefs.city))score+=1;
+    return score;
   }
   function filter(items,view,records){
     const query=String(view.query||'').trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
     return items.filter(p=>{
       const text=[p.title,p.organization,p.summary,p.target||p.targetPreview,p.category,p.region,...(p.audience||[])].join(' ').toLocaleLowerCase();
-      return !p.isSample&&query.every(q=>text.includes(q))&&(!view.category||p.category===view.category)&&(!view.region||['전국','확인 필요',view.region].includes(p.region))&&(!view.audience||(p.audience||[]).includes(view.audience))&&(!view.supportType||(p.supportTypes||[p.supportType]).includes(view.supportType))&&(view.tab!=='saved'||records.saved.includes(p.id))&&(view.tab!=='matched'||matchReasons(p,records.prefs)!==null);
-    }).sort((a,b)=>view.sort==='title'?a.title.localeCompare(b.title,'ko'):view.sort==='deadline'?(validDate(a.endDate)?a.endDate:'9999').localeCompare(validDate(b.endDate)?b.endDate:'9999'):modified(b).localeCompare(modified(a)));
+      return !p.isSample&&query.every(q=>text.includes(q))&&(!view.category||p.category===view.category)&&(!view.region||regionMatch(p,view.region,view.city))&&(!view.city||regionMatch(p,view.region,view.city))&&(!view.targetGroup||(p.targetGroups||[]).some(t=>t.label===view.targetGroup))&&(!view.applicationStatus||({active:['접수 중','상시 신청'].includes(applicationState(p,view.now)),soon:closingSoon(p,view.now),not_closed:applicationState(p,view.now)!=='접수 종료',needs_check:applicationState(p,view.now)==='확인 필요'})[view.applicationStatus])&&(!view.audience||(p.audience||[]).includes(view.audience))&&(!view.supportType||(p.supportTypes||[p.supportType]).includes(view.supportType))&&(view.tab!=='saved'||records.saved.includes(p.id))&&(view.tab!=='matched'||matchReasons(p,records.prefs)!==null);
+    }).sort((a,b)=>view.sort==='title'?a.title.localeCompare(b.title,'ko'):view.sort==='deadline'?deadline(a,view.now).localeCompare(deadline(b,view.now)):(view.tab==='matched'?affinity(b,records.prefs)-affinity(a,records.prefs):0)||modified(b).localeCompare(modified(a)));
   }
   function modified(p){const s=p.sourceUpdatedAt;return String(s&&typeof s==='object'?s.list||s.detail||'':s||p.checkedAt||'').replace(/[^0-9]/g,'').padEnd(14,'0');}
   function parseFeed(feed){
@@ -84,6 +129,6 @@
   }
   function parseDetail(payload,index){if(!plain(payload)||payload.generation!==index.generation||!plain(payload.items)||!own(payload.items,index.id))throw Error('상세 자료 버전이 일치하지 않습니다. 새로고침 후 다시 확인하세요.');const row=payload.items[index.id];if(!plain(row)||row.id!==index.id||row.generation!==index.generation||row.title!==index.title||['target','support','method','documents','contact'].some(k=>typeof row[k]!=='string'))throw Error('상세 자료를 확인할 수 없습니다.');return row;}
   function health(feed,state,current=new Date()){if(!state||state.status==='unavailable')return '갱신 상태를 조회하지 못했습니다. 표시된 자료 조회 시각을 확인하세요.';if(state.generation&&state.generation!==feed.generation)return '새 자료의 갱신 상태가 확인되었습니다. 새로고침하여 목록과 상세 자료를 함께 갱신하세요.';if(state.status==='failed')return '최근 자료 갱신에 실패했습니다. 마지막으로 검증된 자료를 유지하고 있습니다.';const stamp=Date.parse(feed.collectionSucceededAt||feed.updatedAt);if(!Number.isFinite(stamp)||stamp>+current+300000)return '자료 수집 시각을 확인할 수 없습니다.';return +current-stamp>30*3600000?'자료 갱신이 지연되고 있습니다. 마지막 수집 시각과 공식 원문을 확인하세요.':'';}
-  const api={KEY,RECOVERY,CATEGORIES,REGIONS,STAGES,blank,validate,load,save,merge,exportBackup,importBackup,safeURL,status,filter,parseFeed,parseDetail,health,matchReasons,idOK,own,validDate};
+  const api={KEY,RECOVERY,CATEGORIES,REGIONS,TARGET_GROUPS,STAGES,applicationState,closingSoon,regionMatch,blank,validate,load,save,merge,exportBackup,importBackup,safeURL,status,filter,parseFeed,parseDetail,health,matchReasons,idOK,own,validDate};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.SupportPick=api;
 })(typeof window!=='undefined'?window:globalThis);
