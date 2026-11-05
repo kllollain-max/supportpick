@@ -36,7 +36,7 @@ jobs:
           retention-days: 3
 
   backup-probe:
-    if: (github.event_name == 'workflow_dispatch' && inputs.backup_probe) || (github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'r2-probe-approved-20261105') && github.event.pull_request.number == 26 && github.event.pull_request.head.repo.full_name == github.repository)
+    if: (github.event_name == 'workflow_dispatch' && inputs.backup_probe) || (github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'preserve-artifacts-approved-20261105') && github.event.pull_request.number == 26 && github.event.pull_request.head.repo.full_name == github.repository)
     needs: verify
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -67,6 +67,7 @@ jobs:
             output/current-run/
           retention-days: 90
       - name: R2 upload, read-back, isolated restore and full rebuild
+        if: github.event_name == 'workflow_dispatch' && inputs.backup_probe
         env:
           SUPPORTPICK_R2_ACCESS_KEY_ID: ${{ secrets.SUPPORTPICK_R2_ACCESS_KEY_ID }}
           SUPPORTPICK_R2_SECRET_ACCESS_KEY: ${{ secrets.SUPPORTPICK_R2_SECRET_ACCESS_KEY }}
