@@ -33,17 +33,18 @@
     "41963079062",
     "41992548749",
     "42010247594",
-    "42021189623"
+    "42021189623",
+    "42117967226"
   ],
   "last_health": {
     "unresolved_publications": 0,
     "published_benefits": 6,
-    "source_run_id": "42010247594",
+    "source_run_id": "42117967226",
     "source_result": "success",
     "source_count": 10942,
-    "source_last_success_at": "2026-11-05T19:28:39.714708+09:00",
-    "source_workflow_conclusion": "success",
-    "source_failure_classification": null,
+    "source_last_success_at": "2026-11-06T07:09:26.419603+09:00",
+    "source_workflow_conclusion": "failure",
+    "source_failure_classification": "post_deployment_verification_only; complete collection and trusted Threads input verified",
     "last_publisher_run_id": "42021189623"
   },
   "incidents": {
@@ -133,6 +134,74 @@
         "public_html_verified": 11058,
         "note": "Later natural operations succeeded without this watch rerunning or changing site code; original classification retained."
       }
+    },
+    "42117967226": {
+      "status": "classified_no_threads_recovery_required",
+      "fingerprint": {
+        "run_id": "42117967226",
+        "run_attempt": 1,
+        "stage": "Verify deployed source, generation and every public HTML URL",
+        "error": "public_generation_mismatch",
+        "head_sha": "4bf3d3a6ad678a7c3616ed34bc1e17b10da87cfa"
+      },
+      "confirmed_cause": "The public generation comparison failed after successful collection, promotion, snapshot upload and Pages deploy. The runtime artifact contained the expected new generation.",
+      "hypothesis": "Pages propagation or cached public generation is possible. The served generation at the failure was not preserved and public manifest recheck was unavailable.",
+      "classification": "post_deployment_verification_only; complete collection and trusted Threads input verified",
+      "related_incident": "41921889569",
+      "source_generation": "gov24-42117967226-1",
+      "source_count": 10942,
+      "source_checked_at": "2026-11-06T07:09:26.419603+09:00",
+      "artifact_id": "13456978982",
+      "artifact_sha256": "d8f8686cc0160aceac6d7396a87fa2ada23b853d50c2f97de4aa2d4ef76a6c6c",
+      "manifest_sha256": "dd884af3082ec49a036187c8f61ea0548e19e014be2706539d134abb882eaeef",
+      "manifest_files_verified": 36,
+      "read_path_verified": {
+        "selected_run": 42117967226,
+        "overall_run_conclusion": "failure",
+        "checked_at": "2026-11-06T07:47:59.290+09:00",
+        "endpoint_coverage": {
+          "serviceDetail": {
+            "completedPages": 110,
+            "duplicateCount": 0,
+            "expectedPages": 110,
+            "receivedCount": 10942,
+            "reportedTotal": 10942,
+            "uniqueCount": 10942
+          },
+          "serviceList": {
+            "completedPages": 110,
+            "duplicateCount": 0,
+            "expectedPages": 110,
+            "receivedCount": 10942,
+            "reportedTotal": 10942,
+            "uniqueCount": 10942
+          },
+          "supportConditions": {
+            "completedPages": 110,
+            "duplicateCount": 0,
+            "expectedPages": 110,
+            "receivedCount": 10942,
+            "reportedTotal": 10942,
+            "uniqueCount": 10942
+          }
+        },
+        "eligible": 10393,
+        "composition_valid": true,
+        "artifact_digest_verified": true,
+        "tests_passed": 98
+      },
+      "publication_ledger_sha": "d8ab0b3facc3de3321c28d483cf6dec05e808431",
+      "unresolved_publications": 0,
+      "repair_pr": null,
+      "repair_sha": null,
+      "code_changes": 0,
+      "no_code_repair_reason": "The current trusted restore and candidate path consumed the verified new source. No Threads or essential collection defect was reproduced.",
+      "attempt_budget": {
+        "posts_sent": 0,
+        "workflow_retries": 0,
+        "recovery_attempts": 0
+      },
+      "next_step": "Allow the next natural Threads slot to use the validated source. Recheck actual publication and report only verified new results. Reopen for a new attempt, restore failure, or publication hold. Public Pages verification is outside Threads repair scope."
     }
   },
   "guardrails": {
@@ -255,10 +324,17 @@
       "conclusion": "success",
       "updated_at": "2026-11-05T11:45:34Z",
       "head_sha": "0db83684355af1f08f56ddac6461588dfc0bce39"
+    },
+    "42117967226": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "updated_at": "2026-11-05T22:11:00Z",
+      "head_sha": "4bf3d3a6ad678a7c3616ed34bc1e17b10da87cfa"
     }
   },
   "last_check": {
-    "result": "healthy_no_new_incident",
+    "result": "operations_public_generation_mismatch_source_verified",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -295,19 +371,19 @@
       "image_evidence": "Approved rotation image 2 reserved and passed through IMAGE container to the successful natural publisher path; no separate remote media-field GET."
     },
     "latest_source": {
-      "run_id": "42010247594",
+      "run_id": "42117967226",
       "run_attempt": 1,
-      "job_id": "127187136462",
-      "head_sha": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "job_id": "127562514003",
+      "head_sha": "4bf3d3a6ad678a7c3616ed34bc1e17b10da87cfa",
       "event": "schedule",
-      "conclusion": "success",
+      "conclusion": "failure",
       "collection_result": "success",
-      "failure_classification": null,
+      "failure_classification": "post_deployment_verification_only; complete collection and trusted Threads input verified",
       "count": 10942,
-      "generation": "gov24-42010247594-1",
-      "last_success_at": "2026-11-05T19:28:39.714708+09:00",
-      "artifact_id": "13406986989",
-      "artifact_sha256": "a75964137ef9c0579fd0efccbb513a816317a897b90934b92a11cb3be4ecb0d4",
+      "generation": "gov24-42117967226-1",
+      "last_success_at": "2026-11-06T07:09:26.419603+09:00",
+      "artifact_id": "13456978982",
+      "artifact_sha256": "d8f8686cc0160aceac6d7396a87fa2ada23b853d50c2f97de4aa2d4ef76a6c6c",
       "artifact_contents_verified": true,
       "manifest_files_verified": 36,
       "endpoint_coverage": {
@@ -336,9 +412,7 @@
           "uniqueCount": 10942
         }
       },
-      "actual_read_path_verified": true,
-      "public_html_verified": 11058,
-      "public_html_failed": 0
+      "actual_read_path_verified": true
     },
     "publication_ledger_sha": "d8ab0b3facc3de3321c28d483cf6dec05e808431",
     "workflow_blob_shas": {
@@ -348,8 +422,10 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-06T06:41:01.089+09:00",
-    "changed_run_ids": [],
+    "checked_at": "2026-11-06T07:47:59.290+09:00",
+    "changed_run_ids": [
+      "42117967226"
+    ],
     "current_main_sha": "4bf3d3a6ad678a7c3616ed34bc1e17b10da87cfa",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
@@ -395,8 +471,8 @@
     "run_list_scan": {
       "pages": 1,
       "per_page": 100,
-      "total_count": 97,
-      "returned": 97,
+      "total_count": 99,
+      "returned": 99,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
@@ -422,7 +498,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 4
     },
-    "next_step": "Continue next natural 08/12/16/20 KST slots with fresh source and dedup, maximum four mains per KST day and two-hour grace. Next new main is text; subsequent generic image slot rotates to image 1 unless a benefit-specific approved asset exists. No backfill or test publication.",
+    "next_step": "Allow the next natural Threads slot to use the validated source. Recheck actual publication and report only verified new results. Reopen for a new attempt, restore failure, or publication hold. Public Pages verification is outside Threads repair scope.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
@@ -480,20 +556,19 @@
       "manual_dispatch_performed": false
     },
     "latest_source_execution": {
-      "run_id": "42010247594",
+      "run_id": "42117967226",
       "run_attempt": 1,
       "status": "completed",
-      "conclusion": "success",
-      "updated_at": "2026-11-05T10:33:33Z",
-      "head_sha": "0db83684355af1f08f56ddac6461588dfc0bce39",
+      "conclusion": "failure",
+      "updated_at": "2026-11-05T22:11:00Z",
+      "head_sha": "4bf3d3a6ad678a7c3616ed34bc1e17b10da87cfa",
       "event": "schedule",
-      "job_id": "127187136462",
+      "job_id": "127562514003",
       "current_step": "completed",
       "result_artifacts_available": true,
       "job_logs_available": true,
-      "classification": "collection_and_terminal_verification_success",
-      "concurrent_mutations_started": false,
-      "prior_in_progress_transition_rechecked": true
+      "classification": "post_deployment_verification_only; complete collection and trusted Threads input verified",
+      "concurrent_mutations_started": false
     },
     "current_day_publication_count": {
       "date_kst": "2026-11-06",
@@ -582,8 +657,8 @@
     "both_rotation_images_natural_publication_verified": true
   },
   "last_reported_operation_issue": {
-    "run_id": "41921889569",
-    "classification": "post_deployment_verification_only; no source collection or Threads publication failure",
-    "recorded_at": "2026-11-05T07:16:42.232829+09:00"
+    "run_id": "42117967226",
+    "classification": "post_deployment_verification_only; complete collection and trusted Threads input verified",
+    "recorded_at": "2026-11-06T07:47:59.290+09:00"
   }
 }
