@@ -1,7 +1,6 @@
 name: Verify SupportPick release
 on:
   pull_request:
-    types: [opened, synchronize, reopened, labeled]
   workflow_dispatch:
     inputs:
       backup_probe:
@@ -36,7 +35,7 @@ jobs:
           retention-days: 3
 
   backup-probe:
-    if: (github.event_name == 'workflow_dispatch' && inputs.backup_probe) || (github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'preserve-artifacts-approved-20261105') && github.event.pull_request.number == 26 && github.event.pull_request.head.repo.full_name == github.repository)
+    if: github.event_name == 'workflow_dispatch' && inputs.backup_probe
     needs: verify
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -78,11 +77,24 @@ jobs:
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
         run: python tools/r2_backup.py backup --output output/r2-probe.json
+      - name: Restore latest verified R2 backup without GitHub artifacts
+        env:
+          SUPPORTPICK_R2_ACCESS_KEY_ID: ${{ secrets.SUPPORTPICK_R2_ACCESS_KEY_ID }}
+          SUPPORTPICK_R2_SECRET_ACCESS_KEY: ${{ secrets.SUPPORTPICK_R2_SECRET_ACCESS_KEY }}
+          SUPPORTPICK_R2_ENDPOINT: ${{ secrets.SUPPORTPICK_R2_ENDPOINT }}
+          SUPPORTPICK_R2_BUCKET: ${{ secrets.SUPPORTPICK_R2_BUCKET }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+        run: python tools/r2_backup.py restore-latest --output output/r2-restore-probe.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: supportpick-r2-probe
-          path: output/r2-probe.json
+          path: |
+            output/r2-probe.json
+            output/r2-restore-probe.json
           retention-days: 90
 
   browser-regression:
