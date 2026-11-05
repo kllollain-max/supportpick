@@ -1,0 +1,81 @@
+{
+  "checkedAt": "2026-11-05T10:21:00.632855+00:00",
+  "project": "supportpick",
+  "registrationSite": "https://kllollain-max.github.io",
+  "independentPathRegistration": false,
+  "errors": [],
+  "unverified": [],
+  "observations": {
+    "https://kllollain-max.github.io/": {
+      "status": 200,
+      "sha256": "a841cff131dde82cce1d156d4e183f926707c0402b09ced0bed0899cc73f6d3d",
+      "headers": []
+    },
+    "https://kllollain-max.github.io/ads.txt": {
+      "status": 200,
+      "sha256": "70bd65f071bae0c935a865a2809ff48ee7faea4d4d11c030165c9c054dca6629",
+      "headers": []
+    },
+    "https://kllollain-max.github.io/robots.txt": {
+      "status": 200,
+      "sha256": "7bdb6a2873465b5e7cf2aa43f5aeaad545161f747946ac488ccb669e3b3afa94",
+      "headers": []
+    },
+    "https://kllollain-max.github.io/supportpick/sitemap.xml": {
+      "status": 200,
+      "sha256": "8e4fdc72168856c694c2099427f4b0be069df2ff4009902bad22be1023a8cf84",
+      "headers": []
+    },
+    "https://kllollain-max.github.io/supportpick/": {
+      "status": 200,
+      "sha256": "b8481d3c576053c5a6607a597d37c0d9da4a225693c34b8bb0401096192fbc52",
+      "headers": []
+    },
+    "https://kllollain-max.github.io/supportpick/about.html": {
+      "status": 200,
+      "sha256": "0ed6124fd539f1eab2eccbadb1279d46fb4ddbf47a8478f85249cd88d94518cc",
+      "headers": []
+    },
+    "https://kllollain-max.github.io/supportpick/privacy.html": {
+      "status": 200,
+      "sha256": "780e7ba8ffa17bea982e4d6048c6d1e6c6744e2d70a4c3d33a0d75e23232a1a5",
+      "headers": []
+    },
+    "https://kllollain-max.github.io/supportpick/contact.html": {
+      "status": 200,
+      "sha256": "38f04024265e2652d3fde4b120c6ed7953b03c8f9cab17071d5bdd2215a6e6d4",
+      "headers": []
+    },
+    "https://kllollain-max.github.io/supportpick/terms.html": {
+      "status": 200,
+      "sha256": "f5188f183cc880bfb933730ee1026e575ba5e0ad7a61b331f215caa2fc588e27",
+      "headers": []
+    },
+    "https://kllollain-max.github.io/supportpick/benefits/105100000001/": {
+      "status": 200,
+      "sha256": "dc4826dfeeb58c0036bbeb59ee56cc815d52bd23c3ea5b85304db25dba9c5f50",
+      "headers": []
+    },
+    "https://kllollain-max.github.io/supportpick/benefits/116010000001/": {
+      "status": 200,
+      "sha256": "9fde7d12a53de63095cf34bbeb3e6347fbd7c083d1180f31c72f43267ae2cea7",
+      "headers": []
+    },
+    "https://kllollain-max.github.io/supportpick/benefits/149200000026/": {
+      "status": 200,
+      "sha256": "9b4cf38f23f251cdf7142e6bf29178755b3f8fa5227ca3c01e0450689f20c3ad",
+      "headers": []
+    },
+    "https://kllollain-max.github.io/supportpick/site-manifest.json": {
+      "status": 200,
+      "sha256": "4ab5cd159bf075f511e1411c1a73d81990a29bcef5f64ab835449b2d6e7e52d7",
+      "headers": []
+    }
+  },
+  "indexing": "not_observed",
+  "adsenseApproval": "not_observed",
+  "sitemapUrls": 11050,
+  "publicRevision": "a890695ccaf14ccea374710d5182030f0cfbd4b1",
+  "publicGeneration": "gov24-41921889569-1",
+  "benefits": 10942
+}

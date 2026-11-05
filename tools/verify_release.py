@@ -20,11 +20,13 @@ NS = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
 class Document(HTMLParser):
     def __init__(self):
         super().__init__(); self.h1 = 0; self.meta = {}; self.canonical = []
-        self.jsonld = []; self.active = None; self.buffer = ''
+        self.jsonld = []; self.active = None; self.buffer = ''; self.robots = []
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
         if tag == 'h1': self.h1 += 1
         if tag == 'meta': self.meta[a.get('name') or a.get('property')] = a.get('content')
+        if tag == 'meta' and a.get('name', '').lower() in {'robots', 'googlebot'}:
+            self.robots.append(a.get('content', '').lower())
         if tag == 'link' and a.get('rel') == 'canonical': self.canonical.append(a.get('href'))
         if tag == 'script' and a.get('type') == 'application/ld+json':
             self.active = True; self.buffer = ''
@@ -39,6 +41,8 @@ def inspect(html, url):
     doc = Document(); doc.feed(html)
     if doc.canonical != [url]: raise ValueError('canonical_mismatch:' + url)
     if doc.meta.get('robots') != 'index,follow': raise ValueError('not_indexable:' + url)
+    if any({'noindex', 'none'} & set(re.split(r'[\s,]+', value)) for value in doc.robots):
+        raise ValueError('conflicting_noindex:' + url)
     if not doc.meta.get('description') or not doc.meta.get('og:title'): raise ValueError('missing_metadata:' + url)
     if doc.h1 != 1: raise ValueError('invalid_h1:' + url)
     if '/benefits/' in url and '/page/' not in url and url != BASE + 'benefits/':
@@ -86,6 +90,9 @@ def fetch_html(entry, url_set):
             if hashlib.sha256(raw).hexdigest() != digest:
                 return url, 'content_hash_mismatch', False
             if url in url_set:
+                values = response.headers.get_all('X-Robots-Tag', []) if hasattr(response, 'headers') else []
+                if any({'noindex', 'none'} & set(re.split(r'[\s,]+', value.lower())) for value in values):
+                    return url, 'header_noindex', False
                 inspect(raw.decode('utf-8'), url)
             return url, None, False
     except HTTPError as error:
