@@ -15,7 +15,7 @@ class PeriodTests(unittest.TestCase):
   self.assertEqual(self.state(text,'2026-11-05T18:00:00+09:00'),'접수 중')
   self.assertEqual(self.state(text,'2026-11-05T18:00:01+09:00'),'접수 종료')
  def test_unknown_invalid_budget_and_single_deadline(self):
-  for text in ['', '11월 1일~11월 5일','2026.11.05까지','2026.02.30 ~ 2026.03.01','2026.12.01~2026.01.01','상시 신청(예산 소진 시 마감)','수시 모집']:
+  for text in ['', '11월 1일~11월 5일','2026.11.05까지','2026.02.30 ~ 2026.03.01','2026.12.01~2026.01.01','상시 신청(예산 소진 시 마감)','수시 모집','2026.11.01~2026.11.05 오후 6시까지']:
    self.assertEqual(self.state(text,'2026-11-05T12:00:00+09:00'),'확인 필요',text)
  def test_multiple_rounds_preserved_and_shorthand_year(self):
   text='1차: 2026. 10. 1.~10. 5.\n2차: 2026.11.01~11.17.'

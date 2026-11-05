@@ -154,6 +154,7 @@ def main():
     archive,meta=package(a.state,a.evidence,Path.cwd(),root/'package');report=upload_verify(client,bucket,archive,meta,root/'roundtrip')
    else:
     receipt=latest(client,bucket);download(client,bucket,receipt['archiveKey'],root/'archive.tar.gz',receipt['archiveSha256']);meta=restore(root/'archive.tar.gz',root/'recovery')
+    if any(meta[k]!=receipt.get(k) for k in ('generation','count','sourceRevision','collectionSucceededAt')):raise ValueError('receipt_restored_identity_mismatch')
     if a.restore_state_to:shutil.copytree(root/'recovery/runtime',a.restore_state_to)
     report={**receipt,'restoreVerified':True}
   report['status']='passed'

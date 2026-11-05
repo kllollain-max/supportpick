@@ -28,7 +28,7 @@ def application_period(raw):
    periods.append(p)
   except ValueError:return {**result,'applicationPeriods':[]}
  remainder=RANGE.sub('',raw)
- if periods and not re.search(r'20\d{2}|\d{1,2}[월/]\s*\d{1,2}|마감.*변경|별도',remainder):result['applicationPeriodKind']='fixed'
+ if periods and not re.search(r'20\d{2}|\d{1,2}[월/]\s*\d{1,2}|\d+\s*시|\d{1,2}:\d{2}|마감.*변경|별도',remainder):result['applicationPeriodKind']='fixed'
  elif not periods and not re.search(r'20\d{2}|\d+[월/.]',raw) and re.search(r'상시|연중',raw):result['applicationPeriodKind']='ongoing'
  return result
 
