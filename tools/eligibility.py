@@ -55,6 +55,11 @@ def navigation(row):
   cities=[c for c in cities if c not in ALIASES.values() and c not in ('거주시','신청시','등록시','접수시','해당시')]
   nationwide=bool(re.search(r'전국\s*(?:거주|주민|대상)|지역\s*제한\s*없',clause))
   if provinces or cities or nationwide:conditions.append({'scope':'nationwide' if nationwide else 'local','regions':provinces,'cities':cities,'basis':'business' if '사업장' in clause else 'residence','evidence':clause.strip()[:600]})
+ unique={}
+ for c in conditions:
+  key=(c['scope'],tuple(c['regions']),tuple(c['cities']),c['basis'])
+  unique.setdefault(key,c)
+ conditions=list(unique.values())
  for label,pattern in TARGETS.items():
   m=re.search(pattern,text)
   if m:tags.append({'label':label,'evidence':text[max(0,m.start()-50):m.end()+120].strip()})

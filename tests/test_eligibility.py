@@ -36,3 +36,6 @@ class PeriodTests(unittest.TestCase):
  def test_alternative_or_exclusion_never_becomes_rejection(self):
   for text in ['서울 또는 경기도에 거주','거주 지역과 관계없이 전국 신청','서울시 거주자 제외']:
    self.assertEqual(navigation({'target':text})['eligibilityRegionStatus'],'needs_check')
+ def test_repeated_same_condition_does_not_change_explicit_to_uncertain(self):
+  r=navigation({'target':'강원특별자치도 춘천시에 거주','selection':'강원특별자치도 춘천시에 거주'})
+  self.assertEqual(r['eligibilityRegionStatus'],'explicit');self.assertEqual(len(r['eligibilityRegions']),1)
