@@ -2,6 +2,7 @@ import copy
 import json
 import sys
 import unittest
+from urllib.error import HTTPError
 from datetime import datetime, timedelta
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
@@ -211,6 +212,16 @@ class PublisherTests(unittest.TestCase):
         def fail(*args, **kw): raise OSError('secret-token')
         with self.assertRaises(RuntimeError) as error: t.Threads('secret-token', opener=fail).call('GET','/me')
         self.assertNotIn('secret-token', str(error.exception))
+    def test_account_read_status_is_reported_without_exposing_request(self):
+        def fail(request, **kwargs):
+            raise HTTPError(request.full_url, 401, 'secret-token', {}, None)
+
+        api = t.Threads('secret-token', opener=fail)
+        with self.assertRaisesRegex(RuntimeError, '^threads_account_read_http_401$'):
+            api.verify_account('123')
+        with self.assertRaisesRegex(RuntimeError, '^threads_request_failed_or_ambiguous_no_automatic_retry$'):
+            api.call('POST', '/me/threads')
+
     def test_four_slot_daily_cap(self):
         for h in (8, 12, 16, 20):
             slot = NOW.replace(hour=h, minute=0).isoformat()
