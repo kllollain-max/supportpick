@@ -310,7 +310,18 @@ class Threads:
             if not isinstance(result, dict) or result.get('error'):
                 raise ValueError()
             return result
-        except (urllib.error.URLError, OSError, TimeoutError, ValueError):
+        except urllib.error.HTTPError as exc:
+            if method == 'GET' and path == '/me':
+                # Exclude response text and request credentials from the result.
+                raise RuntimeError(f'threads_account_read_http_{exc.code}') from None
+            raise RuntimeError('threads_request_failed_or_ambiguous_no_automatic_retry') from None
+        except (urllib.error.URLError, OSError, TimeoutError):
+            if method == 'GET' and path == '/me':
+                raise RuntimeError('threads_account_read_transport_failure') from None
+            raise RuntimeError('threads_request_failed_or_ambiguous_no_automatic_retry') from None
+        except ValueError:
+            if method == 'GET' and path == '/me':
+                raise RuntimeError('threads_account_read_invalid_response') from None
             raise RuntimeError('threads_request_failed_or_ambiguous_no_automatic_retry') from None
 
     def verify_account(self, expected_id):
