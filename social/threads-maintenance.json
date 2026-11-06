@@ -37,7 +37,8 @@
     "42117967226",
     "42131131069",
     "42145922173",
-    "42147790905"
+    "42147790905",
+    "42150698993"
   ],
   "last_health": {
     "unresolved_publications": 0,
@@ -51,8 +52,9 @@
     "last_publisher_run_id": "42021189623",
     "writer_queue_ready": 4,
     "writer_schema": "supportpick.writer.v1",
-    "account_check": "failed_http_400_code_200",
-    "account_check_run_id": "42147790905"
+    "account_check": "all_official_variants_http_400_code_200",
+    "account_check_run_id": "42150698993",
+    "account_verified": false
   },
   "incidents": {
     "41796747628": {
@@ -211,7 +213,7 @@
       "next_step": "Allow the next natural Threads slot to use the validated source. Recheck actual publication and report only verified new results. Reopen for a new attempt, restore failure, or publication hold. Public Pages verification is outside Threads repair scope."
     },
     "42131131069": {
-      "status": "hold_account_access_http_400_code_200",
+      "status": "hold_account_access_owner_login_required",
       "fingerprint": {
         "run_id": "42131131069",
         "run_attempt": 1,
@@ -219,8 +221,8 @@
         "stage": "GET /me before ledger reservation",
         "error": "threads_request_failed_or_ambiguous_no_automatic_retry"
       },
-      "confirmed_cause": "Read-only checks of GET /me returned HTTP 400; the new diagnostic identified numeric API code 200 with no subcode. The account check occurs before reservation. The publication ledger remains at six published records with the same blob SHA; this session created no post or reservation.",
-      "hypothesis": "Permissions or account/app authorization is the leading possibility for API code 200. Exact missing grant or credential condition is not established; token expiry is not confirmed.",
+      "confirmed_cause": "GET /me was rejected with HTTP 400 / API code 200 on both official hosts, using either Bearer or query-token authentication. A same-token debug GET was also rejected with the same code. All five diagnostic requests were read-only. No verified alternative request path was found; token validity, expiry and granted scopes remain unknown.",
+      "hypothesis": "Account/app authorization or permission refusal remains the leading possibility. No exact missing grant or expired token has been established.",
       "remote_history_verified": false,
       "source_generation": "gov24-42117967226-1",
       "source_restore": "success",
@@ -241,12 +243,14 @@
         "posts_sent": 0,
         "workflow_reruns": 0,
         "recovery_attempts": 0,
-        "read_only_account_diagnostic_runs": 2
+        "read_only_account_check_runs": 2,
+        "bounded_diagnostic_runs": 1,
+        "bounded_diagnostic_gets": 5
       },
-      "next_step": "Owner must inspect the existing Threads app/account grants and re-authorize the existing integration if required. If a replacement token is issued, update SUPPORTPICK_THREADS_ACCESS_TOKEN in the existing GitHub repository secret without disclosing it in chat. Verify check-account before any publication recovery. Only resume an unreserved original slot inside its two-hour window; otherwise use the next regular slot.",
+      "next_step": "Complete the existing Meta developer-account sign-in and inspect SupportPick Threads app approval for hid_1004. Determine the actual app/account authorization issue. Any replacement credential must be entered by the owner into the existing GitHub secret without sharing it in chat. Then perform check-account, and only recover within the normal slot policy.",
       "repair_pr": 31,
       "repair_head_sha": "551b3611e7ff08669a26cb9039621b9582b92edd",
-      "repair_status": "writer_and_recovery_guards_applied_account_access_still_blocked",
+      "repair_status": "read_only_diagnostic_applied_owner_account_app_review_required",
       "validation": {
         "local_tests_passed": 38,
         "read_path": {
@@ -325,8 +329,84 @@
         "account_verified": false,
         "remote_history_verified": false
       },
-      "repeat_policy": "Do not rerun the same failed attempt or repeatedly patch this unchanged account response. Preserve the code-200 fingerprint; report again only for changed evidence, owner action, or verified recovery. Natural scheduled runs may observe restored access.",
-      "updated_at": "2026-11-06T02:09:52.967Z"
+      "repeat_policy": "Do not repeat this five-request diagnostic, replay failed publication attempts or create another code patch for unchanged HTTP 400/code 200 without new app/grant/credential evidence. Preserve unknown token validity and scopes. Report only a changed state or verified recovery.",
+      "updated_at": "2026-11-06T02:31:51.603Z",
+      "latest_account_diagnostic": {
+        "run_id": "42150698993",
+        "job_id": "127672982605",
+        "mode": "read_only_account_diagnostic",
+        "head_sha": "afb7e4f026cacb0cf0a73ccaee79beff546b4ae8",
+        "workflow_conclusion": "success",
+        "account_verified": false,
+        "classification": "no_verified_account_path",
+        "request_count": 5,
+        "original_path_verified": false,
+        "verified_alternatives": [],
+        "probes": [
+          {
+            "probe": "net_bearer_me",
+            "status": "http_error",
+            "http_status": 400,
+            "api_code": 200,
+            "api_subcode": null
+          },
+          {
+            "probe": "com_bearer_me",
+            "status": "http_error",
+            "http_status": 400,
+            "api_code": 200,
+            "api_subcode": null
+          },
+          {
+            "probe": "net_query_me",
+            "status": "http_error",
+            "http_status": 400,
+            "api_code": 200,
+            "api_subcode": null
+          },
+          {
+            "probe": "com_query_me",
+            "status": "http_error",
+            "http_status": 400,
+            "api_code": 200,
+            "api_subcode": null
+          },
+          {
+            "probe": "com_query_debug",
+            "status": "http_error",
+            "http_status": 400,
+            "api_code": 200,
+            "api_subcode": null
+          }
+        ],
+        "token_valid": null,
+        "token_account_matches": null,
+        "threads_basic": null,
+        "threads_content_publish": null,
+        "token_expiry": "unknown",
+        "new_publication_attempted": false,
+        "ledger_sha_after": "d8ab0b3facc3de3321c28d483cf6dec05e808431",
+        "checked_at": "2026-11-06T02:31:51.603Z"
+      },
+      "diagnostic_feature": {
+        "pr": 34,
+        "head_sha": "2af0a5d378dd9d456f9380a08d57713802749ac6",
+        "merge_sha": "afb7e4f026cacb0cf0a73ccaee79beff546b4ae8",
+        "tests": 17,
+        "full_python_tests": 182,
+        "node_tests": 56,
+        "ci_runs": [
+          42150364983,
+          42150365009
+        ],
+        "independent_safety_review": "passed"
+      },
+      "owner_handoff": {
+        "required": true,
+        "purpose": "Sign in to Meta for Developers with the existing account that owns SupportPick Threads; inspect hid_1004 approval and existing app permissions.",
+        "observed_login_block": "Selected managed Meta sign-in reported no connected account. Return to the sign-in method choices; do not create an account or alter permissions speculatively.",
+        "credential_values_recorded": false
+      }
     }
   },
   "guardrails": {
@@ -477,10 +557,17 @@
       "conclusion": "failure",
       "updated_at": "2026-11-06T02:03:19Z",
       "head_sha": "820ca8aeca9ae3e2f16a04a165f4f1e87ca569e7"
+    },
+    "42150698993": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-06T02:30:14Z",
+      "head_sha": "afb7e4f026cacb0cf0a73ccaee79beff546b4ae8"
     }
   },
   "last_check": {
-    "result": "writer_applied_queue_ready_account_access_hold",
+    "result": "account_diagnostic_complete_owner_login_required",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -550,7 +637,7 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-06T02:09:52.967Z",
+    "checked_at": "2026-11-06T02:31:51.603Z",
     "changed_run_ids": [],
     "current_main_sha": "a18f235b40a96fe24788dd883ffc149ed33e7164",
     "ranking_policy": {
@@ -735,11 +822,61 @@
       "image_evidence": "Approved rotation image 2 reserved and passed through IMAGE container to the successful natural publisher path; no separate remote media-field GET."
     },
     "account_diagnostic": {
-      "run_id": "42147790905",
-      "job_id": "127663381834",
-      "reason": "threads_account_read_http_400_code_200",
-      "mode": "check-account",
-      "new_publication_attempted": false
+      "run_id": "42150698993",
+      "job_id": "127672982605",
+      "mode": "read_only_account_diagnostic",
+      "head_sha": "afb7e4f026cacb0cf0a73ccaee79beff546b4ae8",
+      "workflow_conclusion": "success",
+      "account_verified": false,
+      "classification": "no_verified_account_path",
+      "request_count": 5,
+      "original_path_verified": false,
+      "verified_alternatives": [],
+      "probes": [
+        {
+          "probe": "net_bearer_me",
+          "status": "http_error",
+          "http_status": 400,
+          "api_code": 200,
+          "api_subcode": null
+        },
+        {
+          "probe": "com_bearer_me",
+          "status": "http_error",
+          "http_status": 400,
+          "api_code": 200,
+          "api_subcode": null
+        },
+        {
+          "probe": "net_query_me",
+          "status": "http_error",
+          "http_status": 400,
+          "api_code": 200,
+          "api_subcode": null
+        },
+        {
+          "probe": "com_query_me",
+          "status": "http_error",
+          "http_status": 400,
+          "api_code": 200,
+          "api_subcode": null
+        },
+        {
+          "probe": "com_query_debug",
+          "status": "http_error",
+          "http_status": 400,
+          "api_code": 200,
+          "api_subcode": null
+        }
+      ],
+      "token_valid": null,
+      "token_account_matches": null,
+      "threads_basic": null,
+      "threads_content_publish": null,
+      "token_expiry": "unknown",
+      "new_publication_attempted": false,
+      "ledger_sha_after": "d8ab0b3facc3de3321c28d483cf6dec05e808431",
+      "checked_at": "2026-11-06T02:31:51.603Z"
     },
     "writer_adoption": {
       "pr": 33,
@@ -861,6 +998,26 @@
       "actual_publication_performed": false,
       "natural_publication_after_change_verified": false,
       "next_step": "Continue scheduled writing and diagnosis. Real publishing remains blocked at account GET /me HTTP 400 code 200; do not claim recovery before account verification and a verified publication receipt."
+    },
+    {
+      "applied_at": "2026-11-06T02:31:51.603Z",
+      "pr": 34,
+      "commit_sha": "afb7e4f026cacb0cf0a73ccaee79beff546b4ae8",
+      "head_sha": "2af0a5d378dd9d456f9380a08d57713802749ac6",
+      "scope": "Manual read-only account diagnostic; fixed official destinations, maximum five GETs, no redirects, allowlisted output, step-scoped existing credentials",
+      "validation": {
+        "diagnostic_tests": 17,
+        "full_python_tests": 182,
+        "node_tests": 56,
+        "ci_runs": [
+          42150364983,
+          42150365009
+        ],
+        "independent_safety_review": "passed"
+      },
+      "real_publication_performed": false,
+      "account_recovered": false,
+      "live_diagnostic_run_id": "42150698993"
     }
   ],
   "content_policy": {
@@ -920,11 +1077,11 @@
   },
   "last_reported_publication_issue": {
     "run_id": "42131131069",
-    "diagnostic_run_id": "42147790905",
-    "classification": "hold_account_access_http_400_code_200",
-    "repair_pr": 33,
-    "repair_sha": "f9c281b3183dc8f178d49e0e084e6ff27995224b",
-    "recorded_at": "2026-11-06T02:09:52.967Z"
+    "diagnostic_run_id": "42150698993",
+    "classification": "hold_account_access_owner_login_required",
+    "diagnostic_pr": 34,
+    "diagnostic_sha": "afb7e4f026cacb0cf0a73ccaee79beff546b4ae8",
+    "recorded_at": "2026-11-06T02:31:51.603Z"
   },
   "writer_policy": {
     "version": "supportpick.writer.v1",
