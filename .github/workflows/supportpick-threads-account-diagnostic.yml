@@ -18,8 +18,6 @@ jobs:
     timeout-minutes: 5
     env:
       TZ: Asia/Seoul
-      SUPPORTPICK_THREADS_ACCESS_TOKEN: ${{ secrets.SUPPORTPICK_THREADS_ACCESS_TOKEN }}
-      SUPPORTPICK_THREADS_USER_ID: ${{ secrets.SUPPORTPICK_THREADS_USER_ID }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -30,6 +28,9 @@ jobs:
       - name: Verify read-only diagnostic safety
         run: python -m unittest discover -s tests -p 'test_supportpick_account_diagnostic.py' -v
       - name: Diagnose existing Threads account without publishing
+        env:
+          SUPPORTPICK_THREADS_ACCESS_TOKEN: ${{ secrets.SUPPORTPICK_THREADS_ACCESS_TOKEN }}
+          SUPPORTPICK_THREADS_USER_ID: ${{ secrets.SUPPORTPICK_THREADS_USER_ID }}
         run: python tools/supportpick_threads_account_diagnostic.py
       - name: Preserve sanitized diagnostic
         if: always()
