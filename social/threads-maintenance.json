@@ -655,7 +655,7 @@
     }
   },
   "last_check": {
-    "result": "natural_writer_image_publication_verified",
+    "result": "four_future_writer_slots_preview_passed",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -769,17 +769,14 @@
     },
     "publication_ledger_sha": "6e7a34a8ac4e6324bd3955f79237cfd3e545c984",
     "workflow_blob_shas": {
-      "threads": "b9eca15d9b506189b513abb15281e77a5cdc3ab5",
+      "threads": "721f96ebc75988113d496958e3b8a29767eef0ce",
       "source": "ce74fe03afd06f59f1d38f2e297fe9a78bbcf604"
     },
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-06T17:08:07.225+09:00",
-    "changed_run_ids": [
-      "42185203085",
-      "42180307041"
-    ],
+    "checked_at": "2026-11-06T17:48:35.000+09:00",
+    "changed_run_ids": [],
     "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
@@ -852,7 +849,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 4
     },
-    "next_step": "Validate the next regular 20:00 P6 TEXT and tomorrow 08:00 P8 IMAGE against fresh source before sending.",
+    "next_step": "Keep 20:00 TEXT and future 08:00 IMAGE, 12:00 TEXT, 16:00 IMAGE only while eligible. Refresh validated collection before tomorrow's slots, verify actual reservation/image order, review any source changes, and refresh 16:00 evidence before its expiration if delayed. Check the next natural scheduled result; no backlog or duplicate send.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
@@ -869,7 +866,9 @@
       "artifact_metadata_and_digests_unchanged": true,
       "previously_digest_verified_artifact_contents_reused": true,
       "publication_ledger_unchanged": true,
-      "restore_and_snapshot_validation_unchanged": true
+      "restore_and_snapshot_validation_unchanged": true,
+      "source_snapshot_verified_now": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918"
     },
     "latest_policy_change": {
       "applied_at": "2026-11-04T23:10:49+09:00",
@@ -1009,19 +1008,14 @@
     },
     "posts_sent_this_check": 0,
     "next_slot_preview": {
-      "slot": "2026-11-06T12:00:00+09:00",
-      "benefit_id": "135200005003",
-      "title": "긴급복지 생계지원",
-      "pattern": "P1",
+      "slot": "2026-11-06T20:00:00+09:00",
+      "benefit_id": "999000000008",
+      "pattern": "P6",
       "media": "TEXT",
-      "characters": 318,
       "status": "READY",
-      "validation": "passed current validate_ready_entry using a future 12:00 simulation; actual send rechecks source and remote ledger",
-      "source_generation": "gov24-42117967226-1",
-      "source_count": 10942,
-      "source_fingerprint": "4ff462f50810f4a2521e2427ea494a03b7b5ace353b17e2f6953f9458de377ab",
-      "queue_blob_sha": "a65067246aeeb2389b49cdfaf629ae0ba2f2d7a4",
-      "actual_publication_verified": false
+      "queue_blob_sha": "efbc7f74975bbe1659c6a6c49bfa27ac3451d910",
+      "actual_publication_verified": false,
+      "validation": "passed, recheck fresh source and actual ledger at send"
     },
     "recovery_automation": {
       "id": "6aeaefe5fd708191a3e8a67b3667fb8f",
@@ -1029,9 +1023,15 @@
       "schedule": "hourly at minute 45"
     },
     "writer_queue_recheck": {
-      "checked_at": "2026-11-06T17:08:07.225+09:00",
-      "queue_blob_sha": "a65067246aeeb2389b49cdfaf629ae0ba2f2d7a4",
-      "ready_count": 2,
+      "checked_at": "2026-11-06T17:48:35.000+09:00",
+      "queue_blob_sha": "efbc7f74975bbe1659c6a6c49bfa27ac3451d910",
+      "previous_queue_blob_sha": "a65067246aeeb2389b49cdfaf629ae0ba2f2d7a4",
+      "queue_commit_sha": "30a1de3693701721038013f9ec0eba93f75d80f4",
+      "write_readback_identical": true,
+      "ready_count": 4,
+      "added_count": 2,
+      "reused_existing_ready_count": 2,
+      "published_history_preserved": true,
       "drafts": [
         {
           "slot": "2026-11-06T20:00:00+09:00",
@@ -1039,7 +1039,10 @@
           "status": "READY",
           "pattern": "P6",
           "media_turn": "TEXT",
-          "reason": null
+          "char_count": 379,
+          "source_fingerprint": "bec42b3b9bcb9ef69be8590e0e111547f0a467f1e9d30781a38a8f2d924d30d6",
+          "asset_sha256": null,
+          "expires_at": "2026-11-07T10:56:01.550792+09:00"
         },
         {
           "slot": "2026-11-07T08:00:00+09:00",
@@ -1047,13 +1050,39 @@
           "status": "READY",
           "pattern": "P8",
           "media_turn": "IMAGE",
-          "reason": null
+          "char_count": 299,
+          "source_fingerprint": "762ad55613b78988667d91bee072311167538dae0e58efcf52b3d325d05ef415",
+          "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "expires_at": "2026-11-07T10:56:01.550792+09:00"
+        },
+        {
+          "slot": "2026-11-07T12:00:00+09:00",
+          "benefit_id": "WII000001410",
+          "status": "READY",
+          "pattern": "P4",
+          "media_turn": "TEXT",
+          "char_count": 317,
+          "source_fingerprint": "4be7317554422f7aeafefd455545cc56be0e64bc717f3ecdb26ede29fc6341a2",
+          "asset_sha256": null,
+          "expires_at": "2026-11-07T17:47:14.197849+09:00"
+        },
+        {
+          "slot": "2026-11-07T16:00:00+09:00",
+          "benefit_id": "641000000139",
+          "status": "READY",
+          "pattern": "P3",
+          "media_turn": "IMAGE",
+          "char_count": 318,
+          "source_fingerprint": "d1db5d915dfc4e34268e797d72c002c86cdc737221b71c9d79b65d832dfcf1fe",
+          "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "expires_at": "2026-11-07T17:47:14.197849+09:00"
         }
       ],
-      "reused_existing_ready": true,
       "source_generation": "gov24-42117967226-1",
       "approved_images_sha256_rechecked": true,
-      "future_slots_require_source_recheck": true
+      "validate_ready_entry_and_preview": "passed at simulated slot times",
+      "future_slots_require_source_recheck": true,
+      "actual_publication_performed": false
     },
     "last_read_only_account_check": {
       "run_id": "42180307041",
