@@ -44,7 +44,8 @@
     "42185203085",
     "42180307041",
     "42201890585",
-    "42211895508"
+    "42211895508",
+    "42300923419"
   ],
   "last_health": {
     "unresolved_publications": 0,
@@ -668,12 +669,29 @@
       "conclusion": "success",
       "updated_at": "2026-11-06T11:40:46Z",
       "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
+    },
+    "42300923419": {
+      "run_attempt": 1,
+      "status": "in_progress",
+      "conclusion": null,
+      "updated_at": "2026-11-06T21:57:42Z",
+      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
     }
   },
   "last_check": {
-    "result": "ready_queue_revalidated_no_new_threads_result",
+    "result": "scheduled_source_collection_in_progress_queue_revalidated_against_last_completed_source",
     "unresolved_publications": 0,
-    "active_target_runs": [],
+    "active_target_runs": [
+      {
+        "run_id": "42300923419",
+        "workflow": "supportpick-operations.yml",
+        "run_attempt": 1,
+        "status": "in_progress",
+        "conclusion": null,
+        "updated_at": "2026-11-06T21:57:42Z",
+        "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
+      }
+    ],
     "latest_publisher": {
       "run_id": "42211895508",
       "run_attempt": 1,
@@ -730,8 +748,10 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-07T06:55:53.084+09:00",
-    "changed_run_ids": [],
+    "checked_at": "2026-11-07T07:00:12.918+09:00",
+    "changed_run_ids": [
+      "42300923419"
+    ],
     "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
@@ -777,8 +797,8 @@
     "run_list_scan": {
       "pages": 2,
       "per_page": 100,
-      "total_count": 186,
-      "returned": 186,
+      "total_count": 187,
+      "returned": 187,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
@@ -804,7 +824,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 4
     },
-    "next_step": "Verify fresh source and publication state before the November 7 08:00 IMAGE slot. Refresh factual/image evidence if a future draft risks expiring before an eligible delayed send.",
+    "next_step": "Read the terminal result and verify the promoted runtime artifact for source run 42300923419. Revalidate the queue against the latest eligible source before the next scheduled publication.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
@@ -986,7 +1006,7 @@
       "schedule": "hourly at minute 45"
     },
     "writer_queue_recheck": {
-      "checked_at": "2026-11-07T06:55:53.084+09:00",
+      "checked_at": "2026-11-07T07:00:12.918+09:00",
       "queue_blob_sha": "6e802f4b3640eb747bc4411b68d746a6b7badbda",
       "previous_queue_blob_sha": "efbc7f74975bbe1659c6a6c49bfa27ac3451d910",
       "queue_commit_sha": "5749f0c8578fdee839a28a843aabca708b6a772b",
