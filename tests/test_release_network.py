@@ -1,4 +1,7 @@
 import hashlib
+import json
+from contextlib import redirect_stdout
+from io import StringIO
 import sys
 import unittest
 from pathlib import Path
@@ -6,7 +9,7 @@ from unittest.mock import patch
 from urllib.error import HTTPError
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'tools'))
-from verify_release import verify_targets, inspect
+from verify_release import verify_targets, inspect, wait_for_public_manifest
 
 URL='https://kllollain-max.github.io/supportpick/about.html'
 BODY=('<html><head><link rel="canonical" href="'+URL+'"><meta name="robots" content="index,follow">'
@@ -66,3 +69,27 @@ class PublicNetworkVerification(unittest.TestCase):
         self.assertEqual(fetch.call_count,1)
         self.assertEqual(report['failed'],1)
         self.assertEqual(report['failures'][0]['error'],'content_hash_mismatch')
+
+    def test_old_public_generation_can_converge_before_crawl(self):
+        expected = {'sourceRevision': 'source', 'generation': 'new', 'files': {'index.html': 'hash'}}
+        stale = {**expected, 'generation': 'old'}
+        output = StringIO()
+        with patch('verify_release.read_public_manifest', side_effect=[stale, expected]) as fetch, \
+                patch('verify_release.time.sleep') as pause, redirect_stdout(output):
+            self.assertEqual(wait_for_public_manifest(expected, 'source', 'new'), expected)
+        self.assertEqual(fetch.call_count, 2)
+        pause.assert_called_once_with(30)
+        self.assertEqual([json.loads(line)['observedGeneration'] for line in output.getvalue().splitlines()],
+                         ['old', 'new'])
+
+    def test_stale_generation_and_same_generation_file_mismatch_stay_failures(self):
+        expected = {'sourceRevision': 'source', 'generation': 'new', 'files': {'index.html': 'hash'}}
+        for public, error, calls in [
+            ({**expected, 'generation': 'old'}, 'public_generation_mismatch', 2),
+            ({**expected, 'files': {'index.html': 'wrong'}}, 'public_manifest_files_mismatch', 1),
+        ]:
+            with self.subTest(error=error), patch('verify_release.read_public_manifest', return_value=public) as fetch, \
+                    patch('verify_release.time.sleep'), redirect_stdout(StringIO()), \
+                    self.assertRaisesRegex(ValueError, error):
+                wait_for_public_manifest(expected, 'source', 'new')
+            self.assertEqual(fetch.call_count, calls)
