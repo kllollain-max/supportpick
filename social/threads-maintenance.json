@@ -672,26 +672,16 @@
     },
     "42300923419": {
       "run_attempt": 1,
-      "status": "in_progress",
-      "conclusion": null,
-      "updated_at": "2026-11-06T21:57:42Z",
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-06T22:10:47Z",
       "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
     }
   },
   "last_check": {
-    "result": "scheduled_source_collection_in_progress_queue_revalidated_against_last_completed_source",
+    "result": "new_source_completed_and_existing_ready_queue_revalidated",
     "unresolved_publications": 0,
-    "active_target_runs": [
-      {
-        "run_id": "42300923419",
-        "workflow": "supportpick-operations.yml",
-        "run_attempt": 1,
-        "status": "in_progress",
-        "conclusion": null,
-        "updated_at": "2026-11-06T21:57:42Z",
-        "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
-      }
-    ],
+    "active_target_runs": [],
     "latest_publisher": {
       "run_id": "42211895508",
       "run_attempt": 1,
@@ -720,21 +710,21 @@
       "ci_tests_passed": 121
     },
     "latest_source": {
-      "run_id": "42201890585",
+      "run_id": "42300923419",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "job_id": "127838918075",
+      "updated_at": "2026-11-06T22:10:47Z",
       "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
-      "updated_at": "2026-11-06T10:32:28Z",
-      "artifact_id": "13495242184",
-      "artifact_sha256": "c075661e7c4e7142d8b7279725f80cf3eabda0aa025c5123d97e97871fbca633",
+      "job_id": "128178186549",
+      "artifact_id": "13544033800",
+      "artifact_sha256": "1d2263702a08a80663514cc06c0ae0e7bf7ba858b28eb9b847d23ca33085fe4d",
       "artifact_contents_verified": true,
-      "generation": "gov24-42201890585-1",
+      "generation": "gov24-42300923419-1",
       "count": 10942,
-      "manifest_sha256": "e98053f0da14ff108cff81eeb9501121b8782125127a3acffd687946803ae198",
+      "manifest_sha256": "2a0cf886a38e57e7956be91f436d2e13e6740c0943aa16fb01e695a6743c4fe2",
       "manifest_files_verified": 36,
-      "last_success_at": "2026-11-06T19:28:08.761898+09:00",
+      "last_success_at": "2026-11-07T07:05:41.400615+09:00",
       "actual_read_path_verified": true,
       "collection_result": "success",
       "public_pages_verified": 11058,
@@ -748,7 +738,7 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-07T07:00:12.918+09:00",
+    "checked_at": "2026-11-07T07:39:06.854+09:00",
     "changed_run_ids": [
       "42300923419"
     ],
@@ -797,8 +787,8 @@
     "run_list_scan": {
       "pages": 2,
       "per_page": 100,
-      "total_count": 187,
-      "returned": 187,
+      "total_count": 188,
+      "returned": 188,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
@@ -824,12 +814,12 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 4
     },
-    "next_step": "Read the terminal result and verify the promoted runtime artifact for source run 42300923419. Revalidate the queue against the latest eligible source before the next scheduled publication.",
+    "next_step": "Check the natural November 7 08:00 KST IMAGE publication and its receipt. Revalidate later slots at send time, including fact/evidence expiry.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
       "latest_source_terminal_logs_pending": false,
-      "source_consumed_by_natural_publisher": true,
+      "source_consumed_by_natural_publisher": false,
       "known_postdeploy_failure_not_retried": true,
       "no_in_scope_unresolved_failure": true,
       "new_result_and_source_artifact_contents_digest_verified": true,
@@ -839,7 +829,7 @@
       "no_pending_publications": true,
       "natural_image_publication_verified": true,
       "artifact_metadata_and_digests_unchanged": true,
-      "previously_digest_verified_artifact_contents_reused": true,
+      "previously_digest_verified_artifact_contents_reused": false,
       "publication_ledger_unchanged": true,
       "restore_and_snapshot_validation_unchanged": true,
       "source_snapshot_verified_now": true,
@@ -885,21 +875,21 @@
       "manual_publication_dispatched": false
     },
     "latest_source_execution": {
-      "run_id": "42201890585",
+      "run_id": "42300923419",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "job_id": "127838918075",
+      "updated_at": "2026-11-06T22:10:47Z",
       "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
-      "updated_at": "2026-11-06T10:32:28Z",
-      "artifact_id": "13495242184",
-      "artifact_sha256": "c075661e7c4e7142d8b7279725f80cf3eabda0aa025c5123d97e97871fbca633",
+      "job_id": "128178186549",
+      "artifact_id": "13544033800",
+      "artifact_sha256": "1d2263702a08a80663514cc06c0ae0e7bf7ba858b28eb9b847d23ca33085fe4d",
       "artifact_contents_verified": true,
-      "generation": "gov24-42201890585-1",
+      "generation": "gov24-42300923419-1",
       "count": 10942,
-      "manifest_sha256": "e98053f0da14ff108cff81eeb9501121b8782125127a3acffd687946803ae198",
+      "manifest_sha256": "2a0cf886a38e57e7956be91f436d2e13e6740c0943aa16fb01e695a6743c4fe2",
       "manifest_files_verified": 36,
-      "last_success_at": "2026-11-06T19:28:08.761898+09:00",
+      "last_success_at": "2026-11-07T07:05:41.400615+09:00",
       "actual_read_path_verified": true,
       "collection_result": "success",
       "public_pages_verified": 11058,
@@ -1006,7 +996,7 @@
       "schedule": "hourly at minute 45"
     },
     "writer_queue_recheck": {
-      "checked_at": "2026-11-07T07:00:12.918+09:00",
+      "checked_at": "2026-11-07T07:39:06.854+09:00",
       "queue_blob_sha": "6e802f4b3640eb747bc4411b68d746a6b7badbda",
       "previous_queue_blob_sha": "efbc7f74975bbe1659c6a6c49bfa27ac3451d910",
       "queue_commit_sha": "5749f0c8578fdee839a28a843aabca708b6a772b",
@@ -1014,8 +1004,8 @@
       "ready_count": 4,
       "added_count": 0,
       "reused_existing_ready_count": 4,
-      "source_generation": "gov24-42201890585-1",
-      "validate_ready_entry_and_preview": "passed at simulated slot times",
+      "source_generation": "gov24-42300923419-1",
+      "validate_ready_entry_and_preview": "passed at simulated slot times against current verified runtime snapshot",
       "future_slots_require_source_recheck": true,
       "drafts": [
         {
@@ -1063,57 +1053,32 @@
       "published": false
     },
     "source_schedule_observation": {
-      "expected_slot": "2026-11-06T18:20:00+09:00",
+      "run_id": "42300923419",
       "classification": "completed_successfully",
-      "latest_completed_run_id": "42117967226",
-      "latest_verified_generation": "gov24-42117967226-1",
+      "latest_verified_generation": "gov24-42300923419-1",
       "fresh_at_check": true,
-      "dispatch_performed": false,
-      "run_id": "42201890585"
+      "dispatch_performed": false
     },
     "previous_source": {
-      "run_id": "42117967226",
+      "run_id": "42201890585",
       "run_attempt": 1,
-      "job_id": "127562514003",
-      "head_sha": "4bf3d3a6ad678a7c3616ed34bc1e17b10da87cfa",
-      "event": "schedule",
-      "conclusion": "failure",
-      "collection_result": "success",
-      "failure_classification": "post_deployment_verification_only; complete collection and trusted Threads input verified",
-      "count": 10942,
-      "generation": "gov24-42117967226-1",
-      "last_success_at": "2026-11-06T07:09:26.419603+09:00",
-      "artifact_id": "13456978982",
-      "artifact_sha256": "d8f8686cc0160aceac6d7396a87fa2ada23b853d50c2f97de4aa2d4ef76a6c6c",
+      "status": "completed",
+      "conclusion": "success",
+      "job_id": "127838918075",
+      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
+      "updated_at": "2026-11-06T10:32:28Z",
+      "artifact_id": "13495242184",
+      "artifact_sha256": "c075661e7c4e7142d8b7279725f80cf3eabda0aa025c5123d97e97871fbca633",
       "artifact_contents_verified": true,
+      "generation": "gov24-42201890585-1",
+      "count": 10942,
+      "manifest_sha256": "e98053f0da14ff108cff81eeb9501121b8782125127a3acffd687946803ae198",
       "manifest_files_verified": 36,
-      "endpoint_coverage": {
-        "serviceDetail": {
-          "completedPages": 110,
-          "duplicateCount": 0,
-          "expectedPages": 110,
-          "receivedCount": 10942,
-          "reportedTotal": 10942,
-          "uniqueCount": 10942
-        },
-        "serviceList": {
-          "completedPages": 110,
-          "duplicateCount": 0,
-          "expectedPages": 110,
-          "receivedCount": 10942,
-          "reportedTotal": 10942,
-          "uniqueCount": 10942
-        },
-        "supportConditions": {
-          "completedPages": 110,
-          "duplicateCount": 0,
-          "expectedPages": 110,
-          "receivedCount": 10942,
-          "reportedTotal": 10942,
-          "uniqueCount": 10942
-        }
-      },
-      "actual_read_path_verified": true
+      "last_success_at": "2026-11-06T19:28:08.761898+09:00",
+      "actual_read_path_verified": true,
+      "collection_result": "success",
+      "public_pages_verified": 11058,
+      "classification": "collection_and_public_verification_success"
     }
   },
   "last_reported_publication": {
