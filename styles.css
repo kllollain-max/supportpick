@@ -52,4 +52,4 @@ a.title-link{text-decoration:none;color:inherit;display:inline-block}.static-ben
 .tracker-actions .primary{flex:1 1 180px}
 .tracker-actions .tracker-delete{color:#a33131;border-color:#e6baba;flex:0 1 auto}
 .tracker-actions .tracker-delete:hover,.tracker-actions .tracker-delete:focus-visible{background:#fff0f0}
-@media(max-width:600px){.tracker-actions{flex-direction:column;align-items:stretch}.tracker-actions button{width:100%}}
+@media(max-width:600px){.tracker-actions{flex-direction:column;align-items:stretch}.tracker-actions button{width:100%}.tracker-actions .primary{flex:0 1 auto}}

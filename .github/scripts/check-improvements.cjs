@@ -56,7 +56,9 @@ const server=createServer((req,res)=>{
    await form.locator('textarea').fill('새 신청의 검증 메모');await form.locator('select').selectOption('서류 준비');await form.locator('[type=submit]').click();
    await page.reload();await page.locator('[data-tab=apps]').click();assert.equal(await form.locator('textarea').inputValue(),'새 신청의 검증 메모');assert.equal(await form.locator('select').inputValue(),'서류 준비');check('application create edit and reload persistence');
    const preserved=await readRecords();
-   const remove=form.locator('[data-delete-app]');await remove.scrollIntoViewIfNeeded();const box=await remove.boundingBox();assert.ok(box&&box.x>=0&&box.x+box.width<=width+1&&box.y>=0&&box.y+box.height<=900,'delete control must be visible');
+   const saveBox=await form.locator('[type=submit]').boundingBox();if(width<=600)assert.ok(saveBox&&saveBox.height>=40&&saveBox.height<=64,'mobile save button must not stretch and push deletion below the controls');
+   const remove=form.locator('[data-delete-app]');await remove.evaluate(el=>el.scrollIntoView({block:'center'}));const box=await remove.boundingBox();assert.ok(box&&box.x>=0&&box.x+box.width<=width+1&&box.y>=0&&box.y+box.height<=900,'delete control must be visible');
+   assert.equal(await remove.evaluate(el=>{const r=el.getBoundingClientRect();return [0.15,0.5,0.85].every(y=>el.contains(document.elementFromPoint(r.x+r.width/2,r.y+r.height*y)));}),true,'delete control must not be covered by the fixed navigation');check('compact application actions and unobscured deletion');
    await page.screenshot({path:'output/browser/applications-'+width+'.png',fullPage:false});
    page.once('dialog',async d=>{assert.equal(d.type(),'confirm');assert.match(d.message(),/신청 기록을 삭제/);await d.dismiss();});await remove.click();assert.deepEqual(await readRecords(),preserved);check('cancel delete retains exact records');
    page.once('dialog',async d=>{assert.equal(d.type(),'confirm');await d.accept();});await remove.click();assert.equal(await form.count(),0);
