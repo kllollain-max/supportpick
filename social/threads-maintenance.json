@@ -4,7 +4,7 @@
   "username": "hid_1004",
   "automation_id": "6aeaefe5fd708191a3e8a67b3667fb8f",
   "configured_at": "2026-11-04T08:42:15.764166+00:00",
-  "mode": "hourly_condition_watch",
+  "mode": "hourly_writer_and_condition_watch",
   "authorization": {
     "date": "2026-11-04",
     "routine_failure_diagnosis_and_repairs_preapproved": true,
@@ -35,7 +35,9 @@
     "42010247594",
     "42021189623",
     "42117967226",
-    "42131131069"
+    "42131131069",
+    "42145922173",
+    "42147790905"
   ],
   "last_health": {
     "unresolved_publications": 0,
@@ -46,7 +48,11 @@
     "source_last_success_at": "2026-11-06T07:09:26.419603+09:00",
     "source_workflow_conclusion": "failure",
     "source_failure_classification": "post_deployment_verification_only; complete collection and trusted Threads input verified",
-    "last_publisher_run_id": "42021189623"
+    "last_publisher_run_id": "42021189623",
+    "writer_queue_ready": 4,
+    "writer_schema": "supportpick.writer.v1",
+    "account_check": "failed_http_400_code_200",
+    "account_check_run_id": "42147790905"
   },
   "incidents": {
     "41796747628": {
@@ -205,7 +211,7 @@
       "next_step": "Allow the next natural Threads slot to use the validated source. Recheck actual publication and report only verified new results. Reopen for a new attempt, restore failure, or publication hold. Public Pages verification is outside Threads repair scope."
     },
     "42131131069": {
-      "status": "hold_account_read_unclassified",
+      "status": "hold_account_access_http_400_code_200",
       "fingerprint": {
         "run_id": "42131131069",
         "run_attempt": 1,
@@ -213,8 +219,8 @@
         "stage": "GET /me before ledger reservation",
         "error": "threads_request_failed_or_ambiguous_no_automatic_retry"
       },
-      "confirmed_cause": "The exact publisher emits this reason on Threads API failure. GET /me is the first such call and the only one before durable reservation. Publication ledger and its file history show no reservation or write for this run. No receipt was logged.",
-      "hypothesis": "Authentication, permission, service or transport failure; the existing error handler suppresses HTTP status and exception class.",
+      "confirmed_cause": "Read-only checks of GET /me returned HTTP 400; the new diagnostic identified numeric API code 200 with no subcode. The account check occurs before reservation. The publication ledger remains at six published records with the same blob SHA; this session created no post or reservation.",
+      "hypothesis": "Permissions or account/app authorization is the leading possibility for API code 200. Exact missing grant or credential condition is not established; token expiry is not confirmed.",
       "remote_history_verified": false,
       "source_generation": "gov24-42117967226-1",
       "source_restore": "success",
@@ -233,13 +239,14 @@
       },
       "attempt_budget": {
         "posts_sent": 0,
-        "workflow_retries": 0,
-        "recovery_attempts": 0
+        "workflow_reruns": 0,
+        "recovery_attempts": 0,
+        "read_only_account_diagnostic_runs": 2
       },
-      "next_step": "Use read-only check-account and inspect exact recent remote history when authorized workflow dispatch is available. Hold this attempt and do not replay. Verify next natural slot independently.",
+      "next_step": "Owner must inspect the existing Threads app/account grants and re-authorize the existing integration if required. If a replacement token is issued, update SUPPORTPICK_THREADS_ACCESS_TOKEN in the existing GitHub repository secret without disclosing it in chat. Verify check-account before any publication recovery. Only resume an unreserved original slot inside its two-hour window; otherwise use the next regular slot.",
       "repair_pr": 31,
       "repair_head_sha": "551b3611e7ff08669a26cb9039621b9582b92edd",
-      "repair_status": "diagnostics_merged_live_account_unverified",
+      "repair_status": "writer_and_recovery_guards_applied_account_access_still_blocked",
       "validation": {
         "local_tests_passed": 38,
         "read_path": {
@@ -269,7 +276,57 @@
         "live_account_and_history_verified": false,
         "merged_files_readback": true
       },
-      "repair_sha": "a18f235b40a96fe24788dd883ffc149ed33e7164"
+      "repair_sha": "a18f235b40a96fe24788dd883ffc149ed33e7164",
+      "account_error": {
+        "http_status": 400,
+        "api_code": 200,
+        "error_subcode": null,
+        "raw_response_or_secret_exposed": false
+      },
+      "diagnostic_runs": [
+        {
+          "run_id": "42145922173",
+          "run_attempt": 1,
+          "mode": "check-account",
+          "head_sha": "c1a156b6fc110485e6152475fd9de8b48120c4de",
+          "conclusion": "failure",
+          "reason": "threads_account_read_http_400",
+          "published": false
+        },
+        {
+          "run_id": "42147790905",
+          "run_attempt": 1,
+          "job_id": "127663381834",
+          "mode": "check-account",
+          "head_sha": "820ca8aeca9ae3e2f16a04a165f4f1e87ca569e7",
+          "conclusion": "failure",
+          "reason": "threads_account_read_http_400_code_200",
+          "published": false
+        }
+      ],
+      "latest_repair_pr": 33,
+      "latest_repair_sha": "f9c281b3183dc8f178d49e0e084e6ff27995224b",
+      "latest_validation": {
+        "publisher_writer_recovery_tests": 104,
+        "full_python_tests": 165,
+        "node_tests": 56,
+        "ci_runs": [
+          {
+            "id": 42147533165,
+            "conclusion": "success"
+          },
+          {
+            "id": 42147533172,
+            "conclusion": "success"
+          }
+        ],
+        "account_http_status": 400,
+        "account_api_code": 200,
+        "account_verified": false,
+        "remote_history_verified": false
+      },
+      "repeat_policy": "Do not rerun the same failed attempt or repeatedly patch this unchanged account response. Preserve the code-200 fingerprint; report again only for changed evidence, owner action, or verified recovery. Natural scheduled runs may observe restored access.",
+      "updated_at": "2026-11-06T02:09:52.967Z"
     }
   },
   "guardrails": {
@@ -406,10 +463,24 @@
       "conclusion": "failure",
       "updated_at": "2026-11-05T23:40:28Z",
       "head_sha": "5c4ecef4e4376d38a0422012de0b368ef341a191"
+    },
+    "42145922173": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "updated_at": "2026-11-06T01:45:37Z",
+      "head_sha": "c1a156b6fc110485e6152475fd9de8b48120c4de"
+    },
+    "42147790905": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "updated_at": "2026-11-06T02:03:19Z",
+      "head_sha": "820ca8aeca9ae3e2f16a04a165f4f1e87ca569e7"
     }
   },
   "last_check": {
-    "result": "threads_account_read_hold_diagnostics_merged",
+    "result": "writer_applied_queue_ready_account_access_hold",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -479,7 +550,7 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-06T09:46:01.488+09:00",
+    "checked_at": "2026-11-06T02:09:52.967Z",
     "changed_run_ids": [],
     "current_main_sha": "a18f235b40a96fe24788dd883ffc149ed33e7164",
     "ranking_policy": {
@@ -662,7 +733,22 @@
       "verification_completed_at": "2026-11-05T20:45:29.723518+09:00",
       "image_url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
       "image_evidence": "Approved rotation image 2 reserved and passed through IMAGE container to the successful natural publisher path; no separate remote media-field GET."
-    }
+    },
+    "account_diagnostic": {
+      "run_id": "42147790905",
+      "job_id": "127663381834",
+      "reason": "threads_account_read_http_400_code_200",
+      "mode": "check-account",
+      "new_publication_attempted": false
+    },
+    "writer_adoption": {
+      "pr": 33,
+      "sha": "f9c281b3183dc8f178d49e0e084e6ff27995224b",
+      "queue_ready": 4,
+      "automation_updated": true,
+      "ci": "success"
+    },
+    "posts_sent_this_check": 0
   },
   "last_reported_publication": {
     "run_id": "42021189623",
@@ -701,10 +787,84 @@
       "real_publication_performed": false,
       "natural_publication_after_change_verified": false,
       "next_step": "Verify on next natural scheduled slots; do not dispatch test or backfill posts."
+    },
+    {
+      "applied_at": "2026-11-06T02:09:52.967Z",
+      "pr": 33,
+      "commit_sha": "f9c281b3183dc8f178d49e0e084e6ff27995224b",
+      "head_sha": "820ca8aeca9ae3e2f16a04a165f4f1e87ca569e7",
+      "scope": "Attached SupportPick master prompt, distinct daily formats, alternating approved images, reviewed writing queue, bounded recovery",
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "automation_id": "6aeaefe5fd708191a3e8a67b3667fb8f",
+      "automation_enabled": true,
+      "automation_schedule": "FREQ=HOURLY;BYMINUTE=45;BYSECOND=0",
+      "normal_publication_slots_kst": [
+        "08:00",
+        "12:00",
+        "16:00",
+        "20:00"
+      ],
+      "daily_main_post_limit": 4,
+      "validation": {
+        "publisher_writer_recovery_tests": 104,
+        "full_python_tests": 165,
+        "node_tests": 56,
+        "ci_runs": [
+          {
+            "id": 42147533165,
+            "conclusion": "success"
+          },
+          {
+            "id": 42147533172,
+            "conclusion": "success"
+          }
+        ],
+        "main_workflow_readback": true,
+        "queue_readback_equal": true,
+        "publication_ledger_unchanged": true
+      },
+      "initial_queue": {
+        "path": "social/threads-writer-queue.json",
+        "commit": "debd90a472fb8561981eb0ae52da60bf54a6dbfc",
+        "ready_count": 4,
+        "entries": [
+          {
+            "slot": "2026-11-06T12:00:00+09:00",
+            "benefit_id": "135200005003",
+            "pattern": "P1",
+            "media": "TEXT",
+            "expires_at": "2026-11-07T10:56:01.550792+09:00"
+          },
+          {
+            "slot": "2026-11-06T16:00:00+09:00",
+            "benefit_id": "161300000088",
+            "pattern": "P5",
+            "media": "IMAGE",
+            "expires_at": "2026-11-07T10:56:01.550792+09:00"
+          },
+          {
+            "slot": "2026-11-06T20:00:00+09:00",
+            "benefit_id": "999000000008",
+            "pattern": "P6",
+            "media": "TEXT",
+            "expires_at": "2026-11-07T10:56:01.550792+09:00"
+          },
+          {
+            "slot": "2026-11-07T08:00:00+09:00",
+            "benefit_id": "WII000000310",
+            "pattern": "P8",
+            "media": "IMAGE",
+            "expires_at": "2026-11-07T10:56:01.550792+09:00"
+          }
+        ]
+      },
+      "actual_publication_performed": false,
+      "natural_publication_after_change_verified": false,
+      "next_step": "Continue scheduled writing and diagnosis. Real publishing remains blocked at account GET /me HTTP 400 code 200; do not claim recovery before account verification and a verified publication receipt."
     }
   ],
   "content_policy": {
-    "version": "profile_cta_no_links_v1",
+    "version": "master_prompt_profile_cta_no_links_v2",
     "post_text_links_allowed": false,
     "reply_text_links_allowed": false,
     "cta": "자세한 사항은 프로필링크 확인",
@@ -712,8 +872,12 @@
     "existing_published_unchanged": true,
     "pending_texts_hashes_preserved": true,
     "legacy_pending_links_action": "HOLD without rewriting or sending",
-    "natural_publication_after_change_verified": true,
-    "verified_run_id": "42021189623"
+    "natural_publication_after_change_verified": false,
+    "new_main_post_count": 1,
+    "new_reply_count": 0,
+    "default_hashtags": false,
+    "exact_cta_once_at_end": true,
+    "prior_policy_verified_run_id": "42021189623"
   },
   "image_policy": {
     "version": "alternate_approved_illustrations_v1",
@@ -742,7 +906,12 @@
     "verified_image_url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
     "verification_completed_at": "2026-11-05T20:45:29.723518+09:00",
     "remote_media_fields_independently_read": false,
-    "both_rotation_images_natural_publication_verified": true
+    "both_rotation_images_natural_publication_verified": true,
+    "writer_image_byte_hash_check": true,
+    "image_review_path": "social/image-review.json",
+    "missing_image_action": "HOLD; never silently replace IMAGE with TEXT",
+    "preserve_alternation_after_unreserved_failure": true,
+    "reviewed_at": "2026-11-06T02:09:52.967Z"
   },
   "last_reported_operation_issue": {
     "run_id": "42117967226",
@@ -751,9 +920,60 @@
   },
   "last_reported_publication_issue": {
     "run_id": "42131131069",
-    "classification": "hold_account_read_unclassified",
-    "repair_pr": 31,
-    "repair_sha": "a18f235b40a96fe24788dd883ffc149ed33e7164",
-    "recorded_at": "2026-11-06T08:45:32.212+09:00"
+    "diagnostic_run_id": "42147790905",
+    "classification": "hold_account_access_http_400_code_200",
+    "repair_pr": 33,
+    "repair_sha": "f9c281b3183dc8f178d49e0e084e6ff27995224b",
+    "recorded_at": "2026-11-06T02:09:52.967Z"
+  },
+  "writer_policy": {
+    "version": "supportpick.writer.v1",
+    "master_prompt_path": "social/supportpick-writer-master-prompt.txt",
+    "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+    "queue_path": "social/threads-writer-queue.json",
+    "normal_publication_slots_kst": [
+      "08:00",
+      "12:00",
+      "16:00",
+      "20:00"
+    ],
+    "daily_main_post_limit": 4,
+    "distinct_patterns_per_kst_day": true,
+    "allowed_patterns": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9"
+    ],
+    "default_patterns": [
+      "P1",
+      "P5",
+      "P6",
+      "P8"
+    ],
+    "recent_history_opening_dedup": 20,
+    "new_posts_main_only": true,
+    "new_reply_count": 0,
+    "legacy_pending_exact_resume_preserved": true,
+    "status_required": "READY",
+    "editorial_length_range": [
+      250,
+      450
+    ],
+    "hard_length_limit": 500,
+    "evidence_required": true,
+    "evidence_max_age_hours": 24,
+    "source_fingerprint_required": true,
+    "higher_ranked_candidate_hold_skip_reasons_required": true,
+    "created_at": "2026-11-06T02:09:52.967Z",
+    "repair_pr": 33,
+    "repair_sha": "f9c281b3183dc8f178d49e0e084e6ff27995224b",
+    "initial_queue_ready": 4,
+    "natural_publication_after_change_verified": false
   }
 }
