@@ -21,6 +21,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -51,13 +52,35 @@ jobs:
         with:
           name: supportpick-runtime-state
           path: runtime-state/
-          retention-days: 3
+          retention-days: 90
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: supportpick-collection-evidence-${{ github.run_id }}-${{ github.run_attempt }}
           path: output/current-run/
-          retention-days: 3
+          retention-days: 90
+      - name: Back up validated operational generation to R2 and rebuild a download
+        id: r2
+        if: steps.collect.outcome == 'success' && steps.bundle.outcome == 'success'
+        continue-on-error: true
+        env:
+          SUPPORTPICK_R2_ACCESS_KEY_ID: ${{ secrets.SUPPORTPICK_R2_ACCESS_KEY_ID }}
+          SUPPORTPICK_R2_SECRET_ACCESS_KEY: ${{ secrets.SUPPORTPICK_R2_SECRET_ACCESS_KEY }}
+          SUPPORTPICK_R2_ENDPOINT: ${{ secrets.SUPPORTPICK_R2_ENDPOINT }}
+          SUPPORTPICK_R2_BUCKET: ${{ secrets.SUPPORTPICK_R2_BUCKET }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+        run: |
+          python -m pip install 'boto3>=1.37,<2'
+          python tools/r2_backup.py backup --expect-source-sha "$GITHUB_SHA" --output output/r2-backup.json
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.r2.outcome != 'skipped'
+        with:
+          name: supportpick-r2-verification
+          path: output/r2-backup.json
+          retention-days: 90
       - name: Decide whether public content actually changed
         id: publish
         if: vars.SUPPORTPICK_SITE_PUBLIC_UPDATE_APPROVED == '1'
@@ -90,4 +113,7 @@ jobs:
           retention-days: 7
       - name: Report collection failure after retaining last good data and status
         if: steps.collect.outcome == 'failure'
+        run: exit 1
+      - name: Report backup failure without discarding collected data or the live site
+        if: steps.r2.outcome == 'failure'
         run: exit 1

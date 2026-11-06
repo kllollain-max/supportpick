@@ -3,9 +3,11 @@ import argparse,hashlib,io,json,os,re,shutil,subprocess,tarfile,tempfile,time
 from datetime import datetime,timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
-from refresh import read_current,verify_snapshot
+from refresh import read_current,verify_snapshot,validate_candidate
 PREFIX='supportpick/v1/'
 LIMIT=600*1024*1024
+IDENTITY=('generation','count','sourceRevision','collectionSucceededAt')
+SECRET_ENV=('SUPPORTPICK_GOV24_SERVICE_KEY','GITHUB_TOKEN','GH_TOKEN','SUPPORTPICK_R2_ACCESS_KEY_ID','SUPPORTPICK_R2_SECRET_ACCESS_KEY','R2_ACCESS_KEY_ID','R2_SECRET_ACCESS_KEY')
 
 def digest(path):
  h=hashlib.sha256()
@@ -17,7 +19,11 @@ def config(env=os.environ):
   values={env[n] for n in names if env.get(n)}
   if len(values)>1:raise ValueError('ambiguous_r2_configuration')
   return next(iter(values),'')
- account=pick('R2_ACCOUNT_ID');endpoint=pick('SUPPORTPICK_R2_ENDPOINT') or ('https://'+account+'.r2.cloudflarestorage.com' if account else '')
+ account=pick('R2_ACCOUNT_ID');explicit=pick('SUPPORTPICK_R2_ENDPOINT')
+ if account and not re.fullmatch(r'[a-f0-9]{32}',account):raise ValueError('invalid_r2_account_id')
+ derived='https://'+account+'.r2.cloudflarestorage.com' if account else ''
+ if explicit and derived and explicit.rstrip('/')!=derived:raise ValueError('ambiguous_r2_configuration:endpoint')
+ endpoint=explicit or derived
  values={'endpoint_url':endpoint,'aws_access_key_id':pick('SUPPORTPICK_R2_ACCESS_KEY_ID','R2_ACCESS_KEY_ID'),'aws_secret_access_key':pick('SUPPORTPICK_R2_SECRET_ACCESS_KEY','R2_SECRET_ACCESS_KEY'),'bucket':pick('SUPPORTPICK_R2_BUCKET','R2_BUCKET_NAME')}
  missing=[k for k,v in values.items() if not v]
  if missing:raise ValueError('missing_r2_settings:'+','.join(missing))
@@ -41,6 +47,10 @@ def package(state,evidence,repo,output):
  if not evidence.is_dir() or not any(p.is_file() for p in evidence.rglob('*')):raise ValueError('backup_evidence_missing')
  pointer,snapshot=read_current(state)
  if not pointer:raise ValueError('missing_valid_state')
+ evidence_report,evidence_feed,evidence_snapshot=validate_candidate(evidence)
+ if (evidence_feed['generation']!=pointer['generation'] or evidence_report['collectionSucceededAt']!=pointer['lastSuccessAt']
+     or len(evidence_feed['items'])!=pointer['count'] or digest(evidence_snapshot/'data.json')!=digest(snapshot/'data.json')):
+  raise ValueError('backup_evidence_identity_mismatch')
  for p in (state/'snapshots').iterdir():verify_snapshot(p)
  sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=repo,text=True).strip()
  if not re.fullmatch(r'[a-f0-9]{40}',sha):raise ValueError('source_revision_invalid')
@@ -53,7 +63,7 @@ def package(state,evidence,repo,output):
    if p.is_symlink():raise ValueError('backup_symlink')
    if p.is_file():files[prefix+'/'+str(p.relative_to(root))]=p
  if len(files)<3 or sum(p.stat().st_size for p in files.values())>LIMIT:raise ValueError('backup_size_limit')
- secrets=[os.environ.get(k,'').encode() for k in ('SUPPORTPICK_GOV24_SERVICE_KEY','GITHUB_TOKEN','SUPPORTPICK_R2_ACCESS_KEY_ID','SUPPORTPICK_R2_SECRET_ACCESS_KEY','R2_ACCESS_KEY_ID','R2_SECRET_ACCESS_KEY') if len(os.environ.get(k,''))>12]
+ secrets=[os.environ.get(k,'').encode() for k in SECRET_ENV if len(os.environ.get(k,''))>12]
  entries={}
  for name,p in files.items():
   if name!='code.bundle':
@@ -82,7 +92,7 @@ def download(client,bucket,key,path,expected):
  finally:body.close()
  if digest(path)!=expected:raise ValueError('download_hash_mismatch')
 
-def restore(archive,destination,rebuild=True):
+def restore(archive,destination,rebuild=True,expected=None):
  dest=Path(destination);dest.mkdir(parents=True,exist_ok=False)
  with tarfile.open(archive,'r:gz') as tar:
   members=tar.getmembers();names=[m.name for m in members]
@@ -92,22 +102,59 @@ def restore(archive,destination,rebuild=True):
    if not m.isfile():raise ValueError('backup_links_or_special_files')
   meta=json.load(tar.extractfile('backup-manifest.json'))
   if not re.fullmatch(r'[a-f0-9]{40}',meta.get('sourceRevision','')):raise ValueError('source_revision_invalid')
+  if expected and any(meta.get(k)!=expected.get(k) for k in IDENTITY):raise ValueError('receipt_restored_identity_mismatch')
   if meta.get('version')!=1 or meta.get('schemaVersion')!=1 or set(names)!={*meta['files'],'backup-manifest.json'}:raise ValueError('backup_manifest_set')
   for name,entry in meta['files'].items():
    raw=tar.extractfile(name).read()
    if len(raw)!=entry['bytes'] or hashlib.sha256(raw).hexdigest()!=entry['sha256']:raise ValueError('backup_file_hash_mismatch')
    target=dest/safe_path(name);target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(raw)
  pointer,_=read_current(dest/'runtime')
- if not pointer or pointer['generation']!=meta['generation'] or pointer['count']!=meta['count']:raise ValueError('restored_state_identity')
+ if not pointer or pointer['generation']!=meta['generation'] or pointer['count']!=meta['count'] or pointer['lastSuccessAt']!=meta['collectionSucceededAt']:raise ValueError('restored_state_identity')
+ for snapshot in (dest/'runtime/snapshots').iterdir():verify_snapshot(snapshot)
  if rebuild:
+  clean_env={k:v for k,v in os.environ.items() if k not in SECRET_ENV}
   code=dest/'code'
-  subprocess.run(['git','clone','--no-checkout',str((dest/'code.bundle').resolve()),str(code)],check=True,capture_output=True)
-  subprocess.run(['git','checkout','--detach',meta['sourceRevision']],cwd=code,check=True,capture_output=True)
+  subprocess.run(['git','clone','--no-checkout',str((dest/'code.bundle').resolve()),str(code)],env=clean_env,check=True,capture_output=True)
+  subprocess.run(['git','checkout','--detach',meta['sourceRevision']],cwd=code,env=clean_env,check=True,capture_output=True)
   actual=subprocess.check_output(['git','rev-parse','HEAD'],cwd=code,text=True).strip()
   if actual!=meta['sourceRevision']:raise ValueError('restored_code_identity')
-  subprocess.run(['python','tools/build.py','--output',str((dest/'site').resolve()),'--state',str((dest/'runtime').resolve()),'--public-base','https://kllollain-max.github.io/supportpick/'],cwd=code,check=True,stdout=subprocess.DEVNULL)
-  subprocess.run(['python','tools/verify_release.py','--output',str((dest/'site').resolve())],cwd=code,check=True,stdout=subprocess.DEVNULL)
+  subprocess.run(['python','tools/build.py','--output',str((dest/'site').resolve()),'--state',str((dest/'runtime').resolve()),'--public-base','https://kllollain-max.github.io/supportpick/'],cwd=code,env=clean_env,check=True,stdout=subprocess.DEVNULL)
+  subprocess.run(['python','tools/verify_release.py','--output',str((dest/'site').resolve()),'--report',str((dest/'site-check.json').resolve())],cwd=code,env=clean_env,check=True,stdout=subprocess.DEVNULL)
+  site=json.loads((dest/'site/site-manifest.json').read_text())
+  if site.get('sourceRevision')!=meta['sourceRevision'] or site.get('generation')!=meta['generation'] or site.get('benefits')!=meta['count']:raise ValueError('rebuilt_site_identity_mismatch')
  return meta
+
+def rebuild_summary(destination):
+ root=Path(destination);site=json.loads((root/'site/site-manifest.json').read_text());checks=json.loads((root/'site-check.json').read_text())
+ return {**{k:site[k] for k in ('sourceRevision','generation','benefits','publicFiles')},**checks}
+
+def validate_receipt(receipt,expected_source=None):
+ if not isinstance(receipt,dict) or receipt.get('version')!=1 or receipt.get('verified') is not True or receipt.get('rebuildVerified') is not True or receipt.get('status','passed')!='passed':raise ValueError('receipt_not_verified')
+ generation=receipt.get('generation','');sha=receipt.get('archiveSha256','');source=receipt.get('sourceRevision','')
+ if not isinstance(generation,str) or not re.fullmatch(r'[A-Za-z0-9_-]{1,80}',generation):raise ValueError('receipt_generation_invalid')
+ if not isinstance(sha,str) or not re.fullmatch(r'[a-f0-9]{64}',sha):raise ValueError('receipt_hash_invalid')
+ if receipt.get('archiveKey')!=PREFIX+'generations/'+generation+'/'+sha+'.tar.gz':raise ValueError('receipt_key_invalid')
+ if not isinstance(source,str) or not re.fullmatch(r'[a-f0-9]{40}',source):raise ValueError('receipt_source_invalid')
+ if type(receipt.get('count')) is not int or receipt['count']<=0:raise ValueError('receipt_count_invalid')
+ for field in ('collectionSucceededAt','createdUTC'):
+  value=receipt.get(field)
+  if field=='createdUTC' and value is None:continue
+  try:
+   parsed=datetime.fromisoformat(value)
+   if parsed.tzinfo is None:raise ValueError()
+  except (TypeError,ValueError):raise ValueError('receipt_time_invalid') from None
+ if expected_source is not None:
+  if not re.fullmatch(r'[a-f0-9]{40}',expected_source):raise ValueError('expected_source_invalid')
+  if source!=expected_source:raise ValueError('receipt_source_expectation_mismatch')
+ return receipt
+
+def restore_verified(client,bucket,receipt,work,expected_source=None):
+ receipt=validate_receipt(receipt,expected_source)
+ work=Path(work);work.mkdir(parents=True,exist_ok=False)
+ # No local archive, artifact, or latest-object fallback is accepted here.
+ download(client,bucket,receipt['archiveKey'],work/'download.tar.gz',receipt['archiveSha256'])
+ meta=restore(work/'download.tar.gz',work/'restored',expected=receipt)
+ return {**receipt,'restoreVerified':True,'downloadSource':'r2','fileHashesVerified':len(meta['files']),'rebuildSummary':rebuild_summary(work/'restored')}
 
 def upload_verify(client,bucket,archive,meta,work,rebuild=True):
  sha=digest(archive);key=PREFIX+'generations/'+meta['generation']+'/'+sha+'.tar.gz'
@@ -115,12 +162,15 @@ def upload_verify(client,bucket,archive,meta,work,rebuild=True):
   with Path(archive).open('rb') as body:client.put_object(Bucket=bucket,Key=key,Body=body,IfNoneMatch='*',ContentType='application/gzip',Metadata={'sha256':sha})
  except Exception as e:
   if getattr(e,'response',{}).get('Error',{}).get('Code') not in ('PreconditionFailed','412'):raise
+ remote=client.head_object(Bucket=bucket,Key=key)
+ if remote.get('ContentLength')!=Path(archive).stat().st_size or remote.get('Metadata',{}).get('sha256')!=sha:raise ValueError('uploaded_object_identity_mismatch')
  work=Path(work);work.mkdir(parents=True,exist_ok=False)
  download(client,bucket,key,work/'download.tar.gz',sha)
  recovered=restore(work/'download.tar.gz',work/'restored',rebuild)
  if recovered!=meta:raise ValueError('roundtrip_manifest_mismatch')
- receipt={'version':1,'verified':True,'archiveKey':key,'archiveSha256':sha,'generation':meta['generation'],'collectionSucceededAt':meta['collectionSucceededAt'],'sourceRevision':meta['sourceRevision'],'count':meta['count'],'rebuildVerified':rebuild}
+ receipt={'version':1,'verified':True,'archiveKey':key,'archiveSha256':sha,'generation':meta['generation'],'collectionSucceededAt':meta['collectionSucceededAt'],'createdUTC':meta['createdUTC'],'sourceRevision':meta['sourceRevision'],'count':meta['count'],'rebuildVerified':rebuild,'objectBytes':remote['ContentLength'],'objectETag':remote.get('ETag'),'fileHashesVerified':len(meta['files']),'downloadSource':'r2'}
  if rebuild:
+  receipt['rebuildSummary']=rebuild_summary(work/'restored')
   payload=json.dumps(receipt,sort_keys=True).encode();receipt_key=PREFIX+'verified/'+hashlib.sha256(payload).hexdigest()+'.json'
   try:client.put_object(Bucket=bucket,Key=receipt_key,Body=payload,IfNoneMatch='*',ContentType='application/json')
   except Exception as e:
@@ -136,31 +186,37 @@ def latest(client,bucket):
    try:r=json.loads(body.read(20001))
    finally:body.close()
    if r.get('verified') and r.get('rebuildVerified') and r.get('version')==1:
-    if not re.fullmatch(r'supportpick/v1/generations/[A-Za-z0-9_-]+/[a-f0-9]{64}\.tar\.gz',r.get('archiveKey','')):raise ValueError('receipt_key_invalid')
-    receipts.append(r)
+    receipts.append(validate_receipt(r))
     if len(receipts)>100000:raise ValueError('receipt_count_limit')
  if not receipts:raise ValueError('no_verified_backup')
  # No mutable latest pointer: a late old upload can never roll back this ordering.
- return max(receipts,key=lambda r:(datetime.fromisoformat(r['collectionSucceededAt']),r['generation'],r['sourceRevision']))
+ return max(receipts,key=lambda r:(datetime.fromisoformat(r['collectionSucceededAt']),datetime.fromisoformat(r.get('createdUTC',r['collectionSucceededAt'])),r['generation'],r['sourceRevision']))
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('action',choices=['backup','restore-latest']);p.add_argument('--state',default='runtime-state');p.add_argument('--evidence',default='output/current-run');p.add_argument('--output',required=True);p.add_argument('--restore-state-to');a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('action',choices=['backup','restore-latest','restore-exact']);p.add_argument('--state',default='runtime-state');p.add_argument('--evidence',default='output/current-run');p.add_argument('--output',required=True);p.add_argument('--restore-state-to');p.add_argument('--receipt');p.add_argument('--expect-source-sha');a=p.parse_args()
  report={'status':'failed'}
  try:
   client,bucket=client_and_bucket()
   with tempfile.TemporaryDirectory() as temp:
    root=Path(temp)
    if a.action=='backup':
-    archive,meta=package(a.state,a.evidence,Path.cwd(),root/'package');report=upload_verify(client,bucket,archive,meta,root/'roundtrip')
+    archive,meta=package(a.state,a.evidence,Path.cwd(),root/'package')
+    if a.expect_source_sha and (not re.fullmatch(r'[a-f0-9]{40}',a.expect_source_sha) or meta['sourceRevision']!=a.expect_source_sha):raise ValueError('backup_source_expectation_mismatch')
+    report=upload_verify(client,bucket,archive,meta,root/'roundtrip')
    else:
-    receipt=latest(client,bucket);download(client,bucket,receipt['archiveKey'],root/'archive.tar.gz',receipt['archiveSha256']);meta=restore(root/'archive.tar.gz',root/'recovery')
-    if any(meta[k]!=receipt.get(k) for k in ('generation','count','sourceRevision','collectionSucceededAt')):raise ValueError('receipt_restored_identity_mismatch')
-    if a.restore_state_to:shutil.copytree(root/'recovery/runtime',a.restore_state_to)
-    report={**receipt,'restoreVerified':True}
+    if a.action=='restore-exact':
+     if not a.receipt or not a.expect_source_sha:raise ValueError('exact_restore_requires_receipt_and_source')
+     receipt_path=Path(a.receipt)
+     if receipt_path.stat().st_size>20000:raise ValueError('receipt_size_limit')
+     receipt=json.loads(receipt_path.read_text())
+    else:receipt=latest(client,bucket)
+    report=restore_verified(client,bucket,receipt,root/'recovery',a.expect_source_sha)
+    if a.restore_state_to:shutil.copytree(root/'recovery/restored/runtime',a.restore_state_to)
   report['status']='passed'
  except Exception as e:
   report['errorCode']=str(e) if isinstance(e,ValueError) and re.fullmatch(r'[a-zA-Z0-9_:,.-]{1,180}',str(e)) else type(e).__name__
-  report['serviceError']=getattr(e,'response',{}).get('Error',{}).get('Code','')
+  service_error=getattr(e,'response',{}).get('Error',{}).get('Code','')
+  report['serviceError']=service_error if isinstance(service_error,str) and re.fullmatch(r'[A-Za-z0-9_.-]{0,80}',service_error) else 'unclassified'
  finally:
   out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps(report,indent=2));print(json.dumps(report))
  if report['status']!='passed':raise SystemExit(1)

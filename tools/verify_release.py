@@ -3,7 +3,8 @@ import argparse
 import hashlib
 import json
 import re
-from publication import wait_manifest, verify_data_release, read_public, PublicationError
+import time
+from publication import verify_data_release, read_public, PublicationError
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from html.parser import HTMLParser
@@ -21,11 +22,13 @@ NS = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
 class Document(HTMLParser):
     def __init__(self):
         super().__init__(); self.h1 = 0; self.meta = {}; self.canonical = []
-        self.jsonld = []; self.active = None; self.buffer = ''
+        self.jsonld = []; self.active = None; self.buffer = ''; self.robots = []
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
         if tag == 'h1': self.h1 += 1
         if tag == 'meta': self.meta[a.get('name') or a.get('property')] = a.get('content')
+        if tag == 'meta' and a.get('name', '').lower() in {'robots', 'googlebot'}:
+            self.robots.append(a.get('content', '').lower())
         if tag == 'link' and a.get('rel') == 'canonical': self.canonical.append(a.get('href'))
         if tag == 'script' and a.get('type') == 'application/ld+json':
             self.active = True; self.buffer = ''
@@ -40,6 +43,8 @@ def inspect(html, url):
     doc = Document(); doc.feed(html)
     if doc.canonical != [url]: raise ValueError('canonical_mismatch:' + url)
     if doc.meta.get('robots') != 'index,follow': raise ValueError('not_indexable:' + url)
+    if any({'noindex', 'none'} & set(re.split(r'[\s,]+', value)) for value in doc.robots):
+        raise ValueError('conflicting_noindex:' + url)
     if not doc.meta.get('description') or not doc.meta.get('og:title'): raise ValueError('missing_metadata:' + url)
     if doc.h1 != 1: raise ValueError('invalid_h1:' + url)
     if '/benefits/' in url and '/page/' not in url and url != BASE + 'benefits/':
@@ -87,6 +92,9 @@ def fetch_html(entry, url_set):
             if hashlib.sha256(raw).hexdigest() != digest:
                 return url, 'content_hash_mismatch', False
             if url in url_set:
+                values = response.headers.get_all('X-Robots-Tag', []) if hasattr(response, 'headers') else []
+                if any({'noindex', 'none'} & set(re.split(r'[\s,]+', value.lower())) for value in values):
+                    return url, 'header_noindex', False
                 inspect(raw.decode('utf-8'), url)
             return url, None, False
     except HTTPError as error:
@@ -122,12 +130,46 @@ def verify_targets(targets, url_set, workers):
             'recoveredAfterRetry':recovered,'failures':remaining}
 
 
+def read_public_manifest():
+    request = Request(BASE + 'site-manifest.json', headers={'Cache-Control': 'no-cache'})
+    with urlopen(request, timeout=30) as response:
+        return json.load(response)
+
+
+def wait_for_public_manifest(local, expected_revision, expected_generation, observations=None):
+    revision = expected_revision or local['sourceRevision']
+    generation = expected_generation or local['generation']
+    if (local['sourceRevision'], local['generation']) != (revision, generation):
+        raise ValueError('local_release_expectation_mismatch')
+    observations = observations if observations is not None else []
+    for attempt in (1, 2):
+        public = read_public_manifest()
+        observed = (public['sourceRevision'], public['generation'])
+        observation = {'manifestAttempt': attempt,
+                       'expectedRevision': revision, 'expectedGeneration': generation,
+                       'observedRevision': observed[0], 'observedGeneration': observed[1],
+                       'observedFingerprint': public.get('contentFingerprint')}
+        observations.append(observation)
+        print(json.dumps(observation), flush=True)
+        if observed == (revision, generation):
+            if public['files'] != local['files']:
+                raise PublicationError('public_manifest_files_mismatch', {'stage': 'publication_barrier', 'observations': observations, 'failed': 1})
+            if public.get('contentFingerprint') != local.get('contentFingerprint'):
+                raise PublicationError('public_manifest_fingerprint_mismatch', {'stage': 'publication_barrier', 'observations': observations, 'failed': 1})
+            return public
+        if attempt == 1:
+            # Preserve main's single 30-second propagation wait. A matching
+            # generation with wrong bytes is an error, never a retry success.
+            time.sleep(30)
+    code = 'public_revision_mismatch' if observed[0] != revision else 'public_generation_mismatch'
+    raise PublicationError(code, {'stage': 'publication_barrier', 'observations': observations, 'failed': 1})
+
+
 def live_check(output, workers=6, expected_revision=None, expected_generation=None):
     output = Path(output)
     local = json.loads((output / 'site-manifest.json').read_text())
-    if expected_revision and local.get('sourceRevision')!=expected_revision: raise ValueError('local_revision_expectation_mismatch')
-    if expected_generation and local.get('generation')!=expected_generation: raise ValueError('local_generation_expectation_mismatch')
-    expected,observations=wait_manifest(local)
+    observations = []
+    expected = wait_for_public_manifest(local, expected_revision, expected_generation, observations)
     consistency=verify_data_release(expected)
     for name in ('app.js','core.js','detail.js','styles.css'):
         if hashlib.sha256(read_public(name)).hexdigest()!=local['files'].get(name):
