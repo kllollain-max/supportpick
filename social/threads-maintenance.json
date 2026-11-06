@@ -671,7 +671,7 @@
     }
   },
   "last_check": {
-    "result": "natural_writer_text_publication_verified",
+    "result": "ready_queue_revalidated_no_new_threads_result",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -730,10 +730,8 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-06T20:50:34.000+09:00",
-    "changed_run_ids": [
-      "42211895508"
-    ],
+    "checked_at": "2026-11-06T21:51:41.000+09:00",
+    "changed_run_ids": [],
     "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
@@ -806,7 +804,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 4
     },
-    "next_step": "Recheck all future drafts at actual publication with fresh collection and ledger. Refresh expiring source evidence if the 16:00 or 20:00 slot is delayed beyond draft expiration.",
+    "next_step": "Verify fresh source and publication state before the November 7 08:00 IMAGE slot. Refresh factual/image evidence if a future draft risks expiring before an eligible delayed send.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
@@ -987,14 +985,14 @@
       "schedule": "hourly at minute 45"
     },
     "writer_queue_recheck": {
-      "checked_at": "2026-11-06T20:50:34.000+09:00",
+      "checked_at": "2026-11-06T21:51:41.000+09:00",
       "queue_blob_sha": "6e802f4b3640eb747bc4411b68d746a6b7badbda",
       "previous_queue_blob_sha": "efbc7f74975bbe1659c6a6c49bfa27ac3451d910",
       "queue_commit_sha": "5749f0c8578fdee839a28a843aabca708b6a772b",
       "write_readback_identical": true,
       "ready_count": 4,
-      "added_count": 1,
-      "reused_existing_ready_count": 3,
+      "added_count": 0,
+      "reused_existing_ready_count": 4,
       "source_generation": "gov24-42201890585-1",
       "validate_ready_entry_and_preview": "passed at simulated slot times",
       "future_slots_require_source_recheck": true,
@@ -1031,7 +1029,8 @@
           "status": "READY",
           "expires_at": "2026-11-07T20:49:25.698098+09:00"
         }
-      ]
+      ],
+      "queue_mutated_this_check": false
     },
     "last_read_only_account_check": {
       "run_id": "42180307041",
