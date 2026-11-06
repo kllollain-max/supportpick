@@ -737,7 +737,7 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-06T13:39:22.656+09:00",
+    "checked_at": "2026-11-06T14:18:08.768+09:00",
     "changed_run_ids": [],
     "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "ranking_policy": {
@@ -784,8 +784,8 @@
     "run_list_scan": {
       "pages": 2,
       "per_page": 100,
-      "total_count": 135,
-      "returned": 135,
+      "total_count": 169,
+      "returned": 169,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
@@ -994,7 +994,7 @@
       "source_generation": "gov24-42117967226-1",
       "approved_images_sha256_rechecked": true,
       "future_slots_require_source_recheck": true,
-      "checked_at": "2026-11-06T13:39:22.656+09:00",
+      "checked_at": "2026-11-06T14:18:08.768+09:00",
       "drafts": [
         {
           "slot": "2026-11-06T16:00:00+09:00",
