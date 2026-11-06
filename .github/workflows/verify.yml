@@ -17,6 +17,9 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: read
+      actions: read
     steps:
       - uses: actions/checkout@v4
         with:
@@ -40,6 +43,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Restore latest validated operational data for the candidate checks
+        if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python tools/restore_latest_state.py
       - run: python -m unittest discover -s tests -p 'test_*.py' -v
       - run: node --test tests/*.test.cjs
       - run: python tools/build.py --output dist --public-base https://kllollain-max.github.io/supportpick/
