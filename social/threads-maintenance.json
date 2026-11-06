@@ -39,18 +39,19 @@
     "42145922173",
     "42147790905",
     "42150698993",
-    "42152164281"
+    "42152164281",
+    "42157908541"
   ],
   "last_health": {
     "unresolved_publications": 0,
-    "published_benefits": 6,
+    "published_benefits": 7,
     "source_run_id": "42117967226",
     "source_result": "success",
     "source_count": 10942,
     "source_last_success_at": "2026-11-06T07:09:26.419603+09:00",
     "source_workflow_conclusion": "failure",
     "source_failure_classification": "post_deployment_verification_only; complete collection and trusted Threads input verified",
-    "last_publisher_run_id": "42021189623",
+    "last_publisher_run_id": "42157908541",
     "writer_queue_ready": 4,
     "writer_schema": "supportpick.writer.v1",
     "account_check": "verified_http_200",
@@ -216,7 +217,7 @@
       "next_step": "Allow the next natural Threads slot to use the validated source. Recheck actual publication and report only verified new results. Reopen for a new attempt, restore failure, or publication hold. Public Pages verification is outside Threads repair scope."
     },
     "42131131069": {
-      "status": "account_access_restored_publication_pending",
+      "status": "resolved_next_natural_publication_verified",
       "fingerprint": {
         "run_id": "42131131069",
         "run_attempt": 1,
@@ -250,7 +251,7 @@
         "bounded_diagnostic_runs": 1,
         "bounded_diagnostic_gets": 5
       },
-      "next_step": "Use the next regular KST 12:00 slot with its reviewed queue entry. The 08:00 missed slot is outside its two-hour window and must not be backfilled. Verify the next natural publication receipt/URL before declaring end-to-end publication recovery. Continue hourly writing and recovery watch without further owner login or token replacement for this resolved access issue.",
+      "next_step": "Monitor subsequent normal slots; reopen only on new evidence.",
       "repair_pr": 31,
       "repair_head_sha": "551b3611e7ff08669a26cb9039621b9582b92edd",
       "repair_status": "account_access_verified_waiting_next_regular_publication",
@@ -455,7 +456,15 @@
         }
       ],
       "account_issue_resolved": true,
-      "resolved_account_access_at": "2026-11-06T02:44:01Z"
+      "resolved_account_access_at": "2026-11-06T02:44:01Z",
+      "resolution": "Read-only diagnostic confirmed restored account access, then the next natural regular slot published and verified a single post. The missed morning slot was not replayed.",
+      "subsequent_publication": {
+        "run_id": "42157908541",
+        "main_id": "18134879377799245",
+        "url": "https://www.threads.com/@hid_1004/post/DfYqaKKm2Oo",
+        "verification_completed_at": "2026-11-06T12:40:54.5990097+09:00",
+        "recorded_at": "2026-11-06T13:12:20.787+09:00"
+      }
     }
   },
   "guardrails": {
@@ -620,26 +629,61 @@
       "conclusion": "success",
       "updated_at": "2026-11-06T02:44:05Z",
       "head_sha": "afb7e4f026cacb0cf0a73ccaee79beff546b4ae8"
+    },
+    "42157908541": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-06T03:40:59Z",
+      "head_sha": "bd40270d6a950c1a7218d8cdeec3b8dec9b3d781"
     }
   },
   "last_check": {
-    "result": "account_access_restored_next_regular_slot_ready",
+    "result": "natural_writer_publication_verified",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
-      "run_id": "42131131069",
+      "run_id": "42157908541",
+      "main_id": "18134879377799245",
+      "url": "https://www.threads.com/@hid_1004/post/DfYqaKKm2Oo",
+      "verification_completed_at": "2026-11-06T12:40:54.5990097+09:00",
+      "recorded_at": "2026-11-06T13:12:20.787+09:00",
       "run_attempt": 1,
-      "job_id": "127607724152",
-      "head_sha": "5c4ecef4e4376d38a0422012de0b368ef341a191",
+      "job_id": "127696358815",
+      "head_sha": "bd40270d6a950c1a7218d8cdeec3b8dec9b3d781",
       "event": "schedule",
-      "conclusion": "failure",
-      "published": "unconfirmed",
-      "artifact_id": "13463227014",
-      "artifact_sha256": "760a0c69c7c911c183a1e2f6c5275cbbb20feba097ba79a2407571f6961318fe",
-      "artifact_contents_verified": true,
+      "conclusion": "success",
+      "published": true,
+      "replies": 0,
+      "benefit_id": "135200005003",
+      "content_hash": "0a9de6fb8a2b7db49c0aafc18f8272b66009f81da2b522e80fcf512868d48d8b",
+      "selection": {
+        "policy": "gov24_views_desc_v1",
+        "basis": "보조금24 누적 조회수",
+        "views": 685652,
+        "source_checked_at": "2026-11-06T07:05:02.411798+09:00",
+        "note": "실시간 검색량·신청자 수가 아닌 공식 API 누적 조회수 기준",
+        "candidate_rank": 2,
+        "higher_ranked_exclusions": [
+          {
+            "benefit_id": "161300000103",
+            "views": 724891,
+            "decision": "HOLD",
+            "reason": "국가 공식 API는 상시신청으로 안내하지만 지자체별 예산 소진시 조기마감. 특정 지역·현재 잔여예산·접수 가능 여부를 확정할 직접 근거를 이번 회차에 확보하지 못해 신규 신청 안내에서 보류했다. 사업 전체가 종료됐다는 뜻은 아니다.",
+            "sources": [
+              "https://easylaw.go.kr/CSP/OnhunqueansInfoRetrieve.laf?onhunqnaAstSeq=84&onhunqueSeq=6445",
+              "https://young.jinju.go.kr/young/business/read/75"
+            ]
+          }
+        ]
+      },
       "source_generation": "gov24-42117967226-1",
-      "failure_stage": "GET /me",
-      "reason": "threads_request_failed_or_ambiguous_no_automatic_retry"
+      "pattern": "P1",
+      "media_turn": "TEXT",
+      "artifact_id": "13475656617",
+      "artifact_sha256": "0065c602cd962650fe1a83b0c72bce53fd5cf97802c83f190917ac3c34ad83fc",
+      "artifact_contents_verified": true,
+      "published_at": "2026-11-06T12:40:10.461460+09:00"
     },
     "latest_source": {
       "run_id": "42117967226",
@@ -685,7 +729,7 @@
       },
       "actual_read_path_verified": true
     },
-    "publication_ledger_sha": "d8ab0b3facc3de3321c28d483cf6dec05e808431",
+    "publication_ledger_sha": "2e0e2cd58dff25c5857f041a84eda49c31e83190",
     "workflow_blob_shas": {
       "threads": "b9eca15d9b506189b513abb15281e77a5cdc3ab5",
       "source": "ce74fe03afd06f59f1d38f2e297fe9a78bbcf604"
@@ -693,8 +737,10 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-06T12:08:39.018+09:00",
-    "changed_run_ids": [],
+    "checked_at": "2026-11-06T13:12:20.787+09:00",
+    "changed_run_ids": [
+      "42157908541"
+    ],
     "current_main_sha": "bd40270d6a950c1a7218d8cdeec3b8dec9b3d781",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
@@ -740,8 +786,8 @@
     "run_list_scan": {
       "pages": 2,
       "per_page": 100,
-      "total_count": 131,
-      "returned": 131,
+      "total_count": 135,
+      "returned": 135,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
@@ -767,7 +813,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 4
     },
-    "next_step": "Use the next regular KST 12:00 slot with its reviewed queue entry. The 08:00 missed slot is outside its two-hour window and must not be backfilled. Verify the next natural publication receipt/URL before declaring end-to-end publication recovery. Continue hourly writing and recovery watch without further owner login or token replacement for this resolved access issue.",
+    "next_step": "Next reviewed regular slot is 16:00 KST, P5 IMAGE. Verify current source, queue, and approved asset at send; retain subsequent P6 TEXT and P8 IMAGE only while valid.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
@@ -817,10 +863,10 @@
       "next_step": "Verify on next natural scheduled slots; do not dispatch test or backfill posts."
     },
     "current_slot_observation": {
-      "checked_at": "2026-11-06T12:08:39.018+09:00",
       "slot": "2026-11-06T12:00:00+09:00",
-      "classification": "regular_run_not_observed_within_grace_window",
-      "remote_run_started": false,
+      "classification": "scheduled_publication_completed_verified",
+      "run_id": "42157908541",
+      "remote_run_started": true,
       "manual_publication_dispatched": false
     },
     "latest_source_execution": {
@@ -840,7 +886,7 @@
     },
     "current_day_publication_count": {
       "date_kst": "2026-11-06",
-      "count": 0,
+      "count": 1,
       "limit": 4
     },
     "previous_verified_publisher": {
@@ -945,22 +991,19 @@
     },
     "writer_queue_recheck": {
       "queue_blob_sha": "a65067246aeeb2389b49cdfaf629ae0ba2f2d7a4",
-      "ready_count": 4,
-      "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "ready_count": 3,
+      "reused_existing_ready": true,
       "source_generation": "gov24-42117967226-1",
-      "source_zip_digest_verified": true,
       "approved_images_sha256_rechecked": true,
-      "validator": "main preview / validate_ready_entry",
-      "future_slots_require_source_recheck": true,
-      "reused_existing_ready": true
+      "future_slots_require_source_recheck": true
     }
   },
   "last_reported_publication": {
-    "run_id": "42021189623",
-    "main_id": "18114999364875745",
-    "url": "https://www.threads.com/@hid_1004/post/DfW84ZbFQQ3",
-    "verification_completed_at": "2026-11-05T20:45:29.723518+09:00",
-    "recorded_at": "2026-11-05T20:55:00+09:00"
+    "run_id": "42157908541",
+    "main_id": "18134879377799245",
+    "url": "https://www.threads.com/@hid_1004/post/DfYqaKKm2Oo",
+    "verification_completed_at": "2026-11-06T12:40:54.5990097+09:00",
+    "recorded_at": "2026-11-06T13:12:20.787+09:00"
   },
   "policy_changes": [
     {
