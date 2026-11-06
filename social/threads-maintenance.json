@@ -737,11 +737,9 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-06T13:12:20.787+09:00",
-    "changed_run_ids": [
-      "42157908541"
-    ],
-    "current_main_sha": "bd40270d6a950c1a7218d8cdeec3b8dec9b3d781",
+    "checked_at": "2026-11-06T13:39:22.656+09:00",
+    "changed_run_ids": [],
+    "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
       "basis": "보조금24 누적 조회수",
@@ -995,7 +993,37 @@
       "reused_existing_ready": true,
       "source_generation": "gov24-42117967226-1",
       "approved_images_sha256_rechecked": true,
-      "future_slots_require_source_recheck": true
+      "future_slots_require_source_recheck": true,
+      "checked_at": "2026-11-06T13:39:22.656+09:00",
+      "drafts": [
+        {
+          "slot": "2026-11-06T16:00:00+09:00",
+          "benefit_id": "161300000088",
+          "status": "READY",
+          "pattern": "P5",
+          "media_turn": "IMAGE",
+          "source_recheck_required_at_publish": true,
+          "reason": null
+        },
+        {
+          "slot": "2026-11-06T20:00:00+09:00",
+          "benefit_id": "999000000008",
+          "status": "READY",
+          "pattern": "P6",
+          "media_turn": "TEXT",
+          "source_recheck_required_at_publish": true,
+          "reason": null
+        },
+        {
+          "slot": "2026-11-07T08:00:00+09:00",
+          "benefit_id": "WII000000310",
+          "status": "READY",
+          "pattern": "P8",
+          "media_turn": "IMAGE",
+          "source_recheck_required_at_publish": true,
+          "reason": null
+        }
+      ]
     }
   },
   "last_reported_publication": {
