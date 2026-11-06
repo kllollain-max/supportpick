@@ -655,7 +655,7 @@
     }
   },
   "last_check": {
-    "result": "four_future_writer_slots_preview_passed",
+    "result": "ready_queue_revalidated_no_new_threads_result",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -775,7 +775,7 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-06T17:48:35.000+09:00",
+    "checked_at": "2026-11-06T19:15:47.000+09:00",
     "changed_run_ids": [],
     "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "ranking_policy": {
@@ -849,7 +849,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 4
     },
-    "next_step": "Keep 20:00 TEXT and future 08:00 IMAGE, 12:00 TEXT, 16:00 IMAGE only while eligible. Refresh validated collection before tomorrow's slots, verify actual reservation/image order, review any source changes, and refresh 16:00 evidence before its expiration if delayed. Check the next natural scheduled result; no backlog or duplicate send.",
+    "next_step": "Check natural 20:00 slot and next Operations execution. Require fresh collection and candidate at actual publication, especially tomorrow's slots. Keep validated drafts while their source fingerprint, media turn and evidence remain valid.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
@@ -868,7 +868,8 @@
       "publication_ledger_unchanged": true,
       "restore_and_snapshot_validation_unchanged": true,
       "source_snapshot_verified_now": true,
-      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918"
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "artifact_digests_matched": true
     },
     "latest_policy_change": {
       "applied_at": "2026-11-04T23:10:49+09:00",
@@ -1023,14 +1024,14 @@
       "schedule": "hourly at minute 45"
     },
     "writer_queue_recheck": {
-      "checked_at": "2026-11-06T17:48:35.000+09:00",
+      "checked_at": "2026-11-06T19:15:47.000+09:00",
       "queue_blob_sha": "efbc7f74975bbe1659c6a6c49bfa27ac3451d910",
       "previous_queue_blob_sha": "a65067246aeeb2389b49cdfaf629ae0ba2f2d7a4",
       "queue_commit_sha": "30a1de3693701721038013f9ec0eba93f75d80f4",
       "write_readback_identical": true,
       "ready_count": 4,
-      "added_count": 2,
-      "reused_existing_ready_count": 2,
+      "added_count": 0,
+      "reused_existing_ready_count": 4,
       "published_history_preserved": true,
       "drafts": [
         {
@@ -1082,7 +1083,8 @@
       "approved_images_sha256_rechecked": true,
       "validate_ready_entry_and_preview": "passed at simulated slot times",
       "future_slots_require_source_recheck": true,
-      "actual_publication_performed": false
+      "actual_publication_performed": false,
+      "queue_mutated_this_check": false
     },
     "last_read_only_account_check": {
       "run_id": "42180307041",
@@ -1092,6 +1094,14 @@
       "artifact_sha256": "48e80e307ca400da84afdd77e657bd43bbfe6c7e776cd3239fb4bb0208302226",
       "status": "account_verified",
       "published": false
+    },
+    "source_schedule_observation": {
+      "expected_slot": "2026-11-06T18:20:00+09:00",
+      "classification": "scheduled_run_not_visible_in_actions_at_check",
+      "latest_completed_run_id": "42117967226",
+      "latest_verified_generation": "gov24-42117967226-1",
+      "fresh_at_check": true,
+      "dispatch_performed": false
     }
   },
   "last_reported_publication": {
