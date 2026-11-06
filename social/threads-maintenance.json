@@ -478,11 +478,9 @@
     },
     "recovery_repeated": false,
     "posts_sent": 0,
-    "code_changes": 2,
-    "checked_at": "2026-11-06T08:45:32.212+09:00",
-    "changed_run_ids": [
-      "42131131069"
-    ],
+    "code_changes": 0,
+    "checked_at": "2026-11-06T09:46:01.488+09:00",
+    "changed_run_ids": [],
     "current_main_sha": "a18f235b40a96fe24788dd883ffc149ed33e7164",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
@@ -528,8 +526,8 @@
     "run_list_scan": {
       "pages": 2,
       "per_page": 100,
-      "total_count": 105,
-      "returned": 105,
+      "total_count": 107,
+      "returned": 107,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
