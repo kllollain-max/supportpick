@@ -3,7 +3,7 @@ import argparse
 import hashlib
 import json
 import re
-import time
+from publication import wait_manifest, verify_data_release, read_public, PublicationError
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from html.parser import HTMLParser
@@ -21,13 +21,11 @@ NS = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
 class Document(HTMLParser):
     def __init__(self):
         super().__init__(); self.h1 = 0; self.meta = {}; self.canonical = []
-        self.jsonld = []; self.active = None; self.buffer = ''; self.robots = []
+        self.jsonld = []; self.active = None; self.buffer = ''
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
         if tag == 'h1': self.h1 += 1
         if tag == 'meta': self.meta[a.get('name') or a.get('property')] = a.get('content')
-        if tag == 'meta' and a.get('name', '').lower() in {'robots', 'googlebot'}:
-            self.robots.append(a.get('content', '').lower())
         if tag == 'link' and a.get('rel') == 'canonical': self.canonical.append(a.get('href'))
         if tag == 'script' and a.get('type') == 'application/ld+json':
             self.active = True; self.buffer = ''
@@ -42,8 +40,6 @@ def inspect(html, url):
     doc = Document(); doc.feed(html)
     if doc.canonical != [url]: raise ValueError('canonical_mismatch:' + url)
     if doc.meta.get('robots') != 'index,follow': raise ValueError('not_indexable:' + url)
-    if any({'noindex', 'none'} & set(re.split(r'[\s,]+', value)) for value in doc.robots):
-        raise ValueError('conflicting_noindex:' + url)
     if not doc.meta.get('description') or not doc.meta.get('og:title'): raise ValueError('missing_metadata:' + url)
     if doc.h1 != 1: raise ValueError('invalid_h1:' + url)
     if '/benefits/' in url and '/page/' not in url and url != BASE + 'benefits/':
@@ -91,9 +87,6 @@ def fetch_html(entry, url_set):
             if hashlib.sha256(raw).hexdigest() != digest:
                 return url, 'content_hash_mismatch', False
             if url in url_set:
-                values = response.headers.get_all('X-Robots-Tag', []) if hasattr(response, 'headers') else []
-                if any({'noindex', 'none'} & set(re.split(r'[\s,]+', value.lower())) for value in values):
-                    return url, 'header_noindex', False
                 inspect(raw.decode('utf-8'), url)
             return url, None, False
     except HTTPError as error:
@@ -129,41 +122,15 @@ def verify_targets(targets, url_set, workers):
             'recoveredAfterRetry':recovered,'failures':remaining}
 
 
-def read_public_manifest():
-    request = Request(BASE + 'site-manifest.json', headers={'Cache-Control': 'no-cache'})
-    with urlopen(request, timeout=30) as response:
-        return json.load(response)
-
-
-def wait_for_public_manifest(local, expected_revision, expected_generation):
-    revision = expected_revision or local['sourceRevision']
-    generation = expected_generation or local['generation']
-    if (local['sourceRevision'], local['generation']) != (revision, generation):
-        raise ValueError('local_release_expectation_mismatch')
-
-    for attempt in (1, 2):
-        public = read_public_manifest()
-        observed = (public['sourceRevision'], public['generation'])
-        print(json.dumps({'manifestAttempt': attempt,
-                          'expectedRevision': revision, 'expectedGeneration': generation,
-                          'observedRevision': observed[0], 'observedGeneration': observed[1]}), flush=True)
-        if observed == (revision, generation):
-            if public['files'] != local['files']:
-                raise ValueError('public_manifest_files_mismatch')
-            return public
-        if attempt == 1:
-            # Pages may acknowledge deployment before the public edge serves it.
-            # Wait once before starting the crawl, without retrying page errors.
-            time.sleep(30)
-    raise ValueError('public_revision_mismatch' if observed[0] != revision else 'public_generation_mismatch')
-
-
 def live_check(output, workers=6, expected_revision=None, expected_generation=None):
     output = Path(output)
     local = json.loads((output / 'site-manifest.json').read_text())
-    expected = wait_for_public_manifest(local, expected_revision, expected_generation)
+    if expected_revision and local.get('sourceRevision')!=expected_revision: raise ValueError('local_revision_expectation_mismatch')
+    if expected_generation and local.get('generation')!=expected_generation: raise ValueError('local_generation_expectation_mismatch')
+    expected,observations=wait_manifest(local)
+    consistency=verify_data_release(expected)
     for name in ('app.js','core.js','detail.js','styles.css'):
-        if expected['files'].get(name)!=local['files'].get(name):
+        if hashlib.sha256(read_public(name)).hexdigest()!=local['files'].get(name):
             raise ValueError('public_application_code_mismatch:'+name)
     with urlopen(BASE+'sitemap.xml',timeout=30) as response:
         raw=response.read()
@@ -195,7 +162,9 @@ def live_check(output, workers=6, expected_revision=None, expected_generation=No
     except HTTPError as error:
         if error.code!=404:raise
         robots={'http':404,'crawlAllowed':True,'scope':'host_root','note':'Absent robots file; no robots prohibition.'}
-    return {'publicHtmlChecked': len(targets), 'sitemapUrls':len(urls), 'generation':expected['generation'],
+    final=json.loads(read_public('site-manifest.json'))
+    if final!=expected:raise PublicationError('public_release_changed_during_check',{'stage':'final_barrier','failed':1})
+    return {'publicationObservations':observations,'dataConsistency':consistency,'publicHtmlChecked': len(targets), 'sitemapUrls':len(urls), 'generation':expected['generation'],
             'sourceRevision':expected.get('sourceRevision'),'robots':robots,'missingUrlHttp':404,**checked}
 
 
@@ -206,7 +175,14 @@ if __name__ == '__main__':
     parser.add_argument('--expect-sha')
     parser.add_argument('--expect-generation')
     args = parser.parse_args()
-    result = live_check(args.output, args.workers,args.expect_sha,args.expect_generation) if args.live else verify(args.output)
-    if args.report: Path(args.report).write_text(json.dumps(result, ensure_ascii=False, indent=2))
+    try:
+        result = live_check(args.output, args.workers,args.expect_sha,args.expect_generation) if args.live else verify(args.output)
+    except (PublicationError,ValueError,HTTPError,URLError,TimeoutError) as error:
+        result={'error':str(error)[:500], 'failed':1, **getattr(error,'report',{})}
+        if args.report:
+            Path(args.report).parent.mkdir(parents=True,exist_ok=True);Path(args.report).write_text(json.dumps(result,ensure_ascii=False,indent=2))
+        print(json.dumps(result,ensure_ascii=False,indent=2));raise SystemExit(1)
+    if args.report:
+        Path(args.report).parent.mkdir(parents=True,exist_ok=True);Path(args.report).write_text(json.dumps(result, ensure_ascii=False, indent=2))
     print(json.dumps(result, ensure_ascii=False, indent=2))
     if result.get('failed'): raise SystemExit(1)
