@@ -1,0 +1,68 @@
+{
+  "schema_version": "supportpick.image-review.v1",
+  "brand": "supportpick",
+  "username": "hid_1004",
+  "checked_at": "2026-11-06T10:45:39+09:00",
+  "reviewed_by": {
+    "type": "AI_VISUAL_INSPECTION",
+    "reviewer": "ChatGPT",
+    "method": "The two local PNG files were opened with view_image and visually inspected. Dimensions, format and SHA-256 were read from the same local files.",
+    "scope": "Image quality and visible content only; this is not human review or verification of a benefit's application rules."
+  },
+  "assets": [
+    {
+      "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+      "path": "social/images/benefit-guide-1.png",
+      "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "bytes": 1888956,
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGB",
+      "review_status": "PASS",
+      "purpose": "generic_brand",
+      "visible_text": [
+        "지원금픽",
+        "생활 혜택, 꼼꼼하게",
+        "자세한 사항은 프로필링크 확인"
+      ],
+      "visual_description": "크림색과 민트색 배경에 체크리스트가 든 봉투, 체크 표시, 동전과 새싹을 배치한 입체 일러스트. 상단에는 지원금픽 로고와 슬로건, 하단에는 프로필링크 안내가 있음.",
+      "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트.",
+      "quality_checks": {
+        "square_high_resolution": "PASS",
+        "legible_korean_text": "PASS",
+        "no_visible_clipping_or_corruption": "PASS",
+        "cta_matches_publication_policy": "PASS"
+      },
+      "program_specific_claims": [],
+      "usage_note": "검수된 지원금·생활혜택 글의 일반 브랜드 이미지로 사용. 사업별 금액·대상·신청기간은 이미지에 없으므로 이미지에서 확인할 수 있다고 설명하지 않는다."
+    },
+    {
+      "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+      "path": "social/images/benefit-guide-2.png",
+      "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "bytes": 1970394,
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "mode": "RGB",
+      "review_status": "PASS",
+      "purpose": "generic_brand",
+      "visible_text": [
+        "지원금픽",
+        "생활 혜택, 꼼꼼하게",
+        "자세한 사항은 프로필링크 확인"
+      ],
+      "visual_description": "크림색과 민트색 배경에 집, 체크 표시가 있는 방패, 체크리스트, 새싹과 해를 배치한 입체 일러스트. 상단에는 지원금픽 로고와 슬로건, 하단에는 프로필링크 안내가 있음.",
+      "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트.",
+      "quality_checks": {
+        "square_high_resolution": "PASS",
+        "legible_korean_text": "PASS",
+        "no_visible_clipping_or_corruption": "PASS",
+        "cta_matches_publication_policy": "PASS"
+      },
+      "program_specific_claims": [],
+      "usage_note": "검수된 지원금·생활혜택 글의 일반 브랜드 이미지로 사용. 사업별 금액·대상·신청기간은 이미지에 없으므로 이미지에서 확인할 수 있다고 설명하지 않는다."
+    }
+  ]
+}

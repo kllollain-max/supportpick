@@ -102,6 +102,8 @@ def select_image(row, records, assets):
             image = rotation[sum(bool(r.get('image_url')) for r in records) % len(rotation)]
     if image and not image_url(image):
         raise ValueError('unapproved_image_url')
+    if not image:
+        raise ValueError('approved_image_required_for_image_turn')
     return image
 
 
@@ -151,6 +153,26 @@ def selection_info(row):
     return {'policy': 'gov24_views_desc_v1', 'basis': '보조금24 누적 조회수',
             'views': popularity_views(row), 'source_checked_at': row.get('checkedAt'),
             'note': '실시간 검색량·신청자 수가 아닌 공식 API 누적 조회수 기준'}
+
+
+def reviewed_selection(row, eligible, queue):
+    """Retain why a higher-view candidate could not safely be written today."""
+    position = next(i for i, candidate in enumerate(eligible) if candidate['id'] == row['id'])
+    notes = queue.get('selection_notes', [])
+    if not isinstance(notes, list):
+        raise ValueError('writer_selection_notes_required')
+    excluded = []
+    for candidate in eligible[:position]:
+        matches = [n for n in notes if isinstance(n, dict) and n.get('benefit_id') == candidate['id']
+                   and n.get('decision') in ('HOLD', 'SKIP') and isinstance(n.get('reason'), str)
+                   and n['reason'].strip()]
+        if len(matches) != 1:
+            raise ValueError('higher_priority_candidate_disposition_required')
+        excluded.append({'benefit_id': candidate['id'], 'views': popularity_views(candidate),
+                         'decision': matches[0]['decision'], 'reason': matches[0]['reason'],
+                         'sources': matches[0].get('sources', [])})
+    return {**selection_info(row), 'candidate_rank': position + 1,
+            'higher_ranked_exclusions': excluded}
 
 
 def candidates(feed, ledger, now):
@@ -233,7 +255,21 @@ def publication_context(env):
         return cron
     if env.get('GITHUB_EVENT_NAME') == 'workflow_dispatch' and env.get('SUPPORTPICK_THREADS_MANUAL_MODE') in ('publish-one-now', 'resume-pending'):
         return 'manual'
+    if env.get('GITHUB_EVENT_NAME') == 'workflow_dispatch' and env.get('SUPPORTPICK_THREADS_MANUAL_MODE') == 'resume-unreserved-slot':
+        cron = env.get('SUPPORTPICK_THREADS_RECOVERY_CRON', '')
+        if cron not in CRONS:
+            raise ValueError('known_scheduled_slot_required')
+        # The normal current_slot, ledger, source and draft checks still apply.
+        return cron
     raise ValueError('explicit_publication_context_required')
+
+
+def receipt_keys(record):
+    # New master-prompt posts are standalone. Existing three-part reservations
+    # remain recoverable without rewriting their text, media or content hash.
+    if record.get('writer_schema') == 'supportpick.writer.v1':
+        return ('main_id',)
+    return ('main_id', 'detail_id', 'links_id')
 
 
 def validate_ledger(state):
@@ -247,7 +283,11 @@ def validate_ledger(state):
                 or r['slot'] in slots or r['benefit_id'] in ids):
             raise ValueError('invalid_ledger_record')
         stamp(r['slot'])
-        if r['status'] == 'published' and (r.get('verified') is not True or not all(str(r.get(k, '')).isdigit() for k in ('main_id', 'detail_id', 'links_id'))):
+        if r.get('writer_schema') not in (None, 'supportpick.writer.v1'):
+            raise ValueError('unknown_writer_record_schema')
+        if r.get('writer_schema') and (not isinstance(r.get('texts'), list) or len(r['texts']) != 1):
+            raise ValueError('invalid_standalone_record')
+        if r['status'] == 'published' and (r.get('verified') is not True or not all(str(r.get(k, '')).isdigit() for k in receipt_keys(r))):
             raise ValueError('incomplete_published_receipt')
         slots.add(r['slot']); ids.add(r['benefit_id'])
     return state
@@ -288,6 +328,22 @@ class Ledger:
         return new_sha
 
 
+def read_writer_queue(token, opener=urllib.request.urlopen):
+    """Read reviewed drafts separately from the publication ledger; never reset."""
+    from supportpick_writer import QUEUE_PATH
+    if not token:
+        raise ValueError('missing_ledger_token')
+    url = f'https://api.github.com/repos/{REPO}/contents/{QUEUE_PATH}?ref={STATE_BRANCH}'
+    req = urllib.request.Request(url, headers={'Authorization': 'Bearer ' + token,
+        'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28'})
+    try:
+        with opener(req, timeout=30) as response:
+            data = json.load(response)
+        return json.loads(base64.b64decode(data['content']))
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError, KeyError, TypeError):
+        raise RuntimeError('writer_queue_unavailable_do_not_use_legacy_template') from None
+
+
 class Threads:
     def __init__(self, token, opener=urllib.request.urlopen, pause=time.sleep):
         if not token:
@@ -304,25 +360,67 @@ class Threads:
             data = query.encode()
         req = urllib.request.Request(url, method=method, data=data, headers={
             'Authorization': 'Bearer ' + self.token, 'Content-Type': 'application/x-www-form-urlencoded'})
-        try:
-            with self.opener(req, timeout=30) as response:
-                result = json.load(response)
-            if not isinstance(result, dict) or result.get('error'):
-                raise ValueError()
-            return result
-        except urllib.error.HTTPError as exc:
-            if method == 'GET' and path == '/me':
-                # Exclude response text and request credentials from the result.
-                raise RuntimeError(f'threads_account_read_http_{exc.code}') from None
-            raise RuntimeError('threads_request_failed_or_ambiguous_no_automatic_retry') from None
-        except (urllib.error.URLError, OSError, TimeoutError):
-            if method == 'GET' and path == '/me':
-                raise RuntimeError('threads_account_read_transport_failure') from None
-            raise RuntimeError('threads_request_failed_or_ambiguous_no_automatic_retry') from None
-        except ValueError:
-            if method == 'GET' and path == '/me':
-                raise RuntimeError('threads_account_read_invalid_response') from None
-            raise RuntimeError('threads_request_failed_or_ambiguous_no_automatic_retry') from None
+        # A read can be repeated without creating another post. Mutations always
+        # receive exactly one attempt, including rate-limit and server errors.
+        attempts = 3 if method == 'GET' else 1
+        for attempt in range(attempts):
+            try:
+                with self.opener(req, timeout=30) as response:
+                    result = json.load(response)
+                if not isinstance(result, dict) or result.get('error'):
+                    raise ValueError()
+                return result
+            except urllib.error.HTTPError as exc:
+                delay = None
+                if method == 'GET' and attempt < attempts - 1 and exc.code in (408, 429, 500, 502, 503, 504):
+                    delay = (2, 5)[attempt]
+                    retry_after = exc.headers.get('Retry-After') if exc.headers else None
+                    if retry_after is not None:
+                        try:
+                            value = str(retry_after).strip()
+                            if re.fullmatch(r'[0-9]+', value):
+                                seconds = int(value)
+                            else:
+                                from email.utils import parsedate_to_datetime
+                                retry_at = parsedate_to_datetime(value)
+                                if retry_at.tzinfo is None or retry_at.utcoffset() is None:
+                                    raise ValueError()
+                                seconds = max(0, (retry_at - datetime.now(KST)).total_seconds())
+                            # Do not clamp a long server wait and then retry too
+                            # early. Leave the run on hold for later diagnosis.
+                            delay = max(delay, seconds) if seconds <= 30 else None
+                        except (TypeError, ValueError, OverflowError):
+                            delay = None
+                if delay is not None:
+                    self.pause(delay)
+                    continue
+                if method == 'GET' and path == '/me':
+                    # Numeric API codes classify authentication failures without
+                    # exposing the message, URL, request or arbitrary body text.
+                    reason = f'threads_account_read_http_{exc.code}'
+                    try:
+                        payload = json.loads(exc.read(16 * 1024))
+                        error = payload.get('error') if isinstance(payload, dict) else None
+                        if isinstance(error, dict):
+                            for field, label in (('code', 'code'), ('error_subcode', 'subcode')):
+                                number = error.get(field)
+                                if type(number) is int and 0 <= number <= 2**31 - 1:
+                                    reason += f'_{label}_{number}'
+                    except (ValueError, TypeError, AttributeError, OSError):
+                        pass
+                    raise RuntimeError(reason) from None
+                raise RuntimeError('threads_request_failed_or_ambiguous_no_automatic_retry') from None
+            except (urllib.error.URLError, OSError, TimeoutError):
+                if method == 'GET' and attempt < attempts - 1:
+                    self.pause((2, 5)[attempt])
+                    continue
+                if method == 'GET' and path == '/me':
+                    raise RuntimeError('threads_account_read_transport_failure') from None
+                raise RuntimeError('threads_request_failed_or_ambiguous_no_automatic_retry') from None
+            except ValueError:
+                if method == 'GET' and path == '/me':
+                    raise RuntimeError('threads_account_read_invalid_response') from None
+                raise RuntimeError('threads_request_failed_or_ambiguous_no_automatic_retry') from None
 
     def verify_account(self, expected_id):
         me = self.call('GET', '/me', {'fields': 'id,username'})
@@ -372,7 +470,7 @@ class Threads:
 
 
 def complete_record(store, api, sha, state, record, now):
-    keys = ('main_id', 'detail_id', 'links_id')
+    keys = receipt_keys(record)
     stage = record.get('stage', '')
     # Inspect the original stage before changing it. A missing receipt after a
     # sending stage is ambiguous and must never be retried, even during resume.
@@ -396,7 +494,10 @@ def complete_record(store, api, sha, state, record, now):
     record.update(status='published', verified=True, published_at=now.isoformat(), stage='complete')
     store.save(sha, state)
     return {'status': 'published', 'published': True, 'benefit_id': record['benefit_id'],
-            'url': record['main_id_url'], 'replies': 2, 'selection': record.get('selection')}
+            'url': record['main_id_url'], 'replies': len(keys) - 1,
+            'pattern': record.get('writer', {}).get('pattern'),
+            'media_turn': 'IMAGE' if record.get('image_url') else 'TEXT',
+            'selection': record.get('selection')}
 
 
 def resume_publication(store, api, now, expected_id, run_id, expected_main_id):
@@ -412,7 +513,7 @@ def resume_publication(store, api, now, expected_id, run_id, expected_main_id):
     if stamp(record['slot']).date() != now.date() or not fresh(record.get('checked_at'), now):
         raise ValueError('resume_requires_same_day_fresh_source')
     texts = record.get('texts')
-    if (not isinstance(texts, list) or len(texts) != 3
+    if (not isinstance(texts, list) or len(texts) != len(receipt_keys(record))
             or any(not isinstance(t, str) or len(t) > 500 for t in texts)
             or record.get('content_hash') != hashlib.sha256(json.dumps(texts, ensure_ascii=False).encode()).hexdigest()):
         raise ValueError('pending_content_hash_mismatch')
@@ -421,7 +522,7 @@ def resume_publication(store, api, now, expected_id, run_id, expected_main_id):
     return {**result, 'resumed': True, 'recovery_run_id': run_id}
 
 
-def publish(feed, store, api, now, cron, run_id, expected_id, assets=None):
+def publish(feed, store, api, now, cron, run_id, expected_id, assets=None, writer_queue=None):
     slot = current_slot(now, cron)
     if not run_id.isdigit():
         raise ValueError('github_run_id_required')
@@ -438,13 +539,25 @@ def publish(feed, store, api, now, cron, run_id, expected_id, assets=None):
     eligible = candidates(feed, state, now)
     if not eligible:
         return {'status': 'skipped', 'reason': 'no_fresh_eligible_benefit', 'published': False}
-    row = copy.deepcopy(eligible[0])
-    texts = compose(row)
+    if not isinstance(writer_queue, dict):
+        raise ValueError('writer_queue_required')
+    entries = [e for e in writer_queue.get('entries', []) if isinstance(e, dict) and e.get('slot') == slot]
+    if len(entries) != 1:
+        raise ValueError('exactly_one_reviewed_slot_required')
+    row = next((r for r in eligible if r['id'] == entries[0].get('benefit_id')), None)
+    if row is None:
+        raise ValueError('reviewed_benefit_no_longer_eligible')
     image = select_image(row, rows, assets or {})
+    from supportpick_writer import validate_ready_entry
+    row, writer, metadata = validate_ready_entry(writer_queue, eligible, rows, now, slot, image)
+    selection = reviewed_selection(row, eligible, writer_queue)
+    texts = [writer['post_text']]
     record = {'benefit_id': row['id'], 'slot': slot, 'run_id': run_id, 'status': 'pending',
               'texts': list(texts), 'image_url': image, 'generation': feed.get('generation'),
               'official_url': row['officialUrl'], 'checked_at': row['checkedAt'],
-              'selection': selection_info(row)}
+              'selection': selection, 'writer_schema': writer['schema_version'],
+              'writer': metadata, 'pattern': metadata['pattern'], 'writer_review': writer['review'],
+              'asset_sha256': entries[0].get('asset_sha256')}
     record['content_hash'] = hashlib.sha256(json.dumps(texts, ensure_ascii=False).encode()).hexdigest()
     rows.append(record)
     sha = store.save(sha, state)  # CAS durable reservation before first side effect.
@@ -453,10 +566,14 @@ def publish(feed, store, api, now, cron, run_id, expected_id, assets=None):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('command', choices=('preview', 'publish', 'check-account', 'resume'))
+    parser.add_argument('command', choices=('preview', 'writer-input', 'publish', 'check-account', 'resume'))
     parser.add_argument('--state', default='collection-state')
+    parser.add_argument('--ledger', help='Read-only local ledger for writer preparation or preview')
+    parser.add_argument('--queue', help='Read-only local reviewed writer queue for preview')
     args = parser.parse_args()
     now = datetime.now(KST)
+    if args.command == 'publish' and (args.ledger or args.queue):
+        raise ValueError('publication_uses_remote_state_only')
     if args.command == 'check-account':
         api = Threads(os.environ.get('SUPPORTPICK_THREADS_ACCESS_TOKEN', ''))
         api.verify_account(os.environ.get('SUPPORTPICK_THREADS_USER_ID', ''))
@@ -474,22 +591,24 @@ def main():
             os.environ.get('SUPPORTPICK_THREADS_RESUME_MAIN_ID', ''))
     else:
         feed = load_feed(args.state)
-        if args.command == 'preview':
-            state = {'version': 1, 'brand': 'supportpick', 'username': USERNAME, 'records': []}
+        if args.command in ('preview', 'writer-input'):
+            from supportpick_writer_input import build_input, preview_queue
+            state = validate_ledger(json.loads(Path(args.ledger).read_text())) if args.ledger else Ledger(os.environ.get('GITHUB_TOKEN', '')).read()[1]
             eligible = candidates(feed, state, now)
-            result = {'status': 'preview', 'published': False, 'eligible': len(eligible),
-                      'profile_link_target': PROFILE_LINK, 'cta': CTA,
-                      'selection': selection_info(eligible[0]) if eligible else None,
-                      'priority_preview': [{'benefit_id': r['id'], 'title': r['title'],
-                                            **selection_info(r)} for r in eligible[:5]],
-                      'posts': list(compose(eligible[0])) if eligible else []}
+            assets = json.loads((ROOT / 'social/assets.json').read_text())
+            if args.command == 'writer-input':
+                result = build_input(feed, state, now, assets)
+            else:
+                queue = json.loads(Path(args.queue).read_text()) if args.queue else read_writer_queue(os.environ.get('GITHUB_TOKEN', ''))
+                result = preview_queue(feed, state, queue, now, assets)
         else:
             cron = publication_context(os.environ)
             assets = json.loads((ROOT / 'social/assets.json').read_text())
+            queue = read_writer_queue(os.environ.get('GITHUB_TOKEN', ''))
             result = publish(feed, Ledger(os.environ.get('GITHUB_TOKEN', '')),
                 Threads(os.environ.get('SUPPORTPICK_THREADS_ACCESS_TOKEN', '')), now,
                 cron, os.environ.get('GITHUB_RUN_ID', ''),
-                os.environ.get('SUPPORTPICK_THREADS_USER_ID', ''), assets)
+                os.environ.get('SUPPORTPICK_THREADS_USER_ID', ''), assets, queue)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     Path('threads-result.json').write_text(json.dumps(result, ensure_ascii=False, indent=2))
     if os.environ.get('GITHUB_STEP_SUMMARY'):
