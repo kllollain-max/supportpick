@@ -9,6 +9,7 @@ from search_metadata import public_metadata, read_verifications, write_sitemap, 
 from detail_pages import write_details
 from release_policy import fingerprint
 from collect_full import period
+from eligibility import navigation
 ROOT=Path(__file__).resolve().parents[1]
 STATIC=('index.html','privacy.html','about.html','terms.html','contact.html','404.html','icon.svg','careerpick-base.css','styles.css','core.js','app.js','detail.js','supportpick-badge.png','supportpick-banner.png','editorials.js','app-features.js','manifest.webmanifest','sw.js','offline.html','app-icon-180.png','app-icon-192.png','app-icon-512.png')
 class Links(HTMLParser):
@@ -65,8 +66,8 @@ def build(destination,state=None,allow_sample=False,public_base=None):
             for sid,row in shard['items'].items():
                 raw=row.get('rawSource',{})
                 source_differences[sid]={key:{'list':raw.get('serviceList',{}).get(key),'detail':raw.get('serviceDetail',{}).get(key)} for key in row.get('sourceConflicts',[])}
-                full_rows[sid]={**row,**period(row.get('period','')),'sourceDifferences':source_differences[sid]}
-    public_feed={**feed,'items':[{**{k:v for k,v in row.items() if k in fields},**period(row.get('period','')),'sourceDifferences':source_differences.get(row['id'],{})} for row in feed['items']]}
+                full_rows[sid]={**row,**period(row.get('period','')),**navigation(row),'sourceDifferences':source_differences[sid]}
+    public_feed={**feed,'items':[{**{k:v for k,v in row.items() if k in fields},**period(row.get('period','')),**{k:v for k,v in full_rows.get(row['id'],{}).items() if k in ('applicationPeriodKind','applicationPeriods','applicationPeriodEvidence','agencyRegion','eligibilityRegions','eligibilityRegionStatus','targetGroups')},'sourceDifferences':source_differences.get(row['id'],{})} for row in feed['items']]}
     public_json=json.dumps(public_feed,ensure_ascii=False,separators=(',',':'))
     (output/'data.json').write_text(public_json)
     (output/'data.js').write_text('window.SUPPORTPICK_DATA = '+public_json.replace('<','\\u003c')+';\n')
@@ -82,7 +83,7 @@ def build(destination,state=None,allow_sample=False,public_base=None):
                     shard=json.loads(shard_path.read_text());public_rows={}
                     for sid,row in shard['items'].items():
                         if candidate!=snapshot:previous_rows[sid]=row
-                        public={**{k:v for k,v in row.items() if k!='rawSource'},**period(row.get('period',''))}
+                        public={**{k:v for k,v in row.items() if k!='rawSource'},**period(row.get('period','')),**navigation(row)}
                         raw=row.get('rawSource',{})
                         public['sourceDifferences']={key:{'list':raw.get('serviceList',{}).get(key),'detail':raw.get('serviceDetail',{}).get(key)} for key in row.get('sourceConflicts',[])}
                         public_rows[sid]=public
