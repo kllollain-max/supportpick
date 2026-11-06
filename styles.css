@@ -44,9 +44,12 @@ a.title-link{text-decoration:none;color:inherit;display:inline-block}.static-ben
 .benefit-card.is-linked .editorial-link{position:relative;z-index:1}
 .card-open-hint{display:block;margin-top:16px;color:var(--brand);font-size:12px;font-weight:700}
 
+/* Preparation tables remain readable without horizontal scrolling. */
+.guide-summary{width:100%;border-collapse:collapse;table-layout:fixed;margin:18px 0 26px}.guide-summary th,.guide-summary td{padding:14px 12px;border:1px solid var(--line,#dfe6e2);text-align:left;vertical-align:top;overflow-wrap:anywhere;line-height:1.75}.guide-summary th{width:28%;background:#f0f7f3}.own-guide li{margin:12px 0;line-height:1.85}.filters input{max-width:100%;min-width:0;width:100%;padding:10px;border:1px solid #dfe6e2;border-radius:8px}.card-meta dd{overflow-wrap:anywhere}.filters label{min-width:0}@media(max-width:420px){.guide-summary th,.guide-summary td{padding:12px 8px}.guide-summary th{width:30%}}
+
 /* Application record actions: clear and compact on mobile. */
 .tracker-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}
 .tracker-actions .primary{flex:1 1 180px}
 .tracker-actions .tracker-delete{color:#a33131;border-color:#e6baba;flex:0 1 auto}
 .tracker-actions .tracker-delete:hover,.tracker-actions .tracker-delete:focus-visible{background:#fff0f0}
-@media(max-width:600px){.tracker-actions{flex-direction:column;align-items:stretch}.tracker-actions button{width:100%}}
+@media(max-width:600px){.tracker-actions{flex-direction:column;align-items:stretch}.tracker-actions button{width:100%}.tracker-actions .primary{flex:0 1 auto}}

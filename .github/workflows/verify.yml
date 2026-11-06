@@ -2,22 +2,52 @@ name: Verify SupportPick release
 on:
   pull_request:
   workflow_dispatch:
+    inputs:
+      backup_probe:
+        description: Upload validated operational backup and rebuild from R2 in isolation
+        type: boolean
+        default: false
+      expected_head:
+        description: Exact 40-character candidate SHA required for a real R2 probe
+        type: string
+        default: ''
 permissions:
   contents: read
 jobs:
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: read
+      actions: read
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - name: Bind an R2 probe to the explicitly requested candidate
+        if: github.event_name == 'workflow_dispatch' && inputs.backup_probe
+        env:
+          EXPECTED_HEAD: ${{ inputs.expected_head }}
+        run: |
+          python - <<'PY'
+          import os,re,subprocess
+          expected=os.environ['EXPECTED_HEAD']
+          actual=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
+          if not re.fullmatch(r'[a-f0-9]{40}',expected) or expected!=os.environ['GITHUB_SHA'] or actual!=expected:
+              raise SystemExit('R2 probe candidate SHA mismatch or missing expected_head')
+          print('R2 probe candidate:',actual)
+          PY
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Restore latest validated operational data for the candidate checks
+        if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python tools/restore_latest_state.py
       - run: python -m unittest discover -s tests -p 'test_*.py' -v
       - run: node --test tests/*.test.cjs
       - run: python tools/build.py --output dist --public-base https://kllollain-max.github.io/supportpick/
@@ -28,3 +58,116 @@ jobs:
           path: dist/
           include-hidden-files: true
           retention-days: 3
+
+  backup-probe:
+    if: github.event_name == 'workflow_dispatch' && inputs.backup_probe
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'boto3>=1.37,<2'
+      - name: Restore validated operational artifacts without publishing
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python tools/restore_latest_state.py
+          python tools/retrieve_evidence.py
+          python tools/refresh.py --state collection-state --bundle-output runtime-state
+      - uses: actions/upload-artifact@v4
+        with:
+          name: supportpick-r2-pending-preservation
+          path: |
+            runtime-state/
+            output/current-run/
+          retention-days: 90
+      - name: R2 upload, read-back, isolated restore and full rebuild
+        if: github.event_name == 'workflow_dispatch' && inputs.backup_probe
+        env:
+          SUPPORTPICK_R2_ACCESS_KEY_ID: ${{ secrets.SUPPORTPICK_R2_ACCESS_KEY_ID }}
+          SUPPORTPICK_R2_SECRET_ACCESS_KEY: ${{ secrets.SUPPORTPICK_R2_SECRET_ACCESS_KEY }}
+          SUPPORTPICK_R2_ENDPOINT: ${{ secrets.SUPPORTPICK_R2_ENDPOINT }}
+          SUPPORTPICK_R2_BUCKET: ${{ secrets.SUPPORTPICK_R2_BUCKET }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+        run: python tools/r2_backup.py backup --expect-source-sha "$GITHUB_SHA" --output output/r2-probe.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: supportpick-r2-upload-receipt
+          path: output/r2-probe.json
+          retention-days: 90
+
+  backup-restore-probe:
+    if: github.event_name == 'workflow_dispatch' && inputs.backup_probe
+    needs: backup-probe
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'boto3>=1.37,<2'
+      - name: Retrieve only the uploaded object's receipt, never the backup contents
+        uses: actions/download-artifact@v4
+        with:
+          name: supportpick-r2-upload-receipt
+          path: probe-receipt
+      - name: Download that exact R2 object and rebuild its bundled code on a fresh runner
+        env:
+          SUPPORTPICK_R2_ACCESS_KEY_ID: ${{ secrets.SUPPORTPICK_R2_ACCESS_KEY_ID }}
+          SUPPORTPICK_R2_SECRET_ACCESS_KEY: ${{ secrets.SUPPORTPICK_R2_SECRET_ACCESS_KEY }}
+          SUPPORTPICK_R2_ENDPOINT: ${{ secrets.SUPPORTPICK_R2_ENDPOINT }}
+          SUPPORTPICK_R2_BUCKET: ${{ secrets.SUPPORTPICK_R2_BUCKET }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+        run: python tools/r2_backup.py restore-exact --receipt probe-receipt/r2-probe.json --expect-source-sha "$GITHUB_SHA" --output output/r2-restore-probe.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: supportpick-r2-restore-verification
+          path: output/r2-restore-probe.json
+          retention-days: 90
+
+  browser-regression:
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/download-artifact@v4
+        with:
+          name: supportpick-verified-release
+          path: dist
+      - run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - run: node .github/scripts/check-improvements.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: supportpick-responsive-regression
+          path: output/browser/
+          retention-days: 30

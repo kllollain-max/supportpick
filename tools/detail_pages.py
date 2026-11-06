@@ -14,9 +14,10 @@ from zoneinfo import ZoneInfo
 
 from collect_full import safe_url, valid_id
 from search_metadata import public_metadata
+from eligibility import application_status
 
 KST = ZoneInfo('Asia/Seoul')
-TEMPLATE_MODIFIED = '2026-11-04'
+TEMPLATE_MODIFIED = '2026-11-05'
 PAGE_SIZE = 100
 MATERIAL_FIELDS = ('id', 'title', 'organization', 'category', 'region', 'regionBasis',
                    'summary', 'target', 'selection', 'support', 'period', 'periodKind',
@@ -72,6 +73,8 @@ def popularity(row):
 
 
 def status(row, current):
+    if row.get('applicationPeriodKind'):
+        return application_status(row,current)+' · 공식 접수 확인'
     today = current.astimezone(KST).date().isoformat()
     if re.fullmatch(r'\d{4}-\d{2}-\d{2}', row.get('endDate') or '') and row['endDate'] < today:
         return '안내 기한 경과 · 새 공고 확인'
@@ -229,13 +232,17 @@ def editorial_html(row, guide):
         references = ''.join('<li><a href="' + escape(x['url'], quote=True)
                              + '" target="_blank" rel="noopener noreferrer">' + escape(x['title'])
                              + ' ↗</a><p>' + escape(x['note']) + '</p></li>' for x in guide['sourceReviews'])
+        preparation = ''
+        if guide.get('preparationSummary'):
+            preparation = '<h3>신청 준비 요약</h3><table class="guide-summary"><tbody>' + ''.join('<tr><th scope="row">'+escape(x['label'])+'</th><td>'+escape(x['value'])+'</td></tr>' for x in guide['preparationSummary']) + '</tbody></table>'
+        review_at=guide.get('aiReview',{}).get('at') or guide['reviewedAt']
         return ('<section class="detail-block own-guide"><span class="source-label">지원금픽 자체 해설</span>'
                 '<h2>신청 전에 이렇게 확인하세요</h2><p>' + escape(guide['summary'])
-                + '</p><h3>먼저 점검할 조건</h3><ul>' + list_items(guide['checks'])
+                + '</p>' + preparation + '<h3>먼저 점검할 조건</h3><ul>' + list_items(guide['checks'])
                 + '</ul><h3>준비하는 순서</h3><ol>' + list_items(guide['steps'])
                 + '</ol><h3>자주 묻는 질문</h3>' + faqs
                 + '<h3>대조한 공식 안내</h3><ul class="reference-list">' + references
-                + '</ul><p class="source-meta">AI 초안·공식자료 대조 ' + escape(stamp(guide['reviewedAt']))
+                + '</ul><p class="source-meta">AI 초안·공식자료 대조 ' + escape(stamp(review_at))
                 + ' · 공식 API 본문과 아래 자료를 대조한 준비 안내입니다. 운영자의 사람 검토 완료는 별도 확인이 필요합니다. 개인의 자격·선정·현재 접수를 확정하지 않습니다.</p></section>')
     checks = []
     if '융자' in row.get('supportType', '') or '대출' in row['title']:
@@ -297,6 +304,8 @@ def render_benefit(row, guide, blog, reasons, related, base, current, feed_statu
              '<p class="context-note">공식 API 안내와 지원금픽의 준비 해설을 구분해 제공합니다. API 조회 성공은 현재 접수·개인 자격 확인을 뜻하지 않습니다.</p>'
              '<div class="detail-actions">' + actions + '</div>'
              '<noscript><p class="context-note">핵심 안내는 JavaScript 없이 읽을 수 있습니다. 관심 저장·내 신청 기록은 JavaScript를 켜거나 홈에서 이용하세요.</p></noscript></article>')
+    conditions=row.get('eligibilityRegions') or []
+    body += section('거주·사업장 조건의 원문', '\n\n'.join(c['evidence'] for c in conditions) if conditions else '명확한 지역 조건을 분류하지 못했습니다. 기관 소재지는 신청인의 거주 자격이 아닙니다. 지원대상과 선정기준에서 확인하세요.')
     body += editorial_html(row, guide)
     for heading, key in [('지원대상', 'target'), ('선정기준·세부 자격', 'selection'), ('지원내용·금액', 'support'),
                          ('신청방법', 'method'), ('준비서류', 'documents'), ('문의처', 'contact')]:
@@ -328,7 +337,7 @@ def render_benefit(row, guide, blog, reasons, related, base, current, feed_statu
             {'@type': 'ListItem', 'position': 1, 'name': '지원금픽', 'item': base},
             {'@type': 'ListItem', 'position': 2, 'name': '혜택 전체', 'item': base + 'benefits/'},
             {'@type': 'ListItem', 'position': 3, 'name': row['title'], 'item': base + path}]}
-    record = {k: row.get(k) for k in ('id', 'title', 'checkedAt', 'periodKind', 'startDate', 'endDate')}
+    record = {k: row.get(k) for k in ('id', 'title', 'checkedAt', 'periodKind', 'startDate', 'endDate', 'applicationPeriodKind', 'applicationPeriods')}
     record['base'] = '../../'
     return shell(title, description, body, path, '../../', base, not reasons, structured, record)
 
