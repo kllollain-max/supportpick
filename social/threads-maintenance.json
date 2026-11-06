@@ -693,9 +693,9 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-06T02:46:47.080Z",
+    "checked_at": "2026-11-06T12:08:39.018+09:00",
     "changed_run_ids": [],
-    "current_main_sha": "afb7e4f026cacb0cf0a73ccaee79beff546b4ae8",
+    "current_main_sha": "bd40270d6a950c1a7218d8cdeec3b8dec9b3d781",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
       "basis": "보조금24 누적 조회수",
@@ -740,8 +740,8 @@
     "run_list_scan": {
       "pages": 2,
       "per_page": 100,
-      "total_count": 107,
-      "returned": 107,
+      "total_count": 131,
+      "returned": 131,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
@@ -817,9 +817,10 @@
       "next_step": "Verify on next natural scheduled slots; do not dispatch test or backfill posts."
     },
     "current_slot_observation": {
-      "checked_at": "2026-11-06T02:46:47.080Z",
-      "next_regular_slot": "2026-11-06T12:00:00+09:00",
-      "classification": "future_regular_slot_ready",
+      "checked_at": "2026-11-06T12:08:39.018+09:00",
+      "slot": "2026-11-06T12:00:00+09:00",
+      "classification": "regular_run_not_observed_within_grace_window",
+      "remote_run_started": false,
       "manual_publication_dispatched": false
     },
     "latest_source_execution": {
@@ -941,6 +942,17 @@
       "id": "6aeaefe5fd708191a3e8a67b3667fb8f",
       "enabled": true,
       "schedule": "hourly at minute 45"
+    },
+    "writer_queue_recheck": {
+      "queue_blob_sha": "a65067246aeeb2389b49cdfaf629ae0ba2f2d7a4",
+      "ready_count": 4,
+      "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "source_generation": "gov24-42117967226-1",
+      "source_zip_digest_verified": true,
+      "approved_images_sha256_rechecked": true,
+      "validator": "main preview / validate_ready_entry",
+      "future_slots_require_source_recheck": true,
+      "reused_existing_ready": true
     }
   },
   "last_reported_publication": {
