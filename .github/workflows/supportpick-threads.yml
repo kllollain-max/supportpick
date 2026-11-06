@@ -10,12 +10,18 @@ on:
     inputs:
       mode:
         type: choice
-        options: [preview, check-account, check-source, publish-one-now, resume-pending]
+        options: [preview, writer-input, check-account, check-source, publish-one-now, resume-pending, resume-unreserved-slot]
         default: preview
         required: true
       resume_main_id:
         description: 'Recovery only: exact existing main post ID; never republishes it'
         type: string
+        default: ''
+        required: false
+      recovery_cron:
+        description: 'Recovery only: original scheduled slot, within its two-hour window'
+        type: choice
+        options: ['', '0 23 * * *', '0 3 * * *', '0 7 * * *', '0 11 * * *']
         default: ''
         required: false
 permissions:
@@ -37,6 +43,7 @@ jobs:
       SUPPORTPICK_THREADS_CRON: ${{ github.event.schedule }}
       SUPPORTPICK_THREADS_MANUAL_MODE: ${{ inputs.mode }}
       SUPPORTPICK_THREADS_RESUME_MAIN_ID: ${{ inputs.resume_main_id }}
+      SUPPORTPICK_THREADS_RECOVERY_CRON: ${{ inputs.recovery_cron }}
       SUPPORTPICK_THREADS_ACCESS_TOKEN: ${{ secrets.SUPPORTPICK_THREADS_ACCESS_TOKEN }}
       SUPPORTPICK_THREADS_USER_ID: ${{ secrets.SUPPORTPICK_THREADS_USER_ID }}
     steps:
@@ -47,11 +54,14 @@ jobs:
         with:
           python-version: '3.12'
       - name: Restore latest validated data
-        if: github.event_name == 'schedule' || inputs.mode == 'preview' || inputs.mode == 'publish-one-now'
+        if: github.event_name == 'schedule' || inputs.mode == 'preview' || inputs.mode == 'writer-input' || inputs.mode == 'publish-one-now' || inputs.mode == 'resume-unreserved-slot'
         # Workflow run numbers are not comparable across different workflows.
         run: env -u GITHUB_RUN_NUMBER python tools/restore_latest_state.py
       - name: Verify publisher safety
-        run: python -m unittest discover -s tests -p 'test_supportpick_threads.py' -v
+        run: python -m unittest discover -s tests -p 'test_supportpick_*.py' -v
+      - name: Prepare source and history for master prompt writer
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'writer-input'
+        run: python tools/supportpick_threads.py writer-input
       - name: Preview without publishing
         if: github.event_name == 'workflow_dispatch' && inputs.mode == 'preview'
         run: python tools/supportpick_threads.py preview
@@ -74,9 +84,9 @@ jobs:
         if: github.event_name == 'workflow_dispatch' && inputs.mode == 'check-account'
         run: python tools/supportpick_threads.py check-account
       - name: Publish one benefit in the current slot
-        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'publish-one-now')
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && (inputs.mode == 'publish-one-now' || inputs.mode == 'resume-unreserved-slot'))
         run: python tools/supportpick_threads.py publish
-      - name: Resume replies from an exact existing post receipt
+      - name: Resume an exact existing post receipt
         if: github.event_name == 'workflow_dispatch' && inputs.mode == 'resume-pending'
         run: python tools/supportpick_threads.py resume
       - name: Report failure

@@ -7,11 +7,15 @@ from datetime import datetime, timedelta
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
 import supportpick_threads as t
+import supportpick_writer as w
 
 NOW = datetime(2026, 11, 4, 8, 15, tzinfo=t.KST)
 
 def empty():
     return {'version': 1, 'brand': 'supportpick', 'username': 'hid_1004', 'records': []}
+
+def urls_for_tests():
+    return json.loads((t.ROOT / 'social/assets.json').read_text())['_rotation']
 
 def feed():
     return {'isSample': False, 'updatedAt': NOW.isoformat(), 'generation': 'test', 'items': [{
@@ -19,6 +23,50 @@ def feed():
         'target': '세부 소득·거주 조건 충족 가구', 'method': '공식 창구에서 안내 확인',
         'period': '원문 확인', 'category': '생활안정', 'checkedAt': NOW.isoformat(),
         'officialUrl': 'https://plus.gov.kr/benefit', 'sourceConflicts': []}]}
+
+
+def reviewed_queue(data, state, now=NOW, cron='0 23 * * *', assets=None):
+    queue = {'schema_version': w.QUEUE_SCHEMA, 'brand': 'supportpick', 'username': t.USERNAME,
+             'prompt_sha256': w.prompt_sha256(), 'entries': []}
+    rows = t.candidates(data, state, now)
+    if not rows:
+        return queue
+    row = rows[0]; slot = t.current_slot(now, cron)
+    image = t.select_image(row, state['records'], assets or {})
+    used = {r.get('writer', {}).get('pattern') for r in state['records'] if t.stamp(r['slot']).date() == now.date()}
+    pattern = next(p for p in ['P1', 'P5', 'P6', 'P8', 'P3', 'P4', 'P9'] if p not in used)
+    text = row['title'] + ' 조건을 살펴봐요 (' + row['id'] + ').\n\n' + row['summary'] + '\n대상과 신청 조건을 함께 확인할 수 있어요.\n\n' + t.CTA
+    prepared = now - timedelta(minutes=1)
+    evidence = [{'source_id': row['id'], 'source_ref': row['officialUrl'],
+                 'access_method': 'OPENED_OFFICIAL', 'verified_at': prepared.isoformat(),
+                 'claims_supported': ['합성 검사 원문의 대상·상시 신청 가능·지원 내용 대조']}]
+    if image:
+        evidence.append({'source_id': 'image-review', 'source_ref': image,
+                         'access_method': 'UPSTREAM_VERIFIED', 'verified_at': prepared.isoformat(),
+                         'claims_supported': ['합성 검수: 실제 체크아웃 이미지 해시와 브랜드 문구 일치']})
+    writer = {'schema_version': w.WRITER_SCHEMA, 'status': 'READY', 'selected_program_id': row['id'],
+              'post_text': text, 'draft_text': None, 'reply_texts': [],
+              'media': {'turn': 'IMAGE' if image else 'TEXT', 'asset_id': image,
+                        'check': 'MATCHED' if image else 'NOT_REQUIRED',
+                        'image_copy': None, 'alt_text': '지원금픽 브랜드 안내 그림' if image else None},
+              'review': {'planned_at': slot, 'application_status': 'ALWAYS', 'reader': '합성 검사 대상',
+                         'central_message': row['summary'], 'pattern': pattern, 'selection_reason': '공식 누적 조회수 우선',
+                         'interest_basis': 'OBSERVED_METRICS' if t.popularity_views(row) is not None else 'ESTIMATED',
+                         'duplicate_check': 'CHECKED', 'evidence': evidence,
+                         'checks': {**{k: 'PASS' for k in ('facts','current_status','eligibility_and_units','cta_and_no_links','length')},
+                                    'media': 'PASS' if image else 'NOT_REQUIRED'},
+                         'char_count': len(text), 'count_method': w.COUNT_METHOD,
+                         'missing_info': [], 'hold_reasons': [], 'warnings': []},
+              'next_history_record': {'program_id': row['id'], 'pattern': pattern,
+                                      'media_turn': 'IMAGE' if image else 'TEXT',
+                                      'opening': w.opening(text), 'structure': '조건 안내 후 핵심 설명'}}
+    entry = {'slot': slot, 'benefit_id': row['id'], 'source_fingerprint': w.source_fingerprint(row),
+             'source_generation': data['generation'], 'prepared_at': prepared.isoformat(),
+             'expires_at': (prepared + timedelta(hours=24)).isoformat(), 'writer': writer}
+    if image:
+        entry['asset_sha256'] = t.hashlib.sha256((t.ROOT / 'social/images' / image.rsplit('/',1)[1]).read_bytes()).hexdigest()
+    queue['entries'].append(entry)
+    return queue
 
 class Store:
     def __init__(self):
@@ -55,18 +103,31 @@ class PublisherTests(unittest.TestCase):
     def setUp(self):
         self.store = Store(); self.api = API(self.store)
     def run_publish(self, data=None, now=NOW, assets=None):
-        return t.publish(data or feed(), self.store, self.api, now, '0 23 * * *', '123', '1004', assets)
-    def test_complete_main_and_two_replies(self):
+        data = data or feed()
+        return t.publish(data, self.store, self.api, now, '0 23 * * *', '123', '1004', assets,
+                         reviewed_queue(data, self.store.state, now, assets=assets))
+    def run_legacy(self):
+        # Existing reservations are fixtures, never created by the new publisher.
+        row = feed()['items'][0]; texts = list(t.compose(row))
+        record = {'benefit_id': row['id'], 'slot': t.current_slot(NOW, '0 23 * * *'),
+                  'run_id': '123', 'status': 'pending', 'texts': texts,
+                  'checked_at': row['checkedAt'], 'image_url': None,
+                  'content_hash': t.hashlib.sha256(json.dumps(texts, ensure_ascii=False).encode()).hexdigest()}
+        state = copy.deepcopy(self.store.state); state['records'].append(record)
+        sha = self.store.save(str(self.store.version), state)
+        return t.complete_record(self.store, self.api, sha, state, record, NOW)
+    def test_complete_single_reviewed_post_without_replies(self):
         result = self.run_publish()
         self.assertTrue(result['published'])
-        self.assertEqual([x[1] for x in self.api.calls], [None, '1001', '1001'])
+        self.assertEqual([x[1] for x in self.api.calls], [None])
         self.assertEqual(self.store.state['records'][0]['status'], 'published')
         self.assertTrue(all(x[0].endswith(t.CTA) for x in self.api.calls))
-        self.assertIn('프로필링크', self.api.calls[2][0])
+        self.assertEqual(result['replies'], 0)
+        self.assertEqual(self.store.state['records'][0]['writer_schema'], w.WRITER_SCHEMA)
     def test_same_slot_cannot_post_twice(self):
         self.run_publish()
         with self.assertRaisesRegex(RuntimeError, 'slot_already_reserved'): self.run_publish()
-        self.assertEqual(len(self.api.calls), 3)
+        self.assertEqual(len(self.api.calls), 1)
     def test_post_ambiguity_blocks_future_slots(self):
         self.api.fail_at = 1
         with self.assertRaises(RuntimeError): self.run_publish()
@@ -74,7 +135,7 @@ class PublisherTests(unittest.TestCase):
         self.assertEqual(len(self.api.calls), 1)
     def test_reply_ambiguity_preserves_main_receipt(self):
         self.api.fail_at = 2
-        with self.assertRaises(RuntimeError): self.run_publish()
+        with self.assertRaises(RuntimeError): self.run_legacy()
         r = self.store.state['records'][0]
         self.assertEqual(r['main_id'], '1001'); self.assertEqual(r['status'], 'pending')
         with self.assertRaisesRegex(RuntimeError, 'unresolved'): self.run_publish(now=NOW + timedelta(days=1))
@@ -95,6 +156,16 @@ class PublisherTests(unittest.TestCase):
     def test_wrong_account_cannot_reserve_or_post(self):
         with self.assertRaises(ValueError): t.publish(feed(), self.store, self.api, NOW, '0 23 * * *', '123', 'wrong')
         self.assertEqual(self.store.state['records'], []); self.assertEqual(self.api.calls, [])
+
+    def test_missing_writer_never_falls_back_to_legacy_template(self):
+        with self.assertRaisesRegex(ValueError, 'writer_queue_required'):
+            t.publish(feed(), self.store, self.api, NOW, '0 23 * * *', '123', '1004')
+        self.assertEqual(self.api.calls, [])
+        self.assertEqual(self.store.state['records'], [])
+
+    def test_missing_image_does_not_turn_an_image_slot_into_text(self):
+        with self.assertRaisesRegex(ValueError, 'approved_image_required'):
+            t.select_image(feed()['items'][0], [{}], {})
     def test_expired_sample_future_conflict_and_stale_data_rejected(self):
         for field, value in [('endDate','2026-11-03'), ('startDate','2026-11-05'),
                              ('sourceConflicts',['지원대상']), ('checkedAt','2026-10-01T00:00:00+09:00'),
@@ -111,6 +182,21 @@ class PublisherTests(unittest.TestCase):
     def test_missed_or_unknown_slot_rejected(self):
         for now, cron in [(NOW + timedelta(hours=2),'0 23 * * *'), (NOW,'unknown')]:
             with self.assertRaises(ValueError): t.current_slot(now, cron)
+
+    def test_prepublication_recovery_reuses_original_slot_and_blocks_duplicate(self):
+        env = {'SUPPORTPICK_THREADS_ENABLED':'true', 'SUPPORTPICK_THREADS_CUTOVER_READY':'true',
+               'GITHUB_REPOSITORY':t.REPO, 'GITHUB_REF':'refs/heads/main', 'GITHUB_RUN_ATTEMPT':'1',
+               'GITHUB_EVENT_NAME':'workflow_dispatch', 'SUPPORTPICK_THREADS_MANUAL_MODE':'resume-unreserved-slot',
+               'SUPPORTPICK_THREADS_RECOVERY_CRON':'0 23 * * *'}
+        cron = t.publication_context(env)
+        self.run_publish()
+        with self.assertRaisesRegex(RuntimeError, 'slot_already_reserved'):
+            t.publish(feed(), self.store, self.api, NOW+timedelta(minutes=10), cron, '124', '1004')
+        self.assertEqual(len(self.api.calls), 1)
+        with self.assertRaisesRegex(ValueError, 'missed_slot_not_backfilled'):
+            t.current_slot(NOW+timedelta(hours=2), cron)
+        with self.assertRaises(ValueError):
+            t.publication_context({**env, 'GITHUB_RUN_ATTEMPT':'2'})
     def test_content_has_no_links_and_retains_profile_cta(self):
         row = feed()['items'][0]
         row['publishedBlogUrl'] = 'https://blog.naver.com/bible_el/123456'
@@ -152,10 +238,11 @@ class PublisherTests(unittest.TestCase):
         for index, hour in enumerate([8, 12, 16, 20]):
             f = feed(); f['items'][0]['id'] = 'benefit' + str(index)
             cron = next(c for c,h in t.CRONS.items() if h == hour)
-            t.publish(f, self.store, self.api, NOW.replace(hour=hour), cron, '123', '1004', assets)
+            now = NOW.replace(hour=hour)
+            t.publish(f, self.store, self.api, now, cron, '123', '1004', assets,
+                      reviewed_queue(f, self.store.state, now, cron, assets))
             self.assertEqual(self.store.state['records'][-1]['image_url'], expected[index])
-        self.assertEqual([c[2] for c in self.api.calls[::3]], expected)
-        self.assertTrue(all(c[2] is None for i,c in enumerate(self.api.calls) if i % 3))
+        self.assertEqual([c[2] for c in self.api.calls], expected)
         self.assertEqual(t.select_image(feed()['items'][0], [{'image_url':u} for u in expected] + [{}], assets), urls[0])
 
     def test_unapproved_rotation_blocks_before_reservation_or_post(self):
@@ -164,9 +251,10 @@ class PublisherTests(unittest.TestCase):
         before = copy.deepcopy(self.store.state)
         with self.assertRaisesRegex(ValueError, 'unapproved_image_rotation'):
             t.publish(f, self.store, self.api, NOW.replace(hour=12), '0 3 * * *', '124', '1004',
-                      {'_rotation':['https://evil.test/image.png']})
+                      {'_rotation':['https://evil.test/image.png']},
+                      reviewed_queue(f, self.store.state, NOW.replace(hour=12), '0 3 * * *', {'_rotation': urls_for_tests()}))
         self.assertEqual(self.store.state, before)
-        self.assertEqual(len(self.api.calls), 3)
+        self.assertEqual(len(self.api.calls), 1)
 
     def test_resume_keeps_reserved_image_when_rotation_changes(self):
         self.store.state['records'].append({'benefit_id':'old', 'slot':NOW.replace(hour=7).isoformat(),
@@ -177,11 +265,11 @@ class PublisherTests(unittest.TestCase):
         self.api.verify_fail = False
         t.resume_publication(self.store,self.api,NOW,'1004','124','1001')
         self.assertEqual(self.store.state['records'][-1]['image_url'], image)
-        self.assertEqual([c[2] for c in self.api.calls], [image,None,None])
+        self.assertEqual([c[2] for c in self.api.calls], [image])
 
     def test_legacy_pending_link_is_held_without_rewriting_or_sending(self):
         self.api.verify_fail = True
-        with self.assertRaises(RuntimeError): self.run_publish()
+        with self.assertRaises(RuntimeError): self.run_legacy()
         self.api.verify_fail = False
         record = self.store.state['records'][0]
         record['texts'][1] += '\nhttps://plus.gov.kr/benefit'
@@ -210,7 +298,7 @@ class PublisherTests(unittest.TestCase):
         with self.assertRaises(ValueError): Wrong('fake').verify_account('1004')
     def test_HTTP_error_is_sanitized(self):
         def fail(*args, **kw): raise OSError('secret-token')
-        with self.assertRaises(RuntimeError) as error: t.Threads('secret-token', opener=fail).call('GET','/me')
+        with self.assertRaises(RuntimeError) as error: t.Threads('secret-token', opener=fail, pause=lambda _:None).call('GET','/me')
         self.assertNotIn('secret-token', str(error.exception))
     def test_account_read_status_is_reported_without_exposing_request(self):
         def fail(request, **kwargs):
@@ -235,12 +323,13 @@ class PublisherTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, 'ledger_unavailable'): t.Ledger('fake', opener=missing).read()
 
     def test_manual_publication_uses_current_minute_and_same_daily_cap(self):
-        result = t.publish(feed(), self.store, self.api, NOW, 'manual', '123', '1004')
+        result = t.publish(feed(), self.store, self.api, NOW, 'manual', '123', '1004',
+                           writer_queue=reviewed_queue(feed(), self.store.state, NOW, 'manual'))
         self.assertTrue(result['published'])
         self.assertEqual(self.store.state['records'][0]['slot'], NOW.replace(second=0, microsecond=0).isoformat())
         with self.assertRaisesRegex(RuntimeError, 'slot_already_reserved'):
             t.publish(feed(), self.store, self.api, NOW, 'manual', '124', '1004')
-        self.assertEqual(len(self.api.calls), 3)
+        self.assertEqual(len(self.api.calls), 1)
 
     def test_explicit_manual_mode_main_repo_and_first_attempt_required(self):
         env = {'SUPPORTPICK_THREADS_ENABLED':'true', 'SUPPORTPICK_THREADS_CUTOVER_READY':'true',
@@ -260,7 +349,7 @@ class PublisherTests(unittest.TestCase):
 
     def test_resume_verifies_existing_main_and_only_posts_missing_replies(self):
         self.api.verify_fail = True
-        with self.assertRaises(RuntimeError): self.run_publish()
+        with self.assertRaises(RuntimeError): self.run_legacy()
         self.api.verify_fail = False
         result = t.resume_publication(self.store, self.api, NOW, '1004', '124', '1001')
         self.assertTrue(result['resumed'])
@@ -270,7 +359,7 @@ class PublisherTests(unittest.TestCase):
 
     def test_resume_cannot_clear_an_ambiguous_reply_without_receipt(self):
         self.api.fail_at = 2
-        with self.assertRaises(RuntimeError): self.run_publish()
+        with self.assertRaises(RuntimeError): self.run_legacy()
         original = copy.deepcopy(self.store.state)
         with self.assertRaisesRegex(RuntimeError, 'ambiguous_send'):
             t.resume_publication(self.store, self.api, NOW, '1004', '124', '1001')
@@ -329,6 +418,15 @@ class PopularityTests(unittest.TestCase):
                       self.row('popular', '50,000', endDate='2026-12-01')]
         self.assertEqual([r['id'] for r in t.candidates(f, empty(), NOW)], ['popular', 'low'])
 
+    def test_editorial_choice_requires_reasons_for_every_higher_view_candidate(self):
+        high, low = self.row('high', 1000), self.row('low', 100)
+        with self.assertRaisesRegex(ValueError, 'higher_priority'):
+            t.reviewed_selection(low, [high, low], {})
+        info = t.reviewed_selection(low, [high, low], {'selection_notes': [
+            {'benefit_id': 'high', 'decision': 'HOLD', 'reason': '현재 공식 접수상태 확인 불가'}]})
+        self.assertEqual(info['candidate_rank'], 2)
+        self.assertEqual(info['higher_ranked_exclusions'][0]['views'], 1000)
+
     def test_equal_views_use_deadline_then_stable_id(self):
         f = feed(); f['items'] = [self.row('z', 100), self.row('b', '100', endDate='2026-11-05'),
                                  self.row('a', 100, endDate='2026-11-05')]
@@ -352,7 +450,8 @@ class PopularityTests(unittest.TestCase):
     def test_published_selection_retains_actual_views_and_basis(self):
         f = feed(); f['items'] = [self.row('low', 1), self.row('high', '2,345')]
         store = Store(); api = API(store)
-        result = t.publish(f, store, api, NOW, '0 23 * * *', '123', '1004')
+        result = t.publish(f, store, api, NOW, '0 23 * * *', '123', '1004',
+                           writer_queue=reviewed_queue(f, store.state))
         self.assertEqual(result['benefit_id'], 'high')
         self.assertEqual(store.state['records'][0]['selection']['views'], 2345)
         self.assertEqual(result['selection']['basis'], '보조금24 누적 조회수')
