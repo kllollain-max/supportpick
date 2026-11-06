@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-06T10:56:01.550792+09:00",
+  "prepared_at": "2026-11-06T17:47:14.197849+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -75,6 +75,30 @@
       "decision": "SELECTED",
       "views": 550615,
       "reason": "신규 가입이 중단된 청년내일채움공제를 제외한 다음 인기 후보이며, 국민연금공단에서 전 국민 무료서비스와 현재 상담예약 경로를 확인했다."
+    },
+    {
+      "benefit_id": "WII000001410",
+      "views": 490260,
+      "decision": "READY",
+      "reason": "이미 발행·편성된 사업과 공식 근거를 확인할 수 없는 상위 후보를 제외한 보조금24 누적 조회수 순.",
+      "sources": [
+        "https://www.mohw.go.kr/menu.es?mid=a10708010500",
+        "https://www.mohw.go.kr/menu.es?mid=a10708010300",
+        "https://www.hanam.go.kr/DATA/newsletter/3982/20260211050114681_duVk.pdf",
+        "https://lll.saha.go.kr/portal/contents.do?mId=0501000000",
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=575760&bnefType=all&svcId=WII000001410"
+      ]
+    },
+    {
+      "benefit_id": "641000000139",
+      "views": 434513,
+      "decision": "READY",
+      "reason": "이미 발행·편성된 사업과 공식 근거를 확인할 수 없는 상위 후보를 제외한 보조금24 누적 조회수 순.",
+      "sources": [
+        "https://web1.gg.go.kr/contents/contents.do?ciIdx=987119&menuId=266082",
+        "https://www.gbuspb.kr/child/user/svc/userServiceInfoView.do",
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002200&bnefType=all&svcId=641000000139"
+      ]
     }
   ],
   "entries": [
@@ -507,6 +531,212 @@
         }
       },
       "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a"
+    },
+    {
+      "slot": "2026-11-07T12:00:00+09:00",
+      "benefit_id": "WII000001410",
+      "source_fingerprint": "4be7317554422f7aeafefd455545cc56be0e64bc717f3ecdb26ede29fc6341a2",
+      "source_generation": "gov24-42117967226-1",
+      "prepared_at": "2026-11-06T17:47:14.197849+09:00",
+      "expires_at": "2026-11-07T17:47:14.197849+09:00",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "WII000001410",
+        "post_text": "기초생활보장 생계급여는 가구의 소득인정액에 따라 매달 지급액이 달라지는 현금 지원이에요.\n\n2026년 월 선정기준은 1인 가구 82만 556원, 4인 가구 207만 8,316원이에요. 일반 수급 가구는 해당 기준액에서 가구의 소득인정액을 뺀 금액을 받아요. 소득인정액에는 소득과 함께 재산을 소득으로 환산한 금액도 반영돼요.\n\n생계와 주거를 따로 하는 1촌 직계혈족과 그 배우자의 연소득이 1억 3천만 원을 넘거나 일반재산이 12억 원을 넘으면 선정에서 제외돼요. 전국의 주소지 관할 읍·면·동 행정복지센터에서 연중 신청할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-07T12:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "가구 소득이 낮아 기초생활보장 생계급여를 알아보는 일반 가구",
+          "central_message": "월 기준액과 심사 후 실제 월 지급액을 구분한다.",
+          "pattern": "P4",
+          "selection_reason": "이미 발행·편성된 사업과 공식 근거를 확인할 수 없는 상위 후보를 제외한 보조금24 누적 조회수 순.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "WII000001410",
+              "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10708010500",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-06T17:47:14.197849+09:00",
+              "claims_supported": [
+                "2026년 가구 규모별 선정·지급 기준과 보충급여 방식"
+              ]
+            },
+            {
+              "source_id": "WII000001410",
+              "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10708010300",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-06T17:47:14.197849+09:00",
+              "claims_supported": [
+                "소득인정액의 구성 및 별도 생계·주거 부양의무자 고소득·고재산 제한"
+              ]
+            },
+            {
+              "source_id": "WII000001410",
+              "source_ref": "https://www.hanam.go.kr/DATA/newsletter/3982/20260211050114681_duVk.pdf",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-06T17:47:14.197849+09:00",
+              "claims_supported": [
+                "2026 기초생활보장 생계급여의 관할 행정복지센터 연중 신청 안내"
+              ]
+            },
+            {
+              "source_id": "WII000001410",
+              "source_ref": "https://lll.saha.go.kr/portal/contents.do?mId=0501000000",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-06T17:47:14.197849+09:00",
+              "claims_supported": [
+                "2026년 가구 규모별 월 기준과 관할 동 연중 신청"
+              ]
+            },
+            {
+              "source_id": "WII000001410",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=575760&bnefType=all&svcId=WII000001410",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-06T17:47:14.197849+09:00",
+              "claims_supported": [
+                "검증 수집본의 동일 서비스 ID, 지원 내용과 신청 경로. 원본 수집 시각 2026-11-06T07:07:48.703476+09:00.",
+                "serviceList 누적 조회수 490260건."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 317,
+          "count_method": "Python len(str), 공백·개행·CTA 포함 유니코드 코드포인트",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "가구별 실제 지급액은 심사에 따라 달라진다. 시설 수급자의 별도 기준과 센터 운영시간은 본문에 포함하지 않았다.",
+            "중앙부처 최신 안내와 동일 ID API의 1.3억·12억 기준을 사용했다. 사하구 페이지의 과거 기준이 남은 별도 문구는 인용하지 않았다.",
+            "최근 긴급복지 생계지원은 위기 사유를 대상으로 하는 별도 사업이다. 이번 원고는 기초생활보장 일반 생계급여의 월 산정 구조를 다룬다.",
+            "실제 발송 시 최신 수집본의 사실 해시, 신청 상태 및 원장을 다시 확인."
+          ]
+        },
+        "next_history_record": {
+          "program_id": "WII000001410",
+          "notice_version": "gov24-42117967226-1:2026-08-14",
+          "pattern": "P4",
+          "opening": "기초생활보장 생계급여는 가구의 소득인정액에 따라 매달 지급액이 달라지는 현금 지원이에요.",
+          "structure": "급여 유형 → 월 선정기준과 차감 방식 → 소득인정액 뜻 → 예외와 연중 신청 경로 → CTA",
+          "media_turn": "TEXT"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-07T16:00:00+09:00",
+      "benefit_id": "641000000139",
+      "source_fingerprint": "d1db5d915dfc4e34268e797d72c002c86cdc737221b71c9d79b65d832dfcf1fe",
+      "source_generation": "gov24-42117967226-1",
+      "prepared_at": "2026-11-06T17:47:14.197849+09:00",
+      "expires_at": "2026-11-07T17:47:14.197849+09:00",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "641000000139",
+        "post_text": "버스나 지하철로 통학하는 자녀가 있다면, 교통카드에 쌓인 이용분이 환급 대상인지 살펴보세요.\n\n경기도 어린이·청소년 교통비 지원은 신청일에 경기도에 주민등록이 된 만 6~18세가 본인 교통카드로 이용한 수도권 대중교통 요금을 돌려주는 제도예요. 실사용액을 분기 최대 6만 원, 연 최대 24만 원 한도에서 지역화폐로 지급해요.\n\n공식 지원 포털에서 연중 가입할 수 있어요. 거주지 인증과 교통카드·지역화폐 등록이 필요하고, 지원은 신청한 분기부터 적용돼요. 같은 분기에 중복 제한 대상 교통비 지원을 받았다면 이 사업 지원에서 제외돼요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-07T16:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "경기도에 거주하며 수도권 대중교통을 이용하는 어린이·청소년과 보호자",
+          "central_message": "실제 대중교통 지출에 연동된 지역화폐 환급 범위와 가입 조건을 설명한다.",
+          "pattern": "P3",
+          "selection_reason": "이미 발행·편성된 사업과 공식 근거를 확인할 수 없는 상위 후보를 제외한 보조금24 누적 조회수 순.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "641000000139",
+              "source_ref": "https://web1.gg.go.kr/contents/contents.do?ciIdx=987119&menuId=266082",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-06T17:47:14.197849+09:00",
+              "claims_supported": [
+                "신청일 경기도 주민등록 및 6~18세, 수도권 교통수단 범위와 분기·연간 한도"
+              ]
+            },
+            {
+              "source_id": "641000000139",
+              "source_ref": "https://www.gbuspb.kr/child/user/svc/userServiceInfoView.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-06T17:47:14.197849+09:00",
+              "claims_supported": [
+                "연중 수시 가입과 가입 분기부터 지원, 거주 인증, 교통카드·지역화폐 등록, 실사용액 및 중복 제한"
+              ]
+            },
+            {
+              "source_id": "641000000139",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002200&bnefType=all&svcId=641000000139",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-06T17:47:14.197849+09:00",
+              "claims_supported": [
+                "검증 수집본의 동일 서비스 ID, 지원 내용과 신청 경로. 원본 수집 시각 2026-11-06T07:06:58.348066+09:00.",
+                "serviceList 누적 조회수 434513건."
+              ]
+            },
+            {
+              "source_id": "641000000139",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-06T17:47:14.197849+09:00",
+              "claims_supported": [
+                "main 시각검수 기록(2026-11-06T10:45:39+09:00)과 현재 파일 SHA-256 일치.",
+                "브랜드와 CTA 일치. 사업별 금액·대상·신청기간 표기 없음."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 318,
+          "count_method": "Python len(str), 공백·개행·CTA 포함 유니코드 코드포인트",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "지원 포털의 별도 공지·작업공지 목록은 열람 경로에서 HTTP 400. 도청 공식 안내 및 포털 사업안내에 일치하는 상시 가입 조건만 사용했다. 별도 분기 마감 시각이나 지급일은 확정하지 않았다.",
+            "공통 이미지는 기존 검수 기록과 파일 해시를 대조했으며 이번 점검에서 새 시각검수는 수행하지 않았다.",
+            "실제 발송 시 최신 수집본의 사실 해시, 신청 상태 및 원장을 다시 확인."
+          ]
+        },
+        "next_history_record": {
+          "program_id": "641000000139",
+          "notice_version": "gov24-42117967226-1:2026-08-13",
+          "pattern": "P3",
+          "opening": "버스나 지하철로 통학하는 자녀가 있다면, 교통카드에 쌓인 이용분이 환급 대상인지 살펴보세요.",
+          "structure": "통학 교통비 지출 → 거주·연령·실사용 환급 한도 → 등록·적용 분기와 중복 제한 → CTA",
+          "media_turn": "IMAGE"
+        }
+      }
     }
   ]
 }
