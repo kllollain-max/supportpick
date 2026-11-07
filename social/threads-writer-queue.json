@@ -1095,6 +1095,95 @@
           "media_turn": "TEXT"
         }
       }
+    },
+    {
+      "slot": "2026-11-08T16:00:00+09:00",
+      "benefit_id": "132000000006",
+      "source_fingerprint": "eb9ec4396bd5e56863fed3e0ec033db96824f5622c5d35f56abd989dbb3df760",
+      "source_generation": "gov24-42300923419-1",
+      "prepared_at": "2026-11-07T17:11:53.718345+09:00",
+      "expires_at": "2026-11-08T17:11:53.718345+09:00",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "132000000006",
+        "draft_text": null,
+        "post_text": "1종 보통 면허 적성검사를 앞뒀다면, 새 신체검사를 받기 전에 기존 건강검진 기록을 확인해 보세요.\n\n• 검진 날짜. 신청일 기준 2년 이내 국민건강보험공단 검진 기록이어야 해요.\n• 시력. 교정시력도 인정되며 양쪽 눈을 함께 뜬 시력은 0.8 이상, 각 눈은 0.5 이상이 기본 기준이에요. 한쪽 눈이 보이지 않는 분은 안과 진단서가 필요해요.\n• 이용 방법. 면허시험장이나 경찰서에서 행정정보 공동이용에 동의하면 검진 결과로 신체검사를 대신할 수 있어요.\n\n이 경우 별도 신체검사 비용을 줄일 수 있고, 면허증 발급 수수료는 따로 내요. 개인별 적성검사 기간은 안전운전 통합민원에서 확인하세요.\n\n자세한 사항은 프로필링크 확인",
+        "reply_texts": [],
+        "review": {
+          "planned_at": "2026-11-08T16:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "1종 보통 면허 정기 적성검사 대상자",
+          "central_message": "최근 건강검진을 활용할 수 있는지와 본인의 검사 기간을 확인한다.",
+          "pattern": "P8",
+          "selection_reason": "이전 발행 및 준비 원고와 상위 보류 항목을 제외하고 동일 서비스 ID의 보조금24 누적 조회수 순으로 골랐다.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "132000000006",
+              "source_ref": "https://www.safedriving.or.kr/diGuide/selectDiGuide01.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-07T17:11:53.718345+09:00",
+              "claims_supported": [
+                "1종 보통은 신청일 전 2년 이내 국민건강보험공단 검진기록을 공동이용 동의 후 활용 가능",
+                "시력 기준과 단안시력자 안과 진단서, 별도 면허증 발급 수수료, 개인별 기간 조회 경로 및 적성검사 기간에 신청 가능"
+              ]
+            },
+            {
+              "source_id": "132000000006",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=761842&bnefType=all&svcId=132000000006",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-07T17:11:53.718345+09:00",
+              "claims_supported": [
+                "검증된 공식 API 원문과 동일 서비스 ID, 검진기록·신청기간·신청 방법 대조",
+                "동일 서비스 ID 원본 누적 조회수 225273. 수집 시각 2026-11-07T07:00:30.509659+09:00"
+              ]
+            },
+            {
+              "source_id": "132000000006",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-07T17:11:53.718345+09:00",
+              "claims_supported": [
+                "기존 시각검수와 main 승인 파일 SHA-256 재대조 일치. 사업별 금액·대상·기간 문구 없음"
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 352,
+          "count_method": "Python Unicode 문자 수, 공백·개행·CTA 포함",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "개인별 갱신기간 및 실제 자료 제공 여부는 다를 수 있다.",
+            "실제 발송 시 최신 완전 수집본 및 이미지 교대 순서를 다시 확인한다."
+          ]
+        },
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "next_history_record": {
+          "program_id": "132000000006",
+          "notice_version": "gov24-42300923419-1:2026-07-27",
+          "pattern": "P8",
+          "opening": "1종 보통 면허 적성검사를 앞뒀다면, 새 신체검사를 받기 전에 기존 건강검진 기록을 확인해 보세요.",
+          "structure": "검진 활용 상황 → 검진 시점·시력·이용 방법 → 비용과 개인별 기간 → CTA",
+          "media_turn": "IMAGE"
+        }
+      }
     }
   ]
 }
