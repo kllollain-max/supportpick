@@ -695,7 +695,7 @@
     }
   },
   "last_check": {
-    "result": "ready_queue_revalidated_no_new_threads_result",
+    "result": "existing_draft_evidence_refreshed_before_scheduled_window",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -755,7 +755,7 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-07T13:23:55.099+09:00",
+    "checked_at": "2026-11-07T15:06:40.481+09:00",
     "changed_run_ids": [],
     "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "ranking_policy": {
@@ -829,7 +829,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 4
     },
-    "next_step": "Verify the 16:00 KST scheduled IMAGE publication. Recheck November 8 drafts against a fresh complete collection before sending.",
+    "next_step": "Verify 16:00 natural IMAGE result and recompute later media only if required. November 8 slots require a fresh complete collection before actual send.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
@@ -1006,16 +1006,16 @@
       "schedule": "hourly at minute 45"
     },
     "writer_queue_recheck": {
-      "checked_at": "2026-11-07T13:23:55.099+09:00",
-      "queue_blob_sha": "c614cb1b93f7f3ff860e7e2e20df81d57c20969b",
-      "previous_queue_blob_sha": "3b0f0836f15c8af688c7cd3dcdd1669eda1de3d7",
-      "queue_commit_sha": "403ddbf3d007e5cef0646a754a1a7a643da02593",
+      "checked_at": "2026-11-07T15:06:40.481+09:00",
+      "queue_blob_sha": "fbda34ea2417987f0316831602e17a4ec0d23430",
+      "previous_queue_blob_sha": "c614cb1b93f7f3ff860e7e2e20df81d57c20969b",
+      "queue_commit_sha": "53cbe1a15cac773704ba6a6b7b811da2d951b2db",
       "write_readback_identical": true,
       "ready_count": 4,
       "added_count": 0,
       "reused_existing_ready_count": 4,
       "source_generation": "gov24-42300923419-1",
-      "validate_ready_entry_and_preview": "four passed at simulated slot times",
+      "validate_ready_entry_and_preview": "four passed; November 7 16:00 and 20:00 validated again one second before their 2h limit",
       "future_slots_require_source_recheck": true,
       "drafts": [
         {
@@ -1024,7 +1024,7 @@
           "pattern": "P3",
           "media_turn": "IMAGE",
           "status": "READY",
-          "expires_at": "2026-11-07T17:47:14.197849+09:00"
+          "expires_at": "2026-11-08T15:05:52.594946+09:00"
         },
         {
           "slot": "2026-11-07T20:00:00+09:00",
@@ -1032,7 +1032,7 @@
           "pattern": "P5",
           "media_turn": "TEXT",
           "status": "READY",
-          "expires_at": "2026-11-07T20:49:25.698098+09:00"
+          "expires_at": "2026-11-08T15:05:52.594946+09:00"
         },
         {
           "slot": "2026-11-08T08:00:00+09:00",
@@ -1051,8 +1051,9 @@
           "expires_at": "2026-11-08T12:52:59.592770+09:00"
         }
       ],
-      "queue_mutated_this_check": false,
-      "next_slot_source_condition": "Both November 8 entries require the latest fresh complete source at send time."
+      "queue_mutated_this_check": true,
+      "next_slot_source_condition": "Both November 8 entries require the latest fresh complete source at send time.",
+      "evidence_refreshed_count": 2
     },
     "last_read_only_account_check": {
       "run_id": "42180307041",
