@@ -703,7 +703,7 @@
     }
   },
   "last_check": {
-    "result": "scheduled_afternoon_image_publication_verified_and_next_draft_queued",
+    "result": "ready_queue_revalidated_no_new_threads_result",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -763,10 +763,8 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-07T17:12:50.545+09:00",
-    "changed_run_ids": [
-      "42352758086"
-    ],
+    "checked_at": "2026-11-07T18:00:42.616+09:00",
+    "changed_run_ids": [],
     "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
@@ -816,6 +814,7 @@
       "returned": 192,
       "complete_to_checkpoint": true,
       "version_fields": [
+        "run_id",
         "run_attempt",
         "status",
         "conclusion",
@@ -847,15 +846,15 @@
       "source_consumed_by_natural_publisher": true,
       "known_postdeploy_failure_not_retried": true,
       "no_in_scope_unresolved_failure": true,
-      "new_result_and_source_artifact_contents_digest_verified": true,
+      "new_result_and_source_artifact_contents_digest_verified": false,
       "publisher_script_and_workflows_unchanged": true,
       "approved_assets_manifest_unchanged": true,
-      "no_new_publication": false,
+      "no_new_publication": true,
       "no_pending_publications": true,
       "natural_image_publication_verified": true,
       "artifact_metadata_and_digests_unchanged": true,
       "previously_digest_verified_artifact_contents_reused": true,
-      "publication_ledger_unchanged": false,
+      "publication_ledger_unchanged": true,
       "restore_and_snapshot_validation_unchanged": true,
       "source_snapshot_verified_now": true,
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
@@ -893,10 +892,10 @@
       "next_step": "Verify on next natural scheduled slots; do not dispatch test or backfill posts."
     },
     "current_slot_observation": {
-      "slot": "2026-11-07T16:00:00+09:00",
-      "classification": "scheduled_publication_completed_verified",
-      "run_id": "42352758086",
-      "remote_run_started": true,
+      "slot": "2026-11-07T20:00:00+09:00",
+      "classification": "upcoming_scheduled_slot",
+      "run_id": null,
+      "remote_run_started": false,
       "manual_publication_dispatched": false
     },
     "latest_source_execution": {
@@ -1001,14 +1000,14 @@
     },
     "posts_sent_this_check": 0,
     "next_slot_preview": {
-      "slot": "2026-11-06T20:00:00+09:00",
-      "benefit_id": "999000000008",
-      "pattern": "P6",
+      "slot": "2026-11-07T20:00:00+09:00",
+      "benefit_id": "336000000096",
+      "pattern": "P5",
       "media": "TEXT",
       "status": "READY",
-      "queue_blob_sha": "efbc7f74975bbe1659c6a6c49bfa27ac3451d910",
+      "queue_blob_sha": "848f69ae2a78f282929ad44875b1f6ca085f1a49",
       "actual_publication_verified": false,
-      "validation": "passed, recheck fresh source and actual ledger at send"
+      "validation": "passed at simulated slot time, recheck fresh source and actual ledger at send"
     },
     "recovery_automation": {
       "id": "6aeaefe5fd708191a3e8a67b3667fb8f",
@@ -1016,14 +1015,14 @@
       "schedule": "hourly at minute 45"
     },
     "writer_queue_recheck": {
-      "checked_at": "2026-11-07T17:12:50.545+09:00",
+      "checked_at": "2026-11-07T18:00:42.616+09:00",
       "queue_blob_sha": "848f69ae2a78f282929ad44875b1f6ca085f1a49",
       "previous_queue_blob_sha": "fbda34ea2417987f0316831602e17a4ec0d23430",
       "queue_commit_sha": "00bca8b6910ce568cdc88b3c636d6d3e665320ce",
       "write_readback_identical": true,
       "ready_count": 4,
-      "added_count": 1,
-      "reused_existing_ready_count": 3,
+      "added_count": 0,
+      "reused_existing_ready_count": 4,
       "source_generation": "gov24-42300923419-1",
       "validate_ready_entry_and_preview": "four passed at simulated slot times",
       "future_slots_require_source_recheck": true,
@@ -1061,7 +1060,7 @@
           "expires_at": "2026-11-08T17:11:53.718345+09:00"
         }
       ],
-      "queue_mutated_this_check": true,
+      "queue_mutated_this_check": false,
       "next_slot_source_condition": "November 8 entries require a fresh complete source at send time.",
       "evidence_refreshed_count": 0
     },
