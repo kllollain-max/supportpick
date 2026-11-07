@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-07T20:15:53.169142+09:00",
+  "prepared_at": "2026-11-07T22:24:00.669141+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -1198,8 +1198,8 @@
       "benefit_id": "WII000001460",
       "source_fingerprint": "7e309097adee4acf77d51e2e76fd1e7c60714705546e9b6de159d4c7e281a6ed",
       "source_generation": "gov24-42362288609-1",
-      "prepared_at": "2026-11-07T20:15:53.169142+09:00",
-      "expires_at": "2026-11-08T20:15:53.169142+09:00",
+      "prepared_at": "2026-11-07T22:24:00.669141+09:00",
+      "expires_at": "2026-11-08T22:24:00.669141+09:00",
       "writer": {
         "schema_version": "supportpick.writer.v1",
         "status": "READY",
@@ -1221,48 +1221,57 @@
               "source_id": "WII000001460",
               "source_ref": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systClId=SC00000246&systId=SI00000406",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-07T20:15:53.169142+09:00",
+              "verified_at": "2026-11-07T22:24:00.669141+09:00",
               "claims_supported": [
-                "일반 단태아 90일 기준 최초 60일 회사 통상임금 지급 의무와 우선지원대상기업 고용보험 지원·차액 부담",
-                "이후 30일은 기업 규모와 무관하게 통상임금 기준 30일 최대 220만 원. 휴가 종료일까지 피보험 단위기간 180일 이상, 신청은 종료 후 12개월 이내",
-                "회사 유형에 따라 신청 시작 가능 시점이 달라짐. 현재 고용24에서 신청 가능"
+                "일반 단태아 출산전후휴가 90일 중 처음 60일 회사 통상임금 지급 의무, 우선지원대상기업의 고용보험 지원 및 회사 차액 부담을 대조",
+                "이후 30일은 기업 규모와 무관하게 통상임금 기준 30일 최대 220만 원. 휴가 종료일까지 피보험 단위기간 합산 180일 이상",
+                "회사 유형에 따라 신청 시작 가능 시점이 달라지며, 휴가 종료 후 12개월 이내 고용24에서 신청 가능"
+              ]
+            },
+            {
+              "source_id": "WII000001460",
+              "source_ref": "https://www.work24.go.kr/ei/b/a/1100/openHPEIBA1100M02.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-07T22:24:00.669141+09:00",
+              "claims_supported": [
+                "고용24 제도 안내의 온라인 신청 버튼을 열어 신청 경로와 로그인 화면을 확인. 개인별 신청 절차는 로그인 이후라 열람하지 않음"
               ]
             },
             {
               "source_id": "WII000001460",
               "source_ref": "https://moel.go.kr/info/lawinfo/instruction/view.do?bbs_seq=20260900589",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-07T20:15:53.169142+09:00",
+              "verified_at": "2026-11-07T22:24:00.669141+09:00",
               "claims_supported": [
-                "현재 시행 고용노동부 고시 제2026-67호 공포 확인"
+                "고용노동부 고시 제2026-67호 공포 확인"
               ]
             },
             {
               "source_id": "WII000001460",
-              "source_ref": "https://www.law.go.kr/admRulSc.do?query=%EC%B6%9C%EC%82%B0%EC%A0%84%ED%9B%84%ED%9C%B4%EA%B0%80+%EA%B8%89%EC%97%AC%EB%93%B1+%EC%83%81%ED%95%9C%EC%95%A1+%EA%B3%A0%EC%8B%9C",
+              "source_ref": "https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000285290",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-07T20:15:53.169142+09:00",
+              "verified_at": "2026-11-07T22:24:00.669141+09:00",
               "claims_supported": [
-                "국가법령정보센터 공식 색인으로 제2026-67호의 2026-09-18 시행과 2026-12-31 유효기간, 90일 상한 660만 원 및 일수 계산을 대조"
+                "국가법령정보센터 공식 검색에 제공된 고시 원문에서 2026-09-18 시행, 2026-12-31 유효기간, 90일 상한 660만 원과 일수 계산을 대조"
               ]
             },
             {
               "source_id": "WII000001460",
               "source_ref": "https://moel.go.kr/info/lawinfo/lawmaking/view.do?bbs_seq=20261100031",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-07T20:15:53.169142+09:00",
+              "verified_at": "2026-11-07T22:24:00.669141+09:00",
               "claims_supported": [
-                "2026-11-02 제2026-491호는 개정안 행정예고임을 확인하여 본문에 시행 조건으로 반영하지 않음"
+                "11월 2일 제2026-491호는 개정안 행정예고임을 확인. 현행 제도 설명에 반영하지 않음"
               ]
             },
             {
               "source_id": "WII000001460",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=758582&bnefType=all&svcId=WII000001460",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-07T20:15:53.169142+09:00",
+              "verified_at": "2026-11-07T22:24:00.669141+09:00",
               "claims_supported": [
-                "보조금24 동일 ID 원문에서 대상·신청기한·관할 고용센터 방문과 고용24 신청 확인",
-                "누적 조회수 219959. 원본 확인시각 2026-11-07T19:08:44.778855+09:00"
+                "보조금24 동일 ID 원문에서 대상, 관할 고용센터 및 고용24 신청, 종료 후 12개월 이내 기한 대조",
+                "serviceList 누적 조회수 219959건. API 원본 확인시각 2026-11-07T19:08:44.778855+09:00"
               ]
             }
           ],
@@ -1282,7 +1291,7 @@
             "일반 단태아 출산전후휴가 기준만 설명했다. 미숙아·다태아·유산·사산의 기간은 별도 조건을 따른다.",
             "고용24 신청 경로는 로그인 화면까지 확인했다. 개인별 서류 제출 상태와 대위신청 여부는 확인 범위 밖이다.",
             "실제 발송 전 최신 수집본과 신청 상태, 직전 발송에 따른 이미지 교대를 확인해야 한다.",
-            "이 원고의 검수 근거 유효기간은 정규 회차의 2시간 지연 허용창보다 먼저 끝난다. 허용창 종료까지 대비하려면 게시 전에 공식 근거를 다시 대조해 갱신해야 한다."
+            "공식 근거를 다시 대조해 11월 8일 22시 직전까지 원고 유효기간을 확인했다. 실제 발송에 사용할 수집본의 신선도는 별도로 검사한다."
           ]
         },
         "media": {
