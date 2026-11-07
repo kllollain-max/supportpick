@@ -687,7 +687,7 @@
     }
   },
   "last_check": {
-    "result": "existing_ready_queue_revalidated_no_new_threads_result",
+    "result": "one_new_ready_draft_three_reused_no_new_publication",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -747,7 +747,7 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-07T10:15:00.033+09:00",
+    "checked_at": "2026-11-07T10:27:34.741+09:00",
     "changed_run_ids": [],
     "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "ranking_policy": {
@@ -821,7 +821,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 4
     },
-    "next_step": "Use the 12:00 KST TEXT queue entry after live revalidation. Prepare November 8 08:00 IMAGE with refreshed source and official evidence; the current snapshot exceeds its 24-hour freshness window at that slot.",
+    "next_step": "Verify the November 7 noon natural publication, then revalidate projected media. The November 8 draft requires a fresh complete source snapshot at send time.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
@@ -997,16 +997,16 @@
       "schedule": "hourly at minute 45"
     },
     "writer_queue_recheck": {
-      "checked_at": "2026-11-07T10:15:00.033+09:00",
-      "queue_blob_sha": "6e802f4b3640eb747bc4411b68d746a6b7badbda",
-      "previous_queue_blob_sha": "efbc7f74975bbe1659c6a6c49bfa27ac3451d910",
-      "queue_commit_sha": "5749f0c8578fdee839a28a843aabca708b6a772b",
+      "checked_at": "2026-11-07T10:27:34.741+09:00",
+      "queue_blob_sha": "3b0f0836f15c8af688c7cd3dcdd1669eda1de3d7",
+      "previous_queue_blob_sha": "6e802f4b3640eb747bc4411b68d746a6b7badbda",
+      "queue_commit_sha": "0a92d615abadbc7ef9db0f783737c60dfd1e46d1",
       "write_readback_identical": true,
-      "ready_count": 3,
-      "added_count": 0,
+      "ready_count": 4,
+      "added_count": 1,
       "reused_existing_ready_count": 3,
       "source_generation": "gov24-42300923419-1",
-      "validate_ready_entry_and_preview": "passed at simulated slot times against current verified runtime snapshot",
+      "validate_ready_entry_and_preview": "four passed at simulated slot times",
       "future_slots_require_source_recheck": true,
       "drafts": [
         {
@@ -1032,20 +1032,18 @@
           "media_turn": "TEXT",
           "status": "READY",
           "expires_at": "2026-11-07T20:49:25.698098+09:00"
+        },
+        {
+          "slot": "2026-11-08T08:00:00+09:00",
+          "benefit_id": "B55201500004",
+          "pattern": "P6",
+          "media_turn": "IMAGE",
+          "status": "READY",
+          "expires_at": "2026-11-08T10:26:51.052458+09:00"
         }
       ],
-      "queue_mutated_this_check": false,
-      "future_unfilled_slot": "2026-11-08T08:00:00+09:00",
-      "future_unfilled_reason": "verified collection snapshot is older than 24 hours by target time; requires fresh source and evidence",
-      "next_slot_research": {
-        "slot": "2026-11-08T08:00:00+09:00",
-        "candidate_id": "999000000025",
-        "decision": "requires_current_official_terms_and_fresh_runtime",
-        "references": [
-          "https://m.bokjiro.go.kr/ssis-tem/cms/mob/common/download/2025%EB%85%84%20%EC%95%88%EB%82%B4%EC%B1%85%EC%9E%90%20%5B%EC%B2%AD%EB%85%84%EC%B8%B5%5D.pdf"
-        ],
-        "reason": "Historical 2025 official guide does not establish current loan terms or November 8 eligibility. Candidate was not reserved."
-      }
+      "queue_mutated_this_check": true,
+      "next_slot_source_condition": "The current snapshot expires before November 8 08:00; use the latest fresh complete collection at send time."
     },
     "last_read_only_account_check": {
       "run_id": "42180307041",
