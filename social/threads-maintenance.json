@@ -703,7 +703,7 @@
     }
   },
   "last_check": {
-    "result": "ready_queue_revalidated_no_new_threads_result",
+    "result": "future_queue_evidence_renewed_for_delayed_regular_slots",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -763,7 +763,7 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-07T18:00:42.616+09:00",
+    "checked_at": "2026-11-07T18:35:28.546+09:00",
     "changed_run_ids": [],
     "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "ranking_policy": {
@@ -838,7 +838,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 4
     },
-    "next_step": "Verify 20:00 KST scheduled TEXT publication and latest complete collection. Recheck November 8 entries against current official evidence, fresh source and actual media rotation.",
+    "next_step": "Verify the natural 20:00 KST run. On November 8, require a fresh complete collection and recheck official status and actual media order before publication.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
@@ -1005,7 +1005,7 @@
       "pattern": "P5",
       "media": "TEXT",
       "status": "READY",
-      "queue_blob_sha": "848f69ae2a78f282929ad44875b1f6ca085f1a49",
+      "queue_blob_sha": "d442e800f167290e794201a7005b3fdf78f97f9c",
       "actual_publication_verified": false,
       "validation": "passed at simulated slot time, recheck fresh source and actual ledger at send"
     },
@@ -1015,16 +1015,16 @@
       "schedule": "hourly at minute 45"
     },
     "writer_queue_recheck": {
-      "checked_at": "2026-11-07T18:00:42.616+09:00",
-      "queue_blob_sha": "848f69ae2a78f282929ad44875b1f6ca085f1a49",
-      "previous_queue_blob_sha": "fbda34ea2417987f0316831602e17a4ec0d23430",
-      "queue_commit_sha": "00bca8b6910ce568cdc88b3c636d6d3e665320ce",
+      "checked_at": "2026-11-07T18:35:28.546+09:00",
+      "queue_blob_sha": "d442e800f167290e794201a7005b3fdf78f97f9c",
+      "previous_queue_blob_sha": "848f69ae2a78f282929ad44875b1f6ca085f1a49",
+      "queue_commit_sha": "ac2257283c67dd62ac2a90e9ebe48edf7244bc9b",
       "write_readback_identical": true,
       "ready_count": 4,
       "added_count": 0,
       "reused_existing_ready_count": 4,
       "source_generation": "gov24-42300923419-1",
-      "validate_ready_entry_and_preview": "four passed at simulated slot times",
+      "validate_ready_entry_and_preview": "4 READY at scheduled times, and 4 passed writer validation immediately before the two-hour cutoff using currently eligible source rows. This simulation does not advance source freshness.",
       "future_slots_require_source_recheck": true,
       "drafts": [
         {
@@ -1049,7 +1049,7 @@
           "pattern": "P5",
           "media_turn": "TEXT",
           "status": "READY",
-          "expires_at": "2026-11-08T12:52:59.592770+09:00"
+          "expires_at": "2026-11-08T18:34:09.306983+09:00"
         },
         {
           "slot": "2026-11-08T16:00:00+09:00",
@@ -1057,12 +1057,42 @@
           "pattern": "P8",
           "media_turn": "IMAGE",
           "status": "READY",
-          "expires_at": "2026-11-08T17:11:53.718345+09:00"
+          "expires_at": "2026-11-08T18:34:09.306983+09:00"
         }
       ],
-      "queue_mutated_this_check": false,
+      "queue_mutated_this_check": true,
       "next_slot_source_condition": "November 8 entries require a fresh complete source at send time.",
-      "evidence_refreshed_count": 0
+      "evidence_refreshed_count": 2,
+      "late_slot_checks": [
+        {
+          "slot": "2026-11-07T20:00:00+09:00",
+          "simulated_at": "2026-11-07T21:59:59.999999+09:00",
+          "status": "READY",
+          "actual_source_eligible": true,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-08T08:00:00+09:00",
+          "simulated_at": "2026-11-08T09:59:59.999999+09:00",
+          "status": "READY",
+          "actual_source_eligible": false,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-08T12:00:00+09:00",
+          "simulated_at": "2026-11-08T13:59:59.999999+09:00",
+          "status": "READY",
+          "actual_source_eligible": false,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-08T16:00:00+09:00",
+          "simulated_at": "2026-11-08T17:59:59.999999+09:00",
+          "status": "READY",
+          "actual_source_eligible": false,
+          "source_recheck_required_at_publish": true
+        }
+      ]
     },
     "last_read_only_account_check": {
       "run_id": "42180307041",
@@ -1100,6 +1130,38 @@
       "collection_result": "success",
       "public_pages_verified": 11058,
       "classification": "collection_and_public_verification_success"
+    },
+    "queue_evidence_renewal": {
+      "checked_at": "2026-11-07T18:34:09.306983+09:00",
+      "cause": "Previous per-entry evidence and draft validity ended before the original two-hour delay allowance.",
+      "reproduced_before": "writer_draft_expired_or_future",
+      "source_snapshot_manifest_files_verified": 36,
+      "publisher_mutation": false,
+      "proof": "official pages reopened, exact published history checked, source fingerprint and approved image SHA verified, body and pattern unchanged",
+      "entries": [
+        {
+          "slot": "2026-11-08T12:00:00+09:00",
+          "benefit_id": "B55353000001",
+          "old_expires_at": "2026-11-08T12:52:59.592770+09:00",
+          "new_expires_at": "2026-11-08T18:34:09.306983+09:00",
+          "evidence_sources": [
+            "https://www.energyv.or.kr/info/support_info.do",
+            "https://www.energyv.or.kr/info/apl_info.do",
+            "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999178&bnefType=all&svcId=B55353000001"
+          ]
+        },
+        {
+          "slot": "2026-11-08T16:00:00+09:00",
+          "benefit_id": "132000000006",
+          "old_expires_at": "2026-11-08T17:11:53.718345+09:00",
+          "new_expires_at": "2026-11-08T18:34:09.306983+09:00",
+          "evidence_sources": [
+            "https://www.safedriving.or.kr/diGuide/selectDiGuide01.do",
+            "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=761842&bnefType=all&svcId=132000000006",
+            "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png"
+          ]
+        }
+      ]
     }
   },
   "last_reported_publication": {
