@@ -46,7 +46,8 @@
     "42201890585",
     "42211895508",
     "42300923419",
-    "42312438288"
+    "42312438288",
+    "42334695570"
   ],
   "last_health": {
     "unresolved_publications": 0,
@@ -684,38 +685,45 @@
       "conclusion": "success",
       "updated_at": "2026-11-06T23:32:17Z",
       "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
-    }
-  },
-  "last_check": {
-    "result": "ready_queue_revalidated_no_new_threads_result",
-    "unresolved_publications": 0,
-    "active_target_runs": [],
-    "latest_publisher": {
-      "run_id": "42312438288",
+    },
+    "42334695570": {
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-06T23:32:17Z",
+      "updated_at": "2026-11-07T03:36:23Z",
+      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
+    }
+  },
+  "last_check": {
+    "result": "scheduled_noon_publication_verified_and_next_draft_queued",
+    "unresolved_publications": 0,
+    "active_target_runs": [],
+    "latest_publisher": {
+      "run_id": "42334695570",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-07T03:36:23Z",
       "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
       "event": "schedule",
-      "job_id": "128216909031",
+      "job_id": "128288852453",
       "published": true,
-      "slot": "2026-11-07T08:00:00+09:00",
-      "published_at": "2026-11-07T08:31:26.250997+09:00",
-      "verification_completed_at": "2026-11-07T08:32:13.3351371+09:00",
-      "benefit_id": "WII000000310",
-      "main_id": "17975519817170618",
-      "url": "https://www.threads.com/@hid_1004/post/DfayvWpjgnj",
+      "slot": "2026-11-07T12:00:00+09:00",
+      "published_at": "2026-11-07T12:35:33.047761+09:00",
+      "verification_completed_at": "2026-11-07T12:36:19.8564187+09:00",
+      "benefit_id": "WII000001410",
+      "main_id": "18093294914677276",
+      "url": "https://www.threads.com/@hid_1004/post/DfbOraejK_S",
       "stage": "complete",
       "verified": true,
-      "content_hash": "266745c912edb0c954c19626b8535c13f6086d218d7e05de80dd27ec9563b1b7",
-      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "content_hash": "dbfdd37d2b41da48f2048da1dc61e486bccd86527ec904bcd03cfc3044d6ee1a",
+      "asset_sha256": null,
       "source_generation": "gov24-42300923419-1",
-      "pattern": "P8",
-      "media_turn": "IMAGE",
+      "pattern": "P4",
+      "media_turn": "TEXT",
       "replies": 0,
-      "artifact_id": "13548658531",
-      "artifact_sha256": "c0ab8f09b5548d4efb3611222798391b730f978fdac93967c04563e06739d08b",
+      "artifact_id": "13558289516",
+      "artifact_sha256": "d28d3067bf5e39e699a40e4210ac06cc466f01599e14086a5fdc665b8c624d4d",
       "artifact_contents_verified": true
     },
     "latest_source": {
@@ -739,7 +747,7 @@
       "public_pages_verified": 11058,
       "classification": "collection_and_public_verification_success"
     },
-    "publication_ledger_sha": "ede307fecfefdae3fd6785adb150b64fd5e9e8c1",
+    "publication_ledger_sha": "1262679f119a8ba8384d7f5a3e2a08745916d15e",
     "workflow_blob_shas": {
       "threads": "721f96ebc75988113d496958e3b8a29767eef0ce",
       "source": "ce74fe03afd06f59f1d38f2e297fe9a78bbcf604"
@@ -747,8 +755,10 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-07T12:15:51.771+09:00",
-    "changed_run_ids": [],
+    "checked_at": "2026-11-07T12:59:43.394+09:00",
+    "changed_run_ids": [
+      "42334695570"
+    ],
     "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
@@ -794,8 +804,8 @@
     "run_list_scan": {
       "pages": 2,
       "per_page": 100,
-      "total_count": 190,
-      "returned": 190,
+      "total_count": 191,
+      "returned": 191,
       "complete_to_checkpoint": true,
       "version_fields": [
         "run_attempt",
@@ -821,7 +831,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 4
     },
-    "next_step": "Observe the natural noon run and its terminal result before changing any future projected media order. All four queued entries passed preview with current snapshot; actual send requires fresh source.",
+    "next_step": "Verify the 16:00 KST scheduled IMAGE publication. Recheck November 8 drafts against a fresh complete collection before sending.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
@@ -832,12 +842,12 @@
       "new_result_and_source_artifact_contents_digest_verified": true,
       "publisher_script_and_workflows_unchanged": true,
       "approved_assets_manifest_unchanged": true,
-      "no_new_publication": true,
+      "no_new_publication": false,
       "no_pending_publications": true,
       "natural_image_publication_verified": true,
       "artifact_metadata_and_digests_unchanged": true,
       "previously_digest_verified_artifact_contents_reused": true,
-      "publication_ledger_unchanged": true,
+      "publication_ledger_unchanged": false,
       "restore_and_snapshot_validation_unchanged": true,
       "source_snapshot_verified_now": true,
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
@@ -876,8 +886,9 @@
     },
     "current_slot_observation": {
       "slot": "2026-11-07T12:00:00+09:00",
-      "classification": "scheduled_window_open_no_remote_run_observed_yet",
-      "remote_run_started": false,
+      "classification": "scheduled_publication_completed_verified",
+      "run_id": "42334695570",
+      "remote_run_started": true,
       "manual_publication_dispatched": false
     },
     "latest_source_execution": {
@@ -903,35 +914,36 @@
     },
     "current_day_publication_count": {
       "date_kst": "2026-11-07",
-      "count": 1,
+      "count": 2,
       "limit": 4
     },
     "previous_verified_publisher": {
-      "run_id": "42211895508",
+      "run_id": "42312438288",
       "run_attempt": 1,
-      "job_id": "127872304053",
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-06T23:32:17Z",
       "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
       "event": "schedule",
-      "conclusion": "success",
+      "job_id": "128216909031",
       "published": true,
-      "slot": "2026-11-06T20:00:00+09:00",
-      "published_at": "2026-11-06T20:39:59.541319+09:00",
-      "verification_completed_at": "2026-11-06T20:40:42.7761443+09:00",
-      "benefit_id": "999000000008",
-      "main_id": "18106136681288101",
-      "url": "https://www.threads.com/@hid_1004/post/DfZhUYXFfTA",
+      "slot": "2026-11-07T08:00:00+09:00",
+      "published_at": "2026-11-07T08:31:26.250997+09:00",
+      "verification_completed_at": "2026-11-07T08:32:13.3351371+09:00",
+      "benefit_id": "WII000000310",
+      "main_id": "17975519817170618",
+      "url": "https://www.threads.com/@hid_1004/post/DfayvWpjgnj",
       "stage": "complete",
       "verified": true,
-      "content_hash": "962e09c621e828647f47634f0b51b15e444e7e5346343190a6c07bdf2481c659",
-      "asset_sha256": null,
-      "source_generation": "gov24-42201890585-1",
-      "pattern": "P6",
-      "media_turn": "TEXT",
+      "content_hash": "266745c912edb0c954c19626b8535c13f6086d218d7e05de80dd27ec9563b1b7",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "source_generation": "gov24-42300923419-1",
+      "pattern": "P8",
+      "media_turn": "IMAGE",
       "replies": 0,
-      "artifact_id": "13499700945",
-      "artifact_sha256": "d235aa1cdee4d5bfb9892ac19988b8a7df3d051d66afd71b10fde7258887de71",
-      "artifact_contents_verified": true,
-      "ci_tests_passed": 121
+      "artifact_id": "13548658531",
+      "artifact_sha256": "c0ab8f09b5548d4efb3611222798391b730f978fdac93967c04563e06739d08b",
+      "artifact_contents_verified": true
     },
     "account_diagnostic": {
       "run_id": "42152164281",
@@ -996,26 +1008,18 @@
       "schedule": "hourly at minute 45"
     },
     "writer_queue_recheck": {
-      "checked_at": "2026-11-07T12:15:51.771+09:00",
-      "queue_blob_sha": "3b0f0836f15c8af688c7cd3dcdd1669eda1de3d7",
-      "previous_queue_blob_sha": "6e802f4b3640eb747bc4411b68d746a6b7badbda",
-      "queue_commit_sha": "0a92d615abadbc7ef9db0f783737c60dfd1e46d1",
+      "checked_at": "2026-11-07T12:59:43.394+09:00",
+      "queue_blob_sha": "c614cb1b93f7f3ff860e7e2e20df81d57c20969b",
+      "previous_queue_blob_sha": "3b0f0836f15c8af688c7cd3dcdd1669eda1de3d7",
+      "queue_commit_sha": "403ddbf3d007e5cef0646a754a1a7a643da02593",
       "write_readback_identical": true,
       "ready_count": 4,
-      "added_count": 0,
-      "reused_existing_ready_count": 4,
+      "added_count": 1,
+      "reused_existing_ready_count": 3,
       "source_generation": "gov24-42300923419-1",
       "validate_ready_entry_and_preview": "four passed at simulated slot times",
       "future_slots_require_source_recheck": true,
       "drafts": [
-        {
-          "slot": "2026-11-07T12:00:00+09:00",
-          "benefit_id": "WII000001410",
-          "pattern": "P4",
-          "media_turn": "TEXT",
-          "status": "READY",
-          "expires_at": "2026-11-07T17:47:14.197849+09:00"
-        },
         {
           "slot": "2026-11-07T16:00:00+09:00",
           "benefit_id": "641000000139",
@@ -1039,10 +1043,18 @@
           "media_turn": "IMAGE",
           "status": "READY",
           "expires_at": "2026-11-08T10:26:51.052458+09:00"
+        },
+        {
+          "slot": "2026-11-08T12:00:00+09:00",
+          "benefit_id": "B55353000001",
+          "pattern": "P5",
+          "media_turn": "TEXT",
+          "status": "READY",
+          "expires_at": "2026-11-08T12:52:59.592770+09:00"
         }
       ],
-      "queue_mutated_this_check": false,
-      "next_slot_source_condition": "The current snapshot expires before November 8 08:00; use the latest fresh complete collection at send time."
+      "queue_mutated_this_check": true,
+      "next_slot_source_condition": "Both November 8 entries require the latest fresh complete source at send time."
     },
     "last_read_only_account_check": {
       "run_id": "42180307041",
@@ -1083,31 +1095,31 @@
     }
   },
   "last_reported_publication": {
-    "run_id": "42312438288",
+    "run_id": "42334695570",
     "run_attempt": 1,
     "status": "completed",
     "conclusion": "success",
-    "updated_at": "2026-11-06T23:32:17Z",
+    "updated_at": "2026-11-07T03:36:23Z",
     "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "event": "schedule",
-    "job_id": "128216909031",
+    "job_id": "128288852453",
     "published": true,
-    "slot": "2026-11-07T08:00:00+09:00",
-    "published_at": "2026-11-07T08:31:26.250997+09:00",
-    "verification_completed_at": "2026-11-07T08:32:13.3351371+09:00",
-    "benefit_id": "WII000000310",
-    "main_id": "17975519817170618",
-    "url": "https://www.threads.com/@hid_1004/post/DfayvWpjgnj",
+    "slot": "2026-11-07T12:00:00+09:00",
+    "published_at": "2026-11-07T12:35:33.047761+09:00",
+    "verification_completed_at": "2026-11-07T12:36:19.8564187+09:00",
+    "benefit_id": "WII000001410",
+    "main_id": "18093294914677276",
+    "url": "https://www.threads.com/@hid_1004/post/DfbOraejK_S",
     "stage": "complete",
     "verified": true,
-    "content_hash": "266745c912edb0c954c19626b8535c13f6086d218d7e05de80dd27ec9563b1b7",
-    "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+    "content_hash": "dbfdd37d2b41da48f2048da1dc61e486bccd86527ec904bcd03cfc3044d6ee1a",
+    "asset_sha256": null,
     "source_generation": "gov24-42300923419-1",
-    "pattern": "P8",
-    "media_turn": "IMAGE",
+    "pattern": "P4",
+    "media_turn": "TEXT",
     "replies": 0,
-    "artifact_id": "13548658531",
-    "artifact_sha256": "c0ab8f09b5548d4efb3611222798391b730f978fdac93967c04563e06739d08b",
+    "artifact_id": "13558289516",
+    "artifact_sha256": "d28d3067bf5e39e699a40e4210ac06cc466f01599e14086a5fdc665b8c624d4d",
     "artifact_contents_verified": true
   },
   "policy_changes": [
