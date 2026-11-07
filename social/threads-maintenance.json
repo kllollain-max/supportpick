@@ -687,7 +687,7 @@
     }
   },
   "last_check": {
-    "result": "scheduled_image_publication_verified",
+    "result": "existing_ready_queue_revalidated_no_new_threads_result",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -747,10 +747,8 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-07T08:55:30.287+09:00",
-    "changed_run_ids": [
-      "42312438288"
-    ],
+    "checked_at": "2026-11-07T10:15:00.033+09:00",
+    "changed_run_ids": [],
     "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
@@ -834,12 +832,12 @@
       "new_result_and_source_artifact_contents_digest_verified": true,
       "publisher_script_and_workflows_unchanged": true,
       "approved_assets_manifest_unchanged": true,
-      "no_new_publication": false,
+      "no_new_publication": true,
       "no_pending_publications": true,
       "natural_image_publication_verified": true,
       "artifact_metadata_and_digests_unchanged": true,
-      "previously_digest_verified_artifact_contents_reused": false,
-      "publication_ledger_unchanged": false,
+      "previously_digest_verified_artifact_contents_reused": true,
+      "publication_ledger_unchanged": true,
       "restore_and_snapshot_validation_unchanged": true,
       "source_snapshot_verified_now": true,
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
@@ -999,7 +997,7 @@
       "schedule": "hourly at minute 45"
     },
     "writer_queue_recheck": {
-      "checked_at": "2026-11-07T08:55:30.287+09:00",
+      "checked_at": "2026-11-07T10:15:00.033+09:00",
       "queue_blob_sha": "6e802f4b3640eb747bc4411b68d746a6b7badbda",
       "previous_queue_blob_sha": "efbc7f74975bbe1659c6a6c49bfa27ac3451d910",
       "queue_commit_sha": "5749f0c8578fdee839a28a843aabca708b6a772b",
@@ -1038,7 +1036,16 @@
       ],
       "queue_mutated_this_check": false,
       "future_unfilled_slot": "2026-11-08T08:00:00+09:00",
-      "future_unfilled_reason": "verified collection snapshot is older than 24 hours by target time; requires fresh source and evidence"
+      "future_unfilled_reason": "verified collection snapshot is older than 24 hours by target time; requires fresh source and evidence",
+      "next_slot_research": {
+        "slot": "2026-11-08T08:00:00+09:00",
+        "candidate_id": "999000000025",
+        "decision": "requires_current_official_terms_and_fresh_runtime",
+        "references": [
+          "https://m.bokjiro.go.kr/ssis-tem/cms/mob/common/download/2025%EB%85%84%20%EC%95%88%EB%82%B4%EC%B1%85%EC%9E%90%20%5B%EC%B2%AD%EB%85%84%EC%B8%B5%5D.pdf"
+        ],
+        "reason": "Historical 2025 official guide does not establish current loan terms or November 8 eligibility. Candidate was not reserved."
+      }
     },
     "last_read_only_account_check": {
       "run_id": "42180307041",
