@@ -719,7 +719,7 @@
     }
   },
   "last_check": {
-    "result": "unchanged_runs_and_four_ready_drafts_revalidated",
+    "result": "evening_draft_evidence_renewed_full_delay_window",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -782,7 +782,7 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-07T21:20:40.594+09:00",
+    "checked_at": "2026-11-07T22:25:06.333+09:00",
     "changed_run_ids": [],
     "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "ranking_policy": {
@@ -857,7 +857,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 4
     },
-    "next_step": "Revalidate complete source and actual media sequence before publication. Starting November 7 22:00 KST, new official evidence can cover the full November 8 20:00 slot delay window within its 24-hour lifetime. Renew before the existing 20:15:53 KST expiry. November 8 20:00 also requires a newer complete source.",
+    "next_step": "Use the latest verified complete feed and actual alternating media state at publication. The November 7 evening feed will not be fresh at the November 8 20:00 slot.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
@@ -1032,7 +1032,7 @@
       "benefit_id": "B55201500004",
       "expires_at": "2026-11-08T10:26:51.052458+09:00",
       "media": "IMAGE",
-      "queue_blob_sha": "b8ddbcf2545d5b7be35283c4ee5f94557437c004",
+      "queue_blob_sha": "db8e9bfed17c57570fcd8d0234b7ad6f349d7b82",
       "actual_publication_verified": false
     },
     "recovery_automation": {
@@ -1041,10 +1041,10 @@
       "schedule": "hourly at minute 45"
     },
     "writer_queue_recheck": {
-      "checked_at": "2026-11-07T21:20:40.594+09:00",
-      "queue_blob_sha": "b8ddbcf2545d5b7be35283c4ee5f94557437c004",
-      "previous_queue_blob_sha": "d442e800f167290e794201a7005b3fdf78f97f9c",
-      "queue_commit_sha": "38ba5ac66961451c12e90481565fff9e5cd2781c",
+      "checked_at": "2026-11-07T22:25:06.333+09:00",
+      "queue_blob_sha": "db8e9bfed17c57570fcd8d0234b7ad6f349d7b82",
+      "previous_queue_blob_sha": "b8ddbcf2545d5b7be35283c4ee5f94557437c004",
+      "queue_commit_sha": "18c97d5a6a2c27b4fc1ae5bff884bf356c446e28",
       "write_readback_identical": true,
       "ready_count": 4,
       "added_count": 0,
@@ -1052,48 +1052,48 @@
       "retained_current_unreserved_slot": null,
       "validated_draft_count": 4,
       "source_generation": "gov24-42362288609-1",
-      "validate_ready_entry_and_preview": "4 passed at simulated slot times with the actual publication ledger",
+      "validate_ready_entry_and_preview": "All 4 passed at their scheduled times and immediately before the two-hour cutoff using currently eligible source rows; simulation does not renew source freshness.",
       "future_slots_require_source_recheck": true,
       "drafts": [
         {
           "slot": "2026-11-08T08:00:00+09:00",
-          "status": "READY",
+          "benefit_id": "B55201500004",
           "pattern": "P6",
           "media_turn": "IMAGE",
+          "status": "READY",
           "source_recheck_required_at_publish": true,
-          "benefit_id": "B55201500004",
           "expires_at": "2026-11-08T10:26:51.052458+09:00"
         },
         {
           "slot": "2026-11-08T12:00:00+09:00",
-          "status": "READY",
+          "benefit_id": "B55353000001",
           "pattern": "P5",
           "media_turn": "TEXT",
+          "status": "READY",
           "source_recheck_required_at_publish": true,
-          "benefit_id": "B55353000001",
           "expires_at": "2026-11-08T18:34:09.306983+09:00"
         },
         {
           "slot": "2026-11-08T16:00:00+09:00",
-          "status": "READY",
+          "benefit_id": "132000000006",
           "pattern": "P8",
           "media_turn": "IMAGE",
+          "status": "READY",
           "source_recheck_required_at_publish": true,
-          "benefit_id": "132000000006",
           "expires_at": "2026-11-08T18:34:09.306983+09:00"
         },
         {
           "slot": "2026-11-08T20:00:00+09:00",
-          "status": "READY",
+          "benefit_id": "WII000001460",
           "pattern": "P1",
           "media_turn": "TEXT",
+          "status": "READY",
           "source_recheck_required_at_publish": true,
-          "benefit_id": "WII000001460",
-          "expires_at": "2026-11-08T20:15:53.169142+09:00"
+          "expires_at": "2026-11-08T22:24:00.669141+09:00"
         }
       ],
-      "evidence_refreshed_count": 0,
-      "queue_mutated_this_check": false,
+      "evidence_refreshed_count": 1,
+      "queue_mutated_this_check": true,
       "priority_selection": {
         "policy": "gov24_views_desc_v1",
         "basis": "보조금24 누적 조회수",
@@ -1196,8 +1196,8 @@
         ]
       },
       "media_condition": "Actual November 7 20:00 TEXT publication now establishes tomorrow's starting IMAGE turn.",
-      "new_entry_expiry": "2026-11-08T20:15:53.169142+09:00",
-      "expiry_condition": "Evidence needs renewal before November 8 20:00 slot to cover the full original two-hour allowance.",
+      "new_entry_expiry": "2026-11-08T22:24:00.669141+09:00",
+      "expiry_condition": "Reviewed evidence now covers the full original two-hour allowance.",
       "next_entry_source_eligible_at_slot": [
         {
           "slot": "2026-11-08T08:00:00+09:00",
@@ -1452,6 +1452,53 @@
         ]
       },
       "new_entry_expiry": "2026-11-08T20:15:53.169142+09:00"
+    },
+    "previous_queue_checkpoint": {
+      "checked_at": "2026-11-07T21:20:40.594+09:00",
+      "queue_blob_sha": "b8ddbcf2545d5b7be35283c4ee5f94557437c004",
+      "queue_commit_sha": "38ba5ac66961451c12e90481565fff9e5cd2781c",
+      "ready_count": 4
+    },
+    "evening_evidence_renewal": {
+      "slot": "2026-11-08T20:00:00+09:00",
+      "benefit_id": "WII000001460",
+      "checked_at": "2026-11-07T22:24:00.669141+09:00",
+      "old_expires_at": "2026-11-08T20:15:53.169142+09:00",
+      "new_expires_at": "2026-11-08T22:24:00.669141+09:00",
+      "late_simulation_at": "2026-11-08T21:59:59.999999+09:00",
+      "before": "writer_draft_expired_or_future",
+      "after": "READY",
+      "body_unchanged": true,
+      "media_turn": "TEXT",
+      "approved_asset_checks_for_other_slots": true,
+      "source_fresh_at_late_check": false,
+      "actual_source_refresh_required": true,
+      "sources": [
+        {
+          "source_ref": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systClId=SC00000246&systId=SI00000406",
+          "access_method": "OPENED_OFFICIAL"
+        },
+        {
+          "source_ref": "https://www.work24.go.kr/ei/b/a/1100/openHPEIBA1100M02.do",
+          "access_method": "OPENED_OFFICIAL"
+        },
+        {
+          "source_ref": "https://moel.go.kr/info/lawinfo/instruction/view.do?bbs_seq=20260900589",
+          "access_method": "OPENED_OFFICIAL"
+        },
+        {
+          "source_ref": "https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000285290",
+          "access_method": "PROVIDED_OFFICIAL_TEXT"
+        },
+        {
+          "source_ref": "https://moel.go.kr/info/lawinfo/lawmaking/view.do?bbs_seq=20261100031",
+          "access_method": "OPENED_OFFICIAL"
+        },
+        {
+          "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=758582&bnefType=all&svcId=WII000001460",
+          "access_method": "PROVIDED_OFFICIAL_TEXT"
+        }
+      ]
     }
   },
   "last_reported_publication": {
