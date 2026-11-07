@@ -695,7 +695,7 @@
     }
   },
   "last_check": {
-    "result": "existing_draft_evidence_refreshed_before_scheduled_window",
+    "result": "ready_queue_revalidated_no_new_threads_result",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -755,7 +755,7 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-07T15:06:40.481+09:00",
+    "checked_at": "2026-11-07T16:08:03.247+09:00",
     "changed_run_ids": [],
     "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "ranking_policy": {
@@ -829,7 +829,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 4
     },
-    "next_step": "Verify 16:00 natural IMAGE result and recompute later media only if required. November 8 slots require a fresh complete collection before actual send.",
+    "next_step": "Observe the scheduled 16:00 IMAGE run and verify its result before changing media projection. November 8 entries need a fresh complete collection at actual send.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
@@ -883,10 +883,9 @@
       "next_step": "Verify on next natural scheduled slots; do not dispatch test or backfill posts."
     },
     "current_slot_observation": {
-      "slot": "2026-11-07T12:00:00+09:00",
-      "classification": "scheduled_publication_completed_verified",
-      "run_id": "42334695570",
-      "remote_run_started": true,
+      "slot": "2026-11-07T16:00:00+09:00",
+      "classification": "scheduled_window_open_no_remote_run_observed_yet",
+      "remote_run_started": false,
       "manual_publication_dispatched": false
     },
     "latest_source_execution": {
@@ -1006,7 +1005,7 @@
       "schedule": "hourly at minute 45"
     },
     "writer_queue_recheck": {
-      "checked_at": "2026-11-07T15:06:40.481+09:00",
+      "checked_at": "2026-11-07T16:08:03.247+09:00",
       "queue_blob_sha": "fbda34ea2417987f0316831602e17a4ec0d23430",
       "previous_queue_blob_sha": "c614cb1b93f7f3ff860e7e2e20df81d57c20969b",
       "queue_commit_sha": "53cbe1a15cac773704ba6a6b7b811da2d951b2db",
@@ -1051,9 +1050,9 @@
           "expires_at": "2026-11-08T12:52:59.592770+09:00"
         }
       ],
-      "queue_mutated_this_check": true,
+      "queue_mutated_this_check": false,
       "next_slot_source_condition": "Both November 8 entries require the latest fresh complete source at send time.",
-      "evidence_refreshed_count": 2
+      "evidence_refreshed_count": 0
     },
     "last_read_only_account_check": {
       "run_id": "42180307041",
