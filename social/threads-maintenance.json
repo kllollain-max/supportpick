@@ -719,7 +719,7 @@
     }
   },
   "last_check": {
-    "result": "evening_draft_evidence_renewed_full_delay_window",
+    "result": "unchanged_runs_and_four_ready_drafts_revalidated",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -782,7 +782,7 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-07T22:25:06.333+09:00",
+    "checked_at": "2026-11-07T23:43:02.506+09:00",
     "changed_run_ids": [],
     "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "ranking_policy": {
@@ -857,7 +857,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 4
     },
-    "next_step": "Use the latest verified complete feed and actual alternating media state at publication. The November 7 evening feed will not be fresh at the November 8 20:00 slot.",
+    "next_step": "Use latest complete feed and actual media sequence at publication. The November 7 evening snapshot will not be fresh at November 8 20:00. Reviewed draft evidence covers every original two-hour window.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
@@ -1041,7 +1041,7 @@
       "schedule": "hourly at minute 45"
     },
     "writer_queue_recheck": {
-      "checked_at": "2026-11-07T22:25:06.333+09:00",
+      "checked_at": "2026-11-07T23:43:02.506+09:00",
       "queue_blob_sha": "db8e9bfed17c57570fcd8d0234b7ad6f349d7b82",
       "previous_queue_blob_sha": "b8ddbcf2545d5b7be35283c4ee5f94557437c004",
       "queue_commit_sha": "18c97d5a6a2c27b4fc1ae5bff884bf356c446e28",
@@ -1092,8 +1092,8 @@
           "expires_at": "2026-11-08T22:24:00.669141+09:00"
         }
       ],
-      "evidence_refreshed_count": 1,
-      "queue_mutated_this_check": true,
+      "evidence_refreshed_count": 0,
+      "queue_mutated_this_check": false,
       "priority_selection": {
         "policy": "gov24_views_desc_v1",
         "basis": "보조금24 누적 조회수",
@@ -1216,7 +1216,29 @@
           "eligible_from_verified_snapshot": false
         }
       ],
-      "full_evening_delay_window_renewal_earliest": "2026-11-07T22:00:00+09:00"
+      "full_evening_delay_window_renewal_earliest": "2026-11-07T22:00:00+09:00",
+      "actual_snapshot_freshness_and_draft_expiry_by_slot": [
+        {
+          "slot": "2026-11-08T08:00:00+09:00",
+          "snapshot_eligible_at_nominal": true,
+          "covers_original_window": true
+        },
+        {
+          "slot": "2026-11-08T12:00:00+09:00",
+          "snapshot_eligible_at_nominal": true,
+          "covers_original_window": true
+        },
+        {
+          "slot": "2026-11-08T16:00:00+09:00",
+          "snapshot_eligible_at_nominal": true,
+          "covers_original_window": true
+        },
+        {
+          "slot": "2026-11-08T20:00:00+09:00",
+          "snapshot_eligible_at_nominal": false,
+          "covers_original_window": true
+        }
+      ]
     },
     "last_read_only_account_check": {
       "run_id": "42180307041",
