@@ -977,6 +977,88 @@
           "media_turn": "IMAGE"
         }
       }
+    },
+    {
+      "slot": "2026-11-08T12:00:00+09:00",
+      "benefit_id": "B55353000001",
+      "source_fingerprint": "2a2fe3afc8b4c1afca98a24f780e8dc7854032c5a7380f2c92f22b7aade8ff47",
+      "source_generation": "gov24-42300923419-1",
+      "prepared_at": "2026-11-07T12:52:59.592770+09:00",
+      "expires_at": "2026-11-08T12:52:59.592770+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "B55353000001",
+        "draft_text": null,
+        "post_text": "에너지바우처를 신청하기 전, 우리 집이 두 가지 조건을 모두 충족하는지 살펴보세요.\n\n① 생계·의료·주거·교육급여 중 하나를 받고 있어야 해요.\n② 등본상 수급자 본인이나 세대원 중 노인, 취학 전 영유아, 등록장애인, 임산부 등 사업에서 정한 대상이 있어야 해요.\n\n2026년 세대당 이용권 총액은 1인 29만 5,200원, 2인 40만 7,500원, 3인 53만 2,700원, 4인 이상 70만 1,300원이에요. 동절기 긴급복지 연료비나 연탄쿠폰 등과는 중복이 제한돼요.\n\n신청은 12월 31일까지 주소지 읍·면·동 행정복지센터나 복지로에서 할 수 있어요. 12월 말에는 접수가 일시 중단되는 날이 있어 방문 전 확인해 보세요.\n\n자세한 사항은 프로필링크 확인",
+        "reply_texts": [],
+        "review": {
+          "planned_at": "2026-11-08T12:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "기초생활급여를 받고 겨울 에너지 비용 지원 요건을 확인하려는 세대",
+          "central_message": "기초생활급여 수급 여부와 세대원 특성 기준을 함께 확인한다.",
+          "pattern": "P5",
+          "selection_reason": "게시·편성 사업과 상위 보류 후보를 제외한 뒤 동일 서비스 ID의 보조금24 누적 조회수 순으로 확인했다.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "B55353000001",
+              "source_ref": "https://www.energyv.or.kr/info/support_info.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-07T12:52:59.592770+09:00",
+              "claims_supported": [
+                "기초생활급여 수급 및 등본상 세대원 특성 기준",
+                "세대원 수에 따른 2026년도 세대당 총액 295200·407500·532700·701300원과 동절기 중복 제한",
+                "2026-06-15~2026-12-31 신청 가능, 12월 말 2~3일 신청·재신청 일시 중단 안내"
+              ]
+            },
+            {
+              "source_id": "B55353000001",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999178&bnefType=all&svcId=B55353000001",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-07T12:52:59.592770+09:00",
+              "claims_supported": [
+                "공식 API 원문에서 자격, 이용권 총액, 기한, 주소지 읍면동 방문·복지로 온라인 신청을 대조",
+                "동일 서비스 ID 원본 누적 조회수 229619. 수집 시각 2026-11-07T07:03:20.575523+09:00"
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 372,
+          "count_method": "Python Unicode 문자 수, 공백·개행·CTA 포함",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "세대원 특성 예시는 전부를 열거하지 않는다.",
+            "12월 말 중단일은 공식 안내에 정확한 날짜가 적혀 있지 않아 특정하지 않았다.",
+            "실제 발송 시 최신 완전 수집본과 신청 상태를 재검증한다."
+          ]
+        },
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "next_history_record": {
+          "program_id": "B55353000001",
+          "notice_version": "gov24-42300923419-1:2026-08-05",
+          "pattern": "P5",
+          "opening": "에너지바우처를 신청하기 전, 우리 집이 두 가지 조건을 모두 충족하는지 살펴보세요.",
+          "structure": "두 가지 자격 확인 → 세대원별 총액과 중복 제한 → 접수 기한 및 방법 → CTA",
+          "media_turn": "TEXT"
+        }
+      }
     }
   ]
 }
