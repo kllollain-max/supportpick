@@ -141,6 +141,24 @@
         "https://jodal.koreapost.go.kr/user/bbs/405b/98/2952/bbsDataView/30026707.do?bbsDataCategory=&column=&page=566&search=&searchEDate=&searchSDate=",
         "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=748477&bnefType=all&svcId=171000000005"
       ]
+    },
+    {
+      "benefit_id": "999000000025",
+      "decision": "HOLD",
+      "reason": "보조금24 원문 월 40만 원·총 960만 원과 수탁은행 상품 안내 월 60만 원·총 1,440만 원이 달라 한도를 확정하지 않았다.",
+      "sources": [
+        "https://obank.kbstar.com/quics?QSL=F&cc=b104363%3Ab104516&isNew=N&page=C103998&prcode=LN20000076",
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999077&bnefType=all&svcId=999000000025"
+      ]
+    },
+    {
+      "benefit_id": "SD0000016138",
+      "decision": "HOLD",
+      "reason": "신청기간·서비스·본인부담이 지역별로 다르고, 공식 모집 목록에서 현재 적용할 지역별 접수 근거를 확보하지 못했다.",
+      "sources": [
+        "https://www.cbcsi.or.kr/oN3Zt",
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=75100&bnefType=all&svcId=SD0000016138"
+      ]
     }
   ],
   "entries": [
@@ -858,6 +876,105 @@
           "opening": "전월세로 살고 있다면 주거급여를 알아볼 때 세 가지를 확인해 보세요.",
           "structure": "임차가구 지목 → 소득·임차료·신청 경로 체크 → 부양의무자 조건 → CTA",
           "media_turn": "TEXT"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-08T08:00:00+09:00",
+      "benefit_id": "B55201500004",
+      "source_fingerprint": "7d4cbbf42d2063fb313d035d9a3b34839ee19383e757fc68ccf38f75ae70107d",
+      "source_generation": "gov24-42300923419-1",
+      "prepared_at": "2026-11-07T10:26:51.052458+09:00",
+      "expires_at": "2026-11-08T10:26:51.052458+09:00",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "B55201500004",
+        "draft_text": null,
+        "post_text": "구직급여가 끝나기 전에 국민연금 실업크레딧 신청기한도 확인해 보세요.\n\n신청기한은 구직급여를 받을 수 있는 마지막 날이 속한 달의 다음 달 15일까지예요. 고용센터나 국민연금공단 지사에서 신청할 수 있어요.\n\n만 18세 이상 60세 미만으로 국민연금 가입 이력이 있는 구직급여 수급자가 대상이에요. 재산세 과세표준 합계가 6억 원을 넘거나 사업·근로소득을 제외한 종합소득 합계가 1,680만 원을 넘으면 제외돼요.\n\n본인이 연금보험료의 25%를 내면 나머지 75%를 지원받아 가입기간에 더할 수 있어요. 지원은 구직급여 수급기간 중 생애 최대 12개월이에요.\n\n자세한 사항은 프로필링크 확인",
+        "reply_texts": [],
+        "review": {
+          "planned_at": "2026-11-08T08:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "구직급여 수급 중 국민연금 가입기간을 이어가려는 사람",
+          "central_message": "개인별 신청기한부터 확인하고 본인부담과 가입기간 산입 조건을 확인한다.",
+          "pattern": "P6",
+          "selection_reason": "앞 회차 편성 및 상위 후보의 보류·제외 이후 보조금24 누적 조회수 순으로 검토해 신청 기준이 확인된 후보를 골랐다.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "B55201500004",
+              "source_ref": "https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systClId=SC00000259&systId=SI00000381",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-07T10:26:51.052458+09:00",
+              "claims_supported": [
+                "구직급여 소정급여일수의 마지막 날이 속한 달 다음 달 15일까지 국민연금공단 지사 또는 고용센터에서 신청 가능",
+                "연령·가입 이력, 본인 부담 25% 및 지원 75%, 구직급여 실지급 일수에 따른 산정"
+              ]
+            },
+            {
+              "source_id": "B55201500004",
+              "source_ref": "https://m.nps.or.kr/pnsinfo/ntpsklg/getOHAF0097M0.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-07T10:26:51.052458+09:00",
+              "claims_supported": [
+                "국민연금공단 실업크레딧 제도 안내에서 구직급여 수급자의 보험료 지원 및 가입기간 산입을 확인"
+              ]
+            },
+            {
+              "source_id": "B55201500004",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999145&bnefType=all&svcId=B55201500004",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-07T10:26:51.052458+09:00",
+              "claims_supported": [
+                "검증된 공식 API 원문에서 재산세 과세표준 6억 원·사업 및 근로소득 제외 종합소득 1,680만 원 초과 제외, 생애 최대 12개월, 신청기한을 대조",
+                "동일 서비스 ID 원본 누적 조회수 257511. 수집 시각 2026-11-07T07:03:18.175446+09:00"
+              ]
+            },
+            {
+              "source_id": "B55201500004",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-07T10:26:51.052458+09:00",
+              "claims_supported": [
+                "기존 시각검수 기록과 현재 승인 파일 SHA-256 일치. 사업별 금액·대상·기간 표기 없음"
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 330,
+          "count_method": "Python Unicode 문자 수, 공백·개행·CTA 포함",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "신청기한은 개인별 소정급여일수에 따라 달라진다.",
+            "11월 8일 발송 시 최신 완전 수집본으로 재검증해야 한다.",
+            "승인 자산은 기존 시각검수 기록과 현재 파일 해시를 대조했다."
+          ]
+        },
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "next_history_record": {
+          "program_id": "B55201500004",
+          "notice_version": "gov24-42300923419-1:2026-08-12",
+          "pattern": "P6",
+          "opening": "구직급여가 끝나기 전에 국민연금 실업크레딧 신청기한도 확인해 보세요.",
+          "structure": "개인별 기한 → 자격과 제외 조건 → 본인부담과 가입기간 → CTA",
+          "media_turn": "IMAGE"
         }
       }
     }
