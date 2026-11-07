@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-07T18:34:09.306983+09:00",
+  "prepared_at": "2026-11-07T20:15:53.169142+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -1190,6 +1190,115 @@
           "opening": "1종 보통 면허 적성검사를 앞뒀다면, 새 신체검사를 받기 전에 기존 건강검진 기록을 확인해 보세요.",
           "structure": "검진 활용 상황 → 검진 시점·시력·이용 방법 → 비용과 개인별 기간 → CTA",
           "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-08T20:00:00+09:00",
+      "benefit_id": "WII000001460",
+      "source_fingerprint": "7e309097adee4acf77d51e2e76fd1e7c60714705546e9b6de159d4c7e281a6ed",
+      "source_generation": "gov24-42362288609-1",
+      "prepared_at": "2026-11-07T20:15:53.169142+09:00",
+      "expires_at": "2026-11-08T20:15:53.169142+09:00",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "WII000001460",
+        "draft_text": null,
+        "post_text": "출산휴가를 앞두고 생활비를 계산한다면, 회사에서 받는 임금과 고용보험 급여를 나눠 살펴보세요.\n\n일반 단태아 출산전후휴가 90일 기준, 처음 60일은 회사에 통상임금 지급 의무가 있어요. 우선지원대상기업은 이 기간에도 고용보험에서 지원하고, 상한을 넘는 통상임금 차액은 회사가 내요. 이후 30일은 회사 규모와 관계없이 고용보험에서 통상임금 기준으로 최대 220만 원을 지원해요.\n\n급여를 신청하려면 휴가 종료일까지 고용보험 피보험 단위기간이 합산 180일 이상이어야 해요. 신청 시작일은 회사 유형에 따라 달라질 수 있고, 휴가 종료 후 12개월 이내에 고용24나 관할 고용센터로 신청할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+        "reply_texts": [],
+        "review": {
+          "planned_at": "2026-11-08T20:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "일반 단태아 출산휴가를 준비하는 고용보험 가입 근로자",
+          "central_message": "출산휴가 기간 중 회사 임금과 고용보험 급여가 적용되는 구간을 확인한다.",
+          "pattern": "P1",
+          "selection_reason": "최근 성공 및 기존 큐를 제외하고 보조금24 동일 서비스 ID 누적 조회수 순으로 공식 근거가 확인된 다음 후보를 선정했다.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "WII000001460",
+              "source_ref": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systClId=SC00000246&systId=SI00000406",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-07T20:15:53.169142+09:00",
+              "claims_supported": [
+                "일반 단태아 90일 기준 최초 60일 회사 통상임금 지급 의무와 우선지원대상기업 고용보험 지원·차액 부담",
+                "이후 30일은 기업 규모와 무관하게 통상임금 기준 30일 최대 220만 원. 휴가 종료일까지 피보험 단위기간 180일 이상, 신청은 종료 후 12개월 이내",
+                "회사 유형에 따라 신청 시작 가능 시점이 달라짐. 현재 고용24에서 신청 가능"
+              ]
+            },
+            {
+              "source_id": "WII000001460",
+              "source_ref": "https://moel.go.kr/info/lawinfo/instruction/view.do?bbs_seq=20260900589",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-07T20:15:53.169142+09:00",
+              "claims_supported": [
+                "현재 시행 고용노동부 고시 제2026-67호 공포 확인"
+              ]
+            },
+            {
+              "source_id": "WII000001460",
+              "source_ref": "https://www.law.go.kr/admRulSc.do?query=%EC%B6%9C%EC%82%B0%EC%A0%84%ED%9B%84%ED%9C%B4%EA%B0%80+%EA%B8%89%EC%97%AC%EB%93%B1+%EC%83%81%ED%95%9C%EC%95%A1+%EA%B3%A0%EC%8B%9C",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-07T20:15:53.169142+09:00",
+              "claims_supported": [
+                "국가법령정보센터 공식 색인으로 제2026-67호의 2026-09-18 시행과 2026-12-31 유효기간, 90일 상한 660만 원 및 일수 계산을 대조"
+              ]
+            },
+            {
+              "source_id": "WII000001460",
+              "source_ref": "https://moel.go.kr/info/lawinfo/lawmaking/view.do?bbs_seq=20261100031",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-07T20:15:53.169142+09:00",
+              "claims_supported": [
+                "2026-11-02 제2026-491호는 개정안 행정예고임을 확인하여 본문에 시행 조건으로 반영하지 않음"
+              ]
+            },
+            {
+              "source_id": "WII000001460",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=758582&bnefType=all&svcId=WII000001460",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-07T20:15:53.169142+09:00",
+              "claims_supported": [
+                "보조금24 동일 ID 원문에서 대상·신청기한·관할 고용센터 방문과 고용24 신청 확인",
+                "누적 조회수 219959. 원본 확인시각 2026-11-07T19:08:44.778855+09:00"
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 354,
+          "count_method": "Python Unicode 문자 수, 공백·개행·CTA 포함",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "일반 단태아 출산전후휴가 기준만 설명했다. 미숙아·다태아·유산·사산의 기간은 별도 조건을 따른다.",
+            "고용24 신청 경로는 로그인 화면까지 확인했다. 개인별 서류 제출 상태와 대위신청 여부는 확인 범위 밖이다.",
+            "실제 발송 전 최신 수집본과 신청 상태, 직전 발송에 따른 이미지 교대를 확인해야 한다.",
+            "이 원고의 검수 근거 유효기간은 정규 회차의 2시간 지연 허용창보다 먼저 끝난다. 허용창 종료까지 대비하려면 게시 전에 공식 근거를 다시 대조해 갱신해야 한다."
+          ]
+        },
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "next_history_record": {
+          "program_id": "WII000001460",
+          "notice_version": "고용노동부고시 제2026-67호",
+          "pattern": "P1",
+          "opening": "출산휴가를 앞두고 생활비를 계산한다면, 회사에서 받는 임금과 고용보험 급여를 나눠 살펴보세요.",
+          "structure": "출산휴가 중 생활비 상황 → 회사 임금과 보험급여 구간 → 보험 가입 요건과 신청기한 → CTA",
+          "media_turn": "TEXT"
         }
       }
     }
