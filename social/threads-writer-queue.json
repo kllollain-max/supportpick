@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-06T20:49:25.698098+09:00",
+  "prepared_at": "2026-11-07T18:34:09.306983+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -1019,8 +1019,8 @@
       "benefit_id": "B55353000001",
       "source_fingerprint": "2a2fe3afc8b4c1afca98a24f780e8dc7854032c5a7380f2c92f22b7aade8ff47",
       "source_generation": "gov24-42300923419-1",
-      "prepared_at": "2026-11-07T12:52:59.592770+09:00",
-      "expires_at": "2026-11-08T12:52:59.592770+09:00",
+      "prepared_at": "2026-11-07T18:34:09.306983+09:00",
+      "expires_at": "2026-11-08T18:34:09.306983+09:00",
       "asset_sha256": null,
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -1043,21 +1043,29 @@
               "source_id": "B55353000001",
               "source_ref": "https://www.energyv.or.kr/info/support_info.do",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-07T12:52:59.592770+09:00",
+              "verified_at": "2026-11-07T18:34:09.306983+09:00",
               "claims_supported": [
-                "기초생활급여 수급 및 등본상 세대원 특성 기준",
-                "세대원 수에 따른 2026년도 세대당 총액 295200·407500·532700·701300원과 동절기 중복 제한",
-                "2026-06-15~2026-12-31 신청 가능, 12월 말 2~3일 신청·재신청 일시 중단 안내"
+                "2026년 생계·의료·주거·교육급여 수급과 주민등록표 등본 세대원 특성의 동시 충족 요건, 동절기 연료비·연탄쿠폰·연탄전환 에너지바우처 중복 제한",
+                "세대당 2026년 이용권 총액 295200·407500·532700·701300원, 2026년 6월 15일~12월 31일 신청 및 12월 말 2~3일 신청·재신청 일시 중단 안내"
+              ]
+            },
+            {
+              "source_id": "B55353000001",
+              "source_ref": "https://www.energyv.or.kr/info/apl_info.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-07T18:34:09.306983+09:00",
+              "claims_supported": [
+                "주민등록상 거주지 읍·면·동 행정복지센터 방문 및 복지로 온라인 신청 경로, 2026년 신청기간 재확인"
               ]
             },
             {
               "source_id": "B55353000001",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999178&bnefType=all&svcId=B55353000001",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-07T12:52:59.592770+09:00",
+              "verified_at": "2026-11-07T18:34:09.306983+09:00",
               "claims_supported": [
-                "공식 API 원문에서 자격, 이용권 총액, 기한, 주소지 읍면동 방문·복지로 온라인 신청을 대조",
-                "동일 서비스 ID 원본 누적 조회수 229619. 수집 시각 2026-11-07T07:03:20.575523+09:00"
+                "검증된 보조금24 원문에서 동일 서비스 ID 및 대상·혜택·신청 경로와 기간 대조",
+                "serviceList 누적 조회수 229619건. 원본 수집 시각 2026-11-07T07:03:20.575523+09:00"
               ]
             }
           ],
@@ -1101,8 +1109,8 @@
       "benefit_id": "132000000006",
       "source_fingerprint": "eb9ec4396bd5e56863fed3e0ec033db96824f5622c5d35f56abd989dbb3df760",
       "source_generation": "gov24-42300923419-1",
-      "prepared_at": "2026-11-07T17:11:53.718345+09:00",
-      "expires_at": "2026-11-08T17:11:53.718345+09:00",
+      "prepared_at": "2026-11-07T18:34:09.306983+09:00",
+      "expires_at": "2026-11-08T18:34:09.306983+09:00",
       "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -1125,29 +1133,29 @@
               "source_id": "132000000006",
               "source_ref": "https://www.safedriving.or.kr/diGuide/selectDiGuide01.do",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-07T17:11:53.718345+09:00",
+              "verified_at": "2026-11-07T18:34:09.306983+09:00",
               "claims_supported": [
-                "1종 보통은 신청일 전 2년 이내 국민건강보험공단 검진기록을 공동이용 동의 후 활용 가능",
-                "시력 기준과 단안시력자 안과 진단서, 별도 면허증 발급 수수료, 개인별 기간 조회 경로 및 적성검사 기간에 신청 가능"
+                "1종 보통은 적성검사 기간에 신청 가능. 공단 마이페이지에서 개인별 기간 확인, 면허시험장·경찰서 교통민원실 방문 및 행정정보공동이용 동의로 신체검사를 대신할 수 있음",
+                "신청일 기준 2년 이내 국민건강보험공단 검진, 두 눈으로 0.8 이상과 각 눈 0.5 이상, 교정시력 포함, 단안시력자 안과 진단서 필요, 신체검사료 면제와 별도 면허 발급 수수료"
               ]
             },
             {
               "source_id": "132000000006",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=761842&bnefType=all&svcId=132000000006",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-07T17:11:53.718345+09:00",
+              "verified_at": "2026-11-07T18:34:09.306983+09:00",
               "claims_supported": [
-                "검증된 공식 API 원문과 동일 서비스 ID, 검진기록·신청기간·신청 방법 대조",
-                "동일 서비스 ID 원본 누적 조회수 225273. 수집 시각 2026-11-07T07:00:30.509659+09:00"
+                "검증된 보조금24 원문에서 동일 서비스 ID 및 대상·혜택·신청 경로와 기간 대조",
+                "serviceList 누적 조회수 225273건. 원본 수집 시각 2026-11-07T07:00:30.509659+09:00"
               ]
             },
             {
               "source_id": "132000000006",
               "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
               "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-07T17:11:53.718345+09:00",
+              "verified_at": "2026-11-07T18:34:09.306983+09:00",
               "claims_supported": [
-                "기존 시각검수와 main 승인 파일 SHA-256 재대조 일치. 사업별 금액·대상·기간 문구 없음"
+                "main에 저장된 기존 시각검수 기록 및 두 파일의 SHA-256 대조. 이 자산에 사업별 금액·대상·기간 표기 없음"
               ]
             }
           ],
