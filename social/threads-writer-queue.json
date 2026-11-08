@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-08T10:39:46.387819+09:00",
+  "prepared_at": "2026-11-08T12:55:23.835838+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -173,6 +173,43 @@
       ],
       "access_scope": "근로복지넷 공지 직접 열람 400, 신청 경로 열람 불가. 법령 화면과 동일 ID 보조금24 API 원문 대조. 제3자 자료는 공식 공지 위치 확인의 단서만 사용.",
       "checked_at": "2026-11-08T08:22:40.901119+09:00"
+    },
+    {
+      "benefit_id": "SD0000004508",
+      "views": 198063,
+      "decision": "HOLD",
+      "reason": "2027년 1학기 국가장학금의 정확한 신청 공고와 접수기간이 아직 게시되지 않았다. 한국장학재단의 현재 신청 화면은 종료된 2026년 2학기 일정이고, 2027년 일정은 11월 말~12월 말이라는 연간 계획만 있어 다음날 현재 접수 중이라고 안내할 수 없다.",
+      "sources": [
+        "https://www.kosaf.go.kr/ko/scholarnf.do?pg=scholarship05_12_07p",
+        "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_01&ttab1=3",
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=83660&bnefType=all&svcId=SD0000004508"
+      ],
+      "access_scope": "한국장학재단 공식 연간 계획과 현재 신청 화면, 보조금24 동일 서비스 ID 원문 대조",
+      "checked_at": "2026-11-08T12:55:23.835838+09:00"
+    },
+    {
+      "benefit_id": "611000000127",
+      "views": 196841,
+      "decision": "SKIP",
+      "reason": "서울주거포털 공식 안내에서 2026년 서울시 청년월세지원 접수기간은 5월 6일~5월 19일로 종료됐다. 현재는 지원금 지급 안내만 있어 11월 신규 신청 안내 후보에서 제외했다.",
+      "sources": [
+        "https://housing.seoul.go.kr/site/main/content/sh01_060513",
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002457&bnefType=all&svcId=611000000127"
+      ],
+      "access_scope": "서울주거포털 공식 2026 모집 안내와 보조금24 동일 서비스 ID 원문 대조",
+      "checked_at": "2026-11-08T12:55:23.835838+09:00"
+    },
+    {
+      "benefit_id": "161300000099",
+      "views": 193933,
+      "decision": "HOLD",
+      "reason": "보조금24 원문에는 청년월세 지원 대상·금액·신청방법이 있으나 11월 9일 현재 적용할 정확한 신규 신청기간과 접수 상태를 국토교통부·복지로의 현재 공고에서 확인하지 못했다. 수집 시각만으로 접수 중이라고 판단하지 않았다.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=805687&bnefType=all&svcId=161300000099",
+        "https://www.bokjiro.go.kr/ssis-tbu/index.do"
+      ],
+      "access_scope": "보조금24 동일 서비스 ID 원문과 복지로 공식 경로 확인; 현재 접수기간 직접 근거 미확보",
+      "checked_at": "2026-11-08T12:55:23.835838+09:00"
     }
   ],
   "entries": [
@@ -1430,6 +1467,89 @@
           "opening": "11월 13일 오후 6시까지, 경기도가 AI·디지털 평생교육이용권 우수이용자 3차 신청을 받아요.",
           "structure": "실제 마감 → 기존 선정 회차별 전액 사용 기준과 환불 제한 → 추가 학습비 및 같은 유형 신청 → CTA",
           "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-09T12:00:00+09:00",
+      "benefit_id": "SSE000000170",
+      "source_fingerprint": "de263be9cb70da85a5c54b284cfee0390fc4a90fc8786fa78198db7f18cba24e",
+      "source_generation": "gov24-42417984108-1",
+      "prepared_at": "2026-11-08T12:55:23.835838+09:00",
+      "expires_at": "2026-11-09T12:55:23.835838+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "SSE000000170",
+        "draft_text": null,
+        "post_text": "만 65세 생일을 앞뒀다면, 기초연금은 생일이 속한 달의 한 달 전부터 준비할 수 있어요.\n\n신청 전에는 세 가지를 확인해 보세요.\n① 소득인정액. 2026년 기준 단독가구는 월 247만 원, 부부가구는 월 395만 2천 원 이하여야 해요.\n② 직역연금. 공무원·사학·군인·별정우체국연금 수급권자와 배우자는 원칙적으로 제외되지만 일부 예외가 있어요.\n③ 신청 경로. 읍·면·동 행정복지센터, 국민연금공단 지사 또는 복지로에서 신청할 수 있어요.\n\n2026년 기준연금액은 단독가구 월 최대 34만 9,700원이에요. 부부가 함께 받으면 각각 20% 감액되고, 소득·재산이나 국민연금액에 따라 더 줄어들 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+        "reply_texts": [],
+        "review": {
+          "planned_at": "2026-11-09T12:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "만 65세 생일을 앞두고 기초연금 신청 조건과 경로를 확인하려는 사람",
+          "central_message": "소득인정액과 직역연금 제외 여부를 확인한 뒤 생일 한 달 전부터 신청을 준비한다.",
+          "pattern": "P6",
+          "selection_reason": "이미 발행·편성된 사업과 공식 현재 상태를 확인할 수 없는 상위 후보를 제외한 뒤, 보조금24 동일 서비스 ID 누적 조회수 순으로 선정했다.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "SSE000000170",
+              "source_ref": "https://www.nps.or.kr/pbcpgdnc/mainbiz/getOHAG0059M0.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-08T12:55:23.835838+09:00",
+              "claims_supported": [
+                "2026년 만 65세 이상, 단독가구 월 247만 원·부부가구 월 395만 2천 원 이하 소득인정액 기준",
+                "2026년 기준연금액 월 최대 34만 9700원, 부부 동시 수급 시 각 20% 감액 및 소득·국민연금에 따른 감액 가능",
+                "만 65세 생일이 속한 달의 한 달 전부터 신청 가능. 주민센터·국민연금공단 지사·복지로 신청 경로가 현재 이용 가능",
+                "공무원·사학·군인·별정우체국연금 수급권자와 배우자의 원칙적 제외 및 일부 예외"
+              ]
+            },
+            {
+              "source_id": "SSE000000170",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=72548&bnefType=all&svcId=SSE000000170",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-08T12:55:23.835838+09:00",
+              "claims_supported": [
+                "보조금24 동일 서비스 ID의 대상·선정기준·신청경로와 국민연금공단 공식 안내를 대조",
+                "serviceList 누적 조회수 186931건. API 원본 확인시각 2026-11-08T06:58:27.350528+09:00"
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 360,
+          "count_method": "Python Unicode 문자 수, 공백·개행·CTA 포함",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "직역연금 예외 유형은 전부 열거하지 않았다.",
+            "실제 지급액은 소득·재산, 국민연금액, 부부 동시 수급 여부 등에 따라 달라질 수 있다.",
+            "실제 발송 전 최신 완전 수집본과 신청 상태를 다시 검증한다."
+          ]
+        },
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "next_history_record": {
+          "program_id": "SSE000000170",
+          "notice_version": "gov24-42417984108-1:2026-08-14",
+          "pattern": "P6",
+          "opening": "만 65세 생일을 앞뒀다면, 기초연금은 생일이 속한 달의 한 달 전부터 준비할 수 있어요.",
+          "structure": "신청 준비 시점 → 소득·직역연금·신청 경로 점검 → 최대액과 감액 조건 → CTA",
+          "media_turn": "TEXT"
         }
       }
     }
