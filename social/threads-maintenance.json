@@ -61,15 +61,15 @@
   ],
   "last_health": {
     "unresolved_publications": 0,
-    "published_benefits": 17,
+    "published_benefits": 18,
     "source_run_id": "42527504841",
     "source_result": "success",
     "source_count": 10942,
     "source_last_success_at": "2026-11-09T07:02:51.685853+09:00",
     "source_workflow_conclusion": "success",
     "source_failure_classification": null,
-    "last_publisher_run_id": "42475511381",
-    "writer_queue_ready": 4,
+    "last_publisher_run_id": "42535443948",
+    "writer_queue_ready": 3,
     "writer_schema": "supportpick.writer.v1",
     "account_check": "verified_http_200",
     "account_check_run_id": "42152164281",
@@ -774,19 +774,26 @@
       "conclusion": "success",
       "updated_at": "2026-11-08T22:03:54Z",
       "head_sha": "44f95bb570aefaa627988e16826058adfc52df77"
+    },
+    "42535443948": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-08T23:31:03Z",
+      "head_sha": "44f95bb570aefaa627988e16826058adfc52df77"
     }
   },
   "last_check": {
-    "result": "new_source_generation_queue_revalidated_no_publication",
-    "checked_at": "2026-11-09T07:14:34+09:00",
+    "result": "new_verified_publication_no_recovery_needed",
+    "checked_at": "2026-11-09T08:55:09+09:00",
     "current_main_sha": "44f95bb570aefaa627988e16826058adfc52df77",
-    "publication_ledger_sha": "7df84a07fdc580b65164784e251fca1d1628ead4",
+    "publication_ledger_sha": "cc6321f25da92dcceffb24b82ef32b98076309ce",
     "queue_blob_sha": "7a01b7f9bc97d22fe7ce3b975774bd6bfe1c58ad",
-    "maintenance_previous_blob_sha": "45ec53988c31ffb1bd5c71667611ea3267aca3a8",
+    "maintenance_previous_blob_sha": "b292350a03a75b9ff421fac50f13b06c327e620a",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_ids": [
-      "42527504841"
+      "42535443948"
     ],
     "latest_source": {
       "run_id": "42527504841",
@@ -835,65 +842,65 @@
       "current_application_status_not_inferred": true
     },
     "latest_publisher": {
-      "run_id": "42475511381",
+      "run_id": "42535443948",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-08T11:24:06Z",
-      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
-      "job_id": "128715842564",
-      "artifact_id": "13615276846",
-      "artifact_digest": "sha256:d7ed56e576ffe25e03c799123181a5a035fe81447b6e296e57f69f34b1e9658d",
-      "classification": "no_new_publisher_run_before_08_slot"
+      "updated_at": "2026-11-08T23:31:03Z",
+      "head_sha": "44f95bb570aefaa627988e16826058adfc52df77",
+      "job_id": "128898632604",
+      "artifact_id": "13639107688",
+      "artifact_digest": "sha256:dd687bb7dea91cebfa90be133d1b92bea57bbd0015123256f04a155e51a75d13",
+      "artifact_expired": false,
+      "restored_generation": "gov24-42527504841-1",
+      "publisher_safety_tests": {
+        "passed": 121,
+        "failed": 0
+      },
+      "receipt": {
+        "benefit_id": "134200000045",
+        "slot": "2026-11-09T08:00:00+09:00",
+        "main_id": "17873881326644553",
+        "url": "https://www.threads.com/@hid_1004/post/Dff8MFPkcJ_",
+        "published_at": "2026-11-09T08:30:12.232536+09:00",
+        "verified": true,
+        "stage": "complete",
+        "content_hash": "a1a2f74723bf4c9f9e9778b0a99566a54bb5352cd1923ab9daf670bd4636284c",
+        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "pattern": "P7",
+        "media_turn": "IMAGE"
+      },
+      "classification": "verified_natural_slot_publication"
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "master_prompt_blob_sha": "89b38a2a579a85cf0ad31dd40e08cc7df76d9333",
       "prompt_hash_recomputed": true,
-      "queue_ready": 4,
+      "queue_ready": 3,
       "preview_constraints_passed": true,
       "queue_reused": true,
       "queue_write": false,
-      "next_slot": {
+      "published_slot": {
         "slot": "2026-11-09T08:00:00+09:00",
         "benefit_id": "134200000045",
         "pattern": "P7",
         "media_turn": "IMAGE",
-        "status": "READY",
         "characters": 309,
-        "expires_at": "2026-11-09T10:39:46.387819+09:00",
-        "source_fingerprint": "08d378cad9716b0ebb9996fb2a8327c33f04d041af08fe9ff848c43029aac246",
-        "prepared_source_generation": "gov24-42417984108-1",
-        "latest_source_generation": "gov24-42527504841-1",
-        "latest_source_content_unchanged": true,
-        "source_recheck_required_at_publish": true,
-        "official_status": "OPEN_AND_LISTED_AS_RECRUITING",
-        "official_rechecked_at": "2026-11-09T07:14:34+09:00",
-        "official_sources": [
-          "https://www.lllcard.kr/reg/gyeonggi/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_000000000141&localNm=%EA%B2%BD%EA%B8%B0%EB%8F%84&nttId=31031",
-          "https://www.lllcard.kr/reg/gyeonggi/main/mainView.do"
-        ],
-        "official_claims_reconfirmed": [
-          "application deadline 2026-11-13 18:00",
-          "AI/digital third-round excellent-user listing remains recruiting",
-          "350000 KRW additional voucher",
-          "first/second round full-use cutoffs and refund-balance exclusion",
-          "same existing selection type required",
-          "announcement planned for 2026-11-20"
-        ],
-        "image_asset_url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-        "image_asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-        "image_blob_sha": "69f4a31ce2a755fc9f15e7a2c0aa3b35e4f8c088",
-        "image_evidence": "Existing visual review remains under 24 hours; required main blobs are unchanged. No new visual inspection claimed."
+        "reply_count": 0,
+        "cta_exact": true,
+        "no_post_url": true,
+        "source_generation_restored": "gov24-42527504841-1"
       },
-      "next_24h_sequence": [
-        {
-          "slot": "2026-11-09T08:00:00+09:00",
-          "benefit_id": "134200000045",
-          "pattern": "P7",
-          "media_turn": "IMAGE",
-          "expires_at": "2026-11-09T10:39:46.387819+09:00"
-        },
+      "next_slot": {
+        "slot": "2026-11-09T12:00:00+09:00",
+        "benefit_id": "SSE000000170",
+        "pattern": "P6",
+        "media_turn": "TEXT",
+        "status": "READY",
+        "expires_at": "2026-11-09T12:55:23.835838+09:00",
+        "source_recheck_required_at_publish": true
+      },
+      "remaining_sequence": [
         {
           "slot": "2026-11-09T12:00:00+09:00",
           "benefit_id": "SSE000000170",
@@ -917,8 +924,8 @@
         }
       ],
       "constraints_rechecked": [
-        "four distinct patterns",
-        "IMAGE/TEXT alternation",
+        "four distinct daily patterns remain P7/P6/P5/P8",
+        "IMAGE/TEXT alternation remains intact",
         "500-character hard limit",
         "reply_texts empty",
         "CTA exactly once at end",
@@ -930,13 +937,13 @@
       "workflow_dispatch": false,
       "posts_sent": 0,
       "code_changes": 0,
-      "reason": "New source run succeeded and no failed/partial publication, pending reservation, active lease or safe recovery target exists."
+      "reason": "Natural 08:00 publication completed, remote receipt was verified, durable state is complete, and no pending/lease or failed stage exists."
     },
     "incidents": {
       "41796747628": "resolved status preserved; PR 7 and recovery run 41797892734 remain verified",
       "new_incident": null
     },
-    "next_condition": "At the natural 08:00 workflow, restore the latest validated runtime state and re-run fingerprint, official-state, IMAGE order/bytes, expiry, account guard, daily limit and CAS checks before reserving."
+    "next_condition": "At the natural 12:00 workflow, re-run source fingerprint, official-state, expiry, TEXT order, account guard, daily limit and CAS checks before reserving."
   },
   "last_reported_publication": {
     "run_id": "42475511381",
