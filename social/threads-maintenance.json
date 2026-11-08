@@ -1175,12 +1175,12 @@
     "natural_publication_after_change_verified": true
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-09T02:44:42.994+09:00",
+    "checked_at": "2026-11-09T04:10:43.691+09:00",
     "result": "no_update",
     "current_main_sha": "44f95bb570aefaa627988e16826058adfc52df77",
     "publication_ledger_sha": "7df84a07fdc580b65164784e251fca1d1628ead4",
     "queue_blob_sha": "7a01b7f9bc97d22fe7ce3b975774bd6bfe1c58ad",
-    "maintenance_previous_blob_sha": "95702474316e7cf3ba5a883ea50ce7eac1ee6f25",
+    "maintenance_previous_blob_sha": "1fd2b53bb55da3e6bfe9885b379af4053fcb0124",
     "active_target_runs": [],
     "changed_run_versions": [],
     "source": {
@@ -1207,7 +1207,7 @@
       "artifact_download_sha256": "1e1adb84bc636bdf0b15d446a63752685f8f3f34ecde04e3842c5da573e4dffd",
       "verify_snapshot_count": 10942,
       "load_feed_count": 10942,
-      "source_consistency": "Same completed run version; artifact remains available with the verified digest, job remains completed/success, and the prior manifest plus read_current→verify_snapshot→load_feed verification remains applicable.",
+      "source_consistency": "Same completed run version; artifact remains available with verified digest, job remains completed/success, and prior manifest plus read_current→verify_snapshot→load_feed verification remains applicable.",
       "artifact_expired": false,
       "job_id": "128697529711"
     },
@@ -1226,7 +1226,7 @@
       "lease": null,
       "last_verified_main_id": "18105328595638743",
       "last_verified_url": "https://www.threads.com/@hid_1004/post/Dfeo_7akb1d",
-      "note": "Same completed publisher run version; artifact remains available with the verified digest, job remains completed/success, and no newer run or reservation exists.",
+      "note": "Same completed publisher run version; artifact remains available with verified digest, job remains completed/success, and no newer run or reservation exists.",
       "artifact_expired": false
     },
     "writer": {
