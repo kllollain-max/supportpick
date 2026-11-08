@@ -735,7 +735,7 @@
     }
   },
   "last_check": {
-    "result": "natural_image_publication_verified_four_remaining_drafts_ready",
+    "result": "next_day_learning_draft_evidence_renewed",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "latest_publisher": {
@@ -801,10 +801,8 @@
     "recovery_repeated": false,
     "posts_sent": 0,
     "code_changes": 0,
-    "checked_at": "2026-11-08T09:42:50.107+09:00",
-    "changed_run_ids": [
-      "42425475381"
-    ],
+    "checked_at": "2026-11-08T10:40:44.273+09:00",
+    "changed_run_ids": [],
     "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
@@ -878,7 +876,7 @@
       "source_fresh_at_publication": true,
       "daily_main_posts": 4
     },
-    "next_step": "Use the actual IMAGE publication to continue TEXT, IMAGE, TEXT, IMAGE. Before November 9 08:00, verify a newer feed and renew evidence to cover the original delay window.",
+    "next_step": "Before November 9 08:00, use the latest complete fresh source and actual media sequence. The renewed review covers the original two-hour delay window.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
@@ -889,12 +887,12 @@
       "new_result_and_source_artifact_contents_digest_verified": true,
       "publisher_script_and_workflows_unchanged": true,
       "approved_assets_manifest_unchanged": true,
-      "no_new_publication": false,
+      "no_new_publication": true,
       "no_pending_publications": true,
       "natural_image_publication_verified": true,
       "artifact_metadata_and_digests_unchanged": true,
       "previously_digest_verified_artifact_contents_reused": true,
-      "publication_ledger_unchanged": false,
+      "publication_ledger_unchanged": true,
       "restore_and_snapshot_validation_unchanged": true,
       "source_snapshot_verified_now": true,
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
@@ -1060,7 +1058,7 @@
       "snapshot_eligible_at_window_end": true,
       "covers_original_window": true,
       "media": "TEXT",
-      "queue_blob_sha": "16516f05eff32070b235cb08ec97b5cd6b2e5748",
+      "queue_blob_sha": "5193b087b3f89b448258cd8c5011bc0aa9b380f8",
       "actual_publication_verified": false
     },
     "recovery_automation": {
@@ -1069,10 +1067,10 @@
       "schedule": "hourly at minute 45"
     },
     "writer_queue_recheck": {
-      "checked_at": "2026-11-08T09:42:50.107+09:00",
-      "queue_blob_sha": "16516f05eff32070b235cb08ec97b5cd6b2e5748",
-      "previous_queue_blob_sha": "db8e9bfed17c57570fcd8d0234b7ad6f349d7b82",
-      "queue_commit_sha": "202be81e8cd9c8c84b3771b4f15a970055ab80ba",
+      "checked_at": "2026-11-08T10:40:44.273+09:00",
+      "queue_blob_sha": "5193b087b3f89b448258cd8c5011bc0aa9b380f8",
+      "previous_queue_blob_sha": "16516f05eff32070b235cb08ec97b5cd6b2e5748",
+      "queue_commit_sha": "02183bc5db8008730837f2487fe572009a5bd1a3",
       "write_readback_identical": true,
       "ready_count": 4,
       "added_count": 0,
@@ -1080,7 +1078,7 @@
       "retained_current_unreserved_slot": null,
       "validated_draft_count": 4,
       "source_generation": "gov24-42417984108-1",
-      "validate_ready_entry_and_preview": "All four remaining drafts passed using the actual 08:00 IMAGE publication in the history; November 9 is simulation and requires a refreshed feed and evidence.",
+      "validate_ready_entry_and_preview": "Four drafts passed; all review windows extend through the original cutoff. November 9 uses current eligible rows in simulation and needs a newer source to publish.",
       "future_slots_require_source_recheck": true,
       "drafts": [
         {
@@ -1125,15 +1123,15 @@
           "pattern": "P7",
           "media_turn": "IMAGE",
           "status": "READY",
-          "expires_at": "2026-11-09T08:22:40.901119+09:00",
+          "expires_at": "2026-11-09T10:39:46.387819+09:00",
           "source_recheck_required_at_publish": true,
           "snapshot_eligible_at_nominal": false,
           "snapshot_eligible_at_window_end": false,
-          "covers_original_window": false
+          "covers_original_window": true
         }
       ],
-      "evidence_refreshed_count": 0,
-      "queue_mutated_this_check": false,
+      "evidence_refreshed_count": 1,
+      "queue_mutated_this_check": true,
       "priority_selection": {
         "policy": "gov24_views_desc_v1",
         "basis": "보조금24 누적 조회수",
@@ -1280,7 +1278,7 @@
           "slot": "2026-11-09T08:00:00+09:00",
           "snapshot_eligible_at_nominal": false,
           "snapshot_eligible_at_window_end": false,
-          "covers_original_window": false
+          "covers_original_window": true
         }
       ],
       "ready_in_next_24h": 4
@@ -1414,22 +1412,21 @@
       ]
     },
     "last_queue_write": {
-      "checked_at": "2026-11-08T08:23:47.731+09:00",
-      "queue_commit_sha": "202be81e8cd9c8c84b3771b4f15a970055ab80ba",
-      "queue_blob_sha": "16516f05eff32070b235cb08ec97b5cd6b2e5748",
-      "previous_queue_blob_sha": "db8e9bfed17c57570fcd8d0234b7ad6f349d7b82",
-      "added_count": 1,
+      "checked_at": "2026-11-08T10:40:44.273+09:00",
+      "queue_commit_sha": "02183bc5db8008730837f2487fe572009a5bd1a3",
+      "queue_blob_sha": "5193b087b3f89b448258cd8c5011bc0aa9b380f8",
+      "previous_queue_blob_sha": "16516f05eff32070b235cb08ec97b5cd6b2e5748",
+      "added_count": 0,
+      "evidence_refreshed_count": 1,
       "slot": "2026-11-09T08:00:00+09:00",
       "benefit_id": "134200000045",
       "source_generation": "gov24-42417984108-1",
       "pattern": "P7",
       "media_turn": "IMAGE",
       "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-      "body_characters": 309,
-      "expires_at": "2026-11-09T08:22:40.901119+09:00",
+      "expires_at": "2026-11-09T10:39:46.387819+09:00",
       "status": "READY",
       "future_slot_source_refresh_required": true,
-      "full_delay_window_evidence_refresh_required": true,
       "publication_verified": false
     },
     "previous_queue_checkpoint": {
@@ -1478,6 +1475,45 @@
           "access_method": "PROVIDED_OFFICIAL_TEXT"
         }
       ]
+    },
+    "learning_voucher_evidence_renewal": {
+      "slot": "2026-11-09T08:00:00+09:00",
+      "benefit_id": "134200000045",
+      "checked_at": "2026-11-08T10:39:46.387819+09:00",
+      "old_expires_at": "2026-11-09T08:22:40.901119+09:00",
+      "new_expires_at": "2026-11-09T10:39:46.387819+09:00",
+      "late_simulation_at": "2026-11-09T09:59:59.999999+09:00",
+      "before": "writer_draft_expired_or_future",
+      "after": "READY",
+      "body_unchanged": true,
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "asset_verification": "existing_visual_review_and_current_sha256_match",
+      "source_fresh_at_late_check": false,
+      "actual_source_refresh_required": true,
+      "sources": [
+        {
+          "source_ref": "https://www.lllcard.kr/reg/gyeonggi/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_000000000141&localNm=%EA%B2%BD%EA%B8%B0%EB%8F%84&nttId=31031",
+          "access_method": "OPENED_OFFICIAL"
+        },
+        {
+          "source_ref": "https://www.lllcard.kr/main?deviceType=PC&siteType=PC",
+          "access_method": "OPENED_OFFICIAL"
+        },
+        {
+          "source_ref": "https://www.lllcard.kr/reg/gyeonggi/main/mainView.do",
+          "access_method": "OPENED_OFFICIAL"
+        },
+        {
+          "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=762701&bnefType=all&svcId=134200000045",
+          "access_method": "PROVIDED_OFFICIAL_TEXT"
+        },
+        {
+          "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "access_method": "UPSTREAM_VERIFIED"
+        }
+      ],
+      "queue_blob_sha": "5193b087b3f89b448258cd8c5011bc0aa9b380f8",
+      "queue_commit_sha": "02183bc5db8008730837f2487fe572009a5bd1a3"
     }
   },
   "last_reported_publication": {
