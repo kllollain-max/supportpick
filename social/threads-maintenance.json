@@ -1783,5 +1783,60 @@
     "repair_sha": "f9c281b3183dc8f178d49e0e084e6ff27995224b",
     "initial_queue_ready": 4,
     "natural_publication_after_change_verified": false
+  },
+  "last_no_update_check": {
+    "checked_at": "2026-11-08T11:46:34.885+09:00",
+    "result": "no_update",
+    "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
+    "publication_ledger_sha": "4840cad28e00869a45e42a2b055db9c54753a1fa",
+    "queue_blob_sha": "5193b087b3f89b448258cd8c5011bc0aa9b380f8",
+    "active_target_runs": [],
+    "changed_run_versions": [],
+    "source": {
+      "run_id": "42417984108",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-07T22:05:17Z",
+      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
+      "artifact_id": "13592457614",
+      "artifact_digest": "sha256:2bc0ed0ce7dca35ddf79bdc6651567f5f74a8773fb414ecde2cb3e8d71b1a053",
+      "generation": "gov24-42417984108-1",
+      "count": 10942,
+      "manifest_sha256": "ecc04aa84b272364014f572796b69cab73426f9d95c42b9741d8e7d3a401b104",
+      "read_current_verify_snapshot_load_feed": true
+    },
+    "publisher": {
+      "latest_run_id": "42425475381",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "main_id": "18148832443604975",
+      "url": "https://www.threads.com/@hid_1004/post/DfdXVsRjpD9",
+      "reported_previously": true
+    },
+    "writer": {
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "preview_ready": 4,
+      "regression_tests_passed": 121,
+      "next_slot": {
+        "slot": "2026-11-08T12:00:00+09:00",
+        "benefit_id": "B55353000001",
+        "pattern": "P5",
+        "media_turn": "TEXT",
+        "characters": 372,
+        "expires_at": "2026-11-08T18:34:09.306983+09:00",
+        "official_source_rechecked_at": "2026-11-08T11:46:34.885+09:00",
+        "official_status": "OPEN",
+        "source_recheck_required_at_publish": true
+      }
+    },
+    "recovery": {
+      "required": false,
+      "workflow_dispatch": false,
+      "posts_sent": 0,
+      "code_changes": 0
+    },
+    "note": "Existing READY entries were reused. No pending publication, active lease, new failure, changed run version, or safe recovery target was found."
   }
 }
