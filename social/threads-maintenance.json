@@ -1175,14 +1175,28 @@
     "natural_publication_after_change_verified": true
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-08T22:28:20.252+09:00",
-    "result": "no_update",
-    "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
+    "checked_at": "2026-11-08T23:50:25.912+09:00",
+    "result": "no_publication_update_main_changed_unrelated",
+    "current_main_sha": "3dba9eed8a0bc4bec154ee9d544255711c33e737",
     "publication_ledger_sha": "7df84a07fdc580b65164784e251fca1d1628ead4",
     "queue_blob_sha": "7a01b7f9bc97d22fe7ce3b975774bd6bfe1c58ad",
-    "maintenance_previous_blob_sha": "e7fe11a1edbe23a8590f5534b7d027c790416c0d",
+    "maintenance_previous_blob_sha": "b086096891148ce2e2c188c3d4639866703da87e",
     "active_target_runs": [],
     "changed_run_versions": [],
+    "main_change": {
+      "previous_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
+      "current_sha": "3dba9eed8a0bc4bec154ee9d544255711c33e737",
+      "commit_message": "ci: diagnose public generation mismatches and stabilize mobile checks",
+      "files": [
+        ".github/workflows/content-mobile-check.yml",
+        "tests/test_public_generation_diagnostics.py",
+        "tools/verify_release.py"
+      ],
+      "threads_writer_or_publisher_files_changed": false,
+      "operations_workflow_changed": false,
+      "required_writer_files_changed": false,
+      "impact": "No current ledger or queue rewrite. Revalidate the next operations run on the new head before treating its source as current."
+    },
     "source": {
       "run_id": "42469753093",
       "run_attempt": 1,
@@ -1204,7 +1218,10 @@
       },
       "read_current_verify_snapshot_load_feed": true,
       "current_application_status_not_inferred": true,
-      "source_consistency": "artifact manifest and feed hashes retained; read_current→verify_snapshot→load_feed passed for this unchanged run version"
+      "artifact_download_sha256": "1e1adb84bc636bdf0b15d446a63752685f8f3f34ecde04e3842c5da573e4dffd",
+      "verify_snapshot_count": 10942,
+      "load_feed_count": 10942,
+      "source_consistency": "artifact digest, manifest, current pointer, verified snapshot, joined feed and job log all matched for the unchanged completed run"
     },
     "publisher": {
       "run_id": "42475511381",
@@ -1213,12 +1230,15 @@
       "conclusion": "success",
       "updated_at": "2026-11-08T11:24:06Z",
       "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
+      "job_id": "128715842564",
+      "artifact_id": "13615276846",
+      "artifact_digest": "sha256:d7ed56e576ffe25e03c799123181a5a035fe81447b6e296e57f69f34b1e9658d",
       "publication_ledger_records": 17,
       "pending": null,
       "lease": null,
       "last_verified_main_id": "18105328595638743",
       "last_verified_url": "https://www.threads.com/@hid_1004/post/Dfeo_7akb1d",
-      "note": "No newer Threads run version or ledger reservation exists after the verified 20:00 natural publication."
+      "note": "Job log, receipt, durable ledger and artifact agree; no newer Threads run version exists."
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
@@ -1231,6 +1251,10 @@
       "queue_readback_equal": true,
       "assets_blob_sha": "e904502fc338fd0064dcbce160e967f49d904845",
       "image_review_blob_sha": "5a758ab03f9da099a04ce41ab1a394bdf2496038",
+      "image_sha256_verified": [
+        "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+        "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a"
+      ],
       "next_24h_sequence": [
         {
           "slot": "2026-11-09T08:00:00+09:00",
@@ -1275,12 +1299,12 @@
       "workflow_dispatch": false,
       "posts_sent": 0,
       "code_changes": 0,
-      "reason": "No failed or partial publication, pending reservation, active lease, changed run version, or safe recovery target was found."
+      "reason": "No failed or partial publication, pending reservation, active lease, changed target run version, or safe recovery target was found."
     },
     "incidents": {
       "41796747628": "resolved status preserved; PR 7 and recovery run 41797892734 remain verified",
       "new_incident": null
     },
-    "next_condition": "At the next natural scheduled slot, revalidate source freshness, current official application state, image asset/hash, media alternation, and READY expiry before publishing."
+    "next_condition": "Verify the next operations run on main SHA 3dba9eed8a0bc4bec154ee9d544255711c33e737, then revalidate official status, image bytes/order and READY expiry at the 08:00 natural slot."
   }
 }
