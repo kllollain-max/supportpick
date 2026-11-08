@@ -1175,12 +1175,12 @@
     "natural_publication_after_change_verified": true
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-08T21:50:57.166+09:00",
+    "checked_at": "2026-11-08T22:28:20.252+09:00",
     "result": "no_update",
     "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "publication_ledger_sha": "7df84a07fdc580b65164784e251fca1d1628ead4",
     "queue_blob_sha": "7a01b7f9bc97d22fe7ce3b975774bd6bfe1c58ad",
-    "maintenance_previous_blob_sha": "65c77e3796143cea26d17aaab655364e649e777d",
+    "maintenance_previous_blob_sha": "e7fe11a1edbe23a8590f5534b7d027c790416c0d",
     "active_target_runs": [],
     "changed_run_versions": [],
     "source": {
