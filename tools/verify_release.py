@@ -155,7 +155,12 @@ def wait_for_public_manifest(local, expected_revision, expected_generation):
             # Pages may acknowledge deployment before the public edge serves it.
             # Wait once before starting the crawl, without retrying page errors.
             time.sleep(30)
-    raise ValueError('public_revision_mismatch' if observed[0] != revision else 'public_generation_mismatch')
+    reason = 'public_revision_mismatch' if observed[0] != revision else 'public_generation_mismatch'
+    print(json.dumps({'publicReleaseVerification': 'blocked', 'reason': reason,
+                      'expectedRevision': revision, 'expectedGeneration': generation,
+                      'observedRevision': observed[0], 'observedGeneration': observed[1],
+                      'manifestAttempts': 2}), flush=True)
+    raise ValueError(reason)
 
 
 def live_check(output, workers=6, expected_revision=None, expected_generation=None):
