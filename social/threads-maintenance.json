@@ -1175,34 +1175,14 @@
     "natural_publication_after_change_verified": true
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-09T00:37:02.081+09:00",
-    "result": "no_publication_update_main_changed_unrelated",
+    "checked_at": "2026-11-09T01:19:38.632+09:00",
+    "result": "no_update",
     "current_main_sha": "44f95bb570aefaa627988e16826058adfc52df77",
     "publication_ledger_sha": "7df84a07fdc580b65164784e251fca1d1628ead4",
     "queue_blob_sha": "7a01b7f9bc97d22fe7ce3b975774bd6bfe1c58ad",
-    "maintenance_previous_blob_sha": "23a258e115be3c73b64c15bd1ad90ee72835ac27",
+    "maintenance_previous_blob_sha": "62a70f4a7b0df6ccef7821ba05cd43a05d07acfa",
     "active_target_runs": [],
     "changed_run_versions": [],
-    "main_change": {
-      "previous_sha": "3dba9eed8a0bc4bec154ee9d544255711c33e737",
-      "current_sha": "44f95bb570aefaa627988e16826058adfc52df77",
-      "commit_message": "feat: 지원금픽 네이버 방문 통계 연결 (#43)",
-      "files": [
-        ".github/workflows/content-mobile-check.yml",
-        "docs/NAVER_ANALYTICS_20261108.md",
-        "docs/OPERATIONS.md",
-        "naver-analytics.css",
-        "naver-analytics.js",
-        "privacy.html",
-        "tests/naver_analytics_browser.cjs",
-        "tests/test_search_metadata.py",
-        "tools/build.py"
-      ],
-      "threads_writer_or_publisher_files_changed": false,
-      "operations_workflow_changed": false,
-      "required_writer_files_changed": false,
-      "impact": "Public-site consent-controlled Naver analytics only. Threads ledger, writer queue, publisher, schedule, source workflow and required writer files are unchanged; await the next natural operations run on this head."
-    },
     "source": {
       "run_id": "42469753093",
       "run_attempt": 1,
@@ -1227,7 +1207,7 @@
       "artifact_download_sha256": "1e1adb84bc636bdf0b15d446a63752685f8f3f34ecde04e3842c5da573e4dffd",
       "verify_snapshot_count": 10942,
       "load_feed_count": 10942,
-      "source_consistency": "Same completed run version and artifact digest previously verified by manifest hashes plus read_current→verify_snapshot→load_feed and job log; no newer completed main operations run exists."
+      "source_consistency": "Same completed run version; artifact ID/digest and successful job steps are unchanged from the fully verified manifest, read_current→verify_snapshot→load_feed and job-log check."
     },
     "publisher": {
       "run_id": "42475511381",
@@ -1244,7 +1224,7 @@
       "lease": null,
       "last_verified_main_id": "18105328595638743",
       "last_verified_url": "https://www.threads.com/@hid_1004/post/Dfeo_7akb1d",
-      "note": "Same completed publisher run version; receipt, durable ledger, artifact and job log remain consistent. No newer Threads run or reservation exists."
+      "note": "Same completed publisher run version; successful job steps, receipt artifact, durable ledger and last verified URL remain consistent. No newer Threads run or reservation exists."
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
@@ -1311,6 +1291,6 @@
       "41796747628": "resolved status preserved; PR 7 and recovery run 41797892734 remain verified",
       "new_incident": null
     },
-    "next_condition": "Verify the next operations run on main SHA 44f95bb570aefaa627988e16826058adfc52df77, then revalidate official status, image bytes/order and READY expiry at the 08:00 natural slot."
+    "next_condition": "At the next natural checkpoint, verify any new main operations or Threads run version; before 08:00 publishing revalidate official status, source freshness, IMAGE bytes/order and READY expiry."
   }
 }
