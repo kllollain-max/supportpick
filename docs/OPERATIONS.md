@@ -66,7 +66,7 @@ python3 tools/build.py --output dist --public-base https://kllollain-max.github.
 3. 이전 정상 세대로 되돌릴 때는 보존된 정상 상태 artifact를 별도 폴더에 먼저 풀고 `tools/refresh.py`의 `read_current()`로 모든 파일 해시·ID·건수를 확인한 후 포인터를 교체한다. 마지막 성공 시각을 현재로 쓰지 않는다.
 4. 빌드 후 검증하고, 배포 승인 범위에서만 Pages 아티팩트를 게시한다. 기존 커리어픽·블로그·웹푸시 설정은 건드리지 않는다.
 
-사용자 개인 기록은 브라우저의 `supportpick:*` 키에 있으며 JSON 또는 텍스트 백업으로 복원한다. 커리어픽의 `saved/apps/prefs/spec`를 읽거나 쓰지 않는다. 새 서비스워커·푸시·분석 스크립트는 등록하지 않는다.
+사용자 개인 기록은 브라우저의 `supportpick:*` 키에 있으며 JSON 또는 텍스트 백업으로 복원한다. 커리어픽의 `saved/apps/prefs/spec`를 읽거나 쓰지 않는다. 2026-11-08 운영자 요청으로 네이버 애널리틱스 `1e12332daddda80`을 연결한다. 공개 페이지에서 방문자가 허용한 경우에만 통계를 요청하며, 선택값은 `supportpick:naver-analytics-consent:v1`에 보관한다. 이 연결은 저장한 혜택·신청 메모를 별도 이벤트로 전송하지 않는다. 기존 서비스워커·푸시 설정과 수집·게시 일정은 변경하지 않는다. 설치·검증 범위는 `docs/NAVER_ANALYTICS_20261108.md`를 참조한다.
 
 ## 승인 후 운영 검증
 

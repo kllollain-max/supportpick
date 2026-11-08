@@ -48,6 +48,19 @@ class SearchMetadataTests(unittest.TestCase):
             self.assertFalse((root / 'public/search-verification.json').exists())
             self.assertFalse((root / 'public/robots.txt').exists())
             self.assertTrue((root / 'public/supportpick-badge.png').is_file())
+            # Every generated depth must resolve the same consent-controlled assets.
+            for page in (root / 'public').rglob('*.html'):
+                html=page.read_text()
+                if page.name in ('404.html','offline.html'):
+                    self.assertNotIn('naver-analytics.js',html)
+                    continue
+                self.assertEqual(html.count('naver-analytics.js?v='),1,str(page))
+                self.assertEqual(html.count('naver-analytics.css?v='),1,str(page))
+                self.assertNotIn('wcslog.js',html)
+            self.assertIn('naver-analytics.js',manifest['files'])
+            self.assertIn('naver-analytics.css',manifest['files'])
+            detail=next((root / 'public/benefits').glob('*/index.html')).read_text()
+            self.assertIn('src="../../naver-analytics.js?v=',detail)
 
     def test_preview_is_noindex_and_does_not_advertise_a_public_sitemap(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -60,6 +73,7 @@ class SearchMetadataTests(unittest.TestCase):
             self.assertNotIn('rel="canonical"', text)
             self.assertNotIn('property="og:url"', text)
             self.assertFalse((root / 'preview/sitemap.xml').exists())
+            self.assertNotIn('naver-analytics.js',text)
 
     def test_verification_tokens_are_optional_validated_and_homepage_only(self):
         with tempfile.TemporaryDirectory() as temp:
