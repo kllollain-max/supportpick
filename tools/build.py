@@ -10,7 +10,24 @@ from detail_pages import write_details
 from release_policy import fingerprint
 from collect_full import period
 ROOT=Path(__file__).resolve().parents[1]
-STATIC=('index.html','privacy.html','about.html','terms.html','contact.html','404.html','icon.svg','careerpick-base.css','styles.css','core.js','app.js','detail.js','supportpick-badge.png','supportpick-banner.png','editorials.js','app-features.js','manifest.webmanifest','sw.js','offline.html','app-icon-180.png','app-icon-192.png','app-icon-512.png')
+STATIC=('index.html','privacy.html','about.html','terms.html','contact.html','404.html','icon.svg','careerpick-base.css','styles.css','core.js','app.js','detail.js','supportpick-badge.png','supportpick-banner.png','editorials.js','app-features.js','manifest.webmanifest','sw.js','offline.html','app-icon-180.png','app-icon-192.png','app-icon-512.png','naver-analytics.js','naver-analytics.css')
+
+def install_naver_analytics(output):
+    """Add one consent-controlled loader to each online page at its actual depth."""
+    for page in output.rglob('*.html'):
+        relative=page.relative_to(output)
+        if str(relative) in ('404.html','offline.html'):continue
+        text=page.read_text(encoding='utf-8')
+        if text.count('</head>')!=1 or text.count('</body>')!=1:
+            raise ValueError('analytics_requires_complete_document:'+str(relative))
+        if 'naver-analytics.js' in text or 'naver-analytics.css' in text:
+            raise ValueError('duplicate_analytics_loader:'+str(relative))
+        style=posixpath.relpath('naver-analytics.css',relative.parent.as_posix())
+        script=posixpath.relpath('naver-analytics.js',relative.parent.as_posix())
+        text=text.replace('</head>',f'<link rel="stylesheet" href="{style}">\n</head>')
+        text=text.replace('</body>',f'<script defer src="{script}"></script>\n</body>')
+        page.write_text(text,encoding='utf-8')
+
 class Links(HTMLParser):
     def __init__(self,output,page,available=None):super().__init__();self.output=output;self.page=page;self.available=available
     def handle_starttag(self,tag,attrs):
@@ -98,6 +115,7 @@ def build(destination,state=None,allow_sample=False,public_base=None):
     home=home.replace('<!-- STATIC_DISCOVERY -->',detail['home'])
     (output/'index.html').write_text(home)
     if public_base:write_sitemap(output,public_base,detail['entries'])
+    if public_base:install_naver_analytics(output)
     (output/'search-report.json').write_text(json.dumps(detail['report'],ensure_ascii=False,indent=2))
     # Invalidate only our generic offline shell when its actual assets change.
     shell_hash=hashlib.sha256(b''.join((output/name).read_bytes() for name in ('offline.html','app-icon-192.png','app-icon-512.png'))).hexdigest()[:16]
