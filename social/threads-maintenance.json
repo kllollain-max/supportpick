@@ -1175,12 +1175,12 @@
     "natural_publication_after_change_verified": true
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-09T04:10:43.691+09:00",
+    "checked_at": "2026-11-09T06:08:17+09:00",
     "result": "no_update",
     "current_main_sha": "44f95bb570aefaa627988e16826058adfc52df77",
     "publication_ledger_sha": "7df84a07fdc580b65164784e251fca1d1628ead4",
     "queue_blob_sha": "7a01b7f9bc97d22fe7ce3b975774bd6bfe1c58ad",
-    "maintenance_previous_blob_sha": "1fd2b53bb55da3e6bfe9885b379af4053fcb0124",
+    "maintenance_previous_blob_sha": "006bbbbff657c788c89d96c1f97d8d9cebbbf477",
     "active_target_runs": [],
     "changed_run_versions": [],
     "source": {
@@ -1204,12 +1204,9 @@
       },
       "read_current_verify_snapshot_load_feed": true,
       "current_application_status_not_inferred": true,
-      "artifact_download_sha256": "1e1adb84bc636bdf0b15d446a63752685f8f3f34ecde04e3842c5da573e4dffd",
-      "verify_snapshot_count": 10942,
-      "load_feed_count": 10942,
-      "source_consistency": "Same completed run version; artifact remains available with verified digest, job remains completed/success, and prior manifest plus read_current→verify_snapshot→load_feed verification remains applicable.",
       "artifact_expired": false,
-      "job_id": "128697529711"
+      "job_id": "128697529711",
+      "source_consistency": "Same completed run version and immutable artifact digest; prior read_current→verify_snapshot→load_feed verification remains applicable. A newer scheduled operations run was not yet due at this checkpoint."
     },
     "publisher": {
       "run_id": "42475511381",
@@ -1226,8 +1223,7 @@
       "lease": null,
       "last_verified_main_id": "18105328595638743",
       "last_verified_url": "https://www.threads.com/@hid_1004/post/Dfeo_7akb1d",
-      "note": "Same completed publisher run version; artifact remains available with verified digest, job remains completed/success, and no newer run or reservation exists.",
-      "artifact_expired": false
+      "note": "No later natural slot existed before this checkpoint; same completed publisher run, no new reservation or remote receipt."
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
@@ -1240,46 +1236,63 @@
       "queue_readback_equal": true,
       "assets_blob_sha": "e904502fc338fd0064dcbce160e967f49d904845",
       "image_review_blob_sha": "5a758ab03f9da099a04ce41ab1a394bdf2496038",
-      "image_sha256_verified": [
-        "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-        "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a"
-      ],
+      "next_slot_preflight": {
+        "slot": "2026-11-09T08:00:00+09:00",
+        "benefit_id": "134200000045",
+        "pattern": "P7",
+        "media_turn": "IMAGE",
+        "status": "READY",
+        "characters": 309,
+        "expires_at": "2026-11-09T10:39:46.387819+09:00",
+        "official_status": "OPEN_AND_LISTED_AS_RECRUITING",
+        "official_rechecked_at": "2026-11-09T06:08:17+09:00",
+        "official_sources": [
+          "https://www.lllcard.kr/reg/gyeonggi/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_000000000141&localNm=%EA%B2%BD%EA%B8%B0%EB%8F%84&nttId=31031",
+          "https://www.lllcard.kr/main?deviceType=PC&siteType=PC",
+          "https://www.lllcard.kr/reg/gyeonggi/main/mainView.do"
+        ],
+        "facts_reconfirmed": [
+          "application window 2026-11-05 11:00 through 2026-11-13 18:00",
+          "AI/digital third-round excellent-user application remains recruiting",
+          "350000 KRW learning voucher recharge",
+          "existing selection type and full-use cutoff requirements",
+          "announcement planned for 2026-11-20"
+        ],
+        "source_generation": "gov24-42417984108-1",
+        "source_recheck_required_at_publish": true,
+        "image_asset_url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+        "image_asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "image_blob_sha": "69f4a31ce2a755fc9f15e7a2c0aa3b35e4f8c088",
+        "image_evidence": "Existing visual review remains under 24 hours; main image blob, assets mapping and image-review blobs are unchanged. No new visual inspection claimed."
+      },
       "next_24h_sequence": [
         {
           "slot": "2026-11-09T08:00:00+09:00",
           "benefit_id": "134200000045",
           "pattern": "P7",
           "media_turn": "IMAGE",
-          "expires_at": "2026-11-09T10:39:46.387819+09:00",
-          "source_generation": "gov24-42417984108-1",
-          "source_recheck_required_at_publish": true
+          "expires_at": "2026-11-09T10:39:46.387819+09:00"
         },
         {
           "slot": "2026-11-09T12:00:00+09:00",
           "benefit_id": "SSE000000170",
           "pattern": "P6",
           "media_turn": "TEXT",
-          "expires_at": "2026-11-09T12:55:23.835838+09:00",
-          "source_generation": "gov24-42417984108-1",
-          "source_recheck_required_at_publish": true
+          "expires_at": "2026-11-09T12:55:23.835838+09:00"
         },
         {
           "slot": "2026-11-09T16:00:00+09:00",
           "benefit_id": "135200005004",
           "pattern": "P5",
           "media_turn": "IMAGE",
-          "expires_at": "2026-11-09T17:56:32.076946+09:00",
-          "source_generation": "gov24-42417984108-1",
-          "source_recheck_required_at_publish": true
+          "expires_at": "2026-11-09T17:56:32.076946+09:00"
         },
         {
           "slot": "2026-11-09T20:00:00+09:00",
           "benefit_id": "WII000000300",
           "pattern": "P8",
           "media_turn": "TEXT",
-          "expires_at": "2026-11-09T20:47:38+09:00",
-          "source_generation": "gov24-42469753093-1",
-          "source_recheck_required_at_publish": true
+          "expires_at": "2026-11-09T20:47:38+09:00"
         }
       ],
       "constraints_rechecked": [
@@ -1302,6 +1315,6 @@
       "41796747628": "resolved status preserved; PR 7 and recovery run 41797892734 remain verified",
       "new_incident": null
     },
-    "next_condition": "At the next natural checkpoint, verify any new main operations or Threads run version; before 08:00 publishing revalidate official status, source freshness, IMAGE bytes/order and READY expiry."
+    "next_condition": "After the 06:20 KST operations run finishes, the natural 08:00 publisher must revalidate the new source generation, official application status, IMAGE order/bytes and READY expiry before reserving."
   }
 }
