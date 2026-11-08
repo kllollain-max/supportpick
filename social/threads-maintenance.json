@@ -56,15 +56,16 @@
     "42443582400",
     "42460308375",
     "42469753093",
-    "42475511381"
+    "42475511381",
+    "42527504841"
   ],
   "last_health": {
     "unresolved_publications": 0,
     "published_benefits": 17,
-    "source_run_id": "42469753093",
+    "source_run_id": "42527504841",
     "source_result": "success",
     "source_count": 10942,
-    "source_last_success_at": "2026-11-08T19:10:19.500907+09:00",
+    "source_last_success_at": "2026-11-09T07:02:51.685853+09:00",
     "source_workflow_conclusion": "success",
     "source_failure_classification": null,
     "last_publisher_run_id": "42475511381",
@@ -766,21 +767,73 @@
       "conclusion": "success",
       "updated_at": "2026-11-08T11:24:06Z",
       "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
+    },
+    "42527504841": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-08T22:03:54Z",
+      "head_sha": "44f95bb570aefaa627988e16826058adfc52df77"
     }
   },
   "last_check": {
-    "result": "new_publication_and_queue_prepared",
-    "checked_at": "2026-11-08T20:50:35+09:00",
-    "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
+    "result": "new_source_generation_queue_revalidated_no_publication",
+    "checked_at": "2026-11-09T07:14:34+09:00",
+    "current_main_sha": "44f95bb570aefaa627988e16826058adfc52df77",
     "publication_ledger_sha": "7df84a07fdc580b65164784e251fca1d1628ead4",
-    "queue_previous_blob_sha": "0a5954b4e79752c0eb87c2ae182fd04d2c009717",
     "queue_blob_sha": "7a01b7f9bc97d22fe7ce3b975774bd6bfe1c58ad",
-    "queue_commit_sha": "7e7292e921d871e119e53606547fc864c343f219",
+    "maintenance_previous_blob_sha": "45ec53988c31ffb1bd5c71667611ea3267aca3a8",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_ids": [
-      "42475511381"
+      "42527504841"
     ],
+    "latest_source": {
+      "run_id": "42527504841",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-08T22:03:54Z",
+      "head_sha": "44f95bb570aefaa627988e16826058adfc52df77",
+      "job_id": "128874269683",
+      "artifact_id": "13635897623",
+      "artifact_digest": "sha256:3b5f8f6fcf45764f5c1d5552190b5586291e5d537ef8610d8e5c097f3725f015",
+      "artifact_expired": false,
+      "generation": "gov24-42527504841-1",
+      "count": 10942,
+      "collection_succeeded_at": "2026-11-09T07:02:51.685853+09:00",
+      "manifest_sha256": "ffa9ae73dc15d8248dd44e2ad86d07598765a65bdbebfa3a602bb7692c3f42aa",
+      "workflow_result": "all collection, completeness, build, static verification, preservation and artifact-upload steps passed",
+      "build_result": {
+        "benefits": 10942,
+        "detail_pages": 10942,
+        "indexable_details": 10935,
+        "status": "success"
+      },
+      "regression_tests": {
+        "passed": 186,
+        "failed": 0
+      },
+      "release_policy": {
+        "publish": false,
+        "reason": "same_day_content_unchanged_public_generation_retained",
+        "candidate_generation": "gov24-42527504841-1",
+        "observed_public_generation": "gov24-42469753093-1",
+        "observed_public_content_fingerprint": "beff4a5a97d1a058f42dbac25c9b73a1f3c3d3a51037ae373221ec267c6ae0b9",
+        "probe_hashes_match": true
+      },
+      "manifest_and_load_verification": {
+        "refresh_manifest_passed": true,
+        "runtime_bundle_passed": true,
+        "source_preserved": true,
+        "generations_in_bundle": 2,
+        "artifact_file_transfer": "GET returned transient HTTP 503 on three total attempts with 2s/5s backoff; no further retries",
+        "classification": "tool-side artifact transfer limitation, not collection or artifact creation failure",
+        "feed_sha256": null,
+        "note": "Exact job log, run record, artifact metadata/digest, manifest result and runtime bundle result were verified. Artifact bytes could not be independently unpacked in this checkpoint."
+      },
+      "current_application_status_not_inferred": true
+    },
     "latest_publisher": {
       "run_id": "42475511381",
       "run_attempt": 1,
@@ -791,117 +844,99 @@
       "job_id": "128715842564",
       "artifact_id": "13615276846",
       "artifact_digest": "sha256:d7ed56e576ffe25e03c799123181a5a035fe81447b6e296e57f69f34b1e9658d",
-      "classification": "verified_natural_publication"
-    },
-    "latest_source": {
-      "run_id": "42469753093",
-      "run_attempt": 1,
-      "status": "completed",
-      "conclusion": "success",
-      "updated_at": "2026-11-08T10:11:18Z",
-      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
-      "artifact_id": "13613277132",
-      "artifact_digest": "sha256:1e1adb84bc636bdf0b15d446a63752685f8f3f34ecde04e3842c5da573e4dffd",
-      "generation": "gov24-42469753093-1",
-      "count": 10942,
-      "collection_succeeded_at": "2026-11-08T19:10:19.500907+09:00",
-      "manifest_sha256": "f2343bc5dca7853f9e14ad958f31109ee36840123999b9b153bd426139f0baaf",
-      "feed_sha256": "13fa3001ed3efeac12808cebbe71b585991e08309bd82cfb2117fe788c84930e",
-      "coverage": {
-        "serviceList": "110/110; 10942 unique; 0 duplicates",
-        "serviceDetail": "110/110; 10942 unique; 0 duplicates",
-        "supportConditions": "110/110; 10942 unique; 0 duplicates"
-      },
-      "read_current_verify_snapshot_load_feed": true,
-      "current_application_status_not_inferred": true
-    },
-    "publication": {
-      "slot": "2026-11-08T20:00:00+09:00",
-      "published_at": "2026-11-08T20:23:17.976799+09:00",
-      "benefit_id": "WII000001460",
-      "main_id": "18105328595638743",
-      "url": "https://www.threads.com/@hid_1004/post/Dfeo_7akb1d",
-      "stage": "complete",
-      "verified": true,
-      "content_hash": "3588f6e186c6abe1005f4b74188fcba2bc7b99710444227806884d2170d32a60",
-      "asset_sha256": null,
-      "source_generation": "gov24-42469753093-1",
-      "pattern": "P1",
-      "media_turn": "TEXT",
-      "replies": 0,
-      "verification": "remote_receipt_plus_durable_ledger_plus_artifact_and_job_log"
+      "classification": "no_new_publisher_run_before_08_slot"
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "master_prompt_blob_sha": "89b38a2a579a85cf0ad31dd40e08cc7df76d9333",
+      "prompt_hash_recomputed": true,
       "queue_ready": 4,
-      "preview_ready": 4,
-      "queue_preview_current_run": true,
-      "prior_regression_tests_reused": 121,
-      "queue_readback_equal": true,
-      "new_entry": {
-        "slot": "2026-11-09T20:00:00+09:00",
-        "benefit_id": "WII000000300",
-        "pattern": "P8",
-        "media_turn": "TEXT",
-        "characters": 410,
-        "source_generation": "gov24-42469753093-1",
-        "prepared_at": "2026-11-08T20:48:38+09:00",
-        "expires_at": "2026-11-09T20:47:38+09:00",
-        "source_recheck_required_at_publish": true
+      "preview_constraints_passed": true,
+      "queue_reused": true,
+      "queue_write": false,
+      "next_slot": {
+        "slot": "2026-11-09T08:00:00+09:00",
+        "benefit_id": "134200000045",
+        "pattern": "P7",
+        "media_turn": "IMAGE",
+        "status": "READY",
+        "characters": 309,
+        "expires_at": "2026-11-09T10:39:46.387819+09:00",
+        "source_fingerprint": "08d378cad9716b0ebb9996fb2a8327c33f04d041af08fe9ff848c43029aac246",
+        "prepared_source_generation": "gov24-42417984108-1",
+        "latest_source_generation": "gov24-42527504841-1",
+        "latest_source_content_unchanged": true,
+        "source_recheck_required_at_publish": true,
+        "official_status": "OPEN_AND_LISTED_AS_RECRUITING",
+        "official_rechecked_at": "2026-11-09T07:14:34+09:00",
+        "official_sources": [
+          "https://www.lllcard.kr/reg/gyeonggi/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_000000000141&localNm=%EA%B2%BD%EA%B8%B0%EB%8F%84&nttId=31031",
+          "https://www.lllcard.kr/reg/gyeonggi/main/mainView.do"
+        ],
+        "official_claims_reconfirmed": [
+          "application deadline 2026-11-13 18:00",
+          "AI/digital third-round excellent-user listing remains recruiting",
+          "350000 KRW additional voucher",
+          "first/second round full-use cutoffs and refund-balance exclusion",
+          "same existing selection type required",
+          "announcement planned for 2026-11-20"
+        ],
+        "image_asset_url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+        "image_asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "image_blob_sha": "69f4a31ce2a755fc9f15e7a2c0aa3b35e4f8c088",
+        "image_evidence": "Existing visual review remains under 24 hours; required main blobs are unchanged. No new visual inspection claimed."
       },
-      "higher_candidate_dispositions_added": [
-        {
-          "benefit_id": "WII000001470",
-          "decision": "HOLD"
-        }
-      ],
       "next_24h_sequence": [
         {
           "slot": "2026-11-09T08:00:00+09:00",
           "benefit_id": "134200000045",
           "pattern": "P7",
           "media_turn": "IMAGE",
-          "expires_at": "2026-11-09T10:39:46.387819+09:00",
-          "source_recheck_required_at_publish": true
+          "expires_at": "2026-11-09T10:39:46.387819+09:00"
         },
         {
           "slot": "2026-11-09T12:00:00+09:00",
           "benefit_id": "SSE000000170",
           "pattern": "P6",
           "media_turn": "TEXT",
-          "expires_at": "2026-11-09T12:55:23.835838+09:00",
-          "source_recheck_required_at_publish": true
+          "expires_at": "2026-11-09T12:55:23.835838+09:00"
         },
         {
           "slot": "2026-11-09T16:00:00+09:00",
           "benefit_id": "135200005004",
           "pattern": "P5",
           "media_turn": "IMAGE",
-          "expires_at": "2026-11-09T17:56:32.076946+09:00",
-          "source_recheck_required_at_publish": true
+          "expires_at": "2026-11-09T17:56:32.076946+09:00"
         },
         {
           "slot": "2026-11-09T20:00:00+09:00",
           "benefit_id": "WII000000300",
           "pattern": "P8",
           "media_turn": "TEXT",
-          "expires_at": "2026-11-09T20:47:38+09:00",
-          "source_recheck_required_at_publish": true
+          "expires_at": "2026-11-09T20:47:38+09:00"
         }
+      ],
+      "constraints_rechecked": [
+        "four distinct patterns",
+        "IMAGE/TEXT alternation",
+        "500-character hard limit",
+        "reply_texts empty",
+        "CTA exactly once at end",
+        "no URL in post text"
       ]
     },
     "recovery": {
       "required": false,
       "workflow_dispatch": false,
-      "posts_sent_by_recovery": 0,
+      "posts_sent": 0,
       "code_changes": 0,
-      "reason": "No failed or partial publication, pending reservation, active lease, or safe recovery target was found."
+      "reason": "New source run succeeded and no failed/partial publication, pending reservation, active lease or safe recovery target exists."
     },
     "incidents": {
       "41796747628": "resolved status preserved; PR 7 and recovery run 41797892734 remain verified",
       "new_incident": null
     },
-    "next_condition": "Revalidate source freshness, official application state, image order, and queue entry at each natural scheduled slot."
+    "next_condition": "At the natural 08:00 workflow, restore the latest validated runtime state and re-run fingerprint, official-state, IMAGE order/bytes, expiry, account guard, daily limit and CAS checks before reserving."
   },
   "last_reported_publication": {
     "run_id": "42475511381",
