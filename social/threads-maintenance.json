@@ -67,7 +67,7 @@
     "source_workflow_conclusion": "success",
     "source_failure_classification": null,
     "last_publisher_run_id": "42460308375",
-    "writer_queue_ready": 3,
+    "writer_queue_ready": 4,
     "writer_schema": "supportpick.writer.v1",
     "account_check": "verified_http_200",
     "account_check_run_id": "42152164281",
@@ -1197,17 +1197,25 @@
       "publication_ledger_records": 16,
       "pending": null,
       "lease": null,
-      "note": "No newer Threads workflow existed before the 20:00 regular slot."
+      "note": "No newer Threads workflow or ledger reservation was present at the beginning of the 20:00 regular window."
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-      "queue_ready": 3,
+      "queue_ready": 4,
       "preview_ready": 4,
       "regression_tests_passed": 121,
       "queue_reused": true,
       "queue_write": false,
       "queue_readback_equal": true,
       "next_24h_sequence": [
+        {
+          "slot": "2026-11-08T20:00:00+09:00",
+          "benefit_id": "WII000001460",
+          "pattern": "P1",
+          "media_turn": "TEXT",
+          "expires_at": "2026-11-08T22:24:00.669141+09:00",
+          "source_recheck_required_at_publish": true
+        },
         {
           "slot": "2026-11-09T08:00:00+09:00",
           "benefit_id": "134200000045",
@@ -1232,7 +1240,9 @@
           "expires_at": "2026-11-09T17:56:32.076946+09:00",
           "source_recheck_required_at_publish": true
         }
-      ]
+      ],
+      "current_window_ready": 1,
+      "future_ready": 3
     },
     "recovery": {
       "required": false,
@@ -1245,6 +1255,6 @@
       "41796747628": "resolved status preserved; PR 7 and recovery run 41797892734 remain verified",
       "new_incident": null
     },
-    "next_condition": "At the natural 20:00 slot, revalidate the reviewed entry against the latest complete source and remote account; do not create an extra scheduler, test post, or rerun."
+    "next_condition": "Allow the natural 20:00 schedule to start. Revalidate its reviewed entry against the latest complete source and remote account; do not create an extra scheduler, test post, or rerun."
   }
 }
