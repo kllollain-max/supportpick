@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-08T17:56:33.076946+09:00",
+  "prepared_at": "2026-11-08T20:48:38+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -258,6 +258,32 @@
       ],
       "access_scope": "복지로 2026 중앙부처 서비스와 보건복지부 긴급복지 정책 안내, 보조금24 동일 서비스 ID 원문 대조",
       "checked_at": "2026-11-08T17:56:33.076946+09:00"
+    },
+    {
+      "benefit_id": "WII000001470",
+      "views": 181992,
+      "decision": "HOLD",
+      "reason": "LH의 현재 시흥거모 S-1 공공분양 공고는 공급유형별 실제 청약일이 2026년 11월 16~17일이다. 최신 보조금24 수집 행에는 시작일이 구조화되지 않아 UPCOMING 검증을 통과시킬 수 없고, 11월 9일 현재 신청 가능한 일반 후보로 표현하지 않기 위해 보류했다.",
+      "sources": [
+        "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&mi=1027&panId=0000061186&uppAisTpCd=05",
+        "https://apply.lh.or.kr/lhapply/apply.do",
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999073&bnefType=all&svcId=WII000001470"
+      ],
+      "access_scope": "LH 정정공고의 공급대상·유형별 신청일과 청약목록 상태, 보조금24 동일 서비스 ID 원문 대조",
+      "checked_at": "2026-11-08T20:48:38+09:00"
+    },
+    {
+      "benefit_id": "WII000000300",
+      "views": 171571,
+      "decision": "SELECTED",
+      "reason": "상위 UPCOMING 공공분양 후보를 보류한 뒤, 국민연금공단의 현재 실버론 안내에서 대상·용도·한도·금리·상환·신청기한과 예산 범위 운영을 확인한 후보 중 보조금24 동일 서비스 ID 누적 조회수 순으로 선정했다.",
+      "sources": [
+        "https://pensioner.nps.or.kr/iaopsrvc/silverloan/getOHDD0001M0.do?menuId=MN24000376",
+        "https://www.nps.or.kr/pnsinfo/ntpsklg/getOHAF0095M0.do?menuId=MN24001131",
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=760851&bnefType=all&svcId=WII000000300"
+      ],
+      "access_scope": "국민연금공단 현재 실버론 지원내용·지식 안내와 보조금24 동일 서비스 ID 원문 대조",
+      "checked_at": "2026-11-08T20:48:38+09:00"
     }
   ],
   "entries": [
@@ -1699,6 +1725,99 @@
           "opening": "난방비나 단전된 전기요금 때문에 긴급복지 지원을 알아본다면, 먼저 긴급복지 생계·주거지원 가구인지 확인하세요.",
           "structure": "긴급복지 주지원 여부 확인 → 연료비·전기요금·요청 경로 체크 → 심사와 제외 조건 → CTA",
           "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-09T20:00:00+09:00",
+      "benefit_id": "WII000000300",
+      "source_fingerprint": "c4ad731bf2451ed4ca8779b59d94c2ddcff71ca47a32e671858f7128d6f66176",
+      "source_generation": "gov24-42469753093-1",
+      "prepared_at": "2026-11-08T20:48:38+09:00",
+      "expires_at": "2026-11-09T20:47:38+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "WII000000300",
+        "draft_text": null,
+        "post_text": "국민연금을 받고 긴급자금이 필요하다면, 실버론은 용도·한도·기한을 함께 보세요.\n\n① 대상: 국내 거주 만 60세 이상 국민연금 수급자 중 노령·분할·유족·장애연금 1~3급 수급자예요. 일부 제외대상이 있어요.\n② 한도: 본인·배우자의 전월세보증금·의료비, 배우자 장제비, 재해복구비의 실제 비용만 빌릴 수 있어요. 연간 연금수령액의 2배 이내, 최고 1,000만 원인 대출이에요.\n③ 비용: 2026년 4분기 금리는 연 3.21% 변동금리이며, 최대 5년 원금균등분할상환이에요. 거치 1~2년 선택 시 최장 7년이에요.\n④ 기한: 전월세는 신규 임차 전후 3개월·갱신 3개월, 의료비와 재해복구비는 6개월, 배우자 장제비는 3개월 이내예요. 예산 범위에서 운영되며 국민연금공단 지사에 방문 신청해요.\n\n자세한 사항은 프로필링크 확인",
+        "reply_texts": [],
+        "review": {
+          "planned_at": "2026-11-09T20:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "국내에 거주하며 긴급 생활자금이 필요한 만 60세 이상 국민연금 수급자",
+          "central_message": "실버론은 현금지원이 아닌 용도 제한 대출이므로 대상·실소요액 한도·금리·신청기한을 함께 확인한다.",
+          "pattern": "P8",
+          "selection_reason": "공공분양 상위 후보는 공급유형별 청약일이 11월 16~17일이고 최신 수집 행에 시작일이 구조화되지 않아 이번 READY에서 보류했다. 이후 국민연금공단 현재 안내로 대상·용도·한도·금리·상환·기한을 확인한 후보 중 보조금24 동일 서비스 ID 누적 조회수 순으로 선정했다.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "WII000000300",
+              "source_ref": "https://pensioner.nps.or.kr/iaopsrvc/silverloan/getOHDD0001M0.do?menuId=MN24000376",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-08T20:48:38+09:00",
+              "claims_supported": [
+                "국내 거주 만 60세 이상 노령·분할·유족·장애연금 1~3급 수급자의 신청자격과 제외대상을 확인",
+                "연간 연금수령액의 2배 이내 실소요액, 최고 1,000만 원 대부와 2026년 4분기 연 3.21% 변동금리를 확인",
+                "전월세보증금·의료비·배우자 장제비·재해복구비의 용도별 증빙과 국민연금공단의 현재 실버론 운영 안내를 확인"
+              ]
+            },
+            {
+              "source_id": "WII000000300",
+              "source_ref": "https://www.nps.or.kr/pnsinfo/ntpsklg/getOHAF0095M0.do?menuId=MN24001131",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-08T20:48:38+09:00",
+              "claims_supported": [
+                "매년 한정된 예산 범위에서 신청 가능하며 국민연금공단 지사에서 신청하는 현재 제도임을 확인",
+                "전월세 신규·갱신 3개월, 의료비 6개월, 배우자 장제비 3개월, 재해복구비 6개월의 신청기한을 확인",
+                "최대 5년 원금균등분할상환과 거치 1~2년 선택 시 최장 7년의 상환기간을 확인"
+              ]
+            },
+            {
+              "source_id": "WII000000300",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=760851&bnefType=all&svcId=WII000000300",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-08T20:48:38+09:00",
+              "claims_supported": [
+                "보조금24 동일 서비스 ID의 대상·용도·한도·방문 신청·용도별 기한을 국민연금공단 현재 안내와 대조",
+                "serviceList 누적 조회수 171571건. API 원본 확인시각 2026-11-08T19:08:09.414504+09:00"
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 410,
+          "count_method": "Python Unicode 문자 수, 공백·개행·CTA 포함",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "현금성 지원이 아니라 상환해야 하는 대출이며 개인별 한도는 연금액과 실소요액에 따라 달라진다.",
+            "분기별 변동금리이고 매년 한정된 예산 범위에서 운영되므로 실제 발송 전 금리와 신청 가능 상태를 다시 확인한다.",
+            "일부 수급자와 기존 미상환자 등은 신청대상에서 제외될 수 있어 국민연금공단의 전체 제외조건을 확인해야 한다."
+          ]
+        },
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "next_history_record": {
+          "program_id": "WII000000300",
+          "notice_version": "gov24-42469753093-1:2026-08-12",
+          "pattern": "P8",
+          "opening": "국민연금을 받고 긴급자금이 필요하다면, 실버론은 용도·한도·기한을 함께 보세요.",
+          "structure": "긴급자금 상황 → 대상 → 용도·한도 → 금리·상환 → 용도별 신청기한·방문 경로 → CTA",
+          "media_turn": "TEXT"
         }
       }
     }
