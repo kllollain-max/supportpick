@@ -52,18 +52,19 @@
     "42362288609",
     "42367885106",
     "42417984108",
-    "42425475381"
+    "42425475381",
+    "42443582400"
   ],
   "last_health": {
     "unresolved_publications": 0,
-    "published_benefits": 14,
+    "published_benefits": 15,
     "source_run_id": "42417984108",
     "source_result": "success",
     "source_count": 10942,
     "source_last_success_at": "2026-11-08T07:01:23.901189+09:00",
     "source_workflow_conclusion": "success",
     "source_failure_classification": null,
-    "last_publisher_run_id": "42425475381",
+    "last_publisher_run_id": "42443582400",
     "writer_queue_ready": 4,
     "writer_schema": "supportpick.writer.v1",
     "account_check": "verified_http_200",
@@ -732,38 +733,45 @@
       "conclusion": "success",
       "updated_at": "2026-11-07T23:30:34Z",
       "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
-    }
-  },
-  "last_check": {
-    "result": "next_day_learning_draft_evidence_renewed",
-    "unresolved_publications": 0,
-    "active_target_runs": [],
-    "latest_publisher": {
-      "run_id": "42425475381",
+    },
+    "42443582400": {
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-07T23:30:34Z",
+      "updated_at": "2026-11-08T03:39:44Z",
+      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
+    }
+  },
+  "last_check": {
+    "result": "new_publication_and_queue_prepared",
+    "unresolved_publications": 0,
+    "active_target_runs": [],
+    "latest_publisher": {
+      "run_id": "42443582400",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-08T03:39:44Z",
       "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
       "event": "schedule",
-      "job_id": "128562726135",
+      "job_id": "128617731644",
       "published": true,
-      "slot": "2026-11-08T08:00:00+09:00",
-      "published_at": "2026-11-08T08:29:44.103110+09:00",
-      "verification_completed_at": "2026-11-07T23:30:33Z",
-      "benefit_id": "B55201500004",
-      "main_id": "18148832443604975",
-      "url": "https://www.threads.com/@hid_1004/post/DfdXVsRjpD9",
+      "slot": "2026-11-08T12:00:00+09:00",
+      "published_at": "2026-11-08T12:38:55.239961+09:00",
+      "verification_completed_at": "2026-11-08T12:58:36.017298+09:00",
+      "benefit_id": "B55353000001",
+      "main_id": "18004026836801587",
+      "url": "https://www.threads.com/@hid_1004/post/Dfdz2wumyrW",
       "stage": "complete",
       "verified": true,
-      "content_hash": "fc214f0c4a31d81194b73d66a47c320ff36cc8b8b242fd6b675f82281c485f78",
-      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "content_hash": "77dc7f10c97efcb06fc35c5b2769fda8417bc5da86ca3c6d148a2ed1a228874a",
+      "asset_sha256": null,
       "source_generation": "gov24-42417984108-1",
-      "pattern": "P6",
-      "media_turn": "IMAGE",
+      "pattern": "P5",
+      "media_turn": "TEXT",
       "replies": 0,
-      "artifact_id": "13594493724",
-      "artifact_sha256": "4416a1b44dfe97daf3c1423cf27ca6aa6c28f57b27098c9afdc764e668f62291",
+      "artifact_id": "13602597911",
+      "artifact_sha256": "5e61faa89401265c84c8f7a9f9b7eed79808b9c1d2772eadd4fa951ec08536a8",
       "artifact_contents_verified": true,
       "verification_method": "publisher_remote_readback_plus_durable_ledger_and_artifact"
     },
@@ -793,16 +801,18 @@
         "final_failures": 0
       }
     },
-    "publication_ledger_sha": "4840cad28e00869a45e42a2b055db9c54753a1fa",
+    "publication_ledger_sha": "72113bd23b5b063d9b0def914d0af0f4e1f66eef",
     "workflow_blob_shas": {
       "threads": "721f96ebc75988113d496958e3b8a29767eef0ce",
       "source": "ce74fe03afd06f59f1d38f2e297fe9a78bbcf604"
     },
     "recovery_repeated": false,
-    "posts_sent": 0,
+    "posts_sent": 1,
     "code_changes": 0,
-    "checked_at": "2026-11-08T10:40:44.273+09:00",
-    "changed_run_ids": [],
+    "checked_at": "2026-11-08T12:58:36.017298+09:00",
+    "changed_run_ids": [
+      "42443582400"
+    ],
     "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "ranking_policy": {
       "policy": "gov24_views_desc_v1",
@@ -874,9 +884,14 @@
       "expected_image_slot": true,
       "approved_rotation_choice_verified": true,
       "source_fresh_at_publication": true,
-      "daily_main_posts": 4
+      "daily_main_posts": 4,
+      "writer_preview_ready": 4,
+      "writer_regression_tests_passed": 121,
+      "queue_readback_equal": true,
+      "no_links_or_replies": true,
+      "exact_cta_once": true
     },
-    "next_step": "Before November 9 08:00, use the latest complete fresh source and actual media sequence. The renewed review covers the original two-hour delay window.",
+    "next_step": "At the next natural slot, revalidate the latest complete source, official status, image order, and exact queue entry. No recovery dispatch is required.",
     "evidence_recheck": {
       "latest_jobs_and_logs_read": true,
       "latest_source_job_metadata_read": true,
@@ -887,7 +902,7 @@
       "new_result_and_source_artifact_contents_digest_verified": true,
       "publisher_script_and_workflows_unchanged": true,
       "approved_assets_manifest_unchanged": true,
-      "no_new_publication": true,
+      "no_new_publication": false,
       "no_pending_publications": true,
       "natural_image_publication_verified": true,
       "artifact_metadata_and_digests_unchanged": true,
@@ -900,7 +915,8 @@
       "approved_image_files_match_review_sha256": true,
       "latest_source_artifact_digest_verified": true,
       "public_web_open_available": false,
-      "publisher_remote_readback_verified": true
+      "publisher_remote_readback_verified": true,
+      "new_publication_verified": true
     },
     "latest_policy_change": {
       "applied_at": "2026-11-04T23:10:49+09:00",
@@ -933,9 +949,9 @@
       "next_step": "Verify on next natural scheduled slots; do not dispatch test or backfill posts."
     },
     "current_slot_observation": {
-      "slot": "2026-11-08T08:00:00+09:00",
+      "slot": "2026-11-08T12:00:00+09:00",
       "classification": "scheduled_publication_completed_verified",
-      "run_id": "42425475381",
+      "run_id": "42443582400",
       "remote_run_started": true,
       "manual_publication_dispatched": false
     },
@@ -967,7 +983,7 @@
     },
     "current_day_publication_count": {
       "date_kst": "2026-11-08",
-      "count": 1,
+      "count": 2,
       "limit": 4
     },
     "previous_verified_publisher": {
@@ -1045,243 +1061,76 @@
       "automation_updated": true,
       "ci": "success"
     },
-    "posts_sent_this_check": 0,
+    "posts_sent_this_check": 1,
     "next_slot_preview": {
-      "slot": "2026-11-08T12:00:00+09:00",
-      "benefit_id": "B55353000001",
-      "pattern": "P5",
-      "media_turn": "TEXT",
-      "status": "READY",
+      "slot": "2026-11-08T16:00:00+09:00",
+      "benefit_id": "132000000006",
+      "pattern": "P8",
+      "media_turn": "IMAGE",
+      "characters": 352,
       "expires_at": "2026-11-08T18:34:09.306983+09:00",
-      "source_recheck_required_at_publish": true,
-      "snapshot_eligible_at_nominal": true,
-      "snapshot_eligible_at_window_end": true,
-      "covers_original_window": true,
-      "media": "TEXT",
-      "queue_blob_sha": "5193b087b3f89b448258cd8c5011bc0aa9b380f8",
-      "actual_publication_verified": false
+      "source_recheck_required_at_publish": true
     },
     "recovery_automation": {
-      "id": "6aeaefe5fd708191a3e8a67b3667fb8f",
-      "enabled": true,
-      "schedule": "hourly at minute 45"
+      "required": false,
+      "workflow_dispatch": false,
+      "posts_sent_by_recovery": 0,
+      "reason": "No failed or partial publication, pending reservation, active lease, or safe recovery target was found."
     },
     "writer_queue_recheck": {
-      "checked_at": "2026-11-08T10:40:44.273+09:00",
-      "queue_blob_sha": "5193b087b3f89b448258cd8c5011bc0aa9b380f8",
-      "previous_queue_blob_sha": "16516f05eff32070b235cb08ec97b5cd6b2e5748",
-      "queue_commit_sha": "02183bc5db8008730837f2487fe572009a5bd1a3",
-      "write_readback_identical": true,
-      "ready_count": 4,
-      "added_count": 0,
-      "reused_existing_ready_count": 4,
-      "retained_current_unreserved_slot": null,
-      "validated_draft_count": 4,
-      "source_generation": "gov24-42417984108-1",
-      "validate_ready_entry_and_preview": "Four drafts passed; all review windows extend through the original cutoff. November 9 uses current eligible rows in simulation and needs a newer source to publish.",
-      "future_slots_require_source_recheck": true,
-      "drafts": [
-        {
-          "slot": "2026-11-08T12:00:00+09:00",
-          "benefit_id": "B55353000001",
-          "pattern": "P5",
-          "media_turn": "TEXT",
-          "status": "READY",
-          "expires_at": "2026-11-08T18:34:09.306983+09:00",
-          "source_recheck_required_at_publish": true,
-          "snapshot_eligible_at_nominal": true,
-          "snapshot_eligible_at_window_end": true,
-          "covers_original_window": true
-        },
-        {
-          "slot": "2026-11-08T16:00:00+09:00",
-          "benefit_id": "132000000006",
-          "pattern": "P8",
-          "media_turn": "IMAGE",
-          "status": "READY",
-          "expires_at": "2026-11-08T18:34:09.306983+09:00",
-          "source_recheck_required_at_publish": true,
-          "snapshot_eligible_at_nominal": true,
-          "snapshot_eligible_at_window_end": true,
-          "covers_original_window": true
-        },
-        {
-          "slot": "2026-11-08T20:00:00+09:00",
-          "benefit_id": "WII000001460",
-          "pattern": "P1",
-          "media_turn": "TEXT",
-          "status": "READY",
-          "expires_at": "2026-11-08T22:24:00.669141+09:00",
-          "source_recheck_required_at_publish": true,
-          "snapshot_eligible_at_nominal": true,
-          "snapshot_eligible_at_window_end": true,
-          "covers_original_window": true
-        },
-        {
-          "slot": "2026-11-09T08:00:00+09:00",
-          "benefit_id": "134200000045",
-          "pattern": "P7",
-          "media_turn": "IMAGE",
-          "status": "READY",
-          "expires_at": "2026-11-09T10:39:46.387819+09:00",
-          "source_recheck_required_at_publish": true,
-          "snapshot_eligible_at_nominal": false,
-          "snapshot_eligible_at_window_end": false,
-          "covers_original_window": true
-        }
-      ],
-      "evidence_refreshed_count": 1,
-      "queue_mutated_this_check": true,
-      "priority_selection": {
-        "policy": "gov24_views_desc_v1",
-        "basis": "보조금24 누적 조회수",
-        "views": 219959,
-        "source_checked_at": "2026-11-07T19:08:44.778855+09:00",
-        "note": "실시간 검색량·신청자 수가 아닌 공식 API 누적 조회수 기준",
-        "candidate_rank": 10,
-        "higher_ranked_exclusions": [
-          {
-            "benefit_id": "161300000103",
-            "views": 724891,
-            "decision": "HOLD",
-            "reason": "국가 공식 API는 상시신청으로 안내하지만 지자체별 예산 소진시 조기마감. 특정 지역·현재 잔여예산·접수 가능 여부를 확정할 직접 근거를 이번 회차에 확보하지 못해 신규 신청 안내에서 보류했다. 사업 전체가 종료됐다는 뜻은 아니다.",
-            "sources": [
-              "https://easylaw.go.kr/CSP/OnhunqueansInfoRetrieve.laf?onhunqnaAstSeq=84&onhunqueSeq=6445",
-              "https://young.jinju.go.kr/young/business/read/75"
-            ]
-          },
-          {
-            "benefit_id": "999000000024",
-            "views": 673195,
-            "decision": "HOLD",
-            "reason": "장기전세 주택공급은 접수기관별 모집공고에 따라 기간·지역·요건이 달라진다. API의 접수기관 별 상이 정보만으로 현재 모집을 확정할 수 없어 보류했다.",
-            "sources": [
-              "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999075&bnefType=all&svcId=999000000024"
-            ]
-          },
-          {
-            "benefit_id": "161300000076",
-            "views": 637382,
-            "decision": "HOLD",
-            "reason": "API는 일반 대출금리 연2.1~2.9%, 주택도시기금 현재 검색 안내는 연2.5~3.5%로 불일치한다. 신규대출 본문 직접 열람도 timeout으로 완료되지 않아 최신 전체 조건·현재 이용 가능성을 확정하지 않았다.",
-            "sources": [
-              "https://nhuf.molit.go.kr/FP/FP05/FP0502/FP05020101.jsp",
-              "https://nhuf.molit.go.kr/FP/FP05/FP0502/FP05020107.jsp",
-              "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=739245&bnefType=all&svcId=161300000076"
-            ]
-          },
-          {
-            "benefit_id": "SD0000011848",
-            "views": 554041,
-            "decision": "SKIP",
-            "reason": "고용노동부 공식 안내에서 2024년부터 신규 가입을 중단하고 2023년까지 가입자만 계속 지원한다고 명시했다. 현재 신규가입 안내로 쓰지 않는다.",
-            "sources": [
-              "https://1350.moel.go.kr/rtmview.do?id=1000279181"
-            ]
-          },
-          {
-            "benefit_id": "424000000006",
-            "views": 429294,
-            "decision": "HOLD",
-            "reason": "2026년 광양시 자료상 난방 접수는 예산 소진 시 마감. 11월 현재 지역별 접수·잔여 물량을 확인하지 못함.",
-            "sources": [
-              "https://gwangyang.go.kr/boardDownload.es?bid=0170&list_no=197961&seq=1",
-              "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=663171&bnefType=all&svcId=424000000006"
-            ]
-          },
-          {
-            "benefit_id": "161300000001",
-            "views": 427641,
-            "decision": "HOLD",
-            "reason": "주택도시기금 상품 상세 직접 열람이 타임아웃됐고, 수탁은행 온라인 접수 안내는 오류 화면으로 돌아와 현재 두 상품의 신규 접수·정확한 조건을 직접 확인하지 못함.",
-            "sources": [
-              "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030201.jsp",
-              "https://spib.wooribank.com/pib/Dream?withyou=PSLON0175",
-              "https://svc.wooribank.com/svc/Dream?cc=c010972%3Ac010531&withyou=HBFLN0027",
-              "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=739256&bnefType=all&svcId=161300000001"
-            ]
-          },
-          {
-            "benefit_id": "171000000005",
-            "views": 420635,
-            "decision": "HOLD",
-            "reason": "열람 가능한 공식 기관 검색 자료에서 현재 신규 판매·보장 조건을 확인하지 못함. 과거 우체국 홍보만으로 신규 가입 가능 여부를 확정하지 않음.",
-            "sources": [
-              "https://jodal.koreapost.go.kr/user/bbs/405b/98/2952/bbsDataView/30026707.do?bbsDataCategory=&column=&page=566&search=&searchEDate=&searchSDate=",
-              "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=748477&bnefType=all&svcId=171000000005"
-            ]
-          },
-          {
-            "benefit_id": "999000000025",
-            "views": 328857,
-            "decision": "HOLD",
-            "reason": "보조금24 원문 월 40만 원·총 960만 원과 수탁은행 상품 안내 월 60만 원·총 1,440만 원이 달라 한도를 확정하지 않았다.",
-            "sources": [
-              "https://obank.kbstar.com/quics?QSL=F&cc=b104363%3Ab104516&isNew=N&page=C103998&prcode=LN20000076",
-              "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999077&bnefType=all&svcId=999000000025"
-            ]
-          },
-          {
-            "benefit_id": "SD0000016138",
-            "views": 303540,
-            "decision": "HOLD",
-            "reason": "신청기간·서비스·본인부담이 지역별로 다르고, 공식 모집 목록에서 현재 적용할 지역별 접수 근거를 확보하지 못했다.",
-            "sources": [
-              "https://www.cbcsi.or.kr/oN3Zt",
-              "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=75100&bnefType=all&svcId=SD0000016138"
-            ]
-          }
-        ]
+      "checked_at": "2026-11-08T12:58:36.017298+09:00",
+      "queue_commit_sha": "d04d4767344826910327048a49f5da8b7d090007",
+      "previous_queue_blob_sha": "5193b087b3f89b448258cd8c5011bc0aa9b380f8",
+      "queue_blob_sha": "166d1a1f21ee45d67be03d163c45fbb0e8f20cc0",
+      "queue_readback_equal": true,
+      "preview_ready": 4,
+      "regression_tests_passed": 121,
+      "new_entry": {
+        "slot": "2026-11-09T12:00:00+09:00",
+        "benefit_id": "SSE000000170",
+        "pattern": "P6",
+        "media_turn": "TEXT",
+        "characters": 360,
+        "source_generation": "gov24-42417984108-1",
+        "expires_at": "2026-11-09T12:55:23.835838+09:00",
+        "source_recheck_required_at_publish": true
       },
-      "media_condition": "Actual November 7 20:00 TEXT publication now establishes tomorrow's starting IMAGE turn.",
-      "new_entry_expiry": "2026-11-08T22:24:00.669141+09:00",
-      "expiry_condition": "Reviewed evidence now covers the full original two-hour allowance.",
-      "next_entry_source_eligible_at_slot": [
+      "higher_candidate_dispositions_added": [
         {
-          "slot": "2026-11-08T12:00:00+09:00",
-          "eligible_from_verified_snapshot": true
+          "benefit_id": "SD0000004508",
+          "decision": "HOLD"
         },
         {
+          "benefit_id": "611000000127",
+          "decision": "SKIP"
+        },
+        {
+          "benefit_id": "161300000099",
+          "decision": "HOLD"
+        }
+      ],
+      "next_24h_sequence": [
+        {
           "slot": "2026-11-08T16:00:00+09:00",
-          "eligible_from_verified_snapshot": true
+          "pattern": "P8",
+          "media_turn": "IMAGE"
         },
         {
           "slot": "2026-11-08T20:00:00+09:00",
-          "eligible_from_verified_snapshot": true
+          "pattern": "P1",
+          "media_turn": "TEXT"
         },
         {
           "slot": "2026-11-09T08:00:00+09:00",
-          "eligible_from_verified_snapshot": false
+          "pattern": "P7",
+          "media_turn": "IMAGE"
+        },
+        {
+          "slot": "2026-11-09T12:00:00+09:00",
+          "pattern": "P6",
+          "media_turn": "TEXT"
         }
-      ],
-      "full_evening_delay_window_renewal_earliest": "2026-11-07T22:00:00+09:00",
-      "actual_snapshot_freshness_and_draft_expiry_by_slot": [
-        {
-          "slot": "2026-11-08T12:00:00+09:00",
-          "snapshot_eligible_at_nominal": true,
-          "snapshot_eligible_at_window_end": true,
-          "covers_original_window": true
-        },
-        {
-          "slot": "2026-11-08T16:00:00+09:00",
-          "snapshot_eligible_at_nominal": true,
-          "snapshot_eligible_at_window_end": true,
-          "covers_original_window": true
-        },
-        {
-          "slot": "2026-11-08T20:00:00+09:00",
-          "snapshot_eligible_at_nominal": true,
-          "snapshot_eligible_at_window_end": true,
-          "covers_original_window": true
-        },
-        {
-          "slot": "2026-11-09T08:00:00+09:00",
-          "snapshot_eligible_at_nominal": false,
-          "snapshot_eligible_at_window_end": false,
-          "covers_original_window": true
-        }
-      ],
-      "ready_in_next_24h": 4
+      ]
     },
     "last_read_only_account_check": {
       "run_id": "42180307041",
@@ -1517,31 +1366,31 @@
     }
   },
   "last_reported_publication": {
-    "run_id": "42425475381",
+    "run_id": "42443582400",
     "run_attempt": 1,
     "status": "completed",
     "conclusion": "success",
-    "updated_at": "2026-11-07T23:30:34Z",
+    "updated_at": "2026-11-08T03:39:44Z",
     "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
     "event": "schedule",
-    "job_id": "128562726135",
+    "job_id": "128617731644",
     "published": true,
-    "slot": "2026-11-08T08:00:00+09:00",
-    "published_at": "2026-11-08T08:29:44.103110+09:00",
-    "verification_completed_at": "2026-11-07T23:30:33Z",
-    "benefit_id": "B55201500004",
-    "main_id": "18148832443604975",
-    "url": "https://www.threads.com/@hid_1004/post/DfdXVsRjpD9",
+    "slot": "2026-11-08T12:00:00+09:00",
+    "published_at": "2026-11-08T12:38:55.239961+09:00",
+    "verification_completed_at": "2026-11-08T12:58:36.017298+09:00",
+    "benefit_id": "B55353000001",
+    "main_id": "18004026836801587",
+    "url": "https://www.threads.com/@hid_1004/post/Dfdz2wumyrW",
     "stage": "complete",
     "verified": true,
-    "content_hash": "fc214f0c4a31d81194b73d66a47c320ff36cc8b8b242fd6b675f82281c485f78",
-    "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+    "content_hash": "77dc7f10c97efcb06fc35c5b2769fda8417bc5da86ca3c6d148a2ed1a228874a",
+    "asset_sha256": null,
     "source_generation": "gov24-42417984108-1",
-    "pattern": "P6",
-    "media_turn": "IMAGE",
+    "pattern": "P5",
+    "media_turn": "TEXT",
     "replies": 0,
-    "artifact_id": "13594493724",
-    "artifact_sha256": "4416a1b44dfe97daf3c1423cf27ca6aa6c28f57b27098c9afdc764e668f62291",
+    "artifact_id": "13602597911",
+    "artifact_sha256": "5e61faa89401265c84c8f7a9f9b7eed79808b9c1d2772eadd4fa951ec08536a8",
     "artifact_contents_verified": true,
     "verification_method": "publisher_remote_readback_plus_durable_ledger_and_artifact"
   },
@@ -1680,7 +1529,7 @@
     "existing_published_unchanged": true,
     "pending_texts_hashes_preserved": true,
     "legacy_pending_links_action": "HOLD without rewriting or sending",
-    "natural_publication_after_change_verified": false,
+    "natural_publication_after_change_verified": true,
     "new_main_post_count": 1,
     "new_reply_count": 0,
     "default_hashtags": false,
@@ -1708,7 +1557,7 @@
     "never_reselect_pending": true,
     "natural_publication_after_change_verified": true,
     "text_only_slot_verified": true,
-    "next_new_main_type": "text",
+    "next_new_main_type": "image",
     "verified_run_id": "42021189623",
     "verified_main_id": "18114999364875745",
     "verified_image_url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
@@ -1782,7 +1631,7 @@
     "repair_pr": 33,
     "repair_sha": "f9c281b3183dc8f178d49e0e084e6ff27995224b",
     "initial_queue_ready": 4,
-    "natural_publication_after_change_verified": false
+    "natural_publication_after_change_verified": true
   },
   "last_no_update_check": {
     "checked_at": "2026-11-08T11:46:34.885+09:00",
