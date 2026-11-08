@@ -54,7 +54,8 @@
     "42417984108",
     "42425475381",
     "42443582400",
-    "42460308375"
+    "42460308375",
+    "42469753093"
   ],
   "last_health": {
     "unresolved_publications": 0,
@@ -72,7 +73,9 @@
     "account_check_run_id": "42152164281",
     "account_verified": true,
     "threads_basic": true,
-    "threads_content_publish": true
+    "threads_content_publish": true,
+    "source_active_run_id": "42469753093",
+    "source_active_status": "in_progress"
   },
   "incidents": {
     "41796747628": {
@@ -748,6 +751,13 @@
       "conclusion": "success",
       "updated_at": "2026-11-08T07:50:01Z",
       "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
+    },
+    "42469753093": {
+      "run_attempt": 1,
+      "status": "in_progress",
+      "conclusion": null,
+      "updated_at": "2026-11-08T10:03:14Z",
+      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
     }
   },
   "last_check": {
@@ -1145,49 +1155,55 @@
     "natural_publication_after_change_verified": true
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-08T11:46:34.885+09:00",
-    "result": "no_update",
+    "checked_at": "2026-11-08T19:11:07.029+09:00",
+    "result": "source_collection_in_progress_queue_reused",
     "current_main_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
-    "publication_ledger_sha": "4840cad28e00869a45e42a2b055db9c54753a1fa",
-    "queue_blob_sha": "5193b087b3f89b448258cd8c5011bc0aa9b380f8",
-    "active_target_runs": [],
-    "changed_run_versions": [],
+    "publication_ledger_sha": "64b8af480d500ec206cf6269137403510e1fc822",
+    "queue_blob_sha": "0a5954b4e79752c0eb87c2ae182fd04d2c009717",
+    "active_target_runs": [
+      {
+        "workflow": "supportpick-operations.yml",
+        "run_id": "42469753093",
+        "run_attempt": 1,
+        "status": "in_progress",
+        "conclusion": null,
+        "updated_at": "2026-11-08T10:03:14Z",
+        "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
+      }
+    ],
+    "changed_run_versions": [
+      "42469753093"
+    ],
     "source": {
       "run_id": "42417984108",
-      "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-07T22:05:17Z",
-      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
-      "artifact_id": "13592457614",
-      "artifact_digest": "sha256:2bc0ed0ce7dca35ddf79bdc6651567f5f74a8773fb414ecde2cb3e8d71b1a053",
       "generation": "gov24-42417984108-1",
       "count": 10942,
-      "manifest_sha256": "ecc04aa84b272364014f572796b69cab73426f9d95c42b9741d8e7d3a401b104",
-      "read_current_verify_snapshot_load_feed": true
+      "read_current_verify_snapshot_load_feed": true,
+      "note": "Latest completed source remains authoritative while run 42469753093 is in progress."
     },
     "publisher": {
-      "latest_run_id": "42425475381",
-      "run_attempt": 1,
+      "latest_run_id": "42460308375",
       "status": "completed",
       "conclusion": "success",
-      "main_id": "18148832443604975",
-      "url": "https://www.threads.com/@hid_1004/post/DfdXVsRjpD9",
-      "reported_previously": true
+      "publication_ledger_records": 16,
+      "pending": null,
+      "lease": null
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-      "preview_ready": 4,
-      "regression_tests_passed": 121,
+      "queue_ready": 4,
+      "queue_reused": true,
+      "queue_write": false,
       "next_slot": {
-        "slot": "2026-11-08T12:00:00+09:00",
-        "benefit_id": "B55353000001",
-        "pattern": "P5",
+        "slot": "2026-11-08T20:00:00+09:00",
+        "benefit_id": "WII000001460",
+        "pattern": "P1",
         "media_turn": "TEXT",
-        "characters": 372,
-        "expires_at": "2026-11-08T18:34:09.306983+09:00",
-        "official_source_rechecked_at": "2026-11-08T11:46:34.885+09:00",
-        "official_status": "OPEN",
+        "characters": 354,
+        "expires_at": "2026-11-08T22:24:00.669141+09:00",
+        "source_generation": "gov24-42362288609-1",
         "source_recheck_required_at_publish": true
       }
     },
@@ -1195,8 +1211,10 @@
       "required": false,
       "workflow_dispatch": false,
       "posts_sent": 0,
-      "code_changes": 0
+      "code_changes": 0,
+      "reason": "No failed or partial publication, pending reservation, active Threads lease, or safe recovery target was found."
     },
-    "note": "Existing READY entries were reused. No pending publication, active lease, new failure, changed run version, or safe recovery target was found."
+    "next_condition": "After operations run 42469753093 completes or changes attempt/status, inspect its runtime artifact and verified read path before treating its generation as authoritative or replacing any READY entry.",
+    "note": "The active operations run is not classified as a failure. Existing future READY entries remain unchanged and must be revalidated at natural publish time."
   }
 }
