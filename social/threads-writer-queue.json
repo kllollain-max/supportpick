@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-08T12:55:23.835838+09:00",
+  "prepared_at": "2026-11-08T17:56:33.076946+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -210,6 +210,54 @@
       ],
       "access_scope": "보조금24 동일 서비스 ID 원문과 복지로 공식 경로 확인; 현재 접수기간 직접 근거 미확보",
       "checked_at": "2026-11-08T12:55:23.835838+09:00"
+    },
+    {
+      "benefit_id": "135200005013",
+      "views": 610402,
+      "decision": "SKIP",
+      "reason": "보조금24 동일 서비스 ID의 2026년 청년내일저축계좌 신규 신청기간은 5월 4일~5월 20일로 이미 종료됐다. 현재 신규 신청 안내 후보에서 제외했다.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=768605&bnefType=all&svcId=135200005013"
+      ],
+      "access_scope": "보조금24 동일 서비스 ID 원문과 수집본의 2026년 신청기간 대조",
+      "checked_at": "2026-11-08T17:56:33.076946+09:00"
+    },
+    {
+      "benefit_id": "135200000115",
+      "views": 549297,
+      "decision": "HOLD",
+      "reason": "질병관리청의 2026~2027절기 대상·기간은 확인했으나 최신 수집본에 서비스 상세와 목록 사이 지원유형 충돌 표시가 남아 있다. 검증기가 후보에서 제외하므로 원인을 해소한 새 완전 수집본 전에는 READY로 저장하지 않는다.",
+      "sources": [
+        "https://nip.kdca.go.kr/irhp/infm/goVcntInfo.do?menuCd=134&menuLv=1",
+        "https://nip.kdca.go.kr/irhp/mngm/goVcntMngm.do?menuCd=333",
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=749131&bnefType=all&svcId=135200000115"
+      ],
+      "access_scope": "질병관리청 예방접종도우미의 현재 사업·지정기관 안내와 보조금24 동일 서비스 ID 원문 대조; 수집본 sourceConflicts=지원유형 확인",
+      "checked_at": "2026-11-08T17:56:33.076946+09:00"
+    },
+    {
+      "benefit_id": "999000000023",
+      "views": 186343,
+      "decision": "HOLD",
+      "reason": "영구임대주택은 모집기관·지역별 공고에 따라 접수기간과 세부 요건이 달라진다. 11월 9일에 적용할 현재 모집공고를 특정하지 못해 신규 접수 안내에서 보류했다.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=573411&bnefType=all&svcId=999000000023"
+      ],
+      "access_scope": "보조금24 동일 서비스 ID 원문 대조; 현재 개별 모집공고 미확인",
+      "checked_at": "2026-11-08T17:56:33.076946+09:00"
+    },
+    {
+      "benefit_id": "135200005004",
+      "views": 184248,
+      "decision": "SELECTED",
+      "reason": "상위 미검증·종료 후보를 제외한 뒤, 복지로 2026 중앙부처 안내와 보건복지부의 현재 긴급복지 안내에서 대상·지원단위·요청 경로를 확인한 후보 중 보조금24 동일 서비스 ID 누적 조회수 순으로 선정했다.",
+      "sources": [
+        "https://www.bokjiro.go.kr/ssis-tbu/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001162",
+        "https://www.mohw.go.kr/menu.es?mid=a10708010100",
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900011&bnefType=all&svcId=135200005004"
+      ],
+      "access_scope": "복지로 2026 중앙부처 서비스와 보건복지부 긴급복지 정책 안내, 보조금24 동일 서비스 ID 원문 대조",
+      "checked_at": "2026-11-08T17:56:33.076946+09:00"
     }
   ],
   "entries": [
@@ -1550,6 +1598,107 @@
           "opening": "만 65세 생일을 앞뒀다면, 기초연금은 생일이 속한 달의 한 달 전부터 준비할 수 있어요.",
           "structure": "신청 준비 시점 → 소득·직역연금·신청 경로 점검 → 최대액과 감액 조건 → CTA",
           "media_turn": "TEXT"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-09T16:00:00+09:00",
+      "benefit_id": "135200005004",
+      "source_fingerprint": "a09a71f5ef7c5865338df99cf85d482d2bc8d24d796d3be6a9d84bde1b30f6b9",
+      "source_generation": "gov24-42417984108-1",
+      "prepared_at": "2026-11-08T17:56:33.076946+09:00",
+      "expires_at": "2026-11-09T17:56:32.076946+09:00",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "135200005004",
+        "draft_text": null,
+        "post_text": "난방비나 단전된 전기요금 때문에 긴급복지 지원을 알아본다면, 먼저 긴급복지 생계·주거지원 가구인지 확인하세요.\n\n① 연료비: 생계·주거지원을 받는 가구 중 난방비가 필요하다고 인정되면 10월~3월에 가구당 월 15만 원을 지원해요.\n② 전기요금: 주택용 전기가 단전됐고 체납액이 50만 원 미만이면 최대 50만 원 범위에서 1회 지원해요. 전류 제한기가 설치된 경우도 포함돼요.\n③ 요청 경로: 129, 읍·면·동 주민센터나 시·군·구청에 지원을 요청할 수 있어요.\n\n위기상황과 소득·재산·금융재산 기준을 함께 심사하므로 실직이나 단전 사실만으로 지원이 확정되지는 않아요. 전기요금 지원은 비주택용·공업용·소매상용에는 적용되지 않아요.\n\n자세한 사항은 프로필링크 확인",
+        "reply_texts": [],
+        "review": {
+          "planned_at": "2026-11-09T16:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "긴급복지 생계·주거지원을 받으며 겨울 연료비나 단전된 주택용 전기요금 지원을 확인하려는 가구",
+          "central_message": "긴급복지 주지원 여부와 연료비·전기요금의 서로 다른 조건과 지원단위를 먼저 확인한다.",
+          "pattern": "P5",
+          "selection_reason": "이미 발행·편성된 사업과 종료·현재 상태 미확인 상위 후보를 제외한 뒤, 복지로 2026 중앙부처 안내에서 현재 조건과 지원단위를 확인한 후보 중 보조금24 동일 서비스 ID 누적 조회수 순으로 선정했다.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "135200005004",
+              "source_ref": "https://www.bokjiro.go.kr/ssis-tbu/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001162",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-08T17:56:33.076946+09:00",
+              "claims_supported": [
+                "2026년 중앙부처 복지사업으로 긴급복지 생계·주거지원 가구에 연료비·전기요금 부가지원을 운영 중",
+                "연료비는 10월~3월 가구당 월 15만 원, 전기요금은 주택용 전기가 단전되고 체납액이 50만 원 미만인 경우 최대 50만 원 범위에서 지원",
+                "비주택용·공업용·소매상용 전기에는 적용되지 않으며 위기상황과 소득·재산·금융재산 기준을 심사"
+              ]
+            },
+            {
+              "source_id": "135200005004",
+              "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10708010100",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-08T17:56:33.076946+09:00",
+              "claims_supported": [
+                "보건복지부의 현재 긴급복지 안내에서 129·읍면동·시군구를 통한 지원요청과 현장확인·지원결정 절차가 운영 중임을 확인"
+              ]
+            },
+            {
+              "source_id": "135200005004",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900011&bnefType=all&svcId=135200005004",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-08T17:56:33.076946+09:00",
+              "claims_supported": [
+                "보조금24 동일 서비스 ID의 대상·지원액·상시 지원요청 경로와 복지로·보건복지부 현재 안내를 대조",
+                "serviceList 누적 조회수 184248건. API 원본 확인시각 2026-11-08T06:56:07.034677+09:00"
+              ]
+            },
+            {
+              "source_id": "135200005004",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-08T17:56:33.076946+09:00",
+              "claims_supported": [
+                "main의 기존 승인 시각검수 기록과 현재 파일 SHA-256을 다시 대조해 일치함",
+                "사업별 금액·대상·기간을 표시하지 않은 공통 브랜드 이미지"
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 373,
+          "count_method": "Python Unicode 문자 수, 공백·개행·CTA 포함",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "긴급복지 생계·주거지원 대상 여부와 부가지원 필요성은 시군구의 확인·결정 절차를 거친다.",
+            "연료비와 전기요금의 대상·지원주기·제외 조건이 서로 다르다.",
+            "실제 발송 전 최신 완전 수집본과 복지로·보건복지부의 현재 안내를 다시 검증한다."
+          ]
+        },
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "check": "MATCHED",
+          "image_copy": "사업별 금액·대상·기간은 이미지에 없고 본문에서만 안내한다.",
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "next_history_record": {
+          "program_id": "135200005004",
+          "notice_version": "gov24-42417984108-1:2026-02-26",
+          "pattern": "P5",
+          "opening": "난방비나 단전된 전기요금 때문에 긴급복지 지원을 알아본다면, 먼저 긴급복지 생계·주거지원 가구인지 확인하세요.",
+          "structure": "긴급복지 주지원 여부 확인 → 연료비·전기요금·요청 경로 체크 → 심사와 제외 조건 → CTA",
+          "media_turn": "IMAGE"
         }
       }
     }
