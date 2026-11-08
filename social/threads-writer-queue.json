@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-08T08:22:40.901119+09:00",
+  "prepared_at": "2026-11-08T10:39:46.387819+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -1330,8 +1330,8 @@
       "benefit_id": "134200000045",
       "source_fingerprint": "08d378cad9716b0ebb9996fb2a8327c33f04d041af08fe9ff848c43029aac246",
       "source_generation": "gov24-42417984108-1",
-      "prepared_at": "2026-11-08T08:22:40.901119+09:00",
-      "expires_at": "2026-11-09T08:22:40.901119+09:00",
+      "prepared_at": "2026-11-08T10:39:46.387819+09:00",
+      "expires_at": "2026-11-09T10:39:46.387819+09:00",
       "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -1361,7 +1361,7 @@
               "source_id": "134200000045",
               "source_ref": "https://www.lllcard.kr/reg/gyeonggi/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_000000000141&localNm=%EA%B2%BD%EA%B8%B0%EB%8F%84&nttId=31031",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-08T08:22:40.901119+09:00",
+              "verified_at": "2026-11-08T10:39:46.387819+09:00",
               "claims_supported": [
                 "경기도평생교육진흥원 제2026-0110호: 11월 5일 11시부터 11월 13일 18시까지 접수",
                 "AI·디지털 1차 선정자 8월 31일, 2차 선정자 11월 3일까지 35만 원 전액 사용, 환불 잔액 발생 시 제외",
@@ -1372,7 +1372,7 @@
               "source_id": "134200000045",
               "source_ref": "https://www.lllcard.kr/main?deviceType=PC&siteType=PC",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-08T08:22:40.901119+09:00",
+              "verified_at": "2026-11-08T10:39:46.387819+09:00",
               "claims_supported": [
                 "국가평생교육진흥원 모집 목록에서 경기도 AI·디지털 3차 우수이용자 접수 중으로 표시, 지원금액 35만 원, 발표 예정일 11월 20일 확인"
               ]
@@ -1381,7 +1381,7 @@
               "source_id": "134200000045",
               "source_ref": "https://www.lllcard.kr/reg/gyeonggi/main/mainView.do",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-08T08:22:40.901119+09:00",
+              "verified_at": "2026-11-08T10:39:46.387819+09:00",
               "claims_supported": [
                 "공고가 안내한 경기도 신청 누리집 연결 및 지역 공지 목록 확인. 확인 범위에서 해당 모집을 종료·정정하는 별도 공지를 찾지 못함"
               ]
@@ -1390,7 +1390,7 @@
               "source_id": "134200000045",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=762701&bnefType=all&svcId=134200000045",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-08T08:22:40.901119+09:00",
+              "verified_at": "2026-11-08T10:39:46.387819+09:00",
               "claims_supported": [
                 "보조금24 동일 서비스 ID의 제도 개요 및 누적 조회수 216455를 원본 자료로 대조. API 수집 확인시각 2026-11-08T06:56:07.034677+09:00; 지역별 모집 및 접수 확인에는 운영기관 원문을 사용"
               ]
@@ -1399,7 +1399,7 @@
               "source_id": "134200000045",
               "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
               "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-08T08:22:40.901119+09:00",
+              "verified_at": "2026-11-08T10:39:46.387819+09:00",
               "claims_supported": [
                 "main의 기존 승인 시각검수 기록과 현재 파일 SHA-256 일치. 사업별 금액, 대상, 기간을 표시하지 않은 이미지"
               ]
@@ -1420,8 +1420,7 @@
           "warnings": [
             "공식 신청 경로와 모집 표시는 확인했으며 개별 로그인 후 접수나 자격 판단은 확인 범위 밖이다.",
             "시군별 배정과 사용기관·사용기한은 세부 공고와 선정 안내를 확인해야 한다. 본문에 미확인 날짜를 기재하지 않았다.",
-            "실제 발송 전 최신 수집본, 신청 상태, 실제 이미지 교대를 재확인해야 한다.",
-            "현재 검수 유효기간이 2시간 지연 허용창보다 먼저 끝나므로 지연에 대비하려면 게시 전 공식 근거를 재확인해야 한다."
+            "실제 발송 전 최신 수집본, 신청 상태, 실제 이미지 교대를 재확인해야 한다."
           ]
         },
         "next_history_record": {
