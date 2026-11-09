@@ -816,24 +816,15 @@
     }
   },
   "last_check": {
-    "checked_at": "2026-11-09T21:27:17+09:00",
-    "result": "publication_verified",
+    "checked_at": "2026-11-09T23:48:09+09:00",
+    "result": "queue_evidence_refreshed",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
     "publication_ledger_sha": "e2c1e5efa7b4274d416647962c382a263442cdf5",
-    "queue_blob_sha": "924097e4c478d8cf53ca61600afa57b7a82e95d3",
-    "maintenance_previous_blob_sha": "5568960f11f3895ef14501e221f32b78d9c9d7fe",
+    "queue_blob_sha": "1c4834b98c215411b2004c90db454264e658cf5a",
+    "maintenance_previous_blob_sha": "d78fd9029cf30cc6b8ec0156ea3acd8c68c7587c",
     "unresolved_publications": 0,
     "active_target_runs": [],
-    "changed_run_versions": [
-      {
-        "run_id": "42611038118",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-09T11:42:41Z",
-        "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
-      }
-    ],
+    "changed_run_versions": [],
     "source": {
       "run_id": "42599671027",
       "run_attempt": 1,
@@ -890,12 +881,13 @@
       "public_web_check": "not accessible in this environment",
       "publication_ledger_records": 21,
       "pending": null,
-      "lease": null
+      "lease": null,
+      "new_publication_observed": false
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "queue_reused": true,
-      "queue_write": false,
+      "queue_write": true,
       "validate_ready_entry_and_preview": true,
       "preview_ready": 4,
       "source_recheck_required_at_publish": true,
@@ -930,9 +922,29 @@
           "benefit_id": "628000000739",
           "pattern": "P8",
           "media_turn": "TEXT",
-          "expires_at": "2026-11-10T11:13:09.000Z"
+          "expires_at": "2026-11-10T14:47:17.000Z"
         }
-      ]
+      ],
+      "queue_readback_equal": true,
+      "queue_commit_sha": "6f9121b74845d320058454febff53aeec1116e60",
+      "evidence_refresh": {
+        "slot": "2026-11-10T20:00:00+09:00",
+        "benefit_id": "628000000739",
+        "reason": "Existing READY content could expire just 13 minutes after slot opening; renewed independently verified evidence to cover the allowed two-hour window.",
+        "previous_prepared_at": "2026-11-09T20:13:09+09:00",
+        "previous_expires_at": "2026-11-10T11:13:09.000Z",
+        "verified_at": "2026-11-09T23:47:17+09:00",
+        "expires_at": "2026-11-10T14:47:17.000Z",
+        "source_fingerprint": "9945e71aab64fa2a010b9ca7dde560ab3c72bddb642980bcd0a792ea79164e50",
+        "body_media_and_pattern_unchanged": true,
+        "other_entries_unchanged": true,
+        "official_pages_reopened": [
+          "https://www.incheon.go.kr/earlychild/EC060102",
+          "https://www.incheon.go.kr/icbenefit/ICB020201/view?curPage=26&srvcId=628000000739"
+        ],
+        "validated_at_end_of_slot_simulation": "2026-11-10T21:59:59+09:00",
+        "live_collection_refresh_still_required": true
+      }
     },
     "metrics": {
       "status": "unavailable_in_current_execution",
@@ -945,13 +957,13 @@
       "workflow_dispatch": false,
       "posts_sent": 0,
       "code_changes": 0,
-      "reason": "Natural publication verified inside slot window; no unresolved record or new failure."
+      "reason": "No new publisher failure, partial result or pending reservation was observed."
     },
     "incidents": {
       "41796747628": "resolved status preserved; PR 7 and recovery run 41797892734 remain verified",
       "new_incident": null
     },
-    "next_condition": "Use the 08:00 regular slot and revalidate source, official status, image, limits, pending and queue expiry before reservation. November 10 20:00 requires a new collection and renewed official evidence if delayed beyond the draft's expiry."
+    "next_condition": "Revalidate the four READY entries against live eligibility and state at send. The 20:00 slot still requires fresh collection; evidence expiry now covers its permitted delay."
   },
   "last_reported_publication": {
     "run_id": "42611038118",
