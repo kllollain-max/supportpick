@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-09T19:04:24+09:00",
+  "prepared_at": "2026-11-09T20:13:09+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -2203,6 +2203,135 @@
           "opening": "인천에서 산전 진료를 오가며 교통비가 부담된다면, 임산부 1인당 50만 원을 한 번 지원하는 사업이 있어요.",
           "structure": "산전 이동비 → 신청 전에 거주·출생·기한 체크 → 지급 수단과 사용 범위 → 본인/방문 신청 경로 → CTA",
           "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-10T20:00:00+09:00",
+      "benefit_id": "628000000739",
+      "source_fingerprint": "9945e71aab64fa2a010b9ca7dde560ab3c72bddb642980bcd0a792ea79164e50",
+      "source_generation": "gov24-42599671027-1",
+      "prepared_at": "2026-11-09T20:13:09+09:00",
+      "expires_at": "2026-11-10T11:13:09.000Z",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "628000000739",
+        "post_text": "인천에 부모와 함께 주민등록을 두고 사는 2016년생 아동이라면, 아이 꿈 수당으로 월 5만 원 인천e음 포인트를 신청할 수 있어요.\n\n언제부터? 생일이 있는 달부터 수시로 신청할 수 있고, 보통 신청한 달부터 지원해요. 다른 지역에서 전입한 가구는 전입일로부터 30일 안에 신청하면 전입한 달부터 받을 수 있어요.\n\n어디에 들어오나요? 일반 가정은 매월 25일 신청자 명의 인천e음 카드에 포인트가 들어와요. 위탁가정이나 아동복지시설에서 보호받는 아동은 본인 명의 디딤씨앗통장으로 현금을 받아요.\n\n부모가 정부24에서 신청하는 게 원칙이에요. 신청자와 카드 명의가 같아야 하고, 온라인 신청이 어렵거나 보호자 예외에 해당하면 주소지 행정복지센터에 문의하세요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-10T20:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "인천에 사는 2016년생 아동을 양육하는 가정",
+          "central_message": "2016년생 인천 아동을 위한 월 5만 원의 지급 방식과 신청 시작월을 구분한다.",
+          "pattern": "P8",
+          "selection_reason": "기존 원장 및 선행 검수 큐 사업을 제외한 뒤 상위 HOLD/SKIP의 공식 근거를 이어 사용했다. 보조금24 동일 서비스 ID 150743회, 인천시 최신 담당부서 안내와 지역 서비스 상세에서 2016년생과 월 5만 원을 대조했다.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "628000000739",
+              "source_ref": "https://www.incheon.go.kr/earlychild/EC060102",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-09T20:13:09+09:00",
+              "claims_supported": [
+                "2026년에는 2016년생 아동이 대상이고 인천 거주·주민등록 요건과 보호아동 예외가 있다.",
+                "생일 달부터 수시 신청, 신청월부터 지원하고 전입 30일 내 신청한 경우 전입월 소급.",
+                "월 5만 원 포인트 지급일은 매월 25일이며 보호아동은 디딤씨앗통장 현금 지급. 정부24와 방문 예외, 카드 명의 조건을 확인했다."
+              ]
+            },
+            {
+              "source_id": "628000000739",
+              "source_ref": "https://www.incheon.go.kr/icbenefit/ICB020201/view?curPage=26&srvcId=628000000739",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-09T20:13:09+09:00",
+              "claims_supported": [
+                "동일 서비스 ID의 2016년생·인천 거주·지급 단위·카드 명의·보호자 방문 예외를 대조했다. 옛 아동수당 법개정 예정 문구는 최신 인천시 안내와 다르므로 인용하지 않았다."
+              ]
+            },
+            {
+              "source_id": "628000000739",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2122203&bnefType=all&svcId=628000000739",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-09T20:13:09+09:00",
+              "claims_supported": [
+                "같은 ID의 원본 serviceList 조회수 150743 및 수집 확인시각 2026-11-09T19:20:18.915540+09:00, 상시신청과 지급 단위 확인. API 시각을 접수 검증으로 간주하지 않았다."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 387,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "예정 시각의 최신 수집 자료와 신청 상태를 재확인해야 한다. 준비·출처 근거 유효기간은 게시 허용창 전체보다 짧다.",
+            "공식 사이트에 정부24 신청 링크가 있으나 로그인 이후 실제 신청 완료나 공개 프로필의 링크 이동은 확인하지 않았다."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "cohort": "B",
+            "opening_type": "대상·혜택형",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "인천에서 2016년생 자녀를 키우며 양육비를 챙기고 있다면, 아이 꿈 수당 월 5만 원 포인트를 확인해 보세요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "인천에 부모와 함께 주민등록을 두고 사는 2016년생 아동이라면, 아이 꿈 수당으로 월 5만 원 인천e음 포인트를 신청할 수 있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "인천 아이 꿈 수당은 2026년 기준 2016년생 아동이 생일이 속한 달부터 신청할 수 있어요."
+              }
+            ],
+            "chosen_opening": "인천에 부모와 함께 주민등록을 두고 사는 2016년생 아동이라면, 아이 꿈 수당으로 월 5만 원 인천e음 포인트를 신청할 수 있어요.",
+            "selection_reason": "인천, 2016년생과 월 5만 원 포인트를 바로 제시하고, 오전 전국 아동수당 자격 체크와 달리 지급·신청 시점 중심으로 답한다. 11월 10일 20시 B군에 해당한다.",
+            "reader_scope": "인천 2016년생 아동 양육 가구",
+            "core_question": "아동이 인천 아이 꿈 수당에 해당한다면 언제부터 어떤 방식으로 받을 수 있나요?",
+            "angles": [
+              "학령기 양육비와 포인트 용도",
+              "생일이 있는 달 및 전입 직후 신청 시기",
+              "포인트 지급과 보호아동의 지급 방식"
+            ],
+            "chosen_angle": "생일이 있는 달 및 전입 직후 신청 시기",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "인천 광역",
+              "benefit": "월 단위 지역화폐 포인트 기본",
+              "application": "수시·개인별 시작월",
+              "audience": "2016년생 아동 양육자"
+            },
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "628000000739",
+          "notice_version": "gov24-42599671027-1:2026-07-06",
+          "pattern": "P8",
+          "opening": "인천에 부모와 함께 주민등록을 두고 사는 2016년생 아동이라면, 아이 꿈 수당으로 월 5만 원 인천e음 포인트를 신청할 수 있어요.",
+          "structure": "인천 2016년생과 포인트 → 첫 신청 월·전입 예외 → 지급일·수단 → 신청 경로 → CTA",
+          "media_turn": "TEXT"
         }
       }
     }
