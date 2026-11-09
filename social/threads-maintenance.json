@@ -792,38 +792,41 @@
     }
   },
   "last_check": {
-    "result": "new_trend_ready_queue_extended_no_recovery_needed",
-    "checked_at": "2026-11-09T14:26:24+09:00",
+    "result": "no_update",
+    "checked_at": "2026-11-09T15:29:11+09:00",
     "current_main_sha": "acab8ae2a65392cda01da873c08574db4c391ff0",
     "publication_ledger_sha": "33c343b3ea04ca51f00efcdfced1c21d21689263",
     "queue_blob_sha": "2afc24715becf213dbc3310030cc545325be1c98",
-    "queue_commit_sha": "3ff57b3904ee990c301556fe909a3c5d0403f716",
-    "maintenance_previous_blob_sha": "e4c774b9143648e4a29e0f1374380ce93cb197dc",
+    "maintenance_previous_blob_sha": "d1344b577eeecc27d633875a2a65462a82953462",
     "unresolved_publications": 0,
     "active_target_runs": [],
-    "changed_run_ids": [],
-    "latest_source": {
+    "changed_run_versions": [],
+    "source": {
       "run_id": "42527504841",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
       "updated_at": "2026-11-08T22:03:54Z",
       "head_sha": "44f95bb570aefaa627988e16826058adfc52df77",
+      "job_id": "128874269683",
+      "job_conclusion": "success",
+      "artifact_id": "13635897623",
+      "artifact_digest": "sha256:3b5f8f6fcf45764f5c1d5552190b5586291e5d537ef8610d8e5c097f3725f015",
+      "artifact_expired": false,
       "generation": "gov24-42527504841-1",
       "count": 10942,
       "collection_succeeded_at": "2026-11-09T07:02:51.685853+09:00",
       "manifest_sha256": "ffa9ae73dc15d8248dd44e2ad86d07598765a65bdbebfa3a602bb7692c3f42aa",
-      "artifact_id": "13635897623",
-      "artifact_digest": "sha256:3b5f8f6fcf45764f5c1d5552190b5586291e5d537ef8610d8e5c097f3725f015",
       "coverage": {
         "serviceList": "110/110; 10942 unique; 0 duplicates",
         "serviceDetail": "110/110; 10942 unique; 0 duplicates",
         "supportConditions": "110/110; 10942 unique; 0 duplicates"
       },
       "read_current_verify_snapshot_load_feed": true,
-      "current_application_status_not_inferred": true
+      "current_application_status_not_inferred": true,
+      "log_result": "refresh passed; snapshot and runtime bundle preserved; no collection error"
     },
-    "latest_publisher": {
+    "publisher": {
       "run_id": "42557813040",
       "run_attempt": 1,
       "status": "completed",
@@ -831,40 +834,35 @@
       "updated_at": "2026-11-09T03:42:57Z",
       "head_sha": "9679fd1de98bfca93bc3d6405eabab817fae23c6",
       "job_id": "128967357716",
+      "job_conclusion": "success",
       "artifact_id": "13647927104",
       "artifact_digest": "sha256:9390ea73245c7d460c70d2db9385cef802b46271422c3022f8b419e6027de749",
-      "event": "schedule",
+      "artifact_expired": false,
       "slot": "2026-11-09T12:00:00+09:00",
       "published_at": "2026-11-09T12:42:07.765419+09:00",
       "benefit_id": "SSE000000170",
       "main_id": "17877910353586651",
       "url": "https://www.threads.com/@hid_1004/post/DfgZBH0EaSq",
-      "content_hash": "97355ca4f1f70517cfbbe2e1231929b4027d81d8da4ddb28c13bb9c11cc374b3",
-      "source_generation": "gov24-42527504841-1",
-      "pattern": "P6",
-      "media_turn": "TEXT",
-      "replies": 0,
       "pending": null,
       "lease": null,
-      "classification": "verified natural publication; no newer run version at this checkpoint"
+      "log_result": "published true; durable ledger and artifact match; no later publisher run version"
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "master_prompt_blob_sha": "89b38a2a579a85cf0ad31dd40e08cc7df76d9333",
-      "queue_write": true,
-      "queue_commit_sha": "3ff57b3904ee990c301556fe909a3c5d0403f716",
-      "queue_blob_sha": "2afc24715becf213dbc3310030cc545325be1c98",
-      "queue_readback_equal": true,
+      "queue_ready": 4,
+      "preview_ready": 4,
       "validate_ready_entry_and_preview": true,
-      "exact_preview_ready": 4,
-      "preserved_ready_slots": [
+      "queue_write": false,
+      "queue_readback_equal": true,
+      "next_24h_sequence": [
         {
           "slot": "2026-11-09T16:00:00+09:00",
           "benefit_id": "135200005004",
           "pattern": "P5",
           "media_turn": "IMAGE",
           "characters": 373,
-          "status": "READY"
+          "expires_at": "2026-11-09T17:56:32.076946+09:00"
         },
         {
           "slot": "2026-11-09T20:00:00+09:00",
@@ -872,7 +870,7 @@
           "pattern": "P8",
           "media_turn": "TEXT",
           "characters": 410,
-          "status": "READY"
+          "expires_at": "2026-11-09T20:47:38+09:00"
         },
         {
           "slot": "2026-11-10T08:00:00+09:00",
@@ -880,59 +878,65 @@
           "pattern": "P1",
           "media_turn": "IMAGE",
           "characters": 383,
-          "status": "READY"
-        }
-      ],
-      "new_ready_slot": {
-        "slot": "2026-11-10T12:00:00+09:00",
-        "benefit_id": "135200000120",
-        "title": "아동수당",
-        "pattern": "P5",
-        "format": "대상자격 체크형",
-        "media_turn": "TEXT",
-        "characters": 349,
-        "reply_count": 0,
-        "status": "READY",
-        "expires_at": "2026-11-10T13:30:00+09:00",
-        "source_generation": "gov24-42527504841-1",
-        "source_fingerprint": "b6cb43b9e290f67841af8cc7d74f64d3dab3e905bdb5f0b56b79076de51036cd",
-        "official_sources_rechecked": true,
-        "source_recheck_required_at_publish": true,
-        "platform_performance_metrics_used": false
-      },
-      "selection_decisions": [
-        {
-          "benefit_id": "GMO000000010",
-          "views": 157853,
-          "decision": "SKIP",
-          "reason": "2026년 접수는 5~6월로 안내되고 11월 현재 신규 접수 공식 근거가 없어 제외"
+          "expires_at": "2026-11-10T09:30:00+09:00"
         },
         {
+          "slot": "2026-11-10T12:00:00+09:00",
           "benefit_id": "135200000120",
-          "views": 157701,
-          "decision": "SELECTED",
-          "reason": "보건복지부·복지로 2026년 현재 안내로 대상·지역별 금액·신청 경로 확인"
+          "pattern": "P5",
+          "media_turn": "TEXT",
+          "characters": 349,
+          "expires_at": "2026-11-10T13:30:00+09:00"
         }
       ],
-      "source_discrepancy": {
-        "benefit_id": "135200000120",
-        "older_summary": "보조금24 요약의 만 8세·월 10만 원",
-        "current_official": "보건복지부·복지로 2026년 안내의 만 9세 미만·지역별 월 10만~13만 원",
-        "action": "현재 공식 안내를 본문 근거로 사용하고 오래된 요약은 제외; 자연 발송 직전 재검증"
-      }
+      "next_slot_preflight": {
+        "slot": "2026-11-09T16:00:00+09:00",
+        "benefit_id": "135200005004",
+        "status": "READY",
+        "official_rechecked_at": "2026-11-09T15:29:11+09:00",
+        "official_sources": [
+          "https://www.bokjiro.go.kr/ssis-tbu/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001162",
+          "https://www.mohw.go.kr/menu.es?mid=a10708010100",
+          "https://easylaw.go.kr/CSP/CnpClsMainBtr.laf?ccfNo=3&cciNo=1&cnpClsNo=5&csmSeq=90"
+        ],
+        "facts_reconfirmed": [
+          "긴급복지 생계·주거지원 가구 중 부가지원이 필요하다고 인정된 가구",
+          "연료비는 동절기 10~3월 월 150000원",
+          "전기요금은 주택용 단전·50만원 미만 체납 시 최대 500000원 범위 1회",
+          "위기상황과 소득·재산·금융재산 기준 및 129·읍면동·시군구 요청 경로"
+        ],
+        "source_generation": "gov24-42527504841-1",
+        "source_recheck_required_at_publish": true,
+        "image_url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+        "image_asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+        "image_blob_sha": "c60655f30016eee7979af07416347fee69b87a0f",
+        "assets_blob_sha": "e904502fc338fd0064dcbce160e967f49d904845",
+        "image_review_blob_sha": "5a758ab03f9da099a04ce41ab1a394bdf2496038",
+        "image_evidence_status": "UPSTREAM_VERIFIED",
+        "image_bytes_recompared_at": "2026-11-09T15:29:11+09:00",
+        "new_visual_inspection_claimed": false
+      },
+      "constraints_rechecked": [
+        "four READY slots only",
+        "IMAGE/TEXT alternation",
+        "500-character hard limit",
+        "reply_texts empty",
+        "CTA exactly once at end",
+        "no URL in sent text"
+      ]
     },
     "recovery": {
       "required": false,
       "workflow_dispatch": false,
       "posts_sent": 0,
       "code_changes": 0,
-      "reason": "No failed or partial publication, pending reservation, active lease, changed run version or safe recovery target exists."
+      "reason": "No failed or partial publication, pending reservation, active lease, changed run version, expired missed slot or safe recovery target was found."
     },
     "incidents": {
       "41796747628": "resolved status preserved; PR 7 and recovery run 41797892734 remain verified",
       "new_incident": null
     },
-    "next_condition": "The natural 16:00 publisher must revalidate the existing READY entry and latest source/image evidence before reservation. The new 2026-11-10 12:00 TEXT draft remains queue-only until its natural slot; no test, backfill or recovery dispatch."
+    "next_condition": "Natural 16:00 publisher must revalidate source, official status, image bytes, account guard, daily limit and CAS immediately before reservation; do not dispatch a test or backfill post."
   },
   "last_reported_publication": {
     "run_id": "42557813040",
