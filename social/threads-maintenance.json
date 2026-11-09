@@ -784,17 +784,15 @@
     }
   },
   "last_check": {
-    "result": "new_verified_publication_no_recovery_needed",
-    "checked_at": "2026-11-09T08:55:09+09:00",
-    "current_main_sha": "44f95bb570aefaa627988e16826058adfc52df77",
+    "result": "preflight_ready_no_recovery_main_change_isolated",
+    "checked_at": "2026-11-09T11:54:36+09:00",
+    "current_main_sha": "9679fd1de98bfca93bc3d6405eabab817fae23c6",
     "publication_ledger_sha": "cc6321f25da92dcceffb24b82ef32b98076309ce",
     "queue_blob_sha": "7a01b7f9bc97d22fe7ce3b975774bd6bfe1c58ad",
-    "maintenance_previous_blob_sha": "b292350a03a75b9ff421fac50f13b06c327e620a",
+    "maintenance_previous_blob_sha": "515e539466df7995f56c1ce8006ae4df70a29cd0",
     "unresolved_publications": 0,
     "active_target_runs": [],
-    "changed_run_ids": [
-      "42535443948"
-    ],
+    "changed_run_ids": [],
     "latest_source": {
       "run_id": "42527504841",
       "run_attempt": 1,
@@ -802,44 +800,13 @@
       "conclusion": "success",
       "updated_at": "2026-11-08T22:03:54Z",
       "head_sha": "44f95bb570aefaa627988e16826058adfc52df77",
-      "job_id": "128874269683",
-      "artifact_id": "13635897623",
-      "artifact_digest": "sha256:3b5f8f6fcf45764f5c1d5552190b5586291e5d537ef8610d8e5c097f3725f015",
-      "artifact_expired": false,
       "generation": "gov24-42527504841-1",
       "count": 10942,
       "collection_succeeded_at": "2026-11-09T07:02:51.685853+09:00",
       "manifest_sha256": "ffa9ae73dc15d8248dd44e2ad86d07598765a65bdbebfa3a602bb7692c3f42aa",
-      "workflow_result": "all collection, completeness, build, static verification, preservation and artifact-upload steps passed",
-      "build_result": {
-        "benefits": 10942,
-        "detail_pages": 10942,
-        "indexable_details": 10935,
-        "status": "success"
-      },
-      "regression_tests": {
-        "passed": 186,
-        "failed": 0
-      },
-      "release_policy": {
-        "publish": false,
-        "reason": "same_day_content_unchanged_public_generation_retained",
-        "candidate_generation": "gov24-42527504841-1",
-        "observed_public_generation": "gov24-42469753093-1",
-        "observed_public_content_fingerprint": "beff4a5a97d1a058f42dbac25c9b73a1f3c3d3a51037ae373221ec267c6ae0b9",
-        "probe_hashes_match": true
-      },
-      "manifest_and_load_verification": {
-        "refresh_manifest_passed": true,
-        "runtime_bundle_passed": true,
-        "source_preserved": true,
-        "generations_in_bundle": 2,
-        "artifact_file_transfer": "GET returned transient HTTP 503 on three total attempts with 2s/5s backoff; no further retries",
-        "classification": "tool-side artifact transfer limitation, not collection or artifact creation failure",
-        "feed_sha256": null,
-        "note": "Exact job log, run record, artifact metadata/digest, manifest result and runtime bundle result were verified. Artifact bytes could not be independently unpacked in this checkpoint."
-      },
-      "current_application_status_not_inferred": true
+      "artifact_id": "13635897623",
+      "artifact_digest": "sha256:3b5f8f6fcf45764f5c1d5552190b5586291e5d537ef8610d8e5c097f3725f015",
+      "classification": "verified_complete_source; unchanged run version"
     },
     "latest_publisher": {
       "run_id": "42535443948",
@@ -848,102 +815,72 @@
       "conclusion": "success",
       "updated_at": "2026-11-08T23:31:03Z",
       "head_sha": "44f95bb570aefaa627988e16826058adfc52df77",
-      "job_id": "128898632604",
-      "artifact_id": "13639107688",
-      "artifact_digest": "sha256:dd687bb7dea91cebfa90be133d1b92bea57bbd0015123256f04a155e51a75d13",
-      "artifact_expired": false,
-      "restored_generation": "gov24-42527504841-1",
-      "publisher_safety_tests": {
-        "passed": 121,
-        "failed": 0
-      },
-      "receipt": {
-        "benefit_id": "134200000045",
-        "slot": "2026-11-09T08:00:00+09:00",
-        "main_id": "17873881326644553",
-        "url": "https://www.threads.com/@hid_1004/post/Dff8MFPkcJ_",
-        "published_at": "2026-11-09T08:30:12.232536+09:00",
-        "verified": true,
-        "stage": "complete",
-        "content_hash": "a1a2f74723bf4c9f9e9778b0a99566a54bb5352cd1923ab9daf670bd4636284c",
-        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-        "pattern": "P7",
-        "media_turn": "IMAGE"
-      },
-      "classification": "verified_natural_slot_publication"
+      "last_verified_main_id": "17873881326644553",
+      "last_verified_url": "https://www.threads.com/@hid_1004/post/Dff8MFPkcJ_",
+      "pending": null,
+      "lease": null,
+      "classification": "verified_complete; unchanged run version"
+    },
+    "main_change": {
+      "commit_sha": "9679fd1de98bfca93bc3d6405eabab817fae23c6",
+      "merged_at": "2026-11-09T10:50:12+09:00",
+      "scope": "operations artifact retention and offline backup verification only",
+      "operations_workflow_blob_sha": "85ac63a90624ff87ed40947ffc2c8c4bfa1033e8",
+      "threads_workflow_blob_sha": "721f96ebc75988113d496958e3b8a29767eef0ce",
+      "threads_publisher_blob_sha": "9fe6703585abc22dc1309ec2dd60da6525b63653",
+      "assessment": "No Threads schedule, account guard, queue, publisher, daily limit, CAS or publication behavior changed. Latest completed collection remains the verified source until a new operations run completes."
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "master_prompt_blob_sha": "89b38a2a579a85cf0ad31dd40e08cc7df76d9333",
-      "prompt_hash_recomputed": true,
-      "queue_ready": 3,
-      "preview_constraints_passed": true,
       "queue_reused": true,
       "queue_write": false,
-      "published_slot": {
-        "slot": "2026-11-09T08:00:00+09:00",
-        "benefit_id": "134200000045",
-        "pattern": "P7",
-        "media_turn": "IMAGE",
-        "characters": 309,
-        "reply_count": 0,
-        "cta_exact": true,
-        "no_post_url": true,
-        "source_generation_restored": "gov24-42527504841-1"
-      },
       "next_slot": {
         "slot": "2026-11-09T12:00:00+09:00",
         "benefit_id": "SSE000000170",
         "pattern": "P6",
         "media_turn": "TEXT",
         "status": "READY",
+        "characters": 360,
+        "reply_count": 0,
         "expires_at": "2026-11-09T12:55:23.835838+09:00",
-        "source_recheck_required_at_publish": true
-      },
-      "remaining_sequence": [
-        {
-          "slot": "2026-11-09T12:00:00+09:00",
-          "benefit_id": "SSE000000170",
-          "pattern": "P6",
-          "media_turn": "TEXT",
-          "expires_at": "2026-11-09T12:55:23.835838+09:00"
-        },
-        {
-          "slot": "2026-11-09T16:00:00+09:00",
-          "benefit_id": "135200005004",
-          "pattern": "P5",
-          "media_turn": "IMAGE",
-          "expires_at": "2026-11-09T17:56:32.076946+09:00"
-        },
-        {
-          "slot": "2026-11-09T20:00:00+09:00",
-          "benefit_id": "WII000000300",
-          "pattern": "P8",
-          "media_turn": "TEXT",
-          "expires_at": "2026-11-09T20:47:38+09:00"
-        }
-      ],
-      "constraints_rechecked": [
-        "four distinct daily patterns remain P7/P6/P5/P8",
-        "IMAGE/TEXT alternation remains intact",
-        "500-character hard limit",
-        "reply_texts empty",
-        "CTA exactly once at end",
-        "no URL in post text"
-      ]
+        "official_rechecked_at": "2026-11-09T11:54:36+09:00",
+        "official_sources": [
+          "https://www.nps.or.kr/pbcpgdnc/mainbiz/getOHAG0059M0.do",
+          "https://basicpension.mohw.go.kr/menu.es?mid=a10201000000"
+        ],
+        "facts_reconfirmed": [
+          "2026 selection threshold: single household 2.47 million KRW; couple household 3.952 million KRW",
+          "monthly maximum 349700 KRW for a single household; 20 percent couple reduction and other reductions may apply",
+          "occupational pension recipients and spouses are generally excluded",
+          "application from one month before the month of the 65th birthday",
+          "local center, NPS branch and Bokjiro application routes"
+        ],
+        "source_generation_in_queue": "gov24-42417984108-1",
+        "latest_verified_source_generation": "gov24-42527504841-1",
+        "source_recheck_required_at_publish": true,
+        "constraints": [
+          "P7/P6/P5/P8 remain distinct",
+          "IMAGE/TEXT/IMAGE/TEXT remains intact",
+          "500-character limit",
+          "reply_texts empty",
+          "CTA once at end",
+          "no URL in post text"
+        ]
+      }
     },
     "recovery": {
       "required": false,
       "workflow_dispatch": false,
       "posts_sent": 0,
       "code_changes": 0,
-      "reason": "Natural 08:00 publication completed, remote receipt was verified, durable state is complete, and no pending/lease or failed stage exists."
+      "reason": "No failure, partial publication, pending reservation, active lease or safe recovery target exists before the natural 12:00 slot."
     },
     "incidents": {
       "41796747628": "resolved status preserved; PR 7 and recovery run 41797892734 remain verified",
       "new_incident": null
     },
-    "next_condition": "At the natural 12:00 workflow, re-run source fingerprint, official-state, expiry, TEXT order, account guard, daily limit and CAS checks before reserving."
+    "next_condition": "The natural 12:00 workflow must restore the latest verified source and re-run fingerprint, official-state, expiry, TEXT order, account guard, daily limit and CAS checks before reserving."
   },
   "last_reported_publication": {
     "run_id": "42475511381",
