@@ -20,7 +20,10 @@ class OfficialGuideCorrectionTests(unittest.TestCase):
     def test_maternity_policy_link_not_spouse_leave(self):
         p=json.loads((ROOT/"review-only/official-guide-corrections-20261109.json").read_text(encoding="utf-8"))
         item=next(x for x in p["entries"] if x["benefitId"]=="WII000001460")
-        self.assertIn("SI00000406",item["proposedLink"])
+        self.assertIn("SI00000407",item["proposedLink"])
+        self.assertEqual(item["proposedLink"],item["currentLink"])
+        self.assertIs(item["correctionRequired"],False)
+        self.assertIn("SI00000406",item["evidence"][1])
         self.assertNotIn("SI00000395",item["proposedLink"])
         self.assertIn("유산",item["proposedLinkTitle"])
     def test_forest_voucher_has_past_intake_and_future_usage(self):
