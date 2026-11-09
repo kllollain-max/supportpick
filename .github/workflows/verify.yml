@@ -25,7 +25,7 @@ jobs:
       - name: Check benefit guide source identity and document review gaps
         run: python tools/benefit_guide_evidence_audit.py
       - name: Create no-publish owner review queue
-        run: python tools/benefit_review_queue.py
+        run: python -m tools.benefit_review_queue
       - run: python tools/build.py --output dist --public-base https://kllollain-max.github.io/supportpick/
       - run: python tools/verify_release.py --output dist
       - uses: actions/upload-artifact@v4
