@@ -16,7 +16,7 @@ def parse_date(value):
         instant = datetime.fromisoformat(value.replace('Z','+00:00'))
         if instant.tzinfo is None:
             return None
-        return instant.astimezone(timezone.utc).date()
+        return instant.astimezone(ZoneInfo('Asia/Seoul')).date()
     except ValueError:
         return None
 
