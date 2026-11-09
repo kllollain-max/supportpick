@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-10T01:04:07+09:00",
+  "prepared_at": "2026-11-10T01:29:39+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -2061,15 +2061,15 @@
       "slot": "2026-11-10T16:00:00+09:00",
       "benefit_id": "628000000735",
       "source_fingerprint": "48c999b0848c9a429a6dee4e1e0235137adc6e09a40e8e716eed7e226f0bb66b",
-      "source_generation": "gov24-42527504841-1",
-      "prepared_at": "2026-11-09T19:04:24+09:00",
-      "expires_at": "2026-11-10T10:04:24.000Z",
+      "source_generation": "gov24-42599671027-1",
+      "prepared_at": "2026-11-10T01:29:39+09:00",
+      "expires_at": "2026-11-11T01:29:39+09:00",
       "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
       "writer": {
         "schema_version": "supportpick.writer.v1",
         "status": "READY",
         "selected_program_id": "628000000735",
-        "post_text": "인천에서 산전 진료를 오가며 교통비가 부담된다면, 임산부 1인당 50만 원을 한 번 지원하는 사업이 있어요.\n\n신청일에 인천에 주민등록을 두고 실제 거주한 기간이 180일 이상이어야 해요. 임신 12주부터 출산일을 포함해 90일 안에 신청할 수 있고, 출산했다면 인천에 출생신고를 해야 해요. 지급 전 타 시도로 전출한 이력이 있으면 지원 대상에서 제외돼요.\n\n기본은 인천e음 교통비 포인트예요. 택시·주유·대중교통에 쓸 수 있고, 포인트 사용기한은 지급일부터 1년이에요. 요건을 충족한 전기차 사용자는 현금으로 받으며 렌트 차량은 해당하지 않아요.\n\n정부24에서 본인 신청이 원칙이에요. 본인 명의 휴대전화가 없는 등 방문이 필요한 경우엔 주소지 행정복지센터에 서류를 확인해 보세요. 예산 상황에 따라 지급이 늦어질 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+        "post_text": "인천에서 산전 진료를 오가며 교통비가 부담된다면, 임산부 1인당 50만 원을 한 번 지원하는 사업이 있어요.\n\n신청일 기준 인천에 6개월 이상 주민등록을 두고 실제 거주해야 해요. 임신 12주부터 출산일을 포함해 90일 이내에 신청하고, 출산했다면 인천에 출생신고를 해야 해요. 지급 전 타 시도 전출입 이력이 있거나 부부가 모두 외국인이면 지원 대상에서 제외돼요.\n\n기본은 인천e음 교통비 포인트예요. 인천e음 택시·자가용 주유·대중교통에 쓸 수 있고, 지급일부터 12개월 안에 써야 해요. 요건을 충족한 전기차 사용자는 현금으로 받아요. 렌트 차량은 현금 지원 대상에서 제외돼요.\n\n정부24에서 임산부가 직접 신청하는 게 원칙이에요. 포인트를 받으려면 인천e음 앱 가입이 필요해요. 외국인 임신부·청소년 산모 등 방문 신청이 필요한 경우엔 주소지 행정복지센터에서 구비서류를 확인하세요.\n\n자세한 사항은 프로필링크 확인",
         "draft_text": null,
         "reply_texts": [],
         "media": {
@@ -2091,43 +2091,41 @@
           "evidence": [
             {
               "source_id": "628000000735",
-              "source_ref": "https://www.incheon.go.kr/jobs/main/support/welfare/view.do?wl_srvc_sn=52",
+              "source_ref": "https://www.incheon.go.kr/earlychild/EC060103",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-09T19:04:24+09:00",
+              "verified_at": "2026-11-10T01:29:39+09:00",
               "claims_supported": [
-                "인천시 6개월 거주와 임신 12주부터 출산일 포함 90일 신청 범위 및 출생신고 요건",
-                "임산부 교통비 50만 원 기본 포인트, 전기차 사용자 현금 예외와 용도",
-                "현행 인천시 상세와 2026년 개정 업무 매뉴얼 첨부를 확인"
+                "시 상세 안내의 신청일 기준 인천 6개월 이상 주민등록·실거주, 지급 전 타 시도 전출입, 부부 모두 외국인인 경우의 제외, 임신 12주부터 출산일로부터 90일 이내와 인천 출생등록 조건을 확인.",
+                "1인당 교통비 50만 원, 인천e음 포인트의 사용처·12개월과 전기차 현금 예외·렌트 제외, 본인 온라인 신청과 방문 예외, 비전기차 온라인 신청 시 인천e음 앱 가입을 대조."
               ]
             },
             {
               "source_id": "628000000735",
-              "source_ref": "https://www.icbp.go.kr/dong/bbs/bbsMsgDetail.do?bcd=dong_notice&dong=bupyeong4&msg_seq=130039&pgno=11",
+              "source_ref": "https://www.incheon.go.kr/jobs/main/support/welfare/view.do?wl_srvc_sn=52",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-09T19:04:24+09:00",
+              "verified_at": "2026-11-10T01:29:39+09:00",
               "claims_supported": [
-                "2026년 180일 거주와 신청일 범위, 정부24 본인 신청 원칙과 방문 예외",
-                "1회 50만 원과 포인트 사용기한 12개월 및 사용처"
+                "시 복지 상세에서 거주 6개월과 신청 기한, 출생신고, 50만 원 및 지급 수단을 교차 확인."
               ]
             },
             {
               "source_id": "628000000735",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2116229&bnefType=all&svcId=628000000735",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-09T19:04:24+09:00",
+              "verified_at": "2026-11-10T01:29:39+09:00",
               "claims_supported": [
-                "실제 수집된 보조금24 동일 ID 상세 원문으로 연중 상시 신청, 지급 전 타시도 전출입 제한, 예산에 따른 지급 지연, 전기차 렌트 차량 제외를 대조",
-                "공식 API 누적 조회수 154512회와 수집 확인시각 2026-11-09T06:58:40.779330+09:00을 실제 원문 열람시각과 구분"
+                "완전 수집본의 동일 ID serviceDetail에서 연중 상시와 거주·신청·대상 제한 확인. API에는 6개월(180일) 병기가 있어 본문에는 시 최신 상세의 ‘6개월 이상’을 사용.",
+                "같은 ID의 serviceList 누적 조회수 154512회, API 원본 확인시각 2026-11-09T19:20:18.915540+09:00. 원문 열람시각과 별도."
               ]
             },
             {
               "source_id": "628000000735",
               "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
               "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-09T19:04:24+09:00",
+              "verified_at": "2026-11-10T01:29:39+09:00",
               "claims_supported": [
-                "main Git blob c60655f30016eee7979af07416347fee69b87a0f와 로컬 파일을 대조하고 기존 시각검수 SHA-256과 일치 확인",
-                "같은 PNG의 360px 축소 미리보기에서 브랜드·슬로건·하단 안내 판독. 사업별 숫자·기간·조건 문구가 없는 승인 로테이션 이미지"
+                "main Git blob c60655f30016eee7979af07416347fee69b87a0f와 로컬 SHA-256 0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd가 기존 시각검수 기록과 일치함.",
+                "360px 판독은 기존 검수 기록을 사용. 사업별 금액·대상·기간이 없는 승인 로테이션 이미지."
               ]
             }
           ],
@@ -2139,13 +2137,13 @@
             "length": "PASS",
             "media": "PASS"
           },
-          "char_count": 426,
+          "char_count": 459,
           "count_method": "python_len_including_spaces_and_newlines",
           "missing_info": [],
           "hold_reasons": [],
           "warnings": [
-            "실제 발송 전 최신 수집 세대에서 후보·fingerprint·공식 신청 상태·교대를 다시 확인한다.",
-            "지역·체류 자격 등 개별 예외는 주소지 관할 센터 확인. 공개 게시 프로필 링크의 실동선은 이번 환경에서 열람하지 못했다."
+            "공식 인천시 상세는 6개월 이상으로 표기한다. 보조금24에는 6개월(180일)이 병기되므로 경계일 계산은 관할 행정복지센터 확인이 필요하다.",
+            "실제 발송 전 최신 수집본, 공식 신청 조건, 사실 해시 및 이미지 교대를 다시 확인한다."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -2160,7 +2158,7 @@
               {
                 "type": "대상·혜택형",
                 "group": "B",
-                "text": "인천에 180일 이상 주민등록을 두고 실제로 사는 임산부라면, 1인당 교통비 50만 원 지원을 확인해 보세요."
+                "text": "인천에 6개월 이상 주민등록을 두고 실제로 사는 임산부라면, 1인당 교통비 50만 원 지원을 확인해 보세요."
               },
               {
                 "type": "조건 설명형",
@@ -2174,7 +2172,7 @@
             "core_question": "인천 임산부 교통비를 신청하려면 거주 기간과 신청 시기를 어떻게 확인하나요?",
             "angles": [
               "산전 진료 이동 부담과 쓸 수 있는 교통비",
-              "180일 거주와 출산 후 90일이 겹치는 신청 자격",
+              "6개월 거주와 출산 후 90일이 겹치는 신청 자격",
               "본인 신청 전 거주 기간·출생신고·지급 수단 확인"
             ],
             "chosen_angle": "본인 신청 전 거주 기간·출생신고·지급 수단 확인",
@@ -2197,7 +2195,7 @@
         },
         "next_history_record": {
           "program_id": "628000000735",
-          "notice_version": "gov24-42527504841-1:2026-10-19",
+          "notice_version": "gov24-42599671027-1:2026-10-19",
           "pattern": "P6",
           "opening": "인천에서 산전 진료를 오가며 교통비가 부담된다면, 임산부 1인당 50만 원을 한 번 지원하는 사업이 있어요.",
           "structure": "산전 이동비 → 신청 전에 거주·출생·기한 체크 → 지급 수단과 사용 범위 → 본인/방문 신청 경로 → CTA",
