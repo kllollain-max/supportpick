@@ -1810,12 +1810,12 @@
     "existing_safety_contract_precedence": true
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-10T02:43:43+09:00",
+    "checked_at": "2026-11-10T04:15:43+09:00",
     "result": "no_update",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
     "publication_ledger_sha": "e2c1e5efa7b4274d416647962c382a263442cdf5",
     "queue_blob_sha": "0698d5e1c3d019748f4fe3b1ead741795c2700a2",
-    "maintenance_previous_blob_sha": "f628d523ef0a616cd2a9cf738a29cd83df463454",
+    "maintenance_previous_blob_sha": "3a64d437d28173459260f518befce7c05ba0e3a7",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [],
