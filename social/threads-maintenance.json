@@ -817,59 +817,50 @@
     },
     "42708067719": {
       "run_attempt": 1,
-      "status": "in_progress",
-      "conclusion": null,
-      "updated_at": "2026-11-09T22:02:10Z",
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-09T22:14:23Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-10T07:12:57+09:00",
-    "result": "new_complete_source_verified_while_operations_running",
+    "checked_at": "2026-11-10T07:56:28+09:00",
+    "result": "morning_operations_completed_all_queued_slots_source_verified",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
     "publication_ledger_sha": "e2c1e5efa7b4274d416647962c382a263442cdf5",
     "queue_blob_sha": "0698d5e1c3d019748f4fe3b1ead741795c2700a2",
-    "maintenance_previous_blob_sha": "bbce06234a30a66316105c9f058e3ea2cdf12fb5",
+    "maintenance_previous_blob_sha": "ca5a3085c00f2533494f3874d87778bbdb80a613",
     "unresolved_publications": 0,
-    "active_target_runs": [
-      "42708067719"
-    ],
+    "active_target_runs": [],
     "changed_run_versions": [
       {
         "run_id": "42708067719",
         "run_attempt": 1,
-        "status": "in_progress",
-        "conclusion": null,
-        "updated_at": "2026-11-09T22:02:10Z",
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-09T22:14:23Z",
         "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
       }
     ],
     "source": {
-      "run_id": "42599671027",
+      "run_id": "42708067719",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-09T10:23:51Z",
+      "updated_at": "2026-11-09T22:14:23Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-      "job_id": "129100734112",
-      "artifact_id": "13665846711",
-      "artifact_digest": "sha256:071ae88c8c09327c1dae4cc3b7d5144f3533a805eca3a5a991a2ff34c7d62ec4",
-      "generation": "gov24-42599671027-1",
+      "job_id": "129470041700",
+      "artifact_id": "13715561025",
+      "artifact_digest": "sha256:f2b158a3c21b52a288f8b036eeafdb017c670ed017d80807a73efc13762901bf",
+      "manifest_sha256": "70b3f564d2bb3e7b4f743406e1d96d23f4df90e912f5acb592aa138ad1279662",
+      "generation": "gov24-42708067719-1",
       "count": 10942,
-      "collection_succeeded_at": "2026-11-09T19:22:48.480119+09:00",
-      "manifest_sha256": "9469a395a033f5a01d9e7c99d6f6460feb4b515d8d05e607a4c9b8fc464491a1",
-      "feed_sha256": "78e30af633b798d149d72f85c82ebd9b38706e81ec99a9fbbe0b12e6ccf9985b",
-      "coverage": {
-        "serviceList": "110/110; 10942 unique; 0 duplicates",
-        "serviceDetail": "110/110; 10942 unique; 0 duplicates",
-        "supportConditions": "110/110; 10942 unique; 0 duplicates"
-      },
+      "collection_succeeded_at": "2026-11-10T07:08:56.482351+09:00",
       "read_current_verify_snapshot_load_feed": true,
-      "current_application_status_not_inferred": true,
-      "local_integrity_note": "A shared scratch extraction acquired an extra dot-prefixed file, which the manifest check rejected. Re-extracting the digest-matched Actions ZIP into an isolated directory restored complete file-set verification; artifact and production source were intact.",
-      "fresh_at_check": true,
-      "requires_new_generation_before_20_kst": true,
-      "currently_consumable_as_latest_completed": true
+      "collection_step": "completed_success",
+      "currently_consumable_as_latest_completed": true,
+      "job_logs": "completed_verified",
+      "job_conclusion": "success"
     },
     "publisher": {
       "run_id": "42611038118",
@@ -1492,7 +1483,9 @@
       },
       "prospective_source_all_four_eligible_through_window": true,
       "prospective_source_fingerprints_unchanged": true,
-      "previously_completed_source_20_kst_eligible": false
+      "previously_completed_source_20_kst_eligible": false,
+      "verified_source_all_four_eligible_through_window": true,
+      "verified_source_fingerprints_unchanged": true
     },
     "metrics": {
       "status": "unavailable_in_current_execution",
@@ -1505,33 +1498,14 @@
       "workflow_dispatch": false,
       "posts_sent": 0,
       "code_changes": 0,
-      "reason": "No new publisher failure or pending reservation. The operations source artifact is complete and valid; downstream job is in progress."
+      "reason": "No new publisher failure or pending reservation. The morning operations run is complete and its verified source is eligible for all four current slots."
     },
     "incidents": {
       "41796747628": "resolved status preserved; PR 7 and recovery run 41797892734 remain verified",
       "new_incident": null
     },
-    "next_condition": "Once operations completes, verify the new run version and restored generation. The latest completed source currently supports the first three slots; the verified 07:08 generation supports all four when selectable. Continue standard send-time validation.",
-    "previous_check_commit_sha": "bc22a5235a2cc141ce8b53935f186a6e334b1681",
-    "prospective_source": {
-      "run_id": "42708067719",
-      "run_attempt": 1,
-      "status": "in_progress",
-      "conclusion": null,
-      "updated_at": "2026-11-09T22:02:10Z",
-      "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-      "job_id": "129470041700",
-      "artifact_id": "13715561025",
-      "artifact_digest": "sha256:f2b158a3c21b52a288f8b036eeafdb017c670ed017d80807a73efc13762901bf",
-      "manifest_sha256": "70b3f564d2bb3e7b4f743406e1d96d23f4df90e912f5acb592aa138ad1279662",
-      "generation": "gov24-42708067719-1",
-      "count": 10942,
-      "collection_succeeded_at": "2026-11-10T07:08:56.482351+09:00",
-      "read_current_verify_snapshot_load_feed": true,
-      "collection_step": "completed_success",
-      "overall_completion_required_for_publisher_restore": true,
-      "job_logs": "not_available_while_running"
-    }
+    "next_condition": "Use the completed morning generation for standard send-time validation, then verify actual publication receipts. No manual publish or recovery target is present.",
+    "previous_check_commit_sha": "bc22a5235a2cc141ce8b53935f186a6e334b1681"
   },
   "last_reported_publication": {
     "run_id": "42611038118",
