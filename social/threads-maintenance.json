@@ -1438,5 +1438,113 @@
       "new_incident": null
     },
     "next_condition": "At the 20:00 natural slot, revalidate current source, official status, READY expiry, TEXT alternation, account guard, daily limit and fresh CAS before reservation. Do not backfill or dispatch a test post."
+  },
+  "reach_policy": {
+    "policy_id": "supportpick-threads-reach-v1-20261109",
+    "policy_status": "automation_prompt_saved_and_first_new_ready_queue_readback_verified",
+    "automation_id": "6aeaefe5fd708191a3e8a67b3667fb8f",
+    "automation_prompt_updated_at": "2026-11-09T10:02:13.484327+00:00",
+    "check_schedule": "FREQ=HOURLY;BYMINUTE=45;BYSECOND=0",
+    "publication_slots_kst": [
+      "08:00",
+      "12:00",
+      "16:00",
+      "20:00"
+    ],
+    "daily_max_main_posts": 4,
+    "baseline": {
+      "observed_at": "2026-11-09T19:04:24+09:00",
+      "requested_days": 28,
+      "available_first": "2026-11-04T17:14:06.646060+09:00",
+      "available_last": "2026-11-09T17:13:22.881745+09:00",
+      "verified_ledger_receipts": 20,
+      "verified_regular_slots": 19,
+      "regular_publication_delay_minutes": {
+        "min": 22.3,
+        "max": 73.4,
+        "all_within_120": true
+      },
+      "duplicate_main_ids": 0,
+      "duplicate_slots": 0,
+      "state_blob_sha": "5f9de50e29e34a6b4c3e69f848a4349b48e7106d",
+      "receipt_basis": "Durable records from the publisher’s readback at time of publication, with the latest result artifact already checked. Current public visibility of all historic posts not independently verified.",
+      "most_recent_receipt": {
+        "id": "18128141311911524",
+        "url": "https://www.threads.com/@hid_1004/post/Dfg4D2UFYDG",
+        "published_at": "2026-11-09T17:13:22.881745+09:00"
+      },
+      "unresolved_publication_records": 0,
+      "image_render_status": "Current remote rendering of historical images not independently verified; no image loss inferred from access limitation.",
+      "historical_incidents": "See incidents and observed_run_versions; baseline counts verified posts, not failed runs or current public visibility."
+    },
+    "first_entry": {
+      "slot": "2026-11-10T16:00:00+09:00",
+      "benefit_id": "628000000735",
+      "pattern": "P6",
+      "cohort": "A",
+      "characters": 426,
+      "media": "IMAGE",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "source_generation": "gov24-42527504841-1",
+      "source_fingerprint": "48c999b0848c9a429a6dee4e1e0235137adc6e09a40e8e716eed7e226f0bb66b",
+      "requires_fresh_data_at_publish": true,
+      "queue_commit_sha": "e2244b3127e274a983b88bf2ef1a306a7fbd9040",
+      "queue_blob_sha": "51e56b076eddde7bc7712df671a0778b13015b7a",
+      "queue_readback_equal": true,
+      "prior_entries_unchanged": true,
+      "preview_ready_count": 4,
+      "publisher_related_tests_passed": 121,
+      "actual_publication": "awaiting_natural_slot"
+    },
+    "measurement": {
+      "status": "unavailable_in_current_execution",
+      "reason": "No authorized Insights read path exposed in this environment. Current token scope is unverified. Official documentation is available, but no authenticated metric response was obtained.",
+      "reference": "https://www.postman.com/meta/threads/request/34203612-385abc7d-b3cc-4e5d-9937-ebbe7174e041",
+      "observed_posts_with_metrics": 0,
+      "views_24h": null,
+      "views_7d": null,
+      "reactions": null,
+      "profile_link_clicks": null,
+      "checkpoints": {
+        "interim_after_days": 7,
+        "final_after_days": 14,
+        "group_target_comparable_24h": 8,
+        "observations_due_hours": [
+          24,
+          168
+        ],
+        "delivery": "existing hourly task"
+      },
+      "experiment": {
+        "first_slot": "2026-11-10T16:00:00+09:00",
+        "first_day": "2026-11-10",
+        "A": "생활 상황형",
+        "B": "대상·혜택형",
+        "first_day_A_slots": [
+          "08:00",
+          "16:00"
+        ],
+        "first_day_B_slots": [
+          "12:00",
+          "20:00"
+        ],
+        "reverse_each_kst_day": true,
+        "preexisting_slots_excluded": [
+          "2026-11-10T08:00:00+09:00",
+          "2026-11-10T12:00:00+09:00"
+        ],
+        "historical_metrics_not_backfilled": true,
+        "decision": "pending first publication and usable measurements"
+      }
+    },
+    "profile_route": {
+      "status": "live_route_unconfirmed",
+      "configured_site": "https://kllollain-max.github.io/supportpick/",
+      "candidate_detail": "https://kllollain-max.github.io/supportpick/benefits/628000000735/",
+      "source_id_present_in_validated_feed": true,
+      "detail_path_verified_in_repository_code": true,
+      "public_profile_and_detail_open": "unavailable in public retrieval"
+    },
+    "next_condition": "Use the existing schedule. Recheck official status and the latest collection fingerprint at publication. Record actual public receipt and comparable age-specific measurements only if the existing authorized read route is available."
   }
 }
