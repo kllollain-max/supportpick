@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-09T20:13:09+09:00",
+  "prepared_at": "2026-11-09T23:47:17+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -2211,8 +2211,8 @@
       "benefit_id": "628000000739",
       "source_fingerprint": "9945e71aab64fa2a010b9ca7dde560ab3c72bddb642980bcd0a792ea79164e50",
       "source_generation": "gov24-42599671027-1",
-      "prepared_at": "2026-11-09T20:13:09+09:00",
-      "expires_at": "2026-11-10T11:13:09.000Z",
+      "prepared_at": "2026-11-09T23:47:17+09:00",
+      "expires_at": "2026-11-10T14:47:17.000Z",
       "asset_sha256": null,
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -2242,7 +2242,7 @@
               "source_id": "628000000739",
               "source_ref": "https://www.incheon.go.kr/earlychild/EC060102",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-09T20:13:09+09:00",
+              "verified_at": "2026-11-09T23:47:17+09:00",
               "claims_supported": [
                 "2026년에는 2016년생 아동이 대상이고 인천 거주·주민등록 요건과 보호아동 예외가 있다.",
                 "생일 달부터 수시 신청, 신청월부터 지원하고 전입 30일 내 신청한 경우 전입월 소급.",
@@ -2253,7 +2253,7 @@
               "source_id": "628000000739",
               "source_ref": "https://www.incheon.go.kr/icbenefit/ICB020201/view?curPage=26&srvcId=628000000739",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-09T20:13:09+09:00",
+              "verified_at": "2026-11-09T23:47:17+09:00",
               "claims_supported": [
                 "동일 서비스 ID의 2016년생·인천 거주·지급 단위·카드 명의·보호자 방문 예외를 대조했다. 옛 아동수당 법개정 예정 문구는 최신 인천시 안내와 다르므로 인용하지 않았다."
               ]
@@ -2262,7 +2262,7 @@
               "source_id": "628000000739",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2122203&bnefType=all&svcId=628000000739",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-09T20:13:09+09:00",
+              "verified_at": "2026-11-09T23:47:17+09:00",
               "claims_supported": [
                 "같은 ID의 원본 serviceList 조회수 150743 및 수집 확인시각 2026-11-09T19:20:18.915540+09:00, 상시신청과 지급 단위 확인. API 시각을 접수 검증으로 간주하지 않았다."
               ]
@@ -2281,7 +2281,7 @@
           "missing_info": [],
           "hold_reasons": [],
           "warnings": [
-            "예정 시각의 최신 수집 자료와 신청 상태를 재확인해야 한다. 준비·출처 근거 유효기간은 게시 허용창 전체보다 짧다.",
+            "실제 발송 때 최신 수집 자료·신청 상태·사실 해시를 다시 확인한다. 11월 9일 19시대 수집본은 다음 날 20시 기준으로 24시간을 넘긴다.",
             "공식 사이트에 정부24 신청 링크가 있으나 로그인 이후 실제 신청 완료나 공개 프로필의 링크 이동은 확인하지 않았다."
           ],
           "reach_editorial": {
