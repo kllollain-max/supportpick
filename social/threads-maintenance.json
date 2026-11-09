@@ -59,7 +59,8 @@
     "42475511381",
     "42527504841",
     "42557813040",
-    "42584348881"
+    "42584348881",
+    "42599671027"
   ],
   "last_health": {
     "unresolved_publications": 0,
@@ -733,99 +734,77 @@
       "status": "completed",
       "conclusion": "success",
       "updated_at": "2026-11-07T22:05:17Z",
-      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
-      "run_id": "42417984108",
-      "workflow": ".github/workflows/supportpick-operations.yml"
+      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
     },
     "42425475381": {
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
       "updated_at": "2026-11-07T23:30:34Z",
-      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
-      "run_id": "42425475381",
-      "workflow": ".github/workflows/supportpick-threads.yml"
+      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
     },
     "42443582400": {
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
       "updated_at": "2026-11-08T03:39:44Z",
-      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
-      "run_id": "42443582400",
-      "workflow": ".github/workflows/supportpick-threads.yml"
+      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
     },
     "42460308375": {
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
       "updated_at": "2026-11-08T07:50:01Z",
-      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
-      "run_id": "42460308375",
-      "workflow": ".github/workflows/supportpick-threads.yml"
+      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
     },
     "42469753093": {
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
       "updated_at": "2026-11-08T10:11:18Z",
-      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
-      "run_id": "42469753093",
-      "workflow": ".github/workflows/supportpick-operations.yml"
+      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
     },
     "42475511381": {
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
       "updated_at": "2026-11-08T11:24:06Z",
-      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a",
-      "run_id": "42475511381",
-      "workflow": ".github/workflows/supportpick-threads.yml"
+      "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
     },
     "42527504841": {
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
       "updated_at": "2026-11-08T22:03:54Z",
-      "head_sha": "44f95bb570aefaa627988e16826058adfc52df77",
-      "run_id": "42527504841",
-      "workflow": ".github/workflows/supportpick-operations.yml"
+      "head_sha": "44f95bb570aefaa627988e16826058adfc52df77"
     },
     "42535443948": {
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
       "updated_at": "2026-11-08T23:31:03Z",
-      "head_sha": "44f95bb570aefaa627988e16826058adfc52df77",
-      "run_id": "42535443948",
-      "workflow": ".github/workflows/supportpick-threads.yml"
+      "head_sha": "44f95bb570aefaa627988e16826058adfc52df77"
     },
     "42557813040": {
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
       "updated_at": "2026-11-09T03:42:57Z",
-      "head_sha": "9679fd1de98bfca93bc3d6405eabab817fae23c6",
-      "run_id": "42557813040",
-      "workflow": ".github/workflows/supportpick-threads.yml"
+      "head_sha": "9679fd1de98bfca93bc3d6405eabab817fae23c6"
     },
     "42584348881": {
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
       "updated_at": "2026-11-09T08:14:18Z",
-      "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-      "run_id": "42584348881",
-      "workflow": ".github/workflows/supportpick-threads.yml"
+      "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
     },
     "42599671027": {
-      "run_id": "42599671027",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
       "updated_at": "2026-11-09T10:23:51Z",
-      "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-      "workflow": ".github/workflows/supportpick-operations.yml"
+      "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
     }
   },
   "last_check": {
@@ -834,7 +813,7 @@
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
     "publication_ledger_sha": "5f9de50e29e34a6b4c3e69f848a4349b48e7106d",
     "queue_blob_sha": "924097e4c478d8cf53ca61600afa57b7a82e95d3",
-    "maintenance_previous_blob_sha": "c220e00e01f9f2936c6b57c1ef3b50b288056f4b",
+    "maintenance_previous_blob_sha": "6d319061204990b6df11884a783866ec5237cacd",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [
@@ -847,84 +826,12 @@
         "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
       },
       {
-        "run_id": "42584348881",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-09T08:14:18Z",
-        "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
-      },
-      {
         "run_id": "42557813040",
         "run_attempt": 1,
         "status": "completed",
         "conclusion": "success",
         "updated_at": "2026-11-09T03:42:57Z",
         "head_sha": "9679fd1de98bfca93bc3d6405eabab817fae23c6"
-      },
-      {
-        "run_id": "42535443948",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-08T23:31:03Z",
-        "head_sha": "44f95bb570aefaa627988e16826058adfc52df77"
-      },
-      {
-        "run_id": "42527504841",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-08T22:03:54Z",
-        "head_sha": "44f95bb570aefaa627988e16826058adfc52df77"
-      },
-      {
-        "run_id": "42475511381",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-08T11:24:06Z",
-        "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
-      },
-      {
-        "run_id": "42469753093",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-08T10:11:18Z",
-        "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
-      },
-      {
-        "run_id": "42460308375",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-08T07:50:01Z",
-        "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
-      },
-      {
-        "run_id": "42443582400",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-08T03:39:44Z",
-        "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
-      },
-      {
-        "run_id": "42425475381",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-07T23:30:34Z",
-        "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
-      },
-      {
-        "run_id": "42417984108",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-07T22:05:17Z",
-        "head_sha": "520e6699cfd4e7e7106ee3e58dcf0518025ddb2a"
       }
     ],
     "source": {
@@ -1039,7 +946,15 @@
       "41796747628": "resolved status preserved; PR 7 and recovery run 41797892734 remain verified",
       "new_incident": null
     },
-    "next_condition": "Check for the existing 20:00 scheduled run and receipt. If it has not reserved and missed, recompute future alternation. Revalidate the reviewed queue and source at each regular slot."
+    "next_condition": "Check for the existing 20:00 scheduled run and receipt. If it has not reserved and missed, recompute future alternation. Revalidate the reviewed queue and source at each regular slot.",
+    "observed_run_version_notes": {
+      "42557813040": {
+        "classification": "timestamp_only_update_of_previously_verified_publication",
+        "job_id": "128967357716",
+        "artifact_id": "13647927104",
+        "verified_record_and_job_log_match": true
+      }
+    }
   },
   "last_reported_publication": {
     "run_id": "42584348881",
