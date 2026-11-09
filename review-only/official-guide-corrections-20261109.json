@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "reviewOnly": true,
+  "reviewDate": "2026-11-09",
+  "sourcePolicy": "Official source passages verified. The 2026-11-18 review expiry in guides.json is not extended. No live application status is assumed.",
+  "entries": [
+    {
+      "benefitId": "140000000176",
+      "changeType": "explicit_closed_intake_warning",
+      "proposedNotice": "2026년 산림복지서비스이용권 신규 신청은 1월 30일에 종료됐습니다. 이미 선정된 분은 공식 안내에서 잔여 이용권과 사용처를 확인하고 2026년 11월 30일까지 사용하세요. 예산 소진 시 사용이 더 일찍 마감될 수 있습니다.",
+      "evidence": [
+        "https://www.forestcard.or.kr/mobile/board/mobileBoardDetail.do?bbsId=BBSMSTR_000000000001&nttId=364&pageIndex=1&pageSize=10",
+        "https://forestcard.or.kr/main/main.do"
+      ],
+      "intakeOpenVerified": false,
+      "personalEligibilityVerified": false,
+      "publicationApproved": false,
+      "validUntilRenewalApproved": false,
+      "editorialRisk": "Do not reframe November 30 as a new application deadline."
+    },
+    {
+      "benefitId": "WII000001460",
+      "changeType": "official_source_link_correction_review",
+      "currentLink": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000407",
+      "proposedLink": "https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000406",
+      "proposedLinkTitle": "고용24 출산전후(유산·사산)휴가와 출산전후휴가급여 제도 안내",
+      "evidence": [
+        "https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000406"
+      ],
+      "intakeOpenVerified": false,
+      "personalEligibilityVerified": false,
+      "publicationApproved": false,
+      "validUntilRenewalApproved": false,
+      "editorialRisk": "Keep distinct from spouse paternity leave grant; current SI00000407 URL could not be verified as correct, so propose change for editorial approval, not automatic overwrite."
+    }
+  ]
+}
