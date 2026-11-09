@@ -6,6 +6,7 @@ import argparse
 import json
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 from urllib.parse import urlsplit
 
 def parse_date(value):
@@ -71,7 +72,7 @@ def main():
     parser.add_argument('--guides',default='guides.json')
     parser.add_argument('--editorials',default='editorials.json')
     parser.add_argument('--out',default='review-only/editorial-freshness.json')
-    parser.add_argument('--as-of',default=datetime.now(timezone.utc).date().isoformat())
+    parser.add_argument('--as-of',default=datetime.now(ZoneInfo('Asia/Seoul')).date().isoformat())
     args=parser.parse_args()
     report=audit(json.loads(Path(args.guides).read_text(encoding='utf-8')),
                  json.loads(Path(args.editorials).read_text(encoding='utf-8')),
