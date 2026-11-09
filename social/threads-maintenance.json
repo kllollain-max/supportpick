@@ -793,11 +793,11 @@
   },
   "last_check": {
     "result": "no_update",
-    "checked_at": "2026-11-09T15:29:11+09:00",
+    "checked_at": "2026-11-09T16:37:23+09:00",
     "current_main_sha": "acab8ae2a65392cda01da873c08574db4c391ff0",
     "publication_ledger_sha": "33c343b3ea04ca51f00efcdfced1c21d21689263",
     "queue_blob_sha": "2afc24715becf213dbc3310030cc545325be1c98",
-    "maintenance_previous_blob_sha": "d1344b577eeecc27d633875a2a65462a82953462",
+    "maintenance_previous_blob_sha": "b063c684db203aa2291ce618a09c46e66f5f98c9",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [],
@@ -824,28 +824,26 @@
       },
       "read_current_verify_snapshot_load_feed": true,
       "current_application_status_not_inferred": true,
-      "log_result": "refresh passed; snapshot and runtime bundle preserved; no collection error"
+      "consistency": "same completed run and immutable artifact digest as prior verified checkpoint"
     },
     "publisher": {
-      "run_id": "42557813040",
-      "run_attempt": 1,
-      "status": "completed",
-      "conclusion": "success",
-      "updated_at": "2026-11-09T03:42:57Z",
-      "head_sha": "9679fd1de98bfca93bc3d6405eabab817fae23c6",
-      "job_id": "128967357716",
-      "job_conclusion": "success",
-      "artifact_id": "13647927104",
-      "artifact_digest": "sha256:9390ea73245c7d460c70d2db9385cef802b46271422c3022f8b419e6027de749",
-      "artifact_expired": false,
-      "slot": "2026-11-09T12:00:00+09:00",
-      "published_at": "2026-11-09T12:42:07.765419+09:00",
-      "benefit_id": "SSE000000170",
-      "main_id": "17877910353586651",
-      "url": "https://www.threads.com/@hid_1004/post/DfgZBH0EaSq",
+      "last_completed_run": {
+        "run_id": "42557813040",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-09T03:42:57Z",
+        "head_sha": "9679fd1de98bfca93bc3d6405eabab817fae23c6",
+        "slot": "2026-11-09T12:00:00+09:00",
+        "main_id": "17877910353586651",
+        "url": "https://www.threads.com/@hid_1004/post/DfgZBH0EaSq"
+      },
+      "expected_slot": "2026-11-09T16:00:00+09:00",
+      "observed_run": null,
+      "observed_at": "2026-11-09T16:37:23+09:00",
+      "classification": "no run created yet; still inside authorized two-hour delay window; not classified as failure",
       "pending": null,
-      "lease": null,
-      "log_result": "published true; durable ledger and artifact match; no later publisher run version"
+      "lease": null
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
@@ -894,49 +892,24 @@
         "benefit_id": "135200005004",
         "status": "READY",
         "official_rechecked_at": "2026-11-09T15:29:11+09:00",
-        "official_sources": [
-          "https://www.bokjiro.go.kr/ssis-tbu/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001162",
-          "https://www.mohw.go.kr/menu.es?mid=a10708010100",
-          "https://easylaw.go.kr/CSP/CnpClsMainBtr.laf?ccfNo=3&cciNo=1&cnpClsNo=5&csmSeq=90"
-        ],
-        "facts_reconfirmed": [
-          "긴급복지 생계·주거지원 가구 중 부가지원이 필요하다고 인정된 가구",
-          "연료비는 동절기 10~3월 월 150000원",
-          "전기요금은 주택용 단전·50만원 미만 체납 시 최대 500000원 범위 1회",
-          "위기상황과 소득·재산·금융재산 기준 및 129·읍면동·시군구 요청 경로"
-        ],
-        "source_generation": "gov24-42527504841-1",
-        "source_recheck_required_at_publish": true,
-        "image_url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
         "image_asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
         "image_blob_sha": "c60655f30016eee7979af07416347fee69b87a0f",
-        "assets_blob_sha": "e904502fc338fd0064dcbce160e967f49d904845",
-        "image_review_blob_sha": "5a758ab03f9da099a04ce41ab1a394bdf2496038",
         "image_evidence_status": "UPSTREAM_VERIFIED",
-        "image_bytes_recompared_at": "2026-11-09T15:29:11+09:00",
-        "new_visual_inspection_claimed": false
-      },
-      "constraints_rechecked": [
-        "four READY slots only",
-        "IMAGE/TEXT alternation",
-        "500-character hard limit",
-        "reply_texts empty",
-        "CTA exactly once at end",
-        "no URL in sent text"
-      ]
+        "source_recheck_required_at_publish": true
+      }
     },
     "recovery": {
       "required": false,
       "workflow_dispatch": false,
       "posts_sent": 0,
       "code_changes": 0,
-      "reason": "No failed or partial publication, pending reservation, active lease, changed run version, expired missed slot or safe recovery target was found."
+      "reason": "The 16:00 run has not appeared, but the slot remains inside its two-hour delay window and no failed run, reservation, pending post or lease exists. Do not create a competing recovery."
     },
     "incidents": {
       "41796747628": "resolved status preserved; PR 7 and recovery run 41797892734 remain verified",
       "new_incident": null
     },
-    "next_condition": "Natural 16:00 publisher must revalidate source, official status, image bytes, account guard, daily limit and CAS immediately before reservation; do not dispatch a test or backfill post."
+    "next_condition": "Re-read Actions and all three ledgers before 18:00 KST. Only if a reservation-before failure is confirmed and the original window remains open may resume-unreserved-slot be dispatched with the original recovery_cron."
   },
   "last_reported_publication": {
     "run_id": "42557813040",
