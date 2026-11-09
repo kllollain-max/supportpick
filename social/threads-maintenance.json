@@ -792,17 +792,16 @@
     }
   },
   "last_check": {
-    "result": "new_verified_publication_no_recovery_needed",
-    "checked_at": "2026-11-09T13:08:52+09:00",
+    "result": "new_trend_ready_queue_stored_no_recovery_needed",
+    "checked_at": "2026-11-09T13:50:09+09:00",
     "current_main_sha": "9679fd1de98bfca93bc3d6405eabab817fae23c6",
     "publication_ledger_sha": "33c343b3ea04ca51f00efcdfced1c21d21689263",
-    "queue_blob_sha": "7a01b7f9bc97d22fe7ce3b975774bd6bfe1c58ad",
-    "maintenance_previous_blob_sha": "464bdc630920f523b610ef605c048effedf0d8ee",
+    "queue_blob_sha": "e6cfaffb9e79cfe7fbaf8cc44548e8fb4015c86d",
+    "queue_commit_sha": "ff48a325e64aea70670f1b1348f2317b2c2ccbc4",
+    "maintenance_previous_blob_sha": "3033fd7155920823e7d9fe432cdb4d59c58bd5d0",
     "unresolved_publications": 0,
     "active_target_runs": [],
-    "changed_run_ids": [
-      "42557813040"
-    ],
+    "changed_run_ids": [],
     "latest_source": {
       "run_id": "42527504841",
       "run_attempt": 1,
@@ -816,14 +815,20 @@
       "manifest_sha256": "ffa9ae73dc15d8248dd44e2ad86d07598765a65bdbebfa3a602bb7692c3f42aa",
       "artifact_id": "13635897623",
       "artifact_digest": "sha256:3b5f8f6fcf45764f5c1d5552190b5586291e5d537ef8610d8e5c097f3725f015",
-      "classification": "verified complete source; unchanged run version"
+      "coverage": {
+        "serviceList": "110/110; 10942 unique; 0 duplicates",
+        "serviceDetail": "110/110; 10942 unique; 0 duplicates",
+        "supportConditions": "110/110; 10942 unique; 0 duplicates"
+      },
+      "read_current_verify_snapshot_load_feed": true,
+      "current_application_status_not_inferred": true
     },
     "latest_publisher": {
       "run_id": "42557813040",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-09T03:42:54Z",
+      "updated_at": "2026-11-09T03:42:57Z",
       "head_sha": "9679fd1de98bfca93bc3d6405eabab817fae23c6",
       "job_id": "128967357716",
       "artifact_id": "13647927104",
@@ -836,41 +841,58 @@
       "url": "https://www.threads.com/@hid_1004/post/DfgZBH0EaSq",
       "content_hash": "97355ca4f1f70517cfbbe2e1231929b4027d81d8da4ddb28c13bb9c11cc374b3",
       "source_generation": "gov24-42527504841-1",
-      "source_fingerprint": "de263be9cb70da85a5c54b284cfee0390fc4a90fc8786fa78198db7f18cba24e",
       "pattern": "P6",
       "media_turn": "TEXT",
       "replies": 0,
       "pending": null,
       "lease": null,
-      "classification": "verified natural publication; remote receipt, durable ledger, successful job and artifact agree"
+      "classification": "verified natural publication; no newer run version at this checkpoint"
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "master_prompt_blob_sha": "89b38a2a579a85cf0ad31dd40e08cc7df76d9333",
-      "queue_reused": true,
-      "queue_write": false,
-      "next_slot": {
-        "slot": "2026-11-09T16:00:00+09:00",
-        "benefit_id": "135200005004",
-        "pattern": "P5",
+      "queue_write": true,
+      "queue_commit_sha": "ff48a325e64aea70670f1b1348f2317b2c2ccbc4",
+      "queue_blob_sha": "e6cfaffb9e79cfe7fbaf8cc44548e8fb4015c86d",
+      "queue_readback_equal": true,
+      "exact_preview_ready": 3,
+      "preserved_ready_slots": [
+        {
+          "slot": "2026-11-09T16:00:00+09:00",
+          "benefit_id": "135200005004",
+          "pattern": "P5",
+          "media_turn": "IMAGE",
+          "characters": 373,
+          "status": "READY"
+        },
+        {
+          "slot": "2026-11-09T20:00:00+09:00",
+          "benefit_id": "WII000000300",
+          "pattern": "P8",
+          "media_turn": "TEXT",
+          "characters": 410,
+          "status": "READY"
+        }
+      ],
+      "new_ready_slot": {
+        "slot": "2026-11-10T08:00:00+09:00",
+        "benefit_id": "B41000200003",
+        "title": "전기 요금 복지할인",
+        "pattern": "P1",
+        "format": "생활공감형",
         "media_turn": "IMAGE",
-        "status": "READY",
-        "characters": 373,
+        "characters": 383,
         "reply_count": 0,
-        "expires_at": "2026-11-09T17:56:32.076946+09:00",
-        "source_generation_in_queue": "gov24-42417984108-1",
-        "latest_verified_source_generation": "gov24-42527504841-1",
+        "status": "READY",
+        "expires_at": "2026-11-10T09:30:00+09:00",
+        "source_generation": "gov24-42527504841-1",
+        "source_fingerprint": "53ee989a2a93ad0210fba3f29bb040d941cb1b30bd20d01c34088a3fcdf715c9",
+        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "official_sources_rechecked": true,
+        "image_bytes_recompared": true,
+        "new_visual_inspection_claimed": false,
         "source_recheck_required_at_publish": true,
-        "official_and_image_recheck_required_at_publish": true,
-        "constraints": [
-          "P7/P6/P5/P8 remain distinct",
-          "IMAGE/TEXT/IMAGE/TEXT remains intact",
-          "500-character limit",
-          "reply_texts empty",
-          "CTA once at end",
-          "no URL in post text",
-          "approved main/social/images bytes must still match review evidence"
-        ]
+        "platform_performance_metrics_used": false
       }
     },
     "recovery": {
@@ -878,13 +900,13 @@
       "workflow_dispatch": false,
       "posts_sent": 0,
       "code_changes": 0,
-      "reason": "The natural 12:00 publication is fully verified. No failed or partial send, pending reservation, active lease or safe recovery target exists."
+      "reason": "No failed or partial publication, pending reservation, active lease, changed run version or safe recovery target exists."
     },
     "incidents": {
       "41796747628": "resolved status preserved; PR 7 and recovery run 41797892734 remain verified",
       "new_incident": null
     },
-    "next_condition": "The natural 16:00 publisher must revalidate the latest source, official status, READY expiry, approved IMAGE bytes/evidence, account guard, daily limit and CAS before reserving; do not create an extra dispatch."
+    "next_condition": "The natural 16:00 publisher must revalidate the existing READY entry and latest source/image evidence before reservation. The new trend-style 08:00 draft remains queue-only until its natural slot; do not dispatch a test or backfill post."
   },
   "last_reported_publication": {
     "run_id": "42557813040",
@@ -1042,6 +1064,37 @@
       "real_publication_performed": false,
       "account_recovered": false,
       "live_diagnostic_run_id": "42150698993"
+    },
+    {
+      "applied_at": "2026-11-09T13:50:09+09:00",
+      "scope": "Threads mobile-natural trend writing from next unstarted slot",
+      "source": "user instruction 2026-11-09",
+      "effective_slot": "2026-11-10T08:00:00+09:00",
+      "existing_ready_slots_preserved": [
+        "2026-11-09T16:00:00+09:00",
+        "2026-11-09T20:00:00+09:00"
+      ],
+      "queue_commit_sha": "ff48a325e64aea70670f1b1348f2317b2c2ccbc4",
+      "queue_blob_sha": "e6cfaffb9e79cfe7fbaf8cc44548e8fb4015c86d",
+      "validation": {
+        "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+        "source_generation": "gov24-42527504841-1",
+        "source_count": 10942,
+        "exact_preview_ready": 3,
+        "next_draft": {
+          "benefit_id": "B41000200003",
+          "pattern": "P1",
+          "media_turn": "IMAGE",
+          "characters": 383,
+          "reply_count": 0
+        },
+        "approved_image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "queue_readback_equal": true,
+        "publication_ledger_unchanged": true,
+        "platform_metrics_used": false
+      },
+      "actual_publication_performed": false,
+      "next_step": "Natural publisher must revalidate source, official status, evidence age, image bytes, alternation, account guard, daily limit and CAS before reservation."
     }
   ],
   "content_policy": {
@@ -1155,7 +1208,21 @@
     "repair_pr": 33,
     "repair_sha": "f9c281b3183dc8f178d49e0e084e6ff27995224b",
     "initial_queue_ready": 4,
-    "natural_publication_after_change_verified": true
+    "natural_publication_after_change_verified": true,
+    "trend_style_effective_slot": "2026-11-10T08:00:00+09:00",
+    "trend_style_version": "threads_mobile_natural_v1",
+    "trend_daily_formats": [
+      "생활공감형",
+      "대상자격 체크형",
+      "신청방법형",
+      "핵심정보 요약형"
+    ],
+    "trend_opening_rule": "첫 1~2줄에 검증된 수혜대상·지원혜택·놓치기 쉬운 자격조건 중 가장 유용한 사실",
+    "trend_mobile_paragraphs": "1~2문장 단락과 쉬운 구어체",
+    "trend_clickbait_prohibited": true,
+    "platform_performance_metrics_available": false,
+    "performance_effect_claim_allowed": false,
+    "existing_safety_contract_precedence": true
   },
   "last_no_update_check": {
     "checked_at": "2026-11-09T06:08:17+09:00",
