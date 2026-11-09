@@ -7,7 +7,7 @@ Status: proposal only. Owner approval required before changing schedules, storag
 - The `supportpick-operations.yml` workflow restores the latest completed main-branch operations artifact, then verifies a generation pointer and content before promoting it.
 - A recovery bundle holds current + previous validated generations. The 2026-11-09 run 42527504841 reported `generations: 2`, `sourcePreserved: true`.
 - Existing run artifact 13635897623 expires 2026-11-12 07:03 KST. Changing retention in a future workflow **does not extend this existing artifact**.
-- This PR proposes 14-day retention for *future* `supportpick-runtime-state` and collection evidence; organization/repository maximum retention limits may supersede it.
+- This PR proposes 7-day retention for future `supportpick-runtime-state` and 1-day retention for large collection evidence to contain storage growth; organization/repository maximum retention limits may supersede them. Existing artifacts retain their original expiry. At two runs/day and the observed 21.45 MB state + 18.40 MB evidence sizes, estimated steady-state storage attributable to these two types is about 337 MB (7 × 2 × 21.45 + 1 × 2 × 18.40), **before all other artifacts**, and is not a guarantee of free-quota compliance.
 - GitHub Actions artifacts are **not independent long-term backups**: they can expire, be deleted, or become inaccessible together with the repository/account.
 
 ## Proposed layered retention (not yet implemented)
