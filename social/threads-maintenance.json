@@ -61,7 +61,8 @@
     "42557813040",
     "42584348881",
     "42599671027",
-    "42611038118"
+    "42611038118",
+    "42708067719"
   ],
   "last_health": {
     "unresolved_publications": 0,
@@ -813,18 +814,36 @@
       "conclusion": "success",
       "updated_at": "2026-11-09T11:42:41Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
+    },
+    "42708067719": {
+      "run_attempt": 1,
+      "status": "in_progress",
+      "conclusion": null,
+      "updated_at": "2026-11-09T22:02:10Z",
+      "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-10T01:30:33+09:00",
-    "result": "preflight_incheon_maternity_eligibility_corrected",
+    "checked_at": "2026-11-10T07:12:57+09:00",
+    "result": "new_complete_source_verified_while_operations_running",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
     "publication_ledger_sha": "e2c1e5efa7b4274d416647962c382a263442cdf5",
     "queue_blob_sha": "0698d5e1c3d019748f4fe3b1ead741795c2700a2",
-    "maintenance_previous_blob_sha": "1f0148d62bc18b65532581a71fc3dfca745a6c31",
+    "maintenance_previous_blob_sha": "bbce06234a30a66316105c9f058e3ea2cdf12fb5",
     "unresolved_publications": 0,
-    "active_target_runs": [],
-    "changed_run_versions": [],
+    "active_target_runs": [
+      "42708067719"
+    ],
+    "changed_run_versions": [
+      {
+        "run_id": "42708067719",
+        "run_attempt": 1,
+        "status": "in_progress",
+        "conclusion": null,
+        "updated_at": "2026-11-09T22:02:10Z",
+        "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
+      }
+    ],
     "source": {
       "run_id": "42599671027",
       "run_attempt": 1,
@@ -849,7 +868,8 @@
       "current_application_status_not_inferred": true,
       "local_integrity_note": "A shared scratch extraction acquired an extra dot-prefixed file, which the manifest check rejected. Re-extracting the digest-matched Actions ZIP into an isolated directory restored complete file-set verification; artifact and production source were intact.",
       "fresh_at_check": true,
-      "requires_new_generation_before_20_kst": true
+      "requires_new_generation_before_20_kst": true,
+      "currently_consumable_as_latest_completed": true
     },
     "publisher": {
       "run_id": "42611038118",
@@ -889,7 +909,7 @@
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "queue_reused": true,
-      "queue_write": true,
+      "queue_write": false,
       "previous_queue_blob_sha": "19eb1cf9f69937c8b651174af5818707010ec40b",
       "queue_readback_equal": true,
       "queue_commit_sha": "177ead9a7de602b12066102de749e296ebbf8d11",
@@ -1469,7 +1489,10 @@
         "slot": "2026-11-10T20:00:00+09:00",
         "source": "https://www.incheon.go.kr/earlychild/EC060102",
         "material_change_found": false
-      }
+      },
+      "prospective_source_all_four_eligible_through_window": true,
+      "prospective_source_fingerprints_unchanged": true,
+      "previously_completed_source_20_kst_eligible": false
     },
     "metrics": {
       "status": "unavailable_in_current_execution",
@@ -1482,14 +1505,33 @@
       "workflow_dispatch": false,
       "posts_sent": 0,
       "code_changes": 0,
-      "reason": "Prepublication editorial corrections only. No new publisher failure, partial result or pending reservation."
+      "reason": "No new publisher failure or pending reservation. The operations source artifact is complete and valid; downstream job is in progress."
     },
     "incidents": {
       "41796747628": "resolved status preserved; PR 7 and recovery run 41797892734 remain verified",
       "new_incident": null
     },
-    "next_condition": "Current queue retains four READY slots and planned IMAGE/TEXT order. At each natural send, recheck current candidate eligibility, facts fingerprint and media. The 20:00 KST slot requires a newly collected validated source generation; the current snapshot will exceed its freshness limit.",
-    "previous_check_commit_sha": "bc22a5235a2cc141ce8b53935f186a6e334b1681"
+    "next_condition": "Once operations completes, verify the new run version and restored generation. The latest completed source currently supports the first three slots; the verified 07:08 generation supports all four when selectable. Continue standard send-time validation.",
+    "previous_check_commit_sha": "bc22a5235a2cc141ce8b53935f186a6e334b1681",
+    "prospective_source": {
+      "run_id": "42708067719",
+      "run_attempt": 1,
+      "status": "in_progress",
+      "conclusion": null,
+      "updated_at": "2026-11-09T22:02:10Z",
+      "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
+      "job_id": "129470041700",
+      "artifact_id": "13715561025",
+      "artifact_digest": "sha256:f2b158a3c21b52a288f8b036eeafdb017c670ed017d80807a73efc13762901bf",
+      "manifest_sha256": "70b3f564d2bb3e7b4f743406e1d96d23f4df90e912f5acb592aa138ad1279662",
+      "generation": "gov24-42708067719-1",
+      "count": 10942,
+      "collection_succeeded_at": "2026-11-10T07:08:56.482351+09:00",
+      "read_current_verify_snapshot_load_feed": true,
+      "collection_step": "completed_success",
+      "overall_completion_required_for_publisher_restore": true,
+      "job_logs": "not_available_while_running"
+    }
   },
   "last_reported_publication": {
     "run_id": "42611038118",
