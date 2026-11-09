@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-09T13:46:00+09:00",
+  "prepared_at": "2026-11-09T14:23:00+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -297,6 +297,32 @@
       ],
       "access_scope": "보조금24 동일 서비스 ID 원문과 한전 공식 고객지원·상세 안내 대조",
       "checked_at": "2026-11-09T13:46:00+09:00"
+    },
+    {
+      "benefit_id": "GMO000000010",
+      "views": 157853,
+      "decision": "SKIP",
+      "reason": "보조금24 동일 서비스 ID는 매년 5월 초~6월 중 약 1.5개월 접수라고 안내하고, 한국지능정보사회진흥원 공식 사이트에는 2026년 사업 안내만 남아 있다. 11월 9일 현재 신규 접수 중이라는 공식 근거가 없어 이번 READY 후보에서 제외했다.",
+      "sources": [
+        "https://www.at4u.or.kr/",
+        "https://www.at4u.or.kr/F03000000000/F03010000000V.asp?BoardUID=1856",
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=728849&bnefType=all&svcId=GMO000000010"
+      ],
+      "access_scope": "한국지능정보사회진흥원 공식 사업 사이트와 보조금24 동일 서비스 ID 신청기간 대조",
+      "checked_at": "2026-11-09T14:23:00+09:00"
+    },
+    {
+      "benefit_id": "135200000120",
+      "views": 157701,
+      "decision": "SELECTED",
+      "reason": "상위 정보통신 보조기기 사업의 현재 접수를 확인할 수 없어 제외한 뒤, 보건복지부와 복지로의 2026년 현재 안내에서 만 9세 미만 대상·지역별 월 10만~13만 원·신청 경로를 확인한 후보 중 보조금24 동일 서비스 ID 누적 조회수 순으로 선정했다.",
+      "sources": [
+        "https://www.mohw.go.kr/menu.es?mid=a10711030100",
+        "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001171",
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=700023&bnefType=all&svcId=135200000120"
+      ],
+      "access_scope": "보건복지부 2026년 현재 정책 페이지와 복지로 서비스 상세를 우선 적용하고, 보조금24 동일 서비스 ID의 오래된 연령·금액 요약은 본문 근거에서 제외",
+      "checked_at": "2026-11-09T14:23:00+09:00"
     }
   ],
   "entries": [
@@ -1933,6 +1959,102 @@
           "opening": "전기요금 고지서가 부담된다면, 가구 상황에 따라 복지할인을 받을 수 있어요.",
           "structure": "생활비 부담 상황 → 대상별 월 한도 구분 → 다자녀·대가족·출산가구 30% 할인 → 신청 경로와 확인사항 → CTA",
           "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-10T12:00:00+09:00",
+      "benefit_id": "135200000120",
+      "source_fingerprint": "b6cb43b9e290f67841af8cc7d74f64d3dab3e905bdb5f0b56b79076de51036cd",
+      "source_generation": "gov24-42527504841-1",
+      "prepared_at": "2026-11-09T14:23:00+09:00",
+      "expires_at": "2026-11-10T13:30:00+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "135200000120",
+        "draft_text": null,
+        "post_text": "2026년 아동수당은 만 9세 미만 아동이 대상이에요.\n\n국적과 주민등록 요건도 확인해야 해요. 대한민국 국적을 보유하고 주민등록번호가 정상적으로 부여된 아동이 기본 대상이며, 복수국적자와 인정 난민도 포함돼요.\n\n금액은 거주지역에 따라 달라요. 수도권은 월 10만 원, 비수도권은 10만 5천 원, 인구감소 우대지역은 11만 원, 특별지역은 12만 원이에요. 특별지역에서 지역화폐로 받으면 1만 원이 더해져 월 최대 13만 원이에요.\n\n현금 지급이 원칙이지만 조례에 따라 지역상품권으로 받을 수 있고, 90일 이상 해외 체류하면 지급이 중단돼요. 읍·면·동 주민센터나 복지로에서 신청하세요.\n\n자세한 사항은 프로필링크 확인",
+        "reply_texts": [],
+        "review": {
+          "planned_at": "2026-11-10T12:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "만 9세 미만 아동을 양육하며 2026년 아동수당 대상과 지역별 금액을 확인하려는 보호자",
+          "central_message": "연령·국적·주민등록 요건과 거주지역별 월 지급액을 먼저 확인한 뒤 신청 경로를 선택한다.",
+          "pattern": "P5",
+          "selection_reason": "현재 접수를 확인할 수 없는 상위 정보통신 보조기기 사업을 제외한 뒤, 보건복지부와 복지로 2026년 안내에서 대상·지역별 금액·신청 경로를 확인한 후보 중 보조금24 동일 서비스 ID 누적 조회수 순으로 선정했다.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "135200000120",
+              "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10711030100",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-09T14:23:00+09:00",
+              "claims_supported": [
+                "2026년 아동수당 대상은 만 9세 미만 모든 아동",
+                "아동 1인당 월 10만~13만 원이며 수도권 10만 원, 비수도권 10만 5천 원, 인구감소 우대지역 11만 원, 특별지역 12만 원과 지역화폐 추가 1만 원을 확인",
+                "현금입금이 원칙이고 조례에 따라 지역상품권 지급 가능, 읍면동 주민센터 또는 복지로 신청"
+              ]
+            },
+            {
+              "source_id": "135200000120",
+              "source_ref": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001171",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-09T14:23:00+09:00",
+              "claims_supported": [
+                "2026년 서비스 상세에서 대한민국 국적·주민등록번호 요건과 복수국적자·인정 난민 포함을 확인",
+                "90일 이상 해외 체류 시 지급 중단과 방문·온라인 신청 경로를 확인"
+              ]
+            },
+            {
+              "source_id": "135200000120",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=700023&bnefType=all&svcId=135200000120",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-09T14:23:00+09:00",
+              "claims_supported": [
+                "보조금24 동일 서비스 ID의 상시신청·현금 지원·주민센터와 온라인 신청 경로를 대조",
+                "serviceList 누적 조회수 157701건. API 원본 확인시각 2026-11-09T06:57:04.957705+09:00",
+                "보조금24의 만 8세·월 10만 원 요약은 2026년 현재 보건복지부·복지로 안내와 달라 본문 근거에서 제외"
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 349,
+          "count_method": "Python Unicode 문자 수, 공백·개행·CTA 포함",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "거주지역 분류와 지역화폐 지급 여부에 따라 실제 월 지급액이 달라질 수 있다.",
+            "난민 인정 신청 심사 중인 경우 등은 제외될 수 있으며 전체 국적·주민등록 요건을 확인해야 한다.",
+            "90일 이상 국외 체류 시 지급이 중단된다.",
+            "보조금24 원문 요약의 연령·금액은 최신 보건복지부·복지로 안내보다 오래되어 최신 공식 안내를 우선했다.",
+            "미래 시각 검증이므로 실제 발송 전 최신 완전 수집본과 보건복지부·복지로 현재 안내를 다시 확인한다.",
+            "Threads 노출·반응 성과 수치를 확보하지 못해 트렌드 효과가 입증됐다고 판단하지 않는다."
+          ]
+        },
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "next_history_record": {
+          "program_id": "135200000120",
+          "notice_version": "gov24-42527504841-1:2026-02-20+MOHW-2026-03-31",
+          "pattern": "P5",
+          "opening": "2026년 아동수당은 만 9세 미만 아동이 대상이에요.",
+          "structure": "대상 연령 → 국적·주민등록 자격 확인 → 지역별 월 지급액 → 지급방식·해외체류 제한·신청경로 → CTA",
+          "media_turn": "TEXT"
         }
       }
     }
