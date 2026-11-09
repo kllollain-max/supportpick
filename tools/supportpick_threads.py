@@ -564,6 +564,114 @@ def publish(feed, store, api, now, cron, run_id, expected_id, assets=None, write
     return complete_record(store, api, sha, state, record, now)
 
 
+def audit_recent_publications(state, recent):
+    """Compare a bounded remote read with the ledger; never repair or republish.
+
+    Media URLs may be signed. Only their presence is reported, and paging URLs
+    are neither emitted nor followed. A missing record is unconfirmed, not proof
+    that a post was deleted. The API's timestamp is distinct from published_at,
+    which older ledger records captured before sending.
+    """
+    validate_ledger(state)
+    rows = recent.get('data') if isinstance(recent, dict) else None
+    if not isinstance(rows, list) or len(rows) > 100 or any(not isinstance(r, dict) for r in rows):
+        raise ValueError('threads_history_invalid_response')
+    published = [r for r in state['records'] if r['status'] == 'published']
+    results, timestamps = [], []
+    for record in published[-20:]:
+        pid = str(record['main_id'])
+        matches = [r for r in rows if str(r.get('id')) == pid]
+        expected_media = 'IMAGE' if record.get('image_url') else 'TEXT_POST'
+        result = {'id': pid, 'slot': record['slot'], 'expected_media_type': expected_media,
+                  'status': 'incomplete', 'reasons': [], 'remote_published_at': None,
+                  'media_type': None, 'has_media_url': False, 'permalink': None,
+                  'text_matches': None}
+        if len(matches) != 1:
+            result['reasons'].append('missing_from_recent_history' if not matches else 'duplicate_remote_id')
+        else:
+            row = matches[0]
+            mismatch = False
+            media_type = row.get('media_type')
+            if media_type in ('TEXT_POST', 'IMAGE', 'VIDEO', 'CAROUSEL_ALBUM', 'REPOST_FACADE', 'AUDIO'):
+                result['media_type'] = media_type
+            if media_type != expected_media:
+                result['reasons'].append('media_type_mismatch' if media_type else 'media_type_missing')
+                mismatch = bool(media_type)
+            # Do not download a media URL or put its value in logs/artifacts.
+            try:
+                media_value = row.get('media_url')
+                media = urllib.parse.urlsplit(media_value if isinstance(media_value, str) else '')
+                result['has_media_url'] = bool(media.scheme == 'https' and media.hostname
+                                               and not media.username and not media.password)
+            except (TypeError, ValueError):
+                pass
+            if expected_media == 'IMAGE' and not result['has_media_url']:
+                result['reasons'].append('image_media_url_missing_or_invalid')
+            texts = record.get('texts')
+            if not isinstance(texts, list) or not texts or not isinstance(texts[0], str):
+                result['reasons'].append('ledger_text_unavailable')
+            elif not isinstance(row.get('text'), str):
+                result['reasons'].append('remote_text_unavailable')
+            else:
+                expected = {texts[0], texts[0].replace('\n\n#지원금픽 ', '\n\n지원금픽 ', 1)}
+                result['text_matches'] = row['text'] in expected
+                if not result['text_matches']:
+                    result['reasons'].append('text_mismatch')
+                    mismatch = True
+            try:
+                permalink = row.get('permalink')
+                url = urllib.parse.urlsplit(permalink if isinstance(permalink, str) else '')
+                if (url.scheme != 'https' or url.hostname not in
+                        ('www.threads.com', 'threads.com', 'www.threads.net', 'threads.net')
+                        or url.username or url.password or url.port not in (None, 443)
+                        or not re.fullmatch('/@' + USERNAME + r'/post/[A-Za-z0-9_-]+/?',
+                                            urllib.parse.unquote(url.path))):
+                    raise ValueError()
+                # Known public post path only; never emit a query or fragment.
+                result['permalink'] = urllib.parse.urlunsplit((url.scheme, url.netloc, url.path, '', ''))
+            except (TypeError, ValueError):
+                result['reasons'].append('public_permalink_unavailable')
+            try:
+                remote_time = stamp(row.get('timestamp'))
+                result['remote_published_at'] = remote_time.isoformat()
+                timestamps.append(remote_time)
+            except (TypeError, ValueError, OverflowError):
+                result['reasons'].append('remote_timestamp_unavailable')
+            result['status'] = 'mismatch' if mismatch else ('incomplete' if result['reasons'] else 'verified')
+        results.append(result)
+    order = 'incomplete'
+    if results and len(timestamps) == len(results):
+        if any(a > b for a, b in zip(timestamps, timestamps[1:])):
+            order = 'mismatch'
+        elif any(a == b for a, b in zip(timestamps, timestamps[1:])):
+            order = 'incomplete'
+        else:
+            order = 'verified'
+    pending = sum(r['status'] == 'pending' for r in state['records'])
+    status = ('mismatch' if order == 'mismatch' or any(r['status'] == 'mismatch' for r in results)
+              else 'verified' if results and not pending and order == 'verified'
+              and all(r['status'] == 'verified' for r in results) else 'incomplete')
+    paging = recent.get('paging')
+    return {'status': status, 'scope': 'latest_20_published_main_posts',
+            'older_records_not_audited': max(0, len(published) - 20),
+            'pending_records': pending, 'chronological_order': order,
+            'more_history': bool(isinstance(paging, dict) and paging.get('next')),
+            'verified_records': sum(r['status'] == 'verified' for r in results),
+            'records': results}
+
+
+def check_account_history(store, api, expected_id):
+    api.verify_account(expected_id)
+    sha, state = store.read()
+    recent = api.call('GET', '/me/threads',
+                      {'fields': 'id,text,permalink,timestamp,media_type,media_url', 'limit': 100})
+    audit = audit_recent_publications(state, recent)
+    return {'status': 'account_verified' if audit['status'] == 'verified' else 'publication_audit_' + audit['status'],
+            'account_verified': True, 'username': USERNAME, 'published': False,
+            'profile_link_target': PROFILE_LINK, 'ledger_blob_sha': sha,
+            'more_history': audit['more_history'], 'publication_audit': audit}
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('command', choices=('preview', 'writer-input', 'publish', 'check-account', 'resume'))
@@ -575,12 +683,9 @@ def main():
     if args.command == 'publish' and (args.ledger or args.queue):
         raise ValueError('publication_uses_remote_state_only')
     if args.command == 'check-account':
-        api = Threads(os.environ.get('SUPPORTPICK_THREADS_ACCESS_TOKEN', ''))
-        api.verify_account(os.environ.get('SUPPORTPICK_THREADS_USER_ID', ''))
-        recent = api.call('GET', '/me/threads', {'fields': 'id,text,permalink,timestamp', 'limit': 100})
-        result = {'status': 'account_verified', 'username': USERNAME, 'published': False,
-                  'profile_link_target': PROFILE_LINK, 'recent_posts': recent.get('data', []),
-                  'more_history': bool(recent.get('paging', {}).get('next'))}
+        result = check_account_history(Ledger(os.environ.get('GITHUB_TOKEN', '')),
+            Threads(os.environ.get('SUPPORTPICK_THREADS_ACCESS_TOKEN', '')),
+            os.environ.get('SUPPORTPICK_THREADS_USER_ID', ''))
     elif args.command == 'resume':
         publication_context(os.environ)
         if os.environ.get('GITHUB_EVENT_NAME') != 'workflow_dispatch' or os.environ.get('SUPPORTPICK_THREADS_MANUAL_MODE') != 'resume-pending':
@@ -614,6 +719,9 @@ def main():
     if os.environ.get('GITHUB_STEP_SUMMARY'):
         with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as out:
             out.write('## 지원금픽 Threads 결과\n\n```json\n' + json.dumps(result, ensure_ascii=False, indent=2) + '\n```\n')
+    if args.command == 'check-account' and result['publication_audit']['status'] != 'verified':
+        # Preserve the detailed read-only report; incomplete is not success.
+        raise SystemExit(1)
 
 
 if __name__ == '__main__':
