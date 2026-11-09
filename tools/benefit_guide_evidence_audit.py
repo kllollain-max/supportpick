@@ -70,6 +70,9 @@ def audit_guides(payload):
 
 if __name__ == "__main__":
     result = audit_guides(json.loads(DATA.read_text(encoding="utf-8")))
+    output = ROOT / "review-only" / "guide-source-audit.json"
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({k:v for k,v in result.items() if k!="rows"}, ensure_ascii=False))
     if result["id_mismatches"] or result["unsafe_source_records"] or result["faq_incomplete"]:
         raise SystemExit(1)
