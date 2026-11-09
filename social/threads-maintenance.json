@@ -816,12 +816,12 @@
     }
   },
   "last_check": {
-    "checked_at": "2026-11-10T01:05:37+09:00",
-    "result": "preflight_eligibility_corrected_two_unreserved_drafts",
+    "checked_at": "2026-11-10T01:30:33+09:00",
+    "result": "preflight_incheon_maternity_eligibility_corrected",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
     "publication_ledger_sha": "e2c1e5efa7b4274d416647962c382a263442cdf5",
-    "queue_blob_sha": "19eb1cf9f69937c8b651174af5818707010ec40b",
-    "maintenance_previous_blob_sha": "593cb342837081712991983671e27d65904f8056",
+    "queue_blob_sha": "0698d5e1c3d019748f4fe3b1ead741795c2700a2",
+    "maintenance_previous_blob_sha": "1f0148d62bc18b65532581a71fc3dfca745a6c31",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [],
@@ -890,9 +890,9 @@
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "queue_reused": true,
       "queue_write": true,
-      "previous_queue_blob_sha": "1c4834b98c215411b2004c90db454264e658cf5a",
+      "previous_queue_blob_sha": "19eb1cf9f69937c8b651174af5818707010ec40b",
       "queue_readback_equal": true,
-      "queue_commit_sha": "763bd5741e54c3ba3d906616cdf3a96206d92e00",
+      "queue_commit_sha": "177ead9a7de602b12066102de749e296ebbf8d11",
       "preview_ready": 4,
       "validate_ready_entry_and_preview": true,
       "source_recheck_required_at_publish": true,
@@ -902,6 +902,7 @@
           "benefit_id": "B41000200003",
           "pattern": "P1",
           "media_turn": "IMAGE",
+          "char_count": 452,
           "expires_at": "2026-11-11T01:04:07+09:00"
         },
         {
@@ -909,6 +910,7 @@
           "benefit_id": "135200000120",
           "pattern": "P5",
           "media_turn": "TEXT",
+          "char_count": 408,
           "expires_at": "2026-11-11T01:04:07+09:00"
         },
         {
@@ -916,13 +918,15 @@
           "benefit_id": "628000000735",
           "pattern": "P6",
           "media_turn": "IMAGE",
-          "expires_at": "2026-11-10T10:04:24.000Z"
+          "char_count": 459,
+          "expires_at": "2026-11-11T01:29:39+09:00"
         },
         {
           "slot": "2026-11-10T20:00:00+09:00",
           "benefit_id": "628000000739",
           "pattern": "P8",
           "media_turn": "TEXT",
+          "char_count": 387,
           "expires_at": "2026-11-10T14:47:17.000Z"
         }
       ],
@@ -1247,10 +1251,225 @@
           "regression_review": "Check applicable amendments, statutory exceptions and current ministry FAQ before stating an age cutoff.",
           "publish_retry_budget_used": 0,
           "final_status": "corrected_ready_queue_readback_verified"
+        },
+        {
+          "slot": "2026-11-10T16:00:00+09:00",
+          "benefit_id": "628000000735",
+          "stage": "before_reservation",
+          "container_id": null,
+          "main_id": null,
+          "confirmed_cause": "The prior draft used only the 180-day parenthetical from the same-ID source and omitted the both-foreign-spouses exclusion. Incheon's current public detail states six months or more; the complete Gov24 detail shows six months (180 days), so the draft now follows the city wording and leaves borderline counting to the competent office.",
+          "previous_entry": {
+            "slot": "2026-11-10T16:00:00+09:00",
+            "benefit_id": "628000000735",
+            "source_fingerprint": "48c999b0848c9a429a6dee4e1e0235137adc6e09a40e8e716eed7e226f0bb66b",
+            "source_generation": "gov24-42527504841-1",
+            "prepared_at": "2026-11-09T19:04:24+09:00",
+            "expires_at": "2026-11-10T10:04:24.000Z",
+            "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+            "writer": {
+              "schema_version": "supportpick.writer.v1",
+              "status": "READY",
+              "selected_program_id": "628000000735",
+              "post_text": "인천에서 산전 진료를 오가며 교통비가 부담된다면, 임산부 1인당 50만 원을 한 번 지원하는 사업이 있어요.\n\n신청일에 인천에 주민등록을 두고 실제 거주한 기간이 180일 이상이어야 해요. 임신 12주부터 출산일을 포함해 90일 안에 신청할 수 있고, 출산했다면 인천에 출생신고를 해야 해요. 지급 전 타 시도로 전출한 이력이 있으면 지원 대상에서 제외돼요.\n\n기본은 인천e음 교통비 포인트예요. 택시·주유·대중교통에 쓸 수 있고, 포인트 사용기한은 지급일부터 1년이에요. 요건을 충족한 전기차 사용자는 현금으로 받으며 렌트 차량은 해당하지 않아요.\n\n정부24에서 본인 신청이 원칙이에요. 본인 명의 휴대전화가 없는 등 방문이 필요한 경우엔 주소지 행정복지센터에 서류를 확인해 보세요. 예산 상황에 따라 지급이 늦어질 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+              "draft_text": null,
+              "reply_texts": [],
+              "media": {
+                "turn": "IMAGE",
+                "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                "check": "MATCHED",
+                "image_copy": null,
+                "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+              },
+              "review": {
+                "planned_at": "2026-11-10T16:00:00+09:00",
+                "application_status": "ALWAYS",
+                "reader": "인천에 거주하며 산전·산후 이동 비용을 확인하려는 임산부",
+                "central_message": "인천 임산부 교통비 1회 50만 원의 지급 방식과 신청 전에 볼 거주·출생신고·기간 조건을 안내한다.",
+                "pattern": "P6",
+                "selection_reason": "최근 20건과 기존 READY 3건을 제외하고, 상위 후보의 HOLD/SKIP 출처·사유를 유지했다. 인천시 2026년 개정 매뉴얼이 연결된 사업 안내와 부평구 2026년 신청 안내, 보조금24 동일 ID 원문을 대조한 다음 후보(154512회)다.",
+                "interest_basis": "OBSERVED_METRICS",
+                "duplicate_check": "CHECKED",
+                "evidence": [
+                  {
+                    "source_id": "628000000735",
+                    "source_ref": "https://www.incheon.go.kr/jobs/main/support/welfare/view.do?wl_srvc_sn=52",
+                    "access_method": "OPENED_OFFICIAL",
+                    "verified_at": "2026-11-09T19:04:24+09:00",
+                    "claims_supported": [
+                      "인천시 6개월 거주와 임신 12주부터 출산일 포함 90일 신청 범위 및 출생신고 요건",
+                      "임산부 교통비 50만 원 기본 포인트, 전기차 사용자 현금 예외와 용도",
+                      "현행 인천시 상세와 2026년 개정 업무 매뉴얼 첨부를 확인"
+                    ]
+                  },
+                  {
+                    "source_id": "628000000735",
+                    "source_ref": "https://www.icbp.go.kr/dong/bbs/bbsMsgDetail.do?bcd=dong_notice&dong=bupyeong4&msg_seq=130039&pgno=11",
+                    "access_method": "OPENED_OFFICIAL",
+                    "verified_at": "2026-11-09T19:04:24+09:00",
+                    "claims_supported": [
+                      "2026년 180일 거주와 신청일 범위, 정부24 본인 신청 원칙과 방문 예외",
+                      "1회 50만 원과 포인트 사용기한 12개월 및 사용처"
+                    ]
+                  },
+                  {
+                    "source_id": "628000000735",
+                    "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2116229&bnefType=all&svcId=628000000735",
+                    "access_method": "PROVIDED_OFFICIAL_TEXT",
+                    "verified_at": "2026-11-09T19:04:24+09:00",
+                    "claims_supported": [
+                      "실제 수집된 보조금24 동일 ID 상세 원문으로 연중 상시 신청, 지급 전 타시도 전출입 제한, 예산에 따른 지급 지연, 전기차 렌트 차량 제외를 대조",
+                      "공식 API 누적 조회수 154512회와 수집 확인시각 2026-11-09T06:58:40.779330+09:00을 실제 원문 열람시각과 구분"
+                    ]
+                  },
+                  {
+                    "source_id": "628000000735",
+                    "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                    "access_method": "UPSTREAM_VERIFIED",
+                    "verified_at": "2026-11-09T19:04:24+09:00",
+                    "claims_supported": [
+                      "main Git blob c60655f30016eee7979af07416347fee69b87a0f와 로컬 파일을 대조하고 기존 시각검수 SHA-256과 일치 확인",
+                      "같은 PNG의 360px 축소 미리보기에서 브랜드·슬로건·하단 안내 판독. 사업별 숫자·기간·조건 문구가 없는 승인 로테이션 이미지"
+                    ]
+                  }
+                ],
+                "checks": {
+                  "facts": "PASS",
+                  "current_status": "PASS",
+                  "eligibility_and_units": "PASS",
+                  "cta_and_no_links": "PASS",
+                  "length": "PASS",
+                  "media": "PASS"
+                },
+                "char_count": 426,
+                "count_method": "python_len_including_spaces_and_newlines",
+                "missing_info": [],
+                "hold_reasons": [],
+                "warnings": [
+                  "실제 발송 전 최신 수집 세대에서 후보·fingerprint·공식 신청 상태·교대를 다시 확인한다.",
+                  "지역·체류 자격 등 개별 예외는 주소지 관할 센터 확인. 공개 게시 프로필 링크의 실동선은 이번 환경에서 열람하지 못했다."
+                ],
+                "reach_editorial": {
+                  "policy_id": "supportpick-threads-reach-v1-20261109",
+                  "cohort": "A",
+                  "opening_type": "생활 상황형",
+                  "opening_candidates": [
+                    {
+                      "type": "생활 상황형",
+                      "group": "A",
+                      "text": "인천에서 산전 진료를 오가며 교통비가 부담된다면, 임산부 1인당 50만 원을 한 번 지원하는 사업이 있어요."
+                    },
+                    {
+                      "type": "대상·혜택형",
+                      "group": "B",
+                      "text": "인천에 180일 이상 주민등록을 두고 실제로 사는 임산부라면, 1인당 교통비 50만 원 지원을 확인해 보세요."
+                    },
+                    {
+                      "type": "조건 설명형",
+                      "group": null,
+                      "text": "인천 임산부 교통비 50만 원은 임신 12주부터 출산일을 포함해 90일 이내에 신청할 수 있어요."
+                    }
+                  ],
+                  "chosen_opening": "인천에서 산전 진료를 오가며 교통비가 부담된다면, 임산부 1인당 50만 원을 한 번 지원하는 사업이 있어요.",
+                  "selection_reason": "인천·산전 이동 부담·임산부 1인당 1회 지원을 첫 문장에 연결하고, 당일 전기요금 원고의 고지서 질문과 다른 ‘이동→신청 준비’ 전개를 사용한다. 11월 10일 16시 A군에 배정한다.",
+                  "reader_scope": "인천 거주 임산부",
+                  "core_question": "인천 임산부 교통비를 신청하려면 거주 기간과 신청 시기를 어떻게 확인하나요?",
+                  "angles": [
+                    "산전 진료 이동 부담과 쓸 수 있는 교통비",
+                    "180일 거주와 출산 후 90일이 겹치는 신청 자격",
+                    "본인 신청 전 거주 기간·출생신고·지급 수단 확인"
+                  ],
+                  "chosen_angle": "본인 신청 전 거주 기간·출생신고·지급 수단 확인",
+                  "history_posts_checked": 20,
+                  "comparison_strata": {
+                    "geo": "인천 광역",
+                    "benefit": "교통비 포인트 기본",
+                    "application": "상시·개인별 기한",
+                    "audience": "임산부"
+                  },
+                  "image_review": {
+                    "width_px": 360,
+                    "asset": "approved_generic_rotation",
+                    "claim_match": "no program-specific claims",
+                    "program_card_available": false
+                  },
+                  "profile_route": "공개 프로필 및 사이트 상세 직접 열람 제한. 저장소 경로와 수집 데이터 내 동일 ID까지만 확인.",
+                  "source_recheck_required_at_publish": true
+                }
+              },
+              "next_history_record": {
+                "program_id": "628000000735",
+                "notice_version": "gov24-42527504841-1:2026-10-19",
+                "pattern": "P6",
+                "opening": "인천에서 산전 진료를 오가며 교통비가 부담된다면, 임산부 1인당 50만 원을 한 번 지원하는 사업이 있어요.",
+                "structure": "산전 이동비 → 신청 전에 거주·출생·기한 체크 → 지급 수단과 사용 범위 → 본인/방문 신청 경로 → CTA",
+                "media_turn": "IMAGE"
+              }
+            }
+          },
+          "previous_body_sha256": "fd6703e6c8fd8a612de67244f56e19bac053ce73d1cc275250eb131eda33be4c",
+          "body_sha256": "49b525df2b737e23b6e778823982c1020dcdd08a28b61818ba1d9fc530fd2c03",
+          "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "pattern": "P6",
+          "media": "IMAGE",
+          "cohort": "A",
+          "char_count": 459,
+          "source_fingerprint": "48c999b0848c9a429a6dee4e1e0235137adc6e09a40e8e716eed7e226f0bb66b",
+          "official_evidence": [
+            {
+              "source_id": "628000000735",
+              "source_ref": "https://www.incheon.go.kr/earlychild/EC060103",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-10T01:29:39+09:00",
+              "claims_supported": [
+                "시 상세 안내의 신청일 기준 인천 6개월 이상 주민등록·실거주, 지급 전 타 시도 전출입, 부부 모두 외국인인 경우의 제외, 임신 12주부터 출산일로부터 90일 이내와 인천 출생등록 조건을 확인.",
+                "1인당 교통비 50만 원, 인천e음 포인트의 사용처·12개월과 전기차 현금 예외·렌트 제외, 본인 온라인 신청과 방문 예외, 비전기차 온라인 신청 시 인천e음 앱 가입을 대조."
+              ]
+            },
+            {
+              "source_id": "628000000735",
+              "source_ref": "https://www.incheon.go.kr/jobs/main/support/welfare/view.do?wl_srvc_sn=52",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-10T01:29:39+09:00",
+              "claims_supported": [
+                "시 복지 상세에서 거주 6개월과 신청 기한, 출생신고, 50만 원 및 지급 수단을 교차 확인."
+              ]
+            },
+            {
+              "source_id": "628000000735",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2116229&bnefType=all&svcId=628000000735",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-10T01:29:39+09:00",
+              "claims_supported": [
+                "완전 수집본의 동일 ID serviceDetail에서 연중 상시와 거주·신청·대상 제한 확인. API에는 6개월(180일) 병기가 있어 본문에는 시 최신 상세의 ‘6개월 이상’을 사용.",
+                "같은 ID의 serviceList 누적 조회수 154512회, API 원본 확인시각 2026-11-09T19:20:18.915540+09:00. 원문 열람시각과 별도."
+              ]
+            },
+            {
+              "source_id": "628000000735",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-10T01:29:39+09:00",
+              "claims_supported": [
+                "main Git blob c60655f30016eee7979af07416347fee69b87a0f와 로컬 SHA-256 0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd가 기존 시각검수 기록과 일치함.",
+                "360px 판독은 기존 검수 기록을 사용. 사업별 금액·대상·기간이 없는 승인 로테이션 이미지."
+              ]
+            }
+          ],
+          "prepared_at": "2026-11-10T01:29:39+09:00",
+          "expires_at": "2026-11-11T01:29:39+09:00",
+          "verification": "Fresh official city detail, same-ID API row and approved image hashes verified. All four exact-time previews and end-of-window writer validation passed. Tested that the 16:00 body uses six months, includes the both-foreign-spouses exclusion, and preserves opening, cohort, and media.",
+          "publish_retry_budget_used": 0,
+          "final_status": "corrected_ready_queue_readback_verified"
         }
       ],
-      "unchanged_existing_entries": 17,
-      "legacy_ready_cohort_exclusions_preserved": true
+      "unchanged_existing_entries": 18,
+      "legacy_ready_cohort_exclusions_preserved": true,
+      "official_readback_other_incheon_slot": {
+        "slot": "2026-11-10T20:00:00+09:00",
+        "source": "https://www.incheon.go.kr/earlychild/EC060102",
+        "material_change_found": false
+      }
     },
     "metrics": {
       "status": "unavailable_in_current_execution",
@@ -1269,8 +1488,8 @@
       "41796747628": "resolved status preserved; PR 7 and recovery run 41797892734 remain verified",
       "new_incident": null
     },
-    "next_condition": "Use the existing schedule. At each send recheck live candidate eligibility, source fingerprint and media turn. The previously verified snapshot exceeds its freshness window before 20:00 KST.",
-    "previous_check_commit_sha": "b62eee1e8d1a218c9bf17a82f1f3fc20ead0df3b"
+    "next_condition": "Current queue retains four READY slots and planned IMAGE/TEXT order. At each natural send, recheck current candidate eligibility, facts fingerprint and media. The 20:00 KST slot requires a newly collected validated source generation; the current snapshot will exceed its freshness limit.",
+    "previous_check_commit_sha": "bc22a5235a2cc141ce8b53935f186a6e334b1681"
   },
   "last_reported_publication": {
     "run_id": "42611038118",
