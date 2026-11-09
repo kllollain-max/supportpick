@@ -51,13 +51,13 @@ jobs:
         with:
           name: supportpick-runtime-state
           path: runtime-state/
-          retention-days: 3
+          retention-days: 14
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: supportpick-collection-evidence-${{ github.run_id }}-${{ github.run_attempt }}
           path: output/current-run/
-          retention-days: 3
+          retention-days: 14
       - name: Decide whether public content actually changed
         id: publish
         if: vars.SUPPORTPICK_SITE_PUBLIC_UPDATE_APPROVED == '1'
