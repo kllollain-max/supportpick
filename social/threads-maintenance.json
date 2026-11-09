@@ -792,13 +792,13 @@
     }
   },
   "last_check": {
-    "result": "new_trend_ready_queue_stored_no_recovery_needed",
-    "checked_at": "2026-11-09T13:50:09+09:00",
-    "current_main_sha": "9679fd1de98bfca93bc3d6405eabab817fae23c6",
+    "result": "new_trend_ready_queue_extended_no_recovery_needed",
+    "checked_at": "2026-11-09T14:26:24+09:00",
+    "current_main_sha": "acab8ae2a65392cda01da873c08574db4c391ff0",
     "publication_ledger_sha": "33c343b3ea04ca51f00efcdfced1c21d21689263",
-    "queue_blob_sha": "e6cfaffb9e79cfe7fbaf8cc44548e8fb4015c86d",
-    "queue_commit_sha": "ff48a325e64aea70670f1b1348f2317b2c2ccbc4",
-    "maintenance_previous_blob_sha": "3033fd7155920823e7d9fe432cdb4d59c58bd5d0",
+    "queue_blob_sha": "2afc24715becf213dbc3310030cc545325be1c98",
+    "queue_commit_sha": "3ff57b3904ee990c301556fe909a3c5d0403f716",
+    "maintenance_previous_blob_sha": "e4c774b9143648e4a29e0f1374380ce93cb197dc",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_ids": [],
@@ -852,10 +852,11 @@
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "master_prompt_blob_sha": "89b38a2a579a85cf0ad31dd40e08cc7df76d9333",
       "queue_write": true,
-      "queue_commit_sha": "ff48a325e64aea70670f1b1348f2317b2c2ccbc4",
-      "queue_blob_sha": "e6cfaffb9e79cfe7fbaf8cc44548e8fb4015c86d",
+      "queue_commit_sha": "3ff57b3904ee990c301556fe909a3c5d0403f716",
+      "queue_blob_sha": "2afc24715becf213dbc3310030cc545325be1c98",
       "queue_readback_equal": true,
-      "exact_preview_ready": 3,
+      "validate_ready_entry_and_preview": true,
+      "exact_preview_ready": 4,
       "preserved_ready_slots": [
         {
           "slot": "2026-11-09T16:00:00+09:00",
@@ -872,27 +873,52 @@
           "media_turn": "TEXT",
           "characters": 410,
           "status": "READY"
+        },
+        {
+          "slot": "2026-11-10T08:00:00+09:00",
+          "benefit_id": "B41000200003",
+          "pattern": "P1",
+          "media_turn": "IMAGE",
+          "characters": 383,
+          "status": "READY"
         }
       ],
       "new_ready_slot": {
-        "slot": "2026-11-10T08:00:00+09:00",
-        "benefit_id": "B41000200003",
-        "title": "전기 요금 복지할인",
-        "pattern": "P1",
-        "format": "생활공감형",
-        "media_turn": "IMAGE",
-        "characters": 383,
+        "slot": "2026-11-10T12:00:00+09:00",
+        "benefit_id": "135200000120",
+        "title": "아동수당",
+        "pattern": "P5",
+        "format": "대상자격 체크형",
+        "media_turn": "TEXT",
+        "characters": 349,
         "reply_count": 0,
         "status": "READY",
-        "expires_at": "2026-11-10T09:30:00+09:00",
+        "expires_at": "2026-11-10T13:30:00+09:00",
         "source_generation": "gov24-42527504841-1",
-        "source_fingerprint": "53ee989a2a93ad0210fba3f29bb040d941cb1b30bd20d01c34088a3fcdf715c9",
-        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "source_fingerprint": "b6cb43b9e290f67841af8cc7d74f64d3dab3e905bdb5f0b56b79076de51036cd",
         "official_sources_rechecked": true,
-        "image_bytes_recompared": true,
-        "new_visual_inspection_claimed": false,
         "source_recheck_required_at_publish": true,
         "platform_performance_metrics_used": false
+      },
+      "selection_decisions": [
+        {
+          "benefit_id": "GMO000000010",
+          "views": 157853,
+          "decision": "SKIP",
+          "reason": "2026년 접수는 5~6월로 안내되고 11월 현재 신규 접수 공식 근거가 없어 제외"
+        },
+        {
+          "benefit_id": "135200000120",
+          "views": 157701,
+          "decision": "SELECTED",
+          "reason": "보건복지부·복지로 2026년 현재 안내로 대상·지역별 금액·신청 경로 확인"
+        }
+      ],
+      "source_discrepancy": {
+        "benefit_id": "135200000120",
+        "older_summary": "보조금24 요약의 만 8세·월 10만 원",
+        "current_official": "보건복지부·복지로 2026년 안내의 만 9세 미만·지역별 월 10만~13만 원",
+        "action": "현재 공식 안내를 본문 근거로 사용하고 오래된 요약은 제외; 자연 발송 직전 재검증"
       }
     },
     "recovery": {
@@ -906,7 +932,7 @@
       "41796747628": "resolved status preserved; PR 7 and recovery run 41797892734 remain verified",
       "new_incident": null
     },
-    "next_condition": "The natural 16:00 publisher must revalidate the existing READY entry and latest source/image evidence before reservation. The new trend-style 08:00 draft remains queue-only until its natural slot; do not dispatch a test or backfill post."
+    "next_condition": "The natural 16:00 publisher must revalidate the existing READY entry and latest source/image evidence before reservation. The new 2026-11-10 12:00 TEXT draft remains queue-only until its natural slot; no test, backfill or recovery dispatch."
   },
   "last_reported_publication": {
     "run_id": "42557813040",
