@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-10T17:10:22+09:00",
+  "prepared_at": "2026-11-10T19:17:23+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -2530,8 +2530,8 @@
       "benefit_id": "B55258400009",
       "source_fingerprint": "2cb9fb936b0bc93d331c7df7069fbece8c959c9697a57687609409e99b544a1f",
       "source_generation": "gov24-42708067719-1",
-      "prepared_at": "2026-11-10T13:05:55+09:00",
-      "expires_at": "2026-11-11T13:05:55+09:00",
+      "prepared_at": "2026-11-10T19:17:23+09:00",
+      "expires_at": "2026-11-11T19:17:23+09:00",
       "asset_sha256": null,
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -2561,55 +2561,46 @@
               "source_id": "B55258400009",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999225&bnefType=all&svcId=B55258400009",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-10T13:05:55+09:00",
+              "verified_at": "2026-11-10T19:17:23+09:00",
               "claims_supported": [
-                "같은 ID 상세의 가정 세대주·세대원, 과거 2년 또는 1년 월별 기준 사용량 비교, 상시신청 안내를 대조했다.",
-                "동일 ID serviceList 누적 조회수 143362회. API 수집 확인 시각 2026-11-10T07:06:34.888072+09:00."
+                "완전 수집본의 동일 ID 원문에서 가정의 세대주·세대원, 과거 2년 또는 1년 월별 기준 사용량 및 상시신청을 재대조했다.",
+                "API 누적 조회수 143362회, API 확인 시각 2026-11-10T07:06:34.888072+09:00."
               ]
             },
             {
               "source_id": "B55258400009",
               "source_ref": "https://cpoint.or.kr/user/guide/registGuide.do",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T13:05:55+09:00",
+              "verified_at": "2026-11-10T19:17:23+09:00",
               "claims_supported": [
-                "계량기나 객관적인 방법으로 사용량 확인이 가능한 가구, 온라인과 시·군·구 방문 신청, 서울 에코마일리지 예외를 확인했다."
+                "사용량 확인이 가능한 가정의 세대주·세대원과 온라인·시군구 방문, 서울 에코마일리지 가입 경로를 확인했다."
               ]
             },
             {
               "source_id": "B55258400009",
               "source_ref": "https://cpoint.or.kr/user/guide/incentiveGuide.do",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T13:05:55+09:00",
+              "verified_at": "2026-11-10T19:17:23+09:00",
               "claims_supported": [
-                "개인 기본 감축 인센티브 5% 이상, 전기 5% 이상 10% 미만 5천 포인트, 연 2회 및 1포인트 최대 2원을 대조했다. 기존 우수 감축 가구의 유지 인센티브는 별도 조건이다."
+                "개인 기본 감축 5% 이상, 전기 5% 이상 10% 미만 5천 포인트, 연 2회 및 1포인트 최대 2원을 대조했다."
               ]
             },
             {
               "source_id": "B55258400009",
               "source_ref": "https://cpoint.or.kr/user/info/calPoint.do",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T13:05:55+09:00",
+              "verified_at": "2026-11-10T19:17:23+09:00",
               "claims_supported": [
-                "개인 반기별 지급 및 지자체별 2원 이내 환산과 실제 사용량에 따른 정산 차이를 확인했다."
+                "반기 기준 사용량과 현재 사용량 비교 및 지자체별 2원 이내 적용 안내를 확인했다."
               ]
             },
             {
               "source_id": "B55258400009",
-              "source_ref": "https://cpoint.or.kr/user/index.do",
+              "source_ref": "https://cpoint.or.kr/user/notice/read.do?notice_seq=12272",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T13:05:55+09:00",
+              "verified_at": "2026-11-10T19:17:23+09:00",
               "claims_supported": [
-                "에너지 분야 신규가입 안내와 기존 가입자의 주소 이전 11월 13일까지 제한 및 11월 16일 재개를 대조했다."
-              ]
-            },
-            {
-              "source_id": "B55258400009",
-              "source_ref": "https://www.cpoint.or.kr/user/notice/list.do",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T13:05:55+09:00",
-              "claims_supported": [
-                "공개 에너지 분야 공지 목록의 신규가입 안내와 주소 변경 제한을 대조했다. 녹색생활 실천 분야의 공지는 이 사업에 적용하지 않았다."
+                "2026년 상반기 정산에 따른 주소 이전 제한과 11월 16일 신청 재개를 9월 10일 공식 공지 원문에서 확인했다."
               ]
             }
           ],
@@ -2628,7 +2619,7 @@
           "warnings": [
             "개인 가정의 기본 감축 인센티브 기준만 설명한다. 5% 미만의 유지 인센티브 등 별도 기준은 적용을 단정하지 않는다.",
             "지자체별 지급 방식, 개인별 실제 포인트, 특정 지역의 행사 혜택은 이 안내에서 확정하지 않는다.",
-            "다음날 발송 시 현재 수집본의 24시간 신선도가 지난다. 새 수집본과 실제 게시 원장, 공식 안내 재확인이 필요하다."
+            "실제 발송 시 최신 완전 수집본과 공식 변경·종료 공지, 원장 교대를 다시 확인한다."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -2694,8 +2685,8 @@
       "benefit_id": "628000000139",
       "source_fingerprint": "84db0668f71767c70026a226fa832ade7e98681df65849f89f53c9e756bd31d4",
       "source_generation": "gov24-42708067719-1",
-      "prepared_at": "2026-11-10T17:10:22+09:00",
-      "expires_at": "2026-11-11T17:10:22+09:00",
+      "prepared_at": "2026-11-10T19:17:23+09:00",
+      "expires_at": "2026-11-11T19:17:23+09:00",
       "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -2725,17 +2716,17 @@
               "source_id": "628000000139",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004275&bnefType=all&svcId=628000000139",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-10T17:10:22+09:00",
+              "verified_at": "2026-11-10T19:17:23+09:00",
               "claims_supported": [
-                "동일 ID 상세의 인천e음 캐시백, 상시신청 및 앱 가입·카드신청·등록을 대조했다.",
-                "동일 ID serviceList 누적 조회수 136150회, API 확인시각 2026-11-10T07:06:14.840900+09:00. 기존 API 요약의 30만 원 한도보다 인천시의 2026년 4분기 공고를 우선했다."
+                "완전 수집본의 동일 ID 원문에서 상시신청과 앱 가입·카드신청·등록을 대조했다.",
+                "API 누적 조회수 136150회, API 확인 시각 2026-11-10T07:06:14.840900+09:00. 30만 원 구기준과 다른 현행 한도는 인천시 4분기 공고를 우선했다."
               ]
             },
             {
               "source_id": "628000000139",
               "source_ref": "https://www.incheon.go.kr/eco/ECO050101/view?curPage=1&nttNo=2046197&srchKey=&srchWord=",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T17:10:22+09:00",
+              "verified_at": "2026-11-10T19:17:23+09:00",
               "claims_supported": [
                 "인천시 2026년 10월 1일~12월 31일 기본 캐시백 10%, 월 결제액 50만 원 한도를 확인했다."
               ]
@@ -2744,29 +2735,29 @@
               "source_id": "628000000139",
               "source_ref": "https://www.incheon.go.kr/eco/ECO050101/view?nttNo=2046317",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T17:10:22+09:00",
+              "verified_at": "2026-11-10T19:17:23+09:00",
               "claims_supported": [
-                "2026년 10월 29일~11월 15일, 예산 소진 시 조기 종료, 연매출 30억 원 이하 가맹점, 월 결제액 50만 원 내 15% 및 착한가격업소 20%, 강화·옹진 각각 20%·25%를 확인했다.",
-                "공식 정정·종료 안내를 추가 확인했으나 이번 열람에서 더 최신 공지는 확인되지 않았다. 남은 예산과 개별 점포 적용 여부는 미확인이다."
+                "2026년 10월 29일~11월 15일, 예산 소진 시 조기 종료, 연매출 30억 원 이하 가맹점, 월 결제액 50만 원 한도, 일반 15%·착한가격업소 20%, 강화·옹진 각각 20%·25%를 확인했다.",
+                "확인한 공식 검색 범위에서 더 최신 정정·종료 공지는 확인되지 않았다. 실제 잔여 예산과 점포별 적용은 미확인이다."
               ]
             },
             {
               "source_id": "628000000139",
               "source_ref": "https://www.incheon.go.kr/eco/ECO020901",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T17:10:22+09:00",
+              "verified_at": "2026-11-10T19:17:23+09:00",
               "claims_supported": [
-                "인천e음 카드 발급 14세 이상, 타지역 시민도 가능, 공식 앱 가입·발급 안내를 확인했다."
+                "14세 이상 카드 발급, 타지역 시민도 가능, 공식 앱 가입과 발급 안내를 대조했다."
               ]
             },
             {
               "source_id": "628000000139",
               "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
               "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-10T17:10:22+09:00",
+              "verified_at": "2026-11-10T19:17:23+09:00",
               "claims_supported": [
-                "현재 main Git blob c60655f30016eee7979af07416347fee69b87a0f, 파일 SHA-256 0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd와 승인 시각검수 기록을 재대조했다.",
-                "같은 파일의 약 360px 축소본에서 브랜드·슬로건·안내 문구를 읽을 수 있음을 직접 확인했다. 사업별 금액·대상·기간·한정 문구는 없는 공통 이미지다."
+                "현재 main Git blob c60655f30016eee7979af07416347fee69b87a0f와 파일 SHA-256 0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd을 승인 시각검수 기록에 재대조했다.",
+                "약 360px에서 브랜드·안내 문구를 판독한 기존 검수 기록을 사용했다. 사업별 금액·대상·기간이 없는 공통 승인 이미지다."
               ]
             }
           ],
@@ -2784,7 +2775,7 @@
           "hold_reasons": [],
           "warnings": [
             "행사 예산 잔액과 실제 가맹점별 적용률은 미확인이다. 조건부 행사 문구를 사용했다.",
-            "현재 수집본은 실제 발송 때 24시간 신선도를 넘긴다. 최신 완전 수집본과 행사 변경·종료 공지 및 실제 원장 교대를 재확인해야 한다. 원고 만료 이후에는 실제 공식 원문과 이미지 재검수가 필요하다."
+            "실제 발송 시 최신 완전 수집본과 공식 변경·종료 공지, 원장 교대를 다시 확인한다."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
