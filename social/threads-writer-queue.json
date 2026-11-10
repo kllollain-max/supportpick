@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-10T01:29:39+09:00",
+  "prepared_at": "2026-11-10T17:10:22+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -334,6 +334,14 @@
         "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999161&bnefType=all&svcId=999000000044"
       ],
       "checked_at": "2026-11-10T10:13:52+09:00"
+    },
+    {
+      "benefit_id": "569000000351",
+      "decision": "HOLD",
+      "reason": "완전 수집본의 동일 ID 보조금24 원문은 명절기간과 읍면동장 추천을 안내한다. 현재 대상 명절·추천 시기·지급 일정이 확인되는 세종시 공고를 확보하지 못했고 공개 원문 페이지도 직접 열람하지 못해 현재 이용 안내에서 보류했다.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004091&bnefType=all&svcId=569000000351"
+      ]
     }
   ],
   "entries": [
@@ -2678,6 +2686,168 @@
           "opening": "지난해보다 전기나 수도를 덜 썼다면, 사용량을 확인할 수 있는 가구는 탄소중립포인트 에너지에 가입해 절감 실적에 따라 포인트를 받을 수 있어요.",
           "structure": "가정의 사용량 절감 → 항목별 포인트 산정 예 → 환산·가입처 → 기존 회원 이전 예외 → CTA",
           "media_turn": "TEXT"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-11T16:00:00+09:00",
+      "benefit_id": "628000000139",
+      "source_fingerprint": "84db0668f71767c70026a226fa832ade7e98681df65849f89f53c9e756bd31d4",
+      "source_generation": "gov24-42708067719-1",
+      "prepared_at": "2026-11-10T17:10:22+09:00",
+      "expires_at": "2026-11-11T17:10:22+09:00",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "628000000139",
+        "post_text": "인천e음 이용자는 인천의 대상 가맹점에서 결제하면, 10~12월 기본 캐시백을 월 결제액 50만 원 한도에서 10% 받을 수 있어요.\n\n11월 15일까지 행사 예산이 남아 있으면 연매출 30억 원 이하 가맹점은 15%, 착한가격업소는 20%예요. 강화·옹진에서는 각각 20%, 25%가 적용돼요.\n\n다른 지역에 살아도 만 14세 이상이면 인천e음 앱에서 가입하고 카드를 신청할 수 있어요. 결제 전 이용할 가맹점과 행사 적용 여부를 확인해 주세요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-11T16:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "인천의 가맹점에서 인천e음으로 결제하거나 처음 카드를 발급받으려는 만 14세 이상 이용자",
+          "central_message": "인천e음 기본 캐시백과 예산 조건이 있는 행사 캐시백을 구분하고 결제 전에 가맹점과 적용 여부를 확인한다.",
+          "pattern": "P8",
+          "selection_reason": "현재 원장과 앞선 세 슬롯의 사업을 제외하고 같은 서비스 ID의 보조금24 누적 조회수 순으로 선정했다. 더 높은 후보의 확인 출처와 판단은 queue.selection_notes에 있다.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "628000000139",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004275&bnefType=all&svcId=628000000139",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-10T17:10:22+09:00",
+              "claims_supported": [
+                "동일 ID 상세의 인천e음 캐시백, 상시신청 및 앱 가입·카드신청·등록을 대조했다.",
+                "동일 ID serviceList 누적 조회수 136150회, API 확인시각 2026-11-10T07:06:14.840900+09:00. 기존 API 요약의 30만 원 한도보다 인천시의 2026년 4분기 공고를 우선했다."
+              ]
+            },
+            {
+              "source_id": "628000000139",
+              "source_ref": "https://www.incheon.go.kr/eco/ECO050101/view?curPage=1&nttNo=2046197&srchKey=&srchWord=",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-10T17:10:22+09:00",
+              "claims_supported": [
+                "인천시 2026년 10월 1일~12월 31일 기본 캐시백 10%, 월 결제액 50만 원 한도를 확인했다."
+              ]
+            },
+            {
+              "source_id": "628000000139",
+              "source_ref": "https://www.incheon.go.kr/eco/ECO050101/view?nttNo=2046317",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-10T17:10:22+09:00",
+              "claims_supported": [
+                "2026년 10월 29일~11월 15일, 예산 소진 시 조기 종료, 연매출 30억 원 이하 가맹점, 월 결제액 50만 원 내 15% 및 착한가격업소 20%, 강화·옹진 각각 20%·25%를 확인했다.",
+                "공식 정정·종료 안내를 추가 확인했으나 이번 열람에서 더 최신 공지는 확인되지 않았다. 남은 예산과 개별 점포 적용 여부는 미확인이다."
+              ]
+            },
+            {
+              "source_id": "628000000139",
+              "source_ref": "https://www.incheon.go.kr/eco/ECO020901",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-10T17:10:22+09:00",
+              "claims_supported": [
+                "인천e음 카드 발급 14세 이상, 타지역 시민도 가능, 공식 앱 가입·발급 안내를 확인했다."
+              ]
+            },
+            {
+              "source_id": "628000000139",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-10T17:10:22+09:00",
+              "claims_supported": [
+                "현재 main Git blob c60655f30016eee7979af07416347fee69b87a0f, 파일 SHA-256 0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd와 승인 시각검수 기록을 재대조했다.",
+                "같은 파일의 약 360px 축소본에서 브랜드·슬로건·안내 문구를 읽을 수 있음을 직접 확인했다. 사업별 금액·대상·기간·한정 문구는 없는 공통 이미지다."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 268,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "행사 예산 잔액과 실제 가맹점별 적용률은 미확인이다. 조건부 행사 문구를 사용했다.",
+            "현재 수집본은 실제 발송 때 24시간 신선도를 넘긴다. 최신 완전 수집본과 행사 변경·종료 공지 및 실제 원장 교대를 재확인해야 한다. 원고 만료 이후에는 실제 공식 원문과 이미지 재검수가 필요하다."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "인천e음 캐시백의 기본 요율과 한시 요율은 어떻게 다르고 월 얼마까지 적용되나요?",
+            "reader_scope": "인천의 가맹점에서 인천e음으로 결제하거나 처음 카드를 발급받으려는 만 14세 이상 이용자",
+            "angles": [
+              "장보기 전에 4분기 기본 캐시백의 월 결제 한도 확인",
+              "일반·착한가격업소와 강화·옹진의 한시 행사 요율 구분",
+              "다른 지역 거주자의 앱 가입 및 가맹점 확인"
+            ],
+            "chosen_angle": "일반·착한가격업소와 강화·옹진의 한시 행사 요율 구분",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "인천에서 장보기 전에 인천e음으로 결제할 계획이라면, 대상 가맹점의 4분기 기본 캐시백 10%와 월 결제액 50만 원 한도를 확인해 보세요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "인천e음 이용자는 인천의 대상 가맹점에서 결제하면, 10~12월 기본 캐시백을 월 결제액 50만 원 한도에서 10% 받을 수 있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "인천e음의 월 50만 원 한도는 캐시백을 계산할 때 적용되는 결제액 기준이에요."
+              }
+            ],
+            "chosen_opening": "인천e음 이용자는 인천의 대상 가맹점에서 결제하면, 10~12월 기본 캐시백을 월 결제액 50만 원 한도에서 10% 받을 수 있어요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "11월 11일 16시 반전 배정 B. 인천 임산부 교통비 글은 정책 포인트와 신청 절차였고 이번 글은 인천e음 일반 결제의 기본·한시 캐시백 요율을 비교한다.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "인천 광역·군별 요율",
+              "benefit": "지역사랑상품권 캐시백",
+              "application": "카드 발급 상시·행사 11월 15일 또는 예산 소진",
+              "audience": "일반 이용자 14세 이상",
+              "media": "IMAGE"
+            },
+            "applied_elements": [
+              "대상과 기본 혜택을 첫 문장에 제시",
+              "월 결제액과 캐시백률의 단위 구분",
+              "기본·행사·지역 조건 분리",
+              "예산 조건과 결제 전 확인"
+            ],
+            "image_review": {
+              "width_px": 360,
+              "asset": "approved_generic_rotation",
+              "claim_match": "no program-specific claims",
+              "program_card_available": false
+            },
+            "profile_route": "공개 Threads 프로필 및 지원금픽 공개 상세는 승인된 읽기 점검에서 접근이 제한됐다. 인천시 공식 카드 발급 안내는 열람했다.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "628000000139",
+          "notice_version": "gov24-42708067719-1:인천시 2046197+2046317",
+          "pattern": "P8",
+          "opening": "인천e음 이용자는 인천의 대상 가맹점에서 결제하면, 10~12월 기본 캐시백을 월 결제액 50만 원 한도에서 10% 받을 수 있어요.",
+          "structure": "인천e음 기본 요율·월 결제 한도 → 가맹점별 행사 요율과 예산 조건 → 카드 가입과 결제 전 확인 → CTA",
+          "media_turn": "IMAGE"
         }
       }
     }
