@@ -1864,12 +1864,12 @@
     "existing_safety_contract_precedence": true
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-10T14:50:57+09:00",
+    "checked_at": "2026-11-10T15:53:31+09:00",
     "result": "no_update",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
     "publication_ledger_sha": "9772f62298bb0fbe19343d3ad2b39ba99db28b91",
     "queue_blob_sha": "220e6e1f467bc62193fa804196478ff72e68c769",
-    "maintenance_previous_blob_sha": "ab96ac64498c501a31d8ba316df91bd04107779e",
+    "maintenance_previous_blob_sha": "131ca2cb8ef35b341dc1b8a3a16e7dbe8d8f5586",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [],
