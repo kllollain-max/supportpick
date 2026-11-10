@@ -71,10 +71,10 @@
   "last_health": {
     "unresolved_publications": 0,
     "published_benefits": 24,
-    "source_run_id": "42708067719",
+    "source_run_id": "42797196046",
     "source_result": "success",
     "source_count": 10942,
-    "source_last_success_at": "2026-11-10T07:08:56.482351+09:00",
+    "source_last_success_at": "2026-11-10T19:19:19.228474+09:00",
     "source_workflow_conclusion": "success",
     "source_failure_classification": null,
     "last_publisher_run_id": "42779218989",
@@ -85,8 +85,8 @@
     "account_verified": true,
     "threads_basic": true,
     "threads_content_publish": true,
-    "source_active_run_id": "42797196046",
-    "source_active_status": "in_progress"
+    "source_active_run_id": null,
+    "source_active_status": null
   },
   "incidents": {
     "41796747628": {
@@ -849,9 +849,9 @@
     },
     "42797196046": {
       "run_attempt": 1,
-      "status": "in_progress",
-      "conclusion": null,
-      "updated_at": "2026-11-10T10:12:47Z",
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-10T10:21:11Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
     }
   },
@@ -1878,69 +1878,52 @@
     "existing_safety_contract_precedence": true
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-10T19:17:23+09:00",
-    "result": "queue_evidence_revalidated_no_new_publication",
+    "checked_at": "2026-11-10T20:17:34+09:00",
+    "result": "evening_source_verified_next_four_slots_ready_current_slot_awaiting_natural_run",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
     "publication_ledger_sha": "9f72085a0048932902020ef52d063008645bbc79",
-    "queue_blob_sha": "69746febf335fc3c6fe6b25ba5a9284aa3fdade1",
-    "maintenance_previous_blob_sha": "57174c0fe37fa29ef084f535f56f3153b28b3c0b",
+    "queue_blob_sha": "cb1b06257ec38f2e7bfe9d4478b8dafc43801f3d",
+    "maintenance_previous_blob_sha": "fac9d4a8fd93bb152201fab94084533026a4db9c",
     "unresolved_publications": 0,
-    "active_target_runs": [
-      {
-        "run_id": "42797196046",
-        "run_attempt": 1,
-        "status": "in_progress",
-        "conclusion": null,
-        "updated_at": "2026-11-10T10:12:47Z",
-        "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-        "job_id": "129765271229",
-        "step": "Collect and promote only a complete generation",
-        "runtime_artifact_available": false
-      }
-    ],
+    "active_target_runs": [],
     "changed_run_versions": [
       {
         "run_id": "42797196046",
         "run_attempt": 1,
-        "status": "in_progress",
-        "conclusion": null,
-        "updated_at": "2026-11-10T10:12:47Z",
-        "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-10T10:21:11Z",
+        "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
+        "previous": {
+          "run_attempt": 1,
+          "status": "in_progress",
+          "conclusion": null,
+          "updated_at": "2026-11-10T10:12:47Z",
+          "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
+        }
       }
     ],
     "source": {
-      "run_id": "42708067719",
+      "run_id": "42797196046",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-09T22:14:23Z",
+      "updated_at": "2026-11-10T10:21:11Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-      "job_id": "129470041700",
-      "artifact_id": "13715561025",
-      "artifact_digest": "sha256:f2b158a3c21b52a288f8b036eeafdb017c670ed017d80807a73efc13762901bf",
-      "manifest_sha256": "70b3f564d2bb3e7b4f743406e1d96d23f4df90e912f5acb592aa138ad1279662",
-      "generation": "gov24-42708067719-1",
+      "generation": "gov24-42797196046-1",
       "count": 10942,
-      "collection_succeeded_at": "2026-11-10T07:08:56.482351+09:00",
+      "manifest_sha256": "81208157cddb9824c18584c5fcd5d9c82eb953f146cf60fb2e5190182badbf17",
+      "collection_succeeded_at": "2026-11-10T19:19:19.228474+09:00",
+      "job_id": "129765271229",
+      "artifact_id": "13755227661",
+      "artifact_digest": "sha256:3d7b9f060d4487d9e3304cfd96de99161556dbb53d763a77315f0d4984f0a0e3",
       "read_current_verify_snapshot_load_feed": true,
       "collection_step": "completed_success",
       "currently_consumable_as_latest_completed": true,
       "job_logs": "completed_verified",
       "job_conclusion": "success",
       "fresh_at_check": true,
-      "current_application_status_not_inferred": true,
-      "revalidated_at": "2026-11-10T19:17:23+09:00",
-      "active_collection": {
-        "run_id": "42797196046",
-        "run_attempt": 1,
-        "status": "in_progress",
-        "conclusion": null,
-        "updated_at": "2026-11-10T10:12:47Z",
-        "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-        "job_id": "129765271229",
-        "step": "Collect and promote only a complete generation",
-        "runtime_artifact_available": false
-      }
+      "current_application_status_not_inferred": true
     },
     "publisher": {
       "run_id": "42779218989",
@@ -1957,28 +1940,26 @@
       "main_id": "18117968657159347",
       "stage": "complete",
       "content_hash": "05d4a451f446f97145d9b5e547a156ebc23bfcd21b0038cb93918f8b186c1546",
-      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd"
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "current_slot": {
+        "slot": "2026-11-10T20:00:00+09:00",
+        "status": "waiting_for_natural_execution_within_grace_period",
+        "reserved": false,
+        "manual_dispatch": false
+      }
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "queue_reused": true,
       "queue_write": true,
-      "queue_previous_blob_sha": "47acd93c639d0f374cc16c5194f7561355c37aba",
-      "queue_commit_sha": "71e7d69aefcf706f2454e6010f65cdeb7a0617ed",
+      "queue_previous_blob_sha": "69746febf335fc3c6fe6b25ba5a9284aa3fdade1",
+      "queue_commit_sha": "affe3874a362a767b745f15d1f1d540c00dd2692",
       "queue_readback_equal": true,
-      "preview_ready": 4,
+      "preview_ready": 5,
+      "ready_future_slots": 4,
+      "existing_open_slot_preview": true,
       "validate_ready_entry_and_preview": true,
       "next_24h_sequence": [
-        {
-          "slot": "2026-11-10T20:00:00+09:00",
-          "benefit_id": "628000000739",
-          "pattern": "P8",
-          "media_turn": "TEXT",
-          "char_count": 387,
-          "last_simulated_draft_validation": "2026-11-10T21:59:59+09:00",
-          "current_source_covers_window": true,
-          "source_recheck_required_at_publish": true
-        },
         {
           "slot": "2026-11-11T08:00:00+09:00",
           "benefit_id": "149200000041",
@@ -1986,7 +1967,8 @@
           "media_turn": "IMAGE",
           "char_count": 320,
           "last_simulated_draft_validation": "2026-11-11T09:59:59+09:00",
-          "current_source_covers_window": false,
+          "current_source_fresh_at_slot": true,
+          "current_source_covers_window": true,
           "source_recheck_required_at_publish": true
         },
         {
@@ -1996,7 +1978,8 @@
           "media_turn": "TEXT",
           "char_count": 358,
           "last_simulated_draft_validation": "2026-11-11T13:59:59+09:00",
-          "current_source_covers_window": false,
+          "current_source_fresh_at_slot": true,
+          "current_source_covers_window": true,
           "source_recheck_required_at_publish": true
         },
         {
@@ -2006,200 +1989,50 @@
           "media_turn": "IMAGE",
           "char_count": 268,
           "last_simulated_draft_validation": "2026-11-11T17:59:59+09:00",
+          "current_source_fresh_at_slot": true,
+          "current_source_covers_window": true,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-11T20:00:00+09:00",
+          "benefit_id": "SD0000007672",
+          "pattern": "P5",
+          "media_turn": "TEXT",
+          "char_count": 408,
+          "last_simulated_draft_validation": "2026-11-11T20:16:22+09:00",
+          "current_source_fresh_at_slot": false,
           "current_source_covers_window": false,
           "source_recheck_required_at_publish": true
         }
       ],
-      "unchanged_existing_entries": 20,
-      "refreshed": [
-        {
-          "slot": "2026-11-11T12:00:00+09:00",
-          "benefit_id": "B55258400009",
-          "previous": {
-            "prepared_at": "2026-11-10T13:05:55+09:00",
-            "expires_at": "2026-11-11T13:05:55+09:00",
-            "source_generation": "gov24-42708067719-1"
-          },
-          "prepared_at": "2026-11-10T19:17:23+09:00",
-          "expires_at": "2026-11-11T19:17:23+09:00",
-          "body_sha256": "a7046c43f093b16e336af06820d1ca5fc479e1e7dafd3e53e8a0001e8c34fb5e",
-          "asset_sha256": null,
-          "source_fingerprint": "2cb9fb936b0bc93d331c7df7069fbece8c959c9697a57687609409e99b544a1f",
-          "pattern": "P3",
-          "media_turn": "TEXT",
-          "cohort": "A",
-          "previous_evidence": [
-            {
-              "source_id": "B55258400009",
-              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999225&bnefType=all&svcId=B55258400009",
-              "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-10T13:05:55+09:00",
-              "claims_supported": [
-                "같은 ID 상세의 가정 세대주·세대원, 과거 2년 또는 1년 월별 기준 사용량 비교, 상시신청 안내를 대조했다.",
-                "동일 ID serviceList 누적 조회수 143362회. API 수집 확인 시각 2026-11-10T07:06:34.888072+09:00."
-              ]
-            },
-            {
-              "source_id": "B55258400009",
-              "source_ref": "https://cpoint.or.kr/user/guide/registGuide.do",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T13:05:55+09:00",
-              "claims_supported": [
-                "계량기나 객관적인 방법으로 사용량 확인이 가능한 가구, 온라인과 시·군·구 방문 신청, 서울 에코마일리지 예외를 확인했다."
-              ]
-            },
-            {
-              "source_id": "B55258400009",
-              "source_ref": "https://cpoint.or.kr/user/guide/incentiveGuide.do",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T13:05:55+09:00",
-              "claims_supported": [
-                "개인 기본 감축 인센티브 5% 이상, 전기 5% 이상 10% 미만 5천 포인트, 연 2회 및 1포인트 최대 2원을 대조했다. 기존 우수 감축 가구의 유지 인센티브는 별도 조건이다."
-              ]
-            },
-            {
-              "source_id": "B55258400009",
-              "source_ref": "https://cpoint.or.kr/user/info/calPoint.do",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T13:05:55+09:00",
-              "claims_supported": [
-                "개인 반기별 지급 및 지자체별 2원 이내 환산과 실제 사용량에 따른 정산 차이를 확인했다."
-              ]
-            },
-            {
-              "source_id": "B55258400009",
-              "source_ref": "https://cpoint.or.kr/user/index.do",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T13:05:55+09:00",
-              "claims_supported": [
-                "에너지 분야 신규가입 안내와 기존 가입자의 주소 이전 11월 13일까지 제한 및 11월 16일 재개를 대조했다."
-              ]
-            },
-            {
-              "source_id": "B55258400009",
-              "source_ref": "https://www.cpoint.or.kr/user/notice/list.do",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T13:05:55+09:00",
-              "claims_supported": [
-                "공개 에너지 분야 공지 목록의 신규가입 안내와 주소 변경 제한을 대조했다. 녹색생활 실천 분야의 공지는 이 사업에 적용하지 않았다."
-              ]
-            }
-          ],
-          "official_recheck": [
-            {
-              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999225&bnefType=all&svcId=B55258400009",
-              "access_method": "PROVIDED_OFFICIAL_TEXT"
-            },
-            {
-              "source_ref": "https://cpoint.or.kr/user/guide/registGuide.do",
-              "access_method": "OPENED_OFFICIAL"
-            },
-            {
-              "source_ref": "https://cpoint.or.kr/user/guide/incentiveGuide.do",
-              "access_method": "OPENED_OFFICIAL"
-            },
-            {
-              "source_ref": "https://cpoint.or.kr/user/info/calPoint.do",
-              "access_method": "OPENED_OFFICIAL"
-            },
-            {
-              "source_ref": "https://cpoint.or.kr/user/notice/read.do?notice_seq=12272",
-              "access_method": "OPENED_OFFICIAL"
-            }
-          ],
-          "reason": "The prior READY review expired before the two-hour slot ended. Official evidence and current image hashes were rechecked; body, media, pattern, slot and cohort were preserved."
-        },
-        {
-          "slot": "2026-11-11T16:00:00+09:00",
-          "benefit_id": "628000000139",
-          "previous": {
-            "prepared_at": "2026-11-10T17:10:22+09:00",
-            "expires_at": "2026-11-11T17:10:22+09:00",
-            "source_generation": "gov24-42708067719-1"
-          },
-          "prepared_at": "2026-11-10T19:17:23+09:00",
-          "expires_at": "2026-11-11T19:17:23+09:00",
-          "body_sha256": "e068ca82a65d0d16bfaa4e9b827d4c88742f33b42acd0861b5db2f1cfc1aa98f",
-          "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-          "source_fingerprint": "84db0668f71767c70026a226fa832ade7e98681df65849f89f53c9e756bd31d4",
-          "pattern": "P8",
-          "media_turn": "IMAGE",
-          "cohort": "B",
-          "previous_evidence": [
-            {
-              "source_id": "628000000139",
-              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004275&bnefType=all&svcId=628000000139",
-              "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-10T17:10:22+09:00",
-              "claims_supported": [
-                "동일 ID 상세의 인천e음 캐시백, 상시신청 및 앱 가입·카드신청·등록을 대조했다.",
-                "동일 ID serviceList 누적 조회수 136150회, API 확인시각 2026-11-10T07:06:14.840900+09:00. 기존 API 요약의 30만 원 한도보다 인천시의 2026년 4분기 공고를 우선했다."
-              ]
-            },
-            {
-              "source_id": "628000000139",
-              "source_ref": "https://www.incheon.go.kr/eco/ECO050101/view?curPage=1&nttNo=2046197&srchKey=&srchWord=",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T17:10:22+09:00",
-              "claims_supported": [
-                "인천시 2026년 10월 1일~12월 31일 기본 캐시백 10%, 월 결제액 50만 원 한도를 확인했다."
-              ]
-            },
-            {
-              "source_id": "628000000139",
-              "source_ref": "https://www.incheon.go.kr/eco/ECO050101/view?nttNo=2046317",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T17:10:22+09:00",
-              "claims_supported": [
-                "2026년 10월 29일~11월 15일, 예산 소진 시 조기 종료, 연매출 30억 원 이하 가맹점, 월 결제액 50만 원 내 15% 및 착한가격업소 20%, 강화·옹진 각각 20%·25%를 확인했다.",
-                "공식 정정·종료 안내를 추가 확인했으나 이번 열람에서 더 최신 공지는 확인되지 않았다. 남은 예산과 개별 점포 적용 여부는 미확인이다."
-              ]
-            },
-            {
-              "source_id": "628000000139",
-              "source_ref": "https://www.incheon.go.kr/eco/ECO020901",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T17:10:22+09:00",
-              "claims_supported": [
-                "인천e음 카드 발급 14세 이상, 타지역 시민도 가능, 공식 앱 가입·발급 안내를 확인했다."
-              ]
-            },
-            {
-              "source_id": "628000000139",
-              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-              "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-10T17:10:22+09:00",
-              "claims_supported": [
-                "현재 main Git blob c60655f30016eee7979af07416347fee69b87a0f, 파일 SHA-256 0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd와 승인 시각검수 기록을 재대조했다.",
-                "같은 파일의 약 360px 축소본에서 브랜드·슬로건·안내 문구를 읽을 수 있음을 직접 확인했다. 사업별 금액·대상·기간·한정 문구는 없는 공통 이미지다."
-              ]
-            }
-          ],
-          "official_recheck": [
-            {
-              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004275&bnefType=all&svcId=628000000139",
-              "access_method": "PROVIDED_OFFICIAL_TEXT"
-            },
-            {
-              "source_ref": "https://www.incheon.go.kr/eco/ECO050101/view?curPage=1&nttNo=2046197&srchKey=&srchWord=",
-              "access_method": "OPENED_OFFICIAL"
-            },
-            {
-              "source_ref": "https://www.incheon.go.kr/eco/ECO050101/view?nttNo=2046317",
-              "access_method": "OPENED_OFFICIAL"
-            },
-            {
-              "source_ref": "https://www.incheon.go.kr/eco/ECO020901",
-              "access_method": "OPENED_OFFICIAL"
-            },
-            {
-              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-              "access_method": "UPSTREAM_VERIFIED"
-            }
-          ],
-          "reason": "The prior READY review expired before the two-hour slot ended. Official evidence and current image hashes were rechecked; body, media, pattern, slot and cohort were preserved."
-        }
-      ]
+      "current_slot_preview": {
+        "slot": "2026-11-10T20:00:00+09:00",
+        "benefit_id": "628000000739",
+        "pattern": "P8",
+        "media_turn": "TEXT",
+        "char_count": 387,
+        "last_simulated_draft_validation": "2026-11-10T21:59:59+09:00",
+        "current_source_fresh_at_slot": true,
+        "current_source_covers_window": true,
+        "source_recheck_required_at_publish": true
+      },
+      "unchanged_existing_entries": 22,
+      "new_ready": {
+        "slot": "2026-11-11T20:00:00+09:00",
+        "benefit_id": "SD0000007672",
+        "pattern": "P5",
+        "media_turn": "TEXT",
+        "cohort": "A",
+        "char_count": 408,
+        "body_sha256": "fc4487b3ce6911a80876062fa06511fc1007d0d963d00e5b1cc7636dcdcdc37c",
+        "source_fingerprint": "31c59bbefc437691f59b1047361d5b31bb8531693ef7b8703f2910c0e8618234",
+        "views": 121986,
+        "projected_rank": 20,
+        "upper_candidate_exclusions": 19,
+        "expires_at": "2026-11-11T20:16:23+09:00",
+        "source_fresh_at_slot_with_current_snapshot": false,
+        "review_expiry_before_end_of_delay_window": true
+      }
     },
     "metrics": {
       "status": "awaiting_first_cohort_24h_window",
@@ -2217,7 +2050,7 @@
       "41796747628": "resolved",
       "new_incident": null
     },
-    "next_condition": "Allow the regular 20:00 KST publisher to consume the queue. Reconcile the evening collection when it completes. Tomorrow's three prepared slots require a newer complete source and matching per-benefit fingerprints at send time."
+    "next_condition": "Check today's natural 20:00 KST result inside the two-hour window. If it skips before reservation, recalculate remaining future drafts from the successful ledger. November 11 20:00 requires a newer complete source and official evidence refresh before the queued review expires at 20:16:23 KST."
   },
   "reach_policy": {
     "policy_id": "supportpick-threads-reach-v1-20261109",
