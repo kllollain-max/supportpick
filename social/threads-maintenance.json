@@ -1870,12 +1870,12 @@
     "existing_safety_contract_precedence": true
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-10T15:53:31+09:00",
+    "checked_at": "2026-11-10T17:28:06.269368+09:00",
     "result": "no_update",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-    "publication_ledger_sha": "9772f62298bb0fbe19343d3ad2b39ba99db28b91",
-    "queue_blob_sha": "220e6e1f467bc62193fa804196478ff72e68c769",
-    "maintenance_previous_blob_sha": "131ca2cb8ef35b341dc1b8a3a16e7dbe8d8f5586",
+    "publication_ledger_sha": "9f72085a0048932902020ef52d063008645bbc79",
+    "queue_blob_sha": "47acd93c639d0f374cc16c5194f7561355c37aba",
+    "maintenance_previous_blob_sha": "2b1db9a3febb9aefccb4934c814b595fdcaa7257",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [],
@@ -1899,72 +1899,45 @@
       "job_logs": "completed_verified",
       "job_conclusion": "success",
       "fresh_at_check": true,
-      "current_application_status_not_inferred": true
+      "current_application_status_not_inferred": true,
+      "revalidated_at": "2026-11-10T17:28:06.269368+09:00"
     },
     "publisher": {
-      "run_id": "42750586131",
+      "run_id": "42779218989",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-10T03:37:56Z",
+      "updated_at": "2026-11-10T08:01:02Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-      "job_id": "129612993837",
-      "artifact_id": "13733825421",
-      "artifact_digest": "sha256:721d312e47565ce3b04f9ed34d7f3207185e99017bac018e7888977f64455a81",
+      "job_id": "129704945564",
+      "artifact_id": "13744872806",
+      "receipt_and_ledger_match": true,
+      "previously_reported": true,
       "classification": "verified_natural_publication",
-      "event": "schedule",
-      "published": true,
-      "slot": "2026-11-10T12:00:00+09:00",
-      "published_at": "2026-11-10T12:37:05.687958+09:00",
-      "benefit_id": "135200000120",
-      "main_id": "18117186563042148",
-      "url": "https://www.threads.com/@hid_1004/post/Dfi9PNxALoe",
+      "main_id": "18117968657159347",
       "stage": "complete",
-      "verified": true,
-      "content_hash": "d7091c21297af63f66dadde0923711fd45af045121e8e07c1205f4a85e1aa393",
-      "asset_sha256": null,
-      "source_generation": "gov24-42708067719-1",
-      "pattern": "P5",
-      "media_turn": "TEXT",
-      "replies": 0,
-      "verification": "Publisher authenticated readback, job log receipt, durable ledger, queued text hash, and digest-verified workflow result agree.",
-      "verification_completed_at": "2026-11-10T13:06:48+09:00",
-      "public_web_visibility_independently_verified": false,
-      "public_web_check": "Public permalink not independently accessible through the external read path.",
-      "publication_ledger_records": 23,
-      "pending": null,
-      "lease": null,
-      "new_publication_observed": false
+      "content_hash": "05d4a451f446f97145d9b5e547a156ebc23bfcd21b0038cb93918f8b186c1546",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd"
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "queue_reused": true,
       "queue_write": false,
-      "queue_readback_equal": true,
-      "validate_ready_entry_and_preview": true,
       "preview_ready": 4,
+      "validate_ready_entry_and_preview": true,
       "next_24h_sequence": [
-        {
-          "slot": "2026-11-10T16:00:00+09:00",
-          "benefit_id": "628000000735",
-          "pattern": "P6",
-          "media_turn": "IMAGE",
-          "char_count": 459,
-          "expires_at": "2026-11-11T01:29:39+09:00",
-          "current_source_covers_window": true,
-          "review_covers_window": true,
-          "validated_until": "2026-11-10T17:59:59+09:00"
-        },
         {
           "slot": "2026-11-10T20:00:00+09:00",
           "benefit_id": "628000000739",
           "pattern": "P8",
           "media_turn": "TEXT",
           "char_count": 387,
-          "expires_at": "2026-11-10T14:47:17.000Z",
+          "ready_at_simulated_start": true,
+          "last_simulated_draft_validation": "2026-11-10T21:59:59+09:00",
+          "source_current_snapshot_fresh_at_slot": true,
           "current_source_covers_window": true,
-          "review_covers_window": true,
-          "validated_until": "2026-11-10T21:59:59+09:00"
+          "rank": 17,
+          "source_recheck_required_at_publish": true
         },
         {
           "slot": "2026-11-11T08:00:00+09:00",
@@ -1972,10 +1945,12 @@
           "pattern": "P6",
           "media_turn": "IMAGE",
           "char_count": 320,
-          "expires_at": "2026-11-11T10:13:52+09:00",
+          "ready_at_simulated_start": true,
+          "last_simulated_draft_validation": "2026-11-11T09:59:59+09:00",
+          "source_current_snapshot_fresh_at_slot": false,
           "current_source_covers_window": false,
-          "review_covers_window": true,
-          "validated_until": "2026-11-11T09:59:59+09:00"
+          "rank": 18,
+          "source_recheck_required_at_publish": true
         },
         {
           "slot": "2026-11-11T12:00:00+09:00",
@@ -1983,20 +1958,32 @@
           "pattern": "P3",
           "media_turn": "TEXT",
           "char_count": 358,
-          "expires_at": "2026-11-11T13:05:55+09:00",
+          "ready_at_simulated_start": true,
+          "last_simulated_draft_validation": "2026-11-11T13:05:54+09:00",
+          "source_current_snapshot_fresh_at_slot": false,
           "current_source_covers_window": false,
-          "review_covers_window": false,
-          "validated_until": "2026-11-11T13:05:54+09:00"
+          "rank": 18,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-11T16:00:00+09:00",
+          "benefit_id": "628000000139",
+          "pattern": "P8",
+          "media_turn": "IMAGE",
+          "char_count": 268,
+          "ready_at_simulated_start": true,
+          "last_simulated_draft_validation": "2026-11-11T17:10:21+09:00",
+          "source_current_snapshot_fresh_at_slot": false,
+          "current_source_covers_window": false,
+          "rank": 19,
+          "source_recheck_required_at_publish": true
         }
-      ],
-      "source_recheck_required_at_publish": true
+      ]
     },
     "metrics": {
-      "status": "unavailable_in_current_execution",
+      "status": "awaiting_first_cohort_24h_window",
       "policy_post_measurements_due": 0,
-      "latest_publication_in_cohort": false,
-      "first_policy_post_status": "awaiting_publication",
-      "note": "12:00 slot remains a pre-existing exclusion. No authenticated Insights response or due cohort measurement."
+      "official_insights_read_path": "not_available_in_current_execution"
     },
     "recovery": {
       "required": false,
@@ -2009,7 +1996,7 @@
       "41796747628": "resolved",
       "new_incident": null
     },
-    "next_condition": "Verify the 16:00 KST publication within its original window. November 11 08:00 and 12:00 need a verified new collection; the noon review expires at 13:05:55 KST and needs factual re-review if publication has not occurred before expiry."
+    "next_condition": "Use existing 20:00 KST schedule. Tomorrow slots require a new complete source. Verify noon and 16:00 review expiry against any delay. First cohort observation due November 11 17:00:08 KST."
   },
   "reach_policy": {
     "policy_id": "supportpick-threads-reach-v1-20261109",
