@@ -67,7 +67,8 @@
     "42750586131",
     "42779218989",
     "42797196046",
-    "42809117674"
+    "42809117674",
+    "42910050871"
   ],
   "last_health": {
     "unresolved_publications": 0,
@@ -494,6 +495,37 @@
         "verification_completed_at": "2026-11-06T12:40:54.5990097+09:00",
         "recorded_at": "2026-11-06T13:12:20.787+09:00"
       }
+    },
+    "42910050871": {
+      "run_id": "42910050871",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "updated_at": "2026-11-10T22:07:31Z",
+      "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
+      "job_id": "130158027087",
+      "stage": "post_deployment_public_verification",
+      "classification": "post_deployment_verification_only; complete collection and trusted Threads input verified",
+      "failure_fingerprint": "public_generation_mismatch:gov24-42910050871-1:observed-gov24-42708067719-1",
+      "confirmed_cause": "The post-deployment manifest read returned an earlier generation while the code revision matched. A later read returned the expected new generation and revision. Collection, artifact integrity and writer validation succeeded.",
+      "underlying_cause": "Public propagation or cache delay is a hypothesis; the precise upstream caching cause was not established.",
+      "collection_status": "success",
+      "artifact_id": "13807161974",
+      "artifact_sha256": "7e4cae7817ffef2925fab1e2ad85c652d2087f9f84a1e896acd42e5562ffd3e2",
+      "source_generation": "gov24-42910050871-1",
+      "manifest_sha256": "b9a91c58de41c85380588cb4ea3c5217225c70f3df3ebe77488a82c6c64b35d5",
+      "observed_public_generation": "gov24-42910050871-1",
+      "observed_public_revision": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
+      "public_readback_at": "2026-11-11T07:08:35.057941+09:00",
+      "scope": "Only the public manifest was rechecked; every public HTML URL was not reverified in this Threads task.",
+      "code_change_required": false,
+      "pr": null,
+      "post_retry_budget_used": 0,
+      "publish_recovery_required": false,
+      "container_id": null,
+      "main_id": null,
+      "final_status": "current_public_manifest_matches; Threads_source_and_queue_validated",
+      "next_condition": "Use the existing 08:00 KST publisher and its normal restore_latest_state path. Recheck current source, queue and ledger before the reservation."
     }
   },
   "guardrails": {
@@ -861,49 +893,53 @@
       "conclusion": "success",
       "updated_at": "2026-11-10T11:39:31Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
+    },
+    "42910050871": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "updated_at": "2026-11-10T22:07:31Z",
+      "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-10T22:00:16+09:00",
-    "result": "verified_natural_20_kst_publication_and_next_queue_readback",
+    "checked_at": "2026-11-11T07:08:35.057941+09:00",
+    "result": "morning_complete_source_verified_after_public_manifest_delay",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
     "publication_ledger_sha": "5b3f4f50be8e3fd63b6f114f16baf6884808a065",
     "queue_blob_sha": "edb9ddc9aa275bed50f70339d2c294584c4fef93",
-    "maintenance_previous_blob_sha": "01431dfd348644a18b302820375c053a83fc6fdc",
+    "maintenance_previous_blob_sha": "1fa50ffb48c8e0f1dc44a8302507ec823e1af42c",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [
       {
-        "run_id": "42809117674",
+        "run_id": "42910050871",
         "run_attempt": 1,
         "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-10T11:39:31Z",
+        "conclusion": "failure",
+        "updated_at": "2026-11-10T22:07:31Z",
         "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
       }
     ],
     "source": {
-      "run_id": "42797196046",
+      "run_id": "42910050871",
       "run_attempt": 1,
       "status": "completed",
-      "conclusion": "success",
-      "updated_at": "2026-11-10T10:21:11Z",
+      "conclusion": "failure",
+      "updated_at": "2026-11-10T22:07:31Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-      "generation": "gov24-42797196046-1",
+      "generation": "gov24-42910050871-1",
       "count": 10942,
-      "manifest_sha256": "81208157cddb9824c18584c5fcd5d9c82eb953f146cf60fb2e5190182badbf17",
-      "collection_succeeded_at": "2026-11-10T19:19:19.228474+09:00",
-      "job_id": "129765271229",
-      "artifact_id": "13755227661",
-      "artifact_digest": "sha256:3d7b9f060d4487d9e3304cfd96de99161556dbb53d763a77315f0d4984f0a0e3",
+      "manifest_sha256": "b9a91c58de41c85380588cb4ea3c5217225c70f3df3ebe77488a82c6c64b35d5",
+      "collection_succeeded_at": "2026-11-11T07:04:57.499352+09:00",
+      "job_id": "130158027087",
+      "artifact_id": "13807161974",
+      "artifact_digest": "sha256:7e4cae7817ffef2925fab1e2ad85c652d2087f9f84a1e896acd42e5562ffd3e2",
       "read_current_verify_snapshot_load_feed": true,
       "collection_step": "completed_success",
       "currently_consumable_as_latest_completed": true,
-      "job_logs": "completed_verified",
-      "job_conclusion": "success",
       "fresh_at_check": true,
-      "current_application_status_not_inferred": true,
-      "revalidated_at": "2026-11-10T22:00:16+09:00"
+      "current_application_status_not_inferred": true
     },
     "publisher": {
       "run_id": "42809117674",
@@ -938,14 +974,13 @@
       "public_web_check": "Public permalink could not be independently opened.",
       "publication_ledger_records": 25,
       "pending": null,
-      "lease": null
+      "lease": null,
+      "previously_reported": true
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "queue_reused": true,
-      "queue_write": true,
-      "queue_previous_blob_sha": "cb1b06257ec38f2e7bfe9d4478b8dafc43801f3d",
-      "queue_commit_sha": "593505723f0e8d9ad9fd843e85177a865bddff00",
+      "queue_write": false,
       "queue_readback_equal": true,
       "preview_ready": 4,
       "validate_ready_entry_and_preview": true,
@@ -987,609 +1022,63 @@
           "media_turn": "TEXT",
           "char_count": 408,
           "last_simulated_draft_validation": "2026-11-11T21:59:59+09:00",
-          "current_source_covers_window": false,
+          "current_source_covers_window": true,
           "source_recheck_required_at_publish": true
         }
       ],
-      "unchanged_existing_entries": 22,
       "source_recheck_required_at_publish": true,
-      "corrections": [
-        {
-          "slot": "2026-11-10T08:00:00+09:00",
-          "benefit_id": "B41000200003",
-          "stage": "before_reservation",
-          "container_id": null,
-          "main_id": null,
-          "confirmed_cause": "The Gov24 eligibility summary lists broad groups. The detailed benefit conditions and current official guidance restrict the higher discount to severe disability, specified grades for injured veterans and the qualifying independence-merit survivor. The original draft omitted those limits and the resident-register family criteria.",
-          "previous_entry": {
-            "slot": "2026-11-10T08:00:00+09:00",
-            "benefit_id": "B41000200003",
-            "source_fingerprint": "53ee989a2a93ad0210fba3f29bb040d941cb1b30bd20d01c34088a3fcdf715c9",
-            "source_generation": "gov24-42527504841-1",
-            "prepared_at": "2026-11-09T13:46:00+09:00",
-            "expires_at": "2026-11-10T09:30:00+09:00",
-            "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-            "writer": {
-              "schema_version": "supportpick.writer.v1",
-              "status": "READY",
-              "selected_program_id": "B41000200003",
-              "draft_text": null,
-              "post_text": "전기요금 고지서가 부담된다면, 가구 상황에 따라 복지할인을 받을 수 있어요.\n\n대상과 할인액은 같지 않아요. 장애인·유공자·생계·의료급여 수급자는 월 1만 6천 원 한도, 여름철에는 2만 원까지 감면돼요. 주거·교육급여 수급자는 월 1만 원, 차상위계층은 월 8천 원 한도예요. 여름철 한도는 각각 1만 2천 원과 1만 원이에요.\n\n자녀 3명 이상, 가구원 5명 이상, 출산가구는 주택용 전기요금의 30%, 월 1만 6천 원 한도로 할인받을 수 있어요. 출산가구는 출생일로부터 3년 미만 영아가 있는 가구예요.\n\n한전ON, 고객센터 123, 한전 지사나 행정복지센터에서 신청할 수 있어요. 대상별 증빙과 실제 할인액은 계약종별·사용량에 따라 확인하세요.\n\n자세한 사항은 프로필링크 확인",
-              "reply_texts": [],
-              "review": {
-                "planned_at": "2026-11-10T08:00:00+09:00",
-                "application_status": "ALWAYS",
-                "reader": "전기요금 부담을 줄일 수 있는 복지할인 대상인지 확인하려는 가구",
-                "central_message": "대상별 할인 방식과 월 한도를 먼저 구분하고, 해당 신청 경로를 확인한다.",
-                "pattern": "P1",
-                "selection_reason": "이미 발행·편성된 사업과 종료·현재 상태 미확인 상위 후보를 제외한 뒤, 보조금24 원문과 한국전력공사 공식 안내에서 대상·할인액·상시 신청 경로를 대조한 후보 중 동일 서비스 ID 누적 조회수 순으로 선정했다.",
-                "interest_basis": "OBSERVED_METRICS",
-                "duplicate_check": "CHECKED",
-                "evidence": [
-                  {
-                    "source_id": "B41000200003",
-                    "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000928&bnefType=all&svcId=B41000200003",
-                    "access_method": "PROVIDED_OFFICIAL_TEXT",
-                    "verified_at": "2026-11-09T13:46:00+09:00",
-                    "claims_supported": [
-                      "보조금24 동일 서비스 ID의 상시신청, 대상별 전기요금 감면 방식·월 한도와 신청 경로를 확인",
-                      "serviceList 누적 조회수 163949건. API 원본 확인시각 2026-11-09T06:58:59.259907+09:00"
-                    ]
-                  },
-                  {
-                    "source_id": "B41000200003",
-                    "source_ref": "https://www.kepco.co.kr/home/customer/csinformation/conts.do",
-                    "access_method": "OPENED_OFFICIAL",
-                    "verified_at": "2026-11-09T13:46:00+09:00",
-                    "claims_supported": [
-                      "한국전력공사 고객지원에서 요금할인 신청 경로와 24시간 고객센터 123 운영을 확인",
-                      "전기요금 복지할인은 상시 신청 가능한 현재 고객 서비스임을 확인"
-                    ]
-                  },
-                  {
-                    "source_id": "B41000200003",
-                    "source_ref": "https://home.kepco.co.kr/kepco/front/html/WZ/2018_11_12/sub15.html",
-                    "access_method": "OPENED_OFFICIAL",
-                    "verified_at": "2026-11-09T13:46:00+09:00",
-                    "claims_supported": [
-                      "대상별 월 할인 한도와 다자녀·대가족·출산가구의 30% 할인 및 월 16000원 한도를 보조금24 최신 원문과 대조",
-                      "출산가구는 출생일로부터 3년 미만 영아가 포함된 가구라는 조건을 대조"
-                    ]
-                  },
-                  {
-                    "source_id": "B41000200003",
-                    "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-                    "access_method": "UPSTREAM_VERIFIED",
-                    "verified_at": "2026-11-09T13:46:00+09:00",
-                    "claims_supported": [
-                      "main 이미지 파일 SHA-256과 기존 시각검수 기록을 현재 다시 대조해 일치함",
-                      "사업별 금액·대상·기간이 없는 공통 브랜드 이미지이며 새로운 직접 시각검수를 했다고 주장하지 않음"
-                    ]
-                  }
-                ],
-                "checks": {
-                  "facts": "PASS",
-                  "current_status": "PASS",
-                  "eligibility_and_units": "PASS",
-                  "cta_and_no_links": "PASS",
-                  "length": "PASS",
-                  "media": "PASS"
-                },
-                "char_count": 383,
-                "count_method": "Python Unicode 문자 수, 공백·개행·CTA 포함",
-                "missing_info": [],
-                "hold_reasons": [],
-                "warnings": [
-                  "대상별 할인액과 적용 전력 종류가 다르며 실제 감면액은 계약종별·사용량에 따라 달라질 수 있다.",
-                  "출산가구·다자녀·대가족 등은 가구 요건과 전기사용계약 정보를 확인해야 한다.",
-                  "미래 시각 검증이므로 실제 발송 전 최신 완전 수집본과 한전의 현재 신청 안내를 다시 확인한다.",
-                  "Threads 노출·반응 성과 수치를 확보하지 못해 트렌드 효과가 입증됐다고 판단하지 않는다."
-                ]
-              },
-              "media": {
-                "turn": "IMAGE",
-                "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-                "check": "MATCHED",
-                "image_copy": "사업별 금액·대상·기간은 이미지에 없고 본문에서만 안내한다.",
-                "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
-              },
-              "next_history_record": {
-                "program_id": "B41000200003",
-                "notice_version": "gov24-42527504841-1:2026-08-14",
-                "pattern": "P1",
-                "opening": "전기요금 고지서가 부담된다면, 가구 상황에 따라 복지할인을 받을 수 있어요.",
-                "structure": "생활비 부담 상황 → 대상별 월 한도 구분 → 다자녀·대가족·출산가구 30% 할인 → 신청 경로와 확인사항 → CTA",
-                "media_turn": "IMAGE"
-              }
-            }
-          },
-          "previous_body_sha256": "88e0cb69bdbe7c5facd55cb29deebdb71127fe811fdfef830f3f860f3ac0f910",
-          "body_sha256": "88bb496a9e1db204d3e6878e7829c7f67c2d9ac0ad1665cee4020c97e06159d7",
-          "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-          "pattern": "P1",
-          "media": "IMAGE",
-          "char_count": 452,
-          "official_evidence": [
-            {
-              "source_id": "B41000200003",
-              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000928&bnefType=all&svcId=B41000200003",
-              "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-10T01:04:07+09:00",
-              "claims_supported": [
-                "검증된 보조금24 serviceDetail의 상시신청, 할인군별 세부 자격·월 한도 및 한전ON과 123 신청 경로를 대조했다.",
-                "동일 서비스 ID serviceList 누적 조회수 163949건. API 원본 수집 확인시각 2026-11-09T19:20:35.231699+09:00."
-              ]
-            },
-            {
-              "source_id": "B41000200003",
-              "source_ref": "https://www.easylaw.go.kr/CSP/CnpClsMainBtr.laf?ccfNo=2&cciNo=1&cnpClsNo=2&csmSeq=1008&menuType=cnpcls&popMenu=ov",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T01:04:07+09:00",
-              "claims_supported": [
-                "한전 기본공급약관을 인용한 공적 안내에서 가구 유형별 30%·월 16000원, 장애 정도·상이 등급·독립유공자 유족 범위와 급여별 월 한도를 대조했다."
-              ]
-            },
-            {
-              "source_id": "B41000200003",
-              "source_ref": "https://home.kepco.co.kr/kepco/front/html/WZ/2018_11_12/sub15.html",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T01:04:07+09:00",
-              "claims_supported": [
-                "한전 안내의 주민등록표 기준, 3년 미만 영아, 할인 방식과 123 신청 경로를 보조금24 원문 및 약관 인용 안내와 교차 확인했다."
-              ]
-            },
-            {
-              "source_id": "B41000200003",
-              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-              "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-10T01:04:07+09:00",
-              "claims_supported": [
-                "main Git blob 69f4a31ce2a755fc9f15e7a2c0aa3b35e4f8c088, 파일 SHA-256 a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a 및 main의 기존 시각검수 기록을 재대조했다.",
-                "사업별 금액·대상·기간 표기가 없는 공통 브랜드 이미지."
-              ]
-            }
-          ],
-          "source_fingerprint": "53ee989a2a93ad0210fba3f29bb040d941cb1b30bd20d01c34088a3fcdf715c9",
-          "prepared_at": "2026-11-10T01:04:07+09:00",
-          "expires_at": "2026-11-11T01:04:07+09:00",
-          "verification": "Official primary evidence and same-ID API detail cross-checked; writer-input, validate_ready_entry, exact-slot preview and end-of-window writer validation passed.",
-          "regression_review": "Use detailed eligibility and supplier tariff rules before summarizing disability, veteran grade and household registration.",
-          "publish_retry_budget_used": 0,
-          "final_status": "corrected_ready_queue_readback_verified"
-        },
-        {
-          "slot": "2026-11-10T12:00:00+09:00",
-          "benefit_id": "135200000120",
-          "stage": "before_reservation",
-          "container_id": null,
-          "main_id": null,
-          "confirmed_cause": "The original draft used the general 2026 under-9 rule without the statutory 2017 birth-cohort exception. The current official counseling FAQ confirms eligibility through the month before the 13th birthday and the regional addition conditions.",
-          "previous_entry": {
-            "slot": "2026-11-10T12:00:00+09:00",
-            "benefit_id": "135200000120",
-            "source_fingerprint": "b6cb43b9e290f67841af8cc7d74f64d3dab3e905bdb5f0b56b79076de51036cd",
-            "source_generation": "gov24-42527504841-1",
-            "prepared_at": "2026-11-09T14:23:00+09:00",
-            "expires_at": "2026-11-10T13:30:00+09:00",
-            "asset_sha256": null,
-            "writer": {
-              "schema_version": "supportpick.writer.v1",
-              "status": "READY",
-              "selected_program_id": "135200000120",
-              "draft_text": null,
-              "post_text": "2026년 아동수당은 만 9세 미만 아동이 대상이에요.\n\n국적과 주민등록 요건도 확인해야 해요. 대한민국 국적을 보유하고 주민등록번호가 정상적으로 부여된 아동이 기본 대상이며, 복수국적자와 인정 난민도 포함돼요.\n\n금액은 거주지역에 따라 달라요. 수도권은 월 10만 원, 비수도권은 10만 5천 원, 인구감소 우대지역은 11만 원, 특별지역은 12만 원이에요. 특별지역에서 지역화폐로 받으면 1만 원이 더해져 월 최대 13만 원이에요.\n\n현금 지급이 원칙이지만 조례에 따라 지역상품권으로 받을 수 있고, 90일 이상 해외 체류하면 지급이 중단돼요. 읍·면·동 주민센터나 복지로에서 신청하세요.\n\n자세한 사항은 프로필링크 확인",
-              "reply_texts": [],
-              "review": {
-                "planned_at": "2026-11-10T12:00:00+09:00",
-                "application_status": "ALWAYS",
-                "reader": "만 9세 미만 아동을 양육하며 2026년 아동수당 대상과 지역별 금액을 확인하려는 보호자",
-                "central_message": "연령·국적·주민등록 요건과 거주지역별 월 지급액을 먼저 확인한 뒤 신청 경로를 선택한다.",
-                "pattern": "P5",
-                "selection_reason": "현재 접수를 확인할 수 없는 상위 정보통신 보조기기 사업을 제외한 뒤, 보건복지부와 복지로 2026년 안내에서 대상·지역별 금액·신청 경로를 확인한 후보 중 보조금24 동일 서비스 ID 누적 조회수 순으로 선정했다.",
-                "interest_basis": "OBSERVED_METRICS",
-                "duplicate_check": "CHECKED",
-                "evidence": [
-                  {
-                    "source_id": "135200000120",
-                    "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10711030100",
-                    "access_method": "OPENED_OFFICIAL",
-                    "verified_at": "2026-11-09T14:23:00+09:00",
-                    "claims_supported": [
-                      "2026년 아동수당 대상은 만 9세 미만 모든 아동",
-                      "아동 1인당 월 10만~13만 원이며 수도권 10만 원, 비수도권 10만 5천 원, 인구감소 우대지역 11만 원, 특별지역 12만 원과 지역화폐 추가 1만 원을 확인",
-                      "현금입금이 원칙이고 조례에 따라 지역상품권 지급 가능, 읍면동 주민센터 또는 복지로 신청"
-                    ]
-                  },
-                  {
-                    "source_id": "135200000120",
-                    "source_ref": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001171",
-                    "access_method": "OPENED_OFFICIAL",
-                    "verified_at": "2026-11-09T14:23:00+09:00",
-                    "claims_supported": [
-                      "2026년 서비스 상세에서 대한민국 국적·주민등록번호 요건과 복수국적자·인정 난민 포함을 확인",
-                      "90일 이상 해외 체류 시 지급 중단과 방문·온라인 신청 경로를 확인"
-                    ]
-                  },
-                  {
-                    "source_id": "135200000120",
-                    "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=700023&bnefType=all&svcId=135200000120",
-                    "access_method": "PROVIDED_OFFICIAL_TEXT",
-                    "verified_at": "2026-11-09T14:23:00+09:00",
-                    "claims_supported": [
-                      "보조금24 동일 서비스 ID의 상시신청·현금 지원·주민센터와 온라인 신청 경로를 대조",
-                      "serviceList 누적 조회수 157701건. API 원본 확인시각 2026-11-09T06:57:04.957705+09:00",
-                      "보조금24의 만 8세·월 10만 원 요약은 2026년 현재 보건복지부·복지로 안내와 달라 본문 근거에서 제외"
-                    ]
-                  }
-                ],
-                "checks": {
-                  "facts": "PASS",
-                  "current_status": "PASS",
-                  "eligibility_and_units": "PASS",
-                  "cta_and_no_links": "PASS",
-                  "length": "PASS",
-                  "media": "NOT_REQUIRED"
-                },
-                "char_count": 349,
-                "count_method": "Python Unicode 문자 수, 공백·개행·CTA 포함",
-                "missing_info": [],
-                "hold_reasons": [],
-                "warnings": [
-                  "거주지역 분류와 지역화폐 지급 여부에 따라 실제 월 지급액이 달라질 수 있다.",
-                  "난민 인정 신청 심사 중인 경우 등은 제외될 수 있으며 전체 국적·주민등록 요건을 확인해야 한다.",
-                  "90일 이상 국외 체류 시 지급이 중단된다.",
-                  "보조금24 원문 요약의 연령·금액은 최신 보건복지부·복지로 안내보다 오래되어 최신 공식 안내를 우선했다.",
-                  "미래 시각 검증이므로 실제 발송 전 최신 완전 수집본과 보건복지부·복지로 현재 안내를 다시 확인한다.",
-                  "Threads 노출·반응 성과 수치를 확보하지 못해 트렌드 효과가 입증됐다고 판단하지 않는다."
-                ]
-              },
-              "media": {
-                "turn": "TEXT",
-                "asset_id": null,
-                "check": "NOT_REQUIRED",
-                "image_copy": null,
-                "alt_text": null
-              },
-              "next_history_record": {
-                "program_id": "135200000120",
-                "notice_version": "gov24-42527504841-1:2026-02-20+MOHW-2026-03-31",
-                "pattern": "P5",
-                "opening": "2026년 아동수당은 만 9세 미만 아동이 대상이에요.",
-                "structure": "대상 연령 → 국적·주민등록 자격 확인 → 지역별 월 지급액 → 지급방식·해외체류 제한·신청경로 → CTA",
-                "media_turn": "TEXT"
-              }
-            }
-          },
-          "previous_body_sha256": "cdd975e0e1c3bc9c2a53361e6ce4c63c8c54c57d999cbbaa501c10d820b0943a",
-          "body_sha256": "1719405bb8cf01736d034fa4a3471ea97e600dc715b4aa2d20adb1097854fbb0",
-          "asset_sha256": null,
-          "pattern": "P5",
-          "media": "TEXT",
-          "char_count": 408,
-          "official_evidence": [
-            {
-              "source_id": "135200000120",
-              "source_ref": "https://www.129.go.kr/faq/faq03.do?searchConsultingKeyword=B12",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T01:04:07+09:00",
-              "claims_supported": [
-                "보건복지상담센터 2026년 10월 15일 안내에서 기본 만 9세 미만, 2017년생은 13세 생일 전 달까지 신청·지급 특례, 국적과 주민등록 기본 요건 및 복수국적·인정 난민 포함을 확인했다.",
-                "아동별 월 지급액과 인구감소지역 지역사랑상품권 월 1만 원 추가 조건을 확인했다."
-              ]
-            },
-            {
-              "source_id": "135200000120",
-              "source_ref": "https://www.korea.kr/news/policyNewsView.do?newsId=148963446",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T01:04:07+09:00",
-              "claims_supported": [
-                "2026년 확대 적용, 권역별 월 지급액, 조례에 따른 추가 및 복지로·읍면동 신규 신청을 대조했다."
-              ]
-            },
-            {
-              "source_id": "135200000120",
-              "source_ref": "https://law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032473011",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T01:04:07+09:00",
-              "claims_supported": [
-                "2026년 9월 10일 시행 아동수당법 제13조의 90일 이상 연속 국외 체류 시 지급 정지를 확인했다."
-              ]
-            },
-            {
-              "source_id": "135200000120",
-              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=700023&bnefType=all&svcId=135200000120",
-              "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-10T01:04:07+09:00",
-              "claims_supported": [
-                "검증된 보조금24 serviceDetail에서 출생신고 후 상시 신청, 부모의 온라인 신청 및 부모가 아닌 보호자의 방문 신청을 확인했다.",
-                "동일 서비스 ID serviceList 누적 조회수 157701건. API 원본 수집 확인시각 2026-11-09T19:18:59.102704+09:00.",
-                "보조금24의 만 8세·월 10만 원 요약은 최신 연령과 차등 지급 근거에 사용하지 않았다."
-              ]
-            }
-          ],
-          "source_fingerprint": "b6cb43b9e290f67841af8cc7d74f64d3dab3e905bdb5f0b56b79076de51036cd",
-          "prepared_at": "2026-11-10T01:04:07+09:00",
-          "expires_at": "2026-11-11T01:04:07+09:00",
-          "verification": "Official primary evidence and same-ID API detail cross-checked; writer-input, validate_ready_entry, exact-slot preview and end-of-window writer validation passed.",
-          "regression_review": "Check applicable amendments, statutory exceptions and current ministry FAQ before stating an age cutoff.",
-          "publish_retry_budget_used": 0,
-          "final_status": "corrected_ready_queue_readback_verified"
-        },
-        {
-          "slot": "2026-11-10T16:00:00+09:00",
-          "benefit_id": "628000000735",
-          "stage": "before_reservation",
-          "container_id": null,
-          "main_id": null,
-          "confirmed_cause": "The prior draft used only the 180-day parenthetical from the same-ID source and omitted the both-foreign-spouses exclusion. Incheon's current public detail states six months or more; the complete Gov24 detail shows six months (180 days), so the draft now follows the city wording and leaves borderline counting to the competent office.",
-          "previous_entry": {
-            "slot": "2026-11-10T16:00:00+09:00",
-            "benefit_id": "628000000735",
-            "source_fingerprint": "48c999b0848c9a429a6dee4e1e0235137adc6e09a40e8e716eed7e226f0bb66b",
-            "source_generation": "gov24-42527504841-1",
-            "prepared_at": "2026-11-09T19:04:24+09:00",
-            "expires_at": "2026-11-10T10:04:24.000Z",
-            "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-            "writer": {
-              "schema_version": "supportpick.writer.v1",
-              "status": "READY",
-              "selected_program_id": "628000000735",
-              "post_text": "인천에서 산전 진료를 오가며 교통비가 부담된다면, 임산부 1인당 50만 원을 한 번 지원하는 사업이 있어요.\n\n신청일에 인천에 주민등록을 두고 실제 거주한 기간이 180일 이상이어야 해요. 임신 12주부터 출산일을 포함해 90일 안에 신청할 수 있고, 출산했다면 인천에 출생신고를 해야 해요. 지급 전 타 시도로 전출한 이력이 있으면 지원 대상에서 제외돼요.\n\n기본은 인천e음 교통비 포인트예요. 택시·주유·대중교통에 쓸 수 있고, 포인트 사용기한은 지급일부터 1년이에요. 요건을 충족한 전기차 사용자는 현금으로 받으며 렌트 차량은 해당하지 않아요.\n\n정부24에서 본인 신청이 원칙이에요. 본인 명의 휴대전화가 없는 등 방문이 필요한 경우엔 주소지 행정복지센터에 서류를 확인해 보세요. 예산 상황에 따라 지급이 늦어질 수 있어요.\n\n자세한 사항은 프로필링크 확인",
-              "draft_text": null,
-              "reply_texts": [],
-              "media": {
-                "turn": "IMAGE",
-                "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-                "check": "MATCHED",
-                "image_copy": null,
-                "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
-              },
-              "review": {
-                "planned_at": "2026-11-10T16:00:00+09:00",
-                "application_status": "ALWAYS",
-                "reader": "인천에 거주하며 산전·산후 이동 비용을 확인하려는 임산부",
-                "central_message": "인천 임산부 교통비 1회 50만 원의 지급 방식과 신청 전에 볼 거주·출생신고·기간 조건을 안내한다.",
-                "pattern": "P6",
-                "selection_reason": "최근 20건과 기존 READY 3건을 제외하고, 상위 후보의 HOLD/SKIP 출처·사유를 유지했다. 인천시 2026년 개정 매뉴얼이 연결된 사업 안내와 부평구 2026년 신청 안내, 보조금24 동일 ID 원문을 대조한 다음 후보(154512회)다.",
-                "interest_basis": "OBSERVED_METRICS",
-                "duplicate_check": "CHECKED",
-                "evidence": [
-                  {
-                    "source_id": "628000000735",
-                    "source_ref": "https://www.incheon.go.kr/jobs/main/support/welfare/view.do?wl_srvc_sn=52",
-                    "access_method": "OPENED_OFFICIAL",
-                    "verified_at": "2026-11-09T19:04:24+09:00",
-                    "claims_supported": [
-                      "인천시 6개월 거주와 임신 12주부터 출산일 포함 90일 신청 범위 및 출생신고 요건",
-                      "임산부 교통비 50만 원 기본 포인트, 전기차 사용자 현금 예외와 용도",
-                      "현행 인천시 상세와 2026년 개정 업무 매뉴얼 첨부를 확인"
-                    ]
-                  },
-                  {
-                    "source_id": "628000000735",
-                    "source_ref": "https://www.icbp.go.kr/dong/bbs/bbsMsgDetail.do?bcd=dong_notice&dong=bupyeong4&msg_seq=130039&pgno=11",
-                    "access_method": "OPENED_OFFICIAL",
-                    "verified_at": "2026-11-09T19:04:24+09:00",
-                    "claims_supported": [
-                      "2026년 180일 거주와 신청일 범위, 정부24 본인 신청 원칙과 방문 예외",
-                      "1회 50만 원과 포인트 사용기한 12개월 및 사용처"
-                    ]
-                  },
-                  {
-                    "source_id": "628000000735",
-                    "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2116229&bnefType=all&svcId=628000000735",
-                    "access_method": "PROVIDED_OFFICIAL_TEXT",
-                    "verified_at": "2026-11-09T19:04:24+09:00",
-                    "claims_supported": [
-                      "실제 수집된 보조금24 동일 ID 상세 원문으로 연중 상시 신청, 지급 전 타시도 전출입 제한, 예산에 따른 지급 지연, 전기차 렌트 차량 제외를 대조",
-                      "공식 API 누적 조회수 154512회와 수집 확인시각 2026-11-09T06:58:40.779330+09:00을 실제 원문 열람시각과 구분"
-                    ]
-                  },
-                  {
-                    "source_id": "628000000735",
-                    "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-                    "access_method": "UPSTREAM_VERIFIED",
-                    "verified_at": "2026-11-09T19:04:24+09:00",
-                    "claims_supported": [
-                      "main Git blob c60655f30016eee7979af07416347fee69b87a0f와 로컬 파일을 대조하고 기존 시각검수 SHA-256과 일치 확인",
-                      "같은 PNG의 360px 축소 미리보기에서 브랜드·슬로건·하단 안내 판독. 사업별 숫자·기간·조건 문구가 없는 승인 로테이션 이미지"
-                    ]
-                  }
-                ],
-                "checks": {
-                  "facts": "PASS",
-                  "current_status": "PASS",
-                  "eligibility_and_units": "PASS",
-                  "cta_and_no_links": "PASS",
-                  "length": "PASS",
-                  "media": "PASS"
-                },
-                "char_count": 426,
-                "count_method": "python_len_including_spaces_and_newlines",
-                "missing_info": [],
-                "hold_reasons": [],
-                "warnings": [
-                  "실제 발송 전 최신 수집 세대에서 후보·fingerprint·공식 신청 상태·교대를 다시 확인한다.",
-                  "지역·체류 자격 등 개별 예외는 주소지 관할 센터 확인. 공개 게시 프로필 링크의 실동선은 이번 환경에서 열람하지 못했다."
-                ],
-                "reach_editorial": {
-                  "policy_id": "supportpick-threads-reach-v1-20261109",
-                  "cohort": "A",
-                  "opening_type": "생활 상황형",
-                  "opening_candidates": [
-                    {
-                      "type": "생활 상황형",
-                      "group": "A",
-                      "text": "인천에서 산전 진료를 오가며 교통비가 부담된다면, 임산부 1인당 50만 원을 한 번 지원하는 사업이 있어요."
-                    },
-                    {
-                      "type": "대상·혜택형",
-                      "group": "B",
-                      "text": "인천에 180일 이상 주민등록을 두고 실제로 사는 임산부라면, 1인당 교통비 50만 원 지원을 확인해 보세요."
-                    },
-                    {
-                      "type": "조건 설명형",
-                      "group": null,
-                      "text": "인천 임산부 교통비 50만 원은 임신 12주부터 출산일을 포함해 90일 이내에 신청할 수 있어요."
-                    }
-                  ],
-                  "chosen_opening": "인천에서 산전 진료를 오가며 교통비가 부담된다면, 임산부 1인당 50만 원을 한 번 지원하는 사업이 있어요.",
-                  "selection_reason": "인천·산전 이동 부담·임산부 1인당 1회 지원을 첫 문장에 연결하고, 당일 전기요금 원고의 고지서 질문과 다른 ‘이동→신청 준비’ 전개를 사용한다. 11월 10일 16시 A군에 배정한다.",
-                  "reader_scope": "인천 거주 임산부",
-                  "core_question": "인천 임산부 교통비를 신청하려면 거주 기간과 신청 시기를 어떻게 확인하나요?",
-                  "angles": [
-                    "산전 진료 이동 부담과 쓸 수 있는 교통비",
-                    "180일 거주와 출산 후 90일이 겹치는 신청 자격",
-                    "본인 신청 전 거주 기간·출생신고·지급 수단 확인"
-                  ],
-                  "chosen_angle": "본인 신청 전 거주 기간·출생신고·지급 수단 확인",
-                  "history_posts_checked": 20,
-                  "comparison_strata": {
-                    "geo": "인천 광역",
-                    "benefit": "교통비 포인트 기본",
-                    "application": "상시·개인별 기한",
-                    "audience": "임산부"
-                  },
-                  "image_review": {
-                    "width_px": 360,
-                    "asset": "approved_generic_rotation",
-                    "claim_match": "no program-specific claims",
-                    "program_card_available": false
-                  },
-                  "profile_route": "공개 프로필 및 사이트 상세 직접 열람 제한. 저장소 경로와 수집 데이터 내 동일 ID까지만 확인.",
-                  "source_recheck_required_at_publish": true
-                }
-              },
-              "next_history_record": {
-                "program_id": "628000000735",
-                "notice_version": "gov24-42527504841-1:2026-10-19",
-                "pattern": "P6",
-                "opening": "인천에서 산전 진료를 오가며 교통비가 부담된다면, 임산부 1인당 50만 원을 한 번 지원하는 사업이 있어요.",
-                "structure": "산전 이동비 → 신청 전에 거주·출생·기한 체크 → 지급 수단과 사용 범위 → 본인/방문 신청 경로 → CTA",
-                "media_turn": "IMAGE"
-              }
-            }
-          },
-          "previous_body_sha256": "fd6703e6c8fd8a612de67244f56e19bac053ce73d1cc275250eb131eda33be4c",
-          "body_sha256": "49b525df2b737e23b6e778823982c1020dcdd08a28b61818ba1d9fc530fd2c03",
-          "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-          "pattern": "P6",
-          "media": "IMAGE",
-          "cohort": "A",
-          "char_count": 459,
-          "source_fingerprint": "48c999b0848c9a429a6dee4e1e0235137adc6e09a40e8e716eed7e226f0bb66b",
-          "official_evidence": [
-            {
-              "source_id": "628000000735",
-              "source_ref": "https://www.incheon.go.kr/earlychild/EC060103",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T01:29:39+09:00",
-              "claims_supported": [
-                "시 상세 안내의 신청일 기준 인천 6개월 이상 주민등록·실거주, 지급 전 타 시도 전출입, 부부 모두 외국인인 경우의 제외, 임신 12주부터 출산일로부터 90일 이내와 인천 출생등록 조건을 확인.",
-                "1인당 교통비 50만 원, 인천e음 포인트의 사용처·12개월과 전기차 현금 예외·렌트 제외, 본인 온라인 신청과 방문 예외, 비전기차 온라인 신청 시 인천e음 앱 가입을 대조."
-              ]
-            },
-            {
-              "source_id": "628000000735",
-              "source_ref": "https://www.incheon.go.kr/jobs/main/support/welfare/view.do?wl_srvc_sn=52",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T01:29:39+09:00",
-              "claims_supported": [
-                "시 복지 상세에서 거주 6개월과 신청 기한, 출생신고, 50만 원 및 지급 수단을 교차 확인."
-              ]
-            },
-            {
-              "source_id": "628000000735",
-              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2116229&bnefType=all&svcId=628000000735",
-              "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-10T01:29:39+09:00",
-              "claims_supported": [
-                "완전 수집본의 동일 ID serviceDetail에서 연중 상시와 거주·신청·대상 제한 확인. API에는 6개월(180일) 병기가 있어 본문에는 시 최신 상세의 ‘6개월 이상’을 사용.",
-                "같은 ID의 serviceList 누적 조회수 154512회, API 원본 확인시각 2026-11-09T19:20:18.915540+09:00. 원문 열람시각과 별도."
-              ]
-            },
-            {
-              "source_id": "628000000735",
-              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-              "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-10T01:29:39+09:00",
-              "claims_supported": [
-                "main Git blob c60655f30016eee7979af07416347fee69b87a0f와 로컬 SHA-256 0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd가 기존 시각검수 기록과 일치함.",
-                "360px 판독은 기존 검수 기록을 사용. 사업별 금액·대상·기간이 없는 승인 로테이션 이미지."
-              ]
-            }
-          ],
-          "prepared_at": "2026-11-10T01:29:39+09:00",
-          "expires_at": "2026-11-11T01:29:39+09:00",
-          "verification": "Fresh official city detail, same-ID API row and approved image hashes verified. All four exact-time previews and end-of-window writer validation passed. Tested that the 16:00 body uses six months, includes the both-foreign-spouses exclusion, and preserves opening, cohort, and media.",
-          "publish_retry_budget_used": 0,
-          "final_status": "corrected_ready_queue_readback_verified"
-        }
-      ],
-      "refreshed": [
-        {
-          "slot": "2026-11-11T20:00:00+09:00",
-          "benefit_id": "SD0000007672",
-          "body_sha256": "fc4487b3ce6911a80876062fa06511fc1007d0d963d00e5b1cc7636dcdcdc37c",
-          "previous_prepared_at": "2026-11-10T20:16:23+09:00",
-          "previous_expires_at": "2026-11-11T20:16:23+09:00",
-          "previous_evidence": [
-            {
-              "source_id": "SD0000007672",
-              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999124&bnefType=all&svcId=SD0000007672",
-              "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-10T20:16:23+09:00",
-              "claims_supported": [
-                "동일 ID serviceDetail의 건강보험 가입자·피부양자, 의료급여 수급자 제외, 이용권 지급·소급 제한·사용기간과 신청 경로를 대조했다.",
-                "동일 ID serviceList 누적 조회수 121986회, API 수집 확인시각 2026-11-10T19:17:25.609348+09:00."
-              ]
-            },
-            {
-              "source_id": "SD0000007672",
-              "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10705020100",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T20:16:23+09:00",
-              "claims_supported": [
-                "2026년 분만취약지 및 카드 발급 안내가 포함된 복지부 현재 제도 안내. 임신·출산이 확인된 건강보험 가입자·피부양자의 공단 온라인 및 지사 방문 신청 가능을 확인했다.",
-                "임신 1회당 단태아 100만 원, 다태아 기본 140만 원, 지정 분만취약지 추가 20만 원, 2세 미만 영유아를 포함한 의료 목적 사용처를 대조했다."
-              ]
-            },
-            {
-              "source_id": "SD0000007672",
-              "source_ref": "https://www.nhis.or.kr/lm/lmxsrv/law/lawFullContent.do?MODE=threeView&SEQ=86&SEQ_HISTORY=613523",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-10T20:16:23+09:00",
-              "claims_supported": [
-                "건강보험공단 법령집의 지급 기준 제4~6조를 대조했다. 쌍둥이 기본액에 60만 원 추가, 세 태아 이상 추가 지급 요건, 지정 분만취약지의 연속 주민등록 30일 및 신청 당시 요건, 출산 전·후 신청에 따른 사용종료일 구분을 확인했다."
-              ]
-            }
-          ],
-          "prepared_at": "2026-11-10T22:00:16+09:00",
-          "expires_at": "2026-11-11T22:00:16+09:00",
-          "pattern": "P5",
-          "media_turn": "TEXT",
-          "reason": "Evidence was rechecked against official sources after 22:00 KST, keeping the original body and format and covering the entire two-hour publication window."
-        }
-      ]
+      "image_files_current_sha_match_existing_visual_reviews": true,
+      "new_visual_inspection": false
     },
     "metrics": {
       "status": "awaiting_first_cohort_24h_window",
       "policy_post_measurements_due": 0,
-      "official_insights_read_path": "not_available_in_current_execution",
-      "latest_publication_in_cohort": true
+      "official_insights_read_path": "not_available_in_current_execution"
     },
     "recovery": {
       "required": false,
       "workflow_dispatch": false,
       "new_failures": 0,
       "new_partials": 0,
-      "post_retry_budget_used": 0
+      "post_retry_budget_used": 0,
+      "operations_verification_issue": {
+        "run_id": "42910050871",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "failure",
+        "updated_at": "2026-11-10T22:07:31Z",
+        "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
+        "job_id": "130158027087",
+        "stage": "post_deployment_public_verification",
+        "classification": "post_deployment_verification_only; complete collection and trusted Threads input verified",
+        "failure_fingerprint": "public_generation_mismatch:gov24-42910050871-1:observed-gov24-42708067719-1",
+        "confirmed_cause": "The post-deployment manifest read returned an earlier generation while the code revision matched. A later read returned the expected new generation and revision. Collection, artifact integrity and writer validation succeeded.",
+        "underlying_cause": "Public propagation or cache delay is a hypothesis; the precise upstream caching cause was not established.",
+        "collection_status": "success",
+        "artifact_id": "13807161974",
+        "artifact_sha256": "7e4cae7817ffef2925fab1e2ad85c652d2087f9f84a1e896acd42e5562ffd3e2",
+        "source_generation": "gov24-42910050871-1",
+        "manifest_sha256": "b9a91c58de41c85380588cb4ea3c5217225c70f3df3ebe77488a82c6c64b35d5",
+        "observed_public_generation": "gov24-42910050871-1",
+        "observed_public_revision": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
+        "public_readback_at": "2026-11-11T07:08:35.057941+09:00",
+        "scope": "Only the public manifest was rechecked; every public HTML URL was not reverified in this Threads task.",
+        "code_change_required": false,
+        "pr": null,
+        "post_retry_budget_used": 0,
+        "publish_recovery_required": false,
+        "container_id": null,
+        "main_id": null,
+        "final_status": "current_public_manifest_matches; Threads_source_and_queue_validated",
+        "next_condition": "Use the existing 08:00 KST publisher and its normal restore_latest_state path. Recheck current source, queue and ledger before the reservation."
+      },
+      "normal_restore_selector_regression": "Latest completed failed run selected without excluding its verified complete snapshot."
     },
     "incidents": {
       "41796747628": "resolved",
-      "new_incident": null
+      "new_incident": "42910050871"
     },
-    "next_condition": "Use existing November 11 08:00 KST schedule. Reconcile the morning source when it completes. November 11 20:00 requires a newer complete source at send time; the draft evidence now covers its entire slot. First cohort 24-hour measurement is due November 11 17:00:08 KST."
+    "next_condition": "Use the existing 08:00 KST publisher and its normal restore_latest_state path. Recheck current source, queue and ledger before the reservation."
   },
   "last_reported_publication": {
     "run_id": "42809117674",
@@ -1834,9 +1323,10 @@
     "reviewed_at": "2026-11-06T02:09:52.967Z"
   },
   "last_reported_operation_issue": {
-    "run_id": "42117967226",
+    "run_id": "42910050871",
     "classification": "post_deployment_verification_only; complete collection and trusted Threads input verified",
-    "recorded_at": "2026-11-06T07:47:59.290+09:00"
+    "recorded_at": "2026-11-11T07:08:35.057941+09:00",
+    "public_manifest_state": "matches_current_generation_after_initial_failure"
   },
   "last_reported_publication_issue": {
     "run_id": "42131131069",
