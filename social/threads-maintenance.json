@@ -1856,12 +1856,12 @@
     "existing_safety_contract_precedence": true
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-10T10:56:52+09:00",
+    "checked_at": "2026-11-10T11:54:17+09:00",
     "result": "no_update",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
     "publication_ledger_sha": "e3f9609da1f5953a44028afa3a6cc53bad0d8c84",
     "queue_blob_sha": "28079ff666ca0e3eb1f03b7605397d3ba7fea74b",
-    "maintenance_previous_blob_sha": "2fa326fee175b6c5a2cf03f1551b3a536643e261",
+    "maintenance_previous_blob_sha": "6ca322e25bd9a084693aaed2306d6f5fdee52234",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [],
@@ -1987,7 +1987,7 @@
       "41796747628": "resolved",
       "new_incident": null
     },
-    "next_condition": "Confirm the natural 12:00 KST receipt and check the successful ledger before consuming any next slot. November 11 08:00 requires a new verified source generation before publication."
+    "next_condition": "Verify the existing 12:00 KST scheduled publication during its authorized two-hour window. November 11 08:00 requires a new verified source generation before publication."
   },
   "reach_policy": {
     "policy_id": "supportpick-threads-reach-v1-20261109",
