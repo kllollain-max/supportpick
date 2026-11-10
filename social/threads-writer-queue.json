@@ -2516,6 +2516,170 @@
           "media_turn": "IMAGE"
         }
       }
+    },
+    {
+      "slot": "2026-11-11T12:00:00+09:00",
+      "benefit_id": "B55258400009",
+      "source_fingerprint": "2cb9fb936b0bc93d331c7df7069fbece8c959c9697a57687609409e99b544a1f",
+      "source_generation": "gov24-42708067719-1",
+      "prepared_at": "2026-11-10T13:05:55+09:00",
+      "expires_at": "2026-11-11T13:05:55+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "B55258400009",
+        "post_text": "지난해보다 전기나 수도를 덜 썼다면, 사용량을 확인할 수 있는 가구는 탄소중립포인트 에너지에 가입해 절감 실적에 따라 포인트를 받을 수 있어요.\n\n전기·상수도·도시가스를 항목별로 과거 월평균과 비교해요. 개인 가구의 기본 감축 포인트는 5% 이상 줄였을 때 산정돼요. 예를 들어 전기를 5% 이상 10% 미만 줄였다면 반기 기준 5천 포인트예요.\n\n포인트는 연 2회 정산하고, 1포인트당 최대 2원 범위에서 지자체별로 달라요. 세대주나 세대원이 온라인이나 관할 시·군·구에서 신청할 수 있고, 서울 거주자는 에코마일리지에서 가입해요.\n\n이미 가입한 뒤 이사했다면 주소 이전 신청은 11월 16일부터 가능해요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-11T12:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "계량기나 객관적 자료로 전기·수도·가스 사용량을 확인할 수 있는 가정의 세대주·세대원",
+          "central_message": "개인 가구가 에너지 절감 포인트의 산정 기준, 가입 경로와 이사 후 주소 이전 일정을 구분한다.",
+          "pattern": "P3",
+          "selection_reason": "앞선 예약 원고는 그대로 두고 실질적으로 중복되지 않는 다음 공식 검증 사업을 보조금24 동일 ID 누적 조회수 순으로 선정했다. 더 높은 후보들의 확인 근거와 보류·제외 판단은 기존 기록을 유지한다.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "B55258400009",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999225&bnefType=all&svcId=B55258400009",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-10T13:05:55+09:00",
+              "claims_supported": [
+                "같은 ID 상세의 가정 세대주·세대원, 과거 2년 또는 1년 월별 기준 사용량 비교, 상시신청 안내를 대조했다.",
+                "동일 ID serviceList 누적 조회수 143362회. API 수집 확인 시각 2026-11-10T07:06:34.888072+09:00."
+              ]
+            },
+            {
+              "source_id": "B55258400009",
+              "source_ref": "https://cpoint.or.kr/user/guide/registGuide.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-10T13:05:55+09:00",
+              "claims_supported": [
+                "계량기나 객관적인 방법으로 사용량 확인이 가능한 가구, 온라인과 시·군·구 방문 신청, 서울 에코마일리지 예외를 확인했다."
+              ]
+            },
+            {
+              "source_id": "B55258400009",
+              "source_ref": "https://cpoint.or.kr/user/guide/incentiveGuide.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-10T13:05:55+09:00",
+              "claims_supported": [
+                "개인 기본 감축 인센티브 5% 이상, 전기 5% 이상 10% 미만 5천 포인트, 연 2회 및 1포인트 최대 2원을 대조했다. 기존 우수 감축 가구의 유지 인센티브는 별도 조건이다."
+              ]
+            },
+            {
+              "source_id": "B55258400009",
+              "source_ref": "https://cpoint.or.kr/user/info/calPoint.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-10T13:05:55+09:00",
+              "claims_supported": [
+                "개인 반기별 지급 및 지자체별 2원 이내 환산과 실제 사용량에 따른 정산 차이를 확인했다."
+              ]
+            },
+            {
+              "source_id": "B55258400009",
+              "source_ref": "https://cpoint.or.kr/user/index.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-10T13:05:55+09:00",
+              "claims_supported": [
+                "에너지 분야 신규가입 안내와 기존 가입자의 주소 이전 11월 13일까지 제한 및 11월 16일 재개를 대조했다."
+              ]
+            },
+            {
+              "source_id": "B55258400009",
+              "source_ref": "https://www.cpoint.or.kr/user/notice/list.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-10T13:05:55+09:00",
+              "claims_supported": [
+                "공개 에너지 분야 공지 목록의 신규가입 안내와 주소 변경 제한을 대조했다. 녹색생활 실천 분야의 공지는 이 사업에 적용하지 않았다."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 358,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "개인 가정의 기본 감축 인센티브 기준만 설명한다. 5% 미만의 유지 인센티브 등 별도 기준은 적용을 단정하지 않는다.",
+            "지자체별 지급 방식, 개인별 실제 포인트, 특정 지역의 행사 혜택은 이 안내에서 확정하지 않는다.",
+            "다음날 발송 시 현재 수집본의 24시간 신선도가 지난다. 새 수집본과 실제 게시 원장, 공식 안내 재확인이 필요하다."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "가정에서 전기·수도·가스를 덜 쓰면 어떤 기준으로 포인트를 받고 어디서 가입하나요?",
+            "reader_scope": "사용량을 확인할 수 있고 에너지 절감 참여를 고려하는 가정의 세대주·세대원",
+            "angles": [
+              "예전보다 줄어든 가정 사용량에서 시작",
+              "5% 구간과 포인트·원 환산을 구분",
+              "온라인·방문 가입과 서울·전입 예외"
+            ],
+            "chosen_angle": "예전보다 줄어든 가정 사용량에서 시작",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "지난해보다 전기나 수도를 덜 썼다면, 사용량을 확인할 수 있는 가구는 탄소중립포인트 에너지에 가입해 절감 실적에 따라 포인트를 받을 수 있어요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "전기·수도·가스 사용량을 확인할 수 있는 가구의 세대주나 세대원은 탄소중립포인트 에너지에 참여할 수 있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "개인 참여 가구의 기본 감축 포인트는 전기·수도·도시가스의 항목별 사용량을 기준보다 5% 이상 줄였을 때 받을 수 있어요."
+              }
+            ],
+            "chosen_opening": "지난해보다 전기나 수도를 덜 썼다면, 사용량을 확인할 수 있는 가구는 탄소중립포인트 에너지에 가입해 절감 실적에 따라 포인트를 받을 수 있어요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "11월 11일 12시 반전 배정 A. 최근 한전 복지할인은 가구 유형과 요금 감면을 설명했으므로 이번에는 실제 사용량과 절감 포인트 산정에 초점을 둔다.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국(서울 별도 가입처)",
+              "benefit": "가정 에너지 절감 인센티브",
+              "application": "상시·반기 정산",
+              "audience": "가정 세대주·세대원",
+              "media": "TEXT"
+            },
+            "applied_elements": [
+              "사용량 확인 조건을 첫 줄에 표시",
+              "5% 예시와 포인트 단위",
+              "서울과 이사 예외를 분리",
+              "짧은 단락"
+            ],
+            "profile_route": "프로필 및 공개 사이트의 검색·상세 동선은 이전 읽기 점검에서 열리지 않았다. 수집본 동일 ID와 운영 기관 공식 가입 안내만 확인했다.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "B55258400009",
+          "notice_version": "gov24-42708067719-1:2026-08-10+2026-09-10 주소 변경 공지",
+          "pattern": "P3",
+          "opening": "지난해보다 전기나 수도를 덜 썼다면, 사용량을 확인할 수 있는 가구는 탄소중립포인트 에너지에 가입해 절감 실적에 따라 포인트를 받을 수 있어요.",
+          "structure": "가정의 사용량 절감 → 항목별 포인트 산정 예 → 환산·가입처 → 기존 회원 이전 예외 → CTA",
+          "media_turn": "TEXT"
+        }
+      }
     }
   ]
 }
