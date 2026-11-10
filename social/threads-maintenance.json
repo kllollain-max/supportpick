@@ -1856,12 +1856,12 @@
     "existing_safety_contract_precedence": true
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-10T08:27:12+09:00",
+    "checked_at": "2026-11-10T10:56:52+09:00",
     "result": "no_update",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-    "publication_ledger_sha": "e2c1e5efa7b4274d416647962c382a263442cdf5",
-    "queue_blob_sha": "0698d5e1c3d019748f4fe3b1ead741795c2700a2",
-    "maintenance_previous_blob_sha": "21bb38183cece8a62bec63c047fa57378f06a21c",
+    "publication_ledger_sha": "e3f9609da1f5953a44028afa3a6cc53bad0d8c84",
+    "queue_blob_sha": "28079ff666ca0e3eb1f03b7605397d3ba7fea74b",
+    "maintenance_previous_blob_sha": "2fa326fee175b6c5a2cf03f1551b3a536643e261",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [],
@@ -1888,69 +1888,56 @@
       "current_application_status_not_inferred": true
     },
     "publisher": {
-      "run_id": "42611038118",
+      "run_id": "42721617024",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-09T11:42:41Z",
+      "updated_at": "2026-11-09T23:36:07Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-      "job_id": "129139220216",
-      "artifact_id": "13671060116",
-      "artifact_digest": "sha256:150908e61465d0facea8293f3061589b7859db5718dd1d5bf00e84d2412dce2e",
+      "job_id": "129516710827",
+      "artifact_id": "13719744883",
+      "artifact_digest": "sha256:69b89871e3895d26bc0b811425df6df98342c0059715c55a1cce7255c07beb72",
       "classification": "verified_natural_publication",
       "event": "schedule",
       "published": true,
-      "slot": "2026-11-09T20:00:00+09:00",
-      "published_at": "2026-11-09T20:41:50.979410+09:00",
-      "benefit_id": "WII000000300",
-      "main_id": "18026006999929860",
-      "url": "https://www.threads.com/@hid_1004/post/DfhP6sWm_2s",
+      "slot": "2026-11-10T08:00:00+09:00",
+      "published_at": "2026-11-10T08:35:13.439859+09:00",
+      "benefit_id": "B41000200003",
+      "main_id": "17882085378652075",
+      "url": "https://www.threads.com/@hid_1004/post/DfihjyNifeI",
       "stage": "complete",
       "verified": true,
-      "content_hash": "823c21db56492b0e5feb6f4bce7bbf14708ad216d37f91d18be06f5d658619b7",
-      "asset_sha256": null,
-      "source_generation": "gov24-42599671027-1",
-      "pattern": "P8",
-      "media_turn": "TEXT",
+      "content_hash": "137f12d1327ebfa7a49187e580159a388635aacfa616a38ecf5bcf86b41d8569",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "source_generation": "gov24-42708067719-1",
+      "pattern": "P1",
+      "media_turn": "IMAGE",
       "replies": 0,
-      "verification": "publisher remote readback, log receipt ID, ledger, queued text/hash and digest-verified workflow artifact agree",
-      "verification_completed_at": "2026-11-09T21:27:17+09:00",
+      "verification": "Publisher authenticated readback, job-log receipt ID, durable ledger, queued text and hash, and digest-matched workflow result agree.",
+      "verification_completed_at": "2026-11-10T10:15:23+09:00",
       "public_web_visibility_independently_verified": false,
-      "public_web_check": "not accessible in this environment",
-      "publication_ledger_records": 21,
+      "public_web_check": "Public permalink was not accessible from the external read path.",
+      "publication_ledger_records": 22,
       "pending": null,
       "lease": null,
-      "new_publication_observed": false,
-      "slot_observation": {
-        "slot": "2026-11-10T08:00:00+09:00",
-        "status": "awaiting_natural_schedule_within_window",
-        "window_ends_at": "2026-11-10T10:00:00+09:00",
-        "reservation_present": false,
-        "attempt_failure_observed": false
-      }
+      "new_publication_observed": false
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "queue_reused": true,
       "queue_write": false,
+      "queue_readback_equal": true,
       "validate_ready_entry_and_preview": true,
       "preview_ready": 4,
       "next_24h_sequence": [
-        {
-          "slot": "2026-11-10T08:00:00+09:00",
-          "benefit_id": "B41000200003",
-          "pattern": "P1",
-          "media_turn": "IMAGE",
-          "char_count": 452,
-          "expires_at": "2026-11-11T01:04:07+09:00"
-        },
         {
           "slot": "2026-11-10T12:00:00+09:00",
           "benefit_id": "135200000120",
           "pattern": "P5",
           "media_turn": "TEXT",
           "char_count": 408,
-          "expires_at": "2026-11-11T01:04:07+09:00"
+          "through_window_writer_validation": true,
+          "current_source_covers_window": true
         },
         {
           "slot": "2026-11-10T16:00:00+09:00",
@@ -1958,7 +1945,8 @@
           "pattern": "P6",
           "media_turn": "IMAGE",
           "char_count": 459,
-          "expires_at": "2026-11-11T01:29:39+09:00"
+          "through_window_writer_validation": true,
+          "current_source_covers_window": true
         },
         {
           "slot": "2026-11-10T20:00:00+09:00",
@@ -1966,29 +1954,40 @@
           "pattern": "P8",
           "media_turn": "TEXT",
           "char_count": 387,
-          "expires_at": "2026-11-10T14:47:17.000Z"
+          "through_window_writer_validation": true,
+          "current_source_covers_window": true
+        },
+        {
+          "slot": "2026-11-11T08:00:00+09:00",
+          "benefit_id": "149200000041",
+          "pattern": "P6",
+          "media_turn": "IMAGE",
+          "char_count": 320,
+          "through_window_writer_validation": true,
+          "current_source_covers_window": false
         }
       ],
-      "source_recheck_required_at_publish": true,
-      "next_day_0800": "Unstarted. Prepare within the existing hourly cycle after checking the remaining publication sequence and nearer the slot so review freshness covers its permitted window."
+      "source_recheck_required_at_publish": true
     },
     "metrics": {
       "status": "unavailable_in_current_execution",
       "policy_post_measurements_due": 0,
       "latest_publication_in_cohort": false,
-      "first_policy_post_status": "awaiting_publication"
+      "first_policy_post_status": "awaiting_publication",
+      "note": "08:00 slot preserved as pre-existing exclusion. No authenticated Insights response."
     },
     "recovery": {
       "required": false,
       "workflow_dispatch": false,
-      "posts_sent": 0,
-      "code_changes": 0
+      "new_failures": 0,
+      "new_partials": 0,
+      "post_retry_budget_used": 0
     },
     "incidents": {
       "41796747628": "resolved",
       "new_incident": null
     },
-    "next_condition": "Check natural 08:00 KST execution and publisher receipt, preserving existing 2-hour delay allowance. Revalidate source and media against actual ledger before each send."
+    "next_condition": "Confirm the natural 12:00 KST receipt and check the successful ledger before consuming any next slot. November 11 08:00 requires a new verified source generation before publication."
   },
   "reach_policy": {
     "policy_id": "supportpick-threads-reach-v1-20261109",
