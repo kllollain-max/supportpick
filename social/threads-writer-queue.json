@@ -323,6 +323,17 @@
       ],
       "access_scope": "보건복지부 2026년 현재 정책 페이지와 복지로 서비스 상세를 우선 적용하고, 보조금24 동일 서비스 ID의 오래된 연령·금액 요약은 본문 근거에서 제외",
       "checked_at": "2026-11-09T14:23:00+09:00"
+    },
+    {
+      "benefit_id": "999000000044",
+      "decision": "HOLD",
+      "reason": "보건복지부 표준 서비스와 사업단 목록은 확인했다. 2026년 11월 대상 지역에서 이용자가 신청할 수 있는 유효한 모집기간·세부 자격·자부담을 같은 공고에서 확인하지 못했다. 사업단 선정 공고를 이용자 접수로 쓰지 않는다.",
+      "sources": [
+        "https://www.mohw.go.kr/menu.es?mid=a10709020400",
+        "https://www.gunsan.go.kr/_cms/board/eFileDownload/484/8621029/9eb9c594b657b507248262605217d61a",
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999161&bnefType=all&svcId=999000000044"
+      ],
+      "checked_at": "2026-11-10T10:13:52+09:00"
     }
   ],
   "entries": [
@@ -2329,6 +2340,180 @@
           "opening": "인천에 부모와 함께 주민등록을 두고 사는 2016년생 아동이라면, 아이 꿈 수당으로 월 5만 원 인천e음 포인트를 신청할 수 있어요.",
           "structure": "인천 2016년생과 포인트 → 첫 신청 월·전입 예외 → 지급일·수단 → 신청 경로 → CTA",
           "media_turn": "TEXT"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-11T08:00:00+09:00",
+      "benefit_id": "149200000041",
+      "source_fingerprint": "36fb3d8bc210487c7ae5cfde46d73af8b5e6258d4e13c5370b709c23d8d19f3d",
+      "source_generation": "gov24-42708067719-1",
+      "prepared_at": "2026-11-10T10:14:35+09:00",
+      "expires_at": "2026-11-11T10:13:52+09:00",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "149200000041",
+        "post_text": "40세 이상 퇴직자와 퇴직 예정자는 중장년내일센터에서 무료로 1:1 전직 상담과 이력서·면접 코칭을 받을 수 있어요.\n\n고용24에 개인 회원으로 가입한 뒤 이력서를 등록해 구직 신청을 해요. 구직 신청이 인증되면 전직지원 서비스를 본인이 신청하는 순서예요.\n\n서비스가 승인되면 담당 상담사가 배정돼요. 지금까지의 경력을 살펴보고 어떤 직무를 알아볼지, 이력서와 면접을 어떻게 준비할지 함께 정리할 수 있어요.\n\n온라인 신청이 어렵다면 가까운 중장년내일센터에 전화하거나 방문해도 돼요. 교육은 센터마다 일정이 달라서 참여 전에 확인해 주세요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-11T08:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "퇴직했거나 퇴직을 앞두고 새 일자리를 준비하는 40세 이상 중장년",
+          "central_message": "40세 이상 퇴직(예정)자가 무료 전직지원의 본인 신청 순서와 상담에서 받을 도움을 확인한다.",
+          "pattern": "P6",
+          "selection_reason": "당일 남은 3건의 기존 READY와 완료된 사업을 보존했다. 상위 지역사회서비스 청년사업단은 현재 지자체 이용자 접수를 특정하지 못해 보류했다. 검수 가능한 다음 보조금24 동일 ID 누적 조회수 순위의 중장년내일센터를 선택했다.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "149200000041",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=518133&bnefType=all&svcId=149200000041",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-10T10:13:52+09:00",
+              "claims_supported": [
+                "보조금24 동일 ID serviceDetail에서 40세 이상 중장년의 전직·재취업 지원과 방문·온라인·전화 경로를 대조했다.",
+                "동일 ID serviceList 누적 조회수 147070회. API 행 수집 시각 2026-11-10T07:04:46.629670+09:00."
+              ]
+            },
+            {
+              "source_id": "149200000041",
+              "source_ref": "https://www.work24.go.kr/wk/u/b/1000/seniorChgJobSptSvc.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-10T10:13:52+09:00",
+              "claims_supported": [
+                "고용24 전직지원 공식 상세에서 40세 이상 퇴직(예정)자의 무료 1:1 전직 상담과 이력서·면접 코칭을 확인했다.",
+                "공식 서비스 페이지에 신청 기능과 신청 현황 안내가 운영 중임을 읽기 범위에서 확인했다. 신청 거래는 수행하지 않았다."
+              ]
+            },
+            {
+              "source_id": "149200000041",
+              "source_ref": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systClId=SC00000195&systCnntId=CI00002121&systId=SI00000428",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-10T10:13:52+09:00",
+              "claims_supported": [
+                "고용24 본인 신청, 개인 회원가입·이력서 등록과 구직 인증 뒤 서비스 신청, 지역 센터 유선·방문 신청 및 센터별 교육 일정 안내를 대조했다."
+              ]
+            },
+            {
+              "source_id": "149200000041",
+              "source_ref": "https://www.work24.go.kr/wk/u/a/1000/seniorCenterSvcInfo.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-10T10:13:52+09:00",
+              "claims_supported": [
+                "전직지원 신청 뒤 승인, 담당 상담사 배정, 1:1 상담과 교육의 순서를 대조했다."
+              ]
+            },
+            {
+              "source_id": "149200000041",
+              "source_ref": "https://easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=3&cciNo=1&cnpClsNo=1&csmSeq=1696",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-10T10:13:52+09:00",
+              "claims_supported": [
+                "2026년 10월 15일 기준 공적 안내에서 만 40세 이상 퇴직(예정)자와 상담·이력서·면접 지원 범위를 교차 확인했다."
+              ]
+            },
+            {
+              "source_id": "149200000041",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-10T10:14:35+09:00",
+              "claims_supported": [
+                "현재 main 이미지 Git blob 69f4a31ce2a755fc9f15e7a2c0aa3b35e4f8c088과 로컬 원본 SHA-256 a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a이 기존 시각검수 기록과 일치한다.",
+                "같은 현재 원본을 360px로 줄인 화면에서 브랜드명·슬로건·하단 CTA를 읽을 수 있고 잘림이 없는 것을 직접 확인했다. 사업별 금액·대상·기간은 표시되지 않는다."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 320,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "무료 전직지원 서비스만 안내한다. 개별 프로그램의 접수 마감·자리, 개인 승인 여부, 취업 결과는 확인 범위 밖이다.",
+            "지원 기간 기산점이 고용24와 생활법령정보 안내에서 다르게 표현되어 본문에 기간을 넣지 않았다.",
+            "미래 슬롯 시뮬레이션이다. 현재 수집본은 예정 발송 전에 24시간이 지나므로 최신 완전 수집본, 같은 ID 원문 및 실제 교대를 다시 확인해야 한다."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "퇴직 전후 무료 전직 상담은 어디에 어떤 순서로 신청하나요?",
+            "reader_scope": "퇴직했거나 퇴직을 앞두고 새 일자리를 준비하는 40세 이상 중장년",
+            "angles": [
+              "퇴직 후 달라진 구직 준비와 막막함",
+              "무료 1:1 상담에서 받는 이력서·면접 코칭",
+              "구직 인증부터 본인 신청과 상담사 배정까지"
+            ],
+            "chosen_angle": "구직 인증부터 본인 신청과 상담사 배정까지",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "퇴직을 앞두고 새 일을 어떻게 찾을지 막막하다면, 40세 이상은 중장년내일센터에서 무료 전직 상담을 받을 수 있어요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "40세 이상 퇴직자와 퇴직 예정자는 중장년내일센터에서 무료로 1:1 전직 상담과 이력서·면접 코칭을 받을 수 있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "40세 이상이고 퇴직했거나 퇴직을 앞뒀다면, 고용24에서 구직 신청을 한 뒤 중장년내일센터의 무료 전직지원 서비스를 신청할 수 있어요."
+              }
+            ],
+            "chosen_opening": "40세 이상 퇴직자와 퇴직 예정자는 중장년내일센터에서 무료로 1:1 전직 상담과 이력서·면접 코칭을 받을 수 있어요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "11월 11일 08시는 반전 배정 B다. 첫 줄에서 퇴직 전후 대상과 무료 상담·코칭을 연결하고 최근 20개에서 쓴 생활비·감면·대출 도입과 다른 신청 절차를 전개한다.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국",
+              "benefit": "무료 고용지원 서비스",
+              "application": "센터별 일정",
+              "audience": "40세 이상 퇴직·퇴직 예정",
+              "media": "IMAGE"
+            },
+            "applied_elements": [
+              "첫 줄 대상과 무료 서비스",
+              "구직 인증 → 본인 신청 → 상담사 배정",
+              "짧은 단락",
+              "승인 공통 이미지"
+            ],
+            "image_review": {
+              "width_px": 360,
+              "asset": "approved_generic_rotation",
+              "claim_match": "no program-specific claims",
+              "program_card_available": false,
+              "evidence": "current main bytes match upstream review and 360px preview visually checked",
+              "checked_at": "2026-11-10T10:14:35+09:00"
+            },
+            "profile_route": "공개 Threads 프로필 링크 및 지원금픽 공개 사이트 검색·상세 동선은 열람 가능한 범위에서 확인되지 않았다. 검증된 수집본의 동일 ID와 공식 신청 경로만 확인했다.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "149200000041",
+          "notice_version": "gov24-42708067719-1:2026-05-11+고용24 공식안내",
+          "pattern": "P6",
+          "opening": "40세 이상 퇴직자와 퇴직 예정자는 중장년내일센터에서 무료로 1:1 전직 상담과 이력서·면접 코칭을 받을 수 있어요.",
+          "structure": "대상과 무료 상담 → 구직 인증 및 본인 신청 → 승인 뒤 담당 상담 및 코칭 → 방문·유선과 일정 → CTA",
+          "media_turn": "IMAGE"
         }
       }
     }
