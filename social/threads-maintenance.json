@@ -1520,12 +1520,12 @@
     "existing_safety_contract_precedence": true
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-11T14:26:54.068906+09:00",
-    "result": "unchanged_runs_and_receipts_next_four_ready_reused",
+    "checked_at": "2026-11-11T15:44:56.883339+09:00",
+    "result": "pre_16_kst_audit_unchanged_runs_and_next_four_ready_reused",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
     "publication_ledger_sha": "93ffde99cb9cf153dcfaea8ef62447126399e5c0",
     "queue_blob_sha": "4143dae9a4f373072d313cbcf05e5fd7cecc8500",
-    "maintenance_previous_blob_sha": "7f8a77d9e65d7aca45060a89888f7d2202f2d196",
+    "maintenance_previous_blob_sha": "a9afb6ef13131f8c5564bff1d752a986d6f69306",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [],
@@ -1554,7 +1554,8 @@
       "collection_step": "completed_success",
       "currently_consumable_as_latest_completed": true,
       "fresh_at_check": true,
-      "current_application_status_not_inferred": true
+      "current_application_status_not_inferred": true,
+      "artifact_digest_reverified": true
     },
     "publisher": {
       "run_id": "42954279775",
@@ -1607,8 +1608,8 @@
           "media_turn": "IMAGE",
           "char_count": 268,
           "last_valid_at": "2026-11-11T17:59:59+09:00",
-          "current_source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true,
+          "current_source_fresh_at_slot": true,
           "selection_rank": 19
         },
         {
@@ -1618,8 +1619,8 @@
           "media_turn": "TEXT",
           "char_count": 408,
           "last_valid_at": "2026-11-11T21:59:59+09:00",
-          "current_source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true,
+          "current_source_fresh_at_slot": true,
           "selection_rank": 20
         },
         {
@@ -1629,8 +1630,8 @@
           "media_turn": "IMAGE",
           "char_count": 378,
           "last_valid_at": "2026-11-12T09:10:32+09:00",
-          "current_source_fresh_at_slot": false,
           "source_recheck_required_at_publish": true,
+          "current_source_fresh_at_slot": false,
           "selection_rank": 21
         },
         {
@@ -1640,18 +1641,32 @@
           "media_turn": "TEXT",
           "char_count": 407,
           "last_valid_at": "2026-11-12T12:34:22+09:00",
-          "current_source_fresh_at_slot": false,
           "source_recheck_required_at_publish": true,
+          "current_source_fresh_at_slot": false,
           "selection_rank": 21
         }
       ],
       "all_existing_bodies_and_media_preserved": true,
       "image_recheck": {
         "status": "UPSTREAM_VERIFIED",
-        "checked_at": "2026-11-11T14:26:54.068906+09:00",
+        "checked_at": "2026-11-11T15:44:56.883339+09:00",
         "current_main_bytes_downloaded": true,
         "both_asset_sha256_match_existing_visual_review": true,
-        "new_visual_inspection": false
+        "new_visual_inspection": false,
+        "assets": [
+          {
+            "file": "benefit-guide-1.png",
+            "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+            "status": "UPSTREAM_VERIFIED",
+            "new_visual_inspection": false
+          },
+          {
+            "file": "benefit-guide-2.png",
+            "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+            "status": "UPSTREAM_VERIFIED",
+            "new_visual_inspection": false
+          }
+        ]
       }
     },
     "metrics": {
