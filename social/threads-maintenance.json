@@ -1520,120 +1520,96 @@
     "existing_safety_contract_precedence": true
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-10T20:17:34+09:00",
-    "result": "evening_source_verified_next_four_slots_ready_current_slot_awaiting_natural_run",
+    "checked_at": "2026-11-11T14:26:54.068906+09:00",
+    "result": "unchanged_runs_and_receipts_next_four_ready_reused",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-    "publication_ledger_sha": "9f72085a0048932902020ef52d063008645bbc79",
-    "queue_blob_sha": "cb1b06257ec38f2e7bfe9d4478b8dafc43801f3d",
-    "maintenance_previous_blob_sha": "fac9d4a8fd93bb152201fab94084533026a4db9c",
+    "publication_ledger_sha": "93ffde99cb9cf153dcfaea8ef62447126399e5c0",
+    "queue_blob_sha": "4143dae9a4f373072d313cbcf05e5fd7cecc8500",
+    "maintenance_previous_blob_sha": "7f8a77d9e65d7aca45060a89888f7d2202f2d196",
     "unresolved_publications": 0,
     "active_target_runs": [],
-    "changed_run_versions": [
-      {
-        "run_id": "42797196046",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-10T10:21:11Z",
-        "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-        "previous": {
-          "run_attempt": 1,
-          "status": "in_progress",
-          "conclusion": null,
-          "updated_at": "2026-11-10T10:12:47Z",
-          "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
-        }
-      }
-    ],
+    "changed_run_versions": [],
+    "run_pagination": {
+      "branch": "main",
+      "pages": 2,
+      "entries_examined": 50,
+      "target_versions_compared": 28,
+      "checkpoint_reached": true
+    },
     "source": {
-      "run_id": "42797196046",
+      "run_id": "42910050871",
       "run_attempt": 1,
       "status": "completed",
-      "conclusion": "success",
-      "updated_at": "2026-11-10T10:21:11Z",
+      "conclusion": "failure",
+      "updated_at": "2026-11-10T22:07:31Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-      "generation": "gov24-42797196046-1",
+      "generation": "gov24-42910050871-1",
       "count": 10942,
-      "manifest_sha256": "81208157cddb9824c18584c5fcd5d9c82eb953f146cf60fb2e5190182badbf17",
-      "collection_succeeded_at": "2026-11-10T19:19:19.228474+09:00",
-      "job_id": "129765271229",
-      "artifact_id": "13755227661",
-      "artifact_digest": "sha256:3d7b9f060d4487d9e3304cfd96de99161556dbb53d763a77315f0d4984f0a0e3",
+      "manifest_sha256": "b9a91c58de41c85380588cb4ea3c5217225c70f3df3ebe77488a82c6c64b35d5",
+      "collection_succeeded_at": "2026-11-11T07:04:57.499352+09:00",
+      "job_id": "130158027087",
+      "artifact_id": "13807161974",
+      "artifact_digest": "sha256:7e4cae7817ffef2925fab1e2ad85c652d2087f9f84a1e896acd42e5562ffd3e2",
       "read_current_verify_snapshot_load_feed": true,
       "collection_step": "completed_success",
       "currently_consumable_as_latest_completed": true,
-      "job_logs": "completed_verified",
-      "job_conclusion": "success",
       "fresh_at_check": true,
       "current_application_status_not_inferred": true
     },
     "publisher": {
-      "run_id": "42779218989",
+      "run_id": "42954279775",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-10T08:01:02Z",
+      "updated_at": "2026-11-11T03:41:15Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-      "job_id": "129704945564",
-      "artifact_id": "13744872806",
-      "receipt_and_ledger_match": true,
-      "previously_reported": true,
+      "job_id": 130305564128,
+      "artifact_id": 13826188179,
+      "artifact_digest": "sha256:ce5fb474d27d24210eef468e72738e2c11b6ed39d65ce690c6ab26c739fce681",
       "classification": "verified_natural_publication",
-      "main_id": "18117968657159347",
+      "event": "schedule",
+      "published": true,
+      "slot": "2026-11-11T12:00:00+09:00",
+      "published_at": "2026-11-11T12:40:29.341997+09:00",
+      "benefit_id": "B55258400009",
+      "main_id": "18001464938830261",
+      "url": "https://www.threads.com/@hid_1004/post/DfliawilQhp",
       "stage": "complete",
-      "content_hash": "05d4a451f446f97145d9b5e547a156ebc23bfcd21b0038cb93918f8b186c1546",
-      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-      "current_slot": {
-        "slot": "2026-11-10T20:00:00+09:00",
-        "status": "waiting_for_natural_execution_within_grace_period",
-        "reserved": false,
-        "manual_dispatch": false
-      }
+      "verified": true,
+      "content_hash": "13c389b8698f0e9ca0748f8607bb57f4e71b8d80d5c2c1eaffdb0c8af3630b41",
+      "asset_sha256": null,
+      "source_generation": "gov24-42910050871-1",
+      "pattern": "P3",
+      "media_turn": "TEXT",
+      "replies": 0,
+      "verification": "Authenticated publisher readback, digest-verified result artifact, durable ledger and exact queued body agree.",
+      "verification_completed_at": "2026-11-11T04:56:43Z",
+      "public_web_visibility_independently_verified": false,
+      "publication_ledger_records": 27,
+      "pending": null,
+      "lease": null,
+      "previously_reported": true,
+      "result_artifact_digest_reverified": true,
+      "job_logs_retrieved": true
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "queue_reused": true,
-      "queue_write": true,
-      "queue_previous_blob_sha": "69746febf335fc3c6fe6b25ba5a9284aa3fdade1",
-      "queue_commit_sha": "affe3874a362a767b745f15d1f1d540c00dd2692",
+      "queue_write": false,
       "queue_readback_equal": true,
-      "preview_ready": 5,
-      "ready_future_slots": 4,
-      "existing_open_slot_preview": true,
+      "preview_ready": 4,
       "validate_ready_entry_and_preview": true,
       "next_24h_sequence": [
-        {
-          "slot": "2026-11-11T08:00:00+09:00",
-          "benefit_id": "149200000041",
-          "pattern": "P6",
-          "media_turn": "IMAGE",
-          "char_count": 320,
-          "last_simulated_draft_validation": "2026-11-11T09:59:59+09:00",
-          "current_source_fresh_at_slot": true,
-          "current_source_covers_window": true,
-          "source_recheck_required_at_publish": true
-        },
-        {
-          "slot": "2026-11-11T12:00:00+09:00",
-          "benefit_id": "B55258400009",
-          "pattern": "P3",
-          "media_turn": "TEXT",
-          "char_count": 358,
-          "last_simulated_draft_validation": "2026-11-11T13:59:59+09:00",
-          "current_source_fresh_at_slot": true,
-          "current_source_covers_window": true,
-          "source_recheck_required_at_publish": true
-        },
         {
           "slot": "2026-11-11T16:00:00+09:00",
           "benefit_id": "628000000139",
           "pattern": "P8",
           "media_turn": "IMAGE",
           "char_count": 268,
-          "last_simulated_draft_validation": "2026-11-11T17:59:59+09:00",
+          "last_valid_at": "2026-11-11T17:59:59+09:00",
           "current_source_fresh_at_slot": true,
-          "current_source_covers_window": true,
-          "source_recheck_required_at_publish": true
+          "source_recheck_required_at_publish": true,
+          "selection_rank": 19
         },
         {
           "slot": "2026-11-11T20:00:00+09:00",
@@ -1641,45 +1617,48 @@
           "pattern": "P5",
           "media_turn": "TEXT",
           "char_count": 408,
-          "last_simulated_draft_validation": "2026-11-11T20:16:22+09:00",
+          "last_valid_at": "2026-11-11T21:59:59+09:00",
+          "current_source_fresh_at_slot": true,
+          "source_recheck_required_at_publish": true,
+          "selection_rank": 20
+        },
+        {
+          "slot": "2026-11-12T08:00:00+09:00",
+          "benefit_id": "641000000138",
+          "pattern": "P1",
+          "media_turn": "IMAGE",
+          "char_count": 378,
+          "last_valid_at": "2026-11-12T09:10:32+09:00",
           "current_source_fresh_at_slot": false,
-          "current_source_covers_window": false,
-          "source_recheck_required_at_publish": true
+          "source_recheck_required_at_publish": true,
+          "selection_rank": 21
+        },
+        {
+          "slot": "2026-11-12T12:00:00+09:00",
+          "benefit_id": "SSI000000020",
+          "pattern": "P5",
+          "media_turn": "TEXT",
+          "char_count": 407,
+          "last_valid_at": "2026-11-12T12:34:22+09:00",
+          "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true,
+          "selection_rank": 21
         }
       ],
-      "current_slot_preview": {
-        "slot": "2026-11-10T20:00:00+09:00",
-        "benefit_id": "628000000739",
-        "pattern": "P8",
-        "media_turn": "TEXT",
-        "char_count": 387,
-        "last_simulated_draft_validation": "2026-11-10T21:59:59+09:00",
-        "current_source_fresh_at_slot": true,
-        "current_source_covers_window": true,
-        "source_recheck_required_at_publish": true
-      },
-      "unchanged_existing_entries": 22,
-      "new_ready": {
-        "slot": "2026-11-11T20:00:00+09:00",
-        "benefit_id": "SD0000007672",
-        "pattern": "P5",
-        "media_turn": "TEXT",
-        "cohort": "A",
-        "char_count": 408,
-        "body_sha256": "fc4487b3ce6911a80876062fa06511fc1007d0d963d00e5b1cc7636dcdcdc37c",
-        "source_fingerprint": "31c59bbefc437691f59b1047361d5b31bb8531693ef7b8703f2910c0e8618234",
-        "views": 121986,
-        "projected_rank": 20,
-        "upper_candidate_exclusions": 19,
-        "expires_at": "2026-11-11T20:16:23+09:00",
-        "source_fresh_at_slot_with_current_snapshot": false,
-        "review_expiry_before_end_of_delay_window": true
+      "all_existing_bodies_and_media_preserved": true,
+      "image_recheck": {
+        "status": "UPSTREAM_VERIFIED",
+        "checked_at": "2026-11-11T14:26:54.068906+09:00",
+        "current_main_bytes_downloaded": true,
+        "both_asset_sha256_match_existing_visual_review": true,
+        "new_visual_inspection": false
       }
     },
     "metrics": {
       "status": "awaiting_first_cohort_24h_window",
       "policy_post_measurements_due": 0,
-      "official_insights_read_path": "not_available_in_current_execution"
+      "official_insights_read_path": "not_available_in_current_execution",
+      "no_performance_effect_inferred": true
     },
     "recovery": {
       "required": false,
@@ -1690,9 +1669,10 @@
     },
     "incidents": {
       "41796747628": "resolved",
+      "42910050871": "previously_recorded_public_manifest_convergence",
       "new_incident": null
     },
-    "next_condition": "Check today's natural 20:00 KST result inside the two-hour window. If it skips before reservation, recalculate remaining future drafts from the successful ledger. November 11 20:00 requires a newer complete source and official evidence refresh before the queued review expires at 20:16:23 KST."
+    "next_condition": "Use existing 16:00 KST regular slot. Tomorrow's 08:00 and 12:00 drafts require newer complete source before sending and official-evidence refresh before their expiry. First cohort 24h window due 2026-11-11 17:00:08 KST. No manual publish or recovery is needed."
   },
   "reach_policy": {
     "policy_id": "supportpick-threads-reach-v1-20261109",
