@@ -2052,7 +2052,7 @@
           "timestamp_basis": "Existing ledger publisher-clock time; exact platform timestamp must be confirmed before future quantitative timing analysis."
         }
       },
-      "last_availability_check_at": "2026-11-12T02:09:48.908+09:00",
+      "last_availability_check_at": "2026-11-12T03:04:08.489+09:00",
       "statistical_decision": "No comparison: zero comparable measured observations; preserve A/B, no editorial share changes. Platform timestamps remain unverified."
     },
     "profile_route": {
@@ -2064,5 +2064,143 @@
       "public_profile_and_detail_open": "unavailable in public retrieval"
     },
     "next_condition": "Use existing Nov 12 08/12/16/20 KST schedule only; revalidate complete source and official evidence at send. Current source is stale for Nov 12 20. Refresh official review before each stored expiry if needed inside the original two-hour window; never roll back or replace a pending draft. No Insights reader: due windows remain unmeasured, not zero. Obtain official post timestamps before measured timing comparisons."
+  },
+  "local_validation_issues": {
+    "supportpick-maintenance:execution_environment_unavailable:v1": {
+      "fingerprint": "supportpick-maintenance:execution_environment_unavailable:v1",
+      "status": "blocked_transient_execution_environment",
+      "observed_at": "2026-11-12T03:04:08.489+09:00",
+      "confirmed_cause": "Execution tool returned: No usable execution environment is available. Wait for an environment to become available before using this tool.",
+      "stage": "local_read_only_python_validation",
+      "publisher_blocked": false,
+      "github_connector_available": true,
+      "source_or_publication_failure_inferred": false,
+      "last_full_validation_at": "2026-11-12T02:09:48.908+09:00",
+      "last_full_validation_result": "4_READY",
+      "preserved_queue_blob_sha": "3ae38bd3f21b053c13e57281a498c5faf6942213",
+      "preserved_ledger_blob_sha": "c37e8a2def283bd0c7254e13e0c615ec0352f7bc",
+      "post_retry_budget_used": 0,
+      "actions_completed": [
+        "Fetched unchanged master/docs/writer/publisher/workflows and queue/ledger with current blob SHAs",
+        "Compared run versions through checkpoint and retrieved latest publisher and collector job logs",
+        "Matched current source artifact listing digest to previously downloaded and verified artifact",
+        "Checked existing four future drafts structurally with actual codepoint character counts, CTA, empty replies, distinct patterns, alternating media and expiry",
+        "Compared current image Git blob SHAs to previously verified bytes; no new file download or visual inspection"
+      ],
+      "remaining": [
+        "When execution environment is available, rerun load_feed/read_current/verify_snapshot and validate_ready_entry/preview against latest full source and unchanged queue",
+        "Before each actual scheduled publication, obtain current complete source and official evidence within existing expiry; current evening source does not cover today's 20 KST slot"
+      ],
+      "next_condition": "Retry local read-only validation in the existing maintenance task once the execution environment returns. Existing Actions schedule and all publisher safety checks remain unchanged. No new scheduler, dispatch or test post."
+    }
+  },
+  "last_limited_check": {
+    "checked_at": "2026-11-12T03:04:08.489+09:00",
+    "result": "github_health_unchanged_local_validator_unavailable",
+    "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
+    "publication_ledger_sha": "c37e8a2def283bd0c7254e13e0c615ec0352f7bc",
+    "queue_blob_sha": "3ae38bd3f21b053c13e57281a498c5faf6942213",
+    "maintenance_previous_blob_sha": "7b6ec85320ffbb6f0e3c2277783c82c6c8ef12c3",
+    "changed_run_versions": [],
+    "run_pagination": {
+      "branch": "main",
+      "pages": 2,
+      "entries_examined": 50,
+      "target_versions_compared": 29,
+      "checkpoint_reached": true
+    },
+    "publisher": {
+      "latest_run_id": "43014097709",
+      "conclusion": "success",
+      "previously_reported": true,
+      "job_logs_retrieved": true,
+      "unresolved_records": 0,
+      "published_records": 29,
+      "active_target_runs": [],
+      "lease": null
+    },
+    "source": {
+      "run_id": "43002359099",
+      "conclusion": "success",
+      "job_logs_retrieved": true,
+      "generation": "gov24-43002359099-1",
+      "artifact_id": 13847491553,
+      "listed_digest_matches_prior_verified_artifact": true,
+      "artifact_redownloaded_this_run": false,
+      "read_current_verify_snapshot_load_feed_executed_this_run": false,
+      "prior_integrity_verified_at": "2026-11-12T02:09:48.908+09:00"
+    },
+    "writer": {
+      "queue_write": false,
+      "all_existing_entries_preserved": true,
+      "new_ready_entries": 0,
+      "validate_ready_entry_and_preview_executed_this_run": false,
+      "prior_full_validation_at": "2026-11-12T02:09:48.908+09:00",
+      "prior_preview_ready": 4,
+      "current_structural_checks": [
+        {
+          "slot": "2026-11-12T08:00:00+09:00",
+          "benefit_id": "641000000138",
+          "pattern": "P1",
+          "media_turn": "IMAGE",
+          "char_count": 378,
+          "expires_at": "2026-11-12T09:10:33+09:00",
+          "check": "structural_only_not_validate_ready_entry",
+          "prior_full_validation_preserved": true
+        },
+        {
+          "slot": "2026-11-12T12:00:00+09:00",
+          "benefit_id": "SSI000000020",
+          "pattern": "P5",
+          "media_turn": "TEXT",
+          "char_count": 407,
+          "expires_at": "2026-11-12T12:34:23+09:00",
+          "check": "structural_only_not_validate_ready_entry",
+          "prior_full_validation_preserved": true
+        },
+        {
+          "slot": "2026-11-12T16:00:00+09:00",
+          "benefit_id": "999000000043",
+          "pattern": "P6",
+          "media_turn": "IMAGE",
+          "char_count": 391,
+          "expires_at": "2026-11-12T16:49:39+09:00",
+          "check": "structural_only_not_validate_ready_entry",
+          "prior_full_validation_preserved": true
+        },
+        {
+          "slot": "2026-11-12T20:00:00+09:00",
+          "benefit_id": "131200000008",
+          "pattern": "P8",
+          "media_turn": "TEXT",
+          "char_count": 438,
+          "expires_at": "2026-11-12T21:05:01+09:00",
+          "check": "structural_only_not_validate_ready_entry",
+          "prior_full_validation_preserved": true
+        }
+      ],
+      "image_current_git_blob_match": true,
+      "image_current_bytes_redownloaded": false,
+      "new_visual_inspection": false
+    },
+    "metrics": {
+      "new_due_unmeasured_records": 0,
+      "official_reader_available": false,
+      "comparable_measured_24h": 0,
+      "no_weight_change": true,
+      "no_performance_effect_inferred": true
+    },
+    "recovery": {
+      "publication_recovery_required": false,
+      "workflow_dispatch": false,
+      "code_change_required": false
+    },
+    "local_validation_issue": "supportpick-maintenance:execution_environment_unavailable:v1",
+    "next_condition": "Retry local read-only validation in the existing maintenance task once the execution environment returns. Existing Actions schedule and all publisher safety checks remain unchanged. No new scheduler, dispatch or test post."
+  },
+  "last_reported_local_validation_issue": {
+    "fingerprint": "supportpick-maintenance:execution_environment_unavailable:v1",
+    "reported_at": "2026-11-12T03:04:08.489+09:00",
+    "status": "blocked_transient_execution_environment"
   }
 }
