@@ -1533,12 +1533,12 @@
     "last_ready_queue_blob_sha": "3ae38bd3f21b053c13e57281a498c5faf6942213"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-11T23:07:58.098+09:00",
+    "checked_at": "2026-11-11T23:31:39.663+09:00",
     "result": "unchanged_runs_receipts_and_next_four_existing_ready_reverified",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
     "publication_ledger_sha": "c37e8a2def283bd0c7254e13e0c615ec0352f7bc",
     "queue_blob_sha": "3ae38bd3f21b053c13e57281a498c5faf6942213",
-    "maintenance_previous_blob_sha": "95af2509b8ba3e99bdcc623bde5aa373a45f6fb3",
+    "maintenance_previous_blob_sha": "8c5040cbeb754084ef2d223aa2171976bc7a99f8",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [],
@@ -1687,7 +1687,7 @@
       "expired_unpublished_slots": [],
       "image_recheck": {
         "status": "UPSTREAM_VERIFIED",
-        "checked_at": "2026-11-11T23:07:58.098+09:00",
+        "checked_at": "2026-11-11T23:31:39.663+09:00",
         "current_main_bytes_downloaded": true,
         "both_asset_sha256_match_existing_visual_review": true,
         "new_visual_inspection": false
@@ -2044,7 +2044,7 @@
           "timestamp_basis": "Existing ledger publisher-clock time; exact platform timestamp must be confirmed before future quantitative timing analysis."
         }
       },
-      "last_availability_check_at": "2026-11-11T23:07:58.098+09:00",
+      "last_availability_check_at": "2026-11-11T23:31:39.663+09:00",
       "statistical_decision": "No comparison: zero comparable measured observations; preserve A/B, no editorial share changes. Platform timestamps remain unverified."
     },
     "profile_route": {
