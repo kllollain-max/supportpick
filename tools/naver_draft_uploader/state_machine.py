@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass
 from enum import Enum
 from pathlib import Path
 from typing import Optional
@@ -126,14 +126,19 @@ class DraftLock:
     def acquire(self, *, job_id: str, manifest: Manifest, runner_id: str, state: str) -> dict:
         self.path.parent.mkdir(parents=True, exist_ok=True)
         now = time.time()
+
         if self.path.exists():
             current = json.loads(self.path.read_text(encoding="utf-8"))
             hb = float(current.get("heartbeat", current.get("acquired_at", 0)))
             if now - hb <= self.stale_after_s:
                 raise RuntimeError("LOCKED")
-            # A stale lock is never silently discarded when a save may have happened.
+
+            # Never discard a stale lock if a save may already have been sent.
             if current.get("state") in {"SAVE_INTENT", "SAVE_CLICKED", "SAVE_STATUS_UNKNOWN"}:
                 raise RuntimeError("SAVE_STATUS_UNKNOWN")
+
+            # Safe stale lock: remove only after confirming it is not save-sensitive.
+            self.path.unlink(missing_ok=True)
 
         payload = {
             "job_id": job_id,
@@ -144,7 +149,10 @@ class DraftLock:
             "runner_id": runner_id,
             "state": state,
         }
-        fd = os.open(self.path, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+        try:
+            fd = os.open(self.path, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+        except FileExistsError as exc:
+            raise RuntimeError("LOCKED") from exc
         try:
             os.write(fd, json.dumps(payload, ensure_ascii=False).encode("utf-8"))
         finally:
