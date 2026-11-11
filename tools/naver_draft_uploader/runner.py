@@ -226,6 +226,25 @@ def run(manifest_path: Path, workdir: Path, adapter: NaverAdapter):
                               "error_code": e.code, "error_message": str(e), "ts": time.time()})
         return 2, terminal
 
+    except RuntimeError as e:
+        code = str(e)
+        if code == "SAVE_STATUS_UNKNOWN":
+            state = State.SAVE_STATUS_UNKNOWN
+            terminal = state.value
+        elif code == "LOCKED":
+            terminal = "SKIPPED_LOCKED"
+            append_jsonl(ledger, {"job_id": job_id, "content_id": manifest.content_id, "event": terminal, "ts": time.time()})
+            return 4, terminal
+        else:
+            state = State.RETRY_PENDING
+            terminal = state.value
+            code = "RETRY_PENDING"
+
+        checkpoint(state_path, manifest, state, error_code=code, error_message=str(e))
+        append_jsonl(ledger, {"job_id": job_id, "content_id": manifest.content_id, "event": terminal,
+                              "error_code": code, "error_message": str(e), "ts": time.time()})
+        return 2, terminal
+
     finally:
         lock.release()
 
