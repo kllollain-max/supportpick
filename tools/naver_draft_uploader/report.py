@@ -23,7 +23,7 @@ def build_report(*, manifest: dict, state: dict, browser: str | None = None,
             "SAVE_INTENT","SAVE_CLICKED","DRAFT_FOUND","REOPENED","CONTENT_VERIFIED","VERIFIED"
         }),
         "image_expected": len(manifest.get("images", [])),
-        "image_uploaded": int(state.get("image_uploaded", 0)),
+        "image_uploaded": int(state.get("image_uploaded", state.get("verification", {}).get("image_count", 0))),
         "save_clicked": final_state in {
             "SAVE_CLICKED","DRAFT_FOUND","REOPENED","CONTENT_VERIFIED","VERIFIED"
         },
