@@ -14,6 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "42984651971",
     "42954279775",
     "42923802457",
     "42910050871",
@@ -75,15 +76,15 @@
   ],
   "last_health": {
     "unresolved_publications": 0,
-    "published_benefits": 27,
+    "published_benefits": 28,
     "source_run_id": "42910050871",
     "source_result": "validated_complete_artifact",
     "source_count": 10942,
     "source_last_success_at": "2026-11-11T07:04:57.499352+09:00",
     "source_workflow_conclusion": "failure",
     "source_failure_classification": "previously_recorded_public_generation_convergence",
-    "last_publisher_run_id": "42954279775",
-    "writer_queue_ready": 5,
+    "last_publisher_run_id": "42984651971",
+    "writer_queue_ready": 4,
     "writer_schema": "supportpick.writer.v1",
     "account_check": "verified_http_200",
     "account_check_run_id": "42152164281",
@@ -945,18 +946,35 @@
       "conclusion": "success",
       "updated_at": "2026-11-11T03:41:15Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
+    },
+    "42984651971": {
+      "run_id": "42984651971",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-11T08:09:21Z",
+      "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-11T16:49:39+09:00",
-    "result": "next_afternoon_ready_draft_saved_and_current_slot_awaiting_natural_run",
+    "checked_at": "2026-11-11T18:08:42.860944+09:00",
+    "result": "verified_regular_16_kst_publication_and_due_unmeasured_metrics",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-    "publication_ledger_sha": "93ffde99cb9cf153dcfaea8ef62447126399e5c0",
+    "publication_ledger_sha": "fb92fc50d2e30576f24a83908542570a6f1bedf7",
     "queue_blob_sha": "d5d7cbc624c048352d961d50b0e757b34f3854cb",
-    "maintenance_previous_blob_sha": "b001750eb3e5c32d045a8da9bc20429161429617",
+    "maintenance_previous_blob_sha": "9e75b51f9ecc154e83029b44efc45692815ddf5e",
     "unresolved_publications": 0,
     "active_target_runs": [],
-    "changed_run_versions": [],
+    "changed_run_versions": [
+      {
+        "run_id": "42984651971",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-11T08:09:21Z",
+        "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
+      }
+    ],
     "run_pagination": {
       "branch": "main",
       "pages": 2,
@@ -986,132 +1004,114 @@
       "artifact_digest_reverified": true
     },
     "publisher": {
-      "run_id": "42954279775",
+      "run_id": "42984651971",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-11T03:41:15Z",
+      "updated_at": "2026-11-11T08:09:21Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-      "job_id": 130305564128,
-      "artifact_id": 13826188179,
-      "artifact_digest": "sha256:ce5fb474d27d24210eef468e72738e2c11b6ed39d65ce690c6ab26c739fce681",
+      "job_id": 130402829564,
+      "artifact_id": 13838354560,
+      "artifact_digest": "sha256:f04a3cda314bbc5f4fc9543039e1e6f15d1a6375a29dfd7a88bf1fa7f409deef",
       "classification": "verified_natural_publication",
       "event": "schedule",
       "published": true,
-      "slot": "2026-11-11T12:00:00+09:00",
-      "published_at": "2026-11-11T12:40:29.341997+09:00",
-      "benefit_id": "B55258400009",
-      "main_id": "18001464938830261",
-      "url": "https://www.threads.com/@hid_1004/post/DfliawilQhp",
+      "slot": "2026-11-11T16:00:00+09:00",
+      "published_at": "2026-11-11T17:08:29.061816+09:00",
+      "benefit_id": "628000000139",
+      "main_id": "18082387943706799",
+      "url": "https://www.threads.com/@hid_1004/post/DfmBF01lfsj",
       "stage": "complete",
       "verified": true,
-      "content_hash": "13c389b8698f0e9ca0748f8607bb57f4e71b8d80d5c2c1eaffdb0c8af3630b41",
-      "asset_sha256": null,
+      "content_hash": "5da581726b7b503dc58066120c401734a47e335124bc5aff976cfd70dc915dd6",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
       "source_generation": "gov24-42910050871-1",
-      "pattern": "P3",
-      "media_turn": "TEXT",
+      "pattern": "P8",
+      "media_turn": "IMAGE",
       "replies": 0,
-      "verification": "Authenticated publisher readback, digest-verified result artifact, durable ledger and exact queued body agree.",
-      "verification_completed_at": "2026-11-11T04:56:43Z",
+      "verification": "Authenticated publisher readback, digest-verified result artifact, durable ledger and queued exact body/image hashes agree.",
+      "verification_completed_at": "2026-11-11T18:08:42.860944+09:00",
       "public_web_visibility_independently_verified": false,
-      "publication_ledger_records": 27,
+      "publication_ledger_records": 28,
       "pending": null,
-      "lease": null,
-      "previously_reported": true,
-      "current_slot": {
-        "slot": "2026-11-11T16:00:00+09:00",
-        "status": "waiting_for_natural_execution_within_grace_period",
-        "reserved": false,
-        "failed_run_confirmed": false,
-        "manual_dispatch": false
-      }
+      "lease": null
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-      "queue_write": true,
       "queue_reused": true,
-      "queue_previous_blob_sha": "4143dae9a4f373072d313cbcf05e5fd7cecc8500",
-      "queue_commit_sha": "39663b3c704cd93053120bdd480c966e6b1c4538",
+      "queue_write": false,
       "queue_readback_equal": true,
-      "unchanged_existing_entries": 25,
-      "preview_ready": 5,
-      "ready_future_slots": 4,
+      "unchanged_existing_entries": 26,
+      "preview_ready": 4,
       "validate_ready_entry_and_preview": true,
       "next_24h_sequence": [
         {
           "slot": "2026-11-11T20:00:00+09:00",
           "benefit_id": "SD0000007672",
-          "status": "READY",
           "pattern": "P5",
           "media_turn": "TEXT",
           "char_count": 408,
-          "validation_time": "2026-11-11T20:00:00+09:00",
-          "source_recheck_required_at_publish": true
+          "last_valid_at": "2026-11-11T21:59:59+09:00",
+          "current_source_fresh_at_slot": true,
+          "source_recheck_required_at_publish": true,
+          "selection_rank": 20
         },
         {
           "slot": "2026-11-12T08:00:00+09:00",
           "benefit_id": "641000000138",
-          "status": "READY",
           "pattern": "P1",
           "media_turn": "IMAGE",
           "char_count": 378,
-          "validation_time": "2026-11-12T08:00:00+09:00",
-          "source_recheck_required_at_publish": true
+          "last_valid_at": "2026-11-12T09:10:32+09:00",
+          "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true,
+          "selection_rank": 21
         },
         {
           "slot": "2026-11-12T12:00:00+09:00",
           "benefit_id": "SSI000000020",
-          "status": "READY",
           "pattern": "P5",
           "media_turn": "TEXT",
           "char_count": 407,
-          "validation_time": "2026-11-12T12:00:00+09:00",
-          "source_recheck_required_at_publish": true
+          "last_valid_at": "2026-11-12T12:34:22+09:00",
+          "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true,
+          "selection_rank": 21
         },
         {
           "slot": "2026-11-12T16:00:00+09:00",
           "benefit_id": "999000000043",
-          "status": "READY",
           "pattern": "P6",
           "media_turn": "IMAGE",
           "char_count": 391,
-          "validation_time": "2026-11-12T16:00:00+09:00",
-          "source_recheck_required_at_publish": true
+          "last_valid_at": "2026-11-12T16:49:38+09:00",
+          "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true,
+          "selection_rank": 21
         }
       ],
-      "current_open_slot": {
-        "slot": "2026-11-11T16:00:00+09:00",
-        "benefit_id": "628000000139",
-        "status": "READY",
-        "pattern": "P8",
-        "media_turn": "IMAGE",
-        "char_count": 268,
-        "validation_time": "2026-11-11T16:49:39+09:00",
-        "source_recheck_required_at_publish": true
-      },
-      "new_ready": {
-        "slot": "2026-11-12T16:00:00+09:00",
-        "benefit_id": "999000000043",
-        "pattern": "P6",
-        "cohort": "A",
-        "media_turn": "IMAGE",
-        "char_count": 391,
-        "body_sha256": "c7f6f1e8705a0e0d608dac46d9277694d165661fa0229a94f894b7c3d3fa135c",
-        "source_fingerprint": "84e54f39d81a55240e738a9f6d45765883bf28e1510ca7241aec7f17c99a4304",
-        "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-        "prepared_at": "2026-11-11T16:49:39+09:00",
-        "expires_at": "2026-11-12T16:49:39+09:00",
-        "current_source_fresh_at_slot": false,
-        "review_expiry_before_end_of_delay_window": true,
-        "source_recheck_required_at_publish": true,
-        "verification": "Ministry 2026 eligibility and Incheon medical-benefit overview opened; same-ID source and cumulative views compared; current main image bytes match upstream visual review. Original 25 queue entries remain unchanged."
+      "image_recheck": {
+        "status": "UPSTREAM_VERIFIED",
+        "checked_at": "2026-11-11T18:08:42.860944+09:00",
+        "current_main_bytes_downloaded": true,
+        "both_asset_sha256_match_existing_visual_review": true,
+        "new_visual_inspection": false
       }
     },
     "metrics": {
-      "status": "awaiting_first_cohort_24h_window",
-      "policy_post_measurements_due": 0,
-      "official_insights_read_path": "not_available_in_current_execution",
-      "no_performance_effect_inferred": true
+      "status": "due_window_unmeasured_official_read_path_unavailable",
+      "new_due_unmeasured_records": [
+        {
+          "main_id": "18117968657159347",
+          "window_hours": 24,
+          "elapsed_hours": 25.14278472222222,
+          "status": "unmeasured_official_read_path_unavailable"
+        }
+      ],
+      "comparable_measured_24h": 0,
+      "no_performance_effect_inferred": true,
+      "no_weight_change": true,
+      "seven_day_evaluation_due": false
     },
     "recovery": {
       "required": false,
@@ -1127,46 +1127,47 @@
     },
     "history_audit": {
       "requested_days": 28,
-      "available_records": 27,
+      "available_records": 28,
       "first": "2026-11-04T17:14:06.646060+09:00",
-      "last": "2026-11-11T12:40:29.341997+09:00",
+      "last": "2026-11-11T17:08:29.061816+09:00",
       "duplicate_main_ids": 0,
       "duplicate_slots": 0,
       "unresolved": 0,
-      "basis": "Durable readback receipts and latest digest-verified result; historical current public visibility and remote image rendering not independently verified."
+      "basis": "Durable publisher readback receipts with latest digest-verified result. Current public visibility and image rendering of all historical posts not independently rechecked.",
+      "latest_regular_delay_minutes": 68.48435
     },
-    "next_condition": "Await existing 16:00 KST schedule inside original two-hour window. If skipped before sending, recompute unreserved future candidates and media. Tomorrow 08:00, 12:00 and 16:00 need newer complete source and official evidence refresh before draft expiry. First 24h cohort observation due 2026-11-11 17:00:08 KST."
+    "next_condition": "Use existing 20:00 KST regular slot. Tomorrow's 08:00, 12:00 and 16:00 drafts require newer complete source and official evidence refresh before expiry. If an authorized official Insights reader becomes available, observe actual elapsed cumulative values without reconstructing 24h history; keep unavailable values separate from zero. Next 24h cohort window due 2026-11-11 20:38:42 KST."
   },
   "last_reported_publication": {
-    "run_id": "42954279775",
+    "run_id": "42984651971",
     "run_attempt": 1,
     "status": "completed",
     "conclusion": "success",
-    "updated_at": "2026-11-11T03:41:15Z",
+    "updated_at": "2026-11-11T08:09:21Z",
     "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-    "job_id": 130305564128,
-    "artifact_id": 13826188179,
-    "artifact_digest": "sha256:ce5fb474d27d24210eef468e72738e2c11b6ed39d65ce690c6ab26c739fce681",
+    "job_id": 130402829564,
+    "artifact_id": 13838354560,
+    "artifact_digest": "sha256:f04a3cda314bbc5f4fc9543039e1e6f15d1a6375a29dfd7a88bf1fa7f409deef",
     "classification": "verified_natural_publication",
     "event": "schedule",
     "published": true,
-    "slot": "2026-11-11T12:00:00+09:00",
-    "published_at": "2026-11-11T12:40:29.341997+09:00",
-    "benefit_id": "B55258400009",
-    "main_id": "18001464938830261",
-    "url": "https://www.threads.com/@hid_1004/post/DfliawilQhp",
+    "slot": "2026-11-11T16:00:00+09:00",
+    "published_at": "2026-11-11T17:08:29.061816+09:00",
+    "benefit_id": "628000000139",
+    "main_id": "18082387943706799",
+    "url": "https://www.threads.com/@hid_1004/post/DfmBF01lfsj",
     "stage": "complete",
     "verified": true,
-    "content_hash": "13c389b8698f0e9ca0748f8607bb57f4e71b8d80d5c2c1eaffdb0c8af3630b41",
-    "asset_sha256": null,
+    "content_hash": "5da581726b7b503dc58066120c401734a47e335124bc5aff976cfd70dc915dd6",
+    "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
     "source_generation": "gov24-42910050871-1",
-    "pattern": "P3",
-    "media_turn": "TEXT",
+    "pattern": "P8",
+    "media_turn": "IMAGE",
     "replies": 0,
-    "verification": "Authenticated publisher readback, digest-verified result artifact, durable ledger and exact queued body agree.",
-    "verification_completed_at": "2026-11-11T04:56:43Z",
+    "verification": "Authenticated publisher readback, digest-verified result artifact, durable ledger and queued exact body/image hashes agree.",
+    "verification_completed_at": "2026-11-11T18:08:42.860944+09:00",
     "public_web_visibility_independently_verified": false,
-    "publication_ledger_records": 27,
+    "publication_ledger_records": 28,
     "pending": null,
     "lease": null
   },
@@ -1692,7 +1693,7 @@
       "actual_source_generation": "gov24-42708067719-1"
     },
     "measurement": {
-      "status": "unavailable_in_current_execution",
+      "status": "due_window_unmeasured_official_read_path_unavailable",
       "reason": "No authorized Insights read path exposed in this environment. Current token scope is unverified. Official documentation is available, but no authenticated metric response was obtained.",
       "reference": "https://www.postman.com/meta/threads/request/34203612-385abc7d-b3cc-4e5d-9937-ebbe7174e041",
       "observed_posts_with_metrics": 0,
@@ -1755,7 +1756,8 @@
             {
               "hours": 24,
               "due_at": "2026-11-11T17:00:08.835254+09:00",
-              "status": "awaiting_due_time"
+              "status": "unmeasured_official_read_path_unavailable",
+              "checked_at": "2026-11-11T18:08:42.860944+09:00"
             },
             {
               "hours": 168,
@@ -1837,8 +1839,64 @@
               "status": "awaiting_due_time"
             }
           ]
+        },
+        "18082387943706799": {
+          "main_id": "18082387943706799",
+          "slot": "2026-11-11T16:00:00+09:00",
+          "published_at": "2026-11-11T17:08:29.061816+09:00",
+          "benefit_id": "628000000139",
+          "reader_scope": "인천의 가맹점에서 인천e음으로 결제하거나 처음 카드를 발급받으려는 만 14세 이상 이용자",
+          "opening_type": "대상·혜택형",
+          "cohort": "B",
+          "pattern": "P8",
+          "char_count": 268,
+          "media_turn": "IMAGE",
+          "windows": [
+            {
+              "hours": 24,
+              "due_at": "2026-11-12T08:08:29.061Z",
+              "status": "awaiting_due_time"
+            },
+            {
+              "hours": 168,
+              "due_at": "2026-11-18T08:08:29.061Z",
+              "status": "awaiting_due_time"
+            }
+          ]
         }
-      }
+      },
+      "observations_by_id_window": {
+        "18117968657159347:24h": {
+          "main_id": "18117968657159347",
+          "window_hours": 24,
+          "scheduled_at": "2026-11-10T16:00:00+09:00",
+          "published_at": "2026-11-10T17:00:08.835254+09:00",
+          "benefit_id": "628000000735",
+          "reader_scope": "인천 거주 임산부",
+          "opening_type": "생활 상황형",
+          "cohort": "A",
+          "pattern": "P6",
+          "char_count": 459,
+          "media_turn": "IMAGE",
+          "checked_at": "2026-11-11T18:08:42.860944+09:00",
+          "elapsed_hours": 25.14278472222222,
+          "due_at": "2026-11-11T08:00:08.835Z",
+          "timing": "late_available_check",
+          "status": "unmeasured_official_read_path_unavailable",
+          "views": null,
+          "likes": null,
+          "replies": null,
+          "reposts": null,
+          "quotes": null,
+          "permission_status": "unverified",
+          "official_api_request_performed": false,
+          "reason": "No authorized Threads Insights reader is exposed in the current execution; no new credentials, permissions or alternate route used.",
+          "not_zero": true,
+          "not_backcalculated": true
+        }
+      },
+      "last_availability_check_at": "2026-11-11T18:08:42.860944+09:00",
+      "statistical_decision": "No comparison: zero comparable measured observations; no editorial share changes."
     },
     "profile_route": {
       "status": "live_route_unconfirmed",
@@ -1848,6 +1906,6 @@
       "detail_path_verified_in_repository_code": true,
       "public_profile_and_detail_open": "unavailable in public retrieval"
     },
-    "next_condition": "Await existing 16:00 KST schedule inside original two-hour window. If skipped before sending, recompute unreserved future candidates and media. Tomorrow 08:00, 12:00 and 16:00 need newer complete source and official evidence refresh before draft expiry. First 24h cohort observation due 2026-11-11 17:00:08 KST."
+    "next_condition": "Use existing 20:00 KST regular slot. Tomorrow's 08:00, 12:00 and 16:00 drafts require newer complete source and official evidence refresh before expiry. If an authorized official Insights reader becomes available, observe actual elapsed cumulative values without reconstructing 24h history; keep unavailable values separate from zero. Next 24h cohort window due 2026-11-11 20:38:42 KST."
   }
 }
