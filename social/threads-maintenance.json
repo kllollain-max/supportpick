@@ -1533,12 +1533,12 @@
     "last_ready_queue_blob_sha": "3ae38bd3f21b053c13e57281a498c5faf6942213"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-12T02:09:48.908+09:00",
-    "result": "unchanged_runs_receipts_and_next_four_existing_ready_reverified",
+    "checked_at": "2026-11-12T04:12:32.733+09:00",
+    "result": "local_validation_environment_restored_and_four_existing_ready_reverified",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
     "publication_ledger_sha": "c37e8a2def283bd0c7254e13e0c615ec0352f7bc",
     "queue_blob_sha": "3ae38bd3f21b053c13e57281a498c5faf6942213",
-    "maintenance_previous_blob_sha": "99a7cf073cae50960101986ebf09691316d19cd1",
+    "maintenance_previous_blob_sha": "347c00fd187abe1b326f8abec1f91090ab6d32fa",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [],
@@ -1689,7 +1689,7 @@
       "expired_unpublished_slots": [],
       "image_recheck": {
         "status": "UPSTREAM_VERIFIED",
-        "checked_at": "2026-11-12T02:09:48.908+09:00",
+        "checked_at": "2026-11-12T04:11:45.728753+09:00",
         "current_main_bytes_downloaded": true,
         "both_asset_sha256_match_existing_visual_review": true,
         "new_visual_inspection": false
@@ -1719,7 +1719,8 @@
       "new_failures": 0,
       "new_partials": 0,
       "post_retry_budget_used": 0,
-      "code_change_required": false
+      "code_change_required": false,
+      "local_validation_environment_recovery": true
     },
     "incidents": {
       "initial_41796747628": "resolved",
@@ -2052,7 +2053,7 @@
           "timestamp_basis": "Existing ledger publisher-clock time; exact platform timestamp must be confirmed before future quantitative timing analysis."
         }
       },
-      "last_availability_check_at": "2026-11-12T03:04:08.489+09:00",
+      "last_availability_check_at": "2026-11-12T04:12:32.733+09:00",
       "statistical_decision": "No comparison: zero comparable measured observations; preserve A/B, no editorial share changes. Platform timestamps remain unverified."
     },
     "profile_route": {
@@ -2068,7 +2069,7 @@
   "local_validation_issues": {
     "supportpick-maintenance:execution_environment_unavailable:v1": {
       "fingerprint": "supportpick-maintenance:execution_environment_unavailable:v1",
-      "status": "blocked_transient_execution_environment",
+      "status": "resolved",
       "observed_at": "2026-11-12T03:04:08.489+09:00",
       "confirmed_cause": "Execution tool returned: No usable execution environment is available. Wait for an environment to become available before using this tool.",
       "stage": "local_read_only_python_validation",
@@ -2088,10 +2089,16 @@
         "Compared current image Git blob SHAs to previously verified bytes; no new file download or visual inspection"
       ],
       "remaining": [
-        "When execution environment is available, rerun load_feed/read_current/verify_snapshot and validate_ready_entry/preview against latest full source and unchanged queue",
-        "Before each actual scheduled publication, obtain current complete source and official evidence within existing expiry; current evening source does not cover today's 20 KST slot"
+        "Actual scheduled publication still requires latest complete source and official evidence within stored expiry; current evening source does not cover today's 20 KST slot"
       ],
-      "next_condition": "Retry local read-only validation in the existing maintenance task once the execution environment returns. Existing Actions schedule and all publisher safety checks remain unchanged. No new scheduler, dispatch or test post."
+      "next_condition": "Use existing regular Actions publisher only. If execution environment becomes unavailable again, preserve queue and prior evidence and record limited checks; restore exact files and verify artifact/image hashes before rerunning validator.",
+      "resolved_at": "2026-11-12T04:12:32.733+09:00",
+      "resolution": "Execution environment became available; restored exact current main source files, latest official runtime/result artifacts and approved image bytes; verified both artifact SHA256 digests and all four existing READY entries with the actual Python validator and preview.",
+      "final_full_validation_at": "2026-11-12T04:11:45.728753+09:00",
+      "final_full_validation_result": "4_READY",
+      "queue_changed": false,
+      "publisher_dispatch": false,
+      "code_change_required": false
     }
   },
   "last_limited_check": {
@@ -2200,7 +2207,7 @@
   },
   "last_reported_local_validation_issue": {
     "fingerprint": "supportpick-maintenance:execution_environment_unavailable:v1",
-    "reported_at": "2026-11-12T03:04:08.489+09:00",
-    "status": "blocked_transient_execution_environment"
+    "reported_at": "2026-11-12T04:12:32.733+09:00",
+    "status": "resolved"
   }
 }
