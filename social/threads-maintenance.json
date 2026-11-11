@@ -14,6 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "43002359099",
     "42984651971",
     "42954279775",
     "42923802457",
@@ -77,12 +78,12 @@
   "last_health": {
     "unresolved_publications": 0,
     "published_benefits": 28,
-    "source_run_id": "42910050871",
-    "source_result": "validated_complete_artifact",
+    "source_run_id": "43002359099",
+    "source_result": "success",
     "source_count": 10942,
-    "source_last_success_at": "2026-11-11T07:04:57.499352+09:00",
-    "source_workflow_conclusion": "failure",
-    "source_failure_classification": "previously_recorded_public_generation_convergence",
+    "source_last_success_at": "2026-11-11T19:25:12.022625+09:00",
+    "source_workflow_conclusion": "success",
+    "source_failure_classification": null,
     "last_publisher_run_id": "42984651971",
     "writer_queue_ready": 4,
     "writer_schema": "supportpick.writer.v1",
@@ -954,6 +955,14 @@
       "conclusion": "success",
       "updated_at": "2026-11-11T08:09:21Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
+    },
+    "43002359099": {
+      "run_id": "43002359099",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-11T10:26:17Z",
+      "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
     }
   },
   "last_check": {
@@ -1457,15 +1466,24 @@
     "existing_safety_contract_precedence": true
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-11T19:13:49.323559+09:00",
-    "result": "pre_20_kst_check_unchanged_runs_and_next_four_ready_reused",
+    "checked_at": "2026-11-11T19:32:23.460567+09:00",
+    "result": "evening_source_integrity_verified_next_four_existing_ready_reused",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
     "publication_ledger_sha": "fb92fc50d2e30576f24a83908542570a6f1bedf7",
     "queue_blob_sha": "d5d7cbc624c048352d961d50b0e757b34f3854cb",
-    "maintenance_previous_blob_sha": "6e9459c54387a9f12c059f5a137e2adacb1f21e0",
+    "maintenance_previous_blob_sha": "4ecb51eac1022e76b4f0b96c07d3b1dce01b2801",
     "unresolved_publications": 0,
     "active_target_runs": [],
-    "changed_run_versions": [],
+    "changed_run_versions": [
+      {
+        "run_id": "43002359099",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-11T10:26:17Z",
+        "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
+      }
+    ],
     "run_pagination": {
       "branch": "main",
       "pages": 2,
@@ -1474,25 +1492,26 @@
       "checkpoint_reached": true
     },
     "source": {
-      "run_id": "42910050871",
+      "run_id": "43002359099",
       "run_attempt": 1,
       "status": "completed",
-      "conclusion": "failure",
-      "updated_at": "2026-11-10T22:07:31Z",
+      "conclusion": "success",
+      "updated_at": "2026-11-11T10:26:17Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-      "generation": "gov24-42910050871-1",
+      "generation": "gov24-43002359099-1",
       "count": 10942,
-      "manifest_sha256": "b9a91c58de41c85380588cb4ea3c5217225c70f3df3ebe77488a82c6c64b35d5",
-      "collection_succeeded_at": "2026-11-11T07:04:57.499352+09:00",
-      "job_id": "130158027087",
-      "artifact_id": "13807161974",
-      "artifact_digest": "sha256:7e4cae7817ffef2925fab1e2ad85c652d2087f9f84a1e896acd42e5562ffd3e2",
+      "manifest_sha256": "a85deb99138eed046c22c7dd9622afb94d6451dead2fd3c94a0f5ff52e14f3ca",
+      "collection_succeeded_at": "2026-11-11T19:25:12.022625+09:00",
+      "job_id": 130461332250,
+      "artifact_id": 13847491553,
+      "artifact_digest": "sha256:d706c01bb6a73f165dce842431780bba2791c93b0e8f80b57d6fca9bfdb91a98",
       "read_current_verify_snapshot_load_feed": true,
       "collection_step": "completed_success",
+      "job_logs": "completed_verified",
       "currently_consumable_as_latest_completed": true,
       "fresh_at_check": true,
       "current_application_status_not_inferred": true,
-      "artifact_digest_reverified": true
+      "public_deploy": "skipped_by_existing_unchanged_content_decision"
     },
     "publisher": {
       "run_id": "42984651971",
@@ -1546,8 +1565,10 @@
           "char_count": 408,
           "last_valid_at": "2026-11-11T21:59:59+09:00",
           "current_source_fresh_at_slot": true,
+          "current_source_covers_delay_window": true,
           "source_recheck_required_at_publish": true,
-          "selection_rank": 20
+          "selection_rank": 20,
+          "source_fingerprint_matches": true
         },
         {
           "slot": "2026-11-12T08:00:00+09:00",
@@ -1556,9 +1577,11 @@
           "media_turn": "IMAGE",
           "char_count": 378,
           "last_valid_at": "2026-11-12T09:10:32+09:00",
-          "current_source_fresh_at_slot": false,
+          "current_source_fresh_at_slot": true,
+          "current_source_covers_delay_window": true,
           "source_recheck_required_at_publish": true,
-          "selection_rank": 21
+          "selection_rank": 21,
+          "source_fingerprint_matches": true
         },
         {
           "slot": "2026-11-12T12:00:00+09:00",
@@ -1567,9 +1590,11 @@
           "media_turn": "TEXT",
           "char_count": 407,
           "last_valid_at": "2026-11-12T12:34:22+09:00",
-          "current_source_fresh_at_slot": false,
+          "current_source_fresh_at_slot": true,
+          "current_source_covers_delay_window": true,
           "source_recheck_required_at_publish": true,
-          "selection_rank": 21
+          "selection_rank": 21,
+          "source_fingerprint_matches": true
         },
         {
           "slot": "2026-11-12T16:00:00+09:00",
@@ -1578,32 +1603,20 @@
           "media_turn": "IMAGE",
           "char_count": 391,
           "last_valid_at": "2026-11-12T16:49:38+09:00",
-          "current_source_fresh_at_slot": false,
+          "current_source_fresh_at_slot": true,
+          "current_source_covers_delay_window": true,
           "source_recheck_required_at_publish": true,
-          "selection_rank": 21
+          "selection_rank": 21,
+          "source_fingerprint_matches": true
         }
       ],
       "all_existing_bodies_and_media_preserved": true,
       "image_recheck": {
         "status": "UPSTREAM_VERIFIED",
-        "checked_at": "2026-11-11T19:13:49.323559+09:00",
+        "checked_at": "2026-11-11T19:32:23.460567+09:00",
         "current_main_bytes_downloaded": true,
         "both_asset_sha256_match_existing_visual_review": true,
-        "new_visual_inspection": false,
-        "assets": [
-          {
-            "asset": "benefit-guide-1.png",
-            "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-            "status": "UPSTREAM_VERIFIED",
-            "new_visual_inspection": false
-          },
-          {
-            "asset": "benefit-guide-2.png",
-            "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-            "status": "UPSTREAM_VERIFIED",
-            "new_visual_inspection": false
-          }
-        ]
+        "new_visual_inspection": false
       }
     },
     "metrics": {
@@ -1611,7 +1624,6 @@
       "new_due_unmeasured_records": 0,
       "existing_unmeasured_id_window_records_preserved": true,
       "comparable_measured_24h": 0,
-      "seven_day_evaluation_due": false,
       "no_performance_effect_inferred": true,
       "no_weight_change": true
     },
@@ -1627,7 +1639,7 @@
       "42910050871": "previously_recorded_public_manifest_convergence",
       "new_incident": null
     },
-    "next_condition": "Use existing 20:00 KST regular slot. Tomorrow's 08:00, 12:00 and 16:00 drafts require newer complete source and official evidence refresh before expiry. If an authorized official Insights reader becomes available, observe actual elapsed cumulative values without reconstructing 24h history; keep unavailable values separate from zero. Next 24h cohort window due 2026-11-11 20:38:42 KST."
+    "next_condition": "Use existing 20:00 KST schedule and recheck latest source/ledger at send. Current complete source covers all next four slot windows; tomorrow's drafts still need renewed official evidence before respective expiry (09:10:33,12:34:23,16:49:39 KST) if publishing later in their original two-hour windows. Next metrics window due 20:38:42 KST; missing official reader is not a zero observation."
   },
   "reach_policy": {
     "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -1910,6 +1922,6 @@
       "detail_path_verified_in_repository_code": true,
       "public_profile_and_detail_open": "unavailable in public retrieval"
     },
-    "next_condition": "Use existing 20:00 KST regular slot. Tomorrow's 08:00, 12:00 and 16:00 drafts require newer complete source and official evidence refresh before expiry. If an authorized official Insights reader becomes available, observe actual elapsed cumulative values without reconstructing 24h history; keep unavailable values separate from zero. Next 24h cohort window due 2026-11-11 20:38:42 KST."
+    "next_condition": "Use existing 20:00 KST schedule and recheck latest source/ledger at send. Current complete source covers all next four slot windows; tomorrow's drafts still need renewed official evidence before respective expiry (09:10:33,12:34:23,16:49:39 KST) if publishing later in their original two-hour windows. Next metrics window due 20:38:42 KST; missing official reader is not a zero observation."
   }
 }
