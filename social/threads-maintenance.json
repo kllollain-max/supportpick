@@ -1457,12 +1457,12 @@
     "existing_safety_contract_precedence": true
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-11T15:44:56.883339+09:00",
-    "result": "pre_16_kst_audit_unchanged_runs_and_next_four_ready_reused",
+    "checked_at": "2026-11-11T19:13:49.323559+09:00",
+    "result": "pre_20_kst_check_unchanged_runs_and_next_four_ready_reused",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-    "publication_ledger_sha": "93ffde99cb9cf153dcfaea8ef62447126399e5c0",
-    "queue_blob_sha": "4143dae9a4f373072d313cbcf05e5fd7cecc8500",
-    "maintenance_previous_blob_sha": "a9afb6ef13131f8c5564bff1d752a986d6f69306",
+    "publication_ledger_sha": "fb92fc50d2e30576f24a83908542570a6f1bedf7",
+    "queue_blob_sha": "d5d7cbc624c048352d961d50b0e757b34f3854cb",
+    "maintenance_previous_blob_sha": "6e9459c54387a9f12c059f5a137e2adacb1f21e0",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [],
@@ -1495,35 +1495,35 @@
       "artifact_digest_reverified": true
     },
     "publisher": {
-      "run_id": "42954279775",
+      "run_id": "42984651971",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-11T03:41:15Z",
+      "updated_at": "2026-11-11T08:09:21Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-      "job_id": 130305564128,
-      "artifact_id": 13826188179,
-      "artifact_digest": "sha256:ce5fb474d27d24210eef468e72738e2c11b6ed39d65ce690c6ab26c739fce681",
+      "job_id": 130402829564,
+      "artifact_id": 13838354560,
+      "artifact_digest": "sha256:f04a3cda314bbc5f4fc9543039e1e6f15d1a6375a29dfd7a88bf1fa7f409deef",
       "classification": "verified_natural_publication",
       "event": "schedule",
       "published": true,
-      "slot": "2026-11-11T12:00:00+09:00",
-      "published_at": "2026-11-11T12:40:29.341997+09:00",
-      "benefit_id": "B55258400009",
-      "main_id": "18001464938830261",
-      "url": "https://www.threads.com/@hid_1004/post/DfliawilQhp",
+      "slot": "2026-11-11T16:00:00+09:00",
+      "published_at": "2026-11-11T17:08:29.061816+09:00",
+      "benefit_id": "628000000139",
+      "main_id": "18082387943706799",
+      "url": "https://www.threads.com/@hid_1004/post/DfmBF01lfsj",
       "stage": "complete",
       "verified": true,
-      "content_hash": "13c389b8698f0e9ca0748f8607bb57f4e71b8d80d5c2c1eaffdb0c8af3630b41",
-      "asset_sha256": null,
+      "content_hash": "5da581726b7b503dc58066120c401734a47e335124bc5aff976cfd70dc915dd6",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
       "source_generation": "gov24-42910050871-1",
-      "pattern": "P3",
-      "media_turn": "TEXT",
+      "pattern": "P8",
+      "media_turn": "IMAGE",
       "replies": 0,
-      "verification": "Authenticated publisher readback, digest-verified result artifact, durable ledger and exact queued body agree.",
-      "verification_completed_at": "2026-11-11T04:56:43Z",
+      "verification": "Authenticated publisher readback, digest-verified result artifact, durable ledger and queued exact body/image hashes agree.",
+      "verification_completed_at": "2026-11-11T18:08:42.860944+09:00",
       "public_web_visibility_independently_verified": false,
-      "publication_ledger_records": 27,
+      "publication_ledger_records": 28,
       "pending": null,
       "lease": null,
       "previously_reported": true,
@@ -1539,25 +1539,14 @@
       "validate_ready_entry_and_preview": true,
       "next_24h_sequence": [
         {
-          "slot": "2026-11-11T16:00:00+09:00",
-          "benefit_id": "628000000139",
-          "pattern": "P8",
-          "media_turn": "IMAGE",
-          "char_count": 268,
-          "last_valid_at": "2026-11-11T17:59:59+09:00",
-          "source_recheck_required_at_publish": true,
-          "current_source_fresh_at_slot": true,
-          "selection_rank": 19
-        },
-        {
           "slot": "2026-11-11T20:00:00+09:00",
           "benefit_id": "SD0000007672",
           "pattern": "P5",
           "media_turn": "TEXT",
           "char_count": 408,
           "last_valid_at": "2026-11-11T21:59:59+09:00",
-          "source_recheck_required_at_publish": true,
           "current_source_fresh_at_slot": true,
+          "source_recheck_required_at_publish": true,
           "selection_rank": 20
         },
         {
@@ -1567,8 +1556,8 @@
           "media_turn": "IMAGE",
           "char_count": 378,
           "last_valid_at": "2026-11-12T09:10:32+09:00",
-          "source_recheck_required_at_publish": true,
           "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true,
           "selection_rank": 21
         },
         {
@@ -1578,27 +1567,38 @@
           "media_turn": "TEXT",
           "char_count": 407,
           "last_valid_at": "2026-11-12T12:34:22+09:00",
-          "source_recheck_required_at_publish": true,
           "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true,
+          "selection_rank": 21
+        },
+        {
+          "slot": "2026-11-12T16:00:00+09:00",
+          "benefit_id": "999000000043",
+          "pattern": "P6",
+          "media_turn": "IMAGE",
+          "char_count": 391,
+          "last_valid_at": "2026-11-12T16:49:38+09:00",
+          "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true,
           "selection_rank": 21
         }
       ],
       "all_existing_bodies_and_media_preserved": true,
       "image_recheck": {
         "status": "UPSTREAM_VERIFIED",
-        "checked_at": "2026-11-11T15:44:56.883339+09:00",
+        "checked_at": "2026-11-11T19:13:49.323559+09:00",
         "current_main_bytes_downloaded": true,
         "both_asset_sha256_match_existing_visual_review": true,
         "new_visual_inspection": false,
         "assets": [
           {
-            "file": "benefit-guide-1.png",
+            "asset": "benefit-guide-1.png",
             "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
             "status": "UPSTREAM_VERIFIED",
             "new_visual_inspection": false
           },
           {
-            "file": "benefit-guide-2.png",
+            "asset": "benefit-guide-2.png",
             "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
             "status": "UPSTREAM_VERIFIED",
             "new_visual_inspection": false
@@ -1607,10 +1607,13 @@
       }
     },
     "metrics": {
-      "status": "awaiting_first_cohort_24h_window",
-      "policy_post_measurements_due": 0,
-      "official_insights_read_path": "not_available_in_current_execution",
-      "no_performance_effect_inferred": true
+      "status": "due_window_unmeasured_official_read_path_unavailable",
+      "new_due_unmeasured_records": 0,
+      "existing_unmeasured_id_window_records_preserved": true,
+      "comparable_measured_24h": 0,
+      "seven_day_evaluation_due": false,
+      "no_performance_effect_inferred": true,
+      "no_weight_change": true
     },
     "recovery": {
       "required": false,
@@ -1624,7 +1627,7 @@
       "42910050871": "previously_recorded_public_manifest_convergence",
       "new_incident": null
     },
-    "next_condition": "Use existing 16:00 KST regular slot. Tomorrow's 08:00 and 12:00 drafts require newer complete source before sending and official-evidence refresh before their expiry. First cohort 24h window due 2026-11-11 17:00:08 KST. No manual publish or recovery is needed."
+    "next_condition": "Use existing 20:00 KST regular slot. Tomorrow's 08:00, 12:00 and 16:00 drafts require newer complete source and official evidence refresh before expiry. If an authorized official Insights reader becomes available, observe actual elapsed cumulative values without reconstructing 24h history; keep unavailable values separate from zero. Next 24h cohort window due 2026-11-11 20:38:42 KST."
   },
   "reach_policy": {
     "policy_id": "supportpick-threads-reach-v1-20261109",
