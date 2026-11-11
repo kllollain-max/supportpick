@@ -7,19 +7,25 @@
       "slot": "hero",
       "source_file_id": "file_000000008b3c8212bd667f35ea59602a",
       "source_name": "SupportPick_medical-aid-cancer-registration-2026_01-thumbnail.png",
-      "path": null
+      "path": "/mnt/data/supportpick_phase1_assets/SupportPick_medical-aid-cancer-registration-2026_01-thumbnail.png",
+      "size_bytes": 1775271,
+      "sha256": "bc778574751fd26aaddc4d113c06c86ecb37c58be8417e3d7a229b769cb6f8ff"
     },
     {
       "slot": "core",
       "source_file_id": "file_00000000df9082129f7c1a404eafddc1",
       "source_name": "SupportPick_medical-aid-cancer-registration-2026_02-benefit.png",
-      "path": null
+      "path": "/mnt/data/supportpick_phase1_assets/SupportPick_medical-aid-cancer-registration-2026_02-benefit.png",
+      "size_bytes": 105257,
+      "sha256": "467f9462a230473c4a80a92d06a531aa608d6500c3ace518214f464db709c369"
     },
     {
       "slot": "check",
       "source_file_id": "file_0000000036748212b4d29f73e35ea8e5",
       "source_name": "SupportPick_medical-aid-cancer-registration-2026_03-application.png",
-      "path": null
+      "path": "/mnt/data/supportpick_phase1_assets/SupportPick_medical-aid-cancer-registration-2026_03-application.png",
+      "size_bytes": 98449,
+      "sha256": "15b597a70cf946c90b0c9cf0d6d93bd7c6ac36c5fc076083e511d6313576da52"
     }
   ],
   "cta_text": "다른 생활 지원 제도는 지원금픽 링크에서 확인하세요.",
@@ -28,5 +34,9 @@
   "source_run_id": "0d7c5fbb-74fc-8325-abbb-3b54341b2440",
   "source_body_file_id": "file_00000000eff882129f045543bab82c5b",
   "phase": 1,
-  "live_publish_allowed": false
+  "live_publish_allowed": false,
+  "source_body_path": "/mnt/data/supportpick_phase1_assets/SupportPick_medical-aid-cancer-registration-2026_body.txt",
+  "source_body_size_bytes": 3540,
+  "source_body_sha256": "35e8cd8d672cc25ba8a0b9d25ca255fe5fa6bddd956d0967294fedab0ce9218c",
+  "asset_materialized_at": "2026-11-11T10:00:00+09:00"
 }
