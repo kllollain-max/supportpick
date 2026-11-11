@@ -68,7 +68,8 @@
     "42779218989",
     "42797196046",
     "42809117674",
-    "42910050871"
+    "42910050871",
+    "42923802457"
   ],
   "last_health": {
     "unresolved_publications": 0,
@@ -900,24 +901,31 @@
       "conclusion": "failure",
       "updated_at": "2026-11-10T22:07:31Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
+    },
+    "42923802457": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-10T23:30:41Z",
+      "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-11T07:08:35.057941+09:00",
-    "result": "morning_complete_source_verified_after_public_manifest_delay",
+    "checked_at": "2026-11-11T09:10:33+09:00",
+    "result": "verified_natural_08_kst_publication_and_next_four_queue_readback",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-    "publication_ledger_sha": "5b3f4f50be8e3fd63b6f114f16baf6884808a065",
-    "queue_blob_sha": "edb9ddc9aa275bed50f70339d2c294584c4fef93",
-    "maintenance_previous_blob_sha": "1fa50ffb48c8e0f1dc44a8302507ec823e1af42c",
+    "publication_ledger_sha": "8c320ebf7d4274e62007f8678280413ea9e4c510",
+    "queue_blob_sha": "695e693167edd510c32131e539dbfb4df5e4c27d",
+    "maintenance_previous_blob_sha": "58bedc05159a4c2d443641a9d4b977e26b499140",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [
       {
-        "run_id": "42910050871",
+        "run_id": "42923802457",
         "run_attempt": 1,
         "status": "completed",
-        "conclusion": "failure",
-        "updated_at": "2026-11-10T22:07:31Z",
+        "conclusion": "success",
+        "updated_at": "2026-11-10T23:30:41Z",
         "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
       }
     ],
@@ -942,68 +950,59 @@
       "current_application_status_not_inferred": true
     },
     "publisher": {
-      "run_id": "42809117674",
+      "run_id": "42923802457",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-10T11:39:31Z",
+      "updated_at": "2026-11-10T23:30:41Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-      "job_id": "129805753297",
-      "artifact_id": "13760123026",
-      "artifact_digest": "sha256:6800a2b2f356900d5b9e7dd4de8818c36ee4bf6e25c2a978639013abd357ada1",
+      "job_id": "130205028031",
+      "artifact_id": "13812144557",
+      "artifact_digest": "sha256:c05c2d875904546c399e066dcafec392999165c7278717a17addfd5218565da2",
       "classification": "verified_natural_publication",
       "event": "schedule",
       "published": true,
-      "slot": "2026-11-10T20:00:00+09:00",
-      "published_at": "2026-11-10T20:38:42.009665+09:00",
-      "benefit_id": "628000000739",
-      "main_id": "17992859946026940",
-      "url": "https://www.threads.com/@hid_1004/post/Dfj0WhoG2Eu",
+      "slot": "2026-11-11T08:00:00+09:00",
+      "published_at": "2026-11-11T08:29:49.253605+09:00",
+      "benefit_id": "149200000041",
+      "main_id": "17913499947663769",
+      "url": "https://www.threads.com/@hid_1004/post/DflFvCdG5H8",
       "stage": "complete",
       "verified": true,
-      "content_hash": "adc2c369ee65d8f01cf12953c276d1ab4bccc1f46cda73e70be39e05d69e3a07",
-      "asset_sha256": null,
-      "source_generation": "gov24-42797196046-1",
-      "prepared_source_generation": "gov24-42599671027-1",
-      "pattern": "P8",
-      "media_turn": "TEXT",
+      "content_hash": "bd438cde725111a8198e90c0f304bb709acbde2318bd2fd01b796f8948ea638f",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "source_generation": "gov24-42910050871-1",
+      "prepared_source_generation": "gov24-42708067719-1",
+      "pattern": "P6",
+      "media_turn": "IMAGE",
       "replies": 0,
-      "verification": "Authenticated publisher readback, job log receipt, durable ledger, queued body hash and digest-verified workflow result agree.",
-      "verification_completed_at": "2026-11-10T22:00:16+09:00",
+      "verification": "Authenticated publisher readback, job receipt, digest-verified result, durable ledger and queued body/image hashes agree.",
+      "verification_completed_at": "2026-11-11T09:10:33+09:00",
       "public_web_visibility_independently_verified": false,
-      "public_web_check": "Public permalink could not be independently opened.",
-      "publication_ledger_records": 25,
+      "publication_ledger_records": 26,
       "pending": null,
-      "lease": null,
-      "previously_reported": true
+      "lease": null
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "queue_write": true,
       "queue_reused": true,
-      "queue_write": false,
+      "queue_previous_blob_sha": "edb9ddc9aa275bed50f70339d2c294584c4fef93",
+      "queue_commit_sha": "c2ccbeee16e5914204c7b3ed52b8e40ea3acf69a",
       "queue_readback_equal": true,
+      "unchanged_existing_entries": 23,
       "preview_ready": 4,
       "validate_ready_entry_and_preview": true,
       "next_24h_sequence": [
-        {
-          "slot": "2026-11-11T08:00:00+09:00",
-          "benefit_id": "149200000041",
-          "pattern": "P6",
-          "media_turn": "IMAGE",
-          "char_count": 320,
-          "last_simulated_draft_validation": "2026-11-11T09:59:59+09:00",
-          "current_source_covers_window": true,
-          "source_recheck_required_at_publish": true
-        },
         {
           "slot": "2026-11-11T12:00:00+09:00",
           "benefit_id": "B55258400009",
           "pattern": "P3",
           "media_turn": "TEXT",
           "char_count": 358,
-          "last_simulated_draft_validation": "2026-11-11T13:59:59+09:00",
-          "current_source_covers_window": true,
-          "source_recheck_required_at_publish": true
+          "expires_at": "2026-11-11T19:17:23+09:00",
+          "source_recheck_required_at_publish": true,
+          "selection_rank": 18
         },
         {
           "slot": "2026-11-11T16:00:00+09:00",
@@ -1011,9 +1010,9 @@
           "pattern": "P8",
           "media_turn": "IMAGE",
           "char_count": 268,
-          "last_simulated_draft_validation": "2026-11-11T17:59:59+09:00",
-          "current_source_covers_window": true,
-          "source_recheck_required_at_publish": true
+          "expires_at": "2026-11-11T19:17:23+09:00",
+          "source_recheck_required_at_publish": true,
+          "selection_rank": 19
         },
         {
           "slot": "2026-11-11T20:00:00+09:00",
@@ -1021,14 +1020,37 @@
           "pattern": "P5",
           "media_turn": "TEXT",
           "char_count": 408,
-          "last_simulated_draft_validation": "2026-11-11T21:59:59+09:00",
-          "current_source_covers_window": true,
-          "source_recheck_required_at_publish": true
+          "expires_at": "2026-11-11T22:00:16+09:00",
+          "source_recheck_required_at_publish": true,
+          "selection_rank": 20
+        },
+        {
+          "slot": "2026-11-12T08:00:00+09:00",
+          "benefit_id": "641000000138",
+          "pattern": "P1",
+          "media_turn": "IMAGE",
+          "char_count": 378,
+          "expires_at": "2026-11-12T09:10:33+09:00",
+          "source_recheck_required_at_publish": true,
+          "selection_rank": 21
         }
       ],
-      "source_recheck_required_at_publish": true,
-      "image_files_current_sha_match_existing_visual_reviews": true,
-      "new_visual_inspection": false
+      "new_ready": {
+        "slot": "2026-11-12T08:00:00+09:00",
+        "benefit_id": "641000000138",
+        "pattern": "P1",
+        "cohort": "A",
+        "media_turn": "IMAGE",
+        "char_count": 378,
+        "body_sha256": "3634c158c7a8764ced2b3352c7907888a92b80880f6586cb8a94af49ce3a1278",
+        "source_fingerprint": "5c57359b9cba3ab93309c08a1232a49567c4112ceb0ae8040a5a131ff0d06270",
+        "prepared_at": "2026-11-11T09:10:33+09:00",
+        "expires_at": "2026-11-12T09:10:33+09:00",
+        "review_expiry_before_end_of_delay_window": true,
+        "current_source_fresh_at_slot": false,
+        "verification": "Gimpo official current fourth-quarter notice and Future Generation Foundation current notice opened, same-ID source and current approved asset bytes compared. Existing READY bodies and images preserved.",
+        "source_recheck_required_at_publish": true
+      }
     },
     "metrics": {
       "status": "awaiting_first_cohort_24h_window",
@@ -1040,78 +1062,46 @@
       "workflow_dispatch": false,
       "new_failures": 0,
       "new_partials": 0,
-      "post_retry_budget_used": 0,
-      "operations_verification_issue": {
-        "run_id": "42910050871",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "failure",
-        "updated_at": "2026-11-10T22:07:31Z",
-        "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-        "job_id": "130158027087",
-        "stage": "post_deployment_public_verification",
-        "classification": "post_deployment_verification_only; complete collection and trusted Threads input verified",
-        "failure_fingerprint": "public_generation_mismatch:gov24-42910050871-1:observed-gov24-42708067719-1",
-        "confirmed_cause": "The post-deployment manifest read returned an earlier generation while the code revision matched. A later read returned the expected new generation and revision. Collection, artifact integrity and writer validation succeeded.",
-        "underlying_cause": "Public propagation or cache delay is a hypothesis; the precise upstream caching cause was not established.",
-        "collection_status": "success",
-        "artifact_id": "13807161974",
-        "artifact_sha256": "7e4cae7817ffef2925fab1e2ad85c652d2087f9f84a1e896acd42e5562ffd3e2",
-        "source_generation": "gov24-42910050871-1",
-        "manifest_sha256": "b9a91c58de41c85380588cb4ea3c5217225c70f3df3ebe77488a82c6c64b35d5",
-        "observed_public_generation": "gov24-42910050871-1",
-        "observed_public_revision": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-        "public_readback_at": "2026-11-11T07:08:35.057941+09:00",
-        "scope": "Only the public manifest was rechecked; every public HTML URL was not reverified in this Threads task.",
-        "code_change_required": false,
-        "pr": null,
-        "post_retry_budget_used": 0,
-        "publish_recovery_required": false,
-        "container_id": null,
-        "main_id": null,
-        "final_status": "current_public_manifest_matches; Threads_source_and_queue_validated",
-        "next_condition": "Use the existing 08:00 KST publisher and its normal restore_latest_state path. Recheck current source, queue and ledger before the reservation."
-      },
-      "normal_restore_selector_regression": "Latest completed failed run selected without excluding its verified complete snapshot."
+      "post_retry_budget_used": 0
     },
     "incidents": {
       "41796747628": "resolved",
-      "new_incident": "42910050871"
+      "42910050871": "previously_recorded_public_manifest_convergence",
+      "new_incident": null
     },
-    "next_condition": "Use the existing 08:00 KST publisher and its normal restore_latest_state path. Recheck current source, queue and ledger before the reservation."
+    "next_condition": "Use the existing 12:00 KST schedule. The November 12 08:00 reviewed draft needs a newer complete source before sending and an official-evidence refresh before November 12 09:10:33 KST to cover the rest of its two-hour window. First cohort metric window is due November 11 17:00:08 KST."
   },
   "last_reported_publication": {
-    "run_id": "42809117674",
+    "run_id": "42923802457",
     "run_attempt": 1,
     "status": "completed",
     "conclusion": "success",
-    "updated_at": "2026-11-10T11:39:31Z",
+    "updated_at": "2026-11-10T23:30:41Z",
     "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-    "job_id": "129805753297",
-    "artifact_id": "13760123026",
-    "artifact_digest": "sha256:6800a2b2f356900d5b9e7dd4de8818c36ee4bf6e25c2a978639013abd357ada1",
+    "job_id": "130205028031",
+    "artifact_id": "13812144557",
+    "artifact_digest": "sha256:c05c2d875904546c399e066dcafec392999165c7278717a17addfd5218565da2",
     "classification": "verified_natural_publication",
     "event": "schedule",
     "published": true,
-    "slot": "2026-11-10T20:00:00+09:00",
-    "published_at": "2026-11-10T20:38:42.009665+09:00",
-    "benefit_id": "628000000739",
-    "main_id": "17992859946026940",
-    "url": "https://www.threads.com/@hid_1004/post/Dfj0WhoG2Eu",
+    "slot": "2026-11-11T08:00:00+09:00",
+    "published_at": "2026-11-11T08:29:49.253605+09:00",
+    "benefit_id": "149200000041",
+    "main_id": "17913499947663769",
+    "url": "https://www.threads.com/@hid_1004/post/DflFvCdG5H8",
     "stage": "complete",
     "verified": true,
-    "content_hash": "adc2c369ee65d8f01cf12953c276d1ab4bccc1f46cda73e70be39e05d69e3a07",
-    "asset_sha256": null,
-    "source_generation": "gov24-42797196046-1",
-    "prepared_source_generation": "gov24-42599671027-1",
-    "pattern": "P8",
-    "media_turn": "TEXT",
+    "content_hash": "bd438cde725111a8198e90c0f304bb709acbde2318bd2fd01b796f8948ea638f",
+    "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+    "source_generation": "gov24-42910050871-1",
+    "prepared_source_generation": "gov24-42708067719-1",
+    "pattern": "P6",
+    "media_turn": "IMAGE",
     "replies": 0,
-    "verification": "Authenticated publisher readback, job log receipt, durable ledger, queued body hash and digest-verified workflow result agree.",
-    "verification_completed_at": "2026-11-10T22:00:16+09:00",
+    "verification": "Authenticated publisher readback, job receipt, digest-verified result, durable ledger and queued body/image hashes agree.",
+    "verification_completed_at": "2026-11-11T09:10:33+09:00",
     "public_web_visibility_independently_verified": false,
-    "public_web_check": "Public permalink could not be independently opened.",
-    "publication_ledger_records": 25,
+    "publication_ledger_records": 26,
     "pending": null,
     "lease": null
   },
@@ -1736,6 +1726,30 @@
             {
               "hours": 168,
               "due_at": "2026-11-17T20:38:42.009665+09:00",
+              "status": "awaiting_due_time"
+            }
+          ]
+        },
+        "17913499947663769": {
+          "main_id": "17913499947663769",
+          "slot": "2026-11-11T08:00:00+09:00",
+          "published_at": "2026-11-11T08:29:49.253605+09:00",
+          "benefit_id": "149200000041",
+          "reader_scope": "퇴직했거나 퇴직을 앞두고 새 일자리를 준비하는 40세 이상 중장년",
+          "cohort": "B",
+          "opening_type": "대상·혜택형",
+          "pattern": "P6",
+          "char_count": 320,
+          "media_turn": "IMAGE",
+          "windows": [
+            {
+              "hours": 24,
+              "due_at": "2026-11-11T23:29:49.253Z",
+              "status": "awaiting_due_time"
+            },
+            {
+              "hours": 168,
+              "due_at": "2026-11-17T23:29:49.253Z",
               "status": "awaiting_due_time"
             }
           ]
