@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-11T21:05:01+09:00",
+  "prepared_at": "2026-11-12T08:18:45+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -377,6 +377,25 @@
         "gov24": "PROVIDED_OFFICIAL_TEXT",
         "ddm": "OPENED_OFFICIAL",
         "lh": "OPENED_OFFICIAL"
+      }
+    },
+    {
+      "benefit_id": "PTR000051706",
+      "decision": "HOLD",
+      "reason": "동일 ID 원문 누적 조회수 100436회로 선택 후보 100141회보다 높다. API 신청기간은 접수기관별 상이이며 구입자금 상세·신청 상태를 확정하지 않았다. 마이홈·서울주거포털에서 소득·자산·한도는 일부 대조했으나 주택도시기금 현재 상품 상세와 FAQ 직접 열람은 timeout이었다. 검색 요약만으로 현재 신규 접수를 확정하지 않고 이번 원고에서 보류한다. 사업 종료로 판단한 것은 아니다.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999074&bnefType=all&svcId=PTR000051706",
+        "https://www.myhome.go.kr/hws/portal/cont/selectFundsPurchaseOfficetelView.do",
+        "https://housing.seoul.go.kr/site/main/content/sh01_070500",
+        "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030501.jsp",
+        "https://nhuf.molit.go.kr/FP/FP08/FP0809/FP0809.jsp?currentPage=18"
+      ],
+      "checked_at": "2026-11-12T08:18:45+09:00",
+      "access_methods": {
+        "gov24": "PROVIDED_OFFICIAL_TEXT",
+        "myhome": "OPENED_OFFICIAL_PARTIAL",
+        "seoul": "OPENED_OFFICIAL",
+        "nhuf": "TIMEOUT"
       }
     }
   ],
@@ -3615,6 +3634,170 @@
           "opening": "18세 미만 자녀 2명을 키우며 6인승 이하 승용차를 구입한다면, 취득세를 50%, 최대 70만 원까지 감면받을 수 있어요.",
           "structure": "2자녀·차종과 최대 감면 → 대상 차량·기한 → 세액 계산 → 기존 차량·공동명의 제한 → 신고·추징 → CTA",
           "media_turn": "TEXT"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-13T08:00:00+09:00",
+      "benefit_id": "999000000004",
+      "source_fingerprint": "811910364c1411ed8254015ed3d57b9b452446c70b555fa7c5901897b76d92e4",
+      "source_generation": "gov24-43110769785-1",
+      "prepared_at": "2026-11-12T08:18:45+09:00",
+      "expires_at": "2026-11-13T08:18:45+09:00",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "999000000004",
+        "post_text": "우선지원대상기업에서 일하며 배우자 출산전후휴가를 쓴 근로자는, 20일분 통상임금 기준으로 2026년 최대 168만 4,210원의 급여를 지원받을 수 있어요.\n\n휴가 중 임금을 보전하는 제도로, 휴가가 끝난 날 이전의 고용보험 피보험 단위기간이 합산 180일 이상이어야 해요. 회사 지급분과 급여의 합계가 통상임금을 넘으면 초과액은 감액돼요.\n\n휴가는 출산예정일 50일 전부터 출산 후 120일 이내에 쓸 수 있어요. 근무 의무가 있는 날만 휴가 일수에 포함해요.\n\n신청 전 회사에 휴가 확인서 제출을 요청하고, 통상임금과 회사에서 받은 금품을 확인할 자료를 준비해요. 출산 전에 휴가를 썼다면 출산예정일 진단서도 필요해요.\n\n휴가 종료 후 고용24나 고용센터에서 한꺼번에 신청해요. 신청 기간은 휴가 시작 1개월 후부터 종료 후 12개월 이내예요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-13T08:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "우선지원대상기업 소속으로 배우자 출산전후휴가를 사용하고 급여 신청을 준비하는 고용보험 가입 근로자",
+          "central_message": "배우자 출산전후휴가 급여는 휴가 중 임금 보전이며, 20일분 한도·보험 요건·회사 지급분 정산과 신청 준비를 함께 확인한다.",
+          "pattern": "P4",
+          "selection_reason": "동일 ID 보조금24 누적 조회수 내림차순. 이미 게시·준비한 사업은 중복 제외하고 상위 HOLD/SKIP 22건의 이유와 출처를 보존한다. 현행 법령과 고용노동부 최신 안내로 구 안내의 출산 전 사용 제한을 해소했다.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "999000000004",
+              "source_ref": "https://www.worklife.kr/website_renew/index/workerSupport/paternity_leave.asp",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-12T08:18:45+09:00",
+              "claims_supported": [
+                "고용노동부 일생활균형의 배우자 출산전후휴가 및 급여 본문을 직접 열람했다. 현재 우선지원대상기업의 요건 충족 근로자가 신청 가능하며, 휴가 종료 후 일괄 신청, 시작 후 1개월부터 종료 후 12개월 이내 신청을 안내한다.",
+                "20일분 통상임금 100%, 2026년 상한 1,684,210원, 휴가 종료일 이전 피보험 단위기간 합산 180일을 대조했다. 월액·정액 보너스가 아니다. 회사 지급분과 합산 통상임금 초과 시 감액하며 임금 인상 시 차액 지급 예외가 있다.",
+                "근무 의무가 있는 날만 휴가 일수에 포함한다. 신청서·휴가 확인서·통상임금 자료·사업주 지급 금품 자료와 출산 전 사용 시 의료기관의 출산예정일 진단서가 필요하다. 고용센터 제출 및 고용24 신청 링크를 확인했고 로그인·실제 접수 거래는 수행하지 않았다."
+              ]
+            },
+            {
+              "source_id": "999000000004",
+              "source_ref": "https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1029336297",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-12T08:18:45+09:00",
+              "claims_supported": [
+                "시행 2026년 9월 18일 남녀고용평등법 제18조의2를 직접 열람했다. 명칭은 배우자 출산전후휴가이며 20일 유급, 출산예정일 50일 전부터 출산 후 120일 이내 사용, 3회 분할이다.",
+                "2026년 2월 5일 수정 고용24 구 안내의 원칙적 출산 후 사용 설명과 보조금24의 구 명칭보다 현행법·고용노동부 개정 안내를 우선했다. 같은 사업의 명칭·사용시기 개정이며 급여 요건·금액은 최신 고용노동부 안내와 원본 동일 ID가 일치한다."
+              ]
+            },
+            {
+              "source_id": "999000000004",
+              "source_ref": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000395",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-12T08:18:45+09:00",
+              "claims_supported": [
+                "급여 신청 전 회사의 휴가 확인서 제출, 통상임금과 사업주 지급자료 준비, 휴가 종료 후 고용24 일괄 신청, 회사 선지급 시 대위신청과 중복 정산 제한을 직접 열람했다. 사용시기·명칭은 현행법과 최신 고용노동부 자료로 보완했다."
+              ]
+            },
+            {
+              "source_id": "999000000004",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999019&bnefType=all&svcId=999000000004",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-12T08:18:45+09:00",
+              "claims_supported": [
+                "완전 검증 수집본 gov24-43110769785-1 동일 ID serviceList.조회수 100141회. 누적 지표이며 실시간 검색량·신청자 수가 아니다. API checkedAt=2026-11-12T07:23:45.548200+09:00, collectionSucceededAt=2026-11-12T07:26:11.043967+09:00로 실제 원문 열람시각과 구분한다.",
+                "동일 ID serviceDetail의 우선지원대상기업·보험 180일·20일분·2026년 상한 1,684,210원·종료 후 12개월과 서류를 대조했다. source_only와 applicationOpenVerified=false를 수집 성공으로 바꾸지 않고 현재 신청 상태는 실제 공식 본문으로 검수했다."
+              ]
+            },
+            {
+              "source_id": "999000000004",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-12T08:18:45+09:00",
+              "claims_supported": [
+                "2026-11-12 08:15:43 KST에 main 허용 URL의 현재 PNG 바이트를 실제 다운로드하고 SHA-256 및 로컬 동일 파일과 재대조했다. social/image-review.json의 2026-11-06 시각검수 PASS와 일치한다. 오늘 새 직접 시각검수를 했다는 뜻이 아니다.",
+                "asset_sha256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a; 1254×1254 공통 브랜드 이미지. 지원금픽 로고·생활 혜택, 꼼꼼하게·프로필링크 안내와 집·방패·체크리스트·새싹. 사업별 금액·대상·시기 문구가 없어 본문과 충돌하지 않는다. 승인된 기존 360px 가독성 검수 범위를 사용한다."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 436,
+          "count_method": "Python Unicode len including spaces, newlines and CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "급여는 개인별 통상임금·휴가 사용·보험 요건과 지급 제한 심사에 따라 달라지며 확정 지급이 아니다. 휴가 중 이직 이후 급여는 지급하지 않는다. 임금 인상에 따른 회사 차액 지급 등 감액 예외는 관할 고용센터 확인이 필요하다.",
+            "구 명칭의 동일 ID를 유지하며 현행법과 최신 고용노동부 안내를 우선했다. 구 안내의 출산 전 사용 제한을 그대로 재사용하지 않는다.",
+            "현재 수집본은 내일 08시 실제 발송까지 신선하지 않다. 발송 시 최신 완전 수집본·동일 ID fingerprint와 현재 공식 사실을 재검증해야 한다.",
+            "원고·근거는 준비 후 최대 24시간만 유효하다. 내일 08시 게시 지연 시 만료될 수 있어 실제 발송 전 재검수해야 한다. 날짜만 바꿔 연장하지 않는다.",
+            "앞 슬롯이 미전송으로 건너뛰어지면 아직 미예약인 미래 후보·미디어를 다시 계산한다. 이미지 미검수·불일치 때 TEXT로 전환하지 않는다.",
+            "공식 Threads 지표 읽기 경로가 없어 노출·반응·A/B 효과를 판단하지 않는다. 프로필·사이트 검색·상세 이동 및 실제 신청 기능은 확인하지 못했고 보장하지 않는다."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "배우자 휴가 중 어떤 급여를 받고, 회사가 이미 지급한 임금과 어떻게 정산하며 언제 신청하나요?",
+            "reader_scope": "우선지원대상기업 소속으로 배우자 출산전후휴가를 사용하고 급여 신청을 준비하는 고용보험 가입 근로자",
+            "angles": [
+              "출산기 가계 소득 공백",
+              "정부 급여와 회사 임금의 정산",
+              "급여 신청 서류·시기 준비"
+            ],
+            "chosen_angle": "휴가 중 임금 보전 급여의 한도·자격·정산을 먼저 설명하고 준비와 신청으로 연결",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "배우자의 출산을 앞두고 휴가 중 월급이 걱정된다면, 우선지원대상기업 근로자는 20일분 통상임금 기준 급여를 지원받을 수 있어요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "우선지원대상기업에서 일하며 배우자 출산전후휴가를 쓴 근로자는, 20일분 통상임금 기준으로 2026년 최대 168만 4,210원의 급여를 지원받을 수 있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "배우자 출산전후휴가 급여는 우선지원대상기업 근로자의 20일분 통상임금을 지원하지만, 회사에서 이미 받은 임금과 함께 정산해요."
+              }
+            ],
+            "chosen_opening": "우선지원대상기업에서 일하며 배우자 출산전후휴가를 쓴 근로자는, 20일분 통상임금 기준으로 2026년 최대 168만 4,210원의 급여를 지원받을 수 있어요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "첫 적용 KST 날짜 11월 10일 배정을 매일 반전하면 11월 13일 08시는 B다. 미착수 신규 슬롯만 배정하고 기존 READY 4건은 보존했다. 최근 실제 게시 20건 및 미래 4건과 비교해 최근 5건에 없는 P4 혜택 유형 설명을 선택했다.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국",
+              "benefit": "고용보험 휴가 급여",
+              "application": "개인별 휴가 종료에 따른 기한",
+              "audience": "우선지원대상기업 근로자",
+              "media": "IMAGE"
+            },
+            "comparison_group": "향후 독자 규모·급여 유형·기한이 유사한 A/B만 비교. 현재 비교 가능한 24시간 지표 없음. 시간대·미디어와 사업 차이는 교란으로 남기며 비중은 조정하지 않는다.",
+            "applied_elements": [
+              "첫 문장 대상·20일분·2026년 상한",
+              "P4 임금 보전·정산 설명",
+              "핵심 보험 요건",
+              "개정 사용시기",
+              "서류와 개인별 신청 기한"
+            ],
+            "profile_route": "프로필 링크와 지원금픽 사이트의 실제 검색·상세 이동 및 신청 거래는 확인하지 못했다. 공식 고용24·고용센터 경로만 안내하고 사이트 접수 기능을 보장하지 않는다.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "999000000004",
+          "notice_version": "gov24-43110769785-1:남녀고용평등법-20260918",
+          "pattern": "P4",
+          "opening": "우선지원대상기업에서 일하며 배우자 출산전후휴가를 쓴 근로자는, 20일분 통상임금 기준으로 2026년 최대 168만 4,210원의 급여를 지원받을 수 있어요.",
+          "structure": "대상·20일분 급여 상한 → 임금 보전 성격·보험 요건·정산 → 사용 가능 기간 → 서류 준비 → 신청 기간·경로 → CTA",
+          "media_turn": "IMAGE"
         }
       }
     }
