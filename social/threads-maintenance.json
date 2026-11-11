@@ -14,6 +14,34 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "42954279775",
+    "42923802457",
+    "42910050871",
+    "42809117674",
+    "42797196046",
+    "42779218989",
+    "42750586131",
+    "42721617024",
+    "42708067719",
+    "42611038118",
+    "42599671027",
+    "42584348881",
+    "42557813040",
+    "42535443948",
+    "42527504841",
+    "42475511381",
+    "42469753093",
+    "42460308375",
+    "42443582400",
+    "42425475381",
+    "42417984108",
+    "42367885106",
+    "42362288609",
+    "42352758086",
+    "42334695570",
+    "42312438288",
+    "42300923419",
+    "42211895508",
     "41797892734",
     "41797694009",
     "41797111146",
@@ -43,45 +71,19 @@
     "42157908541",
     "42185203085",
     "42180307041",
-    "42201890585",
-    "42211895508",
-    "42300923419",
-    "42312438288",
-    "42334695570",
-    "42352758086",
-    "42362288609",
-    "42367885106",
-    "42417984108",
-    "42425475381",
-    "42443582400",
-    "42460308375",
-    "42469753093",
-    "42475511381",
-    "42527504841",
-    "42557813040",
-    "42584348881",
-    "42599671027",
-    "42611038118",
-    "42708067719",
-    "42721617024",
-    "42750586131",
-    "42779218989",
-    "42797196046",
-    "42809117674",
-    "42910050871",
-    "42923802457"
+    "42201890585"
   ],
   "last_health": {
     "unresolved_publications": 0,
-    "published_benefits": 26,
+    "published_benefits": 27,
     "source_run_id": "42910050871",
     "source_result": "validated_complete_artifact",
     "source_count": 10942,
     "source_last_success_at": "2026-11-11T07:04:57.499352+09:00",
     "source_workflow_conclusion": "failure",
     "source_failure_classification": "previously_recorded_public_generation_convergence",
-    "last_publisher_run_id": "42923802457",
-    "writer_queue_ready": 5,
+    "last_publisher_run_id": "42954279775",
+    "writer_queue_ready": 4,
     "writer_schema": "supportpick.writer.v1",
     "account_check": "verified_http_200",
     "account_check_run_id": "42152164281",
@@ -935,18 +937,42 @@
       "updated_at": "2026-11-10T23:30:41Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
       "run_id": "42923802457"
+    },
+    "42954279775": {
+      "run_id": "42954279775",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-11T03:41:15Z",
+      "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-11T03:36:39Z",
-    "result": "new_noon_draft_cas_saved_and_all_unpublished_queue_readback_verified",
+    "checked_at": "2026-11-11T04:56:43Z",
+    "result": "verified_natural_noon_publication_and_reused_next_four_ready_drafts",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-    "publication_ledger_sha": "8c320ebf7d4274e62007f8678280413ea9e4c510",
+    "publication_ledger_sha": "93ffde99cb9cf153dcfaea8ef62447126399e5c0",
     "queue_blob_sha": "4143dae9a4f373072d313cbcf05e5fd7cecc8500",
-    "maintenance_previous_blob_sha": "61a0947a35bea8be7f74ef436b129e80f7206ee2",
+    "maintenance_previous_blob_sha": "786f73b7e4adc59695680976d112bcd3435d2f51",
     "unresolved_publications": 0,
     "active_target_runs": [],
-    "changed_run_versions": [],
+    "changed_run_versions": [
+      {
+        "run_id": "42954279775",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-11T03:41:15Z",
+        "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
+      }
+    ],
+    "run_pagination": {
+      "branch": "main",
+      "pages": 2,
+      "entries_examined": 50,
+      "target_versions_compared": 28,
+      "checkpoint_reached": true
+    },
     "source": {
       "run_id": "42910050871",
       "run_attempt": 1,
@@ -968,59 +994,46 @@
       "current_application_status_not_inferred": true
     },
     "publisher": {
-      "run_id": "42923802457",
+      "run_id": "42954279775",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-10T23:30:41Z",
+      "updated_at": "2026-11-11T03:41:15Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-      "job_id": "130205028031",
-      "artifact_id": "13812144557",
-      "artifact_digest": "sha256:c05c2d875904546c399e066dcafec392999165c7278717a17addfd5218565da2",
+      "job_id": 130305564128,
+      "artifact_id": 13826188179,
+      "artifact_digest": "sha256:ce5fb474d27d24210eef468e72738e2c11b6ed39d65ce690c6ab26c739fce681",
       "classification": "verified_natural_publication",
       "event": "schedule",
       "published": true,
-      "slot": "2026-11-11T08:00:00+09:00",
-      "published_at": "2026-11-11T08:29:49.253605+09:00",
-      "benefit_id": "149200000041",
-      "main_id": "17913499947663769",
-      "url": "https://www.threads.com/@hid_1004/post/DflFvCdG5H8",
+      "slot": "2026-11-11T12:00:00+09:00",
+      "published_at": "2026-11-11T12:40:29.341997+09:00",
+      "benefit_id": "B55258400009",
+      "main_id": "18001464938830261",
+      "url": "https://www.threads.com/@hid_1004/post/DfliawilQhp",
       "stage": "complete",
       "verified": true,
-      "content_hash": "bd438cde725111a8198e90c0f304bb709acbde2318bd2fd01b796f8948ea638f",
-      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "content_hash": "13c389b8698f0e9ca0748f8607bb57f4e71b8d80d5c2c1eaffdb0c8af3630b41",
+      "asset_sha256": null,
       "source_generation": "gov24-42910050871-1",
-      "prepared_source_generation": "gov24-42708067719-1",
-      "pattern": "P6",
-      "media_turn": "IMAGE",
+      "pattern": "P3",
+      "media_turn": "TEXT",
       "replies": 0,
-      "verification": "Authenticated publisher readback, job receipt, digest-verified result, durable ledger and queued body/image hashes agree.",
-      "verification_completed_at": "2026-11-11T09:10:33+09:00",
+      "verification": "Authenticated publisher readback, digest-verified result artifact, durable ledger and exact queued body agree.",
+      "verification_completed_at": "2026-11-11T04:56:43Z",
       "public_web_visibility_independently_verified": false,
-      "publication_ledger_records": 26,
+      "publication_ledger_records": 27,
       "pending": null,
-      "lease": null,
-      "previously_reported": true,
-      "current_slot": {
-        "slot": "2026-11-11T12:00:00+09:00",
-        "status": "waiting_for_natural_execution_within_grace_period",
-        "reserved": false,
-        "manual_dispatch": false,
-        "failed_run_confirmed": false
-      }
+      "lease": null
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-      "queue_write": true,
+      "queue_write": false,
       "queue_reused": true,
-      "queue_previous_blob_sha": "695e693167edd510c32131e539dbfb4df5e4c27d",
-      "queue_commit_sha": "6c615ed6f7abe8db4a7c3d78ef8930c330636ed9",
       "queue_readback_equal": true,
-      "unchanged_existing_entries": 24,
-      "preview_ready": 5,
-      "ready_future_slots": 4,
+      "unchanged_existing_entries": 25,
+      "preview_ready": 4,
       "validate_ready_entry_and_preview": true,
-      "validation_mode": "future-slot simulation; source freshness must be checked at actual send",
       "next_24h_sequence": [
         {
           "slot": "2026-11-11T16:00:00+09:00",
@@ -1063,36 +1076,106 @@
           "source_recheck_required_at_publish": true
         }
       ],
-      "current_open_slot": {
-        "slot": "2026-11-11T12:00:00+09:00",
-        "benefit_id": "B55258400009",
-        "status": "READY",
-        "pattern": "P3",
-        "media_turn": "TEXT",
-        "char_count": 358,
-        "validation_time": "2026-11-11T12:34:23+09:00",
-        "source_recheck_required_at_publish": true
-      },
-      "new_ready": {
-        "slot": "2026-11-12T12:00:00+09:00",
-        "benefit_id": "SSI000000020",
-        "pattern": "P5",
-        "media_turn": "TEXT",
-        "cohort": "B",
-        "char_count": 407,
-        "body_sha256": "bd9cc3090458728fc1b12a5d1e801afd2094dffef02cb541e484a5bb4109f0dd",
-        "source_fingerprint": "373e1ec51f19b976c149d7054e6ef4d7ae7a0913a351abd7442dc44d73da588a",
-        "prepared_at": "2026-11-11T12:34:23+09:00",
-        "expires_at": "2026-11-12T12:34:23+09:00",
-        "current_source_fresh_at_slot": false,
-        "review_expiry_before_end_of_delay_window": true,
-        "verification": "Current ministry and province official pages opened; same-ID raw serviceList and serviceDetail compared. New main-only text passes complete queue preview and last-valid-window validation. Existing 24 entries preserved."
+      "window_validation": [
+        {
+          "slot": "2026-11-11T16:00:00+09:00",
+          "last_valid_at": "2026-11-11T17:59:59+09:00",
+          "rank": 19,
+          "exclusions": 18,
+          "current_source_fresh_at_slot": true
+        },
+        {
+          "slot": "2026-11-11T20:00:00+09:00",
+          "last_valid_at": "2026-11-11T21:59:59+09:00",
+          "rank": 20,
+          "exclusions": 19,
+          "current_source_fresh_at_slot": true
+        },
+        {
+          "slot": "2026-11-12T08:00:00+09:00",
+          "last_valid_at": "2026-11-12T09:10:32+09:00",
+          "rank": 21,
+          "exclusions": 20,
+          "current_source_fresh_at_slot": false
+        },
+        {
+          "slot": "2026-11-12T12:00:00+09:00",
+          "last_valid_at": "2026-11-12T12:34:22+09:00",
+          "rank": 21,
+          "exclusions": 20,
+          "current_source_fresh_at_slot": false
+        }
+      ],
+      "source_recheck_required_at_publish": true,
+      "image_byte_verification": {
+        "status": "UPSTREAM_VERIFIED",
+        "checked_at": "2026-11-11T04:56:43Z",
+        "downloaded_current_main_files": true,
+        "matched_existing_visual_review": true,
+        "new_visual_inspection": false,
+        "assets": [
+          {
+            "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+            "path": "social/images/benefit-guide-1.png",
+            "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+            "bytes": 1888956,
+            "width": 1254,
+            "height": 1254,
+            "format": "PNG",
+            "mode": "RGB",
+            "review_status": "PASS",
+            "purpose": "generic_brand",
+            "visible_text": [
+              "지원금픽",
+              "생활 혜택, 꼼꼼하게",
+              "자세한 사항은 프로필링크 확인"
+            ],
+            "visual_description": "크림색과 민트색 배경에 체크리스트가 든 봉투, 체크 표시, 동전과 새싹을 배치한 입체 일러스트. 상단에는 지원금픽 로고와 슬로건, 하단에는 프로필링크 안내가 있음.",
+            "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트.",
+            "quality_checks": {
+              "square_high_resolution": "PASS",
+              "legible_korean_text": "PASS",
+              "no_visible_clipping_or_corruption": "PASS",
+              "cta_matches_publication_policy": "PASS"
+            },
+            "program_specific_claims": [],
+            "usage_note": "검수된 지원금·생활혜택 글의 일반 브랜드 이미지로 사용. 사업별 금액·대상·신청기간은 이미지에 없으므로 이미지에서 확인할 수 있다고 설명하지 않는다."
+          },
+          {
+            "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+            "path": "social/images/benefit-guide-2.png",
+            "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+            "bytes": 1970394,
+            "width": 1254,
+            "height": 1254,
+            "format": "PNG",
+            "mode": "RGB",
+            "review_status": "PASS",
+            "purpose": "generic_brand",
+            "visible_text": [
+              "지원금픽",
+              "생활 혜택, 꼼꼼하게",
+              "자세한 사항은 프로필링크 확인"
+            ],
+            "visual_description": "크림색과 민트색 배경에 집, 체크 표시가 있는 방패, 체크리스트, 새싹과 해를 배치한 입체 일러스트. 상단에는 지원금픽 로고와 슬로건, 하단에는 프로필링크 안내가 있음.",
+            "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트.",
+            "quality_checks": {
+              "square_high_resolution": "PASS",
+              "legible_korean_text": "PASS",
+              "no_visible_clipping_or_corruption": "PASS",
+              "cta_matches_publication_policy": "PASS"
+            },
+            "program_specific_claims": [],
+            "usage_note": "검수된 지원금·생활혜택 글의 일반 브랜드 이미지로 사용. 사업별 금액·대상·신청기간은 이미지에 없으므로 이미지에서 확인할 수 있다고 설명하지 않는다."
+          }
+        ]
       }
     },
     "metrics": {
       "status": "awaiting_first_cohort_24h_window",
       "policy_post_measurements_due": 0,
-      "official_insights_read_path": "not_available_in_current_execution"
+      "official_insights_read_path": "not_available_in_current_execution",
+      "no_performance_effect_inferred": true
     },
     "recovery": {
       "required": false,
@@ -1106,56 +1189,48 @@
       "42910050871": "previously_recorded_public_manifest_convergence",
       "new_incident": null
     },
-    "next_condition": "Await existing noon schedule inside original two-hour grace; no failed run or ambiguous send confirmed. Recompute future media only if that slot skips before sending. Tomorrow 08:00 and 12:00 require newer complete source at send and renewed official evidence after respective expiry; first 24h cohort measurement due 2026-11-11 17:00:08 KST.",
-    "run_pagination": {
-      "branch": "main",
-      "pages": 2,
-      "entries_examined": 50,
-      "target_versions_compared": 27,
-      "checkpoint_reached": true
-    },
     "history_audit": {
       "requested_days": 28,
-      "available_records": 26,
+      "available_records": 27,
       "first": "2026-11-04T17:14:06.646060+09:00",
-      "last": "2026-11-11T08:29:49.253605+09:00",
+      "last": "2026-11-11T12:40:29.341997+09:00",
       "duplicate_main_ids": 0,
       "duplicate_slots": 0,
-      "basis": "Durable publisher readback receipts; latest result artifact and log compared. Current public visibility and image rendering for all historic posts were not independently rechecked.",
-      "performance_comparison": "not_measured_no_inference"
-    }
+      "unresolved": 0,
+      "basis": "Durable readback receipts and latest digest-verified result; historical current public visibility and remote image rendering not independently verified."
+    },
+    "next_condition": "Use existing 16:00 KST regular slot. Tomorrow's 08:00 and 12:00 drafts require newer complete source before sending and official-evidence refresh before their expiry. First cohort 24h window due 2026-11-11 17:00:08 KST. No manual publish or recovery is needed."
   },
   "last_reported_publication": {
-    "run_id": "42923802457",
+    "run_id": "42954279775",
     "run_attempt": 1,
     "status": "completed",
     "conclusion": "success",
-    "updated_at": "2026-11-10T23:30:41Z",
+    "updated_at": "2026-11-11T03:41:15Z",
     "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-    "job_id": "130205028031",
-    "artifact_id": "13812144557",
-    "artifact_digest": "sha256:c05c2d875904546c399e066dcafec392999165c7278717a17addfd5218565da2",
+    "job_id": 130305564128,
+    "artifact_id": 13826188179,
+    "artifact_digest": "sha256:ce5fb474d27d24210eef468e72738e2c11b6ed39d65ce690c6ab26c739fce681",
     "classification": "verified_natural_publication",
     "event": "schedule",
     "published": true,
-    "slot": "2026-11-11T08:00:00+09:00",
-    "published_at": "2026-11-11T08:29:49.253605+09:00",
-    "benefit_id": "149200000041",
-    "main_id": "17913499947663769",
-    "url": "https://www.threads.com/@hid_1004/post/DflFvCdG5H8",
+    "slot": "2026-11-11T12:00:00+09:00",
+    "published_at": "2026-11-11T12:40:29.341997+09:00",
+    "benefit_id": "B55258400009",
+    "main_id": "18001464938830261",
+    "url": "https://www.threads.com/@hid_1004/post/DfliawilQhp",
     "stage": "complete",
     "verified": true,
-    "content_hash": "bd438cde725111a8198e90c0f304bb709acbde2318bd2fd01b796f8948ea638f",
-    "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+    "content_hash": "13c389b8698f0e9ca0748f8607bb57f4e71b8d80d5c2c1eaffdb0c8af3630b41",
+    "asset_sha256": null,
     "source_generation": "gov24-42910050871-1",
-    "prepared_source_generation": "gov24-42708067719-1",
-    "pattern": "P6",
-    "media_turn": "IMAGE",
+    "pattern": "P3",
+    "media_turn": "TEXT",
     "replies": 0,
-    "verification": "Authenticated publisher readback, job receipt, digest-verified result, durable ledger and queued body/image hashes agree.",
-    "verification_completed_at": "2026-11-11T09:10:33+09:00",
+    "verification": "Authenticated publisher readback, digest-verified result artifact, durable ledger and exact queued body agree.",
+    "verification_completed_at": "2026-11-11T04:56:43Z",
     "public_web_visibility_independently_verified": false,
-    "publication_ledger_records": 26,
+    "publication_ledger_records": 27,
     "pending": null,
     "lease": null
   },
@@ -1807,6 +1882,30 @@
               "status": "awaiting_due_time"
             }
           ]
+        },
+        "18001464938830261": {
+          "main_id": "18001464938830261",
+          "slot": "2026-11-11T12:00:00+09:00",
+          "published_at": "2026-11-11T12:40:29.341997+09:00",
+          "benefit_id": "B55258400009",
+          "reader_scope": "사용량을 확인할 수 있고 에너지 절감 참여를 고려하는 가정의 세대주·세대원",
+          "cohort": "A",
+          "opening_type": "생활 상황형",
+          "pattern": "P3",
+          "char_count": 358,
+          "media_turn": "TEXT",
+          "windows": [
+            {
+              "hours": 24,
+              "due_at": "2026-11-12T03:40:29.341Z",
+              "status": "awaiting_due_time"
+            },
+            {
+              "hours": 168,
+              "due_at": "2026-11-18T03:40:29.341Z",
+              "status": "awaiting_due_time"
+            }
+          ]
         }
       }
     },
@@ -1818,6 +1917,6 @@
       "detail_path_verified_in_repository_code": true,
       "public_profile_and_detail_open": "unavailable in public retrieval"
     },
-    "next_condition": "Await existing noon schedule inside original two-hour grace; no failed run or ambiguous send confirmed. Recompute future media only if that slot skips before sending. Tomorrow 08:00 and 12:00 require newer complete source at send and renewed official evidence after respective expiry; first 24h cohort measurement due 2026-11-11 17:00:08 KST."
+    "next_condition": "Use existing 16:00 KST regular slot. Tomorrow's 08:00 and 12:00 drafts require newer complete source before sending and official-evidence refresh before their expiry. First cohort 24h window due 2026-11-11 17:00:08 KST. No manual publish or recovery is needed."
   }
 }
