@@ -1739,7 +1739,8 @@
           {
             "hours": 24,
             "due_at": "2026-11-11T17:00:08.835254+09:00",
-            "status": "awaiting_due_time"
+            "status": "unmeasured_official_read_path_unavailable",
+            "checked_at": "2026-11-11T18:08:42.860944+09:00"
           },
           {
             "hours": 168,
