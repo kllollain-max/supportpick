@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-11T12:34:23+09:00",
+  "prepared_at": "2026-11-11T16:49:39+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -3295,6 +3295,167 @@
           "opening": "저소득 한부모가족은 아동양육비로 자녀 1명당 월 23만 원의 현금 지원을 받을 수 있어요. 먼저 가구 소득과 자녀 나이를 함께 확인해 보세요.",
           "structure": "대상·월 기본급여 → 소득인정액 → 자녀 나이·중복 제한 → 연중 신청과 서류 → CTA",
           "media_turn": "TEXT"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-12T16:00:00+09:00",
+      "benefit_id": "999000000043",
+      "source_fingerprint": "84e54f39d81a55240e738a9f6d45765883bf28e1510ca7241aec7f17c99a4304",
+      "source_generation": "gov24-42910050871-1",
+      "prepared_at": "2026-11-11T16:49:39+09:00",
+      "expires_at": "2026-11-12T16:49:39+09:00",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "999000000043",
+        "post_text": "병원비가 부담되는 저소득 가구라면, 의료급여로 진찰·검사·입원 등에 필요한 의료비를 지원받을 수 있는지 확인해 보세요.\n\n기초생활보장 의료급여를 준비한다면 가구의 소득인정액이 기준 중위소득 40% 이하여야 해요. 월급뿐 아니라 재산도 반영하며, 부양의무자 기준과 적용 예외도 함께 심사해요.\n\n신청은 주민등록 주소지 행정복지센터나 시·군·구청에서 상시 상담할 수 있어요. 가족관계·임대차·소득재산 확인서류 등 가구에 필요한 서류를 먼저 확인하고 방문해 주세요. 신청만으로 수급이 확정되지는 않아요.\n\n선정 뒤에는 1종·2종과 진료 항목에 따라 본인부담이 달라져요. 비급여 비용은 본인부담이며, 원칙적으로 1차 의료기관부터 이용하는 절차와 진료 의뢰서도 확인해야 해요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게라는 문구 아래 체크리스트가 든 봉투, 동전, 새싹을 배치한 크림색 정사각형 브랜드 이미지. 하단에는 자세한 사항은 프로필링크 확인 문구가 있다."
+        },
+        "review": {
+          "planned_at": "2026-11-12T16:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "기초생활보장 의료급여 신청을 준비하는 저소득 가구",
+          "central_message": "기초생활보장 의료급여의 심사·서류 준비와 선정 후 의료기관 이용 절차를 구분한다.",
+          "pattern": "P6",
+          "selection_reason": "기존 READY·게시된 사업을 보존하고 상위 HOLD/SKIP의 개별 사유·출처를 유지했다. 동일 ID 누적 조회수 내림차순에서 다음 검증 가능한 의료급여를 선택했다.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "999000000043",
+              "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10708010300",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-11T16:49:39+09:00",
+              "claims_supported": [
+                "보건복지부 수급자선정기준의 2026년 의료급여 소득인정액 중위소득 40% 이하와 소득평가액·재산환산액 산식을 직접 열람했다.",
+                "의료급여 부양의무자 기준, 부양받을 수 없는 경우와 기준 폐지 예외를 확인했다. 본문 소득기준은 기초생활보장 의료급여에 한정한다."
+              ]
+            },
+            {
+              "source_id": "999000000043",
+              "source_ref": "https://www.incheon.go.kr/health/HE040401",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-11T16:49:39+09:00",
+              "claims_supported": [
+                "인천광역시 의료급여 개요를 직접 열어 진찰·검사·입원 등 의료급여 내용, 1종·2종과 진료유형별 본인부담 및 비급여 전액 본인부담을 확인했다. 구체적인 본인부담 금액은 안내 범위에서 제외했다.",
+                "주민등록상 주소지 읍면동 행정복지센터 방문 신청, 원칙적인 1차→2차→3차 의료기관 이용과 의뢰서, 예외가 있음을 확인했다. 전국 제도 설명만 사용하고 지역 자체 혜택은 합산하지 않았다."
+              ]
+            },
+            {
+              "source_id": "999000000043",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999152&bnefType=all&svcId=999000000043",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-11T16:49:39+09:00",
+              "claims_supported": [
+                "완전 수집본 동일 ID serviceList·serviceDetail의 누적 조회수 105497회와 상시신청, 시군구청 방문 및 가족관계·임대차·소득재산 서류를 대조했다. API 확인시각 2026-11-11T07:02:56.363340+09:00와 실제 검수시각을 구분한다.",
+                "급여 유형은 서비스(의료)이며 개인 현금액을 만들지 않았다."
+              ]
+            },
+            {
+              "source_id": "999000000043",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-11T16:49:39+09:00",
+              "claims_supported": [
+                "현재 main 승인 이미지의 실제 다운로드 파일 SHA-256 0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd을 기존 image-review.json 시각검수와 다시 대조해 일치했다.",
+                "사업 금액·대상·기한이 없는 공통 브랜드 이미지다. 360px 판독은 기존 검수를 사용하며 새 직접 시각검수를 했다고 주장하지 않는다."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 391,
+          "count_method": "Python Unicode len including spaces, newlines and CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "기초생활보장 의료급여에 범위를 한정한다. 다른 법률에 따른 수급권자 조건과 개인 자격·본인부담 액수는 확정하지 않는다.",
+            "일부 지자체 페이지는 본문 재조회 시 타임아웃·방화벽 차단이 있었다. 직접 열람 완료한 보건복지부와 인천광역시 개요 및 동일 ID 공식 원문만 근거로 사용했다.",
+            "내일 발송에는 최신 완전 수집본·동일 ID fingerprint와 원문 상태 재검증이 필요하다. 현재 수집본을 내일도 신선하다고 가정하지 않는다.",
+            "최대 24시간 검수 유효기간이 내일 16시 허용창 후반 이전에 끝난다. 만료 후 발송에는 공식 근거 재검수가 필요하다.",
+            "앞선 16시가 전송 전에 건너뛰어지면 미예약 미래 후보와 예상 미디어를 재계산해야 한다.",
+            "성과 실측이 없어 개선 효과는 판정하지 않는다."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "병원비가 부담되는 저소득 가구는 의료급여를 어떤 순서로 준비하고 이용하나요?",
+            "reader_scope": "기초생활보장 의료급여 신청을 준비하는 저소득 가구",
+            "angles": [
+              "병원비 부담과 의료서비스 지원",
+              "소득인정액·부양의무자 심사",
+              "서류 확인과 방문 신청 및 선정 후 이용 절차"
+            ],
+            "chosen_angle": "신청 준비에서 선정 후 의료기관 이용까지 순서 안내",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "병원비가 부담되는 저소득 가구라면, 의료급여로 진찰·검사·입원 등에 필요한 의료비를 지원받을 수 있는지 확인해 보세요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "의료급여는 선정된 저소득 수급권자의 진찰·검사·입원 등 의료비를 지원하는 제도예요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "기초생활보장 의료급여를 신청하기 전에는 가구 소득인정액과 부양의무자 기준을 함께 확인해야 해요."
+              }
+            ],
+            "chosen_opening": "병원비가 부담되는 저소득 가구라면, 의료급여로 진찰·검사·입원 등에 필요한 의료비를 지원받을 수 있는지 확인해 보세요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "첫 적용일 11월 10일에서 이틀 뒤인 11월 12일 16시는 A다. 같은 날 P1·P5 원고를 보존하고 P6의 서류 준비→방문 신청→선정 뒤 이용 순서를 적용했다. 최근 20건의 도입과 전개를 대조했다.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국",
+              "benefit": "의료 서비스",
+              "application": "상시신청",
+              "audience": "저소득 기초생활보장 수급 심사 가구",
+              "media": "IMAGE"
+            },
+            "comparison_group": "유사 독자·지역·혜택·마감 조건의 A/B 표본 확보 뒤 비교. 현재 비교 가능한 실측 없음. 시간·미디어 중첩은 교란이다.",
+            "applied_elements": [
+              "생활 상황과 의료비 지원",
+              "신청 전 심사기준",
+              "방문 전 서류 확인",
+              "선정 후 본인부담과 이용 절차"
+            ],
+            "image_review": {
+              "width_px": 360,
+              "asset": "approved_generic_rotation",
+              "program_card_available": false,
+              "claim_match": "no program-specific claims",
+              "evidence": "current main bytes match upstream visual review; no new visual inspection",
+              "checked_at": "2026-11-11T16:49:39+09:00"
+            },
+            "profile_route": "프로필·사이트 검색 상세 이동 및 신청 거래는 직접 검증하지 않았다. 소관부처와 공적 기관의 제도·방문 신청 안내 범위만 확인했다.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "999000000043",
+          "notice_version": "gov24-42910050871-1:기초생활보장-2026",
+          "pattern": "P6",
+          "opening": "병원비가 부담되는 저소득 가구라면, 의료급여로 진찰·검사·입원 등에 필요한 의료비를 지원받을 수 있는지 확인해 보세요.",
+          "structure": "의료비 부담 → 신청 전 자격 → 서류·방문 신청 → 선정 후 본인부담·이용절차 → CTA",
+          "media_turn": "IMAGE"
         }
       }
     }
