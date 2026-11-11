@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-10T22:00:16+09:00",
+  "prepared_at": "2026-11-11T09:10:33+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -352,6 +352,16 @@
         "https://www.guro.go.kr/www/selectBbsNttView.do?bbsNo=665&key=1793&nttNo=230919&pageIndex=1&pageUnit=10",
         "https://welfare.dobong.go.kr/dobongBokji/bbs/BMSR00002/view.do?boardId=1627&menuNo=200099"
       ]
+    },
+    {
+      "benefit_id": "553000000116",
+      "decision": "HOLD",
+      "reason": "동일 ID 상세는 설·추석 가구당 10만 원 지급과 신청 불필요를 안내한다. 11월 12일 현재 새 신청·추가 지급을 확인할 화성시 공고를 확보하지 못해 현 시점의 신청 안내에서 보류한다. 제도 자체 종료로 판단하지 않는다.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003944&bnefType=all&svcId=553000000116"
+      ],
+      "access_scope": "검증된 최신 보조금24 원문 대조; 새 명절 접수·추가 지급 직접 근거 없음",
+      "checked_at": "2026-11-11T09:10:33+09:00"
     }
   ],
   "entries": [
@@ -2986,6 +2996,165 @@
           "opening": "임신을 확인받고 진료비가 걱정된다면, 건강보험 가입자나 피부양자는 국민행복카드로 임신·출산 진료비 바우처를 신청할 수 있어요.",
           "structure": "임신 확인·건강보험 자격 점검 → 태아 수와 분만취약지 지급 조건 → 사용 범위와 기한 → 확인 및 신청 경로 → CTA",
           "media_turn": "TEXT"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-12T08:00:00+09:00",
+      "benefit_id": "641000000138",
+      "source_fingerprint": "5c57359b9cba3ab93309c08a1232a49567c4112ceb0ae8040a5a131ff0d06270",
+      "source_generation": "gov24-42910050871-1",
+      "prepared_at": "2026-11-11T09:10:33+09:00",
+      "expires_at": "2026-11-12T09:10:33+09:00",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "641000000138",
+        "post_text": "김포에서 생활비 지출이 부담되는 24세 청년이라면, 4분기 청년기본소득으로 지역화폐 25만 원을 신청할 수 있어요.\n\n이번 대상은 2001년 10월 2일~2002년 10월 1일 출생자예요. 신청일 현재 김포시에 주민등록을 두고, 경기도에 최근 3년 이상 계속 거주했거나 합산 10년 이상 거주해야 해요.\n\n분기별 지원액은 1인당 25만 원이며 김포페이로 지급돼요. 연 최대 100만 원은 여러 분기의 요건을 충족했을 때의 한도예요. 이번 신청 한 번으로 100만 원이 지급되는 건 아니에요.\n\n2026년 4분기 신청은 11월 2일 오전 9시부터 12월 1일 오후 6시까지 잡아바 어플라이에서 받아요. 생년월일과 거주 이력을 먼저 확인해 주세요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-12T08:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "김포시에 주민등록을 둔 4분기 해당 출생 청년",
+          "central_message": "김포 청년기본소득의 4분기 25만 원과 생년월일·거주기간·신청기한을 확인한다.",
+          "pattern": "P1",
+          "selection_reason": "기존 READY 3건을 보존하고 상위 후보의 개별 모집 미확인·종료·충돌 사유를 기록한 뒤, 동일 ID 누적 조회수 순으로 현재 공식 접수를 검증한 다음 후보를 선정했다.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "641000000138",
+              "source_ref": "https://www.gimpo.go.kr/portal/selectBbsNttView.do?bbsNo=292&deleteAt=N&key=999&nttNo=1035435&pageIndex=1&pageUnit=10&searchCnd=SJ&searchKrwd=%EA%B8%B0%EB%B3%B8%EC%86%8C%EB%93%9D",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-11T09:10:33+09:00",
+              "claims_supported": [
+                "김포시청 2026년 10월 30일 4분기 공고를 직접 열람했다. 2001.10.2~2002.10.1 출생, 김포 주민등록, 경기도 최근 3년 계속 또는 합산 10년 거주를 확인했다.",
+                "2026.11.2 09:00~12.1 18:00 신청 가능 기간으로 현재 접수 중인 공고다. 분기별 25만 원, 1인 최대 100만 원, 김포페이 및 잡아바 온라인 신청을 대조했다."
+              ]
+            },
+            {
+              "source_id": "641000000138",
+              "source_ref": "https://gfgf.kr/web/lay1/bbs/S1T46C88/A/7/view.do?article_seq=1916",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-11T09:10:33+09:00",
+              "claims_supported": [
+                "경기도미래세대재단의 2026년 4분기 모집 공고에서 동일한 접수기간과 거주기간, 분기 25만 원 지역화폐 지급을 교차 확인했다. 신청 거래는 수행하지 않았다."
+              ]
+            },
+            {
+              "source_id": "641000000138",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002199&bnefType=all&svcId=641000000138",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-11T09:10:33+09:00",
+              "claims_supported": [
+                "완전 수집본의 보조금24 동일 ID serviceDetail과 serviceList를 대조했다. 누적 조회수 111866회, API 행 확인시각 2026-11-11T07:02:44.661286+09:00. 실제 공고 열람시각과 구분한다.",
+                "분기별 25만 원·최대 100만 원, 24세·경기도 거주기간 요건. API의 광역 요약을 김포시 대상 공고로 좁혀 작성했다."
+              ]
+            },
+            {
+              "source_id": "641000000138",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-11T09:10:33+09:00",
+              "claims_supported": [
+                "현재 main 승인 이미지 다운로드 파일 SHA-256 a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a을 기존 image-review.json 시각검수와 다시 대조해 일치함을 확인했다.",
+                "사업별 금액·지역·기간이 없는 공통 브랜드 이미지다. 360px 판독은 기존 검수 기록을 사용하며 새 직접 시각검수를 했다고 주장하지 않는다."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 378,
+          "count_method": "Python Unicode len including spaces, newlines and CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "김포시 공고로 안내 범위를 제한했다. 다른 시군에는 지역별 안내·지역화폐가 적용된다.",
+            "잡아바 신청 화면은 방화벽 차단 문구가 표시되어 거래 가능 여부를 직접 확인하지 못했다. 시청·재단 공식 모집 공고로 접수기간을 확인했다.",
+            "최대 24시간 원고 유효기간은 내일 2시간 허용창의 앞부분까지만 덮는다. 만료 전에 공식 근거 재검수가 필요하다.",
+            "현 수집본은 내일 발송 시각까지 신선하지 않다. 실제 발송 전 최신 완전 수집본과 source fingerprint를 다시 확인해야 한다.",
+            "성과 실측이 없어 도입 개선 효과를 입증했다고 판단하지 않는다."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "김포에 사는 24세 청년이 이번 4분기에 받을 수 있는 지역화폐와 신청 조건은 무엇인가요?",
+            "reader_scope": "김포시에 주민등록을 둔 4분기 해당 출생 청년",
+            "angles": [
+              "생활비 지출과 지역화폐 25만 원",
+              "대상 생년월일과 경기도 거주 이력",
+              "신청기간과 분기액·연 한도의 차이"
+            ],
+            "chosen_angle": "생활비 지출과 이번 분기 지역화폐를 먼저 연결하고 생년월일·거주 조건을 설명한다.",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "김포에서 생활비 지출이 부담되는 24세 청년이라면, 4분기 청년기본소득으로 지역화폐 25만 원을 신청할 수 있어요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "김포시에 사는 이번 4분기 대상 청년은 청년기본소득 25만 원을 김포페이로 신청할 수 있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "김포 청년기본소득 4분기는 생년월일과 경기도 거주기간을 함께 확인해야 해요."
+              }
+            ],
+            "chosen_opening": "김포에서 생활비 지출이 부담되는 24세 청년이라면, 4분기 청년기본소득으로 지역화폐 25만 원을 신청할 수 있어요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "첫 적용일 11월 10일에서 이틀 뒤인 11월 12일 08시는 A다. 최근 20건의 전국 고용서비스·아동·요금감면과 다른 김포 청년의 분기별 지역화폐로 도입과 전개를 바꿨다.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "김포시",
+              "benefit": "분기별 지역화폐",
+              "application": "기한 있는 모집",
+              "audience": "특정 출생기간 24세 청년",
+              "media": "IMAGE"
+            },
+            "comparison_group": "유사한 독자 규모·지역·혜택·마감 조건의 A/B 글이 확보된 뒤 비교. 현재 비교 가능한 24시간 실측 없음.",
+            "applied_elements": [
+              "생활 상황형 도입",
+              "첫 줄 김포·24세·분기 25만 원",
+              "생년월일과 거주 이력",
+              "분기액과 연 한도 구분"
+            ],
+            "image_review": {
+              "width_px": 360,
+              "asset": "approved_generic_rotation",
+              "program_card_available": false,
+              "claim_match": "no program-specific claims",
+              "evidence": "current downloaded bytes match upstream visual review; no new visual inspection",
+              "checked_at": "2026-11-11T09:10:33+09:00"
+            },
+            "profile_route": "이번 회차에서 공개 프로필·사이트 검색 상세의 이동 기능을 직접 검증하지 않았다. 동일 ID의 수집 데이터 및 시 공식 공고를 확인했다.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "641000000138",
+          "notice_version": "gov24-42910050871-1:김포시-20261030-4분기",
+          "pattern": "P1",
+          "opening": "김포에서 생활비 지출이 부담되는 24세 청년이라면, 4분기 청년기본소득으로 지역화폐 25만 원을 신청할 수 있어요.",
+          "structure": "생활비와 김포 지역화폐 → 생년월일·거주기간 → 분기액과 연 한도 → 신청기간·경로 → CTA",
+          "media_turn": "IMAGE"
         }
       }
     }
