@@ -33,6 +33,21 @@ class DraftUploaderSafetyTests(unittest.TestCase):
                 DraftLock(p).acquire(job_id="j2", manifest=m, runner_id="r2", state="PRECHECK")
             first.release()
 
+    def test_safe_stale_lock_can_be_recovered(self):
+        with tempfile.TemporaryDirectory() as d:
+            p = Path(d) / "naver_draft_lock.json"
+            p.write_text(json.dumps({
+                "heartbeat": 1,
+                "state": "PRECHECK",
+                "content_id": "supportpick-20261111-old"
+            }), encoding="utf-8")
+            lock = DraftLock(p, stale_after_s=1)
+            payload = lock.acquire(
+                job_id="j2", manifest=self.manifest(), runner_id="r2", state="PRECHECK"
+            )
+            self.assertEqual("j2", payload["job_id"])
+            lock.release()
+
     def test_stale_save_clicked_lock_is_not_discarded(self):
         with tempfile.TemporaryDirectory() as d:
             p = Path(d) / "naver_draft_lock.json"
