@@ -1533,12 +1533,12 @@
     "last_ready_queue_blob_sha": "3ae38bd3f21b053c13e57281a498c5faf6942213"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-12T05:41:47.495+09:00",
-    "result": "unchanged_runs_receipts_four_existing_ready_reverified_source_log_timeout",
+    "checked_at": "2026-11-12T06:23:17.896+09:00",
+    "result": "unchanged_runs_receipts_four_existing_ready_reverified_collector_log_read_restored",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
     "publication_ledger_sha": "c37e8a2def283bd0c7254e13e0c615ec0352f7bc",
     "queue_blob_sha": "3ae38bd3f21b053c13e57281a498c5faf6942213",
-    "maintenance_previous_blob_sha": "2c7e3bb1beadce6fac5558899761c42573d84863",
+    "maintenance_previous_blob_sha": "49d7872d3fcd6dcc7556386b757b076ae8f8dcc8",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [],
@@ -1565,7 +1565,7 @@
       "artifact_digest": "sha256:d706c01bb6a73f165dce842431780bba2791c93b0e8f80b57d6fca9bfdb91a98",
       "read_current_verify_snapshot_load_feed": true,
       "collection_step": "completed_success",
-      "job_logs": "read_timeout_after_bounded_attempts",
+      "job_logs": "retrieved_again_completed_success",
       "currently_consumable_as_latest_completed": true,
       "fresh_at_check": true,
       "current_application_status_not_inferred": true,
@@ -1573,12 +1573,14 @@
       "artifact_digest_reverified": true,
       "cached_download_bytes_match_current_artifact_listing": true,
       "artifact_downloaded_again": false,
-      "job_logs_retrieved_this_run": false,
-      "job_log_last_successful_retrieval_at": "2026-11-12T04:47:45.820+09:00",
+      "job_logs_retrieved_this_run": true,
+      "job_log_last_successful_retrieval_at": "2026-11-12T06:23:17.896+09:00",
       "log_read_attempt_budget": 3,
-      "log_read_is_transient": true,
+      "log_read_is_transient": false,
       "collection_failure_inferred": false,
-      "remaining_condition": "Read unchanged collector log again in next existing maintenance run; do not rerun workflow."
+      "remaining_condition": "Recheck latest complete source and official evidence before normal scheduled publication.",
+      "log_read_attempts_this_run": 1,
+      "previous_log_read_timeout_resolved": true
     },
     "publisher": {
       "run_id": "43014097709",
@@ -1625,7 +1627,8 @@
       "previously_reported": true,
       "ledger_and_queue_exact_body_verified": true,
       "artifact_downloaded_again": false,
-      "job_log_read_timeout_recovered_on_last_attempt": true
+      "job_log_read_timeout_recovered_on_last_attempt": false,
+      "job_log_read_attempts_this_run": 1
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
@@ -1696,7 +1699,7 @@
       "expired_unpublished_slots": [],
       "image_recheck": {
         "status": "UPSTREAM_VERIFIED",
-        "checked_at": "2026-11-12T05:41:47.495+09:00",
+        "checked_at": "2026-11-12T06:23:17.896+09:00",
         "current_main_bytes_downloaded": true,
         "both_asset_sha256_match_existing_visual_review": true,
         "new_visual_inspection": false
@@ -2060,7 +2063,7 @@
           "timestamp_basis": "Existing ledger publisher-clock time; exact platform timestamp must be confirmed before future quantitative timing analysis."
         }
       },
-      "last_availability_check_at": "2026-11-12T05:41:47.495+09:00",
+      "last_availability_check_at": "2026-11-12T06:23:17.896+09:00",
       "statistical_decision": "No comparison: zero comparable measured observations; preserve A/B, no editorial share changes. Platform timestamps remain unverified."
     },
     "profile_route": {
