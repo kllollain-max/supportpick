@@ -1533,12 +1533,12 @@
     "last_ready_queue_blob_sha": "3ae38bd3f21b053c13e57281a498c5faf6942213"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-12T00:23:40.217+09:00",
+    "checked_at": "2026-11-12T02:09:48.908+09:00",
     "result": "unchanged_runs_receipts_and_next_four_existing_ready_reverified",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
     "publication_ledger_sha": "c37e8a2def283bd0c7254e13e0c615ec0352f7bc",
     "queue_blob_sha": "3ae38bd3f21b053c13e57281a498c5faf6942213",
-    "maintenance_previous_blob_sha": "9aacbea87516cad0b25e7ef092d0706fb739652d",
+    "maintenance_previous_blob_sha": "99a7cf073cae50960101986ebf09691316d19cd1",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [],
@@ -1571,7 +1571,8 @@
       "current_application_status_not_inferred": true,
       "public_deploy": "skipped_by_existing_unchanged_content_decision",
       "artifact_digest_reverified": true,
-      "cached_download_bytes_match_current_artifact_listing": true
+      "cached_download_bytes_match_current_artifact_listing": true,
+      "artifact_downloaded_again": true
     },
     "publisher": {
       "run_id": "43014097709",
@@ -1616,7 +1617,8 @@
         "public_report": "Report publication confirmation at 20:43 KST; exact platform publication timestamp unavailable."
       },
       "previously_reported": true,
-      "ledger_and_queue_exact_body_verified": true
+      "ledger_and_queue_exact_body_verified": true,
+      "artifact_downloaded_again": true
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
@@ -1687,26 +1689,18 @@
       "expired_unpublished_slots": [],
       "image_recheck": {
         "status": "UPSTREAM_VERIFIED",
-        "checked_at": "2026-11-12T00:23:17.365047+09:00",
+        "checked_at": "2026-11-12T02:09:48.908+09:00",
         "current_main_bytes_downloaded": true,
         "both_asset_sha256_match_existing_visual_review": true,
-        "new_visual_inspection": false,
-        "assets": [
-          {
-            "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-            "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-            "upstream_review_match": true,
-            "new_visual_inspection": false
-          },
-          {
-            "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-            "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-            "upstream_review_match": true,
-            "new_visual_inspection": false
-          }
-        ]
+        "new_visual_inspection": false
       },
-      "input_comparison": "Parsed inputs equal fresh remote contents; ledger serialization differs only in trailing newline."
+      "input_comparison": "Parsed inputs equal fresh remote contents; ledger serialization differs only in trailing newline.",
+      "local_validation_workspace": {
+        "restored_from_current_remote_files_and_digest_verified_artifacts": true,
+        "approved_image_files_restored": true,
+        "final_validation": "4_READY",
+        "remote_queue_or_publisher_failure": false
+      }
     },
     "metrics": {
       "status": "due_window_unmeasured_official_read_path_unavailable",
@@ -2058,7 +2052,7 @@
           "timestamp_basis": "Existing ledger publisher-clock time; exact platform timestamp must be confirmed before future quantitative timing analysis."
         }
       },
-      "last_availability_check_at": "2026-11-12T00:23:40.217+09:00",
+      "last_availability_check_at": "2026-11-12T02:09:48.908+09:00",
       "statistical_decision": "No comparison: zero comparable measured observations; preserve A/B, no editorial share changes. Platform timestamps remain unverified."
     },
     "profile_route": {
