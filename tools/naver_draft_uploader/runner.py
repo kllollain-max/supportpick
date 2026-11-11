@@ -9,6 +9,7 @@ import uuid
 from pathlib import Path
 
 from state_machine import DraftLock, State, append_jsonl, checkpoint, load_manifest, validate_pre_save
+from assets import validate_image_assets
 
 
 TERMINAL_FAILURES = {
@@ -173,6 +174,10 @@ def run(manifest_path: Path, workdir: Path, adapter: NaverAdapter):
             raise AdapterError("BODY_INPUT_FAILED", "body readback too short")
         current = State.BODY_DONE
         checkpoint(state_path, manifest, current)
+
+        asset_problems = validate_image_assets(manifest.images)
+        if asset_problems:
+            raise AdapterError("IMAGE_UPLOAD_FAILED", ",".join(asset_problems))
 
         image_uploaded = adapter.upload_images(manifest.images)
         if image_uploaded < len(manifest.images):
