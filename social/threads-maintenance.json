@@ -83,7 +83,7 @@
     "source_workflow_conclusion": "failure",
     "source_failure_classification": "previously_recorded_public_generation_convergence",
     "last_publisher_run_id": "42954279775",
-    "writer_queue_ready": 4,
+    "writer_queue_ready": 5,
     "writer_schema": "supportpick.writer.v1",
     "account_check": "verified_http_200",
     "account_check_run_id": "42152164281",
@@ -948,24 +948,15 @@
     }
   },
   "last_check": {
-    "checked_at": "2026-11-11T04:56:43Z",
-    "result": "verified_natural_noon_publication_and_reused_next_four_ready_drafts",
+    "checked_at": "2026-11-11T16:49:39+09:00",
+    "result": "next_afternoon_ready_draft_saved_and_current_slot_awaiting_natural_run",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
     "publication_ledger_sha": "93ffde99cb9cf153dcfaea8ef62447126399e5c0",
-    "queue_blob_sha": "4143dae9a4f373072d313cbcf05e5fd7cecc8500",
-    "maintenance_previous_blob_sha": "786f73b7e4adc59695680976d112bcd3435d2f51",
+    "queue_blob_sha": "d5d7cbc624c048352d961d50b0e757b34f3854cb",
+    "maintenance_previous_blob_sha": "b001750eb3e5c32d045a8da9bc20429161429617",
     "unresolved_publications": 0,
     "active_target_runs": [],
-    "changed_run_versions": [
-      {
-        "run_id": "42954279775",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-11T03:41:15Z",
-        "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
-      }
-    ],
+    "changed_run_versions": [],
     "run_pagination": {
       "branch": "main",
       "pages": 2,
@@ -991,7 +982,8 @@
       "collection_step": "completed_success",
       "currently_consumable_as_latest_completed": true,
       "fresh_at_check": true,
-      "current_application_status_not_inferred": true
+      "current_application_status_not_inferred": true,
+      "artifact_digest_reverified": true
     },
     "publisher": {
       "run_id": "42954279775",
@@ -1024,27 +1016,28 @@
       "public_web_visibility_independently_verified": false,
       "publication_ledger_records": 27,
       "pending": null,
-      "lease": null
+      "lease": null,
+      "previously_reported": true,
+      "current_slot": {
+        "slot": "2026-11-11T16:00:00+09:00",
+        "status": "waiting_for_natural_execution_within_grace_period",
+        "reserved": false,
+        "failed_run_confirmed": false,
+        "manual_dispatch": false
+      }
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-      "queue_write": false,
+      "queue_write": true,
       "queue_reused": true,
+      "queue_previous_blob_sha": "4143dae9a4f373072d313cbcf05e5fd7cecc8500",
+      "queue_commit_sha": "39663b3c704cd93053120bdd480c966e6b1c4538",
       "queue_readback_equal": true,
       "unchanged_existing_entries": 25,
-      "preview_ready": 4,
+      "preview_ready": 5,
+      "ready_future_slots": 4,
       "validate_ready_entry_and_preview": true,
       "next_24h_sequence": [
-        {
-          "slot": "2026-11-11T16:00:00+09:00",
-          "benefit_id": "628000000139",
-          "status": "READY",
-          "pattern": "P8",
-          "media_turn": "IMAGE",
-          "char_count": 268,
-          "validation_time": "2026-11-11T16:00:00+09:00",
-          "source_recheck_required_at_publish": true
-        },
         {
           "slot": "2026-11-11T20:00:00+09:00",
           "benefit_id": "SD0000007672",
@@ -1074,101 +1067,44 @@
           "char_count": 407,
           "validation_time": "2026-11-12T12:00:00+09:00",
           "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-12T16:00:00+09:00",
+          "benefit_id": "999000000043",
+          "status": "READY",
+          "pattern": "P6",
+          "media_turn": "IMAGE",
+          "char_count": 391,
+          "validation_time": "2026-11-12T16:00:00+09:00",
+          "source_recheck_required_at_publish": true
         }
       ],
-      "window_validation": [
-        {
-          "slot": "2026-11-11T16:00:00+09:00",
-          "last_valid_at": "2026-11-11T17:59:59+09:00",
-          "rank": 19,
-          "exclusions": 18,
-          "current_source_fresh_at_slot": true
-        },
-        {
-          "slot": "2026-11-11T20:00:00+09:00",
-          "last_valid_at": "2026-11-11T21:59:59+09:00",
-          "rank": 20,
-          "exclusions": 19,
-          "current_source_fresh_at_slot": true
-        },
-        {
-          "slot": "2026-11-12T08:00:00+09:00",
-          "last_valid_at": "2026-11-12T09:10:32+09:00",
-          "rank": 21,
-          "exclusions": 20,
-          "current_source_fresh_at_slot": false
-        },
-        {
-          "slot": "2026-11-12T12:00:00+09:00",
-          "last_valid_at": "2026-11-12T12:34:22+09:00",
-          "rank": 21,
-          "exclusions": 20,
-          "current_source_fresh_at_slot": false
-        }
-      ],
-      "source_recheck_required_at_publish": true,
-      "image_byte_verification": {
-        "status": "UPSTREAM_VERIFIED",
-        "checked_at": "2026-11-11T04:56:43Z",
-        "downloaded_current_main_files": true,
-        "matched_existing_visual_review": true,
-        "new_visual_inspection": false,
-        "assets": [
-          {
-            "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-            "path": "social/images/benefit-guide-1.png",
-            "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-            "bytes": 1888956,
-            "width": 1254,
-            "height": 1254,
-            "format": "PNG",
-            "mode": "RGB",
-            "review_status": "PASS",
-            "purpose": "generic_brand",
-            "visible_text": [
-              "지원금픽",
-              "생활 혜택, 꼼꼼하게",
-              "자세한 사항은 프로필링크 확인"
-            ],
-            "visual_description": "크림색과 민트색 배경에 체크리스트가 든 봉투, 체크 표시, 동전과 새싹을 배치한 입체 일러스트. 상단에는 지원금픽 로고와 슬로건, 하단에는 프로필링크 안내가 있음.",
-            "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트.",
-            "quality_checks": {
-              "square_high_resolution": "PASS",
-              "legible_korean_text": "PASS",
-              "no_visible_clipping_or_corruption": "PASS",
-              "cta_matches_publication_policy": "PASS"
-            },
-            "program_specific_claims": [],
-            "usage_note": "검수된 지원금·생활혜택 글의 일반 브랜드 이미지로 사용. 사업별 금액·대상·신청기간은 이미지에 없으므로 이미지에서 확인할 수 있다고 설명하지 않는다."
-          },
-          {
-            "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-            "path": "social/images/benefit-guide-2.png",
-            "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-            "bytes": 1970394,
-            "width": 1254,
-            "height": 1254,
-            "format": "PNG",
-            "mode": "RGB",
-            "review_status": "PASS",
-            "purpose": "generic_brand",
-            "visible_text": [
-              "지원금픽",
-              "생활 혜택, 꼼꼼하게",
-              "자세한 사항은 프로필링크 확인"
-            ],
-            "visual_description": "크림색과 민트색 배경에 집, 체크 표시가 있는 방패, 체크리스트, 새싹과 해를 배치한 입체 일러스트. 상단에는 지원금픽 로고와 슬로건, 하단에는 프로필링크 안내가 있음.",
-            "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트.",
-            "quality_checks": {
-              "square_high_resolution": "PASS",
-              "legible_korean_text": "PASS",
-              "no_visible_clipping_or_corruption": "PASS",
-              "cta_matches_publication_policy": "PASS"
-            },
-            "program_specific_claims": [],
-            "usage_note": "검수된 지원금·생활혜택 글의 일반 브랜드 이미지로 사용. 사업별 금액·대상·신청기간은 이미지에 없으므로 이미지에서 확인할 수 있다고 설명하지 않는다."
-          }
-        ]
+      "current_open_slot": {
+        "slot": "2026-11-11T16:00:00+09:00",
+        "benefit_id": "628000000139",
+        "status": "READY",
+        "pattern": "P8",
+        "media_turn": "IMAGE",
+        "char_count": 268,
+        "validation_time": "2026-11-11T16:49:39+09:00",
+        "source_recheck_required_at_publish": true
+      },
+      "new_ready": {
+        "slot": "2026-11-12T16:00:00+09:00",
+        "benefit_id": "999000000043",
+        "pattern": "P6",
+        "cohort": "A",
+        "media_turn": "IMAGE",
+        "char_count": 391,
+        "body_sha256": "c7f6f1e8705a0e0d608dac46d9277694d165661fa0229a94f894b7c3d3fa135c",
+        "source_fingerprint": "84e54f39d81a55240e738a9f6d45765883bf28e1510ca7241aec7f17c99a4304",
+        "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+        "prepared_at": "2026-11-11T16:49:39+09:00",
+        "expires_at": "2026-11-12T16:49:39+09:00",
+        "current_source_fresh_at_slot": false,
+        "review_expiry_before_end_of_delay_window": true,
+        "source_recheck_required_at_publish": true,
+        "verification": "Ministry 2026 eligibility and Incheon medical-benefit overview opened; same-ID source and cumulative views compared; current main image bytes match upstream visual review. Original 25 queue entries remain unchanged."
       }
     },
     "metrics": {
@@ -1199,7 +1135,7 @@
       "unresolved": 0,
       "basis": "Durable readback receipts and latest digest-verified result; historical current public visibility and remote image rendering not independently verified."
     },
-    "next_condition": "Use existing 16:00 KST regular slot. Tomorrow's 08:00 and 12:00 drafts require newer complete source before sending and official-evidence refresh before their expiry. First cohort 24h window due 2026-11-11 17:00:08 KST. No manual publish or recovery is needed."
+    "next_condition": "Await existing 16:00 KST schedule inside original two-hour window. If skipped before sending, recompute unreserved future candidates and media. Tomorrow 08:00, 12:00 and 16:00 need newer complete source and official evidence refresh before draft expiry. First 24h cohort observation due 2026-11-11 17:00:08 KST."
   },
   "last_reported_publication": {
     "run_id": "42954279775",
@@ -1912,6 +1848,6 @@
       "detail_path_verified_in_repository_code": true,
       "public_profile_and_detail_open": "unavailable in public retrieval"
     },
-    "next_condition": "Use existing 16:00 KST regular slot. Tomorrow's 08:00 and 12:00 drafts require newer complete source before sending and official-evidence refresh before their expiry. First cohort 24h window due 2026-11-11 17:00:08 KST. No manual publish or recovery is needed."
+    "next_condition": "Await existing 16:00 KST schedule inside original two-hour window. If skipped before sending, recompute unreserved future candidates and media. Tomorrow 08:00, 12:00 and 16:00 need newer complete source and official evidence refresh before draft expiry. First 24h cohort observation due 2026-11-11 17:00:08 KST."
   }
 }
