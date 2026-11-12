@@ -23,6 +23,8 @@ def snapshot(post_id, published_at, observed_at, values):
     due = [w for w in WINDOWS if hours >= w]
     if not due:
         raise ValueError("snapshot_not_due")
+    # A snapshot is valid only for its latest reached milestone; never
+    # mislabel a 48-hour observation as a 24-hour measurement.
     if not isinstance(values, dict):
         raise ValueError("metrics_object_required")
     result = {}
