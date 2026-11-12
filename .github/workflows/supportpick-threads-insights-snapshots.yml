@@ -1,0 +1,36 @@
+name: SupportPick Threads Insights Scheduled Snapshots
+on:
+  schedule:
+    - cron: '25 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: supportpick-threads-insights-snapshots
+  cancel-in-progress: false
+jobs:
+  snapshots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      SUPPORTPICK_THREADS_ACCESS_TOKEN: ${{ secrets.SUPPORTPICK_THREADS_ACCESS_TOKEN }}
+      SUPPORTPICK_THREADS_STATE_FILE: threads-state.json
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read published state without modifying it
+        run: |
+          git fetch --depth=1 origin supportpick-threads-state
+          git show FETCH_HEAD:social/threads-state.json > threads-state.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Select milestones and read API
+        run: python tools/supportpick_threads_snapshots.py
+      - name: Preserve results for audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: threads-insights-snapshots-${{ github.run_id }}
+          path: threads-insights-snapshots.json
+          if-no-files-found: warn
+          retention-days: 90
