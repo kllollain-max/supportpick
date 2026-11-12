@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-12T12:12:47+09:00",
+  "prepared_at": "2026-11-12T20:53:30.387765+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -460,6 +460,20 @@
       "checked_at": "2026-11-12T16:46:41+09:00",
       "access_methods": {
         "gov24": "PROVIDED_OFFICIAL_TEXT"
+      }
+    },
+    {
+      "benefit_id": "B55370100044",
+      "decision": "SKIP",
+      "reason": "동일 ID 원본 serviceList 누적 조회수85938회로 선택사업85775회보다 높다. 직접 연 금융위원회2026-10-06 안내의2차 신규 가입신청은10월7~16일18:30으로 종료됐다. 11월12~13일은 심사결과 안내,11월16~27일은 기존 신청·심사 통과자의 계좌개설 기간으로 신규 신청과 다르다. 이번 신규 신청 안내에서 제외하며 제도 전체 종료로 판단하지 않는다.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2182516&bnefType=all&svcId=B55370100044",
+        "https://www.fsc.go.kr/po010104/87880"
+      ],
+      "checked_at": "2026-11-12T20:53:30.387765+09:00",
+      "access_methods": {
+        "gov24": "PROVIDED_OFFICIAL_TEXT",
+        "fsc": "OPENED_OFFICIAL"
       }
     }
   ],
@@ -4163,6 +4177,157 @@
           "opening": "등록장애인 중 SK텔레콤 휴대전화를 이용한다면, 복지요금 감면 자격을 확인해 보세요. 자격 확인 후 등록하면 월정액·데이터 통화료·국내음성 통화료를 각각 35% 감면받을 수 있어요.",
           "structure": "대상·감면 → 본인 회선·중복 제한 → 요금제와 알뜰폰 구분 → 등록 확인 → CTA",
           "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-13T20:00:00+09:00",
+      "benefit_id": "628000000744",
+      "source_fingerprint": "d0dbbbf5bbe6b094fa4be11daeb82ea7bae0f26052aa078860692223af5ea097",
+      "source_generation": "gov24-43199783330-1",
+      "prepared_at": "2026-11-12T20:53:30.387765+09:00",
+      "expires_at": "2026-11-13T20:53:30.387765+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "628000000744",
+        "post_text": "출산 뒤 조리비가 걱정되는 인천의 기초생활수급자·차상위 산모라면, 맘편한 산후조리비로 산모 1인당 150만 원의 인천e음 포인트를 지원받을 수 있어요.\n\n먼저 신청일 기준 인천에 1년 이상 연속 주민등록을 두고 실제 거주했는지 확인해요. 지급 때까지 다른 시도로 전출하지 않아야 해요.\n\n신청 시기는 임신 32주부터 출산 후 90일 이내예요.\n\n다음은 중앙육아종합지원센터의 부모용 온라인 교육을 수료하고, 수료증과 자격 확인 서류를 준비해요.\n\n산모 본인의 정부24 온라인 신청이 원칙이며 인천e음 앱 가입도 필요해요. 온라인 신청이 어렵다면 주소지 보건소의 방문 접수를 확인하세요.\n\n포인트는 지급일부터 12개월 안에 지정 산후조리·건강관리 가맹점에서 사용해요.\n\n현금으로 바꾸거나 별도 지원되는 산모·신생아 건강관리 제공기관에 사용할 수는 없어요. 예산 사정에 따라 지급이 늦어질 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-13T20:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "인천에1년 이상 연속 거주하며 임신32주~출산후90일 이내인 기초생활수급자·차상위 산모",
+          "central_message": "산후조리비 포인트의 대상과 준비 순서, 사용기한·제한을 설명한다.",
+          "pattern": "P6",
+          "selection_reason": "완전 수집본의 동일ID 누적 조회수 내림차순을 유지하고 게시원장33건·기존 미래READY3건 중복을 제외했다. 더 높은 후보들의 구체 HOLD/SKIP 근거는selection_notes에 보존했다. 청년미래적금의 신규 신청기간 종료를 공식 원문으로 확인하여 제외하고 다음 검증 가능한 후보를 선택했다.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "628000000744",
+              "source_ref": "https://www.incheon.go.kr/earlychild/EC060104",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-12T20:53:30.387765+09:00",
+              "claims_supported": [
+                "인천시 영유아정책과 공식 사업안내(최종업데이트2026-07-08)를 직접 열어 기초수급·차상위 등 취약계층 산모, 신청일 기준 인천1년 연속 주민등록·거주, 임신32주~출산후90일, 부모교육수료와 연중 신청을 확인했다. 현재 상시 접수 안내가 유지되어 예정일에도 개별기한 내 이용 가능하되 실제 접수 거래·잔여예산·선정을 확인한 것은 아니다.",
+                "산모1인당150만원 인천e음 포인트, 현금거래금지, 지정 산후조리·건강관리 가맹점 사용과 별도 지원되는 산모신생아 건강관리 제공기관 사용불가를 대조했다. 급여유형이 다른 지원액을 합산하지 않는다."
+              ]
+            },
+            {
+              "source_id": "628000000744",
+              "source_ref": "https://www.seohae.go.kr/open_content/clinic/business/mathernal_child/postnatal.jsp",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-12T20:53:30.387765+09:00",
+              "claims_supported": [
+                "보건소 현재 안내를 직접 열어150만원 포인트와 지급일로부터12개월 사용, 부모용 교육은 산모 이름으로 수료, 정부24 본인신청·교육수료증·자격별 서류 및 온라인 신청 불가시 방문 접수 경로를 교차 확인했다. 특정 보건소 층수는 다른 군구에 적용하지 않았다."
+              ]
+            },
+            {
+              "source_id": "628000000744",
+              "source_ref": "https://www.incheon.go.kr/icbenefit/ICB020201/view?srvcId=628000000744",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-12T20:53:30.387765+09:00",
+              "claims_supported": [
+                "인천시의 동일 서비스ID 보조금24 상세를 직접 열었다. 연중 상시신청, 지급까지 타시도 전출입 제한, 인천e음 앱 본인명의 가입과 지역별 비교통카드 지급, 예산확보 사정에 따른 지급지연 가능성,1년 뒤 미사용포인트 소멸을 대조했다. 개별 접수·지급완료를 뜻하지 않는다."
+              ]
+            },
+            {
+              "source_id": "628000000744",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2127802&bnefType=all&svcId=628000000744",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-12T20:53:30.387765+09:00",
+              "claims_supported": [
+                "완전 검증한gov24-43199783330-1 동일ID serviceList·serviceDetail·supportConditions를 대조했다. 원본 누적 조회수85775회, API checkedAt 2026-11-12T19:26:11.610470+09:00, 수집 성공2026-11-12T19:28:32.267476+09:00와 실제 원문검수2026-11-12T20:53:30.387765+09:00를 구분한다. API source_only를 현재 접수 검증으로 바꾸지 않았다."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 463,
+          "count_method": "Python Unicode len including spaces, newlines and CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "이 글은 전체 취약계층 중 기초수급자·차상위 산모만을 소개한다. 다른 자격군의 연령·소득 조건을 같은 기준으로 일반화하지 않는다. 2026년 예정일 임신32주~출산90일 내 대상은2025-01-01이후 분만 조건과 충돌하지 않는다.",
+            "신청일 기준1년 거주를 안내하는 최신 담당부서·보건소·동일ID 자료를 사용했다. 인천일자리플랫폼의2025 기준연도 요약에 출생일 기준이라고 쓰인 내용은 최신2026-07-08 담당부서 본문보다 우선하지 않았다.",
+            "지역별 비교통카드·명의·대리신청 서류와 실제 가맹 여부는 관할 보건소에서 확인한다. 지급 지연 가능성이 있으며 잔여 예산·개인 선정·접수를 보장하지 않는다.",
+            "이미지는 TEXT 교대 회차이므로 사용하지 않는다. 기존 미래READY의 본문·해시·이미지·형식·유효기간은 보존한다.",
+            "이 증빙은 최대24시간 유효하다. 내일20시 지연시 실제 원문 재검수가 필요하며 현재 수집본도 발송시점에 최신 완전본으로 재확인한다.",
+            "기존 사이트 주소는 읽기 도구가 접근 오류로 열지 못했다. 실제 프로필 링크와 사업검색·상세·접수 거래를 확인하거나 보장하지 않는다.",
+            "비교 가능한24시간 실측은 A0/B1로 부족하다. 신규 원고에 효과 입증·목표 성장 보장을 적용하지 않는다."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "인천의 기초수급·차상위 산모는 산후조리비 포인트를 신청하기 전에 무엇을 준비해야 하나요?",
+            "reader_scope": "인천1년 이상 거주한 기초수급자·차상위 산모",
+            "angles": [
+              "출산 뒤 조리비 부담",
+              "거주기간·취약계층·신청기한 자격",
+              "교육·서류·앱 가입과 사용처 준비"
+            ],
+            "chosen_angle": "생활비 부담을 실제 포인트 효용에 연결하고 교육·서류·신청 순서로 답한다.",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "출산 뒤 조리비가 걱정되는 인천의 기초생활수급자·차상위 산모라면, 맘편한 산후조리비로 산모 1인당 150만 원의 인천e음 포인트를 지원받을 수 있어요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "인천의 기초수급자·차상위 산모는 맘편한 산후조리비로1인당150만원의 인천e음 포인트를 지원받을 수 있어요. 거주기간과 신청기한을 함께 확인해요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "인천의 맘편한 산후조리비는 취약계층 산모에게150만원 포인트를 지원하며, 신청 전1년 거주와 부모교육 수료 등 조건을 확인해요."
+              }
+            ],
+            "chosen_opening": "출산 뒤 조리비가 걱정되는 인천의 기초생활수급자·차상위 산모라면, 맘편한 산후조리비로 산모 1인당 150만 원의 인천e음 포인트를 지원받을 수 있어요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "첫 적용2026-11-10 배정을 날짜별 반전하면11월13일20시는A다. 최근 실제20건과 내일P4/P3/P5 READY의 도입·전개를 비교했다. 기존 출산 바우처와 달리 인천 한정 산후조리비·교육수료 준비를 설명하며 질문만 바꾼 반복을 피했다.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "인천",
+              "benefit": "산후조리비 전용 지역화폐 포인트",
+              "application": "연중·임신32주~출산후90일",
+              "audience": "기초수급자·차상위 산모",
+              "media": "TEXT"
+            },
+            "comparison_group": "독자규모·지역·혜택유형·마감이 유사한A/B의 실제24시간 관측만 비교한다. 시간·미디어·인천 독자층·다른 사업은 교란이다. A0/B1로 현재 효과 비교 보류.",
+            "applied_elements": [
+              "첫 문장 대상·인천·1인당150만원 포인트",
+              "P6 교육·서류·신청 순서",
+              "1년 거주와90일 기한",
+              "12개월 사용·중복제한·지연 가능성"
+            ],
+            "profile_route": "기존 사이트 URL은 읽기 접근 오류. 실제 프로필 링크 및 검색·상세 이동·접수 기능 미확인.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "628000000744",
+          "notice_version": "gov24-43199783330-1:인천-맘편한-2026",
+          "pattern": "P6",
+          "opening": "출산 뒤 조리비가 걱정되는 인천의 기초생활수급자·차상위 산모라면, 맘편한 산후조리비로 산모 1인당 150만 원의 인천e음 포인트를 지원받을 수 있어요.",
+          "structure": "생활 상황·인천 수급/차상위·포인트 → 거주와 개별기한 → 교육·서류·본인 신청 준비 → 사용범위·중복제한·지급지연 → CTA",
+          "media_turn": "TEXT"
         }
       }
     }
