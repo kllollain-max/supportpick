@@ -20,11 +20,9 @@ def snapshot(post_id, published_at, observed_at, values):
     if published.tzinfo is None or observed.tzinfo is None or observed < published:
         raise ValueError("valid_aware_timestamps_required")
     hours = (observed - published).total_seconds() / 3600
-    due = [w for w in WINDOWS if hours >= w]
+    due = [w for w in WINDOWS if w <= hours <= w + 2]
     if not due:
-        raise ValueError("snapshot_not_due")
-    # A snapshot is valid only for its latest reached milestone; never
-    # mislabel a 48-hour observation as a 24-hour measurement.
+        raise ValueError("snapshot_outside_milestone_window")
     if not isinstance(values, dict):
         raise ValueError("metrics_object_required")
     result = {}
