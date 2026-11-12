@@ -1663,25 +1663,16 @@
     "last_ready_queue_blob_sha": "e20e3d75d78d7dc2a944a421daa501dd0bc8b288"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-12T14:42:17Z",
+    "checked_at": "2026-11-12T15:48:39Z",
     "result": "no_update",
     "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
     "publication_ledger_sha": "db9d0fba2d71d4e65d5fa9d6cda743e2acddddd9",
     "queue_blob_sha": "cd277503eb37ef527fc39d27753449acde7e319a",
-    "maintenance_previous_blob_sha": "1132fc89e573a2f676aea77aafa4c3423480d07e",
+    "maintenance_previous_blob_sha": "9f0907cdd4cfb6be6ee70f4842bdc3d963d5b733",
     "unresolved_publications": 0,
     "lease": null,
     "active_target_runs": [],
-    "changed_run_versions": [
-      {
-        "run_id": "43237641864",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-12T14:29:17Z",
-        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
-      }
-    ],
+    "changed_run_versions": [],
     "run_pagination": {
       "branch": "main",
       "pages": 1,
@@ -1707,7 +1698,7 @@
       "regression_ci_tests_passed": 203,
       "fresh_at_check": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-12T14:42:17Z"
+      "verification_checked_at": "2026-11-12T15:48:39Z"
     },
     "publisher": {
       "run_id": "43211696660",
@@ -1794,7 +1785,7 @@
       "expired_unpublished_slots": [],
       "image_recheck": {
         "status": "UPSTREAM_VERIFIED",
-        "checked_at": "2026-11-12T14:42:17Z",
+        "checked_at": "2026-11-12T15:48:39Z",
         "assets": [
           {
             "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
@@ -1813,7 +1804,7 @@
         "both_asset_sha256_match_existing_visual_review": true,
         "new_visual_inspection": false
       },
-      "last_validated_at": "2026-11-12T23:41:02.599461+09:00"
+      "last_validated_at": "2026-11-13T00:47:50.829097+09:00"
     },
     "history_audit": {
       "requested_days": 28,
@@ -1822,9 +1813,10 @@
       "ledger_complete_verified": 33,
       "duplicate_main_ids": 0,
       "duplicate_slots": 0,
-      "today_main_posts": 4,
+      "today_main_posts": 0,
       "pending": 0,
-      "actual_scope": "Fresh durable ledger plus latest authenticated publisher receipt/log and artifact; historical present public rendering not independently rechecked."
+      "actual_scope": "Fresh durable ledger plus latest authenticated publisher receipt/log and artifact; historical present public rendering not independently rechecked.",
+      "kst_date": "2026-11-13"
     },
     "metrics": {
       "latest_observed_run_id": "43237641864",
