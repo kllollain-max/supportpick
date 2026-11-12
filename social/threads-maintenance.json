@@ -1572,12 +1572,12 @@
     "last_ready_queue_blob_sha": "20839f28d02d7956d8bd42a5726dd0a5084e254b"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-12T10:05:35.000+09:00",
+    "checked_at": "2026-11-12T10:46:00.000+09:00",
     "result": "unchanged_runs_receipts_four_existing_ready_reverified",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
     "publication_ledger_sha": "78957532a9727150f4dfaf8a59f289c59de139ba",
     "queue_blob_sha": "20839f28d02d7956d8bd42a5726dd0a5084e254b",
-    "maintenance_previous_blob_sha": "9b7b44ca5a61293709c24e021272db3696e0f3c9",
+    "maintenance_previous_blob_sha": "87d1544d7e8473330a030e96a255628fd16029e1",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [],
@@ -1617,7 +1617,8 @@
       },
       "remaining_condition": "Revalidate source and official evidence before actual send; current source is stale for Nov 13 08.",
       "cached_artifact_digest_reverified": true,
-      "job_logs_retrieved_this_run": true
+      "job_logs_retrieved_this_run": true,
+      "verification_checked_at": "2026-11-12T10:46:00.000+09:00"
     },
     "publisher": {
       "run_id": "43121957083",
@@ -1735,7 +1736,7 @@
       "expired_unpublished_slots": [],
       "image_recheck": {
         "status": "UPSTREAM_VERIFIED",
-        "checked_at": "2026-11-12T10:04:43.015874+09:00",
+        "checked_at": "2026-11-12T10:45:18.770997+09:00",
         "current_main_bytes_downloaded": true,
         "both_asset_sha256_match_existing_visual_review": true,
         "new_visual_inspection": false
@@ -2195,7 +2196,7 @@
           "timestamp_basis": "Ledger invocation time; exact platform timestamp unverified. No quantitative comparison allowed."
         }
       },
-      "last_availability_check_at": "2026-11-12T10:05:35.000+09:00",
+      "last_availability_check_at": "2026-11-12T10:46:00.000+09:00",
       "statistical_decision": "No comparison: zero comparable measured observations; preserve A/B, no editorial share changes. Platform timestamps remain unverified."
     },
     "profile_route": {
