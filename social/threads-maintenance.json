@@ -1570,20 +1570,20 @@
     "last_ready_queue_blob_sha": "e20e3d75d78d7dc2a944a421daa501dd0bc8b288"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-12T12:15:10.000+09:00",
-    "result": "noon_evidence_actually_reverified_body_preserved_next_noon_new_reviewed_draft_saved",
+    "checked_at": "2026-11-12T14:16:43.000+09:00",
+    "result": "no_change_four_existing_ready_revalidated_no_new_publication_or_failure",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-    "publication_ledger_sha": "78957532a9727150f4dfaf8a59f289c59de139ba",
+    "publication_ledger_sha": "c40969270f6218a84a175af2931cb8a4c633db1b",
     "queue_blob_sha": "e20e3d75d78d7dc2a944a421daa501dd0bc8b288",
-    "maintenance_previous_blob_sha": "23618b809af7aea1c668aef4f47a61a2e1d01706",
+    "maintenance_previous_blob_sha": "58c9a08a84486a158f3178dcabd834ce987df79c",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [],
     "run_pagination": {
       "branch": "main",
-      "pages": 2,
-      "entries_examined": 50,
-      "target_versions_compared": 27,
+      "pages": 1,
+      "entries_examined": 25,
+      "target_versions_compared": 16,
       "checkpoint_reached": true
     },
     "source": {
@@ -1613,41 +1613,42 @@
         "run_id": "43110769785",
         "python_tests_passed": 194
       },
-      "remaining_condition": "Revalidate source and official evidence before actual send; current source is stale for Nov 13 08.",
+      "remaining_condition": "Revalidate source and official evidence before actual send; current source is stale for Nov 13 08 and 12.",
       "cached_artifact_digest_reverified": true,
       "job_logs_retrieved_this_run": true,
-      "verification_checked_at": "2026-11-12T12:15:10.000+09:00"
+      "verification_checked_at": "2026-11-12T14:16:43.000+09:00"
     },
     "publisher": {
-      "run_id": "43121957083",
+      "run_id": "43149664311",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-11T23:44:17Z",
+      "updated_at": "2026-11-12T03:40:33Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-      "job_id": 130864374064,
-      "artifact_id": 13900318672,
-      "artifact_digest": "sha256:ec3bf4c536ed020f0cced8d1f002db051484e93ec9e061481a4ff9727f32aeca",
+      "job_id": 130955596097,
+      "artifact_id": 13912904119,
+      "artifact_digest": "sha256:ea7562980e8cddc44e2445fb0257ebeb894623e4ccb13abe2ec9b7f2beb7c60f",
       "classification": "verified_natural_publication",
       "event": "schedule",
       "published": true,
-      "slot": "2026-11-12T08:00:00+09:00",
-      "published_at": "2026-11-12T08:43:26.386351+09:00",
-      "benefit_id": "641000000138",
-      "main_id": "18032141162693111",
-      "url": "https://www.threads.com/@hid_1004/post/DfnsFsAEcRN",
+      "slot": "2026-11-12T12:00:00+09:00",
+      "published_at": "2026-11-12T12:39:43.607600+09:00",
+      "benefit_id": "SSI000000020",
+      "main_id": "18061100522563998",
+      "url": "https://www.threads.com/@hid_1004/post/DfoHIN5jTCO",
       "stage": "complete",
       "verified": true,
-      "content_hash": "96cb8e57bd9b1d23dfe7a35ff9b255e0a5c257e699c806bda25ebe0e64d3b585",
-      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "content_hash": "42a78c9bf7530a50d17e0f8983de8b618f158ad264d64d2f3499e060b4322d91",
+      "asset_sha256": null,
       "source_generation": "gov24-43110769785-1",
-      "pattern": "P1",
-      "media_turn": "IMAGE",
+      "pattern": "P5",
+      "media_turn": "TEXT",
+      "char_count": 407,
       "replies": 0,
       "verification": "Authenticated publisher text/permalink readback, digest-verified result artifact, durable ledger and exact READY body agree.",
-      "verification_completed_at": "2026-11-12T09:15:36.000+09:00",
+      "verification_completed_at": "2026-11-12T12:59:23.000+09:00",
       "public_web_visibility_independently_verified": false,
-      "publication_ledger_records": 30,
+      "publication_ledger_records": 31,
       "pending": null,
       "lease": null,
       "job_logs_retrieved": true,
@@ -1655,24 +1656,25 @@
       "publisher_related_tests_passed": 121,
       "time_basis": {
         "published_at": "Ledger publisher invocation time; not exact platform publication timestamp.",
-        "receipt_emitted_at": "2026-11-12T08:44:10.860363+09:00",
-        "verified_result_logged_at": "2026-11-12T08:44:14.733460+09:00",
+        "receipt_emitted_at": "2026-11-12T12:40:25.663786+09:00",
+        "verified_result_logged_at": "2026-11-12T12:40:29.798427+09:00",
         "platform_timestamp": null,
-        "public_report": "Publication confirmed 2026-11-12 08:44 KST."
+        "public_report": "Publication confirmed 2026-11-12 12:40 KST."
       },
       "previously_reported": true,
       "artifact_downloaded_again": false,
       "job_logs_retrieved_this_run": true,
-      "ledger_and_queue_exact_body_verified": true
+      "ledger_and_queue_exact_body_verified": true,
+      "latest_read_check_at": "2026-11-12T14:16:43.000+09:00"
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "main_prompt_and_code_blob_shas_unchanged": true,
       "queue_reused": true,
-      "queue_write": true,
+      "queue_write": false,
       "queue_readback_equal": true,
-      "unchanged_existing_entries": 27,
-      "preview_ready": 5,
+      "unchanged_existing_entries": 29,
+      "preview_ready": 4,
       "validate_ready_entry_and_preview": true,
       "future_slot_simulation": true,
       "source_freshness_checked_separately": true,
@@ -1734,68 +1736,34 @@
       "expired_unpublished_slots": [],
       "image_recheck": {
         "status": "UPSTREAM_VERIFIED",
-        "checked_at": "2026-11-12T12:13:59.716652+09:00",
+        "image_hashes": [
+          "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a"
+        ],
+        "checked_at": "2026-11-12T14:16:35.832585+09:00",
+        "cached_code_artifact_queue_hashes_verified": true,
         "current_main_bytes_downloaded": true,
         "both_asset_sha256_match_existing_visual_review": true,
         "new_visual_inspection": false
       },
-      "input_comparison": "Validated local queue Git blob equals fresh remote readback e20e3d75d78d7dc2a944a421daa501dd0bc8b288; original 28 bodies preserved, noon active evidence actually re-reviewed and previous entry archived.",
+      "input_comparison": "Current remote prompt/code match validated local blobs; exact local queue blob equals fresh remote e20e3d75d78d7dc2a944a421daa501dd0bc8b288. New ledger matched semantically and latest body/hash verified against actual receipt.",
       "local_validation_workspace": {
         "available": true,
         "current_files_and_inputs_match_remote_blobs": true,
-        "final_validation": "5_READY: current noon plus next four regular slots",
+        "final_validation": "4_READY",
         "remote_queue_or_publisher_failure": false
       },
       "queue_commit": "3a1eca5911bd1091437b14f90ac225ad37d344f2",
-      "current_regular_window": [
-        {
-          "slot": "2026-11-12T12:00:00+09:00",
-          "benefit_id": "SSI000000020",
-          "pattern": "P5",
-          "media_turn": "TEXT",
-          "char_count": 407,
-          "last_valid_at": "2026-11-12T13:59:59+09:00",
-          "expires_at": "2026-11-13T12:09:39.000+09:00",
-          "current_source_fresh_at_slot": true,
-          "source_recheck_required_at_publish": true,
-          "selection_rank": 21,
-          "source_fingerprint_matches": true
-        }
-      ],
-      "new_ready_entry": {
-        "slot": "2026-11-13T12:00:00+09:00",
-        "benefit_id": "135200005001",
-        "pattern": "P3",
-        "cohort": "A",
-        "media_turn": "TEXT",
-        "char_count": 446,
-        "prepared_at": "2026-11-12T12:12:47+09:00",
-        "expires_at": "2026-11-13T12:12:47+09:00",
-        "source_generation": "gov24-43110769785-1",
-        "source_fingerprint": "22b11500412634c68b21004bf6776122696a9a9710e827d19ae55c7116051d2f",
-        "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-        "policy_id": "supportpick-threads-reach-v1-20261109"
-      },
-      "higher_ranked_hold_added": {
-        "benefit_id": "999000000092",
-        "decision": "HOLD",
-        "reason": "동일 ID 누적 조회수 96038회로 선택 후보 94728회보다 높다. API는 매월 1~10일 접수이며 직접 연 사하구 2026년 안내도 매월 10일까지다. 예정 발송일 11월 13일은 확인한 월별 접수창 이후이고 다른 지역의 현재 접수 가능 근거는 확보하지 못했다. 다음달 접수 시작은 원본 startDate가 없어 UPCOMING 검증에 맞춰 꾸미지 않는다. 제도 전체 종료로 판단하지 않는다.",
-        "sources": [
-          "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999259&bnefType=all&svcId=999000000092",
-          "https://news.saha.go.kr/portal/contents.do?mId=0501040600"
-        ],
-        "checked_at": "2026-11-12T12:12:47+09:00",
-        "access_methods": {
-          "gov24": "PROVIDED_OFFICIAL_TEXT",
-          "saha": "OPENED_OFFICIAL"
-        }
-      },
+      "current_regular_window": [],
+      "new_ready_entry": null,
+      "higher_ranked_hold_added": null,
       "new_ready_entry_this_run": null,
-      "existing_bodies_preserved": 28,
-      "existing_entry_evidence_revalidated": 1
+      "existing_bodies_preserved": 29,
+      "existing_entry_evidence_revalidated": 0,
+      "last_validated_at": "2026-11-12T14:16:08.734599+09:00"
     },
     "metrics": {
-      "status": "due_window_unmeasured_official_read_path_unavailable",
+      "status": "no_new_due_window_official_read_path_unavailable",
       "new_due_unmeasured_records": 0,
       "existing_unmeasured_id_window_records_preserved": true,
       "comparable_measured_24h": 0,
@@ -1804,7 +1772,7 @@
       "no_weight_change": true,
       "seven_day_evaluation_due": false,
       "fourteen_day_evaluation_due": false,
-      "next_due_at": "2026-11-12T08:29:49.253605+09:00"
+      "next_due_at": "2026-11-12T17:08:29.061816+09:00"
     },
     "recovery": {
       "required": false,
@@ -1812,26 +1780,25 @@
       "new_failures": 0,
       "new_partials": 0,
       "post_retry_budget_used": 0,
-      "code_change_required": false,
-      "preventive_official_evidence_revalidation": true
+      "code_change_required": false
     },
     "incidents": {
       "initial_41796747628": "resolved",
       "new_incident": null
     },
-    "next_condition": "Use existing normal publisher only. Current noon is unreserved within its original 12–14 KST grace window; genuine official re-review now covers the full window without altering body, hash, pattern or media. No observed failure justifies dispatch. Revalidate latest complete data and official facts at actual send. Nov 13 08/12 require fresh source; stored evidence expires at 08:18:45/12:12:47, so actual re-review is required if delayed. Next metric due 12:40:29; no official Insights reader means unmeasured, never zero. No new publication or operational failure to notify.",
+    "next_condition": "Use existing regular publisher at Nov 12 16/20 and Nov 13 08/12. No dispatch needed. Revalidate source and official status before actual send. Current source is stale for tomorrow; delayed sends beyond evidence expiry require genuine official re-review, particularly Nov 13 08:18:45/12:12:47. Preserve pending. Next 24h measurement window at 17:08:29; official reader remains unavailable, values remain null and no A/B effect is inferred.",
     "history_audit": {
       "requested_days": 28,
-      "available_records": 30,
+      "available_records": 31,
       "from_slot": "2026-11-04T17:04:00+09:00",
-      "through_slot": "2026-11-12T08:00:00+09:00",
-      "ledger_complete_verified": 30,
+      "through_slot": "2026-11-12T12:00:00+09:00",
+      "ledger_complete_verified": 31,
       "duplicate_main_ids": 0,
       "duplicate_slots": 0,
       "unresolved": 0,
       "actual_scope": "All available durable records since Nov 4, newest authenticated receipt/body/permalink and artifact verified. Historical current public visibility and media rendering not independently rechecked.",
-      "today_main_posts": 1,
-      "latest_regular_delay_minutes": 44.181,
+      "today_main_posts": 2,
+      "latest_regular_delay_minutes": 40.428,
       "delay_basis": "Publication receipt confirmation; exact platform timestamp unavailable.",
       "low_views_after_normal_post": "unmeasured_official_reader_unavailable"
     }
@@ -2272,7 +2239,7 @@
           "timestamp_basis": "Ledger publisher invocation time; exact platform timestamp unavailable, so quantitative timing comparison awaits confirmation."
         }
       },
-      "last_availability_check_at": "2026-11-12T12:59:23.000+09:00",
+      "last_availability_check_at": "2026-11-12T14:16:43.000+09:00",
       "statistical_decision": "No comparison: zero comparable measured observations; preserve A/B, no editorial share changes. Platform timestamps remain unverified."
     },
     "profile_route": {
