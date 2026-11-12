@@ -14,6 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "43163347739",
     "43149664311",
     "43121957083",
     "43110769785",
@@ -999,6 +1000,14 @@
       "conclusion": "success",
       "updated_at": "2026-11-12T03:40:33Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
+    },
+    "43163347739": {
+      "run_id": "43163347739",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-12T05:44:20Z",
+      "head_sha": "62df9ebdb49174c6688b14a8b1642114997d2853"
     }
   },
   "last_check": {
@@ -1570,12 +1579,12 @@
     "last_ready_queue_blob_sha": "e20e3d75d78d7dc2a944a421daa501dd0bc8b288"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-12T14:16:43.000+09:00",
-    "result": "no_change_four_existing_ready_revalidated_no_new_publication_or_failure",
-    "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
+    "checked_at": "2026-11-12T14:56:02.376373+09:00",
+    "result": "existing_four_ready_valid_on_updated_writer_input_official_diagnostic_metrics_observed",
+    "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
     "publication_ledger_sha": "c40969270f6218a84a175af2931cb8a4c633db1b",
     "queue_blob_sha": "e20e3d75d78d7dc2a944a421daa501dd0bc8b288",
-    "maintenance_previous_blob_sha": "58c9a08a84486a158f3178dcabd834ce987df79c",
+    "maintenance_previous_blob_sha": "db1574b9b1960aac929d2fef0743dcf343aabcbb",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [],
@@ -1616,7 +1625,7 @@
       "remaining_condition": "Revalidate source and official evidence before actual send; current source is stale for Nov 13 08 and 12.",
       "cached_artifact_digest_reverified": true,
       "job_logs_retrieved_this_run": true,
-      "verification_checked_at": "2026-11-12T14:16:43.000+09:00"
+      "verification_checked_at": "2026-11-12T14:56:02.376373+09:00"
     },
     "publisher": {
       "run_id": "43149664311",
@@ -1665,11 +1674,11 @@
       "artifact_downloaded_again": false,
       "job_logs_retrieved_this_run": true,
       "ledger_and_queue_exact_body_verified": true,
-      "latest_read_check_at": "2026-11-12T14:16:43.000+09:00"
+      "latest_read_check_at": "2026-11-12T14:56:02.376373+09:00"
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-      "main_prompt_and_code_blob_shas_unchanged": true,
+      "main_prompt_and_code_blob_shas_unchanged": false,
       "queue_reused": true,
       "queue_write": false,
       "queue_readback_equal": true,
@@ -1740,17 +1749,16 @@
           "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
           "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a"
         ],
-        "checked_at": "2026-11-12T14:16:35.832585+09:00",
-        "cached_code_artifact_queue_hashes_verified": true,
+        "checked_at": "2026-11-12T14:56:02.376373+09:00",
         "current_main_bytes_downloaded": true,
         "both_asset_sha256_match_existing_visual_review": true,
         "new_visual_inspection": false
       },
-      "input_comparison": "Current remote prompt/code match validated local blobs; exact local queue blob equals fresh remote e20e3d75d78d7dc2a944a421daa501dd0bc8b288. New ledger matched semantically and latest body/hash verified against actual receipt.",
+      "input_comparison": "Updated writer-input and imported advisory module local Git blobs match current main; exact existing queue and unchanged ledger reused. New module's three tests and actual build_input/validate_ready_entry/preview with four READY entries pass.",
       "local_validation_workspace": {
         "available": true,
         "current_files_and_inputs_match_remote_blobs": true,
-        "final_validation": "4_READY",
+        "final_validation": "4_READY_CURRENT_MAIN",
         "remote_queue_or_publisher_failure": false
       },
       "queue_commit": "3a1eca5911bd1091437b14f90ac225ad37d344f2",
@@ -1760,19 +1768,24 @@
       "new_ready_entry_this_run": null,
       "existing_bodies_preserved": 29,
       "existing_entry_evidence_revalidated": 0,
-      "last_validated_at": "2026-11-12T14:16:08.734599+09:00"
+      "last_validated_at": "2026-11-12T14:55:16.847130+09:00",
+      "prompt_and_publisher_unchanged": true,
+      "writer_input_blob_sha": "0569caae4775bae2f771cbfb5a699cfa0672ea55",
+      "writer_input_updated_to_current_main_locally": true,
+      "growth_advisory_tests_passed": 3
     },
     "metrics": {
-      "status": "no_new_due_window_official_read_path_unavailable",
+      "status": "official_diagnostic_read_verified_milestone_observations_pending",
       "new_due_unmeasured_records": 0,
       "existing_unmeasured_id_window_records_preserved": true,
       "comparable_measured_24h": 0,
-      "official_reader_available": false,
+      "official_reader_available": true,
       "no_performance_effect_inferred": true,
       "no_weight_change": true,
       "seven_day_evaluation_due": false,
       "fourteen_day_evaluation_due": false,
-      "next_due_at": "2026-11-12T17:08:29.061816+09:00"
+      "next_due_at": "2026-11-12T17:08:29.061816+09:00",
+      "new_diagnostic_observations": 1
     },
     "recovery": {
       "required": false,
@@ -1786,7 +1799,7 @@
       "initial_41796747628": "resolved",
       "new_incident": null
     },
-    "next_condition": "Use existing regular publisher at Nov 12 16/20 and Nov 13 08/12. No dispatch needed. Revalidate source and official status before actual send. Current source is stale for tomorrow; delayed sends beyond evidence expiry require genuine official re-review, particularly Nov 13 08:18:45/12:12:47. Preserve pending. Next 24h measurement window at 17:08:29; official reader remains unavailable, values remain null and no A/B effect is inferred.",
+    "next_condition": "Use the four existing normal READY slots, preserving bodies and media. Revalidate latest complete source and official evidence before send; tomorrow requires a newer source. Genuine re-review needed if a send passes stored evidence expiry. Existing-token diagnostic is readable, but 24h/7d snapshots await actual milestone runs. No recovery dispatch, posting test, policy success claim, new schedule or A/B weight change.",
     "history_audit": {
       "requested_days": 28,
       "available_records": 31,
@@ -1870,10 +1883,10 @@
       "actual_source_generation": "gov24-42708067719-1"
     },
     "measurement": {
-      "status": "due_window_unmeasured_official_read_path_unavailable",
-      "reason": "No authorized Insights read path exposed in this environment. Current token scope is unverified. Official documentation is available, but no authenticated metric response was obtained.",
+      "status": "official_diagnostic_read_verified_milestone_observations_pending",
+      "reason": "Existing-token official diagnostic returned metrics for one approved published post. Scheduled read-only snapshot workflow code exists; no completed milestone snapshot observed in this check.",
       "reference": "https://www.postman.com/meta/threads/request/34203612-385abc7d-b3cc-4e5d-9937-ebbe7174e041",
-      "observed_posts_with_metrics": 0,
+      "observed_posts_with_metrics": 1,
       "views_24h": null,
       "views_7d": null,
       "reactions": null,
@@ -2239,8 +2252,67 @@
           "timestamp_basis": "Ledger publisher invocation time; exact platform timestamp unavailable, so quantitative timing comparison awaits confirmation."
         }
       },
-      "last_availability_check_at": "2026-11-12T14:16:43.000+09:00",
-      "statistical_decision": "No comparison: zero comparable measured observations; preserve A/B, no editorial share changes. Platform timestamps remain unverified."
+      "last_availability_check_at": "2026-11-12T14:56:02.376373+09:00",
+      "statistical_decision": "No comparison: zero comparable measured observations; preserve A/B, no editorial share changes. Platform timestamps remain unverified.",
+      "diagnostic_observations_by_run_id": {
+        "43163347739": {
+          "run_id": "43163347739",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-12T05:44:20Z",
+          "head_sha": "62df9ebdb49174c6688b14a8b1642114997d2853",
+          "job_id": 130999424768,
+          "artifact_id": 13919286542,
+          "artifact_digest": "sha256:e2f6d1c7e1767bba52302b79f01e29aa08198a0166aa70a13f7652debca13e27",
+          "artifact_hash_verified": true,
+          "main_id": "18061100522563998",
+          "slot": "2026-11-12T12:00:00+09:00",
+          "benefit_id": "SSI000000020",
+          "pattern": "P5",
+          "cohort": "B",
+          "opening_type": "대상·혜택형",
+          "char_count": 407,
+          "media_turn": "TEXT",
+          "published_at": "2026-11-12T12:39:43.607600+09:00",
+          "observation_time_bounds": {
+            "from": "2026-11-12T14:44:16.217289+09:00",
+            "to": "2026-11-12T14:44:16.915992+09:00",
+            "basis": "collector command log start to artifact upload start; artifact contains no exact observed_at"
+          },
+          "elapsed_hours_approx": 2.076,
+          "window_hours": null,
+          "timing": "ad_hoc_before_24h",
+          "metrics": {
+            "views": 108,
+            "likes": 2,
+            "replies": 0,
+            "reposts": 0,
+            "shares": 0,
+            "quotes": null,
+            "saves": null,
+            "profile_visits": null,
+            "new_followers": null,
+            "site_visits": null
+          },
+          "actual_official_read_success": true,
+          "new_permission_or_token_change": false,
+          "not_24h_or_7d": true,
+          "no_backcalculation": true,
+          "limitations": [
+            "One early cumulative diagnostic observation is not a comparable 24h sample or growth effect.",
+            "Quote count is not retained by current collector output; null is not zero.",
+            "Past unmeasured milestone records are preserved; no retroactive 24h values inferred."
+          ]
+        }
+      },
+      "official_read_path": {
+        "status": "verified_existing_workflow_diagnostic",
+        "run_id": "43163347739",
+        "post_id": "18061100522563998",
+        "metric_scope": "post cumulative",
+        "milestone_collection_verified": false
+      }
     },
     "profile_route": {
       "status": "live_route_unconfirmed",
@@ -2569,6 +2641,39 @@
         "revalidated_evidence_consumed": true,
         "post_retried": false
       }
+    }
+  },
+  "observed_main_changes": {
+    "bb67953ed1e6655617942388306da5ebecd8ba99": {
+      "checked_at": "2026-11-12T14:56:02.376373+09:00",
+      "commits": [
+        {
+          "sha": "121d143291ef06ba279a6a5f9ebd24700d78b825",
+          "message": "Threads @hid_1004 성장 개선 v3 운영 기준 및 검증 게이트 (#52)"
+        },
+        {
+          "sha": "e9bd78dd095bb3772e0a7e195cb143ae64ad85a2",
+          "message": "Threads v3 성과 지표 스냅샷·집계 기반 및 테스트 (#53)"
+        },
+        {
+          "sha": "cce45a5ec5319aff66cb76b40cb586c2ea60ec8d",
+          "message": "Threads v3 읽기 전용 성과 수집기 초기 구현 (#54)"
+        },
+        {
+          "sha": "62df9ebdb49174c6688b14a8b1642114997d2853",
+          "message": "feat: add manual read-only Threads insights diagnostic workflow (#55)"
+        },
+        {
+          "sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
+          "message": "Threads v3 24h·72h·7d 읽기 전용 예약 스냅샷 (#56)"
+        }
+      ],
+      "publisher_and_schedule_unchanged": true,
+      "queue_unchanged": true,
+      "advisory_does_not_override_gov24_priority": true,
+      "existing_ready_preserved": true,
+      "growth_v3_new_draft_application_verified": false,
+      "scheduled_metrics_actual_execution_verified": false
     }
   }
 }
