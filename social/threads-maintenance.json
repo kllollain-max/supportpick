@@ -1572,29 +1572,20 @@
     "last_ready_queue_blob_sha": "20839f28d02d7956d8bd42a5726dd0a5084e254b"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-12T08:22:11.000+09:00",
-    "result": "new_complete_source_verified_existing_four_ready_reused_next_morning_reviewed_draft_saved",
+    "checked_at": "2026-11-12T10:05:35.000+09:00",
+    "result": "unchanged_runs_receipts_four_existing_ready_reverified",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-    "publication_ledger_sha": "c37e8a2def283bd0c7254e13e0c615ec0352f7bc",
+    "publication_ledger_sha": "78957532a9727150f4dfaf8a59f289c59de139ba",
     "queue_blob_sha": "20839f28d02d7956d8bd42a5726dd0a5084e254b",
-    "maintenance_previous_blob_sha": "5e9416ec1f1e3c851f9791e3b58e75b4d055db52",
+    "maintenance_previous_blob_sha": "9b7b44ca5a61293709c24e021272db3696e0f3c9",
     "unresolved_publications": 0,
     "active_target_runs": [],
-    "changed_run_versions": [
-      {
-        "run_id": "43110769785",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-11T22:30:46Z",
-        "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc"
-      }
-    ],
+    "changed_run_versions": [],
     "run_pagination": {
       "branch": "main",
       "pages": 2,
       "entries_examined": 50,
-      "target_versions_compared": 28,
+      "target_versions_compared": 27,
       "checkpoint_reached": true
     },
     "source": {
@@ -1611,7 +1602,7 @@
       "job_id": 130825875026,
       "artifact_id": 13896806723,
       "artifact_digest": "sha256:a155caef0dd38c2b6a0eda929c3ad9247a0481e8478a8861334058b99f7f2dcf",
-      "artifact_downloaded_again": true,
+      "artifact_downloaded_again": false,
       "artifact_digest_reverified": true,
       "read_current_verify_snapshot_load_feed": true,
       "collection_step": "completed_success",
@@ -1624,66 +1615,65 @@
         "run_id": "43110769785",
         "python_tests_passed": 194
       },
-      "remaining_condition": "Revalidate source and official evidence before actual send; current source is stale for Nov 13 08."
+      "remaining_condition": "Revalidate source and official evidence before actual send; current source is stale for Nov 13 08.",
+      "cached_artifact_digest_reverified": true,
+      "job_logs_retrieved_this_run": true
     },
     "publisher": {
-      "run_id": "43014097709",
+      "run_id": "43121957083",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-11T11:43:08Z",
+      "updated_at": "2026-11-11T23:44:17Z",
       "head_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
-      "job_id": 130500724560,
-      "artifact_id": 13851049675,
-      "artifact_digest": "sha256:1ac8d3daccae9390b3ee5bb9dea0b2941d31b591c72700d0f6256e57054a4f08",
+      "job_id": 130864374064,
+      "artifact_id": 13900318672,
+      "artifact_digest": "sha256:ec3bf4c536ed020f0cced8d1f002db051484e93ec9e061481a4ff9727f32aeca",
       "classification": "verified_natural_publication",
       "event": "schedule",
       "published": true,
-      "slot": "2026-11-11T20:00:00+09:00",
-      "published_at": "2026-11-11T20:42:18.875261+09:00",
-      "benefit_id": "SD0000007672",
-      "main_id": "18415603489088485",
-      "url": "https://www.threads.com/@hid_1004/post/DfmZj7OFstT",
+      "slot": "2026-11-12T08:00:00+09:00",
+      "published_at": "2026-11-12T08:43:26.386351+09:00",
+      "benefit_id": "641000000138",
+      "main_id": "18032141162693111",
+      "url": "https://www.threads.com/@hid_1004/post/DfnsFsAEcRN",
       "stage": "complete",
       "verified": true,
-      "content_hash": "cd15e5940579c1885c15e3e608c5e40bcf1d0a195d4a1b5971549e03ad324214",
-      "asset_sha256": null,
-      "source_generation": "gov24-43002359099-1",
-      "pattern": "P5",
-      "media_turn": "TEXT",
+      "content_hash": "96cb8e57bd9b1d23dfe7a35ff9b255e0a5c257e699c806bda25ebe0e64d3b585",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "source_generation": "gov24-43110769785-1",
+      "pattern": "P1",
+      "media_turn": "IMAGE",
       "replies": 0,
-      "verification": "Authenticated publisher text/permalink readback, digest-verified result artifact, exact queue body, durable receipt and content hash agree.",
-      "verification_completed_at": "2026-11-11T21:07:49.480+09:00",
+      "verification": "Authenticated publisher text/permalink readback, digest-verified result artifact, durable ledger and exact READY body agree.",
+      "verification_completed_at": "2026-11-12T09:15:36.000+09:00",
       "public_web_visibility_independently_verified": false,
-      "publication_ledger_records": 29,
+      "publication_ledger_records": 30,
       "pending": null,
       "lease": null,
       "job_logs_retrieved": true,
       "result_artifact_digest_reverified": true,
       "publisher_related_tests_passed": 121,
       "time_basis": {
-        "published_at": "Existing ledger timestamp uses publisher invocation time, not a platform timestamp.",
-        "receipt_emitted_at": "2026-11-11T20:43:00.747675+09:00",
-        "verified_result_logged_at": "2026-11-11T20:43:04.952635+09:00",
+        "published_at": "Ledger publisher invocation time; not exact platform publication timestamp.",
+        "receipt_emitted_at": "2026-11-12T08:44:10.860363+09:00",
+        "verified_result_logged_at": "2026-11-12T08:44:14.733460+09:00",
         "platform_timestamp": null,
-        "public_report": "Report publication confirmation at 20:43 KST; exact platform publication timestamp unavailable."
+        "public_report": "Publication confirmed 2026-11-12 08:44 KST."
       },
       "previously_reported": true,
-      "ledger_and_queue_exact_body_verified": true,
       "artifact_downloaded_again": false,
-      "job_log_read_timeout_recovered_on_last_attempt": false,
-      "job_log_read_attempts_this_run": 1,
       "job_logs_retrieved_this_run": true,
-      "artifact_listing_digest_matches_cached_verified_bytes": true
+      "ledger_and_queue_exact_body_verified": true
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "main_prompt_and_code_blob_shas_unchanged": true,
       "queue_reused": true,
-      "queue_write": true,
+      "queue_write": false,
       "queue_readback_equal": true,
-      "unchanged_existing_entries": 27,
-      "preview_ready": 5,
+      "unchanged_existing_entries": 28,
+      "preview_ready": 4,
       "validate_ready_entry_and_preview": true,
       "future_slot_simulation": true,
       "source_freshness_checked_separately": true,
@@ -1745,36 +1735,20 @@
       "expired_unpublished_slots": [],
       "image_recheck": {
         "status": "UPSTREAM_VERIFIED",
-        "checked_at": "2026-11-12T08:15:43.204695+09:00",
+        "checked_at": "2026-11-12T10:04:43.015874+09:00",
         "current_main_bytes_downloaded": true,
-        "asset_url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-        "matches_existing_visual_review": true,
+        "both_asset_sha256_match_existing_visual_review": true,
         "new_visual_inspection": false
       },
-      "input_comparison": "Validated local queue blob equals remote readback blob 20839f28d02d7956d8bd42a5726dd0a5084e254b; existing 27 entries unchanged.",
+      "input_comparison": "Fresh remote code/prompt blobs match verified local files; queue blob exactly matches validated local queue. New ledger compared semantically; latest body and content hash verified.",
       "local_validation_workspace": {
         "available": true,
         "current_files_and_inputs_match_remote_blobs": true,
-        "final_validation": "5_READY including current 08 window plus next 24h four regular slots",
+        "final_validation": "4_READY",
         "remote_queue_or_publisher_failure": false
       },
       "queue_commit": "082bd7a6ba8312232f687a6432171c11f219645d",
-      "current_regular_window": [
-        {
-          "slot": "2026-11-12T08:00:00+09:00",
-          "benefit_id": "641000000138",
-          "pattern": "P1",
-          "media_turn": "IMAGE",
-          "char_count": 378,
-          "last_valid_at": "2026-11-12T09:10:32+09:00",
-          "expires_at": "2026-11-12T09:10:33+09:00",
-          "current_source_fresh_at_slot": true,
-          "source_recheck_required_at_publish": true,
-          "selection_rank": 21,
-          "source_fingerprint_matches": true
-        }
-      ],
+      "current_regular_window": [],
       "new_ready_entry": {
         "slot": "2026-11-13T08:00:00+09:00",
         "benefit_id": "999000000004",
@@ -1797,7 +1771,8 @@
         "decision": "HOLD",
         "reason": "Current detailed fund application conditions and status could not be verified after official detail/FAQ read timeouts; current official overview only partially confirms conditions.",
         "selected_benefit_views": 100141
-      }
+      },
+      "new_ready_entry_this_run": null
     },
     "metrics": {
       "status": "due_window_unmeasured_official_read_path_unavailable",
@@ -1817,31 +1792,27 @@
       "new_failures": 0,
       "new_partials": 0,
       "post_retry_budget_used": 0,
-      "code_change_required": false,
-      "local_validation_environment_recovery": false
+      "code_change_required": false
     },
     "incidents": {
       "initial_41796747628": "resolved",
       "new_incident": null
     },
-    "next_condition": "Only existing 08/12/16/20 KST publisher consumes the queue. Current 08 has no observed workflow yet and remains inside the two-hour normal window; absence of a run at this check is not a confirmed pre-reservation failure. Revalidate at send; never dispatch a test or replay expired slot. New Nov 13 08 expires at 08:18:45 and requires actual official re-review if delayed past that time, plus fresh Nov 13 collection. Later current-day entries also retain their existing evidence expiries; never extend timestamps without actual review. No new publication, recovery, blocked operation or due evaluation to notify.",
+    "next_condition": "Reuse normal 12/16/20 KST and Nov 13 08 READY entries. At actual send, revalidate latest complete source, evidence age and fingerprints. Nov 12 noon evidence expires 12:34:23 and next-day morning evidence 08:18:45; if publication delay would exceed expiry, perform actual official re-review before reservation rather than changing timestamps alone. Current source is stale for Nov 13 08. Preserve pending; no test or recovery dispatch without actual failure. Next 24h metric window is 12:40:29 KST; no official reader means unmeasured, never zero.",
     "history_audit": {
       "requested_days": 28,
-      "available_records": 29,
+      "available_records": 30,
       "from_slot": "2026-11-04T17:04:00+09:00",
-      "through_slot": "2026-11-11T20:00:00+09:00",
-      "ledger_complete_verified": 29,
+      "through_slot": "2026-11-12T08:00:00+09:00",
+      "ledger_complete_verified": 30,
       "duplicate_main_ids": 0,
       "duplicate_slots": 0,
       "unresolved": 0,
-      "actual_scope": "All available ledger entries since Nov 4; latest digest-verified result receipt, text and URL compared. Historical authenticated receipts retained. All 29 current public statuses/media rendering not independently re-read.",
-      "publication_failure_or_partial": 0,
-      "missing_image_confirmed": 0,
-      "missing_image_remote_render_verification": "not_independently_measured",
-      "today_main_posts": 0,
-      "low_views_after_normal_post": "unmeasured",
-      "measurement_failure": "official_authenticated_insights_reader_unavailable",
-      "delay_basis": "Ledger invocation times and receipt confirmations only; exact platform timestamps unavailable."
+      "actual_scope": "All available durable records since Nov 4, newest authenticated receipt/body/permalink and artifact verified. Historical current public visibility and media rendering not independently rechecked.",
+      "today_main_posts": 1,
+      "latest_regular_delay_minutes": 44.181,
+      "delay_basis": "Publication receipt confirmation; exact platform timestamp unavailable.",
+      "low_views_after_normal_post": "unmeasured_official_reader_unavailable"
     }
   },
   "reach_policy": {
@@ -2224,7 +2195,7 @@
           "timestamp_basis": "Ledger invocation time; exact platform timestamp unverified. No quantitative comparison allowed."
         }
       },
-      "last_availability_check_at": "2026-11-12T09:15:36.000+09:00",
+      "last_availability_check_at": "2026-11-12T10:05:35.000+09:00",
       "statistical_decision": "No comparison: zero comparable measured observations; preserve A/B, no editorial share changes. Platform timestamps remain unverified."
     },
     "profile_route": {
