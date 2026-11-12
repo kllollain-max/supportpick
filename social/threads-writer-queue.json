@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-12T08:18:45+09:00",
+  "prepared_at": "2026-11-12T12:09:39.000+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -3197,9 +3197,9 @@
       "slot": "2026-11-12T12:00:00+09:00",
       "benefit_id": "SSI000000020",
       "source_fingerprint": "373e1ec51f19b976c149d7054e6ef4d7ae7a0913a351abd7442dc44d73da588a",
-      "source_generation": "gov24-42910050871-1",
-      "prepared_at": "2026-11-11T12:34:23+09:00",
-      "expires_at": "2026-11-12T12:34:23+09:00",
+      "source_generation": "gov24-43110769785-1",
+      "prepared_at": "2026-11-12T12:09:39.000+09:00",
+      "expires_at": "2026-11-13T12:09:39.000+09:00",
       "asset_sha256": null,
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -3229,29 +3229,20 @@
               "source_id": "SSI000000020",
               "source_ref": "https://www.mogef.go.kr/sp/fam/sp_fam_f006.do",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-11T12:34:23+09:00",
+              "verified_at": "2026-11-12T12:09:39.000+09:00",
               "claims_supported": [
-                "성평등가족부 현재 한부모가족 자녀양육 지원 페이지의 2026년 1월 이후 지급기준을 직접 열람했다. 소득인정액 기준 중위소득 65% 이하, 18세 미만 자녀, 고교 재학 시 22세 미만 고3 12월까지, 기본 아동양육비 월 23만 원을 확인했다.",
-                "가정위탁양육보조금 수급 시 아동양육비 제외, 주민등록지 읍면동 또는 복지로 연중 신청 가능, 소득재산 조사 후 결정과 구비서류 안내를 확인했다. 신청 거래는 수행하지 않았다."
-              ]
-            },
-            {
-              "source_id": "SSI000000020",
-              "source_ref": "https://www.gg.go.kr/contents/contents.do?ciIdx=1413&menuId=3332",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-11T12:34:23+09:00",
-              "claims_supported": [
-                "경기도의 국비 한부모가족 지원 안내를 직접 열어 자녀 1인당 월 23만 원, 고교 재학 연령 예외, 소득재산 서류와 연중 신청 경로를 교차 대조했다. 경기도 자체 추가급여를 전국 금액에 합산하지 않았다."
+                "공식 부처 한부모가족 자녀양육 지원 본문 2026년 지급표와 신청절차를 이번 회차에 다시 직접 열람했다. 기준 중위소득 65% 이하 소득인정액, 18세 미만 및 고교 재학 시 22세 미만 고3 12월까지, 자녀 1인당 월 23만원 기본급여가 기존 본문과 일치한다.",
+                "가정위탁양육보조금 수급 시 아동양육비 제외, 주민등록지 읍면동 또는 복지로 연중 신청 가능, 조사 후 지자체 결정, 신청서·소득재산 자료·금융정보 동의서 안내를 확인했다. 실제 접수 거래는 수행하지 않았다."
               ]
             },
             {
               "source_id": "SSI000000020",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=87903&bnefType=all&svcId=SSI000000020",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-11T12:34:23+09:00",
+              "verified_at": "2026-11-12T12:09:39.000+09:00",
               "claims_supported": [
-                "보조금24 동일 ID serviceList·serviceDetail을 완전 수집본에서 대조했다. 누적 조회수 108107회, API 확인시각 2026-11-11T07:03:18.141477+09:00이며 실제 원문 열람시각과 구분한다.",
-                "월 23만 원 기본 현금급여, 소득·재산 조사와 결정 절차를 대조했다. API의 불명확한 신청기간은 직접 연 공식 소관부처의 연중 신청 안내로 해소했다."
+                "완전 검증한 gov24-43110769785-1 동일 ID serviceList·serviceDetail을 다시 대조했다. 누적 조회수 108107회, API checkedAt 2026-11-12T07:24:12.068768+09:00, 수집 완료 07:26:11.043967+09:00과 실제 공식 원문 재검수 시각을 구분한다.",
+                "월 23만원 기본급여·소득재산 조사 내용이 본문과 일치하고 검증기 source_fingerprint는 기존 값과 동일하다. source_only를 현재 접수 근거로 바꾸지 않았으며 현재 상태는 별도 직접 열람한 공식 부처 원문으로 확인했다."
               ]
             }
           ],
@@ -3269,9 +3260,8 @@
           "hold_reasons": [],
           "warnings": [
             "기본 아동양육비만 안내하며 추가양육비·학용품비·시설생활비 및 청소년한부모 별도 급여를 합산하지 않는다. 개인 지원 여부는 조사 후 결정된다.",
-            "내일 발송 전 최신 완전 수집본과 같은 ID source fingerprint를 재검증해야 한다. 현재 수집시각을 내일 접수 확인으로 바꾸지 않는다.",
-            "원고 및 원문 검수 유효기간은 최대 24시간이다. 내일 12시 허용창 후반에는 만료되므로 만료 전 새 공식 검수가 필요하다.",
-            "실제 지표가 없어 글쓰기 개선 효과·신청 전환을 판정하지 않는다."
+            "실제 지표가 없어 글쓰기 개선 효과·신청 전환을 판정하지 않는다.",
+            "실제 공식 원문 재검수에 근거해 준비·만료시각을 갱신했다. 실제 발송 시 최신 수집본과 공식 상태를 재확인하며 pending은 교체하지 않는다."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -3321,6 +3311,14 @@
             ],
             "profile_route": "복지로 상세는 동적 본문이 읽히지 않아 실제 신청 거래와 프로필·사이트 이동 기능은 검증하지 못했다. 소관부처가 안내한 신청 경로만 기록한다.",
             "source_recheck_required_at_publish": true
+          },
+          "reverification": {
+            "checked_at": "2026-11-12T12:09:39.000+09:00",
+            "reason": "원래 검수 만료 12:34:23이 정규 슬롯의 2시간 허용창 전체를 덮지 않아 실제 공식 원문 재열람 후 갱신. 본문·해시·형식·미디어는 유지.",
+            "previous_prepared_at": "2026-11-11T12:34:23+09:00",
+            "previous_expires_at": "2026-11-12T12:34:23+09:00",
+            "secondary_read_limit": "경기도 보조 페이지는 이번 조회 timeout으로 새 evidence에 넣지 않았다. 이전 evidence는 점검 원장의 이전 entry에 보존한다.",
+            "body_unchanged": true
           }
         },
         "next_history_record": {
