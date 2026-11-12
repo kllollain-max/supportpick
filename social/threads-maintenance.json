@@ -1579,12 +1579,12 @@
     "last_ready_queue_blob_sha": "e20e3d75d78d7dc2a944a421daa501dd0bc8b288"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-12T14:56:02.376373+09:00",
-    "result": "existing_four_ready_valid_on_updated_writer_input_official_diagnostic_metrics_observed",
+    "checked_at": "2026-11-12T15:26:56.000+09:00",
+    "result": "16_kst_official_evidence_reverified_all_bodies_preserved_four_ready_queue_readback_verified",
     "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
     "publication_ledger_sha": "c40969270f6218a84a175af2931cb8a4c633db1b",
-    "queue_blob_sha": "e20e3d75d78d7dc2a944a421daa501dd0bc8b288",
-    "maintenance_previous_blob_sha": "db1574b9b1960aac929d2fef0743dcf343aabcbb",
+    "queue_blob_sha": "f9c8d5bc97bab585e3daa1cae4ff36f2b094e937",
+    "maintenance_previous_blob_sha": "327bee7dcfd60fd0b8b5ccad22f0aff7960d0f74",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [],
@@ -1625,7 +1625,7 @@
       "remaining_condition": "Revalidate source and official evidence before actual send; current source is stale for Nov 13 08 and 12.",
       "cached_artifact_digest_reverified": true,
       "job_logs_retrieved_this_run": true,
-      "verification_checked_at": "2026-11-12T14:56:02.376373+09:00"
+      "verification_checked_at": "2026-11-12T15:26:56.000+09:00"
     },
     "publisher": {
       "run_id": "43149664311",
@@ -1674,15 +1674,15 @@
       "artifact_downloaded_again": false,
       "job_logs_retrieved_this_run": true,
       "ledger_and_queue_exact_body_verified": true,
-      "latest_read_check_at": "2026-11-12T14:56:02.376373+09:00"
+      "latest_read_check_at": "2026-11-12T15:26:56.000+09:00"
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-      "main_prompt_and_code_blob_shas_unchanged": false,
+      "main_prompt_and_code_blob_shas_unchanged": true,
       "queue_reused": true,
-      "queue_write": false,
+      "queue_write": true,
       "queue_readback_equal": true,
-      "unchanged_existing_entries": 29,
+      "unchanged_existing_entries": 28,
       "preview_ready": 4,
       "validate_ready_entry_and_preview": true,
       "future_slot_simulation": true,
@@ -1694,8 +1694,8 @@
           "pattern": "P6",
           "media_turn": "IMAGE",
           "char_count": 391,
-          "last_valid_at": "2026-11-12T16:49:38+09:00",
-          "expires_at": "2026-11-12T16:49:39+09:00",
+          "last_valid_at": "2026-11-12T17:59:59+09:00",
+          "expires_at": "2026-11-13T15:25:29.000+09:00",
           "current_source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true,
           "selection_rank": 21,
@@ -1745,30 +1745,26 @@
       "expired_unpublished_slots": [],
       "image_recheck": {
         "status": "UPSTREAM_VERIFIED",
-        "image_hashes": [
-          "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-          "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a"
-        ],
-        "checked_at": "2026-11-12T14:56:02.376373+09:00",
+        "checked_at": "2026-11-12T15:25:10.795323+09:00",
         "current_main_bytes_downloaded": true,
         "both_asset_sha256_match_existing_visual_review": true,
         "new_visual_inspection": false
       },
-      "input_comparison": "Updated writer-input and imported advisory module local Git blobs match current main; exact existing queue and unchanged ledger reused. New module's three tests and actual build_input/validate_ready_entry/preview with four READY entries pass.",
+      "input_comparison": "Current main writer-input/advisory and master prompt verified; updated local queue exact remote readback matches. All 29 bodies/media/patterns preserved; only 16 KST evidence actually re-reviewed, original entry archived before queue CAS.",
       "local_validation_workspace": {
         "available": true,
         "current_files_and_inputs_match_remote_blobs": true,
         "final_validation": "4_READY_CURRENT_MAIN",
         "remote_queue_or_publisher_failure": false
       },
-      "queue_commit": "3a1eca5911bd1091437b14f90ac225ad37d344f2",
+      "queue_commit": "4e5926e35f7ef61144399b834539ec7d550d715a",
       "current_regular_window": [],
       "new_ready_entry": null,
       "higher_ranked_hold_added": null,
       "new_ready_entry_this_run": null,
       "existing_bodies_preserved": 29,
-      "existing_entry_evidence_revalidated": 0,
-      "last_validated_at": "2026-11-12T14:55:16.847130+09:00",
+      "existing_entry_evidence_revalidated": 1,
+      "last_validated_at": "2026-11-12T15:26:11.989739+09:00",
       "prompt_and_publisher_unchanged": true,
       "writer_input_blob_sha": "0569caae4775bae2f771cbfb5a699cfa0672ea55",
       "writer_input_updated_to_current_main_locally": true,
@@ -1785,7 +1781,7 @@
       "seven_day_evaluation_due": false,
       "fourteen_day_evaluation_due": false,
       "next_due_at": "2026-11-12T17:08:29.061816+09:00",
-      "new_diagnostic_observations": 1
+      "new_diagnostic_observations": 0
     },
     "recovery": {
       "required": false,
@@ -1793,13 +1789,14 @@
       "new_failures": 0,
       "new_partials": 0,
       "post_retry_budget_used": 0,
-      "code_change_required": false
+      "code_change_required": false,
+      "preventive_official_evidence_revalidation": true
     },
     "incidents": {
       "initial_41796747628": "resolved",
       "new_incident": null
     },
-    "next_condition": "Use the four existing normal READY slots, preserving bodies and media. Revalidate latest complete source and official evidence before send; tomorrow requires a newer source. Genuine re-review needed if a send passes stored evidence expiry. Existing-token diagnostic is readable, but 24h/7d snapshots await actual milestone runs. No recovery dispatch, posting test, policy success claim, new schedule or A/B weight change.",
+    "next_condition": "Existing 16 KST draft now has genuine re-reviewed official and image evidence through its full original 16–18 grace window; actual send must still revalidate source and facts. No dispatch justified. Existing 20 KST and tomorrow 08/12 drafts preserved; actual re-review required if their evidence expires before send. Tomorrow requires new complete source. Official prior diagnostic is an early cumulative observation only; no new milestone metrics read this run and no A/B effect claimed.",
     "history_audit": {
       "requested_days": 28,
       "available_records": 31,
@@ -2252,7 +2249,7 @@
           "timestamp_basis": "Ledger publisher invocation time; exact platform timestamp unavailable, so quantitative timing comparison awaits confirmation."
         }
       },
-      "last_availability_check_at": "2026-11-12T14:56:02.376373+09:00",
+      "last_availability_check_at": "2026-11-12T15:26:56.000+09:00",
       "statistical_decision": "No comparison: zero comparable measured observations; preserve A/B, no editorial share changes. Platform timestamps remain unverified.",
       "diagnostic_observations_by_run_id": {
         "43163347739": {
@@ -2813,9 +2810,11 @@
         "https://www.incheon.go.kr/health/HE040401"
       ],
       "image_sha256_rechecked": true,
-      "queue_write_status": "prepared_validated_not_yet_written",
+      "queue_write_status": "saved_readback_verified",
       "preview_ready": 4,
-      "pending_modified": false
+      "pending_modified": false,
+      "queue_commit": "4e5926e35f7ef61144399b834539ec7d550d715a",
+      "queue_blob_sha": "f9c8d5bc97bab585e3daa1cae4ff36f2b094e937"
     }
   },
   "observed_main_changes": {
