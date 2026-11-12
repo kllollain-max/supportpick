@@ -14,6 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "43191480157",
     "43180829602",
     "43149664311",
     "43121957083",
@@ -1026,6 +1027,14 @@
       "conclusion": "success",
       "updated_at": "2026-11-12T08:11:55Z",
       "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+    },
+    "43191480157": {
+      "run_id": "43191480157",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-12T09:26:38Z",
+      "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
     }
   },
   "last_check": {
@@ -1621,24 +1630,15 @@
     "last_ready_queue_blob_sha": "e20e3d75d78d7dc2a944a421daa501dd0bc8b288"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-12T17:20:47.000+09:00",
-    "result": "verified_new_natural_image_publication_four_existing_ready_reused",
+    "checked_at": "2026-11-12T19:03:58.000+09:00",
+    "result": "20_kst_official_law_reverified_body_preserved_three_actual_metric_snapshots_saved",
     "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
     "publication_ledger_sha": "c347b8e9b28383060a2a916f813cd49a50c1d98e",
-    "queue_blob_sha": "d9879a0f4cccea0c26e39bf74cd3bdaf0c4d3d10",
-    "maintenance_previous_blob_sha": "7ce37e26d6255d99f907c1cf5c6eda4cb5e0c469",
+    "queue_blob_sha": "2622a04c92d79ea64113d00d441b5bc8e60422a0",
+    "maintenance_previous_blob_sha": "38f9bd556245b8191c2a7832d211a670e6a5fb5c",
     "unresolved_publications": 0,
     "active_target_runs": [],
-    "changed_run_versions": [
-      {
-        "run_id": "43180829602",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-12T08:11:55Z",
-        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
-      }
-    ],
+    "changed_run_versions": [],
     "run_pagination": {
       "branch": "main",
       "pages": 1,
@@ -1660,7 +1660,7 @@
       "job_id": 130825875026,
       "artifact_id": 13896806723,
       "artifact_digest": "sha256:a155caef0dd38c2b6a0eda929c3ad9247a0481e8478a8861334058b99f7f2dcf",
-      "artifact_downloaded_again": true,
+      "artifact_downloaded_again": false,
       "artifact_digest_reverified": true,
       "read_current_verify_snapshot_load_feed": true,
       "collection_step": "completed_success",
@@ -1676,7 +1676,7 @@
       "remaining_condition": "Revalidate source and official evidence before actual send; current source is stale for Nov 13 08 and 12.",
       "cached_artifact_digest_reverified": true,
       "job_logs_retrieved_this_run": true,
-      "verification_checked_at": "2026-11-12T17:20:47.000+09:00"
+      "verification_checked_at": "2026-11-12T19:03:58.000+09:00"
     },
     "publisher": {
       "run_id": "43180829602",
@@ -1720,15 +1720,19 @@
         "verified_result_logged_at": "2026-11-12T17:11:50.871178+09:00",
         "platform_timestamp": null,
         "public_report": "Publication confirmed 2026-11-12 17:11 KST."
-      }
+      },
+      "previously_reported": true,
+      "artifact_downloaded_again": false,
+      "job_logs_retrieved_this_run": true,
+      "latest_read_check_at": "2026-11-12T19:03:58.000+09:00"
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "main_prompt_and_code_blob_shas_unchanged": true,
       "queue_reused": true,
-      "queue_write": false,
+      "queue_write": true,
       "queue_readback_equal": true,
-      "unchanged_existing_entries": 30,
+      "unchanged_existing_entries": 29,
       "preview_ready": 4,
       "validate_ready_entry_and_preview": true,
       "future_slot_simulation": true,
@@ -1740,8 +1744,8 @@
           "pattern": "P8",
           "media_turn": "TEXT",
           "char_count": 438,
-          "last_valid_at": "2026-11-12T21:05:00+09:00",
-          "expires_at": "2026-11-12T21:05:01+09:00",
+          "last_valid_at": "2026-11-12T21:59:59+09:00",
+          "expires_at": "2026-11-13T10:01:41.938Z",
           "current_source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true,
           "selection_rank": 22,
@@ -1795,13 +1799,12 @@
           "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
           "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a"
         ],
-        "checked_at": "2026-11-12T17:20:31.661696+09:00",
-        "current_code_hashes_verified": true,
+        "checked_at": "2026-11-12T19:01:41.938305+09:00",
         "current_main_bytes_downloaded": true,
         "both_asset_sha256_match_existing_visual_review": true,
         "new_visual_inspection": false
       },
-      "input_comparison": "Restored missing transient validation inputs from fresh remote code/ledger/queue and digest-verified artifacts. Current code Git blobs verified; exact latest publication body/hash and all four future READY entries pass. No queue change.",
+      "input_comparison": "All30 original bodies/media/patterns preserved; only unreserved20KST official evidence actually re-reviewed, original entry archived before CAS. Four READY entries passed validate_ready_entry and preview; exact remote queue readback verified.",
       "local_validation_workspace": {
         "available": true,
         "transient_missing_files_restored_this_run": true,
@@ -1810,14 +1813,14 @@
         "current_files_and_inputs_match_remote_blobs": true,
         "remote_queue_or_publisher_failure": false
       },
-      "queue_commit": "a87729e9db9ab93a53ab0a7f3ad800a897b24c5f",
+      "queue_commit": "3a9f807f528008b721ff0065d02ebfa7ecf0d443",
       "current_regular_window": [],
       "new_ready_entry": null,
       "higher_ranked_hold_added": null,
       "new_ready_entry_this_run": null,
       "existing_bodies_preserved": 30,
-      "existing_entry_evidence_revalidated": 0,
-      "last_validated_at": "2026-11-12T17:20:32.161447+09:00",
+      "existing_entry_evidence_revalidated": 1,
+      "last_validated_at": "2026-11-12T19:03:13.030942+09:00",
       "prompt_and_publisher_unchanged": true,
       "writer_input_blob_sha": "0569caae4775bae2f771cbfb5a699cfa0672ea55",
       "writer_input_updated_to_current_main_locally": true,
@@ -1825,23 +1828,28 @@
       "higher_ranked_holds_added": []
     },
     "metrics": {
-      "status": "due_window_pending_existing_authorized_snapshot",
+      "status": "official_milestone_observed_insufficient_comparison_samples",
       "new_due_unmeasured_records": 0,
       "existing_unmeasured_id_window_records_preserved": true,
-      "comparable_measured_24h": 0,
+      "comparable_measured_24h": 1,
       "official_reader_available": true,
       "no_performance_effect_inferred": true,
       "no_weight_change": true,
       "seven_day_evaluation_due": false,
       "fourteen_day_evaluation_due": false,
-      "next_due_at": "2026-11-12T17:08:29.061816+09:00",
+      "next_due_at": "2026-11-12T20:42:18.875261+09:00",
       "new_diagnostic_observations": 0,
-      "new_scheduled_snapshot_run": null,
-      "due_count": 1,
-      "measured_count": 0,
-      "due_main_id": "18082387943706799",
+      "new_scheduled_snapshot_run": "43191480157",
+      "due_count": 3,
+      "measured_count": 3,
+      "due_main_id": null,
       "due_window_hours": 24,
-      "actual_metric_values_not_available": true
+      "actual_metric_values_not_available": true,
+      "new_observation_keys": [
+        "17916193179493008:168h",
+        "18128141311911524:72h",
+        "18082387943706799:24h"
+      ]
     },
     "recovery": {
       "required": false,
@@ -1856,7 +1864,7 @@
       "initial_41796747628": "resolved",
       "new_incident": null
     },
-    "next_condition": "Use four existing normal future slots only: today20 and Nov13 08/12/16. Revalidate latest complete source and official facts before send; tomorrow requires new source and genuine re-review if evidence expires. Existing official read-only workflow should collect the due24h window; no permission change or cumulative backcalculation. No recovery dispatch/test/replay required.",
+    "next_condition": "Use existing normal20KST publisher only; its body is preserved and actual fresh law re-review now covers the original20–22 grace window. Revalidate latest complete source and official facts before send. Tomorrow requires new source and genuine re-review if stored evidence expires. Preserve pending and media alternation. Official snapshots are actual late cumulative values, not exact24h backfills; onlyB1 experimental24h sample so comparison/weight change deferred. Next milestone tonight20:42; no recovery dispatch/test post.",
     "history_audit": {
       "requested_days": 28,
       "available_records": 32,
@@ -1948,10 +1956,10 @@
       "actual_source_generation": "gov24-42708067719-1"
     },
     "measurement": {
-      "status": "official_diagnostic_read_verified_milestone_observations_pending",
-      "reason": "Existing-token official diagnostic returned metrics for one approved published post. Scheduled read-only snapshot workflow code exists; no completed milestone snapshot observed in this check.",
+      "status": "official_milestone_observed_insufficient_comparison_samples",
+      "reason": "Three actual official cumulative milestone snapshots were bound to approved ledger IDs; only one is a comparable experimental24h observation. No performance effect established.",
       "reference": "https://www.postman.com/meta/threads/request/34203612-385abc7d-b3cc-4e5d-9937-ebbe7174e041",
-      "observed_posts_with_metrics": 1,
+      "observed_posts_with_metrics": 4,
       "views_24h": null,
       "views_7d": null,
       "reactions": null,
@@ -2114,9 +2122,11 @@
             {
               "hours": 24,
               "due_at": "2026-11-12T08:08:29.061Z",
-              "status": "due_pending_next_existing_authorized_snapshot",
+              "status": "measured_official_api",
               "last_checked_at": "2026-11-12T17:20:47.000+09:00",
-              "not_zero": true
+              "not_zero": true,
+              "checked_at": "2026-11-12T09:26:33.094441+00:00",
+              "observation_key": "18082387943706799:24h"
             },
             {
               "hours": 168,
@@ -2342,9 +2352,129 @@
           "not_zero": true,
           "not_backcalculated": true,
           "timestamp_basis": "Ledger publisher invocation time; exact platform timestamp unavailable, so quantitative timing comparison awaits confirmation."
+        },
+        "17916193179493008:168h": {
+          "main_id": "17916193179493008",
+          "window_hours": 168,
+          "scheduled_at": "2026-11-05T16:00:00+09:00",
+          "published_at": "2026-11-05T17:11:33.635851+09:00",
+          "benefit_id": "B55140800003",
+          "reader_scope": "실험 이전 게시물의 실제 원장 본문 범위",
+          "opening_type": null,
+          "cohort": null,
+          "pattern": null,
+          "char_count": 160,
+          "media_turn": "TEXT",
+          "checked_at": "2026-11-12T09:26:33.094441+00:00",
+          "elapsed_hours": 169.24984972222222,
+          "due_at": "2026-11-12T08:11:33.635Z",
+          "timing": "late_available_check",
+          "status": "measured_official_api",
+          "views": 9,
+          "likes": 2,
+          "replies": 2,
+          "reposts": 1,
+          "shares": 0,
+          "quotes": null,
+          "saves": null,
+          "profile_visits": null,
+          "new_followers": null,
+          "site_visits": null,
+          "permission_status": "existing_authorized_token_read_succeeded",
+          "official_api_request_performed": true,
+          "source_run_id": "43191480157",
+          "artifact_id": 13929929599,
+          "artifact_sha256_verified": true,
+          "timestamp_basis": "Ledger publisher invocation time; exact platform timestamp unavailable. Actual elapsed time shown; no24h backcalculation.",
+          "comparison_eligible": false,
+          "comparison_exclusion": "Pre-policy historical post; no retrospective cohort assignment",
+          "automatic_author_replies_in_original_record": 2,
+          "reader_only_replies": null,
+          "reply_scope": "Platform aggregate replies; reader-only replies cannot be separated from author replies here.",
+          "not_backcalculated": true
+        },
+        "18128141311911524:72h": {
+          "main_id": "18128141311911524",
+          "window_hours": 72,
+          "scheduled_at": "2026-11-09T16:00:00+09:00",
+          "published_at": "2026-11-09T17:13:22.881745+09:00",
+          "benefit_id": "135200005004",
+          "reader_scope": "실험 이전 게시물의 실제 원장 본문 범위",
+          "opening_type": null,
+          "cohort": null,
+          "pattern": "P5",
+          "char_count": 373,
+          "media_turn": "IMAGE",
+          "checked_at": "2026-11-12T09:26:33.094441+00:00",
+          "elapsed_hours": 73.21950361111111,
+          "due_at": "2026-11-12T08:13:22.881Z",
+          "timing": "late_available_check",
+          "status": "measured_official_api",
+          "views": 9,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 1,
+          "shares": 0,
+          "quotes": null,
+          "saves": null,
+          "profile_visits": null,
+          "new_followers": null,
+          "site_visits": null,
+          "permission_status": "existing_authorized_token_read_succeeded",
+          "official_api_request_performed": true,
+          "source_run_id": "43191480157",
+          "artifact_id": 13929929599,
+          "artifact_sha256_verified": true,
+          "timestamp_basis": "Ledger publisher invocation time; exact platform timestamp unavailable. Actual elapsed time shown; no24h backcalculation.",
+          "comparison_eligible": false,
+          "comparison_exclusion": "Pre-policy historical post; no retrospective cohort assignment",
+          "automatic_author_replies_in_original_record": 0,
+          "reader_only_replies": null,
+          "reply_scope": "Platform aggregate replies; reader-only replies cannot be separated from author replies here.",
+          "not_backcalculated": true
+        },
+        "18082387943706799:24h": {
+          "main_id": "18082387943706799",
+          "window_hours": 24,
+          "scheduled_at": "2026-11-11T16:00:00+09:00",
+          "published_at": "2026-11-11T17:08:29.061816+09:00",
+          "benefit_id": "628000000139",
+          "reader_scope": "인천의 가맹점에서 인천e음으로 결제하거나 처음 카드를 발급받으려는 만 14세 이상 이용자",
+          "opening_type": "대상·혜택형",
+          "cohort": "B",
+          "pattern": "P8",
+          "char_count": 268,
+          "media_turn": "IMAGE",
+          "checked_at": "2026-11-12T09:26:33.094441+00:00",
+          "elapsed_hours": 25.301120277777777,
+          "due_at": "2026-11-12T08:08:29.061Z",
+          "timing": "late_available_check",
+          "status": "measured_official_api",
+          "views": 17,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "shares": 0,
+          "quotes": null,
+          "saves": null,
+          "profile_visits": null,
+          "new_followers": null,
+          "site_visits": null,
+          "permission_status": "existing_authorized_token_read_succeeded",
+          "official_api_request_performed": true,
+          "source_run_id": "43191480157",
+          "artifact_id": 13929929599,
+          "artifact_sha256_verified": true,
+          "timestamp_basis": "Ledger publisher invocation time; exact platform timestamp unavailable. Actual elapsed time shown; no24h backcalculation.",
+          "comparison_eligible": true,
+          "comparison_exclusion": null,
+          "automatic_author_replies_in_original_record": 0,
+          "reader_only_replies": null,
+          "reply_scope": "Platform aggregate replies; reader-only replies cannot be separated from author replies here.",
+          "not_backcalculated": true
         }
       },
-      "last_availability_check_at": "2026-11-12T17:20:47.000+09:00",
+      "last_availability_check_at": "2026-11-12T19:03:58.000+09:00",
       "statistical_decision": "No comparison: zero comparable measured observations; preserve A/B, no editorial share changes. Platform timestamps remain unverified.",
       "diagnostic_observations_by_run_id": {
         "43163347739": {
@@ -2403,7 +2533,7 @@
         "run_id": "43163347739",
         "post_id": "18061100522563998",
         "metric_scope": "post cumulative",
-        "milestone_collection_verified": false,
+        "milestone_collection_verified": true,
         "scheduled_workflow_execution_verified": true
       },
       "scheduled_snapshot_runs": {
@@ -2426,6 +2556,78 @@
           "published": false,
           "ledger_or_queue_mutated": false,
           "job_logs_retrieved": true
+        },
+        "43191480157": {
+          "run_id": "43191480157",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-12T09:26:38Z",
+          "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
+          "job_id": 131091609653,
+          "artifact_id": 13929929599,
+          "artifact_digest": "sha256:2e57f2a427f28208b9e4dadbb3fc5911dae7c9806be6eabebbe98d4c014795f8",
+          "artifact_sha256_verified": true,
+          "observed_at": "2026-11-12T09:26:33.094441+00:00",
+          "due_count": 3,
+          "success_count": 3,
+          "records": [
+            {
+              "post_id": "17916193179493008",
+              "published_at": "2026-11-05T17:11:33.635851+09:00",
+              "observed_at": "2026-11-12T09:26:33.094441+00:00",
+              "window_hours": 168,
+              "metrics": {
+                "views": 9,
+                "likes": 2,
+                "comments": 2,
+                "reposts": 1,
+                "shares": 0,
+                "saves": null,
+                "profile_visits": null,
+                "new_followers": null,
+                "site_visits": null
+              }
+            },
+            {
+              "post_id": "18128141311911524",
+              "published_at": "2026-11-09T17:13:22.881745+09:00",
+              "observed_at": "2026-11-12T09:26:33.094441+00:00",
+              "window_hours": 72,
+              "metrics": {
+                "views": 9,
+                "likes": 1,
+                "comments": 0,
+                "reposts": 1,
+                "shares": 0,
+                "saves": null,
+                "profile_visits": null,
+                "new_followers": null,
+                "site_visits": null
+              }
+            },
+            {
+              "post_id": "18082387943706799",
+              "published_at": "2026-11-11T17:08:29.061816+09:00",
+              "observed_at": "2026-11-12T09:26:33.094441+00:00",
+              "window_hours": 24,
+              "metrics": {
+                "views": 17,
+                "likes": 1,
+                "comments": 0,
+                "reposts": 0,
+                "shares": 0,
+                "saves": null,
+                "profile_visits": null,
+                "new_followers": null,
+                "site_visits": null
+              }
+            }
+          ],
+          "classification": "verified_read_only_milestone_observations",
+          "published": false,
+          "ledger_or_queue_mutated": false,
+          "job_logs_retrieved": true
         }
       },
       "additional_connector_check": {
@@ -2435,6 +2637,21 @@
         "new_connection_or_permission_requested": false,
         "metric_read_performed": false,
         "existing_official_workflow_remains_available": true
+      },
+      "last_comparison": {
+        "checked_at": "2026-11-12T19:03:58.000+09:00",
+        "comparable_24h_n": 1,
+        "A_n": 0,
+        "B_n": 1,
+        "views_median": 17,
+        "actual_observed_elapsed_hours": 25.301120277777777,
+        "decision": "comparison_deferred_insufficient_samples_and_unbalanced_groups",
+        "weight_changed": false,
+        "seven_day_interim_due": false,
+        "fourteen_day_evaluation_due": false,
+        "historical_72h_and_168h_excluded": true,
+        "zero_and_missing_distinguished": true,
+        "reader_reply_attribution_unavailable": true
       }
     },
     "profile_route": {
@@ -3105,9 +3322,11 @@
         "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032180475",
         "https://www.easylaw.go.kr/CSP/CnpClsMainBtr.laf?ccfNo=6&cciNo=1&cnpClsNo=1&csmSeq=1126&menuType=cnpcls"
       ],
-      "queue_write_status": "prepared_validated_not_yet_written",
+      "queue_write_status": "saved_readback_verified",
       "preview_ready": 4,
-      "pending_modified": false
+      "pending_modified": false,
+      "queue_commit": "3a9f807f528008b721ff0065d02ebfa7ecf0d443",
+      "queue_blob_sha": "2622a04c92d79ea64113d00d441b5bc8e60422a0"
     }
   },
   "observed_main_changes": {
@@ -3142,5 +3361,10 @@
       "growth_v3_new_draft_application_verified": false,
       "scheduled_metrics_actual_execution_verified": false
     }
-  }
+  },
+  "last_reported_metric_observation_keys": [
+    "17916193179493008:168h",
+    "18128141311911524:72h",
+    "18082387943706799:24h"
+  ]
 }
