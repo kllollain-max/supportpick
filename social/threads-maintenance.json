@@ -86,7 +86,8 @@
     "43211696660",
     "43208825382",
     "43217754059",
-    "43237641864"
+    "43237641864",
+    "43258926267"
   ],
   "last_health": {
     "unresolved_publications": 0,
@@ -1080,6 +1081,14 @@
       "conclusion": "success",
       "updated_at": "2026-11-12T14:29:17Z",
       "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+    },
+    "43258926267": {
+      "run_id": "43258926267",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-12T16:28:01Z",
+      "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
     }
   },
   "last_check": {
@@ -1663,16 +1672,25 @@
     "last_ready_queue_blob_sha": "e20e3d75d78d7dc2a944a421daa501dd0bc8b288"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-12T16:19:33Z",
+    "checked_at": "2026-11-12T17:17:19Z",
     "result": "no_update",
     "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
     "publication_ledger_sha": "db9d0fba2d71d4e65d5fa9d6cda743e2acddddd9",
     "queue_blob_sha": "cd277503eb37ef527fc39d27753449acde7e319a",
-    "maintenance_previous_blob_sha": "49ab6a122983dd1b9bd44638390024b38a6a1bde",
+    "maintenance_previous_blob_sha": "13924925ca3a4f38213812dcb2668cedca91b9be",
     "unresolved_publications": 0,
     "lease": null,
     "active_target_runs": [],
-    "changed_run_versions": [],
+    "changed_run_versions": [
+      {
+        "run_id": "43258926267",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-12T16:28:01Z",
+        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+      }
+    ],
     "run_pagination": {
       "branch": "main",
       "pages": 1,
@@ -1698,7 +1716,7 @@
       "regression_ci_tests_passed": 203,
       "fresh_at_check": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-12T16:19:33Z"
+      "verification_checked_at": "2026-11-12T17:17:19Z"
     },
     "publisher": {
       "run_id": "43211696660",
@@ -1785,7 +1803,7 @@
       "expired_unpublished_slots": [],
       "image_recheck": {
         "status": "UPSTREAM_VERIFIED",
-        "checked_at": "2026-11-12T16:19:33Z",
+        "checked_at": "2026-11-12T17:17:19Z",
         "assets": [
           {
             "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
@@ -1804,7 +1822,7 @@
         "both_asset_sha256_match_existing_visual_review": true,
         "new_visual_inspection": false
       },
-      "last_validated_at": "2026-11-13T01:18:44.197586+09:00"
+      "last_validated_at": "2026-11-13T02:16:08.599059+09:00"
     },
     "history_audit": {
       "requested_days": 28,
@@ -1819,7 +1837,7 @@
       "kst_date": "2026-11-13"
     },
     "metrics": {
-      "latest_observed_run_id": "43237641864",
+      "latest_observed_run_id": "43258926267",
       "new_metric_observations": 0,
       "previous_three_observations_already_saved": true,
       "cached_snapshot_digest_reverified": true,
@@ -1834,17 +1852,17 @@
       "seven_day_evaluation_due": false,
       "fourteen_day_evaluation_due": false,
       "new_snapshot_run": {
-        "run_id": "43237641864",
+        "run_id": "43258926267",
         "run_attempt": 1,
         "status": "completed",
         "conclusion": "success",
-        "updated_at": "2026-11-12T14:29:17Z",
+        "updated_at": "2026-11-12T16:28:01Z",
         "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
-        "job_id": 131249196360,
-        "artifact_id": 13952342811,
-        "artifact_digest": "sha256:b6afc6f23949e8831d2db5d227df7d87bc588338310266204263cd492420dfda",
+        "job_id": 131324614748,
+        "artifact_id": 13963750937,
+        "artifact_digest": "sha256:822466276704cc01a8efc8c3002da833c483854ae4c3477ec3653c56d50c5bf0",
         "artifact_sha256_verified": true,
-        "observed_at": "2026-11-12T14:29:09.958146+00:00",
+        "observed_at": "2026-11-12T16:27:56.197914+00:00",
         "due_count": 0,
         "success_count": 0,
         "records": [],
@@ -2863,6 +2881,26 @@
           "artifact_digest": "sha256:b6afc6f23949e8831d2db5d227df7d87bc588338310266204263cd492420dfda",
           "artifact_sha256_verified": true,
           "observed_at": "2026-11-12T14:29:09.958146+00:00",
+          "due_count": 0,
+          "success_count": 0,
+          "records": [],
+          "classification": "normal_no_milestone_due",
+          "published": false,
+          "ledger_or_queue_mutated": false,
+          "job_logs_retrieved": true
+        },
+        "43258926267": {
+          "run_id": "43258926267",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-12T16:28:01Z",
+          "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
+          "job_id": 131324614748,
+          "artifact_id": 13963750937,
+          "artifact_digest": "sha256:822466276704cc01a8efc8c3002da833c483854ae4c3477ec3653c56d50c5bf0",
+          "artifact_sha256_verified": true,
+          "observed_at": "2026-11-12T16:27:56.197914+00:00",
           "due_count": 0,
           "success_count": 0,
           "records": [],
