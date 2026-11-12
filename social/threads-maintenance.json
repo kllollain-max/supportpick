@@ -14,7 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
-    "43191480157",
+    "43199783330",
     "43180829602",
     "43149664311",
     "43121957083",
@@ -30,6 +30,7 @@
     "42779218989",
     "42750586131",
     "42721617024",
+    "43191480157",
     "43177762371",
     "43163347739",
     "42708067719",
@@ -100,8 +101,8 @@
     "account_verified": true,
     "threads_basic": true,
     "threads_content_publish": true,
-    "source_active_run_id": null,
-    "source_active_status": null
+    "source_active_run_id": "43199783330",
+    "source_active_status": "in_progress"
   },
   "incidents": {
     "41796747628": {
@@ -1035,6 +1036,14 @@
       "conclusion": "success",
       "updated_at": "2026-11-12T09:26:38Z",
       "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+    },
+    "43199783330": {
+      "run_id": "43199783330",
+      "run_attempt": 1,
+      "status": "in_progress",
+      "conclusion": null,
+      "updated_at": "2026-11-12T10:22:32Z",
+      "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
     }
   },
   "last_check": {
@@ -1630,20 +1639,38 @@
     "last_ready_queue_blob_sha": "e20e3d75d78d7dc2a944a421daa501dd0bc8b288"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-12T19:03:58.000+09:00",
-    "result": "20_kst_official_law_reverified_body_preserved_three_actual_metric_snapshots_saved",
+    "checked_at": "2026-11-12T19:27:18.000+09:00",
+    "result": "four_existing_ready_revalidated_new_collection_in_progress_no_new_publication_or_failure",
     "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
     "publication_ledger_sha": "c347b8e9b28383060a2a916f813cd49a50c1d98e",
     "queue_blob_sha": "2622a04c92d79ea64113d00d441b5bc8e60422a0",
-    "maintenance_previous_blob_sha": "38f9bd556245b8191c2a7832d211a670e6a5fb5c",
+    "maintenance_previous_blob_sha": "4d13b484afc744100e9b6a0ad3acb677b28aa0d7",
     "unresolved_publications": 0,
-    "active_target_runs": [],
-    "changed_run_versions": [],
+    "active_target_runs": [
+      {
+        "run_id": "43199783330",
+        "run_attempt": 1,
+        "status": "in_progress",
+        "conclusion": null,
+        "updated_at": "2026-11-12T10:22:32Z",
+        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+      }
+    ],
+    "changed_run_versions": [
+      {
+        "run_id": "43199783330",
+        "run_attempt": 1,
+        "status": "in_progress",
+        "conclusion": null,
+        "updated_at": "2026-11-12T10:22:32Z",
+        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+      }
+    ],
     "run_pagination": {
       "branch": "main",
       "pages": 1,
       "entries_examined": 25,
-      "target_versions_compared": 15,
+      "target_versions_compared": 16,
       "checkpoint_reached": true
     },
     "source": {
@@ -1676,7 +1703,7 @@
       "remaining_condition": "Revalidate source and official evidence before actual send; current source is stale for Nov 13 08 and 12.",
       "cached_artifact_digest_reverified": true,
       "job_logs_retrieved_this_run": true,
-      "verification_checked_at": "2026-11-12T19:03:58.000+09:00"
+      "verification_checked_at": "2026-11-12T19:27:18.000+09:00"
     },
     "publisher": {
       "run_id": "43180829602",
@@ -1724,15 +1751,15 @@
       "previously_reported": true,
       "artifact_downloaded_again": false,
       "job_logs_retrieved_this_run": true,
-      "latest_read_check_at": "2026-11-12T19:03:58.000+09:00"
+      "latest_read_check_at": "2026-11-12T19:27:18.000+09:00"
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "main_prompt_and_code_blob_shas_unchanged": true,
       "queue_reused": true,
-      "queue_write": true,
+      "queue_write": false,
       "queue_readback_equal": true,
-      "unchanged_existing_entries": 29,
+      "unchanged_existing_entries": 30,
       "preview_ready": 4,
       "validate_ready_entry_and_preview": true,
       "future_slot_simulation": true,
@@ -1799,12 +1826,12 @@
           "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
           "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a"
         ],
-        "checked_at": "2026-11-12T19:01:41.938305+09:00",
+        "checked_at": "2026-11-12T19:26:50.036483+09:00",
         "current_main_bytes_downloaded": true,
         "both_asset_sha256_match_existing_visual_review": true,
         "new_visual_inspection": false
       },
-      "input_comparison": "All30 original bodies/media/patterns preserved; only unreserved20KST official evidence actually re-reviewed, original entry archived before CAS. Four READY entries passed validate_ready_entry and preview; exact remote queue readback verified.",
+      "input_comparison": "Fresh remote prompt/code blobs and canonical queue blob match local validated bytes. Completed source/receipt archive digests rechecked; no draft edits. New collection is in progress and is not substituted for a completed source.",
       "local_validation_workspace": {
         "available": true,
         "transient_missing_files_restored_this_run": true,
@@ -1819,8 +1846,8 @@
       "higher_ranked_hold_added": null,
       "new_ready_entry_this_run": null,
       "existing_bodies_preserved": 30,
-      "existing_entry_evidence_revalidated": 1,
-      "last_validated_at": "2026-11-12T19:03:13.030942+09:00",
+      "existing_entry_evidence_revalidated": 0,
+      "last_validated_at": "2026-11-12T19:26:14.725443+09:00",
       "prompt_and_publisher_unchanged": true,
       "writer_input_blob_sha": "0569caae4775bae2f771cbfb5a699cfa0672ea55",
       "writer_input_updated_to_current_main_locally": true,
@@ -1839,17 +1866,13 @@
       "fourteen_day_evaluation_due": false,
       "next_due_at": "2026-11-12T20:42:18.875261+09:00",
       "new_diagnostic_observations": 0,
-      "new_scheduled_snapshot_run": "43191480157",
-      "due_count": 3,
-      "measured_count": 3,
+      "new_scheduled_snapshot_run": null,
+      "due_count": 0,
+      "measured_count": 0,
       "due_main_id": null,
       "due_window_hours": 24,
       "actual_metric_values_not_available": true,
-      "new_observation_keys": [
-        "17916193179493008:168h",
-        "18128141311911524:72h",
-        "18082387943706799:24h"
-      ]
+      "new_observation_keys": []
     },
     "recovery": {
       "required": false,
@@ -1864,7 +1887,7 @@
       "initial_41796747628": "resolved",
       "new_incident": null
     },
-    "next_condition": "Use existing normal20KST publisher only; its body is preserved and actual fresh law re-review now covers the original20–22 grace window. Revalidate latest complete source and official facts before send. Tomorrow requires new source and genuine re-review if stored evidence expires. Preserve pending and media alternation. Official snapshots are actual late cumulative values, not exact24h backfills; onlyB1 experimental24h sample so comparison/weight change deferred. Next milestone tonight20:42; no recovery dispatch/test post.",
+    "next_condition": "Keep original20KST schedule and four existing READY drafts. New source43199783330 must complete with manifest/read_current/verify_snapshot validation before being consumed; no collection outcome inferred while in progress. Actual publisher must recheck the then-latest complete source and fingerprints, official facts and evidence freshness. Tomorrow remains simulation only until fresh source verified. No recovery dispatch/test/extra schedule or repeat performance report.",
     "history_audit": {
       "requested_days": 28,
       "available_records": 32,
@@ -1887,6 +1910,20 @@
       "main_id": "17982543780133074",
       "failed_execution_observed": false,
       "no_recovery_dispatch_justified": true
+    },
+    "active_source": {
+      "run_id": "43199783330",
+      "run_attempt": 1,
+      "status": "in_progress",
+      "conclusion": null,
+      "updated_at": "2026-11-12T10:22:32Z",
+      "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
+      "job_id": 131119852786,
+      "observed_stage": "Collect and promote only a complete generation",
+      "stage_status": "in_progress",
+      "usable_as_completed_generation": false,
+      "classification": "normal_collection_in_progress",
+      "current_last_good_generation_preserved": true
     }
   },
   "reach_policy": {
@@ -2474,7 +2511,7 @@
           "not_backcalculated": true
         }
       },
-      "last_availability_check_at": "2026-11-12T19:03:58.000+09:00",
+      "last_availability_check_at": "2026-11-12T19:27:18.000+09:00",
       "statistical_decision": "No comparison: zero comparable measured observations; preserve A/B, no editorial share changes. Platform timestamps remain unverified.",
       "diagnostic_observations_by_run_id": {
         "43163347739": {
