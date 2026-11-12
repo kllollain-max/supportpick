@@ -1,0 +1,44 @@
+name: SupportPick Threads Insights Read-only Diagnostic
+on:
+  workflow_dispatch:
+    inputs:
+      post_id:
+        description: 'Existing published Threads post numeric ID; no posting'
+        type: string
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: supportpick-threads-insights-diagnostic
+  cancel-in-progress: false
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      SUPPORTPICK_THREADS_ACCESS_TOKEN: ${{ secrets.SUPPORTPICK_THREADS_ACCESS_TOKEN }}
+      SUPPORTPICK_THREADS_INSIGHTS_POST_ID: ${{ inputs.post_id }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate read-only collector
+        run: python -m unittest discover -s tests -p 'test_supportpick_threads_insights.py' -v
+      - name: Read insights without publishing
+        shell: bash
+        run: |
+          set +e
+          python tools/supportpick_threads_insights.py > insights-diagnostic.json
+          status=$?
+          if [ "$status" -ne 0 ]; then
+            echo '{"status":"unavailable","published":false,"metrics":null}' > insights-diagnostic.json
+          fi
+          echo "Read-only diagnostic finished; check artifact for available metrics." >> "$GITHUB_STEP_SUMMARY"
+          exit 0
+      - name: Preserve diagnostic result
+        uses: actions/upload-artifact@v4
+        with:
+          name: supportpick-insights-diagnostic-${{ github.run_id }}
+          path: insights-diagnostic.json
+          retention-days: 7
