@@ -1122,6 +1122,22 @@
       "conclusion": "success",
       "updated_at": "2026-11-12T21:15:35Z",
       "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+    },
+    "43317758537": {
+      "run_id": "43317758537",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-12T22:12:45Z",
+      "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+    },
+    "43316327378": {
+      "run_id": "43316327378",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-12T22:15:01Z",
+      "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
     }
   },
   "last_check": {
@@ -1691,22 +1707,30 @@
     "last_ready_queue_blob_sha": "e20e3d75d78d7dc2a944a421daa501dd0bc8b288"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-12T21:47:13Z",
+    "checked_at": "2026-11-12T22:43:18Z",
     "result": "no_update",
     "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
     "publication_ledger_sha": "db9d0fba2d71d4e65d5fa9d6cda743e2acddddd9",
     "queue_blob_sha": "cc2ba4297688b612226c39a30f1ee4a10d86c771",
-    "maintenance_previous_blob_sha": "b0bf8cf7ca1d8b1a8ec04088e84e641df4e31c63",
+    "maintenance_previous_blob_sha": "4fab69451ea39a8668591a6d5447f60049f3c1b4",
     "unresolved_publications": 0,
     "lease": null,
     "active_target_runs": [],
     "changed_run_versions": [
       {
-        "run_id": "43308398779",
+        "run_id": "43317758537",
         "run_attempt": 1,
         "status": "completed",
         "conclusion": "success",
-        "updated_at": "2026-11-12T21:15:35Z",
+        "updated_at": "2026-11-12T22:12:45Z",
+        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+      },
+      {
+        "run_id": "43316327378",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-12T22:15:01Z",
         "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
       }
     ],
@@ -1717,24 +1741,25 @@
       "checkpoint_reached": true
     },
     "source": {
-      "run_id": "43199783330",
+      "run_id": "43316327378",
       "run_attempt": 1,
       "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
       "status": "completed",
       "conclusion": "success",
-      "generation": "gov24-43199783330-1",
+      "generation": "gov24-43316327378-1",
       "count": 10942,
-      "manifest_sha256": "31843331eaef3381f85484cdbd3659dc5f845ba18d7251334dbf794652afa5d7",
-      "collection_succeeded_at": "2026-11-12T19:28:32.267476+09:00",
-      "artifact_id": 13934363236,
-      "cached_artifact_digest_reverified": true,
-      "artifact_digest": "sha256:4f6739e28320f8a71a0e2c7194da5491d07921c98bafcd0521c445bb016850e5",
+      "manifest_sha256": "a5e0a5ed307be1b00f3d33d97173d99d2fbeb06e8288e1f9e7e78f5e84b0461f",
+      "collection_succeeded_at": "2026-11-13T07:11:37.258822+09:00",
+      "artifact_id": 13988502920,
+      "artifact_digest": "sha256:d3b4a257df9aed7127f932f9b6d93529a98d9fb38f127d21d0868e9cf21f68a8",
+      "artifact_digest_verified": true,
+      "downloaded_via_github_artifact_tool": true,
       "read_current_verify_snapshot_load_feed": true,
       "job_logs_retrieved_this_run": true,
       "regression_ci_tests_passed": 203,
       "fresh_at_check": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-12T21:47:13Z"
+      "verification_checked_at": "2026-11-12T22:43:18Z"
     },
     "publisher": {
       "run_id": "43211696660",
@@ -1812,7 +1837,7 @@
           "char_count": 463,
           "last_valid_at": "2026-11-13T20:53:29.387765+09:00",
           "expires_at": "2026-11-13T20:53:30.387765+09:00",
-          "current_source_fresh_at_slot": false,
+          "current_source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true,
           "selection_rank": 29,
           "source_fingerprint_matches": true
@@ -1820,7 +1845,7 @@
       ],
       "expired_unpublished_slots": [],
       "image_recheck": {
-        "checked_at": "2026-11-12T21:47:13Z",
+        "checked_at": "2026-11-12T22:43:18Z",
         "status": "UPSTREAM_VERIFIED",
         "current_main_bytes_downloaded": true,
         "both_asset_sha256_match_existing_visual_review": true,
@@ -1836,7 +1861,7 @@
           }
         ]
       },
-      "last_validated_at": "2026-11-13T06:45:58.840002+09:00"
+      "last_validated_at": "2026-11-13T07:42:35.579292+09:00"
     },
     "history_audit": {
       "requested_days": 28,
@@ -1851,7 +1876,7 @@
       "kst_date": "2026-11-13"
     },
     "metrics": {
-      "latest_observed_run_id": "43308398779",
+      "latest_observed_run_id": "43317758537",
       "new_metric_observations": 0,
       "previous_three_observations_already_saved": true,
       "cached_snapshot_digest_reverified": true,
@@ -1866,16 +1891,16 @@
       "seven_day_evaluation_due": false,
       "fourteen_day_evaluation_due": false,
       "new_snapshot_run": {
-        "run_id": "43308398779",
+        "run_id": "43317758537",
         "run_attempt": 1,
         "status": "completed",
         "conclusion": "success",
-        "updated_at": "2026-11-12T21:15:35Z",
+        "updated_at": "2026-11-12T22:12:45Z",
         "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
-        "artifact_id": 13983399937,
-        "artifact_digest": "sha256:997220c8c121fea2886d2ac6b1bdfb4781f942945eb9a20d43098db19506d07c",
+        "artifact_id": 13989750256,
+        "artifact_digest": "sha256:e67dd48a6aade05ac0f6dd9ba6ef65b2dc21ece974e040236277750079fd066a",
         "artifact_sha256_verified": true,
-        "observed_at": "2026-11-12T21:15:29.748165+00:00",
+        "observed_at": "2026-11-12T22:12:42.042434+00:00",
         "records": [],
         "job_logs_retrieved": true,
         "classification": "normal_no_milestone_due",
@@ -1892,7 +1917,7 @@
       "code_change_required": false
     },
     "initial_41796747628_status": "resolved",
-    "next_condition": "Original Nov13 08 regular slot consumes revalidated unchanged draft; latest source/facts checked at actual send. Re-review 12 and 16 entries before their expiry. Current source generation stale at Nov13 20; never backfill/replay."
+    "next_condition": "Reuse existing four Nov13 READY entries; actual sender checks newest complete source and current facts again. 08 entry valid throughout original 08~10 window; re-review 12/16/20 entries before evidence expiry inside their original grace windows. No replay or diagnostic publication."
   },
   "reach_policy": {
     "policy_id": "supportpick-threads-reach-v1-20261109",
