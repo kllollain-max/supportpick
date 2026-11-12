@@ -1114,6 +1114,14 @@
       "conclusion": "success",
       "updated_at": "2026-11-12T19:24:12Z",
       "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+    },
+    "43308398779": {
+      "run_id": "43308398779",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-12T21:15:35Z",
+      "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
     }
   },
   "last_check": {
@@ -1683,21 +1691,29 @@
     "last_ready_queue_blob_sha": "e20e3d75d78d7dc2a944a421daa501dd0bc8b288"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-12T19:24:13Z",
+    "checked_at": "2026-11-12T21:47:13Z",
     "result": "no_update",
     "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
     "publication_ledger_sha": "db9d0fba2d71d4e65d5fa9d6cda743e2acddddd9",
-    "queue_blob_sha": "cd277503eb37ef527fc39d27753449acde7e319a",
-    "maintenance_previous_blob_sha": "8828ffcc898939509e29ef12189afa3d6fd7c4c0",
+    "queue_blob_sha": "cc2ba4297688b612226c39a30f1ee4a10d86c771",
+    "maintenance_previous_blob_sha": "b0bf8cf7ca1d8b1a8ec04088e84e641df4e31c63",
     "unresolved_publications": 0,
     "lease": null,
     "active_target_runs": [],
-    "changed_run_versions": [],
+    "changed_run_versions": [
+      {
+        "run_id": "43308398779",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-12T21:15:35Z",
+        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+      }
+    ],
     "run_pagination": {
       "branch": "main",
       "pages": 1,
-      "entries_examined": 25,
-      "target_versions_compared": 19,
+      "entries_examined": 30,
       "checkpoint_reached": true
     },
     "source": {
@@ -1718,7 +1734,7 @@
       "regression_ci_tests_passed": 203,
       "fresh_at_check": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-12T19:24:13Z"
+      "verification_checked_at": "2026-11-12T21:47:13Z"
     },
     "publisher": {
       "run_id": "43211696660",
@@ -1755,8 +1771,8 @@
           "pattern": "P4",
           "media_turn": "IMAGE",
           "char_count": 436,
-          "last_valid_at": "2026-11-13T08:18:44+09:00",
-          "expires_at": "2026-11-13T08:18:45+09:00",
+          "last_valid_at": "2026-11-13T09:59:59+09:00",
+          "expires_at": "2026-11-14T06:08:21+09:00",
           "current_source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true,
           "selection_rank": 23,
@@ -1804,27 +1820,23 @@
       ],
       "expired_unpublished_slots": [],
       "image_recheck": {
+        "checked_at": "2026-11-12T21:47:13Z",
         "status": "UPSTREAM_VERIFIED",
-        "checked_at": "2026-11-12T19:24:13Z",
-        "assets": [
-          {
-            "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-            "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-            "status": "UPSTREAM_VERIFIED",
-            "new_visual_inspection": false
-          },
-          {
-            "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-            "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-            "status": "UPSTREAM_VERIFIED",
-            "new_visual_inspection": false
-          }
-        ],
         "current_main_bytes_downloaded": true,
         "both_asset_sha256_match_existing_visual_review": true,
-        "new_visual_inspection": false
+        "new_visual_inspection": false,
+        "assets": [
+          {
+            "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+            "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+            "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a"
+          }
+        ]
       },
-      "last_validated_at": "2026-11-13T04:23:25.404608+09:00"
+      "last_validated_at": "2026-11-13T06:45:58.840002+09:00"
     },
     "history_audit": {
       "requested_days": 28,
@@ -1839,7 +1851,7 @@
       "kst_date": "2026-11-13"
     },
     "metrics": {
-      "latest_observed_run_id": "43277669758",
+      "latest_observed_run_id": "43308398779",
       "new_metric_observations": 0,
       "previous_three_observations_already_saved": true,
       "cached_snapshot_digest_reverified": true,
@@ -1854,24 +1866,21 @@
       "seven_day_evaluation_due": false,
       "fourteen_day_evaluation_due": false,
       "new_snapshot_run": {
-        "run_id": "43277669758",
+        "run_id": "43308398779",
         "run_attempt": 1,
         "status": "completed",
         "conclusion": "success",
-        "updated_at": "2026-11-12T18:16:15Z",
+        "updated_at": "2026-11-12T21:15:35Z",
         "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
-        "job_id": 131390312990,
-        "artifact_id": 13971052677,
-        "artifact_digest": "sha256:5b6c34ded791835c94b87223081eab223774194d6dce67bd5d41640ba39fd0ba",
+        "artifact_id": 13983399937,
+        "artifact_digest": "sha256:997220c8c121fea2886d2ac6b1bdfb4781f942945eb9a20d43098db19506d07c",
         "artifact_sha256_verified": true,
-        "observed_at": "2026-11-12T18:16:11.871203+00:00",
-        "due_count": 0,
-        "success_count": 0,
+        "observed_at": "2026-11-12T21:15:29.748165+00:00",
         "records": [],
+        "job_logs_retrieved": true,
         "classification": "normal_no_milestone_due",
         "published": false,
-        "ledger_or_queue_mutated": false,
-        "job_logs_retrieved": true
+        "ledger_or_queue_mutated": false
       }
     },
     "recovery": {
@@ -1883,7 +1892,7 @@
       "code_change_required": false
     },
     "initial_41796747628_status": "resolved",
-    "next_condition": "Reuse existing four Nov13 regular-slot READY entries. Genuine official re-review before evidence expiry, current complete source and fingerprint checks before actual send. Current generation is stale at Nov13 20. No replay, extra scheduler or diagnostic publication; await new official ID/window measurements."
+    "next_condition": "Original Nov13 08 regular slot consumes revalidated unchanged draft; latest source/facts checked at actual send. Re-review 12 and 16 entries before their expiry. Current source generation stale at Nov13 20; never backfill/replay."
   },
   "reach_policy": {
     "policy_id": "supportpick-threads-reach-v1-20261109",
