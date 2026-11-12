@@ -10,6 +10,7 @@ from datetime import timedelta
 
 import supportpick_threads as t
 import supportpick_writer as w
+from supportpick_growth_v3 import editorial_priority
 
 
 def planned_slots(now, records, limit=4):
@@ -26,6 +27,10 @@ def planned_slots(now, records, limit=4):
 def build_input(feed, state, now, assets):
     rows = t.candidates(feed, state, now)
     history = state['records'][-20:]
+    # Advisory only: preserve the publisher's existing priority and queue contract.
+    # The writer may compare reader utility, but must still document exclusions
+    # against the publisher's actual verified candidate order.
+    growth_rows = sorted(rows, key=lambda row: editorial_priority(row, now.date()))
     projected = copy.deepcopy(state['records'])
     slots = []
     for index, slot in enumerate(planned_slots(now, projected)):
@@ -45,13 +50,19 @@ def build_input(feed, state, now, assets):
         'slots': slots, 'history': history, 'eligible_count': len(rows),
         'candidate_priority': [{'id': r['id'], 'title': r['title'], **t.selection_info(r)} for r in rows[:30]],
         'candidate_facts': [{'source_fingerprint': w.source_fingerprint(r), 'row': r} for r in rows[:12]],
+        'growth_v3_advisory': {
+            'policy': 'reader_utility_deadline_v3_advisory',
+            'candidate_ids': [r['id'] for r in growth_rows[:30]],
+            'note': 'Advisory only. Actual publication priority, source checks, queue and ledger remain unchanged.',
+        },
         'instructions': ['Read the entire master prompt before writing.',
                          'Verify current official eligibility, amounts and application state.',
                          'Collection timestamps alone do not prove that applications are open.',
                          'Record why higher-ranked candidates cannot be verified.',
                          'Reserve four different valid patterns per KST date; never fabricate urgency.',
                          'Write the queue with a fresh blob SHA; never modify publication records.',
-                         'Recompute future media turns if an earlier slot was not published.']}
+                         'Recompute future media turns if an earlier slot was not published.',
+                         'Use growth_v3_advisory to consider deadlines and reader relevance without bypassing publisher priority or source verification.']}
 
 
 def preview_queue(feed, state, queue, now, assets):
