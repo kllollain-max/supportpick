@@ -88,7 +88,7 @@
     "source_workflow_conclusion": "success",
     "source_failure_classification": null,
     "last_publisher_run_id": "43121957083",
-    "writer_queue_ready": 4,
+    "writer_queue_ready": 5,
     "writer_schema": "supportpick.writer.v1",
     "account_check": "verified_http_200",
     "account_check_run_id": "42152164281",
@@ -1568,16 +1568,16 @@
     "platform_performance_metrics_available": false,
     "performance_effect_claim_allowed": false,
     "existing_safety_contract_precedence": true,
-    "last_ready_queue_readback_at": "2026-11-12T08:22:11.000+09:00",
-    "last_ready_queue_blob_sha": "20839f28d02d7956d8bd42a5726dd0a5084e254b"
+    "last_ready_queue_readback_at": "2026-11-12T12:15:10.000+09:00",
+    "last_ready_queue_blob_sha": "e20e3d75d78d7dc2a944a421daa501dd0bc8b288"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-12T10:46:00.000+09:00",
-    "result": "unchanged_runs_receipts_four_existing_ready_reverified",
+    "checked_at": "2026-11-12T12:15:10.000+09:00",
+    "result": "noon_evidence_actually_reverified_body_preserved_next_noon_new_reviewed_draft_saved",
     "current_main_sha": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
     "publication_ledger_sha": "78957532a9727150f4dfaf8a59f289c59de139ba",
-    "queue_blob_sha": "20839f28d02d7956d8bd42a5726dd0a5084e254b",
-    "maintenance_previous_blob_sha": "87d1544d7e8473330a030e96a255628fd16029e1",
+    "queue_blob_sha": "e20e3d75d78d7dc2a944a421daa501dd0bc8b288",
+    "maintenance_previous_blob_sha": "23618b809af7aea1c668aef4f47a61a2e1d01706",
     "unresolved_publications": 0,
     "active_target_runs": [],
     "changed_run_versions": [],
@@ -1618,7 +1618,7 @@
       "remaining_condition": "Revalidate source and official evidence before actual send; current source is stale for Nov 13 08.",
       "cached_artifact_digest_reverified": true,
       "job_logs_retrieved_this_run": true,
-      "verification_checked_at": "2026-11-12T10:46:00.000+09:00"
+      "verification_checked_at": "2026-11-12T12:15:10.000+09:00"
     },
     "publisher": {
       "run_id": "43121957083",
@@ -1671,27 +1671,14 @@
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "main_prompt_and_code_blob_shas_unchanged": true,
       "queue_reused": true,
-      "queue_write": false,
+      "queue_write": true,
       "queue_readback_equal": true,
-      "unchanged_existing_entries": 28,
-      "preview_ready": 4,
+      "unchanged_existing_entries": 27,
+      "preview_ready": 5,
       "validate_ready_entry_and_preview": true,
       "future_slot_simulation": true,
       "source_freshness_checked_separately": true,
       "next_24h_sequence": [
-        {
-          "slot": "2026-11-12T12:00:00+09:00",
-          "benefit_id": "SSI000000020",
-          "pattern": "P5",
-          "media_turn": "TEXT",
-          "char_count": 407,
-          "last_valid_at": "2026-11-12T12:34:22+09:00",
-          "expires_at": "2026-11-12T12:34:23+09:00",
-          "current_source_fresh_at_slot": true,
-          "source_recheck_required_at_publish": true,
-          "selection_rank": 21,
-          "source_fingerprint_matches": true
-        },
         {
           "slot": "2026-11-12T16:00:00+09:00",
           "benefit_id": "999000000043",
@@ -1730,50 +1717,84 @@
           "source_recheck_required_at_publish": true,
           "selection_rank": 23,
           "source_fingerprint_matches": true
+        },
+        {
+          "slot": "2026-11-13T12:00:00+09:00",
+          "benefit_id": "135200005001",
+          "pattern": "P3",
+          "media_turn": "TEXT",
+          "char_count": 446,
+          "last_valid_at": "2026-11-13T12:12:46+09:00",
+          "expires_at": "2026-11-13T12:12:47+09:00",
+          "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true,
+          "selection_rank": 24,
+          "source_fingerprint_matches": true
         }
       ],
       "all_existing_bodies_and_media_preserved": true,
       "expired_unpublished_slots": [],
       "image_recheck": {
         "status": "UPSTREAM_VERIFIED",
-        "checked_at": "2026-11-12T10:45:18.770997+09:00",
+        "checked_at": "2026-11-12T12:13:59.716652+09:00",
         "current_main_bytes_downloaded": true,
         "both_asset_sha256_match_existing_visual_review": true,
         "new_visual_inspection": false
       },
-      "input_comparison": "Fresh remote code/prompt blobs match verified local files; queue blob exactly matches validated local queue. New ledger compared semantically; latest body and content hash verified.",
+      "input_comparison": "Validated local queue Git blob equals fresh remote readback e20e3d75d78d7dc2a944a421daa501dd0bc8b288; original 28 bodies preserved, noon active evidence actually re-reviewed and previous entry archived.",
       "local_validation_workspace": {
         "available": true,
         "current_files_and_inputs_match_remote_blobs": true,
-        "final_validation": "4_READY",
+        "final_validation": "5_READY: current noon plus next four regular slots",
         "remote_queue_or_publisher_failure": false
       },
-      "queue_commit": "082bd7a6ba8312232f687a6432171c11f219645d",
-      "current_regular_window": [],
+      "queue_commit": "3a1eca5911bd1091437b14f90ac225ad37d344f2",
+      "current_regular_window": [
+        {
+          "slot": "2026-11-12T12:00:00+09:00",
+          "benefit_id": "SSI000000020",
+          "pattern": "P5",
+          "media_turn": "TEXT",
+          "char_count": 407,
+          "last_valid_at": "2026-11-12T13:59:59+09:00",
+          "expires_at": "2026-11-13T12:09:39.000+09:00",
+          "current_source_fresh_at_slot": true,
+          "source_recheck_required_at_publish": true,
+          "selection_rank": 21,
+          "source_fingerprint_matches": true
+        }
+      ],
       "new_ready_entry": {
-        "slot": "2026-11-13T08:00:00+09:00",
-        "benefit_id": "999000000004",
-        "pattern": "P4",
-        "media_turn": "IMAGE",
-        "cohort": "B",
-        "char_count": 436,
-        "source_fingerprint": "811910364c1411ed8254015ed3d57b9b452446c70b555fa7c5901897b76d92e4",
+        "slot": "2026-11-13T12:00:00+09:00",
+        "benefit_id": "135200005001",
+        "pattern": "P3",
+        "cohort": "A",
+        "media_turn": "TEXT",
+        "char_count": 446,
+        "prepared_at": "2026-11-12T12:12:47+09:00",
+        "expires_at": "2026-11-13T12:12:47+09:00",
         "source_generation": "gov24-43110769785-1",
-        "prepared_at": "2026-11-12T08:18:45+09:00",
-        "expires_at": "2026-11-13T08:18:45+09:00",
-        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "source_fingerprint": "22b11500412634c68b21004bf6776122696a9a9710e827d19ae55c7116051d2f",
         "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-        "policy_id": "supportpick-threads-reach-v1-20261109",
-        "official_revision_check": "Current Sep 18 law and updated ministry page supersede old Feb 5 Work24 usage-period description; raw same-ID record preserved."
+        "policy_id": "supportpick-threads-reach-v1-20261109"
       },
       "higher_ranked_hold_added": {
-        "benefit_id": "PTR000051706",
-        "views": 100436,
+        "benefit_id": "999000000092",
         "decision": "HOLD",
-        "reason": "Current detailed fund application conditions and status could not be verified after official detail/FAQ read timeouts; current official overview only partially confirms conditions.",
-        "selected_benefit_views": 100141
+        "reason": "동일 ID 누적 조회수 96038회로 선택 후보 94728회보다 높다. API는 매월 1~10일 접수이며 직접 연 사하구 2026년 안내도 매월 10일까지다. 예정 발송일 11월 13일은 확인한 월별 접수창 이후이고 다른 지역의 현재 접수 가능 근거는 확보하지 못했다. 다음달 접수 시작은 원본 startDate가 없어 UPCOMING 검증에 맞춰 꾸미지 않는다. 제도 전체 종료로 판단하지 않는다.",
+        "sources": [
+          "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999259&bnefType=all&svcId=999000000092",
+          "https://news.saha.go.kr/portal/contents.do?mId=0501040600"
+        ],
+        "checked_at": "2026-11-12T12:12:47+09:00",
+        "access_methods": {
+          "gov24": "PROVIDED_OFFICIAL_TEXT",
+          "saha": "OPENED_OFFICIAL"
+        }
       },
-      "new_ready_entry_this_run": null
+      "new_ready_entry_this_run": null,
+      "existing_bodies_preserved": 28,
+      "existing_entry_evidence_revalidated": 1
     },
     "metrics": {
       "status": "due_window_unmeasured_official_read_path_unavailable",
@@ -1793,13 +1814,14 @@
       "new_failures": 0,
       "new_partials": 0,
       "post_retry_budget_used": 0,
-      "code_change_required": false
+      "code_change_required": false,
+      "preventive_official_evidence_revalidation": true
     },
     "incidents": {
       "initial_41796747628": "resolved",
       "new_incident": null
     },
-    "next_condition": "Reuse normal 12/16/20 KST and Nov 13 08 READY entries. At actual send, revalidate latest complete source, evidence age and fingerprints. Nov 12 noon evidence expires 12:34:23 and next-day morning evidence 08:18:45; if publication delay would exceed expiry, perform actual official re-review before reservation rather than changing timestamps alone. Current source is stale for Nov 13 08. Preserve pending; no test or recovery dispatch without actual failure. Next 24h metric window is 12:40:29 KST; no official reader means unmeasured, never zero.",
+    "next_condition": "Use existing normal publisher only. Current noon is unreserved within its original 12–14 KST grace window; genuine official re-review now covers the full window without altering body, hash, pattern or media. No observed failure justifies dispatch. Revalidate latest complete data and official facts at actual send. Nov 13 08/12 require fresh source; stored evidence expires at 08:18:45/12:12:47, so actual re-review is required if delayed. Next metric due 12:40:29; no official Insights reader means unmeasured, never zero. No new publication or operational failure to notify.",
     "history_audit": {
       "requested_days": 28,
       "available_records": 30,
@@ -2196,7 +2218,7 @@
           "timestamp_basis": "Ledger invocation time; exact platform timestamp unverified. No quantitative comparison allowed."
         }
       },
-      "last_availability_check_at": "2026-11-12T10:46:00.000+09:00",
+      "last_availability_check_at": "2026-11-12T12:15:10.000+09:00",
       "statistical_decision": "No comparison: zero comparable measured observations; preserve A/B, no editorial share changes. Platform timestamps remain unverified."
     },
     "profile_route": {
@@ -2209,12 +2231,12 @@
     },
     "next_condition": "Use existing Nov 12 08/12/16/20 KST schedule only; revalidate complete source and official evidence at send. Current source is stale for Nov 12 20. Refresh official review before each stored expiry if needed inside the original two-hour window; never roll back or replace a pending draft. No Insights reader: due windows remain unmeasured, not zero. Obtain official post timestamps before measured timing comparisons.",
     "latest_prepared_entry": {
-      "slot": "2026-11-13T08:00:00+09:00",
-      "benefit_id": "999000000004",
-      "cohort": "B",
+      "slot": "2026-11-13T12:00:00+09:00",
+      "benefit_id": "135200005001",
+      "cohort": "A",
       "policy_id": "supportpick-threads-reach-v1-20261109",
-      "queue_readback_at": "2026-11-12T08:22:11.000+09:00",
-      "queue_blob_sha": "20839f28d02d7956d8bd42a5726dd0a5084e254b",
+      "queue_readback_at": "2026-11-12T12:15:10.000+09:00",
+      "queue_blob_sha": "e20e3d75d78d7dc2a944a421daa501dd0bc8b288",
       "applied_to_new_unstarted_slot_only": true
     }
   },
@@ -2361,5 +2383,159 @@
     "fingerprint": "supportpick-maintenance:execution_environment_unavailable:v1",
     "reported_at": "2026-11-12T04:12:32.733+09:00",
     "status": "resolved"
+  },
+  "writer_revalidation_history": {
+    "2026-11-12T12:00:00+09:00@2026-11-12T12:09:39.000+09:00": {
+      "slot": "2026-11-12T12:00:00+09:00",
+      "reason": "Original evidence expired at 12:34:23 inside the regular two-hour grace window. Actual official source re-opened and facts reconfirmed before reservation.",
+      "previous_entry": {
+        "slot": "2026-11-12T12:00:00+09:00",
+        "benefit_id": "SSI000000020",
+        "source_fingerprint": "373e1ec51f19b976c149d7054e6ef4d7ae7a0913a351abd7442dc44d73da588a",
+        "source_generation": "gov24-42910050871-1",
+        "prepared_at": "2026-11-11T12:34:23+09:00",
+        "expires_at": "2026-11-12T12:34:23+09:00",
+        "asset_sha256": null,
+        "writer": {
+          "schema_version": "supportpick.writer.v1",
+          "status": "READY",
+          "selected_program_id": "SSI000000020",
+          "post_text": "저소득 한부모가족은 아동양육비로 자녀 1명당 월 23만 원의 현금 지원을 받을 수 있어요. 먼저 가구 소득과 자녀 나이를 함께 확인해 보세요.\n\n가구의 소득인정액이 기준 중위소득 65% 이하여야 해요. 소득인정액은 월급만 보는 기준이 아니며, 소득과 재산을 조사해 지원 여부를 결정해요.\n\n자녀는 18세 미만이 대상이에요. 고등학교에 다닌다면 22세 미만도 고3 12월까지 지원받을 수 있어요. 월 23만 원은 기본 아동양육비이고, 추가 지원은 별도 조건이 있어요. 가정위탁양육보조금을 받는 경우에는 이 아동양육비 대상에서 제외돼요.\n\n주민등록 주소지 읍·면·동 주민센터나 복지로에서 연중 신청할 수 있어요. 신청서와 소득·재산 확인서류를 준비하고, 필요한 추가 서류는 주민센터에 확인해 주세요.\n\n자세한 사항은 프로필링크 확인",
+          "draft_text": null,
+          "reply_texts": [],
+          "media": {
+            "turn": "TEXT",
+            "asset_id": null,
+            "check": "NOT_REQUIRED",
+            "image_copy": null,
+            "alt_text": null
+          },
+          "review": {
+            "planned_at": "2026-11-12T12:00:00+09:00",
+            "application_status": "ALWAYS",
+            "reader": "미성년 자녀를 양육하며 소득요건을 확인하려는 한부모가족",
+            "central_message": "한부모가족 기본 아동양육비 월 23만 원의 주요 자격과 신청 경로를 확인한다.",
+            "pattern": "P5",
+            "selection_reason": "기존 READY와 예약 사업을 보존했다. 검증된 동일 ID 누적 조회수 내림차순에서 상위 HOLD/SKIP의 출처·사유를 유지하고 현재 공식 연중 신청이 확인되는 다음 후보를 선택했다.",
+            "interest_basis": "OBSERVED_METRICS",
+            "duplicate_check": "CHECKED",
+            "evidence": [
+              {
+                "source_id": "SSI000000020",
+                "source_ref": "https://www.mogef.go.kr/sp/fam/sp_fam_f006.do",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-11T12:34:23+09:00",
+                "claims_supported": [
+                  "성평등가족부 현재 한부모가족 자녀양육 지원 페이지의 2026년 1월 이후 지급기준을 직접 열람했다. 소득인정액 기준 중위소득 65% 이하, 18세 미만 자녀, 고교 재학 시 22세 미만 고3 12월까지, 기본 아동양육비 월 23만 원을 확인했다.",
+                  "가정위탁양육보조금 수급 시 아동양육비 제외, 주민등록지 읍면동 또는 복지로 연중 신청 가능, 소득재산 조사 후 결정과 구비서류 안내를 확인했다. 신청 거래는 수행하지 않았다."
+                ]
+              },
+              {
+                "source_id": "SSI000000020",
+                "source_ref": "https://www.gg.go.kr/contents/contents.do?ciIdx=1413&menuId=3332",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-11T12:34:23+09:00",
+                "claims_supported": [
+                  "경기도의 국비 한부모가족 지원 안내를 직접 열어 자녀 1인당 월 23만 원, 고교 재학 연령 예외, 소득재산 서류와 연중 신청 경로를 교차 대조했다. 경기도 자체 추가급여를 전국 금액에 합산하지 않았다."
+                ]
+              },
+              {
+                "source_id": "SSI000000020",
+                "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=87903&bnefType=all&svcId=SSI000000020",
+                "access_method": "PROVIDED_OFFICIAL_TEXT",
+                "verified_at": "2026-11-11T12:34:23+09:00",
+                "claims_supported": [
+                  "보조금24 동일 ID serviceList·serviceDetail을 완전 수집본에서 대조했다. 누적 조회수 108107회, API 확인시각 2026-11-11T07:03:18.141477+09:00이며 실제 원문 열람시각과 구분한다.",
+                  "월 23만 원 기본 현금급여, 소득·재산 조사와 결정 절차를 대조했다. API의 불명확한 신청기간은 직접 연 공식 소관부처의 연중 신청 안내로 해소했다."
+                ]
+              }
+            ],
+            "checks": {
+              "facts": "PASS",
+              "current_status": "PASS",
+              "eligibility_and_units": "PASS",
+              "cta_and_no_links": "PASS",
+              "length": "PASS",
+              "media": "NOT_REQUIRED"
+            },
+            "char_count": 407,
+            "count_method": "Python Unicode len including spaces, newlines and CTA",
+            "missing_info": [],
+            "hold_reasons": [],
+            "warnings": [
+              "기본 아동양육비만 안내하며 추가양육비·학용품비·시설생활비 및 청소년한부모 별도 급여를 합산하지 않는다. 개인 지원 여부는 조사 후 결정된다.",
+              "내일 발송 전 최신 완전 수집본과 같은 ID source fingerprint를 재검증해야 한다. 현재 수집시각을 내일 접수 확인으로 바꾸지 않는다.",
+              "원고 및 원문 검수 유효기간은 최대 24시간이다. 내일 12시 허용창 후반에는 만료되므로 만료 전 새 공식 검수가 필요하다.",
+              "실제 지표가 없어 글쓰기 개선 효과·신청 전환을 판정하지 않는다."
+            ],
+            "reach_editorial": {
+              "policy_id": "supportpick-threads-reach-v1-20261109",
+              "core_question": "한부모가족 기본 아동양육비의 소득·자녀 나이 조건과 신청 경로는 무엇인가요?",
+              "reader_scope": "미성년 자녀를 양육하며 소득요건을 확인하려는 한부모가족",
+              "angles": [
+                "매달 양육비 부담과 기본 현금급여",
+                "가구 소득인정액과 자녀 나이 확인",
+                "신청서류와 조사·결정 절차"
+              ],
+              "chosen_angle": "가구 소득과 자녀 나이를 차례로 점검한다.",
+              "opening_candidates": [
+                {
+                  "type": "생활 상황형",
+                  "group": "A",
+                  "text": "혼자 아이를 키우며 매달 양육비가 부담된다면, 소득요건을 충족한 한부모가족의 자녀 1명당 월 23만 원 기본 아동양육비를 확인해 볼 수 있어요."
+                },
+                {
+                  "type": "대상·혜택형",
+                  "group": "B",
+                  "text": "저소득 한부모가족은 아동양육비로 자녀 1명당 월 23만 원의 현금 지원을 받을 수 있어요. 먼저 가구 소득과 자녀 나이를 함께 확인해 보세요."
+                },
+                {
+                  "type": "조건 설명형",
+                  "group": null,
+                  "text": "한부모가족 아동양육비는 소득인정액과 자녀 나이를 함께 확인해야 해요. 조건을 충족하면 기본 지원액은 자녀 1명당 월 23만 원이에요."
+                }
+              ],
+              "chosen_opening": "저소득 한부모가족은 아동양육비로 자녀 1명당 월 23만 원의 현금 지원을 받을 수 있어요. 먼저 가구 소득과 자녀 나이를 함께 확인해 보세요.",
+              "opening_type": "대상·혜택형",
+              "cohort": "B",
+              "selection_reason": "첫 적용일 11월 10일 기준 이틀 뒤 11월 12일 12시는 B다. 최근 20건과 앞선 READY를 대조해 한부모 기본급여의 소득·나이·중복 제한을 점검하는 순서로 작성했다. 내일 08시 P1과 다른 P5다.",
+              "history_posts_checked": 20,
+              "comparison_strata": {
+                "geo": "전국",
+                "benefit": "월별 현금 기본급여",
+                "application": "연중 신청",
+                "audience": "저소득 한부모가족",
+                "media": "TEXT"
+              },
+              "comparison_group": "유사 독자·지역·급여·접수조건에서 A/B 표본 확보 후 비교. 24시간 실측 없음. 시간·미디어 중첩과 사업 차이를 교란으로 기록한다.",
+              "applied_elements": [
+                "대상·혜택 도입",
+                "소득인정액과 월급 구분",
+                "자녀 나이 예외와 중복 제한",
+                "짧은 단락"
+              ],
+              "profile_route": "복지로 상세는 동적 본문이 읽히지 않아 실제 신청 거래와 프로필·사이트 이동 기능은 검증하지 못했다. 소관부처가 안내한 신청 경로만 기록한다.",
+              "source_recheck_required_at_publish": true
+            }
+          },
+          "next_history_record": {
+            "program_id": "SSI000000020",
+            "notice_version": "gov24-42910050871-1:국비-2026기준",
+            "pattern": "P5",
+            "opening": "저소득 한부모가족은 아동양육비로 자녀 1명당 월 23만 원의 현금 지원을 받을 수 있어요. 먼저 가구 소득과 자녀 나이를 함께 확인해 보세요.",
+            "structure": "대상·월 기본급여 → 소득인정액 → 자녀 나이·중복 제한 → 연중 신청과 서류 → CTA",
+            "media_turn": "TEXT"
+          }
+        }
+      },
+      "revalidated_at": "2026-11-12T12:09:39.000+09:00",
+      "new_expires_at": "2026-11-13T12:09:39.000+09:00",
+      "body_hash_and_media_preserved": true,
+      "official_source": "https://www.mogef.go.kr/sp/fam/sp_fam_f006.do",
+      "secondary_source_limit": "Gyeonggi read timed out this run and was not relabelled as new evidence.",
+      "queue_commit": "74fcedb760bc3396de6ba1302a5d5a23e9f49cd5",
+      "preview_ready": 4,
+      "pending_modified": false
+    }
   }
 }
