@@ -88,18 +88,29 @@
     "43217754059",
     "43237641864",
     "43258926267",
-    "43277669758"
+    "43277669758",
+    "43360384792",
+    "43357569434",
+    "43346432144",
+    "43334368634",
+    "43330421703",
+    "43326468650",
+    "43317758537",
+    "43316327378",
+    "43308398779",
+    "43299402164",
+    "43289761470"
   ],
   "last_health": {
     "unresolved_publications": 0,
-    "published_benefits": 33,
-    "source_run_id": "43199783330",
+    "published_benefits": 35,
+    "source_run_id": "43316327378",
     "source_result": "success",
     "source_count": 10942,
-    "source_last_success_at": "2026-11-12T19:28:32.267476+09:00",
+    "source_last_success_at": "2026-11-13T07:11:37.258822+09:00",
     "source_workflow_conclusion": "success",
     "source_failure_classification": null,
-    "last_publisher_run_id": "43211696660",
+    "last_publisher_run_id": "43360384792",
     "writer_queue_ready": 4,
     "writer_schema": "supportpick.writer.v1",
     "account_check": "verified_http_200",
@@ -1170,25 +1181,49 @@
       "conclusion": "success",
       "updated_at": "2026-11-13T01:38:51Z",
       "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+    },
+    "43360384792": {
+      "run_id": "43360384792",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-13T03:40:17Z",
+      "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+    },
+    "43357569434": {
+      "run_id": "43357569434",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-13T03:14:13Z",
+      "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-13T02:28:12Z",
-    "result": "writer_evidence_revalidated",
+    "checked_at": "2026-11-13T04:15:46Z",
+    "result": "verified_natural_publication_and_new_ready",
     "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
-    "publication_ledger_sha": "196789cbc3841e1e2056df590cddb39bbc452da3",
-    "queue_blob_sha": "8f1b967b11834dce695a5fb22321646ca243a95f",
-    "maintenance_previous_blob_sha": "a9d3bc83abcdd4609c75bea622f107568f2ab3c4",
+    "publication_ledger_sha": "3d522c9115f6cab303b5403c33dd971c50a7f59d",
+    "queue_blob_sha": "ed5512a6fd1d74994e59f56ff4f38bd5bcd593a0",
+    "maintenance_previous_blob_sha": "037af678a5b6f5efe7dd02de0d77d9c37e6b7976",
     "unresolved_publications": 0,
     "lease": null,
     "active_target_runs": [],
     "changed_run_versions": [
       {
-        "run_id": "43346432144",
+        "run_id": "43360384792",
         "run_attempt": 1,
         "status": "completed",
         "conclusion": "success",
-        "updated_at": "2026-11-13T01:38:51Z",
+        "updated_at": "2026-11-13T03:40:17Z",
+        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+      },
+      {
+        "run_id": "43357569434",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-13T03:14:13Z",
         "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
       }
     ],
@@ -1217,52 +1252,52 @@
       "regression_ci_tests_passed": 203,
       "fresh_at_check": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-13T02:28:12Z",
+      "verification_checked_at": "2026-11-13T04:15:46Z",
       "cached_artifact_digest_reverified": true
     },
     "publisher": {
-      "run_id": "43330421703",
+      "run_id": "43360384792",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-12T23:38:41Z",
+      "updated_at": "2026-11-13T03:40:17Z",
       "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
-      "job_id": 131573429254,
-      "artifact_id": 13995131117,
-      "artifact_digest": "sha256:5899bb02040c7fea132209a82238894e3251f133fdfd00e5ae3afa4749854a09",
+      "job_id": 131672211424,
+      "artifact_id": 14007967291,
+      "artifact_digest": "sha256:9224c997d85c6f2e012528baef275a21d2720b7e8465eed64d86bf680cfd8d21",
       "classification": "verified_natural_publication",
       "event": "schedule",
       "published": true,
-      "slot": "2026-11-13T08:00:00+09:00",
-      "published_at": "2026-11-13T08:37:44.761537+09:00",
-      "benefit_id": "999000000004",
-      "main_id": "18131183578857421",
-      "url": "https://www.threads.com/@hid_1004/post/DfqQPC0EYxe",
+      "slot": "2026-11-13T12:00:00+09:00",
+      "published_at": "2026-11-13T12:39:24.842566+09:00",
+      "benefit_id": "135200005001",
+      "main_id": "18158110936524366",
+      "url": "https://www.threads.com/@hid_1004/post/Dfqr43MjQA7",
       "stage": "complete",
       "verified": true,
-      "content_hash": "cf1b783e08dfbd2fd44172399cb15348668aaecb911044cb3ece65e2cfd59000",
-      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "content_hash": "a2e9daecf36f44c5105ad63515c88ce00698b83ecc7791b728a901a5b1616adb",
+      "asset_sha256": null,
       "source_generation": "gov24-43316327378-1",
-      "pattern": "P4",
-      "media_turn": "IMAGE",
-      "char_count": 436,
+      "pattern": "P3",
+      "media_turn": "TEXT",
+      "char_count": 446,
       "replies": 0,
       "verification": "Authenticated publisher permalink/body readback, original digest-verified receipt and exact READY body/media match.",
-      "verification_completed_at": "2026-11-13T00:12:49Z",
+      "verification_completed_at": "2026-11-13T04:15:46Z",
       "public_web_visibility_independently_verified": false,
-      "publication_ledger_records": 34,
+      "publication_ledger_records": 35,
       "pending": null,
       "lease": null,
       "job_logs_retrieved": true,
       "publisher_related_tests_passed": 130,
       "time_basis": {
         "published_at": "Ledger publisher invocation, not exact platform timestamp.",
-        "verified_result_logged_at": "2026-11-13T08:38:36.600941+09:00",
+        "verified_result_logged_at": "2026-11-13T12:40:12.193197+09:00",
         "platform_timestamp": null,
-        "public_report": "Publication confirmed Nov13 08:38 KST."
+        "public_report": "Publication confirmed Nov13 12:40 KST."
       },
-      "latest_publication_previously_reported": true,
-      "new_publication_this_run": false,
+      "latest_publication_previously_reported": false,
+      "new_publication_this_run": true,
       "receipt_verified_again": true
     },
     "writer": {
@@ -1272,25 +1307,12 @@
       "queue_reused": true,
       "queue_write": true,
       "queue_readback_equal": true,
-      "unchanged_existing_entries": 31,
+      "unchanged_existing_entries": 32,
       "preview_ready": 4,
       "validate_ready_entry_and_preview": true,
       "future_slot_simulation": true,
       "source_recheck_required_at_publish": true,
       "next_24h_sequence": [
-        {
-          "slot": "2026-11-13T12:00:00+09:00",
-          "benefit_id": "135200005001",
-          "pattern": "P3",
-          "media_turn": "TEXT",
-          "char_count": 446,
-          "last_valid_at": "2026-11-13T13:59:59+09:00",
-          "expires_at": "2026-11-14T02:26:47.000Z",
-          "current_source_fresh_at_slot": true,
-          "source_recheck_required_at_publish": true,
-          "selection_rank": 24,
-          "source_fingerprint_matches": true
-        },
         {
           "slot": "2026-11-13T16:00:00+09:00",
           "benefit_id": "172100000012",
@@ -1329,11 +1351,24 @@
           "source_recheck_required_at_publish": true,
           "selection_rank": 29,
           "source_fingerprint_matches": true
+        },
+        {
+          "slot": "2026-11-14T12:00:00+09:00",
+          "benefit_id": "SBA000000100",
+          "pattern": "P5",
+          "media_turn": "TEXT",
+          "char_count": 422,
+          "last_valid_at": "2026-11-14T13:13:34.343271+09:00",
+          "expires_at": "2026-11-14T13:13:35.343271+09:00",
+          "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true,
+          "selection_rank": 31,
+          "source_fingerprint_matches": true
         }
       ],
       "expired_unpublished_slots": [],
       "image_recheck": {
-        "checked_at": "2026-11-13T01:30:05Z",
+        "checked_at": "2026-11-13T04:15:46Z",
         "status": "UPSTREAM_VERIFIED",
         "current_main_bytes_downloaded": true,
         "both_asset_sha256_match_existing_visual_review": true,
@@ -1347,29 +1382,28 @@
             "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
             "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a"
           }
-        ],
-        "current_main_bytes_downloaded_this_check": false,
-        "checked_at_this_check": false,
-        "note": "Text slot evidence refreshed. Existing image evidence and bytes from Nov13 10:30 retained unchanged; no new visual inspection."
+        ]
       },
-      "last_validated_at": "2026-11-13T11:27:09.568198+09:00",
-      "evidence_revalidated_slot": "2026-11-13T12:00:00+09:00",
-      "queue_commit_sha": "787ed80c887d1bfbd8d4fdf050ed871a461da45c"
+      "last_validated_at": "2026-11-13T13:13:36.918623+09:00",
+      "queue_commit_sha": "faf089eda9ad932d1b194d4ebf2583a1c570a692",
+      "new_entry_slot": "2026-11-14T12:00:00+09:00",
+      "new_entry_benefit_id": "SBA000000100",
+      "new_entry_char_count": 422
     },
     "history_audit": {
       "requested_days": 28,
-      "available_records": 34,
-      "through_slot": "2026-11-13T08:00:00+09:00",
-      "ledger_complete_verified": 34,
+      "available_records": 35,
+      "through_slot": "2026-11-13T12:00:00+09:00",
+      "ledger_complete_verified": 35,
       "duplicate_main_ids": 0,
       "duplicate_slots": 0,
-      "today_main_posts": 1,
+      "today_main_posts": 2,
       "pending": 0,
       "actual_scope": "Fresh durable ledger plus latest authenticated publisher receipt/log and artifact; historical present public rendering not independently rechecked.",
       "kst_date": "2026-11-13"
     },
     "metrics": {
-      "latest_observed_run_id": "43346432144",
+      "latest_observed_run_id": "43357569434",
       "new_metric_observations": 0,
       "previous_three_observations_already_saved": true,
       "cached_snapshot_digest_reverified": true,
@@ -1384,13 +1418,13 @@
       "seven_day_evaluation_due": false,
       "fourteen_day_evaluation_due": false,
       "previous_observations_already_saved": true,
-      "duplicate_window_discarded": {
-        "key": "18032141162693111:24h",
-        "observed_at": "2026-11-13T01:38:45.897961+00:00",
-        "first_observation_preserved": true,
-        "values_unchanged": true,
-        "artifact_id": 14001697472,
-        "artifact_digest": "sha256:61c8bdd538a9db76d80d158084704bc0c1e66505352fc517a137cdf4e2c8bc76"
+      "empty_snapshot": {
+        "observed_at": "2026-11-13T03:14:09.902955+00:00",
+        "records": 0,
+        "classification": "No eligible milestone at snapshot time, not collection failure.",
+        "artifact_id": 14007300430,
+        "artifact_digest": "sha256:0962d8465572df27a52b55c2bffa71ba468203660bf6963cb55090e0c158cdaa",
+        "digest_verified": true
       }
     },
     "recovery": {
@@ -1402,49 +1436,52 @@
       "code_change_required": false
     },
     "initial_41796747628_status": "resolved",
-    "next_condition": "Existing regular Actions consumes preserved READY. Nov13 noon evidence covers entire 12:00–14:00 KST grace window; verify fresh complete source at actual send. Re-review other entries before their individual expiry, Nov14 freshness not assumed. No recovery dispatch or extra publication."
+    "next_condition": "Existing Actions consumes preserved Nov13 16/20 and Nov14 08/12 READY. Refresh individual evidence before expiry and latest full source at actual send; tomorrow source freshness not assumed. No recovery dispatch required."
   },
   "last_reported_publication": {
-    "run_id": "43330421703",
+    "run_id": "43360384792",
     "run_attempt": 1,
     "status": "completed",
     "conclusion": "success",
-    "updated_at": "2026-11-12T23:38:41Z",
+    "updated_at": "2026-11-13T03:40:17Z",
     "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
-    "job_id": 131573429254,
-    "artifact_id": 13995131117,
-    "artifact_digest": "sha256:5899bb02040c7fea132209a82238894e3251f133fdfd00e5ae3afa4749854a09",
+    "job_id": 131672211424,
+    "artifact_id": 14007967291,
+    "artifact_digest": "sha256:9224c997d85c6f2e012528baef275a21d2720b7e8465eed64d86bf680cfd8d21",
     "classification": "verified_natural_publication",
     "event": "schedule",
     "published": true,
-    "slot": "2026-11-13T08:00:00+09:00",
-    "published_at": "2026-11-13T08:37:44.761537+09:00",
-    "benefit_id": "999000000004",
-    "main_id": "18131183578857421",
-    "url": "https://www.threads.com/@hid_1004/post/DfqQPC0EYxe",
+    "slot": "2026-11-13T12:00:00+09:00",
+    "published_at": "2026-11-13T12:39:24.842566+09:00",
+    "benefit_id": "135200005001",
+    "main_id": "18158110936524366",
+    "url": "https://www.threads.com/@hid_1004/post/Dfqr43MjQA7",
     "stage": "complete",
     "verified": true,
-    "content_hash": "cf1b783e08dfbd2fd44172399cb15348668aaecb911044cb3ece65e2cfd59000",
-    "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+    "content_hash": "a2e9daecf36f44c5105ad63515c88ce00698b83ecc7791b728a901a5b1616adb",
+    "asset_sha256": null,
     "source_generation": "gov24-43316327378-1",
-    "pattern": "P4",
-    "media_turn": "IMAGE",
-    "char_count": 436,
+    "pattern": "P3",
+    "media_turn": "TEXT",
+    "char_count": 446,
     "replies": 0,
     "verification": "Authenticated publisher permalink/body readback, original digest-verified receipt and exact READY body/media match.",
-    "verification_completed_at": "2026-11-13T00:12:49Z",
+    "verification_completed_at": "2026-11-13T04:15:46Z",
     "public_web_visibility_independently_verified": false,
-    "publication_ledger_records": 34,
+    "publication_ledger_records": 35,
     "pending": null,
     "lease": null,
     "job_logs_retrieved": true,
     "publisher_related_tests_passed": 130,
     "time_basis": {
       "published_at": "Ledger publisher invocation, not exact platform timestamp.",
-      "verified_result_logged_at": "2026-11-13T08:38:36.600941+09:00",
+      "verified_result_logged_at": "2026-11-13T12:40:12.193197+09:00",
       "platform_timestamp": null,
-      "public_report": "Publication confirmed Nov13 08:38 KST."
-    }
+      "public_report": "Publication confirmed Nov13 12:40 KST."
+    },
+    "latest_publication_previously_reported": false,
+    "new_publication_this_run": true,
+    "receipt_verified_again": true
   },
   "policy_changes": [
     {
@@ -1730,8 +1767,8 @@
     "platform_performance_metrics_available": false,
     "performance_effect_claim_allowed": false,
     "existing_safety_contract_precedence": true,
-    "last_ready_queue_readback_at": "2026-11-12T12:15:10.000+09:00",
-    "last_ready_queue_blob_sha": "e20e3d75d78d7dc2a944a421daa501dd0bc8b288"
+    "last_ready_queue_readback_at": "2026-11-13T04:15:46Z",
+    "last_ready_queue_blob_sha": "ed5512a6fd1d74994e59f56ff4f38bd5bcd593a0"
   },
   "last_no_update_check": {
     "checked_at": "2026-11-13T01:30:05Z",
@@ -4782,6 +4819,312 @@
         "low_views_after_normal_post": "Separate verified metrics from publication success; no penalty or account restriction inferred."
       },
       "next_condition": "Existing 08/12/16/20 regular slots only. Nov13 READY entries must pass genuine official re-review before evidence expires, latest source and hashes before actual send. Existing read-only milestone workflow collects due24h values; no replay, new scheduler, manual post or permission change."
+    },
+    "2026-11-13T04:15:46Z": {
+      "result": "verified_natural_publication_and_new_ready",
+      "publication": {
+        "run_id": "43360384792",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-13T03:40:17Z",
+        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
+        "job_id": 131672211424,
+        "artifact_id": 14007967291,
+        "artifact_digest": "sha256:9224c997d85c6f2e012528baef275a21d2720b7e8465eed64d86bf680cfd8d21",
+        "classification": "verified_natural_publication",
+        "event": "schedule",
+        "published": true,
+        "slot": "2026-11-13T12:00:00+09:00",
+        "published_at": "2026-11-13T12:39:24.842566+09:00",
+        "benefit_id": "135200005001",
+        "main_id": "18158110936524366",
+        "url": "https://www.threads.com/@hid_1004/post/Dfqr43MjQA7",
+        "stage": "complete",
+        "verified": true,
+        "content_hash": "a2e9daecf36f44c5105ad63515c88ce00698b83ecc7791b728a901a5b1616adb",
+        "asset_sha256": null,
+        "source_generation": "gov24-43316327378-1",
+        "pattern": "P3",
+        "media_turn": "TEXT",
+        "char_count": 446,
+        "replies": 0,
+        "verification": "Authenticated publisher permalink/body readback, original digest-verified receipt and exact READY body/media match.",
+        "verification_completed_at": "2026-11-13T04:15:46Z",
+        "public_web_visibility_independently_verified": false,
+        "publication_ledger_records": 35,
+        "pending": null,
+        "lease": null,
+        "job_logs_retrieved": true,
+        "publisher_related_tests_passed": 130,
+        "time_basis": {
+          "published_at": "Ledger publisher invocation, not exact platform timestamp.",
+          "verified_result_logged_at": "2026-11-13T12:40:12.193197+09:00",
+          "platform_timestamp": null,
+          "public_report": "Publication confirmed Nov13 12:40 KST."
+        },
+        "latest_publication_previously_reported": false,
+        "new_publication_this_run": true,
+        "receipt_verified_again": true
+      },
+      "writer": {
+        "new_entry": {
+          "slot": "2026-11-14T12:00:00+09:00",
+          "benefit_id": "SBA000000100",
+          "source_fingerprint": "e0fbe2aa412740c3c5ecfe89e2101abc95be7659fd16bb635e2094edf2868f4f",
+          "source_generation": "gov24-43316327378-1",
+          "prepared_at": "2026-11-13T13:13:35.343271+09:00",
+          "expires_at": "2026-11-14T13:13:35.343271+09:00",
+          "asset_sha256": null,
+          "writer": {
+            "schema_version": "supportpick.writer.v1",
+            "status": "READY",
+            "selected_program_id": "SBA000000100",
+            "post_text": "근로능력이 있는 18~64세 차상위계층이라면, 자활근로로 일자리와 자립에 필요한 경험을 쌓을 수 있어요. 먼저 소득인정액이 기준 중위소득 50% 이하인 비수급권자인지 확인해 보세요.\n\n조건부수급자는 우선 선정 대상이에요. 수급 유형과 근로능력 등을 판단한 뒤 상담을 거쳐 참여 사업단을 정하므로, 소득 조건만으로 참여가 확정되지는 않아요.\n\n2026년 하루 급여는 시장진입형 62,080원, 사회서비스형 53,840원, 근로유지형 29,940원이에요. 실제 근무일에는 실비 4,000원이 별도로 붙어요. 앞의 두 유형은 하루 8시간, 근로유지형은 5시간이며 주 5일 기준이에요.\n\n신청은 상시로 읍면동 주민센터나 시군구청에서 할 수 있어요. 상담할 때 본인 수급 유형과 참여 가능한 사업단, 근무조건을 함께 확인해 주세요.\n\n자세한 사항은 프로필링크 확인",
+            "draft_text": null,
+            "reply_texts": [],
+            "media": {
+              "turn": "TEXT",
+              "asset_id": null,
+              "check": "NOT_REQUIRED",
+              "image_copy": null,
+              "alt_text": null
+            },
+            "review": {
+              "planned_at": "2026-11-14T12:00:00+09:00",
+              "application_status": "ALWAYS",
+              "reader": "근로능력이 있는 18~64세 차상위 비수급권자 중 자활근로 참여 희망자",
+              "central_message": "자활근로는 차상위자의 자격·근로능력을 판단한 후 일자리 참여를 지원하며 급여와 실비를 구분한다.",
+              "pattern": "P5",
+              "selection_reason": "동일ID 누적조회수 내림차순과 최근35게시·기존3미래원고 중복을 제외했다. 높은 미선정사업의 이유·출처는selection_notes.",
+              "interest_basis": "OBSERVED_METRICS",
+              "duplicate_check": "CHECKED",
+              "evidence": [
+                {
+                  "source_id": "SBA000000100",
+                  "source_ref": "https://www.sdm.go.kr/welfare/lowincome/self.do",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-13T13:13:35.343271+09:00",
+                  "claims_supported": [
+                    "실제 자활사업 본문을 열어 18~64세, 근로능력, 차상위 소득인정액 중위50% 이하 비수급권자, 조건부수급 우선 및 판정→상담→선정 절차를 확인했다. 전국 공통 사업의 요건 대조이며 서대문 사업단의 빈자리를 전국에 보장하지 않는다.",
+                    "2026-01-01 기준 단가 표의 시장진입형62080/사회서비스53840/근로유지29940원, 실제근무일 실비4000 별도, 8시간/5시간·주5일을 확인했다. Gov24의66080/57840/33940원은 실비를 합산한 값으로 대조되고 본문은 급여와 실비를 분리한다."
+                  ]
+                },
+                {
+                  "source_id": "SBA000000100",
+                  "source_ref": "https://gm.go.kr/pt/partInfo/wf/wf01/workfare/PTMN476.jsp",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-13T13:13:35.343271+09:00",
+                  "claims_supported": [
+                    "공식 자활사업대상자 본문에서 조건부수급자 정의, 차상위자의 근로능력·소득인정액50%·비수급권자 기준을 직접 대조했다. 예외유형을 전부 포괄하는 원고가 아니라 위 독자층에 한정했다."
+                  ]
+                },
+                {
+                  "source_id": "SBA000000100",
+                  "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=167950&bnefType=all&svcId=SBA000000100",
+                  "access_method": "PROVIDED_OFFICIAL_TEXT",
+                  "verified_at": "2026-11-13T13:13:35.343271+09:00",
+                  "claims_supported": [
+                    "검증한 완전 수집본 gov24-43316327378-1 동일ID serviceList 누적조회수81856회, API checkedAt=2026-11-13T07:09:19.341053+09:00, collectionSucceededAt=2026-11-13T07:11:37.258822+09:00. 수집시각은 현재 접수 검증과 다르다.",
+                    "동일ID의 상시신청, 읍면동 주민센터·시군구청 방문신청, 직접일자리 지원, 유형별 시간·일단가를 원본 serviceDetail과 대조했다. source_only/applicationOpenVerified=false는 변경하지 않는다. 접수 거래·현장 정원 확인은 하지 않았다."
+                  ]
+                }
+              ],
+              "checks": {
+                "facts": "PASS",
+                "current_status": "PASS",
+                "eligibility_and_units": "PASS",
+                "cta_and_no_links": "PASS",
+                "length": "PASS",
+                "media": "NOT_REQUIRED"
+              },
+              "char_count": 422,
+              "count_method": "Python Unicode len including spaces, newlines and CTA",
+              "missing_info": [],
+              "hold_reasons": [],
+              "warnings": [
+                "상시신청은 상담·심사 경로이며 즉시 사업단배치·선정·지급 보장이 아니다. 다른 수급자·연령예외를 포괄하지 않는다.",
+                "보조금24 단가에 포함된 실비를 급여와 분리했다. 실제근무일 기준이며 월급·연급·확정수령액으로 환산하지 않는다.",
+                "현재 수집본은 내일12시까지 신선하지 않다. 실제게시시 최신완전수집본·동일ID사실·공식상태 재검증이 필요하다.",
+                "복지로 본문은 동적 페이지로 읽지 못했다. 직접 열린 서대문·광명 공식본문과 Gov24 동일ID원문을 사용했다. 서울시는2025급여여서 현재단가 근거로 쓰지 않았다."
+              ],
+              "reach_editorial": {
+                "policy_id": "supportpick-threads-reach-v1-20261109",
+                "core_question": "차상위계층인 나는 자활근로를 신청할 수 있고 어떤 일·급여 조건을 확인해야 하나요?",
+                "reader_scope": "근로능력이 있는 18~64세 차상위 비수급권자 중 자활근로 참여 희망자",
+                "angles": [
+                  "일을 통한 자립 경험",
+                  "차상위 자격 확인",
+                  "유형별 근무와 급여 구분"
+                ],
+                "chosen_angle": "차상위 본인 자격을 먼저 확인한 뒤 근무·신청 판단으로 연결",
+                "opening_candidates": [
+                  {
+                    "type": "생활 상황형",
+                    "group": "A",
+                    "text": "일할 기회를 찾는 18~64세 차상위계층이라면, 자활근로로 근로 경험을 쌓을 수 있어요."
+                  },
+                  {
+                    "type": "대상·혜택형",
+                    "group": "B",
+                    "text": "근로능력이 있는 18~64세 차상위계층이라면, 자활근로로 일자리와 자립에 필요한 경험을 쌓을 수 있어요. 먼저 소득인정액이 기준 중위소득 50% 이하인 비수급권자인지 확인해 보세요."
+                  },
+                  {
+                    "type": "조건 설명형",
+                    "group": null,
+                    "text": "자활근로를 희망하는 차상위자는 근로능력과 소득인정액 기준을 함께 확인해야 해요."
+                  }
+                ],
+                "chosen_opening": "근로능력이 있는 18~64세 차상위계층이라면, 자활근로로 일자리와 자립에 필요한 경험을 쌓을 수 있어요. 먼저 소득인정액이 기준 중위소득 50% 이하인 비수급권자인지 확인해 보세요.",
+                "opening_type": "대상·혜택형",
+                "cohort": "B",
+                "selection_reason": "첫 적용일11월10일의 날짜별 반전에 따라11월14일12시는B. 같은날08시P1A와 도입 및 전개가 다른 P5 자격체크. 최근20건의 질문과 도입을 대조했다.",
+                "history_posts_checked": 20,
+                "comparison_strata": {
+                  "geo": "전국",
+                  "benefit": "직접일자리·근로급여",
+                  "audience": "차상위 근로가능자",
+                  "application": "상시 상담신청",
+                  "media": "TEXT"
+                },
+                "comparison_group": "A2/B1 실제24h관측은 비교 가능한 사업쌍이 없고 교란이 있어 효과 판단·비중조정 보류. 기존CTA·시각·선정·교대 유지.",
+                "applied_elements": [
+                  "대상·근로경험을 먼저 제시",
+                  "소득인정액과 수급유형 체크",
+                  "급여와실비 분리",
+                  "조건확인 후 상시상담 경로"
+                ],
+                "profile_route": "승인된 읽기 범위에서 프로필링크·사이트 검색/상세/접수 기능은 확인하지 못해 보장하지 않는다. 공식 행정복지센터 경로만 안내한다.",
+                "source_recheck_required_at_publish": true
+              }
+            },
+            "next_history_record": {
+              "program_id": "SBA000000100",
+              "notice_version": "gov24-43316327378-1:자활근로2026",
+              "pattern": "P5",
+              "opening": "근로능력이 있는 18~64세 차상위계층이라면, 자활근로로 일자리와 자립에 필요한 경험을 쌓을 수 있어요. 먼저 소득인정액이 기준 중위소득 50% 이하인 비수급권자인지 확인해 보세요.",
+              "structure": "차상위 대상·근로경험 → 소득인정액·우선선정 → 유형별일급·실비·시간 → 상시상담경로 → CTA",
+              "media_turn": "TEXT"
+            }
+          }
+        },
+        "queue_blob_sha": "ed5512a6fd1d74994e59f56ff4f38bd5bcd593a0",
+        "queue_commit_sha": "faf089eda9ad932d1b194d4ebf2583a1c570a692",
+        "readback_equal": true,
+        "existing_entries_preserved": 32,
+        "validation": {
+          "checked_at": "2026-11-13T13:13:36.918623+09:00",
+          "preview_ready": 4,
+          "drafts": [
+            {
+              "slot": "2026-11-13T16:00:00+09:00",
+              "benefit_id": "172100000012",
+              "pattern": "P5",
+              "media_turn": "IMAGE",
+              "char_count": 401,
+              "last_valid_at": "2026-11-13T16:46:40+09:00",
+              "expires_at": "2026-11-13T16:46:41+09:00",
+              "current_source_fresh_at_slot": true,
+              "source_recheck_required_at_publish": true,
+              "selection_rank": 28,
+              "source_fingerprint_matches": true
+            },
+            {
+              "slot": "2026-11-13T20:00:00+09:00",
+              "benefit_id": "628000000744",
+              "pattern": "P6",
+              "media_turn": "TEXT",
+              "char_count": 463,
+              "last_valid_at": "2026-11-13T20:53:29.387765+09:00",
+              "expires_at": "2026-11-13T20:53:30.387765+09:00",
+              "current_source_fresh_at_slot": true,
+              "source_recheck_required_at_publish": true,
+              "selection_rank": 29,
+              "source_fingerprint_matches": true
+            },
+            {
+              "slot": "2026-11-14T08:00:00+09:00",
+              "benefit_id": "149200005002",
+              "pattern": "P1",
+              "media_turn": "IMAGE",
+              "char_count": 414,
+              "last_valid_at": "2026-11-14T09:10:52+09:00",
+              "expires_at": "2026-11-14T00:10:53.000Z",
+              "current_source_fresh_at_slot": false,
+              "source_recheck_required_at_publish": true,
+              "selection_rank": 29,
+              "source_fingerprint_matches": true
+            },
+            {
+              "slot": "2026-11-14T12:00:00+09:00",
+              "benefit_id": "SBA000000100",
+              "pattern": "P5",
+              "media_turn": "TEXT",
+              "char_count": 422,
+              "last_valid_at": "2026-11-14T13:13:34.343271+09:00",
+              "expires_at": "2026-11-14T13:13:35.343271+09:00",
+              "current_source_fresh_at_slot": false,
+              "source_recheck_required_at_publish": true,
+              "selection_rank": 31,
+              "source_fingerprint_matches": true
+            }
+          ],
+          "source": {
+            "count": 10942,
+            "generation": "gov24-43316327378-1",
+            "lastSuccessAt": "2026-11-13T07:11:37.258822+09:00",
+            "manifestSha256": "a5e0a5ed307be1b00f3d33d97173d99d2fbeb06e8288e1f9e7e78f5e84b0461f",
+            "path": "snapshots/gov24-43316327378-1",
+            "version": 1
+          },
+          "recent_history_count": 20,
+          "receipt_verified": true,
+          "expired_unpublished_slots": []
+        }
+      },
+      "changed_run_versions": [
+        {
+          "run_id": "43360384792",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-13T03:40:17Z",
+          "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+        },
+        {
+          "run_id": "43357569434",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-13T03:14:13Z",
+          "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+        }
+      ],
+      "metrics": {
+        "latest_observed_run_id": "43357569434",
+        "new_metric_observations": 0,
+        "previous_three_observations_already_saved": true,
+        "cached_snapshot_digest_reverified": true,
+        "job_logs_retrieved_this_run": true,
+        "id_window_deduplication": true,
+        "observations_24h": 3,
+        "A_n": 2,
+        "B_n": 1,
+        "matched_comparison_pairs": 0,
+        "comparison_deferred": true,
+        "weights_unchanged": true,
+        "seven_day_evaluation_due": false,
+        "fourteen_day_evaluation_due": false,
+        "previous_observations_already_saved": true,
+        "empty_snapshot": {
+          "observed_at": "2026-11-13T03:14:09.902955+00:00",
+          "records": 0,
+          "classification": "No eligible milestone at snapshot time, not collection failure.",
+          "artifact_id": 14007300430,
+          "artifact_digest": "sha256:0962d8465572df27a52b55c2bffa71ba468203660bf6963cb55090e0c158cdaa",
+          "digest_verified": true
+        }
+      }
     }
   }
 }
