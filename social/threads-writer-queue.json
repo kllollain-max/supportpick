@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-13T19:50:05.710139+09:00",
+  "prepared_at": "2026-11-13T20:50:06.111108+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -501,6 +501,36 @@
       "sources": [
         "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_01&ttab1=3",
         "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999257&bnefType=all&svcId=999000000090"
+      ]
+    },
+    {
+      "benefit_id": "134200005002",
+      "views": 79152,
+      "decision": "HOLD",
+      "reason": "동일ID원본2026년2학기1·2차신청종료. 직접연한국장학재단Ⅱ유형 현재화면은8월12일~9월9일 일정이며11월14일유효한신규접수를확인하지못해HOLD. 제도전체종료는아니다.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900001&bnefType=all&svcId=134200005002",
+        "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_02"
+      ]
+    },
+    {
+      "benefit_id": "SD0000007429",
+      "views": 73484,
+      "decision": "HOLD",
+      "reason": "자금별상이이며소상공인정책자금 공식메인 직접열람은읽을본문0줄. 현재특정자금신규접수·금리·상환·예산을함께검증하지못해HOLD. 수집성공을접수가능으로대체하지않는다.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=39748&bnefType=all&svcId=SD0000007429",
+        "https://ols.semas.or.kr/"
+      ]
+    },
+    {
+      "benefit_id": "148000000007",
+      "views": 73395,
+      "decision": "HOLD",
+      "reason": "동일ID는각지자체공고참조. 직접연경기도공식안내에서자격·한도는확인했으나11월14일신규접수가능한특정지역공고·잔여예산을확정하지못해HOLD. 제도전체종료아님.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=558379&bnefType=all&svcId=148000000007",
+        "https://www.gg.go.kr/contents/contents.do?ciIdx=884&menuId=2559"
       ]
     }
   ],
@@ -4820,6 +4850,144 @@
           "opening": "아이의 학습 준비 비용이 부담된다면, 소득인정액이 기준 중위소득 50% 이하인 가구의 초·중·고 학생은 교육급여 교육활동지원비를 확인해 보세요. 학생 1명당 연 1회 바우처로 지원해요.",
           "structure": "생활상황·소득조건·바우처 → 학제별연액목록 → 급여신청선정 → 별도바우처신청·사용기한 → 용도제한 → CTA",
           "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-14T20:00:00+09:00",
+      "benefit_id": "645000000114",
+      "source_fingerprint": "8d1e1328fcdce49c0a5184c7b7172fe3af41fa3a173bc81ed38f3561537bdfa1",
+      "source_generation": "gov24-43408141820-1",
+      "prepared_at": "2026-11-13T20:50:06.111108+09:00",
+      "expires_at": "2026-11-14T20:50:06.111108+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "645000000114",
+        "post_text": "전북 군산에 주민등록을 둔 시민은 별도 가입 절차 없이 시민안전보험에 자동 가입돼요. 등록외국인도 포함되며 보험료는 시가 부담해요.\n\n사고를 당했다면 먼저 사고일의 보장 항목과 한도를 확인해요. 자동 가입과 보험금 청구는 별개예요. 모든 사고나 병원비가 보장되는 것은 아니에요.\n\n2026년 군산 보험의 보장기간은 2월 20일부터 2027년 2월 19일까지예요. 전출하면 자동 해지되므로 사고 당시 주소와 적용 기간을 확인해야 해요.\n\n다음은 보험사에 문의해 청구서와 필요한 증빙서류를 준비해요. 피해 시민이나 법정상속인이 보험사에 직접 청구하며, 사고일로부터 3년 이내 신청할 수 있어요. 심사를 거쳐 지급해요.\n\n개인 상해보험과 중복 보장이 가능하지만 항목별 조건이 있어요. 전북의 다른 시·군은 보장 항목과 한도가 다르니 군산 기준을 그대로 적용하지 마세요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-14T20:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "전북 군산에 주민등록을 둔 시민과 등록외국인 중 사고보험 청구를 확인하려는 독자",
+          "central_message": "군산시가보험료를부담하는자동가입제도와사고후별도청구순서를구분한다.",
+          "pattern": "P6",
+          "selection_reason": "실제37게시·기존미래READY3개 중복제외, 동일ID누적조회수 내림차순. 더높은후보HOLD/SKIP은selection_notes에ID·출처·이유기록.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "645000000114",
+              "source_ref": "https://www.gunsan.go.kr/main/m2560",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-13T20:50:06.111108+09:00",
+              "claims_supported": [
+                "군산시 공식2026 본문을 직접 열어 보장기간2026-02-20~2027-02-19, 주민등록 시민·등록외국인 자동가입과 시보험료부담, 전출해지, 피해시민/법정상속인의 보험사직접청구·사고일부터3년, 문의→서류→청구→심사→지급 절차, 항목별한도·개인상해보험 중복가능을 대조했다. 보장표를 확인했으나 개별금액·확정지급은 본문에 쓰지 않는다. 웹읽기 응답은3주전 크롤표시이며 명시된2026보험기간에 근거, 실제신청거래·개별보장 심사를 확인한 것은 아니다."
+              ]
+            },
+            {
+              "source_id": "645000000114",
+              "source_ref": "https://www.jeonbuk.go.kr/newsroom/board/view.jeonbuk?boardId=BBS_0000090&dataSid=656596&menuCd=DOM_000001101000000000&orderBy=REGISTER_DATE%3ADESC&paging=ok&startPage=126",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-13T20:50:06.111108+09:00",
+              "claims_supported": [
+                "전북도2026-04-06 공식본문 직접열람. 도민안전보험이 시군시민안전보험으로 운영됨, 주민등록 도민·등록외국인 자동적용, 사고일부터3년청구와심사, 시군별보장항목·한도 차이를 대조했다. 같은645000000114 사업의 군산운영 사례에 한정했고 다른시군금액·현재계약을 일반화하지 않는다."
+              ]
+            },
+            {
+              "source_id": "645000000114",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002829&bnefType=all&svcId=645000000114",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-13T20:50:06.111108+09:00",
+              "claims_supported": [
+                "최신완전수집본gov24-43408141820-1 동일ID 원본 serviceList 조회수73385회, 전북도민 대상·시군별 상이·재난부서문의 안내를 실제대조했다. API checkedAt=2026-11-13T19:22:49.288612+09:00, 수집완료=2026-11-13T19:25:28.440628+09:00를 웹열람시각과 구분하며 source_only를 현재보장 검증으로 바꾸지 않는다."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 445,
+          "count_method": "Python Unicode len including spaces newlines CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "전북도민사업중군산만소개한다. 다른시군보장·한도일반화금지. 시가보험료를부담하며보험금확정지원이아니다.",
+            "사고일에해당하는계약·약관·면책과서류는보험사확인, 본문에개별보장금액을포괄확정하지않는다.",
+            "현재수집본은내일20시까지신선하지않다. 발송시최신완전수집본·동일ID사실·공식기간·정정과Evidence를재검증한다.",
+            "TEXT교대회차. 실제플랫폼·접수거래·사이트기능을추정하지않는다."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "군산 시민안전보험은 자동가입 뒤 보험금을 어떤 순서로 청구하나요?",
+            "reader_scope": "전북 군산에 주민등록을 둔 시민과 등록외국인 중 사고보험 청구를 확인하려는 독자",
+            "angles": [
+              "사고뒤 비용부담",
+              "주민등록과자동가입·기간조건",
+              "보험사문의와서류·청구준비"
+            ],
+            "chosen_angle": "대상·보험료부담을 먼저 알리고 자동가입과별도청구를 구분한 준비절차",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "사고 뒤 비용이 걱정되는 군산 시민이라면, 시가 보험료를 부담하는 시민안전보험의 보장 항목을 확인해 보세요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "전북 군산에 주민등록을 둔 시민은 별도 가입 절차 없이 시민안전보험에 자동 가입돼요. 등록외국인도 포함되며 보험료는 시가 부담해요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "군산 시민안전보험은 주민등록으로 자동 가입되지만, 보험금은 사고 뒤 별도로 청구해야 해요."
+              }
+            ],
+            "chosen_opening": "전북 군산에 주민등록을 둔 시민은 별도 가입 절차 없이 시민안전보험에 자동 가입돼요. 등록외국인도 포함되며 보험료는 시가 부담해요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "첫적용11월10일 기준11월14일20시는B. 같은날 P1·P5·P8 READY를 보존하고 P6 청구준비순서로4개서로다른패턴. 최근20게시와미래READY의 도입·전개비교. 보험료지원과보험금청구를 분리해 구체지역조건 전달.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전북 군산",
+              "benefit": "지자체보험 보장",
+              "audience": "주민등록시민·등록외국인",
+              "application": "사고후청구3년",
+              "media": "TEXT"
+            },
+            "comparison_group": "A3/B2 실제24h·유사사업비교쌍0. 표본부족·독자지역혜택시간미디어교란으로 효과판단·비중조정 보류. 기존비교군 유지.",
+            "applied_elements": [
+              "군산대상·시보험료부담 먼저",
+              "자동가입과청구 구분",
+              "보장기간·주소확인",
+              "보험사문의→서류→청구→심사"
+            ],
+            "profile_route": "프로필링크 및 사이트 검색·상세·신청기능은 승인된읽기범위에서 확인하지못해 보장하지않는다. 공식보험청구경로만 안내.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "645000000114",
+          "notice_version": "gov24-43408141820-1:군산안전보험2026",
+          "pattern": "P6",
+          "opening": "전북 군산에 주민등록을 둔 시민은 별도 가입 절차 없이 시민안전보험에 자동 가입돼요. 등록외국인도 포함되며 보험료는 시가 부담해요.",
+          "structure": "군산대상·보험료→자동가입과청구구분→기간·주소→문의·서류·청구·심사→중복·시군차이→CTA",
+          "media_turn": "TEXT"
         }
       }
     }
