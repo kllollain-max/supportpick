@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-13T06:08:21+09:00",
+  "prepared_at": "2026-11-13T00:10:53+00:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -4331,6 +4331,183 @@
           "opening": "출산 뒤 조리비가 걱정되는 인천의 기초생활수급자·차상위 산모라면, 맘편한 산후조리비로 산모 1인당 150만 원의 인천e음 포인트를 지원받을 수 있어요.",
           "structure": "생활 상황·인천 수급/차상위·포인트 → 거주와 개별기한 → 교육·서류·본인 신청 준비 → 사용범위·중복제한·지급지연 → CTA",
           "media_turn": "TEXT"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-14T08:00:00+09:00",
+      "benefit_id": "149200005002",
+      "source_fingerprint": "ea7bdead69d285829ef09a7addfeaaafc836adb1a1df31f7d7783d323aaf5aa4",
+      "source_generation": "gov24-43316327378-1",
+      "prepared_at": "2026-11-13T00:10:53+00:00",
+      "expires_at": "2026-11-14T00:10:53.000Z",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "149200005002",
+        "post_text": "먼 지역으로 면접을 가며 교통비가 부담된다면, 구직급여 수급자격자는 고용센터 소개로 편도 25km 이상 떨어진 사업장에 구직활동을 할 때 광역구직활동비를 받을 수 있어요.\n\n거리만 충족하면 자동 지급되는 건 아니에요. 고용센터장이 지급 필요성을 인정해야 하고, 방문 사업주가 비용을 주지 않았거나 지급액이 지원 기준보다 적어야 해요.\n\n운임은 교통수단별 중등급 실비 기준으로 계산해요. 숙박은 필요하다고 인정된 경우에만 정해진 기준으로 지원하며, 사업주에게 받은 비용은 공제돼요.\n\n구직활동이 끝난 날부터 14일 이내에 청구서를 신청지 관할 고용센터에 제출해요. 운임·숙박료 영수증 등 증빙도 준비해 주세요.\n\n출발 전에는 고용센터 소개 여부와 거리 산정, 비용 인정 범위를 담당 센터에 확인해 두면 좋아요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-14T08:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "고용센터 소개로 먼 사업장에 구직활동을 하는 구직급여 수급자격자",
+          "central_message": "면접 이동비 지원은 센터 소개·거리·필요성·사업주 비용과 14일 청구기한을 함께 확인한다.",
+          "pattern": "P1",
+          "selection_reason": "동일ID 누적조회수 내림차순, 실제게시34건과 기존미래READY3건 중복 제외. 더 높은 미선정 사업의 HOLD/SKIP 사유와 출처는selection_notes에 보존한다.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "149200005002",
+              "source_ref": "https://ei.work24.go.kr/ei/eim/eg/ei/eiEminsr/retrievePb0201Info.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-13T00:10:53+00:00",
+              "claims_supported": [
+                "고용보험 공식 본문을 실제 열람해 직업안정기관장 소개와 편도25km 이상 기준을 확인했다. 검색 캐시의50km 문구는 실제 열린 본문의25km와 달라 채택하지 않았다. 현재 법령과 동일 ID 원본도25km다."
+              ]
+            },
+            {
+              "source_id": "149200005002",
+              "source_ref": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000387",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-13T00:10:53+00:00",
+              "claims_supported": [
+                "고용24 실제 제도 본문의 취업촉진수당 부분에서 고용센터 소개에 따른 광역 구직활동 및 센터장의 필요성 인정 시 교통비·숙박료 지원을 확인했다. 다른 일반 실업급여의 수급자격을 본 사업 조건으로 추가하지 않았다."
+              ]
+            },
+            {
+              "source_id": "149200005002",
+              "source_ref": "https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=106217",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-13T00:10:53+00:00",
+              "claims_supported": [
+                "현행 시행2026-09-18 고용보험법 시행규칙111조를 실제 열어25km·교통수단 중등급 실비·숙박필요성·사업주 지급비용 공제를 대조했다."
+              ]
+            },
+            {
+              "source_id": "149200005002",
+              "source_ref": "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0112&lsiSeq=288723&urlMode=lsScJoRltInfoR",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-13T00:10:53+00:00",
+              "claims_supported": [
+                "현행 시행규칙112조 실제본문에서 종료후14일 이내 청구서 제출, 운임·숙박료 영수증 등 증빙을 대조했다. 현재 요건을 갖춘 수급자격자는 개별기한 안에 신청 가능하며 고정 모집기간·선정확정으로 표현하지 않았다."
+              ]
+            },
+            {
+              "source_id": "149200005002",
+              "source_ref": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=3&cciNo=1&cnpClsNo=3&csmSeq=722&popMenu=ov",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-13T00:10:53+00:00",
+              "claims_supported": [
+                "2026-10-15 기준 법제처 생활법령 본문 실제열람. 수급자격·사업주비용 미지급 또는기준미달·통상거리25km·신청지관할센터·정해진 기준의 실비·숙박 필요 인정·계좌지급을 교차대조했다. 2026-11-27 시행예정 주석은 현재 시행으로 적용하지 않았다."
+              ]
+            },
+            {
+              "source_id": "149200005002",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999015&bnefType=all&svcId=149200005002",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-13T00:10:53+00:00",
+              "claims_supported": [
+                "완전 검증 gov24-43316327378-1 동일ID raw serviceList.조회수84943 누적. API checkedAt=2026-11-13T07:06:49.078800+09:00, collectionSucceededAt=2026-11-13T07:11:37.258822+09:00로 실제공식 열람과 구분한다.",
+                "동일ID serviceDetail의 교통비·숙박료·14일기한·청구서·증빙을 대조했다. source_only와 applicationOpenVerified=false는 유지하며 현재 이용은 현행법령과 담당기관 본문으로 검수했다."
+              ]
+            },
+            {
+              "source_id": "149200005002",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-13T00:10:53+00:00",
+              "claims_supported": [
+                "2026-11-13 09:09 KST main 허용PNG 바이트 실제다운로드·SHA-256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a 재계산. social/image-review.json의2026-11-06 시각검수 PASS와 일치. 1254×1254 브랜드 이미지로 사업별금액·기간·대상문구 없음. 기존360px가독성 검수근거 유지. 오늘 새 직접시각검수는 하지 않았다."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 414,
+          "count_method": "Python Unicode len including spaces, newlines and CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "개별 인정과 증빙에 따라 지급 여부·금액이 달라지며 모든 면접·숙박비를 보장하지 않는다. 부득이한 사유의 기한 예외는 관할센터 확인사항이다.",
+            "법령·실제고용보험본문은25km다. 검색 캐시의50km와 실제본문 차이는 현재 직접열람·현행법으로 해소했다.",
+            "현재 수집본은 내일08시 실제 발송까지 신선하지 않다. 발송 전 최신완전수집본·fingerprint·공식상태 재검증이 필요하다.",
+            "증빙과 원고는 최대24시간 유효하다. 내일08~10시 지연창 후반에는 새 공식재검수가 필요하며 날짜만 바꿔 연장하지 않는다.",
+            "승인 이미지 미검수·불일치 때TEXT로 바꾸지 않는다. 앞 미전송 시 아직 미예약인 미래교대를 다시 계산한다.",
+            "실제프로필·지원금픽검색·상세·신청거래는 확인하지 못해 보장하지 않는다. A/B 표본은 부족하고 사업·미디어 교란이 있어 효과판단·비중조정은 보류한다."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "고용센터 소개로 먼 곳에 면접을 가는 구직자는 어떤 이동비를 어떤 조건과 기한으로 청구하나요?",
+            "reader_scope": "구직급여 수급자격자 중 센터 소개로 편도25km 이상 사업장에 구직활동하는 사람",
+            "angles": [
+              "면접 이동 지출 부담",
+              "센터 소개·거리·사업주비용 자격",
+              "영수증과14일 청구 준비"
+            ],
+            "chosen_angle": "실제면접 이동비 부담에서 출발해 지원조건과 청구기한으로 답한다.",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "먼 지역으로 면접을 가며 교통비가 부담된다면, 구직급여 수급자격자는 고용센터 소개로 편도 25km 이상 떨어진 사업장에 구직활동을 할 때 광역구직활동비를 받을 수 있어요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "고용센터 소개로 편도25km 이상 떨어진 사업장에 구직활동을 하는 구직급여 수급자격자는, 필요성을 인정받으면 교통비와 숙박료를 지원받을 수 있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "광역구직활동비는 고용센터 소개와 편도25km 이상 거리, 비용 인정요건을 함께 확인해야 받을 수 있어요."
+              }
+            ],
+            "chosen_opening": "먼 지역으로 면접을 가며 교통비가 부담된다면, 구직급여 수급자격자는 고용센터 소개로 편도 25km 이상 떨어진 사업장에 구직활동을 할 때 광역구직활동비를 받을 수 있어요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "첫적용11월10일 배정을 날짜별 반전하면11월14일08시는A. 최근실제20건·미래3건 도입전개를 대조해 P1의 이동지출 상황을 사용했다. 전날08시P4 임금보전과 다른 질문·순서다.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국",
+              "benefit": "구직활동 실비",
+              "audience": "구직급여 수급자격자",
+              "application": "개별 종료후14일",
+              "media": "IMAGE"
+            },
+            "comparison_group": "유사대상·혜택·기한의 A/B24시간 관측만 비교. 현재 일치비교쌍 없음. 시간·미디어·지역·사업차이를 교란으로 기록한다.",
+            "applied_elements": [
+              "첫1~2줄 대상·실익·센터소개·25km",
+              "P1 이동비부담",
+              "필요성·사업주비용 제한",
+              "인정실비·영수증·14일"
+            ],
+            "profile_route": "실제프로필·사이트내사업검색·상세·접수기능 미확인. 공식센터청구경로만 설명한다.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "149200005002",
+          "notice_version": "gov24-43316327378-1:고용보험법시행규칙20260918",
+          "pattern": "P1",
+          "opening": "먼 지역으로 면접을 가며 교통비가 부담된다면, 구직급여 수급자격자는 고용센터 소개로 편도 25km 이상 떨어진 사업장에 구직활동을 할 때 광역구직활동비를 받을 수 있어요.",
+          "structure": "면접이동비부담·대상 → 소개·거리·비용제한 → 운임·숙박 인정범위 → 14일기한·증빙 → 출발전확인 → CTA",
+          "media_turn": "IMAGE"
         }
       }
     }
