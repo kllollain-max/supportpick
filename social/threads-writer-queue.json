@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-13T02:26:47Z",
+  "prepared_at": "2026-11-13T13:13:35.343271+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -475,6 +475,23 @@
         "gov24": "PROVIDED_OFFICIAL_TEXT",
         "fsc": "OPENED_OFFICIAL"
       }
+    },
+    {
+      "benefit_id": "999000000026",
+      "decision": "HOLD",
+      "reason": "원본은 접수기관별 상이이며 특정지역 현재 모집기간·자격 공고를 확보하지 못했다. 마이홈 공식 제도안내 직접열람도 timeout으로 현재 접수를 확정하지 않고 HOLD한다. 제도전체 종료는 아니다.",
+      "sources": [
+        "https://www.myhome.go.kr/hws/portal/cont/selectHappyHouseView.do"
+      ]
+    },
+    {
+      "benefit_id": "337000000013",
+      "decision": "HOLD",
+      "reason": "API·복지부 상설안내는 월6000원이지만2025 제도개선 공식검색자료에는12000원이 있다. 복지로 직접본문은 읽히지 않고 현재적용액 충돌을 해소하지 못해 HOLD한다. 날짜·수집신선도로 금액을 확정하지 않는다.",
+      "sources": [
+        "https://www.mohw.go.kr/menu.es?mid=a10708030300",
+        "https://paldal.suwon.go.kr/bbsplus/view.asp?bd_gubn=20&code=tbl_bbs_sub200510&dong_gubn=&menuid=&mnuflag=&no=MTUxMTkg&page=15"
+      ]
     }
   ],
   "entries": [
@@ -4508,6 +4525,146 @@
           "opening": "먼 지역으로 면접을 가며 교통비가 부담된다면, 구직급여 수급자격자는 고용센터 소개로 편도 25km 이상 떨어진 사업장에 구직활동을 할 때 광역구직활동비를 받을 수 있어요.",
           "structure": "면접이동비부담·대상 → 소개·거리·비용제한 → 운임·숙박 인정범위 → 14일기한·증빙 → 출발전확인 → CTA",
           "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-14T12:00:00+09:00",
+      "benefit_id": "SBA000000100",
+      "source_fingerprint": "e0fbe2aa412740c3c5ecfe89e2101abc95be7659fd16bb635e2094edf2868f4f",
+      "source_generation": "gov24-43316327378-1",
+      "prepared_at": "2026-11-13T13:13:35.343271+09:00",
+      "expires_at": "2026-11-14T13:13:35.343271+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "SBA000000100",
+        "post_text": "근로능력이 있는 18~64세 차상위계층이라면, 자활근로로 일자리와 자립에 필요한 경험을 쌓을 수 있어요. 먼저 소득인정액이 기준 중위소득 50% 이하인 비수급권자인지 확인해 보세요.\n\n조건부수급자는 우선 선정 대상이에요. 수급 유형과 근로능력 등을 판단한 뒤 상담을 거쳐 참여 사업단을 정하므로, 소득 조건만으로 참여가 확정되지는 않아요.\n\n2026년 하루 급여는 시장진입형 62,080원, 사회서비스형 53,840원, 근로유지형 29,940원이에요. 실제 근무일에는 실비 4,000원이 별도로 붙어요. 앞의 두 유형은 하루 8시간, 근로유지형은 5시간이며 주 5일 기준이에요.\n\n신청은 상시로 읍면동 주민센터나 시군구청에서 할 수 있어요. 상담할 때 본인 수급 유형과 참여 가능한 사업단, 근무조건을 함께 확인해 주세요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-14T12:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "근로능력이 있는 18~64세 차상위 비수급권자 중 자활근로 참여 희망자",
+          "central_message": "자활근로는 차상위자의 자격·근로능력을 판단한 후 일자리 참여를 지원하며 급여와 실비를 구분한다.",
+          "pattern": "P5",
+          "selection_reason": "동일ID 누적조회수 내림차순과 최근35게시·기존3미래원고 중복을 제외했다. 높은 미선정사업의 이유·출처는selection_notes.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "SBA000000100",
+              "source_ref": "https://www.sdm.go.kr/welfare/lowincome/self.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-13T13:13:35.343271+09:00",
+              "claims_supported": [
+                "실제 자활사업 본문을 열어 18~64세, 근로능력, 차상위 소득인정액 중위50% 이하 비수급권자, 조건부수급 우선 및 판정→상담→선정 절차를 확인했다. 전국 공통 사업의 요건 대조이며 서대문 사업단의 빈자리를 전국에 보장하지 않는다.",
+                "2026-01-01 기준 단가 표의 시장진입형62080/사회서비스53840/근로유지29940원, 실제근무일 실비4000 별도, 8시간/5시간·주5일을 확인했다. Gov24의66080/57840/33940원은 실비를 합산한 값으로 대조되고 본문은 급여와 실비를 분리한다."
+              ]
+            },
+            {
+              "source_id": "SBA000000100",
+              "source_ref": "https://gm.go.kr/pt/partInfo/wf/wf01/workfare/PTMN476.jsp",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-13T13:13:35.343271+09:00",
+              "claims_supported": [
+                "공식 자활사업대상자 본문에서 조건부수급자 정의, 차상위자의 근로능력·소득인정액50%·비수급권자 기준을 직접 대조했다. 예외유형을 전부 포괄하는 원고가 아니라 위 독자층에 한정했다."
+              ]
+            },
+            {
+              "source_id": "SBA000000100",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=167950&bnefType=all&svcId=SBA000000100",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-13T13:13:35.343271+09:00",
+              "claims_supported": [
+                "검증한 완전 수집본 gov24-43316327378-1 동일ID serviceList 누적조회수81856회, API checkedAt=2026-11-13T07:09:19.341053+09:00, collectionSucceededAt=2026-11-13T07:11:37.258822+09:00. 수집시각은 현재 접수 검증과 다르다.",
+                "동일ID의 상시신청, 읍면동 주민센터·시군구청 방문신청, 직접일자리 지원, 유형별 시간·일단가를 원본 serviceDetail과 대조했다. source_only/applicationOpenVerified=false는 변경하지 않는다. 접수 거래·현장 정원 확인은 하지 않았다."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 422,
+          "count_method": "Python Unicode len including spaces, newlines and CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "상시신청은 상담·심사 경로이며 즉시 사업단배치·선정·지급 보장이 아니다. 다른 수급자·연령예외를 포괄하지 않는다.",
+            "보조금24 단가에 포함된 실비를 급여와 분리했다. 실제근무일 기준이며 월급·연급·확정수령액으로 환산하지 않는다.",
+            "현재 수집본은 내일12시까지 신선하지 않다. 실제게시시 최신완전수집본·동일ID사실·공식상태 재검증이 필요하다.",
+            "복지로 본문은 동적 페이지로 읽지 못했다. 직접 열린 서대문·광명 공식본문과 Gov24 동일ID원문을 사용했다. 서울시는2025급여여서 현재단가 근거로 쓰지 않았다."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "차상위계층인 나는 자활근로를 신청할 수 있고 어떤 일·급여 조건을 확인해야 하나요?",
+            "reader_scope": "근로능력이 있는 18~64세 차상위 비수급권자 중 자활근로 참여 희망자",
+            "angles": [
+              "일을 통한 자립 경험",
+              "차상위 자격 확인",
+              "유형별 근무와 급여 구분"
+            ],
+            "chosen_angle": "차상위 본인 자격을 먼저 확인한 뒤 근무·신청 판단으로 연결",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "일할 기회를 찾는 18~64세 차상위계층이라면, 자활근로로 근로 경험을 쌓을 수 있어요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "근로능력이 있는 18~64세 차상위계층이라면, 자활근로로 일자리와 자립에 필요한 경험을 쌓을 수 있어요. 먼저 소득인정액이 기준 중위소득 50% 이하인 비수급권자인지 확인해 보세요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "자활근로를 희망하는 차상위자는 근로능력과 소득인정액 기준을 함께 확인해야 해요."
+              }
+            ],
+            "chosen_opening": "근로능력이 있는 18~64세 차상위계층이라면, 자활근로로 일자리와 자립에 필요한 경험을 쌓을 수 있어요. 먼저 소득인정액이 기준 중위소득 50% 이하인 비수급권자인지 확인해 보세요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "첫 적용일11월10일의 날짜별 반전에 따라11월14일12시는B. 같은날08시P1A와 도입 및 전개가 다른 P5 자격체크. 최근20건의 질문과 도입을 대조했다.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국",
+              "benefit": "직접일자리·근로급여",
+              "audience": "차상위 근로가능자",
+              "application": "상시 상담신청",
+              "media": "TEXT"
+            },
+            "comparison_group": "A2/B1 실제24h관측은 비교 가능한 사업쌍이 없고 교란이 있어 효과 판단·비중조정 보류. 기존CTA·시각·선정·교대 유지.",
+            "applied_elements": [
+              "대상·근로경험을 먼저 제시",
+              "소득인정액과 수급유형 체크",
+              "급여와실비 분리",
+              "조건확인 후 상시상담 경로"
+            ],
+            "profile_route": "승인된 읽기 범위에서 프로필링크·사이트 검색/상세/접수 기능은 확인하지 못해 보장하지 않는다. 공식 행정복지센터 경로만 안내한다.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "SBA000000100",
+          "notice_version": "gov24-43316327378-1:자활근로2026",
+          "pattern": "P5",
+          "opening": "근로능력이 있는 18~64세 차상위계층이라면, 자활근로로 일자리와 자립에 필요한 경험을 쌓을 수 있어요. 먼저 소득인정액이 기준 중위소득 50% 이하인 비수급권자인지 확인해 보세요.",
+          "structure": "차상위 대상·근로경험 → 소득인정액·우선선정 → 유형별일급·실비·시간 → 상시상담경로 → CTA",
+          "media_turn": "TEXT"
         }
       }
     }
