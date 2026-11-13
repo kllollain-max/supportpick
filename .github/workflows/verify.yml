@@ -22,6 +22,10 @@ jobs:
       - run: node --test tests/*.test.cjs
       - name: Read-only editorial freshness and SEO fact review
         run: python tools/editorial_freshness_audit.py
+      - name: Check benefit guide source identity and document review gaps
+        run: python tools/benefit_guide_evidence_audit.py
+      - name: Create no-publish owner review queue
+        run: python -m tools.benefit_review_queue
       - run: python tools/build.py --output dist --public-base https://kllollain-max.github.io/supportpick/
       - run: python tools/verify_release.py --output dist
       - uses: actions/upload-artifact@v4
@@ -30,5 +34,7 @@ jobs:
           path: |
             dist/
             review-only/editorial-freshness.json
+            review-only/guide-source-audit.json
+            review-only/review-queue.json
           include-hidden-files: true
           retention-days: 3
