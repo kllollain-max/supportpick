@@ -108,7 +108,8 @@
     "43408141820",
     "43419124107",
     "43416380513",
-    "43424502223"
+    "43424502223",
+    "43435755010"
   ],
   "last_health": {
     "unresolved_publications": 0,
@@ -1247,6 +1248,13 @@
       "conclusion": "success",
       "updated_at": "2026-11-13T12:22:06Z",
       "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+    },
+    "43435755010": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-13T13:40:59Z",
+      "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
     }
   },
   "last_check": {
@@ -1803,16 +1811,25 @@
     "last_ready_queue_blob_sha": "f4ea5e0fb01dc19e93e0a765d61adebe72f71ea8"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-13T13:19:28.250Z",
+    "checked_at": "2026-11-13T14:22:39.366Z",
     "result": "no_update",
     "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
     "publication_ledger_sha": "f8fab355030df7d1a92b9960d69f6041bd1a3c65",
     "queue_blob_sha": "f4ea5e0fb01dc19e93e0a765d61adebe72f71ea8",
-    "maintenance_previous_blob_sha": "4bee5e5b7ee5205a27427bea27b67906efe0de20",
+    "maintenance_previous_blob_sha": "7f6aa70062484fd4fe07a5bf4ce9a73715f2ada8",
     "unresolved_publications": 0,
     "lease": null,
     "active_target_runs": [],
-    "changed_run_versions": [],
+    "changed_run_versions": [
+      {
+        "run_id": "43435755010",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-13T13:40:59Z",
+        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+      }
+    ],
     "run_pagination": {
       "branch": "main",
       "pages": 1,
@@ -1839,7 +1856,7 @@
       "regression_ci_tests_passed": 203,
       "fresh_at_check": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-13T13:19:28.250Z",
+      "verification_checked_at": "2026-11-13T14:22:39.366Z",
       "classification": "validated_complete_fresh_generation_public_content_unchanged",
       "public_generation": "gov24-43316327378-1",
       "public_retained_reason": "same_day_content_unchanged_public_generation_retained",
@@ -1875,7 +1892,7 @@
       "char_count": 463,
       "replies": 0,
       "verification": "Digest-verified actual result receipt and authenticated publisher verification log reconciled with exact original queued body, durable ledger content hash and no-image turn.",
-      "verification_completed_at": "2026-11-13T13:19:28.250Z",
+      "verification_completed_at": "2026-11-13T14:22:39.366Z",
       "public_web_visibility_independently_verified": false,
       "publication_ledger_records": 37,
       "pending": null,
@@ -1964,7 +1981,7 @@
         "future_existing_IMAGE_evidence_preserved": true,
         "new_visual_inspection": false
       },
-      "last_validated_at": "2026-11-13T22:18:39.494762+09:00",
+      "last_validated_at": "2026-11-13T23:21:29.483557+09:00",
       "queue_commit_sha": "25c0b18502f3ebab7a046034d4b019f03f867a39",
       "new_entries": 0
     },
@@ -1981,14 +1998,14 @@
       "kst_date": "2026-11-13"
     },
     "metrics": {
-      "latest_observed_run_id": "43424502223",
+      "latest_observed_run_id": "43435755010",
       "new_metric_observations": 0,
       "new_observation_keys": [],
       "id_window_deduplication": true,
-      "artifact_id": 14035348167,
-      "artifact_digest": "sha256:7c13d7ef9f1534e16913ca3e1b20401233aae67f3ea5309a4fd66ba1adecc0b1",
+      "artifact_id": 14043507122,
+      "artifact_digest": "sha256:c0dab47ce173d027fd0adacfdbb1ba1c441e103c3be80c5b80cfe1279d7a3890",
       "artifact_digest_verified": true,
-      "job_logs_retrieved_this_run": false,
+      "job_logs_retrieved_this_run": true,
       "observations_24h": 6,
       "A_n": 3,
       "B_n": 3,
@@ -1998,7 +2015,12 @@
       "seven_day_evaluation_due": false,
       "fourteen_day_evaluation_due": false,
       "historical_72h_168h_excluded_from_24h_comparison": true,
-      "note": "No changed insights run since stored 21:22KST snapshot. Existing A3/B3 data preserved; no matched pairs, no allocation change."
+      "note": "Repeated24h observation181views/1like unchanged. Original first24h snapshot preserved, no additional sample or report. A3/B3, matched0, weights unchanged.",
+      "duplicate_window_keys": [
+        "18038465675899354:24h"
+      ],
+      "first_observations_preserved": true,
+      "repeated_values_unchanged": true
     },
     "recovery": {
       "required": false,
@@ -3769,6 +3791,25 @@
           "published": false,
           "ledger_or_queue_mutated": false,
           "job_logs_retrieved": true
+        },
+        "43435755010": {
+          "run_id": "43435755010",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-13T13:40:59Z",
+          "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
+          "job_id": 131920282856,
+          "artifact_id": 14043507122,
+          "artifact_digest": "sha256:c0dab47ce173d027fd0adacfdbb1ba1c441e103c3be80c5b80cfe1279d7a3890",
+          "artifact_digest_verified": true,
+          "observed_at": "2026-11-13T13:40:55.396458+00:00",
+          "duplicate_window_keys": [
+            "18038465675899354:24h"
+          ],
+          "new_observations": 0,
+          "first_observations_preserved": true,
+          "repeated_values_unchanged": true
         }
       },
       "additional_connector_check": {
