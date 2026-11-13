@@ -1827,25 +1827,16 @@
     "last_ready_queue_blob_sha": "f4ea5e0fb01dc19e93e0a765d61adebe72f71ea8"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-13T17:10:31.575Z",
+    "checked_at": "2026-11-13T17:19:26.736Z",
     "result": "no_update",
     "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
     "publication_ledger_sha": "f8fab355030df7d1a92b9960d69f6041bd1a3c65",
     "queue_blob_sha": "f4ea5e0fb01dc19e93e0a765d61adebe72f71ea8",
-    "maintenance_previous_blob_sha": "61821b40c117390e25d9050f15af374ee76ed989",
+    "maintenance_previous_blob_sha": "0deb53b43a89f8e1f6fc29d795dba59d87f94b38",
     "unresolved_publications": 0,
     "lease": null,
     "active_target_runs": [],
-    "changed_run_versions": [
-      {
-        "run_id": "43461432228",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-13T16:18:52Z",
-        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
-      }
-    ],
+    "changed_run_versions": [],
     "run_pagination": {
       "branch": "main",
       "pages": 1,
@@ -1872,7 +1863,7 @@
       "regression_ci_tests_passed": 203,
       "fresh_at_check": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-13T17:10:31.575Z",
+      "verification_checked_at": "2026-11-13T17:19:26.736Z",
       "classification": "validated_complete_fresh_generation_public_content_unchanged",
       "public_generation": "gov24-43316327378-1",
       "public_retained_reason": "same_day_content_unchanged_public_generation_retained",
@@ -1908,7 +1899,7 @@
       "char_count": 463,
       "replies": 0,
       "verification": "Digest-verified actual result receipt and authenticated publisher verification log reconciled with exact original queued body, durable ledger content hash and no-image turn.",
-      "verification_completed_at": "2026-11-13T17:10:31.575Z",
+      "verification_completed_at": "2026-11-13T17:19:26.736Z",
       "public_web_visibility_independently_verified": false,
       "publication_ledger_records": 37,
       "pending": null,
@@ -1997,7 +1988,7 @@
         "future_existing_IMAGE_evidence_preserved": true,
         "new_visual_inspection": false
       },
-      "last_validated_at": "2026-11-14T02:09:06.706056+09:00",
+      "last_validated_at": "2026-11-14T02:18:58.592644+09:00",
       "queue_commit_sha": "25c0b18502f3ebab7a046034d4b019f03f867a39",
       "new_entries": 0
     },
@@ -2035,7 +2026,8 @@
       "empty_snapshot": {
         "observed_at": "2026-11-13T16:18:48.003568+00:00",
         "records": 0
-      }
+      },
+      "cached_artifact_digest_reverified": true
     },
     "recovery": {
       "required": false,
