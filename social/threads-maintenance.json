@@ -1162,41 +1162,33 @@
       "conclusion": "success",
       "updated_at": "2026-11-12T23:10:05Z",
       "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+    },
+    "43346432144": {
+      "run_id": "43346432144",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-13T01:38:51Z",
+      "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-13T00:12:49Z",
-    "result": "new_publication_draft_and_metrics",
+    "checked_at": "2026-11-13T02:28:12Z",
+    "result": "writer_evidence_revalidated",
     "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
     "publication_ledger_sha": "196789cbc3841e1e2056df590cddb39bbc452da3",
-    "queue_blob_sha": "414ef9345bb7649537557a82d018f1839a86e58c",
-    "maintenance_previous_blob_sha": "1a835195d55ffc58596b342ebde4bed8565120c0",
+    "queue_blob_sha": "8f1b967b11834dce695a5fb22321646ca243a95f",
+    "maintenance_previous_blob_sha": "a9d3bc83abcdd4609c75bea622f107568f2ab3c4",
     "unresolved_publications": 0,
     "lease": null,
     "active_target_runs": [],
     "changed_run_versions": [
       {
-        "run_id": "43334368634",
+        "run_id": "43346432144",
         "run_attempt": 1,
         "status": "completed",
         "conclusion": "success",
-        "updated_at": "2026-11-13T00:06:41Z",
-        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
-      },
-      {
-        "run_id": "43330421703",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-12T23:38:41Z",
-        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
-      },
-      {
-        "run_id": "43326468650",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-12T23:10:05Z",
+        "updated_at": "2026-11-13T01:38:51Z",
         "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
       }
     ],
@@ -1225,7 +1217,8 @@
       "regression_ci_tests_passed": 203,
       "fresh_at_check": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-12T22:43:18Z"
+      "verification_checked_at": "2026-11-13T02:28:12Z",
+      "cached_artifact_digest_reverified": true
     },
     "publisher": {
       "run_id": "43330421703",
@@ -1267,13 +1260,16 @@
         "verified_result_logged_at": "2026-11-13T08:38:36.600941+09:00",
         "platform_timestamp": null,
         "public_report": "Publication confirmed Nov13 08:38 KST."
-      }
+      },
+      "latest_publication_previously_reported": true,
+      "new_publication_this_run": false,
+      "receipt_verified_again": true
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "current_code_and_prompt_blobs_unchanged": true,
       "all_local_inputs_match_fresh_remote_blobs": true,
-      "queue_reused": false,
+      "queue_reused": true,
       "queue_write": true,
       "queue_readback_equal": true,
       "unchanged_existing_entries": 31,
@@ -1288,8 +1284,8 @@
           "pattern": "P3",
           "media_turn": "TEXT",
           "char_count": 446,
-          "last_valid_at": "2026-11-13T12:12:46+09:00",
-          "expires_at": "2026-11-13T12:12:47+09:00",
+          "last_valid_at": "2026-11-13T13:59:59+09:00",
+          "expires_at": "2026-11-14T02:26:47.000Z",
           "current_source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true,
           "selection_rank": 24,
@@ -1337,21 +1333,28 @@
       ],
       "expired_unpublished_slots": [],
       "image_recheck": {
+        "checked_at": "2026-11-13T01:30:05Z",
         "status": "UPSTREAM_VERIFIED",
-        "checked_at": "2026-11-13T00:12:49Z",
         "current_main_bytes_downloaded": true,
+        "both_asset_sha256_match_existing_visual_review": true,
         "new_visual_inspection": false,
-        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a"
+        "assets": [
+          {
+            "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+            "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+            "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a"
+          }
+        ],
+        "current_main_bytes_downloaded_this_check": false,
+        "checked_at_this_check": false,
+        "note": "Text slot evidence refreshed. Existing image evidence and bytes from Nov13 10:30 retained unchanged; no new visual inspection."
       },
-      "last_validated_at": "2026-11-13T09:11:12.789682+09:00",
-      "new_entry": {
-        "slot": "2026-11-14T08:00:00+09:00",
-        "benefit_id": "149200005002",
-        "char_count": 414,
-        "pattern": "P1",
-        "media_turn": "IMAGE",
-        "queue_commit": "3094ab212ddb55224278b15f38cd7a57c4eafedc"
-      }
+      "last_validated_at": "2026-11-13T11:27:09.568198+09:00",
+      "evidence_revalidated_slot": "2026-11-13T12:00:00+09:00",
+      "queue_commit_sha": "787ed80c887d1bfbd8d4fdf050ed871a461da45c"
     },
     "history_audit": {
       "requested_days": 28,
@@ -1366,8 +1369,8 @@
       "kst_date": "2026-11-13"
     },
     "metrics": {
-      "latest_observed_run_id": "43334368634",
-      "new_metric_observations": 2,
+      "latest_observed_run_id": "43346432144",
+      "new_metric_observations": 0,
       "previous_three_observations_already_saved": true,
       "cached_snapshot_digest_reverified": true,
       "job_logs_retrieved_this_run": true,
@@ -1379,7 +1382,16 @@
       "comparison_deferred": true,
       "weights_unchanged": true,
       "seven_day_evaluation_due": false,
-      "fourteen_day_evaluation_due": false
+      "fourteen_day_evaluation_due": false,
+      "previous_observations_already_saved": true,
+      "duplicate_window_discarded": {
+        "key": "18032141162693111:24h",
+        "observed_at": "2026-11-13T01:38:45.897961+00:00",
+        "first_observation_preserved": true,
+        "values_unchanged": true,
+        "artifact_id": 14001697472,
+        "artifact_digest": "sha256:61c8bdd538a9db76d80d158084704bc0c1e66505352fc517a137cdf4e2c8bc76"
+      }
     },
     "recovery": {
       "required": false,
@@ -1390,7 +1402,7 @@
       "code_change_required": false
     },
     "initial_41796747628_status": "resolved",
-    "next_condition": "Existing Actions consumes preserved future READY; latest full source/current official status required at actual send; Nov14 source freshness not assumed. Re-review before individual expiry; no replay/additional publication."
+    "next_condition": "Existing regular Actions consumes preserved READY. Nov13 noon evidence covers entire 12:00–14:00 KST grace window; verify fresh complete source at actual send. Re-review other entries before their individual expiry, Nov14 freshness not assumed. No recovery dispatch or extra publication."
   },
   "last_reported_publication": {
     "run_id": "43330421703",
@@ -3998,6 +4010,209 @@
       "preview_ready": 4,
       "full_original_grace_window_validated": true,
       "pending_modified": false
+    },
+    "2026-11-13T12:00:00+09:00@2026-11-13T02:26:47Z": {
+      "slot": "2026-11-13T12:00:00+09:00",
+      "reason": "Previous review expired at 12:12:47 KST inside original noon 2-hour grace window.",
+      "previous_entry": {
+        "slot": "2026-11-13T12:00:00+09:00",
+        "benefit_id": "135200005001",
+        "source_fingerprint": "22b11500412634c68b21004bf6776122696a9a9710e827d19ae55c7116051d2f",
+        "source_generation": "gov24-43110769785-1",
+        "prepared_at": "2026-11-12T12:12:47+09:00",
+        "expires_at": "2026-11-13T12:12:47+09:00",
+        "asset_sha256": null,
+        "writer": {
+          "schema_version": "supportpick.writer.v1",
+          "status": "READY",
+          "selected_program_id": "135200005001",
+          "post_text": "화재나 실직으로 당장 지낼 곳이 막막한 저소득 가구라면, 긴급복지 주거지원으로 임시거소를 지원받을 수 있어요. 민간 임시거소 이용비는 거소 제공자에게 지급해요.\n\n소득은 기준 중위소득 75% 이하여야 해요. 재산 기준은 대도시 2억 4,100만 원, 중소도시 1억 5,200만 원, 농어촌 1억 3,000만 원 이하이며 주거용재산 공제와 부채를 반영해요.\n\n금융재산은 가구별 생활준비금에 800만 원을 더한 주거지원 기준으로 따로 확인해요. 위기사유와 주거지원 필요성도 인정돼야 해요.\n\n지원은 1개월이 원칙이고, 위기가 계속되면 심사·연장을 거쳐 총 12개월 이내로 가능해요. 지역·가구원 수에 따라 지원 한도가 달라요.\n\n주민센터·시군구청이나 129에 상시 요청할 수 있어요. 현장확인 후 지원하고 사후조사·적정성 심사를 하며, 부적정 지원은 환수될 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+          "draft_text": null,
+          "reply_texts": [],
+          "media": {
+            "turn": "TEXT",
+            "asset_id": null,
+            "check": "NOT_REQUIRED",
+            "image_copy": null,
+            "alt_text": null
+          },
+          "review": {
+            "planned_at": "2026-11-13T12:00:00+09:00",
+            "application_status": "ALWAYS",
+            "reader": "화재·실직 등 위기사유로 생계와 임시거처 확보가 어려운 저소득 가구",
+            "central_message": "위기가구의 임시거소 지원은 소득·지역별 재산·금융재산과 필요성을 함께 확인하고 신청·사후심사를 거친다.",
+            "pattern": "P3",
+            "selection_reason": "게시·준비 큐 사업 중복을 제외하고 동일 ID 누적 조회수 내림차순을 유지했다. 상위 양곡할인은 월별 접수창이 지나 현재 신청 안내에서 HOLD했다. 최근 20건과 준비 원고를 대조해 임시거소 서비스 목적을 설명하는 P3를 선택했다.",
+            "interest_basis": "OBSERVED_METRICS",
+            "duplicate_check": "CHECKED",
+            "evidence": [
+              {
+                "source_id": "135200005001",
+                "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10708010100",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-12T12:12:47+09:00",
+                "claims_supported": [
+                  "보건복지부 현재 긴급복지지원 안내(최종 수정 2026-06-30)를 직접 열어 화재·실직 등 위기사유, 기준 중위소득 75% 이하, 재산 기준 대도시 2억4100만원·중소도시 1억5200만원·농어촌 1억3000만원을 확인했다. 주거용재산 공제한도와 부채를 반영하고 금융재산은 별도로 본다.",
+                  "금융재산 표와 주거지원 200만원 추가 기준, 읍면동·시군구·129 지원요청, 현장확인·결정·사후조사·심사·환수 절차를 확인했다. 상시 지원요청 경로이며 신청 거래는 수행하지 않았다."
+                ]
+              },
+              {
+                "source_id": "135200005001",
+                "source_ref": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=3&cciNo=1&cnpClsNo=3&csmSeq=90&popMenu=ov",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-12T12:12:47+09:00",
+                "claims_supported": [
+                  "2026-10-15 기준 국가 생활법령정보 주거지원 본문을 직접 열었다. 임시거소 제공 또는 제공 곤란 시 거소확보 비용, 민간 거소 제공자·관리자에 비용 지급, 지역·가구원수별 월 한도를 확인했다.",
+                  "1개월 원칙, 지자체장 판단에 의한 1개월씩 두 번 연장, 이후 긴급지원심의위원회 심의를 거쳐 합계 최장 12개월이다. 자동 12개월·가구 정액 현금으로 표현하지 않는다."
+                ]
+              },
+              {
+                "source_id": "135200005001",
+                "source_ref": "https://www.busan.go.kr/depart/welpolicy0106",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-12T12:12:47+09:00",
+                "claims_supported": [
+                  "부산광역시 2026년 긴급복지 안내의 금융재산 기준인 가구별 생활준비금(중위소득100%)에 주거지원 800만원 합산을 직접 대조했다. 국가 공통 기준을 보건복지부 표와 교차 확인했고 부산 자체 추가급여를 전국에 적용하지 않았다.",
+                  "임시거소 제공과 지원상한 내 실비, 주소지 읍면동 또는 구군 지원요청·현장확인·결정을 확인했다."
+                ]
+              },
+              {
+                "source_id": "135200005001",
+                "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900008&bnefType=all&svcId=135200005001",
+                "access_method": "PROVIDED_OFFICIAL_TEXT",
+                "verified_at": "2026-11-12T12:12:47+09:00",
+                "claims_supported": [
+                  "완전 검증 수집본 gov24-43110769785-1 동일 ID serviceList.조회수 94728회, API checkedAt 2026-11-12T07:21:59.066464+09:00, 수집 완료 2026-11-12T07:26:11.043967+09:00를 실제 공식 원문 열람시각과 구분한다.",
+                  "동일 ID의 상시신청·임시거소 원칙·민간 제공자 지급·지역 및 가구원수별 지원·읍면동/시군구/129 경로를 대조했다. source_only와 수집 시각을 접수 검증으로 바꾸지 않고 별도 직접 연 공식 자료로 현재 상태를 검수했다."
+                ]
+              }
+            ],
+            "checks": {
+              "facts": "PASS",
+              "current_status": "PASS",
+              "eligibility_and_units": "PASS",
+              "cta_and_no_links": "PASS",
+              "length": "PASS",
+              "media": "NOT_REQUIRED"
+            },
+            "char_count": 446,
+            "count_method": "Python Unicode len including spaces, newlines and CTA",
+            "missing_info": [],
+            "hold_reasons": [],
+            "warnings": [
+              "소득·재산·금융재산과 위기사유·주거 필요성을 모두 심사한다. 지원금액은 지역·가구원수에 따른 월 한도 내 실비이며 임시거소가 기본이다.",
+              "동일 위기사유·다른 법률에 따른 중복지원 및 재지원 제한은 담당 지자체가 확인해야 한다. 지원·연장을 확정하지 않는다.",
+              "현재 07:26 수집본은 내일 12시까지 신선하지 않다. 발송 시 최신 완전 수집본과 동일 ID fingerprint·공식 사실을 재검증해야 한다.",
+              "준비·근거는 최대 24시간 유효하며 내일 게시 지연 시 만료 전에 실제 공식 원문을 재검수해야 한다. 날짜만 바꿔 연장하지 않는다.",
+              "앞 슬롯이 전송 전에 건너뛰어지면 아직 미예약인 미래 후보와 미디어 순서를 다시 계산한다. 성과 실측이 없어 도입 개선 효과를 판단하지 않는다."
+            ],
+            "reach_editorial": {
+              "policy_id": "supportpick-threads-reach-v1-20261109",
+              "core_question": "위기로 임시거처가 필요한 가구는 어떤 지원을 어디에 요청하고 무엇을 확인하나요?",
+              "reader_scope": "화재·실직 등 위기사유로 생계와 임시거처 확보가 어려운 저소득 가구",
+              "angles": [
+                "위기로 거처를 잃는 생활 상황",
+                "소득·재산·금융재산 자격",
+                "임시거소 이용과 요청·사후심사"
+              ],
+              "chosen_angle": "당장 필요한 임시거처 서비스의 쓰임과 조건을 연결",
+              "opening_candidates": [
+                {
+                  "type": "생활 상황형",
+                  "group": "A",
+                  "text": "화재나 실직으로 당장 지낼 곳이 막막한 저소득 가구라면, 긴급복지 주거지원으로 임시거소를 지원받을 수 있어요. 민간 임시거소 이용비는 거소 제공자에게 지급해요."
+                },
+                {
+                  "type": "대상·혜택형",
+                  "group": "B",
+                  "text": "화재·실직 등으로 거처 마련이 어려운 저소득 위기가구는 긴급복지 주거지원으로 임시거소를 지원받을 수 있어요."
+                },
+                {
+                  "type": "조건 설명형",
+                  "group": null,
+                  "text": "긴급복지 주거지원은 위기사유와 거처 필요성뿐 아니라 소득·재산·금융재산을 함께 확인해요."
+                }
+              ],
+              "chosen_opening": "화재나 실직으로 당장 지낼 곳이 막막한 저소득 가구라면, 긴급복지 주거지원으로 임시거소를 지원받을 수 있어요. 민간 임시거소 이용비는 거소 제공자에게 지급해요.",
+              "opening_type": "생활 상황형",
+              "cohort": "A",
+              "selection_reason": "첫 적용 11월 10일 배정을 날짜별 반전하면 11월 13일 12시는 A다. 기존 READY는 보존하고 내일 08시 P4와 다른 P3 서비스 이용 목적 전개를 사용했다.",
+              "history_posts_checked": 20,
+              "comparison_strata": {
+                "geo": "전국·지역별 기준",
+                "benefit": "임시거소 서비스·실비",
+                "application": "위기 발생 시 상시",
+                "audience": "저소득 위기가구",
+                "media": "TEXT"
+              },
+              "comparison_group": "독자규모·지역·혜택·기한이 유사한 A/B 실측 확보 후 비교. 시간·미디어·사업 차이는 교란이며 현재 비교 가능한 24시간 지표는 없다.",
+              "applied_elements": [
+                "첫 문장 위기가구·임시거소 효용",
+                "소득·재산·금융재산 구분",
+                "민간 거소 제공자 지급",
+                "최장기간 조건·요청과 사후심사"
+              ],
+              "profile_route": "프로필 링크·지원금픽 검색과 상세 이동·실제 접수 기능은 확인하지 못했다. 공식 행정복지센터·시군구·129 경로만 안내하고 사이트 기능을 보장하지 않는다.",
+              "source_recheck_required_at_publish": true
+            }
+          },
+          "next_history_record": {
+            "program_id": "135200005001",
+            "notice_version": "gov24-43110769785-1:긴급복지-2026",
+            "pattern": "P3",
+            "opening": "화재나 실직으로 당장 지낼 곳이 막막한 저소득 가구라면, 긴급복지 주거지원으로 임시거소를 지원받을 수 있어요. 민간 임시거소 이용비는 거소 제공자에게 지급해요.",
+            "structure": "위기 생활상황·임시거소 → 소득·지역별 재산 → 금융재산·필요성 → 지원기간·한도 → 요청·사후심사 → CTA",
+            "media_turn": "TEXT"
+          }
+        }
+      },
+      "revalidated_at": "2026-11-13T02:26:47Z",
+      "new_expires_at": "2026-11-14T02:26:47.000Z",
+      "body_hash_and_media_preserved": true,
+      "official_sources": [
+        {
+          "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10708010100",
+          "access_method": "OPENED_OFFICIAL",
+          "verified_at": "2026-11-13T02:26:47Z"
+        },
+        {
+          "source_ref": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=3&cciNo=1&cnpClsNo=3&csmSeq=90&popMenu=ov",
+          "access_method": "OPENED_OFFICIAL",
+          "verified_at": "2026-11-13T02:26:47Z"
+        },
+        {
+          "source_ref": "https://www.busan.go.kr/depart/welpolicy0106",
+          "access_method": "OPENED_OFFICIAL",
+          "verified_at": "2026-11-13T02:26:47Z"
+        },
+        {
+          "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900008&bnefType=all&svcId=135200005001",
+          "access_method": "PROVIDED_OFFICIAL_TEXT",
+          "verified_at": "2026-11-13T02:26:47Z"
+        }
+      ],
+      "review_retrieval_note": "Opened MOHW current criteria/procedures; Easylaw housing contents; Busan 2026 table and request process. Busan find requests temporarily timed out; subsequent open at content lines succeeded before PASS.",
+      "queue_commit_sha": "787ed80c887d1bfbd8d4fdf050ed871a461da45c",
+      "queue_blob_sha": "8f1b967b11834dce695a5fb22321646ca243a95f",
+      "queue_readback_equal": true,
+      "preview_ready": 4,
+      "full_original_grace_window_validated": true,
+      "pending_modified": false,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "source_generation": "gov24-43316327378-1",
+      "validation": {
+        "slot": "2026-11-13T12:00:00+09:00",
+        "benefit_id": "135200005001",
+        "pattern": "P3",
+        "media_turn": "TEXT",
+        "char_count": 446,
+        "last_valid_at": "2026-11-13T13:59:59+09:00",
+        "expires_at": "2026-11-14T02:26:47.000Z",
+        "current_source_fresh_at_slot": true,
+        "source_recheck_required_at_publish": true,
+        "selection_rank": 24,
+        "source_fingerprint_matches": true
+      }
     }
   },
   "observed_main_changes": {
