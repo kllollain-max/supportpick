@@ -1,0 +1,8 @@
+{
+  "enabled": false,
+  "allow_publish": false,
+  "target_blog": "bible_el",
+  "max_parallel": 1,
+  "require_reopen_verification": true,
+  "require_correct_account": true
+}
