@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-13T06:11:21Z",
+  "prepared_at": "2026-11-13T18:08:52.769998+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -491,6 +491,16 @@
       "sources": [
         "https://www.mohw.go.kr/menu.es?mid=a10708030300",
         "https://paldal.suwon.go.kr/bbsplus/view.asp?bd_gubn=20&code=tbl_bbs_sub200510&dong_gubn=&menuid=&mnuflag=&no=MTUxMTkg&page=15"
+      ]
+    },
+    {
+      "benefit_id": "999000000090",
+      "views": 80604,
+      "decision": "HOLD",
+      "reason": "같은ID원본의2026년2학기1/2차신청기간은종료됐다. 한국장학재단의현재신청안내에서11월14일유효한동일사업 신규접수기간을확정하지못해HOLD. 2027계획을현재접수로바꾸지않으며제도전체종료로판단하지않는다.",
+      "sources": [
+        "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_01&ttab1=3",
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999257&bnefType=all&svcId=999000000090"
       ]
     }
   ],
@@ -4665,6 +4675,153 @@
           "opening": "근로능력이 있는 18~64세 차상위계층이라면, 자활근로로 일자리와 자립에 필요한 경험을 쌓을 수 있어요. 먼저 소득인정액이 기준 중위소득 50% 이하인 비수급권자인지 확인해 보세요.",
           "structure": "차상위 대상·근로경험 → 소득인정액·우선선정 → 유형별일급·실비·시간 → 상시상담경로 → CTA",
           "media_turn": "TEXT"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-14T16:00:00+09:00",
+      "benefit_id": "134200000003",
+      "source_fingerprint": "7e6d046351ccce53c95ccbd013769f99841d02feaf80baefb563f159e98c0875",
+      "source_generation": "gov24-43316327378-1",
+      "prepared_at": "2026-11-13T18:08:52.769998+09:00",
+      "expires_at": "2026-11-14T18:08:52.769998+09:00",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "134200000003",
+        "post_text": "아이의 학습 준비 비용이 부담된다면, 소득인정액이 기준 중위소득 50% 이하인 가구의 초·중·고 학생은 교육급여 교육활동지원비를 확인해 보세요. 학생 1명당 연 1회 바우처로 지원해요.\n\n2026년 지원액은 이렇게 나뉘어요.\n• 초등학생 50만 2천 원\n• 중학생 69만 9천 원\n• 고등학생 86만 원\n\n교육급여는 주민센터·복지로·교육비 원클릭에서 연중 신청할 수 있어요. 소득·재산 등을 조사해 수급 여부를 결정하므로 월급만으로 판단하거나 지급을 확정하면 안 돼요.\n\n새로 수급권자로 선정됐다면 한국장학재단에 바우처를 별도 신청해야 해요. 2026학년도 바우처 신청은 2027년 2월 28일까지, 사용은 3월 31일까지예요. 기한 뒤 남은 포인트는 소멸돼요.\n\n교육활동용 물품·서비스에 쓰는 이용권이며, 사용이 제한되는 업종도 있어요. 현금으로 받는 지원과 구분해 주세요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게라는 문구 아래 체크리스트가 든 봉투, 동전, 새싹을 배치한 크림색 정사각형 브랜드 이미지. 하단에는 자세한 사항은 프로필링크 확인 문구가 있다."
+        },
+        "review": {
+          "planned_at": "2026-11-14T16:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "학습 준비 비용과 교육급여 신규 신청을 확인하려는 저소득 초중고 학생 가구",
+          "central_message": "교육급여 연간 교육활동지원비는 학교급별바우처이며 신규선정후 별도신청·사용기한을 확인한다.",
+          "pattern": "P8",
+          "selection_reason": "36실제게시와 기존3미래READY 중복을 제외하고 동일ID누적조회수 내림차순. 상위HOLD/SKIP 사유출처는selection_notes에 보존.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "134200000003",
+              "source_ref": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=105459&lev=0&m=020402&opType=N&page=1&s=moe&searchType=null&statusYN=W",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-13T18:08:52.769998+09:00",
+              "claims_supported": [
+                "2026-03-02 교육부 보도자료 본문을 직접 열었다. 교육급여 대상 중위소득50% 이하 초중고 가구, 연1회 학교급별502000/699000/860000원과 현금이 아닌 바우처, 주민센터·복지로·교육비원클릭 연중 신청, 신규선정후 바우처 별도신청 절차를 대조했다. 3월집중기간을 연간마감으로 쓰지 않는다."
+              ]
+            },
+            {
+              "source_id": "134200000003",
+              "source_ref": "https://www.kosaf.go.kr/ko/info.do?mode=view&naviParam=DN,08,02,00&pg=press01_02&seqNo=20713",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-13T18:08:52.769998+09:00",
+              "claims_supported": [
+                "2026-03-31 재단 공개 보도자료 실제 본문을 열어 2026학년도 신청2026-04-01~2027-02-28, 사용기한2027-03-31 및 미사용포인트 소멸, 교육활동 물품·서비스 용도와 학교급별연1회금액을 확인했다. 상단 로그인안내와 별개로 공개보도본문은 읽혔으며 로그인/신청거래를 하지 않았다. 기존2025사용자의 자동신청을 신규선정자의 별도신청과 구분한다."
+              ]
+            },
+            {
+              "source_id": "134200000003",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=726481&bnefType=all&svcId=134200000003",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-13T18:08:52.769998+09:00",
+              "claims_supported": [
+                "검증된 gov24-43316327378-1 동일ID serviceList 누적조회수80444, API checkedAt=2026-11-13T07:06:44.958050+09:00, collectionSucceededAt=2026-11-13T07:11:37.258822+09:00를 실제원문 열람과 구분했다.",
+                "원본의 소득인정액50% 이하·대상학교·2026단가·상시신청·행정복지센터/온라인 신청을 대조했다. source_only와 applicationOpenVerified=false는 수집메타로 유지하고 현재상태는 별도 직접연 공식자료로 검수했다."
+              ]
+            },
+            {
+              "source_id": "134200000003",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-13T18:08:52.769998+09:00",
+              "claims_supported": [
+                "현재 main 허용PNG 실제다운로드·SHA256=0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd 재계산, image-review.json 2026-11-06 시각검수PASS와 일치. 금액·조건·기간없는1254정사각형 브랜드이미지, 실제alt와 대조. 약360px 기존가독성검수 근거 유지, 오늘 새직접시각검수는 하지 않았다."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 452,
+          "count_method": "Python Unicode len including spaces newlines CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "기준중위50%는 가구 소득인정액 기준이며 월급과 다르다. 신청과선정·배정을 확정하지 않는다.",
+            "이번본문은 교육활동지원비에 한정하며 무상교육제외학교 학비를 합산하지않는다. 기존수급자는 자격유지/기존지급수단에 따른 자동신청 여부를 재단안내로 확인한다.",
+            "교육급여상시신청과 바우처접수마감·사용기한을 구분한다. 현재11월13일 자료는 내일16시까지신선하지않아 실제발송시 최신완전수집본·동일ID사실·공식상태를 재검증한다."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "교육활동지원비는 얼마이며 급여선정 뒤 바우처를 따로 신청해야 하나요?",
+            "reader_scope": "학습 준비 비용과 교육급여 신규 신청을 확인하려는 저소득 초중고 학생 가구",
+            "angles": [
+              "학습 준비 비용 부담",
+              "학제별금액과소득조건",
+              "급여선정과바우처신청 구분"
+            ],
+            "chosen_angle": "생활비부담에서 학교급별 지원을 요약하고 별도바우처절차 안내",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "아이의 학습 준비 비용이 부담된다면, 소득인정액이 기준 중위소득 50% 이하인 가구의 초·중·고 학생은 교육급여 교육활동지원비를 확인해 보세요. 학생 1명당 연 1회 바우처로 지원해요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "소득인정액이 기준 중위소득50% 이하인 초중고 학생 가구는 교육급여 교육활동지원비를 학생1명당 연1회 바우처로 지원받을 수 있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "교육급여에 새로 선정됐다면 교육활동지원비 바우처 신청을 별도로 해야 해요."
+              }
+            ],
+            "chosen_opening": "아이의 학습 준비 비용이 부담된다면, 소득인정액이 기준 중위소득 50% 이하인 가구의 초·중·고 학생은 교육급여 교육활동지원비를 확인해 보세요. 학생 1명당 연 1회 바우처로 지원해요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "첫적용11월10일 날짜별반전상11월14일16시는A. 같은날08시P1/12시P5를 보존하고 P8 학제금액목록→선정→별도신청·사용기한으로 변주했다. 최근20게시·기존미래원고 도입전개 대조.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국",
+              "benefit": "교육활동 바우처",
+              "audience": "저소득 초중고가구",
+              "application": "교육급여연중·바우처별도기한",
+              "media": "IMAGE"
+            },
+            "comparison_group": "실제24h A2/B2·유사사업 비교쌍0. 표본부족·사업/미디어/시간/형식 교란으로 효과판단·비중조정 보류, 기존비교군 유지.",
+            "applied_elements": [
+              "상황과대상실익 먼저",
+              "학제별연액목록",
+              "선정과바우처신청 구분",
+              "사용소멸기한·짧은단락"
+            ],
+            "profile_route": "프로필링크·지원금픽 검색상세·접수기능은 승인된읽기범위에서 확인하지못해 보장하지않는다. 공식안내경로만 설명.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "134200000003",
+          "notice_version": "gov24-43316327378-1:교육급여2026",
+          "pattern": "P8",
+          "opening": "아이의 학습 준비 비용이 부담된다면, 소득인정액이 기준 중위소득 50% 이하인 가구의 초·중·고 학생은 교육급여 교육활동지원비를 확인해 보세요. 학생 1명당 연 1회 바우처로 지원해요.",
+          "structure": "생활상황·소득조건·바우처 → 학제별연액목록 → 급여신청선정 → 별도바우처신청·사용기한 → 용도제한 → CTA",
+          "media_turn": "IMAGE"
         }
       }
     }
