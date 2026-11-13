@@ -1722,12 +1722,12 @@
     "last_ready_queue_blob_sha": "e20e3d75d78d7dc2a944a421daa501dd0bc8b288"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-13T00:37:44Z",
+    "checked_at": "2026-11-13T01:30:05Z",
     "result": "no_update",
     "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
     "publication_ledger_sha": "196789cbc3841e1e2056df590cddb39bbc452da3",
     "queue_blob_sha": "414ef9345bb7649537557a82d018f1839a86e58c",
-    "maintenance_previous_blob_sha": "2dcde15a9ba616f172d06f9752635b5b991c10fe",
+    "maintenance_previous_blob_sha": "4c5531ac424950423d72080f89017b4006a97ddc",
     "unresolved_publications": 0,
     "lease": null,
     "active_target_runs": [],
@@ -1757,7 +1757,7 @@
       "regression_ci_tests_passed": 203,
       "fresh_at_check": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-13T00:37:44Z",
+      "verification_checked_at": "2026-11-13T01:30:05Z",
       "cached_artifact_digest_reverified": true
     },
     "publisher": {
@@ -1873,7 +1873,7 @@
       ],
       "expired_unpublished_slots": [],
       "image_recheck": {
-        "checked_at": "2026-11-13T00:37:44Z",
+        "checked_at": "2026-11-13T01:30:05Z",
         "status": "UPSTREAM_VERIFIED",
         "current_main_bytes_downloaded": true,
         "both_asset_sha256_match_existing_visual_review": true,
@@ -1889,7 +1889,7 @@
           }
         ]
       },
-      "last_validated_at": "2026-11-13T09:36:58.001271+09:00"
+      "last_validated_at": "2026-11-13T10:29:26.522560+09:00"
     },
     "history_audit": {
       "requested_days": 28,
