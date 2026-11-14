@@ -14,6 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "43650925687",
     "43645878955",
     "43645251692",
     "43640613267",
@@ -1551,6 +1552,13 @@
       "conclusion": "success",
       "updated_at": "2026-11-14T21:02:11Z",
       "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+    },
+    "43650925687": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-14T22:59:46Z",
+      "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
     }
   },
   "last_check": {
@@ -2190,38 +2198,22 @@
     "last_ready_queue_blob_sha": "f4ea5e0fb01dc19e93e0a765d61adebe72f71ea8"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-14T22:10:06.599Z",
+    "checked_at": "2026-11-14T23:15:16.795Z",
     "result": "no_update",
     "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
     "publication_ledger_sha": "43e735e236cc7729a8a3bffe41f577b27cab0e6d",
     "queue_blob_sha": "e2727d894a6e8dd95c77e3ca7ae245e0af5f97ff",
-    "maintenance_previous_blob_sha": "aaa2718d1f64e45afab6c29bf08a53ce98ab27a8",
+    "maintenance_previous_blob_sha": "e3e97e14cbd854a6cd6799b67ac0e144bc4d2133",
     "unresolved_publications": 0,
     "lease": null,
     "active_target_runs": [],
     "changed_run_versions": [
       {
-        "run_id": "43645878955",
+        "run_id": "43650925687",
         "run_attempt": 1,
         "status": "completed",
         "conclusion": "success",
-        "updated_at": "2026-11-14T22:01:50Z",
-        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
-      },
-      {
-        "run_id": "43645251692",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-14T22:05:42Z",
-        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
-      },
-      {
-        "run_id": "43640613267",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-14T21:02:11Z",
+        "updated_at": "2026-11-14T22:59:46Z",
         "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
       }
     ],
@@ -2251,10 +2243,10 @@
       "regression_ci_tests_passed": 203,
       "fresh_at_check": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-14T22:10:06.599Z",
+      "verification_checked_at": "2026-11-14T23:15:16.795Z",
       "classification": "validated_complete_fresh_generation",
-      "cached_artifact_digest_reverified": false,
-      "artifact_redownloaded_and_digest_verified_this_check": true
+      "cached_artifact_digest_reverified": true,
+      "artifact_redownloaded_and_digest_verified_this_check": false
     },
     "publisher": {
       "run_id": "43589790582",
@@ -2285,7 +2277,7 @@
       "char_count": 445,
       "replies": 0,
       "verification": "Digest-verified receipt and authenticated publisher job log matched durable ledger main ID, URL, original content hash, TEXT/no asset and0 replies.",
-      "verification_completed_at": "2026-11-14T22:10:06.599Z",
+      "verification_completed_at": "2026-11-14T23:15:16.795Z",
       "public_web_visibility_independently_verified": false,
       "publication_ledger_records": 41,
       "pending": null,
@@ -2370,7 +2362,7 @@
         }
       ],
       "expired_unpublished_slots": [],
-      "last_validated_at": "2026-11-15T07:09:18.726239+09:00",
+      "last_validated_at": "2026-11-15T08:14:24.030386+09:00",
       "source_generation_checked": "gov24-43645251692-1",
       "image_recheck": {
         "existing_ready_evidence_preserved": true,
@@ -2409,12 +2401,12 @@
       "today_media": []
     },
     "metrics": {
-      "latest_observed_run_id": "43645878955",
+      "latest_observed_run_id": "43650925687",
       "new_metric_observations": 0,
       "new_observation_keys": [],
       "id_window_deduplication": true,
-      "artifact_id": 14133612281,
-      "artifact_digest": "sha256:25e33de2dbb0a047600cc8fffc65d5c54e1a6b8130fe4c37e7e648c347dd5519",
+      "artifact_id": 14135218791,
+      "artifact_digest": "sha256:e3b09d25a8313fc8edea95e9761016b1aa85e68a539b30fe835d7a019bad969d",
       "artifact_digest_verified": true,
       "job_logs_retrieved_this_run": true,
       "observations_24h": 10,
@@ -2495,7 +2487,7 @@
       "code_change_required": false
     },
     "initial_41796747628_status": "resolved",
-    "next_condition": "Nov15 regular08/12/16/20 existing READY P5/P6/P8/P1 IMAGE/TEXT/IMAGE/TEXT preserved byte-for-byte and validated with complete07:01 generation, all4 fingerprints match. Current source fresh at planned slots but actual send must still recheck latest source, official facts/status, media evidence and expiry; first08h draft only valid through08:51:24 KST under existing review/expiry. No expired unpublished slots or pending. Two new official snapshot runs no due milestones. No new publication/failure/partial/recovery/metric. A5/B5 unmatched/insufficient; weights unchanged;7/14day policy evaluations not due. No dispatch or code change."
+    "next_condition": "08h natural scheduled execution not yet observed; no failed08h run and no08h reservation, so no recovery dispatch. Existing08h IMAGE/P5 READY valid through08:51:24 KST;12/16/20 drafts preserved. Current complete07:01 source validates all4 fingerprints and source age, but actual sender must recheck source, official facts/status, image evidence and expiry. No expired unpublished slot, pending, new publication/failure/partial/recovery or metric. A5/B5 unmatched/insufficient; comparison and weights unchanged;7/14day evaluations not due."
   },
   "reach_policy": {
     "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -5292,6 +5284,23 @@
           "artifact_digest": "sha256:d7e557d17f46a023325266e37da37c5ae528f364e8daaeb64a20e033ea0bd366",
           "artifact_digest_verified": true,
           "observed_at": "2026-11-14T21:02:06.758726+00:00",
+          "records": 0,
+          "new_observations": 0,
+          "classification": "normal_no_due_milestones",
+          "job_logs_retrieved": true
+        },
+        "43650925687": {
+          "run_id": "43650925687",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-14T22:59:46Z",
+          "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
+          "job_id": 132618997922,
+          "artifact_id": 14135218791,
+          "artifact_digest": "sha256:e3b09d25a8313fc8edea95e9761016b1aa85e68a539b30fe835d7a019bad969d",
+          "artifact_digest_verified": true,
+          "observed_at": "2026-11-14T22:59:42.257763+00:00",
           "records": 0,
           "new_observations": 0,
           "classification": "normal_no_due_milestones",
