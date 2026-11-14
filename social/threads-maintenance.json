@@ -2111,25 +2111,16 @@
     "last_ready_queue_blob_sha": "f4ea5e0fb01dc19e93e0a765d61adebe72f71ea8"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-14T02:11:11.416Z",
+    "checked_at": "2026-11-14T02:22:07.398Z",
     "result": "no_update",
     "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
     "publication_ledger_sha": "61e2ae6c089b0a2dfc878164592812f2e4835055",
     "queue_blob_sha": "c8143f5f719e196a462e3585acbbef67432d2ec0",
-    "maintenance_previous_blob_sha": "22e6bb2da02d0e5aa74ccfa07f1c280decd41968",
+    "maintenance_previous_blob_sha": "b4bc2bb25e0b59f4b75b0d12a9defae3c5881f4f",
     "unresolved_publications": 0,
     "lease": null,
     "active_target_runs": [],
-    "changed_run_versions": [
-      {
-        "run_id": "43541276020",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-14T01:33:28Z",
-        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
-      }
-    ],
+    "changed_run_versions": [],
     "run_pagination": {
       "branch": "main",
       "pages": 1,
@@ -2156,7 +2147,7 @@
       "regression_ci_tests_passed": 203,
       "fresh_at_check": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-14T02:11:11.416Z",
+      "verification_checked_at": "2026-11-14T02:22:07.398Z",
       "classification": "validated_complete_fresh_generation",
       "cached_artifact_digest_reverified": true,
       "artifact_redownloaded_and_digest_verified_this_check": false
@@ -2190,7 +2181,7 @@
       "char_count": 414,
       "replies": 0,
       "verification": "Digest-verified actual result receipt and authenticated publisher verification log match original queued text, ledger content hash, approved image SHA and main ID.",
-      "verification_completed_at": "2026-11-14T02:11:11.416Z",
+      "verification_completed_at": "2026-11-14T02:22:07.398Z",
       "public_web_visibility_independently_verified": false,
       "publication_ledger_records": 38,
       "pending": null,
@@ -2282,7 +2273,7 @@
         "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
         "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
       },
-      "last_validated_at": "2026-11-14T11:10:13.146996+09:00",
+      "last_validated_at": "2026-11-14T11:21:22.339613+09:00",
       "queue_commit_sha": "cace5e97b50c3c1c50d3605397641343ce55099f",
       "new_entries": 0,
       "validation_environment": {
@@ -2388,7 +2379,8 @@
           "metrics_identical": true,
           "classification": "duplicate_id_window_first_observation_preserved"
         }
-      ]
+      ],
+      "cached_artifact_digest_reverified": true
     },
     "recovery": {
       "required": false,
@@ -2399,7 +2391,14 @@
       "code_change_required": false
     },
     "initial_41796747628_status": "resolved",
-    "next_condition": "Existing4 READY unchanged. Next12h TEXT/P5 entry valid through13:13:34 KST; actual publisher must recheck latest source/facts/status. No pending/recovery/extra dispatch. Duplicate24h snapshot preserved separately; first24h observation and A/B comparison unchanged."
+    "next_condition": "Existing4 READY unchanged. Next12h TEXT/P5 entry valid through13:13:34 KST; actual publisher must recheck latest source/facts/status. No pending/recovery/extra dispatch. Duplicate24h snapshot preserved separately; first24h observation and A/B comparison unchanged.",
+    "inspection_transport": {
+      "initial_file_read_failed": true,
+      "conditional_mutation_started_before_recovery": false,
+      "recovered_by_fresh_read": true,
+      "all_latest_blobs_read_successfully": true,
+      "production_failure_inferred": false
+    }
   },
   "reach_policy": {
     "policy_id": "supportpick-threads-reach-v1-20261109",
