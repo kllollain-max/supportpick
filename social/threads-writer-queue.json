@@ -5141,6 +5141,156 @@
           "media_turn": "IMAGE"
         }
       }
+    },
+    {
+      "slot": "2026-11-15T12:00:00+09:00",
+      "benefit_id": "149200000063",
+      "source_generation": "gov24-43515826483-1",
+      "source_fingerprint": "dad2f2bf5d57278e5f3352f2b381801a4197f484718901c2ca6fab395a91bc16",
+      "prepared_at": "2026-11-14T13:32:41.699516+09:00",
+      "expires_at": "2026-11-15T13:32:41.699516+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "149200000063",
+        "post_text": "구직급여를 받다가 새 직장에 자리 잡았다면, 남은 급여 일부를 조기재취업수당으로 받을 수 있어요. 이직 당시 65세 미만인 일반 근로자의 준비 순서예요.\n\n먼저 실업 신고 후 14일이 지나 재취업했고, 재취업 전날 기준 소정급여일수가 절반 이상 남았는지 확인해요. 이후 단절 없이 12개월 이상 고용돼야 해요.\n\n금액은 구직급여일액에 미지급일수의 절반을 곱해 일시 지급해요. 재취업 전 2년 내 같은 수당을 받은 이력이 없어야 해요.\n\n전 직장·관련 사업주 재고용, 신고 전 채용 약속, 고시 임금액 이상, 일반 공무원 임용·일부 병역 복무 등은 제외돼요. 일용근로·자영업·65세 이상은 별도 기준을 확인해야 해요.\n\n12개월이 지난 뒤 청구서와 재직증명서 또는 근로계약서 등을 준비해 관할 고용센터에 신청할 수 있어요. 개인별 제외 사유도 함께 심사해요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-15T12:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "이직당시65세 미만 일반 근로자 구직급여 수급자의 재취업",
+          "central_message": "일반 근로자로 재취업한 뒤 조기재취업수당을 언제 어떤 서류로 청구하나요?",
+          "pattern": "P6",
+          "selection_reason": "동일ID 누적조회수 내림차순·실제39게시/미래3READY 중복제외, 모든 상위미선정 ID·이유·출처는 기존selection_notes 보존.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "149200000063",
+              "source_ref": "https://ei.work24.go.kr/ei/eih/eg/pb/pbPersonBnef/retrievePb0208Info.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-14T13:32:41.699516+09:00",
+              "claims_supported": [
+                "직접 본문299~339행 열람. 14일 이후·잔여일수 절반·연속12개월 고용, 종전/관련사업주·채용약속·고시임금액·공무원 제외, 재취업 이전2년 수당수령 제한,12개월 이후 청구서·재직증명서/근로계약서로 관할고용센터 신청 가능. 현재 운영 안내의 개인별 사후청구 경로로 확인했으며 접수 거래를 하지 않았다.",
+                "일용·자영업·65세 이상 특례는 본문 독자범위에서 제외. 운영안내의2024임금액을2026확정액으로 복사하지 않고 고시임금 제외조건만 유지. 자영업 준비활동 항목은 최신법령과 대조가 더 필요하므로 일반 근로자 설명으로 한정."
+              ]
+            },
+            {
+              "source_id": "149200000063",
+              "source_ref": "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0084&lsiSeq=288717&urlMode=lsScJoRltInfoR",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-14T13:32:41.699516+09:00",
+              "claims_supported": [
+                "2026-09-18 시행 제84조 본문30~45행 직접열람. 14일·절반·12개월, 이직당시65세 특례와 종전사업주/채용약속/일반공무원/고시임금/일부병역 제외 및2년 제한 대조. 2026-05-12 연혁문을 최신으로 간주하지 않고9월시행 조문으로 재대조했다."
+              ]
+            },
+            {
+              "source_id": "149200000063",
+              "source_ref": "https://www.law.go.kr/lsLawLinkInfo.do?chrClsCd=010202&lsJoLnkSeq=1000770699",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-14T13:32:41.699516+09:00",
+              "claims_supported": [
+                "2026-09-18 시행 제86조 직접열람. 일반 근로자 재취직일부터12개월 이후 청구서·서류 제출 신청 가능,65세 특례 별도. 일괄 모집마감이 아닌 개인별 사후 청구로 현재 운영기관의 신청 경로와 일치."
+              ]
+            },
+            {
+              "source_id": "149200000063",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999033&bnefType=all&svcId=149200000063",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-14T13:32:41.699516+09:00",
+              "claims_supported": [
+                "완전검증수집본gov24-43515826483-1 동일ID serviceList 누적조회수68696회. API checkedAt=2026-11-14T07:04:32.077757+09:00,수집성공=2026-11-14T07:08:16.946958+09:00. 미지급일수1/2 일시지급·일액산식·청구서류·개인별신청시기 대조. source_only/applicationOpenVerified=false는 변경하지 않았고 직접 원문열람시각과 구분."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 441,
+          "count_method": "Python Unicode len including spaces/newlines/CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "일반근로자 개인별 사후청구 경로이며 즉시지급·수급확정을 보장하지 않는다.",
+            "고시임금액 숫자는 현재값 직접확인 없이 쓰지 않았다. 해당여부는고용센터 심사로 확인한다.",
+            "원본 sourceOnly 수집시각을현재접수 검증으로 대체하지 않는다. 내일발송시최신source·fingerprint·공식상태·원고유효기간 재검증 필요."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "일반 근로자로 재취업한 뒤 조기재취업수당을 언제 어떤 서류로 청구하나요?",
+            "reader_scope": "이직당시65세 미만 일반 근로자 구직급여 수급자의 재취업",
+            "angles": [
+              "새 직장에 정착한 뒤 놓치기 쉬운 사후청구",
+              "잔여급여일수와 제외사유",
+              "12개월 경과와 청구서류 준비"
+            ],
+            "chosen_angle": "새 직장에 정착→자격확인→12개월경과→서류청구",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "구직급여를 받다가 새 직장에 자리 잡았다면, 남은 급여 일부를 조기재취업수당으로 받을 수 있어요. 이직 당시 65세 미만인 일반 근로자의 준비 순서예요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "조기에 재취업한 구직급여 수급자는 요건을 채우면 남은 급여 일부를 조기재취업수당으로 받을 수 있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "조기재취업수당은 취업 즉시 받는 돈이 아니에요. 일반 근로자는 12개월 이상 계속 고용된 뒤 청구해요."
+              }
+            ],
+            "chosen_opening": "구직급여를 받다가 새 직장에 자리 잡았다면, 남은 급여 일부를 조기재취업수당으로 받을 수 있어요. 이직 당시 65세 미만인 일반 근로자의 준비 순서예요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "첫적용11월10일에서 날짜반전한11월15일12시는A. 같은날08시P5 도시가스자격과 다른 P6 사후신청절차. 최근20건/미래3건 도입·전개 대조.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국",
+              "benefit": "고용보험 사후 현금수당",
+              "audience": "재취업 일반근로자",
+              "application": "개인별12개월경과후",
+              "media": "TEXT"
+            },
+            "comparison_group": "유사독자·지역·혜택·마감의 A/B24h만 비교. 현재 매칭쌍 부족·시각/미디어 교란으로 비중 유지.",
+            "applied_elements": [
+              "생활상황과 혜택 먼저",
+              "일반근로자로 범위 제한",
+              "조건→제외→서류청구 순서",
+              "일액×남은일수절반, 일시지급"
+            ],
+            "profile_route": "프로필/사이트검색·상세·실제청구거래는 미확인, 보장하지 않는다.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "149200000063",
+          "notice_version": {
+            "detail": "2026-05-07",
+            "list": "20260507135412"
+          },
+          "pattern": "P6",
+          "opening": "구직급여를 받다가 새 직장에 자리 잡았다면, 남은 급여 일부를 조기재취업수당으로 받을 수 있어요. 이직 당시 65세 미만인 일반 근로자의 준비 순서예요.",
+          "structure": "재취업정착→14일/잔여일수/12개월→산식·2년→제외→서류청구",
+          "media_turn": "TEXT"
+        }
+      }
     }
   ]
 }
