@@ -14,6 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "43608335935",
     "43603870851",
     "43599437712",
     "43592967935",
@@ -1479,6 +1480,13 @@
       "conclusion": "success",
       "updated_at": "2026-11-14T14:15:12Z",
       "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+    },
+    "43608335935": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-14T15:06:19Z",
+      "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
     }
   },
   "last_check": {
@@ -2118,22 +2126,22 @@
     "last_ready_queue_blob_sha": "f4ea5e0fb01dc19e93e0a765d61adebe72f71ea8"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-14T14:28:53.099Z",
+    "checked_at": "2026-11-14T15:24:42.134Z",
     "result": "no_update",
     "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
     "publication_ledger_sha": "43e735e236cc7729a8a3bffe41f577b27cab0e6d",
     "queue_blob_sha": "e2727d894a6e8dd95c77e3ca7ae245e0af5f97ff",
-    "maintenance_previous_blob_sha": "e2fb052631a84883ea4d62d84a1c9ea9a8e119f4",
+    "maintenance_previous_blob_sha": "25541f4384a4d13cfc34a2a2839d15346f8e412e",
     "unresolved_publications": 0,
     "lease": null,
     "active_target_runs": [],
     "changed_run_versions": [
       {
-        "run_id": "43603870851",
+        "run_id": "43608335935",
         "run_attempt": 1,
         "status": "completed",
         "conclusion": "success",
-        "updated_at": "2026-11-14T14:15:12Z",
+        "updated_at": "2026-11-14T15:06:19Z",
         "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
       }
     ],
@@ -2163,7 +2171,7 @@
       "regression_ci_tests_passed": 203,
       "fresh_at_check": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-14T14:28:53.099Z",
+      "verification_checked_at": "2026-11-14T15:24:42.134Z",
       "classification": "validated_complete_fresh_generation",
       "cached_artifact_digest_reverified": true,
       "artifact_redownloaded_and_digest_verified_this_check": false
@@ -2197,7 +2205,7 @@
       "char_count": 445,
       "replies": 0,
       "verification": "Digest-verified receipt and authenticated publisher job log matched durable ledger main ID, URL, original content hash, TEXT/no asset and0 replies.",
-      "verification_completed_at": "2026-11-14T14:28:53.099Z",
+      "verification_completed_at": "2026-11-14T15:24:42.134Z",
       "public_web_visibility_independently_verified": false,
       "publication_ledger_records": 41,
       "pending": null,
@@ -2282,7 +2290,7 @@
         }
       ],
       "expired_unpublished_slots": [],
-      "last_validated_at": "2026-11-14T23:28:07.184627+09:00",
+      "last_validated_at": "2026-11-15T00:23:55.633002+09:00",
       "source_generation_checked": "gov24-43583449230-1",
       "image_recheck": {
         "existing_ready_evidence_preserved": true,
@@ -2313,30 +2321,20 @@
       "ledger_complete_verified": 41,
       "duplicate_main_ids": 0,
       "duplicate_slots": 0,
-      "today_main_posts": 4,
+      "today_main_posts": 0,
       "pending": 0,
       "actual_scope": "Fresh durable ledger plus latest authenticated publisher receipt/log and artifact; historical present public rendering not independently rechecked.",
-      "kst_date": "2026-11-14",
-      "today_patterns": [
-        "P1",
-        "P5",
-        "P8",
-        "P6"
-      ],
-      "today_media": [
-        "IMAGE",
-        "TEXT",
-        "IMAGE",
-        "TEXT"
-      ]
+      "kst_date": "2026-11-15",
+      "today_patterns": [],
+      "today_media": []
     },
     "metrics": {
-      "latest_observed_run_id": "43603870851",
+      "latest_observed_run_id": "43608335935",
       "new_metric_observations": 0,
       "new_observation_keys": [],
       "id_window_deduplication": true,
-      "artifact_id": 14117516176,
-      "artifact_digest": "sha256:7849b85ec26df027b43ea15864c1a40b054fe86b5624bbba0c22f61e1c2f7ce2",
+      "artifact_id": 14119131695,
+      "artifact_digest": "sha256:bc31681b5f1fc739bfc7a0656bcd78caa86614d5067903ceacacd45e3e66f2f8",
       "artifact_digest_verified": true,
       "job_logs_retrieved_this_run": true,
       "observations_24h": 10,
@@ -2417,7 +2415,7 @@
       "code_change_required": false
     },
     "initial_41796747628_status": "resolved",
-    "next_condition": "No new publication/failure/partial/pending or metrics. Latest successful official snapshot has no due milestones. Next-day4 READY preserved byte-for-byte and validate_ready_entry/preview passed with current complete source, fingerprints and approved asset bytes. Actual publish must recheck latest source, official facts/status, media evidence and expiry; current19:09 source stale by Nov15 20h. A5/B5 unmatched/insufficient; weights unchanged;7/14day policy evaluations not due. No dispatch, POST retry or code change."
+    "next_condition": "Nov15 regular08/12/16/20 existing READY P5/P6/P8/P1 IMAGE/TEXT/IMAGE/TEXT preserved and validated; no expired unpublished slot. Actual send must recheck latest complete source, official facts/status, media evidence and expiry. Current Nov14 19:09 source not fresh through Nov15 20h. Latest official insight snapshot has no due milestones. No new publication/failure/partial/pending/recovery or metric. A5/B5 unmatched/insufficient; weights unchanged;7/14day policy evaluations not due. No dispatch, POST retry or code change."
   },
   "reach_policy": {
     "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -5078,6 +5076,23 @@
           "artifact_digest": "sha256:7849b85ec26df027b43ea15864c1a40b054fe86b5624bbba0c22f61e1c2f7ce2",
           "artifact_digest_verified": true,
           "observed_at": "2026-11-14T14:15:09.747774+00:00",
+          "records": 0,
+          "new_observations": 0,
+          "classification": "normal_no_due_milestones",
+          "job_logs_retrieved": true
+        },
+        "43608335935": {
+          "run_id": "43608335935",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-14T15:06:19Z",
+          "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
+          "job_id": 132487689109,
+          "artifact_id": 14119131695,
+          "artifact_digest": "sha256:bc31681b5f1fc739bfc7a0656bcd78caa86614d5067903ceacacd45e3e66f2f8",
+          "artifact_digest_verified": true,
+          "observed_at": "2026-11-14T15:06:16.501240+00:00",
           "records": 0,
           "new_observations": 0,
           "classification": "normal_no_due_milestones",
