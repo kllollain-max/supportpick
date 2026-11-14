@@ -129,7 +129,8 @@
     "43560820467",
     "43565225249",
     "43571613008",
-    "43572910759"
+    "43572910759",
+    "43579525190"
   ],
   "last_health": {
     "unresolved_publications": 0,
@@ -1415,25 +1416,32 @@
       "conclusion": "success",
       "updated_at": "2026-11-14T07:50:58Z",
       "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+    },
+    "43579525190": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-14T09:13:45Z",
+      "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-14T09:04:28.115Z",
-    "result": "new_publication_and_new_writer_verified",
+    "checked_at": "2026-11-14T09:37:58.570Z",
+    "result": "new_metrics_verified_writer_reused",
     "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
     "publication_ledger_sha": "31e6e7e6bac3caa2bd4a5f3c2d51b19c72791156",
     "queue_blob_sha": "bd4d9dd4729df9395c9fdcabdd32598b7e3252a6",
-    "maintenance_previous_blob_sha": "e50b4816b8fd7876bb15a3bbf366c16dbdd7a67e",
+    "maintenance_previous_blob_sha": "09e2c7479b562f23507c661a9925700c9dd90657",
     "unresolved_publications": 0,
     "lease": null,
     "active_target_runs": [],
     "changed_run_versions": [
       {
-        "run_id": "43572910759",
+        "run_id": "43579525190",
         "run_attempt": 1,
         "status": "completed",
         "conclusion": "success",
-        "updated_at": "2026-11-14T07:50:58Z",
+        "updated_at": "2026-11-14T09:13:45Z",
         "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
       }
     ],
@@ -1463,7 +1471,7 @@
       "regression_ci_tests_passed": 203,
       "fresh_at_check": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-14T09:04:28.115Z",
+      "verification_checked_at": "2026-11-14T09:37:58.570Z",
       "classification": "validated_complete_fresh_generation",
       "cached_artifact_digest_reverified": true,
       "artifact_redownloaded_and_digest_verified_this_check": false
@@ -1497,7 +1505,7 @@
       "char_count": 452,
       "replies": 0,
       "verification": "Digest-verified result receipt and authenticated publisher log match original queued text, content hash, approved IMAGE SHA, main ID and0 replies.",
-      "verification_completed_at": "2026-11-14T09:04:28.115Z",
+      "verification_completed_at": "2026-11-14T09:37:58.570Z",
       "public_web_visibility_independently_verified": false,
       "publication_ledger_records": 40,
       "pending": null,
@@ -1510,17 +1518,17 @@
         "platform_timestamp": null,
         "public_report": "Publication confirmed Nov14 16:50 KST."
       },
-      "latest_publication_previously_reported": false,
-      "new_publication_this_run": true
+      "latest_publication_previously_reported": true,
+      "new_publication_this_run": false
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "current_code_and_prompt_blobs_unchanged": true,
       "all_local_inputs_match_fresh_remote_blobs": true,
-      "queue_reused": false,
-      "queue_write": true,
+      "queue_reused": true,
+      "queue_write": false,
       "queue_readback_equal": true,
-      "unchanged_existing_entries": 37,
+      "unchanged_existing_entries": 38,
       "preview_ready": 4,
       "validate_ready_entry_and_preview": true,
       "future_slot_simulation": true,
@@ -1589,9 +1597,9 @@
         "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
         "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
       },
-      "last_validated_at": "2026-11-14T18:03:23.284987+09:00",
+      "last_validated_at": "2026-11-14T18:36:28.602659+09:00",
       "queue_commit_sha": "071b2aa322ecab638ad6589d7c6738c76d2d143e",
-      "new_entries": 1,
+      "new_entries": 0,
       "validation_environment": {
         "existing_exact_local_blobs_verified_against_fresh_remote": true,
         "master_sha256_verified": true,
@@ -1607,12 +1615,6 @@
         "private_openings": 3,
         "selected_cohort": "B",
         "recent_history_count": 20
-      },
-      "new_entry": {
-        "benefit_id": "999000000027",
-        "slot": "2026-11-15T16:00:00+09:00",
-        "char_count": 460,
-        "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd"
       }
     },
     "history_audit": {
@@ -1628,17 +1630,21 @@
       "kst_date": "2026-11-14"
     },
     "metrics": {
-      "latest_observed_run_id": "43571613008",
-      "new_metric_observations": 0,
-      "new_observation_keys": [],
+      "latest_observed_run_id": "43579525190",
+      "new_metric_observations": 3,
+      "new_observation_keys": [
+        "18135426070761677:168h",
+        "18082387943706799:72h",
+        "18156121705549353:24h"
+      ],
       "id_window_deduplication": true,
-      "artifact_id": 14103908433,
-      "artifact_digest": "sha256:d075a2c6a71b852a63668c8926aba6338781fc21f430c648666a744e26044720",
+      "artifact_id": 14106649433,
+      "artifact_digest": "sha256:9486952b3be2049c9c0e341e7ecd38f5783d6312cc58a62b758548fd94f2e99e",
       "artifact_digest_verified": true,
-      "job_logs_retrieved_this_run": false,
-      "observations_24h": 8,
+      "job_logs_retrieved_this_run": true,
+      "observations_24h": 9,
       "A_n": 4,
-      "B_n": 4,
+      "B_n": 5,
       "matched_comparison_pairs": 0,
       "comparison_deferred": true,
       "weights_unchanged": true,
@@ -1646,16 +1652,16 @@
       "fourteen_day_evaluation_due": false,
       "historical_72h_168h_excluded_from_24h_comparison": true,
       "comparison": {
-        "checked_at": "2026-11-14T04:34:17.051Z",
-        "comparable_24h_n": 8,
-        "window_eligible_24h_n": 8,
+        "checked_at": "2026-11-14T09:37:58.570Z",
+        "comparable_24h_n": 9,
+        "window_eligible_24h_n": 9,
         "matched_comparison_pairs": 0,
         "A_n": 4,
-        "B_n": 4,
-        "views_median": 127,
+        "B_n": 5,
+        "views_median": 104,
         "group_medians": {
           "A": 85,
-          "B": 142.5
+          "B": 104
         },
         "actual_observed_elapsed_hours": [
           25.301120277777777,
@@ -1665,7 +1671,8 @@
           25.236122777777776,
           24.626399166666666,
           24.357242222222222,
-          24.677569722222223
+          24.677569722222223,
+          25.06515277777778
         ],
         "decision": "comparison_deferred_insufficient_samples_and_confounded_strata",
         "weight_changed": false,
@@ -1677,7 +1684,8 @@
         "confounders": [
           "A pregnancy voucher TEXT/P5, Gimpo local currency IMAGE/P1, medical service IMAGE/P6; B Incheon cashback IMAGE/P8, single-parent cash TEXT/P5, automobile acquisition tax TEXT/P8. Different audience/geography/benefit/time/length/media; no matched pair.",
           "New B IMAGE/P4 maternity-related employment-insurance wage benefit has different reader group and length; no matched A comparison.",
-          "New A TEXT post has distinct reader/benefit; no matched B pair. Four per group below initial8/group target."
+          "New A TEXT post has distinct reader/benefit; no matched B pair. Four per group below initial8/group target.",
+          "New B IMAGE/P5 has different audience/benefit and no matched A pair. A4/B5 below8 per group."
         ],
         "reactions": {
           "A": {
@@ -1687,9 +1695,9 @@
             "shares": 0
           },
           "B": {
-            "likes": 6,
+            "likes": 8,
             "aggregate_replies": 0,
-            "reposts": 2,
+            "reposts": 4,
             "shares": 0
           }
         },
@@ -1697,8 +1705,8 @@
       },
       "duplicate_observations": [],
       "cached_artifact_digest_reverified": false,
-      "due_milestones": 0,
-      "classification": "no_new_snapshot_run"
+      "due_milestones": 3,
+      "classification": "official_api_milestones_verified"
     },
     "recovery": {
       "required": false,
@@ -1709,7 +1717,7 @@
       "code_change_required": false
     },
     "initial_41796747628_status": "resolved",
-    "next_condition": "Next20h TEXT/P6 thenNov15 08h IMAGE/P5,12h TEXT/P6,16h IMAGE/P8. All4 READY validated; existing37 entries preserved. Tomorrow latest source/facts/image/expiry recheck mandatory; source freshness not presumed.40 complete verified ledger records, no pending/failure/partial; no recovery/POST retry/code change/extra dispatch."
+    "next_condition": "20h TEXT/P6 READY valid through20:50:05 KST; existing4 READY preserved and validated. New24h B IMAGE72 views observed25h03m after ledger invocation. A4/B5 and unmatched strata => comparison deferred, no weight change;7/14day policy evaluations not due. Next-day source/facts/image/expiry recheck remains mandatory. No new publication/failure/partial/pending/recovery."
   },
   "last_reported_publication": {
     "run_id": "43572910759",
@@ -3784,6 +3792,126 @@
           "reader_only_replies": null,
           "reply_scope": "Platform aggregate replies; quotes not separately supplied.",
           "not_backcalculated": true
+        },
+        "18135426070761677:168h": {
+          "main_id": "18135426070761677",
+          "window_hours": 168,
+          "scheduled_at": "2026-11-07T16:00:00+09:00",
+          "published_at": "2026-11-07T16:48:05.317709+09:00",
+          "benefit_id": "641000000139",
+          "reader_scope": "경기도에 거주하며 수도권 대중교통을 이용하는 어린이·청소년과 보호자",
+          "opening_type": null,
+          "cohort": null,
+          "pattern": "P3",
+          "char_count": 318,
+          "media_turn": "IMAGE",
+          "checked_at": "2026-11-14T09:13:39.725377+00:00",
+          "elapsed_hours": 169.42622444444444,
+          "due_at": "2026-11-14T07:48:05.317Z",
+          "timing": "late_available_check",
+          "status": "measured_official_api",
+          "views": 2,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 1,
+          "shares": 0,
+          "quotes": null,
+          "saves": null,
+          "profile_visits": null,
+          "new_followers": null,
+          "site_visits": null,
+          "permission_status": "existing_authorized_token_read_succeeded",
+          "official_api_request_performed": true,
+          "source_run_id": "43579525190",
+          "artifact_id": 14106649433,
+          "artifact_sha256_verified": true,
+          "timestamp_basis": "Ledger publisher invocation time; exact platform timestamp unavailable. Actual elapsed shown; no24h backcalculation.",
+          "comparison_eligible": false,
+          "comparison_exclusion": "Historical72h/168h excluded from24h A/B; no retrospective cohort.",
+          "automatic_author_replies_in_original_record": 0,
+          "reader_only_replies": null,
+          "reply_scope": "Platform aggregate replies; quotes not separately provided.",
+          "not_backcalculated": true
+        },
+        "18082387943706799:72h": {
+          "main_id": "18082387943706799",
+          "window_hours": 72,
+          "scheduled_at": "2026-11-11T16:00:00+09:00",
+          "published_at": "2026-11-11T17:08:29.061816+09:00",
+          "benefit_id": "628000000139",
+          "reader_scope": "인천의 가맹점에서 인천e음으로 결제하거나 처음 카드를 발급받으려는 만 14세 이상 이용자",
+          "opening_type": "대상·혜택형",
+          "cohort": "B",
+          "pattern": "P8",
+          "char_count": 268,
+          "media_turn": "IMAGE",
+          "checked_at": "2026-11-14T09:13:39.725377+00:00",
+          "elapsed_hours": 73.08629555555555,
+          "due_at": "2026-11-14T08:08:29.061Z",
+          "timing": "late_available_check",
+          "status": "measured_official_api",
+          "views": 17,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 1,
+          "shares": 0,
+          "quotes": null,
+          "saves": null,
+          "profile_visits": null,
+          "new_followers": null,
+          "site_visits": null,
+          "permission_status": "existing_authorized_token_read_succeeded",
+          "official_api_request_performed": true,
+          "source_run_id": "43579525190",
+          "artifact_id": 14106649433,
+          "artifact_sha256_verified": true,
+          "timestamp_basis": "Ledger publisher invocation time; exact platform timestamp unavailable. Actual elapsed shown; no24h backcalculation.",
+          "comparison_eligible": false,
+          "comparison_exclusion": "Historical72h/168h excluded from24h A/B; no retrospective cohort.",
+          "automatic_author_replies_in_original_record": 0,
+          "reader_only_replies": null,
+          "reply_scope": "Platform aggregate replies; quotes not separately provided.",
+          "not_backcalculated": true
+        },
+        "18156121705549353:24h": {
+          "main_id": "18156121705549353",
+          "window_hours": 24,
+          "scheduled_at": "2026-11-13T16:00:00+09:00",
+          "published_at": "2026-11-13T17:09:45.175573+09:00",
+          "benefit_id": "172100000012",
+          "reader_scope": "등록장애인 중 SK텔레콤 이동전화 이용자",
+          "opening_type": "대상·혜택형",
+          "cohort": "B",
+          "pattern": "P5",
+          "char_count": 401,
+          "media_turn": "IMAGE",
+          "checked_at": "2026-11-14T09:13:39.725377+00:00",
+          "elapsed_hours": 25.06515277777778,
+          "due_at": "2026-11-14T08:09:45.175Z",
+          "timing": "late_available_check",
+          "status": "measured_official_api",
+          "views": 72,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 2,
+          "shares": 0,
+          "quotes": null,
+          "saves": null,
+          "profile_visits": null,
+          "new_followers": null,
+          "site_visits": null,
+          "permission_status": "existing_authorized_token_read_succeeded",
+          "official_api_request_performed": true,
+          "source_run_id": "43579525190",
+          "artifact_id": 14106649433,
+          "artifact_sha256_verified": true,
+          "timestamp_basis": "Ledger publisher invocation time; exact platform timestamp unavailable. Actual elapsed shown; no24h backcalculation.",
+          "comparison_eligible": true,
+          "comparison_exclusion": null,
+          "automatic_author_replies_in_original_record": 0,
+          "reader_only_replies": null,
+          "reply_scope": "Platform aggregate replies; quotes not separately provided.",
+          "not_backcalculated": true
         }
       },
       "last_availability_check_at": "2026-11-14T01:16:39.952Z",
@@ -4639,6 +4767,28 @@
           "new_observations": 0,
           "classification": "normal_no_due_milestones",
           "job_logs_retrieved": true
+        },
+        "43579525190": {
+          "run_id": "43579525190",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-14T09:13:45Z",
+          "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
+          "job_id": 132401055218,
+          "artifact_id": 14106649433,
+          "artifact_digest": "sha256:9486952b3be2049c9c0e341e7ecd38f5783d6312cc58a62b758548fd94f2e99e",
+          "artifact_digest_verified": true,
+          "observed_at": "2026-11-14T09:13:39.725377+00:00",
+          "records": 3,
+          "new_observations": 3,
+          "new_observation_keys": [
+            "18135426070761677:168h",
+            "18082387943706799:72h",
+            "18156121705549353:24h"
+          ],
+          "classification": "official_api_milestones_verified",
+          "job_logs_retrieved": true
         }
       },
       "additional_connector_check": {
@@ -4650,16 +4800,16 @@
         "existing_official_workflow_remains_available": true
       },
       "last_comparison": {
-        "checked_at": "2026-11-14T04:34:17.051Z",
-        "comparable_24h_n": 8,
-        "window_eligible_24h_n": 8,
+        "checked_at": "2026-11-14T09:37:58.570Z",
+        "comparable_24h_n": 9,
+        "window_eligible_24h_n": 9,
         "matched_comparison_pairs": 0,
         "A_n": 4,
-        "B_n": 4,
-        "views_median": 127,
+        "B_n": 5,
+        "views_median": 104,
         "group_medians": {
           "A": 85,
-          "B": 142.5
+          "B": 104
         },
         "actual_observed_elapsed_hours": [
           25.301120277777777,
@@ -4669,7 +4819,8 @@
           25.236122777777776,
           24.626399166666666,
           24.357242222222222,
-          24.677569722222223
+          24.677569722222223,
+          25.06515277777778
         ],
         "decision": "comparison_deferred_insufficient_samples_and_confounded_strata",
         "weight_changed": false,
@@ -4681,7 +4832,8 @@
         "confounders": [
           "A pregnancy voucher TEXT/P5, Gimpo local currency IMAGE/P1, medical service IMAGE/P6; B Incheon cashback IMAGE/P8, single-parent cash TEXT/P5, automobile acquisition tax TEXT/P8. Different audience/geography/benefit/time/length/media; no matched pair.",
           "New B IMAGE/P4 maternity-related employment-insurance wage benefit has different reader group and length; no matched A comparison.",
-          "New A TEXT post has distinct reader/benefit; no matched B pair. Four per group below initial8/group target."
+          "New A TEXT post has distinct reader/benefit; no matched B pair. Four per group below initial8/group target.",
+          "New B IMAGE/P5 has different audience/benefit and no matched A pair. A4/B5 below8 per group."
         ],
         "reactions": {
           "A": {
@@ -4691,9 +4843,9 @@
             "shares": 0
           },
           "B": {
-            "likes": 6,
+            "likes": 8,
             "aggregate_replies": 0,
-            "reposts": 2,
+            "reposts": 4,
             "shares": 0
           }
         },
@@ -6402,7 +6554,10 @@
     "18131183578857421:24h",
     "18093294914677276:168h",
     "18001464938830261:72h",
-    "18158110936524366:24h"
+    "18158110936524366:24h",
+    "18135426070761677:168h",
+    "18082387943706799:72h",
+    "18156121705549353:24h"
   ],
   "check_history": {
     "2026-11-12T17:20:47.000+09:00": {
@@ -10005,6 +10160,300 @@
       },
       "initial_41796747628_status": "resolved",
       "next_condition": "Next20h TEXT/P6 thenNov15 08h IMAGE/P5,12h TEXT/P6,16h IMAGE/P8. All4 READY validated; existing37 entries preserved. Tomorrow latest source/facts/image/expiry recheck mandatory; source freshness not presumed.40 complete verified ledger records, no pending/failure/partial; no recovery/POST retry/code change/extra dispatch."
+    },
+    "2026-11-14T09:37:58.570Z": {
+      "checked_at": "2026-11-14T09:37:58.570Z",
+      "result": "new_metrics_verified_writer_reused",
+      "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
+      "publication_ledger_sha": "31e6e7e6bac3caa2bd4a5f3c2d51b19c72791156",
+      "queue_blob_sha": "bd4d9dd4729df9395c9fdcabdd32598b7e3252a6",
+      "maintenance_previous_blob_sha": "09e2c7479b562f23507c661a9925700c9dd90657",
+      "unresolved_publications": 0,
+      "lease": null,
+      "active_target_runs": [],
+      "changed_run_versions": [
+        {
+          "run_id": "43579525190",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-14T09:13:45Z",
+          "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+        }
+      ],
+      "run_pagination": {
+        "branch": "main",
+        "pages": 1,
+        "entries_examined": 30,
+        "checkpoint_reached": true
+      },
+      "source": {
+        "run_id": "43515826483",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-13T22:13:28Z",
+        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
+        "generation": "gov24-43515826483-1",
+        "count": 10942,
+        "manifest_sha256": "a6f242d5fa1f58e2cf51be0896b0ed6567caaa2af67f3a5622389ce4fbbb61e1",
+        "collection_succeeded_at": "2026-11-14T07:08:16.946958+09:00",
+        "artifact_id": 14080059459,
+        "artifact_digest": "sha256:0e1b755c95e0f330619213481f734e79bd5f2773db4b2fd026fea90a5bd99193",
+        "artifact_digest_verified": true,
+        "downloaded_via_github_artifact_tool": true,
+        "read_current_verify_snapshot_load_feed": true,
+        "job_logs_retrieved_this_run": true,
+        "regression_ci_tests_passed": 203,
+        "fresh_at_check": true,
+        "source_only_not_current_application_verification": true,
+        "verification_checked_at": "2026-11-14T09:37:58.570Z",
+        "classification": "validated_complete_fresh_generation",
+        "cached_artifact_digest_reverified": true,
+        "artifact_redownloaded_and_digest_verified_this_check": false
+      },
+      "publisher": {
+        "run_id": "43572910759",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-14T07:50:58Z",
+        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
+        "job_id": 132380934825,
+        "artifact_id": 14105615136,
+        "artifact_digest": "sha256:00d03f5a872be5f73dd18f3a0b4702861998c972c1ea9d8c27b6ab38e7d67623",
+        "artifact_digest_verified": true,
+        "classification": "verified_natural_publication",
+        "event": "schedule",
+        "published": true,
+        "slot": "2026-11-14T16:00:00+09:00",
+        "published_at": "2026-11-14T16:50:05.404143+09:00",
+        "benefit_id": "134200000003",
+        "main_id": "17979889164133776",
+        "url": "https://www.threads.com/@hid_1004/post/DfttXuAlbC1",
+        "stage": "complete",
+        "verified": true,
+        "content_hash": "edbe92f061dae0fdb44ec713c544d46fa91c52acf1340f6c0af62e574cefac53",
+        "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+        "source_generation": "gov24-43515826483-1",
+        "pattern": "P8",
+        "media_turn": "IMAGE",
+        "char_count": 452,
+        "replies": 0,
+        "verification": "Digest-verified result receipt and authenticated publisher log match original queued text, content hash, approved IMAGE SHA, main ID and0 replies.",
+        "verification_completed_at": "2026-11-14T09:37:58.570Z",
+        "public_web_visibility_independently_verified": false,
+        "publication_ledger_records": 40,
+        "pending": null,
+        "lease": null,
+        "job_logs_retrieved": true,
+        "publisher_related_tests_passed": 130,
+        "time_basis": {
+          "published_at": "Ledger invocation, not exact platform timestamp.",
+          "verified_result_logged_at": "2026-11-14T16:50:54.1469766+09:00",
+          "platform_timestamp": null,
+          "public_report": "Publication confirmed Nov14 16:50 KST."
+        },
+        "latest_publication_previously_reported": true,
+        "new_publication_this_run": false
+      },
+      "writer": {
+        "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+        "current_code_and_prompt_blobs_unchanged": true,
+        "all_local_inputs_match_fresh_remote_blobs": true,
+        "queue_reused": true,
+        "queue_write": false,
+        "queue_readback_equal": true,
+        "unchanged_existing_entries": 38,
+        "preview_ready": 4,
+        "validate_ready_entry_and_preview": true,
+        "future_slot_simulation": true,
+        "source_recheck_required_at_publish": true,
+        "next_24h_sequence": [
+          {
+            "slot": "2026-11-14T20:00:00+09:00",
+            "benefit_id": "645000000114",
+            "pattern": "P6",
+            "media_turn": "TEXT",
+            "char_count": 445,
+            "last_valid_at": "2026-11-14T20:50:05.111108+09:00",
+            "expires_at": "2026-11-14T20:50:06.111108+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true,
+            "selection_rank": 35,
+            "source_fingerprint_matches": true
+          },
+          {
+            "slot": "2026-11-15T08:00:00+09:00",
+            "benefit_id": "B55121000003",
+            "pattern": "P5",
+            "media_turn": "IMAGE",
+            "char_count": 416,
+            "last_valid_at": "2026-11-15T08:51:24.993450+09:00",
+            "expires_at": "2026-11-15T08:51:25.993450+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true,
+            "selection_rank": 35,
+            "source_fingerprint_matches": true
+          },
+          {
+            "slot": "2026-11-15T12:00:00+09:00",
+            "benefit_id": "149200000063",
+            "pattern": "P6",
+            "media_turn": "TEXT",
+            "char_count": 441,
+            "last_valid_at": "2026-11-15T13:32:40.699516+09:00",
+            "expires_at": "2026-11-15T13:32:41.699516+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true,
+            "selection_rank": 35,
+            "source_fingerprint_matches": true
+          },
+          {
+            "slot": "2026-11-15T16:00:00+09:00",
+            "benefit_id": "999000000027",
+            "pattern": "P8",
+            "media_turn": "IMAGE",
+            "char_count": 460,
+            "last_valid_at": "2026-11-15T17:59:59+09:00",
+            "expires_at": "2026-11-15T18:03:23.284987+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true,
+            "selection_rank": 35,
+            "source_fingerprint_matches": true
+          }
+        ],
+        "expired_unpublished_slots": [],
+        "image_recheck": {
+          "status": "UPSTREAM_VERIFIED",
+          "verified_at": "2026-11-14T18:03:23.284987+09:00",
+          "new_visual_inspection": false,
+          "method": "Current allowed main PNG re-downloaded and SHA256 matched current image-review visual PASS; prior360px review retained.",
+          "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "last_validated_at": "2026-11-14T18:36:28.602659+09:00",
+        "queue_commit_sha": "071b2aa322ecab638ad6589d7c6738c76d2d143e",
+        "new_entries": 0,
+        "validation_environment": {
+          "existing_exact_local_blobs_verified_against_fresh_remote": true,
+          "master_sha256_verified": true,
+          "latest_source_artifact_digest_verified": true
+        },
+        "source_generation_checked": "gov24-43515826483-1",
+        "policy_input": {
+          "master_prompt_full_used": true,
+          "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+          "reach_policy_id": "supportpick-threads-reach-v1-20261109",
+          "review_reach_editorial_present": true,
+          "private_angles": 3,
+          "private_openings": 3,
+          "selected_cohort": "B",
+          "recent_history_count": 20
+        }
+      },
+      "history_audit": {
+        "requested_days": 28,
+        "available_records": 40,
+        "through_slot": "2026-11-14T16:00:00+09:00",
+        "ledger_complete_verified": 40,
+        "duplicate_main_ids": 0,
+        "duplicate_slots": 0,
+        "today_main_posts": 3,
+        "pending": 0,
+        "actual_scope": "Fresh durable ledger plus latest authenticated publisher receipt/log and artifact; historical present public rendering not independently rechecked.",
+        "kst_date": "2026-11-14"
+      },
+      "metrics": {
+        "latest_observed_run_id": "43579525190",
+        "new_metric_observations": 3,
+        "new_observation_keys": [
+          "18135426070761677:168h",
+          "18082387943706799:72h",
+          "18156121705549353:24h"
+        ],
+        "id_window_deduplication": true,
+        "artifact_id": 14106649433,
+        "artifact_digest": "sha256:9486952b3be2049c9c0e341e7ecd38f5783d6312cc58a62b758548fd94f2e99e",
+        "artifact_digest_verified": true,
+        "job_logs_retrieved_this_run": true,
+        "observations_24h": 9,
+        "A_n": 4,
+        "B_n": 5,
+        "matched_comparison_pairs": 0,
+        "comparison_deferred": true,
+        "weights_unchanged": true,
+        "seven_day_evaluation_due": false,
+        "fourteen_day_evaluation_due": false,
+        "historical_72h_168h_excluded_from_24h_comparison": true,
+        "comparison": {
+          "checked_at": "2026-11-14T09:37:58.570Z",
+          "comparable_24h_n": 9,
+          "window_eligible_24h_n": 9,
+          "matched_comparison_pairs": 0,
+          "A_n": 4,
+          "B_n": 5,
+          "views_median": 104,
+          "group_medians": {
+            "A": 85,
+            "B": 104
+          },
+          "actual_observed_elapsed_hours": [
+            25.301120277777777,
+            24.721231678888888,
+            24.38634,
+            24.748259444444443,
+            25.236122777777776,
+            24.626399166666666,
+            24.357242222222222,
+            24.677569722222223,
+            25.06515277777778
+          ],
+          "decision": "comparison_deferred_insufficient_samples_and_confounded_strata",
+          "weight_changed": false,
+          "seven_day_interim_due": false,
+          "fourteen_day_evaluation_due": false,
+          "historical_72h_and_168h_excluded": true,
+          "zero_and_missing_distinguished": true,
+          "reader_reply_attribution_unavailable": true,
+          "confounders": [
+            "A pregnancy voucher TEXT/P5, Gimpo local currency IMAGE/P1, medical service IMAGE/P6; B Incheon cashback IMAGE/P8, single-parent cash TEXT/P5, automobile acquisition tax TEXT/P8. Different audience/geography/benefit/time/length/media; no matched pair.",
+            "New B IMAGE/P4 maternity-related employment-insurance wage benefit has different reader group and length; no matched A comparison.",
+            "New A TEXT post has distinct reader/benefit; no matched B pair. Four per group below initial8/group target.",
+            "New B IMAGE/P5 has different audience/benefit and no matched A pair. A4/B5 below8 per group."
+          ],
+          "reactions": {
+            "A": {
+              "likes": 7,
+              "aggregate_replies": 0,
+              "reposts": 4,
+              "shares": 0
+            },
+            "B": {
+              "likes": 8,
+              "aggregate_replies": 0,
+              "reposts": 4,
+              "shares": 0
+            }
+          },
+          "reaction_rate_used": false
+        },
+        "duplicate_observations": [],
+        "cached_artifact_digest_reverified": false,
+        "due_milestones": 3,
+        "classification": "official_api_milestones_verified"
+      },
+      "recovery": {
+        "required": false,
+        "workflow_dispatch": false,
+        "new_failures": 0,
+        "new_partials": 0,
+        "post_retry_budget_used": 0,
+        "code_change_required": false
+      },
+      "initial_41796747628_status": "resolved",
+      "next_condition": "20h TEXT/P6 READY valid through20:50:05 KST; existing4 READY preserved and validated. New24h B IMAGE72 views observed25h03m after ledger invocation. A4/B5 and unmatched strata => comparison deferred, no weight change;7/14day policy evaluations not due. Next-day source/facts/image/expiry recheck remains mandatory. No new publication/failure/partial/pending/recovery."
     }
   }
 }
