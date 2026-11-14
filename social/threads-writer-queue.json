@@ -532,6 +532,16 @@
         "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=558379&bnefType=all&svcId=148000000007",
         "https://www.gg.go.kr/contents/contents.do?ciIdx=884&menuId=2559"
       ]
+    },
+    {
+      "benefit_id": "423000000362",
+      "views": 66522,
+      "decision": "HOLD",
+      "reason": "동일ID 원본은2025년기준 중위소득200%·시간당12180원표이며, 직접열람한2026-01-15 성평등가족부 현재안내는250%·12790원으로다르다. 출처와수집시각만으로옛기준을READY하지않고 이번동일ID검수에서보류한다. 사업종료아님.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=746602&bnefType=all&svcId=423000000362",
+        "https://www.mogef.go.kr/nw/rpd/nw_rpd_s001d.do?bbtSn=710800&mid=news405"
+      ]
     }
   ],
   "entries": [
@@ -5447,6 +5457,146 @@
           "opening": "저소득 농어민을 위한 농어가목돈마련저축은 본인 납입금에 기본이자와 별도 장려금을 더하는 저축이에요. 만기까지 유지하는 조건을 먼저 봐야 해요.",
           "structure": "저소득농어민저축→기간/장려금/보험료목록→농외제외→만기중도→서류",
           "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-15T20:00:00+09:00",
+      "benefit_id": "135200005015",
+      "source_generation": "gov24-43583449230-1",
+      "source_fingerprint": "cbb972c5d70f550ffab95ea1f5dce904d47c92b73ff8190528ce8ea2cfa7e3d8",
+      "prepared_at": "2026-11-14T20:37:55.489107+09:00",
+      "expires_at": "2026-11-15T20:37:55.489107+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "135200005015",
+        "post_text": "아기 출생 뒤 양육용품을 준비하고 있다면, 첫만남이용권으로 초기 지출 부담을 덜 수 있어요. 2026년 출생아는 첫째 200만원, 둘째 이상 300만원을 아동당 한 번 국민행복카드 바우처로 지원해요.\n\n먼저 출생신고가 끝나 정상적으로 주민등록번호를 부여받은 아동인지 확인해 주세요. 사용기간은 아동의 주민등록상 출생일부터 2년이에요. 신청한 날부터 2년으로 늘어나는 것은 아니에요.\n\n유흥·사행업종, 마사지 등 일부 위생업종, 성인용품점·면세점 등은 사용에서 제외돼요. 사용 가능한 업종과 남은 기간을 함께 확인하면 좋아요.\n\n신청은 상시로 안내되며 주소지 행정복지센터 방문이나 복지로·정부24에서 할 수 있어요. 방문할 때는 신분증과 신청서를 준비하고, 출생순위나 보호자 관계 확인에 추가 서류가 필요한지도 확인해 주세요. 심사 후 지급 여부가 결정돼요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-15T20:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "2026년출생신고한아동의보호자 중 일반 국민행복카드바우처 이용자",
+          "central_message": "2026년 출생아의 양육용품 지출에 첫만남이용권을 어떻게 쓰고 언제까지 신청·사용하나요?",
+          "pattern": "P1",
+          "selection_reason": "누적조회수순·실제41게시/미래3READY중복제외. 상위66522회아이돌봄은2025원본/2026공식불일치HOLD,ID/이유/출처추가기록. 나머지상위notes보존.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "135200005015",
+              "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10711020100",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-14T20:37:55.489107+09:00",
+              "claims_supported": [
+                "보건복지부 현재 첫만남이용권 본문978~1012행 직접열람.2024이후 출생아·출생신고/정상주민번호·아동당첫째200/둘째이상300 국민행복카드바우처·출생일부터2년·사용제외업종·신분증/신청서/순위관계서류대조. 본문2026출생아로한정해구1년문구와신2년각주를구분. 현금예외·2027계획을일반바우처현재내용과합치지않음."
+              ]
+            },
+            {
+              "source_id": "135200005015",
+              "source_ref": "https://www.busan.go.kr/childcare/childcare010101",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-14T20:37:55.489107+09:00",
+              "claims_supported": [
+                "부산시2026현재공식 첫만남이용권 구역 직접열람. 읍면동행정복지센터·복지로·정부24 신청 경로,사용기간전신청·연중계속 확인. 전국공통첫만남이용권만대조하고부산추가지원100만원은전국지원금에합산하지않음."
+              ]
+            },
+            {
+              "source_id": "135200005015",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=805790&bnefType=all&svcId=135200005015",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-14T20:37:55.489107+09:00",
+              "claims_supported": [
+                "검증완전수집본gov24-43583449230-1 동일ID serviceList 누적조회수66238,API checkedAt=2026-11-14T19:06:04.818623+09:00,collectionSucceededAt=2026-11-14T19:09:45.353575+09:00. 상시신청·방문/온라인·출생/금액/2년을직접열람공식안내와대조. 수집시각은현재접수검증아님,source_only/applicationOpenVerified=false 유지."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 441,
+          "count_method": "Python Unicode len including spaces/newlines/CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "2026출생아일반바우처독자에한정,시설보호등현금예외를일반현금으로설명하지않음.",
+            "신청시기와출생일기준사용기한구분.개인별판정/지급보장없음.",
+            "2027예산/계획변경은현재시행제도에합치지않음.발송시최신source·공식상태·유효기간재검증필수."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "2026년 출생아의 양육용품 지출에 첫만남이용권을 어떻게 쓰고 언제까지 신청·사용하나요?",
+            "reader_scope": "2026년출생신고한아동의보호자 중 일반 국민행복카드바우처 이용자",
+            "angles": [
+              "출생후양육용품지출",
+              "아동당금액과출생순위",
+              "출생일기준사용기한"
+            ],
+            "chosen_angle": "초기양육지출→금액→출생일기한→사용제한→신청",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "아기 출생 뒤 양육용품을 준비하고 있다면, 첫만남이용권으로 초기 지출 부담을 덜 수 있어요. 2026년 출생아는 첫째 200만원, 둘째 이상 300만원을 아동당 한 번 국민행복카드 바우처로 지원해요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "2026년 출생아의 첫만남이용권은 첫째200만원, 둘째이상300만원을 국민행복카드바우처로 지원해요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "첫만남이용권의 사용기한은 신청일이 아닌 아동 출생일부터 계산해요.2026년 출생아는2년이에요."
+              }
+            ],
+            "chosen_opening": "아기 출생 뒤 양육용품을 준비하고 있다면, 첫만남이용권으로 초기 지출 부담을 덜 수 있어요. 2026년 출생아는 첫째 200만원, 둘째 이상 300만원을 아동당 한 번 국민행복카드 바우처로 지원해요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "첫적용11월10일의날짜반전으로11월15일20시는A. 같은날P5/P6/P8와다른P1생활지출,최근20건/미래3건도입·전개대조.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국",
+              "benefit": "출생아1회바우처",
+              "audience": "2026출생아보호자",
+              "application": "상시·개인별기한",
+              "media": "TEXT"
+            },
+            "comparison_group": "A4/B5·매칭쌍0으로효과판단보류.독자/혜택/지역/시각/미디어교란기록,비중유지.",
+            "applied_elements": [
+              "양육용품생활상황과금액먼저",
+              "아동당1회바우처",
+              "출생일부터2년",
+              "제외업종과서류"
+            ],
+            "profile_route": "실제프로필/사이트검색·상세·신청거래미확인,기능/전환보장없음.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "135200005015",
+          "notice_version": {
+            "detail": "2025-11-28",
+            "list": "20251128170143"
+          },
+          "pattern": "P1",
+          "opening": "아기 출생 뒤 양육용품을 준비하고 있다면, 첫만남이용권으로 초기 지출 부담을 덜 수 있어요. 2026년 출생아는 첫째 200만원, 둘째 이상 300만원을 아동당 한 번 국민행복카드 바우처로 지원해요.",
+          "structure": "양육용품지출→출생순위별아동당바우처→출생일부터2년→제외업종→서류신청",
+          "media_turn": "TEXT"
         }
       }
     }
