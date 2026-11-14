@@ -122,7 +122,8 @@
     "42180307041",
     "42201890585",
     "43211696660",
-    "43208825382"
+    "43208825382",
+    "43550557266"
   ],
   "last_health": {
     "unresolved_publications": 0,
@@ -1359,6 +1360,13 @@
       "conclusion": "success",
       "updated_at": "2026-11-14T01:33:28Z",
       "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+    },
+    "43550557266": {
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-14T03:14:20Z",
+      "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
     }
   },
   "last_check": {
@@ -2111,16 +2119,25 @@
     "last_ready_queue_blob_sha": "f4ea5e0fb01dc19e93e0a765d61adebe72f71ea8"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-14T02:22:07.398Z",
+    "checked_at": "2026-11-14T03:20:12.286Z",
     "result": "no_update",
     "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
     "publication_ledger_sha": "61e2ae6c089b0a2dfc878164592812f2e4835055",
     "queue_blob_sha": "c8143f5f719e196a462e3585acbbef67432d2ec0",
-    "maintenance_previous_blob_sha": "b4bc2bb25e0b59f4b75b0d12a9defae3c5881f4f",
+    "maintenance_previous_blob_sha": "a171247476c65689b4314ed5f7dcd9cc85bd0a65",
     "unresolved_publications": 0,
     "lease": null,
     "active_target_runs": [],
-    "changed_run_versions": [],
+    "changed_run_versions": [
+      {
+        "run_id": "43550557266",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-14T03:14:20Z",
+        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+      }
+    ],
     "run_pagination": {
       "branch": "main",
       "pages": 1,
@@ -2147,7 +2164,7 @@
       "regression_ci_tests_passed": 203,
       "fresh_at_check": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-14T02:22:07.398Z",
+      "verification_checked_at": "2026-11-14T03:20:12.286Z",
       "classification": "validated_complete_fresh_generation",
       "cached_artifact_digest_reverified": true,
       "artifact_redownloaded_and_digest_verified_this_check": false
@@ -2181,7 +2198,7 @@
       "char_count": 414,
       "replies": 0,
       "verification": "Digest-verified actual result receipt and authenticated publisher verification log match original queued text, ledger content hash, approved image SHA and main ID.",
-      "verification_completed_at": "2026-11-14T02:22:07.398Z",
+      "verification_completed_at": "2026-11-14T03:20:12.286Z",
       "public_web_visibility_independently_verified": false,
       "publication_ledger_records": 38,
       "pending": null,
@@ -2273,7 +2290,7 @@
         "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
         "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
       },
-      "last_validated_at": "2026-11-14T11:21:22.339613+09:00",
+      "last_validated_at": "2026-11-14T12:18:52.552790+09:00",
       "queue_commit_sha": "cace5e97b50c3c1c50d3605397641343ce55099f",
       "new_entries": 0,
       "validation_environment": {
@@ -2306,12 +2323,12 @@
       "kst_date": "2026-11-14"
     },
     "metrics": {
-      "latest_observed_run_id": "43541276020",
+      "latest_observed_run_id": "43550557266",
       "new_metric_observations": 0,
       "new_observation_keys": [],
       "id_window_deduplication": true,
-      "artifact_id": 14092386454,
-      "artifact_digest": "sha256:5259d7389442244ef78fcbb71754eccf4f32f71c35508e5d77bdef298dfe17fb",
+      "artifact_id": 14096645006,
+      "artifact_digest": "sha256:98c2513d03e46deef923a5e3e2084f37e843e4c518548d4bb80b911e737a496b",
       "artifact_digest_verified": true,
       "job_logs_retrieved_this_run": true,
       "observations_24h": 7,
@@ -2371,16 +2388,10 @@
         },
         "reaction_rate_used": false
       },
-      "duplicate_observations": [
-        {
-          "key": "18131183578857421:24h",
-          "first_observed_at": "2026-11-13T23:59:10.833564+00:00",
-          "new_observed_at": "2026-11-14T01:33:22.786111+00:00",
-          "metrics_identical": true,
-          "classification": "duplicate_id_window_first_observation_preserved"
-        }
-      ],
-      "cached_artifact_digest_reverified": true
+      "duplicate_observations": [],
+      "cached_artifact_digest_reverified": false,
+      "due_milestones": 0,
+      "classification": "normal_no_due_milestones"
     },
     "recovery": {
       "required": false,
@@ -2391,14 +2402,7 @@
       "code_change_required": false
     },
     "initial_41796747628_status": "resolved",
-    "next_condition": "Existing4 READY unchanged. Next12h TEXT/P5 entry valid through13:13:34 KST; actual publisher must recheck latest source/facts/status. No pending/recovery/extra dispatch. Duplicate24h snapshot preserved separately; first24h observation and A/B comparison unchanged.",
-    "inspection_transport": {
-      "initial_file_read_failed": true,
-      "conditional_mutation_started_before_recovery": false,
-      "recovered_by_fresh_read": true,
-      "all_latest_blobs_read_successfully": true,
-      "production_failure_inferred": false
-    }
+    "next_condition": "12:00 KST regular slot has not started in observed Actions list; within original 2h grace, no failure inferred and no dispatch. Existing four READY entries retained; first expires at13:13:35 KST. Publisher must recheck current source, official facts and queue expiry before sending. Next-day source freshness not presumed; no new metric milestones."
   },
   "reach_policy": {
     "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -4495,6 +4499,24 @@
             "18131183578857421:24h"
           ],
           "classification": "duplicate_id_window_first_observation_preserved",
+          "job_logs_retrieved": true
+        },
+        "43550557266": {
+          "run_id": "43550557266",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-14T03:14:20Z",
+          "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
+          "job_id": 132311798553,
+          "artifact_id": 14096645006,
+          "artifact_digest": "sha256:98c2513d03e46deef923a5e3e2084f37e843e4c518548d4bb80b911e737a496b",
+          "artifact_digest_verified": true,
+          "observed_at": "2026-11-14T03:14:17.024930+00:00",
+          "records": 0,
+          "new_observations": 0,
+          "duplicate_observation_keys": [],
+          "classification": "normal_no_due_milestones",
           "job_logs_retrieved": true
         }
       },
