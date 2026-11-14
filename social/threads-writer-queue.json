@@ -5291,6 +5291,164 @@
           "media_turn": "TEXT"
         }
       }
+    },
+    {
+      "slot": "2026-11-15T16:00:00+09:00",
+      "benefit_id": "999000000027",
+      "source_generation": "gov24-43515826483-1",
+      "source_fingerprint": "6aebe8441a8804ecb2df514ccf8b68342199a108c20f95c2478d66969c237d06",
+      "prepared_at": "2026-11-14T18:03:23.284987+09:00",
+      "expires_at": "2026-11-15T18:03:23.284987+09:00",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "999000000027",
+        "post_text": "저소득 농어민을 위한 농어가목돈마련저축은 본인 납입금에 기본이자와 별도 장려금을 더하는 저축이에요. 만기까지 유지하는 조건을 먼저 봐야 해요.\n\n핵심은 세 가지예요.\n· 기간: 3년 또는 5년\n· 저소득 농어민의 만기 장려금 지급률: 연 3.0% 또는 연 4.8%\n· 2026년 건강보험 가입자 기준: 경감 전 월 보험료 220,050원 이하\n\n농업인·임업인·어업인 자격도 필요해요. 농어업 외 분야 상시근로자나, 해당 분야 외 직전 연도 종합소득이 직전 연도 기준 중위소득의 40% 이상인 경우는 가입에서 제외돼요.\n\n장려금률은 기본금리와 구분하며, 중도해지 때는 만기 조건이 그대로 적용되지 않아요. 보험료 조건만으로 가입이 확정되지는 않아요.\n\n상시신청으로 안내돼요. 농·수협이나 산림조합에서 경영체 등록확인서 등 농어민 증빙과 소득·건강보험 자료를 준비해 가입 자격을 확인해 보세요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-15T16:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "건강보험가입 저소득 농업인·임업인·어업인",
+          "central_message": "저소득 농어민의 목돈저축은 어떤 만기 장려금과 가입제한을 확인해야 하나요?",
+          "pattern": "P8",
+          "selection_reason": "동일ID누적조회수순·40게시및미래3READY중복제외. 상위HOLD/SKIP의ID/이유/출처는기존selection_notes전부보존.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "999000000027",
+              "source_ref": "https://www.fsc.go.kr/po040200/85890",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-14T18:03:23.284987+09:00",
+              "claims_supported": [
+                "금융위 고시 제2025-37호 본문279~316행 직접열람. 2026-01-01~12-31 적용, 경감전 월건강보험료 일반309200/저소득220050원 이하 및 피부양자 등 별도 규정 대조. 본문은 건강보험가입 저소득농어민 한정."
+              ]
+            },
+            {
+              "source_id": "999000000027",
+              "source_ref": "https://bhwizard.nonghyup.com/bbs/wondang/718/14526/download.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-14T18:03:23.284987+09:00",
+              "claims_supported": [
+                "원당농협2026년 신규적용 안내PDF 실제열람. 2026-01-01이후 신규계좌3/5년, 건강보험료220050원, 기본금리2.99 및 중도해지 별도금리 확인. 본문은 기본금리 숫자·합산수익을 약속하지 않고 만기/중도 구분만 사용. 현재 신규가입 안내의 운영근거이며 실제거래 실행아님."
+              ]
+            },
+            {
+              "source_id": "999000000027",
+              "source_ref": "https://ijinju.nonghyup.com/ijinju/74463/subview.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-14T18:03:23.284987+09:00",
+              "claims_supported": [
+                "진주북부농협 금융상품공시 기준일2026-04-30의132~143행 직접열람. 단위연%, 저소득3년 만기장려금3.00/5년4.80, 기본금리와 별도 열임을 확인. 본문은전체금리가 아닌 만기장려금률. 가입대상 농지면적 안내는 최신보험료고시/동일ID원본과 달라 그 행은 자격근거로 쓰지 않음."
+              ]
+            },
+            {
+              "source_id": "999000000027",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999080&bnefType=all&svcId=999000000027",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-14T18:03:23.284987+09:00",
+              "claims_supported": [
+                "완전검증수집본 gov24-43515826483-1 동일ID serviceList 누적조회수67313회. API checkedAt=2026-11-14T07:06:02.337186+09:00,collectionSucceededAt=2026-11-14T07:08:16.946958+09:00. 원본 상시신청·농어민자격·농외상시근로/종합소득40%제외·장려금3년3.0/5년4.8·서류·관할농축협수협산림조합방문을대조. source_only/applicationOpenVerified=false 유지,실제공식열람시각과구분."
+              ]
+            },
+            {
+              "source_id": "999000000027",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-14T18:03:23.284987+09:00",
+              "claims_supported": [
+                "현재허용mainPNG 실제재다운로드 SHA256=0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd를기존2026-11-06 visualPASS 및현재image-review와재대조.1254px정사각형,기존360px가독성PASS,금액·지역·기간 없음. 새시각검수 아님."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 460,
+          "count_method": "Python Unicode len including spaces/newlines/CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "농어민자격·보험료·농외소득을함께심사하며개별가입·수령확정아님. 건강보험피부양자등별도유형은본문독자에서제외.",
+            "복지로직접열람은0줄로실패,직접열람성공근거로쓰지않음. 농협공시가입대상오래된면적표와현재보험료고시를혼합하지않음.",
+            "현재source가내일16시까지신선하지않음.발송시최신완전수집본·사실fingerprint·공식상태·이미지·유효기간재검증필수."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "저소득 농어민의 목돈저축은 어떤 만기 장려금과 가입제한을 확인해야 하나요?",
+            "reader_scope": "건강보험가입 저소득 농업인·임업인·어업인",
+            "angles": [
+              "농어민의목돈마련",
+              "건강보험료와농외소득자격",
+              "기간별만기장려금구분"
+            ],
+            "chosen_angle": "저축성혜택과기간/장려금/보험료목록",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "농어민으로 목돈을 모으고 있다면, 본인 저축에 장려금을 더하는 농어가목돈마련저축의 만기 조건을 확인해 보세요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "저소득 농어민을 위한 농어가목돈마련저축은 본인 납입금에 기본이자와 별도 장려금을 더하는 저축이에요. 만기까지 유지하는 조건을 먼저 봐야 해요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "농어가목돈마련저축의 장려금률은 기본금리와 달라요. 저소득 농어민은 3년·5년 만기와 가입 기준을 함께 봐야 해요."
+              }
+            ],
+            "chosen_opening": "저소득 농어민을 위한 농어가목돈마련저축은 본인 납입금에 기본이자와 별도 장려금을 더하는 저축이에요. 만기까지 유지하는 조건을 먼저 봐야 해요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "첫적용11월10일에서날짜반전한11월15일16시는B.08시P5·12시P6와다른P8. 최근20건및미래3건도입/전개대조.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국",
+              "benefit": "본인저축+만기장려금",
+              "audience": "저소득농어민",
+              "application": "상시",
+              "media": "IMAGE"
+            },
+            "comparison_group": "현재A/B각4건·매칭쌍0.독자/지역/혜택/시간/미디어교란으로효과판단·비중조정 보류.",
+            "applied_elements": [
+              "대상·본인저축·장려금먼저",
+              "3항목목록",
+              "농외소득/상시근로제외",
+              "만기와중도구분"
+            ],
+            "profile_route": "실제프로필·사이트검색·상세·가입거래미확인,보장하지않음.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "999000000027",
+          "notice_version": {
+            "detail": "2026-10-27",
+            "list": "20261027172658"
+          },
+          "pattern": "P8",
+          "opening": "저소득 농어민을 위한 농어가목돈마련저축은 본인 납입금에 기본이자와 별도 장려금을 더하는 저축이에요. 만기까지 유지하는 조건을 먼저 봐야 해요.",
+          "structure": "저소득농어민저축→기간/장려금/보험료목록→농외제외→만기중도→서류",
+          "media_turn": "IMAGE"
+        }
+      }
     }
   ]
 }
