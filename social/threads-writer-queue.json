@@ -5908,6 +5908,146 @@
           "media_turn": "TEXT"
         }
       }
+    },
+    {
+      "slot": "2026-11-16T16:00:00+09:00",
+      "benefit_id": "149200005001",
+      "source_generation": "gov24-43645251692-1",
+      "source_fingerprint": "ddf39e1b30fff0845f5a409014194174538fe1340119c016d8741f948189ed0a",
+      "prepared_at": "2026-11-15T18:01:55.760731+09:00",
+      "expires_at": "2026-11-16T18:01:55.760731+09:00",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "149200005001",
+        "post_text": "훈련을 오가는 교통비와 식비가 부담된다면, 구직급여 수급자격자는 고용센터장이 지시한 훈련을 받을 때 직업능력개발수당을 확인해 보세요. 2026년 기준 훈련받은 날 하루 10,320원이에요.\n\n먼저 센터의 훈련 지시를 받은 과정인지 확인해요. 본인이 따로 등록한 모든 강의에 주는 수당은 아니며, 훈련받은 날 중 구직급여 지급 대상인 날에 지원돼요.\n\n다음으로 훈련기관에서 수강증명서를 받아 고지된 실업인정일에 제출해요. 마지막 실업인정일과 훈련 종료일이 다르면 종료일 제출 여부도 관할 센터와 확인해 주세요.\n\n공공·위탁 훈련에서 교통비나 식비를 따로 받으면 그 금액은 제외돼요. 구직급여 지급이 정지된 기간에는 이 수당도 받을 수 없어요. 지급 요건을 인정받으면 구직급여 지급일에 지정 계좌로 입금돼요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-16T16:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "고용센터장 지시에 따라 훈련받는 구직급여 수급자격자",
+          "central_message": "센터 지시로 훈련받는 구직급여 수급자격자가 교통비·식비 성격의 직업능력개발수당을 어떻게 신청하나요?",
+          "pattern": "P6",
+          "selection_reason": "동일ID누적조회수65107회.44성공원장과미래3READY중복제외후최상위검증가능후보. 기존상위HOLD/SKIP ID·구체이유·출처48건보존.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "149200005001",
+              "source_ref": "https://easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=3&cciNo=1&cnpClsNo=2&csmSeq=722&menuType=cnpcls&popMenu=ov",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-15T18:01:55.760731+09:00",
+              "claims_supported": [
+                "법제처생활법령2026-10-15기준 현재본문212~242행 직접열람.센터장훈련지시·수급자격·훈련일중구직급여대상일,하루10320원,공공/위탁훈련교통비·식비차감,지급정지기간제외,실업인정일수강증명서·마지막종료일예외·구직급여일계좌지급을대조. 개인별실업인정일에요건을갖춰신청가능한제도로확인.11월27일시행예정주석은현재변경으로쓰지않음."
+              ]
+            },
+            {
+              "source_id": "149200005001",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999034&bnefType=all&svcId=149200005001",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-15T18:01:55.760731+09:00",
+              "claims_supported": [
+                "완전수집본gov24-43645251692-1 동일IDserviceList 누적조회수65107/하루10320원/센터지시훈련을실제연법제처현재본문과대조. API checkedAt=2026-11-15T06:56:43.272548+09:00; collectionSucceededAt=2026-11-15T07:01:38.071947+09:00. sourceOnly/applicationOpenVerified=false는수집상태로보존,현재접수검증으로바꾸지않음."
+              ]
+            },
+            {
+              "source_id": "149200005001",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-15T18:01:55.760731+09:00",
+              "claims_supported": [
+                "허용mainPNG를이번점검실제재다운로드한SHA256=0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd가현재image-review.json의2026-11-06 AI_VISUAL_INSPECTION/PASS와일치.1254px정사각형·기존축소가독성근거참조,새시각검수아님. 실제내용체크리스트봉투·동전·새싹·브랜드/CTA이며사업금액·대상·기간문구없음. 위조공식화면/수령후기아님."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 412,
+          "count_method": "Python Unicode len including spaces/newlines/CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "고용24실업급여종합안내검색은옛7530원표기가있다. 실제연법제처2026-10-15본문의10320원과동일ID원본10320원을채택. 고시2026-01-01시행검색결과는보조단서이며법령센터본문은동적쉘/열람실패로직접고시를읽었다고주장하지않음.",
+            "개인별훈련지시·수급기간·중복교통비식비·지급정지는센터판정필요. 실제출석일수추정·월/연환산·지급보장없음.",
+            "현재source는내일16시까지신선하지않음. 실제발송시최신자료·공식상태·원고/증거24시간유효기간·이미지SHA재검증."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "센터 지시로 훈련받는 구직급여 수급자격자가 교통비·식비 성격의 직업능력개발수당을 어떻게 신청하나요?",
+            "reader_scope": "고용센터장 지시에 따라 훈련받는 구직급여 수급자격자",
+            "angles": [
+              "훈련이동·식사비부담",
+              "센터지시와구직급여대상일",
+              "수강증명서·실업인정일준비"
+            ],
+            "chosen_angle": "생활비부담과하루금액→센터지시확인→증명서제출→중복차감·지급정지제한",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "훈련을 오가는 교통비와 식비가 부담된다면, 구직급여 수급자격자는 고용센터장이 지시한 훈련을 받을 때 직업능력개발수당을 확인해 보세요. 2026년 기준 훈련받은 날 하루 10,320원이에요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "고용센터장이 지시한 훈련을 받는 구직급여 수급자격자는2026년 직업능력개발수당을 훈련일 하루10,320원 기준으로 받을 수 있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "직업능력개발수당은 센터장의 훈련 지시와 구직급여 지급 대상일 여부를 함께 확인해야 해요."
+              }
+            ],
+            "chosen_opening": "훈련을 오가는 교통비와 식비가 부담된다면, 구직급여 수급자격자는 고용센터장이 지시한 훈련을 받을 때 직업능력개발수당을 확인해 보세요. 2026년 기준 훈련받은 날 하루 10,320원이에요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "첫적용11월10일에서6일경과한11월16일16시는A. 같은날P8/P5와다른P6훈련지시확인→증명서제출순서. 최근20실제게시와미래3원고도입·전개를대조.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국",
+              "benefit": "훈련교통비·식비수당",
+              "audience": "구직급여수급자격자",
+              "application": "개별실업인정일",
+              "media": "IMAGE"
+            },
+            "comparison_group": "A/B도입만비교,사업독자·지역·혜택·시각·미디어교란으로직접매칭쌍없음. 24h각군8건목표미달로효과판단/비중변경보류.",
+            "applied_elements": [
+              "생활비부담과대상·일금액첫문단",
+              "센터지시·지급대상일한정",
+              "수강증명서제출절차",
+              "중복차감·급여정지제한"
+            ],
+            "profile_route": "승인읽기경로에서프로필링크·실사이트검색/상세/검진접수거래현재동작을별도확인하지못함. 이동/접수기능이나전환보장없음.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "149200005001",
+          "notice_version": {
+            "detail": "2026-05-07",
+            "list": "20260507135927"
+          },
+          "pattern": "P6",
+          "opening": "훈련을 오가는 교통비와 식비가 부담된다면, 구직급여 수급자격자는 고용센터장이 지시한 훈련을 받을 때 직업능력개발수당을 확인해 보세요. 2026년 기준 훈련받은 날 하루 10,320원이에요.",
+          "structure": "훈련이동비부담·일금액→센터지시확인→수강증명서제출→차감/정지·지급일",
+          "media_turn": "IMAGE"
+        }
+      }
     }
   ]
 }
