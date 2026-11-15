@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-15T20:38:54.421665+09:00",
+  "prepared_at": "2026-11-16T08:50:26.369742+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -6182,6 +6182,153 @@
           "opening": "대전에 주민등록을 두고 거주하는 자녀가 2명 이상이고 막내가 18세 이하인 가정은 상수도요금을 두 자녀 10%, 세 자녀 이상 30% 감면받을 수 있어요. 매달 나가는 수도요금 부담을 덜어주는 제도예요.",
           "structure": "대전대상과감면율→반복수도지출·비현금→공동주택산정→상시신청·고객번호→익월·소급·중복·이사→CTA",
           "media_turn": "TEXT"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-17T08:00:00+09:00",
+      "benefit_id": "643000000105",
+      "source_fingerprint": "c8d5068ff5c3e4e6ffbffbcd85743e765b93cf9126bd20d7128b1789de4cd40e",
+      "source_generation": "gov24-43766350375-1",
+      "prepared_at": "2026-11-16T08:50:26.369742+09:00",
+      "expires_at": "2026-11-17T08:50:26.369742+09:00",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "643000000105",
+        "post_text": "충북에 주민등록을 둔 도민은 도민안전보험의 보장 대상 사고로 신체 피해를 입으면 보험금을 청구할 수 있어요. 등록외국인도 포함돼요.\n\n별도 가입절차 없이 자동 가입되지만, 보험금까지 자동 지급되는 것은 아니에요. 사고 뒤 청구서와 필요한 서류를 내고 보험사의 지급 심사를 받아야 해요.\n\n2026년 도민안전보험은 1월 1일~12월 31일 운영하며, 청구는 사고 발생일부터 3년 이내에 해요. 개인 상해보험과 중복 보장도 가능해요.\n\n다만 모든 사고를 보장하는 건 아니에요. 주소지 시·군의 사고 당시 보장항목·가입기간·연령별 조건과 지급액을 확인한 뒤, 담당 보험사에 필요한 서류를 문의해 주세요. 전출하면 자동 해지돼요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-17T08:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "충북에 주민등록을 둔 도민 및 등록외국인 중 보장대상 사고피해자",
+          "central_message": "자동가입과 보험금청구·지급심사는 어떻게 다른가요?",
+          "pattern": "P2",
+          "selection_reason": "동일ID 원본 누적조회수64307. 실제46게시와미래3READY중복제외, 상위HOLD/SKIP ID·이유·출처48기록보존. 공식현재자료로자동가입/본인청구차이를설명가능해P2선택.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "643000000105",
+              "source_ref": "https://www.chungbuk.go.kr/www/selectBbsNttView.do?bbsNo=60&key=421&nttNo=415265",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-16T08:50:26.369742+09:00",
+              "claims_supported": [
+                "충북 안전정책과 2026년 도민안전보험 운영 알림 HTML을 curl GET으로 실제 열람하고 연결된 첨부 downloadBbsFile.do?key=421&bbsNo=60&atchmnflNo=276650 HWPX를 내려받아 Contents/section XML 전문을 직접 읽음. 웹 열람 도구의502는 숨기지 않으며 검색요약으로 대체하지 않음. 사업기간2026.1.1~12.31, 주민등록 도민/등록외국인, 별도가입없이자동가입·전입자동가입·전출자동해지, 개인상해보험중복, 사고일부터3년내청구, 시군13공통항목+추가항목, 서류접수후보험사지급심사/필요시사고조사를 확인. 지급확정/전사고보장/단일금액으로 확대하지 않음."
+              ]
+            },
+            {
+              "source_id": "643000000105",
+              "source_ref": "https://www.goesan.go.kr/www/selectBbsNttView.do?bbsNo=190&key=135&nttNo=140122",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-16T08:50:26.369742+09:00",
+              "claims_supported": [
+                "괴산군 안전정책과2026-11-06 현행 안내 본문587~596행 직접열람: 해당시군2026.2.12~2027.2.11 계약, 사고일부터3년내신청, 본인청구·보험사심의·개별상해보험중복을 대조. 충북전체가 같은계약일/보장액인것처럼 합치지 않고 시군별가입기간확인을 본문에 명시."
+              ]
+            },
+            {
+              "source_id": "643000000105",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1000707&bnefType=all&svcId=643000000105",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-16T08:50:26.369742+09:00",
+              "claims_supported": [
+                "최신 완전수집본gov24-43766350375-1 동일ID 원본 serviceList 조회수64307, 수정일20260813, API checkedAt=2026-11-16T06:59:09.755272+09:00, 수집완료=2026-11-16T07:02:51.228351+09:00. 대상·자동가입/해지·보험유형·시군청구절차를 실제 열린 충북HWPX와 대조. 원본 공개웹 직접열람 불가를 기록하며 수집시각을 접수확인으로 바꾸지 않음. API와2026공식첨부의일부전화번호상이해 본문에전화번호를싣지않고현재시군담당보험사확인안내."
+              ]
+            },
+            {
+              "source_id": "643000000105",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-16T08:50:26.369742+09:00",
+              "claims_supported": [
+                "이번실행에서 허용mainPNG를 실제재다운로드하고 SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a를현재image-review의2026-11-06 AI_VISUAL_INSPECTION/PASS 및로컬파일과재대조함.1254px정사각형.새시각검수아님.약360px가독성은기존검수기록참조. 실제집·방패체크·체크리스트·새싹·브랜드·CTA이며 사업금액/대상/기간이없어본문과충돌없음.사업별승인자산없어기존로테이션사용."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 366,
+          "count_method": "Python Unicode len including spaces/newlines/CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "실제개인보장·금액은사고당시시군계약/항목·연령요건과보험사심사로결정. 개인정보를공개댓글로요청하지않음.",
+            "충북HTML/HWPX는curl로실제열람했고웹도구502/정부24공개페이지열람불가를구분. 괴산계약기간을도전체로확대하지않음.",
+            "공식첨부와API일부연락처상이: 본문에번호미기재,현재시군담당보험사확인.",
+            "실제발송시최신수집본·공식운영상태·원고/evidence24시간·이미지SHA재검증필수.현재11월16일07시수집본은내일08시발송에신선하지않음."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "자동가입과 보험금청구·지급심사는 어떻게 다른가요?",
+            "reader_scope": "충북주민등록도민/등록외국인 중 보장대상사고피해자",
+            "angles": [
+              "사고피해시보험금청구가능성",
+              "자동가입과청구절차차이",
+              "주소지시군보장/서류확인"
+            ],
+            "chosen_angle": "대상·실익→자동가입/지급차이→청구기한·시군조건",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "사고 뒤 보장받을 보험을 찾는다면, 충북에 주민등록을 둔 도민은 도민안전보험의 대상 사고인지 확인해 보세요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "충북에 주민등록을 둔 도민은 도민안전보험의 보장 대상 사고로 신체 피해를 입으면 보험금을 청구할 수 있어요. 등록외국인도 포함돼요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "충북 도민안전보험은 자동 가입되지만 보험금은 보장 대상 사고인지 심사받아야 해요."
+              }
+            ],
+            "chosen_opening": "충북에 주민등록을 둔 도민은 도민안전보험의 보장 대상 사고로 신체 피해를 입으면 보험금을 청구할 수 있어요. 등록외국인도 포함돼요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "첫적용KST11월10일기준7일경과11월17일08시는반전B. 최근20건과미래3READY도입/전개대조. 군산보험P6와달리P2로자동가입·지급차이와시군별조건강조. 실제반복독자질문을주장하지않음.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "충북",
+              "benefit": "사고보험금",
+              "audience": "등록주민·외국인사고피해자",
+              "application": "사고일부터3년내청구/시군계약",
+              "media": "IMAGE"
+            },
+            "comparison_group": "A/B도입비교. 사업·지역·독자·시간·미디어교란,매칭쌍0.현재24h A7/B7로8건목표미달,효과입증/가중치변경없음.",
+            "applied_elements": [
+              "첫문단대상·실익·지역",
+              "자동가입과지급차이",
+              "청구기한과시군조건",
+              "보험사심사명시"
+            ],
+            "profile_route": "승인읽기경로에서프로필링크와실사이트검색/상세/청구거래동작은별도확인하지못함. 이동·접수기능이나글별전환을보장하지않음.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "643000000105",
+          "notice_version": "2026 충북 도민안전보험 운영 첨부 및 보조금24 2026-08-13",
+          "pattern": "P2",
+          "opening": "충북에 주민등록을 둔 도민은 도민안전보험의 보장 대상 사고로 신체 피해를 입으면 보험금을 청구할 수 있어요. 등록외국인도 포함돼요.",
+          "structure": "대상·보장사고실익→자동가입/청구·심사차이→운영연도·청구기한→시군조건·전출해지→CTA",
+          "media_turn": "IMAGE"
         }
       }
     }
