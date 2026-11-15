@@ -5758,6 +5758,156 @@
           "media_turn": "IMAGE"
         }
       }
+    },
+    {
+      "slot": "2026-11-16T12:00:00+09:00",
+      "benefit_id": "999000000007",
+      "source_generation": "gov24-43645251692-1",
+      "source_fingerprint": "6f5cda25b4a70cbebab26fde017ea71c272d602e6f9aea82fcdb568ec6eaa935",
+      "prepared_at": "2026-11-15T13:27:07.098420+09:00",
+      "expires_at": "2026-11-16T13:27:07.098420+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "999000000007",
+        "post_text": "만 12세 이하 또는 초등학교 6학년 이하 자녀를 키우는 근로자는, 육아기 근로시간 단축 급여로 줄어든 임금의 일부를 지원받을 수 있어요.\n\n급여를 신청하기 전 두 조건을 확인해요.\n같은 자녀를 대상으로 육아기 근로시간 단축을 30일 이상 사용했는지, 단축 시작 전 고용보험 피보험 단위기간이 합산 180일 이상인지예요. 출산전후휴가와 겹친 기간은 30일 계산에서 제외돼요.\n\n단축 후 근로시간은 주 15~35시간이어야 해요. 급여는 통상임금과 줄인 시간 비율로 계산돼 개인별 금액이 달라요. 회사에서 받은 금품과 급여 합계가 단축 전 통상임금을 넘으면 감액돼요.\n\n단축 시작 1개월 후부터 종료 후 12개월 이내에 고용24나 관할 고용센터로 신청해요. 단축 확인서와 근로시간·임금 증빙을 준비하고, 심사 후 지급 여부를 확인해 주세요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-16T12:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "만12세이하 또는 초등6학년이하 자녀를 양육하며 육아기근로시간단축을 사용한 고용보험근로자",
+          "central_message": "아이 돌봄을 위해 근로시간을 줄인 근로자가 단축급여를 받으려면 무엇을 확인해야 하나요?",
+          "pattern": "P5",
+          "selection_reason": "누적조회수65517회 동일ID.43성공원장과미래3READY사업중복제외후최상위검증가능후보. 기존상위HOLD/SKIP ID·이유·출처48건보존.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "999000000007",
+              "source_ref": "https://www.worklife.kr/website_renew/index/workerSupport/reduced_hours_childcare_benefit.asp",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-15T13:27:07.098420+09:00",
+              "claims_supported": [
+                "고용노동부일생활균형 현재본문131~155/232~281행 직접열람. 12세이하또는초6이하,주15~35시간,30일(출산전후휴가중복제외),피보험단위180일,통상임금/단축시간비례산정,개인별기한·증빙·감액을동일사업으로대조. 회사신청허용과급여지급심사는별도이며수령보장없음."
+              ]
+            },
+            {
+              "source_id": "999000000007",
+              "source_ref": "https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000397",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-15T13:27:07.098420+09:00",
+              "claims_supported": [
+                "고용24현재공식본문328~398행 직접열람.30일·180일과무급일/실업급여기수급전기간의단위기간계산제한,시작1개월후~종료12개월내신청가능,고용24/센터경로·확인서와근로조건증빙·금품합계초과감액을대조. 개인별금액확정불가,미제공개인정보는추정하지않음."
+              ]
+            },
+            {
+              "source_id": "999000000007",
+              "source_ref": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=2&cnpClsNo=2&csmSeq=1380",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-15T13:27:07.098420+09:00",
+              "claims_supported": [
+                "법제처생활법령 현재본문205~255행 직접열람.30일/180일·시작1개월후~종료12개월내·신청서/최초확인서/임금증빙·250/160만원은비례산식의기준상한임을대조. 본문에상한액을수령액으로표현하지않음. 상단11월27일시행예정주석을오늘시행변경으로쓰지않음."
+              ]
+            },
+            {
+              "source_id": "999000000007",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999028&bnefType=all&svcId=999000000007",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-15T13:27:07.098420+09:00",
+              "claims_supported": [
+                "완전수집본gov24-43645251692-1 동일IDserviceList 누적조회수65517/API checkedAt=2026-11-15T06:58:18.636526+09:00/collectionSucceededAt=2026-11-15T07:01:38.071947+09:00를현재직접열람공식자료와대조. sourceOnly/applicationOpenVerified=false는수집상태로유지. 수집시각을현재접수검증으로바꾸지않음."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 430,
+          "count_method": "Python Unicode len including spaces/newlines/CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "고용24일부도입의옛5시간/최대2년문구를현재공식최초10시간/최대3년과혼동하지않음. 사용기간상한·금액산식상한은본문의개인별수령액으로쓰지않음.",
+            "개인별피보험단위기간·사업주금품·이직/추가취업사실은심사시확인필요. 지급확정·부당중복권유없음.",
+            "현재source는내일12시까지신선하지않음. 실제발송시최신자료·공식상태·증거/원고24시간유효기간재검증."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "아이 돌봄을 위해 근로시간을 줄인 근로자가 단축급여를 받으려면 무엇을 확인해야 하나요?",
+            "reader_scope": "만12세이하 또는 초등6학년이하 자녀를 양육하며 육아기근로시간단축을 사용한 고용보험근로자",
+            "angles": [
+              "줄어든임금의일부보전",
+              "30일·180일급여자격",
+              "개인별신청기한과증빙"
+            ],
+            "chosen_angle": "대상·임금일부지원→30일/180일자격→주15~35시간·개인별산정/감액→기한/증빙",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "아이 돌봄 때문에 근무시간을 줄였다면, 요건을 갖춘 근로자는 육아기 근로시간 단축 급여로 임금 감소분 일부를 지원받을 수 있어요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "만 12세 이하 또는 초등학교 6학년 이하 자녀를 키우는 근로자는, 육아기 근로시간 단축 급여로 줄어든 임금의 일부를 지원받을 수 있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "육아기 근로시간 단축 급여는 단축사용30일과 시작전 피보험단위기간180일 요건을 함께 확인해야 해요."
+              }
+            ],
+            "chosen_opening": "만 12세 이하 또는 초등학교 6학년 이하 자녀를 키우는 근로자는, 육아기 근로시간 단축 급여로 줄어든 임금의 일부를 지원받을 수 있어요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "첫적용11월10일부터6일경과한11월16일12시는B. 오전P8목록과달리P5급여자격확인형. 최근20실제게시와미래3원고의도입·전개를대조.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국",
+              "benefit": "육아기단축근무임금일부보전",
+              "audience": "고용보험근로자",
+              "application": "개인별기한",
+              "media": "TEXT"
+            },
+            "comparison_group": "A/B도입만비교,사업독자·지역·혜택·시각·미디어교란으로직접매칭쌍없음. 24h각군8건목표미달로효과판단/비중변경보류.",
+            "applied_elements": [
+              "대상과임금일부지원첫문단",
+              "30일과180일분리",
+              "출산휴가중복기간제외",
+              "시간비례산정·감액",
+              "개인별신청기한과증빙"
+            ],
+            "profile_route": "승인읽기경로에서프로필링크·실사이트검색/상세/검진접수거래현재동작을별도확인하지못함. 이동/접수기능이나전환보장없음.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "999000000007",
+          "notice_version": {
+            "detail": "2026-05-11",
+            "list": "20260511153939"
+          },
+          "pattern": "P5",
+          "opening": "만 12세 이하 또는 초등학교 6학년 이하 자녀를 키우는 근로자는, 육아기 근로시간 단축 급여로 줄어든 임금의 일부를 지원받을 수 있어요.",
+          "structure": "자녀연령·임금일부지원→30일/180일→단축시간·비례산정/감액→신청기한·증빙",
+          "media_turn": "TEXT"
+        }
+      }
     }
   ]
 }
