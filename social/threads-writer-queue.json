@@ -5599,6 +5599,165 @@
           "media_turn": "TEXT"
         }
       }
+    },
+    {
+      "slot": "2026-11-16T08:00:00+09:00",
+      "benefit_id": "408000000419",
+      "source_generation": "gov24-43645251692-1",
+      "source_fingerprint": "b907b47de86b546d97daac11f59ac4a787344bcd895dc88108af22215bffdd8c",
+      "prepared_at": "2026-11-15T09:46:49.493142+09:00",
+      "expires_at": "2026-11-16T09:46:49.493142+09:00",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "408000000419",
+        "post_text": "검진 비용이 걱정된다면, 20~64세 의료급여수급권자는 올해 일반건강검진 대상인지 확인해 보세요. 대상자는 정해진 검사항목을 본인 부담 없이 받을 수 있어요.\n\n확인할 내용은 세 가지예요.\n대상: 2026년은 1962~2006년 짝수년도 출생자가 대상이에요. 공단의 올해 검진 대상 여부를 먼저 확인해 주세요.\n기간: 올해 12월 말까지 전국 일반건강검진 지정 의료기관에서 받아요.\n준비: 건강검진표와 신분증을 챙기고, 방문할 기관의 검진 일정을 확인해요.\n\n문진·혈압·혈액·소변·구강검진 등이 포함되며, 일부 항목은 성별·연령에 따라 달라요. 정해진 검진항목 외 추가 검사까지 무료인 것은 아니니 비용을 구분해 확인해 주세요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-16T08:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "20~64세 의료급여수급권자 중2026년검진대상자",
+          "central_message": "올해 의료급여 일반건강검진을 누가 언제까지 어떤 비용 범위로 받을 수 있나요?",
+          "pattern": "P8",
+          "selection_reason": "누적조회수65767회동일ID. 실제42성공원장과미래3READY중복제외후검증가능한최상위후보. 상위HOLD/SKIP의사업ID/구체이유/출처를현재queue.selection_notes그대로보존.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "408000000419",
+              "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10706020200",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-15T09:46:49.493142+09:00",
+              "claims_supported": [
+                "보건복지부 의료급여수급권자 일반건강검진 현재 본문 직접열람:20~64세 세대주·세대원, 일반건강검진 공통항목과 성별·연령별 항목을 대조. 66세이상 생애전환기검진은 별도사업으로 합치지 않음."
+              ]
+            },
+            {
+              "source_id": "408000000419",
+              "source_ref": "https://www.nhis.or.kr/lm/lmxsrv/law/lawFullContent.do?MODE=twoView&SEQ=80&SEQ_HISTORY=613138",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-15T09:46:49.493142+09:00",
+              "claims_supported": [
+                "건강검진 실시기준 보건복지부고시 제2026-6호 직접열람. 제2조20~64세,제5조공통검진,제7~9조지정기관·해당연도·2년주기·검진표안내·신분증과기관대상확인,제12조국가/지자체부담및정해진항목외비용제외를 대조. 검진비지원서비스이며현금지급이나추가검사전체무료로설명하지않음."
+              ]
+            },
+            {
+              "source_id": "408000000419",
+              "source_ref": "https://www.yeonsu.go.kr/etc/bbs/SearchView.asp?bbs_code=board_1&seq=119061",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-15T09:46:49.493142+09:00",
+              "claims_supported": [
+                "연수구 건강증진과2026-08-03 공식 2026년의료급여수급권자일반건강검진 사업 본문0~41행직접열람. 1962~2006년짝수년도출생20~64세/2년주기,2026년12월말까지전국지정기관검진,검진비무료를확인해대상자이용가능기간을대조. 지역별추가선물/행사혜택을전국사업에합치지않음. 개인별공단대상확인·기관검진일정은방문전확인해야함."
+              ]
+            },
+            {
+              "source_id": "408000000419",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999155&bnefType=all&svcId=408000000419",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-15T09:46:49.493142+09:00",
+              "claims_supported": [
+                "완전수집본gov24-43645251692-1 동일ID serviceList 누적조회수65767. API checkedAt=2026-11-15T06:57:10.428841+09:00, collectionSucceededAt=2026-11-15T07:01:38.071947+09:00. 검진대상통보당해연도/건강검진표·신분증을직접연공식자료와대조. 수집시각은현재접수검증이아니며sourceOnly/applicationOpenVerified=false를현재검증으로바꾸지않음."
+              ]
+            },
+            {
+              "source_id": "408000000419",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-15T09:46:49.493142+09:00",
+              "claims_supported": [
+                "허용mainPNG를이번점검에실제재다운로드하고SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a를현재image-review.json의2026-11-06 AI_VISUAL_INSPECTION/PASS와재대조.1254px정사각형,기존축소가독성검수기록참조. 새시각검수아님. 실제내용은집·방패체크·체크리스트·새싹,브랜드/CTA이며사업금액·조건·기한없음. 공식화면/수령후기아님. 본문에이미지에검진항목이있다고약속하지않음."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 369,
+          "count_method": "Python Unicode len including spaces/newlines/CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "부산서구2026독려참여행사는10월31일까지이며검진선물등지역행사로분리,연수구연말검진안내/전국건강검진실시기준과혼동하지않음.",
+            "건강검진지원은의료서비스이며현금지급아님. 개인별검진대상·검사항목·기관일정은공단/기관확인필요.",
+            "공식고시상횟수초과검진비는환수대상가능,이중검진을권하지않음.",
+            "발송시최신source·공식이용상태·24시간evidence/원고유효기간·이미지SHA재검증필수. 현재07시수집본이내일08시까지신선하다고가정하지않음."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "올해 의료급여 일반건강검진을 누가 언제까지 어떤 비용 범위로 받을 수 있나요?",
+            "reader_scope": "20~64세 의료급여수급권자 중2026년검진대상자",
+            "angles": [
+              "검진비부담과무료범위",
+              "짝수출생연도와공단대상확인",
+              "연말이용기한과지참물"
+            ],
+            "chosen_angle": "비용부담상황→대상/기간/준비목록→연령별항목·추가검사비구분",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "검진 비용이 걱정된다면, 20~64세 의료급여수급권자는 올해 일반건강검진 대상인지 확인해 보세요. 대상자는 정해진 검사항목을 본인 부담 없이 받을 수 있어요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "20~64세 의료급여수급권자 중 올해 검진 대상자는 정해진 일반건강검진 항목을 본인 부담 없이 받을 수 있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "2026년 의료급여 일반건강검진은1962~2006년짝수년도 출생 대상자가 정해진 검사항목을 무료로 받는 제도예요."
+              }
+            ],
+            "chosen_opening": "검진 비용이 걱정된다면, 20~64세 의료급여수급권자는 올해 일반건강검진 대상인지 확인해 보세요. 대상자는 정해진 검사항목을 본인 부담 없이 받을 수 있어요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "첫적용KST11월10일에서6일경과한11월16일08시는A. 최근20게시와기존미래3READY의도입·전개를대조하고P8작은목록으로11월15일08시P5와질문·구성을다르게함. 공식정확성우선.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국",
+              "benefit": "일반건강검진서비스",
+              "audience": "20~64세의료급여검진대상자",
+              "application": "2026대상연도12월말까지",
+              "media": "IMAGE"
+            },
+            "comparison_group": "A/B도입만비교,사업독자·지역·혜택·시각·미디어교란으로직접매칭쌍없음. 24h각군8건목표미달로효과판단/비중변경보류.",
+            "applied_elements": [
+              "생활비부담상황과대상·실익첫문단",
+              "대상/기간/준비3목록",
+              "공통/연령별항목구분",
+              "추가검사비무료범위제한"
+            ],
+            "profile_route": "승인읽기경로에서프로필링크·실사이트검색/상세/검진접수거래현재동작을별도확인하지못함. 이동/접수기능이나전환보장없음.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "408000000419",
+          "notice_version": {
+            "detail": "2026-05-13",
+            "list": "20260513110442"
+          },
+          "pattern": "P8",
+          "opening": "검진 비용이 걱정된다면, 20~64세 의료급여수급권자는 올해 일반건강검진 대상인지 확인해 보세요. 대상자는 정해진 검사항목을 본인 부담 없이 받을 수 있어요.",
+          "structure": "검진비생활상황→대상/연말기간/준비물목록→항목차이·추가비용구분",
+          "media_turn": "IMAGE"
+        }
+      }
     }
   ]
 }
