@@ -28,7 +28,7 @@ const { chromium } = require('playwright');
   const browser = await chromium.launch({headless:true});
   const results = [];
   try {
-    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['', 'benefits/149200000026/', 'privacy.html', 'guides/application-checklist.html', 'guides/compare-benefits.html'];
+    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['', 'benefits/149200000026/', 'privacy.html', 'guides/application-checklist.html', 'guides/compare-benefits.html', 'guides/energy-voucher-2026.html', 'guides/emergency-vs-livelihood-2026.html'];
     await fs.mkdir('mobile-evidence', {recursive:true});
     for (const width of [320,390,1440]) {
       const context = await browser.newContext({viewport:{width,height:900},serviceWorkers:'block'});

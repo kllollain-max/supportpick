@@ -14,6 +14,7 @@ from zoneinfo import ZoneInfo
 
 from collect_full import safe_url, valid_id
 from search_metadata import public_metadata
+from benefit_analysis import related_analysis
 
 KST = ZoneInfo('Asia/Seoul')
 TEMPLATE_MODIFIED = '2026-11-17'
@@ -298,6 +299,7 @@ def render_benefit(row, guide, blog, reasons, related, base, current, feed_statu
              '<div class="detail-actions">' + actions + '</div>'
              '<noscript><p class="context-note">핵심 안내는 JavaScript 없이 읽을 수 있습니다. 관심 저장·내 신청 기록은 JavaScript를 켜거나 홈에서 이용하세요.</p></noscript></article>')
     body += editorial_html(row, guide)
+    body += related_analysis(row['id'])
     age = (str(row['ageMin'])+'~'+str(row['ageMax'])+'세 (API 분류 · 적용 기준일은 원문 확인)'
            if type(row.get('ageMin')) is int and type(row.get('ageMax')) is int else '공식 공고 확인 필요')
     body += ('<section class="detail-block"><h2>조건을 대조할 때 확인할 항목</h2><dl class="condition-summary">'

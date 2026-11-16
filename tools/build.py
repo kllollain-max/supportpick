@@ -8,6 +8,7 @@ from bootstrap_state import ensure_bootstrap
 from search_metadata import public_metadata, read_verifications, write_sitemap, version_local_assets
 from detail_pages import write_details, quality_reasons
 from application_guides import write_guides
+from benefit_analysis import coverage_report
 from release_policy import fingerprint
 from collect_full import period
 from content_quality import conditions, audit
@@ -124,8 +125,9 @@ def build(destination,state=None,allow_sample=False,public_base=None):
     guides=json.loads((ROOT/'guides.json').read_text())
     if guides.get('version')!=1 or not isinstance(guides.get('guides'),list):raise ValueError('invalid_own_guide_registry')
     detail=write_details(output,full_rows,previous_rows,public_base,guides,registry,status['status'])
-    detail['entries'].extend(write_guides(output,public_base))
+    detail['entries'].extend(write_guides(output,public_base,full_rows))
     (output/'content-quality-report.json').write_text(json.dumps(audit(full_rows),ensure_ascii=False,separators=(',',':')))
+    (output/'content-value-report.json').write_text(json.dumps(coverage_report(detail['report'],full_rows),ensure_ascii=False,indent=2))
     home=(output/'index.html').read_text()
     home=home.replace('<!-- STATIC_DISCOVERY -->',detail['home'])
     (output/'index.html').write_text(home)

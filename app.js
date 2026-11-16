@@ -38,6 +38,7 @@
     $('savedCount').textContent=snapshot.data.saved.length;$('appCount').textContent=Object.keys(snapshot.data.apps).length;
     document.querySelectorAll('[data-tab]').forEach(b=>{if(b.dataset.tab===view.tab)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
     const isDetail=location.hash.startsWith('#benefit=');
+    if($('benefitAnalysis'))$('benefitAnalysis').hidden=isDetail||view.tab!=='all';
     if($('staticDiscovery'))$('staticDiscovery').hidden=isDetail||view.tab!=='all';
     $('detailSection').hidden=!isDetail;$('hero').hidden=isDetail||view.tab!=='all';$('browseSection').hidden=isDetail||view.tab==='guide';$('guideSection').hidden=isDetail||view.tab!=='guide';$('portals').hidden=isDetail;
     if(isDetail){renderDetail();return;}
