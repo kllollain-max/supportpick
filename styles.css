@@ -50,3 +50,22 @@ a.title-link{text-decoration:none;color:inherit;display:inline-block}.static-ben
 .tracker-actions .tracker-delete{color:#a33131;border-color:#e6baba;flex:0 1 auto}
 .tracker-actions .tracker-delete:hover,.tracker-actions .tracker-delete:focus-visible{background:#fff0f0}
 @media(max-width:600px){.tracker-actions{flex-direction:column;align-items:stretch}.tracker-actions button{width:100%}}
+/* Search, preparation guides and comparison use the existing record store. */
+.guide-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
+.guide-links a{padding:16px;border:1px solid #cbded5;border-radius:12px;color:#095b45;background:#f3faf6;font-weight:700;line-height:1.6}
+.filters input[type=number]{width:100%;min-height:44px;border:1px solid #cbd5d1;border-radius:10px;padding:10px;background:var(--surface,#fff);color:inherit;font:inherit}
+.unknown-toggle{display:flex!important;align-items:center;gap:8px;grid-column:1/-1}
+.unknown-toggle input{width:20px;height:20px}
+.compare-bar{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:16px 0;padding:14px;border:1px solid #bdd5c9;border-radius:14px;background:#f3faf6}
+.compare-bar p{margin:0;flex:1;min-width:160px}
+#compareDialog{width:min(1100px,96vw);max-width:96vw}
+.comparison-scroll{overflow:auto;max-height:65vh;border:1px solid #ccd8d2;border-radius:10px}
+.comparison-table{width:100%;min-width:660px;border-collapse:collapse;font-size:15px}
+.comparison-table th,.comparison-table td{padding:14px;text-align:left;vertical-align:top;border:1px solid #dce5e0;line-height:1.75;white-space:pre-line;overflow-wrap:anywhere;min-width:170px}
+.comparison-table th{background:#eff7f3;color:#154b38}.comparison-table th:first-child{min-width:110px}
+.comparison-table caption{padding:12px;text-align:left;font-weight:700}
+.card-actions{flex-wrap:wrap}.card-actions button{min-height:44px}
+.preparation-checks label{display:flex;align-items:flex-start;gap:10px;line-height:1.8;margin:12px 0}.preparation-checks input{margin-top:6px;width:20px;height:20px;flex:none}
+.guide-table{overflow:auto}.guide-table table{width:100%;border-collapse:collapse}.guide-table th,.guide-table td{padding:12px;text-align:left;border:1px solid #d3dfd8;line-height:1.8;vertical-align:top}
+.condition-summary{margin-top:18px;padding:16px;background:#f3faf6;border-radius:12px;line-height:1.8}
+@media(max-width:600px){.guide-links{grid-template-columns:1fr}.card-actions button{flex:1 1 100px}.comparison-table{font-size:14px}.comparison-table th,.comparison-table td{padding:10px}}

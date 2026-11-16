@@ -65,6 +65,19 @@ def period(raw, kind=''):
     # Two explicit years can be starts of different rounds, not one start/end pair.
     if re.search(r'[12]차|상반기|하반기', raw):
         return {'periodKind':'needs_check','startDate':None,'endDate':None}
+    # One explicit start year may govern the end in a single, unambiguous range.
+    # Do not guess years for yearless text or combine separate application rounds.
+    compact = re.search(r'(20\d{2})\s*[.년/-]\s*(\d{1,2})\s*[.월/-]\s*(\d{1,2})[\s.일]*(?:\([월화수목금토일]\))?[\s]*(?:\d{1,2}:\d{2})?\s*[~∼～]\s*(\d{1,2})\s*[.월/-]\s*(\d{1,2})', raw)
+    explicit_years = re.findall(r'20\d{2}\s*[.년/-]', raw)
+    if compact and len(explicit_years) == 1 and len(re.findall(r'[~∼～]', raw)) == 1:
+        y, m, d, em, ed = map(int, compact.groups())
+        try:
+            start, end = datetime(y,m,d).date(), datetime(y,em,ed).date()
+            if start <= end:
+                return {'periodKind':'fixed','startDate':start.isoformat(),'endDate':end.isoformat()}
+        except ValueError:
+            pass
+        return {'periodKind':'needs_check','startDate':None,'endDate':None}
     dates = []
     for y,m,d in re.findall(r'(20\d{2})\s*[.년/-]\s*(\d{1,2})\s*[.월/-]\s*(\d{1,2})', raw):
         try:

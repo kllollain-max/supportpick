@@ -15,6 +15,7 @@
   <meta name="apple-mobile-web-app-title" content="지원금픽">
   <script src="app-features.js" defer></script>
   <script src="data.js" defer></script>
+  <script src="feed-loader.js" defer></script>
   <script src="core.js" defer></script>
   <script src="editorial-data.js" defer></script>
   <script src="editorials.js" defer></script>
@@ -54,15 +55,20 @@
         <label>관련 지역 <select id="region"><option value="">모든 지역</option><option>강원</option><option>서울</option><option>경기</option><option>인천</option><option>부산</option><option>대구</option><option>광주</option><option>대전</option><option>울산</option><option>세종</option><option>충북</option><option>충남</option><option>전북</option><option>전남</option><option>경북</option><option>경남</option><option>제주</option></select></label>
         <label>안내 대상 <select id="audience"><option value="">모든 대상</option></select></label>
         <label>지원 방식 <select id="supportType"><option value="">모든 방식</option><option>현금</option><option>이용권</option><option>현물</option><option>서비스</option><option>융자</option></select></label>
+        <label>찾을 나이 <input id="age" type="number" min="0" max="120" inputmode="numeric" placeholder="예: 35"></label>
+        <label>가구 특성 <select id="household"><option value="">모든 가구</option><option>1인가구</option><option>한부모·조손가정</option><option>다자녀가구</option><option>무주택세대</option><option>다문화가족</option><option>북한이탈주민</option><option>신규전입</option><option>확대가족</option></select></label>
+        <label>신청기간 안내 <select id="periodState"><option value="">전체 안내</option><option value="dated">기한 내 날짜 안내 · 접수 확인</option><option value="ongoing">상시 안내 · 접수 확인</option><option value="budget_limited">예산 소진 여부 확인</option><option value="upcoming">안내 기간 전</option><option value="ended">안내 기한 경과</option><option value="unknown">기간 확인 필요</option></select></label>
+        <label class="unknown-toggle"><input id="includeUnknown" type="checkbox" checked> 연령·가구 조건 미표기 자료 포함</label>
         <button type="button" class="quiet" id="resetFilters">검색·필터 초기화</button>
-        <p class="data-note">관련 지역은 소관기관의 지역 또는 원문 표기입니다. 지역 미제공 자료도 함께 표시하며 실제 거주·수급 조건을 확정하지 않습니다.</p>
+        <p class="data-note">연령·가구는 공식 API의 분류 조건입니다. 생년월일·소득을 입력하지 않으며 수급 자격을 판정하지 않습니다. 관련 지역은 소관기관의 지역 또는 원문 표기입니다. 지역 미제공 자료도 함께 표시하며 실제 거주·수급 조건을 확정하지 않습니다.</p>
       </div>
       <div id="matchNotice" class="context-note" hidden></div>
       <div class="results-line"><p id="resultCount" role="status" aria-live="polite"></p><label>정렬 <select id="sort"><option value="updated">원문 수정순</option><option value="deadline">기한순</option><option value="title">이름순</option></select></label></div>
-      <p class="data-note" id="dataNote"></p>
+      <p class="data-note" id="dataNote"></p><button id="feedRetry" class="quiet" type="button" hidden>전체 목록 다시 불러오기</button><div id="compareBar" class="compare-bar" hidden><p id="compareCount" role="status"></p><button id="compareOpen" class="primary" type="button">선택한 지원금 비교</button><button id="compareClear" class="quiet" type="button">선택 해제</button></div>
       <div id="list" class="benefit-list"></div>
     </section>
     <section id="guideSection" hidden aria-labelledby="guideTitle"><div class="section-heading"><div><span class="eyebrow">APPLICATION GUIDE</span><h2 id="guideTitle">신청 전, 이 순서로 확인하세요</h2></div></div><div class="guide-steps"><article><span>01</span><h3>공식 공고 확인</h3><p>대상·지원내용·신청기간을 원문에서 확인하세요. 접수 상황은 달라질 수 있어요.</p></article><article><span>02</span><h3>조건과 서류 점검</h3><p>연령·소득·거주지 등 세부 조건과 구비서류를 확인하세요.</p></article><article><span>03</span><h3>공식 창구에서 신청</h3><p>신청은 기관의 공식 사이트나 방문 창구에서 진행하세요.</p></article><article><span>04</span><h3>진행 상태 기록</h3><p>지원금픽의 ‘내 신청’에서 준비·접수·결과를 직접 기록할 수 있어요.</p></article></div><p class="context-note">맞춤 결과는 선택한 관심 조건이 비슷한 정보입니다. 실제 수급 자격이나 선정 여부를 판정하지 않습니다.</p></section>
+    <section class="detail-block guide-hub"><h2>신청할 때 막히는 부분부터 확인하세요</h2><p>지원대상과 조건을 살펴보고, 필요한 서류와 신청 순서를 준비하세요.</p><div class="guide-links"><a href="guides/find-and-verify.html">조건으로 찾고 공식 공고 대조하기 →</a><a href="guides/compare-benefits.html">현금·융자·이용권 비교하기 →</a><a href="guides/application-checklist.html">서류 발급 전 준비 체크리스트 →</a><a href="guides/deadlines-and-updates.html">마감일·차수·자료 확인일 읽기 →</a></div></section>
     <!-- STATIC_DISCOVERY -->
     <section id="detailSection" hidden aria-labelledby="detailTitle" class="detail-section"></section>
     <section class="portal-section" id="portals" aria-labelledby="portalsTitle"><div class="section-heading"><div><span class="eyebrow">OFFICIAL SOURCES</span><h2 id="portalsTitle">더 많은 혜택은 공식 창구에서</h2></div><span class="muted">공식 사이트로 이동합니다</span></div><div class="portal-grid">
@@ -76,6 +82,7 @@
 </div>
 <dialog id="preferencesDialog" aria-labelledby="preferencesTitle"><form id="preferencesForm"><div class="dialog-header"><h2 id="preferencesTitle">내 관심 조건</h2><button type="button" class="icon-button" data-close-dialog aria-label="닫기">×</button></div><p class="muted">민감한 개인정보 없이 관심 조건만 저장합니다.</p><label>관심 지역 <select id="prefRegion"><option value="">모든 지역</option><option>강원</option><option>서울</option><option>경기</option><option>인천</option><option>부산</option><option>대구</option><option>광주</option><option>대전</option><option>울산</option><option>세종</option><option>충북</option><option>충남</option><option>전북</option><option>전남</option><option>경북</option><option>경남</option><option>제주</option></select></label><label>관심 분야 <select id="prefCategory"><option value="">모든 분야</option><option>생활안정</option><option>주거·자립</option><option>보육·교육</option><option>고용·창업</option><option>소상공인</option><option>보건·의료</option></select></label><p class="context-note">검색 편의를 위한 조건입니다. 실제 지원 자격은 공식 공고에서 확인하세요.</p><div class="dialog-actions"><button class="quiet" type="button" data-close-dialog>닫기</button><button class="primary" type="submit">저장하고 혜택 보기</button></div><p class="form-error" id="preferencesError" role="alert"></p></form></dialog>
 <dialog id="recordsDialog" aria-labelledby="recordsTitle"><div class="dialog-header"><h2 id="recordsTitle">내 기록 관리</h2><button class="icon-button" data-close-dialog aria-label="닫기">×</button></div><p>저장한 혜택·신청 상태·메모·관심 조건은 이 브라우저에 보관됩니다. 기기를 바꾸기 전 백업하세요.</p><div class="record-actions"><button class="primary" id="exportButton">내 기록 백업(JSON)</button><label class="file-button">백업 가져오기<input id="importInput" type="file" accept="application/json,.json"></label></div><details id="backupFallback"><summary>파일 저장이 어려우면 텍스트로 백업</summary><button class="quiet" id="showBackupText">현재 기록을 텍스트로 보기</button><label>백업 JSON 텍스트<textarea id="backupText" rows="6" spellcheck="false" placeholder="백업 텍스트를 복사해 보관하거나 붙여넣어 가져오세요."></textarea></label><button class="quiet" id="importTextButton">이 텍스트 가져오기</button></details><p class="context-note">지원금픽 전용 백업만 가져올 수 있습니다. 기존 기록을 우선 보존하며 없는 항목만 추가합니다.</p><p class="form-error" id="recordsError" role="alert"></p></dialog>
+<dialog id="compareDialog" aria-labelledby="compareTitle"><div class="dialog-header"><h2 id="compareTitle">지원금 비교</h2><button class="icon-button" type="button" data-close-dialog aria-label="비교 닫기">×</button></div><p>공식 API 안내를 나란히 표시합니다. 중복 수급 가능 여부·지급액·개인 자격을 확정하지 않습니다.</p><div id="compareContent" aria-live="polite"></div></dialog>
 <div id="toast" role="status" aria-live="polite" hidden></div>
 <noscript><p class="warning">혜택 검색과 개인 기록 관리는 JavaScript가 필요합니다. 공식 사이트 링크는 그대로 이용할 수 있습니다.</p></noscript>
 </body>

@@ -1,0 +1,7 @@
+{
+  "count": 10942,
+  "feedBytes": 11432343,
+  "parseMs": 107.361739,
+  "filterMedianMs": 46.55704700000001,
+  "filterP95Ms": 65.52899899999997
+}

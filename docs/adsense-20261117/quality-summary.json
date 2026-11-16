@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "total": 10942,
+  "checks": {
+    "period_needs_check": 3598,
+    "short_summary_review": 1659,
+    "duplicate_receipt_rule_not_structured": 10442,
+    "source_conflict": 174
+  },
+  "sameNameAgencyGroups": [
+    [
+      "629000000182",
+      "646000000145"
+    ]
+  ],
+  "sourcePreserved": true,
+  "automaticDeletion": false,
+  "automaticIndexingChange": false,
+  "linkCheckScope": "scheme and government hostname only; HTTP availability requires a live check",
+  "factCheckScope": "missing fields, source conflicts and date syntax; financial facts require official review"
+}

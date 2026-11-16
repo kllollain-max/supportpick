@@ -116,7 +116,7 @@ def write_sitemap(output, base, extra=()):
     ET.register_namespace('', namespace)
     root = ET.Element(f'{{{namespace}}}urlset')
     seen=set()
-    for page, modified in [(('' if p=='index.html' else p),None if p=='index.html' else '2026-11-04') for p in PUBLIC_PAGES] + list(extra):
+    for page, modified in [(('' if p=='index.html' else p),None if p=='index.html' else '2026-11-17' if p in ('about.html','privacy.html') else '2026-11-04') for p in PUBLIC_PAGES] + list(extra):
         target=output/(page+'index.html' if page.endswith('/') or not page else page)
         if not target.is_file():
             raise ValueError('sitemap_target_missing')

@@ -28,7 +28,7 @@ const { chromium } = require('playwright');
   const browser = await chromium.launch({headless:true});
   const results = [];
   try {
-    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['benefits/149200000026/', 'privacy.html'];
+    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['', 'benefits/149200000026/', 'privacy.html', 'guides/application-checklist.html', 'guides/compare-benefits.html'];
     await fs.mkdir('mobile-evidence', {recursive:true});
     for (const width of [320,390,1440]) {
       const context = await browser.newContext({viewport:{width,height:900},serviceWorkers:'block'});
@@ -38,6 +38,30 @@ const { chromium } = require('playwright');
         const response = await page.goto(origin + '/' + project + '/' + entry, {waitUntil:'networkidle'});
         assert.equal(response.status(),200);
         await page.locator('h1').waitFor({state:'visible'});
+        if (project === 'supportpick' && entry === '') {
+          await page.waitForFunction(() => window.SUPPORTPICK_DATA && !window.SUPPORTPICK_DATA.partial,{timeout:60000});
+          const total=await page.evaluate(() => window.SUPPORTPICK_DATA.items.length);
+          assert(total>10000);
+          assert.equal(await page.locator('.benefit-card').count(),30);
+          await page.locator('#filterToggle').click();
+          await page.locator('#age').fill('35');
+          await page.locator('#age').dispatchEvent('change');
+          await page.locator('#household').selectOption('1인가구');
+          assert(await page.locator('#resultCount').innerText());
+          await page.locator('#resetFilters').click();
+          await page.locator('[data-compare]').nth(0).click();
+          await page.locator('[data-compare]').nth(1).click();
+          await page.locator('#compareOpen').click();
+          await page.locator('.comparison-table').waitFor({state:'visible'});
+          assert.equal(await page.locator('.comparison-table thead th').count(),3);
+          assert(await page.getByText('개별 공고의 중복지원·제외 조항 확인 필요').count()>0);
+          await page.getByRole('button',{name:'비교 닫기',exact:true}).click();
+          await page.locator('#compareClear').click();
+          await page.locator('#query').fill('없는정보검사문자열');
+          await page.getByText('조건에 맞는 정보가 없어요',{exact:true}).waitFor();
+          await page.locator('#resetFilters').click();
+          assert.equal(await page.locator('.benefit-card').count(),30);
+        }
         if (entry.includes('after-application')) {
           assert.equal(await page.locator('#deadline-plan').count(),1);
           await page.locator('summary').first().click();

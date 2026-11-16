@@ -1,0 +1,8 @@
+{
+  "count": 10942,
+  "initialFeedBytes": 36738,
+  "completeFeedBytes": 13249448,
+  "filterMedianMs": 4.600698999999963,
+  "coldFilterMs": 153.15761699999996,
+  "scope": "Node same host, 15 runs; warm cache median; not field Core Web Vitals"
+}
