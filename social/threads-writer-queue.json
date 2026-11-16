@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-16T18:34:12.332771+09:00",
+  "prepared_at": "2026-11-16T21:19:19.602482+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -6482,6 +6482,154 @@
           "opening": "65세 이상 기초생활수급자·차상위계층·기초연금수급자 중 돌봄이 필요한 어르신은 노인맞춤돌봄서비스를 신청할 수 있어요. 안부 확인 등 필요한 돌봄을 무료로 제공하는 서비스예요.",
           "structure": "대상·무료돌봄→선정·제공·중복3항목→상시신청준비→CTA",
           "media_turn": "TEXT"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-17T20:00:00+09:00",
+      "benefit_id": "WII000001060",
+      "source_fingerprint": "eea018183cf424246fa45d91884a66187d317418bf24000fdae3263282cdbc02",
+      "source_generation": "gov24-43852258780-1",
+      "prepared_at": "2026-11-16T21:19:19.602482+09:00",
+      "expires_at": "2026-11-17T21:19:19.602482+09:00",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "WII000001060",
+        "post_text": "직원의 육아기 단축근무를 지원하는 사업장이라면, 출산육아기 고용안정장려금을 확인해 보세요. 우선지원대상기업 사업주는 근로자 1인당 일반지원 월 30만원을 받을 수 있어요.\n\n① 30일 이상 허용했나요? 출산휴가와 겹친 기간은 빼요.\n② 고용보험 가입과 친족·보수·외국인 제한을 확인했나요? 배우자·직계가족, 신고보수 월 124만원 미만 등은 제외돼요. 단시간 근로자는 시간비례로 판단해요.\n③ 지원금 절반은 사용 중 3개월 단위로 신청해요. 나머지는 원칙적으로 복귀 후 6개월 이상 계속 고용을 확인한 뒤 지급해요.\n\n공공기관·일부 업종·체불명단 공표 사업주 등은 제외되며, 다른 지원금과의 중복도 제한돼요. 지급신청서와 단축 시행 증빙을 준비해요. 사용 중 받을 절반은 종료일부터 12개월 내, 나머지는 종료 6개월이 지난 다음 날부터 12개월 내 신청해요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-17T20:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "고용보험근로자에게육아기단축을30일이상허용한우선지원대상기업사업주",
+          "central_message": "직원의육아기단축근무를허용한기업은어떤일반지원과신청조건을확인해야하나요?",
+          "pattern": "P5",
+          "selection_reason": "검증가능후보중 동일ID보조금24누적조회수62860. 실제48게시와다른미래3READY중복제외,상위49HOLD/SKIP이유·출처보존. 30일·근로자·분리지급조건을P5로검수.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "WII000001060",
+              "source_ref": "https://www.worklife.kr/website_renew/index/employerSupport/parental_leave_reduction_subsidy.asp",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-16T21:19:19.602482+09:00",
+              "claims_supported": [
+                "고용노동부 일생활균형 실제본문123~198행 열람. 우선지원대상기업·30일허용(출산휴가중복제외)·단축근로자1인월일반30만원·50%사용중3개월주기/나머지복귀후6개월고용·보수124만원/보험·친족·외국인·제외업종/공공기관/공표사업주·증빙을대조. 근로자개인급여아닌사업주장려금. 선택범위는육아기단축일반지원이며육아휴직특례·대체인력·업무분담금액을합산하지않음."
+              ]
+            },
+            {
+              "source_id": "WII000001060",
+              "source_ref": "https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systClId=SC00000302&systId=SI00000398",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-16T21:19:19.602482+09:00",
+              "claims_supported": [
+                "고용24 실제본문320행에서요건을충족한사업주는신청 가능하다고명시한현재제도안내를직접확인. 개인별기한과심사를적용하며실제로그인후신청거래성공은미검증. 고용24 실제본문293~403행 열람. 단축근로자1인월30만원과첫3사례월10만원추가(본문은일반지원한정),우선지원대상·고용보험/124만원미만(단시간비례)/친족·외국인제한,공공·업종·체불/산재공표제외,50%분리신청과중복잔액조정·지급심사를대조.365행에서사용중50%는종료다음날부터12개월,나머지는종료6개월경과다음날부터12개월로구분한상세신청기한확인. 일반API요약의종료12개월을나머지50%에도같은기한인것처럼합치지않음. 법령검색요약은직접열람증빙으로대체하지않음."
+              ]
+            },
+            {
+              "source_id": "WII000001060",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999040&bnefType=all&svcId=WII000001060",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-16T21:19:19.602482+09:00",
+              "claims_supported": [
+                "최신완전수집본 gov24-43852258780-1 동일ID원본 serviceList 누적조회수62860·수정2026-08-05, API checkedAt=2026-11-16T19:55:13.129166+09:00, 수집완료=2026-11-16T19:57:32.568236+09:00. 사업주대상·일반지원30만원·30일·6개월조건을실제열람공식자료와대조. source_only/applicationOpenVerified=false는유지. 수집시각을현재접수검증시각으로바꾸지않음."
+              ]
+            },
+            {
+              "source_id": "WII000001060",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-16T21:19:19.602482+09:00",
+              "claims_supported": [
+                "이번실행에서현재허용mainPNG를실제재다운로드하고SHA256=0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd를현재image-review의2026-11-06 AI_VISUAL_INSPECTION/PASS와로컬바이트에재대조.새시각검수아님. 기존약360px가독성참조. 실제체크리스트봉투·동전·새싹·브랜드/CTA,금액·대상·기간문구없어본문과충돌없음. 사업별승인자산없어기존로테이션."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 443,
+          "count_method": "Python Unicode len including spaces/newlines/CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "신청/수령확정아님. 일반지원만소개하고추가인센티브·육아휴직특례·대체인력·업무분담금액을합산하지않음.",
+            "나머지50%의자기사정이직예외등개별적용은센터확인. 본문에계속고용원칙명시.",
+            "법령51조변경조문직접열람은404,전체법령화면은메타정보만읽힘. 실제열린고용24상세본문으로검수하며법령전문을직접확인했다고주장하지않음.",
+            "실제발송시최신자료·공식상태·근거24시간·이미지SHA·유효기간재검증필수.현재19:57수집본은내일20시기준24시간초과로신선하지않음."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "직원의육아기단축근무를허용한기업은어떤일반지원과신청조건을확인해야하나요?",
+            "reader_scope": "고용보험근로자에게육아기단축을30일이상허용한우선지원대상기업사업주",
+            "angles": [
+              "직원의단축근무운영부담",
+              "사업주와근로자자격확인",
+              "절반씩다른지급·신청시기"
+            ],
+            "chosen_angle": "사업장운영상황·일반지원→30일/근로자제외조건체크→6개월고용·분리신청기한",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "직원의 육아기 단축근무를 지원하는 사업장이라면, 출산육아기 고용안정장려금을 확인해 보세요. 우선지원대상기업 사업주는 근로자 1인당 일반지원 월 30만원을 받을 수 있어요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "육아기 근로시간 단축을 30일 이상 허용한 우선지원대상기업 사업주는 근로자 1인당 일반지원 월 30만원을 확인할 수 있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "육아기 단축 지원금은 사업주에게 지급하며, 나머지 절반은 원칙적으로 복귀 후 6개월 이상 계속 고용을 확인해요."
+              }
+            ],
+            "chosen_opening": "직원의 육아기 단축근무를 지원하는 사업장이라면, 출산육아기 고용안정장려금을 확인해 보세요. 우선지원대상기업 사업주는 근로자 1인당 일반지원 월 30만원을 받을 수 있어요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "첫적용KST11월10일기준11월17일20시는반전A. 실제최근20건및기존미래3READY도입·전개대조. 같은날P1/P2/P8과다른P5자격확인형. Nov16근로자개인단축급여와달리사업주지원으로독자범위명시.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국제도/사업주소재지고용센터",
+              "benefit": "사업주고용안정장려금일반지원",
+              "audience": "우선지원대상기업",
+              "application": "개별단축기간·50%분리기한",
+              "media": "IMAGE"
+            },
+            "comparison_group": "현재24h관측16건 A7/B9,중앙값 A63/B89,매칭쌍0. 사업·독자·지역·시간·미디어교란과A8건미달로비교보류·가중치유지.",
+            "applied_elements": [
+              "첫문단사업장상황·대상·일반30만원",
+              "30일·고용보험/친족/보수제한체크",
+              "6개월고용원칙",
+              "두지급분기한구분",
+              "기업지원과개인급여구분"
+            ],
+            "profile_route": "프로필링크·실사이트검색/상세·신청거래동작은이번승인읽기경로에서별도확인하지못함. 이동·접수성공·글별전환보장없음.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "WII000001060",
+          "notice_version": "보조금24수정2026-08-05·고용24현행제도안내",
+          "pattern": "P5",
+          "opening": "직원의 육아기 단축근무를 지원하는 사업장이라면, 출산육아기 고용안정장려금을 확인해 보세요. 우선지원대상기업 사업주는 근로자 1인당 일반지원 월 30만원을 받을 수 있어요.",
+          "structure": "사업장상황·사업주일반지원→30일·제외조건체크→분리지급과6개월고용→업종/중복·증빙·기한→CTA",
+          "media_turn": "IMAGE"
         }
       }
     }
