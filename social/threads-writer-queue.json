@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-16T08:50:26.369742+09:00",
+  "prepared_at": "2026-11-16T13:15:14.819212+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -541,6 +541,15 @@
       "sources": [
         "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=746602&bnefType=all&svcId=423000000362",
         "https://www.mogef.go.kr/nw/rpd/nw_rpd_s001d.do?bbtSn=710800&mid=news405"
+      ]
+    },
+    {
+      "benefit_id": "476000000135",
+      "views": 63866,
+      "decision": "HOLD",
+      "reason": "동일ID 최신원본 신청기한은 설,추석 명절기간으로만 제공되고 시작/종료일이 없다. 11월16일 검수에서 내일12시 신규접수 가능한 임실군 현행 공고를 확보하지 못해 현재상태 UNKNOWN으로 보류한다. 사업전체종료나상시접수로추정하지않음.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005107&bnefType=all&svcId=476000000135"
       ]
     }
   ],
@@ -6329,6 +6338,144 @@
           "opening": "충북에 주민등록을 둔 도민은 도민안전보험의 보장 대상 사고로 신체 피해를 입으면 보험금을 청구할 수 있어요. 등록외국인도 포함돼요.",
           "structure": "대상·보장사고실익→자동가입/청구·심사차이→운영연도·청구기한→시군조건·전출해지→CTA",
           "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-17T12:00:00+09:00",
+      "benefit_id": "SSE000000050",
+      "source_fingerprint": "d33e62af0d991a8cca805b3d96b090a532300d763ac631acfcedc43bf0107edd",
+      "source_generation": "gov24-43766350375-1",
+      "prepared_at": "2026-11-16T13:15:14.819212+09:00",
+      "expires_at": "2026-11-17T13:15:14.819212+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "SSE000000050",
+        "post_text": "혼자 식사나 외출을 챙기기 어려운 65세 이상 어르신이라면, 노인맞춤돌봄서비스를 확인해 보세요. 기초생활수급자·차상위계층·기초연금수급자 중 돌봄이 필요한 분에게 안부 확인과 일상생활 지원 등을 무료로 제공해요.\n\n나이와 소득 자격만으로 자동 선정되는 건 아니에요. 돌봄 필요도를 조사하고 심의한 뒤, 필요한 서비스와 제공시간·주기를 정해요. 일반돌봄군에는 정기적인 가사지원이 제공되지 않아요.\n\n유사한 돌봄사업 자격이 있으면 원칙적으로 제외되며, 지자체가 필요성을 인정하는 예외는 별도 확인해야 해요.\n\n상시 신청은 주민등록상 주소지 읍·면·동 행정복지센터에서 해요. 신청서와 신분증 등을 준비하고, 현재 이용 중인 돌봄서비스도 함께 알려 대상 여부를 확인해 주세요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-17T12:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "65세이상 기초생활수급자·차상위·기초연금수급자 중 돌봄이 필요한 어르신",
+          "central_message": "혼자 일상을 챙기기 어려울 때 어떤 무료 돌봄을 신청할 수 있나요?",
+          "pattern": "P1",
+          "selection_reason": "동일ID 누적조회수63573. 실제47게시와기존미래3READY중복제외, 상위49HOLD/SKIP 이유/출처보존. 식사·외출의 실제어려움과 돌봄서비스 효용이 연결되어 P1선택.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "SSE000000050",
+              "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10712010400",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-16T13:15:14.819212+09:00",
+              "claims_supported": [
+                "보건복지부 노인맞춤돌봄서비스 정책안내 본문852~937행을 실제 열람. 최종수정2026-03-31. 65세 이상 기초생활/차상위/기초연금 중 돌봄필요, 선정조사·심의, 안부확인·일상생활지원, 필요도에 따른 내용·시간·주기, 이용자부담무료, 주민등록주소지 읍면동 신청서/신분증을 대조. 개인선정·일정한가사시간·접수거래성공은 보장하지 않음."
+              ]
+            },
+            {
+              "source_id": "SSE000000050",
+              "source_ref": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=1&cnpClsNo=1&csmSeq=1963&menuType=cnpcls&popMenu=ov",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-16T13:15:14.819212+09:00",
+              "claims_supported": [
+                "법제처 생활법령정보 본문220~269행 실제 열람. 정보기준2026-10-15, 2026년 사업안내 근거. 일반돌봄군 월16시간미만/주기적가사지원불가, 65세이상 소득·돌봄필요조건, 유사중복사업자격제외와 직접/연계서비스를 대조. 확인한 제한을 본문에 유지."
+              ]
+            },
+            {
+              "source_id": "SSE000000050",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=757126&bnefType=all&svcId=SSE000000050",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-16T13:15:14.819212+09:00",
+              "claims_supported": [
+                "완전수집본 gov24-43766350375-1 동일ID serviceList 누적조회수63573, 수정일2026-08-20, API원문 checkedAt=2026-11-16T06:59:41.141217+09:00; 수집완료=2026-11-16T07:02:51.228351+09:00. 상시신청·유사중복자격제외/시군구 필요인정시예외·방문신청과선정조건을 실제 열린 보건복지부/생활법령 자료와 대조. source_only와applicationOpenVerified=false를바꾸지않으며 API시각을원문검수시각으로사용하지않음."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 391,
+          "count_method": "Python Unicode len including spaces/newlines/CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "일반돌봄군에는정기적가사지원이제공되지않는제한을본문유지. 개인별선정·서비스시간·대기기간은미확인으로확정하지않음.",
+            "복지로 모바일 상세는직접열람결과읽을수있는본문0행. 검색요약을직접열람근거로사용하지않고 실제열린보건복지부/생활법령과동일ID공식API원문으로검수.",
+            "실제발송시최신수집본·공식운영상태·원고/evidence24시간·유효기간재검증필수.현재11월16일07시수집본은내일12시발송에신선하지않음."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "혼자 일상을 챙기기 어려울 때 어떤 무료 돌봄을 신청할 수 있나요?",
+            "reader_scope": "65세이상 기초생활/차상위/기초연금 중 돌봄필요 어르신",
+            "angles": [
+              "혼자식사·외출을챙기는일상어려움",
+              "소득자격과돌봄필요도선정구분",
+              "행정복지센터신청준비와중복제한"
+            ],
+            "chosen_angle": "일상어려움과무료서비스효용→필요도별제공·가사지원제한→중복조건→상시신청준비",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "혼자 식사나 외출을 챙기기 어려운 65세 이상 어르신이라면, 노인맞춤돌봄서비스를 확인해 보세요. 기초생활수급자·차상위계층·기초연금수급자 중 돌봄이 필요한 분에게 안부 확인과 일상생활 지원 등을 무료로 제공해요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "65세 이상 기초생활수급자·차상위계층·기초연금수급자 중 돌봄이 필요한 어르신에게 무료 돌봄서비스를 제공해요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "노인맞춤돌봄서비스는 소득 자격뿐 아니라 돌봄 필요도 조사와 선정을 거쳐 안부 확인 등을 제공해요."
+              }
+            ],
+            "chosen_opening": "혼자 식사나 외출을 챙기기 어려운 65세 이상 어르신이라면, 노인맞춤돌봄서비스를 확인해 보세요. 기초생활수급자·차상위계층·기초연금수급자 중 돌봄이 필요한 분에게 안부 확인과 일상생활 지원 등을 무료로 제공해요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "첫적용KST11월10일기준11월17일12시는반전A. 최근20건과미래3READY 도입·전개를실제대조. 같은날08시보험P2/B와달리생활상황P1/A로정기적가사지원과선정제한을설명. 가짜경험·실제반복독자질문을주장하지않음.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "중앙정부제도/주소지기관신청",
+              "benefit": "무료돌봄서비스",
+              "audience": "65세이상저소득돌봄필요",
+              "application": "상시신청/선정조사·심의",
+              "media": "TEXT"
+            },
+            "comparison_group": "A/B도입비교. 실제24h관측15건 A7/B8,중앙값전체89/A63/B96.5.매칭쌍0,독자·지역·혜택·시간·미디어교란및A8건미달로효과·우세판단보류.가중치유지.",
+            "applied_elements": [
+              "생활상황과대상·실익을첫문단에연결",
+              "무료서비스유형",
+              "자동선정아님·일반돌봄가사지원제한",
+              "유사중복원칙/예외",
+              "상시신청경로·준비물"
+            ],
+            "profile_route": "승인읽기경로에서프로필링크와실사이트사업검색/상세/신청거래동작은별도확인하지못함. 이동·접수기능이나글별전환을보장하지않음.",
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "SSE000000050",
+          "notice_version": "보건복지부2026-03-31·생활법령2026-10-15·동일ID보조금24수정2026-08-20",
+          "pattern": "P1",
+          "opening": "혼자 식사나 외출을 챙기기 어려운 65세 이상 어르신이라면, 노인맞춤돌봄서비스를 확인해 보세요. 기초생활수급자·차상위계층·기초연금수급자 중 돌봄이 필요한 분에게 안부 확인과 일상생활 지원 등을 무료로 제공해요.",
+          "structure": "생활상황·대상과무료돌봄→선정조사·제공범위와가사지원제한→중복제한/예외→상시신청·준비물→CTA",
+          "media_turn": "TEXT"
         }
       }
     }
