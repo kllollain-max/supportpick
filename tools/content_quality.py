@@ -57,7 +57,8 @@ def audit(rows):
 def reading_gaps(row):
     """Only observed gaps; a complete record gets no generated filler paragraph."""
     gaps=[]
-    for key,label in [('selection','선정기준'),('documents','구비서류'),('contact','문의처')]:
+    # Eligibility can be fully described in target without a separate selection field.
+    for key,label in [('documents','구비서류'),('contact','문의처')]:
         if not str(row.get(key) or '').strip():
             gaps.append('공식 연결자료에 '+label+' 항목이 제공되지 않았습니다. 필요한 내용은 공식 공고·담당기관에서 확인하세요.')
     if period(row.get('period',''))['periodKind'] in ('needs_check','not_provided'):

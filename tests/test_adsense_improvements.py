@@ -35,6 +35,8 @@ class SourceQualityTests(unittest.TestCase):
     def test_reading_notes_only_describe_missing_or_ambiguous_source_fields(self):
         r={'selection':'중복 조건은 공고 확인','documents':'신분증','contact':'기관','period':'상시신청'}
         self.assertEqual(reading_gaps(r),[])
+        r['selection']='';r['target']='지원대상 본문에 실제 선정 조건이 제공됨'
+        self.assertEqual(reading_gaps(r),[])
         r['documents']='';r['period']='5.1.~5.31.'
         gaps=reading_gaps(r)
         self.assertEqual(len(gaps),2)
