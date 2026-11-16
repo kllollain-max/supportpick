@@ -15,6 +15,7 @@ from zoneinfo import ZoneInfo
 from collect_full import safe_url, valid_id
 from search_metadata import public_metadata
 from benefit_analysis import related_analysis
+from content_quality import reading_gaps
 
 KST = ZoneInfo('Asia/Seoul')
 TEMPLATE_MODIFIED = '2026-11-17'
@@ -238,21 +239,10 @@ def editorial_html(row, guide):
                 + '<h3>대조한 공식 안내</h3><ul class="reference-list">' + references
                 + '</ul><p class="source-meta">AI 초안·공식자료 대조 ' + escape(stamp(guide['reviewedAt']))
                 + ' · 공식 API 본문과 아래 자료를 대조한 준비 안내입니다. 운영자의 사람 검토 완료는 별도 확인이 필요합니다. 개인의 자격·선정·현재 접수를 확정하지 않습니다.</p></section>')
-    checks = []
-    if '융자' in row.get('supportType', '') or '대출' in row['title']:
-        checks.append('지원방식에 대출·융자가 포함된 안내입니다. 수령액만 보지 말고 이자, 상환 방식과 심사 조건을 공식 창구에서 함께 확인하세요.')
-    if row.get('regionBasis') == 'agency_jurisdiction':
-        checks.append(row['organization'] + '의 소관 지역 표기는 거주 자격 판정이 아닙니다. 신청인의 주민등록지와 사업의 거주기간 조건을 대조하세요.')
-    else:
-        checks.append('지역 제한을 이 페이지의 기관명만으로 판단하지 마세요. 지원대상 원문에서 주소지·사업장 소재지·세대 기준을 확인하세요.')
-    if row.get('periodKind') == 'ongoing':
-        checks.append('상시 안내라도 담당 창구의 예산·차수·접수 상황은 달라질 수 있습니다. 서류를 발급하기 전에 현재 접수 중인지 문의하세요.')
-    else:
-        checks.append('신청기간이 연도·차수별로 달라질 수 있습니다. 위 기간을 현재 모집으로 단정하지 말고 공식 공고의 신청 시작·마감일을 확인하세요.')
-    checks.append('아래 구비서류에서 본인에게 해당하는 증빙과 발급 기준일을 확인하고, 미제공 항목은 담당기관에 확인한 뒤 준비하세요.')
-    return ('<section class="detail-block own-guide"><span class="source-label">지원금픽 준비 안내</span>'
-            '<h2>' + escape(row['title']) + ' 확인 순서</h2><ul>' + list_items(checks)
-            + '</ul><p>공식 안내에서 조건과 서류를 확인한 뒤 관심 저장을 해두세요. 내 신청에는 준비·접수·결과를 직접 기록할 수 있으며 공식 접수가 자동으로 이루어지지는 않습니다.</p></section>')
+    gaps=reading_gaps(row)
+    if not gaps:return ''
+    return ('<section class="detail-block data-gaps"><h2>이 자료에서 추가로 확인할 항목</h2><ul>'
+            +list_items(gaps)+'</ul></section>')
 
 
 def render_benefit(row, guide, blog, reasons, related, base, current, feed_status):

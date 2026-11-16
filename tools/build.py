@@ -11,7 +11,7 @@ from application_guides import write_guides
 from benefit_analysis import coverage_report
 from release_policy import fingerprint
 from collect_full import period
-from content_quality import conditions, audit
+from content_quality import conditions, audit, review_queue
 ROOT=Path(__file__).resolve().parents[1]
 STATIC=('index.html','privacy.html','about.html','terms.html','contact.html','404.html','icon.svg','careerpick-base.css','styles.css','core.js','app.js','detail.js','supportpick-badge.png','supportpick-banner.png','editorials.js','app-features.js','manifest.webmanifest','sw.js','offline.html','app-icon-180.png','app-icon-192.png','app-icon-512.png','naver-analytics.js','naver-analytics.css','feed-loader.js')
 
@@ -126,7 +126,9 @@ def build(destination,state=None,allow_sample=False,public_base=None):
     if guides.get('version')!=1 or not isinstance(guides.get('guides'),list):raise ValueError('invalid_own_guide_registry')
     detail=write_details(output,full_rows,previous_rows,public_base,guides,registry,status['status'])
     detail['entries'].extend(write_guides(output,public_base,full_rows))
-    (output/'content-quality-report.json').write_text(json.dumps(audit(full_rows),ensure_ascii=False,separators=(',',':')))
+    quality=audit(full_rows)
+    quality['triage']=review_queue(full_rows,quality,detail['report'])
+    (output/'content-quality-report.json').write_text(json.dumps(quality,ensure_ascii=False,separators=(',',':')))
     (output/'content-value-report.json').write_text(json.dumps(coverage_report(detail['report'],full_rows),ensure_ascii=False,indent=2))
     home=(output/'index.html').read_text()
     home=home.replace('<!-- STATIC_DISCOVERY -->',detail['home'])
