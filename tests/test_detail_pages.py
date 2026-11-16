@@ -42,6 +42,21 @@ class Text(HTMLParser):
 
 
 class StaticDetailTests(unittest.TestCase):
+    def test_confirmed_outdated_source_links_to_current_explanation_without_republishing_old_facts(self):
+        with tempfile.TemporaryDirectory() as temp:
+            output=Path(temp); a=row('135200000120')
+            a['summary']='OUTDATED_SUMMARY';a['support']='OUTDATED_PAYMENT'
+            result=write_details(output,{a['id']:a},{},BASE,
+                                 {'holds':{a['id']:{'reason':'Official age and regional amount changed',
+                                                   'url':'https://www.mohw.go.kr/menu.es?mid=a10711030100'}}},
+                                 {},'success',NOW)
+            html=(output/benefit_path(a['id'])/'index.html').read_text()
+            self.assertNotIn('OUTDATED_SUMMARY',html)
+            self.assertNotIn('OUTDATED_PAYMENT',html)
+            self.assertIn('../../guides/child-allowance-2026.html',html)
+            self.assertEqual(result['report']['indexableDetails'],0)
+            self.assertEqual(a['support'],'OUTDATED_PAYMENT')
+
     def test_core_information_is_in_initial_html_with_unique_canonical_breadcrumb_and_local_assets(self):
         with tempfile.TemporaryDirectory() as temp:
             output = Path(temp)

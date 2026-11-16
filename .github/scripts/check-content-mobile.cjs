@@ -28,7 +28,7 @@ const { chromium } = require('playwright');
   const browser = await chromium.launch({headless:true});
   const results = [];
   try {
-    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['', 'benefits/149200000026/', 'privacy.html', 'guides/application-checklist.html', 'guides/compare-benefits.html', 'guides/energy-voucher-2026.html', 'guides/emergency-vs-livelihood-2026.html'];
+    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['', 'benefits/149200000026/', 'privacy.html', 'guides/application-checklist.html', 'guides/compare-benefits.html', 'guides/energy-voucher-2026.html', 'guides/emergency-vs-livelihood-2026.html', 'guides/child-allowance-2026.html', 'guides/housing-benefit-2026.html', 'benefits/135200000120/'];
     await fs.mkdir('mobile-evidence', {recursive:true});
     for (const width of [320,390,1440]) {
       const context = await browser.newContext({viewport:{width,height:900},serviceWorkers:'block'});
@@ -61,6 +61,17 @@ const { chromium } = require('playwright');
           await page.getByText('조건에 맞는 정보가 없어요',{exact:true}).waitFor();
           await page.locator('#resetFilters').click();
           assert.equal(await page.locator('.benefit-card').count(),30);
+          await page.locator('#query').fill('아동수당');
+          const heldCard=page.locator('.benefit-card').filter({has:page.locator('[data-detail="135200000120"]')});
+          await heldCard.getByText('내용 확인 필요',{exact:true}).waitFor();
+          assert(!(await heldCard.innerText()).includes('만 8세 미만'));
+          assert.equal(await heldCard.locator('[data-compare]').count(),0);
+          await page.goto(origin + '/' + project + '/#benefit=135200000120',{waitUntil:'networkidle'});
+          await page.locator('#detailSection').getByText('아동수당 · 내용 확인 필요',{exact:true}).waitFor();
+          assert(!(await page.locator('#detailSection').innerText()).includes('매달 25일'));
+          await page.goto(origin + '/' + project + '/', {waitUntil:'networkidle'});
+          await page.locator('#filterToggle').click();
+          await page.locator('#resetFilters').click();
         }
         if (entry.includes('after-application')) {
           assert.equal(await page.locator('#deadline-plan').count(),1);
@@ -69,6 +80,11 @@ const { chromium } = require('playwright');
         }
         if (entry.includes('149200000026')) {
           assert(await page.getByText('카드 발급 전에 훈련과정을 어떻게 비교해 두면 좋을까요?', {exact:true}).count() > 0);
+        }
+        if (entry === 'benefits/135200000120/') {
+          assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'),'noindex,follow');
+          assert.equal(await page.locator('a[href="../../guides/child-allowance-2026.html"]').count(),1);
+          assert(!(await page.locator('main').innerText()).includes('90일(출국일 포함)'));
         }
         const dimensions = await page.evaluate(() => ({width:innerWidth, content:document.documentElement.scrollWidth}));
         assert(dimensions.content <= dimensions.width + 1, JSON.stringify({entry,...dimensions}));

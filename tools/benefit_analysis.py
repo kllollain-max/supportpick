@@ -4,6 +4,7 @@ Facts refer to the stated year and review date. The scenarios are our own
 reading aids, not eligibility decisions. Keep sources beside the relevant facts.
 """
 from html import escape
+from family_housing_analysis import FOCUS_ARTICLES
 
 REVIEWED = '2026-11-17'
 ENERGY = 'https://www.energyv.or.kr/info/'
@@ -66,10 +67,14 @@ ARTICLES = [
 ''', [(EMERGENCY,'보건복지부 · 긴급복지지원'), (LIVELIHOOD,'보건복지부 · 기초생활보장 급여수준')])
 ]
 
+ARTICLES += FOCUS_ARTICLES
+
 BENEFIT_ARTICLES = {
     'B55353000001': 'energy-voucher-2026',
     '135200005003': 'emergency-vs-livelihood-2026',
     'WII000001410': 'emergency-vs-livelihood-2026',
+    '135200000120': 'child-allowance-2026',
+    '336000000096': 'housing-benefit-2026',
 }
 
 
@@ -96,6 +101,7 @@ def coverage_report(search, rows):
         'detailsWithoutMatchedPreparationGuide': search['indexableDetails'] - len(matched),
         'substantiveAnalysisArticles': len(ARTICLES),
         'analysisLinkedBenefitIds': linked,
+        'heldBenefitAnalysisIds': sorted(sid for sid in BENEFIT_ARTICLES if sid in rows and sid in held),
         'siteWideContentValueReview': 'incomplete',
         'resubmissionRecommended': False,
         'reason': 'Original analysis exists for a small subset; site-wide value has not been demonstrated.',

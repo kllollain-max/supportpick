@@ -123,7 +123,7 @@ def safe_reference(value):
                     'www.gbuspb.kr', 'www.mnuri.kr', 'www.energyv.or.kr',
                     'www.kosaf.go.kr', 'www.hf.go.kr', 'www.khug.or.kr', 'www.nps.or.kr',
                     'fowi.or.kr', 'www.fowi.or.kr', 'www.safedriving.or.kr',
-                    'www.energy.or.kr', 'min24.energy.or.kr'}))
+                    'www.energy.or.kr', 'min24.energy.or.kr', 'www.lh.or.kr'}))
     except ValueError:
         return False
 
@@ -286,6 +286,7 @@ def render_benefit(row, guide, blog, reasons, related, base, current, feed_statu
         reference=row.get('_holdReference')
         if reference and safe_reference(reference):
             body += '<section class="detail-block"><h2>최신 공식 안내 확인</h2><a href="' + escape(reference,quote=True) + '" target="_blank" rel="noopener noreferrer">대조한 담당기관 안내 ↗</a></section>'
+        body += related_analysis(row['id'])
         record={k:row.get(k) for k in ('id','title','checkedAt')};record['base']='../../'
         return shell(row['title']+' | 내용 확인 필요 - 지원금픽',
                      row['organization']+'의 지원정보를 확인 중입니다. 최신 공식 안내를 확인하세요.',
