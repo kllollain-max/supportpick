@@ -5242,12 +5242,12 @@
     "last_ready_queue_blob_sha": "f4ea5e0fb01dc19e93e0a765d61adebe72f71ea8"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-16T09:53:23.228376+00:00",
+    "checked_at": "2026-11-16T10:46:44.399443+00:00",
     "result": "no_update",
     "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
     "publication_ledger_sha": "621233fb44fa21b7944b2e96c619eacd7f2fe762",
     "queue_blob_sha": "aaf012b7eaafb039f70c4130809f171b9eabbc49",
-    "maintenance_previous_blob_sha": "9cb9eff36aa25fb2671ee8fbc953a801973ff3cb",
+    "maintenance_previous_blob_sha": "3199adfc98107eacacf608d3ada1fa2a39e8a4ef",
     "unresolved_publications": 0,
     "lease": null,
     "active_target_runs": [],
@@ -5278,7 +5278,7 @@
       "regression_ci_tests_passed": 203,
       "fresh_at_check": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-16T18:52:40.319456+09:00",
+      "verification_checked_at": "2026-11-16T19:46:18.049600+09:00",
       "classification": "validated_complete_fresh_generation",
       "artifact_redownloaded_and_digest_verified_this_check": false,
       "cached_artifact_digest_reverified": true
@@ -5377,13 +5377,13 @@
         }
       ],
       "expired_unpublished_slots": [],
-      "last_validated_at": "2026-11-16T18:52:40.319456+09:00",
+      "last_validated_at": "2026-11-16T19:46:18.049600+09:00",
       "source_generation_checked": "gov24-43766350375-1",
       "image_recheck": {
         "existing_ready_evidence_preserved": true,
         "new_visual_inspection": false,
         "current_main_asset_download_and_sha256_recompared_with_current_image_review": true,
-        "verification_checked_at": "2026-11-16T18:52:40.319456+09:00",
+        "verification_checked_at": "2026-11-16T19:46:18.049600+09:00",
         "method": "Both allowed current main PNG files redownloaded and SHA256 matched current image-review PASS. Existing READY evidence timestamps preserved."
       },
       "validation_environment": {
@@ -28368,6 +28368,27 @@
         "no_production_code_change": true,
         "late_slot_rejected_before_any_external_call": "PASS"
       }
+    },
+    "2026-11-16T10:46:44.399443+00:00": {
+      "checked_at": "2026-11-16T10:46:44.399443+00:00",
+      "result": "no_update",
+      "publication_ledger_sha": "621233fb44fa21b7944b2e96c619eacd7f2fe762",
+      "queue_blob_sha": "aaf012b7eaafb039f70c4130809f171b9eabbc49",
+      "maintenance_previous_blob_sha": "3199adfc98107eacacf608d3ada1fa2a39e8a4ef",
+      "changed_run_versions": [],
+      "preview_ready": 4,
+      "ledger_complete_verified": 47,
+      "pending": 0,
+      "lease": null,
+      "source_generation": "gov24-43766350375-1",
+      "actual_read_path_validation": "PASS",
+      "current_images_sha_verified": true,
+      "new_failures": 0,
+      "new_partials": 0,
+      "new_publications": 0,
+      "new_metric_observations": 0,
+      "existing_ready_preserved": 45,
+      "next_condition": "Existing20h publisher consumes current READY; recheck latest source,official status,expiry andimage bytes. No replay of expired16h."
     }
   }
 }
