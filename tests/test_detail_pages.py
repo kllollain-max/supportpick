@@ -11,7 +11,7 @@ from xml.etree import ElementTree as ET
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
 from detail_pages import (benefit_path, material_hash, popularity, reviewed_guide,
-                          matching_blog, source_date, write_details)
+                          matching_blog, source_date, write_details, editorial_html)
 from search_metadata import write_sitemap
 from build import Links
 
@@ -42,6 +42,15 @@ class Text(HTMLParser):
 
 
 class StaticDetailTests(unittest.TestCase):
+    def test_api_only_detail_does_not_manufacture_a_repeated_preparation_essay(self):
+        a=row()
+        self.assertEqual(editorial_html(a,None),'')
+        a['documents']=''
+        text=editorial_html(a,None)
+        self.assertIn('구비서류 항목이 제공되지 않았습니다',text)
+        self.assertNotIn('지원금픽 자체 해설',text)
+        self.assertNotIn('의 소관 지역 표기는',text)
+
     def test_confirmed_outdated_source_links_to_current_explanation_without_republishing_old_facts(self):
         with tempfile.TemporaryDirectory() as temp:
             output=Path(temp); a=row('135200000120')

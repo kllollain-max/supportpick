@@ -28,7 +28,7 @@ const { chromium } = require('playwright');
   const browser = await chromium.launch({headless:true});
   const results = [];
   try {
-    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['', 'benefits/149200000026/', 'privacy.html', 'guides/application-checklist.html', 'guides/compare-benefits.html', 'guides/energy-voucher-2026.html', 'guides/emergency-vs-livelihood-2026.html', 'guides/child-allowance-2026.html', 'guides/housing-benefit-2026.html', 'benefits/135200000120/'];
+    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['', 'benefits/149200000026/', 'privacy.html', 'guides/application-checklist.html', 'guides/compare-benefits.html', 'guides/energy-voucher-2026.html', 'guides/emergency-vs-livelihood-2026.html', 'guides/child-allowance-2026.html', 'guides/housing-benefit-2026.html', 'benefits/135200000120/', 'guides/earned-income-credit-late-2026.html'];
     await fs.mkdir('mobile-evidence', {recursive:true});
     for (const width of [320,390,1440]) {
       const context = await browser.newContext({viewport:{width,height:900},serviceWorkers:'block'});
@@ -49,6 +49,22 @@ const { chromium } = require('playwright');
           await page.locator('#household').selectOption('1인가구');
           assert(await page.locator('#resultCount').innerText());
           await page.locator('#resetFilters').click();
+          if(width===320){
+            const legacy=await context.newPage();
+            let catalogAttempts=0;
+            await legacy.route('**/catalog/*.json',async route=>{
+              await new Promise(resolve=>setTimeout(resolve,1800));
+              if(++catalogAttempts===1){await route.abort('failed');return;}
+              await route.continue();
+            });
+            await legacy.goto(origin+'/'+project+'/#benefit=135200000120',{waitUntil:'domcontentloaded'});
+            await legacy.getByText('전체 목록에서 요청한 지원정보를 확인하고 있습니다.',{exact:true}).waitFor();
+            assert.equal(await legacy.getByText('혜택 자료를 찾지 못했어요',{exact:true}).count(),0);
+            await legacy.getByRole('button',{name:'전체 목록 다시 불러오기',exact:true}).click();
+            assert.equal(await legacy.getByRole('link',{name:'공유 상세페이지로 바로 확인 →',exact:true}).getAttribute('href'),'benefits/135200000120/');
+            await legacy.getByText('아동수당 · 내용 확인 필요',{exact:true}).waitFor();
+            await legacy.close();
+          }
           await page.locator('[data-compare]').nth(0).click();
           await page.locator('[data-compare]').nth(1).click();
           await page.locator('#compareOpen').click();

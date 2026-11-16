@@ -70,6 +70,11 @@
     const request=++detailRequest;
     let id='';try{id=decodeURIComponent(location.hash.slice(9));}catch(e){}
     let p=items.find(x=>x.id===id);
+    if(!p&&window.SUPPORTPICK_DATA.partial&&C.idOK(id)){
+      const direct=/^[A-Za-z0-9_-]{1,80}$/.test(id)?`<a class="quiet" href="benefits/${encodeURIComponent(id)}/">공유 상세페이지로 바로 확인 →</a>`:'';
+      $('detailSection').innerHTML=(feedLoadError?`<p role="alert">${esc(feedLoadError)}</p><button class="quiet" type="button" data-feed-retry>전체 목록 다시 불러오기</button>`:'<p role="status">전체 목록에서 요청한 지원정보를 확인하고 있습니다.</p>')+direct;
+      return;
+    }
     if(!p){$('detailSection').innerHTML='<button class="quiet back-button" data-back>← 목록으로</button>'+empty('혜택 자료를 찾지 못했어요','목록으로 돌아가 공식 정보를 다시 확인하세요.','all');return;}
     if(p.reviewRequired===true){
       $('detailSection').innerHTML=`<button class="quiet back-button" data-back>← 목록으로 돌아가기</button><article class="detail-block"><h2 id="detailTitle">${esc(p.title)} · 내용 확인 필요</h2><p>이전 API의 대상·금액을 현재 조건으로 표시하지 않습니다. 확인 사유와 최신 공식 안내·관련 해설을 상세페이지에서 확인하세요.</p><a class="primary" href="benefits/${encodeURIComponent(p.id)}/">최신 확인 안내 보기 →</a></article>`;
@@ -121,7 +126,8 @@
   }
   $('compareOpen').onclick=openComparison;
   $('compareClear').onclick=()=>{comparison.clear();drawComparison();render();};
-  $('feedRetry').onclick=()=>{$('feedRetry').hidden=true;feedLoadError='';render();window.SupportPickFeed.load().catch(()=>{});};
+  function retryFeed(){$('feedRetry').hidden=true;feedLoadError='';render();window.SupportPickFeed.load().catch(()=>{});}
+  $('feedRetry').onclick=retryFeed;
   window.addEventListener('supportpick:feed',()=>{
     try{items=C.parseFeed(window.SUPPORTPICK_DATA);feedError='';feedLoadError='';$('feedRetry').hidden=true;
       $('audience').innerHTML='<option value="">모든 대상</option>'+[...new Set(items.flatMap(p=>p.audience||[]))].sort().map(x=>'<option>'+esc(x)+'</option>').join('');
@@ -129,7 +135,7 @@
       render();
     }catch(error){warn(error.message);}
   });
-  window.addEventListener('supportpick:feed-error',e=>{feedLoadError=e.detail+' 현재 일부 목록만 표시합니다. 전체 검색 결과가 아닙니다.';$('dataNote').textContent=feedLoadError;$('feedRetry').hidden=false;});
+  window.addEventListener('supportpick:feed-error',e=>{feedLoadError=e.detail+' 현재 일부 목록만 표시합니다. 전체 검색 결과가 아닙니다.';$('dataNote').textContent=feedLoadError;$('feedRetry').hidden=false;if(location.hash.startsWith('#benefit='))renderDetail();});
   function renderApps(){
     const records=Object.entries(snapshot.data.apps).sort((a,b)=>b[1].updatedAt.localeCompare(a[1].updatedAt));
     $('resultCount').textContent=`신청 준비·진행 기록 ${records.length}건`;
@@ -153,6 +159,7 @@
     if(b.hasAttribute('data-reset'))reset();
     if(b.hasAttribute('data-more')){view.limit+=30;remember();render();}
     if(b.hasAttribute('data-detail-retry'))renderDetail();
+    if(b.hasAttribute('data-feed-retry'))retryFeed();
     if(b.hasAttribute('data-open-preferences'))openPreferences();
     if(b.hasAttribute('data-close-dialog'))b.closest('dialog').close();
     if(b.dataset.compare){const id=b.dataset.compare;if(comparison.has(id))comparison.delete(id);else if(comparison.size<3)comparison.add(id);else{toast('지원금은 최대 3개까지 비교할 수 있어요.');return;}drawComparison();render();}
