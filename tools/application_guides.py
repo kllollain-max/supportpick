@@ -1,6 +1,7 @@
 """A small authored reference desk, separate from copied API benefit facts."""
 from html import escape
 from detail_pages import shell
+from benefit_analysis import ARTICLES, BENEFIT_ARTICLES
 
 MODIFIED = '2026-11-17'
 API = 'https://www.data.go.kr/data/15113968/openapi.do'
@@ -67,16 +68,19 @@ GUIDES = [
 ]
 
 
-def write_guides(output, base):
+def write_guides(output, base, rows=None):
     entries=[]
-    for slug, title, description, body, sources in GUIDES:
+    articles = ARTICLES + GUIDES
+    for slug, title, description, body, sources in articles:
         path='guides/'+slug+'.html'
         refs=''.join('<li><a target="_blank" rel="noopener noreferrer" href="'+escape(url,quote=True)+'">'+escape(label)+' ↗</a></li>' for url,label in sources)
-        links=''.join('<li><a href="'+other+'.html">'+escape(label)+'</a></li>' for other,label,*_ in GUIDES if other!=slug)
+        links=''.join('<li><a href="'+other+'.html">'+escape(label)+'</a></li>' for other,label,*_ in articles if other!=slug)
+        related=''.join('<li><a href="../benefits/'+sid+'/">'+escape(row['title'])+'</a></li>' for sid,row in (rows or {}).items() if BENEFIT_ARTICLES.get(sid)==slug and (output/'benefits'/sid/'index.html').is_file())
+        related='<h2>공식 API 자료와 대조하기</h2><ul>'+related+'</ul>' if related else ''
         html=('<nav class="breadcrumbs" aria-label="현재 위치"><a href="../">홈</a><span>›</span><span>신청 준비 안내</span></nav>'
               '<article class="detail-block"><h1>'+escape(title)+'</h1><p>'+escape(description)+'</p>'
               '<p class="source-meta">작성: 지원금픽 · 공식 자료 대조: '+MODIFIED+' · AI 보조로 작성한 신청 준비 안내입니다. 개인의 자격·선정 결과를 판정하지 않습니다.</p>'
-              +body+'<h2>확인한 공식 자료</h2><ul>'+refs+'</ul><h2>이어서 확인하기</h2><ul>'+links+'</ul>'
+              +body+related+'<h2>확인한 공식 자료</h2><ul>'+refs+'</ul><h2>이어서 확인하기</h2><ul>'+links+'</ul>'
               '<p><a href="../contact.html">오류·변경 사항 알려주기</a> · <a href="../">지원금 검색·비교하기</a></p></article>')
         (output/'guides').mkdir(exist_ok=True)
         (output/path).write_text(shell(title+' | 지원금픽',description,html,path,'../',base))
