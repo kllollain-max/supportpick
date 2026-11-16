@@ -70,6 +70,7 @@ const { chromium } = require('playwright');
           await page.locator('#detailSection').getByText('아동수당 · 내용 확인 필요',{exact:true}).waitFor();
           assert(!(await page.locator('#detailSection').innerText()).includes('매달 25일'));
           await page.goto(origin + '/' + project + '/', {waitUntil:'networkidle'});
+          await page.locator('#filterToggle').click();
           await page.locator('#resetFilters').click();
         }
         if (entry.includes('after-application')) {
