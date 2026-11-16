@@ -13,6 +13,16 @@ test('period state uses KST and never means verified open',()=>{
  assert.equal(C.periodState({...a,periodKind:'fixed',endDate:'2026-11-17'},new Date('2026-11-16T15:00:00Z')),'dated');
  assert.equal(C.periodState({...a,periodKind:'fixed',endDate:'2026-02-31'}),'unknown');
 });
+test('held facts are labelled for review and are not used as known age or period conditions',()=>{
+ const held={...a,id:'HELD',reviewRequired:true,periodKind:'ongoing'};
+ assert.equal(C.status(held),'내용 확인 필요');
+ assert.equal(C.periodState(held),'unknown');
+ assert.equal(C.filter([held],{age:'35',includeUnknown:false},C.blank()).length,0);
+ assert.equal(C.filter([held],{age:'50',includeUnknown:true},C.blank()).length,1);
+ assert.equal(C.filter([held],{household:'다자녀가구',includeUnknown:true},C.blank()).length,1);
+ assert.equal(C.filter([held],{periodState:'ongoing'},C.blank()).length,0);
+ assert.equal(held.ageMax,39);
+});
 test('indexed filtering has the same AND semantics without modifying source order',()=>{
  const rows=[{...a,id:'B',title:'다른 안내'},a],before=JSON.stringify(rows);
  assert.equal(C.filter(rows,{query:'주택바우처 기관',sort:'title'},C.blank())[0].id,'A');

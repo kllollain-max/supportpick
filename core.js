@@ -53,6 +53,7 @@
     const d=new Date(value+'T00:00:00Z');return Number.isFinite(+d)&&d.toISOString().slice(0,10)===value;
   }
   function status(item,now=new Date()){
+    if(item.reviewRequired===true)return '내용 확인 필요';
     if(validDate(item.endDate)&&item.endDate<day(now))return '안내 기한 경과';
     if(validDate(item.startDate)&&item.startDate>day(now))return '안내 기간 전';
     // A listed future end date or API success is not proof that applications are open.
@@ -69,6 +70,7 @@
   }
   const indexes=new WeakMap();
   function periodState(p,now=new Date()){
+    if(p.reviewRequired===true)return 'unknown';
     const today=typeof now==='string'?now:day(now);
     if(validDate(p.endDate)&&p.endDate<today)return 'ended';
     if(validDate(p.startDate)&&p.startDate>today)return 'upcoming';
@@ -83,7 +85,7 @@
     const query=String(view.query||'').trim().toLocaleLowerCase().split(/\s+/).filter(Boolean),today=day(new Date());
     const saved=new Set(records.saved),age=String(view.age??'').trim(),unknown=view.includeUnknown!==false;
     return index.sorts[sort].filter(p=>{
-      const ageKnown=Number.isInteger(p.ageMin)&&Number.isInteger(p.ageMax),households=p.households||[];
+      const ageKnown=p.reviewRequired!==true&&Number.isInteger(p.ageMin)&&Number.isInteger(p.ageMax),households=p.reviewRequired===true?[]:p.households||[];
       return !p.isSample&&query.every(q=>index.text.get(p).includes(q))&&(!view.category||p.category===view.category)&&(!view.region||['전국','확인 필요',view.region].includes(p.region))&&(!view.audience||(p.audience||[]).includes(view.audience))&&(!view.supportType||(p.supportTypes||[p.supportType]).includes(view.supportType))&&(!view.periodState||periodState(p,today)===view.periodState)&&(!age||(ageKnown?+age>=p.ageMin&&+age<=p.ageMax:unknown))&&(!view.household||(households.length?households.includes(view.household):unknown))&&(view.tab!=='saved'||saved.has(p.id))&&(view.tab!=='matched'||matchReasons(p,records.prefs)!==null);
     });
   }

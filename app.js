@@ -31,6 +31,7 @@
   function categories(){const all=['전체',...new Set([...C.CATEGORIES,...items.map(x=>x.category)])];$('categories').innerHTML=all.map(x=>`<button class="chip" type="button" data-category="${esc(x==='전체'?'':x)}" aria-pressed="${(x==='전체'?'':x)===view.category}">${esc(x)}</button>`).join('');}
   function card(p){
     const saved=snapshot.data.saved.includes(p.id),tracked=C.own(snapshot.data.apps,p.id),reason=view.tab==='matched'?C.matchReasons(p,snapshot.data.prefs):null;
+    if(p.reviewRequired===true)return `<article class="benefit-card is-linked"><div class="card-content"><span class="badge">내용 확인 필요</span><h3><a class="title-link card-detail-link" href="benefits/${encodeURIComponent(p.id)}/" data-detail="${esc(p.id)}">${esc(p.title)}</a></h3><p class="organization">${esc(p.organization)}</p><p class="card-summary">공식 최신 안내와 대조 중입니다. 이전 대상·금액을 현재 조건으로 표시하지 않습니다.</p><a href="benefits/${encodeURIComponent(p.id)}/">확인 사유·최신 공식 안내 보기 →</a></div><div class="card-actions"><button data-save="${esc(p.id)}" aria-pressed="${saved}">${saved?'★ 저장됨':'☆ 관심 저장'}</button><button data-track="${esc(p.id)}">${tracked?'신청 기록 보기':'신청 준비하기'}</button></div></article>`;
     return `<article class="benefit-card is-linked"><div class="card-content"><div class="card-top"><span class="category-badge">${esc(p.category)}</span><span class="badge">${esc(C.status(p))}</span></div><h3><a class="title-link card-detail-link" href="benefits/${encodeURIComponent(p.id)}/" data-detail="${esc(p.id)}">${esc(p.title)}</a></h3><p class="organization">${esc(p.organization)} · ${esc(p.regionBasis==='agency_jurisdiction'?'기관 지역 '+p.region:p.region)}</p><p class="card-summary">${esc(p.summary)}</p><dl class="card-meta"><dt>지원</dt><dd>${esc(p.supportType)}</dd><dt>기간</dt><dd>${esc(p.period||'공식 공고 확인')}</dd><dt>출처</dt><dd>${esc(p.source)} · ${esc(koreanTime(p.checkedAt))}</dd></dl><span class="card-open-hint" aria-hidden="true">상세 보기 →</span>${explanation(p)}${reason&&reason.length?`<p class="match-reason">${esc(reason.join(' · '))}</p>`:''}</div><div class="card-actions"><button type="button" data-compare="${esc(p.id)}" aria-pressed="${comparison.has(p.id)}">${comparison.has(p.id)?'✓ 비교 선택됨':'비교 선택'}</button><button data-save="${esc(p.id)}" aria-pressed="${saved}" class="${saved?'saved':''}">${saved?'★ 저장됨':'☆ 관심 저장'}</button><button data-track="${esc(p.id)}">${tracked?'신청 기록 보기':'신청 준비하기'}</button></div></article>`;
   }
   function empty(title,text,action='reset'){return `<div class="empty-state"><span class="empty-mark" aria-hidden="true">◎</span><h3>${esc(title)}</h3><p>${esc(text)}</p>${action==='preferences'?'<button class="primary" data-open-preferences>관심 조건 설정하기</button>':action==='all'?'<button class="quiet" data-show-all>전체 혜택 보기</button>':action==='reset'?'<button class="quiet" data-reset>검색·필터 초기화</button>':''}</div>`;}
@@ -70,6 +71,10 @@
     let id='';try{id=decodeURIComponent(location.hash.slice(9));}catch(e){}
     let p=items.find(x=>x.id===id);
     if(!p){$('detailSection').innerHTML='<button class="quiet back-button" data-back>← 목록으로</button>'+empty('혜택 자료를 찾지 못했어요','목록으로 돌아가 공식 정보를 다시 확인하세요.','all');return;}
+    if(p.reviewRequired===true){
+      $('detailSection').innerHTML=`<button class="quiet back-button" data-back>← 목록으로 돌아가기</button><article class="detail-block"><h2 id="detailTitle">${esc(p.title)} · 내용 확인 필요</h2><p>이전 API의 대상·금액을 현재 조건으로 표시하지 않습니다. 확인 사유와 최신 공식 안내·관련 해설을 상세페이지에서 확인하세요.</p><a class="primary" href="benefits/${encodeURIComponent(p.id)}/">최신 확인 안내 보기 →</a></article>`;
+      return;
+    }
     if(p.detailShard){
       $('detailSection').innerHTML='<button class="quiet back-button" data-back>← 목록으로 돌아가기</button><p role="status">공식 상세자료를 불러오고 있어요.</p>';
       try{
