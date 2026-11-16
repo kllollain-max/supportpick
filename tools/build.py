@@ -6,11 +6,13 @@ from urllib.parse import urlsplit,unquote,quote
 from refresh import read_current,verify_snapshot
 from bootstrap_state import ensure_bootstrap
 from search_metadata import public_metadata, read_verifications, write_sitemap, version_local_assets
-from detail_pages import write_details
+from detail_pages import write_details, quality_reasons
+from application_guides import write_guides
 from release_policy import fingerprint
 from collect_full import period
+from content_quality import conditions, audit
 ROOT=Path(__file__).resolve().parents[1]
-STATIC=('index.html','privacy.html','about.html','terms.html','contact.html','404.html','icon.svg','careerpick-base.css','styles.css','core.js','app.js','detail.js','supportpick-badge.png','supportpick-banner.png','editorials.js','app-features.js','manifest.webmanifest','sw.js','offline.html','app-icon-180.png','app-icon-192.png','app-icon-512.png','naver-analytics.js','naver-analytics.css')
+STATIC=('index.html','privacy.html','about.html','terms.html','contact.html','404.html','icon.svg','careerpick-base.css','styles.css','core.js','app.js','detail.js','supportpick-badge.png','supportpick-banner.png','editorials.js','app-features.js','manifest.webmanifest','sw.js','offline.html','app-icon-180.png','app-icon-192.png','app-icon-512.png','naver-analytics.js','naver-analytics.css','feed-loader.js')
 
 def install_naver_analytics(output):
     """Add one consent-controlled loader to each online page at its actual depth."""
@@ -70,6 +72,7 @@ def build(destination,state=None,allow_sample=False,public_base=None):
             else:text=public_metadata(text,name,public_base,verifications)
             (output/name).write_text(text)
     registry=json.loads((ROOT/'editorials.json').read_text())
+    guide_registry=json.loads((ROOT/'guides.json').read_text())
     if registry.get('version')!=1 or not isinstance(registry.get('articles'),list):raise ValueError('invalid_editorial_registry')
     registry_json=json.dumps(registry,ensure_ascii=False,separators=(',',':'))
     (output/'editorial-data.js').write_text('window.SUPPORTPICK_EDITORIALS = '+registry_json.replace('<','\\u003c')+';\n')
@@ -82,11 +85,21 @@ def build(destination,state=None,allow_sample=False,public_base=None):
             for sid,row in shard['items'].items():
                 raw=row.get('rawSource',{})
                 source_differences[sid]={key:{'list':raw.get('serviceList',{}).get(key),'detail':raw.get('serviceDetail',{}).get(key)} for key in row.get('sourceConflicts',[])}
-                full_rows[sid]={**row,**period(row.get('period','')),'sourceDifferences':source_differences[sid]}
-    public_feed={**feed,'items':[{**{k:v for k,v in row.items() if k in fields},**period(row.get('period','')),'sourceDifferences':source_differences.get(row['id'],{})} for row in feed['items']]}
+                full_rows[sid]={**row,**period(row.get('period','')),'sourceDifferences':source_differences[sid],**conditions(row)}
+    public_feed={**feed,'items':[{**{k:v for k,v in row.items() if k in fields},**period(row.get('period','')),'sourceDifferences':source_differences.get(row['id'],{}),**conditions(full_rows.get(row['id'],{})), 'reviewRequired':bool(quality_reasons(full_rows[row['id']],guide_registry)) if row['id'] in full_rows else True} for row in feed['items']]}
     public_json=json.dumps(public_feed,ensure_ascii=False,separators=(',',':'))
     (output/'data.json').write_text(public_json)
     (output/'data.js').write_text('window.SUPPORTPICK_DATA = '+public_json.replace('<','\\u003c')+';\n')
+    catalog_path='catalog/'+hashlib.sha256(public_json.encode()).hexdigest()+'.json'
+    (output/'catalog').mkdir()
+    (output/catalog_path).write_text(public_json)
+    def modified(row):
+        value=row.get('sourceUpdatedAt') or {}
+        return str(value.get('list') or value.get('detail') or '') if isinstance(value,dict) else str(value)
+    bootstrap={**public_feed,'partial':True,'catalogUrl':catalog_path,
+               'items':sorted(public_feed['items'],key=modified,reverse=True)[:30]}
+    (output/'data-bootstrap.js').write_text('window.SUPPORTPICK_DATA = '+json.dumps(bootstrap,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')+';\n')
+    (output/'index.html').write_text((output/'index.html').read_text().replace('src="data.js"','src="data-bootstrap.js"'))
     generations=[];previous_rows={}
     if snapshot:
         candidates=[snapshot]+sorted((state/'snapshots').iterdir(),key=lambda x:x.name,reverse=True)
@@ -99,7 +112,7 @@ def build(destination,state=None,allow_sample=False,public_base=None):
                     shard=json.loads(shard_path.read_text());public_rows={}
                     for sid,row in shard['items'].items():
                         if candidate!=snapshot:previous_rows[sid]=row
-                        public={**{k:v for k,v in row.items() if k!='rawSource'},**period(row.get('period',''))}
+                        public={**{k:v for k,v in row.items() if k!='rawSource'},**period(row.get('period','')),**conditions(row)}
                         raw=row.get('rawSource',{})
                         public['sourceDifferences']={key:{'list':raw.get('serviceList',{}).get(key),'detail':raw.get('serviceDetail',{}).get(key)} for key in row.get('sourceConflicts',[])}
                         public_rows[sid]=public
@@ -111,6 +124,8 @@ def build(destination,state=None,allow_sample=False,public_base=None):
     guides=json.loads((ROOT/'guides.json').read_text())
     if guides.get('version')!=1 or not isinstance(guides.get('guides'),list):raise ValueError('invalid_own_guide_registry')
     detail=write_details(output,full_rows,previous_rows,public_base,guides,registry,status['status'])
+    detail['entries'].extend(write_guides(output,public_base))
+    (output/'content-quality-report.json').write_text(json.dumps(audit(full_rows),ensure_ascii=False,separators=(',',':')))
     home=(output/'index.html').read_text()
     home=home.replace('<!-- STATIC_DISCOVERY -->',detail['home'])
     (output/'index.html').write_text(home)

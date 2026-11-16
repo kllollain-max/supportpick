@@ -29,7 +29,8 @@ class SearchMetadataTests(unittest.TestCase):
             urls = [x.text for x in tree.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
             # Fixture rows omit application methods, so detail indexing is correctly held.
             self.assertEqual(set(urls), {BASE, BASE + 'about.html', BASE + 'privacy.html',
-                                         BASE + 'terms.html', BASE + 'contact.html', BASE + 'benefits/'})
+                                         BASE + 'terms.html', BASE + 'contact.html', BASE + 'benefits/',
+                                         *[BASE+'guides/'+slug+'.html' for slug in ['find-and-verify','compare-benefits','application-checklist','deadlines-and-updates']]})
             for name, url in [('index.html', BASE), ('about.html', BASE + 'about.html'), ('privacy.html', BASE + 'privacy.html')]:
                 text = (root / 'public' / name).read_text()
                 self.assertEqual(text.count('rel="canonical"'), 1)

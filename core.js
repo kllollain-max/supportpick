@@ -50,7 +50,7 @@
   function day(value){return new Date(value).toLocaleDateString('sv-SE',{timeZone:'Asia/Seoul'});}
   function validDate(value){
     if(!/^\d{4}-\d{2}-\d{2}$/.test(value||''))return false;
-    const d=new Date(value+'T00:00:00+09:00');return Number.isFinite(+d)&&day(d)===value;
+    const d=new Date(value+'T00:00:00Z');return Number.isFinite(+d)&&d.toISOString().slice(0,10)===value;
   }
   function status(item,now=new Date()){
     if(validDate(item.endDate)&&item.endDate<day(now))return '안내 기한 경과';
@@ -67,12 +67,25 @@
     if(prefs.category){if(item.category!==prefs.category)return null;reasons.push(prefs.category+' 관심 분야');}
     return reasons;
   }
+  const indexes=new WeakMap();
+  function periodState(p,now=new Date()){
+    const today=typeof now==='string'?now:day(now);
+    if(validDate(p.endDate)&&p.endDate<today)return 'ended';
+    if(validDate(p.startDate)&&p.startDate>today)return 'upcoming';
+    if(p.periodKind==='fixed'&&validDate(p.endDate))return 'dated';
+    return ['ongoing','budget_limited'].includes(p.periodKind)?p.periodKind:'unknown';
+  }
   function filter(items,view,records){
-    const query=String(view.query||'').trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
-    return items.filter(p=>{
-      const text=[p.title,p.organization,p.summary,p.target||p.targetPreview,p.category,p.region,...(p.audience||[])].join(' ').toLocaleLowerCase();
-      return !p.isSample&&query.every(q=>text.includes(q))&&(!view.category||p.category===view.category)&&(!view.region||['전국','확인 필요',view.region].includes(p.region))&&(!view.audience||(p.audience||[]).includes(view.audience))&&(!view.supportType||(p.supportTypes||[p.supportType]).includes(view.supportType))&&(view.tab!=='saved'||records.saved.includes(p.id))&&(view.tab!=='matched'||matchReasons(p,records.prefs)!==null);
-    }).sort((a,b)=>view.sort==='title'?a.title.localeCompare(b.title,'ko'):view.sort==='deadline'?(validDate(a.endDate)?a.endDate:'9999').localeCompare(validDate(b.endDate)?b.endDate:'9999'):modified(b).localeCompare(modified(a)));
+    let index=indexes.get(items);
+    if(!index){index={text:new Map(items.map(p=>[p,[p.title,p.organization,p.summary,p.target||p.targetPreview,p.category,p.region,...(p.audience||[])].join(' ').toLocaleLowerCase()])),sorts:{}};indexes.set(items,index);}
+    const sort=['title','deadline'].includes(view.sort)?view.sort:'updated';
+    if(!index.sorts[sort])index.sorts[sort]=[...items].sort((a,b)=>sort==='title'?a.title.localeCompare(b.title,'ko'):sort==='deadline'?(validDate(a.endDate)?a.endDate:'9999').localeCompare(validDate(b.endDate)?b.endDate:'9999'):modified(b).localeCompare(modified(a)));
+    const query=String(view.query||'').trim().toLocaleLowerCase().split(/\s+/).filter(Boolean),today=day(new Date());
+    const saved=new Set(records.saved),age=String(view.age??'').trim(),unknown=view.includeUnknown!==false;
+    return index.sorts[sort].filter(p=>{
+      const ageKnown=Number.isInteger(p.ageMin)&&Number.isInteger(p.ageMax),households=p.households||[];
+      return !p.isSample&&query.every(q=>index.text.get(p).includes(q))&&(!view.category||p.category===view.category)&&(!view.region||['전국','확인 필요',view.region].includes(p.region))&&(!view.audience||(p.audience||[]).includes(view.audience))&&(!view.supportType||(p.supportTypes||[p.supportType]).includes(view.supportType))&&(!view.periodState||periodState(p,today)===view.periodState)&&(!age||(ageKnown?+age>=p.ageMin&&+age<=p.ageMax:unknown))&&(!view.household||(households.length?households.includes(view.household):unknown))&&(view.tab!=='saved'||saved.has(p.id))&&(view.tab!=='matched'||matchReasons(p,records.prefs)!==null);
+    });
   }
   function modified(p){const s=p.sourceUpdatedAt;return String(s&&typeof s==='object'?s.list||s.detail||'':s||p.checkedAt||'').replace(/[^0-9]/g,'').padEnd(14,'0');}
   function parseFeed(feed){
@@ -84,6 +97,6 @@
   }
   function parseDetail(payload,index){if(!plain(payload)||payload.generation!==index.generation||!plain(payload.items)||!own(payload.items,index.id))throw Error('상세 자료 버전이 일치하지 않습니다. 새로고침 후 다시 확인하세요.');const row=payload.items[index.id];if(!plain(row)||row.id!==index.id||row.generation!==index.generation||row.title!==index.title||['target','support','method','documents','contact'].some(k=>typeof row[k]!=='string'))throw Error('상세 자료를 확인할 수 없습니다.');return row;}
   function health(feed,state,current=new Date()){if(!state||state.status==='unavailable')return '갱신 상태를 조회하지 못했습니다. 표시된 자료 조회 시각을 확인하세요.';if(state.generation&&state.generation!==feed.generation)return '새 자료의 갱신 상태가 확인되었습니다. 새로고침하여 목록과 상세 자료를 함께 갱신하세요.';if(state.status==='failed')return '최근 자료 갱신에 실패했습니다. 마지막으로 검증된 자료를 유지하고 있습니다.';const stamp=Date.parse(feed.collectionSucceededAt||feed.updatedAt);if(!Number.isFinite(stamp)||stamp>+current+300000)return '자료 수집 시각을 확인할 수 없습니다.';return +current-stamp>30*3600000?'자료 갱신이 지연되고 있습니다. 마지막 수집 시각과 공식 원문을 확인하세요.':'';}
-  const api={KEY,RECOVERY,CATEGORIES,REGIONS,STAGES,blank,validate,load,save,merge,exportBackup,importBackup,safeURL,status,filter,parseFeed,parseDetail,health,matchReasons,idOK,own,validDate};
+  const api={KEY,RECOVERY,CATEGORIES,REGIONS,STAGES,blank,validate,load,save,merge,exportBackup,importBackup,safeURL,status,periodState,filter,parseFeed,parseDetail,health,matchReasons,idOK,own,validDate};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.SupportPick=api;
 })(typeof window!=='undefined'?window:globalThis);

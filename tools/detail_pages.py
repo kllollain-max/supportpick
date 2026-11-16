@@ -16,7 +16,7 @@ from collect_full import safe_url, valid_id
 from search_metadata import public_metadata
 
 KST = ZoneInfo('Asia/Seoul')
-TEMPLATE_MODIFIED = '2026-11-04'
+TEMPLATE_MODIFIED = '2026-11-17'
 PAGE_SIZE = 100
 MATERIAL_FIELDS = ('id', 'title', 'organization', 'category', 'region', 'regionBasis',
                    'summary', 'target', 'selection', 'support', 'period', 'periodKind',
@@ -298,6 +298,16 @@ def render_benefit(row, guide, blog, reasons, related, base, current, feed_statu
              '<div class="detail-actions">' + actions + '</div>'
              '<noscript><p class="context-note">핵심 안내는 JavaScript 없이 읽을 수 있습니다. 관심 저장·내 신청 기록은 JavaScript를 켜거나 홈에서 이용하세요.</p></noscript></article>')
     body += editorial_html(row, guide)
+    age = (str(row['ageMin'])+'~'+str(row['ageMax'])+'세 (API 분류 · 적용 기준일은 원문 확인)'
+           if type(row.get('ageMin')) is int and type(row.get('ageMax')) is int else '공식 공고 확인 필요')
+    body += ('<section class="detail-block"><h2>조건을 대조할 때 확인할 항목</h2><dl class="condition-summary">'
+             '<dt>연령 분류</dt><dd>'+escape(age)+'</dd><dt>가구 분류</dt><dd>'
+             +escape(' · '.join(row.get('households') or []) or '공식 공고 확인 필요')
+             +'</dd><dt>관련 지역</dt><dd>'+escape(row.get('region','확인 필요'))
+             +' · 소관기관 지역과 실제 거주 조건은 다를 수 있습니다.</dd>'
+             '<dt>소득·재산·가구원 계산</dt><dd>아래 지원대상·선정기준에서 확인하세요. 미제공 정보는 담당기관 확인이 필요합니다.</dd>'
+             '<dt>중복 수혜</dt><dd>공식 공고의 중복지원·제외 조항 확인 필요. 함께 표시되는 사업을 동시에 받을 수 있다는 뜻은 아닙니다.</dd></dl>'
+             '<p>분류 조건만으로 개인의 수급 자격을 판정하지 않습니다.</p></section>')
     for heading, key in [('지원대상', 'target'), ('선정기준·세부 자격', 'selection'), ('지원내용·금액', 'support'),
                          ('신청방법', 'method'), ('준비서류', 'documents'), ('문의처', 'contact')]:
         body += section(heading, row.get(key))
@@ -312,6 +322,11 @@ def render_benefit(row, guide, blog, reasons, related, base, current, feed_statu
              + '<br>API 자료 조회: ' + escape(stamp(row.get('checkedAt')))
              + '</p><p>조회 시각과 내용 수정일은 다릅니다. 신청기간이 불명확하거나 예산 소진 여부가 제공되지 않으면 확인이 필요합니다.</p>'
              '<p><a href="../../contact.html">오류·변경 사항 알려주기</a></p></section>')
+    body += ('<section class="detail-block preparation-checks"><h2>신청 전 준비 체크</h2><p>이 체크는 화면에서만 사용하며 기관에 제출되지 않습니다. 필요한 서류는 위 공식 구비서류 안내를 우선 확인하세요.</p>'
+             '<label><input type="checkbox">사업명·기관·신청 차수가 공식 공고와 같은지 확인했습니다.</label>'
+             '<label><input type="checkbox">대상 조건과 서류 발급 기준일을 확인했습니다.</label>'
+             '<label><input type="checkbox">공식 신청 경로와 마감 시각·접수 완료 확인 방법을 확인했습니다.</label>'
+             '<p><a href="../../guides/application-checklist.html">서류 준비 순서</a> · <a href="../../guides/compare-benefits.html">지원방식·중복수혜 비교 요령</a> · <a href="../../guides/deadlines-and-updates.html">마감일과 확인일 읽는 법</a></p></section>')
     if related:
         body += '<section class="detail-block"><h2>함께 확인할 지원정보</h2><p>같은 분야·소관기관의 정보이며 중복 수급 가능 여부를 뜻하지 않습니다.</p><ul>'
         body += ''.join('<li><a href="../' + quote(x['id'], safe='') + '/">' + escape(x['title']) + '</a> · ' + escape(x['organization']) + '</li>' for x in related)
