@@ -14,6 +14,9 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "43861591455",
+    "43852667169",
+    "43852258780",
     "43840293619",
     "43838097975",
     "43812548540",
@@ -186,14 +189,14 @@
   ],
   "last_health": {
     "unresolved_publications": 0,
-    "published_benefits": 47,
-    "source_run_id": "43766350375",
+    "published_benefits": 48,
+    "source_run_id": "43852258780",
     "source_result": "success",
     "source_count": 10942,
-    "source_last_success_at": "2026-11-16T07:02:51.228351+09:00",
+    "source_last_success_at": "2026-11-16T19:57:32.568236+09:00",
     "source_workflow_conclusion": "success",
     "source_failure_classification": null,
-    "last_publisher_run_id": "43800761644",
+    "last_publisher_run_id": "43861591455",
     "writer_queue_ready": 4,
     "writer_schema": "supportpick.writer.v1",
     "account_check": "verified_http_200",
@@ -1239,8 +1242,15 @@
       "queue_commit_sha": "6fc2c6f4f214a35d2eb7151abb901b8b98a20af8",
       "queue_blob_sha": "aaf012b7eaafb039f70c4130809f171b9eabbc49",
       "queue_readback_equal": true,
-      "final_status": "expired_slot_not_backfilled; future_regular_queue_replanned_and_verified; actual20hpublication_awaited",
-      "next_condition": "Consume reviewed20h slot through existing schedule and recheck latest facts/source/evidence/media/expiry. Recovery only inside original2h grace viaauthorized mode; no recovery for expired16h. External schedule delay remains possible."
+      "final_status": "expired16h_not_backfilled;future_queue_replanned;subsequent_regular20h_publication_verified",
+      "next_condition": "Consume reviewed20h slot through existing schedule and recheck latest facts/source/evidence/media/expiry. Recovery only inside original2h grace viaauthorized mode; no recovery for expired16h. External schedule delay remains possible.",
+      "subsequent_regular_publication": {
+        "run_id": "43861591455",
+        "main_id": "17893701492454069",
+        "url": "https://www.threads.com/@hid_1004/post/DfzSyU9m-qc",
+        "slot": "2026-11-16T20:00:00+09:00",
+        "verified": true
+      }
     }
   },
   "guardrails": {
@@ -2500,33 +2510,65 @@
       "conclusion": "success",
       "updated_at": "2026-11-16T09:15:46Z",
       "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+    },
+    "43861591455": {
+      "run_id": "43861591455",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-16T11:54:09Z",
+      "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+    },
+    "43852667169": {
+      "run_id": "43852667169",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-16T10:52:25Z",
+      "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+    },
+    "43852258780": {
+      "run_id": "43852258780",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-16T10:59:18Z",
+      "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-16T09:36:46.494342+00:00",
-    "result": "late_schedule_guarded_and_future_queue_replanned",
+    "checked_at": "2026-11-16T12:21:25.962671+00:00",
+    "result": "verified_natural_publication_and_new_reviewed_queue_entry",
     "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
-    "publication_ledger_sha": "621233fb44fa21b7944b2e96c619eacd7f2fe762",
-    "queue_blob_sha": "aaf012b7eaafb039f70c4130809f171b9eabbc49",
-    "maintenance_previous_blob_sha": "b02baa9b642250090b973840583acebf607a300a",
+    "publication_ledger_sha": "b1a716bed25983a387becc1149aa9f223c9cf6a4",
+    "queue_blob_sha": "0f55b967566992e38f1820e5a3f52057adcf2620",
+    "maintenance_previous_blob_sha": "7484cfebc2061bbd5d53808ee2f7a99b21ffba2c",
     "unresolved_publications": 0,
     "lease": null,
     "active_target_runs": [],
     "changed_run_versions": [
       {
-        "run_id": "43840293619",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "failure",
-        "updated_at": "2026-11-16T09:30:25Z",
-        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
-      },
-      {
-        "run_id": "43838097975",
+        "run_id": "43861591455",
         "run_attempt": 1,
         "status": "completed",
         "conclusion": "success",
-        "updated_at": "2026-11-16T09:15:46Z",
+        "updated_at": "2026-11-16T11:54:09Z",
+        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+      },
+      {
+        "run_id": "43852667169",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-16T10:52:25Z",
+        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+      },
+      {
+        "run_id": "43852258780",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-16T10:59:18Z",
         "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
       }
     ],
@@ -2537,56 +2579,81 @@
       "checkpoint_reached": true
     },
     "source": {
-      "run_id": "43766350375",
+      "run_id": "43852258780",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-15T22:07:35Z",
+      "updated_at": "2026-11-16T10:59:18Z",
       "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
-      "generation": "gov24-43766350375-1",
+      "generation": "gov24-43852258780-1",
       "count": 10942,
-      "manifest_sha256": "c0959c506876e6f673dd76511f644d2e9f475b414c159cea451c172bc1772439",
-      "collection_succeeded_at": "2026-11-16T07:02:51.228351+09:00",
-      "artifact_id": 14182826455,
-      "artifact_digest": "sha256:dc00953d6111a606289677d017c2463be713e121922e91755e6ae86ef3f4374d",
+      "manifest_sha256": "916f293dedb34a19c4f1798b1786a5f110036bd7220b37c2a1ade8ea9ed251bb",
+      "collection_succeeded_at": "2026-11-16T19:57:32.568236+09:00",
+      "artifact_id": 14219956302,
+      "artifact_digest": "sha256:75749101eeabb7cc81888a5872c2d8299a99e28b0b9d08d66b4a57132d5afd70",
       "artifact_digest_verified": true,
       "downloaded_via_github_artifact_tool": true,
       "read_current_verify_snapshot_load_feed": true,
+      "job_id": 133247521139,
       "job_logs_retrieved_this_run": true,
       "regression_ci_tests_passed": 203,
       "fresh_at_check": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-16T18:34:12.332771+09:00",
+      "verification_checked_at": "2026-11-16T21:19:19.602482+09:00",
       "classification": "validated_complete_fresh_generation",
-      "artifact_redownloaded_and_digest_verified_this_check": false,
-      "cached_artifact_digest_reverified": true
+      "artifact_redownloaded_and_digest_verified_this_check": true,
+      "cached_artifact_digest_reverified": false,
+      "public_publish_decision": "same_day_content_unchanged_public_generation_retained",
+      "retained_public_generation": "gov24-43766350375-1",
+      "public_deployment_not_claimed": true
     },
     "publisher": {
-      "run_id": "43840293619",
+      "run_id": "43861591455",
       "run_attempt": 1,
       "status": "completed",
-      "conclusion": "failure",
-      "updated_at": "2026-11-16T09:30:25Z",
+      "conclusion": "success",
+      "updated_at": "2026-11-16T11:54:09Z",
       "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
-      "job_id": 133206978974,
-      "artifact_id": 14211898779,
-      "artifact_digest": "sha256:7ff83a050d9dc6a89ac0f3acfbd2de07fd06dc54a1313aedfd03ad37369bc111",
+      "job_id": 133279502022,
+      "artifact_id": 14223322895,
+      "artifact_digest": "sha256:432aa0482440ce8fdd0cf4090e49979df1f4b9d0e03cd23c1ccaf6dce3e149a0",
       "artifact_digest_verified": true,
-      "classification": "late_schedule_rejected_before_reservation",
+      "classification": "verified_natural_publication",
       "event": "schedule",
-      "published": false,
-      "slot": "2026-11-16T16:00:00+09:00",
-      "main_id": null,
-      "container_id": null,
-      "stage": "before_account_check_and_reservation",
-      "reason": "missed_slot_not_backfilled",
-      "publication_ledger_records": 47,
+      "published": true,
+      "slot": "2026-11-16T20:00:00+09:00",
+      "published_at": "2026-11-16T20:53:13.555988+09:00",
+      "benefit_id": "149200005001",
+      "main_id": "17893701492454069",
+      "url": "https://www.threads.com/@hid_1004/post/DfzSyU9m-qc",
+      "stage": "complete",
+      "verified": true,
+      "content_hash": "2a384405b5135f0992762b9b4b9cd6e1d2267f4834ddfafdcb0435f2dce4f674",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "source_generation": "gov24-43852258780-1",
+      "writer_prepared_source_generation": "gov24-43766350375-1",
+      "pattern": "P6",
+      "media_turn": "IMAGE",
+      "char_count": 389,
+      "replies": 0,
+      "verification": "Digest-verified current receipt and authenticated publisher log match durable ID,URL,exact body/hash,image SHA and0 replies. No independent full remote-history/public rendering check.",
+      "verification_completed_at": "2026-11-16T12:21:25.962671+00:00",
+      "public_web_visibility_independently_verified": false,
+      "publication_ledger_records": 48,
       "pending": null,
       "lease": null,
+      "job_logs_retrieved": true,
       "publisher_related_tests_passed": 130,
-      "last_success_main_id": "17983626669129975",
-      "new_publication_this_run": false,
-      "actual_20h_publication_awaited": true
+      "time_basis": {
+        "published_at": "Ledger publisher invocation, not exact platform timestamp",
+        "verified_result_logged_at": "2026-11-16T20:54:03.2270205+09:00",
+        "platform_timestamp": null,
+        "public_report": "Publication confirmed Nov16 20:54 KST."
+      },
+      "latest_publication_previously_reported": false,
+      "new_publication_this_run": true,
+      "artifact_redownloaded_and_digest_verified_this_check": true,
+      "cached_artifact_digest_reverified": false
     },
     "writer": {
       "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
@@ -2595,1546 +2662,71 @@
       "queue_reused": false,
       "queue_write": true,
       "queue_readback_equal": true,
-      "unchanged_existing_entries": 41,
-      "new_entries": 4,
-      "queue_commit_sha": "6fc2c6f4f214a35d2eb7151abb901b8b98a20af8",
+      "unchanged_existing_entries": 45,
+      "new_entries": 1,
+      "queue_commit_sha": "13eb3850369a73b138dbbfb0631c824a37e344bc",
       "preview_ready": 4,
       "validate_ready_entry_and_preview": true,
       "future_slot_simulation": true,
       "source_recheck_required_at_publish": true,
       "next_24h_sequence": [
         {
-          "slot": "2026-11-16T20:00:00+09:00",
-          "benefit_id": "149200005001",
-          "status": "READY",
-          "pattern": "P6",
-          "media_turn": "IMAGE",
-          "selection": {
-            "policy": "gov24_views_desc_v1",
-            "basis": "보조금24 누적 조회수",
-            "views": 65107,
-            "source_checked_at": "2026-11-16T06:57:49.661063+09:00",
-            "note": "실시간 검색량·신청자 수가 아닌 공식 API 누적 조회수 기준",
-            "candidate_rank": 36,
-            "higher_ranked_exclusions": [
-              {
-                "benefit_id": "161300000103",
-                "views": 724891,
-                "decision": "HOLD",
-                "reason": "국가 공식 API는 상시신청으로 안내하지만 지자체별 예산 소진시 조기마감. 특정 지역·현재 잔여예산·접수 가능 여부를 확정할 직접 근거를 이번 회차에 확보하지 못해 신규 신청 안내에서 보류했다. 사업 전체가 종료됐다는 뜻은 아니다.",
-                "sources": [
-                  "https://easylaw.go.kr/CSP/OnhunqueansInfoRetrieve.laf?onhunqnaAstSeq=84&onhunqueSeq=6445",
-                  "https://young.jinju.go.kr/young/business/read/75"
-                ]
-              },
-              {
-                "benefit_id": "999000000024",
-                "views": 673195,
-                "decision": "HOLD",
-                "reason": "장기전세 주택공급은 접수기관별 모집공고에 따라 기간·지역·요건이 달라진다. API의 접수기관 별 상이 정보만으로 현재 모집을 확정할 수 없어 보류했다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999075&bnefType=all&svcId=999000000024"
-                ]
-              },
-              {
-                "benefit_id": "161300000076",
-                "views": 637382,
-                "decision": "HOLD",
-                "reason": "API는 일반 대출금리 연2.1~2.9%, 주택도시기금 현재 검색 안내는 연2.5~3.5%로 불일치한다. 신규대출 본문 직접 열람도 timeout으로 완료되지 않아 최신 전체 조건·현재 이용 가능성을 확정하지 않았다.",
-                "sources": [
-                  "https://nhuf.molit.go.kr/FP/FP05/FP0502/FP05020101.jsp",
-                  "https://nhuf.molit.go.kr/FP/FP05/FP0502/FP05020107.jsp",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=739245&bnefType=all&svcId=161300000076"
-                ]
-              },
-              {
-                "benefit_id": "SD0000011848",
-                "views": 554041,
-                "decision": "SKIP",
-                "reason": "고용노동부 공식 안내에서 2024년부터 신규 가입을 중단하고 2023년까지 가입자만 계속 지원한다고 명시했다. 현재 신규가입 안내로 쓰지 않는다.",
-                "sources": [
-                  "https://1350.moel.go.kr/rtmview.do?id=1000279181"
-                ]
-              },
-              {
-                "benefit_id": "424000000006",
-                "views": 429294,
-                "decision": "HOLD",
-                "reason": "2026년 광양시 자료상 난방 접수는 예산 소진 시 마감. 11월 현재 지역별 접수·잔여 물량을 확인하지 못함.",
-                "sources": [
-                  "https://gwangyang.go.kr/boardDownload.es?bid=0170&list_no=197961&seq=1",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=663171&bnefType=all&svcId=424000000006"
-                ]
-              },
-              {
-                "benefit_id": "161300000001",
-                "views": 427641,
-                "decision": "HOLD",
-                "reason": "주택도시기금 상품 상세 직접 열람이 타임아웃됐고, 수탁은행 온라인 접수 안내는 오류 화면으로 돌아와 현재 두 상품의 신규 접수·정확한 조건을 직접 확인하지 못함.",
-                "sources": [
-                  "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030201.jsp",
-                  "https://spib.wooribank.com/pib/Dream?withyou=PSLON0175",
-                  "https://svc.wooribank.com/svc/Dream?cc=c010972%3Ac010531&withyou=HBFLN0027",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=739256&bnefType=all&svcId=161300000001"
-                ]
-              },
-              {
-                "benefit_id": "171000000005",
-                "views": 420635,
-                "decision": "HOLD",
-                "reason": "열람 가능한 공식 기관 검색 자료에서 현재 신규 판매·보장 조건을 확인하지 못함. 과거 우체국 홍보만으로 신규 가입 가능 여부를 확정하지 않음.",
-                "sources": [
-                  "https://jodal.koreapost.go.kr/user/bbs/405b/98/2952/bbsDataView/30026707.do?bbsDataCategory=&column=&page=566&search=&searchEDate=&searchSDate=",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=748477&bnefType=all&svcId=171000000005"
-                ]
-              },
-              {
-                "benefit_id": "999000000025",
-                "views": 328857,
-                "decision": "HOLD",
-                "reason": "보조금24 원문 월 40만 원·총 960만 원과 수탁은행 상품 안내 월 60만 원·총 1,440만 원이 달라 한도를 확정하지 않았다.",
-                "sources": [
-                  "https://obank.kbstar.com/quics?QSL=F&cc=b104363%3Ab104516&isNew=N&page=C103998&prcode=LN20000076",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999077&bnefType=all&svcId=999000000025"
-                ]
-              },
-              {
-                "benefit_id": "SD0000016138",
-                "views": 303540,
-                "decision": "HOLD",
-                "reason": "신청기간·서비스·본인부담이 지역별로 다르고, 공식 모집 목록에서 현재 적용할 지역별 접수 근거를 확보하지 못했다.",
-                "sources": [
-                  "https://www.cbcsi.or.kr/oN3Zt",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=75100&bnefType=all&svcId=SD0000016138"
-                ]
-              },
-              {
-                "benefit_id": "149200000009",
-                "views": 218481,
-                "decision": "HOLD",
-                "reason": "보조금24 원본은 상시신청으로 안내하지만 최근 11월 접수 재개 공지가 따로 있다는 단서를 확인했다. 근로복지넷 공식 공지와 신청 페이지가 열리지 않아 11월 9일 일반 융자 접수 가능 여부를 확인하지 못했다.",
-                "sources": [
-                  "https://welfare.comwel.or.kr/board/bbs.do?cfgIdx=1&idxId=472442&mCode=G015000000&op=view",
-                  "https://welfare.comwel.or.kr/welfare/dbs/ldDef.do",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=105992&bnefType=all&svcId=149200000009",
-                  "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000283222&chrClsCd=010201"
-                ]
-              },
-              {
-                "benefit_id": "SD0000004508",
-                "views": 198063,
-                "decision": "HOLD",
-                "reason": "2027년 1학기 국가장학금의 정확한 신청 공고와 접수기간이 아직 게시되지 않았다. 한국장학재단의 현재 신청 화면은 종료된 2026년 2학기 일정이고, 2027년 일정은 11월 말~12월 말이라는 연간 계획만 있어 다음날 현재 접수 중이라고 안내할 수 없다.",
-                "sources": [
-                  "https://www.kosaf.go.kr/ko/scholarnf.do?pg=scholarship05_12_07p",
-                  "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_01&ttab1=3",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=83660&bnefType=all&svcId=SD0000004508"
-                ]
-              },
-              {
-                "benefit_id": "611000000127",
-                "views": 196841,
-                "decision": "SKIP",
-                "reason": "서울주거포털 공식 안내에서 2026년 서울시 청년월세지원 접수기간은 5월 6일~5월 19일로 종료됐다. 현재는 지원금 지급 안내만 있어 11월 신규 신청 안내 후보에서 제외했다.",
-                "sources": [
-                  "https://housing.seoul.go.kr/site/main/content/sh01_060513",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002457&bnefType=all&svcId=611000000127"
-                ]
-              },
-              {
-                "benefit_id": "161300000099",
-                "views": 193933,
-                "decision": "HOLD",
-                "reason": "보조금24 원문에는 청년월세 지원 대상·금액·신청방법이 있으나 11월 9일 현재 적용할 정확한 신규 신청기간과 접수 상태를 국토교통부·복지로의 현재 공고에서 확인하지 못했다. 수집 시각만으로 접수 중이라고 판단하지 않았다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=805687&bnefType=all&svcId=161300000099",
-                  "https://www.bokjiro.go.kr/ssis-tbu/index.do"
-                ]
-              },
-              {
-                "benefit_id": "999000000023",
-                "views": 186343,
-                "decision": "HOLD",
-                "reason": "영구임대주택은 모집기관·지역별 공고에 따라 접수기간과 세부 요건이 달라진다. 11월 9일에 적용할 현재 모집공고를 특정하지 못해 신규 접수 안내에서 보류했다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=573411&bnefType=all&svcId=999000000023"
-                ]
-              },
-              {
-                "benefit_id": "WII000001470",
-                "views": 181992,
-                "decision": "HOLD",
-                "reason": "LH의 현재 시흥거모 S-1 공공분양 공고는 공급유형별 실제 청약일이 2026년 11월 16~17일이다. 최신 보조금24 수집 행에는 시작일이 구조화되지 않아 UPCOMING 검증을 통과시킬 수 없고, 11월 9일 현재 신청 가능한 일반 후보로 표현하지 않기 위해 보류했다.",
-                "sources": [
-                  "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&mi=1027&panId=0000061186&uppAisTpCd=05",
-                  "https://apply.lh.or.kr/lhapply/apply.do",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999073&bnefType=all&svcId=WII000001470"
-                ]
-              },
-              {
-                "benefit_id": "GMO000000010",
-                "views": 157853,
-                "decision": "SKIP",
-                "reason": "보조금24 동일 서비스 ID는 매년 5월 초~6월 중 약 1.5개월 접수라고 안내하고, 한국지능정보사회진흥원 공식 사이트에는 2026년 사업 안내만 남아 있다. 11월 9일 현재 신규 접수 중이라는 공식 근거가 없어 이번 READY 후보에서 제외했다.",
-                "sources": [
-                  "https://www.at4u.or.kr/",
-                  "https://www.at4u.or.kr/F03000000000/F03010000000V.asp?BoardUID=1856",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=728849&bnefType=all&svcId=GMO000000010"
-                ]
-              },
-              {
-                "benefit_id": "999000000044",
-                "views": 148501,
-                "decision": "HOLD",
-                "reason": "보건복지부 표준 서비스와 사업단 목록은 확인했다. 2026년 11월 대상 지역에서 이용자가 신청할 수 있는 유효한 모집기간·세부 자격·자부담을 같은 공고에서 확인하지 못했다. 사업단 선정 공고를 이용자 접수로 쓰지 않는다.",
-                "sources": [
-                  "https://www.mohw.go.kr/menu.es?mid=a10709020400",
-                  "https://www.gunsan.go.kr/_cms/board/eFileDownload/484/8621029/9eb9c594b657b507248262605217d61a",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999161&bnefType=all&svcId=999000000044"
-                ]
-              },
-              {
-                "benefit_id": "569000000351",
-                "views": 137789,
-                "decision": "HOLD",
-                "reason": "완전 수집본의 동일 ID 보조금24 원문은 명절기간과 읍면동장 추천을 안내한다. 현재 대상 명절·추천 시기·지급 일정이 확인되는 세종시 공고를 확보하지 못했고 공개 원문 페이지도 직접 열람하지 못해 현재 이용 안내에서 보류했다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004091&bnefType=all&svcId=569000000351"
-                ]
-              },
-              {
-                "benefit_id": "GKE000000070",
-                "views": 128278,
-                "decision": "HOLD",
-                "reason": "동일 ID 보조금24 상세는 지자체마다 시기가 다르다고 안내한다. 구로구 공식 2026년 모집은 4월 24일까지였고 확인한 도봉구 공식 안내는 해당 지역의 봄 사업이다. 11월 11일 현재 신청 가능한 지자체의 공고·접수기간을 확인하지 못했다. 전국 사업이 종료됐다는 뜻은 아니다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=108010&bnefType=all&svcId=GKE000000070",
-                  "https://www.guro.go.kr/www/selectBbsNttView.do?bbsNo=665&key=1793&nttNo=230919&pageIndex=1&pageUnit=10",
-                  "https://welfare.dobong.go.kr/dobongBokji/bbs/BMSR00002/view.do?boardId=1627&menuNo=200099"
-                ]
-              },
-              {
-                "benefit_id": "553000000116",
-                "views": 114417,
-                "decision": "HOLD",
-                "reason": "동일 ID 상세는 설·추석 가구당 10만 원 지급과 신청 불필요를 안내한다. 11월 12일 현재 새 신청·추가 지급을 확인할 화성시 공고를 확보하지 못해 현 시점의 신청 안내에서 보류한다. 제도 자체 종료로 판단하지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003944&bnefType=all&svcId=553000000116"
-                ]
-              },
-              {
-                "benefit_id": "999000000022",
-                "views": 104962,
-                "decision": "HOLD",
-                "reason": "동일 ID 보조금24 원문은 접수기관별 상이로 안내한다. 직접 열람한 동대문구 2026년 LH 정기 전세임대는 6월 8~12일 접수로 이미 지났다. LH 통합검색과 공식 검색 결과에서는 11월 현재 이 동일 사업·대상 유형의 유효한 모집기간·지역·자격을 함께 확인하지 못했다. 다른 매입임대·신혼신생아 모집을 일반 기존주택 전세임대의 현재 접수로 대체하지 않는다. 전국 사업 전체가 종료됐다는 뜻은 아니다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999070&bnefType=all&svcId=999000000022",
-                  "https://www.ddm.go.kr/www/selectBbsNttView.do?bbsNo=72&key=470&nttNo=189926&searchCtgry=%EC%B2%AD%EB%9F%89%EB%A6%AC%EB%8F%99",
-                  "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?viewType=srch"
-                ]
-              },
-              {
-                "benefit_id": "PTR000051706",
-                "views": 100436,
-                "decision": "HOLD",
-                "reason": "동일 ID 원문 누적 조회수 100436회로 선택 후보 100141회보다 높다. API 신청기간은 접수기관별 상이이며 구입자금 상세·신청 상태를 확정하지 않았다. 마이홈·서울주거포털에서 소득·자산·한도는 일부 대조했으나 주택도시기금 현재 상품 상세와 FAQ 직접 열람은 timeout이었다. 검색 요약만으로 현재 신규 접수를 확정하지 않고 이번 원고에서 보류한다. 사업 종료로 판단한 것은 아니다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999074&bnefType=all&svcId=PTR000051706",
-                  "https://www.myhome.go.kr/hws/portal/cont/selectFundsPurchaseOfficetelView.do",
-                  "https://housing.seoul.go.kr/site/main/content/sh01_070500",
-                  "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030501.jsp",
-                  "https://nhuf.molit.go.kr/FP/FP08/FP0809/FP0809.jsp?currentPage=18"
-                ]
-              },
-              {
-                "benefit_id": "999000000092",
-                "views": 96038,
-                "decision": "HOLD",
-                "reason": "동일 ID 누적 조회수 96038회로 선택 후보 94728회보다 높다. API는 매월 1~10일 접수이며 직접 연 사하구 2026년 안내도 매월 10일까지다. 예정 발송일 11월 13일은 확인한 월별 접수창 이후이고 다른 지역의 현재 접수 가능 근거는 확보하지 못했다. 다음달 접수 시작은 원본 startDate가 없어 UPCOMING 검증에 맞춰 꾸미지 않는다. 제도 전체 종료로 판단하지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999259&bnefType=all&svcId=999000000092",
-                  "https://news.saha.go.kr/portal/contents.do?mId=0501040600"
-                ]
-              },
-              {
-                "benefit_id": "149200000020",
-                "views": 89482,
-                "decision": "HOLD",
-                "reason": "예산 범위 수시 모집이며, 현재 공단의 프로그램별 접수·가용 예산을 확인할 원문을 확보하지 못했다. 공식 정부24 직접 조회 오류와 공단 검색 결과만으로 접수 중이라고 하지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999023&bnefType=all&svcId=149200000020",
-                  "https://webzine.comwel.or.kr/vol91/sub2-1.html"
-                ]
-              },
-              {
-                "benefit_id": "611000000126",
-                "views": 88763,
-                "decision": "HOLD",
-                "reason": "현재 보조금24는 매년 공고 참고로 안내한다. 서울 공식 목록은 기존 참여자 기록서·선정 이후 안내이고 11월13일 신규 접수 공고를 특정하지 못했다. 과거 5월 모집을 현재 접수로 쓰지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002456&bnefType=all&svcId=611000000126",
-                  "https://youth.seoul.go.kr/bbs/list.do?key=2303300002"
-                ]
-              },
-              {
-                "benefit_id": "GFO000000030",
-                "views": 88496,
-                "decision": "HOLD",
-                "reason": "원본은 수행기관 공고일에 따르며 사업별 자격·임금과 지역이 달라진다. 11월13일 유효한 특정 모집공고를 확보하지 못해 일반 접수 안내에서 보류한다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=579594&bnefType=all&svcId=GFO000000030"
-                ]
-              },
-              {
-                "benefit_id": "O00045000002",
-                "views": 86589,
-                "decision": "HOLD",
-                "reason": "원본은 공연별 할인율·대상이 다르고 70세와1954년·65세와1959년 등 출생연도 표기가2026년과 불일치한다. 현재 특정 공연의 예매·할인 조건을 확인하지 못했다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001289&bnefType=all&svcId=O00045000002"
-                ]
-              },
-              {
-                "benefit_id": "B55370100044",
-                "views": 85938,
-                "decision": "SKIP",
-                "reason": "동일 ID 원본 serviceList 누적 조회수85938회로 선택사업85775회보다 높다. 직접 연 금융위원회2026-10-06 안내의2차 신규 가입신청은10월7~16일18:30으로 종료됐다. 11월12~13일은 심사결과 안내,11월16~27일은 기존 신청·심사 통과자의 계좌개설 기간으로 신규 신청과 다르다. 이번 신규 신청 안내에서 제외하며 제도 전체 종료로 판단하지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2182516&bnefType=all&svcId=B55370100044",
-                  "https://www.fsc.go.kr/po010104/87880"
-                ]
-              },
-              {
-                "benefit_id": "999000000026",
-                "views": 84875,
-                "decision": "HOLD",
-                "reason": "원본은 접수기관별 상이이며 특정지역 현재 모집기간·자격 공고를 확보하지 못했다. 마이홈 공식 제도안내 직접열람도 timeout으로 현재 접수를 확정하지 않고 HOLD한다. 제도전체 종료는 아니다.",
-                "sources": [
-                  "https://www.myhome.go.kr/hws/portal/cont/selectHappyHouseView.do"
-                ]
-              },
-              {
-                "benefit_id": "337000000013",
-                "views": 82368,
-                "decision": "HOLD",
-                "reason": "API·복지부 상설안내는 월6000원이지만2025 제도개선 공식검색자료에는12000원이 있다. 복지로 직접본문은 읽히지 않고 현재적용액 충돌을 해소하지 못해 HOLD한다. 날짜·수집신선도로 금액을 확정하지 않는다.",
-                "sources": [
-                  "https://www.mohw.go.kr/menu.es?mid=a10708030300",
-                  "https://paldal.suwon.go.kr/bbsplus/view.asp?bd_gubn=20&code=tbl_bbs_sub200510&dong_gubn=&menuid=&mnuflag=&no=MTUxMTkg&page=15"
-                ]
-              },
-              {
-                "benefit_id": "999000000090",
-                "views": 80604,
-                "decision": "HOLD",
-                "reason": "같은ID원본의2026년2학기1/2차신청기간은종료됐다. 한국장학재단의현재신청안내에서11월14일유효한동일사업 신규접수기간을확정하지못해HOLD. 2027계획을현재접수로바꾸지않으며제도전체종료로판단하지않는다.",
-                "sources": [
-                  "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_01&ttab1=3",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999257&bnefType=all&svcId=999000000090"
-                ]
-              },
-              {
-                "benefit_id": "134200005002",
-                "views": 79152,
-                "decision": "HOLD",
-                "reason": "동일ID원본2026년2학기1·2차신청종료. 직접연한국장학재단Ⅱ유형 현재화면은8월12일~9월9일 일정이며11월14일유효한신규접수를확인하지못해HOLD. 제도전체종료는아니다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900001&bnefType=all&svcId=134200005002",
-                  "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_02"
-                ]
-              },
-              {
-                "benefit_id": "SD0000007429",
-                "views": 73484,
-                "decision": "HOLD",
-                "reason": "자금별상이이며소상공인정책자금 공식메인 직접열람은읽을본문0줄. 현재특정자금신규접수·금리·상환·예산을함께검증하지못해HOLD. 수집성공을접수가능으로대체하지않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=39748&bnefType=all&svcId=SD0000007429",
-                  "https://ols.semas.or.kr/"
-                ]
-              },
-              {
-                "benefit_id": "148000000007",
-                "views": 73395,
-                "decision": "HOLD",
-                "reason": "동일ID는각지자체공고참조. 직접연경기도공식안내에서자격·한도는확인했으나11월14일신규접수가능한특정지역공고·잔여예산을확정하지못해HOLD. 제도전체종료아님.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=558379&bnefType=all&svcId=148000000007",
-                  "https://www.gg.go.kr/contents/contents.do?ciIdx=884&menuId=2559"
-                ]
-              },
-              {
-                "benefit_id": "423000000362",
-                "views": 66522,
-                "decision": "HOLD",
-                "reason": "동일ID 원본은2025년기준 중위소득200%·시간당12180원표이며, 직접열람한2026-01-15 성평등가족부 현재안내는250%·12790원으로다르다. 출처와수집시각만으로옛기준을READY하지않고 이번동일ID검수에서보류한다. 사업종료아님.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=746602&bnefType=all&svcId=423000000362",
-                  "https://www.mogef.go.kr/nw/rpd/nw_rpd_s001d.do?bbtSn=710800&mid=news405"
-                ]
-              }
-            ]
-          },
-          "post_text": "구직급여 수급자격자는 고용센터장이 지시한 훈련을 받으면 직업능력개발수당을 확인할 수 있어요. 2026년 기준 훈련받은 날 하루 10,320원이에요.\n\n먼저 센터의 훈련 지시를 받은 과정인지 확인해요. 본인이 따로 등록한 모든 강의에 주는 수당은 아니며, 훈련받은 날 중 구직급여 지급 대상인 날에 지원돼요.\n\n다음으로 훈련기관에서 수강증명서를 받아 고지된 실업인정일에 제출해요. 마지막 실업인정일과 훈련 종료일이 다르면 종료일 제출 여부도 관할 센터와 확인해 주세요.\n\n공공·위탁 훈련에서 교통비나 식비를 따로 받으면 그 금액은 제외돼요. 구직급여 지급이 정지된 기간에는 이 수당도 받을 수 없어요. 지급 요건을 인정받으면 구직급여 지급일에 지정 계좌로 입금돼요.\n\n자세한 사항은 프로필링크 확인",
-          "char_count": 389,
-          "validation_time": "2026-11-16T20:00:00+09:00",
-          "source_recheck_required_at_publish": true,
-          "current_source_fresh_at_slot": true
-        },
-        {
           "slot": "2026-11-17T08:00:00+09:00",
           "benefit_id": "630000000660",
-          "status": "READY",
           "pattern": "P1",
           "media_turn": "TEXT",
-          "selection": {
-            "policy": "gov24_views_desc_v1",
-            "basis": "보조금24 누적 조회수",
-            "views": 64533,
-            "source_checked_at": "2026-11-16T06:59:06.536688+09:00",
-            "note": "실시간 검색량·신청자 수가 아닌 공식 API 누적 조회수 기준",
-            "candidate_rank": 36,
-            "higher_ranked_exclusions": [
-              {
-                "benefit_id": "161300000103",
-                "views": 724891,
-                "decision": "HOLD",
-                "reason": "국가 공식 API는 상시신청으로 안내하지만 지자체별 예산 소진시 조기마감. 특정 지역·현재 잔여예산·접수 가능 여부를 확정할 직접 근거를 이번 회차에 확보하지 못해 신규 신청 안내에서 보류했다. 사업 전체가 종료됐다는 뜻은 아니다.",
-                "sources": [
-                  "https://easylaw.go.kr/CSP/OnhunqueansInfoRetrieve.laf?onhunqnaAstSeq=84&onhunqueSeq=6445",
-                  "https://young.jinju.go.kr/young/business/read/75"
-                ]
-              },
-              {
-                "benefit_id": "999000000024",
-                "views": 673195,
-                "decision": "HOLD",
-                "reason": "장기전세 주택공급은 접수기관별 모집공고에 따라 기간·지역·요건이 달라진다. API의 접수기관 별 상이 정보만으로 현재 모집을 확정할 수 없어 보류했다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999075&bnefType=all&svcId=999000000024"
-                ]
-              },
-              {
-                "benefit_id": "161300000076",
-                "views": 637382,
-                "decision": "HOLD",
-                "reason": "API는 일반 대출금리 연2.1~2.9%, 주택도시기금 현재 검색 안내는 연2.5~3.5%로 불일치한다. 신규대출 본문 직접 열람도 timeout으로 완료되지 않아 최신 전체 조건·현재 이용 가능성을 확정하지 않았다.",
-                "sources": [
-                  "https://nhuf.molit.go.kr/FP/FP05/FP0502/FP05020101.jsp",
-                  "https://nhuf.molit.go.kr/FP/FP05/FP0502/FP05020107.jsp",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=739245&bnefType=all&svcId=161300000076"
-                ]
-              },
-              {
-                "benefit_id": "SD0000011848",
-                "views": 554041,
-                "decision": "SKIP",
-                "reason": "고용노동부 공식 안내에서 2024년부터 신규 가입을 중단하고 2023년까지 가입자만 계속 지원한다고 명시했다. 현재 신규가입 안내로 쓰지 않는다.",
-                "sources": [
-                  "https://1350.moel.go.kr/rtmview.do?id=1000279181"
-                ]
-              },
-              {
-                "benefit_id": "424000000006",
-                "views": 429294,
-                "decision": "HOLD",
-                "reason": "2026년 광양시 자료상 난방 접수는 예산 소진 시 마감. 11월 현재 지역별 접수·잔여 물량을 확인하지 못함.",
-                "sources": [
-                  "https://gwangyang.go.kr/boardDownload.es?bid=0170&list_no=197961&seq=1",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=663171&bnefType=all&svcId=424000000006"
-                ]
-              },
-              {
-                "benefit_id": "161300000001",
-                "views": 427641,
-                "decision": "HOLD",
-                "reason": "주택도시기금 상품 상세 직접 열람이 타임아웃됐고, 수탁은행 온라인 접수 안내는 오류 화면으로 돌아와 현재 두 상품의 신규 접수·정확한 조건을 직접 확인하지 못함.",
-                "sources": [
-                  "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030201.jsp",
-                  "https://spib.wooribank.com/pib/Dream?withyou=PSLON0175",
-                  "https://svc.wooribank.com/svc/Dream?cc=c010972%3Ac010531&withyou=HBFLN0027",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=739256&bnefType=all&svcId=161300000001"
-                ]
-              },
-              {
-                "benefit_id": "171000000005",
-                "views": 420635,
-                "decision": "HOLD",
-                "reason": "열람 가능한 공식 기관 검색 자료에서 현재 신규 판매·보장 조건을 확인하지 못함. 과거 우체국 홍보만으로 신규 가입 가능 여부를 확정하지 않음.",
-                "sources": [
-                  "https://jodal.koreapost.go.kr/user/bbs/405b/98/2952/bbsDataView/30026707.do?bbsDataCategory=&column=&page=566&search=&searchEDate=&searchSDate=",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=748477&bnefType=all&svcId=171000000005"
-                ]
-              },
-              {
-                "benefit_id": "999000000025",
-                "views": 328857,
-                "decision": "HOLD",
-                "reason": "보조금24 원문 월 40만 원·총 960만 원과 수탁은행 상품 안내 월 60만 원·총 1,440만 원이 달라 한도를 확정하지 않았다.",
-                "sources": [
-                  "https://obank.kbstar.com/quics?QSL=F&cc=b104363%3Ab104516&isNew=N&page=C103998&prcode=LN20000076",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999077&bnefType=all&svcId=999000000025"
-                ]
-              },
-              {
-                "benefit_id": "SD0000016138",
-                "views": 303540,
-                "decision": "HOLD",
-                "reason": "신청기간·서비스·본인부담이 지역별로 다르고, 공식 모집 목록에서 현재 적용할 지역별 접수 근거를 확보하지 못했다.",
-                "sources": [
-                  "https://www.cbcsi.or.kr/oN3Zt",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=75100&bnefType=all&svcId=SD0000016138"
-                ]
-              },
-              {
-                "benefit_id": "149200000009",
-                "views": 218481,
-                "decision": "HOLD",
-                "reason": "보조금24 원본은 상시신청으로 안내하지만 최근 11월 접수 재개 공지가 따로 있다는 단서를 확인했다. 근로복지넷 공식 공지와 신청 페이지가 열리지 않아 11월 9일 일반 융자 접수 가능 여부를 확인하지 못했다.",
-                "sources": [
-                  "https://welfare.comwel.or.kr/board/bbs.do?cfgIdx=1&idxId=472442&mCode=G015000000&op=view",
-                  "https://welfare.comwel.or.kr/welfare/dbs/ldDef.do",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=105992&bnefType=all&svcId=149200000009",
-                  "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000283222&chrClsCd=010201"
-                ]
-              },
-              {
-                "benefit_id": "SD0000004508",
-                "views": 198063,
-                "decision": "HOLD",
-                "reason": "2027년 1학기 국가장학금의 정확한 신청 공고와 접수기간이 아직 게시되지 않았다. 한국장학재단의 현재 신청 화면은 종료된 2026년 2학기 일정이고, 2027년 일정은 11월 말~12월 말이라는 연간 계획만 있어 다음날 현재 접수 중이라고 안내할 수 없다.",
-                "sources": [
-                  "https://www.kosaf.go.kr/ko/scholarnf.do?pg=scholarship05_12_07p",
-                  "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_01&ttab1=3",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=83660&bnefType=all&svcId=SD0000004508"
-                ]
-              },
-              {
-                "benefit_id": "611000000127",
-                "views": 196841,
-                "decision": "SKIP",
-                "reason": "서울주거포털 공식 안내에서 2026년 서울시 청년월세지원 접수기간은 5월 6일~5월 19일로 종료됐다. 현재는 지원금 지급 안내만 있어 11월 신규 신청 안내 후보에서 제외했다.",
-                "sources": [
-                  "https://housing.seoul.go.kr/site/main/content/sh01_060513",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002457&bnefType=all&svcId=611000000127"
-                ]
-              },
-              {
-                "benefit_id": "161300000099",
-                "views": 193933,
-                "decision": "HOLD",
-                "reason": "보조금24 원문에는 청년월세 지원 대상·금액·신청방법이 있으나 11월 9일 현재 적용할 정확한 신규 신청기간과 접수 상태를 국토교통부·복지로의 현재 공고에서 확인하지 못했다. 수집 시각만으로 접수 중이라고 판단하지 않았다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=805687&bnefType=all&svcId=161300000099",
-                  "https://www.bokjiro.go.kr/ssis-tbu/index.do"
-                ]
-              },
-              {
-                "benefit_id": "999000000023",
-                "views": 186343,
-                "decision": "HOLD",
-                "reason": "영구임대주택은 모집기관·지역별 공고에 따라 접수기간과 세부 요건이 달라진다. 11월 9일에 적용할 현재 모집공고를 특정하지 못해 신규 접수 안내에서 보류했다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=573411&bnefType=all&svcId=999000000023"
-                ]
-              },
-              {
-                "benefit_id": "WII000001470",
-                "views": 181992,
-                "decision": "HOLD",
-                "reason": "LH의 현재 시흥거모 S-1 공공분양 공고는 공급유형별 실제 청약일이 2026년 11월 16~17일이다. 최신 보조금24 수집 행에는 시작일이 구조화되지 않아 UPCOMING 검증을 통과시킬 수 없고, 11월 9일 현재 신청 가능한 일반 후보로 표현하지 않기 위해 보류했다.",
-                "sources": [
-                  "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&mi=1027&panId=0000061186&uppAisTpCd=05",
-                  "https://apply.lh.or.kr/lhapply/apply.do",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999073&bnefType=all&svcId=WII000001470"
-                ]
-              },
-              {
-                "benefit_id": "GMO000000010",
-                "views": 157853,
-                "decision": "SKIP",
-                "reason": "보조금24 동일 서비스 ID는 매년 5월 초~6월 중 약 1.5개월 접수라고 안내하고, 한국지능정보사회진흥원 공식 사이트에는 2026년 사업 안내만 남아 있다. 11월 9일 현재 신규 접수 중이라는 공식 근거가 없어 이번 READY 후보에서 제외했다.",
-                "sources": [
-                  "https://www.at4u.or.kr/",
-                  "https://www.at4u.or.kr/F03000000000/F03010000000V.asp?BoardUID=1856",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=728849&bnefType=all&svcId=GMO000000010"
-                ]
-              },
-              {
-                "benefit_id": "999000000044",
-                "views": 148501,
-                "decision": "HOLD",
-                "reason": "보건복지부 표준 서비스와 사업단 목록은 확인했다. 2026년 11월 대상 지역에서 이용자가 신청할 수 있는 유효한 모집기간·세부 자격·자부담을 같은 공고에서 확인하지 못했다. 사업단 선정 공고를 이용자 접수로 쓰지 않는다.",
-                "sources": [
-                  "https://www.mohw.go.kr/menu.es?mid=a10709020400",
-                  "https://www.gunsan.go.kr/_cms/board/eFileDownload/484/8621029/9eb9c594b657b507248262605217d61a",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999161&bnefType=all&svcId=999000000044"
-                ]
-              },
-              {
-                "benefit_id": "569000000351",
-                "views": 137789,
-                "decision": "HOLD",
-                "reason": "완전 수집본의 동일 ID 보조금24 원문은 명절기간과 읍면동장 추천을 안내한다. 현재 대상 명절·추천 시기·지급 일정이 확인되는 세종시 공고를 확보하지 못했고 공개 원문 페이지도 직접 열람하지 못해 현재 이용 안내에서 보류했다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004091&bnefType=all&svcId=569000000351"
-                ]
-              },
-              {
-                "benefit_id": "GKE000000070",
-                "views": 128278,
-                "decision": "HOLD",
-                "reason": "동일 ID 보조금24 상세는 지자체마다 시기가 다르다고 안내한다. 구로구 공식 2026년 모집은 4월 24일까지였고 확인한 도봉구 공식 안내는 해당 지역의 봄 사업이다. 11월 11일 현재 신청 가능한 지자체의 공고·접수기간을 확인하지 못했다. 전국 사업이 종료됐다는 뜻은 아니다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=108010&bnefType=all&svcId=GKE000000070",
-                  "https://www.guro.go.kr/www/selectBbsNttView.do?bbsNo=665&key=1793&nttNo=230919&pageIndex=1&pageUnit=10",
-                  "https://welfare.dobong.go.kr/dobongBokji/bbs/BMSR00002/view.do?boardId=1627&menuNo=200099"
-                ]
-              },
-              {
-                "benefit_id": "553000000116",
-                "views": 114417,
-                "decision": "HOLD",
-                "reason": "동일 ID 상세는 설·추석 가구당 10만 원 지급과 신청 불필요를 안내한다. 11월 12일 현재 새 신청·추가 지급을 확인할 화성시 공고를 확보하지 못해 현 시점의 신청 안내에서 보류한다. 제도 자체 종료로 판단하지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003944&bnefType=all&svcId=553000000116"
-                ]
-              },
-              {
-                "benefit_id": "999000000022",
-                "views": 104962,
-                "decision": "HOLD",
-                "reason": "동일 ID 보조금24 원문은 접수기관별 상이로 안내한다. 직접 열람한 동대문구 2026년 LH 정기 전세임대는 6월 8~12일 접수로 이미 지났다. LH 통합검색과 공식 검색 결과에서는 11월 현재 이 동일 사업·대상 유형의 유효한 모집기간·지역·자격을 함께 확인하지 못했다. 다른 매입임대·신혼신생아 모집을 일반 기존주택 전세임대의 현재 접수로 대체하지 않는다. 전국 사업 전체가 종료됐다는 뜻은 아니다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999070&bnefType=all&svcId=999000000022",
-                  "https://www.ddm.go.kr/www/selectBbsNttView.do?bbsNo=72&key=470&nttNo=189926&searchCtgry=%EC%B2%AD%EB%9F%89%EB%A6%AC%EB%8F%99",
-                  "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?viewType=srch"
-                ]
-              },
-              {
-                "benefit_id": "PTR000051706",
-                "views": 100436,
-                "decision": "HOLD",
-                "reason": "동일 ID 원문 누적 조회수 100436회로 선택 후보 100141회보다 높다. API 신청기간은 접수기관별 상이이며 구입자금 상세·신청 상태를 확정하지 않았다. 마이홈·서울주거포털에서 소득·자산·한도는 일부 대조했으나 주택도시기금 현재 상품 상세와 FAQ 직접 열람은 timeout이었다. 검색 요약만으로 현재 신규 접수를 확정하지 않고 이번 원고에서 보류한다. 사업 종료로 판단한 것은 아니다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999074&bnefType=all&svcId=PTR000051706",
-                  "https://www.myhome.go.kr/hws/portal/cont/selectFundsPurchaseOfficetelView.do",
-                  "https://housing.seoul.go.kr/site/main/content/sh01_070500",
-                  "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030501.jsp",
-                  "https://nhuf.molit.go.kr/FP/FP08/FP0809/FP0809.jsp?currentPage=18"
-                ]
-              },
-              {
-                "benefit_id": "999000000092",
-                "views": 96038,
-                "decision": "HOLD",
-                "reason": "동일 ID 누적 조회수 96038회로 선택 후보 94728회보다 높다. API는 매월 1~10일 접수이며 직접 연 사하구 2026년 안내도 매월 10일까지다. 예정 발송일 11월 13일은 확인한 월별 접수창 이후이고 다른 지역의 현재 접수 가능 근거는 확보하지 못했다. 다음달 접수 시작은 원본 startDate가 없어 UPCOMING 검증에 맞춰 꾸미지 않는다. 제도 전체 종료로 판단하지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999259&bnefType=all&svcId=999000000092",
-                  "https://news.saha.go.kr/portal/contents.do?mId=0501040600"
-                ]
-              },
-              {
-                "benefit_id": "149200000020",
-                "views": 89482,
-                "decision": "HOLD",
-                "reason": "예산 범위 수시 모집이며, 현재 공단의 프로그램별 접수·가용 예산을 확인할 원문을 확보하지 못했다. 공식 정부24 직접 조회 오류와 공단 검색 결과만으로 접수 중이라고 하지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999023&bnefType=all&svcId=149200000020",
-                  "https://webzine.comwel.or.kr/vol91/sub2-1.html"
-                ]
-              },
-              {
-                "benefit_id": "611000000126",
-                "views": 88763,
-                "decision": "HOLD",
-                "reason": "현재 보조금24는 매년 공고 참고로 안내한다. 서울 공식 목록은 기존 참여자 기록서·선정 이후 안내이고 11월13일 신규 접수 공고를 특정하지 못했다. 과거 5월 모집을 현재 접수로 쓰지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002456&bnefType=all&svcId=611000000126",
-                  "https://youth.seoul.go.kr/bbs/list.do?key=2303300002"
-                ]
-              },
-              {
-                "benefit_id": "GFO000000030",
-                "views": 88496,
-                "decision": "HOLD",
-                "reason": "원본은 수행기관 공고일에 따르며 사업별 자격·임금과 지역이 달라진다. 11월13일 유효한 특정 모집공고를 확보하지 못해 일반 접수 안내에서 보류한다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=579594&bnefType=all&svcId=GFO000000030"
-                ]
-              },
-              {
-                "benefit_id": "O00045000002",
-                "views": 86589,
-                "decision": "HOLD",
-                "reason": "원본은 공연별 할인율·대상이 다르고 70세와1954년·65세와1959년 등 출생연도 표기가2026년과 불일치한다. 현재 특정 공연의 예매·할인 조건을 확인하지 못했다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001289&bnefType=all&svcId=O00045000002"
-                ]
-              },
-              {
-                "benefit_id": "B55370100044",
-                "views": 85938,
-                "decision": "SKIP",
-                "reason": "동일 ID 원본 serviceList 누적 조회수85938회로 선택사업85775회보다 높다. 직접 연 금융위원회2026-10-06 안내의2차 신규 가입신청은10월7~16일18:30으로 종료됐다. 11월12~13일은 심사결과 안내,11월16~27일은 기존 신청·심사 통과자의 계좌개설 기간으로 신규 신청과 다르다. 이번 신규 신청 안내에서 제외하며 제도 전체 종료로 판단하지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2182516&bnefType=all&svcId=B55370100044",
-                  "https://www.fsc.go.kr/po010104/87880"
-                ]
-              },
-              {
-                "benefit_id": "999000000026",
-                "views": 84875,
-                "decision": "HOLD",
-                "reason": "원본은 접수기관별 상이이며 특정지역 현재 모집기간·자격 공고를 확보하지 못했다. 마이홈 공식 제도안내 직접열람도 timeout으로 현재 접수를 확정하지 않고 HOLD한다. 제도전체 종료는 아니다.",
-                "sources": [
-                  "https://www.myhome.go.kr/hws/portal/cont/selectHappyHouseView.do"
-                ]
-              },
-              {
-                "benefit_id": "337000000013",
-                "views": 82368,
-                "decision": "HOLD",
-                "reason": "API·복지부 상설안내는 월6000원이지만2025 제도개선 공식검색자료에는12000원이 있다. 복지로 직접본문은 읽히지 않고 현재적용액 충돌을 해소하지 못해 HOLD한다. 날짜·수집신선도로 금액을 확정하지 않는다.",
-                "sources": [
-                  "https://www.mohw.go.kr/menu.es?mid=a10708030300",
-                  "https://paldal.suwon.go.kr/bbsplus/view.asp?bd_gubn=20&code=tbl_bbs_sub200510&dong_gubn=&menuid=&mnuflag=&no=MTUxMTkg&page=15"
-                ]
-              },
-              {
-                "benefit_id": "999000000090",
-                "views": 80604,
-                "decision": "HOLD",
-                "reason": "같은ID원본의2026년2학기1/2차신청기간은종료됐다. 한국장학재단의현재신청안내에서11월14일유효한동일사업 신규접수기간을확정하지못해HOLD. 2027계획을현재접수로바꾸지않으며제도전체종료로판단하지않는다.",
-                "sources": [
-                  "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_01&ttab1=3",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999257&bnefType=all&svcId=999000000090"
-                ]
-              },
-              {
-                "benefit_id": "134200005002",
-                "views": 79152,
-                "decision": "HOLD",
-                "reason": "동일ID원본2026년2학기1·2차신청종료. 직접연한국장학재단Ⅱ유형 현재화면은8월12일~9월9일 일정이며11월14일유효한신규접수를확인하지못해HOLD. 제도전체종료는아니다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900001&bnefType=all&svcId=134200005002",
-                  "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_02"
-                ]
-              },
-              {
-                "benefit_id": "SD0000007429",
-                "views": 73484,
-                "decision": "HOLD",
-                "reason": "자금별상이이며소상공인정책자금 공식메인 직접열람은읽을본문0줄. 현재특정자금신규접수·금리·상환·예산을함께검증하지못해HOLD. 수집성공을접수가능으로대체하지않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=39748&bnefType=all&svcId=SD0000007429",
-                  "https://ols.semas.or.kr/"
-                ]
-              },
-              {
-                "benefit_id": "148000000007",
-                "views": 73395,
-                "decision": "HOLD",
-                "reason": "동일ID는각지자체공고참조. 직접연경기도공식안내에서자격·한도는확인했으나11월14일신규접수가능한특정지역공고·잔여예산을확정하지못해HOLD. 제도전체종료아님.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=558379&bnefType=all&svcId=148000000007",
-                  "https://www.gg.go.kr/contents/contents.do?ciIdx=884&menuId=2559"
-                ]
-              },
-              {
-                "benefit_id": "423000000362",
-                "views": 66522,
-                "decision": "HOLD",
-                "reason": "동일ID 원본은2025년기준 중위소득200%·시간당12180원표이며, 직접열람한2026-01-15 성평등가족부 현재안내는250%·12790원으로다르다. 출처와수집시각만으로옛기준을READY하지않고 이번동일ID검수에서보류한다. 사업종료아님.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=746602&bnefType=all&svcId=423000000362",
-                  "https://www.mogef.go.kr/nw/rpd/nw_rpd_s001d.do?bbtSn=710800&mid=news405"
-                ]
-              }
-            ]
-          },
-          "post_text": "대전에 주민등록을 두고 거주하는 자녀가 2명 이상이고 막내가 18세 이하인 가정은 상수도요금을 두 자녀 10%, 세 자녀 이상 30% 감면받을 수 있어요. 매달 나가는 수도요금 부담을 덜어주는 제도예요.\n\n현금을 따로 받는 지원은 아니에요. 공동주택은 전체 수도사용량을 바탕으로 계산한 세대별 평균사용량에 감면율을 적용해요.\n\n신청은 상시로 안내돼요. 주소지 관할 상수도 지역사업소를 방문하거나 정부24·상수도사업본부에서 온라인으로 신청할 수 있어요. 고지서의 고객번호를 미리 확인해 두세요.\n\n감면은 신청 다음 달 고지분부터 적용되고 소급되지 않아요. 기존 기초생활수급자 감면과는 중복되지 않으며, 이사하면 변경 신청, 대전 밖으로 전출하면 해지 신청이 필요해요. 개인별 적용 여부는 관할 사업소에서 확인해 주세요.\n\n자세한 사항은 프로필링크 확인",
           "char_count": 419,
-          "validation_time": "2026-11-17T08:00:00+09:00",
+          "expires_at": "2026-11-17T18:34:12.332771+09:00",
+          "last_valid_at": "2026-11-17T09:59:59+09:00",
+          "current_source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true,
-          "current_source_fresh_at_slot": false
+          "source_fingerprint_matches": true
         },
         {
           "slot": "2026-11-17T12:00:00+09:00",
           "benefit_id": "643000000105",
-          "status": "READY",
           "pattern": "P2",
           "media_turn": "IMAGE",
-          "selection": {
-            "policy": "gov24_views_desc_v1",
-            "basis": "보조금24 누적 조회수",
-            "views": 64307,
-            "source_checked_at": "2026-11-16T06:59:09.755272+09:00",
-            "note": "실시간 검색량·신청자 수가 아닌 공식 API 누적 조회수 기준",
-            "candidate_rank": 36,
-            "higher_ranked_exclusions": [
-              {
-                "benefit_id": "161300000103",
-                "views": 724891,
-                "decision": "HOLD",
-                "reason": "국가 공식 API는 상시신청으로 안내하지만 지자체별 예산 소진시 조기마감. 특정 지역·현재 잔여예산·접수 가능 여부를 확정할 직접 근거를 이번 회차에 확보하지 못해 신규 신청 안내에서 보류했다. 사업 전체가 종료됐다는 뜻은 아니다.",
-                "sources": [
-                  "https://easylaw.go.kr/CSP/OnhunqueansInfoRetrieve.laf?onhunqnaAstSeq=84&onhunqueSeq=6445",
-                  "https://young.jinju.go.kr/young/business/read/75"
-                ]
-              },
-              {
-                "benefit_id": "999000000024",
-                "views": 673195,
-                "decision": "HOLD",
-                "reason": "장기전세 주택공급은 접수기관별 모집공고에 따라 기간·지역·요건이 달라진다. API의 접수기관 별 상이 정보만으로 현재 모집을 확정할 수 없어 보류했다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999075&bnefType=all&svcId=999000000024"
-                ]
-              },
-              {
-                "benefit_id": "161300000076",
-                "views": 637382,
-                "decision": "HOLD",
-                "reason": "API는 일반 대출금리 연2.1~2.9%, 주택도시기금 현재 검색 안내는 연2.5~3.5%로 불일치한다. 신규대출 본문 직접 열람도 timeout으로 완료되지 않아 최신 전체 조건·현재 이용 가능성을 확정하지 않았다.",
-                "sources": [
-                  "https://nhuf.molit.go.kr/FP/FP05/FP0502/FP05020101.jsp",
-                  "https://nhuf.molit.go.kr/FP/FP05/FP0502/FP05020107.jsp",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=739245&bnefType=all&svcId=161300000076"
-                ]
-              },
-              {
-                "benefit_id": "SD0000011848",
-                "views": 554041,
-                "decision": "SKIP",
-                "reason": "고용노동부 공식 안내에서 2024년부터 신규 가입을 중단하고 2023년까지 가입자만 계속 지원한다고 명시했다. 현재 신규가입 안내로 쓰지 않는다.",
-                "sources": [
-                  "https://1350.moel.go.kr/rtmview.do?id=1000279181"
-                ]
-              },
-              {
-                "benefit_id": "424000000006",
-                "views": 429294,
-                "decision": "HOLD",
-                "reason": "2026년 광양시 자료상 난방 접수는 예산 소진 시 마감. 11월 현재 지역별 접수·잔여 물량을 확인하지 못함.",
-                "sources": [
-                  "https://gwangyang.go.kr/boardDownload.es?bid=0170&list_no=197961&seq=1",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=663171&bnefType=all&svcId=424000000006"
-                ]
-              },
-              {
-                "benefit_id": "161300000001",
-                "views": 427641,
-                "decision": "HOLD",
-                "reason": "주택도시기금 상품 상세 직접 열람이 타임아웃됐고, 수탁은행 온라인 접수 안내는 오류 화면으로 돌아와 현재 두 상품의 신규 접수·정확한 조건을 직접 확인하지 못함.",
-                "sources": [
-                  "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030201.jsp",
-                  "https://spib.wooribank.com/pib/Dream?withyou=PSLON0175",
-                  "https://svc.wooribank.com/svc/Dream?cc=c010972%3Ac010531&withyou=HBFLN0027",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=739256&bnefType=all&svcId=161300000001"
-                ]
-              },
-              {
-                "benefit_id": "171000000005",
-                "views": 420635,
-                "decision": "HOLD",
-                "reason": "열람 가능한 공식 기관 검색 자료에서 현재 신규 판매·보장 조건을 확인하지 못함. 과거 우체국 홍보만으로 신규 가입 가능 여부를 확정하지 않음.",
-                "sources": [
-                  "https://jodal.koreapost.go.kr/user/bbs/405b/98/2952/bbsDataView/30026707.do?bbsDataCategory=&column=&page=566&search=&searchEDate=&searchSDate=",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=748477&bnefType=all&svcId=171000000005"
-                ]
-              },
-              {
-                "benefit_id": "999000000025",
-                "views": 328857,
-                "decision": "HOLD",
-                "reason": "보조금24 원문 월 40만 원·총 960만 원과 수탁은행 상품 안내 월 60만 원·총 1,440만 원이 달라 한도를 확정하지 않았다.",
-                "sources": [
-                  "https://obank.kbstar.com/quics?QSL=F&cc=b104363%3Ab104516&isNew=N&page=C103998&prcode=LN20000076",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999077&bnefType=all&svcId=999000000025"
-                ]
-              },
-              {
-                "benefit_id": "SD0000016138",
-                "views": 303540,
-                "decision": "HOLD",
-                "reason": "신청기간·서비스·본인부담이 지역별로 다르고, 공식 모집 목록에서 현재 적용할 지역별 접수 근거를 확보하지 못했다.",
-                "sources": [
-                  "https://www.cbcsi.or.kr/oN3Zt",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=75100&bnefType=all&svcId=SD0000016138"
-                ]
-              },
-              {
-                "benefit_id": "149200000009",
-                "views": 218481,
-                "decision": "HOLD",
-                "reason": "보조금24 원본은 상시신청으로 안내하지만 최근 11월 접수 재개 공지가 따로 있다는 단서를 확인했다. 근로복지넷 공식 공지와 신청 페이지가 열리지 않아 11월 9일 일반 융자 접수 가능 여부를 확인하지 못했다.",
-                "sources": [
-                  "https://welfare.comwel.or.kr/board/bbs.do?cfgIdx=1&idxId=472442&mCode=G015000000&op=view",
-                  "https://welfare.comwel.or.kr/welfare/dbs/ldDef.do",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=105992&bnefType=all&svcId=149200000009",
-                  "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000283222&chrClsCd=010201"
-                ]
-              },
-              {
-                "benefit_id": "SD0000004508",
-                "views": 198063,
-                "decision": "HOLD",
-                "reason": "2027년 1학기 국가장학금의 정확한 신청 공고와 접수기간이 아직 게시되지 않았다. 한국장학재단의 현재 신청 화면은 종료된 2026년 2학기 일정이고, 2027년 일정은 11월 말~12월 말이라는 연간 계획만 있어 다음날 현재 접수 중이라고 안내할 수 없다.",
-                "sources": [
-                  "https://www.kosaf.go.kr/ko/scholarnf.do?pg=scholarship05_12_07p",
-                  "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_01&ttab1=3",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=83660&bnefType=all&svcId=SD0000004508"
-                ]
-              },
-              {
-                "benefit_id": "611000000127",
-                "views": 196841,
-                "decision": "SKIP",
-                "reason": "서울주거포털 공식 안내에서 2026년 서울시 청년월세지원 접수기간은 5월 6일~5월 19일로 종료됐다. 현재는 지원금 지급 안내만 있어 11월 신규 신청 안내 후보에서 제외했다.",
-                "sources": [
-                  "https://housing.seoul.go.kr/site/main/content/sh01_060513",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002457&bnefType=all&svcId=611000000127"
-                ]
-              },
-              {
-                "benefit_id": "161300000099",
-                "views": 193933,
-                "decision": "HOLD",
-                "reason": "보조금24 원문에는 청년월세 지원 대상·금액·신청방법이 있으나 11월 9일 현재 적용할 정확한 신규 신청기간과 접수 상태를 국토교통부·복지로의 현재 공고에서 확인하지 못했다. 수집 시각만으로 접수 중이라고 판단하지 않았다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=805687&bnefType=all&svcId=161300000099",
-                  "https://www.bokjiro.go.kr/ssis-tbu/index.do"
-                ]
-              },
-              {
-                "benefit_id": "999000000023",
-                "views": 186343,
-                "decision": "HOLD",
-                "reason": "영구임대주택은 모집기관·지역별 공고에 따라 접수기간과 세부 요건이 달라진다. 11월 9일에 적용할 현재 모집공고를 특정하지 못해 신규 접수 안내에서 보류했다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=573411&bnefType=all&svcId=999000000023"
-                ]
-              },
-              {
-                "benefit_id": "WII000001470",
-                "views": 181992,
-                "decision": "HOLD",
-                "reason": "LH의 현재 시흥거모 S-1 공공분양 공고는 공급유형별 실제 청약일이 2026년 11월 16~17일이다. 최신 보조금24 수집 행에는 시작일이 구조화되지 않아 UPCOMING 검증을 통과시킬 수 없고, 11월 9일 현재 신청 가능한 일반 후보로 표현하지 않기 위해 보류했다.",
-                "sources": [
-                  "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&mi=1027&panId=0000061186&uppAisTpCd=05",
-                  "https://apply.lh.or.kr/lhapply/apply.do",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999073&bnefType=all&svcId=WII000001470"
-                ]
-              },
-              {
-                "benefit_id": "GMO000000010",
-                "views": 157853,
-                "decision": "SKIP",
-                "reason": "보조금24 동일 서비스 ID는 매년 5월 초~6월 중 약 1.5개월 접수라고 안내하고, 한국지능정보사회진흥원 공식 사이트에는 2026년 사업 안내만 남아 있다. 11월 9일 현재 신규 접수 중이라는 공식 근거가 없어 이번 READY 후보에서 제외했다.",
-                "sources": [
-                  "https://www.at4u.or.kr/",
-                  "https://www.at4u.or.kr/F03000000000/F03010000000V.asp?BoardUID=1856",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=728849&bnefType=all&svcId=GMO000000010"
-                ]
-              },
-              {
-                "benefit_id": "999000000044",
-                "views": 148501,
-                "decision": "HOLD",
-                "reason": "보건복지부 표준 서비스와 사업단 목록은 확인했다. 2026년 11월 대상 지역에서 이용자가 신청할 수 있는 유효한 모집기간·세부 자격·자부담을 같은 공고에서 확인하지 못했다. 사업단 선정 공고를 이용자 접수로 쓰지 않는다.",
-                "sources": [
-                  "https://www.mohw.go.kr/menu.es?mid=a10709020400",
-                  "https://www.gunsan.go.kr/_cms/board/eFileDownload/484/8621029/9eb9c594b657b507248262605217d61a",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999161&bnefType=all&svcId=999000000044"
-                ]
-              },
-              {
-                "benefit_id": "569000000351",
-                "views": 137789,
-                "decision": "HOLD",
-                "reason": "완전 수집본의 동일 ID 보조금24 원문은 명절기간과 읍면동장 추천을 안내한다. 현재 대상 명절·추천 시기·지급 일정이 확인되는 세종시 공고를 확보하지 못했고 공개 원문 페이지도 직접 열람하지 못해 현재 이용 안내에서 보류했다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004091&bnefType=all&svcId=569000000351"
-                ]
-              },
-              {
-                "benefit_id": "GKE000000070",
-                "views": 128278,
-                "decision": "HOLD",
-                "reason": "동일 ID 보조금24 상세는 지자체마다 시기가 다르다고 안내한다. 구로구 공식 2026년 모집은 4월 24일까지였고 확인한 도봉구 공식 안내는 해당 지역의 봄 사업이다. 11월 11일 현재 신청 가능한 지자체의 공고·접수기간을 확인하지 못했다. 전국 사업이 종료됐다는 뜻은 아니다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=108010&bnefType=all&svcId=GKE000000070",
-                  "https://www.guro.go.kr/www/selectBbsNttView.do?bbsNo=665&key=1793&nttNo=230919&pageIndex=1&pageUnit=10",
-                  "https://welfare.dobong.go.kr/dobongBokji/bbs/BMSR00002/view.do?boardId=1627&menuNo=200099"
-                ]
-              },
-              {
-                "benefit_id": "553000000116",
-                "views": 114417,
-                "decision": "HOLD",
-                "reason": "동일 ID 상세는 설·추석 가구당 10만 원 지급과 신청 불필요를 안내한다. 11월 12일 현재 새 신청·추가 지급을 확인할 화성시 공고를 확보하지 못해 현 시점의 신청 안내에서 보류한다. 제도 자체 종료로 판단하지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003944&bnefType=all&svcId=553000000116"
-                ]
-              },
-              {
-                "benefit_id": "999000000022",
-                "views": 104962,
-                "decision": "HOLD",
-                "reason": "동일 ID 보조금24 원문은 접수기관별 상이로 안내한다. 직접 열람한 동대문구 2026년 LH 정기 전세임대는 6월 8~12일 접수로 이미 지났다. LH 통합검색과 공식 검색 결과에서는 11월 현재 이 동일 사업·대상 유형의 유효한 모집기간·지역·자격을 함께 확인하지 못했다. 다른 매입임대·신혼신생아 모집을 일반 기존주택 전세임대의 현재 접수로 대체하지 않는다. 전국 사업 전체가 종료됐다는 뜻은 아니다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999070&bnefType=all&svcId=999000000022",
-                  "https://www.ddm.go.kr/www/selectBbsNttView.do?bbsNo=72&key=470&nttNo=189926&searchCtgry=%EC%B2%AD%EB%9F%89%EB%A6%AC%EB%8F%99",
-                  "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?viewType=srch"
-                ]
-              },
-              {
-                "benefit_id": "PTR000051706",
-                "views": 100436,
-                "decision": "HOLD",
-                "reason": "동일 ID 원문 누적 조회수 100436회로 선택 후보 100141회보다 높다. API 신청기간은 접수기관별 상이이며 구입자금 상세·신청 상태를 확정하지 않았다. 마이홈·서울주거포털에서 소득·자산·한도는 일부 대조했으나 주택도시기금 현재 상품 상세와 FAQ 직접 열람은 timeout이었다. 검색 요약만으로 현재 신규 접수를 확정하지 않고 이번 원고에서 보류한다. 사업 종료로 판단한 것은 아니다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999074&bnefType=all&svcId=PTR000051706",
-                  "https://www.myhome.go.kr/hws/portal/cont/selectFundsPurchaseOfficetelView.do",
-                  "https://housing.seoul.go.kr/site/main/content/sh01_070500",
-                  "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030501.jsp",
-                  "https://nhuf.molit.go.kr/FP/FP08/FP0809/FP0809.jsp?currentPage=18"
-                ]
-              },
-              {
-                "benefit_id": "999000000092",
-                "views": 96038,
-                "decision": "HOLD",
-                "reason": "동일 ID 누적 조회수 96038회로 선택 후보 94728회보다 높다. API는 매월 1~10일 접수이며 직접 연 사하구 2026년 안내도 매월 10일까지다. 예정 발송일 11월 13일은 확인한 월별 접수창 이후이고 다른 지역의 현재 접수 가능 근거는 확보하지 못했다. 다음달 접수 시작은 원본 startDate가 없어 UPCOMING 검증에 맞춰 꾸미지 않는다. 제도 전체 종료로 판단하지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999259&bnefType=all&svcId=999000000092",
-                  "https://news.saha.go.kr/portal/contents.do?mId=0501040600"
-                ]
-              },
-              {
-                "benefit_id": "149200000020",
-                "views": 89482,
-                "decision": "HOLD",
-                "reason": "예산 범위 수시 모집이며, 현재 공단의 프로그램별 접수·가용 예산을 확인할 원문을 확보하지 못했다. 공식 정부24 직접 조회 오류와 공단 검색 결과만으로 접수 중이라고 하지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999023&bnefType=all&svcId=149200000020",
-                  "https://webzine.comwel.or.kr/vol91/sub2-1.html"
-                ]
-              },
-              {
-                "benefit_id": "611000000126",
-                "views": 88763,
-                "decision": "HOLD",
-                "reason": "현재 보조금24는 매년 공고 참고로 안내한다. 서울 공식 목록은 기존 참여자 기록서·선정 이후 안내이고 11월13일 신규 접수 공고를 특정하지 못했다. 과거 5월 모집을 현재 접수로 쓰지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002456&bnefType=all&svcId=611000000126",
-                  "https://youth.seoul.go.kr/bbs/list.do?key=2303300002"
-                ]
-              },
-              {
-                "benefit_id": "GFO000000030",
-                "views": 88496,
-                "decision": "HOLD",
-                "reason": "원본은 수행기관 공고일에 따르며 사업별 자격·임금과 지역이 달라진다. 11월13일 유효한 특정 모집공고를 확보하지 못해 일반 접수 안내에서 보류한다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=579594&bnefType=all&svcId=GFO000000030"
-                ]
-              },
-              {
-                "benefit_id": "O00045000002",
-                "views": 86589,
-                "decision": "HOLD",
-                "reason": "원본은 공연별 할인율·대상이 다르고 70세와1954년·65세와1959년 등 출생연도 표기가2026년과 불일치한다. 현재 특정 공연의 예매·할인 조건을 확인하지 못했다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001289&bnefType=all&svcId=O00045000002"
-                ]
-              },
-              {
-                "benefit_id": "B55370100044",
-                "views": 85938,
-                "decision": "SKIP",
-                "reason": "동일 ID 원본 serviceList 누적 조회수85938회로 선택사업85775회보다 높다. 직접 연 금융위원회2026-10-06 안내의2차 신규 가입신청은10월7~16일18:30으로 종료됐다. 11월12~13일은 심사결과 안내,11월16~27일은 기존 신청·심사 통과자의 계좌개설 기간으로 신규 신청과 다르다. 이번 신규 신청 안내에서 제외하며 제도 전체 종료로 판단하지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2182516&bnefType=all&svcId=B55370100044",
-                  "https://www.fsc.go.kr/po010104/87880"
-                ]
-              },
-              {
-                "benefit_id": "999000000026",
-                "views": 84875,
-                "decision": "HOLD",
-                "reason": "원본은 접수기관별 상이이며 특정지역 현재 모집기간·자격 공고를 확보하지 못했다. 마이홈 공식 제도안내 직접열람도 timeout으로 현재 접수를 확정하지 않고 HOLD한다. 제도전체 종료는 아니다.",
-                "sources": [
-                  "https://www.myhome.go.kr/hws/portal/cont/selectHappyHouseView.do"
-                ]
-              },
-              {
-                "benefit_id": "337000000013",
-                "views": 82368,
-                "decision": "HOLD",
-                "reason": "API·복지부 상설안내는 월6000원이지만2025 제도개선 공식검색자료에는12000원이 있다. 복지로 직접본문은 읽히지 않고 현재적용액 충돌을 해소하지 못해 HOLD한다. 날짜·수집신선도로 금액을 확정하지 않는다.",
-                "sources": [
-                  "https://www.mohw.go.kr/menu.es?mid=a10708030300",
-                  "https://paldal.suwon.go.kr/bbsplus/view.asp?bd_gubn=20&code=tbl_bbs_sub200510&dong_gubn=&menuid=&mnuflag=&no=MTUxMTkg&page=15"
-                ]
-              },
-              {
-                "benefit_id": "999000000090",
-                "views": 80604,
-                "decision": "HOLD",
-                "reason": "같은ID원본의2026년2학기1/2차신청기간은종료됐다. 한국장학재단의현재신청안내에서11월14일유효한동일사업 신규접수기간을확정하지못해HOLD. 2027계획을현재접수로바꾸지않으며제도전체종료로판단하지않는다.",
-                "sources": [
-                  "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_01&ttab1=3",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999257&bnefType=all&svcId=999000000090"
-                ]
-              },
-              {
-                "benefit_id": "134200005002",
-                "views": 79152,
-                "decision": "HOLD",
-                "reason": "동일ID원본2026년2학기1·2차신청종료. 직접연한국장학재단Ⅱ유형 현재화면은8월12일~9월9일 일정이며11월14일유효한신규접수를확인하지못해HOLD. 제도전체종료는아니다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900001&bnefType=all&svcId=134200005002",
-                  "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_02"
-                ]
-              },
-              {
-                "benefit_id": "SD0000007429",
-                "views": 73484,
-                "decision": "HOLD",
-                "reason": "자금별상이이며소상공인정책자금 공식메인 직접열람은읽을본문0줄. 현재특정자금신규접수·금리·상환·예산을함께검증하지못해HOLD. 수집성공을접수가능으로대체하지않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=39748&bnefType=all&svcId=SD0000007429",
-                  "https://ols.semas.or.kr/"
-                ]
-              },
-              {
-                "benefit_id": "148000000007",
-                "views": 73395,
-                "decision": "HOLD",
-                "reason": "동일ID는각지자체공고참조. 직접연경기도공식안내에서자격·한도는확인했으나11월14일신규접수가능한특정지역공고·잔여예산을확정하지못해HOLD. 제도전체종료아님.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=558379&bnefType=all&svcId=148000000007",
-                  "https://www.gg.go.kr/contents/contents.do?ciIdx=884&menuId=2559"
-                ]
-              },
-              {
-                "benefit_id": "423000000362",
-                "views": 66522,
-                "decision": "HOLD",
-                "reason": "동일ID 원본은2025년기준 중위소득200%·시간당12180원표이며, 직접열람한2026-01-15 성평등가족부 현재안내는250%·12790원으로다르다. 출처와수집시각만으로옛기준을READY하지않고 이번동일ID검수에서보류한다. 사업종료아님.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=746602&bnefType=all&svcId=423000000362",
-                  "https://www.mogef.go.kr/nw/rpd/nw_rpd_s001d.do?bbtSn=710800&mid=news405"
-                ]
-              }
-            ]
-          },
-          "post_text": "사고 뒤 받을 수 있는 보장을 찾는다면, 충북에 주민등록을 둔 도민은 도민안전보험의 대상 사고인지 확인해 보세요. 보장 대상 신체 피해는 보험금을 청구할 수 있고 등록외국인도 포함돼요.\n\n별도 가입절차 없이 자동 가입되지만, 보험금까지 자동 지급되는 것은 아니에요. 사고 뒤 청구서와 필요한 서류를 내고 보험사의 지급 심사를 받아야 해요.\n\n2026년 도민안전보험은 1월 1일~12월 31일 운영하며, 청구는 사고 발생일부터 3년 이내에 해요. 개인 상해보험과 중복 보장도 가능해요.\n\n다만 모든 사고를 보장하는 건 아니에요. 주소지 시·군의 사고 당시 보장항목·가입기간·연령별 조건과 지급액을 확인한 뒤, 담당 보험사에 필요한 서류를 문의해 주세요. 전출하면 자동 해지돼요.\n\n자세한 사항은 프로필링크 확인",
           "char_count": 396,
-          "validation_time": "2026-11-17T12:00:00+09:00",
+          "expires_at": "2026-11-17T18:34:12.332771+09:00",
+          "last_valid_at": "2026-11-17T13:59:59+09:00",
+          "current_source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true,
-          "current_source_fresh_at_slot": false
+          "source_fingerprint_matches": true
         },
         {
           "slot": "2026-11-17T16:00:00+09:00",
           "benefit_id": "SSE000000050",
-          "status": "READY",
           "pattern": "P8",
           "media_turn": "TEXT",
-          "selection": {
-            "policy": "gov24_views_desc_v1",
-            "basis": "보조금24 누적 조회수",
-            "views": 63573,
-            "source_checked_at": "2026-11-16T06:59:41.141217+09:00",
-            "note": "실시간 검색량·신청자 수가 아닌 공식 API 누적 조회수 기준",
-            "candidate_rank": 37,
-            "higher_ranked_exclusions": [
-              {
-                "benefit_id": "161300000103",
-                "views": 724891,
-                "decision": "HOLD",
-                "reason": "국가 공식 API는 상시신청으로 안내하지만 지자체별 예산 소진시 조기마감. 특정 지역·현재 잔여예산·접수 가능 여부를 확정할 직접 근거를 이번 회차에 확보하지 못해 신규 신청 안내에서 보류했다. 사업 전체가 종료됐다는 뜻은 아니다.",
-                "sources": [
-                  "https://easylaw.go.kr/CSP/OnhunqueansInfoRetrieve.laf?onhunqnaAstSeq=84&onhunqueSeq=6445",
-                  "https://young.jinju.go.kr/young/business/read/75"
-                ]
-              },
-              {
-                "benefit_id": "999000000024",
-                "views": 673195,
-                "decision": "HOLD",
-                "reason": "장기전세 주택공급은 접수기관별 모집공고에 따라 기간·지역·요건이 달라진다. API의 접수기관 별 상이 정보만으로 현재 모집을 확정할 수 없어 보류했다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999075&bnefType=all&svcId=999000000024"
-                ]
-              },
-              {
-                "benefit_id": "161300000076",
-                "views": 637382,
-                "decision": "HOLD",
-                "reason": "API는 일반 대출금리 연2.1~2.9%, 주택도시기금 현재 검색 안내는 연2.5~3.5%로 불일치한다. 신규대출 본문 직접 열람도 timeout으로 완료되지 않아 최신 전체 조건·현재 이용 가능성을 확정하지 않았다.",
-                "sources": [
-                  "https://nhuf.molit.go.kr/FP/FP05/FP0502/FP05020101.jsp",
-                  "https://nhuf.molit.go.kr/FP/FP05/FP0502/FP05020107.jsp",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=739245&bnefType=all&svcId=161300000076"
-                ]
-              },
-              {
-                "benefit_id": "SD0000011848",
-                "views": 554041,
-                "decision": "SKIP",
-                "reason": "고용노동부 공식 안내에서 2024년부터 신규 가입을 중단하고 2023년까지 가입자만 계속 지원한다고 명시했다. 현재 신규가입 안내로 쓰지 않는다.",
-                "sources": [
-                  "https://1350.moel.go.kr/rtmview.do?id=1000279181"
-                ]
-              },
-              {
-                "benefit_id": "424000000006",
-                "views": 429294,
-                "decision": "HOLD",
-                "reason": "2026년 광양시 자료상 난방 접수는 예산 소진 시 마감. 11월 현재 지역별 접수·잔여 물량을 확인하지 못함.",
-                "sources": [
-                  "https://gwangyang.go.kr/boardDownload.es?bid=0170&list_no=197961&seq=1",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=663171&bnefType=all&svcId=424000000006"
-                ]
-              },
-              {
-                "benefit_id": "161300000001",
-                "views": 427641,
-                "decision": "HOLD",
-                "reason": "주택도시기금 상품 상세 직접 열람이 타임아웃됐고, 수탁은행 온라인 접수 안내는 오류 화면으로 돌아와 현재 두 상품의 신규 접수·정확한 조건을 직접 확인하지 못함.",
-                "sources": [
-                  "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030201.jsp",
-                  "https://spib.wooribank.com/pib/Dream?withyou=PSLON0175",
-                  "https://svc.wooribank.com/svc/Dream?cc=c010972%3Ac010531&withyou=HBFLN0027",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=739256&bnefType=all&svcId=161300000001"
-                ]
-              },
-              {
-                "benefit_id": "171000000005",
-                "views": 420635,
-                "decision": "HOLD",
-                "reason": "열람 가능한 공식 기관 검색 자료에서 현재 신규 판매·보장 조건을 확인하지 못함. 과거 우체국 홍보만으로 신규 가입 가능 여부를 확정하지 않음.",
-                "sources": [
-                  "https://jodal.koreapost.go.kr/user/bbs/405b/98/2952/bbsDataView/30026707.do?bbsDataCategory=&column=&page=566&search=&searchEDate=&searchSDate=",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=748477&bnefType=all&svcId=171000000005"
-                ]
-              },
-              {
-                "benefit_id": "999000000025",
-                "views": 328857,
-                "decision": "HOLD",
-                "reason": "보조금24 원문 월 40만 원·총 960만 원과 수탁은행 상품 안내 월 60만 원·총 1,440만 원이 달라 한도를 확정하지 않았다.",
-                "sources": [
-                  "https://obank.kbstar.com/quics?QSL=F&cc=b104363%3Ab104516&isNew=N&page=C103998&prcode=LN20000076",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999077&bnefType=all&svcId=999000000025"
-                ]
-              },
-              {
-                "benefit_id": "SD0000016138",
-                "views": 303540,
-                "decision": "HOLD",
-                "reason": "신청기간·서비스·본인부담이 지역별로 다르고, 공식 모집 목록에서 현재 적용할 지역별 접수 근거를 확보하지 못했다.",
-                "sources": [
-                  "https://www.cbcsi.or.kr/oN3Zt",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=75100&bnefType=all&svcId=SD0000016138"
-                ]
-              },
-              {
-                "benefit_id": "149200000009",
-                "views": 218481,
-                "decision": "HOLD",
-                "reason": "보조금24 원본은 상시신청으로 안내하지만 최근 11월 접수 재개 공지가 따로 있다는 단서를 확인했다. 근로복지넷 공식 공지와 신청 페이지가 열리지 않아 11월 9일 일반 융자 접수 가능 여부를 확인하지 못했다.",
-                "sources": [
-                  "https://welfare.comwel.or.kr/board/bbs.do?cfgIdx=1&idxId=472442&mCode=G015000000&op=view",
-                  "https://welfare.comwel.or.kr/welfare/dbs/ldDef.do",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=105992&bnefType=all&svcId=149200000009",
-                  "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000283222&chrClsCd=010201"
-                ]
-              },
-              {
-                "benefit_id": "SD0000004508",
-                "views": 198063,
-                "decision": "HOLD",
-                "reason": "2027년 1학기 국가장학금의 정확한 신청 공고와 접수기간이 아직 게시되지 않았다. 한국장학재단의 현재 신청 화면은 종료된 2026년 2학기 일정이고, 2027년 일정은 11월 말~12월 말이라는 연간 계획만 있어 다음날 현재 접수 중이라고 안내할 수 없다.",
-                "sources": [
-                  "https://www.kosaf.go.kr/ko/scholarnf.do?pg=scholarship05_12_07p",
-                  "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_01&ttab1=3",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=83660&bnefType=all&svcId=SD0000004508"
-                ]
-              },
-              {
-                "benefit_id": "611000000127",
-                "views": 196841,
-                "decision": "SKIP",
-                "reason": "서울주거포털 공식 안내에서 2026년 서울시 청년월세지원 접수기간은 5월 6일~5월 19일로 종료됐다. 현재는 지원금 지급 안내만 있어 11월 신규 신청 안내 후보에서 제외했다.",
-                "sources": [
-                  "https://housing.seoul.go.kr/site/main/content/sh01_060513",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002457&bnefType=all&svcId=611000000127"
-                ]
-              },
-              {
-                "benefit_id": "161300000099",
-                "views": 193933,
-                "decision": "HOLD",
-                "reason": "보조금24 원문에는 청년월세 지원 대상·금액·신청방법이 있으나 11월 9일 현재 적용할 정확한 신규 신청기간과 접수 상태를 국토교통부·복지로의 현재 공고에서 확인하지 못했다. 수집 시각만으로 접수 중이라고 판단하지 않았다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=805687&bnefType=all&svcId=161300000099",
-                  "https://www.bokjiro.go.kr/ssis-tbu/index.do"
-                ]
-              },
-              {
-                "benefit_id": "999000000023",
-                "views": 186343,
-                "decision": "HOLD",
-                "reason": "영구임대주택은 모집기관·지역별 공고에 따라 접수기간과 세부 요건이 달라진다. 11월 9일에 적용할 현재 모집공고를 특정하지 못해 신규 접수 안내에서 보류했다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=573411&bnefType=all&svcId=999000000023"
-                ]
-              },
-              {
-                "benefit_id": "WII000001470",
-                "views": 181992,
-                "decision": "HOLD",
-                "reason": "LH의 현재 시흥거모 S-1 공공분양 공고는 공급유형별 실제 청약일이 2026년 11월 16~17일이다. 최신 보조금24 수집 행에는 시작일이 구조화되지 않아 UPCOMING 검증을 통과시킬 수 없고, 11월 9일 현재 신청 가능한 일반 후보로 표현하지 않기 위해 보류했다.",
-                "sources": [
-                  "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&mi=1027&panId=0000061186&uppAisTpCd=05",
-                  "https://apply.lh.or.kr/lhapply/apply.do",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999073&bnefType=all&svcId=WII000001470"
-                ]
-              },
-              {
-                "benefit_id": "GMO000000010",
-                "views": 157853,
-                "decision": "SKIP",
-                "reason": "보조금24 동일 서비스 ID는 매년 5월 초~6월 중 약 1.5개월 접수라고 안내하고, 한국지능정보사회진흥원 공식 사이트에는 2026년 사업 안내만 남아 있다. 11월 9일 현재 신규 접수 중이라는 공식 근거가 없어 이번 READY 후보에서 제외했다.",
-                "sources": [
-                  "https://www.at4u.or.kr/",
-                  "https://www.at4u.or.kr/F03000000000/F03010000000V.asp?BoardUID=1856",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=728849&bnefType=all&svcId=GMO000000010"
-                ]
-              },
-              {
-                "benefit_id": "999000000044",
-                "views": 148501,
-                "decision": "HOLD",
-                "reason": "보건복지부 표준 서비스와 사업단 목록은 확인했다. 2026년 11월 대상 지역에서 이용자가 신청할 수 있는 유효한 모집기간·세부 자격·자부담을 같은 공고에서 확인하지 못했다. 사업단 선정 공고를 이용자 접수로 쓰지 않는다.",
-                "sources": [
-                  "https://www.mohw.go.kr/menu.es?mid=a10709020400",
-                  "https://www.gunsan.go.kr/_cms/board/eFileDownload/484/8621029/9eb9c594b657b507248262605217d61a",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999161&bnefType=all&svcId=999000000044"
-                ]
-              },
-              {
-                "benefit_id": "569000000351",
-                "views": 137789,
-                "decision": "HOLD",
-                "reason": "완전 수집본의 동일 ID 보조금24 원문은 명절기간과 읍면동장 추천을 안내한다. 현재 대상 명절·추천 시기·지급 일정이 확인되는 세종시 공고를 확보하지 못했고 공개 원문 페이지도 직접 열람하지 못해 현재 이용 안내에서 보류했다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004091&bnefType=all&svcId=569000000351"
-                ]
-              },
-              {
-                "benefit_id": "GKE000000070",
-                "views": 128278,
-                "decision": "HOLD",
-                "reason": "동일 ID 보조금24 상세는 지자체마다 시기가 다르다고 안내한다. 구로구 공식 2026년 모집은 4월 24일까지였고 확인한 도봉구 공식 안내는 해당 지역의 봄 사업이다. 11월 11일 현재 신청 가능한 지자체의 공고·접수기간을 확인하지 못했다. 전국 사업이 종료됐다는 뜻은 아니다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=108010&bnefType=all&svcId=GKE000000070",
-                  "https://www.guro.go.kr/www/selectBbsNttView.do?bbsNo=665&key=1793&nttNo=230919&pageIndex=1&pageUnit=10",
-                  "https://welfare.dobong.go.kr/dobongBokji/bbs/BMSR00002/view.do?boardId=1627&menuNo=200099"
-                ]
-              },
-              {
-                "benefit_id": "553000000116",
-                "views": 114417,
-                "decision": "HOLD",
-                "reason": "동일 ID 상세는 설·추석 가구당 10만 원 지급과 신청 불필요를 안내한다. 11월 12일 현재 새 신청·추가 지급을 확인할 화성시 공고를 확보하지 못해 현 시점의 신청 안내에서 보류한다. 제도 자체 종료로 판단하지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003944&bnefType=all&svcId=553000000116"
-                ]
-              },
-              {
-                "benefit_id": "999000000022",
-                "views": 104962,
-                "decision": "HOLD",
-                "reason": "동일 ID 보조금24 원문은 접수기관별 상이로 안내한다. 직접 열람한 동대문구 2026년 LH 정기 전세임대는 6월 8~12일 접수로 이미 지났다. LH 통합검색과 공식 검색 결과에서는 11월 현재 이 동일 사업·대상 유형의 유효한 모집기간·지역·자격을 함께 확인하지 못했다. 다른 매입임대·신혼신생아 모집을 일반 기존주택 전세임대의 현재 접수로 대체하지 않는다. 전국 사업 전체가 종료됐다는 뜻은 아니다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999070&bnefType=all&svcId=999000000022",
-                  "https://www.ddm.go.kr/www/selectBbsNttView.do?bbsNo=72&key=470&nttNo=189926&searchCtgry=%EC%B2%AD%EB%9F%89%EB%A6%AC%EB%8F%99",
-                  "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?viewType=srch"
-                ]
-              },
-              {
-                "benefit_id": "PTR000051706",
-                "views": 100436,
-                "decision": "HOLD",
-                "reason": "동일 ID 원문 누적 조회수 100436회로 선택 후보 100141회보다 높다. API 신청기간은 접수기관별 상이이며 구입자금 상세·신청 상태를 확정하지 않았다. 마이홈·서울주거포털에서 소득·자산·한도는 일부 대조했으나 주택도시기금 현재 상품 상세와 FAQ 직접 열람은 timeout이었다. 검색 요약만으로 현재 신규 접수를 확정하지 않고 이번 원고에서 보류한다. 사업 종료로 판단한 것은 아니다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999074&bnefType=all&svcId=PTR000051706",
-                  "https://www.myhome.go.kr/hws/portal/cont/selectFundsPurchaseOfficetelView.do",
-                  "https://housing.seoul.go.kr/site/main/content/sh01_070500",
-                  "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030501.jsp",
-                  "https://nhuf.molit.go.kr/FP/FP08/FP0809/FP0809.jsp?currentPage=18"
-                ]
-              },
-              {
-                "benefit_id": "999000000092",
-                "views": 96038,
-                "decision": "HOLD",
-                "reason": "동일 ID 누적 조회수 96038회로 선택 후보 94728회보다 높다. API는 매월 1~10일 접수이며 직접 연 사하구 2026년 안내도 매월 10일까지다. 예정 발송일 11월 13일은 확인한 월별 접수창 이후이고 다른 지역의 현재 접수 가능 근거는 확보하지 못했다. 다음달 접수 시작은 원본 startDate가 없어 UPCOMING 검증에 맞춰 꾸미지 않는다. 제도 전체 종료로 판단하지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999259&bnefType=all&svcId=999000000092",
-                  "https://news.saha.go.kr/portal/contents.do?mId=0501040600"
-                ]
-              },
-              {
-                "benefit_id": "149200000020",
-                "views": 89482,
-                "decision": "HOLD",
-                "reason": "예산 범위 수시 모집이며, 현재 공단의 프로그램별 접수·가용 예산을 확인할 원문을 확보하지 못했다. 공식 정부24 직접 조회 오류와 공단 검색 결과만으로 접수 중이라고 하지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999023&bnefType=all&svcId=149200000020",
-                  "https://webzine.comwel.or.kr/vol91/sub2-1.html"
-                ]
-              },
-              {
-                "benefit_id": "611000000126",
-                "views": 88763,
-                "decision": "HOLD",
-                "reason": "현재 보조금24는 매년 공고 참고로 안내한다. 서울 공식 목록은 기존 참여자 기록서·선정 이후 안내이고 11월13일 신규 접수 공고를 특정하지 못했다. 과거 5월 모집을 현재 접수로 쓰지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002456&bnefType=all&svcId=611000000126",
-                  "https://youth.seoul.go.kr/bbs/list.do?key=2303300002"
-                ]
-              },
-              {
-                "benefit_id": "GFO000000030",
-                "views": 88496,
-                "decision": "HOLD",
-                "reason": "원본은 수행기관 공고일에 따르며 사업별 자격·임금과 지역이 달라진다. 11월13일 유효한 특정 모집공고를 확보하지 못해 일반 접수 안내에서 보류한다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=579594&bnefType=all&svcId=GFO000000030"
-                ]
-              },
-              {
-                "benefit_id": "O00045000002",
-                "views": 86589,
-                "decision": "HOLD",
-                "reason": "원본은 공연별 할인율·대상이 다르고 70세와1954년·65세와1959년 등 출생연도 표기가2026년과 불일치한다. 현재 특정 공연의 예매·할인 조건을 확인하지 못했다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001289&bnefType=all&svcId=O00045000002"
-                ]
-              },
-              {
-                "benefit_id": "B55370100044",
-                "views": 85938,
-                "decision": "SKIP",
-                "reason": "동일 ID 원본 serviceList 누적 조회수85938회로 선택사업85775회보다 높다. 직접 연 금융위원회2026-10-06 안내의2차 신규 가입신청은10월7~16일18:30으로 종료됐다. 11월12~13일은 심사결과 안내,11월16~27일은 기존 신청·심사 통과자의 계좌개설 기간으로 신규 신청과 다르다. 이번 신규 신청 안내에서 제외하며 제도 전체 종료로 판단하지 않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2182516&bnefType=all&svcId=B55370100044",
-                  "https://www.fsc.go.kr/po010104/87880"
-                ]
-              },
-              {
-                "benefit_id": "999000000026",
-                "views": 84875,
-                "decision": "HOLD",
-                "reason": "원본은 접수기관별 상이이며 특정지역 현재 모집기간·자격 공고를 확보하지 못했다. 마이홈 공식 제도안내 직접열람도 timeout으로 현재 접수를 확정하지 않고 HOLD한다. 제도전체 종료는 아니다.",
-                "sources": [
-                  "https://www.myhome.go.kr/hws/portal/cont/selectHappyHouseView.do"
-                ]
-              },
-              {
-                "benefit_id": "337000000013",
-                "views": 82368,
-                "decision": "HOLD",
-                "reason": "API·복지부 상설안내는 월6000원이지만2025 제도개선 공식검색자료에는12000원이 있다. 복지로 직접본문은 읽히지 않고 현재적용액 충돌을 해소하지 못해 HOLD한다. 날짜·수집신선도로 금액을 확정하지 않는다.",
-                "sources": [
-                  "https://www.mohw.go.kr/menu.es?mid=a10708030300",
-                  "https://paldal.suwon.go.kr/bbsplus/view.asp?bd_gubn=20&code=tbl_bbs_sub200510&dong_gubn=&menuid=&mnuflag=&no=MTUxMTkg&page=15"
-                ]
-              },
-              {
-                "benefit_id": "999000000090",
-                "views": 80604,
-                "decision": "HOLD",
-                "reason": "같은ID원본의2026년2학기1/2차신청기간은종료됐다. 한국장학재단의현재신청안내에서11월14일유효한동일사업 신규접수기간을확정하지못해HOLD. 2027계획을현재접수로바꾸지않으며제도전체종료로판단하지않는다.",
-                "sources": [
-                  "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_01&ttab1=3",
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999257&bnefType=all&svcId=999000000090"
-                ]
-              },
-              {
-                "benefit_id": "134200005002",
-                "views": 79152,
-                "decision": "HOLD",
-                "reason": "동일ID원본2026년2학기1·2차신청종료. 직접연한국장학재단Ⅱ유형 현재화면은8월12일~9월9일 일정이며11월14일유효한신규접수를확인하지못해HOLD. 제도전체종료는아니다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=900001&bnefType=all&svcId=134200005002",
-                  "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_02"
-                ]
-              },
-              {
-                "benefit_id": "SD0000007429",
-                "views": 73484,
-                "decision": "HOLD",
-                "reason": "자금별상이이며소상공인정책자금 공식메인 직접열람은읽을본문0줄. 현재특정자금신규접수·금리·상환·예산을함께검증하지못해HOLD. 수집성공을접수가능으로대체하지않는다.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=39748&bnefType=all&svcId=SD0000007429",
-                  "https://ols.semas.or.kr/"
-                ]
-              },
-              {
-                "benefit_id": "148000000007",
-                "views": 73395,
-                "decision": "HOLD",
-                "reason": "동일ID는각지자체공고참조. 직접연경기도공식안내에서자격·한도는확인했으나11월14일신규접수가능한특정지역공고·잔여예산을확정하지못해HOLD. 제도전체종료아님.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=558379&bnefType=all&svcId=148000000007",
-                  "https://www.gg.go.kr/contents/contents.do?ciIdx=884&menuId=2559"
-                ]
-              },
-              {
-                "benefit_id": "423000000362",
-                "views": 66522,
-                "decision": "HOLD",
-                "reason": "동일ID 원본은2025년기준 중위소득200%·시간당12180원표이며, 직접열람한2026-01-15 성평등가족부 현재안내는250%·12790원으로다르다. 출처와수집시각만으로옛기준을READY하지않고 이번동일ID검수에서보류한다. 사업종료아님.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=746602&bnefType=all&svcId=423000000362",
-                  "https://www.mogef.go.kr/nw/rpd/nw_rpd_s001d.do?bbtSn=710800&mid=news405"
-                ]
-              },
-              {
-                "benefit_id": "476000000135",
-                "views": 63866,
-                "decision": "HOLD",
-                "reason": "동일ID 최신원본 신청기한은 설,추석 명절기간으로만 제공되고 시작/종료일이 없다. 11월16일 검수에서 내일12시 신규접수 가능한 임실군 현행 공고를 확보하지 못해 현재상태 UNKNOWN으로 보류한다. 사업전체종료나상시접수로추정하지않음.",
-                "sources": [
-                  "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005107&bnefType=all&svcId=476000000135"
-                ]
-              }
-            ]
-          },
-          "post_text": "65세 이상 기초생활수급자·차상위계층·기초연금수급자 중 돌봄이 필요한 어르신은 노인맞춤돌봄서비스를 신청할 수 있어요. 안부 확인 등 필요한 돌봄을 무료로 제공하는 서비스예요.\n\n확인할 건 세 가지예요.\n① 돌봄 필요도 조사와 심의를 거쳐 선정해요. 나이와 소득 자격만으로 자동 선정되지는 않아요.\n② 서비스와 시간·주기는 필요도에 따라 달라요. 일반돌봄군에는 정기적인 가사지원이 제공되지 않아요.\n③ 유사한 돌봄사업 자격이 있으면 원칙적으로 제외되며, 지자체가 필요성을 인정하는 예외는 별도 확인해요.\n\n상시 신청은 주민등록상 주소지 읍·면·동 행정복지센터에서 해요. 신청서와 신분증 등을 준비하고, 이용 중인 돌봄서비스도 함께 알려 대상 여부를 확인해 주세요.\n\n자세한 사항은 프로필링크 확인",
           "char_count": 388,
-          "validation_time": "2026-11-17T16:00:00+09:00",
+          "expires_at": "2026-11-17T18:34:12.332771+09:00",
+          "last_valid_at": "2026-11-17T17:59:59+09:00",
+          "current_source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true,
-          "current_source_fresh_at_slot": false
+          "source_fingerprint_matches": true
+        },
+        {
+          "slot": "2026-11-17T20:00:00+09:00",
+          "benefit_id": "WII000001060",
+          "pattern": "P5",
+          "media_turn": "IMAGE",
+          "char_count": 443,
+          "expires_at": "2026-11-17T21:19:19.602482+09:00",
+          "last_valid_at": "2026-11-17T21:19:18.602482+09:00",
+          "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true,
+          "source_fingerprint_matches": true
         }
       ],
-      "expired_unpublished_slots": [
-        "2026-11-16T16:00:00+09:00"
-      ],
-      "last_validated_at": "2026-11-16T18:34:12.332771+09:00",
-      "source_generation_checked": "gov24-43766350375-1",
+      "expired_unpublished_slots": [],
+      "last_validated_at": "2026-11-16T21:19:19.602482+09:00",
+      "source_generation_checked": "gov24-43852258780-1",
       "image_recheck": {
         "existing_ready_evidence_preserved": true,
         "new_visual_inspection": false,
         "current_main_asset_download_and_sha256_recompared_with_current_image_review": true,
-        "verification_checked_at": "2026-11-16T18:34:12.332771+09:00",
+        "verification_checked_at": "2026-11-16T21:19:19.602482+09:00",
         "method": "Both allowed current main PNG files redownloaded and SHA256 matched current image-review PASS. Existing READY evidence timestamps preserved."
       },
       "validation_environment": {
@@ -4155,26 +2747,28 @@
       },
       "selection_notes_preserved": 49,
       "new_higher_ranked_hold_notes": 0,
-      "archived_replanned_entries": 4
+      "archived_replanned_entries": 0
     },
     "history_audit": {
       "requested_days": 28,
-      "available_records": 47,
-      "through_slot": "2026-11-16T12:00:00+09:00",
-      "ledger_complete_verified": 47,
+      "available_records": 48,
+      "through_slot": "2026-11-16T20:00:00+09:00",
+      "ledger_complete_verified": 48,
       "duplicate_main_ids": 0,
       "duplicate_slots": 0,
-      "today_main_posts": 2,
+      "today_main_posts": 3,
       "pending": 0,
       "actual_scope": "Fresh durable ledger plus latest authenticated publisher receipt/log and artifact; historical present public rendering not independently rechecked.",
       "kst_date": "2026-11-16",
       "today_patterns": [
         "P8",
-        "P5"
+        "P5",
+        "P6"
       ],
       "today_media": [
         "IMAGE",
-        "TEXT"
+        "TEXT",
+        "IMAGE"
       ],
       "actual_available_from_slot": "2026-11-04T17:04:00+09:00",
       "all_content_hashes_match": true,
@@ -4196,16 +2790,12 @@
       "previous_day_main_posts": 4
     },
     "metrics": {
-      "latest_observed_run_id": "43838097975",
-      "new_metric_observations": 3,
-      "new_observation_keys": [
-        "18128141311911524:168h",
-        "18156121705549353:72h",
-        "18117627773024048:24h"
-      ],
+      "latest_observed_run_id": "43852667169",
+      "new_metric_observations": 0,
+      "new_observation_keys": [],
       "id_window_deduplication": true,
-      "artifact_id": 14211611992,
-      "artifact_digest": "sha256:8d6b84e49c112c041c92633dd95cb15d191f31b1bd6f8f30d97b35e88db3bddb",
+      "artifact_id": 14217529178,
+      "artifact_digest": "sha256:565709f2b1447d7db9211dfe4b96e041288260076fa97462de406c6d0f6e22b6",
       "artifact_digest_verified": true,
       "job_logs_retrieved_this_run": true,
       "observations_24h": 16,
@@ -4284,8 +2874,8 @@
         "reaction_rate_used": false
       },
       "duplicate_observations": [],
-      "due_milestones": 3,
-      "classification": "new_official_observations",
+      "due_milestones": 0,
+      "classification": "normal_no_due_milestones",
       "original_measurements_unchanged": true,
       "new_snapshot_runs_checked": 1,
       "cached_artifact_digest_reverified": false
@@ -4293,13 +2883,13 @@
     "recovery": {
       "required": false,
       "workflow_dispatch": false,
-      "new_failures": 1,
+      "new_failures": 0,
       "new_partials": 0,
       "post_retry_budget_used": 0,
       "code_change_required": false
     },
     "initial_41796747628_status": "resolved",
-    "next_condition": "Consume reviewed20h slot through existing schedule and recheck latest facts/source/evidence/media/expiry. Recovery only inside original2h grace viaauthorized mode; no recovery for expired16h. External schedule delay remains possible.",
+    "next_condition": "Nov16 20h natural IMAGE single-body publication verified at20:54KST.48 complete records,today3 posts,no pending/lease. Preserve all45 prior queue entries and49 selection notes;new443char WII000001060 Nov17 20h/P5/A/IMAGE entry saved andreadback. Nextday08TEXT/P1/B,12IMAGE/P2/A,16TEXT/P8/B,20IMAGE/P5/A validate. Actual sender must recheck newest complete source,official status,evidence24h/expiry andimages. Nov16 19:57 source is not fresh forNov17 20h. No new official metrics/due0;keep16 24h A7/B9,comparison/weights deferred. Previously expired16h remains unfilled;subsequent20h regular publication succeeded without rerun/backfill/code guard change.",
     "local_validation": {
       "actual_read_path_validation": "PASS",
       "ci_from_authenticated_current_head_logs": {
@@ -4315,46 +2905,47 @@
     }
   },
   "last_reported_publication": {
-    "run_id": "43800761644",
+    "run_id": "43861591455",
     "run_attempt": 1,
     "status": "completed",
     "conclusion": "success",
-    "updated_at": "2026-11-16T03:54:03Z",
+    "updated_at": "2026-11-16T11:54:09Z",
     "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
-    "job_id": 133080204206,
-    "artifact_id": 14196545602,
-    "artifact_digest": "sha256:1e1769a444c17c596dc6fb7b16b4366138b92ec0408615ac0bea6f7e76724687",
+    "job_id": 133279502022,
+    "artifact_id": 14223322895,
+    "artifact_digest": "sha256:432aa0482440ce8fdd0cf4090e49979df1f4b9d0e03cd23c1ccaf6dce3e149a0",
     "artifact_digest_verified": true,
     "classification": "verified_natural_publication",
     "event": "schedule",
     "published": true,
-    "slot": "2026-11-16T12:00:00+09:00",
-    "published_at": "2026-11-16T12:53:15.656338+09:00",
-    "benefit_id": "999000000007",
-    "main_id": "17983626669129975",
-    "url": "https://www.threads.com/@hid_1004/post/Dfyb20Ilsec",
+    "slot": "2026-11-16T20:00:00+09:00",
+    "published_at": "2026-11-16T20:53:13.555988+09:00",
+    "benefit_id": "149200005001",
+    "main_id": "17893701492454069",
+    "url": "https://www.threads.com/@hid_1004/post/DfzSyU9m-qc",
     "stage": "complete",
     "verified": true,
-    "content_hash": "c0956b0435e274f9881b29de7e25305581c4ddfdc260a6ab89adbbe898a574b3",
-    "asset_sha256": null,
-    "source_generation": "gov24-43766350375-1",
-    "pattern": "P5",
-    "media_turn": "TEXT",
-    "char_count": 430,
+    "content_hash": "2a384405b5135f0992762b9b4b9cd6e1d2267f4834ddfafdcb0435f2dce4f674",
+    "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+    "source_generation": "gov24-43852258780-1",
+    "writer_prepared_source_generation": "gov24-43766350375-1",
+    "pattern": "P6",
+    "media_turn": "IMAGE",
+    "char_count": 389,
     "replies": 0,
-    "verification": "Digest-verified new receipt and authenticated publisher log match durable main ID, URL, original singlebody/hash and0 replies.",
-    "verification_completed_at": "2026-11-16T04:17:35.384Z",
+    "verification": "Digest-verified current receipt and authenticated publisher log match durable ID,URL,exact body/hash,image SHA and0 replies. No independent full remote-history/public rendering check.",
+    "verification_completed_at": "2026-11-16T12:21:25.962671+00:00",
     "public_web_visibility_independently_verified": false,
-    "publication_ledger_records": 47,
+    "publication_ledger_records": 48,
     "pending": null,
     "lease": null,
     "job_logs_retrieved": true,
     "publisher_related_tests_passed": 130,
     "time_basis": {
       "published_at": "Ledger publisher invocation, not exact platform timestamp",
-      "verified_result_logged_at": "2026-11-16T12:54:00.4387012+09:00",
+      "verified_result_logged_at": "2026-11-16T20:54:03.2270205+09:00",
       "platform_timestamp": null,
-      "public_report": "Publication confirmed Nov16 12:54 KST."
+      "public_report": "Publication confirmed Nov16 20:54 KST."
     },
     "latest_publication_previously_reported": false,
     "new_publication_this_run": true,
@@ -6295,6 +4886,31 @@
             {
               "hours": 168,
               "due_at": "2026-11-23T03:53:15.656Z",
+              "status": "awaiting_due_time"
+            }
+          ]
+        },
+        "17893701492454069": {
+          "main_id": "17893701492454069",
+          "slot": "2026-11-16T20:00:00+09:00",
+          "published_at": "2026-11-16T20:53:13.555988+09:00",
+          "benefit_id": "149200005001",
+          "reader_scope": "고용센터장 지시에 따라 훈련받는 구직급여 수급자격자",
+          "opening_type": "대상·혜택형",
+          "cohort": "B",
+          "pattern": "P6",
+          "char_count": 389,
+          "media_turn": "IMAGE",
+          "timestamp_basis": "Ledger publisher invocation; platform exact timestamp unavailable",
+          "windows": [
+            {
+              "hours": 24,
+              "due_at": "2026-11-17T11:53:13.555988+00:00",
+              "status": "awaiting_due_time"
+            },
+            {
+              "hours": 168,
+              "due_at": "2026-11-23T11:53:13.555988+00:00",
               "status": "awaiting_due_time"
             }
           ]
@@ -8344,7 +6960,7 @@
           "not_backcalculated": true
         }
       },
-      "last_availability_check_at": "2026-11-16T09:36:46.494342+00:00",
+      "last_availability_check_at": "2026-11-16T12:21:25.962671+00:00",
       "statistical_decision": "A6/B6 eligible delayed24h observations; matched pairs0, insufficient8/group and confounded strata. Preserve groups/weights. No effect claim.",
       "diagnostic_observations_by_run_id": {
         "43163347739": {
@@ -9961,6 +8577,23 @@
           "new_observations": 3,
           "classification": "new_official_observations",
           "job_logs_retrieved": true
+        },
+        "43852667169": {
+          "run_id": "43852667169",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-16T10:52:25Z",
+          "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
+          "job_id": 133248928576,
+          "artifact_id": 14217529178,
+          "artifact_digest": "sha256:565709f2b1447d7db9211dfe4b96e041288260076fa97462de406c6d0f6e22b6",
+          "artifact_digest_verified": true,
+          "observed_at": "2026-11-16T10:52:20.948939+00:00",
+          "records": 0,
+          "new_observations": 0,
+          "classification": "normal_no_due_milestones",
+          "job_logs_retrieved": true
         }
       },
       "additional_connector_check": {
@@ -10048,16 +8681,16 @@
     },
     "next_condition": "Natural20 KST and tomorrow08/12/16 publishers consume4 reviewed READY drafts; newNov16 16 IMAGE/P6 A vocational-training allowance entry stored and read back, previous41 entries preserved. Actual sender must recheck latest complete source, official status, evidence age, asset SHA and expiry. Current07:01 source is not fresh for tomorrow.44 complete publications; no pending/new failure/partial/recovery/code change. No new metrics; A6/B6 delayed24h comparison unchanged, insufficient8/group/no matched pairs; weights retained and7/14day evaluations not due. Official-law current10320 evidence used; obsolete7530 overview not copied, dynamic-shell law page not claimed directly read.",
     "latest_prepared_entry": {
-      "benefit_id": "SSE000000050",
-      "slot": "2026-11-17T16:00:00+09:00",
-      "prepared_at": "2026-11-16T18:34:12.332771+09:00",
-      "char_count": 388,
-      "asset_sha256": null,
+      "benefit_id": "WII000001060",
+      "slot": "2026-11-17T20:00:00+09:00",
+      "prepared_at": "2026-11-16T21:19:19.602482+09:00",
+      "char_count": 443,
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
       "policy_id": "supportpick-threads-reach-v1-20261109",
-      "cohort": "B",
-      "pattern": "P8",
-      "queue_commit_sha": "6fc2c6f4f214a35d2eb7151abb901b8b98a20af8",
-      "queue_blob_sha": "aaf012b7eaafb039f70c4130809f171b9eabbc49",
+      "cohort": "A",
+      "pattern": "P5",
+      "queue_commit_sha": "13eb3850369a73b138dbbfb0631c824a37e344bc",
+      "queue_blob_sha": "0f55b967566992e38f1820e5a3f52057adcf2620",
       "queue_readback_equal": true,
       "source_recheck_required_at_publish": true
     }
@@ -28389,6 +27022,374 @@
       "new_metric_observations": 0,
       "existing_ready_preserved": 45,
       "next_condition": "Existing20h publisher consumes current READY; recheck latest source,official status,expiry andimage bytes. No replay of expired16h."
+    },
+    "2026-11-16T12:21:25.962671+00:00": {
+      "checked_at": "2026-11-16T12:21:25.962671+00:00",
+      "result": "verified_natural_publication_and_new_reviewed_queue_entry",
+      "current_main_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
+      "publication_ledger_sha": "b1a716bed25983a387becc1149aa9f223c9cf6a4",
+      "queue_blob_sha": "0f55b967566992e38f1820e5a3f52057adcf2620",
+      "maintenance_previous_blob_sha": "7484cfebc2061bbd5d53808ee2f7a99b21ffba2c",
+      "unresolved_publications": 0,
+      "lease": null,
+      "active_target_runs": [],
+      "changed_run_versions": [
+        {
+          "run_id": "43861591455",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-16T11:54:09Z",
+          "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+        },
+        {
+          "run_id": "43852667169",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-16T10:52:25Z",
+          "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+        },
+        {
+          "run_id": "43852258780",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-16T10:59:18Z",
+          "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99"
+        }
+      ],
+      "run_pagination": {
+        "branch": "main",
+        "pages": 1,
+        "entries_examined": 30,
+        "checkpoint_reached": true
+      },
+      "source": {
+        "run_id": "43852258780",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-16T10:59:18Z",
+        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
+        "generation": "gov24-43852258780-1",
+        "count": 10942,
+        "manifest_sha256": "916f293dedb34a19c4f1798b1786a5f110036bd7220b37c2a1ade8ea9ed251bb",
+        "collection_succeeded_at": "2026-11-16T19:57:32.568236+09:00",
+        "artifact_id": 14219956302,
+        "artifact_digest": "sha256:75749101eeabb7cc81888a5872c2d8299a99e28b0b9d08d66b4a57132d5afd70",
+        "artifact_digest_verified": true,
+        "downloaded_via_github_artifact_tool": true,
+        "read_current_verify_snapshot_load_feed": true,
+        "job_id": 133247521139,
+        "job_logs_retrieved_this_run": true,
+        "regression_ci_tests_passed": 203,
+        "fresh_at_check": true,
+        "source_only_not_current_application_verification": true,
+        "verification_checked_at": "2026-11-16T21:19:19.602482+09:00",
+        "classification": "validated_complete_fresh_generation",
+        "artifact_redownloaded_and_digest_verified_this_check": true,
+        "cached_artifact_digest_reverified": false,
+        "public_publish_decision": "same_day_content_unchanged_public_generation_retained",
+        "retained_public_generation": "gov24-43766350375-1",
+        "public_deployment_not_claimed": true
+      },
+      "publisher": {
+        "run_id": "43861591455",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-16T11:54:09Z",
+        "head_sha": "bb67953ed1e6655617942388306da5ebecd8ba99",
+        "job_id": 133279502022,
+        "artifact_id": 14223322895,
+        "artifact_digest": "sha256:432aa0482440ce8fdd0cf4090e49979df1f4b9d0e03cd23c1ccaf6dce3e149a0",
+        "artifact_digest_verified": true,
+        "classification": "verified_natural_publication",
+        "event": "schedule",
+        "published": true,
+        "slot": "2026-11-16T20:00:00+09:00",
+        "published_at": "2026-11-16T20:53:13.555988+09:00",
+        "benefit_id": "149200005001",
+        "main_id": "17893701492454069",
+        "url": "https://www.threads.com/@hid_1004/post/DfzSyU9m-qc",
+        "stage": "complete",
+        "verified": true,
+        "content_hash": "2a384405b5135f0992762b9b4b9cd6e1d2267f4834ddfafdcb0435f2dce4f674",
+        "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+        "source_generation": "gov24-43852258780-1",
+        "writer_prepared_source_generation": "gov24-43766350375-1",
+        "pattern": "P6",
+        "media_turn": "IMAGE",
+        "char_count": 389,
+        "replies": 0,
+        "verification": "Digest-verified current receipt and authenticated publisher log match durable ID,URL,exact body/hash,image SHA and0 replies. No independent full remote-history/public rendering check.",
+        "verification_completed_at": "2026-11-16T12:21:25.962671+00:00",
+        "public_web_visibility_independently_verified": false,
+        "publication_ledger_records": 48,
+        "pending": null,
+        "lease": null,
+        "job_logs_retrieved": true,
+        "publisher_related_tests_passed": 130,
+        "time_basis": {
+          "published_at": "Ledger publisher invocation, not exact platform timestamp",
+          "verified_result_logged_at": "2026-11-16T20:54:03.2270205+09:00",
+          "platform_timestamp": null,
+          "public_report": "Publication confirmed Nov16 20:54 KST."
+        },
+        "latest_publication_previously_reported": false,
+        "new_publication_this_run": true,
+        "artifact_redownloaded_and_digest_verified_this_check": true,
+        "cached_artifact_digest_reverified": false
+      },
+      "writer": {
+        "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+        "current_code_and_prompt_blobs_unchanged": true,
+        "all_local_inputs_match_fresh_remote_blobs": true,
+        "queue_reused": false,
+        "queue_write": true,
+        "queue_readback_equal": true,
+        "unchanged_existing_entries": 45,
+        "new_entries": 1,
+        "queue_commit_sha": "13eb3850369a73b138dbbfb0631c824a37e344bc",
+        "preview_ready": 4,
+        "validate_ready_entry_and_preview": true,
+        "future_slot_simulation": true,
+        "source_recheck_required_at_publish": true,
+        "next_24h_sequence": [
+          {
+            "slot": "2026-11-17T08:00:00+09:00",
+            "benefit_id": "630000000660",
+            "pattern": "P1",
+            "media_turn": "TEXT",
+            "char_count": 419,
+            "expires_at": "2026-11-17T18:34:12.332771+09:00",
+            "last_valid_at": "2026-11-17T09:59:59+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true,
+            "source_fingerprint_matches": true
+          },
+          {
+            "slot": "2026-11-17T12:00:00+09:00",
+            "benefit_id": "643000000105",
+            "pattern": "P2",
+            "media_turn": "IMAGE",
+            "char_count": 396,
+            "expires_at": "2026-11-17T18:34:12.332771+09:00",
+            "last_valid_at": "2026-11-17T13:59:59+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true,
+            "source_fingerprint_matches": true
+          },
+          {
+            "slot": "2026-11-17T16:00:00+09:00",
+            "benefit_id": "SSE000000050",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 388,
+            "expires_at": "2026-11-17T18:34:12.332771+09:00",
+            "last_valid_at": "2026-11-17T17:59:59+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true,
+            "source_fingerprint_matches": true
+          },
+          {
+            "slot": "2026-11-17T20:00:00+09:00",
+            "benefit_id": "WII000001060",
+            "pattern": "P5",
+            "media_turn": "IMAGE",
+            "char_count": 443,
+            "expires_at": "2026-11-17T21:19:19.602482+09:00",
+            "last_valid_at": "2026-11-17T21:19:18.602482+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true,
+            "source_fingerprint_matches": true
+          }
+        ],
+        "expired_unpublished_slots": [],
+        "last_validated_at": "2026-11-16T21:19:19.602482+09:00",
+        "source_generation_checked": "gov24-43852258780-1",
+        "image_recheck": {
+          "existing_ready_evidence_preserved": true,
+          "new_visual_inspection": false,
+          "current_main_asset_download_and_sha256_recompared_with_current_image_review": true,
+          "verification_checked_at": "2026-11-16T21:19:19.602482+09:00",
+          "method": "Both allowed current main PNG files redownloaded and SHA256 matched current image-review PASS. Existing READY evidence timestamps preserved."
+        },
+        "validation_environment": {
+          "all_current_main_blobs_verified": true,
+          "master_sha256_verified": true,
+          "latest_runtime_downloaded_and_manifest_verified": true,
+          "latest_publication_receipt_digest_verified": true,
+          "validation_inputs_match_current_state_and_queue_blob_shas": true
+        },
+        "policy_input": {
+          "master_prompt_full_preserved": true,
+          "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+          "reach_policy_id": "supportpick-threads-reach-v1-20261109",
+          "full_supplemental_policy_used": true,
+          "existing_ready_preserved": true,
+          "new_writing_this_check": true,
+          "recent_history_count": 20
+        },
+        "selection_notes_preserved": 49,
+        "new_higher_ranked_hold_notes": 0,
+        "archived_replanned_entries": 0
+      },
+      "history_audit": {
+        "requested_days": 28,
+        "available_records": 48,
+        "through_slot": "2026-11-16T20:00:00+09:00",
+        "ledger_complete_verified": 48,
+        "duplicate_main_ids": 0,
+        "duplicate_slots": 0,
+        "today_main_posts": 3,
+        "pending": 0,
+        "actual_scope": "Fresh durable ledger plus latest authenticated publisher receipt/log and artifact; historical present public rendering not independently rechecked.",
+        "kst_date": "2026-11-16",
+        "today_patterns": [
+          "P8",
+          "P5",
+          "P6"
+        ],
+        "today_media": [
+          "IMAGE",
+          "TEXT",
+          "IMAGE"
+        ],
+        "actual_available_from_slot": "2026-11-04T17:04:00+09:00",
+        "all_content_hashes_match": true,
+        "max_daily_main_posts": 4,
+        "outside_two_hour_grace": [],
+        "image_alternation_since_policy_verified": true,
+        "historical_prepolicy_same_media_pairs": [
+          [
+            "2026-11-04T17:04:00+09:00",
+            "2026-11-04T20:00:00+09:00"
+          ],
+          [
+            "2026-11-04T20:00:00+09:00",
+            "2026-11-05T08:00:00+09:00"
+          ]
+        ],
+        "historical_prepolicy_records_preserved": true,
+        "previous_kst_date": "2026-11-15",
+        "previous_day_main_posts": 4
+      },
+      "metrics": {
+        "latest_observed_run_id": "43852667169",
+        "new_metric_observations": 0,
+        "new_observation_keys": [],
+        "id_window_deduplication": true,
+        "artifact_id": 14217529178,
+        "artifact_digest": "sha256:565709f2b1447d7db9211dfe4b96e041288260076fa97462de406c6d0f6e22b6",
+        "artifact_digest_verified": true,
+        "job_logs_retrieved_this_run": true,
+        "observations_24h": 16,
+        "A_n": 7,
+        "B_n": 9,
+        "matched_comparison_pairs": 0,
+        "comparison_deferred": true,
+        "weights_unchanged": true,
+        "seven_day_evaluation_due": false,
+        "fourteen_day_evaluation_due": false,
+        "historical_72h_168h_excluded_from_24h_comparison": true,
+        "comparison": {
+          "checked_at": "2026-11-16T09:36:46.494342+00:00",
+          "comparable_24h_n": 16,
+          "window_eligible_24h_n": 16,
+          "matched_comparison_pairs": 0,
+          "A_n": 7,
+          "B_n": 9,
+          "views_median": 83.5,
+          "group_medians": {
+            "A": 63,
+            "B": 89
+          },
+          "actual_observed_elapsed_hours": [
+            25.301120277777777,
+            24.721231678888888,
+            24.38634,
+            24.748259444444443,
+            25.236122777777776,
+            24.626399166666666,
+            24.357242222222222,
+            24.677569722222223,
+            25.06515277777778,
+            24.366340833333332,
+            24.368370275833335,
+            24.76059083333333,
+            25.374826388888888,
+            24.706368055555554,
+            24.649745555555555,
+            25.34951790527778
+          ],
+          "decision": "comparison_deferred_insufficient_samples_and_confounded_strata",
+          "weight_changed": false,
+          "seven_day_interim_due": false,
+          "fourteen_day_evaluation_due": false,
+          "historical_72h_and_168h_excluded": true,
+          "zero_and_missing_distinguished": true,
+          "reader_reply_attribution_unavailable": true,
+          "confounders": [
+            "A pregnancy voucher TEXT/P5, Gimpo local currency IMAGE/P1, medical service IMAGE/P6; B Incheon cashback IMAGE/P8, single-parent cash TEXT/P5, automobile acquisition tax TEXT/P8. Different audience/geography/benefit/time/length/media; no matched pair.",
+            "New B IMAGE/P4 maternity-related employment-insurance wage benefit has different reader group and length; no matched A comparison.",
+            "New A TEXT post has distinct reader/benefit; no matched B pair. Four per group below initial8/group target.",
+            "New B IMAGE/P5 has different audience/benefit and no matched A pair. A4/B5 below8 per group.",
+            "New A TEXT/P6 Incheon low-income postpartum points differs in locality, audience, benefit, length, time and media; no matched B pair. A5/B5 below8 per group.",
+            "New A IMAGE/P1 nationwide job-seeking travel-cost post differs in audience, benefit and conditions from available B posts; no matched pair. A6/B5 remain below8 per group. All 24h observations were delayed; actual elapsed times retained.",
+            "New B TEXT/P5 self-sufficiency employment post has different audience/benefit from available A posts; no matched pair. A6/B6 below8/group. Delayed observation shown as actual elapsed, not exact24h.",
+            "New A IMAGE/P8 education voucher concerns low-income school-age households, with distinct audience, benefit, length, time and media; no matched B pair. A7/B6 remain below8/group; delayed25.375h observation retained without24h backcalculation.",
+            "New B TEXT/P6 Gunsan citizen-safety insurance post differs in geography, audience and benefit from A posts; no matched pair. A7/B7 remain below8/group. Delayed24.706h observation retained without backcalculation; no weight change.",
+            "New B TEXT/P5 gas-fee reduction post targets eligible benefit households, with different benefit/audience/media/time from available A. No matched comparison pair. A7/B8: A below8/group. Delayed24.650h official snapshot retained without24h backcalculation; no weight change.",
+            "New B IMAGE/P8 farmer savings post has a distinct audience/benefit and no matched A pair; delayed25.350h retained. A7/B9 insufficient and confounded; no weight change."
+          ],
+          "reactions": {
+            "A": {
+              "likes": 12,
+              "reposts": 5,
+              "shares": 0,
+              "aggregate_replies": 0
+            },
+            "B": {
+              "likes": 14,
+              "reposts": 5,
+              "shares": 0,
+              "aggregate_replies": 0
+            }
+          },
+          "reaction_rate_used": false
+        },
+        "duplicate_observations": [],
+        "due_milestones": 0,
+        "classification": "normal_no_due_milestones",
+        "original_measurements_unchanged": true,
+        "new_snapshot_runs_checked": 1,
+        "cached_artifact_digest_reverified": false
+      },
+      "recovery": {
+        "required": false,
+        "workflow_dispatch": false,
+        "new_failures": 0,
+        "new_partials": 0,
+        "post_retry_budget_used": 0,
+        "code_change_required": false
+      },
+      "initial_41796747628_status": "resolved",
+      "next_condition": "Nov16 20h natural IMAGE single-body publication verified at20:54KST.48 complete records,today3 posts,no pending/lease. Preserve all45 prior queue entries and49 selection notes;new443char WII000001060 Nov17 20h/P5/A/IMAGE entry saved andreadback. Nextday08TEXT/P1/B,12IMAGE/P2/A,16TEXT/P8/B,20IMAGE/P5/A validate. Actual sender must recheck newest complete source,official status,evidence24h/expiry andimages. Nov16 19:57 source is not fresh forNov17 20h. No new official metrics/due0;keep16 24h A7/B9,comparison/weights deferred. Previously expired16h remains unfilled;subsequent20h regular publication succeeded without rerun/backfill/code guard change.",
+      "local_validation": {
+        "actual_read_path_validation": "PASS",
+        "ci_from_authenticated_current_head_logs": {
+          "publisher_tests": 130,
+          "source_tests": 203
+        },
+        "all_current_main_inputs_match_fresh_remote_blobs": true,
+        "validation_queue_blob_matches_current_remote": true,
+        "current_image_sha256_verified": true,
+        "source_and_receipt_cached_zip_digest_reverified": true,
+        "no_production_code_change": true,
+        "late_slot_rejected_before_any_external_call": "PASS"
+      }
     }
   }
 }
