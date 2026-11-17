@@ -10,6 +10,23 @@ HOUSEHOLDS = {'JA0401': '다문화가족', 'JA0402': '북한이탈주민',
               'JA0411': '다자녀가구', 'JA0412': '무주택세대',
               'JA0413': '신규전입', 'JA0414': '확대가족'}
 
+SUMMARY_PLACEHOLDERS = {'', '-', '상동', '위와동일', '상기와동일', '없음', '해당없음'}
+
+
+def summary_view(row, withheld=False):
+    """Use an attributed source excerpt for an unusable summary; never rewrite data."""
+    if withheld:
+        return {'text': '', 'label': ''}
+    summary = re.sub(r'\s+', ' ', str(row.get('summary') or '')).strip()
+    if re.sub(r'\s+', '', summary) not in SUMMARY_PLACEHOLDERS:
+        return {'text': summary, 'label': ''}
+    for field in ('targetPreview', 'target'):
+        target = re.sub(r'\s+', ' ', str(row.get(field) or '')).strip()
+        if re.sub(r'\s+', '', target) not in SUMMARY_PLACEHOLDERS:
+            return {'text': target[:180] + ('…' if len(target) > 180 else ''),
+                    'label': '지원대상 원문 일부'}
+    return {'text': '', 'label': ''}
+
 
 def conditions(row):
     """Expose API flags, never infer eligibility from names or narrative text."""
@@ -39,6 +56,8 @@ def audit(rows):
             reasons.append('source_modified_date_missing')
         if len(str(row.get('summary') or '').strip()) < 20:
             reasons.append('short_summary_review')
+        if re.sub(r'\s+', '', str(row.get('summary') or '')) in SUMMARY_PLACEHOLDERS:
+            reasons.append('placeholder_summary_review')
         if not re.search(r'중복|동시|타\s*사업|다른\s*사업', row.get('selection', '') + row.get('target', '') + row.get('support', '')):
             reasons.append('duplicate_receipt_rule_not_structured')
         groups[(row.get('title', '').strip(), row.get('organization', '').strip())].append(sid)

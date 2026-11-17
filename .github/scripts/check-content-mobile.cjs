@@ -28,7 +28,7 @@ const { chromium } = require('playwright');
   const browser = await chromium.launch({headless:true});
   const results = [];
   try {
-    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['', 'benefits/149200000026/', 'privacy.html', 'guides/application-checklist.html', 'guides/compare-benefits.html', 'guides/energy-voucher-2026.html', 'guides/emergency-vs-livelihood-2026.html', 'guides/child-allowance-2026.html', 'guides/housing-benefit-2026.html', 'benefits/135200000120/', 'guides/earned-income-credit-late-2026.html', 'guides/women-farmer-voucher-records-2026.html', 'guides/youth-savings-contribution-2026.html', 'benefits/646000000145/'];
+    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['', 'benefits/149200000026/', 'privacy.html', 'guides/application-checklist.html', 'guides/compare-benefits.html', 'guides/energy-voucher-2026.html', 'guides/emergency-vs-livelihood-2026.html', 'guides/child-allowance-2026.html', 'guides/housing-benefit-2026.html', 'benefits/135200000120/', 'guides/earned-income-credit-late-2026.html', 'guides/women-farmer-voucher-records-2026.html', 'guides/youth-savings-contribution-2026.html', 'benefits/646000000145/', 'benefits/135200005013/', 'benefits/SD0000015525/', 'guides/first-meeting-vs-parent-benefit-2026.html', 'benefits/305000000113/'];
     await fs.mkdir('mobile-evidence', {recursive:true});
     for (const width of [320,390,1440]) {
       const context = await browser.newContext({viewport:{width,height:900},serviceWorkers:'block'});
@@ -77,6 +77,12 @@ const { chromium } = require('playwright');
           await page.getByText('조건에 맞는 정보가 없어요',{exact:true}).waitFor();
           await page.locator('#resetFilters').click();
           assert.equal(await page.locator('.benefit-card').count(),30);
+          for(const [query,id] of [['청년내일저축계좌','135200005013'],['교육복지 우선 지원','SD0000015525']]){
+            await page.locator('#query').fill(query);
+            const card=page.locator('.benefit-card').filter({has:page.locator('[data-detail="'+id+'"]')});
+            await card.getByText('지원대상 원문 일부:',{exact:false}).waitFor();
+            assert(!['상동','-'].includes((await card.locator('.card-summary').innerText()).trim()));
+          }
           await page.locator('#query').fill('아동수당');
           const heldCard=page.locator('.benefit-card').filter({has:page.locator('[data-detail="135200000120"]')});
           await heldCard.getByText('내용 확인 필요',{exact:true}).waitFor();
@@ -119,6 +125,19 @@ const { chromium } = require('playwright');
         if (entry === 'guides/youth-savings-contribution-2026.html') {
           assert(await page.getByText('1,800만원',{exact:true}).count()>0);
           assert.equal(await page.locator('a[href="../benefits/135200005013/"]').count(),1);
+        }
+        if(['benefits/135200005013/','benefits/SD0000015525/'].includes(entry)){
+          assert((await page.locator('.benefit-summary').innerText()).startsWith('지원대상 원문 일부:'));
+        }
+        if(entry==='benefits/305000000113/'){
+          assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'),'noindex,follow');
+          assert.equal(await page.locator('a[href="https://www.ddm.go.kr/www/contents.do?key=756"]').count(),1);
+          assert.equal(await page.locator('a[href="../../guides/first-meeting-vs-parent-benefit-2026.html"]').count(),1);
+          assert(!(await page.locator('main').innerText()).includes('출생아1인당 1회 200만원의 이용권 지원'));
+        }
+        if(entry==='guides/first-meeting-vs-parent-benefit-2026.html'){
+          assert.equal(await page.locator('a[href^="../benefits/"]').count(),4);
+          assert(await page.getByText('100만원 − 58만4천원 = 현금 차액 41만6천원',{exact:true}).count()>0);
         }
         const dimensions = await page.evaluate(() => ({width:innerWidth, content:document.documentElement.scrollWidth}));
         assert(dimensions.content <= dimensions.width + 1, JSON.stringify({entry,...dimensions}));

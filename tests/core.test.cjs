@@ -24,3 +24,15 @@ test('feed rejects duplicates, missing data and unsafe links',()=>{for(const p o
 test('keyword category region type and saved filters intersect',()=>{const p=feed.items[0],records={...C.blank(),saved:[p.id]},base={query:'에너지 바우처',category:'생활안정',region:'강원',supportType:'이용권',tab:'saved'};assert.equal(C.filter(feed.items,base,records).length,1);assert.equal(C.filter(feed.items,{...base,supportType:'현금'},records).length,0);assert.equal(C.filter(feed.items,{...base,query:'없는혜택'},records).length,0);});
 test('matching reasons reflect interests, never income or eligibility',()=>{assert.deepEqual(C.matchReasons(feed.items[0],{region:'강원',category:'생활안정'}),['전국 대상 안내 · 지역별 조건 확인','생활안정 관심 분야']);assert.equal(C.matchReasons(feed.items[0],{region:'강원',category:'소상공인'}),null);});
 test('all app scripts parse and no legacy key or external scripts are used',()=>{for(const file of ['app.js','core.js','data.js']){const code=fs.readFileSync(require.resolve('../'+file),'utf8');new vm.Script(code);assert(!/(?:getItem|setItem)\(['"](?:saved|prefs|apps|spec)['"]/.test(code));assert(!code.includes('localStorage.clear'));}const html=fs.readFileSync(require.resolve('../index.html'),'utf8');assert(!/<script[^>]+src=["']https?:/.test(html));});
+
+test('placeholder summaries show attributed target excerpts without changing raw records or held facts',()=>{
+ for(const summary of ['상동 ','-','해당 없음','']){
+  const p={summary,targetPreview:'교육취약계층 학생 지원',documents:'해당없음'},before=JSON.stringify(p);
+  assert.deepEqual(C.summaryView(p),{text:p.targetPreview,label:'지원대상 원문 일부'});
+  assert.equal(JSON.stringify(p),before);
+  assert.deepEqual(C.summaryView({...p,reviewRequired:true}),{text:'',label:''});
+ }
+ assert.deepEqual(C.summaryView({summary:'의미 있는 공식 요약',targetPreview:'대상'}),{text:'의미 있는 공식 요약',label:''});
+ assert.deepEqual(C.summaryView({summary:'-',targetPreview:'상동'}),{text:'',label:''});
+ assert.equal(C.summaryView({summary:'-',targetPreview:'x'.repeat(200)}).text,'x'.repeat(180)+'…');
+});
