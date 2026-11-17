@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-16T21:19:19.602482+09:00",
+  "prepared_at": "2026-11-18T08:42:35.990191+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -7297,6 +7297,154 @@
           "opening": "법률문제로 상담이 필요한 국민이라면, 국내 거주 외국인을 포함해 대한법률구조공단의 무료 법률상담을 이용할 수 있어요. 현금을 받는 지원이 아니라 법률문제의 해결 방향을 상담하는 서비스예요.",
           "structure": "대상·무료법률상담서비스유형→전화시간·통화료→복잡한사안방문예약·대기→상담제한·의견참고→CTA",
           "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-19T08:00:00+09:00",
+      "benefit_id": "VOU000000020",
+      "source_fingerprint": "0ff1444f5c9c2026fa586d283c7c97fc4e99a6309edc0b5f9ff2730b8311e07c",
+      "source_generation": "gov24-44187754977-1",
+      "prepared_at": "2026-11-18T08:42:35.990191+09:00",
+      "expires_at": "2026-11-19T08:42:35.990191+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "VOU000000020",
+        "post_text": "만 6세 이상 65세 미만 등록 장애인 중 혼자 일상생활이 어려운 분은 장애인 활동지원을 신청할 수 있어요. 식사·이동·가사 등을 돕는 서비스를 바우처로 이용하는 제도예요.\n\n소득과 관계없이 신청할 수 있지만, 종합조사와 심의를 거쳐 수급자격과 활동지원등급이 정해져요. 매월 이용 한도는 등급에 따라 다르고 현금을 받는 지원은 아니에요.\n\n본인부담금은 소득에 따라 달라지며, 생계·의료급여 수급자는 면제돼요. 시설 입소나 다른 법령의 유사 급여 이용 등은 제한이 있어요. 65세 이후 기존 수급자 등 예외는 별도 기준을 확인해야 해요.\n\n상시 신청은 주소지 읍·면·동 주민센터나 복지로에서 할 수 있어요. 신청만으로 서비스 이용이 확정되지는 않아요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-19T08:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "일상생활·이동 지원이 필요한 등록 장애인과 가족",
+          "central_message": "누가 활동지원 서비스를 신청하고 어떤 비용·선정 조건을 확인하나요?",
+          "pattern": "P5",
+          "selection_reason": "최신동일ID누적조회수57617순위. 앞선4미전송READY사업을제외한최상위미검수후보를공식검증. 최근20게시및기존미전송4원고와대조.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "VOU000000020",
+              "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710040800",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-18T08:42:35.990191+09:00",
+              "claims_supported": [
+                "공식 제도개요 실제본문855~891행: 6세이상65세미만 등록장애인, 소득무관신청, 장기요양·시설제한과예외, 주민센터/복지로, 종합조사·심의·등급, 바우처·신체/가사/이동 서비스 확인."
+              ]
+            },
+            {
+              "source_id": "VOU000000020",
+              "source_ref": "https://www.ableservice.or.kr/regm/info/getOHGC0005M0.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-18T08:42:35.990191+09:00",
+              "claims_supported": [
+                "공식 신청안내214~279행: 신청자격·시설/입원/중복급여등 제외, 기존수급자65세예외, 언제든지신청가능(상시),신청서류와추가서류확인."
+              ]
+            },
+            {
+              "source_id": "VOU000000020",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=719747&bnefType=all&svcId=VOU000000020",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-18T08:42:35.990191+09:00",
+              "claims_supported": [
+                "동일ID serviceList.조회수=57617 누적,상시신청,소득무관신청·등급바우처·본인부담 대조. API checkedAt=2026-11-18T07:17:31.220641+09:00, collectionSucceededAt=2026-11-18T07:19:29.776730+09:00; source_only는 현재 접수증거로대체하지않음."
+              ]
+            },
+            {
+              "source_id": "VOU000000020",
+              "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710040700",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-18T08:42:35.990191+09:00",
+              "claims_supported": [
+                "지원서비스 소득별 본인부담·생계/의료급여 수급자 면제 확인."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 381,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "현재08시원고는미예약·허용창내이며전송성공확인전. 기존4슬롯이성공순서로소비될때내일08시TEXT예상. 앞회차실패/건너뜀확정시미예약미래교대재계산필수.",
+            "현재07:19수집본은내일08시신선도24시간초과. 발송시최신완전자료·공식상태·근거24시간·expiry 재검증필수. 유효기간은내일08시2시간허용창전체를덮지않음.",
+            "개인별수급판정·본인부담액·활동지원사배정·서비스개시시점은보장하지않음."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "누가 활동지원 서비스를 신청하고 어떤 비용·선정 조건을 확인하나요?",
+            "reader_scope": "일상생활·이동 지원이 필요한 등록 장애인과 가족",
+            "angles": [
+              "일상생활 도움",
+              "신청자격과비용",
+              "신청준비와등급결정"
+            ],
+            "chosen_angle": "대상·생활도움→종합조사선정→본인부담·예외→상시신청경로",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "식사나 외출에 도움이 필요한 등록 장애인이라면, 장애인 활동지원으로 일상생활 지원 서비스를 확인해요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "만 6세 이상 65세 미만 등록 장애인 중 혼자 일상생활이 어려운 분은 장애인 활동지원을 신청할 수 있어요. 식사·이동·가사 등을 돕는 서비스를 바우처로 이용하는 제도예요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "장애인 활동지원은 소득과 관계없이 신청하지만, 종합조사와 심의로 수급자격이 결정돼요."
+              }
+            ],
+            "chosen_opening": "만 6세 이상 65세 미만 등록 장애인 중 혼자 일상생활이 어려운 분은 장애인 활동지원을 신청할 수 있어요. 식사·이동·가사 등을 돕는 서비스를 바우처로 이용하는 제도예요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "첫적용11월10일로부터9일뒤11월19일08시는B반전. 실제최근20건과전일P6임대준비/P8스포츠목록/P5의료자격/P4법률유형대조; 주제·핵심질문구별. 11월19일첫원고이며이후3회차별도패턴필요.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국",
+              "audience": "일상생활·이동 지원이 필요한 등록 장애인과 가족",
+              "benefit": "활동지원서비스바우처",
+              "application": "상시·조사심의",
+              "media": "TEXT"
+            },
+            "comparison_group": "기존7일중간평가유지. 군별24시간A9/B11중앙값102/89,유사사업매칭0·독자/시간/미디어교란으로비중변경없음.14일미도래.",
+            "applied_elements": [
+              "대상과실익첫단락",
+              "본인부담·선정제한",
+              "1~2문장단락",
+              "자연스러운해요체"
+            ],
+            "profile_route": "프로필링크·사이트사업검색/상세·접수거래독립확인불가. 기능·신청완료보장안함.",
+            "source_recheck_required_at_publish": true,
+            "master_full_and_supplemental_full_used": true,
+            "writing_input_sha256": "2afa27dea157d5d6251bfb0f07325ae120a1d40cfa6ea5992bf863d03d483bf7"
+          }
+        },
+        "next_history_record": {
+          "program_id": "VOU000000020",
+          "notice_version": "2026-11-18 공식현행안내열람·gov24-44187754977-1",
+          "pattern": "P5",
+          "opening": "만 6세 이상 65세 미만 등록 장애인 중 혼자 일상생활이 어려운 분은 장애인 활동지원을 신청할 수 있어요. 식사·이동·가사 등을 돕는 서비스를 바우처로 이용하는 제도예요.",
+          "structure": "대상·서비스실익→종합조사·바우처→본인부담·예외→상시신청",
+          "media_turn": "TEXT"
         }
       }
     }
