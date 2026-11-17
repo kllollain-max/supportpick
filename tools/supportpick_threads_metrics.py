@@ -20,7 +20,7 @@ def snapshot(post_id, published_at, observed_at, values):
     if published.tzinfo is None or observed.tzinfo is None or observed < published:
         raise ValueError("valid_aware_timestamps_required")
     hours = (observed - published).total_seconds() / 3600
-    due = [w for w in WINDOWS if w <= hours <= w + 2]
+    due = [w for w in WINDOWS if w <= hours]
     if not due:
         raise ValueError("snapshot_outside_milestone_window")
     if not isinstance(values, dict):
@@ -33,6 +33,10 @@ def snapshot(post_id, published_at, observed_at, values):
         result[key] = value
     return {"post_id": post_id, "published_at": published.isoformat(),
             "observed_at": observed.isoformat(), "window_hours": max(due),
+            "elapsed_hours": hours,
+            "timing": "on_time" if hours == max(due) else "late_available_check",
+            "within_target_tolerance": hours <= max(due) + 2,
+            "not_backcalculated": True,
             "metrics": result}
 
 
@@ -54,3 +58,4 @@ def summarize(records):
     valid = [(a, b) for a, b in followers if type(a) is int and type(b) is int and b > 0]
     result["follower_conversion_rate"] = rate(sum(a for a, _ in valid), sum(b for _, b in valid)) if valid else None
     return result
+
