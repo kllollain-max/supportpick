@@ -551,6 +551,20 @@
       "sources": [
         "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005107&bnefType=all&svcId=476000000135"
       ]
+    },
+    {
+      "benefit_id": "149200005016",
+      "decision": "HOLD",
+      "reason": "동일ID 원문 누적조회수332458. 새 세대의 20260101~20261231 표기는 직접 연 고용24 제도안내에서 2026년 청년 채용기간으로 확인되어 신규 사업참여 접수기간으로 단정하지 않는다. 2026-10-22 고용부 지급방법 개정 공지도 직접 확인했다. 고용24는 예산 사정상 요건 충족에도 지원되지 않을 수 있다고 명시하며, 지정 운영기관 선택 URL을 열었으나 개인 메인으로 돌아와 현재 사업장 관할 운영기관의 접수·가용 예산을 확인하지 못했다. 제도 전체 종료나 예산 소진으로 단정하지 않고 현재 신규접수 안내에서 HOLD한다.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=809404&bnefType=all&svcId=149200005016",
+        "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?currentPageNo=1&recordCountPerPage=9&systClId=SC00000117&systId=SI00000318",
+        "https://moel.go.kr/news/notice/noticeView.do?bbs_seq=20261000802",
+        "https://www.work24.go.kr/wk/k/a/1430/operOrgList.do"
+      ],
+      "verified_at": "2026-11-17T20:40:53.882574+09:00",
+      "access_method": "OPENED_OFFICIAL",
+      "application_transaction_verified": false
     }
   ],
   "entries": [
