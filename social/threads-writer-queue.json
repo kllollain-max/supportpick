@@ -565,6 +565,55 @@
       "verified_at": "2026-11-17T20:40:53.882574+09:00",
       "access_method": "OPENED_OFFICIAL",
       "application_transaction_verified": false
+    },
+    {
+      "benefit_id": "641000000192",
+      "views": 61602,
+      "decision": "SKIP",
+      "reason": "경기도미래세대재단 현재 공지목록에서 2026-10-14 신규모집 미운영 안내를 직접 열람했고 사업안내는 15기 시기·진행여부 논의중/추후별도공지로 명시한다. 3월 선발계획이나 API 공고시별도안내만으로 현재 신규모집이라고 쓰지 않는다.",
+      "sources": [
+        "https://account.gfgf.kr/hpdsk/ntc/list.do?searchCntntsSeCd=01",
+        "https://account.gfgf.kr/main/businessGuide.do"
+      ],
+      "verified_at": "2026-11-17T20:52:37.498752+09:00",
+      "access_method": "OPENED_OFFICIAL"
+    },
+    {
+      "benefit_id": "B55211100001",
+      "views": 61211,
+      "decision": "SKIP",
+      "reason": "한국과학창의재단 2026년 공고 본문을 직접 열람. 온라인포인트 신청2026-5-6~6-2 17시, 사용7-13~10-12 17시로 모두 지났다. API1인5만원과 올해공고10만원도 달라 현재 신규 신청 원고로 쓰지 않는다. 찾아가는바우처는 다른운영형태로 합치지 않는다.",
+      "sources": [
+        "https://www.kosac.re.kr/menus/270/boards/386/posts/61259?page=1"
+      ],
+      "verified_at": "2026-11-17T20:52:37.498752+09:00",
+      "access_method": "OPENED_OFFICIAL"
+    },
+    {
+      "benefit_id": "142000000014",
+      "views": 59739,
+      "decision": "HOLD",
+      "reason": "확인한 서울청 장안솔렌시아 기관추천 접수는11-2~11-5 18시로 마감. 현재서울청목록의모집표지만으로접수중이라고하지않는다. 대구경북트리븐가흥 본문에는11-26~10-29라는날짜오기가있어임의보정하지않는다. 새지역·새단지의현재신청공고와가격/청약조건을확정못해현재신규접수안내보류. 제도전국종료라는뜻아님.",
+      "sources": [
+        "https://www.mss.go.kr/site/seoul/ex/bbs/View.do?bcIdx=1072209&cbIdx=359",
+        "https://mss.go.kr/site/seoul/ex/bbs/List.do?cbIdx=359",
+        "https://www.mss.go.kr/site/daegu/ex/bbs/View.do?bcIdx=1071965&cbIdx=253"
+      ],
+      "verified_at": "2026-11-17T20:52:37.498752+09:00",
+      "access_method": "OPENED_OFFICIAL"
+    },
+    {
+      "benefit_id": "B01000300002",
+      "views": 58773,
+      "decision": "HOLD",
+      "reason": "동일ID 최신보조금24 상세는 개인회생 변제계획12개월이상, 직접 연 캠코 서민금융지원 상세는2년이상으로 중요자격이 충돌한다. 어느쪽이 최신적용기준인지 확인못함. 국민행복기금 메인은 열었지만 현재세부대출약관·접수기준은확인못해 유리한조건을골라쓰지않고 보류.",
+      "sources": [
+        "https://www.kamco.or.kr/portal/contents.do?mId=0204000000",
+        "https://www.happyfund.or.kr/service/FrontController?command=MainInfo",
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000537&bnefType=all&svcId=B01000300002"
+      ],
+      "verified_at": "2026-11-17T20:52:37.498752+09:00",
+      "access_method": "OPENED_OFFICIAL"
     }
   ],
   "entries": [
@@ -7074,6 +7123,163 @@
           "opening": "갑작스러운 입원·수술비가 막막한 1인가구라면, 긴급복지 의료지원으로 의료비 최대 300만원 범위의 도움을 받을 수 있어요. 원칙은 1회 지원이며 의료기관에 비용을 지급해요.",
           "structure": "1인가구입원·수술비부담·최대범위→소득/금융/재산체크→질병과비용제외·보험금→퇴원전상담·심사→CTA",
           "media_turn": "TEXT"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-18T20:00:00+09:00",
+      "benefit_id": "B27000100005",
+      "source_fingerprint": "2ecb85ffe660d9cb68e2e4d9f10203a4b53c1b46de059ce2fdcc192ca23bf7ba",
+      "source_generation": "gov24-44064687406-1",
+      "prepared_at": "2026-11-17T20:52:53.257775+09:00",
+      "expires_at": "2026-11-18T20:52:53.257775+09:00",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "B27000100005",
+        "post_text": "법률문제로 상담이 필요한 국민이라면, 국내 거주 외국인을 포함해 대한법률구조공단의 무료 법률상담을 이용할 수 있어요. 현금을 받는 지원이 아니라 법률문제의 해결 방향을 상담하는 서비스예요.\n\n간단한 내용은 국번 없이 132로 문의해요. 상담원 연결은 평일 오전 9시~11시50분, 오후 1시~5시50분이며 통화료는 본인 부담이에요.\n\n계약서 등 자료를 보여줘야 하는 복잡한 사안은 가까운 공단 사무실 방문상담을 확인해요. 홈페이지나 132로 예약할 수 있지만, 기관별 예약이 일찍 마감되거나 상담이 지연될 수 있어요.\n\n법원 판결에 대한 탄원성 질의나 단체 내부 분쟁 등은 상담이 제한될 수 있어요. 상담 의견은 분쟁 해결의 참고자료이며, 소송대리나 원하는 결과가 확정되는 것은 아니에요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-18T20:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "법률문제로상담방향이필요한국민·국내거주외국인",
+          "central_message": "무료 법률상담은 어떤 도움이며 전화와 방문상담 중 어떻게 이용하고 어떤 제한을 확인하나요?",
+          "pattern": "P4",
+          "selection_reason": "실제52게시+다른3미예약슬롯중복제외. 동일ID보조금24원본조회수57693우선,상위54HOLD/SKIP구체이유·출처보존.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "B27000100005",
+              "source_ref": "https://www.klac.or.kr/legalstruct/telephoneConsultation.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-17T20:52:53.257775+09:00",
+              "claims_supported": [
+                "공식 전화상담 실제본문354~385행 열람. 132,발신자통화료부담,평일09:00~11:50/13:00~17:50,간단한내용만전화·복잡한사안방문,지연가능성·의견참고·상담제한대조."
+              ]
+            },
+            {
+              "source_id": "B27000100005",
+              "source_ref": "https://www.klac.or.kr/legalstruct/consultationGuidance.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-17T20:52:53.257775+09:00",
+              "claims_supported": [
+                "공식 상담유형 안내355~424행 실제열람. 무료상담제도와전화/방문유형구분,한정인원지연·상담의견참고 및제한,소송구조와상담별도메뉴대조."
+              ]
+            },
+            {
+              "source_id": "B27000100005",
+              "source_ref": "https://www.klac.or.kr/legalstruct/visitingConsultation.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-17T20:52:53.257775+09:00",
+              "claims_supported": [
+                "공식 방문상담 안내357~407행 실제열람. 전국가까운공단사무실·일반상담과소송대리구별,홈페이지/132예약·기관별조기마감·지연·제한을대조. 예약거래·통화는수행하지않음."
+              ]
+            },
+            {
+              "source_id": "B27000100005",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000940&bnefType=all&svcId=B27000100005",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-17T20:52:53.257775+09:00",
+              "claims_supported": [
+                "완전검증gov24-44064687406-1 동일ID serviceList.조회수57693 누적지표,serviceDetail국민(국내거주외국인포함)·무료법률상담·기타상담서비스·상시신청을대조. APIcheckedAt=2026-11-17T19:46:28.093481+09:00,수집완료=2026-11-17T19:48:29.759538+09:00. source_only를현재접수검증으로바꾸지않고공단현행안내를별도실제열람."
+              ]
+            },
+            {
+              "source_id": "B27000100005",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-17T20:52:53.257775+09:00",
+              "claims_supported": [
+                "이번실행에서현재mainPNG실제다운로드·현재image-review의2026-11-06 AI_VISUAL_INSPECTION/PASS와SHA256=0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd재대조. 새직접시각검수아님. 약360px기존가독성검수참조. 사업별승인자산없어검수rotation1사용,공통혜택안내일러스트에사업별금액/대상/기간없어본문과충돌없음."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 403,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "상시제도여도게시시각20시는전화상담운영시간외이며본문에평일시간명시. 개인별예약가능시간·통화연결·소송대리·결과는보장하지않음.",
+            "현재19:48수집본은내일20시기준신선하지않음. 실제발송시최신완전자료·정정/중단·근거24시간·유효기간·이미지SHA·교대재검증필수.",
+            "유효기간준비후24시간으로내일20시2시간허용창전체를덮지않음. 만료후게시금지."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "무료 법률상담은 어떤 도움이며 전화와 방문상담 중 어떻게 이용하고 어떤 제한을 확인하나요?",
+            "reader_scope": "법률문제로상담방향이필요한국민·국내거주외국인",
+            "angles": [
+              "법률문제의막막함",
+              "무료상담서비스의성격과한계",
+              "전화/방문방법과시간"
+            ],
+            "chosen_angle": "대상·무료서비스→전화운영시간/통화료→복잡한사안방문과예약제한→상담의견한계",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "법률문제로 어디에 물어볼지 막막하다면, 국민과 국내 거주 외국인은 대한법률구조공단 무료 법률상담을 확인해요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "법률문제로 상담이 필요한 국민이라면, 국내 거주 외국인을 포함해 대한법률구조공단의 무료 법률상담을 이용할 수 있어요. 현금을 받는 지원이 아니라 법률문제의 해결 방향을 상담하는 서비스예요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "132 법률상담은 간단한 내용에 맞는 무료 상담이에요. 복잡한 법률문제는 대한법률구조공단 방문상담을 확인해요."
+              }
+            ],
+            "chosen_opening": "법률문제로 상담이 필요한 국민이라면, 국내 거주 외국인을 포함해 대한법률구조공단의 무료 법률상담을 이용할 수 있어요. 현금을 받는 지원이 아니라 법률문제의 해결 방향을 상담하는 서비스예요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "첫적용11월10일부터8일뒤11월18일20시는B. 같은날P6임대서류/P8스포츠목록/P5의료자격과다른P4혜택유형먼저설명. 최근실제20게시도입·전개와미예약3READY비교. 전화번호를과장된즉시상담보장으로쓰지않고시간/요금/예약제한명시.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국",
+              "audience": "법률문제로상담방향이필요한국민·국내거주외국인",
+              "benefit": "무료법률상담서비스",
+              "application": "상시·기관운영시간/예약한도",
+              "media": "IMAGE"
+            },
+            "comparison_group": "기존7일중간평가유지. 비교가능24시간A9/B10중앙값102/96.5,유사사업매칭0·독자/지역/혜택/시간/미디어교란으로비중변경없음. 정상게시와저조회/측정실패구분.",
+            "applied_elements": [
+              "대상과무료상담유형먼저",
+              "1~2문장단락",
+              "전화운영시간과통화료명시",
+              "방문예약과제한·결과비보장"
+            ],
+            "profile_route": "이번실행에서프로필링크·실사이트검색/상세·접수거래독립확인못함. 이동/신청완료나글별전환보장없음.",
+            "source_recheck_required_at_publish": true,
+            "master_full_and_supplemental_full_used": true,
+            "writing_input_sha256": "a24e6d188b2811c615426d35d2b8aa3b354f3dec49086b96efcd7a80e2f65ab6"
+          }
+        },
+        "next_history_record": {
+          "program_id": "B27000100005",
+          "notice_version": "대한법률구조공단현행전화/방문/상담유형안내·2026-11-17열람",
+          "pattern": "P4",
+          "opening": "법률문제로 상담이 필요한 국민이라면, 국내 거주 외국인을 포함해 대한법률구조공단의 무료 법률상담을 이용할 수 있어요. 현금을 받는 지원이 아니라 법률문제의 해결 방향을 상담하는 서비스예요.",
+          "structure": "대상·무료법률상담서비스유형→전화시간·통화료→복잡한사안방문예약·대기→상담제한·의견참고→CTA",
+          "media_turn": "IMAGE"
         }
       }
     }
