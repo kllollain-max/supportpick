@@ -15,12 +15,14 @@ jobs:
     env:
       SUPPORTPICK_THREADS_ACCESS_TOKEN: ${{ secrets.SUPPORTPICK_THREADS_ACCESS_TOKEN }}
       SUPPORTPICK_THREADS_STATE_FILE: threads-state.json
+      SUPPORTPICK_THREADS_MAINTENANCE_FILE: threads-maintenance.json
     steps:
       - uses: actions/checkout@v4
       - name: Read published state without modifying it
         run: |
           git fetch --depth=1 origin supportpick-threads-state
           git show FETCH_HEAD:social/threads-state.json > threads-state.json
+          git show FETCH_HEAD:social/threads-maintenance.json > threads-maintenance.json
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -34,3 +36,4 @@ jobs:
           path: threads-insights-snapshots.json
           if-no-files-found: warn
           retention-days: 90
+
