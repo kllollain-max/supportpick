@@ -11,6 +11,7 @@ from birth_benefit_analysis import BIRTH_ARTICLES
 from culture_pension_analysis import CULTURE_PENSION_ARTICLES, source_advisory
 from forest_transport_analysis import FOREST_TRANSPORT_ARTICLES, source_advisory as forest_source_advisory
 from winter_energy_analysis import WINTER_ARTICLES
+from housing_service_analysis import HOUSING_SERVICE_ARTICLES
 
 REVIEWED = '2026-11-17'
 ENERGY = 'https://www.energyv.or.kr/info/'
@@ -81,8 +82,11 @@ ARTICLES += BIRTH_ARTICLES
 ARTICLES += CULTURE_PENSION_ARTICLES
 ARTICLES += FOREST_TRANSPORT_ARTICLES
 ARTICLES += WINTER_ARTICLES
+ARTICLES += HOUSING_SERVICE_ARTICLES
 
 BENEFIT_ARTICLES = {
+    '999000000024': 'long-term-lease-notice-checklist-2026',
+    'SD0000016138': 'local-social-service-application-vs-use-2026',
     '424000000006': 'winter-bills-vs-home-improvement-2026',
     'B55353000001': 'energy-voucher-2026',
     '135200005003': 'emergency-vs-livelihood-2026',

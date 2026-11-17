@@ -28,7 +28,7 @@ const { chromium } = require('playwright');
   const browser = await chromium.launch({headless:true});
   const results = [];
   try {
-    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['', 'benefits/149200000026/', 'privacy.html', 'guides/application-checklist.html', 'guides/compare-benefits.html', 'guides/energy-voucher-2026.html', 'guides/emergency-vs-livelihood-2026.html', 'guides/child-allowance-2026.html', 'guides/housing-benefit-2026.html', 'benefits/135200000120/', 'guides/earned-income-credit-late-2026.html', 'guides/women-farmer-voucher-records-2026.html', 'guides/youth-savings-contribution-2026.html', 'benefits/646000000145/', 'benefits/135200005013/', 'benefits/SD0000015525/', 'guides/first-meeting-vs-parent-benefit-2026.html', 'benefits/305000000113/', 'guides/culture-card-deadlines-2026.html', 'guides/basic-pension-amounts-2026.html', 'benefits/137100000236/', 'benefits/648000001107/', 'benefits/B55151000066/', 'benefits/SSE000000170/', 'guides/forest-voucher-application-vs-use-2026.html', 'guides/gyeonggi-child-transport-cap-2026.html', 'benefits/140000000176/', 'benefits/641000000139/', 'guides/winter-bills-vs-home-improvement-2026.html', 'benefits/424000000006/', 'benefits/B55353000001/', 'benefits/135200005003/', 'benefits/WII000001410/'];
+    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['', 'benefits/149200000026/', 'privacy.html', 'guides/application-checklist.html', 'guides/compare-benefits.html', 'guides/energy-voucher-2026.html', 'guides/emergency-vs-livelihood-2026.html', 'guides/child-allowance-2026.html', 'guides/housing-benefit-2026.html', 'benefits/135200000120/', 'guides/earned-income-credit-late-2026.html', 'guides/women-farmer-voucher-records-2026.html', 'guides/youth-savings-contribution-2026.html', 'benefits/646000000145/', 'benefits/135200005013/', 'benefits/SD0000015525/', 'guides/first-meeting-vs-parent-benefit-2026.html', 'benefits/305000000113/', 'guides/culture-card-deadlines-2026.html', 'guides/basic-pension-amounts-2026.html', 'benefits/137100000236/', 'benefits/648000001107/', 'benefits/B55151000066/', 'benefits/SSE000000170/', 'guides/forest-voucher-application-vs-use-2026.html', 'guides/gyeonggi-child-transport-cap-2026.html', 'benefits/140000000176/', 'benefits/641000000139/', 'guides/winter-bills-vs-home-improvement-2026.html', 'benefits/424000000006/', 'benefits/B55353000001/', 'benefits/135200005003/', 'benefits/WII000001410/', 'guides/long-term-lease-notice-checklist-2026.html', 'guides/local-social-service-application-vs-use-2026.html', 'benefits/999000000024/', 'benefits/SD0000016138/', 'benefits/WII000000310/', 'benefits/132000000006/'];
     await fs.mkdir('mobile-evidence', {recursive:true});
     for (const width of [320,390,1440]) {
       const context = await browser.newContext({viewport:{width,height:900},serviceWorkers:'block'});
@@ -197,6 +197,24 @@ const { chromium } = require('playwright');
         }
         if(entry==='benefits/WII000001410/'){
           assert(await page.getByText('통장에 찍힌 월급을 기준액에서 바로 빼도 되나요?',{exact:true}).count()>0);
+        }
+        if(entry==='guides/long-term-lease-notice-checklist-2026.html'){
+          assert.equal(await page.locator('a[href="../benefits/999000000024/"]').count(),1);
+          assert(await page.getByText('서울시민·면적별 기준',{exact:false}).count()>0);
+        }
+        if(entry==='guides/local-social-service-application-vs-use-2026.html'){
+          assert.equal(await page.locator('a[href="../benefits/SD0000016138/"]').count(),1);
+          assert(await page.getByText('이용기관 선택·계약',{exact:true}).count()>0);
+        }
+        const revisedQuestions={
+          'benefits/999000000024/':'최장 20년이면 처음 계약할 때 20년 거주가 확정되나요?',
+          'benefits/SD0000016138/':'신청 전에 진단서와 건강보험 관련 서류를 모두 발급해야 하나요?',
+          'benefits/WII000000310/':'상담 뒤 추가 확인이나 기관 연계도 받을 수 있나요?',
+          'benefits/132000000006/':'건강검진을 어제 받았으면 오늘 바로 자료를 불러올 수 있나요?'};
+        if(revisedQuestions[entry]){
+          const question=page.getByText(revisedQuestions[entry],{exact:true});
+          await question.click();
+          assert(await page.locator('details[open]').count()>0);
         }
         const dimensions = await page.evaluate(() => ({width:innerWidth, content:document.documentElement.scrollWidth}));
         assert(dimensions.content <= dimensions.width + 1, JSON.stringify({entry,...dimensions}));
