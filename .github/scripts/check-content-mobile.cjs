@@ -111,6 +111,10 @@ const { chromium } = require('playwright');
           assert.equal(await page.locator('a[href="../benefits/646000000145/"]').count(),1);
           assert.equal(await page.locator('a[href="../benefits/629000000182/"]').count(),1);
           assert(await page.getByText('현행 자격 확정표 아님',{exact:false}).count()>0);
+          const sourceLinks=await page.locator('a[href^="../benefits/"]').allTextContents();
+          assert.equal(new Set(sourceLinks).size,2);
+          assert(sourceLinks.some(text=>text.includes('전남도청 농업정책과')));
+          assert(sourceLinks.some(text=>text.includes('동구청')));
         }
         if (entry === 'guides/youth-savings-contribution-2026.html') {
           assert(await page.getByText('1,800만원',{exact:true}).count()>0);
