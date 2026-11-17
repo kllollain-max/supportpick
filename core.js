@@ -53,8 +53,7 @@
     const d=new Date(value+'T00:00:00Z');return Number.isFinite(+d)&&d.toISOString().slice(0,10)===value;
   }
   function scheduleInfo(item,now=new Date()){
-    if(item.reviewRequired===true||!(now instanceof Date)||!Number.isFinite(+now))return null;
-    const s=item.verifiedSchedule;if(!plain(s))return null;
+    const s=item.verifiedSchedule;if(!plain(s)||item.reviewRequired===true||!(now instanceof Date)||!Number.isFinite(+now))return null;
     if(['scope','followupLabel'].some(k=>typeof s[k]!=='string'||!s[k].trim()||s[k].length>100))return null;
     try{const u=new URL(s.sourceUrl);if(u.protocol!=='https:'||u.hostname!=='www.kosaf.go.kr'||u.username||u.password||u.port)return null;}catch(e){return null;}
     const keys=['applicationStart','applicationEnd','followupEnd','reviewedAt','validUntil'];
@@ -87,10 +86,9 @@
     return reasons;
   }
   const indexes=new WeakMap();
-  function periodState(p,now=new Date()){
+  function periodState(p,now=new Date(),today=typeof now==='string'?now:day(now)){
     if(p.reviewRequired===true)return 'unknown';
     const schedule=scheduleInfo(p,now);if(schedule)return schedule.state;
-    const today=typeof now==='string'?now:day(now);
     if(validDate(p.endDate)&&p.endDate<today)return 'ended';
     if(validDate(p.startDate)&&p.startDate>today)return 'upcoming';
     if(p.periodKind==='fixed'&&validDate(p.endDate))return 'dated';
@@ -101,11 +99,11 @@
     if(!index){index={text:new Map(items.map(p=>[p,[p.title,p.organization,p.summary,p.target||p.targetPreview,p.category,p.region,...(p.audience||[])].join(' ').toLocaleLowerCase()])),sorts:{}};indexes.set(items,index);}
     const sort=['title','deadline'].includes(view.sort)?view.sort:'updated';
     if(!index.sorts[sort])index.sorts[sort]=[...items].sort((a,b)=>sort==='title'?a.title.localeCompare(b.title,'ko'):sort==='deadline'?(validDate(a.endDate)?a.endDate:'9999').localeCompare(validDate(b.endDate)?b.endDate:'9999'):modified(b).localeCompare(modified(a)));
-    const query=String(view.query||'').trim().toLocaleLowerCase().split(/\s+/).filter(Boolean),today=new Date();
+    const query=String(view.query||'').trim().toLocaleLowerCase().split(/\s+/).filter(Boolean),current=new Date(),today=day(current);
     const saved=new Set(records.saved),age=String(view.age??'').trim(),unknown=view.includeUnknown!==false;
     return index.sorts[sort].filter(p=>{
       const ageKnown=p.reviewRequired!==true&&Number.isInteger(p.ageMin)&&Number.isInteger(p.ageMax),households=p.reviewRequired===true?[]:p.households||[];
-      return !p.isSample&&query.every(q=>index.text.get(p).includes(q))&&(!view.category||p.category===view.category)&&(!view.region||['전국','확인 필요',view.region].includes(p.region))&&(!view.audience||(p.audience||[]).includes(view.audience))&&(!view.supportType||(p.supportTypes||[p.supportType]).includes(view.supportType))&&(!view.periodState||periodState(p,today)===view.periodState)&&(!age||(ageKnown?+age>=p.ageMin&&+age<=p.ageMax:unknown))&&(!view.household||(households.length?households.includes(view.household):unknown))&&(view.tab!=='saved'||saved.has(p.id))&&(view.tab!=='matched'||matchReasons(p,records.prefs)!==null);
+      return !p.isSample&&query.every(q=>index.text.get(p).includes(q))&&(!view.category||p.category===view.category)&&(!view.region||['전국','확인 필요',view.region].includes(p.region))&&(!view.audience||(p.audience||[]).includes(view.audience))&&(!view.supportType||(p.supportTypes||[p.supportType]).includes(view.supportType))&&(!view.periodState||periodState(p,current,today)===view.periodState)&&(!age||(ageKnown?+age>=p.ageMin&&+age<=p.ageMax:unknown))&&(!view.household||(households.length?households.includes(view.household):unknown))&&(view.tab!=='saved'||saved.has(p.id))&&(view.tab!=='matched'||matchReasons(p,records.prefs)!==null);
     });
   }
   function modified(p){const s=p.sourceUpdatedAt;return String(s&&typeof s==='object'?s.list||s.detail||'':s||p.checkedAt||'').replace(/[^0-9]/g,'').padEnd(14,'0');}

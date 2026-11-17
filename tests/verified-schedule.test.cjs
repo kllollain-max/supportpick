@@ -28,3 +28,12 @@ test('deadline filter retains the instant, never reducing it to a date',()=>{
     assert.equal(C.filter(items,{periodState:'dated'},records).length,0);
   }finally{global.Date=Original;}
 });
+test('full-list filtering calculates the KST date once rather than once per record',()=>{
+  const original=Date.prototype.toLocaleDateString;let calls=0;
+  try{
+    Date.prototype.toLocaleDateString=function(...args){calls++;return original.apply(this,args);};
+    const items=Array.from({length:1000},(_,i)=>({id:'item'+i,title:'지원금',periodKind:'fixed',endDate:'2020-01-01'}));
+    assert.equal(C.filter(items,{periodState:'ended'},C.blank()).length,1000);
+    assert.equal(calls,1);
+  }finally{Date.prototype.toLocaleDateString=original;}
+});
