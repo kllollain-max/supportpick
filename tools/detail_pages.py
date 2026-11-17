@@ -123,7 +123,7 @@ def safe_reference(value):
                 and not u.port and (safe_url(value) or u.hostname in {
                     'www.gbuspb.kr', 'www.mnuri.kr', 'www.energyv.or.kr',
                     'www.kosaf.go.kr', 'www.hf.go.kr', 'www.khug.or.kr', 'www.nps.or.kr',
-                    'fowi.or.kr', 'www.fowi.or.kr', 'www.safedriving.or.kr',
+                    'fowi.or.kr', 'www.fowi.or.kr', 'forestcard.or.kr', 'www.forestcard.or.kr', 'www.safedriving.or.kr',
                     'www.energy.or.kr', 'min24.energy.or.kr', 'www.lh.or.kr'}))
     except ValueError:
         return False

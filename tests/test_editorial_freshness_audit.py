@@ -12,9 +12,23 @@ def article(valid='2026-12-01', verified=True):
 
 class EditorialFreshnessTests(unittest.TestCase):
     def test_fresh_and_due(self):
-        r=audit({'guides':[guide('2026-11-15')]},{'articles':[article()]},date(2026,11,9))
+        r=audit({'guides':[guide('2026-11-11')]},{'articles':[article()]},date(2026,11,9))
         self.assertEqual(r['status_counts']['review_due_soon'],1)
         self.assertEqual(r['status_counts']['fresh_review'],1)
+        self.assertEqual(r['review_window_days'],3)
+    def test_a_new_fourteen_day_review_is_not_immediately_due(self):
+        g={'guides':[guide('2026-11-23')]}
+        before=repr(g)
+        r=audit(g,{'articles':[]},date(2026,11,9))
+        self.assertEqual(r['upcoming_review_count'],0)
+        self.assertEqual(repr(g),before)
+        self.assertEqual(audit(g,{'articles':[]},date(2026,11,9),14)['upcoming_review_count'],1)
+    def test_due_window_includes_the_boundary_and_retains_expired_reviews(self):
+        r=audit({'guides':[guide('2026-11-12'),guide('2026-11-13'),guide('2026-11-08')]},
+                {'articles':[]},date(2026,11,9))
+        self.assertEqual(r['status_counts'],{'review_due_soon':1,'fresh_review':1,'expired_review':1})
+        for window in (-1,91):
+            with self.assertRaises(ValueError):audit({'guides':[]},{'articles':[]},date(2026,11,9),window)
     def test_expired_and_unknown(self):
         r=audit({'guides':[guide('2026-10-01'),{'benefitId':'A2','status':'reviewed'}]},
                 {'articles':[]},date(2026,11,9))
