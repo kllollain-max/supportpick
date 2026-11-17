@@ -11,7 +11,7 @@ Draft-only, no live service mutation, API collection, publishing, advertisement 
 
 ## 2. Search relevance and editorial freshness
 
-- `tools/editorial_freshness_audit.py` inspects the existing `guides.json` and `editorials.json` (not the sample production data) to flag expired or soon-expiring source reviews, missing validity, unverified publication URLs and missing benefit identity.
+- `tools/editorial_freshness_audit.py` inspects the existing `guides.json` and `editorials.json` (not the sample production data) to flag expired source reviews or those due within three KST calendar days (use `--window-days` to override), missing validity, unverified publication URLs and missing benefit identity.
 - Review-only report contains counts and benefit IDs for editorial review; it does not silently rewrite articles or upgrade a stale support program to `open`.
 - Popular benefit selection needs genuine source view-count data where available, official application status and expiry validation. No fabricated click/search-volume rankings, invented support sums or guesses about active application windows.
 - News/trends are insufficient alone; source dates, audience eligibility, region and application deadlines must be checked against official agencies before content changes.

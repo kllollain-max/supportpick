@@ -20,7 +20,7 @@ def parse_date(value):
     except ValueError:
         return None
 
-def audit(guides, editorials, today, window=14):
+def audit(guides, editorials, today, window=3):
     if not isinstance(guides, dict) or not isinstance(guides.get('guides'), list):
         raise ValueError('invalid_guides')
     if not isinstance(editorials, dict) or not isinstance(editorials.get('articles'), list):
@@ -59,7 +59,7 @@ def audit(guides, editorials, today, window=14):
     counts={}
     for item in rows: counts[item['status']]=counts.get(item['status'],0)+1
     urgent={'expired_review','unknown_validity','publication_not_verified','missing_benefit_id','invalid_record'}
-    return {'as_of':today.isoformat(),'items':len(rows),'status_counts':counts,
+    return {'as_of':today.isoformat(),'review_window_days':window,'items':len(rows),'status_counts':counts,
             'urgent_review_count':sum(item['status'] in urgent for item in rows),
             'upcoming_review_count':counts.get('review_due_soon',0),
             'review_rows':[item for item in rows if item['status'] != 'fresh_review'],
@@ -73,10 +73,12 @@ def main():
     parser.add_argument('--editorials',default='editorials.json')
     parser.add_argument('--out',default='review-only/editorial-freshness.json')
     parser.add_argument('--as-of',default=datetime.now(ZoneInfo('Asia/Seoul')).date().isoformat())
+    parser.add_argument('--window-days',type=int,default=3,
+                        help='KST calendar-day lookahead; does not extend source reviews')
     args=parser.parse_args()
     report=audit(json.loads(Path(args.guides).read_text(encoding='utf-8')),
                  json.loads(Path(args.editorials).read_text(encoding='utf-8')),
-                 date.fromisoformat(args.as_of))
+                 date.fromisoformat(args.as_of),args.window_days)
     out=Path(args.out);out.parent.mkdir(parents=True,exist_ok=True)
     out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps({k:v for k,v in report.items() if k!='review_rows'},ensure_ascii=False))
