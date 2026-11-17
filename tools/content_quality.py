@@ -68,9 +68,12 @@ def reading_gaps(row):
     return gaps
 
 
-def review_queue(rows, quality, search, current=None):
+def review_queue(rows, quality, search, current=None, decisions=None):
     """Operational triage of all records. Never deletes, merges or changes robots."""
-    today=(current or datetime.now(ZoneInfo('Asia/Seoul'))).astimezone(ZoneInfo('Asia/Seoul')).date().isoformat()
+    current=current or datetime.now(ZoneInfo('Asia/Seoul'))
+    today=current.astimezone(ZoneInfo('Asia/Seoul')).date().isoformat()
+    from record_reviews import approved_distinctions
+    reviewed=approved_distinctions(rows,quality['sameNameAgencyGroups'],decisions or {'version':1,'groups':[]},current)
     grouped={sid:group for group in quality['sameNameAgencyGroups'] for sid in group}
     held=search['heldReasons']; matched=set(search['guideIds']);items=[];counts=Counter()
     for sid,row in rows.items():
@@ -80,7 +83,7 @@ def review_queue(rows, quality, search, current=None):
         if sid not in matched:flags.append('no_matched_preparation_guide')
         if sid in held:
             state,priority='기존 공개 보류 재확인',0
-        elif sid in grouped:
+        elif sid in grouped and sid not in reviewed:
             state,priority='통합 검토',1
         elif any(x not in ('no_matched_preparation_guide','duplicate_receipt_rule_not_structured') for x in flags):
             state,priority='수정 대기',2
@@ -92,12 +95,14 @@ def review_queue(rows, quality, search, current=None):
                       'reviewState':state,'priority':priority,'observedFlags':flags,
                       'existingPublicationHold':sid in held,'holdReasons':held.get(sid,[]),
                       'sameNameAgencyIds':grouped.get(sid,[]),'officialCumulativeViews':views,
+                      'sourceRecordDecision':reviewed.get(sid),
                       'sourceModifiedAt':row.get('sourceUpdatedAt'),'apiFetchedAt':row.get('checkedAt'),
                       'officialUrl':row.get('officialUrl')})
         counts[state]+=1
     items.sort(key=lambda x:(x['priority'],x['officialCumulativeViews'] is None,-(x['officialCumulativeViews'] or 0),x['id']))
     return {'asOf':today,'total':len(items),'stateCounts':dict(counts),'items':items,
-            'priorityBasis':'Existing holds, possible duplicate groups, observed gaps; actual API cumulative views within each group.',
+            'priorityBasis':'Existing holds, unresolved possible duplicate groups, observed gaps; actual API cumulative views within each group.',
+            'reviewedSeparateSourceGroups':len({tuple(sorted(d['ids'])) for d in reviewed.values()}),
             'automaticDeletion':False,'automaticIndexingChange':False,'automaticMerge':False,
             'limitations':['Candidate states do not establish low value or factual accuracy.',
                           'An ended date does not establish that a replacement round exists.',

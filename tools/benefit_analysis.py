@@ -6,6 +6,7 @@ reading aids, not eligibility decisions. Keep sources beside the relevant facts.
 from html import escape
 from family_housing_analysis import FOCUS_ARTICLES
 from tax_benefit_analysis import TAX_ARTICLES
+from savings_voucher_analysis import RECORD_ARTICLES
 
 REVIEWED = '2026-11-17'
 ENERGY = 'https://www.energyv.or.kr/info/'
@@ -70,6 +71,7 @@ ARTICLES = [
 
 ARTICLES += FOCUS_ARTICLES
 ARTICLES += TAX_ARTICLES
+ARTICLES += RECORD_ARTICLES
 
 BENEFIT_ARTICLES = {
     'B55353000001': 'energy-voucher-2026',
@@ -78,6 +80,9 @@ BENEFIT_ARTICLES = {
     '135200000120': 'child-allowance-2026',
     '336000000096': 'housing-benefit-2026',
     '105100000001': 'earned-income-credit-late-2026',
+    '646000000145': 'women-farmer-voucher-records-2026',
+    '629000000182': 'women-farmer-voucher-records-2026',
+    '135200005013': 'youth-savings-contribution-2026',
 }
 
 

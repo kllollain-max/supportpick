@@ -28,7 +28,7 @@ const { chromium } = require('playwright');
   const browser = await chromium.launch({headless:true});
   const results = [];
   try {
-    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['', 'benefits/149200000026/', 'privacy.html', 'guides/application-checklist.html', 'guides/compare-benefits.html', 'guides/energy-voucher-2026.html', 'guides/emergency-vs-livelihood-2026.html', 'guides/child-allowance-2026.html', 'guides/housing-benefit-2026.html', 'benefits/135200000120/', 'guides/earned-income-credit-late-2026.html'];
+    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['', 'benefits/149200000026/', 'privacy.html', 'guides/application-checklist.html', 'guides/compare-benefits.html', 'guides/energy-voucher-2026.html', 'guides/emergency-vs-livelihood-2026.html', 'guides/child-allowance-2026.html', 'guides/housing-benefit-2026.html', 'benefits/135200000120/', 'guides/earned-income-credit-late-2026.html', 'guides/women-farmer-voucher-records-2026.html', 'guides/youth-savings-contribution-2026.html', 'benefits/646000000145/'];
     await fs.mkdir('mobile-evidence', {recursive:true});
     for (const width of [320,390,1440]) {
       const context = await browser.newContext({viewport:{width,height:900},serviceWorkers:'block'});
@@ -101,6 +101,20 @@ const { chromium } = require('playwright');
           assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'),'noindex,follow');
           assert.equal(await page.locator('a[href="../../guides/child-allowance-2026.html"]').count(),1);
           assert(!(await page.locator('main').innerText()).includes('90일(출국일 포함)'));
+        }
+        if (entry === 'benefits/646000000145/') {
+          assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'),'noindex,follow');
+          assert.equal(await page.locator('a[href="../../guides/women-farmer-voucher-records-2026.html"]').count(),1);
+          assert(!(await page.locator('main').innerText()).includes('2024년 현재'));
+        }
+        if (entry === 'guides/women-farmer-voucher-records-2026.html') {
+          assert.equal(await page.locator('a[href="../benefits/646000000145/"]').count(),1);
+          assert.equal(await page.locator('a[href="../benefits/629000000182/"]').count(),1);
+          assert(await page.getByText('현행 자격 확정표 아님',{exact:false}).count()>0);
+        }
+        if (entry === 'guides/youth-savings-contribution-2026.html') {
+          assert(await page.getByText('1,800만원',{exact:true}).count()>0);
+          assert.equal(await page.locator('a[href="../benefits/135200005013/"]').count(),1);
         }
         const dimensions = await page.evaluate(() => ({width:innerWidth, content:document.documentElement.scrollWidth}));
         assert(dimensions.content <= dimensions.width + 1, JSON.stringify({entry,...dimensions}));

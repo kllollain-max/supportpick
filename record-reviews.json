@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "groups": [
+    {
+      "ids": [
+        "646000000145",
+        "629000000182"
+      ],
+      "decision": "keep_separate_source_records",
+      "reason": "두 공식 API 자료의 대상·금액·문의 창구가 달라 원본 ID를 유지합니다. 동일·별개 제도의 최종 행정 분류나 현재 조건을 확정한 결정은 아닙니다.",
+      "reviewedAt": "2026-11-17T01:58:31.363718+00:00",
+      "validUntil": "2026-12-01T01:58:31.363718+00:00",
+      "reviewMethod": "AI 보조 원문 비교·공식 공고 대조",
+      "sourceScopeHashes": {
+        "646000000145": "bd9298c2780bb9936135658e796a9e2fe23e858fae9f6f41df116cc502b86e53",
+        "629000000182": "870f05f54e9dbebe5afd29f3c7dda9a6e84d3b1baf1dd87d8a48e2ec0062a133"
+      },
+      "evidence": [
+        {
+          "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003085&bnefType=all&svcId=646000000145",
+          "note": "공식 수집 원문의 대상·금액·기간·문의 창구를 대조. 외부 상세의 실시간 렌더링 검증과는 구분."
+        },
+        {
+          "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005831&bnefType=all&svcId=629000000182",
+          "note": "공식 수집 원문의 대상·금액·기간·문의 창구를 대조. 외부 상세의 실시간 렌더링 검증과는 구분."
+        }
+      ]
+    }
+  ]
+}
