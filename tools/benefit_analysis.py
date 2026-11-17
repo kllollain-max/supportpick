@@ -10,6 +10,7 @@ from savings_voucher_analysis import RECORD_ARTICLES
 from birth_benefit_analysis import BIRTH_ARTICLES
 from culture_pension_analysis import CULTURE_PENSION_ARTICLES, source_advisory
 from forest_transport_analysis import FOREST_TRANSPORT_ARTICLES, source_advisory as forest_source_advisory
+from winter_energy_analysis import WINTER_ARTICLES
 
 REVIEWED = '2026-11-17'
 ENERGY = 'https://www.energyv.or.kr/info/'
@@ -19,6 +20,7 @@ LIVELIHOOD = 'https://www.mohw.go.kr/menu.es?mid=a10708010500'
 ARTICLES = [
 ('energy-voucher-2026', '2026 에너지바우처: 신청 마감과 사용기한, 난방비 중복지원 확인',
  '총 지원액을 월 지급액으로 오해하지 않고, 난방 방식과 기존 지원에 맞춰 신청을 준비하는 사례별 안내입니다.', '''
+<p class="context-note">고지서 부담과 단열·보일러 공사를 함께 고민한다면 <a href="winter-bills-vs-home-improvement-2026.html">요금 이용권과 주택 공사 준비 비교</a>에서 지역 접수와 소유주 동의부터 나누어 확인하세요.</p>
 <h2>신청할 때와 사용할 때의 달력이 다릅니다</h2>
 <div class="guide-table"><table><caption>2026년 에너지바우처의 두 기한</caption><thead><tr><th scope="col">구분</th><th scope="col">공식 안내</th><th scope="col">준비할 일</th></tr></thead><tbody>
 <tr><th scope="row">신청</th><td>2026.6.15.~12.31.</td><td>신청서 접수와 처리 여부를 확인합니다. 사용기한까지 신청할 수 있는 것으로 읽지 않습니다.</td></tr>
@@ -78,8 +80,10 @@ ARTICLES += RECORD_ARTICLES
 ARTICLES += BIRTH_ARTICLES
 ARTICLES += CULTURE_PENSION_ARTICLES
 ARTICLES += FOREST_TRANSPORT_ARTICLES
+ARTICLES += WINTER_ARTICLES
 
 BENEFIT_ARTICLES = {
+    '424000000006': 'winter-bills-vs-home-improvement-2026',
     'B55353000001': 'energy-voucher-2026',
     '135200005003': 'emergency-vs-livelihood-2026',
     'WII000001410': 'emergency-vs-livelihood-2026',

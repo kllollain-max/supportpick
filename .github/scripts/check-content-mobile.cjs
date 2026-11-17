@@ -28,7 +28,7 @@ const { chromium } = require('playwright');
   const browser = await chromium.launch({headless:true});
   const results = [];
   try {
-    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['', 'benefits/149200000026/', 'privacy.html', 'guides/application-checklist.html', 'guides/compare-benefits.html', 'guides/energy-voucher-2026.html', 'guides/emergency-vs-livelihood-2026.html', 'guides/child-allowance-2026.html', 'guides/housing-benefit-2026.html', 'benefits/135200000120/', 'guides/earned-income-credit-late-2026.html', 'guides/women-farmer-voucher-records-2026.html', 'guides/youth-savings-contribution-2026.html', 'benefits/646000000145/', 'benefits/135200005013/', 'benefits/SD0000015525/', 'guides/first-meeting-vs-parent-benefit-2026.html', 'benefits/305000000113/', 'guides/culture-card-deadlines-2026.html', 'guides/basic-pension-amounts-2026.html', 'benefits/137100000236/', 'benefits/648000001107/', 'benefits/B55151000066/', 'benefits/SSE000000170/', 'guides/forest-voucher-application-vs-use-2026.html', 'guides/gyeonggi-child-transport-cap-2026.html', 'benefits/140000000176/', 'benefits/641000000139/'];
+    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['', 'benefits/149200000026/', 'privacy.html', 'guides/application-checklist.html', 'guides/compare-benefits.html', 'guides/energy-voucher-2026.html', 'guides/emergency-vs-livelihood-2026.html', 'guides/child-allowance-2026.html', 'guides/housing-benefit-2026.html', 'benefits/135200000120/', 'guides/earned-income-credit-late-2026.html', 'guides/women-farmer-voucher-records-2026.html', 'guides/youth-savings-contribution-2026.html', 'benefits/646000000145/', 'benefits/135200005013/', 'benefits/SD0000015525/', 'guides/first-meeting-vs-parent-benefit-2026.html', 'benefits/305000000113/', 'guides/culture-card-deadlines-2026.html', 'guides/basic-pension-amounts-2026.html', 'benefits/137100000236/', 'benefits/648000001107/', 'benefits/B55151000066/', 'benefits/SSE000000170/', 'guides/forest-voucher-application-vs-use-2026.html', 'guides/gyeonggi-child-transport-cap-2026.html', 'benefits/140000000176/', 'benefits/641000000139/', 'guides/winter-bills-vs-home-improvement-2026.html', 'benefits/424000000006/', 'benefits/B55353000001/', 'benefits/135200005003/', 'benefits/WII000001410/'];
     await fs.mkdir('mobile-evidence', {recursive:true});
     for (const width of [320,390,1440]) {
       const context = await browser.newContext({viewport:{width,height:900},serviceWorkers:'block'});
@@ -179,6 +179,24 @@ const { chromium } = require('playwright');
           assert(await page.locator('.source-advisory').getByText('신청과 사용기한 구분:',{exact:true}).count()>0);
           assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'),'index,follow');
           assert(await page.getByText('11월 30일까지 새로 신청할 수 있나요?',{exact:true}).count()>0);
+        }
+        if(entry==='guides/winter-bills-vs-home-improvement-2026.html'){
+          assert(await page.getByText('9월 11일 18시',{exact:false}).count()>0);
+          assert.equal(await page.locator('a[href="../benefits/424000000006/"]').count(),1);
+          assert(await page.getByText('소유주 동의 가능 여부',{exact:true}).count()>0);
+        }
+        if(entry==='benefits/424000000006/'){
+          assert.equal(await page.locator('a[href="../../guides/winter-bills-vs-home-improvement-2026.html"]').count(),1);
+          assert(await page.getByText('전국 안내에 연말 날짜가 있으면 지금 신청할 수 있나요?',{exact:true}).count()>0);
+        }
+        if(entry==='benefits/B55353000001/'){
+          assert(await page.getByText('긴급복지 생계지원과 동절기 연료비는 같은 제한인가요?',{exact:true}).count()>0);
+        }
+        if(entry==='benefits/135200005003/'){
+          assert(await page.getByText('먼저 지원한다는 말은 이후 조사가 없다는 뜻인가요?',{exact:true}).count()>0);
+        }
+        if(entry==='benefits/WII000001410/'){
+          assert(await page.getByText('통장에 찍힌 월급을 기준액에서 바로 빼도 되나요?',{exact:true}).count()>0);
         }
         const dimensions = await page.evaluate(() => ({width:innerWidth, content:document.documentElement.scrollWidth}));
         assert(dimensions.content <= dimensions.width + 1, JSON.stringify({entry,...dimensions}));
