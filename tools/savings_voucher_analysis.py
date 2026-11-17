@@ -8,15 +8,15 @@ API_VOUCHER_B = 'https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benef
 RECORD_ARTICLES = [
 ('women-farmer-voucher-records-2026', '여성농업인 행복바우처: 같은 이름의 자료와 지역별 공고를 구분하는 법',
  '대상·금액·접수기관이 다른 두 API 자료를 비교하고, 광양시 2026년 안내의 연령·신청기간·사용기간을 나누어 확인합니다.', '''
-<h2>이름과 기관명이 같아도 바로 하나로 합칠 수 없습니다</h2>
-<p>지원금픽의 중복 점검에서 아래 두 ID가 같은 이름·기관명으로 묶였습니다. 그러나 기관이 제공한 대상·금액·문의 창구는 다릅니다. 단순 중복이라고 삭제하거나 큰 금액 쪽을 모든 이용자에게 적용하면 신청 준비에 필요한 차이를 잃습니다.</p>
-<div class="guide-table"><table><caption>수집된 API 원문의 차이 · 현행 자격 확정표 아님</caption><thead><tr><th scope="col">항목</th><th scope="col">646000000145</th><th scope="col">629000000182</th></tr></thead><tbody>
+<h2>이름보다 주소지와 문의 창구를 먼저 확인하세요</h2>
+<p>같은 이름의 지원 안내라도 대상·금액·문의 창구가 다를 수 있습니다. 아래 두 공식 연결자료도 문의 지역과 지원 내용이 다릅니다. 큰 금액 쪽이 나에게 적용된다고 고르기 전에 주소지에서 어느 공고를 확인해야 하는지 찾아보세요.</p>
+<div class="guide-table"><table><caption>공식 연결자료의 원문 비교 · 현행 자격 확정표 아님</caption><thead><tr><th scope="col">항목</th><th scope="col">전남도청·시군 문의 안내</th><th scope="col">광주 자치구 문의 안내</th></tr></thead><tbody>
 <tr><th scope="row">나이·대상 표기</th><td>20~75세 여성농어업인</td><td>19세 이상~75세 미만 여성농업인</td></tr>
 <tr><th scope="row">금액 표기</th><td>연 20만원권</td><td>연 10만원 카드: 지원 8만원·자부담 2만원</td></tr>
 <tr><th scope="row">문의 창구 표기</th><td>전남도청·목포·여수·광양 등</td><td>동구·서구·남구·북구·광산구</td></tr>
 <tr><th scope="row">기간 표기</th><td>접수기관별 상이</td><td>4~6월 중 별도 신청기간</td></tr>
 </tbody></table></div>
-<p>이 표는 API에 남아 있는 안내를 비교한 것입니다. 현재 지역별 제도의 최종 행정 분류나 올해 접수 가능 여부를 확정하지 않습니다. 두 ID와 원본을 유지하면서 차이를 검토합니다. <a href="https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003085&amp;bnefType=all&amp;svcId=646000000145" target="_blank" rel="noopener noreferrer">첫째 공식 자료 ↗</a> · <a href="https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005831&amp;bnefType=all&amp;svcId=629000000182" target="_blank" rel="noopener noreferrer">둘째 공식 자료 ↗</a></p>
+<p>표의 지역 이름은 각 자료의 문의 창구를 구분하는 표시이며 지원 지역을 확정하는 분류가 아닙니다. 이 표만으로 현재 신청 자격이나 접수 가능 여부를 판단하지 말고 거주지의 해당 연도 공고를 확인하세요. <a href="https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003085&amp;bnefType=all&amp;svcId=646000000145" target="_blank" rel="noopener noreferrer">전남도청·시군 문의 안내의 공식 자료 ↗</a> · <a href="https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005831&amp;bnefType=all&amp;svcId=629000000182" target="_blank" rel="noopener noreferrer">광주 자치구 문의 안내의 공식 자료 ↗</a></p>
 <h2>광양시 2026년 공고에는 80세까지로 안내되어 있습니다</h2>
 <p>광양시 다압면이 배포한 2026년 안내는 2026년 1월 1일 기준 도내 1년 이상 거주·실제 영농·사업년도 20~80세 요건을 함께 제시하고, 연 20만원을 안내합니다. API 첫째 자료의 75세 상한과 달라 해당 상세의 현재 조건 표시는 보류했습니다. 둘째 자료까지 같은 나이로 바꾸거나 다른 지역에 이 기준을 확대하지 않습니다. <a href="https://gwangyang.go.kr/boardDownload.es?bid=0170&amp;list_no=196475&amp;seq=1#page=26" target="_blank" rel="noopener noreferrer">광양시 공식 PDF · 파일 26쪽 / 인쇄 쪽 24 ‘여성농업인 행복바우처’ ↗</a></p>
 <p>예를 들어 78세 이용자는 오래된 75세 표기만 보고 포기하기 전에 본인 거주지의 해당 연도 공고를 찾아야 합니다. 반대로 같은 이름의 다른 지역 자료에 80세를 그대로 대입해도 된다는 뜻은 아닙니다. 주소지와 나이 기준일을 함께 제시해 담당기관에 문의하세요.</p>

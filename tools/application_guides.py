@@ -75,7 +75,15 @@ def write_guides(output, base, rows=None):
         path='guides/'+slug+'.html'
         refs=''.join('<li><a target="_blank" rel="noopener noreferrer" href="'+escape(url,quote=True)+'">'+escape(label)+' ↗</a></li>' for url,label in sources)
         links=''.join('<li><a href="'+other+'.html">'+escape(label)+'</a></li>' for other,label,*_ in articles if other!=slug)
-        related=''.join('<li><a href="../benefits/'+sid+'/">'+escape(row['title'])+'</a></li>' for sid,row in (rows or {}).items() if BENEFIT_ARTICLES.get(sid)==slug and (output/'benefits'/sid/'index.html').is_file())
+        related_rows=[(sid,row) for sid,row in (rows or {}).items() if BENEFIT_ARTICLES.get(sid)==slug and (output/'benefits'/sid/'index.html').is_file()]
+        titles=[row['title'] for _,row in related_rows]
+        def label(sid,row):
+            title=row['title']
+            if titles.count(title)>1:
+                contact=str(row.get('contact') or '').split('||')[0].split('/')[0].strip()
+                title+=' · '+(contact or '자료 '+sid)
+            return title
+        related=''.join('<li><a href="../benefits/'+sid+'/">'+escape(label(sid,row))+'</a></li>' for sid,row in related_rows)
         related='<h2>공식 API 자료와 대조하기</h2><ul>'+related+'</ul>' if related else ''
         html=('<nav class="breadcrumbs" aria-label="현재 위치"><a href="../">홈</a><span>›</span><span>신청 준비 안내</span></nav>'
               '<article class="detail-block"><h1>'+escape(title)+'</h1><p>'+escape(description)+'</p>'
