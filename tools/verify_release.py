@@ -4,6 +4,9 @@ import hashlib
 import json
 import re
 import time
+import threading
+from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from html.parser import HTMLParser
@@ -16,6 +19,68 @@ from xml.etree import ElementTree as ET
 
 BASE = 'https://kllollain-max.github.io/supportpick/'
 NS = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+
+
+class PublicRequestPacer:
+    """Share a ten-request/second ceiling and server cooldown across workers."""
+    def __init__(self, clock=None, sleep=None):
+        self.clock = clock or time.monotonic
+        self.sleep = sleep or time.sleep
+        self.lock = threading.Lock()
+        self.next_request = self.cool_until = 0
+        self.episodes = 0
+        self.stopped = False
+
+    def wait(self):
+        while True:
+            with self.lock:
+                if self.stopped:
+                    return False
+                now = self.clock()
+                delay = max(self.next_request, self.cool_until) - now
+                if delay <= 0:
+                    self.next_request = now + 0.1
+                    return True
+            self.sleep(min(delay, 1))
+
+    def limited(self, headers):
+        raw = (headers or {}).get('Retry-After', '')
+        try:
+            delay = max(0, int(raw))
+        except (ValueError, TypeError):
+            try:
+                date = parsedate_to_datetime(raw)
+                delay = max(0, (date - datetime.now(timezone.utc)).total_seconds())
+            except (ValueError, TypeError, OverflowError):
+                delay = 0
+        with self.lock:
+            now = self.clock()
+            if now >= self.cool_until:
+                self.episodes += 1
+                if self.episodes > 3:
+                    self.stopped = True
+                    return
+                print(json.dumps({'publicRateLimit': 'cooldown', 'episode': self.episodes,
+                                  'seconds': max(delay, 60 * 2 ** (self.episodes - 1))}), flush=True)
+            self.cool_until = max(self.cool_until, now + max(delay, 60 * 2 ** (self.episodes - 1)))
+
+
+def open_public(request, pacer):
+    """Use the same cooldown for manifest, sitemap, robots and 404 probes."""
+    for attempt in range(4):
+        if not pacer.wait():
+            raise ValueError('public_request_limit_stopped')
+        try:
+            return urlopen(request, timeout=30)
+        except HTTPError as error:
+            if error.code == 429:
+                pacer.limited(error.headers)
+                if attempt < 3:
+                    continue
+            elif error.code in (408,500,502,503,504) and attempt == 0:
+                time.sleep(1)
+                continue
+            raise
 
 
 class Document(HTMLParser):
@@ -81,8 +146,10 @@ def verify(output):
             **{k: report[k] for k in ('detailPages', 'indexableDetails', 'heldDetails', 'reviewedGuides', 'blogLinks', 'directoryPages', 'retiredPages')}}
 
 
-def fetch_html(entry, url_set):
+def fetch_html(entry, url_set, pacer=None):
     url, name, digest = entry
+    if pacer and not pacer.wait():
+        return url, 'request_limit_scan_stopped', False
     try:
         with urlopen(Request(url, headers={'User-Agent': 'SupportPick-Release-Verification/1.0'}), timeout=30) as response:
             raw = response.read()
@@ -97,6 +164,8 @@ def fetch_html(entry, url_set):
                 inspect(raw.decode('utf-8'), url)
             return url, None, False
     except HTTPError as error:
+        if error.code == 429 and pacer:
+            pacer.limited(error.headers)
         return url, str(error), error.code in (408,429,500,502,503,504)
     except (URLError, TimeoutError) as error:
         return url, str(error)[:180], True
@@ -104,10 +173,11 @@ def fetch_html(entry, url_set):
         return url, str(error)[:180], False
 
 
-def verify_targets(targets, url_set, workers):
+def verify_targets(targets, url_set, workers, pacer=None):
+    pacer = pacer or PublicRequestPacer()
     failures=[];passed=0;by_url={entry[0]:entry for entry in targets}
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        jobs=[pool.submit(fetch_html,entry,url_set) for entry in targets]
+        jobs=[pool.submit(fetch_html,entry,url_set,pacer) for entry in targets]
         for future in as_completed(jobs):
             url,error,retryable=future.result()
             if error:failures.append({'url':url,'error':error,'retryable':retryable})
@@ -119,30 +189,32 @@ def verify_targets(targets, url_set, workers):
     # the full pass. Missing pages, metadata and content mismatches remain errors.
     for failure in failures:
         if failure['retryable']:
-            url,error,_=fetch_html(by_url[failure['url']],url_set)
+            url,error,_=fetch_html(by_url[failure['url']],url_set,pacer)
             if error is None:
                 passed+=1;recovered.append({'url':url,'initialError':failure['error'],'retryHttp':200})
                 continue
             failure['retryError']=error
         remaining.append({k:v for k,v in failure.items() if k!='retryable'})
     return {'passed':passed,'failed':len(remaining),'initialFailures':initial_failures,
+            'maxRequestsPerSecond':10,'rateLimitEpisodes':pacer.episodes,
+            'stoppedForRateLimit':pacer.stopped,
             'recoveredAfterRetry':recovered,'failures':remaining}
 
 
-def read_public_manifest():
+def read_public_manifest(pacer=None):
     request = Request(BASE + 'site-manifest.json', headers={'Cache-Control': 'no-cache'})
-    with urlopen(request, timeout=30) as response:
+    with (open_public(request,pacer) if pacer else urlopen(request,timeout=30)) as response:
         return json.load(response)
 
 
-def wait_for_public_manifest(local, expected_revision, expected_generation):
+def wait_for_public_manifest(local, expected_revision, expected_generation, pacer=None):
     revision = expected_revision or local['sourceRevision']
     generation = expected_generation or local['generation']
     if (local['sourceRevision'], local['generation']) != (revision, generation):
         raise ValueError('local_release_expectation_mismatch')
 
     for attempt in (1, 2):
-        public = read_public_manifest()
+        public = read_public_manifest(pacer) if pacer else read_public_manifest()
         observed = (public['sourceRevision'], public['generation'])
         print(json.dumps({'manifestAttempt': attempt,
                           'expectedRevision': revision, 'expectedGeneration': generation,
@@ -166,11 +238,12 @@ def wait_for_public_manifest(local, expected_revision, expected_generation):
 def live_check(output, workers=6, expected_revision=None, expected_generation=None):
     output = Path(output)
     local = json.loads((output / 'site-manifest.json').read_text())
-    expected = wait_for_public_manifest(local, expected_revision, expected_generation)
+    pacer = PublicRequestPacer()
+    expected = wait_for_public_manifest(local, expected_revision, expected_generation,pacer)
     for name in ('app.js','core.js','detail.js','styles.css'):
         if expected['files'].get(name)!=local['files'].get(name):
             raise ValueError('public_application_code_mismatch:'+name)
-    with urlopen(BASE+'sitemap.xml',timeout=30) as response:
+    with open_public(BASE+'sitemap.xml',pacer) as response:
         raw=response.read()
     if hashlib.sha256(raw).hexdigest()!=expected['files']['sitemap.xml']:
         raise ValueError('public_sitemap_hash_mismatch')
@@ -181,10 +254,16 @@ def live_check(output, workers=6, expected_revision=None, expected_generation=No
     targets = [(BASE + name.removesuffix('index.html'), name, sha)
                for name, sha in expected['files'].items() if name.endswith('.html') and name != '404.html'
                and re.fullmatch(r'[A-Za-z0-9_/-]+\.html',name) and '..' not in name]
-    checked=verify_targets(targets,set(urls),workers)
+    checked=verify_targets(targets,set(urls),workers,pacer)
+    # Do not add requests after a persistent limit, or lose the completed scan
+    # report to a later robots/404 request. A blocked scan must stay a failure.
+    if checked['stoppedForRateLimit']:
+        return {'publicHtmlChecked':len(targets),'sitemapUrls':len(urls),
+                'generation':expected['generation'],'sourceRevision':expected['sourceRevision'],
+                'missingUrlHttp':None,'robots':{'status':'not_checked_after_rate_limit'},**checked}
     missing=BASE+'benefits/__supportpick_missing_release_check__/'
     try:
-        with urlopen(missing,timeout=30) as response:
+        with open_public(missing,pacer) as response:
             raise ValueError('missing_page_not_404')
     except HTTPError as error:
         if error.code!=404: raise
@@ -192,7 +271,7 @@ def live_check(output, workers=6, expected_revision=None, expected_generation=No
             raise ValueError('custom_404_not_present')
     robots_url='https://kllollain-max.github.io/robots.txt'
     try:
-        with urlopen(robots_url,timeout=30) as response:
+        with open_public(robots_url,pacer) as response:
             robot=RobotFileParser();robot.parse(response.read().decode('utf-8').splitlines())
             if any(not robot.can_fetch(bot,BASE+'benefits/149200000026/') for bot in ('Googlebot','Yeti')):
                 raise ValueError('root_robots_blocks_crawling')
@@ -211,7 +290,11 @@ if __name__ == '__main__':
     parser.add_argument('--expect-sha')
     parser.add_argument('--expect-generation')
     args = parser.parse_args()
-    result = live_check(args.output, args.workers,args.expect_sha,args.expect_generation) if args.live else verify(args.output)
+    try:
+        result = live_check(args.output, args.workers,args.expect_sha,args.expect_generation) if args.live else verify(args.output)
+    except Exception as error:
+        result = {'failed':1,'verificationError':str(error),
+                  'publicReleaseVerification':'incomplete' if args.live else 'failed'}
     if args.report: Path(args.report).write_text(json.dumps(result, ensure_ascii=False, indent=2))
     print(json.dumps(result, ensure_ascii=False, indent=2))
     if result.get('failed'): raise SystemExit(1)

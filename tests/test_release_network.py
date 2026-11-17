@@ -9,7 +9,7 @@ from unittest.mock import patch
 from urllib.error import HTTPError
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'tools'))
-from verify_release import verify_targets, inspect, wait_for_public_manifest
+from verify_release import verify_targets, inspect, wait_for_public_manifest, PublicRequestPacer, open_public
 
 URL='https://kllollain-max.github.io/supportpick/about.html'
 BODY=('<html><head><link rel="canonical" href="'+URL+'"><meta name="robots" content="index,follow">'
@@ -25,6 +25,60 @@ class Response:
 
 
 class PublicNetworkVerification(unittest.TestCase):
+    def fake_pacer(self):
+        now=[0.0]
+        def sleep(seconds):now[0]+=seconds
+        return PublicRequestPacer(clock=lambda:now[0],sleep=sleep),now
+
+    def test_request_starts_are_spaced_and_share_a_server_cooldown(self):
+        pacer,now=self.fake_pacer()
+        self.assertTrue(pacer.wait());self.assertEqual(now[0],0)
+        self.assertTrue(pacer.wait());self.assertAlmostEqual(now[0],0.1)
+        with redirect_stdout(StringIO()):pacer.limited({'Retry-After':'120'})
+        self.assertTrue(pacer.wait());self.assertGreaterEqual(now[0],120.1)
+
+    def test_repeated_limits_stop_requests_instead_of_draining_a_large_queue(self):
+        pacer,now=self.fake_pacer()
+        with redirect_stdout(StringIO()):
+            for _ in range(3):
+                pacer.limited({});self.assertTrue(pacer.wait())
+            pacer.limited({})
+        self.assertTrue(pacer.stopped)
+        with patch('verify_release.urlopen') as fetch:
+            report=verify_targets(self.target(),{URL},1,pacer)
+        fetch.assert_not_called()
+        self.assertEqual(report['failed'],1)
+        self.assertTrue(report['stoppedForRateLimit'])
+
+    def test_429_recovery_waits_then_still_checks_the_actual_body(self):
+        pacer,now=self.fake_pacer()
+        with patch('verify_release.urlopen',side_effect=[HTTPError(URL,429,'slow down',{'Retry-After':'90'},None),Response()]),redirect_stdout(StringIO()):
+            report=verify_targets(self.target(),{URL},1,pacer)
+        self.assertGreaterEqual(now[0],90)
+        self.assertEqual(report['passed'],1)
+        self.assertEqual(report['rateLimitEpisodes'],1)
+        self.assertEqual(report['failed'],0)
+
+    def test_retry_after_http_date_and_invalid_nonfinite_values_are_bounded(self):
+        from datetime import datetime, timezone
+        pacer,now=self.fake_pacer()
+        with patch('verify_release.datetime') as date,redirect_stdout(StringIO()):
+            date.now.return_value=datetime(2026,11,17,0,0,tzinfo=timezone.utc)
+            pacer.limited({'Retry-After':'Tue, 17 Nov 2026 00:02:00 GMT'})
+        self.assertTrue(pacer.wait());self.assertGreaterEqual(now[0],120)
+        for value in ['inf','NaN','invalid']:
+            pacer,now=self.fake_pacer()
+            with redirect_stdout(StringIO()):pacer.limited({'Retry-After':value})
+            self.assertTrue(pacer.wait());self.assertEqual(now[0],60)
+
+    def test_auxiliary_404_probe_obeys_limits_and_preserves_the_real_404(self):
+        pacer,now=self.fake_pacer()
+        with patch('verify_release.urlopen',side_effect=[HTTPError(URL,429,'slow down',{},None),HTTPError(URL,404,'missing',{},None)]) as fetch,redirect_stdout(StringIO()),self.assertRaises(HTTPError) as error:
+            open_public(URL,pacer)
+        self.assertEqual(error.exception.code,404)
+        self.assertEqual(fetch.call_count,2)
+        self.assertGreaterEqual(now[0],60)
+
     def test_bot_specific_and_duplicate_meta_cannot_hide_noindex(self):
         for name, value in [('googlebot', 'noindex'), ('Googlebot', 'NONE'), ('robots', 'none')]:
             text = BODY.decode().replace('</head>', '<meta name="'+name+'" content="'+value+'"></head>')
