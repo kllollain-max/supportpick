@@ -120,6 +120,9 @@ BENEFIT_ARTICLES = {
 }
 
 
+ARTICLE_REVIEW_DATES = {'leave-benefit-claim-checklist-2026': '2026-11-18'}
+
+
 def related_analysis(sid, row=None):
     slug = BENEFIT_ARTICLES.get(sid)
     article = next((a for a in ARTICLES if a[0] == slug), None)
@@ -128,7 +131,7 @@ def related_analysis(sid, row=None):
     return (source_advisory(row or {}) + forest_source_advisory(row or {}) + '<section class="detail-block"><h2>조건을 해석하는 사업별 해설</h2><p>'
             + escape(article[2]) + '</p><a class="editorial-link" href="../../guides/'
             + article[0] + '.html">' + escape(article[1]) + ' →</a><p class="source-meta">'
-            + REVIEWED + ' 공식 자료 대조 · 2026년 기준</p></section>')
+            + ARTICLE_REVIEW_DATES.get(slug, REVIEWED) + ' 공식 자료 대조 · 2026년 기준</p></section>')
 
 
 def coverage_report(search, rows):

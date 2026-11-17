@@ -12,6 +12,7 @@ from benefit_analysis import coverage_report
 from release_policy import fingerprint
 from collect_full import period
 from content_quality import conditions, audit, review_queue
+from source_review_audit import audit as source_review_audit
 ROOT=Path(__file__).resolve().parents[1]
 STATIC=('index.html','privacy.html','about.html','terms.html','contact.html','404.html','icon.svg','careerpick-base.css','styles.css','core.js','app.js','detail.js','supportpick-badge.png','supportpick-banner.png','editorials.js','app-features.js','manifest.webmanifest','sw.js','offline.html','app-icon-180.png','app-icon-192.png','app-icon-512.png','naver-analytics.js','naver-analytics.css','feed-loader.js')
 
@@ -129,6 +130,7 @@ def build(destination,state=None,allow_sample=False,public_base=None):
     guides=json.loads((ROOT/'guides.json').read_text())
     if guides.get('version')!=1 or not isinstance(guides.get('guides'),list):raise ValueError('invalid_own_guide_registry')
     detail=write_details(output,full_rows,previous_rows,public_base,guides,registry,status['status'])
+    (output/'source-review-report.json').write_text(json.dumps(source_review_audit(full_rows,previous_rows,guides,registry),ensure_ascii=False,indent=2))
     detail['entries'].extend(write_guides(output,public_base,full_rows))
     quality=audit(full_rows)
     record_reviews=json.loads((ROOT/'record-reviews.json').read_text())

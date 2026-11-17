@@ -39,6 +39,8 @@ const { chromium } = require('playwright');
         assert.equal(response.status(),200);
         await page.locator('h1').waitFor({state:'visible'});
         if(entry==='guides/leave-benefit-claim-checklist-2026.html'){
+          assert(await page.getByRole('heading',{name:'임신 중 배우자 돌봄과 급여 신청을 나누어 확인하세요',exact:true}).count());
+          assert.equal(await page.locator('a[href="https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19964"]').count(),2);
           assert.equal(await page.locator('.guide-table').count(),2);
           assert(await page.getByText('근로자 신청인지, 회사가 실제 지급 후 대위 신청하는지 확인',{exact:true}).count());
           assert.equal(await page.locator('a[href="../benefits/999000000008/"]').count(),1);

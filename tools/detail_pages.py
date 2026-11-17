@@ -147,11 +147,15 @@ def safe_reference(value):
         return False
 
 
-def matching_blog(row, registry, current):
+def blog_source_key(row):
     s = row.get('sourceUpdatedAt') or {}
-    key = json.dumps([row['id'], row['title'], row['organization'], row['region'], row['period'],
+    return json.dumps([row['id'], row['title'], row['organization'], row['region'], row['period'],
                       row['summary'], s.get('list') or '', s.get('detail') or ''],
                      ensure_ascii=False, separators=(',', ':'))
+
+
+def matching_blog(row, registry, current):
+    key = blog_source_key(row)
     found = []
     for article in registry.get('articles', []):
         checked, observed, until = (time_value(article.get(k)) for k in
