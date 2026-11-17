@@ -3,6 +3,8 @@
 CHILDCARE = 'https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systClId=SC00000249&systId=SI00000402'
 MATERNITY = 'https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000407'
 UNEMPLOYMENT = 'https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?currentPageNo=1&recordCountPerPage=9&systClId=SC00000254&systId=SI00000411&upprSystClId='
+PRENATAL = 'https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19964'
+PRENATAL_LAW = 'https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1034869287'
 CREDIT_FORM = 'https://www.nps.or.kr/pnsinfo/databbs/getOHAF0279M1.do?menuId=MN24000998&tmpltDataSn=1881'
 CREDIT = 'https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?currentPageNo=1&recordCountPerPage=10&systClId=SC00000259&systId=SI00000381'
 
@@ -18,6 +20,9 @@ CLAIM_ARTICLES = [
 <tr><th scope="row">마지막 확인</th><td>고용24·고용센터의 접수내역과 보완 요청</td><td>본인·회사 중 실제 접수 주체의 접수내역과 대상기간</td></tr>
 </tbody></table></div>
 <p>고용24의 육아휴직급여 안내는 온라인 급여 신청 전에 회사의 육아휴직 확인서 제출이 필요하다고 설명합니다. 회사에 ‘휴가 승인이 됐나요?’와 ‘급여 신청에 필요한 확인서를 제출했나요?’를 따로 물어보세요. <a href="'''+CHILDCARE+'''" target="_blank" rel="noopener noreferrer">육아휴직급여 지원절차 ↗</a></p>
+<h2>임신 중 배우자 돌봄과 급여 신청을 나누어 확인하세요</h2>
+<p>2026년 11월 18일 추가 대조: 9월 18일 시행 안내와 현행 법률은 유산·조산 등의 위험이 있는 임신 중 배우자를 돌보려는 남성 근로자의 출산 전 육아휴직을 설명합니다. 모든 배우자의 임신이 같은 조건에 해당한다고 해석하지 말고, 본인 상황이 해당 위험 요건에 맞는지와 필요한 증빙을 회사·고용센터에서 확인하세요. <a href="'''+PRENATAL+'''" target="_blank" rel="noopener noreferrer">고용노동부 시행 안내 ↗</a> · <a href="'''+PRENATAL_LAW+'''" target="_blank" rel="noopener noreferrer">현행 법률 제19조 ↗</a></p>
+<p>공식 안내의 휴직 시작 전 신청 시점과 실제 회사 확인서 제출·고용보험 급여 접수는 별도 질문입니다. 산전 사용을 이미 승인받았다면 적용 기간, 회사 확인서, 급여 접수 유형과 추가 증빙을 순서대로 확인하세요. 휴직을 쓸 수 있다는 설명만으로 개인의 급여액·수급이 확정되지는 않습니다.</p>
 <h2>회사에서 돈을 받았다는 말만으로 대위 신청까지 끝났다고 보지 마세요</h2>
 <p>출산전후·유산사산휴가 급여는 근로자가 신청하는 것이 원칙이며, 회사가 통상임금 전액을 실제 지급한 뒤 근로자가 받을 급여를 대신 신청하는 대위 신청도 안내돼 있습니다. 본인 신청인지 대위 신청인지 회사 담당자와 먼저 맞추고, 같은 대상기간에 대해 중복으로 새 신청부터 하지 마세요. <a href="'''+MATERNITY+'''" target="_blank" rel="noopener noreferrer">급여와 대위 신청 공식 안내 ↗</a></p>
 <p>예를 들어 급여명세서에 휴가기간의 지급액이 있어도 ‘어느 기간의 어떤 급여인지, 회사가 대위 신청했는지, 본인이 추가로 접수할 기간이 있는지’는 별도 질문입니다. 지급명세와 접수내역의 대상기간을 나란히 적으면 서로 다른 달의 금액을 같은 지급분으로 오해하는 일을 줄일 수 있습니다. 이는 독자의 확인 방법이며 중복 여부나 차액을 지원금픽이 판정하는 계산식은 아닙니다.</p>
@@ -33,7 +38,9 @@ CLAIM_ARTICLES = [
 <p>급여 신청을 휴가 종료 뒤 무기한 미룰 수는 없습니다. 공식 API의 해당 두 사업은 휴가·휴직 시작 후 1개월부터 종료 후 12개월 이내의 신청기간을 안내합니다. 회사와 고용센터에서 본인의 정확한 시작·종료일, 급여 대상기간, 접수 가능한 시점을 확인하고 달력에 적으세요. 예외 사유나 다른 고용형태의 제도를 이 글만으로 판단하지 마세요.</p>
 <ol><li>회사와 맞춘 휴가·휴직 유형 및 시작·종료일을 적습니다.</li><li>확인서 제출 여부와 본인·회사 중 급여 접수 주체를 확인합니다.</li><li>접수 대상기간·완료 여부·보완 기한을 공식 내역에서 확인합니다.</li><li>다음 회차 신청이나 회사에 다시 요청할 자료를 메모합니다.</li></ol>
 <p>증빙 파일은 회사와 담당기관의 공식 창구에 필요한 범위로 제출하세요. 지원금픽의 내 신청 기록은 공식 접수가 아니며 회사 지급 내역·진단서·주민번호를 이 사이트에 올릴 필요가 없습니다. 2026년 11월 17일 자료 대조 기준이며 개인별 급여액·수급 여부를 확정하지 않습니다.</p>
-''', [(CHILDCARE,'고용24 · 육아휴직급여 신청과 회사 확인서'),
+''', [(PRENATAL,'고용노동부 · 배우자 임신 중 육아휴직 시행 안내'),
+      (PRENATAL_LAW,'국가법령정보센터 · 현행 제19조'),
+      (CHILDCARE,'고용24 · 육아휴직급여 신청과 회사 확인서'),
       (MATERNITY,'고용24 · 출산전후·유산사산휴가 급여와 대위 신청')]),
 ('unemployment-benefit-vs-pension-credit-2026', '구직급여와 실업크레딧: 생활비 지급·보험료 납부·가입기간을 구분하기',
  '구직급여 접수·실업인정과 국민연금 실업크레딧 신청·본인부담 납부를 나누어 준비하는 비교표입니다.', '''
