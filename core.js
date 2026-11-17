@@ -99,6 +99,15 @@
   }
   function parseDetail(payload,index){if(!plain(payload)||payload.generation!==index.generation||!plain(payload.items)||!own(payload.items,index.id))throw Error('상세 자료 버전이 일치하지 않습니다. 새로고침 후 다시 확인하세요.');const row=payload.items[index.id];if(!plain(row)||row.id!==index.id||row.generation!==index.generation||row.title!==index.title||['target','support','method','documents','contact'].some(k=>typeof row[k]!=='string'))throw Error('상세 자료를 확인할 수 없습니다.');return row;}
   function health(feed,state,current=new Date()){if(!state||state.status==='unavailable')return '갱신 상태를 조회하지 못했습니다. 표시된 자료 조회 시각을 확인하세요.';if(state.generation&&state.generation!==feed.generation)return '새 자료의 갱신 상태가 확인되었습니다. 새로고침하여 목록과 상세 자료를 함께 갱신하세요.';if(state.status==='failed')return '최근 자료 갱신에 실패했습니다. 마지막으로 검증된 자료를 유지하고 있습니다.';const stamp=Date.parse(feed.collectionSucceededAt||feed.updatedAt);if(!Number.isFinite(stamp)||stamp>+current+300000)return '자료 수집 시각을 확인할 수 없습니다.';return +current-stamp>30*3600000?'자료 갱신이 지연되고 있습니다. 마지막 수집 시각과 공식 원문을 확인하세요.':'';}
-  const api={KEY,RECOVERY,CATEGORIES,REGIONS,STAGES,blank,validate,load,save,merge,exportBackup,importBackup,safeURL,status,periodState,filter,parseFeed,parseDetail,health,matchReasons,idOK,own,validDate};
+  function summaryView(p){
+    if(p.reviewRequired===true)return {text:'',label:''};
+    const placeholders=new Set(['','-','상동','위와동일','상기와동일','없음','해당없음']);
+    const clean=value=>String(value||'').replace(/\s+/g,' ').trim();
+    const summary=clean(p.summary);
+    if(!placeholders.has(summary.replace(/\s+/g,'')))return {text:summary,label:''};
+    for(const field of ['targetPreview','target']){const target=clean(p[field]);if(!placeholders.has(target.replace(/\s+/g,'')))return {text:target.slice(0,180)+(target.length>180?'…':''),label:'지원대상 원문 일부'};}
+    return {text:'',label:''};
+  }
+  const api={KEY,RECOVERY,CATEGORIES,REGIONS,STAGES,blank,validate,load,save,merge,exportBackup,importBackup,safeURL,status,periodState,filter,parseFeed,parseDetail,health,matchReasons,idOK,own,validDate,summaryView};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.SupportPick=api;
 })(typeof window!=='undefined'?window:globalThis);

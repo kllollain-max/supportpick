@@ -15,7 +15,7 @@ from zoneinfo import ZoneInfo
 from collect_full import safe_url, valid_id
 from search_metadata import public_metadata
 from benefit_analysis import related_analysis
-from content_quality import reading_gaps
+from content_quality import reading_gaps, summary_view
 
 KST = ZoneInfo('Asia/Seoul')
 TEMPLATE_MODIFIED = '2026-11-17'
@@ -248,7 +248,9 @@ def editorial_html(row, guide):
 def render_benefit(row, guide, blog, reasons, related, base, current, feed_status):
     path = benefit_path(row['id'])
     title = row['title'] + ' | 신청대상·지원내용·신청방법 - 지원금픽'
-    summary = re.sub(r'\s+', ' ', row.get('summary', '')).strip()
+    preview = summary_view(row, withheld=bool(reasons))
+    summary = (preview['label'] + ': ' if preview['label'] else '') + preview['text']
+    summary_html = '<p class="benefit-summary">' + escape(summary) + '</p>' if summary else ''
     description = (row['title'] + ': ' + row['organization'] + ' 안내. ' + summary)[:155]
     crumbs = ('<nav class="breadcrumbs" aria-label="현재 위치"><a href="../../">홈</a><span>›</span>'
               '<a href="../">혜택 전체</a><span>›</span><span>' + escape(row['title']) + '</span></nav>')
@@ -284,7 +286,7 @@ def render_benefit(row, guide, blog, reasons, related, base, current, feed_statu
     body += (f'<article class="detail-header"><span class="category-badge">{escape(row["category"])}</span> '
              f'<span class="badge" id="period-status">{escape(status(row, current))}</span>'
              f'<h1>{escape(row["title"])}</h1><p class="organization">{escape(row["organization"])}</p>'
-             f'<p>{escape(summary)}</p><dl class="card-meta"><dt>신청기간</dt><dd>{escape(row["period"])}</dd>'
+             f'{summary_html}<dl class="card-meta"><dt>신청기간</dt><dd>{escape(row["period"])}</dd>'
              f'<dt>지원방식</dt><dd>{escape(row["supportType"])}</dd><dt>자료조회</dt><dd>{escape(stamp(row.get("checkedAt")))}</dd></dl>'
              '<p class="context-note">공식 API 안내와 지원금픽의 준비 해설을 구분해 제공합니다. API 조회 성공은 현재 접수·개인 자격 확인을 뜻하지 않습니다.</p>'
              '<div class="detail-actions">' + actions + '</div>'

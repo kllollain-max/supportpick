@@ -7,6 +7,7 @@ from html import escape
 from family_housing_analysis import FOCUS_ARTICLES
 from tax_benefit_analysis import TAX_ARTICLES
 from savings_voucher_analysis import RECORD_ARTICLES
+from birth_benefit_analysis import BIRTH_ARTICLES
 
 REVIEWED = '2026-11-17'
 ENERGY = 'https://www.energyv.or.kr/info/'
@@ -72,6 +73,7 @@ ARTICLES = [
 ARTICLES += FOCUS_ARTICLES
 ARTICLES += TAX_ARTICLES
 ARTICLES += RECORD_ARTICLES
+ARTICLES += BIRTH_ARTICLES
 
 BENEFIT_ARTICLES = {
     'B55353000001': 'energy-voucher-2026',
@@ -83,6 +85,10 @@ BENEFIT_ARTICLES = {
     '646000000145': 'women-farmer-voucher-records-2026',
     '629000000182': 'women-farmer-voucher-records-2026',
     '135200005013': 'youth-savings-contribution-2026',
+    '135200005015': 'first-meeting-vs-parent-benefit-2026',
+    '305000000113': 'first-meeting-vs-parent-benefit-2026',
+    '319000000130': 'first-meeting-vs-parent-benefit-2026',
+    '442000000135': 'first-meeting-vs-parent-benefit-2026',
 }
 
 
