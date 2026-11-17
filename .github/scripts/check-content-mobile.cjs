@@ -28,7 +28,7 @@ const { chromium } = require('playwright');
   const browser = await chromium.launch({headless:true});
   const results = [];
   try {
-    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['', 'benefits/149200000026/', 'privacy.html', 'guides/application-checklist.html', 'guides/compare-benefits.html', 'guides/energy-voucher-2026.html', 'guides/emergency-vs-livelihood-2026.html', 'guides/child-allowance-2026.html', 'guides/housing-benefit-2026.html', 'benefits/135200000120/', 'guides/earned-income-credit-late-2026.html', 'guides/women-farmer-voucher-records-2026.html', 'guides/youth-savings-contribution-2026.html', 'benefits/646000000145/', 'benefits/135200005013/', 'benefits/SD0000015525/', 'guides/first-meeting-vs-parent-benefit-2026.html', 'benefits/305000000113/', 'guides/culture-card-deadlines-2026.html', 'guides/basic-pension-amounts-2026.html', 'benefits/137100000236/', 'benefits/648000001107/', 'benefits/B55151000066/', 'benefits/SSE000000170/', 'guides/forest-voucher-application-vs-use-2026.html', 'guides/gyeonggi-child-transport-cap-2026.html', 'benefits/140000000176/', 'benefits/641000000139/', 'guides/winter-bills-vs-home-improvement-2026.html', 'benefits/424000000006/', 'benefits/B55353000001/', 'benefits/135200005003/', 'benefits/WII000001410/', 'guides/long-term-lease-notice-checklist-2026.html', 'guides/local-social-service-application-vs-use-2026.html', 'benefits/999000000024/', 'benefits/SD0000016138/', 'benefits/WII000000310/', 'benefits/132000000006/'];
+    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['', 'benefits/149200000026/', 'privacy.html', 'guides/application-checklist.html', 'guides/compare-benefits.html', 'guides/energy-voucher-2026.html', 'guides/emergency-vs-livelihood-2026.html', 'guides/child-allowance-2026.html', 'guides/housing-benefit-2026.html', 'benefits/135200000120/', 'guides/earned-income-credit-late-2026.html', 'guides/women-farmer-voucher-records-2026.html', 'guides/youth-savings-contribution-2026.html', 'benefits/646000000145/', 'benefits/135200005013/', 'benefits/SD0000015525/', 'guides/first-meeting-vs-parent-benefit-2026.html', 'benefits/305000000113/', 'guides/culture-card-deadlines-2026.html', 'guides/basic-pension-amounts-2026.html', 'benefits/137100000236/', 'benefits/648000001107/', 'benefits/B55151000066/', 'benefits/SSE000000170/', 'guides/forest-voucher-application-vs-use-2026.html', 'guides/gyeonggi-child-transport-cap-2026.html', 'benefits/140000000176/', 'benefits/641000000139/', 'guides/winter-bills-vs-home-improvement-2026.html', 'benefits/424000000006/', 'benefits/B55353000001/', 'benefits/135200005003/', 'benefits/WII000001410/', 'guides/long-term-lease-notice-checklist-2026.html', 'guides/local-social-service-application-vs-use-2026.html', 'benefits/999000000024/', 'benefits/SD0000016138/', 'benefits/WII000000310/', 'benefits/132000000006/', 'guides/leave-benefit-claim-checklist-2026.html', 'guides/unemployment-benefit-vs-pension-credit-2026.html', 'benefits/149200005007/', 'benefits/SD0000015536/', 'benefits/999000000008/', 'benefits/135200000115/', 'benefits/171000000005/', 'benefits/B55201500004/', 'benefits/WII000001460/'];
     await fs.mkdir('mobile-evidence', {recursive:true});
     for (const width of [320,390,1440]) {
       const context = await browser.newContext({viewport:{width,height:900},serviceWorkers:'block'});
@@ -38,6 +38,18 @@ const { chromium } = require('playwright');
         const response = await page.goto(origin + '/' + project + '/' + entry, {waitUntil:'networkidle'});
         assert.equal(response.status(),200);
         await page.locator('h1').waitFor({state:'visible'});
+        if(entry==='guides/leave-benefit-claim-checklist-2026.html'){
+          assert.equal(await page.locator('.guide-table').count(),2);
+          assert(await page.getByText('근로자 신청인지, 회사가 실제 지급 후 대위 신청하는지 확인',{exact:true}).count());
+          assert.equal(await page.locator('a[href="../benefits/999000000008/"]').count(),1);
+          assert.equal(await page.locator('a[href="../benefits/WII000001460/"]').count(),1);
+        }
+        if(entry==='guides/unemployment-benefit-vs-pension-credit-2026.html'){
+          assert.equal(await page.locator('.guide-table').count(),2);
+          assert(await page.getByRole('heading',{name:'마지막 입금일보다 소정급여일수의 마지막 날을 먼저 확인하세요',exact:true}).count());
+          assert.equal(await page.locator('a[href="../benefits/B55201500004/"]').count(),1);
+          assert.equal(await page.locator('a[href="../benefits/SD0000015536/"]').count(),1);
+        }
         if (project === 'supportpick' && entry === '') {
           await page.waitForFunction(() => window.SUPPORTPICK_DATA && !window.SUPPORTPICK_DATA.partial,{timeout:60000});
           const total=await page.evaluate(() => window.SUPPORTPICK_DATA.items.length);
