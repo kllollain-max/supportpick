@@ -204,7 +204,7 @@ const { chromium } = require('playwright');
         }
         if(entry==='guides/local-social-service-application-vs-use-2026.html'){
           assert.equal(await page.locator('a[href="../benefits/SD0000016138/"]').count(),1);
-          assert(await page.getByText('제공기관 선택·계약',{exact:true}).count()>0);
+          assert(await page.getByText('이용기관 선택·계약',{exact:true}).count()>0);
         }
         const revisedQuestions={
           'benefits/999000000024/':'최장 20년이면 처음 계약할 때 20년 거주가 확정되나요?',
