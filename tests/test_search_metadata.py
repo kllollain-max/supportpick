@@ -30,7 +30,7 @@ class SearchMetadataTests(unittest.TestCase):
             # Fixture rows omit application methods, so detail indexing is correctly held.
             self.assertEqual(set(urls), {BASE, BASE + 'about.html', BASE + 'privacy.html',
                                          BASE + 'terms.html', BASE + 'contact.html', BASE + 'benefits/',
-                                         *[BASE+'guides/'+slug+'.html' for slug in ['find-and-verify','compare-benefits','application-checklist','deadlines-and-updates','energy-voucher-2026','emergency-vs-livelihood-2026','child-allowance-2026','housing-benefit-2026','earned-income-credit-late-2026','women-farmer-voucher-records-2026','youth-savings-contribution-2026','first-meeting-vs-parent-benefit-2026']]})
+                                         *[BASE+'guides/'+slug+'.html' for slug in ['find-and-verify','compare-benefits','application-checklist','deadlines-and-updates','energy-voucher-2026','emergency-vs-livelihood-2026','child-allowance-2026','housing-benefit-2026','earned-income-credit-late-2026','women-farmer-voucher-records-2026','youth-savings-contribution-2026','first-meeting-vs-parent-benefit-2026','culture-card-deadlines-2026','basic-pension-amounts-2026']]})
             for name, url in [('index.html', BASE), ('about.html', BASE + 'about.html'), ('privacy.html', BASE + 'privacy.html')]:
                 text = (root / 'public' / name).read_text()
                 self.assertEqual(text.count('rel="canonical"'), 1)

@@ -81,7 +81,7 @@ def build(destination,state=None,allow_sample=False,public_base=None):
     # Keep exact classification conflicts visible and reviewable in both cards and details.
     source_differences={};full_rows={}
     if snapshot:
-        for shard_path in (snapshot/'details'/feed['generation']).glob('*.json'):
+        for shard_path in sorted((snapshot/'details'/feed['generation']).glob('*.json')):
             shard=json.loads(shard_path.read_text())
             for sid,row in shard['items'].items():
                 raw=row.get('rawSource',{})
