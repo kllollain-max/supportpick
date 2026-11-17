@@ -13,7 +13,7 @@ class ReleasePolicyTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(); self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name); (self.root / 'tools').mkdir()
-        for name in ('index.html', 'guides.json', 'editorials.json', 'search-verification.json', 'tools/build.py'):
+        for name in ('index.html', 'guides.json', 'editorials.json', 'search-verification.json', 'record-reviews.json', 'tools/build.py'):
             (self.root / name).write_text('{}')
         self.row = {'id': 'B1', 'title': '혜택', 'support': '공식 금액', 'checkedAt': '2026-11-04T09:00:00+09:00',
                     'dataCollectedAt': 'morning', 'generation': 'g1', 'factsVerifiedAt': None,
@@ -50,6 +50,10 @@ class ReleasePolicyTests(unittest.TestCase):
         previous = self.signature(); (self.root / 'index.html').write_text('changed')
         self.assertNotEqual(previous, self.signature())
         previous = self.signature(); (self.root / 'tools/build.py').write_text('changed')
+        self.assertNotEqual(previous, self.signature())
+    def test_record_review_evidence_change_requires_new_public_release(self):
+        previous = self.signature()
+        (self.root / 'record-reviews.json').write_text('{"version":1,"groups":[]}')
         self.assertNotEqual(previous, self.signature())
     def remote(self, matching=True, broken=False):
         body = b'previous verified public bytes'

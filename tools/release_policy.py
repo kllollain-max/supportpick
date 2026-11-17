@@ -24,7 +24,7 @@ def fingerprint(root, feed, rows, previous, status, search, static, current=None
         return {k: v for k, v in value.items() if k not in ('generation', 'checkedAt', 'dataCollectedAt')}
     source = {k: v for k, v in feed.items() if k not in ('items', 'generation', 'detailBase', 'updatedAt', 'collectionSucceededAt')}
     source['items'] = sorted((row(item) for item in feed['items']), key=lambda item: item['id'])
-    paths = sorted(set(static) | {'guides.json', 'editorials.json', 'search-verification.json'} |
+    paths = sorted(set(static) | {'guides.json', 'editorials.json', 'search-verification.json', 'record-reviews.json'} |
                    {str(p.relative_to(root)) for p in (root / 'tools').glob('*.py')})
     files = {name: hashlib.sha256((root / name).read_bytes()).hexdigest() for name in paths}
     value = {'version': 1, 'kstDay': current.astimezone(ZoneInfo('Asia/Seoul')).date().isoformat(),

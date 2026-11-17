@@ -792,6 +792,17 @@
         "지역별 월 지원액"
       ],
       "nextAction": "API 갱신 후 현행 공식 안내와 재대조하여 개별 보류 해제 검토"
+    },
+    "646000000145": {
+      "reason": "API의 20~75세 안내가 광양시 2026년 여성농업인 바우처 공고의 20~80세 안내와 다릅니다. 거주지별 현행 적용 조건 확인이 필요합니다.",
+      "url": "https://gwangyang.go.kr/boardDownload.es?bid=0170&list_no=196475&seq=1",
+      "reviewedAt": "2026-11-17T01:58:31.363718+00:00",
+      "observedSourceHash": "64b5b85098fbad6ef053358b62afd9258dac559c052185b7da24585736ec157e",
+      "reviewScope": [
+        "연령 상한",
+        "적용 지역·모집 차수"
+      ],
+      "nextAction": "API와 거주지의 현행 공식 공고를 재대조한 뒤 개별 보류 해제 검토"
     }
   }
 }
