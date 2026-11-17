@@ -8,6 +8,7 @@ from family_housing_analysis import FOCUS_ARTICLES
 from tax_benefit_analysis import TAX_ARTICLES
 from savings_voucher_analysis import RECORD_ARTICLES
 from birth_benefit_analysis import BIRTH_ARTICLES
+from culture_pension_analysis import CULTURE_PENSION_ARTICLES, source_advisory
 
 REVIEWED = '2026-11-17'
 ENERGY = 'https://www.energyv.or.kr/info/'
@@ -74,6 +75,7 @@ ARTICLES += FOCUS_ARTICLES
 ARTICLES += TAX_ARTICLES
 ARTICLES += RECORD_ARTICLES
 ARTICLES += BIRTH_ARTICLES
+ARTICLES += CULTURE_PENSION_ARTICLES
 
 BENEFIT_ARTICLES = {
     'B55353000001': 'energy-voucher-2026',
@@ -89,15 +91,19 @@ BENEFIT_ARTICLES = {
     '305000000113': 'first-meeting-vs-parent-benefit-2026',
     '319000000130': 'first-meeting-vs-parent-benefit-2026',
     '442000000135': 'first-meeting-vs-parent-benefit-2026',
+    '137100000236': 'culture-card-deadlines-2026',
+    '648000001107': 'culture-card-deadlines-2026',
+    'B55151000066': 'culture-card-deadlines-2026',
+    'SSE000000170': 'basic-pension-amounts-2026',
 }
 
 
-def related_analysis(sid):
+def related_analysis(sid, row=None):
     slug = BENEFIT_ARTICLES.get(sid)
     article = next((a for a in ARTICLES if a[0] == slug), None)
     if not article:
         return ''
-    return ('<section class="detail-block"><h2>조건을 해석하는 사업별 해설</h2><p>'
+    return (source_advisory(row or {}) + '<section class="detail-block"><h2>조건을 해석하는 사업별 해설</h2><p>'
             + escape(article[2]) + '</p><a class="editorial-link" href="../../guides/'
             + article[0] + '.html">' + escape(article[1]) + ' →</a><p class="source-meta">'
             + REVIEWED + ' 공식 자료 대조 · 2026년 기준</p></section>')

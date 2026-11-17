@@ -75,7 +75,7 @@ def write_guides(output, base, rows=None):
         path='guides/'+slug+'.html'
         refs=''.join('<li><a target="_blank" rel="noopener noreferrer" href="'+escape(url,quote=True)+'">'+escape(label)+' ↗</a></li>' for url,label in sources)
         links=''.join('<li><a href="'+other+'.html">'+escape(label)+'</a></li>' for other,label,*_ in articles if other!=slug)
-        related_rows=[(sid,row) for sid,row in (rows or {}).items() if BENEFIT_ARTICLES.get(sid)==slug and (output/'benefits'/sid/'index.html').is_file()]
+        related_rows=sorted((sid,row) for sid,row in (rows or {}).items() if BENEFIT_ARTICLES.get(sid)==slug and (output/'benefits'/sid/'index.html').is_file())
         titles=[row['title'] for _,row in related_rows]
         def label(sid,row):
             title=row['title']

@@ -28,7 +28,7 @@ const { chromium } = require('playwright');
   const browser = await chromium.launch({headless:true});
   const results = [];
   try {
-    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['', 'benefits/149200000026/', 'privacy.html', 'guides/application-checklist.html', 'guides/compare-benefits.html', 'guides/energy-voucher-2026.html', 'guides/emergency-vs-livelihood-2026.html', 'guides/child-allowance-2026.html', 'guides/housing-benefit-2026.html', 'benefits/135200000120/', 'guides/earned-income-credit-late-2026.html', 'guides/women-farmer-voucher-records-2026.html', 'guides/youth-savings-contribution-2026.html', 'benefits/646000000145/', 'benefits/135200005013/', 'benefits/SD0000015525/', 'guides/first-meeting-vs-parent-benefit-2026.html', 'benefits/305000000113/'];
+    const pages = project === 'careerpick' ? ['guides/after-application-checklist.html', 'privacy.html'] : ['', 'benefits/149200000026/', 'privacy.html', 'guides/application-checklist.html', 'guides/compare-benefits.html', 'guides/energy-voucher-2026.html', 'guides/emergency-vs-livelihood-2026.html', 'guides/child-allowance-2026.html', 'guides/housing-benefit-2026.html', 'benefits/135200000120/', 'guides/earned-income-credit-late-2026.html', 'guides/women-farmer-voucher-records-2026.html', 'guides/youth-savings-contribution-2026.html', 'benefits/646000000145/', 'benefits/135200005013/', 'benefits/SD0000015525/', 'guides/first-meeting-vs-parent-benefit-2026.html', 'benefits/305000000113/', 'guides/culture-card-deadlines-2026.html', 'guides/basic-pension-amounts-2026.html', 'benefits/137100000236/', 'benefits/648000001107/', 'benefits/B55151000066/', 'benefits/SSE000000170/'];
     await fs.mkdir('mobile-evidence', {recursive:true});
     for (const width of [320,390,1440]) {
       const context = await browser.newContext({viewport:{width,height:900},serviceWorkers:'block'});
@@ -83,6 +83,14 @@ const { chromium } = require('playwright');
             await card.getByText('지원대상 원문 일부:',{exact:false}).waitFor();
             assert(!['상동','-'].includes((await card.locator('.card-summary').innerText()).trim()));
           }
+          await page.locator('#query').fill('문화누리카드');
+          await page.locator('[data-detail="648000001107"]').click();
+          await page.locator('.source-advisory').getByText('신청 주소 확인:',{exact:true}).waitFor();
+          await page.goto(origin + '/' + project + '/#benefit=648000001107', {waitUntil:'networkidle'});
+          await page.locator('#detailSection').getByRole('link',{name:'출처·확인 안내 상세페이지 →',exact:true}).click();
+          await page.locator('.source-advisory').getByText('신청 주소 확인:',{exact:true}).waitFor();
+          await page.goto(origin + '/' + project + '/', {waitUntil:'networkidle'});
+          await page.waitForFunction(() => window.SUPPORTPICK_DATA && !window.SUPPORTPICK_DATA.partial,{timeout:60000});
           await page.locator('#query').fill('아동수당');
           const heldCard=page.locator('.benefit-card').filter({has:page.locator('[data-detail="135200000120"]')});
           await heldCard.getByText('내용 확인 필요',{exact:true}).waitFor();
@@ -138,6 +146,24 @@ const { chromium } = require('playwright');
         if(entry==='guides/first-meeting-vs-parent-benefit-2026.html'){
           assert.equal(await page.locator('a[href^="../benefits/"]').count(),4);
           assert(await page.getByText('100만원 − 58만4천원 = 현금 차액 41만6천원',{exact:true}).count()>0);
+        }
+        if(entry==='guides/culture-card-deadlines-2026.html'){
+          assert.equal(await page.locator('a[href^="../benefits/"]').count(),3);
+          assert(await page.getByText('2026.12.31.까지',{exact:true}).count()>0);
+          assert(await page.getByText('2025년 기간과 14만원',{exact:false}).count()>0);
+        }
+        if(entry==='guides/basic-pension-amounts-2026.html'){
+          assert.equal(await page.locator('a[href="../benefits/SSE000000170/"]').count(),1);
+          assert(await page.getByText('349,700원 × 80% = 279,760원',{exact:true}).count()>0);
+        }
+        if(entry==='benefits/648000001107/'){
+          assert(await page.locator('.source-advisory').getByText('신청 주소 확인:',{exact:true}).count()>0);
+          assert.equal(await page.locator('.source-advisory a').getAttribute('href'),'https://www.mnuri.kr/munhwa/cardIssueGuide.do');
+        }
+        if(entry==='benefits/B55151000066/'){
+          assert(await page.locator('.source-advisory').getByText('지난 연도 자료:',{exact:true}).count()>0);
+          assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'),'index,follow');
+          assert(await page.getByText('2025년 기준 14만 원',{exact:false}).count()>0);
         }
         const dimensions = await page.evaluate(() => ({width:innerWidth, content:document.documentElement.scrollWidth}));
         assert(dimensions.content <= dimensions.width + 1, JSON.stringify({entry,...dimensions}));
