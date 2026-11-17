@@ -16,6 +16,7 @@ from collect_full import safe_url, valid_id
 from search_metadata import public_metadata
 from benefit_analysis import related_analysis
 from content_quality import reading_gaps, summary_view
+import verified_schedule
 
 KST = ZoneInfo('Asia/Seoul')
 TEMPLATE_MODIFIED = '2026-11-17'
@@ -74,6 +75,9 @@ def popularity(row):
 
 
 def status(row, current):
+    verified = verified_schedule.label(row.get('verifiedSchedule'), current)
+    if verified:
+        return verified
     today = current.astimezone(KST).date().isoformat()
     if re.fullmatch(r'\d{4}-\d{2}-\d{2}', row.get('endDate') or '') and row['endDate'] < today:
         return '안내 기한 경과 · 새 공고 확인'
@@ -116,12 +120,26 @@ def reviewed_guide(row, registry, current):
     return g
 
 
+def schedule_metadata(row, registry, current=None):
+    current = current or datetime.now(timezone.utc)
+    if row.get('reviewRequired') is True or quality_reasons(row, registry):
+        return None
+    guide = reviewed_guide(row, registry, current)
+    if not guide or not isinstance(guide.get('applicationSchedule'), dict):
+        return None
+    schedule = {**guide['applicationSchedule'], 'reviewedAt': guide['reviewedAt'],
+                'validUntil': guide['validUntil']}
+    if schedule.get('sourceUrl') not in {x.get('url') for x in guide['sourceReviews']}:
+        return None
+    return verified_schedule.checked(schedule, current)
+
+
 def safe_reference(value):
     try:
         u = urlsplit(value)
         return (u.scheme == 'https' and bool(u.hostname) and not u.username and not u.password
                 and not u.port and (safe_url(value) or u.hostname in {
-                    'www.gbuspb.kr', 'www.mnuri.kr', 'www.energyv.or.kr',
+                    'www.gbuspb.kr', 'www.mnuri.kr', 'www.energyv.or.kr', 'www.koreg.or.kr',
                     'www.kosaf.go.kr', 'www.hf.go.kr', 'www.khug.or.kr', 'www.nps.or.kr', 'csa.nps.or.kr',
                     'fowi.or.kr', 'www.fowi.or.kr', 'forestcard.or.kr', 'www.forestcard.or.kr', 'www.safedriving.or.kr',
                     'www.energy.or.kr', 'min24.energy.or.kr', 'www.e-policy.or.kr', 'www.lh.or.kr'}))
@@ -246,6 +264,8 @@ def editorial_html(row, guide):
 
 
 def render_benefit(row, guide, blog, reasons, related, base, current, feed_status):
+    schedule = schedule_metadata(row, {'guides': [guide] if guide else []}, current)
+    row = {**row, **({'verifiedSchedule': schedule} if schedule and not reasons else {})}
     path = benefit_path(row['id'])
     title = row['title'] + ' | 신청대상·지원내용·신청방법 - 지원금픽'
     preview = summary_view(row, withheld=bool(reasons))
@@ -291,6 +311,7 @@ def render_benefit(row, guide, blog, reasons, related, base, current, feed_statu
              '<p class="context-note">공식 API 안내와 지원금픽의 준비 해설을 구분해 제공합니다. API 조회 성공은 현재 접수·개인 자격 확인을 뜻하지 않습니다.</p>'
              '<div class="detail-actions">' + actions + '</div>'
              '<noscript><p class="context-note">핵심 안내는 JavaScript 없이 읽을 수 있습니다. 관심 저장·내 신청 기록은 JavaScript를 켜거나 홈에서 이용하세요.</p></noscript></article>')
+    body += verified_schedule.render(row.get('verifiedSchedule'), current)
     body += editorial_html(row, guide)
     body += related_analysis(row['id'], row)
     age = (str(row['ageMin'])+'~'+str(row['ageMax'])+'세 (API 분류 · 적용 기준일은 원문 확인)'
@@ -340,6 +361,8 @@ def render_benefit(row, guide, blog, reasons, related, base, current, feed_statu
             {'@type': 'ListItem', 'position': 3, 'name': row['title'], 'item': base + path}]}
     record = {k: row.get(k) for k in ('id', 'title', 'checkedAt', 'periodKind', 'startDate', 'endDate')}
     record['base'] = '../../'
+    if schedule:
+        record['verifiedSchedule'] = schedule
     return shell(title, description, body, path, '../../', base, not reasons, structured, record)
 
 

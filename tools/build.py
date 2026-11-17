@@ -6,7 +6,7 @@ from urllib.parse import urlsplit,unquote,quote
 from refresh import read_current,verify_snapshot
 from bootstrap_state import ensure_bootstrap
 from search_metadata import public_metadata, read_verifications, write_sitemap, version_local_assets
-from detail_pages import write_details, quality_reasons
+from detail_pages import write_details, quality_reasons, schedule_metadata
 from application_guides import write_guides
 from benefit_analysis import coverage_report
 from release_policy import fingerprint
@@ -88,6 +88,10 @@ def build(destination,state=None,allow_sample=False,public_base=None):
                 source_differences[sid]={key:{'list':raw.get('serviceList',{}).get(key),'detail':raw.get('serviceDetail',{}).get(key)} for key in row.get('sourceConflicts',[])}
                 full_rows[sid]={**row,**period(row.get('period','')),'sourceDifferences':source_differences[sid],**conditions(row)}
     public_feed={**feed,'items':[{**{k:v for k,v in row.items() if k in fields},**period(row.get('period','')),'sourceDifferences':source_differences.get(row['id'],{}),**conditions(full_rows.get(row['id'],{})), 'reviewRequired':bool(quality_reasons(full_rows[row['id']],guide_registry)) if row['id'] in full_rows else True} for row in feed['items']]}
+    for item in public_feed['items']:
+        schedule = schedule_metadata(full_rows[item['id']], guide_registry) if item['id'] in full_rows else None
+        if schedule:
+            item['verifiedSchedule'] = schedule
     public_json=json.dumps(public_feed,ensure_ascii=False,separators=(',',':'))
     (output/'data.json').write_text(public_json)
     (output/'data.js').write_text('window.SUPPORTPICK_DATA = '+public_json.replace('<','\\u003c')+';\n')
