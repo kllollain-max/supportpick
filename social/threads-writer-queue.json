@@ -537,11 +537,14 @@
       "benefit_id": "423000000362",
       "views": 66522,
       "decision": "HOLD",
-      "reason": "동일ID 원본은2025년기준 중위소득200%·시간당12180원표이며, 직접열람한2026-01-15 성평등가족부 현재안내는250%·12790원으로다르다. 출처와수집시각만으로옛기준을READY하지않고 이번동일ID검수에서보류한다. 사업종료아님.",
+      "reason": "최신 동일ID API가 2026년 기준 중위소득250%와 갱신된 시간당 지원표로 바뀌어 과거2025기준 충돌 사유는 해소됐다. 다만 수집 원문은 source_only이고 현재 동해시 제공기관 신청·배정 가능 상태와 동일ID의 실제 접수 검증을 이번 회차에 확보하지 못해 HOLD를 유지한다. API 수집 성공을 현재 접수 확인으로 바꾸지 않는다.",
       "sources": [
         "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=746602&bnefType=all&svcId=423000000362",
         "https://www.mogef.go.kr/nw/rpd/nw_rpd_s001d.do?bbtSn=710800&mid=news405"
-      ]
+      ],
+      "previous_reason": "동일ID 원본은2025년기준 중위소득200%·시간당12180원표이며, 직접열람한2026-01-15 성평등가족부 현재안내는250%·12790원으로다르다. 출처와수집시각만으로옛기준을READY하지않고 이번동일ID검수에서보류한다. 사업종료아님.",
+      "source_generation": "gov24-44187754977-1",
+      "access_method": "PROVIDED_OFFICIAL_TEXT current same-ID source only; current official application unverified"
     },
     {
       "benefit_id": "476000000135",
@@ -614,6 +617,20 @@
       ],
       "verified_at": "2026-11-17T20:52:37.498752+09:00",
       "access_method": "OPENED_OFFICIAL"
+    },
+    {
+      "benefit_id": "628000000176",
+      "views": 70873,
+      "decision": "HOLD",
+      "reason": "2026-11-18 최신 동일ID API는 최대30만원·2024년 소급 안내를 포함한다. 직접 열람한 인천주거포털은 2025-03-31 이후 가입 최대40만원(이전30만원), 연중·군구 예산소진 조기마감을 안내한다. 동일ID 조건과 현행 안내의 차이 및 현재 관할 군구 접수·잔여예산을 확정하지 못해 신규 안내 후보를 HOLD한다. 제도 전체 종료로 단정하지 않는다.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2109109&bnefType=all&svcId=628000000176",
+        "https://www.incheon.go.kr/housing/hou030104",
+        "https://youth.incheon.go.kr/dwelling/guarantee.jsp"
+      ],
+      "checked_at": "2026-11-18T07:43:01.480145+09:00",
+      "access_method": "OPENED_OFFICIAL plus PROVIDED_OFFICIAL_TEXT same-ID API",
+      "source_generation": "gov24-44187754977-1"
     }
   ],
   "entries": [
