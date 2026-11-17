@@ -124,7 +124,7 @@ def safe_reference(value):
                     'www.gbuspb.kr', 'www.mnuri.kr', 'www.energyv.or.kr',
                     'www.kosaf.go.kr', 'www.hf.go.kr', 'www.khug.or.kr', 'www.nps.or.kr',
                     'fowi.or.kr', 'www.fowi.or.kr', 'forestcard.or.kr', 'www.forestcard.or.kr', 'www.safedriving.or.kr',
-                    'www.energy.or.kr', 'min24.energy.or.kr', 'www.lh.or.kr'}))
+                    'www.energy.or.kr', 'min24.energy.or.kr', 'www.e-policy.or.kr', 'www.lh.or.kr'}))
     except ValueError:
         return False
 
