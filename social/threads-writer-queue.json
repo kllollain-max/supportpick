@@ -6632,6 +6632,148 @@
           "media_turn": "IMAGE"
         }
       }
+    },
+    {
+      "slot": "2026-11-18T08:00:00+09:00",
+      "benefit_id": "161300000101",
+      "source_fingerprint": "5bb8a08ec8af3968266b2bd32d831b2a57693788e027a067211757152ab6c12c",
+      "source_generation": "gov24-43966656376-1",
+      "prepared_at": "2026-11-17T09:14:46.241333+09:00",
+      "expires_at": "2026-11-18T09:14:46.241333+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "161300000101",
+        "post_text": "평창에서 이사할 집을 찾고 있다면, 평창장평 통합공공임대 일반형 32호 중 일반공급 13호 모집을 살펴봐요. 임대주택 공급으로, 보증금과 월세는 본인이 부담해요.\n\n먼저 2026년 10월 30일 공고 기준 성년·무주택·소득·자산 요건을 확인해요. 일반공급 소득은 기준 중위소득 150% 이하가 기본이고 1인가구 170%, 2인가구 160%를 적용해요.\n\n총자산 3억4500만원·자동차 4542만원 이하가 기본이며 출산가구 등 우대 기준은 달라요.\n\nLH청약플러스 온라인 접수는 11월 20일 17시까지예요. 서류제출 대상자로 뽑히면 공고일 이후 발급한 서류를 12월 7~11일 제출해요.\n\n임대료는 주택형·소득에 따라 달라지고, 1세대 1주택 신청이 원칙이에요.\n\n입주는 2028년 7월 예정으로 변경될 수 있어요. 최대 30년 거주하며 분양전환되지 않아요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-18T08:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "평창장평 일반형 주택의 일반공급 중 일반계층 자격을 확인하는 성년 무주택가구",
+          "central_message": "평창에서 공공임대주택을 알아보는 무주택가구가 무엇을 확인하고 언제 서류를 준비해야 하나요?",
+          "pattern": "P6",
+          "selection_reason": "실제49게시와기존미래3READY중복제외후,검증가능후보중동일ID보조금24누적조회수62659. 상위49HOLD/SKIP의사업ID·구체이유·출처를그대로보존하고그외상위미해결후보없음을reviewed_selection으로검증. 평창LH현재공고PDF까지열려상위후보를보류하지않고선택.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "161300000101",
+              "source_ref": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=48&ccrCnntSysDsCd=03&panId=2015122300020992&uppAisTpCd=06",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-17T09:14:46.241333+09:00",
+              "claims_supported": [
+                "현재 LH청약플러스 공식 상세 본문과 native GET HTML을 실제열람. 평창장평통합공공임대주택(일반형) 2026-10-30공고, panId2015122300020992, 현재접수중. 인터넷2026-11-16 10시~11-20 17시 신청 가능하여예정11-18 08시도기간내. 고령자별도pan20993와합치지않음. 첨부공고69203782 링크를실제확인·다운로드."
+              ]
+            },
+            {
+              "source_id": "161300000101",
+              "source_ref": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=69203782",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-17T09:14:46.241333+09:00",
+              "claims_supported": [
+                "실제PDF GET(1155647bytes)와pdftotext-layout로본문열람. SHA256=3c261a133465796ff66317213805e909849d07e71dba25f1d81e4ceb9d95ce72. 주택관리번호2026000561. 일반형총32호=우선19/일반13,31A/36A/46A,강원평창용평면소재. 2026-10-30판단기준일성년무주택세대(청년등예외는별도),일반소득중위150%기본·1인170/2인160,출산·맞벌이등우대구분. 자산기본3억4500/자동차4542만원,출산가산별도. 보증금·월세본인부담·주택형/소득별차등. 일반계층독자로좁혀본소개하며우선공급100%와합치지않음.",
+                "인터넷2026-11-16 10시~20일17시 접수 중,선정12-3/서류12-7~11,공고일이후서류·선정전제. 1세대1주택원칙과청년세대원예외,중복예비입주자지위상실. 입주2028-07예정변경가능·최대30년·분양전환없음. 선정·입주확정아님. 일반공급물량은우선미달시증가가능. 사업별추가자격/선정추첨·우대가개별적용."
+              ]
+            },
+            {
+              "source_id": "161300000101",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2103502&bnefType=all&svcId=161300000101",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-17T09:14:46.241333+09:00",
+              "claims_supported": [
+                "완전수집gov24-43966656376-1 동일ID serviceList 조회수62659(누적지표,검색량/신청자수아님)·2026-05-08수정원본과serviceDetail대조. API행checkedAt=2026-11-17T07:08:32.222819+09:00, 수집완료=2026-11-17T07:12:39.565151+09:00. 일반공급150%·소득연계임대·30년제도를구체적LH모집으로좁힘. source_only/applicationOpenVerified=false를변경하지않으며수집시각을접수검증시각으로바꾸지않음."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 442,
+          "count_method": "Python Unicode len including spaces/newlines/CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "현금지원/무료임대/선정확정아님. 일반계층기본조건을소개하며청년·신혼·한부모등세부우대/예외는공고로개별판단.",
+            "현재수집본은내일08시기준24시간이지나신선하지않다. 실제발송시최신완전세대·공식정정/종료·근거24시간·유효기간재검증필수.",
+            "현장접수는장애인/65세등온라인어려운경우의별도일정으로이글온라인기한과합치지않음. 본문에2028입주예정변동가능명시."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "평창에서 공공임대주택을 알아보는 무주택가구가 무엇을 확인하고 언제 서류를 준비해야 하나요?",
+            "reader_scope": "평창장평 일반형 주택의 일반공급 중 일반계층 자격을 확인하는 성년 무주택가구",
+            "angles": [
+              "이사할 집을 찾는 생활상황과 임대주택 효용",
+              "무주택·가구소득·자산 기본자격 확인",
+              "온라인 접수 후 서류선정·제출 준비"
+            ],
+            "chosen_angle": "이사할 집을 찾는 상황→일반공급 기본요건→접수·후속서류→본인부담과입주시기",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "평창에서 이사할 집을 찾고 있다면, 평창장평 통합공공임대 일반형 32호 중 일반공급 13호 모집을 살펴봐요. 임대주택 공급으로, 보증금과 월세는 본인이 부담해요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "성년 무주택가구가 알아볼 평창장평 통합공공임대 일반형은 총 32호, 그중 일반공급은 13호예요. 보증금·월세와 소득·자산 심사가 있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "평창장평 통합공공임대는 무료 주택이 아니에요. 보증금·월세를 부담하며, 일반공급은 무주택·소득·자산 기준을 확인해야 해요."
+              }
+            ],
+            "chosen_opening": "평창에서 이사할 집을 찾고 있다면, 평창장평 통합공공임대 일반형 32호 중 일반공급 13호 모집을 살펴봐요. 임대주택 공급으로, 보증금과 월세는 본인이 부담해요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "첫적용11월10일에서8일지난11월18일08시는A. 실제최근20건의도입·전개와기존미래3READY를비교. 앞날P1/P2/P8/P5와다르게P6로접수후서류준비시점을연결. Nov13긴급주거임시거소와다른신규건설임대공급·입주시기를명시. 후보3개는비게시review에만보존.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "강원평창장평소재주택",
+              "audience": "일반계층성년무주택가구",
+              "benefit": "본인부담공공임대주택",
+              "application": "2026-11-16~20 단기모집",
+              "media": "TEXT"
+            },
+            "comparison_group": "24h관측17건 A8/B9 중앙값104.5/89는지연누적관측. 매칭비교쌍0·사업/독자/지역/시간/미디어교란. 초기8건원시목표도달만으로우세판정하지않으며비교보류·가중치유지.",
+            "applied_elements": [
+              "이사생활상황과평창소재주택을도입에명시",
+              "총32호와일반공급13호구분",
+              "현금아닌본인부담임대",
+              "기본소득·자산과가구별우대구분",
+              "접수후서류제출시점",
+              "2028입주예정과최대30년·분양전환없음"
+            ],
+            "profile_route": "프로필링크·실사이트검색/상세·신청거래동작은이번승인읽기경로에서별도확인못함. 이동·접수성공·글별전환보장없음.",
+            "source_recheck_required_at_publish": true,
+            "writing_input_sha256": "d04f3cbc0b1613fea3527e6a4bcd2055f16d046939c561dffba16ead100daa71",
+            "master_full_and_supplemental_full_used": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "161300000101",
+          "notice_version": "LH2026-10-30평창장평일반형2026000561·PDF69203782",
+          "pattern": "P6",
+          "opening": "평창에서 이사할 집을 찾고 있다면, 평창장평 통합공공임대 일반형 32호 중 일반공급 13호 모집을 살펴봐요. 임대주택 공급으로, 보증금과 월세는 본인이 부담해요.",
+          "structure": "이사상황·평창임대물량→일반계층자격과기본자산→온라인접수후서류준비→본인부담·중복신청→2028입주예정·30년→CTA",
+          "media_turn": "TEXT"
+        }
+      }
     }
   ]
 }
