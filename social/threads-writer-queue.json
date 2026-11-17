@@ -6774,6 +6774,154 @@
           "media_turn": "TEXT"
         }
       }
+    },
+    {
+      "slot": "2026-11-18T12:00:00+09:00",
+      "benefit_id": "137100000006",
+      "source_fingerprint": "57ec674fa778ad18995cc242aaedd8efe2a6402ddb44158252b418c61d5187f9",
+      "source_generation": "gov24-43966656376-1",
+      "prepared_at": "2026-11-17T12:28:32.113996+09:00",
+      "expires_at": "2026-11-18T12:28:32.113996+09:00",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "137100000006",
+        "post_text": "기초생활수급·차상위·법정 한부모가족의 2009~2022년생 자녀라면, 2027년 스포츠강좌이용권을 확인해요. 선정되면 1인당 월 최대 10만5천원까지 스포츠 수강료를 이용권으로 지원해요.\n\n• 신청: 2026년 11월 27일 23시59분까지예요. 선착순이 아니며 인천 서해구는 신청 제외지역이에요.\n• 방법: 스포츠강좌이용권 홈페이지에서 거주지역을 선택하거나 주민등록지 시·군·구청, 행정복지센터에 서면 신청해요.\n• 선정: 지자체가 자격과 기존 이용기간 등을 심사하고 12월 중 결과를 알려줘요. 자동신청도 자동선정은 아니에요.\n\n이용기간은 2027년 1월~12월 10일이며, 예산이 일찍 소진되면 지원 중단·한도 축소가 가능해요. 스포츠꿈나무 특기장려금·지역사회서비스 투자사업의 아동 건강관리 사업과 중복 지원되지 않아요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-18T12:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "기초생활수급·차상위·법정한부모가족의2009~2022년생자녀보호자(인천서해구제외)",
+          "central_message": "저소득가구 자녀의2027년 운동수강료 이용권은 언제 어떻게 신청하고 어떤 제한이 있나요?",
+          "pattern": "P8",
+          "selection_reason": "实际49게시+기존미예약4READY중복제외후동일ID보조금24누적조회수62307. 상위49HOLD/SKIP출처·이유보존하고상위161300000101은기존다음08시큐로중복제외. reviewed_selection으로순위검증.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "137100000006",
+              "source_ref": "https://svoucher.kspo.or.kr/svoucher/bbs/B0000051/view.do?menuNo=20&nttId=64394&topMenuNo=5",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-17T12:28:32.113996+09:00",
+              "claims_supported": [
+                "이번실행에서KSPO현재공식2027신청공지 실제본문166~236행을열람. 신청기간2026-11-9~27 23:59 신청 가능(선착순아님),2009-01-01~2022-12-31출생·생계/의료/주거/교육급여수급·차상위·법정한부모,인천서해구제외. 1인매월10.5만원내스포츠수강료·2027-1~12-10사용·예산조기소진시중단/한도축소. 온라인거주지역선택또는주민등록관할방문서면,지자체12월선정과기존이용기간순위,자동신청자동선정아님을대조. 폴케어추천예외는별도로존재하나이글은기본복지대상만소개. 접수거래는수행하지않음."
+              ]
+            },
+            {
+              "source_id": "137100000006",
+              "source_ref": "https://svoucher.kspo.or.kr/svoucher/bbs/B0000051/view.do?menuNo=20&nttId=64352&topMenuNo=5",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-17T12:28:32.113996+09:00",
+              "claims_supported": [
+                "KSPO2026-10-19현재중복수혜제한공지 실제본문178~186행 직접열람. 스포츠꿈나무특기장려금및지역사회서비스투자사업중(비만)아동건강관리사업중복불가,중복확인시지원중단/하나선택을확인."
+              ]
+            },
+            {
+              "source_id": "137100000006",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999118&bnefType=all&svcId=137100000006",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-17T12:28:32.113996+09:00",
+              "claims_supported": [
+                "완전검증세대gov24-43966656376-1 동일IDserviceList.조회수62307누적지표와serviceDetail대조. APIcheckedAt=2026-11-17T07:08:26.057945+09:00, 수집완료=2026-11-17T07:12:39.565151+09:00. 월10.5만원·기본복지대상일치. source_only/applicationOpenVerified=false는현재접수검증으로바꾸지않고별도공식2027공지로현재상태확인."
+              ]
+            },
+            {
+              "source_id": "137100000006",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-17T12:28:32.113996+09:00",
+              "claims_supported": [
+                "이번실행에서현재main허용PNG를실제다시다운로드하고현재image-review의2026-11-06 AI_VISUAL_INSPECTION/PASS 및파일바이트SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a와재대조했다. 새직접시각검수아님. 기존약360px가독성검수참조. 공통브랜드혜택안내일러스트로사업별금액·대상·기간문구없어본문과충돌없음. 사업별자산없어기존rotation2사용."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 424,
+          "count_method": "Python Unicode len including spaces/newlines/CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "선정/지급확정아님. 본문은기본복지자격대상으로좁혀안내하며폴케어특례도존재.",
+            "현재07:12수집본은내일12시기준신선하지않음. 실제발송시최신완전자료·공식정정/종료·근거24시간·이미지SHA·유효기간재검증필수.",
+            "유효기간은준비후최대24시간으로내일12시이후허용창전체를덮지않는다. 만료후게시금지."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "저소득가구 자녀의2027년 운동수강료 이용권은 언제 어떻게 신청하고 어떤 제한이 있나요?",
+            "reader_scope": "기초생활수급·차상위·법정한부모가족의2009~2022년생자녀보호자(인천서해구제외)",
+            "angles": [
+              "아이운동수강료부담",
+              "복지자격·출생연도확인",
+              "신청·선정·이용기간구분"
+            ],
+            "chosen_angle": "대상·월한도→신청기한/경로/심사목록→이용기간·예산·중복제한",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "아이 운동 수강료가 부담된다면, 기초생활수급·차상위·법정 한부모가족의 2009~2022년생 자녀는 스포츠강좌이용권을 확인해요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "기초생활수급·차상위·법정 한부모가족의 2009~2022년생 자녀라면, 2027년 스포츠강좌이용권을 확인해요. 선정되면 1인당 월 최대 10만5천원까지 스포츠 수강료를 이용권으로 지원해요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "스포츠강좌이용권은 신청 순서로 뽑지 않아요. 2027년 이용자는 복지자격과 기존 이용기간 등에 따라 지자체가 선정해요."
+              }
+            ],
+            "chosen_opening": "기초생활수급·차상위·법정 한부모가족의 2009~2022년생 자녀라면, 2027년 스포츠강좌이용권을 확인해요. 선정되면 1인당 월 최대 10만5천원까지 스포츠 수강료를 이용권으로 지원해요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "첫적용11월10일로부터8일지난11월18일12시는B. 실제최근20건및기존미예약4READY의도입/전개비교. 같은날08시P6임대주택서류준비와다른P8목록으로운동수강료의신청·선정·사용시점을구분. 기본대상복지3그룹으로독자범위를좁히며폴케어특례전체까지소개한다고하지않음.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국신청(인천서해구제외)",
+              "audience": "저소득청소년가구",
+              "benefit": "스포츠수강료이용권",
+              "application": "2027년도신청11/9~27",
+              "media": "IMAGE"
+            },
+            "comparison_group": "실측지연24h관측18건 A9/B9중앙값102/89. 유사사업매칭0·사업/지역/독자/시간/미디어교란으로효과비교보류·비중유지.",
+            "applied_elements": [
+              "대상·출생연도·월최대한도를먼저",
+              "신청/방법/선정목록",
+              "2027이용기간과예산제한",
+              "비현금용도·중복제한"
+            ],
+            "profile_route": "프로필링크와실사이트검색/상세·실제접수거래는별도확인못함. 이동·접수성공·글별전환을보장하지않음.",
+            "source_recheck_required_at_publish": true,
+            "writing_input_sha256": "29d769d61994ea4e36f6d9a96eb44a68b62d65451d70c176a8ceafdf94b667bf",
+            "master_full_and_supplemental_full_used": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "137100000006",
+          "notice_version": "KSPO2027전국신청공지64394(2026-10-27)·중복제한64352(2026-10-19)",
+          "pattern": "P8",
+          "opening": "기초생활수급·차상위·법정 한부모가족의 2009~2022년생 자녀라면, 2027년 스포츠강좌이용권을 확인해요. 선정되면 1인당 월 최대 10만5천원까지 스포츠 수강료를 이용권으로 지원해요.",
+          "structure": "복지대상·자녀출생연도·월한도→신청기한/제외지역·신청경로·심사목록→이용기간·예산·중복제한→CTA",
+          "media_turn": "IMAGE"
+        }
+      }
     }
   ]
 }
