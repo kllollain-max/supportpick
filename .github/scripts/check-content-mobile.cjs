@@ -85,6 +85,8 @@ const { chromium } = require('playwright');
           }
           await page.locator('#query').fill('문화누리카드');
           await page.locator('[data-detail="648000001107"]').click();
+          await page.locator('.source-advisory').getByText('신청 주소 확인:',{exact:true}).waitFor();
+          await page.goto(origin + '/' + project + '/#benefit=648000001107', {waitUntil:'networkidle'});
           await page.locator('#detailSection').getByRole('link',{name:'출처·확인 안내 상세페이지 →',exact:true}).click();
           await page.locator('.source-advisory').getByText('신청 주소 확인:',{exact:true}).waitFor();
           await page.goto(origin + '/' + project + '/', {waitUntil:'networkidle'});
