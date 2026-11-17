@@ -25,6 +25,7 @@
   window.addEventListener('storage',e=>{if(e.key!==C.KEY)return;try{snapshot=C.load(localStorage);draw();}catch(error){writable=false;saveButton.disabled=true;trackButton.disabled=true;fail(error);}});
   const message=document.createElement('p');message.id='record-message';message.setAttribute('role','status');message.className='context-note';saveButton.parentElement.after(message);
   if(row.periodKind)document.getElementById('period-status').textContent=C.status(row);
+  for(const block of document.querySelectorAll('[data-schedule-until]'))if(!C.scheduleInfo(row))block.hidden=true;
   const age=Date.now()-Date.parse(row.checkedAt);
   if(!Number.isFinite(age)||age>30*3600000){const banner=document.getElementById('freshness-warning');banner.textContent='자료 조회 후 시간이 지났습니다. 현재 접수·변경 사항은 공식 안내에서 확인하세요.';banner.hidden=false;}
   for(const block of document.querySelectorAll('[data-blog-until]'))if(!(Date.now()<Date.parse(block.dataset.blogUntil)))block.hidden=true;

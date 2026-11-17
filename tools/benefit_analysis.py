@@ -13,6 +13,7 @@ from forest_transport_analysis import FOREST_TRANSPORT_ARTICLES, source_advisory
 from winter_energy_analysis import WINTER_ARTICLES
 from housing_service_analysis import HOUSING_SERVICE_ARTICLES
 from claim_preparation_analysis import CLAIM_ARTICLES
+from education_business_analysis import EDUCATION_BUSINESS_ARTICLES
 
 REVIEWED = '2026-11-17'
 ENERGY = 'https://www.energyv.or.kr/info/'
@@ -85,8 +86,11 @@ ARTICLES += FOREST_TRANSPORT_ARTICLES
 ARTICLES += WINTER_ARTICLES
 ARTICLES += HOUSING_SERVICE_ARTICLES
 ARTICLES += CLAIM_ARTICLES
+ARTICLES += EDUCATION_BUSINESS_ARTICLES
 
 BENEFIT_ARTICLES = {
+    **dict.fromkeys(('SD0000004508','999000000090','134200005002','GES000000110','GES000000100'), 'scholarships-vs-student-loan-steps-2026'),
+    **dict.fromkeys(('SD0000007429','SD0000018904'), 'small-business-loan-vs-guarantee-2026'),
     '999000000008': 'leave-benefit-claim-checklist-2026',
     'WII000001460': 'leave-benefit-claim-checklist-2026',
     'SD0000015536': 'unemployment-benefit-vs-pension-credit-2026',
