@@ -631,6 +631,24 @@
       "checked_at": "2026-11-18T07:43:01.480145+09:00",
       "access_method": "OPENED_OFFICIAL plus PROVIDED_OFFICIAL_TEXT same-ID API",
       "source_generation": "gov24-44187754977-1"
+    },
+    {
+      "benefit_id": "B55201500202",
+      "views": 57593,
+      "decision": "SKIP",
+      "reason": "07:15 최신 동일ID 누적조회수57593으로 푸드뱅크57514보다 높아졌지만, 이 사업은 이미 2026-11-19 20시 READY 원고로 같은 검수 큐에 저장돼 있다. 기존 READY 보존과 동일사업 중복선정 방지를 위해 16시의 재선정만 SKIP한다. 20시 기존 READY를 종료·보류·취소한다는 뜻이 아니며 본문·회차·미디어·해시를 그대로 유지한다. 사업의 현재 이용 불가나 사실 부족을 사유로 꾸미지 않는다.",
+      "sources": [
+        "https://github.com/kllollain-max/supportpick/blob/d14e6589770bfd2d9c1c7b02e4b02bf7ecceec0b/social/threads-writer-queue.json",
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2100952&bnefType=all&svcId=B55201500202",
+        "https://www.4insure.or.kr/pbiz/gdne/cerfUtztnAnc.do"
+      ],
+      "checked_at": "2026-11-19T07:45:49.379108+09:00",
+      "access_method": "UPSTREAM_VERIFIED exact current queue blob3fa5dc9c860b901138ad1b05d7a73bc05a62ec83 and PROVIDED_OFFICIAL_TEXT same-ID latest rawSource; official guide review in original preserved20entry",
+      "source_generation": "gov24-44408666268-1",
+      "scope": "duplicate_reselection_before_existing_READY_slot_only",
+      "existing_ready_slot": "2026-11-19T20:00:00+09:00",
+      "existing_ready_preserved": true,
+      "official_current_application_not_reverified_by_collection": true
     }
   ],
   "entries": [
