@@ -66,7 +66,7 @@ class SourceReviewAuditTests(unittest.TestCase):
 
     def test_unchanged_hold_stays_held_and_editorial_counts_are_separate(self):
         a=row('service')
-        registry={'guides':[guide(a)], 'holds':{'service':{'observedSourceHash':material_hash(a)}}}
+        registry={'guides':[guide(a)], 'holds':{'service':{'reason':'공식 근거 재검토', 'observedSourceHash':material_hash(a)}}}
         original=copy.deepcopy((a,registry))
         report=audit({'service':a},{},registry,{},NOW)
         self.assertEqual((report['registeredEntries'],report['active'],report['reviewRequired']),(1,0,1))
