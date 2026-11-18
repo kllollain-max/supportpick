@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-18T14:06:45.686883+09:00",
+  "prepared_at": "2026-11-18T17:15:50.080831+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -7513,6 +7513,170 @@
           "opening": "만 6세 이상 65세 미만 등록 장애인 중 혼자 일상생활이 어려운 분은 장애인 활동지원을 신청할 수 있어요. 식사·이동·가사 등을 돕는 서비스를 바우처로 이용하는 제도예요.",
           "structure": "대상·서비스실익→종합조사·바우처→본인부담·예외→상시신청",
           "media_turn": "TEXT"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-19T16:00:00+09:00",
+      "benefit_id": "B46001400003",
+      "source_fingerprint": "c1a6b4fe291b53b66de4120b4ea7fe69293f7f95088456ccf53a9be7fa8d49d9",
+      "source_generation": "gov24-44187754977-1",
+      "prepared_at": "2026-11-18T17:15:50.080831+09:00",
+      "expires_at": "2026-11-19T17:15:50.080831+09:00",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "B46001400003",
+        "post_text": "식비가 버거운 긴급지원대상자나 차상위 가구라면, 푸드뱅크·푸드마켓의 기부식품 지원을 상담할 수 있어요. 현금 지원이 아니라 기부된 식품과 생활용품을 나누는 사업이에요.\n\n먼저 거주지역 행정복지센터에 연락하거나 방문해 이용 상담을 받아요. 이용자로 선정된 뒤 지역 푸드뱅크·마켓을 통해 물품을 제공받는 순서예요.\n\n긴급지원대상자, 차상위계층, 생계·의료급여 신청 탈락·중지자 등 형편이 어려운 재가 대상자를 우선해요. 생계·의료급여 수급자는 지자체 상황에 따라 제공될 수 있어요.\n\n상담 신청은 상시지만 선정은 지자체와 협의해 결정해요. 제공 품목과 기간은 지역·기부물품 상황에 따라 달라 원하는 물품이나 즉시 지원이 보장되지는 않아요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게라는 문구 아래 집, 체크 표시 방패, 체크리스트, 새싹을 배치한 크림색 정사각형 브랜드 이미지. 하단에는 자세한 사항은 프로필링크 확인 문구가 있다."
+        },
+        "review": {
+          "planned_at": "2026-11-19T16:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "식품·생활용품 지원 상담이 필요한 긴급지원·차상위 등 저소득 재가 가구",
+          "central_message": "푸드뱅크 물품 지원을 어디에서 상담하고 어떤 순서로 이용하나요?",
+          "pattern": "P6",
+          "selection_reason": "실제53게시와기존4READY제외한동일ID 누적조회수57509 최상위후보. 상위55HOLD/SKIP구체이유/출처보존. 최근20게시와도입·전개비교.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "B46001400003",
+              "source_ref": "https://www.foodbank1377.org/guide/useInfo.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-18T17:15:50.080831+09:00",
+              "claims_supported": [
+                "공식이용방법145~190행 직접열람: 주민센터전화/방문상담→선정후기초푸드뱅크/마켓이용,긴급지원/차상위/급여탈락·중지등우선순위,지자체협의선정. 지역실제배정은보장하지않음.",
+                "2026-11-18이번실행공식페이지실제재열람: useInfo145~179상담→선정→이용/우선순위/지역별기간; organize209~216식품·생활용품/지자체선정. 본문주장재대조."
+              ]
+            },
+            {
+              "source_id": "B46001400003",
+              "source_ref": "https://www.foodbank1377.org/introduce/organize.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-18T17:15:50.080831+09:00",
+              "claims_supported": [
+                "공식사업체계실제열람: 기초푸드뱅크는기부식품/생활용품을취약계층에전달하고마켓은방문선택매장. 지자체지도감독·협의선정.",
+                "2026-11-18이번실행공식페이지실제재열람: useInfo145~179상담→선정→이용/우선순위/지역별기간; organize209~216식품·생활용품/지자체선정. 본문주장재대조."
+              ]
+            },
+            {
+              "source_id": "B46001400003",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002071&bnefType=all&svcId=B46001400003",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-18T17:15:50.080831+09:00",
+              "claims_supported": [
+                "검증완전gov24-44187754977-1 동일ID원문상시신청·주민센터상담·대상우선순위·지역별1년이하기간/상담연장대조. 누적조회수57509(실시간신청자수아님),APIcheckedAt=2026-11-18T07:17:07.234591+09:00,수집=2026-11-18T07:19:29.776730+09:00. source_only를개별접수/배정검증으로대체하지않음. 그냥드림일부지역사업은이원고에서혼합하지않음.",
+                "SameID rawSource/serviceList cumulative views57509 and source fingerprint verified against complete gov24-44187754977-1. API freshness is not current allocation verification."
+              ]
+            },
+            {
+              "source_id": "B46001400003",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-18T17:15:50.080831+09:00",
+              "claims_supported": [
+                "이번실행main허용PNG실제재다운로드SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a와image-review2026-11-06 AI_VISUAL_INSPECTION/PASS재대조. 기존약360px가독성검수참고,새직접시각검수아님. 공통브랜드카드에금액/대상/기간없어본문과충돌없음.",
+                "Current main allowed PNG actually downloaded and SHA256 matched existing approved visual review; no new visual inspection claimed."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 373,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "지역별실제선정/물량/기간·운영시간은추가상담사항이며즉시배정확정아님. 일반기부식품사업만소개하고일부지역그냥드림3~5품목/2만원안내와합치지않음.",
+            "현재07:19수집본은내일12시신선도초과. 실제발송시최신완전자료·공식정정/중단·이미지SHA·교대·근거24h·expiry재검증필수. 앞12시미전송시미예약미래교대재계산.",
+            "Current07:19source is notfresh tomorrow16. Sender must restore newer complete source and revalidate official status, fingerprint, assets, expiry. Original existing A opening retained and excluded from rescheduled-slot A/B experiment."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "푸드뱅크 물품 지원을 어디에서 상담하고 어떤 순서로 이용하나요?",
+            "reader_scope": "식품·생활용품 지원 상담이 필요한 긴급지원·차상위 등 저소득 재가 가구",
+            "angles": [
+              "식비부담과현물도움",
+              "이용자우선순위",
+              "상담부터선정후이용"
+            ],
+            "chosen_angle": "생활부담→주민센터상담·선정→우선순위→지역별제공제한",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "식비가 버거운 긴급지원대상자나 차상위 가구라면, 푸드뱅크·푸드마켓의 기부식품 지원을 상담할 수 있어요. 현금 지원이 아니라 기부된 식품과 생활용품을 나누는 사업이에요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "긴급지원대상자나 차상위 가구는 푸드뱅크·푸드마켓의 기부식품 지원 상담을 확인해요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "푸드뱅크 지원은 지자체와 협의해 이용자를 정한 뒤 기부식품을 제공하는 방식이에요."
+              }
+            ],
+            "chosen_opening": "식비가 버거운 긴급지원대상자나 차상위 가구라면, 푸드뱅크·푸드마켓의 기부식품 지원을 상담할 수 있어요. 현금 지원이 아니라 기부된 식품과 생활용품을 나누는 사업이에요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "첫적용11월10일부터9일뒤11월19일12시는A. 같은날08P5장애인바우처와다른P6상담절차. 최근20실제게시·미예약원고비교.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국·지역별운영",
+              "audience": "식품·생활용품 지원 상담이 필요한 긴급지원·차상위 등 저소득 재가 가구",
+              "benefit": "기부식품현물",
+              "application": "상시상담·선정필요",
+              "media": "IMAGE"
+            },
+            "comparison_group": "75공식ID/window관측보존;24시간A9/B12중앙값102/83.5,유사사업매칭0·독자/혜택/시간/미디어교란으로비중유지.7일기평가유지,14일미도래.",
+            "applied_elements": [
+              "생활부담과대상첫단락",
+              "상담부터이용절차",
+              "현물과현금구분",
+              "선정/물량제한"
+            ],
+            "profile_route": "승인읽기범위에서프로필링크와사이트접수거래독립확인못함. 자동신청/선정기능보장안함.",
+            "source_recheck_required_at_publish": true,
+            "master_full_and_supplemental_full_used": true,
+            "writing_input_sha256": "c00b30fbb20c92e82e7e7ae0d2d6c86da1c8a977046661db7fa9c5418f7bd586",
+            "reassigned_from_slot": "2026-11-19T12:00:00+09:00",
+            "comparison_eligible": false,
+            "comparison_exclusion": "Previously written input preserved; no retrospective cohort assignment after failed preceding slot"
+          },
+          "review_refresh": {
+            "reason": "Archived unposted foodbank input now fits next unreserved24h regular slot after verified16publication; no old-slot backfill",
+            "previous_slot": "2026-11-19T12:00:00+09:00",
+            "previous_prepared_at": "2026-11-18T12:27:49.583297+09:00",
+            "previous_expires_at": "2026-11-19T12:27:49.583297+09:00",
+            "actual_official_sources_reopened": true,
+            "body_media_pattern_preserved": true,
+            "writing_input_sha256": "349c2c796560c08a04ea77e7266cdab362266e8d79ed993b5863d9da3dd3a7b4"
+          }
+        },
+        "next_history_record": {
+          "program_id": "B46001400003",
+          "notice_version": "2026-11-18공식이용안내재열람·gov24-44187754977-1",
+          "pattern": "P6",
+          "opening": "식비가 버거운 긴급지원대상자나 차상위 가구라면, 푸드뱅크·푸드마켓의 기부식품 지원을 상담할 수 있어요. 현금 지원이 아니라 기부된 식품과 생활용품을 나누는 사업이에요.",
+          "structure": "생활상황·현물→상담·선정절차→대상우선순위→지역별제한→CTA",
+          "media_turn": "IMAGE"
         }
       }
     }
