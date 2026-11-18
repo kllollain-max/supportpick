@@ -20,6 +20,7 @@ from maternal_service_analysis import MATERNAL_SERVICE_ARTICLES
 from rental_guarantee_analysis import RENTAL_GUARANTEE_ARTICLES
 from legacy_youth_savings_analysis import LEGACY_YOUTH_SAVINGS_ARTICLES
 from youth_subscription_analysis import YOUTH_SUBSCRIPTION_ARTICLES
+from didimdol_analysis import DIDIMDOL_ARTICLES
 
 REVIEWED = '2026-11-17'
 ENERGY = 'https://www.energyv.or.kr/info/'
@@ -99,8 +100,10 @@ ARTICLES += MATERNAL_SERVICE_ARTICLES
 ARTICLES += RENTAL_GUARANTEE_ARTICLES
 ARTICLES += LEGACY_YOUTH_SAVINGS_ARTICLES
 ARTICLES += YOUTH_SUBSCRIPTION_ARTICLES
+ARTICLES += DIDIMDOL_ARTICLES
 
 BENEFIT_ARTICLES = {
+    'B55140800003': 'didimdol-cap-collateral-and-closing-2026',
     '161300000088': 'youth-housing-account-announcement-tax-conversion-2026',
     'SD0000011848': 'youth-mutual-aid-closed-enrollment-maturity-2026',
     '161300000103': 'rental-guarantee-fee-cap-and-dates-2026',
@@ -138,7 +141,7 @@ BENEFIT_ARTICLES = {
 }
 
 
-ARTICLE_REVIEW_DATES = {'youth-housing-account-announcement-tax-conversion-2026': '2026-11-18', 'youth-mutual-aid-closed-enrollment-maturity-2026': '2026-11-18', 'rental-guarantee-fee-cap-and-dates-2026': '2026-11-18', 'maternal-service-application-use-refund-2026': '2026-11-18', 'incheon-child-dream-birth-year-2026': '2026-11-18', 'incheon-pregnancy-transport-vs-postpartum-2026': '2026-11-18', 'leave-benefit-claim-checklist-2026': '2026-11-18'}
+ARTICLE_REVIEW_DATES = {'didimdol-cap-collateral-and-closing-2026': '2026-11-19', 'youth-housing-account-announcement-tax-conversion-2026': '2026-11-18', 'youth-mutual-aid-closed-enrollment-maturity-2026': '2026-11-18', 'rental-guarantee-fee-cap-and-dates-2026': '2026-11-18', 'maternal-service-application-use-refund-2026': '2026-11-18', 'incheon-child-dream-birth-year-2026': '2026-11-18', 'incheon-pregnancy-transport-vs-postpartum-2026': '2026-11-18', 'leave-benefit-claim-checklist-2026': '2026-11-18'}
 
 
 def related_analysis(sid, row=None):
