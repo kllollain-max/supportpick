@@ -64,4 +64,66 @@ class SourceReviewAuditTests(unittest.TestCase):
                 self.assertTrue(a['recheckEvidence']['officialLinksMatched'])
 
 
+    def test_unchanged_hold_stays_held_and_editorial_counts_are_separate(self):
+        a=row('service')
+        registry={'guides':[guide(a)], 'holds':{'service':{'reason':'공식 근거 재검토', 'observedSourceHash':material_hash(a)}}}
+        original=copy.deepcopy((a,registry))
+        report=audit({'service':a},{},registry,{},NOW)
+        self.assertEqual((report['registeredEntries'],report['active'],report['reviewRequired']),(1,0,1))
+        self.assertEqual((report['holdEntries'],report['holdReviewRequired']),(1,0))
+        self.assertEqual(report['holds'][0]['reason'],'held_source_unchanged')
+        self.assertEqual(report['holds'][0]['status'],'held')
+        self.assertEqual((a,registry),original)
+
+    def test_changed_hold_requires_review_with_only_proven_field_differences(self):
+        old=row('service');new={**old,'selection':'현재 공식 기준으로 갱신된 조건'}
+        registry={'holds':{'service':{'observedSourceHash':material_hash(old)}}}
+        original=copy.deepcopy((old,new,registry))
+        report=audit({'service':new},{'service':old},registry,{},NOW)
+        item=report['holds'][0]
+        self.assertEqual((report['registeredEntries'],report['reviewRequired']),(0,0))
+        self.assertEqual(report['holdReviewRequired'],1)
+        self.assertEqual(item['reason'],'held_source_material_changed')
+        self.assertEqual(item['changedFields'],['selection'])
+        self.assertEqual(item['fieldComparisonBasis'],'previous_source_matches_observed_hold_hash')
+        self.assertEqual(item['status'],'held')
+        for previous in ({},{'service':new}):
+            item=audit({'service':new},previous,registry,{},NOW)['holds'][0]
+            self.assertEqual(item['changedFields'],[])
+            self.assertEqual(item['fieldComparisonBasis'],'unavailable')
+        self.assertEqual((old,new,registry),original)
+
+    def test_missing_and_unrecorded_hold_baselines_are_not_silently_renewed(self):
+        a=row('service')
+        for baseline in (None,'',42,'x'*64,'A'*64):
+            entry={} if baseline is None else {'observedSourceHash':baseline}
+            registry={'holds':{'service':entry}}
+            original=copy.deepcopy(registry)
+            report=audit({'service':a},{'service':a},registry,{},NOW)
+            self.assertEqual(report['holds'][0]['reason'],'hold_baseline_unavailable')
+            self.assertEqual(report['holdReviewRequired'],1)
+            self.assertEqual(registry,original)
+        registry={'holds':{'service':{'observedSourceHash':material_hash(a)}}}
+        item=audit({}, {'service':a},registry,{},NOW)['holds'][0]
+        self.assertEqual(item['reason'],'not_in_current_source')
+        self.assertEqual(item['status'],'held')
+        self.assertEqual(item['changedFields'],[])
+
+    def test_hold_timestamps_do_not_trigger_material_change_or_clear_hold(self):
+        a=row('service');new={**a,'sourceUpdatedAt':{'list':'20261118090000','detail':'2026-11-18'}}
+        registry={'holds':{'service':{'observedSourceHash':material_hash(a)}}}
+        item=audit({'service':new},{'service':a},registry,{},NOW)['holds'][0]
+        self.assertEqual(item['reason'],'held_source_unchanged')
+        self.assertEqual(item['status'],'held')
+
+    def test_existing_legacy_holds_are_visible_without_inventing_baselines(self):
+        root=Path(__file__).resolve().parents[1]
+        registry=json.loads((root/'guides.json').read_text())
+        report=audit({}, {},registry,{},NOW)
+        self.assertEqual(report['holdEntries'],len(registry['holds']))
+        self.assertEqual({x['benefitId'] for x in report['holds']},set(registry['holds']))
+        self.assertTrue(all(x['status']=='held' for x in report['holds']))
+        self.assertTrue(all(x['reason']=='not_in_current_source' for x in report['holds']))
+
+
 if __name__=='__main__':unittest.main()
