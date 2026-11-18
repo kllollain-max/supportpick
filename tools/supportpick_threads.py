@@ -293,6 +293,29 @@ def validate_ledger(state):
     return state
 
 
+def github_content_bytes(data, token, opener):
+    """Contents omits files above 1MB; retrieve the exact immutable blob.
+
+    Never follow response-provided URLs or read a moving branch twice. The
+    original Contents SHA remains the CAS precondition for a later write.
+    """
+    if data.get('encoding') != 'none':
+        return base64.b64decode(data['content'])
+    sha, size = data.get('sha'), data.get('size')
+    if (not isinstance(sha, str) or not re.fullmatch(r'[0-9a-f]{40}', sha)
+            or type(size) is not int or not 0 < size <= 100 * 1024 * 1024):
+        raise ValueError('github_blob_metadata_invalid')
+    req = urllib.request.Request(f'https://api.github.com/repos/{REPO}/git/blobs/{sha}',
+        headers={'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github.raw+json',
+                 'X-GitHub-Api-Version': '2022-11-28'})
+    with opener(req, timeout=30) as response:
+        raw = response.read(size + 1)
+    digest = hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest()
+    if len(raw) != size or digest != sha:
+        raise ValueError('github_blob_integrity_mismatch')
+    return raw
+
+
 class Ledger:
     """GitHub Contents GET + SHA guarded PUT; never reset or create on a 404."""
     def __init__(self, token, opener=urllib.request.urlopen):
@@ -316,7 +339,7 @@ class Ledger:
 
     def read(self):
         data = self.request('GET')
-        return data['sha'], validate_ledger(json.loads(base64.b64decode(data['content'])))
+        return data['sha'], validate_ledger(json.loads(github_content_bytes(data, self.token, self.opener)))
 
     def save(self, sha, state):
         validate_ledger(state)
@@ -339,7 +362,7 @@ def read_writer_queue(token, opener=urllib.request.urlopen):
     try:
         with opener(req, timeout=30) as response:
             data = json.load(response)
-        return json.loads(base64.b64decode(data['content']))
+        return json.loads(github_content_bytes(data, token, opener))
     except (urllib.error.URLError, TimeoutError, OSError, ValueError, KeyError, TypeError):
         raise RuntimeError('writer_queue_unavailable_do_not_use_legacy_template') from None
 

@@ -459,3 +459,48 @@ class PopularityTests(unittest.TestCase):
 
 if __name__ == '__main__': unittest.main()
 
+
+
+class LargeContentsRegressionTests(unittest.TestCase):
+    def test_large_real_ledger_blob_is_pinned_verified_and_preserves_cas_sha(self):
+        import io, base64, hashlib
+        from unittest.mock import patch
+        import supportpick_threads as mod
+        raw = b'{"padding":"' + b'x' * (1024 * 1024) + b'"}'
+        sha = hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest()
+        meta = {'sha': sha, 'size': len(raw), 'encoding': 'none', 'content': '',
+                'git_url': 'https://untrusted.invalid/not-used'}
+        calls = []
+        def opener(req, timeout=30):
+            calls.append((req.full_url, req.get_method()))
+            return io.BytesIO(raw)
+        ledger = mod.Ledger('test', opener)
+        ledger.request = lambda method: meta
+        with patch.object(mod, 'validate_ledger', side_effect=lambda x: x):
+            actual_sha, result = ledger.read()
+        self.assertEqual(actual_sha, sha)
+        self.assertEqual(len(result['padding']), 1024 * 1024)
+        self.assertEqual(calls, [(f'https://api.github.com/repos/{mod.REPO}/git/blobs/{sha}', 'GET')])
+        # Same SHA is preserved for the caller's existing conditional write.
+        with self.assertRaises(ValueError):
+            json.loads(base64.b64decode(meta['content']))
+
+    def test_large_blob_corruption_and_invalid_metadata_fail_closed(self):
+        import io, hashlib
+        import supportpick_threads as mod
+        raw = b'{}';sha = hashlib.sha1(b'blob 2\0' + raw).hexdigest()
+        meta = {'sha': sha, 'size': 2, 'encoding': 'none', 'content': ''}
+        for bad in [b'[]', b'{', b'{}x']:
+            with self.assertRaisesRegex(ValueError, 'github_blob_integrity_mismatch'):
+                mod.github_content_bytes(meta, 'test', lambda *a, **k: io.BytesIO(bad))
+        for field, value in [('sha', '../main'), ('size', True), ('size', 0)]:
+            with self.assertRaisesRegex(ValueError, 'github_blob_metadata_invalid'):
+                mod.github_content_bytes({**meta, field: value}, 'test', lambda *a, **k: self.fail('network'))
+
+    def test_queue_uses_same_large_blob_contract(self):
+        import io, hashlib
+        import supportpick_threads as mod
+        raw = b'{"entries":[]}'
+        sha = hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest()
+        responses = [io.BytesIO(json.dumps({'sha': sha, 'size': len(raw), 'encoding': 'none', 'content': ''}).encode()), io.BytesIO(raw)]
+        self.assertEqual(mod.read_writer_queue('test', lambda *a, **k: responses.pop(0)), {'entries': []})
