@@ -1429,8 +1429,15 @@
       "url": "https://m.myhome.go.kr/hws/portal/cont/selectResidentialMonthlyRentLoanView.do"
     },
     "161300000088": {
-      "reason": "2026년 10월 국토교통부의 가입 소득요건 완화 안내가 있어 API의 기존 조건 적용 여부 확인이 필요합니다.",
-      "url": "https://www.molit.go.kr/USR/NEWS/m_71/dtl.jsp?id=95092491"
+      "reason": "2026년10월 국토교통부의7천만원 완화 계획과 기준일2026.6.30. 상품 안내를 대조했습니다. 실제 개정 시행일·취급은행 적용 기준 및 가입·금리·세제 요건의 구분 확인 전까지 과거 상세 본문·검색 등록 보류를 유지합니다.",
+      "url": "https://m.korea.kr/briefing/pressReleaseView.do?newsId=156784858",
+      "reviewedAt": "2026-11-18T23:36:00.656034+09:00",
+      "observedSourceHash": "08297f2801cecca10dce74f307ba87514b93c0153f7102ddf5b7ad117dade042",
+      "reviewScope": [
+        "2026.10.12. 완화 계획·10.15. 예정 안내와 상품기준일 구분",
+        "가입·우대금리·세제 요건 및 전환·증빙 준비 구분"
+      ],
+      "nextAction": "개정 고시 시행일과 취급은행의 적용 상품설명서·API 갱신을 공식 자료로 재대조한 뒤 개별 검토. 자동 보류 해제하지 않음"
     },
     "161300000103": {
       "reason": "보증료 지원의 2025년 3월 30일 경과 기준이 API(가입건)와 지자체 안내(신청일)에서 달라 해당기관 확인이 필요합니다.",
