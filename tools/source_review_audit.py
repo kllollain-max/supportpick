@@ -1,5 +1,6 @@
 """Explain dropped editorial bindings without renewing hashes or changing originals."""
 import json
+import re
 from collections import Counter
 from datetime import datetime, timezone
 
@@ -8,6 +9,30 @@ from detail_pages import (MATERIAL_FIELDS, blog_source_key, matching_blog, mater
 
 BLOG_FIELDS = ('id', 'title', 'organization', 'region', 'period', 'summary',
                'sourceUpdatedAt.list', 'sourceUpdatedAt.detail')
+
+
+def audit_holds(rows, previous, guides):
+    """Track source changes behind manual holds; never release or renew them."""
+    holds = []
+    for sid, entry in sorted(guides.get('holds', {}).items()):
+        row = rows.get(sid)
+        baseline = entry.get('observedSourceHash')
+        item = {'benefitId': sid, 'status': 'held', 'reviewRequired': True,
+                'reason': '', 'changedFields': [], 'fieldComparisonBasis': 'unavailable'}
+        if row is None:
+            item['reason'] = 'not_in_current_source'
+        elif not isinstance(baseline, str) or re.fullmatch(r'[0-9a-f]{64}', baseline) is None:
+            item['reason'] = 'hold_baseline_unavailable'
+        elif baseline != material_hash(row):
+            item['reason'] = 'held_source_material_changed'
+            old = previous.get(sid)
+            if old is not None and material_hash(old) == baseline:
+                item['changedFields'] = [k for k in MATERIAL_FIELDS if old.get(k) != row.get(k)]
+                item['fieldComparisonBasis'] = 'previous_source_matches_observed_hold_hash'
+        else:
+            item.update(reviewRequired=False, reason='held_source_unchanged')
+        holds.append(item)
+    return holds
 
 
 def audit(rows, previous, guides, blogs, current=None):
@@ -48,13 +73,19 @@ def audit(rows, previous, guides, blogs, current=None):
             else:
                 item['reason'] = 'review_expired_or_invalid'
             entries.append(item)
+    holds = audit_holds(rows, previous, guides)
     registered_ids = {x['benefitId'] for x in entries}
     return {'version': 1, 'asOf': current.astimezone(KST).date().isoformat(), 'sourceRecords': len(rows),
             'registeredEntries': len(entries),
             'sourceRecordsWithoutRegisteredEditorial': len(set(rows) - registered_ids),
             'active': sum(x['status'] == 'active' for x in entries),
             'reviewRequired': sum(x['status'] != 'active' for x in entries), 'entries': entries,
-            'notes': ['Only registered guides/blogs are checked; this is not a site-wide quality verdict.',
+            'holdEntries': len(holds),
+            'holdReviewRequired': sum(x['reviewRequired'] for x in holds),
+            'holds': holds,
+            'notes': ['Registered guides/blogs and manual holds are checked separately; this is not a site-wide quality verdict.',
+                      'Unchanged held source does not establish correctness; manual holds remain in effect.',
+                      'Missing hold baselines require manual review; current data is not adopted as a baseline.',
                       'Read-only comparison; no hash, date, publication, source or indexing changes.',
                       'Changed fields alone do not establish that editorial text is incorrect.',
                       'Missing historical baseline is reported rather than inferred.']}
