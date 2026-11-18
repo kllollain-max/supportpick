@@ -120,6 +120,21 @@ def reviewed_guide(row, registry, current):
     return g
 
 
+def support_display(row, guide, current):
+    """Only show a source-bound clarification while its review remains valid."""
+    checked = reviewed_guide(row, {'guides': [guide] if guide else []}, current)
+    value = checked.get('supportDisplay') if checked else None
+    if not isinstance(value, dict):
+        return None
+    text, url = value.get('text'), value.get('sourceUrl')
+    if (not isinstance(text, str) or not text.strip() or len(text) > 100
+            or '\n' in text or '\r' in text
+            or not isinstance(url, str)
+            or url not in {x.get('url') for x in checked['sourceReviews']}):
+        return None
+    return {'text': text.strip(), 'sourceUrl': url}
+
+
 def schedule_metadata(row, registry, current=None):
     current = current or datetime.now(timezone.utc)
     if row.get('reviewRequired') is True or quality_reasons(row, registry):
@@ -268,6 +283,11 @@ def editorial_html(row, guide):
 
 
 def render_benefit(row, guide, blog, reasons, related, base, current, feed_status):
+    display = support_display(row, guide, current)
+    support_html = escape(display['text'] if display else row['supportType'])
+    if display:
+        support_html += (' · <a href="' + escape(display['sourceUrl'], quote=True)
+                         + '" target="_blank" rel="noopener noreferrer">공식 안내 ↗</a>')
     schedule = schedule_metadata(row, {'guides': [guide] if guide else []}, current)
     row = {**row, **({'verifiedSchedule': schedule} if schedule and not reasons else {})}
     path = benefit_path(row['id'])
@@ -311,7 +331,7 @@ def render_benefit(row, guide, blog, reasons, related, base, current, feed_statu
              f'<span class="badge" id="period-status">{escape(status(row, current))}</span>'
              f'<h1>{escape(row["title"])}</h1><p class="organization">{escape(row["organization"])}</p>'
              f'{summary_html}<dl class="card-meta"><dt>신청기간</dt><dd>{escape(row["period"])}</dd>'
-             f'<dt>지원방식</dt><dd>{escape(row["supportType"])}</dd><dt>자료조회</dt><dd>{escape(stamp(row.get("checkedAt")))}</dd></dl>'
+             f'<dt>지원방식</dt><dd>{support_html}</dd><dt>자료조회</dt><dd>{escape(stamp(row.get("checkedAt")))}</dd></dl>'
              '<p class="context-note">공식 API 안내와 지원금픽의 준비 해설을 구분해 제공합니다. API 조회 성공은 현재 접수·개인 자격 확인을 뜻하지 않습니다.</p>'
              '<div class="detail-actions">' + actions + '</div>'
              '<noscript><p class="context-note">핵심 안내는 JavaScript 없이 읽을 수 있습니다. 관심 저장·내 신청 기록은 JavaScript를 켜거나 홈에서 이용하세요.</p></noscript></article>')
