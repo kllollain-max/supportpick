@@ -16,6 +16,7 @@ from claim_preparation_analysis import CLAIM_ARTICLES
 from education_business_analysis import EDUCATION_BUSINESS_ARTICLES
 from incheon_maternity_analysis import MATERNITY_ARTICLES
 from incheon_child_analysis import CHILD_ARTICLES
+from maternal_service_analysis import MATERNAL_SERVICE_ARTICLES
 
 REVIEWED = '2026-11-17'
 ENERGY = 'https://www.energyv.or.kr/info/'
@@ -91,8 +92,10 @@ ARTICLES += CLAIM_ARTICLES
 ARTICLES += EDUCATION_BUSINESS_ARTICLES
 ARTICLES += MATERNITY_ARTICLES
 ARTICLES += CHILD_ARTICLES
+ARTICLES += MATERNAL_SERVICE_ARTICLES
 
 BENEFIT_ARTICLES = {
+    **dict.fromkeys(('PTR000050390','628000000111'), 'maternal-service-application-use-refund-2026'),
     '628000000739': 'incheon-child-dream-birth-year-2026',
     **dict.fromkeys(('628000000735','628000000744'), 'incheon-pregnancy-transport-vs-postpartum-2026'),
     **dict.fromkeys(('SD0000004508','999000000090','134200005002','GES000000110','GES000000100'), 'scholarships-vs-student-loan-steps-2026'),
@@ -126,7 +129,7 @@ BENEFIT_ARTICLES = {
 }
 
 
-ARTICLE_REVIEW_DATES = {'incheon-child-dream-birth-year-2026': '2026-11-18', 'incheon-pregnancy-transport-vs-postpartum-2026': '2026-11-18', 'leave-benefit-claim-checklist-2026': '2026-11-18'}
+ARTICLE_REVIEW_DATES = {'maternal-service-application-use-refund-2026': '2026-11-18', 'incheon-child-dream-birth-year-2026': '2026-11-18', 'incheon-pregnancy-transport-vs-postpartum-2026': '2026-11-18', 'leave-benefit-claim-checklist-2026': '2026-11-18'}
 
 
 def related_analysis(sid, row=None):
