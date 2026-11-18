@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-18T08:42:35.990191+09:00",
+  "prepared_at": "2026-11-18T12:26:17.443078+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -6859,9 +6859,9 @@
       "slot": "2026-11-18T12:00:00+09:00",
       "benefit_id": "137100000006",
       "source_fingerprint": "57ec674fa778ad18995cc242aaedd8efe2a6402ddb44158252b418c61d5187f9",
-      "source_generation": "gov24-43966656376-1",
-      "prepared_at": "2026-11-17T12:28:32.113996+09:00",
-      "expires_at": "2026-11-18T12:28:32.113996+09:00",
+      "source_generation": "gov24-44187754977-1",
+      "prepared_at": "2026-11-18T12:26:17.443078+09:00",
+      "expires_at": "2026-11-18T14:00:00+09:00",
       "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -6891,36 +6891,36 @@
               "source_id": "137100000006",
               "source_ref": "https://svoucher.kspo.or.kr/svoucher/bbs/B0000051/view.do?menuNo=20&nttId=64394&topMenuNo=5",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-17T12:28:32.113996+09:00",
+              "verified_at": "2026-11-18T12:26:17.443078+09:00",
               "claims_supported": [
-                "이번실행에서KSPO현재공식2027신청공지 실제본문166~236행을열람. 신청기간2026-11-9~27 23:59 신청 가능(선착순아님),2009-01-01~2022-12-31출생·생계/의료/주거/교육급여수급·차상위·법정한부모,인천서해구제외. 1인매월10.5만원내스포츠수강료·2027-1~12-10사용·예산조기소진시중단/한도축소. 온라인거주지역선택또는주민등록관할방문서면,지자체12월선정과기존이용기간순위,자동신청자동선정아님을대조. 폴케어추천예외는별도로존재하나이글은기본복지대상만소개. 접수거래는수행하지않음."
+                "2026-11-18 이번실행에서공식64394공지166~236행재열람: 2026-11-18현재신청가능(접수중)·신청11/9~27 23:59,2009~2022출생복지대상, 인천서해구제외,1인매월10.5만원내수강료·2027/1~12/10사용,예산조기소진중단/축소,12월지자체선정·자동신청자동선정아님,방문/온라인경로본문전주장재대조. 접수거래안함."
               ]
             },
             {
               "source_id": "137100000006",
               "source_ref": "https://svoucher.kspo.or.kr/svoucher/bbs/B0000051/view.do?menuNo=20&nttId=64352&topMenuNo=5",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-17T12:28:32.113996+09:00",
+              "verified_at": "2026-11-18T12:26:17.443078+09:00",
               "claims_supported": [
-                "KSPO2026-10-19현재중복수혜제한공지 실제본문178~186행 직접열람. 스포츠꿈나무특기장려금및지역사회서비스투자사업중(비만)아동건강관리사업중복불가,중복확인시지원중단/하나선택을확인."
+                "이번실행 공식64352공지178~186행 실제재열람: 스포츠꿈나무특기장려금,지역사회서비스투자사업중(비만)아동건강관리사업중복불가·하나선택/지원중단."
               ]
             },
             {
               "source_id": "137100000006",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999118&bnefType=all&svcId=137100000006",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-17T12:28:32.113996+09:00",
+              "verified_at": "2026-11-18T12:26:17.443078+09:00",
               "claims_supported": [
-                "완전검증세대gov24-43966656376-1 동일IDserviceList.조회수62307누적지표와serviceDetail대조. APIcheckedAt=2026-11-17T07:08:26.057945+09:00, 수집완료=2026-11-17T07:12:39.565151+09:00. 월10.5만원·기본복지대상일치. source_only/applicationOpenVerified=false는현재접수검증으로바꾸지않고별도공식2027공지로현재상태확인."
+                "검증완전세대gov24-44187754977-1 동일ID원본·source_fingerprint일치. 누적조회수62965·월10.5만원·기본대상. APIcheckedAt=2026-11-18T07:15:21.681698+09:00,수집완료=2026-11-18T07:19:29.776730+09:00. 현재접수는별도공식공지직접재열람근거."
               ]
             },
             {
               "source_id": "137100000006",
               "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
               "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-17T12:28:32.113996+09:00",
+              "verified_at": "2026-11-18T12:26:17.443078+09:00",
               "claims_supported": [
-                "이번실행에서현재main허용PNG를실제다시다운로드하고현재image-review의2026-11-06 AI_VISUAL_INSPECTION/PASS 및파일바이트SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a와재대조했다. 새직접시각검수아님. 기존약360px가독성검수참조. 공통브랜드혜택안내일러스트로사업별금액·대상·기간문구없어본문과충돌없음. 사업별자산없어기존rotation2사용."
+                "이번실행현재mainPNG실제다운로드SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a와현재image-review2026-11-06 AI_VISUAL_INSPECTION/PASS를재대조. 약360px기존가독성검수,공통브랜드카드로금액/대상/기한없어충돌없음. 새직접시각검수아님."
               ]
             }
           ],
@@ -6991,6 +6991,13 @@
             "source_recheck_required_at_publish": true,
             "writing_input_sha256": "29d769d61994ea4e36f6d9a96eb44a68b62d65451d70c176a8ceafdf94b667bf",
             "master_full_and_supplemental_full_used": true
+          },
+          "review_refresh": {
+            "at": "2026-11-18T12:26:17.443078+09:00",
+            "reason": "original evidence24h validity ends12:28 while original regularslot grace continues until14:00; actually reopened official notices and downloaded approved PNG; exact public input reused",
+            "original_prepared_at": "2026-11-17T12:28:32.113996+09:00",
+            "original_expires_at": "2026-11-18T12:28:32.113996+09:00",
+            "original_evidence_sha256": "27ae76e673fe7ffd7d794ddf60cc00037805830d672cec7fdd462cc18297c92e"
           }
         },
         "next_history_record": {
