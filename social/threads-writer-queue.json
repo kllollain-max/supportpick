@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-18T17:15:50.080831+09:00",
+  "prepared_at": "2026-11-18T20:05:08.171505+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -7677,6 +7677,137 @@
           "opening": "식비가 버거운 긴급지원대상자나 차상위 가구라면, 푸드뱅크·푸드마켓의 기부식품 지원을 상담할 수 있어요. 현금 지원이 아니라 기부된 식품과 생활용품을 나누는 사업이에요.",
           "structure": "생활상황·현물→상담·선정절차→대상우선순위→지역별제한→CTA",
           "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-19T20:00:00+09:00",
+      "benefit_id": "B55201500202",
+      "source_fingerprint": "544a3c8e367b8484fb0d0940fd47c72a74ac054a3ebd51c5236e7d21ce971441",
+      "source_generation": "gov24-44285051232-1",
+      "prepared_at": "2026-11-18T20:05:08.171505+09:00",
+      "expires_at": "2026-11-19T20:05:08.171505+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "B55201500202",
+        "post_text": "내 보험 가입 상태가 궁금할 때, 4대사회보험 가입자는 가입내역 확인서로 현재 가입 현황을 한 장에서 확인할 수 있어요. 현금 지원이 아니라 가입 정보를 확인하는 서비스예요.\n\n신청 전에 세 가지를 확인해요.\n• 확인 범위: 각 보험기관의 현시점 가입 자료예요. 사업장과 자격취득일 등 가입 정보를 살펴볼 수 있어요.\n• 본인 확인: 정보연계센터의 발급 안내는 공동인증서로 본인 여부를 확인한 뒤 증명서를 신청하도록 안내해요.\n• 자료 수신: 한 기관 자료만 도착해도 출력가능으로 표시돼요. 네 기관 내역이 모두 필요하다면 각 기관의 자료가 도착했는지 확인해요.\n\n인터넷 발급은 시스템 점검시간을 제외하고 이용할 수 있어요. 다른 기관 제출용은 공단 지사 창구 신청 안내도 확인하고, 내역이 사실과 다르면 해당 보험기관에 문의해요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-19T20:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "현재4대사회보험가입상태와가입사업장·자격취득일을확인하려는가입자",
+          "central_message": "현재가입현황을한장으로확인할때본인인증과기관별자료수신상태를먼저확인한다",
+          "pattern": "P8",
+          "selection_reason": "실제54게시와다른4READY제외후같은ID누적조회수57287최상위검증후보. 기존55상위HOLD/SKIP출처와이유보존.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "B55201500202",
+              "source_ref": "https://www.4insure.or.kr/pbiz/gdne/cerfUtztnAnc.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-18T20:05:08.171505+09:00",
+              "claims_supported": [
+                "공식증명서발급도우미를공개HTTPS GET으로실제열람(웹추출기는시간초과하여동일공식URL직접읽기). 현재가입상태/한장증명/공동인증서/기관자료수신/한기관수신시출력가능/네기관완료확인/점검시간제외/제출용지사신청/내용불일치기관문의 모두본문대조. 신청·발급거래로그인은수행하지않아개인별발급성공이나즉시완료보장없음.",
+                "공식HTML SHA256=dbde7f447fd23b7ede3d716337ed66cc334ea315e53c8bef64145dc8ac67d0e8"
+              ]
+            },
+            {
+              "source_id": "B55201500202",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2100952&bnefType=all&svcId=B55201500202",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-18T20:05:08.171505+09:00",
+              "claims_supported": [
+                "동일ID rawSource serviceList/detail 실제검증완전세대gov24-44285051232-1 대조:상시신청/4대사회보험가입자/가입사업장·자격취득일/원본누적조회수57287. APIcheckedAt=2026-11-18T19:35:07.661982+09:00,수집=2026-11-18T19:37:15.298065+09:00;sourceOnly를현재개인별발급검증으로대체하지않음. Gov24화면열람실패기록,공식4insure안내원문은별도직접확보."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 427,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "공식공개안내열람만수행;실제개인발급/로그인/출력기능검증하지않음. 즉시발급이나모든기관수신보장안함.",
+            "현재19:37완전수집본은내일20시발송시24h초과. 실제발송때최신완전source·공식안내·기한·교대필수재검증."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "4대보험가입현황확인서를신청할때무엇을확인해야할까요?",
+            "reader_scope": "4대사회보험가입자,현재가입상태확인필요한개인",
+            "angles": [
+              "가입상태한장확인",
+              "본인인증준비",
+              "출력가능과기관별수신구분"
+            ],
+            "chosen_angle": "현재가입현황실익과신청전세가지확인",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "내 보험 가입 상태가 궁금할 때, 4대사회보험 가입자는 가입내역 확인서로 현재 가입 현황을 한 장에서 확인할 수 있어요. 현금 지원이 아니라 가입 정보를 확인하는 서비스예요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "4대사회보험 가입자는 가입내역 확인서로 현재 가입 현황을 한 장에서 확인할 수 있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "4대보험 확인서가 출력가능으로 보여도 기관별 자료 수신 상태는 확인해야 해요."
+              }
+            ],
+            "chosen_opening": "내 보험 가입 상태가 궁금할 때, 4대사회보험 가입자는 가입내역 확인서로 현재 가입 현황을 한 장에서 확인할 수 있어요. 현금 지원이 아니라 가입 정보를 확인하는 서비스예요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "첫적용11월10일기준날짜반전배정으로11월19일20시는A. 같은날08P4법률/12P5활동지원/16P6푸드뱅크와다른P8확인목록. 최근20실제게시의도입·전개대조.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국",
+              "audience": "사회보험가입자",
+              "benefit": "가입증명확인서비스",
+              "application": "상시·점검시간제외",
+              "media": "TEXT"
+            },
+            "comparison_group": "81공식ID/window관측. 대상·혜택·시간·미디어다르고비교가능유사쌍0,반복우세입증안됨. 기존A/B비중과이미완료7일평가유지,14일미도래.",
+            "applied_elements": [
+              "생활상황과대상실익첫단락",
+              "세가지핵심정보목록",
+              "현금지원아닌확인서비스구분",
+              "자료수신·본인인증제한"
+            ],
+            "profile_route": "프로필링크와사이트의개인별발급거래는독립실행검증하지않음. 자동신청기능보장안함.",
+            "source_recheck_required_at_publish": true,
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true,
+            "writing_input_sha256": "31d6ca28f42cb0a3e4b7d3a938d2a28a3fd08ebdb3f4475109062f2e24692a8f"
+          }
+        },
+        "next_history_record": {
+          "program_id": "B55201500202",
+          "notice_version": "2026-11-18공식증명서발급도우미직접열람",
+          "pattern": "P8",
+          "opening": "내 보험 가입 상태가 궁금할 때, 4대사회보험 가입자는 가입내역 확인서로 현재 가입 현황을 한 장에서 확인할 수 있어요. 현금 지원이 아니라 가입 정보를 확인하는 서비스예요.",
+          "structure": "생활상황·가입자실익→확인범위/본인확인/수신세가지→이용제한·문의→CTA",
+          "media_turn": "TEXT"
         }
       }
     }
