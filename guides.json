@@ -1434,7 +1434,28 @@
     },
     "161300000103": {
       "reason": "보증료 지원의 2025년 3월 30일 경과 기준이 API(가입건)와 지자체 안내(신청일)에서 달라 해당기관 확인이 필요합니다.",
-      "url": "https://www.gg.go.kr/contents/contents.do?ciIdx=987251&menuId=1534091"
+      "url": "https://www.gg.go.kr/contents/contents.do?ciIdx=987251&menuId=1534091",
+      "reviewedAt": "2026-11-18T15:27:18.572264+09:00",
+      "observedSourceHash": "5987351b4f9be3e03a6fe318e71013e384db32e1a5548f9f3343800af4161944",
+      "reviewScope": [
+        "2025.3.30. 경과 기준의 가입일·사업 신청일 차이",
+        "납부 보증료·상한·지역별 청년 연령·증빙과 처리 단계"
+      ],
+      "nextAction": "현재 주소지 관할기관의 경과 조항·적용일 확인 또는 공식 안내 정정 후 개별 보류 해제 검토",
+      "sourceReviews": [
+        {
+          "url": "https://www.gg.go.kr/contents/contents.do?ciIdx=987251&menuId=1534091",
+          "note": "사업 신청일 기준 경과 문구·19~39세 확인"
+        },
+        {
+          "url": "https://www.busan.go.kr/depart/reguarantee",
+          "note": "보증 가입일 기준 경과 문구·18~39세·납부 증빙·결과 통지와 입금 구분 확인"
+        },
+        {
+          "url": "https://easylaw.go.kr/CSP/OnhunqueansInfoRetrieve.laf?onhunqnaAstSeq=84&onhunqueSeq=6445",
+          "note": "2026.9.15. 기준 가입 건 경과 문구·보증료 상한과 비율 확인"
+        }
+      ]
     },
     "SD0000011848": {
       "reason": "신청기간이 미제공된 과거 제도 안내입니다. 현재 신규 가입 가능 여부를 확인하기 전 검색 등록을 보류합니다."
