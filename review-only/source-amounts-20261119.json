@@ -1,0 +1,72 @@
+{
+  "reviewedAt": "2026-11-19T20:10:13.499561+09:00",
+  "sourceGeneration": "gov24-44505539863-1",
+  "records": [
+    "626000000649",
+    "557000000250",
+    "875000000016"
+  ],
+  "sourcePreserved": true,
+  "automaticAmountCorrection": false,
+  "methods": [
+    {
+      "key": "busan",
+      "url": "https://www.busan.go.kr/depart/family0106",
+      "error": "HTTPError"
+    },
+    {
+      "key": "insurance",
+      "url": "https://www.ins24.go.kr/safeInsrnc/search/view.do?grntPdBgngDt=2026&orgCd=5570000&upOrgCd=6430000",
+      "http": 200,
+      "bytes": 94341,
+      "sha256": "ee2601d4fac73443b91b5311e7ab14bd96ebd248f9a1d4b127b1ee44daf6f8bd"
+    },
+    {
+      "key": "jeungpyeong",
+      "url": "https://www.jp.go.kr/kor/sub05_06_08.do",
+      "http": 200,
+      "bytes": 99710,
+      "sha256": "9e92fb8b5a111a8307cba1558e018f9128fc0abe96187489513201b48baf7365"
+    }
+  ],
+  "webBodyReviews": [
+    {
+      "url": "https://www.busan.go.kr/depart/family0106",
+      "method": "web_tool_readable_official_body",
+      "displayedUpdatedAt": "2026-11-17",
+      "claims": [
+        "16,000원 총요금·본인부담 구분",
+        "다형9,600/6,400금액과50/50%비율·15,000설명 불일치",
+        "등급판정·신청·선납·매칭·시간·병동 제외"
+      ],
+      "limitation": "별도 executor HTTP요청 실패. 검색 도구의 공식 본문은 읽음. 올바른 비율·개인 요금·실제 예약을 결정하지 않음."
+    },
+    {
+      "url": "https://www.ins24.go.kr/safeInsrnc/search/view.do?grntPdBgngDt=2026&orgCd=5570000&upOrgCd=6430000",
+      "method": "official_body_and_direct_HTML_200",
+      "claims": [
+        "도민 어린이 계약과 군민 계약 구분",
+        "군민2026-02-01~2027-01-31·한국지방재정공제회",
+        "스쿨존1800만원·농기계후유장해1800만원·PM후유장해500만원"
+      ],
+      "limitation": "개별 사고 지급액·면책·중복지급·청구기간 판단하지 않음"
+    },
+    {
+      "url": "https://www.goe.go.kr/resource/goe/na/bbs_2675/2026/05/f792b8b5-8d10-4920-95a5-f8550b30cd24.pdf",
+      "method": "official_2026_ministry_PDF_text_read",
+      "pageIndex": 31,
+      "printedPage": 26,
+      "claims": [
+        "17,600원과1,650원 구분",
+        "통신사 직접 지급·PC 가구 설치·중복 지원 제한",
+        "시도별 대상·내용 차이"
+      ],
+      "limitation": "전국 안내는 경북19,2500의 정정액·현재 지역 세부기준 확정 근거가 아님"
+    }
+  ],
+  "nonDecisions": [
+    "원본 숫자·단위 수정 없음",
+    "개인 자격·현재 접수·예산·지급일 확정 없음",
+    "보류·삭제·색인 규칙 변경 없음"
+  ]
+}
