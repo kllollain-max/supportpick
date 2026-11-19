@@ -14,6 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "44497143766",
     "44485979789",
     "44482718055",
     "44471898284",
@@ -4217,12 +4218,20 @@
       "conclusion": "success",
       "updated_at": "2026-11-19T07:50:45Z",
       "head_sha": "51f77fdd3f66ae2bfd69aef3ba3c2aff8ea44b1c"
+    },
+    "44497143766": {
+      "run_id": "44497143766",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-19T09:31:22Z",
+      "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-19T09:02:15.342080+00:00",
-    "result": "new_verified_publication",
-    "maintenance_previous_blob_sha": "78f59c1a92c868564ef73b291f5c6c2e83b1fc78",
+    "checked_at": "2026-11-19T09:38:48.608386+00:00",
+    "result": "no_update",
+    "maintenance_previous_blob_sha": "38929d02327984d843ed4548a94a3b5ef92b9988",
     "current_main_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384",
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
@@ -4230,20 +4239,12 @@
     "queue_blob_sha": "3bad1d56d85dfdc72dc7aa3ef1c40b80406f3e6c",
     "changed_run_versions": [
       {
-        "run_id": "44485979789",
+        "run_id": "44497143766",
         "run_attempt": 1,
         "status": "completed",
         "conclusion": "success",
-        "updated_at": "2026-11-19T08:15:59Z",
+        "updated_at": "2026-11-19T09:31:22Z",
         "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384"
-      },
-      {
-        "run_id": "44482718055",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-19T07:50:45Z",
-        "head_sha": "51f77fdd3f66ae2bfd69aef3ba3c2aff8ea44b1c"
       }
     ],
     "active_target_runs": [],
@@ -4277,7 +4278,7 @@
       "read_current_verify_snapshot_load_feed": true,
       "all_four_ready_source_fingerprints_equal": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-19T09:02:15.342080+00:00",
+      "verification_checked_at": "2026-11-19T09:38:48.608386+00:00",
       "cached_artifact_digest_reverified": true
     },
     "publisher": {
@@ -4327,13 +4328,14 @@
       "delay_minutes_from_slot": 75,
       "reserved_before_review_expiry": true,
       "latest_run_id": "44485979789",
-      "latest_publication_previously_reported": false,
-      "new_publication_this_run": true,
+      "latest_publication_previously_reported": true,
+      "new_publication_this_run": false,
       "new_failure": false,
       "new_partial": false,
       "body_and_asset_hash_match": true,
       "actual_publisher_tests_passed": 138,
-      "job_logs_retrieved_this_check": true
+      "job_logs_retrieved_this_check": true,
+      "cached_artifact_digest_reverified": true
     },
     "writer": {
       "queue_write": false,
@@ -4384,50 +4386,45 @@
       ],
       "asset_current_sha256_recompared": true,
       "new_visual_inspection": false,
-      "already_published_expired_wrapper_retained": "2026-11-19T16:00:00+09:00"
+      "already_published_expired_wrapper_retained": "2026-11-19T16:00:00+09:00",
+      "last_validated_at": "2026-11-19T18:38:04.195467+09:00"
     },
     "metrics": {
-      "run_id": "44482718055",
+      "run_id": "44497143766",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-19T07:50:45Z",
-      "head_sha": "51f77fdd3f66ae2bfd69aef3ba3c2aff8ea44b1c",
-      "job_id": 135418582510,
-      "artifact_id": 14509072541,
-      "artifact_digest": "sha256:292b0079d8ae3c35a358e69299224ec7c93f55c22083e3e28cb10ac58d8101f9",
+      "updated_at": "2026-11-19T09:31:22Z",
+      "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384",
+      "job_id": 135467131637,
+      "artifact_id": 14515352484,
+      "artifact_digest": "sha256:950460dc00c8c8a4d10006dcee1b60368f80fc504837e6baf8d2dad5fb52d98a",
       "artifact_digest_verified": true,
-      "observed_at": "2026-11-19T07:50:39.970818+00:00",
-      "records": 0,
-      "new_observations": 0,
+      "observed_at": "2026-11-19T09:31:16.169989+00:00",
+      "records": 2,
+      "new_observations": 2,
+      "new_observation_keys": [
+        "17982543780133074:168h",
+        "18061699079561356:24h"
+      ],
       "job_logs_retrieved": true,
       "workflow_dispatch": false,
       "publication_calls": 0,
-      "classification": "normal_no_due_milestones_at_observation_time",
-      "latest_observed_run_id": "44482718055",
-      "total_observations": 89,
-      "new_metric_observations": 0,
-      "new_observation_keys": [],
-      "actual_current_read_path_due_missing_latest_windows": 2,
-      "currently_due_post_ids": [
-        "17982543780133074",
-        "18061699079561356"
-      ],
-      "current_due_status": "awaiting_next_existing_official_snapshot",
-      "job_logs_retrieved_this_check": true,
-      "artifact_redownloaded_this_check": true,
-      "inline_publisher_reader_summary": {
-        "due": 1,
-        "success": 1,
-        "actual_counts_in_result_artifact": false,
-        "counts_not_invented": true
-      },
+      "classification": "two_official_due_milestone_observations_success",
+      "latest_observed_run_id": "44497143766",
+      "total_observations": 91,
+      "new_metric_observations": 2,
+      "actual_current_read_path_due_missing_latest_windows": 0,
+      "currently_due_post_ids": [],
+      "current_due_status": "none_after_verified_snapshot_merge",
       "new_evaluation_report_due": false,
       "prior_7day_evaluation_unchanged": true,
       "14day_not_due": true,
       "weights_unchanged": true,
+      "artifact_redownloaded_this_check": true,
+      "job_logs_retrieved_this_check": true,
       "actual_zero_and_unprovided_null_distinguished": true,
-      "new_24h_observations": 0,
+      "new_24h_observations": 1,
       "descriptive_24h_comparison_unchanged": true
     },
     "recovery": {
@@ -4443,7 +4440,7 @@
       "same_cause_priority_guard_still_passes": true
     },
     "local_validation": {
-      "checked_at": "2026-11-19T18:00:55.874174+09:00",
+      "checked_at": "2026-11-19T18:38:04.195467+09:00",
       "ready": 3,
       "future_regular_ready": 3,
       "active_regular_ready": 0,
@@ -4492,7 +4489,7 @@
       "queue_entries": 55,
       "selection_notes": 56,
       "queue_write": false,
-      "new_posts": 1,
+      "new_posts": 0,
       "due_metrics_before_merge": 2,
       "due_ids_before_merge": [
         "17982543780133074",
@@ -4502,9 +4499,13 @@
       "new_visual_inspection": false,
       "pending": null,
       "lease": null,
-      "source_recheck_required_at_publish": true
+      "source_recheck_required_at_publish": true,
+      "due_metrics_after_merge": 0,
+      "due_ids_after_merge": [],
+      "actual_metric_observations_added": 2,
+      "total_metric_observations": 91
     },
-    "next_condition": "Nov19 16 slot published IMAGE/P6 standalone373char with zero replies at verified result17:15KST, within120min grace; authenticated receipt URL/mainID and content/image hashes verified.58 unique complete verified ledger records,no pending/lease. Original body/pattern/cohort preserved, rescheduled prior input excluded from A/B without retrospective reassignment. Existing3futureREADY20TEXT/P8,Nov20 08IMAGE/P1,12TEXT/P5 passpreview/validate_ready_entry/priority/fingerprint/current approved PNG byte SHA.55queueentries56selectionnotes unchanged; posted16wrapper preserved as history, no expiredunpostedslot backfill. Source10887complete07:15manifest verified, not fresh nextday08/12 so sender must use newestcomplete source/officialstatus/expiry/media. Current2due metricwindows await next existing authorized snapshot;16:50snapshot0due normal atthat time and inline17:15reader due1success1 lacks actualcounts inpublicationartifact; no values reconstructed.89priorobservations/evaluations/weights unchanged,14daynotdue. No recoverydispatch,extraPOST,rerun,backfill,schedule/code/site/otheraccountchange.",
+    "next_condition": "No new publication/failure/partial/hold/evaluation.58uniquecompleteverifiedledger,no pending/lease.55queueentries56selectionnotes unchanged. Existing3futureREADY20TEXT/P8,Nov20 08IMAGE/P1,12TEXT/P5 pass actual preview/validate_ready_entry/source fingerprint/priority/current PNG bytes SHA; no wrapper date refresh or new visual inspection. Current07:15complete10887source notfreshNov20slots; sender latestcomplete source/official status/expiry/media mandatory. Natural18:31 official reader2due2success snapshot actual169.337h184views and25.375h8views merged as distinct ID/windows; total91. New24h sports voucher was previously rescheduled and original B input is explicitly comparison-ineligible, so descriptive eligible A12/B13 medians83/78 and matchedpairs0 remain unchanged. Normal posted low views distinguished from operational failure. No causal penalty/automation-block assumption. Prior7dayevaluation preserved,14daynotdue,weights unchanged. Previouslyreported17:15publication not repeated. No extraPOST/dispatch/rerun/backfill/schedule/code/site/otheraccountchange.",
     "main_change_observation": {
       "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384",
       "changed_files": [
@@ -4526,7 +4527,7 @@
       "required_threads_writer_blobs_unchanged": true,
       "site_change_observed_only": true
     },
-    "local_execution_note": "Fresh remote required master/writer/workflow/asset/state blobs matchedactual localGitblobSHA. New actual publisher and metrics logs read; returned artifact ZIP SHA256s verified, full source snapshot load_feed/read_current/verify_snapshot passed. Original prepared body and media hashed against verified ledger. Actual allowedPNGbytes match original visualreviewSHA, no newvisualinspection. Main ee523fd siteamountreading changes observed only; Threads blobs unchanged."
+    "local_execution_note": "Fresh main master/writer/workflow/asset/state/queue/maintenance blob SHA matched actual localbytes. Latest completed operations/publisher/metrics logs re-read. Source and publisher returned-artifact cached ZIP digests reverified and source manifest/load_feed/read_current/verify_snapshot pass. Newmetrics tool-returnedartifact downloaded and ZIP SHA256 verified. New observation zeros and unavailable nulls distinguished, actual elapsed times retained without24h backcalculation. Original rescheduled sports voucher24h excluded from A/B as alreadyrecorded. Queue reused with no mutation; current main ee523fd unchanged since prior check; no site edits."
   },
   "last_reported_publication": {
     "run_id": "44485979789",
@@ -5456,11 +5457,11 @@
     "last_ready_queue_blob_sha": "f4ea5e0fb01dc19e93e0a765d61adebe72f71ea8"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-19T07:18:00.262323+00:00",
+    "checked_at": "2026-11-19T09:38:48.608386+00:00",
     "new_publications": 0,
     "new_incidents": 0,
-    "queue_ready": 4,
-    "new_metric_observations": 0,
+    "queue_ready": 3,
+    "new_metric_observations": 2,
     "new_evaluation_due": false,
     "duplicate_notification_suppressed": true
   },
@@ -5534,7 +5535,7 @@
       "status": "official_milestone_observations_available",
       "reason": "Nov13 21:22KST official snapshot supplied3 new observations: automobile acquisition tax24h, Incheon child allowance72h, historical housing168h. Actual elapsed time retained, no backcalculation or causal claim.",
       "reference": "https://www.postman.com/meta/threads/request/34203612-385abc7d-b3cc-4e5d-9937-ebbe7174e041",
-      "observed_posts_with_metrics": 53,
+      "observed_posts_with_metrics": 54,
       "views_24h": null,
       "views_7d": null,
       "reactions": null,
@@ -5851,7 +5852,9 @@
             {
               "hours": 168,
               "due_at": "2026-11-19T08:11:02.262Z",
-              "status": "awaiting_due_time"
+              "status": "measured_official_api",
+              "checked_at": "2026-11-19T09:31:16.169989+00:00",
+              "elapsed_hours": 169.3371965775
             }
           ]
         },
@@ -6412,7 +6415,9 @@
             {
               "hours": 24,
               "due_at": "2026-11-19T17:08:46.989186+09:00",
-              "status": "awaiting_due_time"
+              "status": "measured_official_api",
+              "checked_at": "2026-11-19T09:31:16.169989+00:00",
+              "elapsed_hours": 25.374772445277777
             },
             {
               "hours": 168,
@@ -10127,9 +10132,93 @@
           "reader_only_replies": null,
           "reply_scope": "Platform aggregate; legacy posts may include original automatic author replies. Quotes not separately provided.",
           "not_backcalculated": true
+        },
+        "17982543780133074:168h": {
+          "main_id": "17982543780133074",
+          "window_hours": 168,
+          "scheduled_at": "2026-11-12T16:00:00+09:00",
+          "published_at": "2026-11-12T17:11:02.262310+09:00",
+          "benefit_id": "999000000043",
+          "reader_scope": "기초생활보장 의료급여 신청을 준비하는 저소득 가구",
+          "opening_type": "생활 상황형",
+          "cohort": "A",
+          "pattern": "P6",
+          "char_count": 391,
+          "media_turn": "IMAGE",
+          "checked_at": "2026-11-19T09:31:16.169989+00:00",
+          "elapsed_hours": 169.3371965775,
+          "due_at": "2026-11-19T17:11:02.262310+09:00",
+          "timing": "late_available_check",
+          "within_target_tolerance": true,
+          "status": "measured_official_api",
+          "views": 184,
+          "likes": 4,
+          "replies": 0,
+          "reposts": 1,
+          "shares": 0,
+          "quotes": null,
+          "saves": null,
+          "profile_visits": null,
+          "new_followers": null,
+          "site_visits": null,
+          "permission_status": "existing_authorized_token_read_succeeded",
+          "official_api_request_performed": true,
+          "source_run_id": "44497143766",
+          "artifact_id": 14515352484,
+          "artifact_sha256_verified": true,
+          "artifact_digest": "sha256:950460dc00c8c8a4d10006dcee1b60368f80fc504837e6baf8d2dad5fb52d98a",
+          "timestamp_basis": "Ledger invocation; exact platform timestamp unavailable. Actual elapsed retained; no earlier count reconstruction.",
+          "comparison_eligible": false,
+          "comparison_exclusion": "not_24h_window",
+          "automatic_author_replies_in_original_record": 0,
+          "reader_only_replies": null,
+          "reply_scope": "Platform aggregate; legacy posts may include original automatic author replies. Quotes not separately provided.",
+          "not_backcalculated": true
+        },
+        "18061699079561356:24h": {
+          "main_id": "18061699079561356",
+          "window_hours": 24,
+          "scheduled_at": "2026-11-18T16:00:00+09:00",
+          "published_at": "2026-11-18T17:08:46.989186+09:00",
+          "benefit_id": "137100000006",
+          "reader_scope": "기초생활수급·차상위·법정한부모가족의2009~2022년생자녀보호자(인천서해구제외)",
+          "opening_type": "대상·혜택형",
+          "cohort": "B",
+          "pattern": "P8",
+          "char_count": 424,
+          "media_turn": "IMAGE",
+          "checked_at": "2026-11-19T09:31:16.169989+00:00",
+          "elapsed_hours": 25.374772445277777,
+          "due_at": "2026-11-19T17:08:46.989186+09:00",
+          "timing": "late_available_check",
+          "within_target_tolerance": true,
+          "status": "measured_official_api",
+          "views": 8,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "shares": 0,
+          "quotes": null,
+          "saves": null,
+          "profile_visits": null,
+          "new_followers": null,
+          "site_visits": null,
+          "permission_status": "existing_authorized_token_read_succeeded",
+          "official_api_request_performed": true,
+          "source_run_id": "44497143766",
+          "artifact_id": 14515352484,
+          "artifact_sha256_verified": true,
+          "artifact_digest": "sha256:950460dc00c8c8a4d10006dcee1b60368f80fc504837e6baf8d2dad5fb52d98a",
+          "timestamp_basis": "Ledger invocation; exact platform timestamp unavailable. Actual elapsed retained; no earlier count reconstruction.",
+          "comparison_eligible": false,
+          "comparison_exclusion": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment",
+          "automatic_author_replies_in_original_record": 0,
+          "reader_only_replies": null,
+          "reply_scope": "Platform aggregate; legacy posts may include original automatic author replies. Quotes not separately provided.",
+          "not_backcalculated": true
         }
       },
-      "last_availability_check_at": "2026-11-19T05:50:58.830838+00:00",
+      "last_availability_check_at": "2026-11-19T09:38:48.608386+00:00",
       "statistical_decision": "comparison_deferred_confounded_strata_and_no_repeated_advantage; extend matched samples, retain A/B weights",
       "diagnostic_observations_by_run_id": {
         "43163347739": {
@@ -12672,6 +12761,29 @@
           "workflow_dispatch": false,
           "publication_calls": 0,
           "classification": "normal_no_due_milestones_at_observation_time"
+        },
+        "44497143766": {
+          "run_id": "44497143766",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-19T09:31:22Z",
+          "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384",
+          "job_id": 135467131637,
+          "artifact_id": 14515352484,
+          "artifact_digest": "sha256:950460dc00c8c8a4d10006dcee1b60368f80fc504837e6baf8d2dad5fb52d98a",
+          "artifact_digest_verified": true,
+          "observed_at": "2026-11-19T09:31:16.169989+00:00",
+          "records": 2,
+          "new_observations": 2,
+          "new_observation_keys": [
+            "17982543780133074:168h",
+            "18061699079561356:24h"
+          ],
+          "job_logs_retrieved": true,
+          "workflow_dispatch": false,
+          "publication_calls": 0,
+          "classification": "two_official_due_milestone_observations_success"
         }
       },
       "additional_connector_check": {
@@ -12772,7 +12884,7 @@
         "delayed_over_26h_excluded": [
           "18122947907049313:24h"
         ],
-        "seven_day_experiment_measured_n": 8
+        "seven_day_experiment_measured_n": 9
       },
       "evaluations_by_window": {
         "7d_interim": {
@@ -67067,6 +67179,307 @@
         "site_change_observed_only": true
       },
       "local_execution_note": "Fresh remote required master/writer/workflow/asset/state blobs matchedactual localGitblobSHA. New actual publisher and metrics logs read; returned artifact ZIP SHA256s verified, full source snapshot load_feed/read_current/verify_snapshot passed. Original prepared body and media hashed against verified ledger. Actual allowedPNGbytes match original visualreviewSHA, no newvisualinspection. Main ee523fd siteamountreading changes observed only; Threads blobs unchanged."
+    },
+    "2026-11-19T09:38:48.608386+00:00": {
+      "checked_at": "2026-11-19T09:38:48.608386+00:00",
+      "result": "no_update",
+      "maintenance_previous_blob_sha": "38929d02327984d843ed4548a94a3b5ef92b9988",
+      "current_main_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "41fda85c933f06a8ea06d564019a982e622e4e86",
+      "queue_blob_sha": "3bad1d56d85dfdc72dc7aa3ef1c40b80406f3e6c",
+      "changed_run_versions": [
+        {
+          "run_id": "44497143766",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-19T09:31:22Z",
+          "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384"
+        }
+      ],
+      "active_target_runs": [],
+      "run_pagination": {
+        "page_size": 100,
+        "pages_read": 1,
+        "last_observed_checkpoint_reached": true,
+        "all_target_run_versions_matched": true
+      },
+      "publication_ledger_records": 58,
+      "complete_verified_records": 58,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "44408666268",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-18T22:35:56Z",
+        "head_sha": "0937bc7a5d3765e9b9568f36bc27926f8f140b33",
+        "job_id": 135170619038,
+        "artifact_id": 14477242172,
+        "artifact_digest": "sha256:99ef449e5ab706bc39351ae6371dd56b93fea0b2bf073c473b1863f3ffc19aa4",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_run": true,
+        "generation": "gov24-44408666268-1",
+        "manifest_sha256": "c5eff55cb762ad6bb709c598d891ea1e8745682f4cacdfe4a293d722eb77660c",
+        "collection_succeeded_at": "2026-11-19T07:15:21.556237+09:00",
+        "count": 10887,
+        "read_current_verify_snapshot_load_feed": true,
+        "all_four_ready_source_fingerprints_equal": true,
+        "source_only_not_current_application_verification": true,
+        "verification_checked_at": "2026-11-19T09:38:48.608386+00:00",
+        "cached_artifact_digest_reverified": true
+      },
+      "publisher": {
+        "run_id": "44485979789",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-19T08:15:59Z",
+        "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384",
+        "job_id": 135429436178,
+        "artifact_id": 14511110312,
+        "artifact_digest": "sha256:3293466139b896022b7539594839c5be283fe85d7df4a7148bc7e6837d3175e4",
+        "artifact_digest_verified": true,
+        "classification": "verified_natural_regular_slot_publication",
+        "event": "schedule",
+        "published": true,
+        "slot": "2026-11-19T16:00:00+09:00",
+        "published_at": "2026-11-19T17:15:01.915601+09:00",
+        "benefit_id": "B46001400003",
+        "main_id": "17876108337601849",
+        "url": "https://www.threads.com/@hid_1004/post/Df6oM-uFu9P",
+        "stage": "complete",
+        "verified": true,
+        "content_hash": "a58757d60f414179cb6a429867e4b9b3f15c08de50a2c54d8eea450dc4fa3b54",
+        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "source_generation": "gov24-44408666268-1",
+        "pattern": "P6",
+        "media_turn": "IMAGE",
+        "char_count": 373,
+        "replies": 0,
+        "verification": "Actual authenticated publisher receipt and unique complete verified ledger match original standalone373char body and approved IMAGE guide2 SHA256. Tool-returned result ZIP digest verified, actual138publisher tests PASS. No independent public render or exact platform timestamp claimed.",
+        "verification_completed_at": "2026-11-19T09:02:15.342080+00:00",
+        "public_web_visibility_independently_verified": false,
+        "publication_ledger_records": 58,
+        "pending": null,
+        "lease": null,
+        "job_logs_retrieved": true,
+        "time_basis": {
+          "published_at": "Ledger invocation, not exact platform timestamp",
+          "verified_result_logged_at": "2026-11-19T17:15:54.666271+09:00",
+          "platform_timestamp": null,
+          "public_report": "Nov19 17:15 KST"
+        },
+        "reported_at": "2026-11-19T09:02:15.342080+00:00",
+        "comparison_eligible": false,
+        "comparison_exclusion": "Previously written input preserved; no retrospective cohort assignment after failed preceding slot",
+        "delay_minutes_from_slot": 75,
+        "reserved_before_review_expiry": true,
+        "latest_run_id": "44485979789",
+        "latest_publication_previously_reported": true,
+        "new_publication_this_run": false,
+        "new_failure": false,
+        "new_partial": false,
+        "body_and_asset_hash_match": true,
+        "actual_publisher_tests_passed": 138,
+        "job_logs_retrieved_this_check": true,
+        "cached_artifact_digest_reverified": true
+      },
+      "writer": {
+        "queue_write": false,
+        "new_entries": 0,
+        "queue_reused": true,
+        "new_writing_this_check": false,
+        "existing_entries_preserved": 55,
+        "existing_public_bodies_preserved": 55,
+        "genuinely_revalidated_existing_wrappers": 0,
+        "selection_notes_preserved": 56,
+        "preview_total_ready": 3,
+        "future_regular_ready": 3,
+        "active_regular_ready": 0,
+        "validate_ready_entry_and_preview": true,
+        "future_slot_simulation": true,
+        "source_recheck_required_at_publish": true,
+        "next_24h_sequence": [
+          {
+            "slot": "2026-11-19T20:00:00+09:00",
+            "benefit_id": "B55201500202",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 427,
+            "expires_at": "2026-11-20T09:11:05.576661+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T08:00:00+09:00",
+            "benefit_id": "B55145700016",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 454,
+            "expires_at": "2026-11-20T09:11:05.576661+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T12:00:00+09:00",
+            "benefit_id": "135200000005",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 394,
+            "expires_at": "2026-11-20T13:27:14.252446+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "asset_current_sha256_recompared": true,
+        "new_visual_inspection": false,
+        "already_published_expired_wrapper_retained": "2026-11-19T16:00:00+09:00",
+        "last_validated_at": "2026-11-19T18:38:04.195467+09:00"
+      },
+      "metrics": {
+        "run_id": "44497143766",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-19T09:31:22Z",
+        "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384",
+        "job_id": 135467131637,
+        "artifact_id": 14515352484,
+        "artifact_digest": "sha256:950460dc00c8c8a4d10006dcee1b60368f80fc504837e6baf8d2dad5fb52d98a",
+        "artifact_digest_verified": true,
+        "observed_at": "2026-11-19T09:31:16.169989+00:00",
+        "records": 2,
+        "new_observations": 2,
+        "new_observation_keys": [
+          "17982543780133074:168h",
+          "18061699079561356:24h"
+        ],
+        "job_logs_retrieved": true,
+        "workflow_dispatch": false,
+        "publication_calls": 0,
+        "classification": "two_official_due_milestone_observations_success",
+        "latest_observed_run_id": "44497143766",
+        "total_observations": 91,
+        "new_metric_observations": 2,
+        "actual_current_read_path_due_missing_latest_windows": 0,
+        "currently_due_post_ids": [],
+        "current_due_status": "none_after_verified_snapshot_merge",
+        "new_evaluation_report_due": false,
+        "prior_7day_evaluation_unchanged": true,
+        "14day_not_due": true,
+        "weights_unchanged": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "actual_zero_and_unprovided_null_distinguished": true,
+        "new_24h_observations": 1,
+        "descriptive_24h_comparison_unchanged": true
+      },
+      "recovery": {
+        "required": false,
+        "new_failures": 0,
+        "new_partials": 0,
+        "code_change_required": false,
+        "code_change_applied": false,
+        "post_retry_budget_used": 0,
+        "workflow_dispatch": false,
+        "past_resolved_incidents_preserved": true,
+        "prior_preventive_input_repair_preserved": true,
+        "same_cause_priority_guard_still_passes": true
+      },
+      "local_validation": {
+        "checked_at": "2026-11-19T18:38:04.195467+09:00",
+        "ready": 3,
+        "future_regular_ready": 3,
+        "active_regular_ready": 0,
+        "drafts": [
+          {
+            "slot": "2026-11-19T20:00:00+09:00",
+            "benefit_id": "B55201500202",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 427,
+            "expires_at": "2026-11-20T09:11:05.576661+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T08:00:00+09:00",
+            "benefit_id": "B55145700016",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 454,
+            "expires_at": "2026-11-20T09:11:05.576661+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T12:00:00+09:00",
+            "benefit_id": "135200000005",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 394,
+            "expires_at": "2026-11-20T13:27:14.252446+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source": {
+          "count": 10887,
+          "generation": "gov24-44408666268-1",
+          "lastSuccessAt": "2026-11-19T07:15:21.556237+09:00",
+          "manifestSha256": "c5eff55cb762ad6bb709c598d891ea1e8745682f4cacdfe4a293d722eb77660c",
+          "path": "snapshots/gov24-44408666268-1",
+          "version": 1
+        },
+        "source_count": 10887,
+        "ledger_records": 58,
+        "queue_entries": 55,
+        "selection_notes": 56,
+        "queue_write": false,
+        "new_posts": 0,
+        "due_metrics_before_merge": 2,
+        "due_ids_before_merge": [
+          "17982543780133074",
+          "18061699079561356"
+        ],
+        "current_image_bytes_sha_recompared": true,
+        "new_visual_inspection": false,
+        "pending": null,
+        "lease": null,
+        "source_recheck_required_at_publish": true,
+        "due_metrics_after_merge": 0,
+        "due_ids_after_merge": [],
+        "actual_metric_observations_added": 2,
+        "total_metric_observations": 91
+      },
+      "next_condition": "No new publication/failure/partial/hold/evaluation.58uniquecompleteverifiedledger,no pending/lease.55queueentries56selectionnotes unchanged. Existing3futureREADY20TEXT/P8,Nov20 08IMAGE/P1,12TEXT/P5 pass actual preview/validate_ready_entry/source fingerprint/priority/current PNG bytes SHA; no wrapper date refresh or new visual inspection. Current07:15complete10887source notfreshNov20slots; sender latestcomplete source/official status/expiry/media mandatory. Natural18:31 official reader2due2success snapshot actual169.337h184views and25.375h8views merged as distinct ID/windows; total91. New24h sports voucher was previously rescheduled and original B input is explicitly comparison-ineligible, so descriptive eligible A12/B13 medians83/78 and matchedpairs0 remain unchanged. Normal posted low views distinguished from operational failure. No causal penalty/automation-block assumption. Prior7dayevaluation preserved,14daynotdue,weights unchanged. Previouslyreported17:15publication not repeated. No extraPOST/dispatch/rerun/backfill/schedule/code/site/otheraccountchange.",
+      "main_change_observation": {
+        "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384",
+        "changed_files": [
+          ".github/scripts/check-content-mobile.cjs",
+          "app.js",
+          "core.js",
+          "docs/ADSENSE_AMOUNT_READING_20261119.md",
+          "index.html",
+          "review-only/sunchang-birth-20261119.json",
+          "tests/amount-reading.test.cjs",
+          "tests/comparison_browser.cjs",
+          "tests/test_amount_reading.py",
+          "tests/test_search_metadata.py",
+          "tools/benefit_analysis.py",
+          "tools/content_quality.py",
+          "tools/detail_pages.py",
+          "tools/sunchang_birth_analysis.py"
+        ],
+        "required_threads_writer_blobs_unchanged": true,
+        "site_change_observed_only": true
+      },
+      "local_execution_note": "Fresh main master/writer/workflow/asset/state/queue/maintenance blob SHA matched actual localbytes. Latest completed operations/publisher/metrics logs re-read. Source and publisher returned-artifact cached ZIP digests reverified and source manifest/load_feed/read_current/verify_snapshot pass. Newmetrics tool-returnedartifact downloaded and ZIP SHA256 verified. New observation zeros and unavailable nulls distinguished, actual elapsed times retained without24h backcalculation. Original rescheduled sports voucher24h excluded from A/B as alreadyrecorded. Queue reused with no mutation; current main ee523fd unchanged since prior check; no site edits."
     }
   },
   "last_reported_prepublication_repair": {
@@ -67276,12 +67689,10 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-19T09:02:15.342080+00:00",
+    "checked_at": "2026-11-19T09:38:48.608386+00:00",
     "queue_blob_sha": "3bad1d56d85dfdc72dc7aa3ef1c40b80406f3e6c",
     "queue_write": false,
     "ready": 3,
-    "future_regular_ready": 3,
-    "active_regular_ready": 0,
     "sequence": [
       {
         "slot": "2026-11-19T20:00:00+09:00",
