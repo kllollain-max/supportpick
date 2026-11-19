@@ -20,6 +20,7 @@ import verified_schedule
 
 KST = ZoneInfo('Asia/Seoul')
 TEMPLATE_MODIFIED = '2026-11-17'
+CLASSIFICATION_MODIFIED = '2026-11-19'
 PAGE_SIZE = 100
 MATERIAL_FIELDS = ('id', 'title', 'organization', 'category', 'region', 'regionBasis',
                    'summary', 'target', 'selection', 'support', 'period', 'periodKind',
@@ -118,6 +119,11 @@ def reviewed_guide(row, registry, current):
     if not reviews or any(not safe_reference(x.get('url', '')) or not x.get('note') for x in reviews):
         return None
     return g
+
+
+def classification_difference(row):
+    differences=row.get('sourceDifferences')
+    return (isinstance(differences,dict) and '지원유형' in differences) or '지원유형' in (row.get('sourceConflicts') or [])
 
 
 def support_display(row, guide, current):
@@ -284,7 +290,9 @@ def editorial_html(row, guide):
 
 def render_benefit(row, guide, blog, reasons, related, base, current, feed_status):
     display = support_display(row, guide, current)
-    support_html = escape(display['text'] if display else row['supportType'])
+    support_html = escape(display['text'] if display else '목록·상세 분류 차이 · 원문 확인' if classification_difference(row) else row['supportType'])
+    if classification_difference(row) and row.get('sourceDifferences'):
+        support_html += ' · <a href="#source-differences">목록·상세 분류 대조 ↓</a>'
     if display:
         support_html += (' · <a href="' + escape(display['sourceUrl'], quote=True)
                          + '" target="_blank" rel="noopener noreferrer">공식 안내 ↗</a>')
@@ -353,7 +361,7 @@ def render_benefit(row, guide, blog, reasons, related, base, current, feed_statu
         body += section(heading, row.get(key))
     differences = row.get('sourceDifferences', {})
     if differences:
-        body += '<section class="detail-block"><h2>공식 목록·상세 표기 차이</h2><p>원본 값이 다릅니다. 적용 기준은 담당기관의 최신 원문에서 확인하세요.</p>'
+        body += '<section class="detail-block" id="source-differences"><h2>공식 목록·상세 표기 차이</h2><p>원본 값이 다릅니다. 적용 기준은 담당기관의 최신 원문에서 확인하세요.</p>'
         for name, values in differences.items():
             body += '<h3>' + escape(name) + '</h3><p class="source-text">목록: ' + escape(str(values.get('list') or '미제공')) + '\n\n상세: ' + escape(str(values.get('detail') or '미제공')) + '</p>'
         body += '</section>'
@@ -427,7 +435,7 @@ def write_details(output, rows, previous, base, registry, blogs, feed_status, cu
         if reasons:
             held[row['id']] = reasons
         elif base:
-            modified = max(filter(None, [TEMPLATE_MODIFIED, source_date(row), guide['reviewedAt'][:10] if guide else None]))
+            modified = max(filter(None, [TEMPLATE_MODIFIED, source_date(row), guide['reviewedAt'][:10] if guide else None, min(CLASSIFICATION_MODIFIED,current.astimezone(KST).date().isoformat()) if classification_difference(row) else None]))
             if row['id'] in previous and material_hash(previous[row['id']])!=material_hash(row) and source_date(previous[row['id']])==source_date(row):
                 modified=None  # Content changed, but the authority did not supply a new modification time.
             entries.append((path, modified))
