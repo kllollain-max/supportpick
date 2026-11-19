@@ -14,6 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "44585992739",
     "44567021465",
     "44554222281",
     "44537164514",
@@ -269,7 +270,7 @@
     "source_workflow_conclusion": "success",
     "source_failure_classification": null,
     "last_publisher_run_id": "44517306294",
-    "writer_queue_ready": 2,
+    "writer_queue_ready": 4,
     "writer_schema": "supportpick.writer.v1",
     "account_check": "verified_http_200",
     "account_check_run_id": "42152164281",
@@ -4289,24 +4290,49 @@
       "conclusion": "success",
       "updated_at": "2026-11-19T16:31:36Z",
       "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
+    },
+    "44585992739": {
+      "run_id": "44585992739",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-19T18:16:25Z",
+      "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-19T17:40:31.128759+00:00",
+    "checked_at": "2026-11-20T04:18:19.889615+09:00",
     "result": "no_update",
-    "maintenance_previous_blob_sha": "ecf6c769711ae9e2d28759d9d467da49be75b78a",
+    "maintenance_previous_blob_sha": "ad86804ebeda0bdd18620f2ebf31ef11b6bbf3c8",
     "current_main_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
     "publication_ledger_sha": "c3ac6b9284f3a815633c83831c86bef84049861a",
-    "queue_blob_sha": "3bad1d56d85dfdc72dc7aa3ef1c40b80406f3e6c",
-    "changed_run_versions": [],
+    "queue_blob_sha": "f58bacad4e1c4247d1519c3d53026f09d7e81c72",
+    "changed_run_versions": [
+      {
+        "run_id": "44585992739",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-19T18:16:25Z",
+        "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
+      }
+    ],
     "active_target_runs": [],
     "run_pagination": {
       "page_size": 100,
       "pages_read": 1,
       "last_observed_checkpoint_reached": true,
-      "all_target_run_versions_matched": true
+      "new_or_changed_versions_checked": 1,
+      "comparison_fields": [
+        "run_id",
+        "run_attempt",
+        "status",
+        "conclusion",
+        "updated_at",
+        "head_sha"
+      ]
     },
     "publication_ledger_records": 59,
     "complete_verified_records": 59,
@@ -4323,8 +4349,8 @@
       "artifact_id": 14519672290,
       "artifact_digest": "sha256:3bdd5b86317adf8f9d4706a56edeb7b4e0e5be8eb78b0f44b496588d2544dba0",
       "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": false,
-      "cached_artifact_digest_reverified": true,
+      "artifact_redownloaded_this_check": true,
+      "cached_artifact_digest_reverified": false,
       "job_logs_retrieved_this_run": true,
       "generation": "gov24-44505539863-1",
       "manifest_sha256": "caaa31a0dc9b154867102f94e841c8cfc574c2c154ea54ddd68b84f5367d86ad",
@@ -4333,7 +4359,7 @@
       "read_current_verify_snapshot_load_feed": true,
       "all_remaining_ready_source_fingerprints_equal": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-19T17:40:31.128759+00:00"
+      "verification_checked_at": "2026-11-20T04:18:19.889615+09:00"
     },
     "publisher": {
       "run_id": "44517306294",
@@ -4389,19 +4415,27 @@
       "body_and_asset_hash_match": true,
       "actual_publisher_tests_passed": 138,
       "job_logs_retrieved_this_check": true,
-      "cached_artifact_digest_reverified": true
+      "cached_artifact_digest_reverified": false,
+      "artifact_redownloaded_this_check": false,
+      "receipt_evidence_basis": "Fresh complete verified ledger and actual latest publisher job log match previously verified/report-delivered artifact receipt. Publisher ZIP is not independently re-downloaded in this check."
     },
     "writer": {
-      "queue_write": false,
-      "new_entries": 0,
+      "queue_write": true,
+      "queue_commit_sha": "622bf9d29f86e4596a6976a48984a399496c97c3",
+      "queue_blob_sha": "f58bacad4e1c4247d1519c3d53026f09d7e81c72",
+      "independent_branch_sha_readback": true,
+      "immutable_commit_bytes_readback_exact": true,
+      "new_entries": 2,
       "queue_reused": true,
-      "new_writing_this_check": false,
+      "new_writing_this_check": true,
       "existing_entries_preserved": 55,
       "existing_public_bodies_preserved": 55,
       "genuinely_revalidated_existing_wrappers": 0,
+      "existing_ready_08_12_preserved": true,
       "selection_notes_preserved": 56,
-      "preview_total_ready": 2,
-      "future_regular_ready": 2,
+      "new_selection_notes": 2,
+      "preview_total_ready": 4,
+      "future_regular_ready": 4,
       "active_regular_ready": 0,
       "validate_ready_entry_and_preview": true,
       "future_slot_simulation": true,
@@ -4426,46 +4460,70 @@
           "expires_at": "2026-11-20T13:27:14.252446+09:00",
           "current_source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-20T16:00:00+09:00",
+          "benefit_id": "SPE000000060",
+          "pattern": "P6",
+          "media_turn": "IMAGE",
+          "char_count": 411,
+          "expires_at": "2026-11-21T04:15:09.480730+09:00",
+          "current_source_fresh_at_slot": true,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-20T20:00:00+09:00",
+          "benefit_id": "149200000147",
+          "pattern": "P8",
+          "media_turn": "TEXT",
+          "char_count": 440,
+          "expires_at": "2026-11-21T04:15:09.480730+09:00",
+          "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true
         }
       ],
       "asset_current_sha256_recompared": true,
       "new_visual_inspection": false,
-      "already_published_wrapper_retained": "2026-11-19T20:00:00+09:00",
-      "last_validated_at": "2026-11-20T02:39:59.359511+09:00"
+      "last_validated_at": "2026-11-20T04:15:35.984112+09:00",
+      "priority_guard_regression": [
+        "WII000001340",
+        "SD0000005037"
+      ],
+      "new_entry_ids": [
+        "SPE000000060",
+        "149200000147"
+      ]
     },
     "metrics": {
-      "run_id": "44567021465",
+      "run_id": "44585992739",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-19T16:31:36Z",
+      "updated_at": "2026-11-19T18:16:25Z",
       "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
-      "job_id": 135711446644,
-      "artifact_id": 14551609132,
-      "artifact_digest": "sha256:07435bdacd8c43307ad8b825141fc411c60b120b03a5bc7f188b8426ca21ae16",
+      "job_id": 135778925310,
+      "artifact_id": 14561402550,
+      "artifact_digest": "sha256:d492a98c5a6a31977ca7b118d9b5255c98d7c40190aa7c5bb15bc10810262dfb",
       "artifact_digest_verified": true,
-      "observed_at": "2026-11-19T16:31:31.111410+00:00",
+      "artifact_redownloaded_this_check": true,
+      "job_logs_retrieved_this_check": true,
+      "observed_at": "2026-11-19T18:16:20.028408+00:00",
       "records": 0,
       "new_observations": 0,
-      "job_logs_retrieved": true,
-      "workflow_dispatch": false,
-      "publication_calls": 0,
-      "classification": "normal_no_due_milestones",
-      "latest_observed_run_id": "44567021465",
-      "total_observations": 94,
       "new_metric_observations": 0,
+      "total_observations": 94,
       "new_observation_keys": [],
       "actual_current_read_path_due_missing_latest_windows": 0,
       "currently_due_post_ids": [],
       "current_due_status": "none",
-      "job_logs_retrieved_this_check": true,
-      "artifact_redownloaded_this_check": false,
+      "classification": "normal_no_due_milestones",
+      "workflow_dispatch": false,
+      "publication_calls": 0,
       "new_evaluation_report_due": false,
       "prior_7day_evaluation_unchanged": true,
       "14day_not_due": true,
       "weights_unchanged": true,
       "actual_zero_and_unprovided_null_distinguished": true,
-      "new_24h_observations": 0,
       "descriptive_24h_comparison_unchanged": true
     },
     "recovery": {
@@ -4481,9 +4539,9 @@
       "same_cause_priority_guard_still_passes": true
     },
     "local_validation": {
-      "checked_at": "2026-11-20T02:39:59.359511+09:00",
-      "ready": 2,
-      "future_regular_ready": 2,
+      "checked_at": "2026-11-20T04:15:35.984112+09:00",
+      "ready": 4,
+      "future_regular_ready": 4,
       "active_regular_ready": 0,
       "drafts": [
         {
@@ -4505,7 +4563,44 @@
           "expires_at": "2026-11-20T13:27:14.252446+09:00",
           "current_source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-20T16:00:00+09:00",
+          "benefit_id": "SPE000000060",
+          "pattern": "P6",
+          "media_turn": "IMAGE",
+          "char_count": 411,
+          "expires_at": "2026-11-21T04:15:09.480730+09:00",
+          "current_source_fresh_at_slot": true,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-20T20:00:00+09:00",
+          "benefit_id": "149200000147",
+          "pattern": "P8",
+          "media_turn": "TEXT",
+          "char_count": 440,
+          "expires_at": "2026-11-21T04:15:09.480730+09:00",
+          "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true
         }
+      ],
+      "source_count": 10887,
+      "ledger_records": 59,
+      "queue_entries": 57,
+      "selection_notes": 58,
+      "queue_write": true,
+      "new_posts": 0,
+      "due_metrics": 0,
+      "due_ids": [],
+      "current_image_bytes_sha_recompared": true,
+      "new_visual_inspection": false,
+      "pending": null,
+      "lease": null,
+      "source_recheck_required_at_publish": true,
+      "priority_guard_regression": [
+        "WII000001340",
+        "SD0000005037"
       ],
       "source": {
         "count": 10887,
@@ -4515,28 +4610,81 @@
         "path": "snapshots/gov24-44505539863-1",
         "version": 1
       },
-      "source_count": 10887,
-      "ledger_records": 59,
-      "queue_entries": 55,
-      "selection_notes": 56,
-      "queue_write": false,
-      "new_posts": 0,
-      "due_metrics_before_merge": 0,
-      "due_ids_before_merge": [],
-      "current_image_bytes_sha_recompared": true,
-      "new_visual_inspection": false,
-      "pending": null,
-      "lease": null,
-      "source_recheck_required_at_publish": true
+      "queue_candidate_validated": true,
+      "new_entries": 2,
+      "queue_commit_sha": "622bf9d29f86e4596a6976a48984a399496c97c3",
+      "queue_blob_sha": "f58bacad4e1c4247d1519c3d53026f09d7e81c72",
+      "queue_readback_exact": true
     },
-    "next_condition": "No new publication/failure/partial/hold/evaluation.59uniquecompleteverifiedledger,no pending/lease.55queueentries56notes unchanged. TwofutureREADYNov20 08IMAGE/P1 and12TEXT/P5 passactualpreview/validate_ready_entry/sourcefingerprint/priority/expiry/currentapprovedPNGbyteSHA. No newwriting,wrapper datecopy ornewvisualinspection. Currentcomplete19:33sourcegov24-44505539863-1 10887manifestverified and freshatbothslots,not permanentlyfresh: natural sender stillmustreadlatestcomplete sourceandvalidateofficialfacts/status/expiry/media. Latestactual01:31scheduledmetrics44567021465 attempt1completedsuccess,joblog andreturnedartifactdigestverifyrecords0,nodue.94officialobservations anddescriptive A12/B13 medians83/78 unchanged,matchedpairs0,no weightsadjustment. Prior7dayevaluation preserved,14daynotdue. Alreadyreported20:44publication andcompletedincidents not repeated. No extraPOST/dispatch/rerun/backfill/schedule/code/site/otheraccountchange.",
+    "next_condition": "Nov20 existing08IMAGE/P1 and12TEXT/P5 unchanged; new16IMAGE/P6(SPE000000060,411chars,A) and20TEXT/P8(149200000147,440chars,B) actually reviewed, CAS saved and independently read back. All4preview and validate_ready_entry pass; source fingerprints/priority/higherHOLD notes/expiry/currentPNG SHA verified. Sender must restore latest complete generation and revalidate current official state, body, images and expiry. Current19:33source is NOT fresh at20slot. Earlier unsent/failed slot requires recalculating unreserved future candidate/media order; no old-slot backfill.59completeuniqueverified,no pending/lease,newfailure0,latest03:16metrics0due,94observations and7dayevaluation retained,14daynotdue,weightsunchanged. No new publication/recovery/block/evaluation notification.",
     "main_change_observation": {
       "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
       "required_threads_writer_blobs_unchanged": true,
       "site_change_observed_only": true
     },
-    "local_execution_note": "Freshrequiredmainmaster/writer/workflow/assets/state/queue/maintenance blobSHA matchedactual localbytes. Latestcompletedoperations/publisher/metrics actualjoblogs re-read. Current19:33source andpublisher cached returned ZIPdigestsreverified,source load_feed/read_current/verify_snapshot pass. Latestmetrics cachedtoolreturnedartifactZIPdigestreverified normal0due. Existingqueue reused unchanged andactualPNGbytesrecomparedagainstoriginalvisualreviewSHA,no newvisualclaim. Main7d77b5c newinfluenza-siteanalysis changes observedonly; allrequiredThreadswriterblobsunchanged. No site changes performed.",
-    "active_publication_runs": []
+    "local_execution_note": "Transient scratch lacked cached source/state bytes; restored state/queue/maintenance from exact current remote blob SHA and source via tool-returned artifact URL with actual ZIP digest. No production collection failure inferred. Full master and full current supplemental writing policy used in saved writer-input0405 with actualhistory20; new review input hash8585aab151ed481efc29a1604535569103d69bb6d7fef7b91bc1d4fda4957c40. Actual official current pages read for new candidates, not copied evidence dates. Current approved PNG fetched and compared with original visual-review SHA, no new visual claim. No main/code/site/otheraccount/schedule/POST/dispatch/rerun/backfill changes.",
+    "active_publication_runs": [],
+    "publication_audit": {
+      "requested_max_days": 28,
+      "ledger_records_checked": 59,
+      "from_slot": "2026-11-04T17:04:00+09:00",
+      "to_slot": "2026-11-19T20:00:00+09:00",
+      "unique_main_ids": 59,
+      "unique_slots": 59,
+      "complete_verified_records": 59,
+      "pending_or_partial": 0,
+      "new_missing_image": 0,
+      "new_duplicates": 0,
+      "new_failure": 0,
+      "actual_receipt_scope": "Fresh durable state plus latest actual publisher log re-read; prior per-ID official observations and verified receipt history retained. No new remote post enumeration/current public rendering claim.",
+      "official_metric_observations_retained": 94,
+      "new_official_snapshot_records": 0,
+      "measurement_missing_distinct_from_zero": true,
+      "low_views_not_failure": true,
+      "account_penalty_inference": false,
+      "visibility_limit": "No current independent public-page audit of every ID. Existing publisher verified status is receipt evidence, not a fresh rendering observation."
+    },
+    "candidate_review": {
+      "checked_at": "2026-11-20T04:18:19.889615+09:00",
+      "new_ready_ids": [
+        "SPE000000060",
+        "149200000147"
+      ],
+      "new_candidate_holds": [
+        {
+          "benefit_id": "WII000001340",
+          "views": 55755,
+          "decision": "HOLD",
+          "reason": "동일ID API 신청기한은 읍면동별 상이. 이번 직접 연 보건복지부(2026-10-06수정)와 광주시(2026-11-16수정) 안내는 예산소진 조기마감을 명시하나 현재 지역별 잔여예산·접수 가능을 확정하지 않는다. 한도·금리·상환은 대조했지만 현재 접수기간을 꾸며 OPEN/ALWAYS로 바꾸지 않고 이번 선정 HOLD. 사업 종료로 단정하지 않음.",
+          "sources": [
+            "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=725443&bnefType=all&svcId=WII000001340",
+            "https://www.mohw.go.kr/menu.es?mid=a10710030600",
+            "https://www.gjcity.go.kr/depart/contents.do?mId=1007010800",
+            "https://bokji.gangnam.go.kr/api/web/serviceDetail.do?id=WII000001340&mid=ID03_02&pgno=1&type="
+          ],
+          "checked_at": "2026-11-20T04:15:09.480730+09:00",
+          "access_method": "OPENED_OFFICIAL current web page plus PROVIDED_OFFICIAL_TEXT same-ID rawSource",
+          "source_generation": "gov24-44505539863-1"
+        },
+        {
+          "benefit_id": "SD0000005037",
+          "views": 54525,
+          "decision": "HOLD",
+          "reason": "접수기관별 상이. 이번 실제 LH 현행 목록에 국민임대 공고/정정공고가 존재함은 확인했으나 개별 모집공고 원문과 순위별 접수일·자산·지역·자격완화·임대조건을 확정할 수 있는 검수가 미완료다. 목록의 공고중을 현재 청약접수중으로 바꾸지 않으며 전국 공통 소득기준으로 특정 모집을 꾸미지 않고 이번 선정 HOLD. 마이홈 제도안내 열람은 timeout.",
+          "sources": [
+            "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=573410&bnefType=all&svcId=SD0000005037",
+            "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?cntntsId=&mi=1026",
+            "https://www.myhome.go.kr/hws/portal/cont/selectNationalRentalHouseView.do"
+          ],
+          "checked_at": "2026-11-20T04:15:09.480730+09:00",
+          "access_method": "OPENED_OFFICIAL current web page plus PROVIDED_OFFICIAL_TEXT same-ID rawSource",
+          "source_generation": "gov24-44505539863-1"
+        }
+      ],
+      "holds_are_editorial_verification_gaps_not_publication_incidents": true,
+      "actual_official_pages_opened_this_check": true,
+      "api_collection_not_current_acceptance_verification": true
+    }
   },
   "last_reported_publication": {
     "run_id": "44517306294",
@@ -5466,12 +5614,14 @@
     "last_ready_queue_blob_sha": "f4ea5e0fb01dc19e93e0a765d61adebe72f71ea8"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-19T17:40:31.128759+00:00",
+    "checked_at": "2026-11-20T04:18:19.889615+09:00",
     "new_publications": 0,
     "new_incidents": 0,
-    "queue_ready": 2,
+    "queue_ready": 4,
     "new_metric_observations": 0,
     "new_evaluation_due": false,
+    "new_ready_drafts": 2,
+    "queue_saved_and_readback": true,
     "duplicate_notification_suppressed": true
   },
   "reach_policy": {
@@ -10376,7 +10526,7 @@
           "not_backcalculated": true
         }
       },
-      "last_availability_check_at": "2026-11-19T13:08:15.585522+00:00",
+      "last_availability_check_at": "2026-11-20T04:18:19.889615+09:00",
       "statistical_decision": "comparison_deferred_confounded_strata_and_no_repeated_advantage; extend matched samples, retain A/B weights",
       "diagnostic_observations_by_run_id": {
         "43163347739": {
@@ -13042,6 +13192,41 @@
           "workflow_dispatch": false,
           "publication_calls": 0,
           "classification": "normal_no_due_milestones"
+        },
+        "44585992739": {
+          "run_id": "44585992739",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-19T18:16:25Z",
+          "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
+          "job_id": 135778925310,
+          "artifact_id": 14561402550,
+          "artifact_digest": "sha256:d492a98c5a6a31977ca7b118d9b5255c98d7c40190aa7c5bb15bc10810262dfb",
+          "artifact_digest_verified": true,
+          "artifact_redownloaded_this_check": true,
+          "job_logs_retrieved_this_check": true,
+          "observed_at": "2026-11-19T18:16:20.028408+00:00",
+          "records": [],
+          "new_observations": 0,
+          "new_metric_observations": 0,
+          "total_observations": 94,
+          "new_observation_keys": [],
+          "actual_current_read_path_due_missing_latest_windows": 0,
+          "currently_due_post_ids": [],
+          "current_due_status": "none",
+          "classification": "normal_no_due_milestones",
+          "workflow_dispatch": false,
+          "publication_calls": 0,
+          "new_evaluation_report_due": false,
+          "prior_7day_evaluation_unchanged": true,
+          "14day_not_due": true,
+          "weights_unchanged": true,
+          "actual_zero_and_unprovided_null_distinguished": true,
+          "descriptive_24h_comparison_unchanged": true,
+          "due_count": 0,
+          "success_count": 0,
+          "artifact_sha256_verified": true
         }
       },
       "additional_connector_check": {
@@ -13334,33 +13519,55 @@
     },
     "next_condition": "Natural20 KST and tomorrow08/12/16 publishers consume4 reviewed READY drafts; newNov16 16 IMAGE/P6 A vocational-training allowance entry stored and read back, previous41 entries preserved. Actual sender must recheck latest complete source, official status, evidence age, asset SHA and expiry. Current07:01 source is not fresh for tomorrow.44 complete publications; no pending/new failure/partial/recovery/code change. No new metrics; A6/B6 delayed24h comparison unchanged, insufficient8/group/no matched pairs; weights retained and7/14day evaluations not due. Official-law current10320 evidence used; obsolete7530 overview not copied, dynamic-shell law page not claimed directly read.",
     "latest_prepared_entry": {
-      "slot": "2026-11-20T12:00:00+09:00",
-      "benefit_id": "135200000005",
-      "prepared_at": "2026-11-19T13:27:14.252446+09:00",
-      "expires_at": "2026-11-20T13:27:14.252446+09:00",
-      "pattern": "P5",
-      "media_turn": "TEXT",
-      "char_count": 394,
-      "cohort": "B",
-      "queue_commit": {
-        "commit_sha": "e3a120c9bff4666aa71d050bdab19b8a7bc75bb7",
-        "content_sha": "3bad1d56d85dfdc72dc7aa3ef1c40b80406f3e6c"
+      "checked_at": "2026-11-20T04:18:19.889615+09:00",
+      "commit": {
+        "commit_sha": "622bf9d29f86e4596a6976a48984a399496c97c3",
+        "content_sha": "f58bacad4e1c4247d1519c3d53026f09d7e81c72"
       },
-      "queue_readback_exact": true,
-      "source_recheck_required_at_publish": true,
-      "genuine_revalidation_needed_before_expected_delayed_publication": false,
-      "genuine_revalidation_completed_at": "2026-11-19T13:27:14.252446+09:00"
+      "entries": 57,
+      "future_regular_ready": 4,
+      "active_regular_ready": 0,
+      "new_entries": 2,
+      "existing_inputs_preserved": 55,
+      "existing_public_bodies_preserved": 55,
+      "selection_notes_preserved": 56,
+      "new_selection_notes": 2,
+      "readback_exact": true,
+      "source_generation": "gov24-44505539863-1",
+      "new_entry_summaries": [
+        {
+          "slot": "2026-11-20T16:00:00+09:00",
+          "benefit_id": "SPE000000060",
+          "source_fingerprint": "650f0d3391c20c6b6b21750e02e7a9931bb40511db1ca48eab4ce5dfd78fae71",
+          "prepared_at": "2026-11-20T04:15:09.480730+09:00",
+          "expires_at": "2026-11-21T04:15:09.480730+09:00",
+          "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a"
+        },
+        {
+          "slot": "2026-11-20T20:00:00+09:00",
+          "benefit_id": "149200000147",
+          "source_fingerprint": "bedcaab9eb4fcbb88e5b5c8d7e4ad385c9aabf489588cd6011f659d8e07427f4",
+          "prepared_at": "2026-11-20T04:15:09.480730+09:00",
+          "expires_at": "2026-11-21T04:15:09.480730+09:00",
+          "asset_sha256": null
+        }
+      ],
+      "writing_input_sha256": "8585aab151ed481efc29a1604535569103d69bb6d7fef7b91bc1d4fda4957c40"
     },
     "latest_writing_policy_input": {
-      "checked_at": "2026-11-19T03:42:19.375046+00:00",
-      "policy_id": "supportpick-threads-reach-v1-20261109",
+      "checked_at": "2026-11-20T04:18:19.889615+09:00",
       "master_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "master_full_used": true,
-      "supplemental_full_used_in_current_model_input": true,
-      "writing_input_sha256": "9386ff289577926dab56255abe99ed42ddb05770c6071050196759902b6dec94",
-      "internal_three_angles_three_openings": true,
-      "public_opening_only_one": true,
-      "existing_ready_cohorts_preserved": true
+      "supplemental_full_used": true,
+      "policy_id": "supportpick-threads-reach-v1-20261109",
+      "writer_input_sha256": "8585aab151ed481efc29a1604535569103d69bb6d7fef7b91bc1d4fda4957c40",
+      "new_slots": [
+        "2026-11-20T16:00:00+09:00",
+        "2026-11-20T20:00:00+09:00"
+      ],
+      "queue_commit_sha": "622bf9d29f86e4596a6976a48984a399496c97c3",
+      "queue_readback_exact": true,
+      "publications_this_check": 0
     }
   },
   "local_validation_issues": {
@@ -15803,6 +16010,81 @@
       },
       "readback_exact": true,
       "readback_consistency_note": "First immediate readback did not match expected. No repeated CAS. Fresh branch and immutable queue commit reads both matched exact407134characters andblobSHA3bad1d56d85dfdc72dc7aa3ef1c40b80406f3e6c. Cause of immediate difference not established; subsequent durable content verified."
+    },
+    "2026-11-20T04:18:19.889615+09:00": {
+      "queue_write": true,
+      "queue_commit_sha": "622bf9d29f86e4596a6976a48984a399496c97c3",
+      "queue_blob_sha": "f58bacad4e1c4247d1519c3d53026f09d7e81c72",
+      "independent_branch_sha_readback": true,
+      "immutable_commit_bytes_readback_exact": true,
+      "new_entries": 2,
+      "queue_reused": true,
+      "new_writing_this_check": true,
+      "existing_entries_preserved": 55,
+      "existing_public_bodies_preserved": 55,
+      "genuinely_revalidated_existing_wrappers": 0,
+      "existing_ready_08_12_preserved": true,
+      "selection_notes_preserved": 56,
+      "new_selection_notes": 2,
+      "preview_total_ready": 4,
+      "future_regular_ready": 4,
+      "active_regular_ready": 0,
+      "validate_ready_entry_and_preview": true,
+      "future_slot_simulation": true,
+      "source_recheck_required_at_publish": true,
+      "next_24h_sequence": [
+        {
+          "slot": "2026-11-20T08:00:00+09:00",
+          "benefit_id": "B55145700016",
+          "pattern": "P1",
+          "media_turn": "IMAGE",
+          "char_count": 454,
+          "expires_at": "2026-11-20T09:11:05.576661+09:00",
+          "current_source_fresh_at_slot": true,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-20T12:00:00+09:00",
+          "benefit_id": "135200000005",
+          "pattern": "P5",
+          "media_turn": "TEXT",
+          "char_count": 394,
+          "expires_at": "2026-11-20T13:27:14.252446+09:00",
+          "current_source_fresh_at_slot": true,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-20T16:00:00+09:00",
+          "benefit_id": "SPE000000060",
+          "pattern": "P6",
+          "media_turn": "IMAGE",
+          "char_count": 411,
+          "expires_at": "2026-11-21T04:15:09.480730+09:00",
+          "current_source_fresh_at_slot": true,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-20T20:00:00+09:00",
+          "benefit_id": "149200000147",
+          "pattern": "P8",
+          "media_turn": "TEXT",
+          "char_count": 440,
+          "expires_at": "2026-11-21T04:15:09.480730+09:00",
+          "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true
+        }
+      ],
+      "asset_current_sha256_recompared": true,
+      "new_visual_inspection": false,
+      "last_validated_at": "2026-11-20T04:15:35.984112+09:00",
+      "priority_guard_regression": [
+        "WII000001340",
+        "SD0000005037"
+      ],
+      "new_entry_ids": [
+        "SPE000000060",
+        "149200000147"
+      ]
     }
   },
   "observed_main_changes": {
@@ -69989,6 +70271,392 @@
       },
       "local_execution_note": "Freshrequiredmainmaster/writer/workflow/assets/state/queue/maintenance blobSHA matchedactual localbytes. Latestcompletedoperations/publisher/metrics actualjoblogs re-read. Current19:33source andpublisher cached returned ZIPdigestsreverified,source load_feed/read_current/verify_snapshot pass. Latestmetrics cachedtoolreturnedartifactZIPdigestreverified normal0due. Existingqueue reused unchanged andactualPNGbytesrecomparedagainstoriginalvisualreviewSHA,no newvisualclaim. Main7d77b5c newinfluenza-siteanalysis changes observedonly; allrequiredThreadswriterblobsunchanged. No site changes performed.",
       "active_publication_runs": []
+    },
+    "2026-11-20T04:18:19.889615+09:00": {
+      "checked_at": "2026-11-20T04:18:19.889615+09:00",
+      "result": "no_update",
+      "maintenance_previous_blob_sha": "ad86804ebeda0bdd18620f2ebf31ef11b6bbf3c8",
+      "current_main_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "c3ac6b9284f3a815633c83831c86bef84049861a",
+      "queue_blob_sha": "f58bacad4e1c4247d1519c3d53026f09d7e81c72",
+      "changed_run_versions": [
+        {
+          "run_id": "44585992739",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-19T18:16:25Z",
+          "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
+        }
+      ],
+      "active_target_runs": [],
+      "run_pagination": {
+        "page_size": 100,
+        "pages_read": 1,
+        "last_observed_checkpoint_reached": true,
+        "new_or_changed_versions_checked": 1,
+        "comparison_fields": [
+          "run_id",
+          "run_attempt",
+          "status",
+          "conclusion",
+          "updated_at",
+          "head_sha"
+        ]
+      },
+      "publication_ledger_records": 59,
+      "complete_verified_records": 59,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "44505539863",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-19T10:54:35Z",
+        "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384",
+        "job_id": 135496040981,
+        "artifact_id": 14519672290,
+        "artifact_digest": "sha256:3bdd5b86317adf8f9d4706a56edeb7b4e0e5be8eb78b0f44b496588d2544dba0",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": true,
+        "cached_artifact_digest_reverified": false,
+        "job_logs_retrieved_this_run": true,
+        "generation": "gov24-44505539863-1",
+        "manifest_sha256": "caaa31a0dc9b154867102f94e841c8cfc574c2c154ea54ddd68b84f5367d86ad",
+        "collection_succeeded_at": "2026-11-19T19:33:46.950475+09:00",
+        "count": 10887,
+        "read_current_verify_snapshot_load_feed": true,
+        "all_remaining_ready_source_fingerprints_equal": true,
+        "source_only_not_current_application_verification": true,
+        "verification_checked_at": "2026-11-20T04:18:19.889615+09:00"
+      },
+      "publisher": {
+        "run_id": "44517306294",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-19T11:44:17Z",
+        "head_sha": "f4c2499c13e7c6dee1641bd5d2f4e0b42f23abe4",
+        "job_id": 135536552116,
+        "artifact_id": 14526610081,
+        "artifact_digest": "sha256:5dfad78ff2f7c970af44092ccb86190606184bee6e94c578800881e7cadbf6fc",
+        "artifact_digest_verified": true,
+        "classification": "verified_natural_regular_slot_publication",
+        "event": "schedule",
+        "published": true,
+        "slot": "2026-11-19T20:00:00+09:00",
+        "published_at": "2026-11-19T20:43:23.554499+09:00",
+        "benefit_id": "B55201500202",
+        "main_id": "17954736195295664",
+        "url": "https://www.threads.com/@hid_1004/post/Df7ADBWFjrO",
+        "stage": "complete",
+        "verified": true,
+        "content_hash": "2d57bb3be2272925d693b15b844ff7d2b726e90dcb218c1d98d526d2634aee80",
+        "asset_sha256": null,
+        "source_generation": "gov24-44505539863-1",
+        "pattern": "P8",
+        "media_turn": "TEXT",
+        "char_count": 427,
+        "replies": 0,
+        "verification": "Actual authenticated publisher receipt and unique complete verified ledger match original standalone427char body and TEXT/noimage. Tool-returned result ZIP digest verified, actual138publisher tests PASS. No independent public render or exact platform timestamp claimed.",
+        "verification_completed_at": "2026-11-19T12:03:37.254577+00:00",
+        "public_web_visibility_independently_verified": false,
+        "publication_ledger_records": 59,
+        "pending": null,
+        "lease": null,
+        "job_logs_retrieved": true,
+        "time_basis": {
+          "published_at": "Ledger invocation, not exact platform timestamp",
+          "verified_result_logged_at": "2026-11-19T20:44:12.246269+09:00",
+          "platform_timestamp": null,
+          "public_report": "Nov19 20:44 KST"
+        },
+        "reported_at": "2026-11-19T12:03:37.254577+00:00",
+        "comparison_eligible": true,
+        "comparison_exclusion": null,
+        "delay_minutes_from_slot": 44,
+        "reserved_before_review_expiry": true,
+        "latest_run_id": "44517306294",
+        "latest_publication_previously_reported": true,
+        "new_publication_this_run": false,
+        "new_failure": false,
+        "new_partial": false,
+        "body_and_asset_hash_match": true,
+        "actual_publisher_tests_passed": 138,
+        "job_logs_retrieved_this_check": true,
+        "cached_artifact_digest_reverified": false,
+        "artifact_redownloaded_this_check": false,
+        "receipt_evidence_basis": "Fresh complete verified ledger and actual latest publisher job log match previously verified/report-delivered artifact receipt. Publisher ZIP is not independently re-downloaded in this check."
+      },
+      "writer": {
+        "queue_write": true,
+        "queue_commit_sha": "622bf9d29f86e4596a6976a48984a399496c97c3",
+        "queue_blob_sha": "f58bacad4e1c4247d1519c3d53026f09d7e81c72",
+        "independent_branch_sha_readback": true,
+        "immutable_commit_bytes_readback_exact": true,
+        "new_entries": 2,
+        "queue_reused": true,
+        "new_writing_this_check": true,
+        "existing_entries_preserved": 55,
+        "existing_public_bodies_preserved": 55,
+        "genuinely_revalidated_existing_wrappers": 0,
+        "existing_ready_08_12_preserved": true,
+        "selection_notes_preserved": 56,
+        "new_selection_notes": 2,
+        "preview_total_ready": 4,
+        "future_regular_ready": 4,
+        "active_regular_ready": 0,
+        "validate_ready_entry_and_preview": true,
+        "future_slot_simulation": true,
+        "source_recheck_required_at_publish": true,
+        "next_24h_sequence": [
+          {
+            "slot": "2026-11-20T08:00:00+09:00",
+            "benefit_id": "B55145700016",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 454,
+            "expires_at": "2026-11-20T09:11:05.576661+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T12:00:00+09:00",
+            "benefit_id": "135200000005",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 394,
+            "expires_at": "2026-11-20T13:27:14.252446+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T16:00:00+09:00",
+            "benefit_id": "SPE000000060",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 411,
+            "expires_at": "2026-11-21T04:15:09.480730+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T20:00:00+09:00",
+            "benefit_id": "149200000147",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 440,
+            "expires_at": "2026-11-21T04:15:09.480730+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "asset_current_sha256_recompared": true,
+        "new_visual_inspection": false,
+        "last_validated_at": "2026-11-20T04:15:35.984112+09:00",
+        "priority_guard_regression": [
+          "WII000001340",
+          "SD0000005037"
+        ],
+        "new_entry_ids": [
+          "SPE000000060",
+          "149200000147"
+        ]
+      },
+      "metrics": {
+        "run_id": "44585992739",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-19T18:16:25Z",
+        "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
+        "job_id": 135778925310,
+        "artifact_id": 14561402550,
+        "artifact_digest": "sha256:d492a98c5a6a31977ca7b118d9b5255c98d7c40190aa7c5bb15bc10810262dfb",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "observed_at": "2026-11-19T18:16:20.028408+00:00",
+        "records": 0,
+        "new_observations": 0,
+        "new_metric_observations": 0,
+        "total_observations": 94,
+        "new_observation_keys": [],
+        "actual_current_read_path_due_missing_latest_windows": 0,
+        "currently_due_post_ids": [],
+        "current_due_status": "none",
+        "classification": "normal_no_due_milestones",
+        "workflow_dispatch": false,
+        "publication_calls": 0,
+        "new_evaluation_report_due": false,
+        "prior_7day_evaluation_unchanged": true,
+        "14day_not_due": true,
+        "weights_unchanged": true,
+        "actual_zero_and_unprovided_null_distinguished": true,
+        "descriptive_24h_comparison_unchanged": true
+      },
+      "recovery": {
+        "required": false,
+        "new_failures": 0,
+        "new_partials": 0,
+        "code_change_required": false,
+        "code_change_applied": false,
+        "post_retry_budget_used": 0,
+        "workflow_dispatch": false,
+        "past_resolved_incidents_preserved": true,
+        "prior_preventive_input_repair_preserved": true,
+        "same_cause_priority_guard_still_passes": true
+      },
+      "local_validation": {
+        "checked_at": "2026-11-20T04:15:35.984112+09:00",
+        "ready": 4,
+        "future_regular_ready": 4,
+        "active_regular_ready": 0,
+        "drafts": [
+          {
+            "slot": "2026-11-20T08:00:00+09:00",
+            "benefit_id": "B55145700016",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 454,
+            "expires_at": "2026-11-20T09:11:05.576661+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T12:00:00+09:00",
+            "benefit_id": "135200000005",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 394,
+            "expires_at": "2026-11-20T13:27:14.252446+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T16:00:00+09:00",
+            "benefit_id": "SPE000000060",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 411,
+            "expires_at": "2026-11-21T04:15:09.480730+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T20:00:00+09:00",
+            "benefit_id": "149200000147",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 440,
+            "expires_at": "2026-11-21T04:15:09.480730+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source_count": 10887,
+        "ledger_records": 59,
+        "queue_entries": 57,
+        "selection_notes": 58,
+        "queue_write": true,
+        "new_posts": 0,
+        "due_metrics": 0,
+        "due_ids": [],
+        "current_image_bytes_sha_recompared": true,
+        "new_visual_inspection": false,
+        "pending": null,
+        "lease": null,
+        "source_recheck_required_at_publish": true,
+        "priority_guard_regression": [
+          "WII000001340",
+          "SD0000005037"
+        ],
+        "source": {
+          "count": 10887,
+          "generation": "gov24-44505539863-1",
+          "lastSuccessAt": "2026-11-19T19:33:46.950475+09:00",
+          "manifestSha256": "caaa31a0dc9b154867102f94e841c8cfc574c2c154ea54ddd68b84f5367d86ad",
+          "path": "snapshots/gov24-44505539863-1",
+          "version": 1
+        },
+        "queue_candidate_validated": true,
+        "new_entries": 2,
+        "queue_commit_sha": "622bf9d29f86e4596a6976a48984a399496c97c3",
+        "queue_blob_sha": "f58bacad4e1c4247d1519c3d53026f09d7e81c72",
+        "queue_readback_exact": true
+      },
+      "next_condition": "Nov20 existing08IMAGE/P1 and12TEXT/P5 unchanged; new16IMAGE/P6(SPE000000060,411chars,A) and20TEXT/P8(149200000147,440chars,B) actually reviewed, CAS saved and independently read back. All4preview and validate_ready_entry pass; source fingerprints/priority/higherHOLD notes/expiry/currentPNG SHA verified. Sender must restore latest complete generation and revalidate current official state, body, images and expiry. Current19:33source is NOT fresh at20slot. Earlier unsent/failed slot requires recalculating unreserved future candidate/media order; no old-slot backfill.59completeuniqueverified,no pending/lease,newfailure0,latest03:16metrics0due,94observations and7dayevaluation retained,14daynotdue,weightsunchanged. No new publication/recovery/block/evaluation notification.",
+      "main_change_observation": {
+        "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
+        "required_threads_writer_blobs_unchanged": true,
+        "site_change_observed_only": true
+      },
+      "local_execution_note": "Transient scratch lacked cached source/state bytes; restored state/queue/maintenance from exact current remote blob SHA and source via tool-returned artifact URL with actual ZIP digest. No production collection failure inferred. Full master and full current supplemental writing policy used in saved writer-input0405 with actualhistory20; new review input hash8585aab151ed481efc29a1604535569103d69bb6d7fef7b91bc1d4fda4957c40. Actual official current pages read for new candidates, not copied evidence dates. Current approved PNG fetched and compared with original visual-review SHA, no new visual claim. No main/code/site/otheraccount/schedule/POST/dispatch/rerun/backfill changes.",
+      "active_publication_runs": [],
+      "publication_audit": {
+        "requested_max_days": 28,
+        "ledger_records_checked": 59,
+        "from_slot": "2026-11-04T17:04:00+09:00",
+        "to_slot": "2026-11-19T20:00:00+09:00",
+        "unique_main_ids": 59,
+        "unique_slots": 59,
+        "complete_verified_records": 59,
+        "pending_or_partial": 0,
+        "new_missing_image": 0,
+        "new_duplicates": 0,
+        "new_failure": 0,
+        "actual_receipt_scope": "Fresh durable state plus latest actual publisher log re-read; prior per-ID official observations and verified receipt history retained. No new remote post enumeration/current public rendering claim.",
+        "official_metric_observations_retained": 94,
+        "new_official_snapshot_records": 0,
+        "measurement_missing_distinct_from_zero": true,
+        "low_views_not_failure": true,
+        "account_penalty_inference": false,
+        "visibility_limit": "No current independent public-page audit of every ID. Existing publisher verified status is receipt evidence, not a fresh rendering observation."
+      },
+      "candidate_review": {
+        "checked_at": "2026-11-20T04:18:19.889615+09:00",
+        "new_ready_ids": [
+          "SPE000000060",
+          "149200000147"
+        ],
+        "new_candidate_holds": [
+          {
+            "benefit_id": "WII000001340",
+            "views": 55755,
+            "decision": "HOLD",
+            "reason": "동일ID API 신청기한은 읍면동별 상이. 이번 직접 연 보건복지부(2026-10-06수정)와 광주시(2026-11-16수정) 안내는 예산소진 조기마감을 명시하나 현재 지역별 잔여예산·접수 가능을 확정하지 않는다. 한도·금리·상환은 대조했지만 현재 접수기간을 꾸며 OPEN/ALWAYS로 바꾸지 않고 이번 선정 HOLD. 사업 종료로 단정하지 않음.",
+            "sources": [
+              "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=725443&bnefType=all&svcId=WII000001340",
+              "https://www.mohw.go.kr/menu.es?mid=a10710030600",
+              "https://www.gjcity.go.kr/depart/contents.do?mId=1007010800",
+              "https://bokji.gangnam.go.kr/api/web/serviceDetail.do?id=WII000001340&mid=ID03_02&pgno=1&type="
+            ],
+            "checked_at": "2026-11-20T04:15:09.480730+09:00",
+            "access_method": "OPENED_OFFICIAL current web page plus PROVIDED_OFFICIAL_TEXT same-ID rawSource",
+            "source_generation": "gov24-44505539863-1"
+          },
+          {
+            "benefit_id": "SD0000005037",
+            "views": 54525,
+            "decision": "HOLD",
+            "reason": "접수기관별 상이. 이번 실제 LH 현행 목록에 국민임대 공고/정정공고가 존재함은 확인했으나 개별 모집공고 원문과 순위별 접수일·자산·지역·자격완화·임대조건을 확정할 수 있는 검수가 미완료다. 목록의 공고중을 현재 청약접수중으로 바꾸지 않으며 전국 공통 소득기준으로 특정 모집을 꾸미지 않고 이번 선정 HOLD. 마이홈 제도안내 열람은 timeout.",
+            "sources": [
+              "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=573410&bnefType=all&svcId=SD0000005037",
+              "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?cntntsId=&mi=1026",
+              "https://www.myhome.go.kr/hws/portal/cont/selectNationalRentalHouseView.do"
+            ],
+            "checked_at": "2026-11-20T04:15:09.480730+09:00",
+            "access_method": "OPENED_OFFICIAL current web page plus PROVIDED_OFFICIAL_TEXT same-ID rawSource",
+            "source_generation": "gov24-44505539863-1"
+          }
+        ],
+        "holds_are_editorial_verification_gaps_not_publication_incidents": true,
+        "actual_official_pages_opened_this_check": true,
+        "api_collection_not_current_acceptance_verification": true
+      }
     }
   },
   "last_reported_prepublication_repair": {
@@ -69997,172 +70665,40 @@
     "checked_at": "2026-11-17T22:44:51.951435+00:00"
   },
   "last_prepared_queue": {
-    "checked_at": "2026-11-19T03:42:19.375046+00:00",
+    "checked_at": "2026-11-20T04:18:19.889615+09:00",
     "commit": {
-      "commit_sha": "c8571baa59129c18d0862e473793a8afe78b5f0f",
-      "content_sha": "f6f80ff7af8a4cd3477c6c0678930f972daae309"
+      "commit_sha": "622bf9d29f86e4596a6976a48984a399496c97c3",
+      "content_sha": "f58bacad4e1c4247d1519c3d53026f09d7e81c72"
     },
-    "entries": 55,
+    "entries": 57,
     "future_regular_ready": 4,
-    "active_regular_ready": 1,
-    "new_entries": 1,
-    "existing_inputs_preserved": 54,
-    "existing_public_bodies_preserved": 54,
+    "active_regular_ready": 0,
+    "new_entries": 2,
+    "existing_inputs_preserved": 55,
+    "existing_public_bodies_preserved": 55,
     "selection_notes_preserved": 56,
+    "new_selection_notes": 2,
     "readback_exact": true,
-    "source_generation": "gov24-44408666268-1",
-    "new_entry": {
-      "slot": "2026-11-20T12:00:00+09:00",
-      "benefit_id": "135200000005",
-      "source_fingerprint": "d27b4b9a9593ad71a17ff6979d1cc74605b87901b0733cac3fc08bc8419bcdb7",
-      "source_generation": "gov24-44408666268-1",
-      "prepared_at": "2026-11-19T12:40:35.808206+09:00",
-      "expires_at": "2026-11-20T12:40:35.808206+09:00",
-      "asset_sha256": null,
-      "writer": {
-        "schema_version": "supportpick.writer.v1",
-        "status": "READY",
-        "selected_program_id": "135200000005",
-        "post_text": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요.\n\n먼저 두 가지를 살펴봐요.\n• 거주·소득: 서초구에 거주하고, 소득과 재산을 함께 반영한 가구 소득인정액이 기준 중위소득 80% 이하여야 해요.\n• 선정 절차: 대기 신청 후 모집기간에 안내를 받아 소득조사와 보건소 영양상태평가·종합판정을 거쳐요. 빈혈·신체계측·영양섭취 상태 등을 확인해요.\n\n전화나 방문으로 대기 신청을 할 수 있어요. 보충식품은 현금 지원이 아니며, 신청 즉시 지급되거나 선정되는 것은 아니에요. 조제분유·친환경 농산물꾸러미 지원 등과의 중복 제한도 확인해야 해요.\n\n자세한 사항은 프로필링크 확인",
-        "draft_text": null,
-        "reply_texts": [],
-        "media": {
-          "turn": "TEXT",
-          "asset_id": null,
-          "check": "NOT_REQUIRED",
-          "image_copy": null,
-          "alt_text": null
-        },
-        "review": {
-          "planned_at": "2026-11-20T12:00:00+09:00",
-          "application_status": "ALWAYS",
-          "reader": "서울 서초구 거주 임산부 및 생후66개월이하영유아 가구 중 소득·영양판정을 받을 대기신청자",
-          "central_message": "서초구 영양플러스 대기 신청과 실제 지원 대상 선정은 어떻게 다른가요?",
-          "pattern": "P5",
-          "selection_reason": "56완료게시+활성12미예약READY와미래3READY중복제외후동일ID누적조회수56221최상위검증후보. 상위40HOLD/SKIP실제이유·출처56기존notes보존. 지역별시기차이는직접연서초연중대기접수로한정.",
-          "interest_basis": "OBSERVED_METRICS",
-          "duplicate_check": "CHECKED",
-          "evidence": [
-            {
-              "source_id": "135200000005",
-              "source_ref": "https://www.seocho.go.kr/site/sh/03/10301040000002019071203.jsp",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-19T12:40:35.808206+09:00",
-              "claims_supported": [
-                "이번실행공식서초구보건소2026기준표·영양플러스본문336~410행실제열람. 관내임산부/66개월이하영유아,소득·재산종합80%및소득인정액정의,연중전화·방문대기접수,모집기간개별안내,소득조사후보건소영양상태평가와종합판정,교육상담·맞춤보충식품확인. 연중인것은대기접수이며현재모집·식품즉시지급을확정하지않음. 주소지외전국일괄접수주장없음."
-              ]
-            },
-            {
-              "source_id": "135200000005",
-              "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10706020300",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-19T12:40:35.808206+09:00",
-              "claims_supported": [
-                "이번실행보건복지부영양플러스서비스안내844~855행실제열람. 영양위험요인,교육상담과보충식품6종,관할보건소신청·영양평가를대조. 페이지최종수정2025-09-30이므로건보료소득판정은2026서초구소득재산안내로한정해최신지역기준우선."
-              ]
-            },
-            {
-              "source_id": "135200000005",
-              "source_ref": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=1&cnpClsNo=3&csmSeq=735",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-19T12:40:35.808206+09:00",
-              "claims_supported": [
-                "이번실행2026영양안내참조공식생활법령본문217~243행실제열람. 조제분유지원받는영유아/친환경농산물꾸러미참여임신출산수유부중복수혜제한확인. 건보료소득판정부분은서초구2026현행소득재산안내와달라본문에그대로쓰지않음. 전국72개월설명과달리선택지역서초66개월로대상명시."
-              ]
-            },
-            {
-              "source_id": "135200000005",
-              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999156&bnefType=all&svcId=135200000005",
-              "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-19T12:40:35.808206+09:00",
-              "claims_supported": [
-                "완전세대gov24-44408666268-1 동일ID공식serviceList/detail전체실제대조,누적조회수56221. APIcheckedAt=2026-11-19T07:11:18.506075+09:00,수집완료=2026-11-19T07:15:21.556237+09:00. 날짜는보건소별상이하므로수집성공을현재모집증거로쓰지않고별도직접연서초현행연중대기접수에한정."
-              ]
-            }
-          ],
-          "checks": {
-            "facts": "PASS",
-            "current_status": "PASS",
-            "eligibility_and_units": "PASS",
-            "cta_and_no_links": "PASS",
-            "length": "PASS",
-            "media": "NOT_REQUIRED"
-          },
-          "char_count": 394,
-          "count_method": "python_len_including_spaces_and_newlines",
-          "missing_info": [],
-          "hold_reasons": [],
-          "warnings": [
-            "현재확인범위는서초구연중대기접수안내이며새모집일·대기순번·선정·실제식품제공시각/물량은확정하지않음. 현재모집중으로표현하지않음.",
-            "소득판정API·과거국가안내건보료와지역2026소득재산조사구분. 최신지역안내로한정했으며연령도서초66개월사용.",
-            "공식공개안내만열람,개인대기신청·접수거래·프로필경로미실행. 현재07:15source는내일12발송시24h초과. 실제발송때최신완전source·공식상태·만료·IMAGE/TEXT필수재검증."
-          ],
-          "reach_editorial": {
-            "policy_id": "supportpick-threads-reach-v1-20261109",
-            "core_question": "서초구 영양플러스 대기 신청과 실제 지원 대상 선정은 어떻게 다른가요?",
-            "reader_scope": "서울 서초구 거주 임산부 및 생후66개월이하영유아 가구 중 소득·영양판정을 받을 대기신청자",
-            "angles": [
-              "영양교육과보충식품실익",
-              "거주·소득재산과영양판정",
-              "연중대기신청과모집선정절차구분"
-            ],
-            "chosen_angle": "대상·지원실익→두자격체크→대기신청과선정구분",
-            "opening_candidates": [
-              {
-                "type": "생활 상황형",
-                "group": "A",
-                "text": "아이의 영양 관리가 걱정되는 서초구 가정이라면 영양플러스의 상담·보충식품 지원과 대기 접수 조건을 확인해요."
-              },
-              {
-                "type": "대상·혜택형",
-                "group": "B",
-                "text": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요."
-              },
-              {
-                "type": "조건 설명형",
-                "group": null,
-                "text": "서초구 영양플러스는 연중 대기 접수와 실제 대상자 선정 시점이 달라요."
-              }
-            ],
-            "chosen_opening": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요.",
-            "opening_type": "대상·혜택형",
-            "cohort": "B",
-            "selection_reason": "첫적용2026-11-10에서10일뒤Nov20 12시는B. 같은날08P1코레일이동상황과다른P5거주·소득재산체크→대기판정흐름. 최근20실제게시와현재4READY의도입·전개를비교하고단어만바꾼템플릿피함.",
-            "history_posts_checked": 20,
-            "comparison_eligible": true,
-            "comparison_strata": {
-              "geo": "서울서초구",
-              "audience": "임산부·영유아가구",
-              "benefit": "영양교육과보충식품현물",
-              "application": "연중대기접수·모집개별안내",
-              "media": "TEXT"
-            },
-            "comparison_group": "87공식관측 중25개24h창은설명통계A12/B13,중앙값83/78. 유사사업매칭0·지역/혜택/독자/시각/미디어교란;반복우세판정없음,비중유지.7일평가완료보존/14일미도래.",
-            "applied_elements": [
-              "지역·대상·실익을첫단락",
-              "소득인정액과월급구분",
-              "대기접수와즉시선정·지급구분",
-              "2항목자격체크와판정순서",
-              "현물과중복제한명시"
-            ],
-            "profile_route": "프로필링크/사이트의접수기능과실제보건소대기신청거래는미수행;자동신청·즉시선정기능을보장하지않음.",
-            "source_recheck_required_at_publish": true,
-            "master_full_used": true,
-            "supplemental_full_used_in_current_model_input": true,
-            "writing_input_sha256": "9386ff289577926dab56255abe99ed42ddb05770c6071050196759902b6dec94"
-          }
-        },
-        "next_history_record": {
-          "program_id": "135200000005",
-          "notice_version": "2026서초구현행연중대기접수직접확인",
-          "pattern": "P5",
-          "opening": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요.",
-          "structure": "서초대상·실익→소득/절차2체크→대기접수·판정과중복제한→CTA",
-          "media_turn": "TEXT"
-        }
+    "source_generation": "gov24-44505539863-1",
+    "new_entry_summaries": [
+      {
+        "slot": "2026-11-20T16:00:00+09:00",
+        "benefit_id": "SPE000000060",
+        "source_fingerprint": "650f0d3391c20c6b6b21750e02e7a9931bb40511db1ca48eab4ce5dfd78fae71",
+        "prepared_at": "2026-11-20T04:15:09.480730+09:00",
+        "expires_at": "2026-11-21T04:15:09.480730+09:00",
+        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a"
+      },
+      {
+        "slot": "2026-11-20T20:00:00+09:00",
+        "benefit_id": "149200000147",
+        "source_fingerprint": "bedcaab9eb4fcbb88e5b5c8d7e4ad385c9aabf489588cd6011f659d8e07427f4",
+        "prepared_at": "2026-11-20T04:15:09.480730+09:00",
+        "expires_at": "2026-11-21T04:15:09.480730+09:00",
+        "asset_sha256": null
       }
-    },
-    "conditional_media_projection": "Active unreserved Nov19noon TEXT and existing futureREADY projected; no publication claimed. If earlier slot fails before send, recompute only unreserved future sequence. build_input raw slot-only estimates omit active slot and are advisory, actual successful-ledger plus READY projection used."
+    ],
+    "writing_input_sha256": "8585aab151ed481efc29a1604535569103d69bb6d7fef7b91bc1d4fda4957c40"
   },
   "prevented_input_incidents": {
     "same_queue_existing_READY_candidate_view_rank_crossover_disposition_missing:gov24-44408666268-1": {
@@ -70198,11 +70734,11 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-19T17:40:31.128759+00:00",
-    "queue_blob_sha": "3bad1d56d85dfdc72dc7aa3ef1c40b80406f3e6c",
-    "queue_write": false,
-    "ready": 2,
-    "sequence": [
+    "checked_at": "2026-11-20T04:15:35.984112+09:00",
+    "ready": 4,
+    "future_regular_ready": 4,
+    "active_regular_ready": 0,
+    "drafts": [
       {
         "slot": "2026-11-20T08:00:00+09:00",
         "benefit_id": "B55145700016",
@@ -70222,7 +70758,57 @@
         "expires_at": "2026-11-20T13:27:14.252446+09:00",
         "current_source_fresh_at_slot": true,
         "source_recheck_required_at_publish": true
+      },
+      {
+        "slot": "2026-11-20T16:00:00+09:00",
+        "benefit_id": "SPE000000060",
+        "pattern": "P6",
+        "media_turn": "IMAGE",
+        "char_count": 411,
+        "expires_at": "2026-11-21T04:15:09.480730+09:00",
+        "current_source_fresh_at_slot": true,
+        "source_recheck_required_at_publish": true
+      },
+      {
+        "slot": "2026-11-20T20:00:00+09:00",
+        "benefit_id": "149200000147",
+        "pattern": "P8",
+        "media_turn": "TEXT",
+        "char_count": 440,
+        "expires_at": "2026-11-21T04:15:09.480730+09:00",
+        "current_source_fresh_at_slot": false,
+        "source_recheck_required_at_publish": true
       }
-    ]
+    ],
+    "source_count": 10887,
+    "ledger_records": 59,
+    "queue_entries": 57,
+    "selection_notes": 58,
+    "queue_write": true,
+    "new_posts": 0,
+    "due_metrics": 0,
+    "due_ids": [],
+    "current_image_bytes_sha_recompared": true,
+    "new_visual_inspection": false,
+    "pending": null,
+    "lease": null,
+    "source_recheck_required_at_publish": true,
+    "priority_guard_regression": [
+      "WII000001340",
+      "SD0000005037"
+    ],
+    "source": {
+      "count": 10887,
+      "generation": "gov24-44505539863-1",
+      "lastSuccessAt": "2026-11-19T19:33:46.950475+09:00",
+      "manifestSha256": "caaa31a0dc9b154867102f94e841c8cfc574c2c154ea54ddd68b84f5367d86ad",
+      "path": "snapshots/gov24-44505539863-1",
+      "version": 1
+    },
+    "queue_candidate_validated": true,
+    "new_entries": 2,
+    "queue_commit_sha": "622bf9d29f86e4596a6976a48984a399496c97c3",
+    "queue_blob_sha": "f58bacad4e1c4247d1519c3d53026f09d7e81c72",
+    "queue_readback_exact": true
   }
 }
