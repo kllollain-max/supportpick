@@ -14,6 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "44505539863",
     "44497143766",
     "44485979789",
     "44482718055",
@@ -4226,12 +4227,20 @@
       "conclusion": "success",
       "updated_at": "2026-11-19T09:31:22Z",
       "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384"
+    },
+    "44505539863": {
+      "run_id": "44505539863",
+      "run_attempt": 1,
+      "status": "in_progress",
+      "conclusion": null,
+      "updated_at": "2026-11-19T10:25:39Z",
+      "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-19T09:38:48.608386+00:00",
+    "checked_at": "2026-11-19T10:51:43.890511+00:00",
     "result": "no_update",
-    "maintenance_previous_blob_sha": "38929d02327984d843ed4548a94a3b5ef92b9988",
+    "maintenance_previous_blob_sha": "b22a449a9278dbd4826079971fad8bce08c51ed6",
     "current_main_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384",
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
@@ -4239,15 +4248,24 @@
     "queue_blob_sha": "3bad1d56d85dfdc72dc7aa3ef1c40b80406f3e6c",
     "changed_run_versions": [
       {
-        "run_id": "44497143766",
+        "run_id": "44505539863",
         "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-19T09:31:22Z",
+        "status": "in_progress",
+        "conclusion": null,
+        "updated_at": "2026-11-19T10:25:39Z",
         "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384"
       }
     ],
-    "active_target_runs": [],
+    "active_target_runs": [
+      {
+        "run_id": "44505539863",
+        "run_attempt": 1,
+        "status": "in_progress",
+        "conclusion": null,
+        "updated_at": "2026-11-19T10:25:39Z",
+        "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384"
+      }
+    ],
     "run_pagination": {
       "page_size": 100,
       "pages_read": 1,
@@ -4278,8 +4296,60 @@
       "read_current_verify_snapshot_load_feed": true,
       "all_four_ready_source_fingerprints_equal": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-19T09:38:48.608386+00:00",
-      "cached_artifact_digest_reverified": true
+      "verification_checked_at": "2026-11-19T10:51:43.890511+00:00",
+      "cached_artifact_digest_reverified": true,
+      "new_in_progress_candidate": {
+        "run_id": "44505539863",
+        "run_attempt": 1,
+        "status": "in_progress",
+        "conclusion": null,
+        "updated_at": "2026-11-19T10:25:39Z",
+        "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384",
+        "job_id": 135496040981,
+        "job_stage_observed": "Verify deployed source, generation and every public HTML URL",
+        "job_log_unavailable_while_in_progress": true,
+        "job_steps_read": true,
+        "runtime_artifact_id": 14519672290,
+        "runtime_artifact_digest": "sha256:3bdd5b86317adf8f9d4706a56edeb7b4e0e5be8eb78b0f44b496588d2544dba0",
+        "runtime_artifact_digest_verified": true,
+        "snapshot_validation": {
+          "verified_at": "2026-11-19T19:50:57.899012+09:00",
+          "current": {
+            "count": 10887,
+            "generation": "gov24-44505539863-1",
+            "lastSuccessAt": "2026-11-19T19:33:46.950475+09:00",
+            "manifestSha256": "caaa31a0dc9b154867102f94e841c8cfc574c2c154ea54ddd68b84f5367d86ad",
+            "path": "snapshots/gov24-44505539863-1",
+            "version": 1
+          },
+          "count": 10887,
+          "uncompleted_run_not_promoted_by_this_check": true,
+          "ready": 3,
+          "drafts": [
+            {
+              "slot": "2026-11-19T20:00:00+09:00",
+              "benefit_id": "B55201500202",
+              "fingerprint_match": true,
+              "fresh_at_slot": true
+            },
+            {
+              "slot": "2026-11-20T08:00:00+09:00",
+              "benefit_id": "B55145700016",
+              "fingerprint_match": true,
+              "fresh_at_slot": true
+            },
+            {
+              "slot": "2026-11-20T12:00:00+09:00",
+              "benefit_id": "135200000005",
+              "fingerprint_match": true,
+              "fresh_at_slot": true
+            }
+          ]
+        },
+        "workflow_completed": false,
+        "collection_failure_inferred": false,
+        "promoted_by_this_check": false
+      }
     },
     "publisher": {
       "run_id": "44485979789",
@@ -4387,7 +4457,8 @@
       "asset_current_sha256_recompared": true,
       "new_visual_inspection": false,
       "already_published_expired_wrapper_retained": "2026-11-19T16:00:00+09:00",
-      "last_validated_at": "2026-11-19T18:38:04.195467+09:00"
+      "last_validated_at": "2026-11-19T19:50:24.589525+09:00",
+      "new_in_progress_source_fingerprint_priority_preview_also_passed": true
     },
     "metrics": {
       "run_id": "44497143766",
@@ -4402,29 +4473,26 @@
       "artifact_digest_verified": true,
       "observed_at": "2026-11-19T09:31:16.169989+00:00",
       "records": 2,
-      "new_observations": 2,
-      "new_observation_keys": [
-        "17982543780133074:168h",
-        "18061699079561356:24h"
-      ],
+      "new_observations": 0,
+      "new_observation_keys": [],
       "job_logs_retrieved": true,
       "workflow_dispatch": false,
       "publication_calls": 0,
       "classification": "two_official_due_milestone_observations_success",
       "latest_observed_run_id": "44497143766",
       "total_observations": 91,
-      "new_metric_observations": 2,
+      "new_metric_observations": 0,
       "actual_current_read_path_due_missing_latest_windows": 0,
       "currently_due_post_ids": [],
-      "current_due_status": "none_after_verified_snapshot_merge",
+      "current_due_status": "none",
       "new_evaluation_report_due": false,
       "prior_7day_evaluation_unchanged": true,
       "14day_not_due": true,
       "weights_unchanged": true,
-      "artifact_redownloaded_this_check": true,
+      "artifact_redownloaded_this_check": false,
       "job_logs_retrieved_this_check": true,
       "actual_zero_and_unprovided_null_distinguished": true,
-      "new_24h_observations": 1,
+      "new_24h_observations": 0,
       "descriptive_24h_comparison_unchanged": true
     },
     "recovery": {
@@ -4440,7 +4508,7 @@
       "same_cause_priority_guard_still_passes": true
     },
     "local_validation": {
-      "checked_at": "2026-11-19T18:38:04.195467+09:00",
+      "checked_at": "2026-11-19T19:50:24.589525+09:00",
       "ready": 3,
       "future_regular_ready": 3,
       "active_regular_ready": 0,
@@ -4490,44 +4558,74 @@
       "selection_notes": 56,
       "queue_write": false,
       "new_posts": 0,
-      "due_metrics_before_merge": 2,
-      "due_ids_before_merge": [
-        "17982543780133074",
-        "18061699079561356"
-      ],
+      "due_metrics_before_merge": 0,
+      "due_ids_before_merge": [],
       "current_image_bytes_sha_recompared": true,
       "new_visual_inspection": false,
       "pending": null,
       "lease": null,
-      "source_recheck_required_at_publish": true,
-      "due_metrics_after_merge": 0,
-      "due_ids_after_merge": [],
-      "actual_metric_observations_added": 2,
-      "total_metric_observations": 91
+      "source_recheck_required_at_publish": true
     },
-    "next_condition": "No new publication/failure/partial/hold/evaluation.58uniquecompleteverifiedledger,no pending/lease.55queueentries56selectionnotes unchanged. Existing3futureREADY20TEXT/P8,Nov20 08IMAGE/P1,12TEXT/P5 pass actual preview/validate_ready_entry/source fingerprint/priority/current PNG bytes SHA; no wrapper date refresh or new visual inspection. Current07:15complete10887source notfreshNov20slots; sender latestcomplete source/official status/expiry/media mandatory. Natural18:31 official reader2due2success snapshot actual169.337h184views and25.375h8views merged as distinct ID/windows; total91. New24h sports voucher was previously rescheduled and original B input is explicitly comparison-ineligible, so descriptive eligible A12/B13 medians83/78 and matchedpairs0 remain unchanged. Normal posted low views distinguished from operational failure. No causal penalty/automation-block assumption. Prior7dayevaluation preserved,14daynotdue,weights unchanged. Previouslyreported17:15publication not repeated. No extraPOST/dispatch/rerun/backfill/schedule/code/site/otheraccountchange.",
+    "next_condition": "No new publication/failure/partial/hold or evaluation.58completeverifiedledger,no pending/lease/activepublisher.55queueentries56selectionnotes unchanged. ThreefutureREADY20TEXT/P8,Nov20 08IMAGE/P1,12TEXT/P5 pass actualpreview/validate_ready_entry/exactfingerprints/priority/current approvedPNGbyteSHA. Latestcompleted07:15source manifest/load_feed/read_current/verify_snapshot pass, notassumedfreshnextday. New44505539863 attempt1 still in_progress atpublicHTMLverification, no failure inferred: its returned runtimeartifact independentlydigestverified, internallycomplete19:33generation10887manifestcaaa31a validated, all3existingREADYfingerprints and priority also pass with new candidate. This check neither promotes source nor changes queue; naturalpublisher must read latest completed artifact and revalidate officialfacts/expiry/media/freshness.91officialobservations unchanged,currentdue0,prior7dayevaluation preserved,14daynotdue,no weightschange. Previouslyreported17:15publication and resolvedincidents not repeated. No recoverydispatch,extraPOST,rerun,backfill,schedule/code/site/otheraccountchange.",
     "main_change_observation": {
       "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384",
-      "changed_files": [
-        ".github/scripts/check-content-mobile.cjs",
-        "app.js",
-        "core.js",
-        "docs/ADSENSE_AMOUNT_READING_20261119.md",
-        "index.html",
-        "review-only/sunchang-birth-20261119.json",
-        "tests/amount-reading.test.cjs",
-        "tests/comparison_browser.cjs",
-        "tests/test_amount_reading.py",
-        "tests/test_search_metadata.py",
-        "tools/benefit_analysis.py",
-        "tools/content_quality.py",
-        "tools/detail_pages.py",
-        "tools/sunchang_birth_analysis.py"
-      ],
       "required_threads_writer_blobs_unchanged": true,
       "site_change_observed_only": true
     },
-    "local_execution_note": "Fresh main master/writer/workflow/asset/state/queue/maintenance blob SHA matched actual localbytes. Latest completed operations/publisher/metrics logs re-read. Source and publisher returned-artifact cached ZIP digests reverified and source manifest/load_feed/read_current/verify_snapshot pass. Newmetrics tool-returnedartifact downloaded and ZIP SHA256 verified. New observation zeros and unavailable nulls distinguished, actual elapsed times retained without24h backcalculation. Original rescheduled sports voucher24h excluded from A/B as alreadyrecorded. Queue reused with no mutation; current main ee523fd unchanged since prior check; no site edits."
+    "local_execution_note": "Fresh required main master/writer/workflow/asset/state/queue/maintenance blobSHA matched localbytes. Latestcompletedoperations/publisher/metrics actualjoblogs re-read; cached returnedartifact ZIPdigests reverified,source manifest/load_feed/read_current/verify_snapshot pass. New in-progress operations jobs/steps and artifact list read; full currentjoblogs unavailable while running, not fabricated. Returnedruntimeartifact downloaded through artifacttool and actualSHA256 verified, completecandidate also validated againstexistingqueue. PNGbytes matchvisualreviewSHA without newvisualclaim. Main ee523fd unchanged. No queue writes or evidence-datecopy.",
+    "active_publication_runs": [],
+    "new_source_candidate": {
+      "run_id": "44505539863",
+      "run_attempt": 1,
+      "status": "in_progress",
+      "conclusion": null,
+      "updated_at": "2026-11-19T10:25:39Z",
+      "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384",
+      "job_id": 135496040981,
+      "job_stage_observed": "Verify deployed source, generation and every public HTML URL",
+      "job_log_unavailable_while_in_progress": true,
+      "job_steps_read": true,
+      "runtime_artifact_id": 14519672290,
+      "runtime_artifact_digest": "sha256:3bdd5b86317adf8f9d4706a56edeb7b4e0e5be8eb78b0f44b496588d2544dba0",
+      "runtime_artifact_digest_verified": true,
+      "snapshot_validation": {
+        "verified_at": "2026-11-19T19:50:57.899012+09:00",
+        "current": {
+          "count": 10887,
+          "generation": "gov24-44505539863-1",
+          "lastSuccessAt": "2026-11-19T19:33:46.950475+09:00",
+          "manifestSha256": "caaa31a0dc9b154867102f94e841c8cfc574c2c154ea54ddd68b84f5367d86ad",
+          "path": "snapshots/gov24-44505539863-1",
+          "version": 1
+        },
+        "count": 10887,
+        "uncompleted_run_not_promoted_by_this_check": true,
+        "ready": 3,
+        "drafts": [
+          {
+            "slot": "2026-11-19T20:00:00+09:00",
+            "benefit_id": "B55201500202",
+            "fingerprint_match": true,
+            "fresh_at_slot": true
+          },
+          {
+            "slot": "2026-11-20T08:00:00+09:00",
+            "benefit_id": "B55145700016",
+            "fingerprint_match": true,
+            "fresh_at_slot": true
+          },
+          {
+            "slot": "2026-11-20T12:00:00+09:00",
+            "benefit_id": "135200000005",
+            "fingerprint_match": true,
+            "fresh_at_slot": true
+          }
+        ]
+      },
+      "workflow_completed": false,
+      "collection_failure_inferred": false,
+      "promoted_by_this_check": false
+    }
   },
   "last_reported_publication": {
     "run_id": "44485979789",
@@ -5457,11 +5555,11 @@
     "last_ready_queue_blob_sha": "f4ea5e0fb01dc19e93e0a765d61adebe72f71ea8"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-19T09:38:48.608386+00:00",
+    "checked_at": "2026-11-19T10:51:43.890511+00:00",
     "new_publications": 0,
     "new_incidents": 0,
     "queue_ready": 3,
-    "new_metric_observations": 2,
+    "new_metric_observations": 0,
     "new_evaluation_due": false,
     "duplicate_notification_suppressed": true
   },
@@ -67480,6 +67578,396 @@
         "site_change_observed_only": true
       },
       "local_execution_note": "Fresh main master/writer/workflow/asset/state/queue/maintenance blob SHA matched actual localbytes. Latest completed operations/publisher/metrics logs re-read. Source and publisher returned-artifact cached ZIP digests reverified and source manifest/load_feed/read_current/verify_snapshot pass. Newmetrics tool-returnedartifact downloaded and ZIP SHA256 verified. New observation zeros and unavailable nulls distinguished, actual elapsed times retained without24h backcalculation. Original rescheduled sports voucher24h excluded from A/B as alreadyrecorded. Queue reused with no mutation; current main ee523fd unchanged since prior check; no site edits."
+    },
+    "2026-11-19T10:51:43.890511+00:00": {
+      "checked_at": "2026-11-19T10:51:43.890511+00:00",
+      "result": "no_update",
+      "maintenance_previous_blob_sha": "b22a449a9278dbd4826079971fad8bce08c51ed6",
+      "current_main_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "41fda85c933f06a8ea06d564019a982e622e4e86",
+      "queue_blob_sha": "3bad1d56d85dfdc72dc7aa3ef1c40b80406f3e6c",
+      "changed_run_versions": [
+        {
+          "run_id": "44505539863",
+          "run_attempt": 1,
+          "status": "in_progress",
+          "conclusion": null,
+          "updated_at": "2026-11-19T10:25:39Z",
+          "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384"
+        }
+      ],
+      "active_target_runs": [
+        {
+          "run_id": "44505539863",
+          "run_attempt": 1,
+          "status": "in_progress",
+          "conclusion": null,
+          "updated_at": "2026-11-19T10:25:39Z",
+          "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384"
+        }
+      ],
+      "run_pagination": {
+        "page_size": 100,
+        "pages_read": 1,
+        "last_observed_checkpoint_reached": true,
+        "all_target_run_versions_matched": true
+      },
+      "publication_ledger_records": 58,
+      "complete_verified_records": 58,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "44408666268",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-18T22:35:56Z",
+        "head_sha": "0937bc7a5d3765e9b9568f36bc27926f8f140b33",
+        "job_id": 135170619038,
+        "artifact_id": 14477242172,
+        "artifact_digest": "sha256:99ef449e5ab706bc39351ae6371dd56b93fea0b2bf073c473b1863f3ffc19aa4",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_run": true,
+        "generation": "gov24-44408666268-1",
+        "manifest_sha256": "c5eff55cb762ad6bb709c598d891ea1e8745682f4cacdfe4a293d722eb77660c",
+        "collection_succeeded_at": "2026-11-19T07:15:21.556237+09:00",
+        "count": 10887,
+        "read_current_verify_snapshot_load_feed": true,
+        "all_four_ready_source_fingerprints_equal": true,
+        "source_only_not_current_application_verification": true,
+        "verification_checked_at": "2026-11-19T10:51:43.890511+00:00",
+        "cached_artifact_digest_reverified": true,
+        "new_in_progress_candidate": {
+          "run_id": "44505539863",
+          "run_attempt": 1,
+          "status": "in_progress",
+          "conclusion": null,
+          "updated_at": "2026-11-19T10:25:39Z",
+          "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384",
+          "job_id": 135496040981,
+          "job_stage_observed": "Verify deployed source, generation and every public HTML URL",
+          "job_log_unavailable_while_in_progress": true,
+          "job_steps_read": true,
+          "runtime_artifact_id": 14519672290,
+          "runtime_artifact_digest": "sha256:3bdd5b86317adf8f9d4706a56edeb7b4e0e5be8eb78b0f44b496588d2544dba0",
+          "runtime_artifact_digest_verified": true,
+          "snapshot_validation": {
+            "verified_at": "2026-11-19T19:50:57.899012+09:00",
+            "current": {
+              "count": 10887,
+              "generation": "gov24-44505539863-1",
+              "lastSuccessAt": "2026-11-19T19:33:46.950475+09:00",
+              "manifestSha256": "caaa31a0dc9b154867102f94e841c8cfc574c2c154ea54ddd68b84f5367d86ad",
+              "path": "snapshots/gov24-44505539863-1",
+              "version": 1
+            },
+            "count": 10887,
+            "uncompleted_run_not_promoted_by_this_check": true,
+            "ready": 3,
+            "drafts": [
+              {
+                "slot": "2026-11-19T20:00:00+09:00",
+                "benefit_id": "B55201500202",
+                "fingerprint_match": true,
+                "fresh_at_slot": true
+              },
+              {
+                "slot": "2026-11-20T08:00:00+09:00",
+                "benefit_id": "B55145700016",
+                "fingerprint_match": true,
+                "fresh_at_slot": true
+              },
+              {
+                "slot": "2026-11-20T12:00:00+09:00",
+                "benefit_id": "135200000005",
+                "fingerprint_match": true,
+                "fresh_at_slot": true
+              }
+            ]
+          },
+          "workflow_completed": false,
+          "collection_failure_inferred": false,
+          "promoted_by_this_check": false
+        }
+      },
+      "publisher": {
+        "run_id": "44485979789",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-19T08:15:59Z",
+        "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384",
+        "job_id": 135429436178,
+        "artifact_id": 14511110312,
+        "artifact_digest": "sha256:3293466139b896022b7539594839c5be283fe85d7df4a7148bc7e6837d3175e4",
+        "artifact_digest_verified": true,
+        "classification": "verified_natural_regular_slot_publication",
+        "event": "schedule",
+        "published": true,
+        "slot": "2026-11-19T16:00:00+09:00",
+        "published_at": "2026-11-19T17:15:01.915601+09:00",
+        "benefit_id": "B46001400003",
+        "main_id": "17876108337601849",
+        "url": "https://www.threads.com/@hid_1004/post/Df6oM-uFu9P",
+        "stage": "complete",
+        "verified": true,
+        "content_hash": "a58757d60f414179cb6a429867e4b9b3f15c08de50a2c54d8eea450dc4fa3b54",
+        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "source_generation": "gov24-44408666268-1",
+        "pattern": "P6",
+        "media_turn": "IMAGE",
+        "char_count": 373,
+        "replies": 0,
+        "verification": "Actual authenticated publisher receipt and unique complete verified ledger match original standalone373char body and approved IMAGE guide2 SHA256. Tool-returned result ZIP digest verified, actual138publisher tests PASS. No independent public render or exact platform timestamp claimed.",
+        "verification_completed_at": "2026-11-19T09:02:15.342080+00:00",
+        "public_web_visibility_independently_verified": false,
+        "publication_ledger_records": 58,
+        "pending": null,
+        "lease": null,
+        "job_logs_retrieved": true,
+        "time_basis": {
+          "published_at": "Ledger invocation, not exact platform timestamp",
+          "verified_result_logged_at": "2026-11-19T17:15:54.666271+09:00",
+          "platform_timestamp": null,
+          "public_report": "Nov19 17:15 KST"
+        },
+        "reported_at": "2026-11-19T09:02:15.342080+00:00",
+        "comparison_eligible": false,
+        "comparison_exclusion": "Previously written input preserved; no retrospective cohort assignment after failed preceding slot",
+        "delay_minutes_from_slot": 75,
+        "reserved_before_review_expiry": true,
+        "latest_run_id": "44485979789",
+        "latest_publication_previously_reported": true,
+        "new_publication_this_run": false,
+        "new_failure": false,
+        "new_partial": false,
+        "body_and_asset_hash_match": true,
+        "actual_publisher_tests_passed": 138,
+        "job_logs_retrieved_this_check": true,
+        "cached_artifact_digest_reverified": true
+      },
+      "writer": {
+        "queue_write": false,
+        "new_entries": 0,
+        "queue_reused": true,
+        "new_writing_this_check": false,
+        "existing_entries_preserved": 55,
+        "existing_public_bodies_preserved": 55,
+        "genuinely_revalidated_existing_wrappers": 0,
+        "selection_notes_preserved": 56,
+        "preview_total_ready": 3,
+        "future_regular_ready": 3,
+        "active_regular_ready": 0,
+        "validate_ready_entry_and_preview": true,
+        "future_slot_simulation": true,
+        "source_recheck_required_at_publish": true,
+        "next_24h_sequence": [
+          {
+            "slot": "2026-11-19T20:00:00+09:00",
+            "benefit_id": "B55201500202",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 427,
+            "expires_at": "2026-11-20T09:11:05.576661+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T08:00:00+09:00",
+            "benefit_id": "B55145700016",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 454,
+            "expires_at": "2026-11-20T09:11:05.576661+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T12:00:00+09:00",
+            "benefit_id": "135200000005",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 394,
+            "expires_at": "2026-11-20T13:27:14.252446+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "asset_current_sha256_recompared": true,
+        "new_visual_inspection": false,
+        "already_published_expired_wrapper_retained": "2026-11-19T16:00:00+09:00",
+        "last_validated_at": "2026-11-19T19:50:24.589525+09:00",
+        "new_in_progress_source_fingerprint_priority_preview_also_passed": true
+      },
+      "metrics": {
+        "run_id": "44497143766",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-19T09:31:22Z",
+        "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384",
+        "job_id": 135467131637,
+        "artifact_id": 14515352484,
+        "artifact_digest": "sha256:950460dc00c8c8a4d10006dcee1b60368f80fc504837e6baf8d2dad5fb52d98a",
+        "artifact_digest_verified": true,
+        "observed_at": "2026-11-19T09:31:16.169989+00:00",
+        "records": 2,
+        "new_observations": 0,
+        "new_observation_keys": [],
+        "job_logs_retrieved": true,
+        "workflow_dispatch": false,
+        "publication_calls": 0,
+        "classification": "two_official_due_milestone_observations_success",
+        "latest_observed_run_id": "44497143766",
+        "total_observations": 91,
+        "new_metric_observations": 0,
+        "actual_current_read_path_due_missing_latest_windows": 0,
+        "currently_due_post_ids": [],
+        "current_due_status": "none",
+        "new_evaluation_report_due": false,
+        "prior_7day_evaluation_unchanged": true,
+        "14day_not_due": true,
+        "weights_unchanged": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": true,
+        "actual_zero_and_unprovided_null_distinguished": true,
+        "new_24h_observations": 0,
+        "descriptive_24h_comparison_unchanged": true
+      },
+      "recovery": {
+        "required": false,
+        "new_failures": 0,
+        "new_partials": 0,
+        "code_change_required": false,
+        "code_change_applied": false,
+        "post_retry_budget_used": 0,
+        "workflow_dispatch": false,
+        "past_resolved_incidents_preserved": true,
+        "prior_preventive_input_repair_preserved": true,
+        "same_cause_priority_guard_still_passes": true
+      },
+      "local_validation": {
+        "checked_at": "2026-11-19T19:50:24.589525+09:00",
+        "ready": 3,
+        "future_regular_ready": 3,
+        "active_regular_ready": 0,
+        "drafts": [
+          {
+            "slot": "2026-11-19T20:00:00+09:00",
+            "benefit_id": "B55201500202",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 427,
+            "expires_at": "2026-11-20T09:11:05.576661+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T08:00:00+09:00",
+            "benefit_id": "B55145700016",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 454,
+            "expires_at": "2026-11-20T09:11:05.576661+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T12:00:00+09:00",
+            "benefit_id": "135200000005",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 394,
+            "expires_at": "2026-11-20T13:27:14.252446+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source": {
+          "count": 10887,
+          "generation": "gov24-44408666268-1",
+          "lastSuccessAt": "2026-11-19T07:15:21.556237+09:00",
+          "manifestSha256": "c5eff55cb762ad6bb709c598d891ea1e8745682f4cacdfe4a293d722eb77660c",
+          "path": "snapshots/gov24-44408666268-1",
+          "version": 1
+        },
+        "source_count": 10887,
+        "ledger_records": 58,
+        "queue_entries": 55,
+        "selection_notes": 56,
+        "queue_write": false,
+        "new_posts": 0,
+        "due_metrics_before_merge": 0,
+        "due_ids_before_merge": [],
+        "current_image_bytes_sha_recompared": true,
+        "new_visual_inspection": false,
+        "pending": null,
+        "lease": null,
+        "source_recheck_required_at_publish": true
+      },
+      "next_condition": "No new publication/failure/partial/hold or evaluation.58completeverifiedledger,no pending/lease/activepublisher.55queueentries56selectionnotes unchanged. ThreefutureREADY20TEXT/P8,Nov20 08IMAGE/P1,12TEXT/P5 pass actualpreview/validate_ready_entry/exactfingerprints/priority/current approvedPNGbyteSHA. Latestcompleted07:15source manifest/load_feed/read_current/verify_snapshot pass, notassumedfreshnextday. New44505539863 attempt1 still in_progress atpublicHTMLverification, no failure inferred: its returned runtimeartifact independentlydigestverified, internallycomplete19:33generation10887manifestcaaa31a validated, all3existingREADYfingerprints and priority also pass with new candidate. This check neither promotes source nor changes queue; naturalpublisher must read latest completed artifact and revalidate officialfacts/expiry/media/freshness.91officialobservations unchanged,currentdue0,prior7dayevaluation preserved,14daynotdue,no weightschange. Previouslyreported17:15publication and resolvedincidents not repeated. No recoverydispatch,extraPOST,rerun,backfill,schedule/code/site/otheraccountchange.",
+      "main_change_observation": {
+        "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384",
+        "required_threads_writer_blobs_unchanged": true,
+        "site_change_observed_only": true
+      },
+      "local_execution_note": "Fresh required main master/writer/workflow/asset/state/queue/maintenance blobSHA matched localbytes. Latestcompletedoperations/publisher/metrics actualjoblogs re-read; cached returnedartifact ZIPdigests reverified,source manifest/load_feed/read_current/verify_snapshot pass. New in-progress operations jobs/steps and artifact list read; full currentjoblogs unavailable while running, not fabricated. Returnedruntimeartifact downloaded through artifacttool and actualSHA256 verified, completecandidate also validated againstexistingqueue. PNGbytes matchvisualreviewSHA without newvisualclaim. Main ee523fd unchanged. No queue writes or evidence-datecopy.",
+      "active_publication_runs": [],
+      "new_source_candidate": {
+        "run_id": "44505539863",
+        "run_attempt": 1,
+        "status": "in_progress",
+        "conclusion": null,
+        "updated_at": "2026-11-19T10:25:39Z",
+        "head_sha": "ee523fd6fd5a140c2ea15ef1c2621ae84109a384",
+        "job_id": 135496040981,
+        "job_stage_observed": "Verify deployed source, generation and every public HTML URL",
+        "job_log_unavailable_while_in_progress": true,
+        "job_steps_read": true,
+        "runtime_artifact_id": 14519672290,
+        "runtime_artifact_digest": "sha256:3bdd5b86317adf8f9d4706a56edeb7b4e0e5be8eb78b0f44b496588d2544dba0",
+        "runtime_artifact_digest_verified": true,
+        "snapshot_validation": {
+          "verified_at": "2026-11-19T19:50:57.899012+09:00",
+          "current": {
+            "count": 10887,
+            "generation": "gov24-44505539863-1",
+            "lastSuccessAt": "2026-11-19T19:33:46.950475+09:00",
+            "manifestSha256": "caaa31a0dc9b154867102f94e841c8cfc574c2c154ea54ddd68b84f5367d86ad",
+            "path": "snapshots/gov24-44505539863-1",
+            "version": 1
+          },
+          "count": 10887,
+          "uncompleted_run_not_promoted_by_this_check": true,
+          "ready": 3,
+          "drafts": [
+            {
+              "slot": "2026-11-19T20:00:00+09:00",
+              "benefit_id": "B55201500202",
+              "fingerprint_match": true,
+              "fresh_at_slot": true
+            },
+            {
+              "slot": "2026-11-20T08:00:00+09:00",
+              "benefit_id": "B55145700016",
+              "fingerprint_match": true,
+              "fresh_at_slot": true
+            },
+            {
+              "slot": "2026-11-20T12:00:00+09:00",
+              "benefit_id": "135200000005",
+              "fingerprint_match": true,
+              "fresh_at_slot": true
+            }
+          ]
+        },
+        "workflow_completed": false,
+        "collection_failure_inferred": false,
+        "promoted_by_this_check": false
+      }
     }
   },
   "last_reported_prepublication_repair": {
@@ -67689,7 +68177,7 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-19T09:38:48.608386+00:00",
+    "checked_at": "2026-11-19T10:51:43.890511+00:00",
     "queue_blob_sha": "3bad1d56d85dfdc72dc7aa3ef1c40b80406f3e6c",
     "queue_write": false,
     "ready": 3,
@@ -67724,6 +68212,40 @@
         "current_source_fresh_at_slot": false,
         "source_recheck_required_at_publish": true
       }
-    ]
+    ],
+    "in_progress_source_candidate_additionally_verified": {
+      "verified_at": "2026-11-19T19:50:57.899012+09:00",
+      "current": {
+        "count": 10887,
+        "generation": "gov24-44505539863-1",
+        "lastSuccessAt": "2026-11-19T19:33:46.950475+09:00",
+        "manifestSha256": "caaa31a0dc9b154867102f94e841c8cfc574c2c154ea54ddd68b84f5367d86ad",
+        "path": "snapshots/gov24-44505539863-1",
+        "version": 1
+      },
+      "count": 10887,
+      "uncompleted_run_not_promoted_by_this_check": true,
+      "ready": 3,
+      "drafts": [
+        {
+          "slot": "2026-11-19T20:00:00+09:00",
+          "benefit_id": "B55201500202",
+          "fingerprint_match": true,
+          "fresh_at_slot": true
+        },
+        {
+          "slot": "2026-11-20T08:00:00+09:00",
+          "benefit_id": "B55145700016",
+          "fingerprint_match": true,
+          "fresh_at_slot": true
+        },
+        {
+          "slot": "2026-11-20T12:00:00+09:00",
+          "benefit_id": "135200000005",
+          "fingerprint_match": true,
+          "fresh_at_slot": true
+        }
+      ]
+    }
   }
 }
