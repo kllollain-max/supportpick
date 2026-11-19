@@ -87,8 +87,10 @@ class Document(HTMLParser):
     def __init__(self):
         super().__init__(); self.h1 = 0; self.meta = {}; self.canonical = []
         self.jsonld = []; self.active = None; self.buffer = ''; self.robots = []
+        self.title = ''; self.title_count = 0; self.in_title = False
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
+        if tag == 'title': self.title_count += 1; self.in_title = True
         if tag == 'h1': self.h1 += 1
         if tag == 'meta': self.meta[a.get('name') or a.get('property')] = a.get('content')
         if tag == 'meta' and a.get('name', '').lower() in {'robots', 'googlebot'}:
@@ -98,13 +100,16 @@ class Document(HTMLParser):
             self.active = True; self.buffer = ''
     def handle_data(self, value):
         if self.active: self.buffer += value
+        if self.in_title: self.title += value
     def handle_endtag(self, tag):
+        if tag == 'title': self.in_title = False
         if tag == 'script' and self.active:
             self.jsonld.append(json.loads(self.buffer)); self.active = None
 
 
 def inspect(html, url):
     doc = Document(); doc.feed(html)
+    if doc.title_count != 1 or not doc.title.strip(): raise ValueError('invalid_title:' + url)
     if doc.canonical != [url]: raise ValueError('canonical_mismatch:' + url)
     if doc.meta.get('robots') != 'index,follow': raise ValueError('not_indexable:' + url)
     if any({'noindex', 'none'} & set(re.split(r'[\s,]+', value)) for value in doc.robots):
@@ -133,16 +138,20 @@ def local_urls(output):
 def verify(output):
     output = Path(output); urls = local_urls(output)
     report = json.loads((output / 'search-report.json').read_text())
+    titles = {}
     for url in urls:
         name = unquote(url[len(BASE):])
         target = output / (name + 'index.html' if not name or name.endswith('/') else name)
         if not target.is_file(): raise ValueError('sitemap_target_missing')
-        inspect(target.read_text(), url)
+        doc = inspect(target.read_text(), url)
+        key = re.sub(r'\s+', ' ', doc.title).strip().casefold()
+        if key in titles: raise ValueError('duplicate_document_title:' + titles[key] + ':' + url)
+        titles[key] = url
     for sid in report['heldReasons']:
         html = (output / 'benefits' / sid / 'index.html').read_text()
         if 'content="noindex,follow"' not in html or BASE + 'benefits/' + sid + '/' in urls:
             raise ValueError('held_page_advertised')
-    return {'sitemapUrls': len(urls), 'validatedUrls': len(urls),
+    return {'sitemapUrls': len(urls), 'validatedUrls': len(urls), 'uniqueTitles': len(titles),
             **{k: report[k] for k in ('detailPages', 'indexableDetails', 'heldDetails', 'reviewedGuides', 'blogLinks', 'directoryPages', 'retiredPages')}}
 
 
