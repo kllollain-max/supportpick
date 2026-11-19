@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-19T13:27:14.252446+09:00",
+  "prepared_at": "2026-11-20T04:15:09.480730+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -649,6 +649,35 @@
       "existing_ready_slot": "2026-11-19T20:00:00+09:00",
       "existing_ready_preserved": true,
       "official_current_application_not_reverified_by_collection": true
+    },
+    {
+      "benefit_id": "WII000001340",
+      "views": 55755,
+      "decision": "HOLD",
+      "reason": "동일ID API 신청기한은 읍면동별 상이. 이번 직접 연 보건복지부(2026-10-06수정)와 광주시(2026-11-16수정) 안내는 예산소진 조기마감을 명시하나 현재 지역별 잔여예산·접수 가능을 확정하지 않는다. 한도·금리·상환은 대조했지만 현재 접수기간을 꾸며 OPEN/ALWAYS로 바꾸지 않고 이번 선정 HOLD. 사업 종료로 단정하지 않음.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=725443&bnefType=all&svcId=WII000001340",
+        "https://www.mohw.go.kr/menu.es?mid=a10710030600",
+        "https://www.gjcity.go.kr/depart/contents.do?mId=1007010800",
+        "https://bokji.gangnam.go.kr/api/web/serviceDetail.do?id=WII000001340&mid=ID03_02&pgno=1&type="
+      ],
+      "checked_at": "2026-11-20T04:15:09.480730+09:00",
+      "access_method": "OPENED_OFFICIAL current web page plus PROVIDED_OFFICIAL_TEXT same-ID rawSource",
+      "source_generation": "gov24-44505539863-1"
+    },
+    {
+      "benefit_id": "SD0000005037",
+      "views": 54525,
+      "decision": "HOLD",
+      "reason": "접수기관별 상이. 이번 실제 LH 현행 목록에 국민임대 공고/정정공고가 존재함은 확인했으나 개별 모집공고 원문과 순위별 접수일·자산·지역·자격완화·임대조건을 확정할 수 있는 검수가 미완료다. 목록의 공고중을 현재 청약접수중으로 바꾸지 않으며 전국 공통 소득기준으로 특정 모집을 꾸미지 않고 이번 선정 HOLD. 마이홈 제도안내 열람은 timeout.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=573410&bnefType=all&svcId=SD0000005037",
+        "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?cntntsId=&mi=1026",
+        "https://www.myhome.go.kr/hws/portal/cont/selectNationalRentalHouseView.do"
+      ],
+      "checked_at": "2026-11-20T04:15:09.480730+09:00",
+      "access_method": "OPENED_OFFICIAL current web page plus PROVIDED_OFFICIAL_TEXT same-ID rawSource",
+      "source_generation": "gov24-44505539863-1"
     }
   ],
   "entries": [
@@ -8129,6 +8158,306 @@
           "pattern": "P5",
           "opening": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요.",
           "structure": "서초대상·실익→소득/절차2체크→대기접수·판정과중복제한→CTA",
+          "media_turn": "TEXT"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-20T16:00:00+09:00",
+      "benefit_id": "SPE000000060",
+      "source_fingerprint": "650f0d3391c20c6b6b21750e02e7a9931bb40511db1ca48eab4ce5dfd78fae71",
+      "source_generation": "gov24-44505539863-1",
+      "prepared_at": "2026-11-20T04:15:09.480730+09:00",
+      "expires_at": "2026-11-21T04:15:09.480730+09:00",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "SPE000000060",
+        "post_text": "보청기나 휠체어를 마련해야 한다면, 등록장애인인 건강보험 가입자·피부양자는 보조기기 구입비 일부를 보험급여로 받을 수 있어요. 일반 대상자는 지급기준금액의 90%가 원칙이에요.\n\n먼저 품목별 대상 기준과 전문의 처방 여부를 확인해요. 전동휠체어·의료용 스쿠터 등은 구입 전 공단의 급여승인 절차가 필요해요.\n\n기준액과 실제 구입금액 중 낮은 금액으로 계산하며, 고시금액이 있는 품목은 그 금액도 비교해요. 초과금과 본인부담금은 따로 부담해요. 차상위 본인부담경감 대상자는 지급기준금액 내 전액 지원 기준을 확인해요.\n\n구입 후 품목별 검수·증빙서류를 갖춰 공단에 청구해요. 등록업소 구입이 필요한 품목과 내구연한 내 재지원·타 제도 중복 제한도 있어요. 상시 청구 제도지만 모든 제품이 대상은 아니에요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-20T16:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "보조기기 급여를 검토하는 등록장애인 건강보험 가입자·피부양자",
+          "central_message": "보조기기를 사기 전 어떤 승인·비용 조건부터 확인해야 하나요?",
+          "pattern": "P6",
+          "selection_reason": "동일IDserviceList누적조회수내림차순. 완료59건과기존미래READY중복제외,상위후보HOLD/SKIP출처·구체이유를selection_notes에보존.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "SPE000000060",
+              "source_ref": "https://www.nhis.or.kr/static/html/wbma/c/wbmac0206_1.html",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-20T04:15:09.480730+09:00",
+              "claims_supported": [
+                "이번 실제 열린 국민건강보험공단 급여제도 소개 본문0~7행. 등록장애인 건강보험 가입자·피부양자, 기준액·해당품목고시금액·구입액 중 최저90%,차상위 본인부담경감 대상 기준액내100%,등록업소필요품목,유형별내구연한내1인1회원칙 확인. 품목수는API90/공단88차이 있어 숫자 자체를 공개본문에 사용하지 않음."
+              ]
+            },
+            {
+              "source_id": "SPE000000060",
+              "source_ref": "https://www.nhis.or.kr/static/html/wbma/c/wbmac0206_2.html",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-20T04:15:09.480730+09:00",
+              "claims_supported": [
+                "이번 공단 품목별 지급절차 실제본문: 전동휠체어·스쿠터는 유형별 전문의처방→공단승인신청후구입,검수불필요,청구서·구입증빙·사진. 자세보조용구 등 검수필요 유형과 구분. 본문은 모든품목검수필수라고 쓰지 않음."
+              ]
+            },
+            {
+              "source_id": "SPE000000060",
+              "source_ref": "https://www.nhis.or.kr/static/html/wbdf/e/03/wbdfe0103_pop_06longdesc.html",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-20T04:15:09.480730+09:00",
+              "claims_supported": [
+                "실제 공단 현금급여 안내 전체 열람. 구입일부터3년내청구,방문·우편·팩스접수,타법령동일유형급여제한을 확인. 상시 청구의 건강보험 제도이고 현재사업모집/개인승인/거래완료 주장과 구분. 지급품목수83은다른소개와차이로사용안함."
+              ]
+            },
+            {
+              "source_id": "SPE000000060",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=749143&bnefType=all&svcId=SPE000000060",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-20T04:15:09.480730+09:00",
+              "claims_supported": [
+                "이번 검증된 완전세대 gov24-44505539863-1 동일 ID serviceList/detail 전체 실제읽기. 누적조회수 54976(실시간 검색량·신청자수 아님). APIcheckedAt=2026-11-19T19:31:21.733137+09:00, collectionSucceededAt=2026-11-19T19:33:46.950475+09:00. 수집시각을 현재접수검증으로쓰지않고 별도 직접연 공식본문과대조."
+              ]
+            },
+            {
+              "source_id": "SPE000000060",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-20T04:15:09.480730+09:00",
+              "claims_supported": [
+                "이번 현재main PNG 직접HTTPS GET 실제파일 SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a를 현재image-review 원2026-11-06 AI_VISUAL_INSPECTION/PASS·약360px검수와 재대조해 일치. 새직접시각검수 아님. 혜택별승인카드없어기존rotation;사업별금액·대상·기간없음."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 411,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "현재원문검수와API수집시각을구분. 실제발송시최신완전source·공식변경종료·만료·순위·미디어재검증필수. 19일19:33source는20일20시시점24h초과이므로현재source로발송가능하다고보장하지않음.",
+            "개인별신청거래·프로필링크전환·사이트검색접수기능을실행/보장하지않음.",
+            "품목별세부인정기준과업소·처방·검수예외및개인차상위자격은선택품목별추가확인대상;확정수령주장없음."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "보조기기를 사기 전 어떤 승인·비용 조건부터 확인해야 하나요?",
+            "reader_scope": "보조기기 급여를 검토하는 등록장애인 건강보험 가입자·피부양자",
+            "angles": [
+              "구입비 부담과 보험급여",
+              "구입 전 처방·승인 준비",
+              "지급기준과 본인부담 구분"
+            ],
+            "chosen_angle": "구입 전 처방·승인 준비",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "보청기나 휠체어를 마련해야 한다면, 등록장애인인 건강보험 가입자·피부양자는 보조기기 구입비 일부를 보험급여로 받을 수 있어요. 일반 대상자는 지급기준금액의 90%가 원칙이에요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "등록장애인인 건강보험 가입자·피부양자는 보조기기 지급기준금액의 90%를 보험급여로 받을 수 있어요. 품목별 기준과 본인부담이 있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "전동휠체어 등은 구입 전 공단 급여승인 절차부터 확인해야 보험급여를 준비할 수 있어요."
+              }
+            ],
+            "chosen_opening": "보청기나 휠체어를 마련해야 한다면, 등록장애인인 건강보험 가입자·피부양자는 보조기기 구입비 일부를 보험급여로 받을 수 있어요. 일반 대상자는 지급기준금액의 90%가 원칙이에요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "첫적용KST2026-11-10 기준짝수일Nov20 16A/20B. 기존08P1·12P5와도입/전개를대조해 P6구입전승인과비용단계/P8내용대상일정3항목으로변주. 최근20완료본문의입원비·활동지원·푸드뱅크등과질문/문장을실제비교.",
+            "history_posts_checked": 20,
+            "comparison_eligible": true,
+            "comparison_strata": {
+              "geo": "전국",
+              "audience": "보조기기 급여를 검토하는 등록장애인 건강보험 가입자·피부양자",
+              "benefit": "보조기기보험급여",
+              "application": "상시청구·품목별기준",
+              "media": "IMAGE"
+            },
+            "comparison_group": "94공식ID/window관측 보존. 기존비교A12/B13의24h중앙값83/78은서로다른사업/지역/시간/미디어교란,matchedpairs0이므로효과입증아님. 반복우세미입증으로비중유지.",
+            "applied_elements": [
+              "첫단락대상·실익",
+              "1~2문장단락",
+              "필수조건과자부담/일정제한",
+              "500자와고정CTA"
+            ],
+            "profile_route": "공개공식안내만열람. 프로필이동·지원금픽검색세부·신청거래미검증으로보장하지않음.",
+            "source_recheck_required_at_publish": true,
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true,
+            "writing_input_sha256": "8585aab151ed481efc29a1604535569103d69bb6d7fef7b91bc1d4fda4957c40"
+          }
+        },
+        "next_history_record": {
+          "program_id": "SPE000000060",
+          "notice_version": "{\"detail\": \"2026-11-06\", \"list\": \"20261106093048\"}",
+          "pattern": "P6",
+          "opening": "보청기나 휠체어를 마련해야 한다면, 등록장애인인 건강보험 가입자·피부양자는 보조기기 구입비 일부를 보험급여로 받을 수 있어요. 일반 대상자는 지급기준금액의 90%가 원칙이에요.",
+          "structure": "구입상황·대상·급여→구입전처방승인→계산기준·본인부담→청구·중복제한→CTA",
+          "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-20T20:00:00+09:00",
+      "benefit_id": "149200000147",
+      "source_fingerprint": "bedcaab9eb4fcbb88e5b5c8d7e4ad385c9aabf489588cd6011f659d8e07427f4",
+      "source_generation": "gov24-44505539863-1",
+      "prepared_at": "2026-11-20T04:15:09.480730+09:00",
+      "expires_at": "2026-11-21T04:15:09.480730+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "149200000147",
+        "post_text": "취업을 준비하는 구직자는 고용센터의 ‘취업역량 강화 프로그램’에서 진로 탐색과 이력서·면접 준비를 도울 집단상담·취업특강을 찾아볼 수 있어요. 현금 지급이 아닌 취업지원 서비스예요.\n\n고를 때는 세 가지를 함께 봐요.\n• 내용: 진로 선택이 고민인지, 입사지원서나 면접 연습이 필요한지에 맞춰 과정을 살펴봐요.\n• 대상: 청년·중장년 등 특정 대상용 과정은 연령과 참여 조건이 달라요.\n• 일정: 센터마다 운영일·장소·대면 또는 온라인 방식이 달라, 전국 공통 접수기간으로 생각하면 안 돼요.\n\n현재 고용24에 11월 23일 이후 과정의 접수 안내가 올라와 있어요. ‘취업지원→취업역량강화’에서 운영센터와 세부 일정을 확인한 뒤 참여 신청을 해요. 가까운 고용센터에 문의할 수도 있어요. 남은 자리와 신청 가능 여부는 선택한 과정에서 다시 확인해야 해요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-20T20:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "직업선택·이력서·면접 준비에 도움이 필요한 구직자",
+          "central_message": "구직자 취업역량 강화 프로그램은 무엇을 비교해 골라야 하나요?",
+          "pattern": "P8",
+          "selection_reason": "동일IDserviceList누적조회수내림차순. 완료59건과기존미래READY중복제외,상위후보HOLD/SKIP출처·구체이유를selection_notes에보존.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "149200000147",
+              "source_ref": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?currentPageNo=1&recordCountPerPage=10&systClId=SC00000188&systId=SI00000321&upprSystClId=SC00000187",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-20T04:15:09.480730+09:00",
+              "claims_supported": [
+                "이번 실제 고용24 제도안내281~328,440~507행 열람. 진로·구직기술 집단상담/취업특강,청년중장년대상별제한,센터·세부일정선택,고용24또는센터신청. 현금수당을임의로추가하지않음. 2025수정제도페이지 단독 현재접수근거로쓰지않음."
+              ]
+            },
+            {
+              "source_id": "149200000147",
+              "source_ref": "https://www.work24.go.kr/cm/f/e/0100/empPrgSrchMain.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-20T04:15:09.480730+09:00",
+              "claims_supported": [
+                "이번 실제 현재 고용24 통합검색299~405행 본문열람. 구직자취업역량강화 유형 아래 11월23일 창원청년지원서작성(관내18~34세),안산청년온라인특강(34세이하),부천구직스트레스(모든구직자),강릉23~24집단상담 등 접수중 안내를 확인. 현재 운영·접수 안내가 존재한다는 범위만 OPEN;특정강좌잔여석·개인접수성공·모든강좌상시를보장하지않음. 발송전변경·마감재확인필수."
+              ]
+            },
+            {
+              "source_id": "149200000147",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999016&bnefType=all&svcId=149200000147",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-20T04:15:09.480730+09:00",
+              "claims_supported": [
+                "이번 검증된 완전세대 gov24-44505539863-1 동일 ID serviceList/detail 전체 실제읽기. 누적조회수 53238(실시간 검색량·신청자수 아님). APIcheckedAt=2026-11-19T19:28:43.654405+09:00, collectionSucceededAt=2026-11-19T19:33:46.950475+09:00. 수집시각을 현재접수검증으로쓰지않고 별도 직접연 공식본문과대조."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 440,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "현재원문검수와API수집시각을구분. 실제발송시최신완전source·공식변경종료·만료·순위·미디어재검증필수. 19일19:33source는20일20시시점24h초과이므로현재source로발송가능하다고보장하지않음.",
+            "개인별신청거래·프로필링크전환·사이트검색접수기능을실행/보장하지않음.",
+            "접수중공개목록조회만수행. 강좌참여신청/로그인거래미수행,발송시잔여석이나마감상태는재확인. 전국공통연령·기간이나현금수당없다고타제도까지확장하지않음."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "구직자 취업역량 강화 프로그램은 무엇을 비교해 골라야 하나요?",
+            "reader_scope": "직업선택·이력서·면접 준비에 도움이 필요한 구직자",
+            "angles": [
+              "진로 탐색과 구직기술 지원",
+              "나에게 맞는 과정 고르기",
+              "신청 전 대상·일정 비교"
+            ],
+            "chosen_angle": "신청 전 대상·일정 비교",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "취업 준비를 어디서 시작할지 막막하다면, 구직자는 고용센터 집단상담·특강에서 진로와 구직기술 도움을 확인할 수 있어요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "취업을 준비하는 구직자는 고용센터의 ‘취업역량 강화 프로그램’에서 진로 탐색과 이력서·면접 준비를 도울 집단상담·취업특강을 찾아볼 수 있어요. 현금 지급이 아닌 취업지원 서비스예요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "취업특강은 과정마다 대상과 일정이 달라, 구직자가 필요한 내용과 함께 비교해야 해요."
+              }
+            ],
+            "chosen_opening": "취업을 준비하는 구직자는 고용센터의 ‘취업역량 강화 프로그램’에서 진로 탐색과 이력서·면접 준비를 도울 집단상담·취업특강을 찾아볼 수 있어요. 현금 지급이 아닌 취업지원 서비스예요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "첫적용KST2026-11-10 기준짝수일Nov20 16A/20B. 기존08P1·12P5와도입/전개를대조해 P6구입전승인과비용단계/P8내용대상일정3항목으로변주. 최근20완료본문의입원비·활동지원·푸드뱅크등과질문/문장을실제비교.",
+            "history_posts_checked": 20,
+            "comparison_eligible": true,
+            "comparison_strata": {
+              "geo": "전국",
+              "audience": "직업선택·이력서·면접 준비에 도움이 필요한 구직자",
+              "benefit": "구직역량서비스",
+              "application": "센터별과정접수·일정상이",
+              "media": "TEXT"
+            },
+            "comparison_group": "94공식ID/window관측 보존. 기존비교A12/B13의24h중앙값83/78은서로다른사업/지역/시간/미디어교란,matchedpairs0이므로효과입증아님. 반복우세미입증으로비중유지.",
+            "applied_elements": [
+              "첫단락대상·실익",
+              "1~2문장단락",
+              "필수조건과자부담/일정제한",
+              "500자와고정CTA"
+            ],
+            "profile_route": "공개공식안내만열람. 프로필이동·지원금픽검색세부·신청거래미검증으로보장하지않음.",
+            "source_recheck_required_at_publish": true,
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true,
+            "writing_input_sha256": "8585aab151ed481efc29a1604535569103d69bb6d7fef7b91bc1d4fda4957c40"
+          }
+        },
+        "next_history_record": {
+          "program_id": "149200000147",
+          "notice_version": "{\"detail\": \"2026-10-30\", \"list\": \"20261030163133\"}",
+          "pattern": "P8",
+          "opening": "취업을 준비하는 구직자는 고용센터의 ‘취업역량 강화 프로그램’에서 진로 탐색과 이력서·면접 준비를 도울 집단상담·취업특강을 찾아볼 수 있어요. 현금 지급이 아닌 취업지원 서비스예요.",
+          "structure": "대상·서비스실익→내용·대상·일정3항목→현재운영확인·신청경로·잔여석제한→CTA",
           "media_turn": "TEXT"
         }
       }
