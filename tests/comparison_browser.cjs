@@ -30,12 +30,12 @@ async function fixture(width,stale=false){
   const feed={schemaVersion:1,generation:'comparison-fixture',updatedAt:stamp,collectionSucceededAt:stamp,
     coverage:'비교 기능 모의자료',sourceCount:items.length,isSample:false,partial:false,items,detailBase:'details/comparison-fixture/'};
   const context=await browser.newContext({viewport:{width,height:900},serviceWorkers:'block'});
-  await context.addInitScript(({key,value})=>localStorage.setItem(key,value),{key:RECORDS,value:stored});
+  await context.addInitScript(({key,value})=>{if(location.origin==='https://kllollain-max.github.io')localStorage.setItem(key,value);},{key:RECORDS,value:stored});
   const errors=[];context.on('page',p=>p.on('pageerror',e=>errors.push(e.message)));
   await context.route('**/*',async route=>{
     const u=new URL(route.request().url());if(u.origin!==ORIGIN)return route.abort();
     const name=u.pathname.replace(/^\/supportpick\//,'')||'index.html';
-    if(name==='data.js')return route.fulfill({contentType:'text/javascript',body:'window.SUPPORTPICK_DATA='+JSON.stringify(feed)+';'});
+    if(name==='data.js'||name==='data-bootstrap.js')return route.fulfill({contentType:'text/javascript',body:'window.SUPPORTPICK_DATA='+JSON.stringify(feed)+';'});
     if(name==='status.json')return route.fulfill({json:{status:'success',generation:feed.generation}});
     if(name==='details/comparison-fixture/00.json')return route.fulfill({json:{generation:stale?'other-generation':feed.generation,items:Object.fromEntries(items.map(p=>[p.id,p]))}});
     const file=path.resolve(DIST,name);if(!file.startsWith(DIST+path.sep)||!fs.existsSync(file))return route.fulfill({status:404,body:'missing'});
