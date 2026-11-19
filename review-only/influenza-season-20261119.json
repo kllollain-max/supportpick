@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-11-19",
+  "benefitId": "135200000115",
+  "rawSupportToken": "2025.6.30",
+  "currentOfficialToken": "2026.6.30",
+  "sourceDifferencesMeaning": "지원유형 classification only; not evidence that medical facts conflict",
+  "sources": [
+    {
+      "url": "https://nip.kdca.go.kr/irhp/infm/goVcntInfo.do?menuCd=134&menuLv=1",
+      "displayedReviewDate": "2026-08-25",
+      "observed": "2026–2027 body; dose history cutoff2026.6.30; historical2020–2021 section retained"
+    },
+    {
+      "url": "https://www.kdca.go.kr/kdca/2848/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa2RjYSUyRjQyJTJGMzEyNjQyJTJGYXJ0Y2xWaWV3LmRvJTNG",
+      "publishedAt": "2026-09-16",
+      "modifiedAt": "2026-09-16",
+      "observed": "Schedule advanced; visit and identification confirmation"
+    }
+  ],
+  "method": "Official full bodies read through web search; no claim of independent HTTP download",
+  "originalDataPreserved": true,
+  "eligibilityOrMedicalDecision": false,
+  "otherAccountChanges": false
+}
