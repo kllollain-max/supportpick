@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-19T09:11:05.576661+09:00",
+  "prepared_at": "2026-11-19T12:40:35.808206+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -7975,6 +7975,157 @@
           "opening": "임신 중 기차로 이동할 일이 있다면, 임산부 등록을 마친 코레일 회원은 ‘맘편한 코레일’로 일반실 운임을 40% 할인받을 수 있어요. 함께 타는 동반 1명까지 적용되는 승차권 할인이에요.",
           "structure": "이동상황·할인실익→혜택유형차이→등록·기간→구매·동반제한→CTA",
           "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-20T12:00:00+09:00",
+      "benefit_id": "135200000005",
+      "source_fingerprint": "d27b4b9a9593ad71a17ff6979d1cc74605b87901b0733cac3fc08bc8419bcdb7",
+      "source_generation": "gov24-44408666268-1",
+      "prepared_at": "2026-11-19T12:40:35.808206+09:00",
+      "expires_at": "2026-11-20T12:40:35.808206+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "135200000005",
+        "post_text": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요.\n\n먼저 두 가지를 살펴봐요.\n• 거주·소득: 서초구에 거주하고, 소득과 재산을 함께 반영한 가구 소득인정액이 기준 중위소득 80% 이하여야 해요.\n• 선정 절차: 대기 신청 후 모집기간에 안내를 받아 소득조사와 보건소 영양상태평가·종합판정을 거쳐요. 빈혈·신체계측·영양섭취 상태 등을 확인해요.\n\n전화나 방문으로 대기 신청을 할 수 있어요. 보충식품은 현금 지원이 아니며, 신청 즉시 지급되거나 선정되는 것은 아니에요. 조제분유·친환경 농산물꾸러미 지원 등과의 중복 제한도 확인해야 해요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-20T12:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "서울 서초구 거주 임산부 및 생후66개월이하영유아 가구 중 소득·영양판정을 받을 대기신청자",
+          "central_message": "서초구 영양플러스 대기 신청과 실제 지원 대상 선정은 어떻게 다른가요?",
+          "pattern": "P5",
+          "selection_reason": "56완료게시+활성12미예약READY와미래3READY중복제외후동일ID누적조회수56221최상위검증후보. 상위40HOLD/SKIP실제이유·출처56기존notes보존. 지역별시기차이는직접연서초연중대기접수로한정.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "135200000005",
+              "source_ref": "https://www.seocho.go.kr/site/sh/03/10301040000002019071203.jsp",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-19T12:40:35.808206+09:00",
+              "claims_supported": [
+                "이번실행공식서초구보건소2026기준표·영양플러스본문336~410행실제열람. 관내임산부/66개월이하영유아,소득·재산종합80%및소득인정액정의,연중전화·방문대기접수,모집기간개별안내,소득조사후보건소영양상태평가와종합판정,교육상담·맞춤보충식품확인. 연중인것은대기접수이며현재모집·식품즉시지급을확정하지않음. 주소지외전국일괄접수주장없음."
+              ]
+            },
+            {
+              "source_id": "135200000005",
+              "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10706020300",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-19T12:40:35.808206+09:00",
+              "claims_supported": [
+                "이번실행보건복지부영양플러스서비스안내844~855행실제열람. 영양위험요인,교육상담과보충식품6종,관할보건소신청·영양평가를대조. 페이지최종수정2025-09-30이므로건보료소득판정은2026서초구소득재산안내로한정해최신지역기준우선."
+              ]
+            },
+            {
+              "source_id": "135200000005",
+              "source_ref": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=1&cnpClsNo=3&csmSeq=735",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-19T12:40:35.808206+09:00",
+              "claims_supported": [
+                "이번실행2026영양안내참조공식생활법령본문217~243행실제열람. 조제분유지원받는영유아/친환경농산물꾸러미참여임신출산수유부중복수혜제한확인. 건보료소득판정부분은서초구2026현행소득재산안내와달라본문에그대로쓰지않음. 전국72개월설명과달리선택지역서초66개월로대상명시."
+              ]
+            },
+            {
+              "source_id": "135200000005",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999156&bnefType=all&svcId=135200000005",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-19T12:40:35.808206+09:00",
+              "claims_supported": [
+                "완전세대gov24-44408666268-1 동일ID공식serviceList/detail전체실제대조,누적조회수56221. APIcheckedAt=2026-11-19T07:11:18.506075+09:00,수집완료=2026-11-19T07:15:21.556237+09:00. 날짜는보건소별상이하므로수집성공을현재모집증거로쓰지않고별도직접연서초현행연중대기접수에한정."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 394,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "현재확인범위는서초구연중대기접수안내이며새모집일·대기순번·선정·실제식품제공시각/물량은확정하지않음. 현재모집중으로표현하지않음.",
+            "소득판정API·과거국가안내건보료와지역2026소득재산조사구분. 최신지역안내로한정했으며연령도서초66개월사용.",
+            "공식공개안내만열람,개인대기신청·접수거래·프로필경로미실행. 현재07:15source는내일12발송시24h초과. 실제발송때최신완전source·공식상태·만료·IMAGE/TEXT필수재검증."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "서초구 영양플러스 대기 신청과 실제 지원 대상 선정은 어떻게 다른가요?",
+            "reader_scope": "서울 서초구 거주 임산부 및 생후66개월이하영유아 가구 중 소득·영양판정을 받을 대기신청자",
+            "angles": [
+              "영양교육과보충식품실익",
+              "거주·소득재산과영양판정",
+              "연중대기신청과모집선정절차구분"
+            ],
+            "chosen_angle": "대상·지원실익→두자격체크→대기신청과선정구분",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "아이의 영양 관리가 걱정되는 서초구 가정이라면 영양플러스의 상담·보충식품 지원과 대기 접수 조건을 확인해요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "서초구 영양플러스는 연중 대기 접수와 실제 대상자 선정 시점이 달라요."
+              }
+            ],
+            "chosen_opening": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "첫적용2026-11-10에서10일뒤Nov20 12시는B. 같은날08P1코레일이동상황과다른P5거주·소득재산체크→대기판정흐름. 최근20실제게시와현재4READY의도입·전개를비교하고단어만바꾼템플릿피함.",
+            "history_posts_checked": 20,
+            "comparison_eligible": true,
+            "comparison_strata": {
+              "geo": "서울서초구",
+              "audience": "임산부·영유아가구",
+              "benefit": "영양교육과보충식품현물",
+              "application": "연중대기접수·모집개별안내",
+              "media": "TEXT"
+            },
+            "comparison_group": "87공식관측 중25개24h창은설명통계A12/B13,중앙값83/78. 유사사업매칭0·지역/혜택/독자/시각/미디어교란;반복우세판정없음,비중유지.7일평가완료보존/14일미도래.",
+            "applied_elements": [
+              "지역·대상·실익을첫단락",
+              "소득인정액과월급구분",
+              "대기접수와즉시선정·지급구분",
+              "2항목자격체크와판정순서",
+              "현물과중복제한명시"
+            ],
+            "profile_route": "프로필링크/사이트의접수기능과실제보건소대기신청거래는미수행;자동신청·즉시선정기능을보장하지않음.",
+            "source_recheck_required_at_publish": true,
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true,
+            "writing_input_sha256": "9386ff289577926dab56255abe99ed42ddb05770c6071050196759902b6dec94"
+          }
+        },
+        "next_history_record": {
+          "program_id": "135200000005",
+          "notice_version": "2026서초구현행연중대기접수직접확인",
+          "pattern": "P5",
+          "opening": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요.",
+          "structure": "서초대상·실익→소득/절차2체크→대기접수·판정과중복제한→CTA",
+          "media_turn": "TEXT"
         }
       }
     }
