@@ -15,7 +15,7 @@ from zoneinfo import ZoneInfo
 from collect_full import safe_url, valid_id
 from search_metadata import public_metadata
 from benefit_analysis import related_analysis
-from content_quality import reading_gaps, summary_view
+from content_quality import reading_gaps, summary_view, malformed_amounts
 import verified_schedule
 
 KST = ZoneInfo('Asia/Seoul')
@@ -372,6 +372,8 @@ def render_benefit(row, guide, blog, reasons, related, base, current, feed_statu
              '<p>분류 조건만으로 개인의 수급 자격을 판정하지 않습니다.</p></section>')
     for heading, key in [('지원대상', 'target'), ('선정기준·세부 자격', 'selection'), ('지원내용·금액', 'support'),
                          ('신청방법', 'method'), ('준비서류', 'documents'), ('문의처', 'contact')]:
+        if key == 'support' and malformed_amounts(row):
+            body += '<p class="context-note amount-source-notice"><strong>금액 표기 확인 필요:</strong> 원문의 쉼표 자릿수를 확인하세요 (' + escape(' · '.join(malformed_amounts(row))) + '). 원문은 보존했으며 지급액으로 확정하지 않습니다.</p>'
         body += section(heading, row.get(key))
     differences = row.get('sourceDifferences', {})
     if differences:
@@ -455,7 +457,7 @@ def write_details(output, rows, previous, base, registry, blogs, feed_status, cu
         if reasons:
             held[row['id']] = reasons
         elif base:
-            modified = max(filter(None, [TEMPLATE_MODIFIED, source_date(row), guide['reviewedAt'][:10] if guide else None, min(CLASSIFICATION_MODIFIED,current.astimezone(KST).date().isoformat()) if classification_difference(row) else None, min(IDENTITY_METADATA_MODIFIED,current.astimezone(KST).date().isoformat()) if repeated else None]))
+            modified = max(filter(None, [TEMPLATE_MODIFIED, source_date(row), guide['reviewedAt'][:10] if guide else None, min(CLASSIFICATION_MODIFIED,current.astimezone(KST).date().isoformat()) if classification_difference(row) else None, min(IDENTITY_METADATA_MODIFIED,current.astimezone(KST).date().isoformat()) if repeated or malformed_amounts(row) else None]))
             if row['id'] in previous and material_hash(previous[row['id']])!=material_hash(row) and source_date(previous[row['id']])==source_date(row):
                 modified=None  # Content changed, but the authority did not supply a new modification time.
             entries.append((path, modified))

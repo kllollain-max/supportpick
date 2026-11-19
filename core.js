@@ -133,6 +133,11 @@
     return different?{text:'목록·상세 분류 차이 · 원문 확인',different:true,list:display(pair.list),detail:display(pair.detail)}:
       {text:typeof p.supportType==='string'?p.supportType:'공식 공고 확인 필요',different:false,list:'',detail:''};
   }
-  const api={KEY,RECOVERY,CATEGORIES,REGIONS,STAGES,blank,validate,load,save,merge,exportBackup,importBackup,safeURL,status,periodState,filter,parseFeed,parseDetail,health,matchReasons,idOK,own,validDate,summaryView,scheduleInfo,scheduleText,supportClassification};
+  function malformedAmounts(p){
+    if(p.reviewRequired===true||typeof p.support!=='string')return [];
+    const tokens=p.support.match(/\d[\d,]*,\d[\d,]*(?=\s*(?:만원|천원|억원|원))/g)||[];
+    return [...new Set(tokens.filter(t=>!/^\d{1,3}(?:,\d{3})+$/.test(t)))];
+  }
+  const api={KEY,RECOVERY,CATEGORIES,REGIONS,STAGES,blank,validate,load,save,merge,exportBackup,importBackup,safeURL,status,periodState,filter,parseFeed,parseDetail,health,matchReasons,idOK,own,validDate,summaryView,scheduleInfo,scheduleText,supportClassification,malformedAmounts};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.SupportPick=api;
 })(typeof window!=='undefined'?window:globalThis);

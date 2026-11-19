@@ -13,6 +13,15 @@ HOUSEHOLDS = {'JA0401': '다문화가족', 'JA0402': '북한이탈주민',
 SUMMARY_PLACEHOLDERS = {'', '-', '상동', '위와동일', '상기와동일', '없음', '해당없음'}
 
 
+def malformed_amounts(row):
+    """Flag comma grouping only, never parse or repair a financial amount."""
+    value = row.get('support')
+    if not isinstance(value, str):
+        return []
+    tokens = re.findall(r'\d[\d,]*,\d[\d,]*(?=\s*(?:만원|천원|억원|원))', value)
+    return list(dict.fromkeys(t for t in tokens if not re.fullmatch(r'\d{1,3}(?:,\d{3})+', t)))
+
+
 def summary_view(row, withheld=False):
     """Use an attributed source excerpt for an unusable summary; never rewrite data."""
     if withheld:
@@ -42,6 +51,8 @@ def audit(rows):
     issues, counts, groups = {}, Counter(), defaultdict(list)
     for sid, row in rows.items():
         reasons = []
+        if malformed_amounts(row):
+            reasons.append('amount_comma_needs_check')
         for field in ('title', 'organization', 'target', 'support', 'method', 'documents', 'contact'):
             if not str(row.get(field) or '').strip():
                 reasons.append('missing_' + field)

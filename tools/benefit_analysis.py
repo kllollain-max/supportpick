@@ -22,6 +22,7 @@ from legacy_youth_savings_analysis import LEGACY_YOUTH_SAVINGS_ARTICLES
 from youth_subscription_analysis import YOUTH_SUBSCRIPTION_ARTICLES
 from didimdol_analysis import DIDIMDOL_ARTICLES
 from school_welfare_analysis import SCHOOL_WELFARE_ARTICLES
+from sunchang_birth_analysis import SUNCHANG_BIRTH_ARTICLES
 
 REVIEWED = '2026-11-17'
 ENERGY = 'https://www.energyv.or.kr/info/'
@@ -103,8 +104,10 @@ ARTICLES += LEGACY_YOUTH_SAVINGS_ARTICLES
 ARTICLES += YOUTH_SUBSCRIPTION_ARTICLES
 ARTICLES += DIDIMDOL_ARTICLES
 ARTICLES += SCHOOL_WELFARE_ARTICLES
+ARTICLES += SUNCHANG_BIRTH_ARTICLES
 
 BENEFIT_ARTICLES = {
+    '477000000110': 'sunchang-birth-total-vs-installments-2026',
     'SD0000015525': 'school-welfare-vs-education-benefit-2026',
     'B55140800003': 'didimdol-cap-collateral-and-closing-2026',
     '161300000088': 'youth-housing-account-announcement-tax-conversion-2026',
@@ -144,7 +147,7 @@ BENEFIT_ARTICLES = {
 }
 
 
-ARTICLE_REVIEW_DATES = {'school-welfare-vs-education-benefit-2026': '2026-11-19', 'didimdol-cap-collateral-and-closing-2026': '2026-11-19', 'youth-housing-account-announcement-tax-conversion-2026': '2026-11-18', 'youth-mutual-aid-closed-enrollment-maturity-2026': '2026-11-18', 'rental-guarantee-fee-cap-and-dates-2026': '2026-11-18', 'maternal-service-application-use-refund-2026': '2026-11-18', 'incheon-child-dream-birth-year-2026': '2026-11-18', 'incheon-pregnancy-transport-vs-postpartum-2026': '2026-11-18', 'leave-benefit-claim-checklist-2026': '2026-11-18'}
+ARTICLE_REVIEW_DATES = {'sunchang-birth-total-vs-installments-2026': '2026-11-19', 'school-welfare-vs-education-benefit-2026': '2026-11-19', 'didimdol-cap-collateral-and-closing-2026': '2026-11-19', 'youth-housing-account-announcement-tax-conversion-2026': '2026-11-18', 'youth-mutual-aid-closed-enrollment-maturity-2026': '2026-11-18', 'rental-guarantee-fee-cap-and-dates-2026': '2026-11-18', 'maternal-service-application-use-refund-2026': '2026-11-18', 'incheon-child-dream-birth-year-2026': '2026-11-18', 'incheon-pregnancy-transport-vs-postpartum-2026': '2026-11-18', 'leave-benefit-claim-checklist-2026': '2026-11-18'}
 
 
 def related_analysis(sid, row=None):

@@ -1,0 +1,39 @@
+{
+  "reviewedAt": "2026-11-19T16:49:54.498937+09:00",
+  "benefitId": "477000000110",
+  "sourcePreserved": true,
+  "automaticAmountRepair": false,
+  "observedCommaReviewIds": [
+    "477000000110",
+    "557000000250",
+    "875000000016",
+    "626000000649"
+  ],
+  "sources": [
+    {
+      "url": "https://www.sunchang.go.kr/health/index.do?menuUid=ff8080819b2a25fe019b4f7984902b9d",
+      "http": 200,
+      "method": "direct_public_HTML_body_read",
+      "sha256": "62f4bd54206f66b35d54c0cb366f5dcabb85a13fdeb7dc553602e5d1d6665d15",
+      "displayedModifiedAt": "2026-02-27",
+      "checkedFacts": [
+        "축하금·월 양육비·분기 특별장려금·구성 합계",
+        "출생일 기준 주소·실제 거주",
+        "읍면 신청서·통장사본·부모 신청·문의창구"
+      ]
+    },
+    {
+      "url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005815",
+      "method": "official_search_index_body_read",
+      "displayedModifiedAt": "2026-07-04",
+      "liveRenderedBodyVerified": false,
+      "note": "공식 검색 색인에서 금액·분할횟수·넷째아이상 표기 대조. 직접 페이지의 JS 본문은 검색 도구에서 읽히지 않았습니다."
+    }
+  ],
+  "limitations": [
+    "군 현재 표 넷째 아와 복지로 넷째아이상 범위 표기를 병기",
+    "다섯째 이상 적용·지급 시작일·개별 자격·현재 접수·예산 미확인",
+    "옛 군 사이트·2023 PDF·다른 지역 조례를 현재 조건의 단독 근거로 사용하지 않음"
+  ],
+  "scope": "금액 쉼표 형식 신호는 검토 후보이며 금액 오류 확정·자동 지급액 계산·색인 판정이 아닙니다."
+}

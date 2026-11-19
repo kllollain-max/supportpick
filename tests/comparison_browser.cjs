@@ -20,7 +20,7 @@ async function fixture(width,stale=false){
   const stamp=new Date().toISOString();
   const ids=['different','normal','third','fourth','held'];
   const items=ids.map((id,i)=>({id,title:'비교모의 '+(id==='third'?'different':id),organization:id==='third'?'다른 모의 기관':'모의 기관',category:'생활안정',region:'전국',
-    summary:'신청 절차를 대조할 수 있는 모의 공식 안내',target:'모의 대상',targetPreview:'모의 대상',support:'모의 지원내용',
+    summary:'신청 절차를 대조할 수 있는 모의 공식 안내',target:'모의 대상',targetPreview:'모의 대상',support:id==='normal'?'9,00만원(30만원 x 30개월)':'모의 지원내용',
     method:'공식 창구 확인',documents:'공식 공고 확인',contact:'공식 문의처 확인',selection:'공식 기준 확인',
     supportType:'현금',supportTypes:['현금'],audience:['개인'],period:'공고별 확인',periodKind:'needs_check',
     officialUrl:'https://plus.gov.kr/',checkedAt:stamp,sourceUpdatedAt:stamp,source:'모의 API',
@@ -59,6 +59,8 @@ test('comparison shows both classifications at three widths, escapes source HTML
       assert.match(await page.locator('#compareCount').innerText(),/3 \/ 3/);
       await page.locator('#compareOpen').click();await page.waitForSelector('.comparison-table');
       assert.match(await page.locator('.same-name-notice').innerText(),/기관별 지원 조건/);
+      assert.equal(await page.locator('.comparison-table .amount-source-notice').count(),1);
+      assert.match(await page.locator('.comparison-table .amount-source-notice').innerText(),/9,00/);
       const headers=page.locator('.comparison-table thead th');
       assert.match(await headers.nth(1).innerText(),/모의 기관/);assert.match(await headers.nth(3).innerText(),/다른 모의 기관/);
       const row=page.locator('.comparison-table tr').filter({has:page.getByRole('rowheader',{name:'지원방식(API 분류)',exact:true})});
