@@ -125,6 +125,14 @@
     for(const field of ['targetPreview','target']){const target=clean(p[field]);if(!placeholders.has(target.replace(/\s+/g,'')))return {text:target.slice(0,180)+(target.length>180?'…':''),label:'지원대상 원문 일부'};}
     return {text:'',label:''};
   }
-  const api={KEY,RECOVERY,CATEGORIES,REGIONS,STAGES,blank,validate,load,save,merge,exportBackup,importBackup,safeURL,status,periodState,filter,parseFeed,parseDetail,health,matchReasons,idOK,own,validDate,summaryView,scheduleInfo,scheduleText};
+  function supportClassification(p){
+    if(p.reviewRequired===true)return {text:'내용 확인 필요',different:false,list:'',detail:''};
+    const differences=plain(p.sourceDifferences)?p.sourceDifferences:{},pair=plain(differences['지원유형'])?differences['지원유형']:{};
+    const different=own(differences,'지원유형')||(Array.isArray(p.sourceConflicts)&&p.sourceConflicts.includes('지원유형'));
+    const display=v=>typeof v==='string'&&v.trim()?v.split('||').map(s=>s.trim()).filter(Boolean).join(' · '):'미제공';
+    return different?{text:'목록·상세 분류 차이 · 원문 확인',different:true,list:display(pair.list),detail:display(pair.detail)}:
+      {text:typeof p.supportType==='string'?p.supportType:'공식 공고 확인 필요',different:false,list:'',detail:''};
+  }
+  const api={KEY,RECOVERY,CATEGORIES,REGIONS,STAGES,blank,validate,load,save,merge,exportBackup,importBackup,safeURL,status,periodState,filter,parseFeed,parseDetail,health,matchReasons,idOK,own,validDate,summaryView,scheduleInfo,scheduleText,supportClassification};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.SupportPick=api;
 })(typeof window!=='undefined'?window:globalThis);
