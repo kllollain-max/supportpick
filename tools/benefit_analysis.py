@@ -22,6 +22,7 @@ from legacy_youth_savings_analysis import LEGACY_YOUTH_SAVINGS_ARTICLES
 from youth_subscription_analysis import YOUTH_SUBSCRIPTION_ARTICLES
 from didimdol_analysis import DIDIMDOL_ARTICLES
 from school_welfare_analysis import SCHOOL_WELFARE_ARTICLES
+from reviewed_amount_analysis import REVIEWED_AMOUNT_ARTICLES, review_advisory
 from sunchang_birth_analysis import SUNCHANG_BIRTH_ARTICLES
 
 REVIEWED = '2026-11-17'
@@ -104,9 +105,13 @@ ARTICLES += LEGACY_YOUTH_SAVINGS_ARTICLES
 ARTICLES += YOUTH_SUBSCRIPTION_ARTICLES
 ARTICLES += DIDIMDOL_ARTICLES
 ARTICLES += SCHOOL_WELFARE_ARTICLES
+ARTICLES += REVIEWED_AMOUNT_ARTICLES
 ARTICLES += SUNCHANG_BIRTH_ARTICLES
 
 BENEFIT_ARTICLES = {
+    '626000000649': 'busan-child-care-fee-vs-copayment-2026',
+    '557000000250': 'jeungpyeong-insurance-contract-vs-claim-2026',
+    '875000000016': 'school-welfare-vs-education-benefit-2026',
     '477000000110': 'sunchang-birth-total-vs-installments-2026',
     'SD0000015525': 'school-welfare-vs-education-benefit-2026',
     'B55140800003': 'didimdol-cap-collateral-and-closing-2026',
@@ -147,7 +152,7 @@ BENEFIT_ARTICLES = {
 }
 
 
-ARTICLE_REVIEW_DATES = {'sunchang-birth-total-vs-installments-2026': '2026-11-19', 'school-welfare-vs-education-benefit-2026': '2026-11-19', 'didimdol-cap-collateral-and-closing-2026': '2026-11-19', 'youth-housing-account-announcement-tax-conversion-2026': '2026-11-18', 'youth-mutual-aid-closed-enrollment-maturity-2026': '2026-11-18', 'rental-guarantee-fee-cap-and-dates-2026': '2026-11-18', 'maternal-service-application-use-refund-2026': '2026-11-18', 'incheon-child-dream-birth-year-2026': '2026-11-18', 'incheon-pregnancy-transport-vs-postpartum-2026': '2026-11-18', 'leave-benefit-claim-checklist-2026': '2026-11-18'}
+ARTICLE_REVIEW_DATES = {'busan-child-care-fee-vs-copayment-2026':'2026-11-19', 'jeungpyeong-insurance-contract-vs-claim-2026':'2026-11-19', 'sunchang-birth-total-vs-installments-2026': '2026-11-19', 'school-welfare-vs-education-benefit-2026': '2026-11-19', 'didimdol-cap-collateral-and-closing-2026': '2026-11-19', 'youth-housing-account-announcement-tax-conversion-2026': '2026-11-18', 'youth-mutual-aid-closed-enrollment-maturity-2026': '2026-11-18', 'rental-guarantee-fee-cap-and-dates-2026': '2026-11-18', 'maternal-service-application-use-refund-2026': '2026-11-18', 'incheon-child-dream-birth-year-2026': '2026-11-18', 'incheon-pregnancy-transport-vs-postpartum-2026': '2026-11-18', 'leave-benefit-claim-checklist-2026': '2026-11-18'}
 
 
 def related_analysis(sid, row=None):
@@ -155,9 +160,11 @@ def related_analysis(sid, row=None):
     article = next((a for a in ARTICLES if a[0] == slug), None)
     if not article:
         return ''
-    return (source_advisory(row or {}) + forest_source_advisory(row or {}) + '<section class="detail-block"><h2>조건을 해석하는 사업별 해설</h2><p>'
-            + escape(article[2]) + '</p><a class="editorial-link" href="../../guides/'
-            + article[0] + '.html">' + escape(article[1]) + ' →</a><p class="source-meta">'
+    fragment = '#education-informatization' if sid == '875000000016' else ''
+    description = 'PC·통신비의 지원 항목·지역별 기준·직접 납부 방식을 대조합니다.' if fragment else article[2]
+    return (review_advisory(row or {}) + source_advisory(row or {}) + forest_source_advisory(row or {}) + '<section class="detail-block"><h2>조건을 해석하는 사업별 해설</h2><p>'
+            + escape(description) + '</p><a class="editorial-link" href="../../guides/'
+            + article[0] + '.html' + fragment + '">' + escape(article[1]) + ' →</a><p class="source-meta">'
             + ARTICLE_REVIEW_DATES.get(slug, REVIEWED) + ' 공식 자료 대조 · 2026년 기준</p></section>')
 
 
