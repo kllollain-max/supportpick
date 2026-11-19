@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-18T20:05:08.171505+09:00",
+  "prepared_at": "2026-11-19T09:11:05.576661+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -7702,9 +7702,9 @@
       "slot": "2026-11-19T20:00:00+09:00",
       "benefit_id": "B55201500202",
       "source_fingerprint": "544a3c8e367b8484fb0d0940fd47c72a74ac054a3ebd51c5236e7d21ce971441",
-      "source_generation": "gov24-44285051232-1",
-      "prepared_at": "2026-11-18T20:05:08.171505+09:00",
-      "expires_at": "2026-11-19T20:05:08.171505+09:00",
+      "source_generation": "gov24-44408666268-1",
+      "prepared_at": "2026-11-19T09:11:05.576661+09:00",
+      "expires_at": "2026-11-20T09:11:05.576661+09:00",
       "asset_sha256": null,
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -7734,19 +7734,18 @@
               "source_id": "B55201500202",
               "source_ref": "https://www.4insure.or.kr/pbiz/gdne/cerfUtztnAnc.do",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-18T20:05:08.171505+09:00",
+              "verified_at": "2026-11-19T09:11:05.576661+09:00",
               "claims_supported": [
-                "공식증명서발급도우미를공개HTTPS GET으로실제열람(웹추출기는시간초과하여동일공식URL직접읽기). 현재가입상태/한장증명/공동인증서/기관자료수신/한기관수신시출력가능/네기관완료확인/점검시간제외/제출용지사신청/내용불일치기관문의 모두본문대조. 신청·발급거래로그인은수행하지않아개인별발급성공이나즉시완료보장없음.",
-                "공식HTML SHA256=dbde7f447fd23b7ede3d716337ed66cc334ea315e53c8bef64145dc8ac67d0e8"
+                "이번 실행 공개 HTTPS GET 실제 원문 재열람 및 본문 427자 전부 주장 대조: 현재가입상태 한 장 확인, 공동인증서 본인확인, 한 기관 자료 수신 시 출력가능/4기관 수신확인, 점검시간제외, 다른기관제출용 지사창구, 내역불일치 해당기관문의. 원문 HTML SHA256=21a0ce130df753cf3941a4a3f88c714c3538734c440f480b5ee133398de90904. 웹 추출기 시간초과, 직접 HTTPS GET 성공. 로그인/개인발급/출력 거래 검증하지 않음."
               ]
             },
             {
               "source_id": "B55201500202",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2100952&bnefType=all&svcId=B55201500202",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-18T20:05:08.171505+09:00",
+              "verified_at": "2026-11-19T09:11:05.576661+09:00",
               "claims_supported": [
-                "동일ID rawSource serviceList/detail 실제검증완전세대gov24-44285051232-1 대조:상시신청/4대사회보험가입자/가입사업장·자격취득일/원본누적조회수57287. APIcheckedAt=2026-11-18T19:35:07.661982+09:00,수집=2026-11-18T19:37:15.298065+09:00;sourceOnly를현재개인별발급검증으로대체하지않음. Gov24화면열람실패기록,공식4insure안내원문은별도직접확보."
+                "이번 실행 최신 완전세대 gov24-44408666268-1 동일 ID 원문 상세와 serviceList 누적조회수 57593 재대조. checkedAt=2026-11-19T07:13:07.825884+09:00; collectionSucceededAt=2026-11-19T07:15:21.556237+09:00. 기존 source_fingerprint 정확히 일치; 수집시각을 현재개인별발급증거로 대체하지 않음."
               ]
             }
           ],
@@ -7763,8 +7762,8 @@
           "missing_info": [],
           "hold_reasons": [],
           "warnings": [
-            "공식공개안내열람만수행;실제개인발급/로그인/출력기능검증하지않음. 즉시발급이나모든기관수신보장안함.",
-            "현재19:37완전수집본은내일20시발송시24h초과. 실제발송때최신완전source·공식안내·기한·교대필수재검증."
+            "실제 공개 공식안내 새열람에 근거한 재검수이며 기존본문·패턴·미디어·cohort 보존. 이전wrapper는 점검원장에 보존. 날짜만 복사한 연장 아님.",
+            "개인별 발급/로그인/출력 및 프로필경로의 거래는 미검증; 결과 보장 없음. 실제 발송 시 최신 source/공식안내/유효기간/교대 재검증 필요."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -7826,6 +7825,156 @@
           "opening": "내 보험 가입 상태가 궁금할 때, 4대사회보험 가입자는 가입내역 확인서로 현재 가입 현황을 한 장에서 확인할 수 있어요. 현금 지원이 아니라 가입 정보를 확인하는 서비스예요.",
           "structure": "생활상황·가입자실익→확인범위/본인확인/수신세가지→이용제한·문의→CTA",
           "media_turn": "TEXT"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-20T08:00:00+09:00",
+      "benefit_id": "B55145700016",
+      "source_fingerprint": "539b2a59336beec7c41f46b0ae3d401b1411f3334f9371f74487563be5314efc",
+      "source_generation": "gov24-44408666268-1",
+      "prepared_at": "2026-11-19T09:11:05.576661+09:00",
+      "expires_at": "2026-11-20T09:11:05.576661+09:00",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "B55145700016",
+        "post_text": "임신 중 기차로 이동할 일이 있다면, 임산부 등록을 마친 코레일 회원은 ‘맘편한 코레일’로 일반실 운임을 40% 할인받을 수 있어요. 함께 타는 동반 1명까지 적용되는 승차권 할인이에요.\n\nKTX 일반실과 ITX·새마을·무궁화호 등 일반열차가 대상이에요. KTX 특실·우등실은 일반실 가격으로 이용하는 방식이며, 다른 할인과 중복되거나 최저운임보다 낮아지지는 않아요.\n\n이용 기간은 출산예정일부터 1년까지예요. 코레일 회원가입 후 정부24 맘편한 임신 서비스나 역 창구의 임산부 등록 안내를 확인해요.\n\n현재 안내상 할인표는 출발 2개월 전부터 24시간 전까지 구매할 수 있어요. 1회 2매, 하루 2회·월 8회 한도이고 본인 신분증을 지참해야 해요. 동반인만 혼자 이용할 수 없으며, 명절 특별수송기간에는 운영하지 않아요. 할인 좌석은 조기 매진될 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-20T08:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "코레일 회원이며 임산부 등록을 마친 임산부와 실제 함께 타는 동반 1명",
+          "central_message": "임신 중 기차 이동에 어떤 할인과 동반·구매 조건을 확인해야 하나요?",
+          "pattern": "P1",
+          "selection_reason": "56완료게시와다른3READY중복제외후동일IDserviceList조회수57187우선. 상위40실제HOLD/SKIP근거와출처는queue.selection_notes그대로보존.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "B55145700016",
+              "source_ref": "https://info.korail.com/info/selectBbsNttView.do?bbsNo=199&key=911&nttNo=26335&pageIndex=4&searchCnd=all",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-19T09:11:05.576661+09:00",
+              "claims_supported": [
+                "이번 실행 코레일 2026-03-10 공식보도자료 실제본문 열람: 임산부·동반1인 일반실운임40%,특실/우등실일반실가격,멤버십등록후역임산부인증또는정부24신청,일부좌석우선예매와출발24h전일반전환. 이용객/지원총액은 본문에 사용하지 않음. 현재 개별 좌석/예매 성공 증거로 쓰지 않음."
+              ]
+            },
+            {
+              "source_id": "B55145700016",
+              "source_ref": "https://info.korail.com/info/selectBbsNttView.do?bbsNo=199&integrDeptCode=&key=911&nttNo=22514&pageIndex=44&searchCnd=all&searchCtgry=&searchKrwd=",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-19T09:11:05.576661+09:00",
+              "claims_supported": [
+                "이번 실행 2024-08-22 코레일 원 공지 실제열람: KTX/ITX새마을/마음/무궁화/청춘 일반실40%,특실일반실가격,출산예정일+1년. 과거공지 단독으로 현재상태를 확정하지 않고 2026-11-06수정 동일ID현재API와2026코레일안내를 대조."
+              ]
+            },
+            {
+              "source_id": "B55145700016",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=94779&bnefType=all&svcId=B55145700016",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-19T09:11:05.576661+09:00",
+              "claims_supported": [
+                "검증된 완전세대 gov24-44408666268-1 동일 ID serviceDetail와serviceList 전체 이번 실행 실제읽기. 누적조회수57187; list수정20261106161412,checkedAt=2026-11-19T07:13:07.825884+09:00,collectionSucceededAt=2026-11-19T07:15:21.556237+09:00. 상시신청,임산부등록회원,동반1명,일반실40%/특실요금면제,출산예정일+1년,다른할인중복불가/최저운임,2개월전~24시간전구매,1회2매/일2회/월8회,본인신분증,명절미운영,좌석매진가능 모두 동일 공식원문에 명시. 수집성공시각을 개인별 예매/현재좌석 검증으로 바꾸지 않음."
+              ]
+            },
+            {
+              "source_id": "B55145700016",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-19T09:11:05.576661+09:00",
+              "claims_supported": [
+                "이번 실행 현재mainPNG 실제HTTPS GET SHA256=0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd 재대조. 현재 image-review의2026-11-06 AI_VISUAL_INSPECTION/PASS 및약360px검수와일치. 새 직접시각검수아님. 승인혜택별이미지없어기존rotation사용;사업별금액·대상·기간없어본문과충돌없음."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 444,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "공식 예매URL 직접 열람은 서비스이용안내 JS shell만 반환,구letskorail404/dev502/go503. 로그인·현재좌석·예매거래확인미수행. 실제직접열린공식코레일공지와최신동일ID공식API만사실근거로사용. 제3자요약으로검증하지않음.",
+            "현재 API와공지상 제도등록 상시를대조했으나 다음날개별좌석/접수거래보장없음. Nov19 07:15수집본은Nov20 08발송때24h초과하므로실제발송시최신완전source와공식상태·변경/종료·이미지·유효기간재검증필수.",
+            "확인된할인표구매기간은2026-11-06수정동일ID공식원문기준. 과거지자체1개월~20분안내는현재기준으로혼합하지않음."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "임신 중 기차 이동에 어떤 할인과 동반·구매 조건을 확인해야 하나요?",
+            "reader_scope": "코레일 회원이며 임산부 등록을 마친 임산부와 실제 함께 타는 동반 1명",
+            "angles": [
+              "기차 이동 운임 부담",
+              "임산부 등록과 동반 자격",
+              "할인표 구매시점과 이용횟수"
+            ],
+            "chosen_angle": "이동 상황에서 받을 수 있는 할인과 이용 전 제한 확인",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "임신 중 기차로 이동할 일이 있다면, 임산부 등록을 마친 코레일 회원은 ‘맘편한 코레일’로 일반실 운임을 40% 할인받을 수 있어요. 함께 타는 동반 1명까지 적용되는 승차권 할인이에요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "임산부 등록을 마친 코레일 회원과 동반 1명은 맘편한 코레일의 일반실 운임 40% 할인을 확인할 수 있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "맘편한 코레일은 임산부가 함께 타야 동반 1명에게도 할인이 적용돼요."
+              }
+            ],
+            "chosen_opening": "임신 중 기차로 이동할 일이 있다면, 임산부 등록을 마친 코레일 회원은 ‘맘편한 코레일’로 일반실 운임을 40% 할인받을 수 있어요. 함께 타는 동반 1명까지 적용되는 승차권 할인이에요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "첫 적용 KST 2026-11-10에서 10일 뒤 Nov20 08시는 A. 첫 두 문장에 상황·등록대상·실익·동반범위, P1 이동상황→유형차이→등록→구매제한. 최근20게시와 오늘3READY의 법률/활동/식품/증명 흐름을 대조해 다른 질문과 전개 선택.",
+            "history_posts_checked": 20,
+            "comparison_eligible": true,
+            "comparison_strata": {
+              "geo": "전국",
+              "audience": "등록임산부",
+              "benefit": "열차운임할인",
+              "application": "상시등록·좌석매진가능",
+              "media": "IMAGE"
+            },
+            "comparison_group": "84 실제 ID/window 관측, 사업·독자·시간·미디어 차이로 유사사업 matched pairs 0. 반복 우세 입증 안 됨. 7일평가 보존,14일미도래,기존A/B배정과비중유지.",
+            "applied_elements": [
+              "상황·대상·40%실익 첫단락",
+              "일반실할인과특실요금면제구별",
+              "본인동반·횟수·예매시점·매진제한",
+              "짧은단락과고정CTA"
+            ],
+            "profile_route": "프로필 링크 이동/개인별 할인 등록·예매거래는 독립 확인하지 않음. 사이트의 맞춤조회·바로신청 기능을 보장하지 않음.",
+            "source_recheck_required_at_publish": true,
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true,
+            "writing_input_sha256": "c836e5738d837b4c792541d47baf4a17f7f92283653e3d3bb5e5b87d353a307c"
+          }
+        },
+        "next_history_record": {
+          "program_id": "B55145700016",
+          "notice_version": "2026-11-06동일IDAPI/2026코레일공식안내대조",
+          "pattern": "P1",
+          "opening": "임신 중 기차로 이동할 일이 있다면, 임산부 등록을 마친 코레일 회원은 ‘맘편한 코레일’로 일반실 운임을 40% 할인받을 수 있어요. 함께 타는 동반 1명까지 적용되는 승차권 할인이에요.",
+          "structure": "이동상황·할인실익→혜택유형차이→등록·기간→구매·동반제한→CTA",
+          "media_turn": "IMAGE"
         }
       }
     }
