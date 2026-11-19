@@ -13,7 +13,7 @@ from verify_release import verify_targets, inspect, wait_for_public_manifest, Pu
 
 URL='https://kllollain-max.github.io/supportpick/about.html'
 BODY=('<html><head><link rel="canonical" href="'+URL+'"><meta name="robots" content="index,follow">'
-      '<meta name="description" content="안내"><meta property="og:title" content="안내">'
+      '<title>안내</title><meta name="description" content="안내"><meta property="og:title" content="안내">'
       '</head><body><h1>안내</h1></body></html>').encode()
 
 

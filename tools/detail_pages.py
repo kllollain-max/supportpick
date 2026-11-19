@@ -21,6 +21,7 @@ import verified_schedule
 KST = ZoneInfo('Asia/Seoul')
 TEMPLATE_MODIFIED = '2026-11-17'
 CLASSIFICATION_MODIFIED = '2026-11-19'
+IDENTITY_METADATA_MODIFIED = '2026-11-19'
 PAGE_SIZE = 100
 MATERIAL_FIELDS = ('id', 'title', 'organization', 'category', 'region', 'regionBasis',
                    'summary', 'target', 'selection', 'support', 'period', 'periodKind',
@@ -288,6 +289,19 @@ def editorial_html(row, guide):
             +list_items(gaps)+'</ul></section>')
 
 
+def identity_key(value):
+    return re.sub(r'\s+', ' ', str(value)).strip().casefold()
+
+
+def document_title(row, repeated=False, include_id=False, withheld=False):
+    if not repeated:
+        return row['title'] + (' | 내용 확인 필요 - 지원금픽' if withheld else ' | 신청대상·지원내용·신청방법 - 지원금픽')
+    stem = row['title'] + ' | ' + row['organization']
+    if include_id:
+        stem += ' · 자료 ' + row['id']
+    return stem + (' · 내용 확인 필요 - 지원금픽' if withheld else ' - 지원금픽')
+
+
 def render_benefit(row, guide, blog, reasons, related, base, current, feed_status):
     display = support_display(row, guide, current)
     support_html = escape(display['text'] if display else '목록·상세 분류 차이 · 원문 확인' if classification_difference(row) else row['supportType'])
@@ -299,7 +313,7 @@ def render_benefit(row, guide, blog, reasons, related, base, current, feed_statu
     schedule = schedule_metadata(row, {'guides': [guide] if guide else []}, current)
     row = {**row, **({'verifiedSchedule': schedule} if schedule and not reasons else {})}
     path = benefit_path(row['id'])
-    title = row['title'] + ' | 신청대상·지원내용·신청방법 - 지원금픽'
+    title = row.get('_identityTitle') or document_title(row)
     preview = summary_view(row, withheld=bool(reasons))
     summary = (preview['label'] + ': ' if preview['label'] else '') + preview['text']
     summary_html = '<p class="benefit-summary">' + escape(summary) + '</p>' if summary else ''
@@ -332,7 +346,7 @@ def render_benefit(row, guide, blog, reasons, related, base, current, feed_statu
             body += '<section class="detail-block"><h2>최신 공식 안내 확인</h2><a href="' + escape(reference,quote=True) + '" target="_blank" rel="noopener noreferrer">대조한 담당기관 안내 ↗</a></section>'
         body += related_analysis(row['id'], row)
         record={k:row.get(k) for k in ('id','title','checkedAt')};record['base']='../../'
-        return shell(row['title']+' | 내용 확인 필요 - 지원금픽',
+        return shell(row.get('_identityTitle') or document_title(row, withheld=True),
                      row['organization']+'의 지원정보를 확인 중입니다. 최신 공식 안내를 확인하세요.',
                      body,path,'../../',base,False,record=record)
     body += (f'<article class="detail-header"><span class="category-badge">{escape(row["category"])}</span> '
@@ -409,6 +423,8 @@ def write_details(output, rows, previous, base, registry, blogs, feed_status, cu
     eligible_categories = {key: [r for r in group if not quality[r['id']]] for key, group in categories.items()}
     # Exact duplicates are held rather than advertised as independent editorial content.
     fingerprints = Counter(payload({k: r.get(k) for k in ('title', 'organization', 'target', 'support', 'method', 'period')}) for r in sorted_rows)
+    repeated_names = Counter(identity_key(r['title']) for r in sorted_rows)
+    repeated_identities = Counter((identity_key(r['title']), identity_key(r['organization'])) for r in sorted_rows)
     entries, held, guides, blog_count = [], {}, [], 0
     paths = set()
     for row in sorted_rows:
@@ -430,12 +446,16 @@ def write_details(output, rows, previous, base, registry, blogs, feed_status, cu
                 break
         target = output / path / 'index.html'
         target.parent.mkdir(parents=True, exist_ok=True)
-        display={**row,'_holdReference':registry.get('holds',{}).get(row['id'],{}).get('url')}
+        repeated = repeated_names[identity_key(row['title'])] > 1
+        display={**row,'_holdReference':registry.get('holds',{}).get(row['id'],{}).get('url'),
+                 '_identityTitle':document_title(row, repeated=repeated,
+                    include_id=repeated_identities[(identity_key(row['title']),identity_key(row['organization']))]>1,
+                    withheld=bool(reasons))}
         target.write_text(render_benefit(display, guide, blog, reasons, related, base, current, feed_status), encoding='utf-8')
         if reasons:
             held[row['id']] = reasons
         elif base:
-            modified = max(filter(None, [TEMPLATE_MODIFIED, source_date(row), guide['reviewedAt'][:10] if guide else None, min(CLASSIFICATION_MODIFIED,current.astimezone(KST).date().isoformat()) if classification_difference(row) else None]))
+            modified = max(filter(None, [TEMPLATE_MODIFIED, source_date(row), guide['reviewedAt'][:10] if guide else None, min(CLASSIFICATION_MODIFIED,current.astimezone(KST).date().isoformat()) if classification_difference(row) else None, min(IDENTITY_METADATA_MODIFIED,current.astimezone(KST).date().isoformat()) if repeated else None]))
             if row['id'] in previous and material_hash(previous[row['id']])!=material_hash(row) and source_date(previous[row['id']])==source_date(row):
                 modified=None  # Content changed, but the authority did not supply a new modification time.
             entries.append((path, modified))

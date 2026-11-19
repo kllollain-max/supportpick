@@ -127,10 +127,12 @@
         return C.parseDetail(await shardCache.get(url),index);
       }));
       const fields=[['운영기관','organization'],['지원대상','target'],['지원내용·금액','support'],['신청기간','period'],['신청방법','method'],['준비서류','documents'],['선정기준','selection'],['API 조회일','checkedAt']];
-      let html='<div class="comparison-scroll" tabindex="0" role="region" aria-label="지원금 비교표"><table class="comparison-table"><caption>선택한 지원금의 공식 안내 비교</caption><thead><tr><th scope="col">확인 항목</th>'+selected.map(p=>'<th scope="col"><a href="benefits/'+encodeURIComponent(p.id)+'/">'+esc(p.title)+'</a></th>').join('')+'</tr></thead><tbody>';
+      let html='<div class="comparison-scroll" tabindex="0" role="region" aria-label="지원금 비교표"><table class="comparison-table"><caption>선택한 지원금의 공식 안내 비교</caption><thead><tr><th scope="col">확인 항목</th>'+selected.map(p=>'<th scope="col"><a href="benefits/'+encodeURIComponent(p.id)+'/">'+esc(p.title)+'</a><br><span class="source-meta">'+esc(p.organization||'기관 확인 필요')+'</span></th>').join('')+'</tr></thead><tbody>';
       html+='<tr><th scope="row">지원방식(API 분류)</th>'+selected.map(p=>'<td>'+classificationHTML(p)+'</td>').join('')+'</tr>';
       for(const [label,key] of fields)html+='<tr><th scope="row">'+label+'</th>'+selected.map(p=>'<td>'+esc(p[key]||'공식 공고 확인 필요')+'</td>').join('')+'</tr>';
       html+='<tr><th scope="row">중복 수혜</th>'+selected.map(()=>'<td>개별 공고의 중복지원·제외 조항 확인 필요</td>').join('')+'</tr><tr><th scope="row">공식 출처</th>'+selected.map(p=>'<td><a target="_blank" rel="noopener noreferrer" href="'+esc(C.safeURL(p.officialUrl))+'">공식 안내 ↗</a></td>').join('')+'</tr></tbody></table></div>';
+      const names=selected.map(p=>String(p.title).replace(/\s+/g,' ').trim().toLocaleLowerCase());
+      if(new Set(names).size<names.length)html='<p class="context-note same-name-notice">이름이 같아도 기관별 지원 조건은 다를 수 있습니다. 각 열의 기관명과 공식 공고를 대조하세요.</p>'+html;
       $('compareContent').innerHTML=html;
     }catch(error){$('compareContent').textContent=error.message+' 잠시 후 다시 시도하거나 개별 공식 안내를 확인하세요.';}
   }
