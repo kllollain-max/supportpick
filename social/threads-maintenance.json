@@ -14,6 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "44450596165",
     "44439237795",
     "44427482591",
     "44423371036",
@@ -4163,25 +4164,33 @@
       "conclusion": "success",
       "updated_at": "2026-11-19T01:45:25Z",
       "head_sha": "09bc2804be9ad3ec55054bec4f3ba7bce4b4762c"
+    },
+    "44450596165": {
+      "run_id": "44450596165",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-19T03:19:27Z",
+      "head_sha": "cbc9e1034ed6c3d85c39eaf3ccfb4a3f6640b819"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-19T02:42:26.423550+00:00",
-    "result": "no_update",
-    "maintenance_previous_blob_sha": "2ea2ff439da07b38d9f5e921559d10661d3f273b",
+    "checked_at": "2026-11-19T03:42:19.375046+00:00",
+    "result": "reviewed_queue_prepared_no_new_publication",
+    "maintenance_previous_blob_sha": "c3379600b337155358ded369411b71b40715ef1a",
     "current_main_sha": "cbc9e1034ed6c3d85c39eaf3ccfb4a3f6640b819",
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
     "publication_ledger_sha": "971b839aab4a39cfaf9784f0c42ddf79fcadd49f",
-    "queue_blob_sha": "589fd555f1e04b3bf0b07bbab0254f536dcf47e6",
+    "queue_blob_sha": "f6f80ff7af8a4cd3477c6c0678930f972daae309",
     "changed_run_versions": [
       {
-        "run_id": "44439237795",
+        "run_id": "44450596165",
         "run_attempt": 1,
         "status": "completed",
         "conclusion": "success",
-        "updated_at": "2026-11-19T01:45:25Z",
-        "head_sha": "09bc2804be9ad3ec55054bec4f3ba7bce4b4762c"
+        "updated_at": "2026-11-19T03:19:27Z",
+        "head_sha": "cbc9e1034ed6c3d85c39eaf3ccfb4a3f6640b819"
       }
     ],
     "active_target_runs": [],
@@ -4215,7 +4224,7 @@
       "read_current_verify_snapshot_load_feed": true,
       "all_four_ready_source_fingerprints_equal": true,
       "source_only_not_current_application_verification": true,
-      "verification_checked_at": "2026-11-19T02:42:26.423550+00:00",
+      "verification_checked_at": "2026-11-19T03:42:19.375046+00:00",
       "cached_artifact_digest_reverified": true
     },
     "publisher": {
@@ -4270,24 +4279,73 @@
       "body_and_asset_hash_match": true,
       "actual_publisher_tests_passed": 138,
       "job_logs_retrieved_this_check": true,
-      "cached_artifact_digest_reverified": true
+      "cached_artifact_digest_reverified": true,
+      "active_noon_slot": {
+        "slot": "2026-11-19T12:00:00+09:00",
+        "status": "unreserved_waiting_existing_natural_schedule",
+        "deadline": "2026-11-19T14:00:00+09:00",
+        "not_classified_failure": true,
+        "recovery_dispatch": false
+      }
     },
     "writer": {
-      "queue_write": false,
-      "new_entries": 0,
-      "queue_reused": true,
-      "new_writing_this_check": false,
+      "queue_write": true,
+      "new_entries": 1,
+      "queue_reused": false,
+      "new_writing_this_check": true,
       "existing_entries_preserved": 54,
       "existing_public_bodies_preserved": 54,
       "genuinely_revalidated_existing_wrappers": 0,
       "selection_notes_preserved": 56,
-      "preview_total_ready": 4,
+      "preview_total_ready": 5,
       "future_regular_ready": 4,
-      "active_regular_ready": 0,
+      "active_regular_ready": 1,
       "validate_ready_entry_and_preview": true,
       "future_slot_simulation": true,
       "source_recheck_required_at_publish": true,
       "next_24h_sequence": [
+        {
+          "slot": "2026-11-19T16:00:00+09:00",
+          "benefit_id": "B46001400003",
+          "pattern": "P6",
+          "media_turn": "IMAGE",
+          "char_count": 373,
+          "expires_at": "2026-11-19T17:15:50.080831+09:00",
+          "current_source_fresh_at_slot": true,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-19T20:00:00+09:00",
+          "benefit_id": "B55201500202",
+          "pattern": "P8",
+          "media_turn": "TEXT",
+          "char_count": 427,
+          "expires_at": "2026-11-20T09:11:05.576661+09:00",
+          "current_source_fresh_at_slot": true,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-20T08:00:00+09:00",
+          "benefit_id": "B55145700016",
+          "pattern": "P1",
+          "media_turn": "IMAGE",
+          "char_count": 454,
+          "expires_at": "2026-11-20T09:11:05.576661+09:00",
+          "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-20T12:00:00+09:00",
+          "benefit_id": "135200000005",
+          "pattern": "P5",
+          "media_turn": "TEXT",
+          "char_count": 394,
+          "expires_at": "2026-11-20T12:40:35.808206+09:00",
+          "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true
+        }
+      ],
+      "active_and_future_sequence": [
         {
           "slot": "2026-11-19T12:00:00+09:00",
           "benefit_id": "VOU000000020",
@@ -4327,64 +4385,62 @@
           "expires_at": "2026-11-20T09:11:05.576661+09:00",
           "current_source_fresh_at_slot": false,
           "source_recheck_required_at_publish": true
-        }
-      ],
-      "new_draft_source_fresh_at_nextday_slot": false,
-      "queue_cas": {
-        "commit_sha": "e7ae68829d5857ae9486f1c97e64f0ce6f7c4639",
-        "content_sha": "589fd555f1e04b3bf0b07bbab0254f536dcf47e6"
-      },
-      "readback_exact": true,
-      "asset_current_sha256_recompared": [
-        {
-          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-          "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-          "checked_at": "2026-11-19T09:10:57.820474+09:00",
-          "new_visual_inspection": false
         },
         {
-          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-          "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-          "checked_at": "2026-11-19T09:11:05.576605+09:00",
-          "new_visual_inspection": false
+          "slot": "2026-11-20T12:00:00+09:00",
+          "benefit_id": "135200000005",
+          "pattern": "P5",
+          "media_turn": "TEXT",
+          "char_count": 394,
+          "expires_at": "2026-11-20T12:40:35.808206+09:00",
+          "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true
         }
       ],
+      "queue_cas": {
+        "commit_sha": "c8571baa59129c18d0862e473793a8afe78b5f0f",
+        "content_sha": "f6f80ff7af8a4cd3477c6c0678930f972daae309"
+      },
+      "readback_exact": true,
+      "asset_current_sha256_recompared": true,
       "new_visual_inspection": false,
-      "new_draft_prepublication_wording_correction": "Clarified discount end at expected birth date plus one year, avoiding unintended start-at-due-date reading; corrected only the new unreserved draft, existing53 public bodies unchanged.",
-      "last_validated_at": "2026-11-19T11:41:16.484378+09:00"
+      "new_slot_expected_media": "TEXT conditional on active noon and existing future READY consumption",
+      "new_entry_fact_scope": "Seocho year-round waitlist intake, not current participant recruitment or immediate food payout. Regional66month and2026income/assets rules override generic72month/old insurance-premium summaries only for this regional post."
     },
     "metrics": {
-      "run_id": "44439237795",
+      "run_id": "44450596165",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-19T01:45:25Z",
-      "head_sha": "09bc2804be9ad3ec55054bec4f3ba7bce4b4762c",
-      "job_id": 135275659241,
-      "artifact_id": 14489897770,
-      "artifact_digest": "sha256:2e28468a69473e1378ac1e9d18dcdfbb21053a6ee9f9e12c7672d908bf2eb129",
+      "updated_at": "2026-11-19T03:19:27Z",
+      "head_sha": "cbc9e1034ed6c3d85c39eaf3ccfb4a3f6640b819",
+      "job_id": 135313268227,
+      "artifact_id": 14494814065,
+      "artifact_digest": "sha256:1ffef64d2224d098131ce8264052a995a99a5f9f24428d96ed6d232c8915dd38",
       "artifact_digest_verified": true,
-      "observed_at": "2026-11-19T01:45:19.897830+00:00",
+      "observed_at": "2026-11-19T03:19:23.086715+00:00",
       "records": 0,
       "new_observations": 0,
       "job_logs_retrieved": true,
       "workflow_dispatch": false,
       "publication_calls": 0,
-      "classification": "normal_no_due_milestones",
-      "latest_observed_run_id": "44439237795",
+      "classification": "normal_no_due_milestones_at_latest_snapshot_time",
+      "latest_observed_run_id": "44450596165",
       "total_observations": 87,
       "new_metric_observations": 0,
       "new_observation_keys": [],
-      "actual_current_read_path_due_missing_latest_windows": 0,
-      "currently_due_post_ids": [],
-      "current_due_status": "none",
-      "job_logs_retrieved_this_check": true,
-      "artifact_redownloaded_this_check": true,
+      "actual_current_read_path_due_missing_latest_windows": 1,
+      "currently_due_post_ids": [
+        "18061100522563998"
+      ],
+      "current_due_status": "awaiting_next_existing_official_snapshot",
       "new_evaluation_report_due": false,
       "prior_7day_evaluation_unchanged": true,
       "14day_not_due": true,
       "weights_unchanged": true,
-      "actual_zero_and_unprovided_null_distinguished": true
+      "artifact_redownloaded_this_check": true,
+      "job_logs_retrieved_this_check": true,
+      "zero_values_not_invented": true
     },
     "recovery": {
       "required": false,
@@ -4399,10 +4455,10 @@
       "same_cause_priority_guard_still_passes": true
     },
     "local_validation": {
-      "checked_at": "2026-11-19T11:41:16.484378+09:00",
-      "ready": 4,
+      "checked_at": "2026-11-19T12:40:35.808206+09:00",
+      "ready": 5,
       "future_regular_ready": 4,
-      "active_regular_ready": 0,
+      "active_regular_ready": 1,
       "drafts": [
         {
           "slot": "2026-11-19T12:00:00+09:00",
@@ -4443,6 +4499,58 @@
           "expires_at": "2026-11-20T09:11:05.576661+09:00",
           "current_source_fresh_at_slot": false,
           "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-20T12:00:00+09:00",
+          "benefit_id": "135200000005",
+          "pattern": "P5",
+          "media_turn": "TEXT",
+          "char_count": 394,
+          "expires_at": "2026-11-20T12:40:35.808206+09:00",
+          "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true
+        }
+      ],
+      "future_next24h": [
+        {
+          "slot": "2026-11-19T16:00:00+09:00",
+          "benefit_id": "B46001400003",
+          "pattern": "P6",
+          "media_turn": "IMAGE",
+          "char_count": 373,
+          "expires_at": "2026-11-19T17:15:50.080831+09:00",
+          "current_source_fresh_at_slot": true,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-19T20:00:00+09:00",
+          "benefit_id": "B55201500202",
+          "pattern": "P8",
+          "media_turn": "TEXT",
+          "char_count": 427,
+          "expires_at": "2026-11-20T09:11:05.576661+09:00",
+          "current_source_fresh_at_slot": true,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-20T08:00:00+09:00",
+          "benefit_id": "B55145700016",
+          "pattern": "P1",
+          "media_turn": "IMAGE",
+          "char_count": 454,
+          "expires_at": "2026-11-20T09:11:05.576661+09:00",
+          "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-20T12:00:00+09:00",
+          "benefit_id": "135200000005",
+          "pattern": "P5",
+          "media_turn": "TEXT",
+          "char_count": 394,
+          "expires_at": "2026-11-20T12:40:35.808206+09:00",
+          "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true
         }
       ],
       "source": {
@@ -4455,19 +4563,172 @@
       },
       "source_count": 10887,
       "ledger_records": 56,
-      "queue_entries": 54,
+      "queue_entries": 55,
       "selection_notes": 56,
-      "queue_write": false,
+      "new_entry": {
+        "slot": "2026-11-20T12:00:00+09:00",
+        "benefit_id": "135200000005",
+        "source_fingerprint": "d27b4b9a9593ad71a17ff6979d1cc74605b87901b0733cac3fc08bc8419bcdb7",
+        "source_generation": "gov24-44408666268-1",
+        "prepared_at": "2026-11-19T12:40:35.808206+09:00",
+        "expires_at": "2026-11-20T12:40:35.808206+09:00",
+        "asset_sha256": null,
+        "writer": {
+          "schema_version": "supportpick.writer.v1",
+          "status": "READY",
+          "selected_program_id": "135200000005",
+          "post_text": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요.\n\n먼저 두 가지를 살펴봐요.\n• 거주·소득: 서초구에 거주하고, 소득과 재산을 함께 반영한 가구 소득인정액이 기준 중위소득 80% 이하여야 해요.\n• 선정 절차: 대기 신청 후 모집기간에 안내를 받아 소득조사와 보건소 영양상태평가·종합판정을 거쳐요. 빈혈·신체계측·영양섭취 상태 등을 확인해요.\n\n전화나 방문으로 대기 신청을 할 수 있어요. 보충식품은 현금 지원이 아니며, 신청 즉시 지급되거나 선정되는 것은 아니에요. 조제분유·친환경 농산물꾸러미 지원 등과의 중복 제한도 확인해야 해요.\n\n자세한 사항은 프로필링크 확인",
+          "draft_text": null,
+          "reply_texts": [],
+          "media": {
+            "turn": "TEXT",
+            "asset_id": null,
+            "check": "NOT_REQUIRED",
+            "image_copy": null,
+            "alt_text": null
+          },
+          "review": {
+            "planned_at": "2026-11-20T12:00:00+09:00",
+            "application_status": "ALWAYS",
+            "reader": "서울 서초구 거주 임산부 및 생후66개월이하영유아 가구 중 소득·영양판정을 받을 대기신청자",
+            "central_message": "서초구 영양플러스 대기 신청과 실제 지원 대상 선정은 어떻게 다른가요?",
+            "pattern": "P5",
+            "selection_reason": "56완료게시+활성12미예약READY와미래3READY중복제외후동일ID누적조회수56221최상위검증후보. 상위40HOLD/SKIP실제이유·출처56기존notes보존. 지역별시기차이는직접연서초연중대기접수로한정.",
+            "interest_basis": "OBSERVED_METRICS",
+            "duplicate_check": "CHECKED",
+            "evidence": [
+              {
+                "source_id": "135200000005",
+                "source_ref": "https://www.seocho.go.kr/site/sh/03/10301040000002019071203.jsp",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-19T12:40:35.808206+09:00",
+                "claims_supported": [
+                  "이번실행공식서초구보건소2026기준표·영양플러스본문336~410행실제열람. 관내임산부/66개월이하영유아,소득·재산종합80%및소득인정액정의,연중전화·방문대기접수,모집기간개별안내,소득조사후보건소영양상태평가와종합판정,교육상담·맞춤보충식품확인. 연중인것은대기접수이며현재모집·식품즉시지급을확정하지않음. 주소지외전국일괄접수주장없음."
+                ]
+              },
+              {
+                "source_id": "135200000005",
+                "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10706020300",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-19T12:40:35.808206+09:00",
+                "claims_supported": [
+                  "이번실행보건복지부영양플러스서비스안내844~855행실제열람. 영양위험요인,교육상담과보충식품6종,관할보건소신청·영양평가를대조. 페이지최종수정2025-09-30이므로건보료소득판정은2026서초구소득재산안내로한정해최신지역기준우선."
+                ]
+              },
+              {
+                "source_id": "135200000005",
+                "source_ref": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=1&cnpClsNo=3&csmSeq=735",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-19T12:40:35.808206+09:00",
+                "claims_supported": [
+                  "이번실행2026영양안내참조공식생활법령본문217~243행실제열람. 조제분유지원받는영유아/친환경농산물꾸러미참여임신출산수유부중복수혜제한확인. 건보료소득판정부분은서초구2026현행소득재산안내와달라본문에그대로쓰지않음. 전국72개월설명과달리선택지역서초66개월로대상명시."
+                ]
+              },
+              {
+                "source_id": "135200000005",
+                "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999156&bnefType=all&svcId=135200000005",
+                "access_method": "PROVIDED_OFFICIAL_TEXT",
+                "verified_at": "2026-11-19T12:40:35.808206+09:00",
+                "claims_supported": [
+                  "완전세대gov24-44408666268-1 동일ID공식serviceList/detail전체실제대조,누적조회수56221. APIcheckedAt=2026-11-19T07:11:18.506075+09:00,수집완료=2026-11-19T07:15:21.556237+09:00. 날짜는보건소별상이하므로수집성공을현재모집증거로쓰지않고별도직접연서초현행연중대기접수에한정."
+                ]
+              }
+            ],
+            "checks": {
+              "facts": "PASS",
+              "current_status": "PASS",
+              "eligibility_and_units": "PASS",
+              "cta_and_no_links": "PASS",
+              "length": "PASS",
+              "media": "NOT_REQUIRED"
+            },
+            "char_count": 394,
+            "count_method": "python_len_including_spaces_and_newlines",
+            "missing_info": [],
+            "hold_reasons": [],
+            "warnings": [
+              "현재확인범위는서초구연중대기접수안내이며새모집일·대기순번·선정·실제식품제공시각/물량은확정하지않음. 현재모집중으로표현하지않음.",
+              "소득판정API·과거국가안내건보료와지역2026소득재산조사구분. 최신지역안내로한정했으며연령도서초66개월사용.",
+              "공식공개안내만열람,개인대기신청·접수거래·프로필경로미실행. 현재07:15source는내일12발송시24h초과. 실제발송때최신완전source·공식상태·만료·IMAGE/TEXT필수재검증."
+            ],
+            "reach_editorial": {
+              "policy_id": "supportpick-threads-reach-v1-20261109",
+              "core_question": "서초구 영양플러스 대기 신청과 실제 지원 대상 선정은 어떻게 다른가요?",
+              "reader_scope": "서울 서초구 거주 임산부 및 생후66개월이하영유아 가구 중 소득·영양판정을 받을 대기신청자",
+              "angles": [
+                "영양교육과보충식품실익",
+                "거주·소득재산과영양판정",
+                "연중대기신청과모집선정절차구분"
+              ],
+              "chosen_angle": "대상·지원실익→두자격체크→대기신청과선정구분",
+              "opening_candidates": [
+                {
+                  "type": "생활 상황형",
+                  "group": "A",
+                  "text": "아이의 영양 관리가 걱정되는 서초구 가정이라면 영양플러스의 상담·보충식품 지원과 대기 접수 조건을 확인해요."
+                },
+                {
+                  "type": "대상·혜택형",
+                  "group": "B",
+                  "text": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요."
+                },
+                {
+                  "type": "조건 설명형",
+                  "group": null,
+                  "text": "서초구 영양플러스는 연중 대기 접수와 실제 대상자 선정 시점이 달라요."
+                }
+              ],
+              "chosen_opening": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요.",
+              "opening_type": "대상·혜택형",
+              "cohort": "B",
+              "selection_reason": "첫적용2026-11-10에서10일뒤Nov20 12시는B. 같은날08P1코레일이동상황과다른P5거주·소득재산체크→대기판정흐름. 최근20실제게시와현재4READY의도입·전개를비교하고단어만바꾼템플릿피함.",
+              "history_posts_checked": 20,
+              "comparison_eligible": true,
+              "comparison_strata": {
+                "geo": "서울서초구",
+                "audience": "임산부·영유아가구",
+                "benefit": "영양교육과보충식품현물",
+                "application": "연중대기접수·모집개별안내",
+                "media": "TEXT"
+              },
+              "comparison_group": "87공식관측 중25개24h창은설명통계A12/B13,중앙값83/78. 유사사업매칭0·지역/혜택/독자/시각/미디어교란;반복우세판정없음,비중유지.7일평가완료보존/14일미도래.",
+              "applied_elements": [
+                "지역·대상·실익을첫단락",
+                "소득인정액과월급구분",
+                "대기접수와즉시선정·지급구분",
+                "2항목자격체크와판정순서",
+                "현물과중복제한명시"
+              ],
+              "profile_route": "프로필링크/사이트의접수기능과실제보건소대기신청거래는미수행;자동신청·즉시선정기능을보장하지않음.",
+              "source_recheck_required_at_publish": true,
+              "master_full_used": true,
+              "supplemental_full_used_in_current_model_input": true,
+              "writing_input_sha256": "9386ff289577926dab56255abe99ed42ddb05770c6071050196759902b6dec94"
+            }
+          },
+          "next_history_record": {
+            "program_id": "135200000005",
+            "notice_version": "2026서초구현행연중대기접수직접확인",
+            "pattern": "P5",
+            "opening": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요.",
+            "structure": "서초대상·실익→소득/절차2체크→대기접수·판정과중복제한→CTA",
+            "media_turn": "TEXT"
+          }
+        }
+      },
+      "queue_write": true,
       "new_posts": 0,
-      "due_metrics_before_merge": 0,
-      "due_ids_before_merge": [],
+      "due_metrics": 1,
+      "due_ids": [
+        "18061100522563998"
+      ],
       "current_image_bytes_sha_recompared": true,
       "new_visual_inspection": false,
       "pending": null,
       "lease": null,
       "source_recheck_required_at_publish": true
     },
-    "next_condition": "No new publication/failure/partial/hold/metric or evaluation. 56uniquecompleteverifiedledger,54queueentries56selectionnotes,87officialID/windowobservations unchanged. Next24h4READY12TEXT/P5,16IMAGE/P6,20TEXT/P8,Nov20 08IMAGE/P1 validated including exact sourcefingerprints/actualallowed futuretimes and currentPNGbytes SHA; originalevidencetimes/bodies/media/pattern/cohorts preserved. Latestcompletedoperations07:15gov24-44408666268-1 complete10887manifest verified; source notfreshNov20 08, sender latestcomplete source/officialstatus/expiry/media mandatory. Latestactualmetrics44439237795 runattempt1completed success01:45:25Z confirmed joblog/digestverifiedartifact observed01:45:19.897830Z records0: normal no due, not failedmeasurements or fabricated0views. No pending/lease/recoverydispatch/extraPOST/rerun/backfill/schedule/code/site/accountchange. Prior7dayevaluation preserved;14daynotdue and matchedpairs0/no weights adjustment. Prior08:46publication and preventive repair not repeated.",
+    "next_condition": "No new publication/failure/partial/recovery. Actual56completeledger no pending/lease. Active Nov19noon unreserved original381TEXT/P5 preserved awaiting natural Actions within12~14window; not failed and no dispatch. Following24h slots16IMAGE/P6,20TEXT/P8,Nov20 08IMAGE/P1,12TEXT/P5 ready after exact sourcefingerprint and futuretime validations.55queueentries/56notes,54originalentries unchanged. New394charSeocho nutrition body states annual WAITLIST intake only, income/assets80%,66monthlocalage,nutritionassessment and noncash/duplicate limits. Fullmaster and supplementalpolicy/private3angles/openingsB applied. New source-generation07:15complete10887 verified; notfreshnextday08/12, sender newestcomplete source+officialstatus/expiry/media required. IMPORTANT new noon entry24h expiryNov20 12:40 precedes normaldelayed12:45 start: later existing check must genuinely re-open official guide/source and archive/CAS fresh factual evidence/wrapper before send; never date-only refresh. If earlierunreservedslot fails beforePOST recalc futurepriority/media, preserve pending.87metricobservations preserved; latest12:19snap0due normal, nowdue windows awaitnext existingofficial reader; no extra dispatch.7dayevaluation preserved/14daynotdue/matchedpairs0/no weightschange. No site/otheraccount/code/schedule/extraPOST/rerun/backfill.",
     "main_change_observation": {
       "head_sha": "cbc9e1034ed6c3d85c39eaf3ccfb4a3f6640b819",
       "files": [
@@ -4481,7 +4742,7 @@
         "tools/detail_pages.py"
       ]
     },
-    "local_execution_note": "Fresh remote required master/writer/workflow/asset/state blobs matched local bytes. Latest actual completed operations/publisher/metrics logs re-read; source and publisher cached returned-artifact ZIP digests reverified; new metrics tool-returned artifact downloaded and SHA256 verified. Complete source manifest/load_feed/read_current/verify_snapshot passed. Maincbc9e103 unrelated classification/site change observed only; required writer blobs unchanged and no site edits performed. Queue reused with no new writing or evidence date refresh. Actual PNG byte comparison succeeded, no new direct visual inspection."
+    "local_execution_note": "Fresh required writer/master/workflow/asset/state blobs matched current local bytes. Actual latest completed operations and publisher logs read; latest metrics run/job and tool-returned ZIP digest verified. Complete source manifest/read_current/verify_snapshot/load_feed rechecked. Current PNG bytes match approved SHA, no newvisualclaim. Main sitecbc9e103 observed only, not changed. Queue CAS read back full exact content and SHA. Active noon slot not replayed or forced."
   },
   "last_reported_publication": {
     "run_id": "44423371036",
@@ -12421,6 +12682,25 @@
           "workflow_dispatch": false,
           "publication_calls": 0,
           "classification": "normal_no_due_milestones"
+        },
+        "44450596165": {
+          "run_id": "44450596165",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-19T03:19:27Z",
+          "head_sha": "cbc9e1034ed6c3d85c39eaf3ccfb4a3f6640b819",
+          "job_id": 135313268227,
+          "artifact_id": 14494814065,
+          "artifact_digest": "sha256:1ffef64d2224d098131ce8264052a995a99a5f9f24428d96ed6d232c8915dd38",
+          "artifact_digest_verified": true,
+          "observed_at": "2026-11-19T03:19:23.086715+00:00",
+          "records": 0,
+          "new_observations": 0,
+          "job_logs_retrieved": true,
+          "workflow_dispatch": false,
+          "publication_calls": 0,
+          "classification": "normal_no_due_milestones_at_latest_snapshot_time"
         }
       },
       "additional_connector_check": {
@@ -12713,29 +12993,30 @@
     },
     "next_condition": "Natural20 KST and tomorrow08/12/16 publishers consume4 reviewed READY drafts; newNov16 16 IMAGE/P6 A vocational-training allowance entry stored and read back, previous41 entries preserved. Actual sender must recheck latest complete source, official status, evidence age, asset SHA and expiry. Current07:01 source is not fresh for tomorrow.44 complete publications; no pending/new failure/partial/recovery/code change. No new metrics; A6/B6 delayed24h comparison unchanged, insufficient8/group/no matched pairs; weights retained and7/14day evaluations not due. Official-law current10320 evidence used; obsolete7530 overview not copied, dynamic-shell law page not claimed directly read.",
     "latest_prepared_entry": {
-      "slot": "2026-11-20T08:00:00+09:00",
-      "benefit_id": "B55145700016",
-      "prepared_at": "2026-11-19T09:11:05.576661+09:00",
-      "expires_at": "2026-11-20T09:11:05.576661+09:00",
-      "pattern": "P1",
-      "media_turn": "IMAGE",
-      "char_count": 454,
-      "cohort": "A",
+      "slot": "2026-11-20T12:00:00+09:00",
+      "benefit_id": "135200000005",
+      "prepared_at": "2026-11-19T12:40:35.808206+09:00",
+      "expires_at": "2026-11-20T12:40:35.808206+09:00",
+      "pattern": "P5",
+      "media_turn": "TEXT",
+      "char_count": 394,
+      "cohort": "B",
       "queue_commit": {
-        "commit_sha": "e7ae68829d5857ae9486f1c97e64f0ce6f7c4639",
-        "content_sha": "589fd555f1e04b3bf0b07bbab0254f536dcf47e6"
+        "commit_sha": "c8571baa59129c18d0862e473793a8afe78b5f0f",
+        "content_sha": "f6f80ff7af8a4cd3477c6c0678930f972daae309"
       },
       "queue_readback_exact": true,
-      "source_recheck_required_at_publish": true
+      "source_recheck_required_at_publish": true,
+      "genuine_revalidation_needed_before_expected_delayed_publication": "Expiry Nov20 12:40:35 is before usual12:45 Actions start. At a later existing check genuinely reopen Seocho current guide and same-ID latest complete source; preserve body/cohort, archive old wrapper and CAS refreshed real evidence/max24h expiry. Do not merely change dates."
     },
     "latest_writing_policy_input": {
-      "checked_at": "2026-11-19T00:14:20.668971+00:00",
+      "checked_at": "2026-11-19T03:42:19.375046+00:00",
       "policy_id": "supportpick-threads-reach-v1-20261109",
       "master_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
       "master_full_used": true,
       "supplemental_full_used_in_current_model_input": true,
-      "writing_input_sha256": "c836e5738d837b4c792541d47baf4a17f7f92283653e3d3bb5e5b87d353a307c",
-      "internal_review_contains_three_angles_and_openings": true,
+      "writing_input_sha256": "9386ff289577926dab56255abe99ed42ddb05770c6071050196759902b6dec94",
+      "internal_three_angles_three_openings": true,
       "public_opening_only_one": true,
       "existing_ready_cohorts_preserved": true
     }
@@ -63613,6 +63894,576 @@
         ]
       },
       "local_execution_note": "Fresh remote required master/writer/workflow/asset/state blobs matched local bytes. Latest actual completed operations/publisher/metrics logs re-read; source and publisher cached returned-artifact ZIP digests reverified; new metrics tool-returned artifact downloaded and SHA256 verified. Complete source manifest/load_feed/read_current/verify_snapshot passed. Maincbc9e103 unrelated classification/site change observed only; required writer blobs unchanged and no site edits performed. Queue reused with no new writing or evidence date refresh. Actual PNG byte comparison succeeded, no new direct visual inspection."
+    },
+    "2026-11-19T03:42:19.375046+00:00": {
+      "checked_at": "2026-11-19T03:42:19.375046+00:00",
+      "result": "reviewed_queue_prepared_no_new_publication",
+      "maintenance_previous_blob_sha": "c3379600b337155358ded369411b71b40715ef1a",
+      "current_main_sha": "cbc9e1034ed6c3d85c39eaf3ccfb4a3f6640b819",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "971b839aab4a39cfaf9784f0c42ddf79fcadd49f",
+      "queue_blob_sha": "f6f80ff7af8a4cd3477c6c0678930f972daae309",
+      "changed_run_versions": [
+        {
+          "run_id": "44450596165",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-19T03:19:27Z",
+          "head_sha": "cbc9e1034ed6c3d85c39eaf3ccfb4a3f6640b819"
+        }
+      ],
+      "active_target_runs": [],
+      "run_pagination": {
+        "page_size": 100,
+        "pages_read": 1,
+        "last_observed_checkpoint_reached": true,
+        "all_target_run_versions_matched": true
+      },
+      "publication_ledger_records": 56,
+      "complete_verified_records": 56,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "44408666268",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-18T22:35:56Z",
+        "head_sha": "0937bc7a5d3765e9b9568f36bc27926f8f140b33",
+        "job_id": 135170619038,
+        "artifact_id": 14477242172,
+        "artifact_digest": "sha256:99ef449e5ab706bc39351ae6371dd56b93fea0b2bf073c473b1863f3ffc19aa4",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_run": true,
+        "generation": "gov24-44408666268-1",
+        "manifest_sha256": "c5eff55cb762ad6bb709c598d891ea1e8745682f4cacdfe4a293d722eb77660c",
+        "collection_succeeded_at": "2026-11-19T07:15:21.556237+09:00",
+        "count": 10887,
+        "read_current_verify_snapshot_load_feed": true,
+        "all_four_ready_source_fingerprints_equal": true,
+        "source_only_not_current_application_verification": true,
+        "verification_checked_at": "2026-11-19T03:42:19.375046+00:00",
+        "cached_artifact_digest_reverified": true
+      },
+      "publisher": {
+        "run_id": "44423371036",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-18T23:46:13Z",
+        "head_sha": "368b25f987793723f211d0c0526c2fd81b46414e",
+        "job_id": 135221823888,
+        "artifact_id": 14483590184,
+        "artifact_digest": "sha256:5c1d0c07994b0afc48878fa3122dfb9e598d46ab2766d3a8d4444e1fd841241d",
+        "artifact_digest_verified": true,
+        "classification": "verified_natural_regular_slot_publication",
+        "event": "schedule",
+        "published": true,
+        "slot": "2026-11-19T08:00:00+09:00",
+        "published_at": "2026-11-19T08:45:16.395779+09:00",
+        "benefit_id": "B27000100005",
+        "main_id": "18361336213223949",
+        "url": "https://www.threads.com/@hid_1004/post/Df5t3Z_GDxZ",
+        "stage": "complete",
+        "verified": true,
+        "content_hash": "3271a2e10489066288eacbdf902f70bb17f6ff85fbe13957e236ee14f14c3678",
+        "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+        "source_generation": "gov24-44408666268-1",
+        "pattern": "P4",
+        "media_turn": "IMAGE",
+        "char_count": 403,
+        "replies": 0,
+        "verification": "Actual original approved403char body, current unique complete verified ledger, main_id/URL receipt, IMAGE URL and approved byte SHA match. Actual138publisher tests PASS and downloaded result ZIP SHA256 verified. No independent public render or exact platform timestamp claimed.",
+        "verification_completed_at": "2026-11-19T00:14:20.668971+00:00",
+        "public_web_visibility_independently_verified": false,
+        "publication_ledger_records": 56,
+        "pending": null,
+        "lease": null,
+        "job_logs_retrieved": true,
+        "time_basis": {
+          "published_at": "Ledger invocation, not exact platform timestamp",
+          "verified_result_logged_at": "2026-11-19T08:46:08.542880+09:00",
+          "platform_timestamp": null,
+          "public_report": "Nov19 08:46 KST"
+        },
+        "reported_at": "2026-11-19T00:14:20.668971+00:00",
+        "comparison_eligible": false,
+        "comparison_exclusion": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment",
+        "latest_run_id": "44423371036",
+        "latest_publication_previously_reported": true,
+        "new_publication_this_run": false,
+        "new_failure": false,
+        "new_partial": false,
+        "body_and_asset_hash_match": true,
+        "actual_publisher_tests_passed": 138,
+        "job_logs_retrieved_this_check": true,
+        "cached_artifact_digest_reverified": true,
+        "active_noon_slot": {
+          "slot": "2026-11-19T12:00:00+09:00",
+          "status": "unreserved_waiting_existing_natural_schedule",
+          "deadline": "2026-11-19T14:00:00+09:00",
+          "not_classified_failure": true,
+          "recovery_dispatch": false
+        }
+      },
+      "writer": {
+        "queue_write": true,
+        "new_entries": 1,
+        "queue_reused": false,
+        "new_writing_this_check": true,
+        "existing_entries_preserved": 54,
+        "existing_public_bodies_preserved": 54,
+        "genuinely_revalidated_existing_wrappers": 0,
+        "selection_notes_preserved": 56,
+        "preview_total_ready": 5,
+        "future_regular_ready": 4,
+        "active_regular_ready": 1,
+        "validate_ready_entry_and_preview": true,
+        "future_slot_simulation": true,
+        "source_recheck_required_at_publish": true,
+        "next_24h_sequence": [
+          {
+            "slot": "2026-11-19T16:00:00+09:00",
+            "benefit_id": "B46001400003",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 373,
+            "expires_at": "2026-11-19T17:15:50.080831+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-19T20:00:00+09:00",
+            "benefit_id": "B55201500202",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 427,
+            "expires_at": "2026-11-20T09:11:05.576661+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T08:00:00+09:00",
+            "benefit_id": "B55145700016",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 454,
+            "expires_at": "2026-11-20T09:11:05.576661+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T12:00:00+09:00",
+            "benefit_id": "135200000005",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 394,
+            "expires_at": "2026-11-20T12:40:35.808206+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "active_and_future_sequence": [
+          {
+            "slot": "2026-11-19T12:00:00+09:00",
+            "benefit_id": "VOU000000020",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 381,
+            "expires_at": "2026-11-19T14:06:45.686883+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-19T16:00:00+09:00",
+            "benefit_id": "B46001400003",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 373,
+            "expires_at": "2026-11-19T17:15:50.080831+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-19T20:00:00+09:00",
+            "benefit_id": "B55201500202",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 427,
+            "expires_at": "2026-11-20T09:11:05.576661+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T08:00:00+09:00",
+            "benefit_id": "B55145700016",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 454,
+            "expires_at": "2026-11-20T09:11:05.576661+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T12:00:00+09:00",
+            "benefit_id": "135200000005",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 394,
+            "expires_at": "2026-11-20T12:40:35.808206+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "queue_cas": {
+          "commit_sha": "c8571baa59129c18d0862e473793a8afe78b5f0f",
+          "content_sha": "f6f80ff7af8a4cd3477c6c0678930f972daae309"
+        },
+        "readback_exact": true,
+        "asset_current_sha256_recompared": true,
+        "new_visual_inspection": false,
+        "new_slot_expected_media": "TEXT conditional on active noon and existing future READY consumption",
+        "new_entry_fact_scope": "Seocho year-round waitlist intake, not current participant recruitment or immediate food payout. Regional66month and2026income/assets rules override generic72month/old insurance-premium summaries only for this regional post."
+      },
+      "metrics": {
+        "run_id": "44450596165",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-19T03:19:27Z",
+        "head_sha": "cbc9e1034ed6c3d85c39eaf3ccfb4a3f6640b819",
+        "job_id": 135313268227,
+        "artifact_id": 14494814065,
+        "artifact_digest": "sha256:1ffef64d2224d098131ce8264052a995a99a5f9f24428d96ed6d232c8915dd38",
+        "artifact_digest_verified": true,
+        "observed_at": "2026-11-19T03:19:23.086715+00:00",
+        "records": 0,
+        "new_observations": 0,
+        "job_logs_retrieved": true,
+        "workflow_dispatch": false,
+        "publication_calls": 0,
+        "classification": "normal_no_due_milestones_at_latest_snapshot_time",
+        "latest_observed_run_id": "44450596165",
+        "total_observations": 87,
+        "new_metric_observations": 0,
+        "new_observation_keys": [],
+        "actual_current_read_path_due_missing_latest_windows": 1,
+        "currently_due_post_ids": [
+          "18061100522563998"
+        ],
+        "current_due_status": "awaiting_next_existing_official_snapshot",
+        "new_evaluation_report_due": false,
+        "prior_7day_evaluation_unchanged": true,
+        "14day_not_due": true,
+        "weights_unchanged": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "zero_values_not_invented": true
+      },
+      "recovery": {
+        "required": false,
+        "new_failures": 0,
+        "new_partials": 0,
+        "code_change_required": false,
+        "code_change_applied": false,
+        "post_retry_budget_used": 0,
+        "workflow_dispatch": false,
+        "past_resolved_incidents_preserved": true,
+        "prior_preventive_input_repair_preserved": true,
+        "same_cause_priority_guard_still_passes": true
+      },
+      "local_validation": {
+        "checked_at": "2026-11-19T12:40:35.808206+09:00",
+        "ready": 5,
+        "future_regular_ready": 4,
+        "active_regular_ready": 1,
+        "drafts": [
+          {
+            "slot": "2026-11-19T12:00:00+09:00",
+            "benefit_id": "VOU000000020",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 381,
+            "expires_at": "2026-11-19T14:06:45.686883+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-19T16:00:00+09:00",
+            "benefit_id": "B46001400003",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 373,
+            "expires_at": "2026-11-19T17:15:50.080831+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-19T20:00:00+09:00",
+            "benefit_id": "B55201500202",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 427,
+            "expires_at": "2026-11-20T09:11:05.576661+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T08:00:00+09:00",
+            "benefit_id": "B55145700016",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 454,
+            "expires_at": "2026-11-20T09:11:05.576661+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T12:00:00+09:00",
+            "benefit_id": "135200000005",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 394,
+            "expires_at": "2026-11-20T12:40:35.808206+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "future_next24h": [
+          {
+            "slot": "2026-11-19T16:00:00+09:00",
+            "benefit_id": "B46001400003",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 373,
+            "expires_at": "2026-11-19T17:15:50.080831+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-19T20:00:00+09:00",
+            "benefit_id": "B55201500202",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 427,
+            "expires_at": "2026-11-20T09:11:05.576661+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T08:00:00+09:00",
+            "benefit_id": "B55145700016",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 454,
+            "expires_at": "2026-11-20T09:11:05.576661+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-20T12:00:00+09:00",
+            "benefit_id": "135200000005",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 394,
+            "expires_at": "2026-11-20T12:40:35.808206+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source": {
+          "count": 10887,
+          "generation": "gov24-44408666268-1",
+          "lastSuccessAt": "2026-11-19T07:15:21.556237+09:00",
+          "manifestSha256": "c5eff55cb762ad6bb709c598d891ea1e8745682f4cacdfe4a293d722eb77660c",
+          "path": "snapshots/gov24-44408666268-1",
+          "version": 1
+        },
+        "source_count": 10887,
+        "ledger_records": 56,
+        "queue_entries": 55,
+        "selection_notes": 56,
+        "new_entry": {
+          "slot": "2026-11-20T12:00:00+09:00",
+          "benefit_id": "135200000005",
+          "source_fingerprint": "d27b4b9a9593ad71a17ff6979d1cc74605b87901b0733cac3fc08bc8419bcdb7",
+          "source_generation": "gov24-44408666268-1",
+          "prepared_at": "2026-11-19T12:40:35.808206+09:00",
+          "expires_at": "2026-11-20T12:40:35.808206+09:00",
+          "asset_sha256": null,
+          "writer": {
+            "schema_version": "supportpick.writer.v1",
+            "status": "READY",
+            "selected_program_id": "135200000005",
+            "post_text": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요.\n\n먼저 두 가지를 살펴봐요.\n• 거주·소득: 서초구에 거주하고, 소득과 재산을 함께 반영한 가구 소득인정액이 기준 중위소득 80% 이하여야 해요.\n• 선정 절차: 대기 신청 후 모집기간에 안내를 받아 소득조사와 보건소 영양상태평가·종합판정을 거쳐요. 빈혈·신체계측·영양섭취 상태 등을 확인해요.\n\n전화나 방문으로 대기 신청을 할 수 있어요. 보충식품은 현금 지원이 아니며, 신청 즉시 지급되거나 선정되는 것은 아니에요. 조제분유·친환경 농산물꾸러미 지원 등과의 중복 제한도 확인해야 해요.\n\n자세한 사항은 프로필링크 확인",
+            "draft_text": null,
+            "reply_texts": [],
+            "media": {
+              "turn": "TEXT",
+              "asset_id": null,
+              "check": "NOT_REQUIRED",
+              "image_copy": null,
+              "alt_text": null
+            },
+            "review": {
+              "planned_at": "2026-11-20T12:00:00+09:00",
+              "application_status": "ALWAYS",
+              "reader": "서울 서초구 거주 임산부 및 생후66개월이하영유아 가구 중 소득·영양판정을 받을 대기신청자",
+              "central_message": "서초구 영양플러스 대기 신청과 실제 지원 대상 선정은 어떻게 다른가요?",
+              "pattern": "P5",
+              "selection_reason": "56완료게시+활성12미예약READY와미래3READY중복제외후동일ID누적조회수56221최상위검증후보. 상위40HOLD/SKIP실제이유·출처56기존notes보존. 지역별시기차이는직접연서초연중대기접수로한정.",
+              "interest_basis": "OBSERVED_METRICS",
+              "duplicate_check": "CHECKED",
+              "evidence": [
+                {
+                  "source_id": "135200000005",
+                  "source_ref": "https://www.seocho.go.kr/site/sh/03/10301040000002019071203.jsp",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-19T12:40:35.808206+09:00",
+                  "claims_supported": [
+                    "이번실행공식서초구보건소2026기준표·영양플러스본문336~410행실제열람. 관내임산부/66개월이하영유아,소득·재산종합80%및소득인정액정의,연중전화·방문대기접수,모집기간개별안내,소득조사후보건소영양상태평가와종합판정,교육상담·맞춤보충식품확인. 연중인것은대기접수이며현재모집·식품즉시지급을확정하지않음. 주소지외전국일괄접수주장없음."
+                  ]
+                },
+                {
+                  "source_id": "135200000005",
+                  "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10706020300",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-19T12:40:35.808206+09:00",
+                  "claims_supported": [
+                    "이번실행보건복지부영양플러스서비스안내844~855행실제열람. 영양위험요인,교육상담과보충식품6종,관할보건소신청·영양평가를대조. 페이지최종수정2025-09-30이므로건보료소득판정은2026서초구소득재산안내로한정해최신지역기준우선."
+                  ]
+                },
+                {
+                  "source_id": "135200000005",
+                  "source_ref": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=1&cnpClsNo=3&csmSeq=735",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-19T12:40:35.808206+09:00",
+                  "claims_supported": [
+                    "이번실행2026영양안내참조공식생활법령본문217~243행실제열람. 조제분유지원받는영유아/친환경농산물꾸러미참여임신출산수유부중복수혜제한확인. 건보료소득판정부분은서초구2026현행소득재산안내와달라본문에그대로쓰지않음. 전국72개월설명과달리선택지역서초66개월로대상명시."
+                  ]
+                },
+                {
+                  "source_id": "135200000005",
+                  "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999156&bnefType=all&svcId=135200000005",
+                  "access_method": "PROVIDED_OFFICIAL_TEXT",
+                  "verified_at": "2026-11-19T12:40:35.808206+09:00",
+                  "claims_supported": [
+                    "완전세대gov24-44408666268-1 동일ID공식serviceList/detail전체실제대조,누적조회수56221. APIcheckedAt=2026-11-19T07:11:18.506075+09:00,수집완료=2026-11-19T07:15:21.556237+09:00. 날짜는보건소별상이하므로수집성공을현재모집증거로쓰지않고별도직접연서초현행연중대기접수에한정."
+                  ]
+                }
+              ],
+              "checks": {
+                "facts": "PASS",
+                "current_status": "PASS",
+                "eligibility_and_units": "PASS",
+                "cta_and_no_links": "PASS",
+                "length": "PASS",
+                "media": "NOT_REQUIRED"
+              },
+              "char_count": 394,
+              "count_method": "python_len_including_spaces_and_newlines",
+              "missing_info": [],
+              "hold_reasons": [],
+              "warnings": [
+                "현재확인범위는서초구연중대기접수안내이며새모집일·대기순번·선정·실제식품제공시각/물량은확정하지않음. 현재모집중으로표현하지않음.",
+                "소득판정API·과거국가안내건보료와지역2026소득재산조사구분. 최신지역안내로한정했으며연령도서초66개월사용.",
+                "공식공개안내만열람,개인대기신청·접수거래·프로필경로미실행. 현재07:15source는내일12발송시24h초과. 실제발송때최신완전source·공식상태·만료·IMAGE/TEXT필수재검증."
+              ],
+              "reach_editorial": {
+                "policy_id": "supportpick-threads-reach-v1-20261109",
+                "core_question": "서초구 영양플러스 대기 신청과 실제 지원 대상 선정은 어떻게 다른가요?",
+                "reader_scope": "서울 서초구 거주 임산부 및 생후66개월이하영유아 가구 중 소득·영양판정을 받을 대기신청자",
+                "angles": [
+                  "영양교육과보충식품실익",
+                  "거주·소득재산과영양판정",
+                  "연중대기신청과모집선정절차구분"
+                ],
+                "chosen_angle": "대상·지원실익→두자격체크→대기신청과선정구분",
+                "opening_candidates": [
+                  {
+                    "type": "생활 상황형",
+                    "group": "A",
+                    "text": "아이의 영양 관리가 걱정되는 서초구 가정이라면 영양플러스의 상담·보충식품 지원과 대기 접수 조건을 확인해요."
+                  },
+                  {
+                    "type": "대상·혜택형",
+                    "group": "B",
+                    "text": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요."
+                  },
+                  {
+                    "type": "조건 설명형",
+                    "group": null,
+                    "text": "서초구 영양플러스는 연중 대기 접수와 실제 대상자 선정 시점이 달라요."
+                  }
+                ],
+                "chosen_opening": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요.",
+                "opening_type": "대상·혜택형",
+                "cohort": "B",
+                "selection_reason": "첫적용2026-11-10에서10일뒤Nov20 12시는B. 같은날08P1코레일이동상황과다른P5거주·소득재산체크→대기판정흐름. 최근20실제게시와현재4READY의도입·전개를비교하고단어만바꾼템플릿피함.",
+                "history_posts_checked": 20,
+                "comparison_eligible": true,
+                "comparison_strata": {
+                  "geo": "서울서초구",
+                  "audience": "임산부·영유아가구",
+                  "benefit": "영양교육과보충식품현물",
+                  "application": "연중대기접수·모집개별안내",
+                  "media": "TEXT"
+                },
+                "comparison_group": "87공식관측 중25개24h창은설명통계A12/B13,중앙값83/78. 유사사업매칭0·지역/혜택/독자/시각/미디어교란;반복우세판정없음,비중유지.7일평가완료보존/14일미도래.",
+                "applied_elements": [
+                  "지역·대상·실익을첫단락",
+                  "소득인정액과월급구분",
+                  "대기접수와즉시선정·지급구분",
+                  "2항목자격체크와판정순서",
+                  "현물과중복제한명시"
+                ],
+                "profile_route": "프로필링크/사이트의접수기능과실제보건소대기신청거래는미수행;자동신청·즉시선정기능을보장하지않음.",
+                "source_recheck_required_at_publish": true,
+                "master_full_used": true,
+                "supplemental_full_used_in_current_model_input": true,
+                "writing_input_sha256": "9386ff289577926dab56255abe99ed42ddb05770c6071050196759902b6dec94"
+              }
+            },
+            "next_history_record": {
+              "program_id": "135200000005",
+              "notice_version": "2026서초구현행연중대기접수직접확인",
+              "pattern": "P5",
+              "opening": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요.",
+              "structure": "서초대상·실익→소득/절차2체크→대기접수·판정과중복제한→CTA",
+              "media_turn": "TEXT"
+            }
+          }
+        },
+        "queue_write": true,
+        "new_posts": 0,
+        "due_metrics": 1,
+        "due_ids": [
+          "18061100522563998"
+        ],
+        "current_image_bytes_sha_recompared": true,
+        "new_visual_inspection": false,
+        "pending": null,
+        "lease": null,
+        "source_recheck_required_at_publish": true
+      },
+      "next_condition": "No new publication/failure/partial/recovery. Actual56completeledger no pending/lease. Active Nov19noon unreserved original381TEXT/P5 preserved awaiting natural Actions within12~14window; not failed and no dispatch. Following24h slots16IMAGE/P6,20TEXT/P8,Nov20 08IMAGE/P1,12TEXT/P5 ready after exact sourcefingerprint and futuretime validations.55queueentries/56notes,54originalentries unchanged. New394charSeocho nutrition body states annual WAITLIST intake only, income/assets80%,66monthlocalage,nutritionassessment and noncash/duplicate limits. Fullmaster and supplementalpolicy/private3angles/openingsB applied. New source-generation07:15complete10887 verified; notfreshnextday08/12, sender newestcomplete source+officialstatus/expiry/media required. IMPORTANT new noon entry24h expiryNov20 12:40 precedes normaldelayed12:45 start: later existing check must genuinely re-open official guide/source and archive/CAS fresh factual evidence/wrapper before send; never date-only refresh. If earlierunreservedslot fails beforePOST recalc futurepriority/media, preserve pending.87metricobservations preserved; latest12:19snap0due normal, nowdue windows awaitnext existingofficial reader; no extra dispatch.7dayevaluation preserved/14daynotdue/matchedpairs0/no weightschange. No site/otheraccount/code/schedule/extraPOST/rerun/backfill.",
+      "main_change_observation": {
+        "head_sha": "cbc9e1034ed6c3d85c39eaf3ccfb4a3f6640b819",
+        "files": [
+          ".github/workflows/content-mobile-check.yml",
+          "app.js",
+          "core.js",
+          "docs/ADSENSE_CLASSIFICATION_20261119.md",
+          "tests/classification.test.cjs",
+          "tests/comparison_browser.cjs",
+          "tests/test_classification_display.py",
+          "tools/detail_pages.py"
+        ]
+      },
+      "local_execution_note": "Fresh required writer/master/workflow/asset/state blobs matched current local bytes. Actual latest completed operations and publisher logs read; latest metrics run/job and tool-returned ZIP digest verified. Complete source manifest/read_current/verify_snapshot/load_feed rechecked. Current PNG bytes match approved SHA, no newvisualclaim. Main sitecbc9e103 observed only, not changed. Queue CAS read back full exact content and SHA. Active noon slot not replayed or forced."
     }
   },
   "last_reported_prepublication_repair": {
@@ -63621,87 +64472,86 @@
     "checked_at": "2026-11-17T22:44:51.951435+00:00"
   },
   "last_prepared_queue": {
-    "checked_at": "2026-11-19T00:14:20.668971+00:00",
+    "checked_at": "2026-11-19T03:42:19.375046+00:00",
     "commit": {
-      "commit_sha": "e7ae68829d5857ae9486f1c97e64f0ce6f7c4639",
-      "content_sha": "589fd555f1e04b3bf0b07bbab0254f536dcf47e6"
+      "commit_sha": "c8571baa59129c18d0862e473793a8afe78b5f0f",
+      "content_sha": "f6f80ff7af8a4cd3477c6c0678930f972daae309"
     },
-    "entries": 54,
+    "entries": 55,
     "future_regular_ready": 4,
-    "active_regular_ready": 0,
+    "active_regular_ready": 1,
     "new_entries": 1,
-    "existing_inputs_preserved": 52,
-    "existing_public_bodies_preserved": 53,
-    "genuinely_revalidated_existing_wrappers": 1,
+    "existing_inputs_preserved": 54,
+    "existing_public_bodies_preserved": 54,
     "selection_notes_preserved": 56,
     "readback_exact": true,
     "source_generation": "gov24-44408666268-1",
     "new_entry": {
-      "slot": "2026-11-20T08:00:00+09:00",
-      "benefit_id": "B55145700016",
-      "source_fingerprint": "539b2a59336beec7c41f46b0ae3d401b1411f3334f9371f74487563be5314efc",
+      "slot": "2026-11-20T12:00:00+09:00",
+      "benefit_id": "135200000005",
+      "source_fingerprint": "d27b4b9a9593ad71a17ff6979d1cc74605b87901b0733cac3fc08bc8419bcdb7",
       "source_generation": "gov24-44408666268-1",
-      "prepared_at": "2026-11-19T09:11:05.576661+09:00",
-      "expires_at": "2026-11-20T09:11:05.576661+09:00",
-      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "prepared_at": "2026-11-19T12:40:35.808206+09:00",
+      "expires_at": "2026-11-20T12:40:35.808206+09:00",
+      "asset_sha256": null,
       "writer": {
         "schema_version": "supportpick.writer.v1",
         "status": "READY",
-        "selected_program_id": "B55145700016",
-        "post_text": "임신 중 기차로 이동할 일이 있다면, 임산부 등록을 마친 코레일 회원은 ‘맘편한 코레일’로 일반실 운임을 40% 할인받을 수 있어요. 함께 타는 동반 1명까지 적용되는 승차권 할인이에요.\n\nKTX 일반실과 ITX·새마을·무궁화호 등 일반열차가 대상이에요. KTX 특실·우등실은 일반실 가격으로 이용하는 방식이며, 다른 할인과 중복되거나 최저운임보다 낮아지지는 않아요.\n\n할인은 출산예정일에 1년을 더한 날까지 이용할 수 있어요. 코레일 회원가입 후 정부24 맘편한 임신 서비스나 역 창구의 임산부 등록 안내를 확인해요.\n\n현재 안내상 할인표는 출발 2개월 전부터 24시간 전까지 구매할 수 있어요. 1회 2매, 하루 2회·월 8회 한도이고 본인 신분증을 지참해야 해요. 동반인만 혼자 이용할 수 없으며, 명절 특별수송기간에는 운영하지 않아요. 할인 좌석은 조기 매진될 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+        "selected_program_id": "135200000005",
+        "post_text": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요.\n\n먼저 두 가지를 살펴봐요.\n• 거주·소득: 서초구에 거주하고, 소득과 재산을 함께 반영한 가구 소득인정액이 기준 중위소득 80% 이하여야 해요.\n• 선정 절차: 대기 신청 후 모집기간에 안내를 받아 소득조사와 보건소 영양상태평가·종합판정을 거쳐요. 빈혈·신체계측·영양섭취 상태 등을 확인해요.\n\n전화나 방문으로 대기 신청을 할 수 있어요. 보충식품은 현금 지원이 아니며, 신청 즉시 지급되거나 선정되는 것은 아니에요. 조제분유·친환경 농산물꾸러미 지원 등과의 중복 제한도 확인해야 해요.\n\n자세한 사항은 프로필링크 확인",
         "draft_text": null,
         "reply_texts": [],
         "media": {
-          "turn": "IMAGE",
-          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-          "check": "MATCHED",
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
           "image_copy": null,
-          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+          "alt_text": null
         },
         "review": {
-          "planned_at": "2026-11-20T08:00:00+09:00",
+          "planned_at": "2026-11-20T12:00:00+09:00",
           "application_status": "ALWAYS",
-          "reader": "코레일 회원이며 임산부 등록을 마친 임산부와 실제 함께 타는 동반 1명",
-          "central_message": "임신 중 기차 이동에 어떤 할인과 동반·구매 조건을 확인해야 하나요?",
-          "pattern": "P1",
-          "selection_reason": "56완료게시와다른3READY중복제외후동일IDserviceList조회수57187우선. 상위40실제HOLD/SKIP근거와출처는queue.selection_notes그대로보존.",
+          "reader": "서울 서초구 거주 임산부 및 생후66개월이하영유아 가구 중 소득·영양판정을 받을 대기신청자",
+          "central_message": "서초구 영양플러스 대기 신청과 실제 지원 대상 선정은 어떻게 다른가요?",
+          "pattern": "P5",
+          "selection_reason": "56완료게시+활성12미예약READY와미래3READY중복제외후동일ID누적조회수56221최상위검증후보. 상위40HOLD/SKIP실제이유·출처56기존notes보존. 지역별시기차이는직접연서초연중대기접수로한정.",
           "interest_basis": "OBSERVED_METRICS",
           "duplicate_check": "CHECKED",
           "evidence": [
             {
-              "source_id": "B55145700016",
-              "source_ref": "https://info.korail.com/info/selectBbsNttView.do?bbsNo=199&key=911&nttNo=26335&pageIndex=4&searchCnd=all",
+              "source_id": "135200000005",
+              "source_ref": "https://www.seocho.go.kr/site/sh/03/10301040000002019071203.jsp",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-19T09:11:05.576661+09:00",
+              "verified_at": "2026-11-19T12:40:35.808206+09:00",
               "claims_supported": [
-                "이번 실행 코레일 2026-03-10 공식보도자료 실제본문 열람: 임산부·동반1인 일반실운임40%,특실/우등실일반실가격,멤버십등록후역임산부인증또는정부24신청,일부좌석우선예매와출발24h전일반전환. 이용객/지원총액은 본문에 사용하지 않음. 현재 개별 좌석/예매 성공 증거로 쓰지 않음."
+                "이번실행공식서초구보건소2026기준표·영양플러스본문336~410행실제열람. 관내임산부/66개월이하영유아,소득·재산종합80%및소득인정액정의,연중전화·방문대기접수,모집기간개별안내,소득조사후보건소영양상태평가와종합판정,교육상담·맞춤보충식품확인. 연중인것은대기접수이며현재모집·식품즉시지급을확정하지않음. 주소지외전국일괄접수주장없음."
               ]
             },
             {
-              "source_id": "B55145700016",
-              "source_ref": "https://info.korail.com/info/selectBbsNttView.do?bbsNo=199&integrDeptCode=&key=911&nttNo=22514&pageIndex=44&searchCnd=all&searchCtgry=&searchKrwd=",
+              "source_id": "135200000005",
+              "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10706020300",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-19T09:11:05.576661+09:00",
+              "verified_at": "2026-11-19T12:40:35.808206+09:00",
               "claims_supported": [
-                "이번 실행 2024-08-22 코레일 원 공지 실제열람: KTX/ITX새마을/마음/무궁화/청춘 일반실40%,특실일반실가격,출산예정일+1년. 과거공지 단독으로 현재상태를 확정하지 않고 2026-11-06수정 동일ID현재API와2026코레일안내를 대조."
+                "이번실행보건복지부영양플러스서비스안내844~855행실제열람. 영양위험요인,교육상담과보충식품6종,관할보건소신청·영양평가를대조. 페이지최종수정2025-09-30이므로건보료소득판정은2026서초구소득재산안내로한정해최신지역기준우선."
               ]
             },
             {
-              "source_id": "B55145700016",
-              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=94779&bnefType=all&svcId=B55145700016",
+              "source_id": "135200000005",
+              "source_ref": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=1&cnpClsNo=3&csmSeq=735",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-19T12:40:35.808206+09:00",
+              "claims_supported": [
+                "이번실행2026영양안내참조공식생활법령본문217~243행실제열람. 조제분유지원받는영유아/친환경농산물꾸러미참여임신출산수유부중복수혜제한확인. 건보료소득판정부분은서초구2026현행소득재산안내와달라본문에그대로쓰지않음. 전국72개월설명과달리선택지역서초66개월로대상명시."
+              ]
+            },
+            {
+              "source_id": "135200000005",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999156&bnefType=all&svcId=135200000005",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-19T09:11:05.576661+09:00",
+              "verified_at": "2026-11-19T12:40:35.808206+09:00",
               "claims_supported": [
-                "검증된 완전세대 gov24-44408666268-1 동일 ID serviceDetail와serviceList 전체 이번 실행 실제읽기. 누적조회수57187; list수정20261106161412,checkedAt=2026-11-19T07:13:07.825884+09:00,collectionSucceededAt=2026-11-19T07:15:21.556237+09:00. 상시신청,임산부등록회원,동반1명,일반실40%/특실요금면제,출산예정일+1년,다른할인중복불가/최저운임,2개월전~24시간전구매,1회2매/일2회/월8회,본인신분증,명절미운영,좌석매진가능 모두 동일 공식원문에 명시. 수집성공시각을 개인별 예매/현재좌석 검증으로 바꾸지 않음."
-              ]
-            },
-            {
-              "source_id": "B55145700016",
-              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-              "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-19T09:11:05.576661+09:00",
-              "claims_supported": [
-                "이번 실행 현재mainPNG 실제HTTPS GET SHA256=0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd 재대조. 현재 image-review의2026-11-06 AI_VISUAL_INSPECTION/PASS 및약360px검수와일치. 새 직접시각검수아님. 승인혜택별이미지없어기존rotation사용;사업별금액·대상·기간없어본문과충돌없음."
+                "완전세대gov24-44408666268-1 동일ID공식serviceList/detail전체실제대조,누적조회수56221. APIcheckedAt=2026-11-19T07:11:18.506075+09:00,수집완료=2026-11-19T07:15:21.556237+09:00. 날짜는보건소별상이하므로수집성공을현재모집증거로쓰지않고별도직접연서초현행연중대기접수에한정."
               ]
             }
           ],
@@ -63711,94 +64561,83 @@
             "eligibility_and_units": "PASS",
             "cta_and_no_links": "PASS",
             "length": "PASS",
-            "media": "PASS"
+            "media": "NOT_REQUIRED"
           },
-          "char_count": 454,
+          "char_count": 394,
           "count_method": "python_len_including_spaces_and_newlines",
           "missing_info": [],
           "hold_reasons": [],
           "warnings": [
-            "공식 예매URL 직접 열람은 서비스이용안내 JS shell만 반환,구letskorail404/dev502/go503. 로그인·현재좌석·예매거래확인미수행. 실제직접열린공식코레일공지와최신동일ID공식API만사실근거로사용. 제3자요약으로검증하지않음.",
-            "현재 API와공지상 제도등록 상시를대조했으나 다음날개별좌석/접수거래보장없음. Nov19 07:15수집본은Nov20 08발송때24h초과하므로실제발송시최신완전source와공식상태·변경/종료·이미지·유효기간재검증필수.",
-            "확인된할인표구매기간은2026-11-06수정동일ID공식원문기준. 과거지자체1개월~20분안내는현재기준으로혼합하지않음."
+            "현재확인범위는서초구연중대기접수안내이며새모집일·대기순번·선정·실제식품제공시각/물량은확정하지않음. 현재모집중으로표현하지않음.",
+            "소득판정API·과거국가안내건보료와지역2026소득재산조사구분. 최신지역안내로한정했으며연령도서초66개월사용.",
+            "공식공개안내만열람,개인대기신청·접수거래·프로필경로미실행. 현재07:15source는내일12발송시24h초과. 실제발송때최신완전source·공식상태·만료·IMAGE/TEXT필수재검증."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
-            "core_question": "임신 중 기차 이동에 어떤 할인과 동반·구매 조건을 확인해야 하나요?",
-            "reader_scope": "코레일 회원이며 임산부 등록을 마친 임산부와 실제 함께 타는 동반 1명",
+            "core_question": "서초구 영양플러스 대기 신청과 실제 지원 대상 선정은 어떻게 다른가요?",
+            "reader_scope": "서울 서초구 거주 임산부 및 생후66개월이하영유아 가구 중 소득·영양판정을 받을 대기신청자",
             "angles": [
-              "기차 이동 운임 부담",
-              "임산부 등록과 동반 자격",
-              "할인표 구매시점과 이용횟수"
+              "영양교육과보충식품실익",
+              "거주·소득재산과영양판정",
+              "연중대기신청과모집선정절차구분"
             ],
-            "chosen_angle": "이동 상황에서 받을 수 있는 할인과 이용 전 제한 확인",
+            "chosen_angle": "대상·지원실익→두자격체크→대기신청과선정구분",
             "opening_candidates": [
               {
                 "type": "생활 상황형",
                 "group": "A",
-                "text": "임신 중 기차로 이동할 일이 있다면, 임산부 등록을 마친 코레일 회원은 ‘맘편한 코레일’로 일반실 운임을 40% 할인받을 수 있어요. 함께 타는 동반 1명까지 적용되는 승차권 할인이에요."
+                "text": "아이의 영양 관리가 걱정되는 서초구 가정이라면 영양플러스의 상담·보충식품 지원과 대기 접수 조건을 확인해요."
               },
               {
                 "type": "대상·혜택형",
                 "group": "B",
-                "text": "임산부 등록을 마친 코레일 회원과 동반 1명은 맘편한 코레일의 일반실 운임 40% 할인을 확인할 수 있어요."
+                "text": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요."
               },
               {
                 "type": "조건 설명형",
                 "group": null,
-                "text": "맘편한 코레일은 임산부가 함께 타야 동반 1명에게도 할인이 적용돼요."
+                "text": "서초구 영양플러스는 연중 대기 접수와 실제 대상자 선정 시점이 달라요."
               }
             ],
-            "chosen_opening": "임신 중 기차로 이동할 일이 있다면, 임산부 등록을 마친 코레일 회원은 ‘맘편한 코레일’로 일반실 운임을 40% 할인받을 수 있어요. 함께 타는 동반 1명까지 적용되는 승차권 할인이에요.",
-            "opening_type": "생활 상황형",
-            "cohort": "A",
-            "selection_reason": "첫 적용 KST 2026-11-10에서 10일 뒤 Nov20 08시는 A. 첫 두 문장에 상황·등록대상·실익·동반범위, P1 이동상황→유형차이→등록→구매제한. 최근20게시와 오늘3READY의 법률/활동/식품/증명 흐름을 대조해 다른 질문과 전개 선택.",
+            "chosen_opening": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "첫적용2026-11-10에서10일뒤Nov20 12시는B. 같은날08P1코레일이동상황과다른P5거주·소득재산체크→대기판정흐름. 최근20실제게시와현재4READY의도입·전개를비교하고단어만바꾼템플릿피함.",
             "history_posts_checked": 20,
             "comparison_eligible": true,
             "comparison_strata": {
-              "geo": "전국",
-              "audience": "등록임산부",
-              "benefit": "열차운임할인",
-              "application": "상시등록·좌석매진가능",
-              "media": "IMAGE"
+              "geo": "서울서초구",
+              "audience": "임산부·영유아가구",
+              "benefit": "영양교육과보충식품현물",
+              "application": "연중대기접수·모집개별안내",
+              "media": "TEXT"
             },
-            "comparison_group": "84 실제 ID/window 관측, 사업·독자·시간·미디어 차이로 유사사업 matched pairs 0. 반복 우세 입증 안 됨. 7일평가 보존,14일미도래,기존A/B배정과비중유지.",
+            "comparison_group": "87공식관측 중25개24h창은설명통계A12/B13,중앙값83/78. 유사사업매칭0·지역/혜택/독자/시각/미디어교란;반복우세판정없음,비중유지.7일평가완료보존/14일미도래.",
             "applied_elements": [
-              "상황·대상·40%실익 첫단락",
-              "일반실할인과특실요금면제구별",
-              "본인동반·횟수·예매시점·매진제한",
-              "짧은단락과고정CTA"
+              "지역·대상·실익을첫단락",
+              "소득인정액과월급구분",
+              "대기접수와즉시선정·지급구분",
+              "2항목자격체크와판정순서",
+              "현물과중복제한명시"
             ],
-            "profile_route": "프로필 링크 이동/개인별 할인 등록·예매거래는 독립 확인하지 않음. 사이트의 맞춤조회·바로신청 기능을 보장하지 않음.",
+            "profile_route": "프로필링크/사이트의접수기능과실제보건소대기신청거래는미수행;자동신청·즉시선정기능을보장하지않음.",
             "source_recheck_required_at_publish": true,
             "master_full_used": true,
             "supplemental_full_used_in_current_model_input": true,
-            "writing_input_sha256": "c836e5738d837b4c792541d47baf4a17f7f92283653e3d3bb5e5b87d353a307c"
+            "writing_input_sha256": "9386ff289577926dab56255abe99ed42ddb05770c6071050196759902b6dec94"
           }
         },
         "next_history_record": {
-          "program_id": "B55145700016",
-          "notice_version": "2026-11-06동일IDAPI/2026코레일공식안내대조",
-          "pattern": "P1",
-          "opening": "임신 중 기차로 이동할 일이 있다면, 임산부 등록을 마친 코레일 회원은 ‘맘편한 코레일’로 일반실 운임을 40% 할인받을 수 있어요. 함께 타는 동반 1명까지 적용되는 승차권 할인이에요.",
-          "structure": "이동상황·할인실익→혜택유형차이→등록·기간→구매·동반제한→CTA",
-          "media_turn": "IMAGE"
+          "program_id": "135200000005",
+          "notice_version": "2026서초구현행연중대기접수직접확인",
+          "pattern": "P5",
+          "opening": "서울 서초구의 임산부와 생후 66개월 이하 영유아는 ‘영양플러스’로 영양교육·상담과 보충식품을 지원받을 수 있어요. 다만 소득·영양 기준을 판정하며, 연중 가능한 것은 대기 접수예요.",
+          "structure": "서초대상·실익→소득/절차2체크→대기접수·판정과중복제한→CTA",
+          "media_turn": "TEXT"
         }
       }
     },
-    "last_28d_review": {
-      "ledger_posts": 56,
-      "records_complete_verified": 56,
-      "latest20_openings_compared": 20,
-      "source_of_public_confirmation": "Durable ledger and actual authenticated publisher receipts; no new separate Threads page render/remote timeline scan this check. Public visibility reuses verified receipt status, not guessed from workflow success.",
-      "actual_recent_platform_metrics_observations": 84,
-      "new_metrics": 0,
-      "failure_and_partial_count": 0,
-      "new_post_delayed_from_regular_slot_minutes": 46,
-      "image_missing": false,
-      "duplicate_main_id_or_benefit": false,
-      "low_views_not_publication_failure": true
-    }
+    "conditional_media_projection": "Active unreserved Nov19noon TEXT and existing futureREADY projected; no publication claimed. If earlier slot fails before send, recompute only unreserved future sequence. build_input raw slot-only estimates omit active slot and are advisory, actual successful-ledger plus READY projection used."
   },
   "prevented_input_incidents": {
     "same_queue_existing_READY_candidate_view_rank_crossover_disposition_missing:gov24-44408666268-1": {
@@ -63834,10 +64673,15 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-19T02:42:26.423550+00:00",
-    "queue_blob_sha": "589fd555f1e04b3bf0b07bbab0254f536dcf47e6",
-    "queue_write": false,
-    "ready": 4,
+    "checked_at": "2026-11-19T03:42:19.375046+00:00",
+    "queue_cas": {
+      "commit_sha": "c8571baa59129c18d0862e473793a8afe78b5f0f",
+      "content_sha": "f6f80ff7af8a4cd3477c6c0678930f972daae309"
+    },
+    "readback_exact": true,
+    "ready": 5,
+    "future_regular_ready": 4,
+    "active_regular_ready": 1,
     "sequence": [
       {
         "slot": "2026-11-19T12:00:00+09:00",
@@ -63876,6 +64720,16 @@
         "media_turn": "IMAGE",
         "char_count": 454,
         "expires_at": "2026-11-20T09:11:05.576661+09:00",
+        "current_source_fresh_at_slot": false,
+        "source_recheck_required_at_publish": true
+      },
+      {
+        "slot": "2026-11-20T12:00:00+09:00",
+        "benefit_id": "135200000005",
+        "pattern": "P5",
+        "media_turn": "TEXT",
+        "char_count": 394,
+        "expires_at": "2026-11-20T12:40:35.808206+09:00",
         "current_source_fresh_at_slot": false,
         "source_recheck_required_at_publish": true
       }
