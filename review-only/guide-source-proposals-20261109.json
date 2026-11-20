@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "reviewOnly": true,
+  "asOf": "2026-11-09",
+  "notes": [
+    "This is a human-review source proposal, not proof of live intake or eligibility.",
+    "Do not write guides.json, publish or extend validUntil based on this file.",
+    "Verify the linked authority and applicable regional programs before any operational approval."
+  ],
+  "proposals": [
+    {
+      "benefitId": "171000000005",
+      "type": "additional_agency_source",
+      "proposedSource": {
+        "url": "https://m.epostlife.go.kr/IGIVDM00AT.do?gdsCd=P510062",
+        "title": "우체국보험 무배당 만원의행복보험 2504 상품상세",
+        "note": "상품의 현재 공개 설명과 약관/요약서를 확인하는 용도. 개별 우체국의 신규 청약 가능 여부는 별도 확인."
+      },
+      "verificationLevel": "official_product_detail_reviewed",
+      "intakeOpenVerified": false,
+      "scope": "Insurance product features only; no automatic eligibility/coverage decision"
+    },
+    {
+      "benefitId": "SD0000016138",
+      "type": "additional_agency_source",
+      "proposedSource": {
+        "url": "https://www.mohw.go.kr/menu.es?mid=a10709020200",
+        "title": "보건복지부 지역사회서비스 투자사업 정책 안내",
+        "note": "전국 제도 일반 안내. 구체적 서비스·신청기간·본인부담·서류는 신청자 주소지 지자체 공고로 별도 확인."
+      },
+      "verificationLevel": "official_policy_overview_reviewed",
+      "intakeOpenVerified": false,
+      "scope": "General policy only, no municipality-specific current intake"
+    }
+  ]
+}
