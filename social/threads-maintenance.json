@@ -14,6 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "44718917106",
     "44711033317",
     "44700476536",
     "44697359068",
@@ -4433,12 +4434,20 @@
       "conclusion": "success",
       "updated_at": "2026-11-20T09:28:47Z",
       "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
+    },
+    "44718917106": {
+      "run_id": "44718917106",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-20T10:52:43Z",
+      "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-20T18:46:57.243375+09:00",
-    "result": "no_update_new_metric_observations_only",
-    "maintenance_previous_blob_sha": "90ba3e27cd189b881024b8cc2c30a417e05eedbb",
+    "checked_at": "2026-11-20T19:54:12.220242+09:00",
+    "result": "no_update",
+    "maintenance_previous_blob_sha": "53baa1e918d619e8a1d7a9cb1314aa992dc77737",
     "current_main_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
@@ -4446,11 +4455,11 @@
     "queue_blob_sha": "5b162a1b2a3f7d378046b552b1240d5b0778834e",
     "changed_run_versions": [
       {
-        "run_id": "44711033317",
+        "run_id": "44718917106",
         "run_attempt": 1,
         "status": "completed",
         "conclusion": "success",
-        "updated_at": "2026-11-20T09:28:47Z",
+        "updated_at": "2026-11-20T10:52:43Z",
         "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
       }
     ],
@@ -4474,19 +4483,260 @@
     "pending": null,
     "lease": null,
     "source": {
-      "run_id": "44625737013",
-      "prior_verified_artifact_reused": true,
+      "run_id": "44718917106",
+      "artifact_id": 14621701272,
+      "artifact_digest": "sha256:20d6811d54820c23ac5106527ad52bdf1525e24d69b7a2f9aee1a7c92a1d3bc7",
+      "artifact_digest_verified": true,
+      "artifact_returned_file_downloaded": true,
       "read_current_verify_snapshot_load_feed": true,
       "count": 10891,
-      "generation": "gov24-44625737013-1",
-      "lastSuccessAt": "2026-11-20T07:15:01.141322+09:00",
-      "manifestSha256": "b75366fcbd890f0b238ce661370b3e9856856ff29e1225fdb16d7f4e14a27b9d",
-      "path": "snapshots/gov24-44625737013-1",
+      "generation": "gov24-44718917106-1",
+      "lastSuccessAt": "2026-11-20T19:31:42.320213+09:00",
+      "manifestSha256": "72930b14053fad8c38ab9e455c4ac00c1f24954d3dabb14de8668175d98a8a7f",
+      "path": "snapshots/gov24-44718917106-1",
       "version": 1,
       "source_only_not_current_application_verification": true
     },
+    "new_operations_observation": {
+      "jobs": [
+        {
+          "id": 136229295551,
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-11-20T10:24:12Z",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1,
+              "started_at": "2026-11-20T10:24:13Z",
+              "completed_at": "2026-11-20T10:24:15Z"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2,
+              "started_at": "2026-11-20T10:24:15Z",
+              "completed_at": "2026-11-20T10:24:16Z"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3,
+              "started_at": "2026-11-20T10:24:16Z",
+              "completed_at": "2026-11-20T10:24:16Z"
+            },
+            {
+              "name": "Restore latest validated state or source baseline",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4,
+              "started_at": "2026-11-20T10:24:16Z",
+              "completed_at": "2026-11-20T10:24:21Z"
+            },
+            {
+              "name": "Run completeness and data-preservation checks",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5,
+              "started_at": "2026-11-20T10:24:21Z",
+              "completed_at": "2026-11-20T10:24:31Z"
+            },
+            {
+              "name": "Collect and promote only a complete generation",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6,
+              "started_at": "2026-11-20T10:24:31Z",
+              "completed_at": "2026-11-20T10:31:46Z"
+            },
+            {
+              "name": "Build current data with accurate delay or failure status",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7,
+              "started_at": "2026-11-20T10:31:46Z",
+              "completed_at": "2026-11-20T10:33:04Z"
+            },
+            {
+              "name": "Verify all static documents and advertised sitemap URLs",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8,
+              "started_at": "2026-11-20T10:33:04Z",
+              "completed_at": "2026-11-20T10:33:21Z"
+            },
+            {
+              "name": "Preserve current and previous validated generations",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9,
+              "started_at": "2026-11-20T10:33:21Z",
+              "completed_at": "2026-11-20T10:33:23Z"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10,
+              "started_at": "2026-11-20T10:33:23Z",
+              "completed_at": "2026-11-20T10:33:27Z"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11,
+              "started_at": "2026-11-20T10:33:27Z",
+              "completed_at": "2026-11-20T10:33:30Z"
+            },
+            {
+              "name": "Decide whether public content actually changed",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 12,
+              "started_at": "2026-11-20T10:33:30Z",
+              "completed_at": "2026-11-20T10:33:30Z"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13,
+              "started_at": "2026-11-20T10:33:30Z",
+              "completed_at": "2026-11-20T10:33:31Z"
+            },
+            {
+              "name": "Run actions/configure-pages@v5",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 14,
+              "started_at": "2026-11-20T10:33:31Z",
+              "completed_at": "2026-11-20T10:33:32Z"
+            },
+            {
+              "name": "Run actions/upload-pages-artifact@v3",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15,
+              "started_at": "2026-11-20T10:33:32Z",
+              "completed_at": "2026-11-20T10:33:36Z"
+            },
+            {
+              "name": "Preserve newer blog or code changes before publication",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16,
+              "started_at": "2026-11-20T10:33:36Z",
+              "completed_at": "2026-11-20T10:33:37Z"
+            },
+            {
+              "name": "Run actions/deploy-pages@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17,
+              "started_at": "2026-11-20T10:33:37Z",
+              "completed_at": "2026-11-20T10:33:43Z"
+            },
+            {
+              "name": "Verify deployed source, generation and every public HTML URL",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 18,
+              "started_at": "2026-11-20T10:33:43Z",
+              "completed_at": "2026-11-20T10:52:40Z"
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 19,
+              "started_at": "2026-11-20T10:52:40Z",
+              "completed_at": "2026-11-20T10:52:41Z"
+            },
+            {
+              "name": "Report collection failure after retaining last good data and status",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 20,
+              "started_at": "2026-11-20T10:52:41Z",
+              "completed_at": "2026-11-20T10:52:41Z"
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 39,
+              "started_at": "2026-11-20T10:52:41Z",
+              "completed_at": "2026-11-20T10:52:41Z"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 40,
+              "started_at": "2026-11-20T10:52:41Z",
+              "completed_at": "2026-11-20T10:52:41Z"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 41,
+              "started_at": "2026-11-20T10:52:41Z",
+              "completed_at": "2026-11-20T10:52:41Z"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 14622511841,
+          "name": "supportpick-public-verification",
+          "digest": "sha256:fea1ddfdcaab002aae3645301543a79548ae5a09c057f17c02750b19e23332d4",
+          "expired": false
+        },
+        {
+          "id": 14621845854,
+          "name": "supportpick-publish-decision",
+          "digest": "sha256:d2b3b54a2235262e6eb191582bde4f2f9896459c83fc7e229f198b3bf532e09a",
+          "expired": false
+        },
+        {
+          "id": 14621766071,
+          "name": "supportpick-collection-evidence-44718917106-1",
+          "digest": "sha256:43f74716023e7e5dfd16334bab4f1d1ec9a7a004543c09ed188009166f907f0e",
+          "expired": false
+        },
+        {
+          "id": 14621701272,
+          "name": "supportpick-runtime-state",
+          "digest": "sha256:20d6811d54820c23ac5106527ad52bdf1525e24d69b7a2f9aee1a7c92a1d3bc7",
+          "expired": false
+        },
+        {
+          "id": 14620728370,
+          "name": "github-pages",
+          "digest": "sha256:6796e8598b4ee8056d58165437a2395340f1785edfa2991ba4ebcb7df07040af",
+          "expired": false
+        }
+      ],
+      "classification": "completed_success_complete_source_verified",
+      "job_logs_read": true,
+      "job_id": 136229295551,
+      "tests_passed": 303,
+      "runtime_artifact_downloaded_and_verified": true,
+      "current_stage": "complete",
+      "new_generation": "gov24-44718917106-1",
+      "source_count": 10891,
+      "collection_time_not_current_application_verification": true,
+      "site_changes_by_this_check": false
+    },
     "writer": {
-      "checked_at": "2026-11-20T18:46:43.854889+09:00",
+      "checked_at": "2026-11-20T19:53:40.854516+09:00",
       "ready": 4,
       "drafts": [
         {
@@ -4506,7 +4756,7 @@
           "media_turn": "IMAGE",
           "char_count": 435,
           "expires_at": "2026-11-21T09:22:06.625659+09:00",
-          "current_source_fresh_at_slot": false,
+          "current_source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true
         },
         {
@@ -4516,7 +4766,7 @@
           "media_turn": "TEXT",
           "char_count": 407,
           "expires_at": "2026-11-21T12:55:21.998961+09:00",
-          "current_source_fresh_at_slot": false,
+          "current_source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true
         },
         {
@@ -4526,16 +4776,16 @@
           "media_turn": "IMAGE",
           "char_count": 406,
           "expires_at": "2026-11-21T16:34:04.049966+09:00",
-          "current_source_fresh_at_slot": false,
+          "current_source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true
         }
       ],
       "source": {
         "count": 10891,
-        "generation": "gov24-44625737013-1",
-        "lastSuccessAt": "2026-11-20T07:15:01.141322+09:00",
-        "manifestSha256": "b75366fcbd890f0b238ce661370b3e9856856ff29e1225fdb16d7f4e14a27b9d",
-        "path": "snapshots/gov24-44625737013-1",
+        "generation": "gov24-44718917106-1",
+        "lastSuccessAt": "2026-11-20T19:31:42.320213+09:00",
+        "manifestSha256": "72930b14053fad8c38ab9e455c4ac00c1f24954d3dabb14de8668175d98a8a7f",
+        "path": "snapshots/gov24-44718917106-1",
         "version": 1
       },
       "source_count": 10891,
@@ -4549,120 +4799,16 @@
       "new_visual_inspection": false,
       "pending": null,
       "lease": null,
-      "source_recheck_required_at_publish": true,
-      "due_metrics_before_merge": 3,
-      "new_metric_observations": 3
+      "source_recheck_required_at_publish": true
     },
     "metrics": {
-      "run_id": "44711033317",
-      "run_attempt": 1,
-      "status": "completed",
-      "conclusion": "success",
-      "updated_at": "2026-11-20T09:28:47Z",
-      "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
-      "job_id": 136202474269,
-      "artifact_id": 14616808111,
-      "artifact_digest": "sha256:2c499bd955c0b70b477fee417cacd560bb8f378de4fb15fe057e5ef16d1be9bb",
-      "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": true,
-      "job_logs_retrieved_this_check": true,
-      "observed_at": "2026-11-20T09:28:43.397574+00:00",
-      "records": [
-        {
-          "post_id": "18156121705549353",
-          "published_at": "2026-11-13T17:09:45.175573+09:00",
-          "observed_at": "2026-11-20T09:28:43.397574+00:00",
-          "window_hours": 168,
-          "elapsed_hours": 169.31617277805555,
-          "timing": "late_available_check",
-          "within_target_tolerance": true,
-          "not_backcalculated": true,
-          "metrics": {
-            "views": 86,
-            "likes": 2,
-            "comments": 0,
-            "reposts": 2,
-            "shares": 0,
-            "saves": null,
-            "profile_visits": null,
-            "new_followers": null,
-            "site_visits": null
-          }
-        },
-        {
-          "post_id": "18450932713126961",
-          "published_at": "2026-11-17T17:11:25.529110+09:00",
-          "observed_at": "2026-11-20T09:28:43.397574+00:00",
-          "window_hours": 72,
-          "elapsed_hours": 73.28829679555555,
-          "timing": "late_available_check",
-          "within_target_tolerance": true,
-          "not_backcalculated": true,
-          "metrics": {
-            "views": 22,
-            "likes": 1,
-            "comments": 0,
-            "reposts": 0,
-            "shares": 0,
-            "saves": null,
-            "profile_visits": null,
-            "new_followers": null,
-            "site_visits": null
-          }
-        },
-        {
-          "post_id": "17876108337601849",
-          "published_at": "2026-11-19T17:15:01.915601+09:00",
-          "observed_at": "2026-11-20T09:28:43.397574+00:00",
-          "window_hours": 24,
-          "elapsed_hours": 25.228189436944444,
-          "timing": "late_available_check",
-          "within_target_tolerance": true,
-          "not_backcalculated": true,
-          "metrics": {
-            "views": 24,
-            "likes": 1,
-            "comments": 0,
-            "reposts": 0,
-            "shares": 0,
-            "saves": null,
-            "profile_visits": null,
-            "new_followers": null,
-            "site_visits": null
-          }
-        }
-      ],
-      "new_observations": 3,
+      "new_official_snapshot_runs": 0,
+      "new_observations": 0,
       "total_observations": 103,
-      "classification": "three_actual_official_milestone_observations",
-      "new_observation_keys": [
-        "18156121705549353:168h",
-        "18450932713126961:72h",
-        "17876108337601849:24h"
-      ],
-      "due_count": 3,
-      "success_count": 3,
-      "current_due_status": "none_after_merge",
-      "currently_due_post_ids": [],
-      "new_evaluation_report_due": false,
-      "prior_7day_evaluation_unchanged": true,
-      "14day_not_due": true,
-      "weights_unchanged": true,
-      "publication_calls": 0,
-      "workflow_dispatch": false,
-      "actual_zero_and_unprovided_null_distinguished": true,
-      "descriptive_24h_comparison_unchanged": true,
-      "new24h_comparison_excluded_reason": "Previously written input preserved; no retrospective cohort assignment after failed preceding slot",
-      "eligible_24h_counts": {
-        "A": 12,
-        "B": 13
-      },
-      "eligible_24h_medians": {
-        "A": 83.0,
-        "B": 78
-      },
-      "matched_comparison_pairs": 0,
-      "reaction_rate_used": false
+      "due_count_now": 0,
+      "seven_day_evaluation_already_completed": true,
+      "fourteen_day_not_due": true,
+      "weights_unchanged": true
     },
     "recovery": {
       "needed": false,
@@ -4670,9 +4816,10 @@
       "new_posts": 0,
       "new_failure": 0,
       "new_partial": 0,
+      "expired_unpublished_queue_slots": 0,
       "previous_publication_already_reported": true
     },
-    "next_condition": "Existing regular slots only; actual sending rechecks latest complete source and official evidence expiry/media/CAS. Current source not fresh tomorrow08/12/16. No formal evaluation due; weights unchanged."
+    "next_condition": "Existing regular slots only. Latest completed generation is fresh at all four planned slots, but actual sender must revalidate latest source, official status/evidence expiry, fingerprint, media alternation, account, limits, pending and CAS. Existing READY wrapper/body/media/cohort preserved. No recovery or formal evaluation due."
   },
   "last_reported_publication": {
     "run_id": "44700476536",
@@ -5608,14 +5755,15 @@
     "last_ready_queue_blob_sha": "5b162a1b2a3f7d378046b552b1240d5b0778834e"
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-20T18:46:57.243375+09:00",
+    "checked_at": "2026-11-20T19:54:12.220242+09:00",
     "new_publications": 0,
     "new_incidents": 0,
     "queue_ready": 4,
-    "new_metric_observations": 3,
+    "new_metric_observations": 0,
     "new_evaluation_due": false,
     "new_ready_drafts": 0,
-    "existing_queue_preserved": true
+    "existing_queue_preserved": true,
+    "new_verified_source_generation": "gov24-44718917106-1"
   },
   "reach_policy": {
     "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -75218,6 +75366,383 @@
         "previous_publication_already_reported": true
       },
       "next_condition": "Existing regular slots only; actual sending rechecks latest complete source and official evidence expiry/media/CAS. Current source not fresh tomorrow08/12/16. No formal evaluation due; weights unchanged."
+    },
+    "2026-11-20T19:54:12.220242+09:00": {
+      "checked_at": "2026-11-20T19:54:12.220242+09:00",
+      "result": "no_update",
+      "maintenance_previous_blob_sha": "53baa1e918d619e8a1d7a9cb1314aa992dc77737",
+      "current_main_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "45af0335824ea6d9adb414d5b8070dfcf89f69ee",
+      "queue_blob_sha": "5b162a1b2a3f7d378046b552b1240d5b0778834e",
+      "changed_run_versions": [
+        {
+          "run_id": "44718917106",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-20T10:52:43Z",
+          "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
+        }
+      ],
+      "active_target_runs": [],
+      "run_pagination": {
+        "page_size": 100,
+        "pages_read": 1,
+        "last_observed_checkpoint_reached": true,
+        "new_or_changed_versions_checked": 1,
+        "comparison_fields": [
+          "run_id",
+          "run_attempt",
+          "status",
+          "conclusion",
+          "updated_at",
+          "head_sha"
+        ]
+      },
+      "publication_ledger_records": 62,
+      "complete_verified_records": 62,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "44718917106",
+        "artifact_id": 14621701272,
+        "artifact_digest": "sha256:20d6811d54820c23ac5106527ad52bdf1525e24d69b7a2f9aee1a7c92a1d3bc7",
+        "artifact_digest_verified": true,
+        "artifact_returned_file_downloaded": true,
+        "read_current_verify_snapshot_load_feed": true,
+        "count": 10891,
+        "generation": "gov24-44718917106-1",
+        "lastSuccessAt": "2026-11-20T19:31:42.320213+09:00",
+        "manifestSha256": "72930b14053fad8c38ab9e455c4ac00c1f24954d3dabb14de8668175d98a8a7f",
+        "path": "snapshots/gov24-44718917106-1",
+        "version": 1,
+        "source_only_not_current_application_verification": true
+      },
+      "new_operations_observation": {
+        "jobs": [
+          {
+            "id": 136229295551,
+            "status": "completed",
+            "conclusion": "success",
+            "started_at": "2026-11-20T10:24:12Z",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1,
+                "started_at": "2026-11-20T10:24:13Z",
+                "completed_at": "2026-11-20T10:24:15Z"
+              },
+              {
+                "name": "Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2,
+                "started_at": "2026-11-20T10:24:15Z",
+                "completed_at": "2026-11-20T10:24:16Z"
+              },
+              {
+                "name": "Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3,
+                "started_at": "2026-11-20T10:24:16Z",
+                "completed_at": "2026-11-20T10:24:16Z"
+              },
+              {
+                "name": "Restore latest validated state or source baseline",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4,
+                "started_at": "2026-11-20T10:24:16Z",
+                "completed_at": "2026-11-20T10:24:21Z"
+              },
+              {
+                "name": "Run completeness and data-preservation checks",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 5,
+                "started_at": "2026-11-20T10:24:21Z",
+                "completed_at": "2026-11-20T10:24:31Z"
+              },
+              {
+                "name": "Collect and promote only a complete generation",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 6,
+                "started_at": "2026-11-20T10:24:31Z",
+                "completed_at": "2026-11-20T10:31:46Z"
+              },
+              {
+                "name": "Build current data with accurate delay or failure status",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 7,
+                "started_at": "2026-11-20T10:31:46Z",
+                "completed_at": "2026-11-20T10:33:04Z"
+              },
+              {
+                "name": "Verify all static documents and advertised sitemap URLs",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 8,
+                "started_at": "2026-11-20T10:33:04Z",
+                "completed_at": "2026-11-20T10:33:21Z"
+              },
+              {
+                "name": "Preserve current and previous validated generations",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 9,
+                "started_at": "2026-11-20T10:33:21Z",
+                "completed_at": "2026-11-20T10:33:23Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 10,
+                "started_at": "2026-11-20T10:33:23Z",
+                "completed_at": "2026-11-20T10:33:27Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 11,
+                "started_at": "2026-11-20T10:33:27Z",
+                "completed_at": "2026-11-20T10:33:30Z"
+              },
+              {
+                "name": "Decide whether public content actually changed",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 12,
+                "started_at": "2026-11-20T10:33:30Z",
+                "completed_at": "2026-11-20T10:33:30Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 13,
+                "started_at": "2026-11-20T10:33:30Z",
+                "completed_at": "2026-11-20T10:33:31Z"
+              },
+              {
+                "name": "Run actions/configure-pages@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 14,
+                "started_at": "2026-11-20T10:33:31Z",
+                "completed_at": "2026-11-20T10:33:32Z"
+              },
+              {
+                "name": "Run actions/upload-pages-artifact@v3",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 15,
+                "started_at": "2026-11-20T10:33:32Z",
+                "completed_at": "2026-11-20T10:33:36Z"
+              },
+              {
+                "name": "Preserve newer blog or code changes before publication",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 16,
+                "started_at": "2026-11-20T10:33:36Z",
+                "completed_at": "2026-11-20T10:33:37Z"
+              },
+              {
+                "name": "Run actions/deploy-pages@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 17,
+                "started_at": "2026-11-20T10:33:37Z",
+                "completed_at": "2026-11-20T10:33:43Z"
+              },
+              {
+                "name": "Verify deployed source, generation and every public HTML URL",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 18,
+                "started_at": "2026-11-20T10:33:43Z",
+                "completed_at": "2026-11-20T10:52:40Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 19,
+                "started_at": "2026-11-20T10:52:40Z",
+                "completed_at": "2026-11-20T10:52:41Z"
+              },
+              {
+                "name": "Report collection failure after retaining last good data and status",
+                "status": "completed",
+                "conclusion": "skipped",
+                "number": 20,
+                "started_at": "2026-11-20T10:52:41Z",
+                "completed_at": "2026-11-20T10:52:41Z"
+              },
+              {
+                "name": "Post Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 39,
+                "started_at": "2026-11-20T10:52:41Z",
+                "completed_at": "2026-11-20T10:52:41Z"
+              },
+              {
+                "name": "Post Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 40,
+                "started_at": "2026-11-20T10:52:41Z",
+                "completed_at": "2026-11-20T10:52:41Z"
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 41,
+                "started_at": "2026-11-20T10:52:41Z",
+                "completed_at": "2026-11-20T10:52:41Z"
+              }
+            ]
+          }
+        ],
+        "artifacts": [
+          {
+            "id": 14622511841,
+            "name": "supportpick-public-verification",
+            "digest": "sha256:fea1ddfdcaab002aae3645301543a79548ae5a09c057f17c02750b19e23332d4",
+            "expired": false
+          },
+          {
+            "id": 14621845854,
+            "name": "supportpick-publish-decision",
+            "digest": "sha256:d2b3b54a2235262e6eb191582bde4f2f9896459c83fc7e229f198b3bf532e09a",
+            "expired": false
+          },
+          {
+            "id": 14621766071,
+            "name": "supportpick-collection-evidence-44718917106-1",
+            "digest": "sha256:43f74716023e7e5dfd16334bab4f1d1ec9a7a004543c09ed188009166f907f0e",
+            "expired": false
+          },
+          {
+            "id": 14621701272,
+            "name": "supportpick-runtime-state",
+            "digest": "sha256:20d6811d54820c23ac5106527ad52bdf1525e24d69b7a2f9aee1a7c92a1d3bc7",
+            "expired": false
+          },
+          {
+            "id": 14620728370,
+            "name": "github-pages",
+            "digest": "sha256:6796e8598b4ee8056d58165437a2395340f1785edfa2991ba4ebcb7df07040af",
+            "expired": false
+          }
+        ],
+        "classification": "completed_success_complete_source_verified",
+        "job_logs_read": true,
+        "job_id": 136229295551,
+        "tests_passed": 303,
+        "runtime_artifact_downloaded_and_verified": true,
+        "current_stage": "complete",
+        "new_generation": "gov24-44718917106-1",
+        "source_count": 10891,
+        "collection_time_not_current_application_verification": true,
+        "site_changes_by_this_check": false
+      },
+      "writer": {
+        "checked_at": "2026-11-20T19:53:40.854516+09:00",
+        "ready": 4,
+        "drafts": [
+          {
+            "slot": "2026-11-20T20:00:00+09:00",
+            "benefit_id": "149200000147",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 440,
+            "expires_at": "2026-11-21T04:15:09.480730+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-21T08:00:00+09:00",
+            "benefit_id": "641000000137",
+            "pattern": "P5",
+            "media_turn": "IMAGE",
+            "char_count": 435,
+            "expires_at": "2026-11-21T09:22:06.625659+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-21T12:00:00+09:00",
+            "benefit_id": "B55271100008",
+            "pattern": "P6",
+            "media_turn": "TEXT",
+            "char_count": 407,
+            "expires_at": "2026-11-21T12:55:21.998961+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-21T16:00:00+09:00",
+            "benefit_id": "SCY000000080",
+            "pattern": "P8",
+            "media_turn": "IMAGE",
+            "char_count": 406,
+            "expires_at": "2026-11-21T16:34:04.049966+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source": {
+          "count": 10891,
+          "generation": "gov24-44718917106-1",
+          "lastSuccessAt": "2026-11-20T19:31:42.320213+09:00",
+          "manifestSha256": "72930b14053fad8c38ab9e455c4ac00c1f24954d3dabb14de8668175d98a8a7f",
+          "path": "snapshots/gov24-44718917106-1",
+          "version": 1
+        },
+        "source_count": 10891,
+        "ledger_records": 62,
+        "queue_entries": 60,
+        "selection_notes": 62,
+        "queue_write": false,
+        "new_posts": 0,
+        "due_metrics": 0,
+        "current_image_bytes_sha_recompared": true,
+        "new_visual_inspection": false,
+        "pending": null,
+        "lease": null,
+        "source_recheck_required_at_publish": true
+      },
+      "metrics": {
+        "new_official_snapshot_runs": 0,
+        "new_observations": 0,
+        "total_observations": 103,
+        "due_count_now": 0,
+        "seven_day_evaluation_already_completed": true,
+        "fourteen_day_not_due": true,
+        "weights_unchanged": true
+      },
+      "recovery": {
+        "needed": false,
+        "dispatch": false,
+        "new_posts": 0,
+        "new_failure": 0,
+        "new_partial": 0,
+        "expired_unpublished_queue_slots": 0,
+        "previous_publication_already_reported": true
+      },
+      "next_condition": "Existing regular slots only. Latest completed generation is fresh at all four planned slots, but actual sender must revalidate latest source, official status/evidence expiry, fingerprint, media alternation, account, limits, pending and CAS. Existing READY wrapper/body/media/cohort preserved. No recovery or formal evaluation due."
     }
   },
   "last_reported_prepublication_repair": {
@@ -75271,7 +75796,7 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-20T18:46:43.854889+09:00",
+    "checked_at": "2026-11-20T19:53:40.854516+09:00",
     "ready": 4,
     "drafts": [
       {
@@ -75291,7 +75816,7 @@
         "media_turn": "IMAGE",
         "char_count": 435,
         "expires_at": "2026-11-21T09:22:06.625659+09:00",
-        "current_source_fresh_at_slot": false,
+        "current_source_fresh_at_slot": true,
         "source_recheck_required_at_publish": true
       },
       {
@@ -75301,7 +75826,7 @@
         "media_turn": "TEXT",
         "char_count": 407,
         "expires_at": "2026-11-21T12:55:21.998961+09:00",
-        "current_source_fresh_at_slot": false,
+        "current_source_fresh_at_slot": true,
         "source_recheck_required_at_publish": true
       },
       {
@@ -75311,16 +75836,16 @@
         "media_turn": "IMAGE",
         "char_count": 406,
         "expires_at": "2026-11-21T16:34:04.049966+09:00",
-        "current_source_fresh_at_slot": false,
+        "current_source_fresh_at_slot": true,
         "source_recheck_required_at_publish": true
       }
     ],
     "source": {
       "count": 10891,
-      "generation": "gov24-44625737013-1",
-      "lastSuccessAt": "2026-11-20T07:15:01.141322+09:00",
-      "manifestSha256": "b75366fcbd890f0b238ce661370b3e9856856ff29e1225fdb16d7f4e14a27b9d",
-      "path": "snapshots/gov24-44625737013-1",
+      "generation": "gov24-44718917106-1",
+      "lastSuccessAt": "2026-11-20T19:31:42.320213+09:00",
+      "manifestSha256": "72930b14053fad8c38ab9e455c4ac00c1f24954d3dabb14de8668175d98a8a7f",
+      "path": "snapshots/gov24-44718917106-1",
       "version": 1
     },
     "source_count": 10891,
@@ -75334,8 +75859,6 @@
     "new_visual_inspection": false,
     "pending": null,
     "lease": null,
-    "source_recheck_required_at_publish": true,
-    "due_metrics_before_merge": 3,
-    "new_metric_observations": 3
+    "source_recheck_required_at_publish": true
   }
 }
