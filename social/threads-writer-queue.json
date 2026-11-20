@@ -8807,6 +8807,157 @@
           "media_turn": "TEXT"
         }
       }
+    },
+    {
+      "slot": "2026-11-21T16:00:00+09:00",
+      "benefit_id": "SCY000000080",
+      "source_fingerprint": "1c2d8e7a0b95de91915f90625e52ecabc45285948764ddbf77db119e9ff8db03",
+      "source_generation": "gov24-44625737013-1",
+      "prepared_at": "2026-11-20T16:34:04.049966+09:00",
+      "expires_at": "2026-11-21T16:34:04.049966+09:00",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "SCY000000080",
+        "post_text": "기초생활수급가구의 만 18세 미만 아동은 디딤씨앗통장으로 자립자금을 모을 수 있어요. 아동 측 저축액의 2배를 정부가 월 최대 10만원까지 더하는 자산형성 지원이에요.\n\n핵심은 세 가지예요.\n• 저축: 보호자·후원자 도움으로 월 5만원을 저축하면 정부가 10만원을 더해요. 5만원을 넘는 저축분에는 추가 매칭이 없어요.\n• 사용: 원칙적으로 18세 만기 이후 학자금·주거 등 정해진 자립 용도로 써요. 만 24세가 되면 용도 제한 없이 받을 수 있어요.\n• 신청: 읍면동 주민센터에서 상시 신청하고, 대상 심사·계좌 개설을 거쳐 적립해요. 신청만으로 매달 10만원이 자동 지급되지는 않아요.\n\n차상위계층·보호대상아동 등도 별도 자격 확인 대상이에요. 생활비로 바로 꺼내 쓰는 지원금과는 달라요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-21T16:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "기초생활수급가구의만18세미만아동과보호자",
+          "central_message": "본인측저축에따른정부매칭과자립용도제한",
+          "pattern": "P8",
+          "selection_reason": "첫적용11/10에서11일뒤11/21은시간대배정반전16시B. 기존08P5산후비·12P6공제금준비와다른P8저축/사용/신청목록. 실제최근20도입/전개와현재4원고비교. 보장·수령후기·긴급성없음.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "SCY000000080",
+              "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10711040800",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-20T16:34:04.049966+09:00",
+              "claims_supported": [
+                "실제현재보건복지부공개페이지849~869행 열람:저축액1:2매칭·정부월10만원한도·18세미만대상·기초수급및차상위대상·만기자립사용·24세용도제한없음. 최종수정2025-10-16을2026신규공고로바꾸지않음."
+              ]
+            },
+            {
+              "source_id": "SCY000000080",
+              "source_ref": "https://rec.ncrc.or.kr/ncrc/cm/cntnts/cntntsView.do?cntntsId=1142&mi=1035",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-20T16:34:04.049966+09:00",
+              "claims_supported": [
+                "실제아동권리보장원사업안내295/332~395/472~480행:월5만원범위1:2,추가분매칭없음,18세만기사용용도·24세제한없음,기초생활수급/차상위가구계좌신청→읍면동취합제출→시군구심사/확정→계좌발급절차현재운영안내대조. 아동수당/부모급여별도추가적립예외가있어총적립상한금액을본문에단정하지않음."
+              ]
+            },
+            {
+              "source_id": "SCY000000080",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=7537&bnefType=all&svcId=SCY000000080",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-20T16:34:04.049966+09:00",
+              "claims_supported": [
+                "실제완전세대gov24-44625737013-1 rawSource serviceList동일ID 누적조회수48889·2026-08-11수정·상시신청·주민센터접수확인. APIcheckedAt=2026-11-20T07:13:16.402594+09:00 collectionSucceededAt=2026-11-20T07:15:01.141322+09:00와실제공식열람시각구분. 수집성공을현재접수검증으로대체안함."
+              ]
+            },
+            {
+              "source_id": "SCY000000080",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-20T16:34:04.049966+09:00",
+              "claims_supported": [
+                "현재main허용URL실제PNG GET·SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a를원2026-11-06 시각검수PASS및약360px검수와재대조일치. 새직접시각검수아님.혜택별승인자산없어검수rotation2사용.그림에금액/대상/기간이없어본문과충돌없음. 실제alt는원본시각기록그대로사용."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 406,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "기초수급가구아동으로핵심독자범위한정. 타대상/개인자격/중복·계좌개설은기관심사. 보호자후원등저축없이정부정액지급아님.",
+            "원칙18세만기자립용도·24세용도해제,중도인출예외는개별요건.장래총지원액/이자/확정지급액계산안함.",
+            "복지로0행으로개인온라인신청성공은검증못함.주민센터와공식운영절차만안내.",
+            "현재07:15source는내일16시24h초과.실제발송최신완전source·상태·증빙유효시각·CAS·교대재검증필수."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "디딤씨앗통장은 얼마를 저축해야 지원받고 언제 어디에 쓸 수 있나요?",
+            "reader_scope": "기초생활수급가구의만18세미만아동과보호자",
+            "angles": [
+              "자녀자립비용마련",
+              "월저축과정부매칭한도",
+              "만기이후사용용도와신청"
+            ],
+            "chosen_angle": "대상실익→저축/사용/신청세항목→즉시생활비아님",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "아이의 나중 학자금을 조금씩 준비하는 기초생활수급가구라면, 만18세미만 아동의 저축에 정부가 월최대10만원을 더하는 디딤씨앗통장을 확인해요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "기초생활수급가구의 만 18세 미만 아동은 디딤씨앗통장으로 자립자금을 모을 수 있어요. 아동 측 저축액의 2배를 정부가 월 최대 10만원까지 더하는 자산형성 지원이에요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "디딤씨앗통장의 정부지원은 매달 저축한 금액에 따라 달라지고, 바로 생활비로 쓰는 돈은 아니에요."
+              }
+            ],
+            "chosen_opening": "기초생활수급가구의 만 18세 미만 아동은 디딤씨앗통장으로 자립자금을 모을 수 있어요. 아동 측 저축액의 2배를 정부가 월 최대 10만원까지 더하는 자산형성 지원이에요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "첫적용11/10에서11일뒤11/21은시간대배정반전16시B. 기존08P5산후비·12P6공제금준비와다른P8저축/사용/신청목록. 실제최근20도입/전개와현재4원고비교. 보장·수령후기·긴급성없음.",
+            "history_posts_checked": 20,
+            "comparison_eligible": true,
+            "comparison_strata": {
+              "geo": "공식국가사업대상자격",
+              "audience": "기초수급가구미성년아동",
+              "benefit": "제한용도저축매칭",
+              "application": "상시·자격심사",
+              "media": "IMAGE"
+            },
+            "comparison_group": "기존24h비교대상25건A12/B13중앙값83/78,매칭비교쌍0·독자/혜택/시간/미디어교란. 비중유지,7일평가보존14일미도래.",
+            "applied_elements": [
+              "대상실익첫2문장",
+              "정부월최대/저축전제동시명시",
+              "원금저축과지원구분",
+              "자립사용제한과만기",
+              "짧은세항목요약"
+            ],
+            "profile_route": "복지로상세직접열람0행으로화면/개인접수확인못함. 사이트검색/상세및프로필기능거래미수행. 자동신청·즉시지급보장없음.",
+            "source_recheck_required_at_publish": true,
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "SCY000000080",
+          "notice_version": "Gov24 2026-08-11; MOHW policy2025-10-16 and NCRCcurrent page checked 2026-11-20T16:34:04.049966+09:00",
+          "pattern": "P8",
+          "opening": "기초생활수급가구의 만 18세 미만 아동은 디딤씨앗통장으로 자립자금을 모을 수 있어요. 아동 측 저축액의 2배를 정부가 월 최대 10만원까지 더하는 자산형성 지원이에요.",
+          "structure": "대상실익→저축/사용/신청목록→생활비사용제한",
+          "media_turn": "IMAGE"
+        }
+      }
     }
   ]
 }
