@@ -732,6 +732,16 @@
       "checked_at": "2026-11-20T12:55:21.998961+09:00",
       "access_method": "OPENED_OFFICIAL",
       "source_generation": "gov24-44625737013-1"
+    },
+    {
+      "benefit_id": "B41000200041",
+      "decision": "HOLD",
+      "reason": "동일ID누적조회수48834로선정48786보다높음. 2026-02-09기후부보도자료는지원율15/30%와가구30만원한도및개시를확인하나11월21일현재접수/잔여예산·품목별기준검증은못함. 공식신청사이트직접열람timeout,대체support.kepco접근불가. 연초개시/원본종료12월31일만으로현재접수를단정하지않고HOLD. 사업종료뜻아님.",
+      "sources": [
+        "https://en-ter.co.kr/support/main/main.do",
+        "https://support.kepco.co.kr",
+        "https://www.korea.kr/news/policyNewsView.do?newsId=148959268"
+      ]
     }
   ],
   "entries": [
@@ -8956,6 +8966,155 @@
           "opening": "기초생활수급가구의 만 18세 미만 아동은 디딤씨앗통장으로 자립자금을 모을 수 있어요. 아동 측 저축액의 2배를 정부가 월 최대 10만원까지 더하는 자산형성 지원이에요.",
           "structure": "대상실익→저축/사용/신청목록→생활비사용제한",
           "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-21T20:00:00+09:00",
+      "benefit_id": "SD0000016119",
+      "source_fingerprint": "5d5d58be7341f073c69f4052672d2e429249a2a66a384787ee6ae4d19bdc3800",
+      "source_generation": "gov24-44718917106-1",
+      "prepared_at": "2026-11-20T22:10:03.319958+09:00",
+      "expires_at": "2026-11-21T22:10:03.319958+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "SD0000016119",
+        "post_text": "장애로 일을 하기 어려워 생활비가 걱정된다면, 만 18세 이상 65세 미만의 장애인연금법상 중증장애인은 장애인연금 지원을 확인해요. 2026년 기초급여는 1인당 월 최대 34만9,700원이에요.\n\n본인과 배우자의 소득·재산을 반영한 월 소득인정액이 기준 이하여야 해요. 배우자가 없으면 140만원, 있으면 224만원 이하이며, 월급만 보는 기준은 아니에요.\n\n부부가 모두 기초급여를 받으면 각각 20% 감액돼요. 소득인정액에 따른 감액도 있고, 부가급여는 연령·소득 유형에 따라 달라져요. 65세가 되는 달부터 기초급여 대신 기초연금을 별도로 신청해야 해요.\n\n읍면동 주민센터나 복지로에서 상시 신청할 수 있어요. 장애 판정·소득재산·직역연금 수급 여부 등 개인별 요건을 심사하므로 신청만으로 지급이 확정되지는 않아요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-21T20:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "만18세이상65세미만장애인연금법상중증장애인과보호자",
+          "central_message": "장애로생활비가어려울때장애인연금기초급여는얼마이며소득기준과감액은어떻게보나요?",
+          "pattern": "P1",
+          "selection_reason": "첫적용11/10에서11일뒤11/21의20시는A. 같은날08P5산후비/12P6공제금/16P8디딤씨앗목록과다른P1생활상황. 최근20완료본문과도입·전개대조,후기나확정지급없음.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "SD0000016119",
+              "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710030100",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-20T22:10:03.319958+09:00",
+              "claims_supported": [
+                "실제보건복지부현재페이지848~921행:18세이상법상중증·본인배우자소득재산,2026선정140/224,기초급여18~65세전달월349700최고액,부부20%와초과분감액,65세기초연금별도신청,직역연금특례급여별도제한대조. 부가급여는개인유형별이라최대439700을기초급여에무조건합산하지않음."
+              ]
+            },
+            {
+              "source_id": "SD0000016119",
+              "source_ref": "https://m.gov.kr/mw/AA020InfoCappView.do?CappBizCD=13520000007&HighCtgCD=A05001",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-20T22:10:03.319958+09:00",
+              "claims_supported": [
+                "정부24현재공개본문346~449실제열람:인터넷/방문,읍면동/시군구접수처리,소득재산/동의서/신분증등서류. 실제개별기관가능여부별도확인안내. 최근내용변경2025-07-31을2026새공고라고쓰지않음. 상시신청은동일ID 최신원문과교차확인. 로그인·개인신청거래미수행."
+              ]
+            },
+            {
+              "source_id": "SD0000016119",
+              "source_ref": "https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000271158",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-20T22:10:03.319958+09:00",
+              "claims_supported": [
+                "2026-01-01시행보건복지부고시2025-227호헤더실제확인. 조문수치는검색본문에서140/224및349700대조하였으나직접열람동적본문불완전,숫자주근거는보건복지부직접열람페이지."
+              ]
+            },
+            {
+              "source_id": "SD0000016119",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=756537&bnefType=all&svcId=SD0000016119",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-20T22:10:03.319958+09:00",
+              "claims_supported": [
+                "검증완전세대gov24-44718917106-1 동일ID serviceList 누적조회수48786,2026-10-27수정,상시신청·주민센터/온라인접수·2026선정140/224·기초349700확인. APIcheckedAt=2026-11-20T19:29:25.140825+09:00 collectionSucceededAt=2026-11-20T19:31:42.320213+09:00는원문실제열람시각과구분."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 420,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "개인장애판정/직역연금제외·특례및수급유형은별도심사. 금액은기초급여최고액이며부가급여를합산한확정지급액아님. 2027기준추정없음.",
+            "공식사이트개인신청거래와프로필전환미검증. 복지로직접열람0행을성공으로기록안함.",
+            "현재19:31source는내일20시24h초과. 실제발송최신완전source·공식정정/상태·증빙expiry·교대·CAS재검증필수."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "장애로생활비가어려울때장애인연금기초급여는얼마이며소득기준과감액은어떻게보나요?",
+            "reader_scope": "만18세이상65세미만장애인연금법상중증장애인과보호자",
+            "angles": [
+              "장애로줄어든생활비보완",
+              "소득재산선정기준",
+              "기초급여최고액과감액/연령전환"
+            ],
+            "chosen_angle": "생활부담→기초급여최고액→소득재산/감액제한→신청",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "장애로 일을 하기 어려워 생활비가 걱정된다면, 만 18세 이상 65세 미만의 장애인연금법상 중증장애인은 장애인연금 지원을 확인해요. 2026년 기초급여는 1인당 월 최대 34만9,700원이에요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "만18세이상65세미만의장애인연금법상중증장애인은2026년월최대34만9700원의기초급여지원을확인해요. 소득재산심사와감액조건이있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "장애인연금의소득기준은월급만으로판단하지않고본인과배우자의소득과재산을함께봐요."
+              }
+            ],
+            "chosen_opening": "장애로 일을 하기 어려워 생활비가 걱정된다면, 만 18세 이상 65세 미만의 장애인연금법상 중증장애인은 장애인연금 지원을 확인해요. 2026년 기초급여는 1인당 월 최대 34만9,700원이에요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "comparison_eligible": true,
+            "selection_reason": "첫적용11/10에서11일뒤11/21의20시는A. 같은날08P5산후비/12P6공제금/16P8디딤씨앗목록과다른P1생활상황. 최근20완료본문과도입·전개대조,후기나확정지급없음.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국제도",
+              "audience": "법상중증성인장애인",
+              "benefit": "현금연금기초급여",
+              "application": "상시·자격심사",
+              "media": "TEXT"
+            },
+            "comparison_group": "기존24hA12/B13중앙값83/78은사업·대상·시간·미디어교란,매칭쌍0. 신규24h자료는별도실측저장후분석,효과입증/비중조정안함.",
+            "applied_elements": [
+              "생활부담과대상실익첫2문장",
+              "최대/월/1인단위",
+              "소득인정액과월급구분",
+              "감액과65세전환제한"
+            ],
+            "profile_route": "공식공개신청안내만열람. 복지로직접본문0행,개인신청/프로필/사이트검색거래미검증. 자동신청/수령보장없음.",
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true,
+            "source_recheck_required_at_publish": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "SD0000016119",
+          "notice_version": "Gov24 2026-10-27; MOHW2026policy actualchecked 2026-11-20T22:10:03.319958+09:00",
+          "pattern": "P1",
+          "opening": "장애로 일을 하기 어려워 생활비가 걱정된다면, 만 18세 이상 65세 미만의 장애인연금법상 중증장애인은 장애인연금 지원을 확인해요. 2026년 기초급여는 1인당 월 최대 34만9,700원이에요.",
+          "structure": "생활상황→기초급여최고액→소득재산→감액/연령전환→심사후신청",
+          "media_turn": "TEXT"
         }
       }
     }
