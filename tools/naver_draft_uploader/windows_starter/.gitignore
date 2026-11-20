@@ -1,0 +1,6 @@
+.venv/
+assets/
+phase1_candidate.json
+reports/
+__pycache__/
+*.pyc

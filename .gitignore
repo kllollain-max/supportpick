@@ -4,3 +4,6 @@ output/
 runtime-state/
 __pycache__/
 *.pyc
+tools/naver_draft_uploader/.naver-browser-profile/
+tools/naver_draft_uploader/.naver-draft-runtime/
+tools/naver_draft_uploader/config.local.json
