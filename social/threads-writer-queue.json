@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-20T04:15:09.480730+09:00",
+  "prepared_at": "2026-11-20T09:22:06.625659+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -678,6 +678,47 @@
       "checked_at": "2026-11-20T04:15:09.480730+09:00",
       "access_method": "OPENED_OFFICIAL current web page plus PROVIDED_OFFICIAL_TEXT same-ID rawSource",
       "source_generation": "gov24-44505539863-1"
+    },
+    {
+      "benefit_id": "135200005010",
+      "views": 52544,
+      "decision": "HOLD",
+      "reason": "이번 직접 연 관악구 2026 안내 1202~1211행은 2026년2차부터 모집중단을 명시(최종갱신10월28일). 남아있는11월2~16일 예정표를 신규접수 가능으로 쓰지 않는다. 동일ID API는2024모집문구라 현재재개근거가 아니며 다른지역현행모집을 확보하지 못해 이번 신규선정 HOLD. 사업전체 영구종료로 단정하지 않음.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=805488&bnefType=all&svcId=135200005010",
+        "https://www.gwanak.go.kr/site/gwanak/06/10609061000002022033009.jsp"
+      ],
+      "checked_at": "2026-11-20T09:22:06.625659+09:00",
+      "access_method": "OPENED_OFFICIAL",
+      "source_generation": "gov24-44625737013-1"
+    },
+    {
+      "benefit_id": "646000000122",
+      "views": 51203,
+      "decision": "HOLD",
+      "reason": "동일ID API상 상시이나 직전검수의 실제 여수URL은47행 일반shell로 사업본문을 반환하지 않았고 목포·순천 공고는timeout. 이번에도 그 실제접근한계를 유지하며 검색요약만으로 특정지역 현재접수·잔여예산을 확정하지 않는다. 기존검수시각=2026-11-20T08:57:10.418747+09:00. 현재 접수 UNKNOWN으로 신규선정HOLD.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1000543&bnefType=all&svcId=646000000122",
+        "https://youth.yeosu.go.kr/www/58?sportArtclId=22",
+        "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?idx=53106&mode=view",
+        "https://www.sc.go.kr/youth/0001/0002/?boardId=bbs_0000000000011247&category=&cntId=616&mode=view&pageIdx=37"
+      ],
+      "checked_at": "2026-11-20T09:22:06.625659+09:00",
+      "access_method": "UPSTREAM_VERIFIED prior actual opened-shell/timeout evidence; current API text read",
+      "source_generation": "gov24-44625737013-1"
+    },
+    {
+      "benefit_id": "629000000189",
+      "views": 51066,
+      "decision": "HOLD",
+      "reason": "이번 직접 연 광주광역시 혜택안내206~208행은2026년6월15일 기준10%·통합월50만원이다. 동일ID API는운영사업이라고만해 최신11월충전 할인예산·실제적용률을 확인할 수 없다. 검색에별도기간한정율단서도있지만 직접현재본문대조가 없어 적용률/충전가능을꾸미지않고이번선정HOLD.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006245&bnefType=all&svcId=629000000189",
+        "https://www.gwangju.go.kr/economy/contentsView.do?pageId=economy125"
+      ],
+      "checked_at": "2026-11-20T09:22:06.625659+09:00",
+      "access_method": "OPENED_OFFICIAL",
+      "source_generation": "gov24-44625737013-1"
     }
   ],
   "entries": [
@@ -8459,6 +8500,157 @@
           "opening": "취업을 준비하는 구직자는 고용센터의 ‘취업역량 강화 프로그램’에서 진로 탐색과 이력서·면접 준비를 도울 집단상담·취업특강을 찾아볼 수 있어요. 현금 지급이 아닌 취업지원 서비스예요.",
           "structure": "대상·서비스실익→내용·대상·일정3항목→현재운영확인·신청경로·잔여석제한→CTA",
           "media_turn": "TEXT"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-21T08:00:00+09:00",
+      "benefit_id": "641000000137",
+      "source_fingerprint": "e8c4bd4f099ba2e1b8ddeb9282e65015e2dad357c85da18cdc5ba58870e587ce",
+      "source_generation": "gov24-44625737013-1",
+      "prepared_at": "2026-11-20T09:22:06.625659+09:00",
+      "expires_at": "2026-11-21T09:22:06.625659+09:00",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "641000000137",
+        "post_text": "경기 광주시 출산가정은 경기도 산후조리비로 출생아 1명당 50만원을 지역화폐로 지원받을 수 있어요. 현금 입금이 아닌 지역화폐 지원이며, 주소·거주·출생등록 요건을 확인해야 해요.\n\n먼저 세 가지를 살펴봐요.\n• 거주: 부 또는 모가 출생일·신청일에 경기도에 주민등록을 두고 실제 거주해야 해요. 광주시 공고는 두 시점의 광주시 주민등록·실거주를 안내해요.\n• 아이: 경기도에 출생등록이 된 영아로, 이번 재개 안내는 2026년 12월 31일 출생아까지예요. 다태아는 출생아 수에 따라 50만원씩 계산해요.\n• 기한: 출생일부터 12개월 이내에 신청해요. 2027년 출생아 지원은 아직 확정되지 않았어요.\n\n출생신고한 관할 주민센터나 경기민원24에서 신청해요. 온라인은 출생신고 후 본인만 신청할 수 있고, 외국인은 온라인 신청 대상이 아니에요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-21T08:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "경기광주시거주 출산가정 중 주소·출생등록·신청기한 요건을 갖춘 부 또는 모",
+          "central_message": "광주시 출산가정은 산후조리비 지역화폐의 주소·출생연도·신청기한을 어떻게 확인하나요?",
+          "pattern": "P5",
+          "selection_reason": "동일IDserviceList50739 누적조회수순. 완료60건과다른3미래READY중복제외. 상위미검수3사업은실제이유·출처를추가하여기존58notes포함모두보존.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "641000000137",
+              "source_ref": "https://cyberoff.gjcity.go.kr/depart/bbs/view.do?bIdx=348189&mId=0802010000&ptIdx=1",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-20T09:22:06.625659+09:00",
+              "claims_supported": [
+                "이번 실제광주시청10월22일재개정정공지504~527행 열람.10월1일종료후추경확보로재개,광주시출생/신청일주민등록실거주,2026년12월31일출생아까지·2027미확정,아동당50만원지역화폐다태아배수,출생후12개월,센터/경기민원24접수,이전종료안내로미신청한가정도요건충족시신청가능. 검색요약이아닌실제정정본문으로과거종료자료를대체."
+              ]
+            },
+            {
+              "source_id": "641000000137",
+              "source_ref": "https://gg24.gg.go.kr/svcreqst/selectSvcReqst.do?sch_tab_code=10&svc_seq=803",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-20T09:22:06.625659+09:00",
+              "claims_supported": [
+                "이번 실제경기민원24본문63~101행 접수중/상시접수,부또는모출생일·신청일경기도주민등록·현재실거주·12개월·도내출생등록,아동당50만원지역화폐다태아배수,출생신고후온라인본인한정·외국인온라인불가를확인. 개인신청거래성공주장은하지않음."
+              ]
+            },
+            {
+              "source_id": "641000000137",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1002198&bnefType=all&svcId=641000000137",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-20T09:22:06.625659+09:00",
+              "claims_supported": [
+                "완전세대gov24-44625737013-1 동일ID serviceList/detail 실제읽기. 누적조회수50739(실시간검색량/신청자수아님),APIcheckedAt=2026-11-20T07:12:43.152860+09:00,collectionSucceededAt=2026-11-20T07:15:01.141322+09:00. 수집일시와현재별도원문검수구분."
+              ]
+            },
+            {
+              "source_id": "641000000137",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-20T09:22:06.625659+09:00",
+              "claims_supported": [
+                "현재mainPNG실제GET SHA256=0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd를원2026-11-06 image-review AI_VISUAL_INSPECTION/PASS·약360px검수와재대조해일치. 새직접시각검수아님.혜택별카드없어검수rotation사용,사업별금액·지역·조건·기간이없는generic카드라본문과충돌없음."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 435,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "실제지원지역은직접연현행광주시공지로한정. 다른시군의종료·재개상태나2027출생아지원으로확장하지않음.",
+            "현재07:15source는내일08발송시24h초과. 발송시최신완전source·공식정정/종료·expiry·이미지교대재검증필수.",
+            "개인신청·심사·지역화폐지급거래/프로필링크이동·사이트검색상세접수기능은실행확인하지않아보장하지않음."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "광주시 출산가정은 산후조리비 지역화폐의 주소·출생연도·신청기한을 어떻게 확인하나요?",
+            "reader_scope": "경기광주시거주 출산가정 중 주소·출생등록·신청기한 요건을 갖춘 부 또는 모",
+            "angles": [
+              "출산비용부담과지역화폐",
+              "주소·출생연도·기한자격",
+              "종료후재개정정과신청준비"
+            ],
+            "chosen_angle": "지원대상과실익부터알고세자격을체크",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "출산 뒤 지출이 커졌다면, 경기 광주시 출산가정은 요건을 갖춰 아기 1명당 50만원 지역화폐 지원을 확인할 수 있어요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "경기 광주시 출산가정은 경기도 산후조리비로 출생아 1명당 50만원을 지역화폐로 지원받을 수 있어요. 현금 입금이 아닌 지역화폐 지원이며, 주소·거주·출생등록 요건을 확인해야 해요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "경기도 산후조리비는 출생등록과 주소·신청기한을 함께 확인하는 지역화폐 지원이에요."
+              }
+            ],
+            "chosen_opening": "경기 광주시 출산가정은 경기도 산후조리비로 출생아 1명당 50만원을 지역화폐로 지원받을 수 있어요. 현금 입금이 아닌 지역화폐 지원이며, 주소·거주·출생등록 요건을 확인해야 해요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "첫적용Nov10기준Nov21반전일08B. 최근20실제완료게시및현재3READY와도입·전개대조. 코레일임신할인은이동운임혜택,영양플러스는서초대기접수. 이번광주시출생지역화폐는주소/출생연도/12개월세자격체크로다른판단질문과전개.",
+            "history_posts_checked": 20,
+            "comparison_eligible": true,
+            "comparison_strata": {
+              "geo": "경기도광주시",
+              "audience": "출산가정",
+              "benefit": "아동당지역화폐",
+              "application": "상시·출생12개월·2026출생아",
+              "media": "IMAGE"
+            },
+            "comparison_group": "기존94공식관측과이번3공식추가관측(24/72/168별도)을구분. 과거단일급등/저조회로효과단정없고유사사업matchedpairs0라비중유지. 이전7일평가보존,14일미도래.",
+            "applied_elements": [
+              "지역·대상·아동당50만원첫단락",
+              "현금과지역화폐구별",
+              "거주·아이·기한3자격체크",
+              "실제재개정정에따른2026출생연도제한",
+              "온라인본인/외국인제한과최종CTA"
+            ],
+            "profile_route": "공식공개접수안내열람,프로필·사이트이동/개인별신청미확인.접수성공기능보장없음.",
+            "source_recheck_required_at_publish": true,
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true,
+            "writing_input_sha256": "dd3a7639c33e43bc4d890e245398675f56b5eb0d720c7bdb18d0c28124ebaad8"
+          }
+        },
+        "next_history_record": {
+          "program_id": "641000000137",
+          "notice_version": "2026-10-22광주시재개정정+현재경기민원24동일사업대조",
+          "pattern": "P5",
+          "opening": "경기 광주시 출산가정은 경기도 산후조리비로 출생아 1명당 50만원을 지역화폐로 지원받을 수 있어요. 현금 입금이 아닌 지역화폐 지원이며, 주소·거주·출생등록 요건을 확인해야 해요.",
+          "structure": "지역대상·지역화폐실익→거주·아이·기한3체크→본인온라인제한→CTA",
+          "media_turn": "IMAGE"
         }
       }
     }
