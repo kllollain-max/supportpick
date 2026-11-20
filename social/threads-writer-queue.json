@@ -719,6 +719,19 @@
       "checked_at": "2026-11-20T09:22:06.625659+09:00",
       "access_method": "OPENED_OFFICIAL",
       "source_generation": "gov24-44625737013-1"
+    },
+    {
+      "benefit_id": "322000000103",
+      "views": 49949,
+      "decision": "HOLD",
+      "reason": "이번 직접 연 강남구청2026-09-14 추석발행공지1174~1182행은9월16일발행·선할인5%·페이백5%예산소진조건이다. 11월21일실제판매잔량/구매가능·현재페이백예산을 확인못해 상시API문구를 현재충전보장으로 쓰지않음. 행사종료나제도폐지로단정하지않고 이번후보HOLD. 검색된서울시10/29~11/15행사도지난기간으로 신규혜택확정근거아님.",
+      "sources": [
+        "https://gangnam.go.kr/board/B_000001/1076640/view.do?mid=ID05_040101",
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1000591&bnefType=all&svcId=322000000103"
+      ],
+      "checked_at": "2026-11-20T12:55:21.998961+09:00",
+      "access_method": "OPENED_OFFICIAL",
+      "source_generation": "gov24-44625737013-1"
     }
   ],
   "entries": [
@@ -8651,6 +8664,147 @@
           "opening": "경기 광주시 출산가정은 경기도 산후조리비로 출생아 1명당 50만원을 지역화폐로 지원받을 수 있어요. 현금 입금이 아닌 지역화폐 지원이며, 주소·거주·출생등록 요건을 확인해야 해요.",
           "structure": "지역대상·지역화폐실익→거주·아이·기한3체크→본인온라인제한→CTA",
           "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-21T12:00:00+09:00",
+      "benefit_id": "B55271100008",
+      "source_fingerprint": "48454fea5b9b62c6f0cff3ebee0b96fd16c0470f0768dc0279d233dc0d5383f5",
+      "source_generation": "gov24-44625737013-1",
+      "prepared_at": "2026-11-20T12:55:21.998961+09:00",
+      "expires_at": "2026-11-21T12:55:21.998961+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "B55271100008",
+        "post_text": "건설 일을 그만두며 생활비를 정리하는 일용·임시직 근로자라면, 건설근로자 퇴직공제금의 적립내역부터 확인해요. 가입사업장이 납부한 공제부금에 이자를 더해 일시금으로 지급하는 제도예요.\n\n먼저 적립일수와 신청사유를 맞춰봐요. 252일 이상 적립했다면 건설업에서 퇴직했거나 만 60세에 이른 경우 신청할 수 있어요. 252일 미만은 만 65세에 이른 경우예요. 현장 공사가 끝나 잠시 쉬는 것만으로는 건설업 퇴직으로 보지 않아요.\n\n그다음 지급청구서·신분증과 퇴직사유별 증빙을 준비해요. 상시 신청하며, 공제회 지사·센터 방문이나 온라인·모바일 등으로 접수할 수 있어요. 서류 심사 후 본인 계좌로 지급하고, 금액은 개인 적립내역에 따라 달라요. 사망자의 유족 신청은 별도 자격·서류를 확인해야 해요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-21T12:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "퇴직공제 가입사업장에서 일한 일용·임시직 건설근로자 중 퇴직 또는 연령기준 해당자",
+          "central_message": "정액지원금이 아닌 본인적립공제금의 조건과 신청준비",
+          "pattern": "P6",
+          "selection_reason": "첫적용11/10에서11일뒤11/21은배정반전하여12시A.08시기존P5지역화폐산후비와다른P6적립·사유·증빙준비순서. 최근20게시및현재3READY도입·전개실제대조. 근거있는조건설명은본문에두고무근거오해반전사용안함.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "B55271100008",
+              "source_ref": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systClId=SC00000262&systId=SI00000311",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-20T12:55:21.998961+09:00",
+              "claims_supported": [
+                "실제 고용24 제도안내294~303/368~441/558~565행 열람. 가입사업장 일용·1년미만근로자 공제부금원금+이자 일시금;252일이상 퇴직또는60세/미만65세;일시현장철수는퇴직아님;지급청구서신분증과사유별증빙,접수·심사·본인계좌 지급,유족별도요건. 페이지최종수정2025-07-09로명시하여새2026공고로바꾸지않음. 현재동일ID2026-08-06 API핵심요건과일치."
+              ]
+            },
+            {
+              "source_id": "B55271100008",
+              "source_ref": "https://meum.cw.or.kr/web/fir/MOFIR140M00",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-20T12:55:21.998961+09:00",
+              "claims_supported": [
+                "실제 현재공제회모바일공개페이지8~22행 신청자격/신청방법/구비서류·가입사업장및적립내역조회·퇴직공제금신청 진입표시를 확인. JS동적세부조건은미노출이므로봤다고하지않음. eum.cw.or.kr메인은읽을본문0행. 로그인·개별청구거래·실제지급은미실행."
+              ]
+            },
+            {
+              "source_id": "B55271100008",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001384&bnefType=all&svcId=B55271100008",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-20T12:55:21.998961+09:00",
+              "claims_supported": [
+                "완전세대 gov24-44625737013-1 동일ID rawSource serviceList조회수49685(누적지표)·serviceDetail8/6수정·상시신청·공통서류및2026건설e음경로를 실제읽음. APIcheckedAt=2026-11-20T07:12:58.448460+09:00 collectionSucceededAt=2026-11-20T07:15:01.141322+09:00와현재공식열람시각구분. 현재접수판단은공개공식제도/신청진입안내대조범위이며개인계좌/자격확정아님."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 407,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "본인적립액·인정일수·사유심사및지급은미확정. 유족안내는별도범위. 특별퇴직공제금대상자는추가지급가능하나최대확정금액후킹없음.",
+            "고용24구경로와현재API건설e음차이는인정하고본문경로를기관/접수방식으로한정. 개인접속거래미실행.",
+            "현재07:15source는내일12시발송때24h초과. 실제발송최신완전세대·사실/상태·증빙유효시각·원장·교대재검증필수."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "건설업을 그만둘 때 퇴직공제금 신청 전 무엇을 확인하고 준비하나요?",
+            "reader_scope": "퇴직공제 가입사업장에서 일한 일용·임시직 건설근로자 중 퇴직 또는 연령기준 해당자",
+            "angles": [
+              "생활비 정리와 적립금 확인",
+              "적립일수·연령·퇴직사유 판단",
+              "증빙 준비와 심사 절차"
+            ],
+            "chosen_angle": "적립내역→신청사유→서류와심사",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "건설 일을 그만두며 생활비를 정리하는 일용·임시직 근로자라면, 건설근로자 퇴직공제금의 적립내역부터 확인해요. 가입사업장이 납부한 공제부금에 이자를 더해 일시금으로 지급하는 제도예요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "퇴직공제에 가입된 일용·임시직 건설근로자는 적립금과 이자를 일시금으로 받을 수 있어요. 적립일수와 퇴직·연령 요건을 충족해야 해요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "건설 현장 공사가 끝났다는 사실만으로 퇴직공제금의 퇴직 요건을 충족하지는 않아요."
+              }
+            ],
+            "chosen_opening": "건설 일을 그만두며 생활비를 정리하는 일용·임시직 근로자라면, 건설근로자 퇴직공제금의 적립내역부터 확인해요. 가입사업장이 납부한 공제부금에 이자를 더해 일시금으로 지급하는 제도예요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "첫적용11/10에서11일뒤11/21은배정반전하여12시A.08시기존P5지역화폐산후비와다른P6적립·사유·증빙준비순서. 최근20게시및현재3READY도입·전개실제대조. 근거있는조건설명은본문에두고무근거오해반전사용안함.",
+            "history_posts_checked": 20,
+            "comparison_eligible": true,
+            "comparison_strata": {
+              "geo": "전국",
+              "audience": "일용·임시직건설근로자",
+              "benefit": "적립공제부금 일시금",
+              "application": "상시·사유심사",
+              "media": "TEXT"
+            },
+            "comparison_group": "24h기존비교A12/B13중앙값83/78,유사사업매칭0.표본·독자/지역/혜택/시각/미디어교란으로우세판정및비중변경없음.7일평가보존14일미도래.",
+            "applied_elements": [
+              "생활상황과실익첫2문장",
+              "적립일수와연령한정",
+              "일시실직과건설업퇴직구분",
+              "현금적립금과정부정액지원구분",
+              "심사와본인계좌절차"
+            ],
+            "profile_route": "사이트해당사업검색/상세및실제신청거래는이번에수행안함. 프로필에서바로청구·자동금액계산보장하지않음.",
+            "source_recheck_required_at_publish": true,
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "B55271100008",
+          "notice_version": "Gov24 2026-08-06; current official Work24 2025-07-09 page+mobile route checked 2026-11-20T12:55:21.998961+09:00",
+          "pattern": "P6",
+          "opening": "건설 일을 그만두며 생활비를 정리하는 일용·임시직 근로자라면, 건설근로자 퇴직공제금의 적립내역부터 확인해요. 가입사업장이 납부한 공제부금에 이자를 더해 일시금으로 지급하는 제도예요.",
+          "structure": "생활비정리/적립실익→적립일수와사유→증빙준비와심사",
+          "media_turn": "TEXT"
         }
       }
     }
