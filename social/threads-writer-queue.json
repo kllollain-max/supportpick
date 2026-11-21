@@ -9117,6 +9117,166 @@
           "media_turn": "TEXT"
         }
       }
+    },
+    {
+      "slot": "2026-11-22T08:00:00+09:00",
+      "benefit_id": "507000000642",
+      "source_fingerprint": "cb9fff56715e19c2da58a57824b1a7fc2f2b41b046f9d964bd37f1e72296d6dc",
+      "source_generation": "gov24-44826151976-1",
+      "prepared_at": "2026-11-21T09:58:44.575555+09:00",
+      "expires_at": "2026-11-22T09:58:44.575555+09:00",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "507000000642",
+        "post_text": "매달 건강보험료가 부담된다면, 농촌·준농촌에 사는 지역가입 농업인 세대는 농업인 건강보험료 지원을 확인해요. 2026년 세대당 월 최대 28%, 10만6,650원까지 보험료 부담을 줄여줘요.\n\n농업·축산·임업에 종사하면서 주소지의 지역 요건을 갖춰야 해요. 직장가입자는 대상이 아니며, 따로 받는 생활비가 아니라 지원액을 뺀 보험료가 고지되는 방식이에요.\n\n월 보험료액이 38만920원 미만이면 28%를 지원해요. 38만920원 이상~52만8,970원 미만은 월 10만6,650원 정액이고, 52만8,970원 이상이면 지원에서 제외돼요.\n\n상시 신청은 신청확인서를 작성해 주소지 지자체 확인 후 건강보험공단 지사에 제출해요. 읍·면 거주 농업경영체 등록자는 지자체 확인 없이 방문·전화 신청도 가능해요. 공단이 자격을 확인하므로 신청만으로 적용이 확정되지는 않아요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-22T08:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "농촌·준농촌주소지요건을갖추고농업·축산·임업에종사하는건강보험지역가입세대",
+          "central_message": "농촌지역농업인세대의건강보험료부담은어떤자격과보험료구간에서줄어드나요?",
+          "pattern": "P3",
+          "selection_reason": "첫적용11/10기준11/22 08시는A. 최근20완료게시와현재3READY대조:산후비지역화폐/공제금/저축/장애인연금과다른농업인반복보험료지출P3. 국고보험료경감과생활비현금구별,세구간전개.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "507000000642",
+              "source_ref": "https://www.mafra.go.kr/bbs/home/791/593407/download.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-21T09:58:44.575555+09:00",
+              "claims_supported": [
+                "농식품부2026-01-06게시공식HWPX실제다운로드153262바이트ZIP/XML추출. 612~770행대조:지역가입·농업종사·농촌준농촌,380920미만28%,380920~528970미만106650정액,528970이상제외. 정부지원액경감고지,지자체확인후공단제출·읍면경영체등록확인면제/유선신청·공단적격심사. 구법2019금액을현재로쓰지않음."
+              ]
+            },
+            {
+              "source_id": "507000000642",
+              "source_ref": "https://www.mafra.go.kr/bbs/home/795/594263/download.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-21T09:58:44.575555+09:00",
+              "claims_supported": [
+                "농식품부2026공식사업안내직접본문5106~5124행:세대건강보험지역가입농업축산임업·월최대28%(106650)·세구간현재수치재대조."
+              ]
+            },
+            {
+              "source_id": "507000000642",
+              "source_ref": "https://www.nhis.or.kr/static/html/wbma/b/wbmab0301.html",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-21T09:58:44.575555+09:00",
+              "claims_supported": [
+                "국민건강보험공단공개현행페이지193~218행:지역요건·신청확인서·읍면등록확인면제유선신청·지원적용시기. 하단2019금액95660은과거연도표시라2026금액주근거로미사용."
+              ]
+            },
+            {
+              "source_id": "507000000642",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=510258&bnefType=all&svcId=507000000642",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-21T09:58:44.575555+09:00",
+              "claims_supported": [
+                "완전검증세대gov24-44826151976-1 동일ID serviceList 누적조회수48228,수정2026-11-03상시신청·금액/제외/대상대조. APIcheckedAt=2026-11-21T07:10:48.393025+09:00 collectionSucceededAt=2026-11-21T07:14:06.816359+09:00는별도시각이며현재신청판정은실제공식지침/공단안내와함께검수."
+              ]
+            },
+            {
+              "source_id": "507000000642",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-21T09:58:44.575555+09:00",
+              "claims_supported": [
+                "이번실제main허용PNG GET SHA256=0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd를social/image-review.json 2026-11-06 AI_VISUAL_INSPECTION/PASS·360px가독성과재대조일치. 새직접시각검수아님. 혜택별카드없어기존검수rotation,금액·지역·기한·조건없는브랜드그림으로본문과충돌없음."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 446,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "농어촌22%별도경감은지역별예외가있어합계50%를모든농업인에게약속하지않음. 어업인별도제도와합치지않고동일ID농업/축산/임업으로한정.",
+            "현재11/21 07:14source는11/22 08시24h초과. 실제발송시최신완전source·공식상태/증빙expiry·교대·CAS검증필수.",
+            "개인적격심사·거래·고지내역·프로필/사이트접수기능미확인. 법령페이지직접열람동적본문불완전,수치주근거는실제추출한2026공식지침."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "농촌지역농업인세대의건강보험료부담은어떤자격과보험료구간에서줄어드나요?",
+            "reader_scope": "농촌·준농촌주소지요건을갖추고농업·축산·임업에종사하는건강보험지역가입세대",
+            "angles": [
+              "매월건강보험료부담",
+              "지역가입과주소·종사자격",
+              "보험료구간별지원과신청확인"
+            ],
+            "chosen_angle": "반복지출→보험료경감방식→구간별판단→확인절차",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "매달 건강보험료가 부담된다면, 농촌·준농촌에 사는 지역가입 농업인 세대는 농업인 건강보험료 지원을 확인해요. 2026년 세대당 월 최대 28%, 10만6,650원까지 보험료 부담을 줄여줘요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "농촌·준농촌의 지역가입 농업인 세대는 건강보험료를 월 최대 28%, 10만6,650원까지 지원받을 수 있어요. 보험료 구간과 주소·종사 요건을 확인해요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "농업인 건강보험료 지원은 지역가입 여부와 주소지·농업 종사 요건, 보험료 구간을 함께 확인해요."
+              }
+            ],
+            "chosen_opening": "매달 건강보험료가 부담된다면, 농촌·준농촌에 사는 지역가입 농업인 세대는 농업인 건강보험료 지원을 확인해요. 2026년 세대당 월 최대 28%, 10만6,650원까지 보험료 부담을 줄여줘요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "comparison_eligible": true,
+            "selection_reason": "첫적용11/10기준11/22 08시는A. 최근20완료게시와현재3READY대조:산후비지역화폐/공제금/저축/장애인연금과다른농업인반복보험료지출P3. 국고보험료경감과생활비현금구별,세구간전개.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국농촌·준농촌요건지역",
+              "audience": "지역가입농업인세대",
+              "benefit": "건강보험료지원경감",
+              "application": "상시·공단자격확인",
+              "media": "IMAGE"
+            },
+            "comparison_group": "실제24/72/168h공식관측구분. 비슷한독자·지역·혜택매칭쌍0,시간/미디어교란으로비중유지. 7일기존평가보존14일미도래.",
+            "applied_elements": [
+              "생활비상황과실익첫단락",
+              "보험료지원과현금지급구별",
+              "세대·월·최대단위",
+              "정률/정액/제외3구간",
+              "공단자격심사와신청경로"
+            ],
+            "profile_route": "공식신청안내만열람. 개인신청거래/프로필링크이동/사이트검색접수기능미검증,접수성공보장없음.",
+            "source_recheck_required_at_publish": true,
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true,
+            "writing_input_sha256": "9947ccca6370f25b2f36c67cd455ed019c92558b8fc1be6f0ea651a1e8dfc947"
+          }
+        },
+        "next_history_record": {
+          "program_id": "507000000642",
+          "notice_version": "2026농식품부지침실제검수 2026-11-21T09:58:44.575555+09:00",
+          "pattern": "P3",
+          "opening": "매달 건강보험료가 부담된다면, 농촌·준농촌에 사는 지역가입 농업인 세대는 농업인 건강보험료 지원을 확인해요. 2026년 세대당 월 최대 28%, 10만6,650원까지 보험료 부담을 줄여줘요.",
+          "structure": "월보험료지출→경감고지방식→3보험료구간→확인·신청절차",
+          "media_turn": "IMAGE"
+        }
+      }
     }
   ]
 }
