@@ -8832,9 +8832,9 @@
       "slot": "2026-11-21T16:00:00+09:00",
       "benefit_id": "SCY000000080",
       "source_fingerprint": "1c2d8e7a0b95de91915f90625e52ecabc45285948764ddbf77db119e9ff8db03",
-      "source_generation": "gov24-44625737013-1",
-      "prepared_at": "2026-11-20T16:34:04.049966+09:00",
-      "expires_at": "2026-11-21T16:34:04.049966+09:00",
+      "source_generation": "gov24-44826151976-1",
+      "prepared_at": "2026-11-21T16:54:43.169032+09:00",
+      "expires_at": "2026-11-21T18:00:00+09:00",
       "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -8864,36 +8864,36 @@
               "source_id": "SCY000000080",
               "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10711040800",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-20T16:34:04.049966+09:00",
+              "verified_at": "2026-11-21T16:54:43.169032+09:00",
               "claims_supported": [
-                "실제현재보건복지부공개페이지849~869행 열람:저축액1:2매칭·정부월10만원한도·18세미만대상·기초수급및차상위대상·만기자립사용·24세용도제한없음. 최종수정2025-10-16을2026신규공고로바꾸지않음."
+                "2026-11-21 실제 재열람 846~855행: 기초수급가구 등 아동 대상,18세미만 저축액1:2·정부월최대10만원,18세만기 이후 자립용도,24세 용도제한해제. 페이지수정2025-10-16을 신규2026공고로 표현하지 않음."
               ]
             },
             {
               "source_id": "SCY000000080",
               "source_ref": "https://rec.ncrc.or.kr/ncrc/cm/cntnts/cntntsView.do?cntntsId=1142&mi=1035",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-20T16:34:04.049966+09:00",
+              "verified_at": "2026-11-21T16:54:43.169032+09:00",
               "claims_supported": [
-                "실제아동권리보장원사업안내295/332~395/472~480행:월5만원범위1:2,추가분매칭없음,18세만기사용용도·24세제한없음,기초생활수급/차상위가구계좌신청→읍면동취합제출→시군구심사/확정→계좌발급절차현재운영안내대조. 아동수당/부모급여별도추가적립예외가있어총적립상한금액을본문에단정하지않음."
+                "2026-11-21 실제 재열람295/374~395/476~480행: 월5만원범위저축에1:2매칭·정부월10만원한도·추가저축매칭없음,18세만기자립용도·24세용도제한없음,기초수급/차상위가구 신청→읍면동취합→시군구심사확정→계좌발급→저축/매칭의 현재 운영절차 재대조. 개인온라인신청거래·지급보장확인아님."
               ]
             },
             {
               "source_id": "SCY000000080",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=7537&bnefType=all&svcId=SCY000000080",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-20T16:34:04.049966+09:00",
+              "verified_at": "2026-11-21T16:54:43.169032+09:00",
               "claims_supported": [
-                "실제완전세대gov24-44625737013-1 rawSource serviceList동일ID 누적조회수48889·2026-08-11수정·상시신청·주민센터접수확인. APIcheckedAt=2026-11-20T07:13:16.402594+09:00 collectionSucceededAt=2026-11-20T07:15:01.141322+09:00와실제공식열람시각구분. 수집성공을현재접수검증으로대체안함."
+                "완전세대gov24-44826151976-1 실제 load_feed/read_current/verify_snapshot 10892건; 동일ID원본 serviceList 누적조회수48910, 상시신청·주민센터접수·기초수급가구18세미만 대조. APIcheckedAt=2026-11-21T07:11:53.990856+09:00; collectionSucceededAt=2026-11-21T07:14:06.816359+09:00. API수집시각은 현재접수검증시각이 아님."
               ]
             },
             {
               "source_id": "SCY000000080",
               "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
               "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-20T16:34:04.049966+09:00",
+              "verified_at": "2026-11-21T16:54:43.169032+09:00",
               "claims_supported": [
-                "현재main허용URL실제PNG GET·SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a를원2026-11-06 시각검수PASS및약360px검수와재대조일치. 새직접시각검수아님.혜택별승인자산없어검수rotation2사용.그림에금액/대상/기간이없어본문과충돌없음. 실제alt는원본시각기록그대로사용."
+                "현재허용main URL 실제PNG GET SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a과현재image-review 원2026-11-06시각검수PASS/약360px검수 재대조일치. 새직접시각검수아님.혜택별자산없어기존rotation2.그림에금액/대상/기간없어본문충돌없음,실제alt보존."
               ]
             }
           ],
@@ -8913,7 +8913,7 @@
             "기초수급가구아동으로핵심독자범위한정. 타대상/개인자격/중복·계좌개설은기관심사. 보호자후원등저축없이정부정액지급아님.",
             "원칙18세만기자립용도·24세용도해제,중도인출예외는개별요건.장래총지원액/이자/확정지급액계산안함.",
             "복지로0행으로개인온라인신청성공은검증못함.주민센터와공식운영절차만안내.",
-            "현재07:15source는내일16시24h초과.실제발송최신완전source·상태·증빙유효시각·CAS·교대재검증필수."
+            "16시미예약원고의 기존16:34:04만료 후 실제공식자료/최신완전세대/현재PNG를 재대조했다. 본문·형식·이미지·A/B배정 보존. 원래16시슬롯18시마감까지만 유효; 지연원인이나게시없음을로그없이단정하지 않음. 실제발송최신source·CAS·교대 재검증필수."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -8971,7 +8971,7 @@
         },
         "next_history_record": {
           "program_id": "SCY000000080",
-          "notice_version": "Gov24 2026-08-11; MOHW policy2025-10-16 and NCRCcurrent page checked 2026-11-20T16:34:04.049966+09:00",
+          "notice_version": "Gov24 2026-08-11; MOHW policy2025-10-16 and NCRC current pages rechecked 2026-11-21T16:54:43.169032+09:00",
           "pattern": "P8",
           "opening": "기초생활수급가구의 만 18세 미만 아동은 디딤씨앗통장으로 자립자금을 모을 수 있어요. 아동 측 저축액의 2배를 정부가 월 최대 10만원까지 더하는 자산형성 지원이에요.",
           "structure": "대상실익→저축/사용/신청목록→생활비사용제한",
