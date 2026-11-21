@@ -781,6 +781,16 @@
         "https://nyj.go.kr/www/contents.do?key=4399"
       ],
       "verified_at": "2026-11-21T17:29:40.349298+09:00"
+    },
+    {
+      "benefit_id": "644000000240",
+      "decision": "HOLD",
+      "reason": "동일ID원본은2024선정자중자녀가있는경우연장제도로안내하지만,현재적용되는연장공고본문·2026개인별신청시기·금리와상환조건을확인할공식근거를확보하지못했다. 충남도메인열람404,공식검색결과에서해당공고직접본문미확보. 일반2026청년대출과합치거나현재모집으로추정하지않음.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=809506&bnefType=all&svcId=644000000240",
+        "https://www.chungnam.go.kr"
+      ],
+      "verified_at": "2026-11-21T21:11:11.683777+09:00"
     }
   ],
   "entries": [
@@ -9605,6 +9615,164 @@
           "opening": "차를 새로 마련할 때 세금 부담이 걱정되는 중증장애인이라면, 보철용·생업활동용 자동차 1대의 취득세·자동차세 면제 요건을 확인해봐요. 현금을 지급하는 지원은 아니에요.",
           "structure": "생활상황→차종/명의→등록전서류→기한/등록후추징",
           "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-22T20:00:00+09:00",
+      "benefit_id": "999000000036",
+      "source_fingerprint": "0443cfafd529dd83a2fab0a211beb60bc7c4a2fe702e91ca72452dabfdd96f34",
+      "source_generation": "gov24-44892709569-1",
+      "prepared_at": "2026-11-21T21:11:11.683777+09:00",
+      "expires_at": "2026-11-22T21:11:11.683777+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "999000000036",
+        "post_text": "1958~2022년생 등록장애인은 2027년 장애인스포츠강좌이용권을 신청할 수 있어요. 선정되면 스포츠강좌 수강료를 1인당 월 최대 11만원까지 이용권으로 지원받아요.\n\n신청 전에 세 가지를 살펴봐요.\n• 대상: 소득과 관계없이 신청할 수 있지만, 연령과 수급자격 등에 따른 선정 우선순위가 있어요. 신청이 곧 선정은 아니에요.\n• 기간: 전국 동시 신청은 2026년 11월 9~27일이에요. 이용은 2027년 1월부터 연간 최대 12개월이며, 카드 발급 일정 등에 따라 달라질 수 있어요.\n• 경로: 장애인스포츠강좌이용권 전용 누리집이나 주소지 관할 시군구·행정복지센터로 신청해요. 결과는 12월 중 개별 안내돼요.\n\n5~18세 저소득층이라도 장애인 등록이 되어 있다면 일반 유·청소년 스포츠강좌이용권이 아닌 장애인용으로 신청해요. 현금 지급은 아니에요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-22T20:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "1958~2022년생등록장애인과신청을돕는가족",
+          "central_message": "2027수강료바우처의대상/한도/접수시기와선정조건",
+          "pattern": "P8",
+          "selection_reason": "Nov22 20시B대상혜택형.기존08P3·12P5·16P6와다른P8대상/기간/경로요약.최근20완료본문및다음3원고대조;11/18일반유청소년스포츠와선택ID/등록장애인대상/11만원한도다름을확인.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "999000000036",
+              "source_ref": "https://www.kspo.or.kr/kspo/main/main.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-21T21:11:11.683777+09:00",
+              "claims_supported": [
+                "실제공단현재공식페이지427/438공지·527/530사업안내열람:2027장애인전국동시신청11/9~27,1958-01-01~2022-12-31등록장애인5~69,매월11만원내수강료최대12개월,연령/수급자격등선정우선순위와12월개별안내. 2026-11-21현재접수중(신청가능).공단공식페이지에게시된안내를대조했으며사설SNS캡처사용아님."
+              ]
+            },
+            {
+              "source_id": "999000000036",
+              "source_ref": "https://culture.go.kr/portal/cltBnf/cltSup/view.do?indRow=129&menuNo=200104&rcrtSn=256295&sWord=&selectType=&viewTp=3&weekju=&yearmonth=",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-21T21:11:11.683777+09:00",
+              "claims_supported": [
+                "실제문화정보원문화포털에제공된대한체육회공식공지215~245행:2027사업,11/9~27신청,2027년1월부터사용,등록장애인소득무관1958~2022년생,수강료바우처/온라인또는관할시군구·행정복지센터신청.일반유청소년10.5만원과장애인11만원구분."
+              ]
+            },
+            {
+              "source_id": "999000000036",
+              "source_ref": "https://www.sdm.go.kr/news/news/notice.do?mode=view&sdmBoardSeq=316312",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-21T21:11:11.683777+09:00",
+              "claims_supported": [
+                "실제2026-10-26서대문공식공지515~535행:동일2027장애인대상/11만원/11월신청/2027년1~12월,카드발급일정등에따라변동가능.비저소득등록장애인도선정순위존재.서대문선정발표12/10예정은전국공통일로일반화하지않음."
+              ]
+            },
+            {
+              "source_id": "999000000036",
+              "source_ref": "https://www.goyang.go.kr/news/user/bbs/BD_selectBbs.do?q_bbsCode=1030&q_bbscttSn=20261103142758737",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-21T21:11:11.683777+09:00",
+              "claims_supported": [
+                "실제고양공식135~137행:5~18저소득유청소년이라도등록장애인은장애인스포츠강좌이용권으로만신청.일반프로그램고양정원1800명/10.5만원/12월10일마감등을장애인전국조건으로복사하지않음."
+              ]
+            },
+            {
+              "source_id": "999000000036",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999119&bnefType=all&svcId=999000000036",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-21T21:11:11.683777+09:00",
+              "claims_supported": [
+                "완전세대gov24-44892709569-1동일ID serviceList누적조회수42935;원본2026출생연도1957~2021은새2027공식안내1958~2022와연도가달라최신연도공식공지우선.월11만원및방문/전용사이트대조.APIcheckedAt=2026-11-21T19:10:42.842414+09:00,collectionSucceededAt=2026-11-21T19:13:06.862743+09:00;수집성공을현재접수증명으로대체하지않음."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 441,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "공식동시접수공지에근거한신규신청안내;개인선정·전액수강료·12개월전부확정지급아님.추가금액/예산잔액/구체강좌가맹·개인카드발급미검증.",
+            "dvoucher직접페이지0행,개인온라인접수거래/승인/프로필사이트신청기능확인못함.주관기관공식및공식재게시원문근거로만경로안내.",
+            "현재source는내일20시24h초과하므로실제발송최신완전세대·공식상태·유효기간·계정/한도/CAS/잠금·교대재검증필수."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "내년운동강좌지원은누가언제어떤경로로신청하나요?",
+            "reader_scope": "1958~2022년생등록장애인과신청을돕는가족",
+            "angles": [
+              "운동강좌비용부담",
+              "등록장애인자격과선정우선순위",
+              "2027이용과2026신청기간구분"
+            ],
+            "chosen_angle": "대상실익→대상/기간/경로목록→일반프로그램과구분",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "운동을 배우는 비용이 부담되는1958~2022년생등록장애인이라면,2027장애인스포츠강좌이용권의월최대11만원수강료지원을확인해요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "1958~2022년생 등록장애인은 2027년 장애인스포츠강좌이용권을 신청할 수 있어요. 선정되면 스포츠강좌 수강료를 1인당 월 최대 11만원까지 이용권으로 지원받아요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "장애인스포츠강좌이용권은2027년이용분을2026년11월에미리신청하고심사를거쳐선정돼요."
+              }
+            ],
+            "chosen_opening": "1958~2022년생 등록장애인은 2027년 장애인스포츠강좌이용권을 신청할 수 있어요. 선정되면 스포츠강좌 수강료를 1인당 월 최대 11만원까지 이용권으로 지원받아요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "Nov22 20시B대상혜택형.기존08P3·12P5·16P6와다른P8대상/기간/경로요약.최근20완료본문및다음3원고대조;11/18일반유청소년스포츠와선택ID/등록장애인대상/11만원한도다름을확인.",
+            "history_posts_checked": 20,
+            "comparison_eligible": true,
+            "comparison_strata": {
+              "geo": "전국동시신청",
+              "audience": "등록장애인5~69",
+              "benefit": "스포츠수강료바우처",
+              "application": "2026-11-09~27",
+              "media": "TEXT"
+            },
+            "comparison_group": "실제관측114개ID/window,비교가능24h29건A15/B14중앙값64/75,matchedpairs0.독자/지역/혜택/시간/미디어교란.반복우세미입증·비중유지.",
+            "applied_elements": [
+              "대상과수강료실익첫2문장",
+              "현재접수/다음해이용구분",
+              "짧은3항목목록",
+              "선정조건과일반이용권구분"
+            ],
+            "profile_route": "프로필사이트검색/접수거래미검증;dvoucher0행,즉시개인접수성공보장없음.",
+            "source_recheck_required_at_publish": true,
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "999000000036",
+          "notice_version": "2027 nationwide application notice KSPO2026-11-09, reviewed 2026-11-21T21:11:11.683777+09:00",
+          "pattern": "P8",
+          "opening": "1958~2022년생 등록장애인은 2027년 장애인스포츠강좌이용권을 신청할 수 있어요. 선정되면 스포츠강좌 수강료를 1인당 월 최대 11만원까지 이용권으로 지원받아요.",
+          "structure": "대상실익→대상/기간/경로목록→등록장애인프로그램구분",
+          "media_turn": "TEXT"
         }
       }
     }
