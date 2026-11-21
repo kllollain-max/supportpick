@@ -742,6 +742,16 @@
         "https://support.kepco.co.kr",
         "https://www.korea.kr/news/policyNewsView.do?newsId=148959268"
       ]
+    },
+    {
+      "benefit_id": "149200000037",
+      "decision": "HOLD",
+      "reason": "동일ID조회수47256로선정46716보다높음. 실제연고용24SI00000366은국가기간전략훈련소득100%이하,동일ID최신Gov24원본은120%이하라중요자격충돌. 어느자료가현행인지확정못함. 근로복지넷직접열람BadRequest로추가현행접수/예산검증도실패. 유리한조건선택해READY로만들지않고보류. 사업전체종료아님.",
+      "sources": [
+        "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systClId=SC00000058&systCnntId=&systId=SI00000366",
+        "https://welfare.comwel.or.kr",
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=754678&bnefType=all&svcId=149200000037"
+      ]
     }
   ],
   "entries": [
@@ -9275,6 +9285,148 @@
           "opening": "매달 건강보험료가 부담된다면, 농촌·준농촌에 사는 지역가입 농업인 세대는 농업인 건강보험료 지원을 확인해요. 2026년 세대당 월 최대 28%, 10만6,650원까지 보험료 부담을 줄여줘요.",
           "structure": "월보험료지출→경감고지방식→3보험료구간→확인·신청절차",
           "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-22T12:00:00+09:00",
+      "benefit_id": "149200000153",
+      "source_fingerprint": "8ed1d66dc46869de6721caaa3e4b41d475caf641b7c16fb6fb395e73166bbae3",
+      "source_generation": "gov24-44826151976-1",
+      "prepared_at": "2026-11-21T14:11:08.497290+09:00",
+      "expires_at": "2026-11-22T14:11:08.497290+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "149200000153",
+        "post_text": "사업자등록 없이 소득활동을 하는 특고·프리랜서 출산여성도, 고용보험의 출산전후급여를 받지 못한다면 ‘고용보험 미적용자 출산급여’를 확인해요. 요건을 갖추면 총 150만원을 지원하는 제도예요.\n\n고용보험에 가입하지 않았다는 이유만으로 모두 받는 것은 아니에요.\n\n소득활동과 소득 발생을 입증해야 하며, 2026년 2월부터는 세금 신고된 소득을 기준으로 확인해요. 사업주가 배우자나 동거친족이면 특고·프리랜서 유형은 지원 대상에서 제외돼요.\n\n예술인·노무제공자 출산전후급여 지급 대상자는 이 급여에서 제외돼요. 유산·사산은 임신기간에 따라 30만~150만원으로 달라져요.\n\n출산일부터 1년 이내에 고용24나 관할 고용센터에 신청해요. 원천징수영수증·종합소득세 신고내역 등 소득 증빙을 준비하고, 고용센터의 요건 심사를 거쳐 지급 여부가 결정돼요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-22T12:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "사업자등록없는특고·프리랜서출산여성중고용보험출산전후급여를지원받지못하고소득활동요건을갖춘분",
+          "central_message": "사업자등록없는특고·프리랜서출산여성은미적용자출산급여의소득증빙·중복제외·신청기한을어떻게확인하나요?",
+          "pattern": "P5",
+          "selection_reason": "첫적용11/10기준11/22 12시는B. 같은날08P3농업인보험료와다른P5자격체크. 최근20완료본문과현재3READY대조,출산지원중광주시지역화폐와전국소득활동모성급여는대상·급여유형·신청근거가다름.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "149200000153",
+              "source_ref": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systClId=SC00000250&systId=SI00000390",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-21T14:11:08.497290+09:00",
+              "claims_supported": [
+                "고용24현재직접본문294~409행실제열람. 150만원총액,특고·프리랜서4유형,2026-02세금신고기준·원천징수/종합소득세증빙,출산일부터1년이내 신청 가능한 개인별기한제도·심사후지급,예술인노무제공자다른출산급여대상자제외·유산사산임신기간별30/50/100/150대조. 2026-01-14최종수정명시,옛고용보험6유형자료를신규규정으로대체하지않음."
+              ]
+            },
+            {
+              "source_id": "149200000153",
+              "source_ref": "https://www.moel.go.kr/news/notice/noticeView.do?bbs_seq=20251201768",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-21T14:11:08.497290+09:00",
+              "claims_supported": [
+                "고용노동부2025-12-31공식변경공지581~590행직접열람:2026-01-01시행·소득증빙02-01부터,세금신고소득인정,특고프리랜서사업주배우자/동거친족지원불가. 더이른자료와충돌시이변경과현행고용24우선."
+              ]
+            },
+            {
+              "source_id": "149200000153",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=746900&bnefType=all&svcId=149200000153",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-21T14:11:08.497290+09:00",
+              "claims_supported": [
+                "완전세대gov24-44826151976-1 동일ID 원본serviceList 누적조회수46716·총150만원일괄·출산1년·고용24/고용센터경로·26.2소득세신고기준교차대조. APIcheckedAt=2026-11-21T07:09:34.686649+09:00 collectionSucceededAt=2026-11-21T07:14:06.816359+09:00는이번공식열람시각과구분."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 433,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "이본문은사업자등록없는특고프리랜서유형에한정. 근로자/1인사업자세부유형으로일괄확대하지않음. 구6유형과신규4유형자료혼용하지않음.",
+            "복지로직접열람0행은사실검증성공아님. 고용24/노동부직접본문과같은ID원문대조만사용. 개인신청·프로필전환미실행.",
+            "현재11/21 07:14source는11/22 12시24h초과. 발송시최신완전source·공식상태·증빙expiry·교대·CAS재검증필수."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "사업자등록없는특고·프리랜서출산여성은미적용자출산급여의소득증빙·중복제외·신청기한을어떻게확인하나요?",
+            "reader_scope": "사업자등록없는특고·프리랜서출산여성중고용보험출산전후급여를지원받지못하고소득활동요건을갖춘분",
+            "angles": [
+              "대상과총액",
+              "소득신고와가족관계제외",
+              "중복급여·기한·서류준비"
+            ],
+            "chosen_angle": "대상혜택→핵심자격체크→중복제외→기한과증빙",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "프리랜서로 일하다 출산해 소득 공백이 걱정된다면, 사업자등록 없이 일하고 고용보험 출산전후급여를 받지 못하는 분은 총150만원 출산급여의 요건을 확인해요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "사업자등록 없이 소득활동을 하는 특고·프리랜서 출산여성도, 고용보험의 출산전후급여를 받지 못한다면 ‘고용보험 미적용자 출산급여’를 확인해요. 요건을 갖추면 총 150만원을 지원하는 제도예요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "고용보험 미적용자 출산급여는 고용보험 미가입만으로 판단하지 않고 소득활동·세금신고와 다른 출산급여의 지급 대상을 함께 확인해요."
+              }
+            ],
+            "chosen_opening": "사업자등록 없이 소득활동을 하는 특고·프리랜서 출산여성도, 고용보험의 출산전후급여를 받지 못한다면 ‘고용보험 미적용자 출산급여’를 확인해요. 요건을 갖추면 총 150만원을 지원하는 제도예요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "comparison_eligible": true,
+            "selection_reason": "첫적용11/10기준11/22 12시는B. 같은날08P3농업인보험료와다른P5자격체크. 최근20완료본문과현재3READY대조,출산지원중광주시지역화폐와전국소득활동모성급여는대상·급여유형·신청근거가다름.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국",
+              "audience": "미적용특고·프리랜서출산여성",
+              "benefit": "일회총액출산현금급여",
+              "application": "개인출산1년기한·심사",
+              "media": "TEXT"
+            },
+            "comparison_group": "관측창24/72/168h분리. 기존동질매칭쌍0/미디어·독자·시각교란,기존7일평가보존14일미도래. 효과입증/비중조정없음.",
+            "applied_elements": [
+              "대상·총150만원첫단락",
+              "미가입과자동지급구별",
+              "2026세금신고증빙",
+              "배우자동거친족·다른급여중복제외",
+              "1년개인신청기한"
+            ],
+            "profile_route": "공식공개신청방법만확인. 개인로그인/신청·프로필이동·사이트검색접수기능미검증,실행성공보장없음.",
+            "source_recheck_required_at_publish": true,
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true,
+            "writing_input_sha256": "197f7414a57a49582a173c078e2f557b1091fd933820608596d6c9f528e549c1"
+          }
+        },
+        "next_history_record": {
+          "program_id": "149200000153",
+          "notice_version": "2026-01-14고용24·2026변경공지실제검수 2026-11-21T14:11:08.497290+09:00",
+          "pattern": "P5",
+          "opening": "사업자등록 없이 소득활동을 하는 특고·프리랜서 출산여성도, 고용보험의 출산전후급여를 받지 못한다면 ‘고용보험 미적용자 출산급여’를 확인해요. 요건을 갖추면 총 150만원을 지원하는 제도예요.",
+          "structure": "대상·총액→소득증빙/가족관계→다른급여제외→1년신청·심사",
+          "media_turn": "TEXT"
         }
       }
     }
