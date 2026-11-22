@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-22T13:12:20.099075+09:00",
+  "prepared_at": "2026-11-22T16:58:34.337995+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -9535,9 +9535,9 @@
       "slot": "2026-11-22T16:00:00+09:00",
       "benefit_id": "131200000004",
       "source_fingerprint": "25f8108297b704d5417bf0fc13956def042b9120749144afe1edd0e1257b48dc",
-      "source_generation": "gov24-44826151976-1",
-      "prepared_at": "2026-11-21T17:29:40.349298+09:00",
-      "expires_at": "2026-11-22T17:29:40.349298+09:00",
+      "source_generation": "gov24-44954238983-1",
+      "prepared_at": "2026-11-22T16:58:34.337995+09:00",
+      "expires_at": "2026-11-23T16:58:34.337995+09:00",
       "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -9567,36 +9567,54 @@
               "source_id": "131200000004",
               "source_ref": "https://law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1033804697",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-21T17:29:40.349298+09:00",
+              "verified_at": "2026-11-22T16:58:34.337995+09:00",
               "claims_supported": [
-                "실제열람 시행2026-06-02법21738호제17조1항:보철/생업용해당차종1대취득세및자동차세2027-12-31까지면제,2000cc이하승용차포함.현행법조건충족시감면신청가능한제도;특정개인면제확정아님."
+                "이번실제22~35행직접열람:법21738호시행2026-06-02제17조1항.보철생업용1대2000cc승용차포함취득세/자동차세2027-12-31면제.현행조건충족시감면신청가능한제도.특정개인승인보장않음."
               ]
             },
             {
               "source_id": "131200000004",
-              "source_ref": "https://www.easylaw.go.kr/CSP/CnpClsMainBtr.laf?ccfNo=4&cciNo=1&cnpClsNo=3&csmSeq=916",
+              "source_ref": "https://law.go.kr/LSW/lsLinkCommonInfo.do?lspttninfSeq=64213",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-21T17:29:40.349298+09:00",
+              "verified_at": "2026-11-22T16:58:34.337995+09:00",
               "claims_supported": [
-                "실제열람108~140행:중증장애인,본인/같은세대법정가족공동명의,1대와차종,대체취득60일조건,시군구감면신청가능·서식/장애인증명/등록서류/등본,등록1년이내부득이사유없는소유권이전·세대분리취득세추징및예외.본문은2000cc승용차범위로한정,별도개별소비세500만원및5년의무규칙혼합안함."
+                "이번실제22~42행직접열람:2026-09-18시행대통령령36587호8조중증장애인/본인또는동일세대법정가족공동명의/대체취득60일.구등급표현으로대상확대않음."
+              ]
+            },
+            {
+              "source_id": "131200000004",
+              "source_ref": "https://www.law.go.kr/LSW/lsLawLinkInfo.do?chrClsCd=010202&lsId=011178&lsJoLnkSeq=1000178097",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-22T16:58:34.337995+09:00",
+              "claims_supported": [
+                "이번실제9~11행직접열람:현행21738호제17조1~3항.면제와대체취득,등록1년이내부득이사유없는소유권이전/세대분가취득세추징및공동등록전환예외.인쇄버전은표제만반환하여근거미사용."
+              ]
+            },
+            {
+              "source_id": "131200000004",
+              "source_ref": "https://www.guri.go.kr/www/selectBbsNttView.do?bbsNo=1681&integrDeptCode=&key=7557&nttNo=120729&pageIndex=1&searchCnd=all&searchCtgry=&searchKrwd=",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-22T16:58:34.337995+09:00",
+              "claims_supported": [
+                "이번실제구리시FAQ1140~1158행직접열람:2025-02-24게시,감면신청서/장애인증명서/등본(가족관계증명서)및세정과문의안내.법정대상은구등급표현아닌이번직접연현행시행령우선.본문서류는관할에확인할준비서류로안내,전국서류동일확정않음."
               ]
             },
             {
               "source_id": "131200000004",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999003&bnefType=all&svcId=131200000004",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-21T17:29:40.349298+09:00",
+              "verified_at": "2026-11-22T16:58:34.337995+09:00",
               "claims_supported": [
-                "완전세대gov24-44826151976-1동일IDserviceList조회수43395누적지표,동일대상/차종/기한대조.APIcheckedAt=2026-11-21T07:09:28.943560+09:00,collectionSucceededAt=2026-11-21T07:14:06.816359+09:00;실제공식원문열람시각과구분."
+                "동일ID완전검증gov24-44954238983-1 serviceList조회수43404/대상/신청서/시군구방문방법/2027기한실제재대조.APIcheckedAt=2026-11-22T07:01:28.583618+09:00 collectionSucceededAt=2026-11-22T07:06:11.815516+09:00는원문확인과별도시각."
               ]
             },
             {
               "source_id": "131200000004",
               "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
               "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-21T17:29:40.349298+09:00",
+              "verified_at": "2026-11-22T16:58:34.337995+09:00",
               "claims_supported": [
-                "현재main허용PNG실제GET SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a와현재image-review 원2026-11-06시각검수PASS/360px기록재대조일치.혜택별자산없어검수rotation2.새직접시각검수아님.금액/대상/기간없는일러스트로본문충돌없음."
+                "이번실제허용PNG GET SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a와main image-review의기존2026-11-06시각검수PASS/360px기록실제재대조일치.새시각검수아님.금액대상기간없는브랜드일러스트와기존alt일치."
               ]
             }
           ],
@@ -9615,7 +9633,8 @@
           "warnings": [
             "법령조건부감면안내이며개인별세액·면제확정아님.다른차종전체를배제하지않고본문독자만2000cc승용차로한정.가족범위·대체취득·추징예외는시군구개별확인.",
             "현재source는내일16시신선도범위초과.발송시최신완전세대·공식상태·증빙유효기간·계정·한도·CAS·미디어교대재검증필수.",
-            "프로필사이트개인신청거래/감면결정기능미검증,보장하지않음."
+            "프로필사이트개인신청거래/감면결정기능미검증,보장하지않음.",
+            "이번지연대비재검수:기존생활법령본문503을총3회(2/5초간격)확인후중단.법제처현행법/시행령/구리시공식서류안내로실제대체검수완료.이전검수시각을오늘로복사하지않음.정규16시슬롯2h허용창/기존본문406자/이미지/형식/코호트유지.실제게시확인은별도."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
