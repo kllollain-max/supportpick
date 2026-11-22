@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-22T16:58:34.337995+09:00",
+  "prepared_at": "2026-11-22T17:25:45.839912+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -10141,6 +10141,182 @@
           "opening": "산후조리원비가 부담되는 대구의 2026년 출산가정은 산후경비 지원을 확인해요. 산모·신생아 건강관리서비스를 이용하지 않았다면 가구당 최대 20만원을 대구로페이로 지원받을 수 있어요.",
           "structure": "산후비용→미이용자최대액→소득주소→출산기한/연도→증빙",
           "media_turn": "TEXT"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-23T16:00:00+09:00",
+      "benefit_id": "SD0000003857",
+      "source_fingerprint": "2aea241d30be53610645552fca1bbff59b62496640956796e3fec834853bde25",
+      "source_generation": "gov24-44954238983-1",
+      "prepared_at": "2026-11-22T17:25:45.839912+09:00",
+      "expires_at": "2026-11-23T17:25:45.839912+09:00",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "SD0000003857",
+        "post_text": "취업지원프로그램 이수자를 채용한 우선지원대상기업은 고용촉진장려금으로 근로자 1명당 연 최대 720만원을 지원받을 수 있어요. 근로자 개인이 아닌 사업주에게 지급해요.\n\n자격은 세 가지부터 확인해요.\n① 지원대상 프로그램 이수자의 유효한 구직등록 이력\n② 기간의 정함 없는 채용과 고용보험 가입\n③ 6개월 이상 고용 유지와 임금 지급\n\n신고한 월평균 보수 124만원 미만이거나 사업주의 배우자·직계가족이면 제외돼요. 채용 전 3개월부터 후 1년까지 고용조정 감원도 제한돼요.\n\n첫 신청기한은 채용일부터 1년 6개월이며, 2026년 7월 1일 전에 채용했다면 12개월이에요. 6개월 단위로 신청하고 신고 보수 한도에서 지원해요. 근로계약서·임금대장·지급 증빙을 준비해 관할 고용센터에서 지원인원 한도와 중복지원 조건도 확인해요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-23T16:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "지원대상 취업지원프로그램 이수 실업자를 기간의 정함 없이 채용한 우선지원대상기업 사업주",
+          "central_message": "채용한 근로자가 고용촉진장려금 대상인지 무엇부터 확인하나요?",
+          "pattern": "P5",
+          "selection_reason": "보조금24 동일ID 누적38937, 기존3READY 및 최근20게시와 중복제외 후 검증가능 최상위 후보. Nov23 08P6교육/12P1출산생활상황과 구분하여 16P5사업주 자격체크·B대상혜택형 적용. 이수·구직등록→계약보험→고용유지→제외→채용일별 기한 순서.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "SD0000003857",
+              "source_ref": "https://law.go.kr/LSW/lsLinkCommonInfo.do?lspttninfSeq=105945",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-22T17:25:45.839912+09:00",
+              "claims_supported": [
+                "2026-09-18시행 현행 제45조23~51행 실제열람: 조건충족 사업주는 6개월마다 신청 가능, 채용일부터1년6개월 신청기한·관할기관·첨부서류. 지급·신청확정 아닌 요건심사."
+              ]
+            },
+            {
+              "source_id": "SD0000003857",
+              "source_ref": "https://www.law.go.kr/LSW/lsInfoR.do?efYd=20260918&lsiSeq=288723",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-22T17:25:45.839912+09:00",
+              "claims_supported": [
+                "실제열람2546~2551행 2026-07-01부칙475호제3조: 시행전 채용자는 종전기한. 7월1일 이후 채용자는18개월, 그전은12개월을 최신동일ID11/9정정원본과대조."
+              ]
+            },
+            {
+              "source_id": "SD0000003857",
+              "source_ref": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1031433779",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-22T17:25:45.839912+09:00",
+              "claims_supported": [
+                "현행2026시행령26조 실제열람22~62행: 지정프로그램이수 실업자/고용보험/6개월 유지·6개월 지급주기·고용조정제한 채용전3개월~후1년·기타 제외조건. 신규후채용근로자 등 예외는 개별심사."
+              ]
+            },
+            {
+              "source_id": "SD0000003857",
+              "source_ref": "https://www.moel.go.kr/common/downloadFile.do?bbs_id=9&bbs_seq=20260200770&file_ext=pdf&file_seq=20260201327",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-22T17:25:45.839912+09:00",
+              "claims_supported": [
+                "공식2026고용장려금지원제도 PDF 실제GET/pdftotext p7~16: 정규직·구직등록·지정프로그램·6개월유지, 우선기업1인연720/6개월360, 신고월평균보수124만원미만·배우자직계존비속등 제외, 지원인원30%/30명(10명미만3명), 고용조정제한. 과거12개월기한은 최신법령으로 교정하여적용. PDF sha256=373e844a49c5db7a7a01478e133d36d6158fd3f3e97fa22b08b2a0fc49773197"
+              ]
+            },
+            {
+              "source_id": "SD0000003857",
+              "source_ref": "https://m.gov.kr/mw/AA020InfoCappView.do?CappBizCD=14900000227&HighCtgCD=A05007",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-22T17:25:45.839912+09:00",
+              "claims_supported": [
+                "실제사업본문346~450행: 고용촉진장려금 지급 민원 운영, 사업주대상·인터넷/방문/FAX/우편·신청서·근로계약/임금대장/지급증빙·접수기관. 공통접근불가 레이어는 있지만 해당사업 본문은 반환; 개인신청이나 지역기관접수완료를 확인한 것은 아님."
+              ]
+            },
+            {
+              "source_id": "SD0000003857",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=585576&bnefType=all&svcId=SD0000003857",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-22T17:25:45.839912+09:00",
+              "claims_supported": [
+                "검증완전세대 gov24-44954238983-1 동일ID serviceList 누적38937·2026-11-09수정·연최대720/보수한도/6개월·12/18개월 구분 대조. APIcheckedAt=2026-11-22T07:04:14.899374+09:00 collectionSucceededAt=2026-11-22T07:06:11.815516+09:00는 실제공식원문검수시각과 구분."
+              ]
+            },
+            {
+              "source_id": "SD0000003857",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-22T17:25:45.839912+09:00",
+              "claims_supported": [
+                "이번실제허용PNG GET SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a와 현재image-review 기존AI_VISUAL_INSPECTION/PASS 및360px검수 기록 재대조일치. 날짜만복사한증빙아님. 신규직접시각검수아님. 그림에 금액/대상/기한없고 위조공식화면/후기없음."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 423,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "고용24 직접열람은 제도본문 대신 일반 메뉴만 반환; 검색요약의 구형12개월을 현재 전체 채용에 적용하지 않음. 실제연2026시행규칙 제45조/475호 부칙으로 7월1일 전후 구분.",
+            "고용부2026-02-18 PDF 실제 다운로드/pdftotext p7~16 확인. PDF의 구형12개월은 최신2026-07-01 법령·Gov24 11/9정정에 따라 구분하여 검수. programme별 인정이수·구직등록/유효기간·근로자/사업주제외·인원한도/중복제한은 개별 심사이며 지급 확정 아님.",
+            "개인로그인/민원실제접수/프로필링크/지원금픽사이트검색·접수기능은 이번에 실행하거나 보장하지 않음. 공식 정부24민원 본문은 확인하되 지역기관 실제접수가능은 직접확인 필요.",
+            "현재수집본은 내일16시 24h초과. 실제발송시 최신완전세대/공식상태/검수유효기간/이미지SHA를 다시 확인해야 함. 신규시각검수는 수행하지 않음."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "채용한 근로자가 고용촉진장려금 대상인지 무엇부터 확인하나요?",
+            "reader_scope": "지원대상 취업지원프로그램 이수 실업자를 기간의 정함 없이 채용한 우선지원대상기업 사업주",
+            "angles": [
+              "채용뒤 인건비 부담",
+              "채용근로자의 대상 자격 체크",
+              "채용일별 첫신청기한과 임금증빙 준비"
+            ],
+            "chosen_angle": "대상근로자 자격과 고용유지 조건 점검",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "취약계층 직원을 채용한 뒤 인건비를 챙기는 우선지원대상기업은, 고용촉진장려금으로 대상 근로자 1명당 연 최대 720만원 지원을 확인할 수 있어요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "취업지원프로그램 이수자를 채용한 우선지원대상기업은 고용촉진장려금으로 근로자 1명당 연 최대 720만원을 지원받을 수 있어요. 근로자 개인이 아닌 사업주에게 지급해요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "고용촉진장려금은 채용만으로 지급되지 않고, 대상 근로자의 구직등록·이수 조건과 6개월 고용 유지부터 확인해요."
+              }
+            ],
+            "chosen_opening": "취업지원프로그램 이수자를 채용한 우선지원대상기업은 고용촉진장려금으로 근로자 1명당 연 최대 720만원을 지원받을 수 있어요. 근로자 개인이 아닌 사업주에게 지급해요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "comparison_eligible": true,
+            "selection_reason": "보조금24 동일ID 누적38937, 기존3READY 및 최근20게시와 중복제외 후 검증가능 최상위 후보. Nov23 08P6교육/12P1출산생활상황과 구분하여 16P5사업주 자격체크·B대상혜택형 적용. 이수·구직등록→계약보험→고용유지→제외→채용일별 기한 순서.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "전국",
+              "audience": "우선지원대상기업사업주",
+              "benefit": "채용장려금현금",
+              "application": "채용일기준개별기한",
+              "media": "IMAGE"
+            },
+            "comparison_group": "최근20게시·현재123공식관측. 대상/혜택규모·시간/미디어 교란·매칭쌍0으로 도입효과 미입증, 기존 A/B배정·비중 유지.",
+            "applied_elements": [
+              "첫2문장 사업주·근로자1명·연최대금액",
+              "세조건체크와 근로자제외",
+              "채용일별 신청기간 구분"
+            ],
+            "source_recheck_required_at_publish": true,
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true,
+            "profile_route": "개인로그인/민원실제접수/프로필링크/지원금픽사이트검색·접수기능은 이번에 실행하거나 보장하지 않음. 공식 정부24민원 본문은 확인하되 지역기관 실제접수가능은 직접확인 필요."
+          }
+        },
+        "next_history_record": {
+          "program_id": "SD0000003857",
+          "notice_version": "Gov24modified2026-11-09; current law475/479 and2026MOEL PDF actually reviewed 2026-11-22T17:25:45.839912+09:00",
+          "pattern": "P5",
+          "opening": "취업지원프로그램 이수자를 채용한 우선지원대상기업은 고용촉진장려금으로 근로자 1명당 연 최대 720만원을 지원받을 수 있어요. 근로자 개인이 아닌 사업주에게 지급해요.",
+          "structure": "사업주대상혜택→근로자자격3체크→제외조건→채용일별기한→증빙확인",
+          "media_turn": "IMAGE"
         }
       }
     }
