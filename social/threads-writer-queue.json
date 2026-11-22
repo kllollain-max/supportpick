@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-22T10:07:17.315427+09:00",
+  "prepared_at": "2026-11-22T13:12:20.099075+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -834,6 +834,25 @@
         "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000418&bnefType=all&svcId=O00083100001"
       ],
       "verified_at": "2026-11-22T10:07:17.315427+09:00"
+    },
+    {
+      "benefit_id": "142000000099",
+      "decision": "HOLD",
+      "reason": "현재디지털지점공식본문직접열람은정책자금로그인신청/지역연락처만확인.검색된탄력상담일정을특정지역이번주접수확정으로쓰지않음.동일ID자료에2024융자제한기준잔존,현재지역별상담가능·배정한도·2026최신상환/제외조건충분히확인못해HOLD.제도종료뜻아님.",
+      "sources": [
+        "https://digital.kosmes.or.kr/dh/map/main.do",
+        "https://kosmes.or.kr/intro/intro_real.html"
+      ],
+      "verified_at": "2026-11-22T13:12:20.099075+09:00"
+    },
+    {
+      "benefit_id": "GES000000120",
+      "decision": "HOLD",
+      "reason": "장학재단2026-11-19공식공지seq21507직접363~369행:2027첫신청11/24 09시시작.예정Nov23 12시는접수전.현재API2026시급10320/12790을2027확정급여로전용하지않음.2026겨울대학별접수·2027지급단가확인미완료로이번현재접수안내HOLD.예정공지자체는별도편집가능하나현재근로수급으로확정않음.",
+      "sources": [
+        "https://www.kosaf.go.kr/ko/notice.do?ctgrId1=0000000002&ctgrId2=&mode=view&page=1&searchStr=&searchType=&seqNo=21507"
+      ],
+      "verified_at": "2026-11-22T13:12:20.099075+09:00"
     }
   ],
   "entries": [
@@ -9964,6 +9983,145 @@
           "opening": "금융 지식이 필요한 사회초년생이라면, 서민금융진흥원 금융교육에서 신용·부채관리와 소비·저축을 무료로 배울 수 있어요. 현금을 받는 지원금이 아니라 교육 서비스예요.",
           "structure": "대상무료교육→주제선택→개인온라인→단체개설조건",
           "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-23T12:00:00+09:00",
+      "benefit_id": "627000000120",
+      "source_fingerprint": "c5c23e16905c17939893ed5b7d1b5b4417eee4ead467da1b98e8b1ee74c79529",
+      "source_generation": "gov24-44954238983-1",
+      "prepared_at": "2026-11-22T13:12:20.099075+09:00",
+      "expires_at": "2026-11-23T13:12:20.099075+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "627000000120",
+        "post_text": "산후조리원비가 부담되는 대구의 2026년 출산가정은 산후경비 지원을 확인해요. 산모·신생아 건강관리서비스를 이용하지 않았다면 가구당 최대 20만원을 대구로페이로 지원받을 수 있어요.\n\n기준 중위소득 150% 이하가 대상이에요. 산모는 출산일과 신청일 모두 대구에 주민등록이 있어야 하고, 아기의 출생신고 주민등록지도 대구여야 해요.\n\n신청은 출산일로부터 60일 이후부터 6개월 이내예요. 2026년 출생아까지 지원하며 2027년 출생아는 대상이 아니에요. 건강관리서비스 이용자의 본인부담금 지원과 중복되지 않아요.\n\n산후조리원 이용 등 건강관리 비용 영수증과 대구로페이 카드 사본을 준비해요. 관할 보건소나 정부24에서 신청하고, 주소·가족관계 확인 서류는 신청 방식에 맞춰 확인해요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-23T12:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "대구거주·중위소득150%이하·2026출산·산모신생아건강관리미이용가정",
+          "central_message": "산후조리비부담을어떤조건에서얼마나덜수있나요?",
+          "pattern": "P1",
+          "selection_reason": "동일ID누적39262,상위2후보근거있는HOLD후선정.최근20게시와기존3READY대조;Nov23기존08P6교육과달리12P1생활상황형A로가구산후비용→조건→개인기한→증빙순서.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "627000000120",
+              "source_ref": "https://nam.daegu.kr/health/index.do?menu_id=00205055",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-22T13:12:20.099075+09:00",
+              "claims_supported": [
+                "직접공식323~369행:중위150·대구모/아이주소·미이용자·가구최대20만원·대구로페이·2026출생60일후6개월·중복불가·보건소/온라인·영수증카드사본.2026-07-21수정표시.2025이전90일과분리.",
+                "현재열람한2026공식안내상소득·거주·미이용요건을충족한2026출산가정은출산일60일이후6개월이내개인별기한에신청가능.모든가정지급확정이나2027출생아가능으로확대하지않음."
+              ]
+            },
+            {
+              "source_id": "627000000120",
+              "source_ref": "https://www.buk.daegu.kr/health/index.do?menu_id=00003532",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-22T13:12:20.099075+09:00",
+              "claims_supported": [
+                "직접공식375~452행:2026소득기준150%·주소요건·60일후6개월·가구20만원한도·대구로페이·미이용자·중복불가·서류·정부24공식안내경로.표하단180%구형제목은2026현행150%본문을우선하여판정.관할구절차다름유지."
+              ]
+            },
+            {
+              "source_id": "627000000120",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001550&bnefType=all&svcId=627000000120",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-22T13:12:20.099075+09:00",
+              "claims_supported": [
+                "동일ID완전검증Gov24원본serviceList누적39262·2026-11-10수정·2026출생아까지/2027제외·동일지원금액기간대상대조.APIcheckedAt=2026-11-22T07:03:33.163424+09:00 collectionSucceededAt=2026-11-22T07:06:11.815516+09:00는실제원문확인과구분."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 401,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "정부24개인로그인·실제신청완료·프로필링크및지원금픽사이트검색경로는실행하지않음.공식보건소안내된경로만설명.",
+            "현재source는내일12시에24h초과하므로실제발송시최신완전세대/공식상태/유효기간재검증필수."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "산후조리비부담을어떤조건에서얼마나덜수있나요?",
+            "reader_scope": "대구거주·중위소득150%이하·2026출산·산모신생아건강관리미이용가정",
+            "angles": [
+              "산후조리비부담",
+              "서비스미이용/소득주소자격",
+              "출산일기준기한과영수증준비"
+            ],
+            "chosen_angle": "산후비용부담을개인신청조건에연결",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "산후조리원비가 부담되는 대구의 2026년 출산가정은 산후경비 지원을 확인해요. 산모·신생아 건강관리서비스를 이용하지 않았다면 가구당 최대 20만원을 대구로페이로 지원받을 수 있어요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "대구의 소득·주소 요건을 갖춘 2026년 출산가정 중 건강관리서비스 미이용자는 산후경비를 가구당 최대 20만원 지원받을 수 있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "대구 산후경비 지원은 건강관리서비스 이용 여부와 출산 후 신청 시기를 함께 봐요."
+              }
+            ],
+            "chosen_opening": "산후조리원비가 부담되는 대구의 2026년 출산가정은 산후경비 지원을 확인해요. 산모·신생아 건강관리서비스를 이용하지 않았다면 가구당 최대 20만원을 대구로페이로 지원받을 수 있어요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "comparison_eligible": true,
+            "selection_reason": "동일ID누적39262,상위2후보근거있는HOLD후선정.최근20게시와기존3READY대조;Nov23기존08P6교육과달리12P1생활상황형A로가구산후비용→조건→개인기한→증빙순서.",
+            "history_posts_checked": 20,
+            "comparison_strata": {
+              "geo": "대구",
+              "audience": "출산가정",
+              "benefit": "산후비용보조대구로페이",
+              "application": "출산후개인기한",
+              "media": "TEXT"
+            },
+            "comparison_group": "최근20게시/120공식관측에서대상·지역·혜택·마감상이.매칭쌍0·시간/미디어교란으로효과미입증·비중유지.",
+            "applied_elements": [
+              "첫두문장대구/2026/미이용/가구최대20만원/대구로페이",
+              "주소소득과기한구체화",
+              "다음증빙준비"
+            ],
+            "source_recheck_required_at_publish": true,
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true,
+            "profile_route": "정부24개인로그인·실제신청완료·프로필링크및지원금픽사이트검색경로는실행하지않음.공식보건소안내된경로만설명."
+          }
+        },
+        "next_history_record": {
+          "program_id": "627000000120",
+          "notice_version": "Gov24modified2026-11-10; official health pages actuallyreviewed2026-11-22T13:12:20.099075+09:00",
+          "pattern": "P1",
+          "opening": "산후조리원비가 부담되는 대구의 2026년 출산가정은 산후경비 지원을 확인해요. 산모·신생아 건강관리서비스를 이용하지 않았다면 가구당 최대 20만원을 대구로페이로 지원받을 수 있어요.",
+          "structure": "산후비용→미이용자최대액→소득주소→출산기한/연도→증빙",
+          "media_turn": "TEXT"
         }
       }
     }
