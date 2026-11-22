@@ -14,6 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "44999340340",
     "44989456387",
     "44984860876",
     "44981746277",
@@ -4847,18 +4848,35 @@
       "conclusion": "success",
       "updated_at": "2026-11-22T04:23:57Z",
       "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
+    },
+    "44999340340": {
+      "run_id": "44999340340",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-22T07:41:14Z",
+      "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-22T15:16:17.782328+09:00",
-    "result": "no_update",
-    "maintenance_previous_blob_sha": "1e1164b6fc538cb6cb75b4ef8c9f57b8481ad177",
+    "checked_at": "2026-11-22T17:00:26.107258+09:00",
+    "result": "regular_slot_awaiting_execution_and_genuine_review_refreshed",
+    "maintenance_previous_blob_sha": "dfb486f7437343818ef94140bf24c5351b3a8254",
     "current_main_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
     "publication_ledger_sha": "5cd32c3b52108076bef187d217a3e1e91e827205",
-    "queue_blob_sha": "b539398057e105f4ad736dd07955b406d5e7f6fb",
-    "changed_run_versions": [],
+    "queue_blob_sha": "1e436b1ae22aff6cac51fa18b4f9721bfc5835be",
+    "changed_run_versions": [
+      {
+        "run_id": "44999340340",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-22T07:41:14Z",
+        "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
+      }
+    ],
     "active_target_runs": [],
     "run_pagination": {
       "per_page": 100,
@@ -4900,7 +4918,7 @@
       "latest_completed_run_unchanged": true
     },
     "writer": {
-      "checked_at": "2026-11-22T15:16:08.031924+09:00",
+      "checked_at": "2026-11-22T16:59:04.839999+09:00",
       "ready": 4,
       "drafts": [
         {
@@ -4909,7 +4927,7 @@
           "pattern": "P6",
           "media_turn": "IMAGE",
           "char_count": 406,
-          "expires_at": "2026-11-22T17:29:40.349298+09:00",
+          "expires_at": "2026-11-23T16:58:34.337995+09:00",
           "current_source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true
         },
@@ -4956,27 +4974,56 @@
       "ledger_records": 69,
       "queue_entries": 67,
       "selection_notes": 74,
-      "queue_write": false,
+      "queue_write": true,
       "new_posts": 0,
-      "due_metrics": 0,
+      "due_metrics": 1,
       "current_image_bytes_sha_recompared": true,
       "new_visual_inspection": false,
       "pending": null,
       "lease": null,
-      "source_recheck_required_at_publish": true
+      "source_recheck_required_at_publish": true,
+      "queue_commit": "a844d9cbee0966763926bacafadf1527a6d4f51b",
+      "queue_readback_exact": true,
+      "new_drafts": 0,
+      "existing_READY_reused": 4,
+      "genuinely_rereviewed_entries": 1,
+      "unchanged_other_READY": 3,
+      "original_body_media_pattern_cohort_preserved": true,
+      "actual_send_latest_source_recheck_required": true
     },
     "metrics": {
-      "run_version_unchanged": true,
-      "latest_run_id": "44989456387",
-      "artifact_redownloaded_this_check": false,
-      "job_logs_retrieved_this_check": false,
-      "classification": "no_new_completed_metric_run_or_due_milestone",
-      "currently_due_count": 0,
+      "run_id": "44999340340",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-22T07:41:14Z",
+      "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
+      "job_id": 137137207884,
+      "artifact_id": 14744987337,
+      "artifact_digest": "sha256:2756601f4153a4e4ccaad165b2af9ff4f25dee77541691f46d40648ccb6f91e6",
+      "artifact_digest_verified": true,
+      "artifact_redownloaded_this_check": true,
+      "job_logs_retrieved_this_check": true,
+      "observed_at": "2026-11-22T07:41:10.498912+00:00",
+      "records": [],
+      "new_observation_keys": [],
       "new_observations": 0,
+      "classification": "normal_no_due_milestones_at_run_time",
+      "due_count": 0,
+      "success_count": 0,
+      "new_evaluation_report_due": false,
+      "14day_not_due": true,
+      "weights_unchanged": true,
+      "publication_calls": 0,
+      "workflow_dispatch": false,
       "total_observations": 123,
       "distinct_posts": 65,
-      "new_evaluation_report_due": false,
-      "weights_unchanged": true
+      "current_check_at": "2026-11-22T17:00:26.107258+09:00",
+      "currently_due_post_ids": [
+        "18117627773024048"
+      ],
+      "currently_due_count": 1,
+      "currently_due_status": "awaiting_next_existing_official_snapshot"
     },
     "recovery": {
       "needed": false,
@@ -4986,9 +5033,17 @@
       "new_partial": 0,
       "publisher_recovery_calls": 0,
       "code_change": null,
-      "no_confirmed_new_code_fault": true
+      "stage": "awaiting_original_scheduled_workflow",
+      "confirmed_cause": null,
+      "hypothesis": "Scheduled workflow delay possible, not established; no16run observed in fresh run list. Do not infer failed POST or external account restriction.",
+      "slot": "2026-11-22T16:00:00+09:00",
+      "original_window_ends": "2026-11-22T18:00:00+09:00",
+      "remote_publication_absence_proven": false,
+      "ledger_slot_absent": true,
+      "post_creation_or_publication_attempt_by_maintenance": false,
+      "reason": "No failed publisher run or reservation/receipt observed for16slot; resume-unreserved requires confirmed pre-reservation failure, so do not invent dispatch eligibility."
     },
-    "next_condition": "Existing fourREADY regularslots16/20today08/12tomorrow, actualsend rechecks latest complete freshcollection and official status/evidence expiry/images/account/daily/CAS/pending guards. Tomorrow current source exceeds24h; latestcollection mandatory. Today16evidence expires17:29 and20expires21:11: if late, genuinely re-review, no date-copy. First14dayevaluation Nov24notdue; matchedpairs0 preserveweights; no extra dispatch or scheduler.",
+    "next_condition": "Reconcile original16slot run/receipt as it appears. Only existing2hwindow until18:00; reviewed copy/image/pattern/cohort unchanged and newly evidenced. No rerun/extra/test/current-minute publication. If confirmed pre-reservation failure within window, use documented resume-unreserved with originalcron; if ambiguousPOST preserveHOLD. If no publication by18, archive expired unposted slot then recompute unreserved future media/priority; do not backfill. Keep20/Nov23 08/12 READY immutable while16outcome unconfirmed; independent candidate preparation can continue without an additional reservation. Actualsend reloads fresh complete collection, official status, image SHA, account/daily/CAS/pending guards. Tomorrow slots need newer collection;20evidence expires21:11 and Nov23 12expires13:12, genuinely re-review if delayed.14dayevaluationNov24notdue preserveweights.",
     "publication": {
       "new_publication_this_run": false,
       "latest_main_id": "18214999999364836",
@@ -5006,6 +5061,25 @@
       "new_receipt_id": "18214999999364836",
       "all_remote_public_statuses_independently_requeried": false,
       "scope_limit": "Current run new receipt+artifact+originaltext+unique ledger reconciled. Prior verified receipts retained. No account penalty or low-view cause inferred."
+    },
+    "official_review_recovery": {
+      "source": "https://www.easylaw.go.kr/CSP/CnpClsMainBtr.laf?ccfNo=4&cciNo=1&cnpClsNo=3&csmSeq=916",
+      "stage": "official_fact_review",
+      "error": "503 Service Unavailable",
+      "attempts": 3,
+      "retry_intervals_seconds": [
+        2,
+        5
+      ],
+      "remaining_retry_budget_this_check": 0,
+      "status": "alternative_primary_official_evidence_reconciled",
+      "evidence_references": [
+        "https://law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1033804697",
+        "https://law.go.kr/LSW/lsLinkCommonInfo.do?lspttninfSeq=64213",
+        "https://www.law.go.kr/LSW/lsLawLinkInfo.do?chrClsCd=010202&lsId=011178&lsJoLnkSeq=1000178097",
+        "https://www.guri.go.kr/www/selectBbsNttView.do?bbsNo=1681&integrDeptCode=&key=7557&nttNo=120729&pageIndex=1&searchCnd=all&searchCtgry=&searchKrwd="
+      ],
+      "limitations": "Law printversion returned titleonly unused; Seongdong fetch did not expose document section and timed out, unused. Guri2025FAQ usedonly procedural document check, current eligibility from2026law/decree. No new visual inspection claimed."
     }
   },
   "last_reported_publication": {
@@ -16988,6 +17062,34 @@
           "earliest_observations_preserved": true,
           "not_a_publication_retry": true,
           "reason": "Scheduled read ran before maintenance imported earlier completed artifact; safe redundant GETs, no POST or double counting."
+        },
+        "44999340340": {
+          "run_id": "44999340340",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-22T07:41:14Z",
+          "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
+          "job_id": 137137207884,
+          "artifact_id": 14744987337,
+          "artifact_digest": "sha256:2756601f4153a4e4ccaad165b2af9ff4f25dee77541691f46d40648ccb6f91e6",
+          "artifact_digest_verified": true,
+          "artifact_redownloaded_this_check": true,
+          "job_logs_retrieved_this_check": true,
+          "observed_at": "2026-11-22T07:41:10.498912+00:00",
+          "records": [],
+          "new_observation_keys": [],
+          "new_observations": 0,
+          "classification": "normal_no_due_milestones_at_run_time",
+          "due_count": 0,
+          "success_count": 0,
+          "new_evaluation_report_due": false,
+          "14day_not_due": true,
+          "weights_unchanged": true,
+          "publication_calls": 0,
+          "workflow_dispatch": false,
+          "total_observations": 123,
+          "distinct_posts": 65
         }
       },
       "additional_connector_check": {
@@ -88278,6 +88380,230 @@
         "all_remote_public_statuses_independently_requeried": false,
         "scope_limit": "Current run new receipt+artifact+originaltext+unique ledger reconciled. Prior verified receipts retained. No account penalty or low-view cause inferred."
       }
+    },
+    "2026-11-22T17:00:26.107258+09:00": {
+      "checked_at": "2026-11-22T17:00:26.107258+09:00",
+      "result": "regular_slot_awaiting_execution_and_genuine_review_refreshed",
+      "maintenance_previous_blob_sha": "dfb486f7437343818ef94140bf24c5351b3a8254",
+      "current_main_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "5cd32c3b52108076bef187d217a3e1e91e827205",
+      "queue_blob_sha": "1e436b1ae22aff6cac51fa18b4f9721bfc5835be",
+      "changed_run_versions": [
+        {
+          "run_id": "44999340340",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-22T07:41:14Z",
+          "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
+        }
+      ],
+      "active_target_runs": [],
+      "run_pagination": {
+        "per_page": 100,
+        "pages": [
+          1
+        ],
+        "checkpoint_run_id": "44989456387",
+        "checkpoint_observed_version_unchanged": true,
+        "all_new_target_versions_observed": true
+      },
+      "publication_ledger_records": 69,
+      "complete_verified_records": 69,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "44954238983",
+        "run_attempt": 1,
+        "conclusion": "success",
+        "job_id": 136998710072,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 303,
+        "artifact_id": 14726873759,
+        "artifact_digest": "sha256:8e55844ba89f2dbdca736c87c3bb945fe22cc7dbc205c20e2410d51709ce7946",
+        "artifact_redownloaded_this_check": false,
+        "artifact_digest_verified": true,
+        "read_current_verify_snapshot_load_feed": true,
+        "count": 10893,
+        "generation": "gov24-44954238983-1",
+        "lastSuccessAt": "2026-11-22T07:06:11.815516+09:00",
+        "manifestSha256": "dccfd1b54d27a2ef01292c2e8824125511eb42fd617650a932f049c92eec4880",
+        "path": "snapshots/gov24-44954238983-1",
+        "version": 1,
+        "source_count": 10893,
+        "source_only_not_current_application_verification": true,
+        "fresh_at_future_slots_is_time_arithmetic_not_future_fact_guarantee": true,
+        "all_four_queue_source_fingerprints_and_priority_revalidated": true,
+        "no_collection_failure": true,
+        "artifact_digest_previously_verified_cached_bytes": true,
+        "latest_completed_run_unchanged": true
+      },
+      "writer": {
+        "checked_at": "2026-11-22T16:59:04.839999+09:00",
+        "ready": 4,
+        "drafts": [
+          {
+            "slot": "2026-11-22T16:00:00+09:00",
+            "benefit_id": "131200000004",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 406,
+            "expires_at": "2026-11-23T16:58:34.337995+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-22T20:00:00+09:00",
+            "benefit_id": "999000000036",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 441,
+            "expires_at": "2026-11-22T21:11:11.683777+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-23T08:00:00+09:00",
+            "benefit_id": "B55370100033",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 408,
+            "expires_at": "2026-11-23T10:07:17.315427+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-23T12:00:00+09:00",
+            "benefit_id": "627000000120",
+            "pattern": "P1",
+            "media_turn": "TEXT",
+            "char_count": 401,
+            "expires_at": "2026-11-23T13:12:20.099075+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source": {
+          "count": 10893,
+          "generation": "gov24-44954238983-1",
+          "lastSuccessAt": "2026-11-22T07:06:11.815516+09:00",
+          "manifestSha256": "dccfd1b54d27a2ef01292c2e8824125511eb42fd617650a932f049c92eec4880",
+          "path": "snapshots/gov24-44954238983-1",
+          "version": 1
+        },
+        "source_count": 10893,
+        "ledger_records": 69,
+        "queue_entries": 67,
+        "selection_notes": 74,
+        "queue_write": true,
+        "new_posts": 0,
+        "due_metrics": 1,
+        "current_image_bytes_sha_recompared": true,
+        "new_visual_inspection": false,
+        "pending": null,
+        "lease": null,
+        "source_recheck_required_at_publish": true,
+        "queue_commit": "a844d9cbee0966763926bacafadf1527a6d4f51b",
+        "queue_readback_exact": true,
+        "new_drafts": 0,
+        "existing_READY_reused": 4,
+        "genuinely_rereviewed_entries": 1,
+        "unchanged_other_READY": 3,
+        "original_body_media_pattern_cohort_preserved": true,
+        "actual_send_latest_source_recheck_required": true
+      },
+      "metrics": {
+        "run_id": "44999340340",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-22T07:41:14Z",
+        "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
+        "job_id": 137137207884,
+        "artifact_id": 14744987337,
+        "artifact_digest": "sha256:2756601f4153a4e4ccaad165b2af9ff4f25dee77541691f46d40648ccb6f91e6",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "observed_at": "2026-11-22T07:41:10.498912+00:00",
+        "records": [],
+        "new_observation_keys": [],
+        "new_observations": 0,
+        "classification": "normal_no_due_milestones_at_run_time",
+        "due_count": 0,
+        "success_count": 0,
+        "new_evaluation_report_due": false,
+        "14day_not_due": true,
+        "weights_unchanged": true,
+        "publication_calls": 0,
+        "workflow_dispatch": false,
+        "total_observations": 123,
+        "distinct_posts": 65,
+        "current_check_at": "2026-11-22T17:00:26.107258+09:00",
+        "currently_due_post_ids": [
+          "18117627773024048"
+        ],
+        "currently_due_count": 1,
+        "currently_due_status": "awaiting_next_existing_official_snapshot"
+      },
+      "recovery": {
+        "needed": false,
+        "dispatch": false,
+        "new_posts": 0,
+        "new_failure": 0,
+        "new_partial": 0,
+        "publisher_recovery_calls": 0,
+        "code_change": null,
+        "stage": "awaiting_original_scheduled_workflow",
+        "confirmed_cause": null,
+        "hypothesis": "Scheduled workflow delay possible, not established; no16run observed in fresh run list. Do not infer failed POST or external account restriction.",
+        "slot": "2026-11-22T16:00:00+09:00",
+        "original_window_ends": "2026-11-22T18:00:00+09:00",
+        "remote_publication_absence_proven": false,
+        "ledger_slot_absent": true,
+        "post_creation_or_publication_attempt_by_maintenance": false,
+        "reason": "No failed publisher run or reservation/receipt observed for16slot; resume-unreserved requires confirmed pre-reservation failure, so do not invent dispatch eligibility."
+      },
+      "next_condition": "Reconcile original16slot run/receipt as it appears. Only existing2hwindow until18:00; reviewed copy/image/pattern/cohort unchanged and newly evidenced. No rerun/extra/test/current-minute publication. If confirmed pre-reservation failure within window, use documented resume-unreserved with originalcron; if ambiguousPOST preserveHOLD. If no publication by18, archive expired unposted slot then recompute unreserved future media/priority; do not backfill. Keep20/Nov23 08/12 READY immutable while16outcome unconfirmed; independent candidate preparation can continue without an additional reservation. Actualsend reloads fresh complete collection, official status, image SHA, account/daily/CAS/pending guards. Tomorrow slots need newer collection;20evidence expires21:11 and Nov23 12expires13:12, genuinely re-review if delayed.14dayevaluationNov24notdue preserveweights.",
+      "publication": {
+        "new_publication_this_run": false,
+        "latest_main_id": "18214999999364836",
+        "latest_already_reported": true,
+        "ledger_records": 69,
+        "stage": "complete",
+        "verified": true,
+        "prior_receipt_preserved": true,
+        "all_remote_public_statuses_independently_requeried": false
+      },
+      "history_reconciliation": {
+        "range": "all69 durable verified records within latest28days",
+        "ledger_checked": 69,
+        "last20_openings_checked": 20,
+        "new_receipt_id": "18214999999364836",
+        "all_remote_public_statuses_independently_requeried": false,
+        "scope_limit": "Current run new receipt+artifact+originaltext+unique ledger reconciled. Prior verified receipts retained. No account penalty or low-view cause inferred."
+      },
+      "official_review_recovery": {
+        "source": "https://www.easylaw.go.kr/CSP/CnpClsMainBtr.laf?ccfNo=4&cciNo=1&cnpClsNo=3&csmSeq=916",
+        "stage": "official_fact_review",
+        "error": "503 Service Unavailable",
+        "attempts": 3,
+        "retry_intervals_seconds": [
+          2,
+          5
+        ],
+        "remaining_retry_budget_this_check": 0,
+        "status": "alternative_primary_official_evidence_reconciled",
+        "evidence_references": [
+          "https://law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1033804697",
+          "https://law.go.kr/LSW/lsLinkCommonInfo.do?lspttninfSeq=64213",
+          "https://www.law.go.kr/LSW/lsLawLinkInfo.do?chrClsCd=010202&lsId=011178&lsJoLnkSeq=1000178097",
+          "https://www.guri.go.kr/www/selectBbsNttView.do?bbsNo=1681&integrDeptCode=&key=7557&nttNo=120729&pageIndex=1&searchCnd=all&searchCtgry=&searchKrwd="
+        ],
+        "limitations": "Law printversion returned titleonly unused; Seongdong fetch did not expose document section and timed out, unused. Guri2025FAQ usedonly procedural document check, current eligibility from2026law/decree. No new visual inspection claimed."
+      }
     }
   },
   "last_reported_prepublication_repair": {
@@ -90809,7 +91135,7 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-22T15:16:08.031924+09:00",
+    "checked_at": "2026-11-22T16:59:04.839999+09:00",
     "ready": 4,
     "drafts": [
       {
@@ -90818,7 +91144,7 @@
         "pattern": "P6",
         "media_turn": "IMAGE",
         "char_count": 406,
-        "expires_at": "2026-11-22T17:29:40.349298+09:00",
+        "expires_at": "2026-11-23T16:58:34.337995+09:00",
         "current_source_fresh_at_slot": true,
         "source_recheck_required_at_publish": true
       },
@@ -90865,13 +91191,350 @@
     "ledger_records": 69,
     "queue_entries": 67,
     "selection_notes": 74,
-    "queue_write": false,
+    "queue_write": true,
     "new_posts": 0,
-    "due_metrics": 0,
+    "due_metrics": 1,
     "current_image_bytes_sha_recompared": true,
     "new_visual_inspection": false,
     "pending": null,
     "lease": null,
-    "source_recheck_required_at_publish": true
+    "source_recheck_required_at_publish": true,
+    "queue_commit": "a844d9cbee0966763926bacafadf1527a6d4f51b",
+    "queue_readback_exact": true,
+    "new_drafts": 0,
+    "existing_READY_reused": 4,
+    "genuinely_rereviewed_entries": 1,
+    "unchanged_other_READY": 3,
+    "original_body_media_pattern_cohort_preserved": true,
+    "actual_send_latest_source_recheck_required": true
+  },
+  "last_queue_review_refresh": {
+    "checked_at": "2026-11-22T16:58:34.337995+09:00",
+    "slot": "2026-11-22T16:00:00+09:00",
+    "previous_entry": {
+      "slot": "2026-11-22T16:00:00+09:00",
+      "benefit_id": "131200000004",
+      "source_fingerprint": "25f8108297b704d5417bf0fc13956def042b9120749144afe1edd0e1257b48dc",
+      "source_generation": "gov24-44826151976-1",
+      "prepared_at": "2026-11-21T17:29:40.349298+09:00",
+      "expires_at": "2026-11-22T17:29:40.349298+09:00",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "131200000004",
+        "post_text": "차를 새로 마련할 때 세금 부담이 걱정되는 중증장애인이라면, 보철용·생업활동용 자동차 1대의 취득세·자동차세 면제 요건을 확인해봐요. 현금을 지급하는 지원은 아니에요.\n\n먼저 차종을 확인해요. 배기량 2,000cc 이하 승용차 등이 대상이고, 이 글은 해당 승용차를 기준으로 안내해요. 장애인 본인 명의이거나 법에서 정한 가족과 같은 세대의 공동명의여야 해요.\n\n등록 전에 관할 시군구에 감면 신청서·장애인 증명·차량 등록서류·주민등록등본 등 필요한 서류를 확인해요. 현재 법상 면제 기한은 2027년 12월 31일이에요.\n\n등록 후 1년 안에 부득이한 사유 없이 소유권을 넘기거나 세대를 분리하면 면제된 취득세가 추징될 수 있어요. 기존 감면차가 있다면 대체취득 요건도 별도로 확인해야 해요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게라는 문구 아래 집, 체크 표시 방패, 체크리스트, 새싹을 배치한 크림색 정사각형 브랜드 이미지. 하단에는 자세한 사항은 프로필링크 확인 문구가 있다."
+        },
+        "review": {
+          "planned_at": "2026-11-22T16:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "2000cc이하보철/생업용승용차취득을검토하는중증장애인",
+          "central_message": "현금지원아닌차량1대취득세자동차세감면과등록전후요건",
+          "pattern": "P6",
+          "selection_reason": "Nov22 16시A생활상황형,기존08P3보험료·12P5출산급여와다른P6차종확인→등록전서류→등록후유의사항.최근실제20건도입전개비교.공식정확성우선,조회효과미입증.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "131200000004",
+              "source_ref": "https://law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1033804697",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-21T17:29:40.349298+09:00",
+              "claims_supported": [
+                "실제열람 시행2026-06-02법21738호제17조1항:보철/생업용해당차종1대취득세및자동차세2027-12-31까지면제,2000cc이하승용차포함.현행법조건충족시감면신청가능한제도;특정개인면제확정아님."
+              ]
+            },
+            {
+              "source_id": "131200000004",
+              "source_ref": "https://www.easylaw.go.kr/CSP/CnpClsMainBtr.laf?ccfNo=4&cciNo=1&cnpClsNo=3&csmSeq=916",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-21T17:29:40.349298+09:00",
+              "claims_supported": [
+                "실제열람108~140행:중증장애인,본인/같은세대법정가족공동명의,1대와차종,대체취득60일조건,시군구감면신청가능·서식/장애인증명/등록서류/등본,등록1년이내부득이사유없는소유권이전·세대분리취득세추징및예외.본문은2000cc승용차범위로한정,별도개별소비세500만원및5년의무규칙혼합안함."
+              ]
+            },
+            {
+              "source_id": "131200000004",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999003&bnefType=all&svcId=131200000004",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-21T17:29:40.349298+09:00",
+              "claims_supported": [
+                "완전세대gov24-44826151976-1동일IDserviceList조회수43395누적지표,동일대상/차종/기한대조.APIcheckedAt=2026-11-21T07:09:28.943560+09:00,collectionSucceededAt=2026-11-21T07:14:06.816359+09:00;실제공식원문열람시각과구분."
+              ]
+            },
+            {
+              "source_id": "131200000004",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-21T17:29:40.349298+09:00",
+              "claims_supported": [
+                "현재main허용PNG실제GET SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a와현재image-review 원2026-11-06시각검수PASS/360px기록재대조일치.혜택별자산없어검수rotation2.새직접시각검수아님.금액/대상/기간없는일러스트로본문충돌없음."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 406,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "법령조건부감면안내이며개인별세액·면제확정아님.다른차종전체를배제하지않고본문독자만2000cc승용차로한정.가족범위·대체취득·추징예외는시군구개별확인.",
+            "현재source는내일16시신선도범위초과.발송시최신완전세대·공식상태·증빙유효기간·계정·한도·CAS·미디어교대재검증필수.",
+            "프로필사이트개인신청거래/감면결정기능미검증,보장하지않음."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "차를등록하기전어떤감면요건과등록후유의사항을확인해야하나요?",
+            "reader_scope": "2000cc이하보철/생업용승용차취득을검토하는중증장애인",
+            "angles": [
+              "차구입세금부담",
+              "감면대상차종/명의자격",
+              "등록전서류와등록후추징조건"
+            ],
+            "chosen_angle": "등록전후준비절차",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "차를 새로 마련할 때 세금 부담이 걱정되는 중증장애인이라면, 보철용·생업활동용 자동차 1대의 취득세·자동차세 면제 요건을 확인해봐요. 현금을 지급하는 지원은 아니에요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "중증장애인의 보철용·생업활동용 자동차는 차종과 명의 요건을 갖춘 1대에 취득세·자동차세 면제가 적용돼요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "장애인 자동차 세금 감면은 차종뿐 아니라 명의와 같은 세대 여부도 확인해야 해요."
+              }
+            ],
+            "chosen_opening": "차를 새로 마련할 때 세금 부담이 걱정되는 중증장애인이라면, 보철용·생업활동용 자동차 1대의 취득세·자동차세 면제 요건을 확인해봐요. 현금을 지급하는 지원은 아니에요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "Nov22 16시A생활상황형,기존08P3보험료·12P5출산급여와다른P6차종확인→등록전서류→등록후유의사항.최근실제20건도입전개비교.공식정확성우선,조회효과미입증.",
+            "history_posts_checked": 20,
+            "comparison_eligible": true,
+            "comparison_strata": {
+              "geo": "국가법령해당차량",
+              "audience": "중증장애인차량구입",
+              "benefit": "지방세면제",
+              "application": "법정요건부신청",
+              "media": "IMAGE"
+            },
+            "comparison_group": "기존24h비교가능28건A14/B14중앙값83/75,매칭비교쌍0.독자·혜택·시간·미디어교란,편집비중유지.7일평가보존14일미도래.",
+            "applied_elements": [
+              "생활부담과대상첫2문장",
+              "감면/현금구분",
+              "신청전후순서",
+              "추징조건누락방지"
+            ],
+            "profile_route": "기존사이트검색및개인감면신청거래미검증,직접신청/감면확정약속없음.",
+            "source_recheck_required_at_publish": true,
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "131200000004",
+          "notice_version": "2026-06-02law21738 article17; official pages reviewed 2026-11-21T17:29:40.349298+09:00",
+          "pattern": "P6",
+          "opening": "차를 새로 마련할 때 세금 부담이 걱정되는 중증장애인이라면, 보철용·생업활동용 자동차 1대의 취득세·자동차세 면제 요건을 확인해봐요. 현금을 지급하는 지원은 아니에요.",
+          "structure": "생활상황→차종/명의→등록전서류→기한/등록후추징",
+          "media_turn": "IMAGE"
+        }
+      }
+    },
+    "new_entry": {
+      "slot": "2026-11-22T16:00:00+09:00",
+      "benefit_id": "131200000004",
+      "source_fingerprint": "25f8108297b704d5417bf0fc13956def042b9120749144afe1edd0e1257b48dc",
+      "source_generation": "gov24-44954238983-1",
+      "prepared_at": "2026-11-22T16:58:34.337995+09:00",
+      "expires_at": "2026-11-23T16:58:34.337995+09:00",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "131200000004",
+        "post_text": "차를 새로 마련할 때 세금 부담이 걱정되는 중증장애인이라면, 보철용·생업활동용 자동차 1대의 취득세·자동차세 면제 요건을 확인해봐요. 현금을 지급하는 지원은 아니에요.\n\n먼저 차종을 확인해요. 배기량 2,000cc 이하 승용차 등이 대상이고, 이 글은 해당 승용차를 기준으로 안내해요. 장애인 본인 명의이거나 법에서 정한 가족과 같은 세대의 공동명의여야 해요.\n\n등록 전에 관할 시군구에 감면 신청서·장애인 증명·차량 등록서류·주민등록등본 등 필요한 서류를 확인해요. 현재 법상 면제 기한은 2027년 12월 31일이에요.\n\n등록 후 1년 안에 부득이한 사유 없이 소유권을 넘기거나 세대를 분리하면 면제된 취득세가 추징될 수 있어요. 기존 감면차가 있다면 대체취득 요건도 별도로 확인해야 해요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게라는 문구 아래 집, 체크 표시 방패, 체크리스트, 새싹을 배치한 크림색 정사각형 브랜드 이미지. 하단에는 자세한 사항은 프로필링크 확인 문구가 있다."
+        },
+        "review": {
+          "planned_at": "2026-11-22T16:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "2000cc이하보철/생업용승용차취득을검토하는중증장애인",
+          "central_message": "현금지원아닌차량1대취득세자동차세감면과등록전후요건",
+          "pattern": "P6",
+          "selection_reason": "Nov22 16시A생활상황형,기존08P3보험료·12P5출산급여와다른P6차종확인→등록전서류→등록후유의사항.최근실제20건도입전개비교.공식정확성우선,조회효과미입증.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "131200000004",
+              "source_ref": "https://law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1033804697",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-22T16:58:34.337995+09:00",
+              "claims_supported": [
+                "이번실제22~35행직접열람:법21738호시행2026-06-02제17조1항.보철생업용1대2000cc승용차포함취득세/자동차세2027-12-31면제.현행조건충족시감면신청가능한제도.특정개인승인보장않음."
+              ]
+            },
+            {
+              "source_id": "131200000004",
+              "source_ref": "https://law.go.kr/LSW/lsLinkCommonInfo.do?lspttninfSeq=64213",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-22T16:58:34.337995+09:00",
+              "claims_supported": [
+                "이번실제22~42행직접열람:2026-09-18시행대통령령36587호8조중증장애인/본인또는동일세대법정가족공동명의/대체취득60일.구등급표현으로대상확대않음."
+              ]
+            },
+            {
+              "source_id": "131200000004",
+              "source_ref": "https://www.law.go.kr/LSW/lsLawLinkInfo.do?chrClsCd=010202&lsId=011178&lsJoLnkSeq=1000178097",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-22T16:58:34.337995+09:00",
+              "claims_supported": [
+                "이번실제9~11행직접열람:현행21738호제17조1~3항.면제와대체취득,등록1년이내부득이사유없는소유권이전/세대분가취득세추징및공동등록전환예외.인쇄버전은표제만반환하여근거미사용."
+              ]
+            },
+            {
+              "source_id": "131200000004",
+              "source_ref": "https://www.guri.go.kr/www/selectBbsNttView.do?bbsNo=1681&integrDeptCode=&key=7557&nttNo=120729&pageIndex=1&searchCnd=all&searchCtgry=&searchKrwd=",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-22T16:58:34.337995+09:00",
+              "claims_supported": [
+                "이번실제구리시FAQ1140~1158행직접열람:2025-02-24게시,감면신청서/장애인증명서/등본(가족관계증명서)및세정과문의안내.법정대상은구등급표현아닌이번직접연현행시행령우선.본문서류는관할에확인할준비서류로안내,전국서류동일확정않음."
+              ]
+            },
+            {
+              "source_id": "131200000004",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999003&bnefType=all&svcId=131200000004",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-22T16:58:34.337995+09:00",
+              "claims_supported": [
+                "동일ID완전검증gov24-44954238983-1 serviceList조회수43404/대상/신청서/시군구방문방법/2027기한실제재대조.APIcheckedAt=2026-11-22T07:01:28.583618+09:00 collectionSucceededAt=2026-11-22T07:06:11.815516+09:00는원문확인과별도시각."
+              ]
+            },
+            {
+              "source_id": "131200000004",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-22T16:58:34.337995+09:00",
+              "claims_supported": [
+                "이번실제허용PNG GET SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a와main image-review의기존2026-11-06시각검수PASS/360px기록실제재대조일치.새시각검수아님.금액대상기간없는브랜드일러스트와기존alt일치."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 406,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "법령조건부감면안내이며개인별세액·면제확정아님.다른차종전체를배제하지않고본문독자만2000cc승용차로한정.가족범위·대체취득·추징예외는시군구개별확인.",
+            "현재source는내일16시신선도범위초과.발송시최신완전세대·공식상태·증빙유효기간·계정·한도·CAS·미디어교대재검증필수.",
+            "프로필사이트개인신청거래/감면결정기능미검증,보장하지않음.",
+            "이번지연대비재검수:기존생활법령본문503을총3회(2/5초간격)확인후중단.법제처현행법/시행령/구리시공식서류안내로실제대체검수완료.이전검수시각을오늘로복사하지않음.정규16시슬롯2h허용창/기존본문406자/이미지/형식/코호트유지.실제게시확인은별도."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "차를등록하기전어떤감면요건과등록후유의사항을확인해야하나요?",
+            "reader_scope": "2000cc이하보철/생업용승용차취득을검토하는중증장애인",
+            "angles": [
+              "차구입세금부담",
+              "감면대상차종/명의자격",
+              "등록전서류와등록후추징조건"
+            ],
+            "chosen_angle": "등록전후준비절차",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "차를 새로 마련할 때 세금 부담이 걱정되는 중증장애인이라면, 보철용·생업활동용 자동차 1대의 취득세·자동차세 면제 요건을 확인해봐요. 현금을 지급하는 지원은 아니에요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "중증장애인의 보철용·생업활동용 자동차는 차종과 명의 요건을 갖춘 1대에 취득세·자동차세 면제가 적용돼요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "장애인 자동차 세금 감면은 차종뿐 아니라 명의와 같은 세대 여부도 확인해야 해요."
+              }
+            ],
+            "chosen_opening": "차를 새로 마련할 때 세금 부담이 걱정되는 중증장애인이라면, 보철용·생업활동용 자동차 1대의 취득세·자동차세 면제 요건을 확인해봐요. 현금을 지급하는 지원은 아니에요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "Nov22 16시A생활상황형,기존08P3보험료·12P5출산급여와다른P6차종확인→등록전서류→등록후유의사항.최근실제20건도입전개비교.공식정확성우선,조회효과미입증.",
+            "history_posts_checked": 20,
+            "comparison_eligible": true,
+            "comparison_strata": {
+              "geo": "국가법령해당차량",
+              "audience": "중증장애인차량구입",
+              "benefit": "지방세면제",
+              "application": "법정요건부신청",
+              "media": "IMAGE"
+            },
+            "comparison_group": "기존24h비교가능28건A14/B14중앙값83/75,매칭비교쌍0.독자·혜택·시간·미디어교란,편집비중유지.7일평가보존14일미도래.",
+            "applied_elements": [
+              "생활부담과대상첫2문장",
+              "감면/현금구분",
+              "신청전후순서",
+              "추징조건누락방지"
+            ],
+            "profile_route": "기존사이트검색및개인감면신청거래미검증,직접신청/감면확정약속없음.",
+            "source_recheck_required_at_publish": true,
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "131200000004",
+          "notice_version": "2026-06-02law21738 article17; official pages reviewed 2026-11-21T17:29:40.349298+09:00",
+          "pattern": "P6",
+          "opening": "차를 새로 마련할 때 세금 부담이 걱정되는 중증장애인이라면, 보철용·생업활동용 자동차 1대의 취득세·자동차세 면제 요건을 확인해봐요. 현금을 지급하는 지원은 아니에요.",
+          "structure": "생활상황→차종/명의→등록전서류→기한/등록후추징",
+          "media_turn": "IMAGE"
+        }
+      }
+    },
+    "original_body_media_pattern_cohort_preserved": true,
+    "genuine_official_re_review": true,
+    "reason": "Original evidence expires17:29before endof18:00grace; delayed regular run not yet observed, no POST/pending.",
+    "queue_commit_sha": "a844d9cbee0966763926bacafadf1527a6d4f51b",
+    "queue_blob_sha": "1e436b1ae22aff6cac51fa18b4f9721bfc5835be",
+    "readback_exact": true,
+    "slot_window_unchanged": true,
+    "publication_separate": true
   }
 }
