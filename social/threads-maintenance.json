@@ -14,6 +14,8 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "44981746277",
+    "44979776477",
     "44972647598",
     "44964606297",
     "44962298960",
@@ -4811,30 +4813,63 @@
       "conclusion": "success",
       "updated_at": "2026-11-22T01:41:51Z",
       "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
+    },
+    "44981746277": {
+      "run_id": "44981746277",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-22T03:42:13Z",
+      "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
+    },
+    "44979776477": {
+      "run_id": "44979776477",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-22T03:15:29Z",
+      "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-22T11:36:23.120759+09:00",
-    "result": "no_update",
-    "maintenance_previous_blob_sha": "cd12d87d9b6c7d7fa6e335004226a9956fce18c5",
+    "checked_at": "2026-11-22T13:14:40.170192+09:00",
+    "result": "new_verified_publication_and_next_regular_draft_prepared",
+    "maintenance_previous_blob_sha": "3dfde7a6dde00260017bc45328eee60d2eb4fa5b",
     "current_main_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-    "publication_ledger_sha": "54e2491766bd1454af0c7d6f5f033229cca44f62",
-    "queue_blob_sha": "c9354400d8790942305e1eeed5ce5d9eeec88717",
-    "changed_run_versions": [],
+    "publication_ledger_sha": "5cd32c3b52108076bef187d217a3e1e91e827205",
+    "queue_blob_sha": "b539398057e105f4ad736dd07955b406d5e7f6fb",
+    "changed_run_versions": [
+      {
+        "run_id": "44981746277",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-22T03:42:13Z",
+        "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
+      },
+      {
+        "run_id": "44979776477",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-22T03:15:29Z",
+        "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
+      }
+    ],
     "active_target_runs": [],
     "run_pagination": {
       "per_page": 100,
       "pages": [
         1
       ],
-      "checkpoint_run_id": "44964606297",
+      "checkpoint_run_id": "44972647598",
       "checkpoint_observed_version_unchanged": true,
       "all_new_target_versions_observed": true
     },
-    "publication_ledger_records": 68,
-    "complete_verified_records": 68,
+    "publication_ledger_records": 69,
+    "complete_verified_records": 69,
     "pending": null,
     "lease": null,
     "source": {
@@ -4864,19 +4899,9 @@
       "latest_completed_run_unchanged": true
     },
     "writer": {
-      "checked_at": "2026-11-22T11:36:14.024977+09:00",
+      "checked_at": "2026-11-22T13:14:03.101242+09:00",
       "ready": 4,
       "drafts": [
-        {
-          "slot": "2026-11-22T12:00:00+09:00",
-          "benefit_id": "149200000153",
-          "pattern": "P5",
-          "media_turn": "TEXT",
-          "char_count": 433,
-          "expires_at": "2026-11-22T14:11:08.497290+09:00",
-          "current_source_fresh_at_slot": true,
-          "source_recheck_required_at_publish": true
-        },
         {
           "slot": "2026-11-22T16:00:00+09:00",
           "benefit_id": "131200000004",
@@ -4906,6 +4931,16 @@
           "expires_at": "2026-11-23T10:07:17.315427+09:00",
           "current_source_fresh_at_slot": false,
           "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-23T12:00:00+09:00",
+          "benefit_id": "627000000120",
+          "pattern": "P1",
+          "media_turn": "TEXT",
+          "char_count": 401,
+          "expires_at": "2026-11-23T13:12:20.099075+09:00",
+          "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true
         }
       ],
       "source": {
@@ -4917,39 +4952,45 @@
         "version": 1
       },
       "source_count": 10893,
-      "ledger_records": 68,
-      "queue_entries": 66,
-      "selection_notes": 72,
-      "queue_write": false,
+      "ledger_records": 69,
+      "queue_entries": 67,
+      "selection_notes": 74,
+      "queue_write": true,
       "new_posts": 0,
-      "due_metrics": 0,
+      "due_metrics": 3,
       "current_image_bytes_sha_recompared": true,
       "new_visual_inspection": false,
       "pending": null,
       "lease": null,
-      "source_recheck_required_at_publish": true
+      "source_recheck_required_at_publish": true,
+      "new_drafts": 1,
+      "queue_commit": "0aff74d78395ae01067b1fa99079e46e158a4cee",
+      "queue_readback_exact": true,
+      "existing_READY_preserved": 3,
+      "new_selection_notes": 2,
+      "actual_send_latest_source_recheck_required": true
     },
     "metrics": {
-      "run_id": "44972647598",
+      "run_id": "44979776477",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-22T01:41:51Z",
+      "updated_at": "2026-11-22T03:15:29Z",
       "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
-      "job_id": 137055564739,
-      "artifact_id": 14734835176,
-      "artifact_digest": "sha256:3e6af15e76120280efb5ee9551f17401e1886625529343fdb67a491160326753",
+      "job_id": 137077519548,
+      "artifact_id": 14736868971,
+      "artifact_digest": "sha256:dbd7e0384a342de8103a512cacfc9f49028af897af4a5d4509cb1fe79ab442a5",
       "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": false,
-      "job_logs_retrieved_this_check": false,
-      "observed_at": "2026-11-22T01:41:48.014986+00:00",
+      "artifact_redownloaded_this_check": true,
+      "job_logs_retrieved_this_check": true,
+      "observed_at": "2026-11-22T03:15:24.652636+00:00",
       "records": [],
       "new_observation_keys": [],
       "new_observations": 0,
-      "classification": "no_new_completed_metric_run_or_due_milestone",
+      "classification": "normal_no_due_milestones",
       "due_count": 0,
       "success_count": 0,
-      "currently_due_count": 0,
+      "currently_due_count": 3,
       "new_evaluation_report_due": false,
       "prior_7day_evaluation_unchanged": true,
       "14day_not_due": true,
@@ -4958,83 +4999,130 @@
       "workflow_dispatch": false,
       "total_observations": 120,
       "distinct_posts": 64,
-      "run_version_unchanged": true
+      "currently_due_status": "awaiting_existing_scheduled_official_read",
+      "current_check_at": "2026-11-22T13:14:40.170192+09:00",
+      "currently_due_post_ids": [
+        "18122947907049313",
+        "18100168118443439",
+        "18098495828440255"
+      ]
     },
     "recovery": {
       "needed": false,
       "dispatch": false,
-      "new_posts": 0,
+      "new_posts": 1,
       "new_failure": 0,
       "new_partial": 0,
       "expired_unpublished_queue_slots": 0,
       "publisher_recovery_calls": 0,
       "code_change": null,
-      "reason": "No newly confirmed fault; all68records complete verified, no pending or lease. Existing four READY pass current validator and priority check."
+      "reason": "No newly confirmed code fault; existing actual publisher138tests passed on unchanged main.69records complete verified; no pending/lease. No POST or dispatch performed by maintenance."
     },
-    "next_condition": "Existing reviewed regular slots Nov22 12/16/20 and Nov23 08; no extra dispatch or scheduler. Each actual send reloads latest complete fresh source and verifies official status/evidence expiry, images, CAS/account/daily/pending guards. Nov23 08 requires a newer collection because current source would exceed24h. Nov22 16 evidence expires17:29 and20expires21:11: later maintenance must genuinely re-review if needed; never date-copy.14day evaluation Nov24notdue; preserve A/Bweights, matchedpairs0.",
+    "next_condition": "Existing regular publisher consumes four READY Nov22 16/20,Nov23 08/12. Actual send must reload latest complete fresh collection and verify official status, evidence expiry, image SHA/rotation, CAS/account/daily/pending guards. Current collection exceeds24h at both Nov23slots; do not assume future freshness. Nov22 16expires17:29,20expires21:11;Nov23 12expires2026-11-23T13:12:20.099075+09:00 before full2hgrace; later maintenance genuinely re-reviews if needed, no date-copy. No dispatch/new schedule.14day evaluation Nov24notdue, retainweights. Three currently due milestones await the next existing official read-only snapshot; no manual dispatch, no fabricated0 or backcalculation.",
     "publication": {
-      "new_publication_this_run": false,
-      "latest_main_id": "18102899498408388",
-      "latest_already_reported": true,
-      "ledger_records": 68,
+      "run_id": "44981746277",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-22T03:42:13Z",
+      "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
+      "job_id": 137083525890,
+      "artifact_id": 14737659309,
+      "artifact_digest": "sha256:6b0f4c27f8af4e973afdd773319f0e7564616dc207e8dfecadf6dec357979c7f",
+      "artifact_digest_verified": true,
+      "classification": "verified_natural_regular_slot_publication",
+      "event": "schedule",
+      "published": true,
+      "slot": "2026-11-22T12:00:00+09:00",
+      "published_at": "2026-11-22T12:41:18.809010+09:00",
+      "benefit_id": "149200000153",
+      "main_id": "18214999999364836",
+      "url": "https://www.threads.com/@hid_1004/post/DgB3Q2Ijr9j",
       "stage": "complete",
       "verified": true,
-      "prior_receipt_preserved": true,
-      "all_remote_public_statuses_independently_requeried": false
+      "content_hash": "1c1918d01fddf3edb369f4b8c4192d1c58b7f3c5cf93338fdfb3f8f8a443b052",
+      "asset_sha256": null,
+      "source_generation": "gov24-44954238983-1",
+      "pattern": "P5",
+      "media_turn": "TEXT",
+      "char_count": 433,
+      "replies": 0,
+      "verification": "Actual authenticated receipt18214999999364836 and digest-verified result artifact match unique durable complete record and original433char TEXT/no image. Prior68records preserved exactly. No independent public render of all IDs.",
+      "verification_completed_at": "2026-11-22T13:14:40.170192+09:00",
+      "reported_at": "2026-11-22T13:14:40.170192+09:00",
+      "public_web_visibility_independently_verified": false,
+      "publication_ledger_records": 69,
+      "pending": null,
+      "lease": null,
+      "job_logs_retrieved_this_check": true,
+      "actual_publisher_tests_passed": 138,
+      "time_basis": {
+        "ledger_published_at": "2026-11-22T12:41:18.809010+09:00 invocation/reservation, not exact platform stamp",
+        "actual_job_receipt_at": "2026-11-22T12:42:02.907372+09:00",
+        "reported_kst_minute": "2026-11-22 12:42",
+        "exact_platform_timestamp_verified": false
+      },
+      "delay_minutes_from_slot": 42,
+      "within_original_two_hour_window": true,
+      "new_publication_this_run": true,
+      "new_failure": false,
+      "new_partial": false,
+      "body_and_asset_hash_match": true,
+      "comparison_eligible": true
     },
     "history_reconciliation": {
-      "range": "all68 durable records Nov04-Nov22 within latest28days",
-      "ledger_checked": 68,
+      "range": "all69 durable verified records within latest28days",
+      "ledger_checked": 69,
       "last20_openings_checked": 20,
-      "new_receipt_id": "18102899498408388",
+      "new_receipt_id": "18214999999364836",
       "all_remote_public_statuses_independently_requeried": false,
-      "scope_limit": "Existing verified receipts retained; current run directly reconciled new receipt+artifact+unique ledger. No account penalty or low-view cause inferred."
+      "scope_limit": "Current run new receipt+artifact+originaltext+unique ledger reconciled. Prior verified receipts retained. No account penalty or low-view cause inferred."
     }
   },
   "last_reported_publication": {
-    "run_id": "44962298960",
+    "run_id": "44981746277",
     "run_attempt": 1,
     "status": "completed",
     "conclusion": "success",
-    "updated_at": "2026-11-21T23:33:36Z",
+    "updated_at": "2026-11-22T03:42:13Z",
     "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
-    "job_id": 137023549923,
-    "artifact_id": 14729563413,
-    "artifact_digest": "sha256:420baa542633c73a9f13ac73e5c4506b9557add81d555eafc43034b65f979c89",
+    "job_id": 137083525890,
+    "artifact_id": 14737659309,
+    "artifact_digest": "sha256:6b0f4c27f8af4e973afdd773319f0e7564616dc207e8dfecadf6dec357979c7f",
     "artifact_digest_verified": true,
     "classification": "verified_natural_regular_slot_publication",
     "event": "schedule",
     "published": true,
-    "slot": "2026-11-22T08:00:00+09:00",
-    "published_at": "2026-11-22T08:32:43.615666+09:00",
-    "benefit_id": "507000000642",
-    "main_id": "18102899498408388",
-    "url": "https://www.threads.com/@hid_1004/post/DgBaz_IG6mV",
+    "slot": "2026-11-22T12:00:00+09:00",
+    "published_at": "2026-11-22T12:41:18.809010+09:00",
+    "benefit_id": "149200000153",
+    "main_id": "18214999999364836",
+    "url": "https://www.threads.com/@hid_1004/post/DgB3Q2Ijr9j",
     "stage": "complete",
     "verified": true,
-    "content_hash": "52ce13c6cd1d4350ad8cab0136b56c7e752b488367c65c938d3112d2c8540d65",
-    "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+    "content_hash": "1c1918d01fddf3edb369f4b8c4192d1c58b7f3c5cf93338fdfb3f8f8a443b052",
+    "asset_sha256": null,
     "source_generation": "gov24-44954238983-1",
-    "pattern": "P3",
-    "media_turn": "IMAGE",
-    "char_count": 446,
+    "pattern": "P5",
+    "media_turn": "TEXT",
+    "char_count": 433,
     "replies": 0,
-    "verification": "Actual authenticated main receipt18102899498408388 and digest-verified result artifact match unique durable complete record and original446char IMAGE copy/approved guide1SHA. Prior67records preserved exactly. No independent public render of all IDs.",
-    "verification_completed_at": "2026-11-22T10:11:36.077687+09:00",
-    "reported_at": "2026-11-22T10:11:36.077687+09:00",
+    "verification": "Actual authenticated receipt18214999999364836 and digest-verified result artifact match unique durable complete record and original433char TEXT/no image. Prior68records preserved exactly. No independent public render of all IDs.",
+    "verification_completed_at": "2026-11-22T13:14:40.170192+09:00",
+    "reported_at": "2026-11-22T13:14:40.170192+09:00",
     "public_web_visibility_independently_verified": false,
-    "publication_ledger_records": 68,
+    "publication_ledger_records": 69,
     "pending": null,
     "lease": null,
     "job_logs_retrieved_this_check": true,
     "actual_publisher_tests_passed": 138,
     "time_basis": {
-      "ledger_published_at": "2026-11-22T08:32:43.615666+09:00 invocation/reservation, not exact platform stamp",
-      "actual_job_receipt_at": "2026-11-22T08:33:28.564352+09:00",
-      "reported_kst_minute": "2026-11-22 08:33",
+      "ledger_published_at": "2026-11-22T12:41:18.809010+09:00 invocation/reservation, not exact platform stamp",
+      "actual_job_receipt_at": "2026-11-22T12:42:02.907372+09:00",
+      "reported_kst_minute": "2026-11-22 12:42",
       "exact_platform_timestamp_verified": false
     },
-    "delay_minutes_from_slot": 33,
+    "delay_minutes_from_slot": 42,
     "within_original_two_hour_window": true,
     "new_publication_this_run": true,
     "new_failure": false,
@@ -16611,6 +16699,36 @@
           "artifact_redownloaded_this_check": true,
           "job_logs_retrieved_this_check": true,
           "observed_at": "2026-11-22T01:41:48.014986+00:00",
+          "records": [],
+          "new_observation_keys": [],
+          "new_observations": 0,
+          "classification": "normal_no_due_milestones",
+          "due_count": 0,
+          "success_count": 0,
+          "currently_due_count": 0,
+          "new_evaluation_report_due": false,
+          "prior_7day_evaluation_unchanged": true,
+          "14day_not_due": true,
+          "weights_unchanged": true,
+          "publication_calls": 0,
+          "workflow_dispatch": false,
+          "total_observations": 120,
+          "distinct_posts": 64
+        },
+        "44979776477": {
+          "run_id": "44979776477",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-22T03:15:29Z",
+          "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
+          "job_id": 137077519548,
+          "artifact_id": 14736868971,
+          "artifact_digest": "sha256:dbd7e0384a342de8103a512cacfc9f49028af897af4a5d4509cb1fe79ab442a5",
+          "artifact_digest_verified": true,
+          "artifact_redownloaded_this_check": true,
+          "job_logs_retrieved_this_check": true,
+          "observed_at": "2026-11-22T03:15:24.652636+00:00",
           "records": [],
           "new_observation_keys": [],
           "new_observations": 0,
@@ -86967,6 +87085,254 @@
         "all_remote_public_statuses_independently_requeried": false,
         "scope_limit": "Existing verified receipts retained; current run directly reconciled new receipt+artifact+unique ledger. No account penalty or low-view cause inferred."
       }
+    },
+    "2026-11-22T13:14:40.170192+09:00": {
+      "checked_at": "2026-11-22T13:14:40.170192+09:00",
+      "result": "new_verified_publication_and_next_regular_draft_prepared",
+      "maintenance_previous_blob_sha": "3dfde7a6dde00260017bc45328eee60d2eb4fa5b",
+      "current_main_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "5cd32c3b52108076bef187d217a3e1e91e827205",
+      "queue_blob_sha": "b539398057e105f4ad736dd07955b406d5e7f6fb",
+      "changed_run_versions": [
+        {
+          "run_id": "44981746277",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-22T03:42:13Z",
+          "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
+        },
+        {
+          "run_id": "44979776477",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-22T03:15:29Z",
+          "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
+        }
+      ],
+      "active_target_runs": [],
+      "run_pagination": {
+        "per_page": 100,
+        "pages": [
+          1
+        ],
+        "checkpoint_run_id": "44972647598",
+        "checkpoint_observed_version_unchanged": true,
+        "all_new_target_versions_observed": true
+      },
+      "publication_ledger_records": 69,
+      "complete_verified_records": 69,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "44954238983",
+        "run_attempt": 1,
+        "conclusion": "success",
+        "job_id": 136998710072,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 303,
+        "artifact_id": 14726873759,
+        "artifact_digest": "sha256:8e55844ba89f2dbdca736c87c3bb945fe22cc7dbc205c20e2410d51709ce7946",
+        "artifact_redownloaded_this_check": false,
+        "artifact_digest_verified": true,
+        "read_current_verify_snapshot_load_feed": true,
+        "count": 10893,
+        "generation": "gov24-44954238983-1",
+        "lastSuccessAt": "2026-11-22T07:06:11.815516+09:00",
+        "manifestSha256": "dccfd1b54d27a2ef01292c2e8824125511eb42fd617650a932f049c92eec4880",
+        "path": "snapshots/gov24-44954238983-1",
+        "version": 1,
+        "source_count": 10893,
+        "source_only_not_current_application_verification": true,
+        "fresh_at_future_slots_is_time_arithmetic_not_future_fact_guarantee": true,
+        "all_four_queue_source_fingerprints_and_priority_revalidated": true,
+        "no_collection_failure": true,
+        "artifact_digest_previously_verified_cached_bytes": true,
+        "latest_completed_run_unchanged": true
+      },
+      "writer": {
+        "checked_at": "2026-11-22T13:14:03.101242+09:00",
+        "ready": 4,
+        "drafts": [
+          {
+            "slot": "2026-11-22T16:00:00+09:00",
+            "benefit_id": "131200000004",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 406,
+            "expires_at": "2026-11-22T17:29:40.349298+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-22T20:00:00+09:00",
+            "benefit_id": "999000000036",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 441,
+            "expires_at": "2026-11-22T21:11:11.683777+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-23T08:00:00+09:00",
+            "benefit_id": "B55370100033",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 408,
+            "expires_at": "2026-11-23T10:07:17.315427+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-23T12:00:00+09:00",
+            "benefit_id": "627000000120",
+            "pattern": "P1",
+            "media_turn": "TEXT",
+            "char_count": 401,
+            "expires_at": "2026-11-23T13:12:20.099075+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source": {
+          "count": 10893,
+          "generation": "gov24-44954238983-1",
+          "lastSuccessAt": "2026-11-22T07:06:11.815516+09:00",
+          "manifestSha256": "dccfd1b54d27a2ef01292c2e8824125511eb42fd617650a932f049c92eec4880",
+          "path": "snapshots/gov24-44954238983-1",
+          "version": 1
+        },
+        "source_count": 10893,
+        "ledger_records": 69,
+        "queue_entries": 67,
+        "selection_notes": 74,
+        "queue_write": true,
+        "new_posts": 0,
+        "due_metrics": 3,
+        "current_image_bytes_sha_recompared": true,
+        "new_visual_inspection": false,
+        "pending": null,
+        "lease": null,
+        "source_recheck_required_at_publish": true,
+        "new_drafts": 1,
+        "queue_commit": "0aff74d78395ae01067b1fa99079e46e158a4cee",
+        "queue_readback_exact": true,
+        "existing_READY_preserved": 3,
+        "new_selection_notes": 2,
+        "actual_send_latest_source_recheck_required": true
+      },
+      "metrics": {
+        "run_id": "44979776477",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-22T03:15:29Z",
+        "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
+        "job_id": 137077519548,
+        "artifact_id": 14736868971,
+        "artifact_digest": "sha256:dbd7e0384a342de8103a512cacfc9f49028af897af4a5d4509cb1fe79ab442a5",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "observed_at": "2026-11-22T03:15:24.652636+00:00",
+        "records": [],
+        "new_observation_keys": [],
+        "new_observations": 0,
+        "classification": "normal_no_due_milestones",
+        "due_count": 0,
+        "success_count": 0,
+        "currently_due_count": 3,
+        "new_evaluation_report_due": false,
+        "prior_7day_evaluation_unchanged": true,
+        "14day_not_due": true,
+        "weights_unchanged": true,
+        "publication_calls": 0,
+        "workflow_dispatch": false,
+        "total_observations": 120,
+        "distinct_posts": 64,
+        "currently_due_status": "awaiting_existing_scheduled_official_read",
+        "current_check_at": "2026-11-22T13:14:40.170192+09:00",
+        "currently_due_post_ids": [
+          "18122947907049313",
+          "18100168118443439",
+          "18098495828440255"
+        ]
+      },
+      "recovery": {
+        "needed": false,
+        "dispatch": false,
+        "new_posts": 1,
+        "new_failure": 0,
+        "new_partial": 0,
+        "expired_unpublished_queue_slots": 0,
+        "publisher_recovery_calls": 0,
+        "code_change": null,
+        "reason": "No newly confirmed code fault; existing actual publisher138tests passed on unchanged main.69records complete verified; no pending/lease. No POST or dispatch performed by maintenance."
+      },
+      "next_condition": "Existing regular publisher consumes four READY Nov22 16/20,Nov23 08/12. Actual send must reload latest complete fresh collection and verify official status, evidence expiry, image SHA/rotation, CAS/account/daily/pending guards. Current collection exceeds24h at both Nov23slots; do not assume future freshness. Nov22 16expires17:29,20expires21:11;Nov23 12expires2026-11-23T13:12:20.099075+09:00 before full2hgrace; later maintenance genuinely re-reviews if needed, no date-copy. No dispatch/new schedule.14day evaluation Nov24notdue, retainweights. Three currently due milestones await the next existing official read-only snapshot; no manual dispatch, no fabricated0 or backcalculation.",
+      "publication": {
+        "run_id": "44981746277",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-22T03:42:13Z",
+        "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
+        "job_id": 137083525890,
+        "artifact_id": 14737659309,
+        "artifact_digest": "sha256:6b0f4c27f8af4e973afdd773319f0e7564616dc207e8dfecadf6dec357979c7f",
+        "artifact_digest_verified": true,
+        "classification": "verified_natural_regular_slot_publication",
+        "event": "schedule",
+        "published": true,
+        "slot": "2026-11-22T12:00:00+09:00",
+        "published_at": "2026-11-22T12:41:18.809010+09:00",
+        "benefit_id": "149200000153",
+        "main_id": "18214999999364836",
+        "url": "https://www.threads.com/@hid_1004/post/DgB3Q2Ijr9j",
+        "stage": "complete",
+        "verified": true,
+        "content_hash": "1c1918d01fddf3edb369f4b8c4192d1c58b7f3c5cf93338fdfb3f8f8a443b052",
+        "asset_sha256": null,
+        "source_generation": "gov24-44954238983-1",
+        "pattern": "P5",
+        "media_turn": "TEXT",
+        "char_count": 433,
+        "replies": 0,
+        "verification": "Actual authenticated receipt18214999999364836 and digest-verified result artifact match unique durable complete record and original433char TEXT/no image. Prior68records preserved exactly. No independent public render of all IDs.",
+        "verification_completed_at": "2026-11-22T13:14:40.170192+09:00",
+        "reported_at": "2026-11-22T13:14:40.170192+09:00",
+        "public_web_visibility_independently_verified": false,
+        "publication_ledger_records": 69,
+        "pending": null,
+        "lease": null,
+        "job_logs_retrieved_this_check": true,
+        "actual_publisher_tests_passed": 138,
+        "time_basis": {
+          "ledger_published_at": "2026-11-22T12:41:18.809010+09:00 invocation/reservation, not exact platform stamp",
+          "actual_job_receipt_at": "2026-11-22T12:42:02.907372+09:00",
+          "reported_kst_minute": "2026-11-22 12:42",
+          "exact_platform_timestamp_verified": false
+        },
+        "delay_minutes_from_slot": 42,
+        "within_original_two_hour_window": true,
+        "new_publication_this_run": true,
+        "new_failure": false,
+        "new_partial": false,
+        "body_and_asset_hash_match": true,
+        "comparison_eligible": true
+      },
+      "history_reconciliation": {
+        "range": "all69 durable verified records within latest28days",
+        "ledger_checked": 69,
+        "last20_openings_checked": 20,
+        "new_receipt_id": "18214999999364836",
+        "all_remote_public_statuses_independently_requeried": false,
+        "scope_limit": "Current run new receipt+artifact+originaltext+unique ledger reconciled. Prior verified receipts retained. No account penalty or low-view cause inferred."
+      }
     }
   },
   "last_reported_prepublication_repair": {
@@ -86977,83 +87343,75 @@
     "scope": "Expired unreserved evidence genuinely revalidated; actual publisher not yet observed"
   },
   "last_prepared_queue": {
-    "checked_at": "2026-11-22T10:11:36.077687+09:00",
+    "checked_at": "2026-11-22T13:14:40.170192+09:00",
     "ready": 4,
     "future_regular_ready": 4,
     "active_regular_ready": 0,
     "new_entries": 1,
-    "slot": "2026-11-23T08:00:00+09:00",
-    "queue_commit_sha": "a47f928b0a003a12f899a15bb5e5086b9f6159bc",
-    "queue_blob_sha": "c9354400d8790942305e1eeed5ce5d9eeec88717",
+    "slot": "2026-11-23T12:00:00+09:00",
+    "queue_commit_sha": "0aff74d78395ae01067b1fa99079e46e158a4cee",
+    "queue_blob_sha": "b539398057e105f4ad736dd07955b406d5e7f6fb",
     "readback_exact": true,
     "publication_separate": true,
     "previous_entries_preserved": true,
     "new_entry": {
-      "slot": "2026-11-23T08:00:00+09:00",
-      "benefit_id": "B55370100033",
-      "source_fingerprint": "b080630e21b4ab1b269988693bf5c8c0a68da0289988e3c232ccd90315f69717",
+      "slot": "2026-11-23T12:00:00+09:00",
+      "benefit_id": "627000000120",
+      "source_fingerprint": "c5c23e16905c17939893ed5b7d1b5b4417eee4ead467da1b98e8b1ee74c79529",
       "source_generation": "gov24-44954238983-1",
-      "prepared_at": "2026-11-22T10:07:17.315427+09:00",
-      "expires_at": "2026-11-23T10:07:17.315427+09:00",
-      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "prepared_at": "2026-11-22T13:12:20.099075+09:00",
+      "expires_at": "2026-11-23T13:12:20.099075+09:00",
+      "asset_sha256": null,
       "writer": {
         "schema_version": "supportpick.writer.v1",
         "status": "READY",
-        "selected_program_id": "B55370100033",
-        "post_text": "금융 지식이 필요한 사회초년생이라면, 서민금융진흥원 금융교육에서 신용·부채관리와 소비·저축을 무료로 배울 수 있어요. 현금을 받는 지원금이 아니라 교육 서비스예요.\n\n먼저 내가 궁금한 주제를 골라요. 대출을 고르는 방법, 부채 수준 판단, 신용관리, 금융사기 예방처럼 일상에서 판단할 때 필요한 내용을 다뤄요.\n\n개인이 온라인으로 배우려면 금융교육포털에서 원하는 교육을 찾아 수강해요. PC와 모바일 모두 이용할 수 있고, 보조금24 안내상 상시 신청이에요. 강좌별 이용 안내는 따로 확인해요.\n\n단체가 방문교육이나 기관 온택트교육을 원한다면 교육 대상 인원 20명 이상이라는 개설 조건이 있어요. 개인 온라인교육과 구분해 준비하면 돼요. 교육 수강이 대출 승인이나 채무 감면을 보장하지는 않아요.\n\n자세한 사항은 프로필링크 확인",
+        "selected_program_id": "627000000120",
+        "post_text": "산후조리원비가 부담되는 대구의 2026년 출산가정은 산후경비 지원을 확인해요. 산모·신생아 건강관리서비스를 이용하지 않았다면 가구당 최대 20만원을 대구로페이로 지원받을 수 있어요.\n\n기준 중위소득 150% 이하가 대상이에요. 산모는 출산일과 신청일 모두 대구에 주민등록이 있어야 하고, 아기의 출생신고 주민등록지도 대구여야 해요.\n\n신청은 출산일로부터 60일 이후부터 6개월 이내예요. 2026년 출생아까지 지원하며 2027년 출생아는 대상이 아니에요. 건강관리서비스 이용자의 본인부담금 지원과 중복되지 않아요.\n\n산후조리원 이용 등 건강관리 비용 영수증과 대구로페이 카드 사본을 준비해요. 관할 보건소나 정부24에서 신청하고, 주소·가족관계 확인 서류는 신청 방식에 맞춰 확인해요.\n\n자세한 사항은 프로필링크 확인",
         "draft_text": null,
         "reply_texts": [],
         "media": {
-          "turn": "IMAGE",
-          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-          "check": "MATCHED",
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
           "image_copy": null,
-          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게라는 문구 아래 체크리스트가 든 봉투, 동전, 새싹을 배치한 크림색 정사각형 브랜드 이미지. 하단에는 자세한 사항은 프로필링크 확인 문구가 있다."
+          "alt_text": null
         },
         "review": {
-          "planned_at": "2026-11-23T08:00:00+09:00",
-          "application_status": "ALWAYS",
-          "reader": "소비·신용·부채관리를배우려는사회초년생",
-          "central_message": "무료금융교육은어디서어떤방식으로이용하나요?",
-          "pattern": "P6",
-          "selection_reason": "Nov23 08 B대상혜택형/P6단계.최근20게시의현금/감면/바우처와다른교육서비스,기존3READY(출산급여P5/자동차감면P6/스포츠P8)와독자·날짜·실제도입전개대조.하루간동일P6가능하나Nov23당일첫패턴.현금오해없이질문→주제선택→개인온라인→단체조건순서.",
+          "planned_at": "2026-11-23T12:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "대구거주·중위소득150%이하·2026출산·산모신생아건강관리미이용가정",
+          "central_message": "산후조리비부담을어떤조건에서얼마나덜수있나요?",
+          "pattern": "P1",
+          "selection_reason": "동일ID누적39262,상위2후보근거있는HOLD후선정.최근20게시와기존3READY대조;Nov23기존08P6교육과달리12P1생활상황형A로가구산후비용→조건→개인기한→증빙순서.",
           "interest_basis": "OBSERVED_METRICS",
           "duplicate_check": "CHECKED",
           "evidence": [
             {
-              "source_id": "B55370100033",
-              "source_ref": "https://bokji.gangnam.go.kr/board/BBS_QNA/1093/view.do?mid=ID03_03&pgno=1&type=",
+              "source_id": "627000000120",
+              "source_ref": "https://nam.daegu.kr/health/index.do?menu_id=00205055",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-22T10:07:17.315427+09:00",
+              "verified_at": "2026-11-22T13:12:20.099075+09:00",
               "claims_supported": [
-                "실제강남구2026-08-21공식복지안내66~95행직접열람:금융교육희망취약계층등,온라인무료PC모바일,포털원하는주제신청수강,방문/기관온택트20명이상.지역대상강남주민한정으로쓰지않음."
+                "직접공식323~369행:중위150·대구모/아이주소·미이용자·가구최대20만원·대구로페이·2026출생60일후6개월·중복불가·보건소/온라인·영수증카드사본.2026-07-21수정표시.2025이전90일과분리.",
+                "현재열람한2026공식안내상소득·거주·미이용요건을충족한2026출산가정은출산일60일이후6개월이내개인별기한에신청가능.모든가정지급확정이나2027출생아가능으로확대하지않음."
               ]
             },
             {
-              "source_id": "B55370100033",
-              "source_ref": "https://www.econedu.go.kr/user/findEcon/findEcon4/dtl?p_conts_sn=ECR0000002688&serchmenu=4",
+              "source_id": "627000000120",
+              "source_ref": "https://www.buk.daegu.kr/health/index.do?menu_id=00003532",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-22T10:07:17.315427+09:00",
+              "verified_at": "2026-11-22T13:12:20.099075+09:00",
               "claims_supported": [
-                "실제정부경제배움공식교육안내191~210행:서민금융진흥원금융생활교육,사회초년생포함대상,소비저축·대출·신용·재무설계.과거크롤링표시여서현재접수증명으로대체하지않음."
+                "직접공식375~452행:2026소득기준150%·주소요건·60일후6개월·가구20만원한도·대구로페이·미이용자·중복불가·서류·정부24공식안내경로.표하단180%구형제목은2026현행150%본문을우선하여판정.관할구절차다름유지."
               ]
             },
             {
-              "source_id": "B55370100033",
-              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2149520&bnefType=all&svcId=B55370100033",
+              "source_id": "627000000120",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001550&bnefType=all&svcId=627000000120",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-22T10:07:17.315427+09:00",
+              "verified_at": "2026-11-22T13:12:20.099075+09:00",
               "claims_supported": [
-                "실제완전검증gov24-44954238983-1동일ID serviceList누적40439,2026-11-13수정,전국민·상시신청·교육유형·무료PC모바일·교육주제/20명이상구분대조.APIcheckedAt=2026-11-22T07:03:57.594446+09:00;collectionSucceededAt=2026-11-22T07:06:11.815516+09:00는실제원문검수시각과구분."
-              ]
-            },
-            {
-              "source_id": "B55370100033",
-              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-              "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-22T10:07:17.315427+09:00",
-              "claims_supported": [
-                "이번실제허용PNG GET SHA256=0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd를image-review의기존AI_VISUAL_INSPECTION/PASS·360px검수와재대조일치.새직접시각검수아님.브랜드이미지에금액/대상/기간없어본문충돌없음."
+                "동일ID완전검증Gov24원본serviceList누적39262·2026-11-10수정·2026출생아까지/2027제외·동일지원금액기간대상대조.APIcheckedAt=2026-11-22T07:03:33.163424+09:00 collectionSucceededAt=2026-11-22T07:06:11.815516+09:00는실제원문확인과구분."
               ]
             }
           ],
@@ -87063,76 +87421,75 @@
             "eligibility_and_units": "PASS",
             "cta_and_no_links": "PASS",
             "length": "PASS",
-            "media": "PASS"
+            "media": "NOT_REQUIRED"
           },
-          "char_count": 408,
+          "char_count": 401,
           "count_method": "python_len_including_spaces_and_newlines",
           "missing_info": [],
           "hold_reasons": [],
           "warnings": [
-            "교육포털루트GET2회502·강좌목록접근불가.원격개인수강/가입·로그인/프로필링크·지원금픽사이트검색경로실거래미확인.공식현행복지안내+동일ID최신공식원본으로제도범위만검수,현재개별강좌접속성공/대출승인보장안함.",
-            "내일08시현재source24h초과:실제발송시최신완전세대와현재공식상태/증빙유효기간/이미지SHA재검증필수."
+            "정부24개인로그인·실제신청완료·프로필링크및지원금픽사이트검색경로는실행하지않음.공식보건소안내된경로만설명.",
+            "현재source는내일12시에24h초과하므로실제발송시최신완전세대/공식상태/유효기간재검증필수."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
-            "core_question": "무료금융교육은어디서어떤방식으로이용하나요?",
-            "reader_scope": "소비·신용·부채관리를배우려는사회초년생",
+            "core_question": "산후조리비부담을어떤조건에서얼마나덜수있나요?",
+            "reader_scope": "대구거주·중위소득150%이하·2026출산·산모신생아건강관리미이용가정",
             "angles": [
-              "월급관리와소비판단",
-              "신용·부채관리자격없는교육접근",
-              "개인온라인과단체개설절차"
+              "산후조리비부담",
+              "서비스미이용/소득주소자격",
+              "출산일기준기한과영수증준비"
             ],
-            "chosen_angle": "무료교육실익→주제→온라인경로→단체조건",
+            "chosen_angle": "산후비용부담을개인신청조건에연결",
             "opening_candidates": [
               {
                 "type": "생활 상황형",
                 "group": "A",
-                "text": "월급을 어떻게 관리할지 고민인 사회초년생은 무료 금융교육으로 소비·신용·부채관리부터 배울 수 있어요."
+                "text": "산후조리원비가 부담되는 대구의 2026년 출산가정은 산후경비 지원을 확인해요. 산모·신생아 건강관리서비스를 이용하지 않았다면 가구당 최대 20만원을 대구로페이로 지원받을 수 있어요."
               },
               {
                 "type": "대상·혜택형",
                 "group": "B",
-                "text": "금융 지식이 필요한 사회초년생이라면, 서민금융진흥원 금융교육에서 신용·부채관리와 소비·저축을 무료로 배울 수 있어요. 현금을 받는 지원금이 아니라 교육 서비스예요."
+                "text": "대구의 소득·주소 요건을 갖춘 2026년 출산가정 중 건강관리서비스 미이용자는 산후경비를 가구당 최대 20만원 지원받을 수 있어요."
               },
               {
                 "type": "조건 설명형",
                 "group": null,
-                "text": "금융교육은 개인 온라인 수강과 단체 방문·온택트 개설 조건을 구분해서 확인해요."
+                "text": "대구 산후경비 지원은 건강관리서비스 이용 여부와 출산 후 신청 시기를 함께 봐요."
               }
             ],
-            "chosen_opening": "금융 지식이 필요한 사회초년생이라면, 서민금융진흥원 금융교육에서 신용·부채관리와 소비·저축을 무료로 배울 수 있어요. 현금을 받는 지원금이 아니라 교육 서비스예요.",
-            "opening_type": "대상·혜택형",
-            "cohort": "B",
+            "chosen_opening": "산후조리원비가 부담되는 대구의 2026년 출산가정은 산후경비 지원을 확인해요. 산모·신생아 건강관리서비스를 이용하지 않았다면 가구당 최대 20만원을 대구로페이로 지원받을 수 있어요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
             "comparison_eligible": true,
-            "selection_reason": "Nov23 08 B대상혜택형/P6단계.최근20게시의현금/감면/바우처와다른교육서비스,기존3READY(출산급여P5/자동차감면P6/스포츠P8)와독자·날짜·실제도입전개대조.하루간동일P6가능하나Nov23당일첫패턴.현금오해없이질문→주제선택→개인온라인→단체조건순서.",
+            "selection_reason": "동일ID누적39262,상위2후보근거있는HOLD후선정.최근20게시와기존3READY대조;Nov23기존08P6교육과달리12P1생활상황형A로가구산후비용→조건→개인기한→증빙순서.",
             "history_posts_checked": 20,
             "comparison_strata": {
-              "geo": "전국",
-              "audience": "사회초년생",
-              "benefit": "무료교육서비스",
-              "application": "상시",
-              "media": "IMAGE"
+              "geo": "대구",
+              "audience": "출산가정",
+              "benefit": "산후비용보조대구로페이",
+              "application": "출산후개인기한",
+              "media": "TEXT"
             },
-            "comparison_group": "공식24/72/168h관측분리,기존117관측·이번신규3예정.매칭쌍0·대상/시간/미디어교란,효과미입증·비중유지.",
+            "comparison_group": "최근20게시/120공식관측에서대상·지역·혜택·마감상이.매칭쌍0·시간/미디어교란으로효과미입증·비중유지.",
             "applied_elements": [
-              "첫2문장대상/무료교육실익",
-              "현금과교육구분",
-              "주제선택후개인단체경로",
-              "보장없는정확한제한"
+              "첫두문장대구/2026/미이용/가구최대20만원/대구로페이",
+              "주소소득과기한구체화",
+              "다음증빙준비"
             ],
             "source_recheck_required_at_publish": true,
             "master_full_used": true,
             "supplemental_full_used_in_current_model_input": true,
-            "profile_route": "교육포털루트GET2회502·강좌목록접근불가.원격개인수강/가입·로그인/프로필링크·지원금픽사이트검색경로실거래미확인.공식현행복지안내+동일ID최신공식원본으로제도범위만검수,현재개별강좌접속성공/대출승인보장안함."
+            "profile_route": "정부24개인로그인·실제신청완료·프로필링크및지원금픽사이트검색경로는실행하지않음.공식보건소안내된경로만설명."
           }
         },
         "next_history_record": {
-          "program_id": "B55370100033",
-          "notice_version": "Gov24modified2026-11-13; official Gangnam2026-08-21 reviewed2026-11-22T10:07:17.315427+09:00",
-          "pattern": "P6",
-          "opening": "금융 지식이 필요한 사회초년생이라면, 서민금융진흥원 금융교육에서 신용·부채관리와 소비·저축을 무료로 배울 수 있어요. 현금을 받는 지원금이 아니라 교육 서비스예요.",
-          "structure": "대상무료교육→주제선택→개인온라인→단체개설조건",
-          "media_turn": "IMAGE"
+          "program_id": "627000000120",
+          "notice_version": "Gov24modified2026-11-10; official health pages actuallyreviewed2026-11-22T13:12:20.099075+09:00",
+          "pattern": "P1",
+          "opening": "산후조리원비가 부담되는 대구의 2026년 출산가정은 산후경비 지원을 확인해요. 산모·신생아 건강관리서비스를 이용하지 않았다면 가구당 최대 20만원을 대구로페이로 지원받을 수 있어요.",
+          "structure": "산후비용→미이용자최대액→소득주소→출산기한/연도→증빙",
+          "media_turn": "TEXT"
         }
       }
     }
@@ -89507,19 +89864,9 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-22T11:36:14.024977+09:00",
+    "checked_at": "2026-11-22T13:14:03.101242+09:00",
     "ready": 4,
     "drafts": [
-      {
-        "slot": "2026-11-22T12:00:00+09:00",
-        "benefit_id": "149200000153",
-        "pattern": "P5",
-        "media_turn": "TEXT",
-        "char_count": 433,
-        "expires_at": "2026-11-22T14:11:08.497290+09:00",
-        "current_source_fresh_at_slot": true,
-        "source_recheck_required_at_publish": true
-      },
       {
         "slot": "2026-11-22T16:00:00+09:00",
         "benefit_id": "131200000004",
@@ -89549,6 +89896,16 @@
         "expires_at": "2026-11-23T10:07:17.315427+09:00",
         "current_source_fresh_at_slot": false,
         "source_recheck_required_at_publish": true
+      },
+      {
+        "slot": "2026-11-23T12:00:00+09:00",
+        "benefit_id": "627000000120",
+        "pattern": "P1",
+        "media_turn": "TEXT",
+        "char_count": 401,
+        "expires_at": "2026-11-23T13:12:20.099075+09:00",
+        "current_source_fresh_at_slot": false,
+        "source_recheck_required_at_publish": true
       }
     ],
     "source": {
@@ -89560,16 +89917,22 @@
       "version": 1
     },
     "source_count": 10893,
-    "ledger_records": 68,
-    "queue_entries": 66,
-    "selection_notes": 72,
-    "queue_write": false,
+    "ledger_records": 69,
+    "queue_entries": 67,
+    "selection_notes": 74,
+    "queue_write": true,
     "new_posts": 0,
-    "due_metrics": 0,
+    "due_metrics": 3,
     "current_image_bytes_sha_recompared": true,
     "new_visual_inspection": false,
     "pending": null,
     "lease": null,
-    "source_recheck_required_at_publish": true
+    "source_recheck_required_at_publish": true,
+    "new_drafts": 1,
+    "queue_commit": "0aff74d78395ae01067b1fa99079e46e158a4cee",
+    "queue_readback_exact": true,
+    "existing_READY_preserved": 3,
+    "new_selection_notes": 2,
+    "actual_send_latest_source_recheck_required": true
   }
 }
