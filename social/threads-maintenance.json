@@ -14,6 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "45015900359",
     "45011341207",
     "45010687035",
     "45006341424",
@@ -4892,32 +4893,32 @@
       "conclusion": "success",
       "updated_at": "2026-11-22T10:31:49Z",
       "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
+    },
+    "45015900359": {
+      "run_id": "45015900359",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-22T11:09:27Z",
+      "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-22T19:47:18.797585+09:00",
-    "result": "no_update",
-    "maintenance_previous_blob_sha": "61b4fca8fa0a86821157af79f35a451cba9c782b",
+    "checked_at": "2026-11-22T20:29:58.034161+09:00",
+    "result": "ready_queue_extended_and_original20_genuinely_rereviewed",
+    "maintenance_previous_blob_sha": "a7fddec3d1bc192c538d421f7a87efa4cdfed470",
     "current_main_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
     "publication_ledger_sha": "571864b678d632c06da48d71973a5cd984b9563e",
-    "queue_blob_sha": "f396533aeaa0d4030b09055be3b7b51a4030a104",
+    "queue_blob_sha": "171c42e6b0e53da604279f50155e92c78846f4e2",
     "changed_run_versions": [
       {
-        "run_id": "45011341207",
+        "run_id": "45015900359",
         "run_attempt": 1,
         "status": "completed",
         "conclusion": "success",
-        "updated_at": "2026-11-22T10:13:11Z",
-        "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
-      },
-      {
-        "run_id": "45010687035",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-22T10:31:49Z",
+        "updated_at": "2026-11-22T11:09:27Z",
         "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
       }
     ],
@@ -4943,11 +4944,11 @@
       "updated_at": "2026-11-22T10:31:49Z",
       "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
       "job_id": 137172125046,
-      "job_logs_retrieved_this_check": true,
+      "job_logs_retrieved_this_check": false,
       "actual_tests_passed": 303,
       "artifact_id": 14750022237,
       "artifact_digest": "sha256:d2b01708c9cbc30920e45dbbd7403038e1da8e1cbe66579b3fe2ceb91d0d801a",
-      "artifact_redownloaded_this_check": true,
+      "artifact_redownloaded_this_check": false,
       "artifact_digest_verified": true,
       "read_current_verify_snapshot_load_feed": true,
       "count": 10893,
@@ -4961,13 +4962,14 @@
       "fresh_at_future_slots_is_time_arithmetic_not_future_fact_guarantee": true,
       "all_four_queue_source_fingerprints_and_priority_revalidated": true,
       "no_collection_failure": true,
-      "latest_completed_run_unchanged": false,
+      "latest_completed_run_unchanged": true,
       "previous_generation": "gov24-44954238983-1",
-      "collection_timestamp_not_original_notice_review": true
+      "collection_timestamp_not_original_notice_review": true,
+      "artifact_digest_previously_verified_cached_bytes": true
     },
     "writer": {
-      "checked_at": "2026-11-22T19:46:34.898779+09:00",
-      "ready": 4,
+      "checked_at": "2026-11-22T20:28:48.334132+09:00",
+      "ready": 5,
       "drafts": [
         {
           "slot": "2026-11-22T20:00:00+09:00",
@@ -4975,7 +4977,7 @@
           "pattern": "P8",
           "media_turn": "TEXT",
           "char_count": 441,
-          "expires_at": "2026-11-22T21:11:11.683777+09:00",
+          "expires_at": "2026-11-23T20:28:18.726689+09:00",
           "current_source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true
         },
@@ -5008,6 +5010,16 @@
           "expires_at": "2026-11-23T17:25:45.839912+09:00",
           "current_source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-23T20:00:00+09:00",
+          "benefit_id": "WII000000500",
+          "pattern": "P8",
+          "media_turn": "TEXT",
+          "char_count": 446,
+          "expires_at": "2026-11-23T20:28:18.726689+09:00",
+          "current_source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true
         }
       ],
       "source": {
@@ -5020,31 +5032,39 @@
       },
       "source_count": 10893,
       "ledger_records": 70,
-      "queue_entries": 68,
+      "queue_entries": 69,
       "selection_notes": 74,
-      "queue_write": false,
+      "queue_write": true,
       "new_posts": 0,
-      "due_metrics": 0,
+      "due_metrics": 1,
       "current_image_bytes_sha_recompared": true,
       "new_visual_inspection": false,
       "pending": null,
       "lease": null,
-      "source_recheck_required_at_publish": true
+      "source_recheck_required_at_publish": true,
+      "queue_commit": "f9dc02fa2de0c259f7a5df536d928c44fa1f41a1",
+      "queue_readback_exact": true,
+      "new_drafts": 1,
+      "future24h_ready": 4,
+      "active_regular_ready": 1,
+      "existing_other_READY_preserved": 3,
+      "genuinely_rereviewed_current_slot": 1,
+      "body_media_pattern_cohort_preserved": true
     },
     "metrics": {
-      "run_id": "45011341207",
+      "run_id": "45015900359",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-22T10:13:11Z",
+      "updated_at": "2026-11-22T11:09:27Z",
       "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
-      "job_id": 137174118432,
-      "artifact_id": 14749763194,
-      "artifact_digest": "sha256:e5df465f7d5757a37d4ff59a867ac3117f84b4a9fdce1f84c2011e40a0193b23",
+      "job_id": 137188032072,
+      "artifact_id": 14752250561,
+      "artifact_digest": "sha256:a5784275bc94267d2032caeff3b87fe0d0eccd53c3e63bc8a2ce06222f780a63",
       "artifact_digest_verified": true,
       "artifact_redownloaded_this_check": true,
       "job_logs_retrieved_this_check": true,
-      "observed_at": "2026-11-22T10:13:08.598662+00:00",
+      "observed_at": "2026-11-22T11:09:22.384434+00:00",
       "records": [],
       "new_observation_keys": [],
       "new_observations": 0,
@@ -5058,10 +5078,12 @@
       "weights_unchanged": true,
       "publication_calls": 0,
       "workflow_dispatch": false,
-      "current_check_at": "2026-11-22T19:47:18.797585+09:00",
-      "currently_due_post_ids": [],
-      "currently_due_count": 0,
-      "currently_due_status": "no_due_milestones"
+      "current_check_at": "2026-11-22T20:29:58.034161+09:00",
+      "currently_due_post_ids": [
+        "17992955862109526"
+      ],
+      "currently_due_count": 1,
+      "currently_due_status": "awaiting_next_existing_official_snapshot"
     },
     "recovery": {
       "needed": false,
@@ -5072,9 +5094,15 @@
       "publisher_recovery_calls": 0,
       "code_change": null,
       "no_confirmed_new_code_fault": true,
-      "reason": "Latest publisher unchanged firstattempt success. Fresh complete collection/manifest and303tests passed; current70records verified complete no pending/lease. No maintenance POST/dispatch."
+      "stage": "awaiting_original20_regular_workflow",
+      "slot": "2026-11-22T20:00:00+09:00",
+      "original_window_ends": "2026-11-22T22:00:00+09:00",
+      "ledger_slot_absent": true,
+      "remote_publication_absence_proven": false,
+      "hypothesis": "Originalscheduled workflow delay possible but no failure/run/POST evidence yet; not an APIrestriction diagnosis.",
+      "reason": "Resume-unreserved requires confirmed reservation-before failure; noneobserved. No invented dispatch eligibility or repeated POST. Current70records completeverified no pending/lease."
     },
-    "next_condition": "Existing regular publisher consumes Nov22 20,Nov23 08/12/16 unchanged READY. Actualsend reloads latest complete fresh collection and official status, evidence expiry, imageSHA/rotation, CAS/account/daily/main/firstattempt/pending guards. Current19:11collection is within24h at all four planned slots by time arithmetic only, not guarantee of future facts. Evidence expiries unchanged:Nov22 20at21:11,Nov23 08at10:07,12at13:12,16at17:25; genuinely re-review if delayed beyond evidence lifetime, never date-copy/backfill. No new dispatch/test/rerun/schedule. No due metrics; 14dayevaluationNov24notdue; weightsunchanged.",
+    "next_condition": "Existing original20regular execution only within its2hwindow until22:00; genuinely refreshed unchangedcopy evidence coverswindow. Do not infer no remote post solely from missingrun/ledger. Only confirmed pre-reservationfailure permits documentedresume originalcron; ambiguousPOST staysHOLD. If20unpublished after22, archiveexpiredslot then recompute allunreservedfuture priorities/media. Fourfuture24hREADY Nov23 08/12/16/20 project original20TEXT; ifpriorfails projection must recompute. Nov23 20currentcollection wouldexceed24h and evidenceexpires20:28 beforefullgrace, actualsend needsfreshcompletegeneration and currentoriginal/evidence/asset/CAS/account/daily/main/firstattempt/pending guards. No extra/test/rerun/backfill/new schedule. Due metric window awaits nextexisting officialsnapshot; 14dayevaluationNov24notdue weightsunchanged.",
     "publication": {
       "new_publication_this_run": false,
       "latest_main_id": "18125366213319496",
@@ -5094,13 +5122,14 @@
       "scope_limit": "No publication ledger changes; previous authenticated receipt/artifact/body/asset evidence retained. Three actual official metric IDs matched to unique completed publication records. No new public rendering of all70 IDs."
     },
     "official_review_recovery": {
-      "stage": "existing_ready_reuse_validation",
-      "status": "four_existing_ready_pass_latest_generation_without_rewriting",
-      "new_official_page_review_this_check": false,
-      "evidence_timestamps_preserved": true,
+      "stage": "original20_rereview_and_new23_20_review",
+      "status": "official_sources_reopened_and_conflict_resolved",
+      "new_official_page_review_this_check": true,
       "new_visual_inspection": false,
       "image_bytes_sha_recompared": true,
-      "limitations": "Existing fourREADY within original reviewed lifetimes; no date-copy. Full master hash and entire writing input retained. New complete generation facts match exact fingerprints; priority/status/expiry/media contracts pass. Actualsend must reverify latest official status. APIcollection is not originalpage review."
+      "original20": "KSPO,문화포털,서대문,고양 currentoriginal reopened for identical2027facts. No body/media/cohort/pattern change; prior evidence archived.",
+      "newdraft": "WII000000500 raw80% conflicts with current100%; dated2026-06-29Paju July1effective correction and2026-08-11Gangnam footnote confirm100%. No estimate or budgetplan used. Bokjiro directshell0lines not used; Jincheon timeout not used.",
+      "next_check": "Latestsource and originalcurrentstatus at actualsend; newNov23 20needs newer complete generation."
     }
   },
   "last_reported_publication": {
@@ -6044,14 +6073,14 @@
     }
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-22T19:47:18.797585+09:00",
+    "checked_at": "2026-11-22T20:29:58.034161+09:00",
     "new_publications": 0,
     "new_incidents": 0,
-    "queue_ready": 4,
+    "queue_ready": 5,
     "new_metric_observations": 0,
     "new_evaluation_due": false,
-    "new_ready_drafts": 0,
-    "existing_queue_preserved": true,
+    "new_ready_drafts": 1,
+    "existing_other_queue_preserved": true,
     "new_complete_source_generation": "gov24-45010687035-1"
   },
   "reach_policy": {
@@ -17350,6 +17379,34 @@
           "artifact_redownloaded_this_check": true,
           "job_logs_retrieved_this_check": true,
           "observed_at": "2026-11-22T10:13:08.598662+00:00",
+          "records": [],
+          "new_observation_keys": [],
+          "new_observations": 0,
+          "total_observations": 126,
+          "distinct_posts": 66,
+          "classification": "normal_no_due_milestones_at_run_time",
+          "due_count": 0,
+          "success_count": 0,
+          "new_evaluation_report_due": false,
+          "14day_not_due": true,
+          "weights_unchanged": true,
+          "publication_calls": 0,
+          "workflow_dispatch": false
+        },
+        "45015900359": {
+          "run_id": "45015900359",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-22T11:09:27Z",
+          "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
+          "job_id": 137188032072,
+          "artifact_id": 14752250561,
+          "artifact_digest": "sha256:a5784275bc94267d2032caeff3b87fe0d0eccd53c3e63bc8a2ce06222f780a63",
+          "artifact_digest_verified": true,
+          "artifact_redownloaded_this_check": true,
+          "job_logs_retrieved_this_check": true,
+          "observed_at": "2026-11-22T11:09:22.384434+00:00",
           "records": [],
           "new_observation_keys": [],
           "new_observations": 0,
@@ -89613,6 +89670,235 @@
         "image_bytes_sha_recompared": true,
         "limitations": "Existing fourREADY within original reviewed lifetimes; no date-copy. Full master hash and entire writing input retained. New complete generation facts match exact fingerprints; priority/status/expiry/media contracts pass. Actualsend must reverify latest official status. APIcollection is not originalpage review."
       }
+    },
+    "2026-11-22T20:29:58.034161+09:00": {
+      "checked_at": "2026-11-22T20:29:58.034161+09:00",
+      "result": "ready_queue_extended_and_original20_genuinely_rereviewed",
+      "maintenance_previous_blob_sha": "a7fddec3d1bc192c538d421f7a87efa4cdfed470",
+      "current_main_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "571864b678d632c06da48d71973a5cd984b9563e",
+      "queue_blob_sha": "171c42e6b0e53da604279f50155e92c78846f4e2",
+      "changed_run_versions": [
+        {
+          "run_id": "45015900359",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-22T11:09:27Z",
+          "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0"
+        }
+      ],
+      "active_target_runs": [],
+      "run_pagination": {
+        "per_page": 100,
+        "pages": [
+          1
+        ],
+        "checkpoint_run_id": "45006341424",
+        "checkpoint_observed_version_unchanged": true,
+        "all_new_target_versions_observed": true
+      },
+      "publication_ledger_records": 70,
+      "complete_verified_records": 70,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "45010687035",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-22T10:31:49Z",
+        "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
+        "job_id": 137172125046,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 303,
+        "artifact_id": 14750022237,
+        "artifact_digest": "sha256:d2b01708c9cbc30920e45dbbd7403038e1da8e1cbe66579b3fe2ceb91d0d801a",
+        "artifact_redownloaded_this_check": false,
+        "artifact_digest_verified": true,
+        "read_current_verify_snapshot_load_feed": true,
+        "count": 10893,
+        "generation": "gov24-45010687035-1",
+        "lastSuccessAt": "2026-11-22T19:11:21.355478+09:00",
+        "manifestSha256": "7b80e21de7436e8e90f38ac6f711d03009ca53528ff77dde2aeb23ebfcbbe98f",
+        "path": "snapshots/gov24-45010687035-1",
+        "version": 1,
+        "source_count": 10893,
+        "source_only_not_current_application_verification": true,
+        "fresh_at_future_slots_is_time_arithmetic_not_future_fact_guarantee": true,
+        "all_four_queue_source_fingerprints_and_priority_revalidated": true,
+        "no_collection_failure": true,
+        "latest_completed_run_unchanged": true,
+        "previous_generation": "gov24-44954238983-1",
+        "collection_timestamp_not_original_notice_review": true,
+        "artifact_digest_previously_verified_cached_bytes": true
+      },
+      "writer": {
+        "checked_at": "2026-11-22T20:28:48.334132+09:00",
+        "ready": 5,
+        "drafts": [
+          {
+            "slot": "2026-11-22T20:00:00+09:00",
+            "benefit_id": "999000000036",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 441,
+            "expires_at": "2026-11-23T20:28:18.726689+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-23T08:00:00+09:00",
+            "benefit_id": "B55370100033",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 408,
+            "expires_at": "2026-11-23T10:07:17.315427+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-23T12:00:00+09:00",
+            "benefit_id": "627000000120",
+            "pattern": "P1",
+            "media_turn": "TEXT",
+            "char_count": 401,
+            "expires_at": "2026-11-23T13:12:20.099075+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-23T16:00:00+09:00",
+            "benefit_id": "SD0000003857",
+            "pattern": "P5",
+            "media_turn": "IMAGE",
+            "char_count": 423,
+            "expires_at": "2026-11-23T17:25:45.839912+09:00",
+            "current_source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-23T20:00:00+09:00",
+            "benefit_id": "WII000000500",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 446,
+            "expires_at": "2026-11-23T20:28:18.726689+09:00",
+            "current_source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source": {
+          "count": 10893,
+          "generation": "gov24-45010687035-1",
+          "lastSuccessAt": "2026-11-22T19:11:21.355478+09:00",
+          "manifestSha256": "7b80e21de7436e8e90f38ac6f711d03009ca53528ff77dde2aeb23ebfcbbe98f",
+          "path": "snapshots/gov24-45010687035-1",
+          "version": 1
+        },
+        "source_count": 10893,
+        "ledger_records": 70,
+        "queue_entries": 69,
+        "selection_notes": 74,
+        "queue_write": true,
+        "new_posts": 0,
+        "due_metrics": 1,
+        "current_image_bytes_sha_recompared": true,
+        "new_visual_inspection": false,
+        "pending": null,
+        "lease": null,
+        "source_recheck_required_at_publish": true,
+        "queue_commit": "f9dc02fa2de0c259f7a5df536d928c44fa1f41a1",
+        "queue_readback_exact": true,
+        "new_drafts": 1,
+        "future24h_ready": 4,
+        "active_regular_ready": 1,
+        "existing_other_READY_preserved": 3,
+        "genuinely_rereviewed_current_slot": 1,
+        "body_media_pattern_cohort_preserved": true
+      },
+      "metrics": {
+        "run_id": "45015900359",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-22T11:09:27Z",
+        "head_sha": "7d77b5cb6942044556d721815a31cd26cc59b2f0",
+        "job_id": 137188032072,
+        "artifact_id": 14752250561,
+        "artifact_digest": "sha256:a5784275bc94267d2032caeff3b87fe0d0eccd53c3e63bc8a2ce06222f780a63",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "observed_at": "2026-11-22T11:09:22.384434+00:00",
+        "records": [],
+        "new_observation_keys": [],
+        "new_observations": 0,
+        "total_observations": 126,
+        "distinct_posts": 66,
+        "classification": "normal_no_due_milestones_at_run_time",
+        "due_count": 0,
+        "success_count": 0,
+        "new_evaluation_report_due": false,
+        "14day_not_due": true,
+        "weights_unchanged": true,
+        "publication_calls": 0,
+        "workflow_dispatch": false,
+        "current_check_at": "2026-11-22T20:29:58.034161+09:00",
+        "currently_due_post_ids": [
+          "17992955862109526"
+        ],
+        "currently_due_count": 1,
+        "currently_due_status": "awaiting_next_existing_official_snapshot"
+      },
+      "recovery": {
+        "needed": false,
+        "dispatch": false,
+        "new_posts": 0,
+        "new_failure": 0,
+        "new_partial": 0,
+        "publisher_recovery_calls": 0,
+        "code_change": null,
+        "no_confirmed_new_code_fault": true,
+        "stage": "awaiting_original20_regular_workflow",
+        "slot": "2026-11-22T20:00:00+09:00",
+        "original_window_ends": "2026-11-22T22:00:00+09:00",
+        "ledger_slot_absent": true,
+        "remote_publication_absence_proven": false,
+        "hypothesis": "Originalscheduled workflow delay possible but no failure/run/POST evidence yet; not an APIrestriction diagnosis.",
+        "reason": "Resume-unreserved requires confirmed reservation-before failure; noneobserved. No invented dispatch eligibility or repeated POST. Current70records completeverified no pending/lease."
+      },
+      "next_condition": "Existing original20regular execution only within its2hwindow until22:00; genuinely refreshed unchangedcopy evidence coverswindow. Do not infer no remote post solely from missingrun/ledger. Only confirmed pre-reservationfailure permits documentedresume originalcron; ambiguousPOST staysHOLD. If20unpublished after22, archiveexpiredslot then recompute allunreservedfuture priorities/media. Fourfuture24hREADY Nov23 08/12/16/20 project original20TEXT; ifpriorfails projection must recompute. Nov23 20currentcollection wouldexceed24h and evidenceexpires20:28 beforefullgrace, actualsend needsfreshcompletegeneration and currentoriginal/evidence/asset/CAS/account/daily/main/firstattempt/pending guards. No extra/test/rerun/backfill/new schedule. Due metric window awaits nextexisting officialsnapshot; 14dayevaluationNov24notdue weightsunchanged.",
+      "publication": {
+        "new_publication_this_run": false,
+        "latest_main_id": "18125366213319496",
+        "latest_already_reported": true,
+        "ledger_records": 70,
+        "stage": "complete",
+        "verified": true,
+        "prior_receipt_preserved": true,
+        "all_remote_public_statuses_independently_requeried": false
+      },
+      "history_reconciliation": {
+        "range": "all70 durable verified records within latest28days",
+        "ledger_checked": 70,
+        "last20_openings_checked": 20,
+        "new_receipt_id": null,
+        "all_remote_public_statuses_independently_requeried": false,
+        "scope_limit": "No publication ledger changes; previous authenticated receipt/artifact/body/asset evidence retained. Three actual official metric IDs matched to unique completed publication records. No new public rendering of all70 IDs."
+      },
+      "official_review_recovery": {
+        "stage": "original20_rereview_and_new23_20_review",
+        "status": "official_sources_reopened_and_conflict_resolved",
+        "new_official_page_review_this_check": true,
+        "new_visual_inspection": false,
+        "image_bytes_sha_recompared": true,
+        "original20": "KSPO,문화포털,서대문,고양 currentoriginal reopened for identical2027facts. No body/media/cohort/pattern change; prior evidence archived.",
+        "newdraft": "WII000000500 raw80% conflicts with current100%; dated2026-06-29Paju July1effective correction and2026-08-11Gangnam footnote confirm100%. No estimate or budgetplan used. Bokjiro directshell0lines not used; Jincheon timeout not used.",
+        "next_check": "Latestsource and originalcurrentstatus at actualsend; newNov23 20needs newer complete generation."
+      }
     }
   },
   "last_reported_prepublication_repair": {
@@ -89623,110 +89909,74 @@
     "scope": "Expired unreserved evidence genuinely revalidated; actual publisher not yet observed"
   },
   "last_prepared_queue": {
-    "checked_at": "2026-11-22T17:27:56.813969+09:00",
-    "ready": 4,
+    "checked_at": "2026-11-22T20:29:58.034161+09:00",
+    "ready": 5,
     "future_regular_ready": 4,
-    "active_regular_ready": 0,
+    "active_regular_ready": 1,
     "new_entries": 1,
-    "slot": "2026-11-23T16:00:00+09:00",
-    "queue_commit_sha": "ac1808e66444f8d94ebf2d849f35fa99790aa235",
-    "queue_blob_sha": "f396533aeaa0d4030b09055be3b7b51a4030a104",
+    "slot": "2026-11-23T20:00:00+09:00",
+    "queue_commit_sha": "f9dc02fa2de0c259f7a5df536d928c44fa1f41a1",
+    "queue_blob_sha": "171c42e6b0e53da604279f50155e92c78846f4e2",
     "readback_exact": true,
     "publication_separate": true,
-    "previous_entries_preserved": true,
+    "previous_other_entries_preserved": true,
     "new_entry": {
-      "slot": "2026-11-23T16:00:00+09:00",
-      "benefit_id": "SD0000003857",
-      "source_fingerprint": "2aea241d30be53610645552fca1bbff59b62496640956796e3fec834853bde25",
-      "source_generation": "gov24-44954238983-1",
-      "prepared_at": "2026-11-22T17:25:45.839912+09:00",
-      "expires_at": "2026-11-23T17:25:45.839912+09:00",
-      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "slot": "2026-11-23T20:00:00+09:00",
+      "benefit_id": "WII000000500",
+      "source_fingerprint": "d8225c67c0166af2fb4d40e7f940f35a252d041c1508c126e051c7e1af8dca7d",
+      "source_generation": "gov24-45010687035-1",
+      "prepared_at": "2026-11-22T20:28:18.726689+09:00",
+      "expires_at": "2026-11-23T20:28:18.726689+09:00",
+      "asset_sha256": null,
       "writer": {
         "schema_version": "supportpick.writer.v1",
         "status": "READY",
-        "selected_program_id": "SD0000003857",
-        "post_text": "취업지원프로그램 이수자를 채용한 우선지원대상기업은 고용촉진장려금으로 근로자 1명당 연 최대 720만원을 지원받을 수 있어요. 근로자 개인이 아닌 사업주에게 지급해요.\n\n자격은 세 가지부터 확인해요.\n① 지원대상 프로그램 이수자의 유효한 구직등록 이력\n② 기간의 정함 없는 채용과 고용보험 가입\n③ 6개월 이상 고용 유지와 임금 지급\n\n신고한 월평균 보수 124만원 미만이거나 사업주의 배우자·직계가족이면 제외돼요. 채용 전 3개월부터 후 1년까지 고용조정 감원도 제한돼요.\n\n첫 신청기한은 채용일부터 1년 6개월이며, 2026년 7월 1일 전에 채용했다면 12개월이에요. 6개월 단위로 신청하고 신고 보수 한도에서 지원해요. 근로계약서·임금대장·지급 증빙을 준비해 관할 고용센터에서 지원인원 한도와 중복지원 조건도 확인해요.\n\n자세한 사항은 프로필링크 확인",
+        "selected_program_id": "WII000000500",
+        "post_text": "기저귀값이 매달 부담되는 영아 가정이라면, 저소득층 기저귀·조제분유 지원을 살펴봐요. 만 2세 미만 아이가 있는 대상 가구는 기저귀 구매비를 영아별 월 9만원, 국민행복카드 바우처로 지원받을 수 있어요.\n\n확인할 정보는 세 가지예요.\n• 대상: 기초생활보장·차상위·한부모가족 수급 가구, 또는 기준 중위소득 100% 이하의 장애인·다자녀(자녀 2명 이상) 가구예요.\n• 분유: 월 11만원 지원은 기저귀 대상 중 산모의 사망·특정질병으로 모유수유가 불가능한 경우나 부자·조손·입양가정 등 추가 요건을 갖춰야 해요.\n• 기한: 두 돌 전날까지 신청하며 신청일 기준으로 남은 기간을 지원해요. 출생일을 포함해 60일 이내 신청하면 24개월분을 지원해요.\n\n아이 주소지 보건소·주민센터나 복지로에서 신청해요. 현금 입금이 아니며, 소득·가구 자격은 심사를 거쳐 확인해요.\n\n자세한 사항은 프로필링크 확인",
         "draft_text": null,
         "reply_texts": [],
         "media": {
-          "turn": "IMAGE",
-          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-          "check": "MATCHED",
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
           "image_copy": null,
-          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+          "alt_text": null
         },
         "review": {
-          "planned_at": "2026-11-23T16:00:00+09:00",
+          "planned_at": "2026-11-23T20:00:00+09:00",
           "application_status": "OPEN",
-          "reader": "지원대상 취업지원프로그램 이수 실업자를 기간의 정함 없이 채용한 우선지원대상기업 사업주",
-          "central_message": "채용한 근로자가 고용촉진장려금 대상인지 무엇부터 확인하나요?",
-          "pattern": "P5",
-          "selection_reason": "보조금24 동일ID 누적38937, 기존3READY 및 최근20게시와 중복제외 후 검증가능 최상위 후보. Nov23 08P6교육/12P1출산생활상황과 구분하여 16P5사업주 자격체크·B대상혜택형 적용. 이수·구직등록→계약보험→고용유지→제외→채용일별 기한 순서.",
+          "reader": "만2세미만 영아를 양육하며 기저귀 구매 부담을 줄이려는 수급·차상위·법정한부모 또는 소득기준 충족 장애인·다자녀가구",
+          "central_message": "기저귀 구매비는 어떤 가구가 얼마를 언제까지 지원받나요?",
+          "pattern": "P8",
+          "selection_reason": "미예약미래4슬롯중Nov23 20 TEXT A/P8. 동일ID누적38075,앞선예약·기존74상위HOLD/SKIP제외후현재검증가능최상위. 최근20게시/Nov23 P6교육P1산후P5사업주체크와 달리 영아필수재비용→세정보목록→신청심사. 지표는누적조회수로효과나실시간검색량주장없음.",
           "interest_basis": "OBSERVED_METRICS",
           "duplicate_check": "CHECKED",
           "evidence": [
             {
-              "source_id": "SD0000003857",
-              "source_ref": "https://law.go.kr/LSW/lsLinkCommonInfo.do?lspttninfSeq=105945",
+              "source_id": "WII000000500",
+              "source_ref": "https://www.paju.go.kr/user/www_02_01_09_01/board/BD_board.view.do?bbsCd=2001&q_ctgCd=1002&seq=20260629111458897",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-22T17:25:45.839912+09:00",
+              "verified_at": "2026-11-22T20:28:18.726689+09:00",
               "claims_supported": [
-                "2026-09-18시행 현행 제45조23~51행 실제열람: 조건충족 사업주는 6개월마다 신청 가능, 채용일부터1년6개월 신청기한·관할기관·첨부서류. 지급·신청확정 아닌 요건심사."
+                "실제657~671행2026-06-29모자보건팀공식공고:7월1일시행장애인·다자녀80→100%완화/월9·11만원/추가분유조건/복지로·관할보건소현재신청가능. 구형Gov2480%와충돌을시행일있는최신정정으로해소."
               ]
             },
             {
-              "source_id": "SD0000003857",
-              "source_ref": "https://www.law.go.kr/LSW/lsInfoR.do?efYd=20260918&lsiSeq=288723",
+              "source_id": "WII000000500",
+              "source_ref": "https://bokji.gangnam.go.kr/board/BBS_QNA/839/view.do?mid=ID03_03&pgno=1",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-22T17:25:45.839912+09:00",
+              "verified_at": "2026-11-22T20:28:18.726689+09:00",
               "claims_supported": [
-                "실제열람2546~2551행 2026-07-01부칙475호제3조: 시행전 채용자는 종전기한. 7월1일 이후 채용자는18개월, 그전은12개월을 최신동일ID11/9정정원본과대조."
+                "실제2026-08-11공식66~100행:수급차상위법정한부모·2세미만/장애인다자녀7월부터100%각주/월9·11만원국민행복카드바우처/분유추가조건/두돌전날까지신청가능·신청일기준·생일포함60일이내24개월·주소지보건소주민센터. 전국서비스설명,강남지역한정지원으로표현안함."
               ]
             },
             {
-              "source_id": "SD0000003857",
-              "source_ref": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1031433779",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-22T17:25:45.839912+09:00",
-              "claims_supported": [
-                "현행2026시행령26조 실제열람22~62행: 지정프로그램이수 실업자/고용보험/6개월 유지·6개월 지급주기·고용조정제한 채용전3개월~후1년·기타 제외조건. 신규후채용근로자 등 예외는 개별심사."
-              ]
-            },
-            {
-              "source_id": "SD0000003857",
-              "source_ref": "https://www.moel.go.kr/common/downloadFile.do?bbs_id=9&bbs_seq=20260200770&file_ext=pdf&file_seq=20260201327",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-22T17:25:45.839912+09:00",
-              "claims_supported": [
-                "공식2026고용장려금지원제도 PDF 실제GET/pdftotext p7~16: 정규직·구직등록·지정프로그램·6개월유지, 우선기업1인연720/6개월360, 신고월평균보수124만원미만·배우자직계존비속등 제외, 지원인원30%/30명(10명미만3명), 고용조정제한. 과거12개월기한은 최신법령으로 교정하여적용. PDF sha256=373e844a49c5db7a7a01478e133d36d6158fd3f3e97fa22b08b2a0fc49773197"
-              ]
-            },
-            {
-              "source_id": "SD0000003857",
-              "source_ref": "https://m.gov.kr/mw/AA020InfoCappView.do?CappBizCD=14900000227&HighCtgCD=A05007",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-22T17:25:45.839912+09:00",
-              "claims_supported": [
-                "실제사업본문346~450행: 고용촉진장려금 지급 민원 운영, 사업주대상·인터넷/방문/FAX/우편·신청서·근로계약/임금대장/지급증빙·접수기관. 공통접근불가 레이어는 있지만 해당사업 본문은 반환; 개인신청이나 지역기관접수완료를 확인한 것은 아님."
-              ]
-            },
-            {
-              "source_id": "SD0000003857",
-              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=585576&bnefType=all&svcId=SD0000003857",
+              "source_id": "WII000000500",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=165908&bnefType=all&svcId=WII000000500",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-22T17:25:45.839912+09:00",
+              "verified_at": "2026-11-22T20:28:18.726689+09:00",
               "claims_supported": [
-                "검증완전세대 gov24-44954238983-1 동일ID serviceList 누적38937·2026-11-09수정·연최대720/보수한도/6개월·12/18개월 구분 대조. APIcheckedAt=2026-11-22T07:04:14.899374+09:00 collectionSucceededAt=2026-11-22T07:06:11.815516+09:00는 실제공식원문검수시각과 구분."
-              ]
-            },
-            {
-              "source_id": "SD0000003857",
-              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-              "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-22T17:25:45.839912+09:00",
-              "claims_supported": [
-                "이번실제허용PNG GET SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a와 현재image-review 기존AI_VISUAL_INSPECTION/PASS 및360px검수 기록 재대조일치. 날짜만복사한증빙아님. 신규직접시각검수아님. 그림에 금액/대상/기한없고 위조공식화면/후기없음."
+                "검증완전세대 gov24-45010687035-1 동일ID serviceList누적38075·금액/영아단위/신청기한/방문온라인경로대조.원본소득80%는7월시행공식정정100%우선.APIcheckedAt=2026-11-22T19:09:35.505526+09:00 collectionSucceededAt=2026-11-22T19:11:21.355478+09:00는실제원문검수시각과구분."
               ]
             }
           ],
@@ -89736,77 +89986,76 @@
             "eligibility_and_units": "PASS",
             "cta_and_no_links": "PASS",
             "length": "PASS",
-            "media": "PASS"
+            "media": "NOT_REQUIRED"
           },
-          "char_count": 423,
+          "char_count": 446,
           "count_method": "python_len_including_spaces_and_newlines",
           "missing_info": [],
           "hold_reasons": [],
           "warnings": [
-            "고용24 직접열람은 제도본문 대신 일반 메뉴만 반환; 검색요약의 구형12개월을 현재 전체 채용에 적용하지 않음. 실제연2026시행규칙 제45조/475호 부칙으로 7월1일 전후 구분.",
-            "고용부2026-02-18 PDF 실제 다운로드/pdftotext p7~16 확인. PDF의 구형12개월은 최신2026-07-01 법령·Gov24 11/9정정에 따라 구분하여 검수. programme별 인정이수·구직등록/유효기간·근로자/사업주제외·인원한도/중복제한은 개별 심사이며 지급 확정 아님.",
-            "개인로그인/민원실제접수/프로필링크/지원금픽사이트검색·접수기능은 이번에 실행하거나 보장하지 않음. 공식 정부24민원 본문은 확인하되 지역기관 실제접수가능은 직접확인 필요.",
-            "현재수집본은 내일16시 24h초과. 실제발송시 최신완전세대/공식상태/검수유효기간/이미지SHA를 다시 확인해야 함. 신규시각검수는 수행하지 않음."
+            "동일ID API와보건복지부일반정책페이지80%잔존. 실제2026-06-29파주7/1시행정정·2026-08-11강남각주로100%현행확인. 예산안만보고시행확정하지않음. 전국사업내용안내이며실제개인접수·자격확정거래아님.",
+            "복지로상세직접열람본문0행이라검색요약을직접열람근거로쓰지않음.진천페이지본문추출timeout은미사용. 프로필링크/지원금픽사이트내상세기능실제접속미확인·보장없음.",
+            "내일20시에는현재collection24h초과이므로실제발송시최신완전세대와공식상태필수재검증. 앞20미게시시미예약미래후보/미디어재계산."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
-            "core_question": "채용한 근로자가 고용촉진장려금 대상인지 무엇부터 확인하나요?",
-            "reader_scope": "지원대상 취업지원프로그램 이수 실업자를 기간의 정함 없이 채용한 우선지원대상기업 사업주",
+            "core_question": "기저귀 구매비는 어떤 가구가 얼마를 언제까지 지원받나요?",
+            "reader_scope": "만2세미만 영아를 양육하며 기저귀 구매 부담을 줄이려는 수급·차상위·법정한부모 또는 소득기준 충족 장애인·다자녀가구",
             "angles": [
-              "채용뒤 인건비 부담",
-              "채용근로자의 대상 자격 체크",
-              "채용일별 첫신청기한과 임금증빙 준비"
+              "기저귀반복구매부담",
+              "수급가구와소득확대자격",
+              "신청시점별지원기간과분유추가조건"
             ],
-            "chosen_angle": "대상근로자 자격과 고용유지 조건 점검",
+            "chosen_angle": "기저귀반복구매부담을대상/분유/기한3정보로해소",
             "opening_candidates": [
               {
                 "type": "생활 상황형",
                 "group": "A",
-                "text": "취약계층 직원을 채용한 뒤 인건비를 챙기는 우선지원대상기업은, 고용촉진장려금으로 대상 근로자 1명당 연 최대 720만원 지원을 확인할 수 있어요."
+                "text": "기저귀값이 매달 부담되는 영아 가정이라면, 저소득층 기저귀·조제분유 지원을 살펴봐요. 만 2세 미만 아이가 있는 대상 가구는 기저귀 구매비를 영아별 월 9만원, 국민행복카드 바우처로 지원받을 수 있어요."
               },
               {
                 "type": "대상·혜택형",
                 "group": "B",
-                "text": "취업지원프로그램 이수자를 채용한 우선지원대상기업은 고용촉진장려금으로 근로자 1명당 연 최대 720만원을 지원받을 수 있어요. 근로자 개인이 아닌 사업주에게 지급해요."
+                "text": "만 2세 미만 영아가 있는 지원대상 가구는 기저귀 구매비 월 9만원을 국민행복카드 바우처로 지원받을 수 있어요."
               },
               {
                 "type": "조건 설명형",
                 "group": null,
-                "text": "고용촉진장려금은 채용만으로 지급되지 않고, 대상 근로자의 구직등록·이수 조건과 6개월 고용 유지부터 확인해요."
+                "text": "기저귀 바우처와 분유 바우처는 대상 조건이 달라요. 신청 시점에 따라 지원받는 기간도 달라져요."
               }
             ],
-            "chosen_opening": "취업지원프로그램 이수자를 채용한 우선지원대상기업은 고용촉진장려금으로 근로자 1명당 연 최대 720만원을 지원받을 수 있어요. 근로자 개인이 아닌 사업주에게 지급해요.",
-            "opening_type": "대상·혜택형",
-            "cohort": "B",
-            "comparison_eligible": true,
-            "selection_reason": "보조금24 동일ID 누적38937, 기존3READY 및 최근20게시와 중복제외 후 검증가능 최상위 후보. Nov23 08P6교육/12P1출산생활상황과 구분하여 16P5사업주 자격체크·B대상혜택형 적용. 이수·구직등록→계약보험→고용유지→제외→채용일별 기한 순서.",
+            "chosen_opening": "기저귀값이 매달 부담되는 영아 가정이라면, 저소득층 기저귀·조제분유 지원을 살펴봐요. 만 2세 미만 아이가 있는 대상 가구는 기저귀 구매비를 영아별 월 9만원, 국민행복카드 바우처로 지원받을 수 있어요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "미예약미래4슬롯중Nov23 20 TEXT A/P8. 동일ID누적38075,앞선예약·기존74상위HOLD/SKIP제외후현재검증가능최상위. 최근20게시/Nov23 P6교육P1산후P5사업주체크와 달리 영아필수재비용→세정보목록→신청심사. 지표는누적조회수로효과나실시간검색량주장없음.",
             "history_posts_checked": 20,
+            "comparison_eligible": true,
             "comparison_strata": {
               "geo": "전국",
-              "audience": "우선지원대상기업사업주",
-              "benefit": "채용장려금현금",
-              "application": "채용일기준개별기한",
-              "media": "IMAGE"
+              "audience": "만2세미만영아가구",
+              "benefit": "필수재구매바우처",
+              "application": "영아개인기한",
+              "media": "TEXT"
             },
-            "comparison_group": "최근20게시·현재123공식관측. 대상/혜택규모·시간/미디어 교란·매칭쌍0으로 도입효과 미입증, 기존 A/B배정·비중 유지.",
+            "comparison_group": "126공식관측/24h군A16B17·매칭쌍0.대상·미디어·시간교란으로효과미입증,기존교대/분배유지.",
             "applied_elements": [
-              "첫2문장 사업주·근로자1명·연최대금액",
-              "세조건체크와 근로자제외",
-              "채용일별 신청기간 구분"
+              "생활비상황과영아별월9만원바우처",
+              "세가지목록실제내용다름",
+              "7월현행100%및신청시점조건"
             ],
+            "profile_route": "복지로상세직접열람본문0행이라검색요약을직접열람근거로쓰지않음.진천페이지본문추출timeout은미사용. 프로필링크/지원금픽사이트내상세기능실제접속미확인·보장없음.",
             "source_recheck_required_at_publish": true,
             "master_full_used": true,
-            "supplemental_full_used_in_current_model_input": true,
-            "profile_route": "개인로그인/민원실제접수/프로필링크/지원금픽사이트검색·접수기능은 이번에 실행하거나 보장하지 않음. 공식 정부24민원 본문은 확인하되 지역기관 실제접수가능은 직접확인 필요."
+            "supplemental_full_used_in_current_model_input": true
           }
         },
         "next_history_record": {
-          "program_id": "SD0000003857",
-          "notice_version": "Gov24modified2026-11-09; current law475/479 and2026MOEL PDF actually reviewed 2026-11-22T17:25:45.839912+09:00",
-          "pattern": "P5",
-          "opening": "취업지원프로그램 이수자를 채용한 우선지원대상기업은 고용촉진장려금으로 근로자 1명당 연 최대 720만원을 지원받을 수 있어요. 근로자 개인이 아닌 사업주에게 지급해요.",
-          "structure": "사업주대상혜택→근로자자격3체크→제외조건→채용일별기한→증빙확인",
-          "media_turn": "IMAGE"
+          "program_id": "WII000000500",
+          "notice_version": "Gov24source1944 and dated2026July1amendment actuallyreviewed 2026-11-22T20:28:18.726689+09:00",
+          "pattern": "P8",
+          "opening": "기저귀값이 매달 부담되는 영아 가정이라면, 저소득층 기저귀·조제분유 지원을 살펴봐요. 만 2세 미만 아이가 있는 대상 가구는 기저귀 구매비를 영아별 월 9만원, 국민행복카드 바우처로 지원받을 수 있어요.",
+          "structure": "생활비구매상황→대상분유기한3목록→신청심사",
+          "media_turn": "TEXT"
         }
       }
     }
@@ -92181,8 +92430,8 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-22T19:46:34.898779+09:00",
-    "ready": 4,
+    "checked_at": "2026-11-22T20:28:48.334132+09:00",
+    "ready": 5,
     "drafts": [
       {
         "slot": "2026-11-22T20:00:00+09:00",
@@ -92190,7 +92439,7 @@
         "pattern": "P8",
         "media_turn": "TEXT",
         "char_count": 441,
-        "expires_at": "2026-11-22T21:11:11.683777+09:00",
+        "expires_at": "2026-11-23T20:28:18.726689+09:00",
         "current_source_fresh_at_slot": true,
         "source_recheck_required_at_publish": true
       },
@@ -92223,6 +92472,16 @@
         "expires_at": "2026-11-23T17:25:45.839912+09:00",
         "current_source_fresh_at_slot": true,
         "source_recheck_required_at_publish": true
+      },
+      {
+        "slot": "2026-11-23T20:00:00+09:00",
+        "benefit_id": "WII000000500",
+        "pattern": "P8",
+        "media_turn": "TEXT",
+        "char_count": 446,
+        "expires_at": "2026-11-23T20:28:18.726689+09:00",
+        "current_source_fresh_at_slot": false,
+        "source_recheck_required_at_publish": true
       }
     ],
     "source": {
@@ -92235,86 +92494,101 @@
     },
     "source_count": 10893,
     "ledger_records": 70,
-    "queue_entries": 68,
+    "queue_entries": 69,
     "selection_notes": 74,
-    "queue_write": false,
+    "queue_write": true,
     "new_posts": 0,
-    "due_metrics": 0,
+    "due_metrics": 1,
     "current_image_bytes_sha_recompared": true,
     "new_visual_inspection": false,
     "pending": null,
     "lease": null,
-    "source_recheck_required_at_publish": true
+    "source_recheck_required_at_publish": true,
+    "queue_commit": "f9dc02fa2de0c259f7a5df536d928c44fa1f41a1",
+    "queue_readback_exact": true,
+    "new_drafts": 1,
+    "future24h_ready": 4,
+    "active_regular_ready": 1,
+    "existing_other_READY_preserved": 3,
+    "genuinely_rereviewed_current_slot": 1,
+    "body_media_pattern_cohort_preserved": true
   },
   "last_queue_review_refresh": {
-    "checked_at": "2026-11-22T16:58:34.337995+09:00",
-    "slot": "2026-11-22T16:00:00+09:00",
-    "previous_entry": {
-      "slot": "2026-11-22T16:00:00+09:00",
-      "benefit_id": "131200000004",
-      "source_fingerprint": "25f8108297b704d5417bf0fc13956def042b9120749144afe1edd0e1257b48dc",
-      "source_generation": "gov24-44826151976-1",
-      "prepared_at": "2026-11-21T17:29:40.349298+09:00",
-      "expires_at": "2026-11-22T17:29:40.349298+09:00",
-      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+    "prior_entry": {
+      "slot": "2026-11-22T20:00:00+09:00",
+      "benefit_id": "999000000036",
+      "source_fingerprint": "0443cfafd529dd83a2fab0a211beb60bc7c4a2fe702e91ca72452dabfdd96f34",
+      "source_generation": "gov24-44892709569-1",
+      "prepared_at": "2026-11-21T21:11:11.683777+09:00",
+      "expires_at": "2026-11-22T21:11:11.683777+09:00",
+      "asset_sha256": null,
       "writer": {
         "schema_version": "supportpick.writer.v1",
         "status": "READY",
-        "selected_program_id": "131200000004",
-        "post_text": "차를 새로 마련할 때 세금 부담이 걱정되는 중증장애인이라면, 보철용·생업활동용 자동차 1대의 취득세·자동차세 면제 요건을 확인해봐요. 현금을 지급하는 지원은 아니에요.\n\n먼저 차종을 확인해요. 배기량 2,000cc 이하 승용차 등이 대상이고, 이 글은 해당 승용차를 기준으로 안내해요. 장애인 본인 명의이거나 법에서 정한 가족과 같은 세대의 공동명의여야 해요.\n\n등록 전에 관할 시군구에 감면 신청서·장애인 증명·차량 등록서류·주민등록등본 등 필요한 서류를 확인해요. 현재 법상 면제 기한은 2027년 12월 31일이에요.\n\n등록 후 1년 안에 부득이한 사유 없이 소유권을 넘기거나 세대를 분리하면 면제된 취득세가 추징될 수 있어요. 기존 감면차가 있다면 대체취득 요건도 별도로 확인해야 해요.\n\n자세한 사항은 프로필링크 확인",
+        "selected_program_id": "999000000036",
+        "post_text": "1958~2022년생 등록장애인은 2027년 장애인스포츠강좌이용권을 신청할 수 있어요. 선정되면 스포츠강좌 수강료를 1인당 월 최대 11만원까지 이용권으로 지원받아요.\n\n신청 전에 세 가지를 살펴봐요.\n• 대상: 소득과 관계없이 신청할 수 있지만, 연령과 수급자격 등에 따른 선정 우선순위가 있어요. 신청이 곧 선정은 아니에요.\n• 기간: 전국 동시 신청은 2026년 11월 9~27일이에요. 이용은 2027년 1월부터 연간 최대 12개월이며, 카드 발급 일정 등에 따라 달라질 수 있어요.\n• 경로: 장애인스포츠강좌이용권 전용 누리집이나 주소지 관할 시군구·행정복지센터로 신청해요. 결과는 12월 중 개별 안내돼요.\n\n5~18세 저소득층이라도 장애인 등록이 되어 있다면 일반 유·청소년 스포츠강좌이용권이 아닌 장애인용으로 신청해요. 현금 지급은 아니에요.\n\n자세한 사항은 프로필링크 확인",
         "draft_text": null,
         "reply_texts": [],
         "media": {
-          "turn": "IMAGE",
-          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-          "check": "MATCHED",
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
           "image_copy": null,
-          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게라는 문구 아래 집, 체크 표시 방패, 체크리스트, 새싹을 배치한 크림색 정사각형 브랜드 이미지. 하단에는 자세한 사항은 프로필링크 확인 문구가 있다."
+          "alt_text": null
         },
         "review": {
-          "planned_at": "2026-11-22T16:00:00+09:00",
+          "planned_at": "2026-11-22T20:00:00+09:00",
           "application_status": "OPEN",
-          "reader": "2000cc이하보철/생업용승용차취득을검토하는중증장애인",
-          "central_message": "현금지원아닌차량1대취득세자동차세감면과등록전후요건",
-          "pattern": "P6",
-          "selection_reason": "Nov22 16시A생활상황형,기존08P3보험료·12P5출산급여와다른P6차종확인→등록전서류→등록후유의사항.최근실제20건도입전개비교.공식정확성우선,조회효과미입증.",
+          "reader": "1958~2022년생등록장애인과신청을돕는가족",
+          "central_message": "2027수강료바우처의대상/한도/접수시기와선정조건",
+          "pattern": "P8",
+          "selection_reason": "Nov22 20시B대상혜택형.기존08P3·12P5·16P6와다른P8대상/기간/경로요약.최근20완료본문및다음3원고대조;11/18일반유청소년스포츠와선택ID/등록장애인대상/11만원한도다름을확인.",
           "interest_basis": "OBSERVED_METRICS",
           "duplicate_check": "CHECKED",
           "evidence": [
             {
-              "source_id": "131200000004",
-              "source_ref": "https://law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1033804697",
+              "source_id": "999000000036",
+              "source_ref": "https://www.kspo.or.kr/kspo/main/main.do",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-21T17:29:40.349298+09:00",
+              "verified_at": "2026-11-21T21:11:11.683777+09:00",
               "claims_supported": [
-                "실제열람 시행2026-06-02법21738호제17조1항:보철/생업용해당차종1대취득세및자동차세2027-12-31까지면제,2000cc이하승용차포함.현행법조건충족시감면신청가능한제도;특정개인면제확정아님."
+                "실제공단현재공식페이지427/438공지·527/530사업안내열람:2027장애인전국동시신청11/9~27,1958-01-01~2022-12-31등록장애인5~69,매월11만원내수강료최대12개월,연령/수급자격등선정우선순위와12월개별안내. 2026-11-21현재접수중(신청가능).공단공식페이지에게시된안내를대조했으며사설SNS캡처사용아님."
               ]
             },
             {
-              "source_id": "131200000004",
-              "source_ref": "https://www.easylaw.go.kr/CSP/CnpClsMainBtr.laf?ccfNo=4&cciNo=1&cnpClsNo=3&csmSeq=916",
+              "source_id": "999000000036",
+              "source_ref": "https://culture.go.kr/portal/cltBnf/cltSup/view.do?indRow=129&menuNo=200104&rcrtSn=256295&sWord=&selectType=&viewTp=3&weekju=&yearmonth=",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-21T17:29:40.349298+09:00",
+              "verified_at": "2026-11-21T21:11:11.683777+09:00",
               "claims_supported": [
-                "실제열람108~140행:중증장애인,본인/같은세대법정가족공동명의,1대와차종,대체취득60일조건,시군구감면신청가능·서식/장애인증명/등록서류/등본,등록1년이내부득이사유없는소유권이전·세대분리취득세추징및예외.본문은2000cc승용차범위로한정,별도개별소비세500만원및5년의무규칙혼합안함."
+                "실제문화정보원문화포털에제공된대한체육회공식공지215~245행:2027사업,11/9~27신청,2027년1월부터사용,등록장애인소득무관1958~2022년생,수강료바우처/온라인또는관할시군구·행정복지센터신청.일반유청소년10.5만원과장애인11만원구분."
               ]
             },
             {
-              "source_id": "131200000004",
-              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999003&bnefType=all&svcId=131200000004",
+              "source_id": "999000000036",
+              "source_ref": "https://www.sdm.go.kr/news/news/notice.do?mode=view&sdmBoardSeq=316312",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-21T21:11:11.683777+09:00",
+              "claims_supported": [
+                "실제2026-10-26서대문공식공지515~535행:동일2027장애인대상/11만원/11월신청/2027년1~12월,카드발급일정등에따라변동가능.비저소득등록장애인도선정순위존재.서대문선정발표12/10예정은전국공통일로일반화하지않음."
+              ]
+            },
+            {
+              "source_id": "999000000036",
+              "source_ref": "https://www.goyang.go.kr/news/user/bbs/BD_selectBbs.do?q_bbsCode=1030&q_bbscttSn=20261103142758737",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-21T21:11:11.683777+09:00",
+              "claims_supported": [
+                "실제고양공식135~137행:5~18저소득유청소년이라도등록장애인은장애인스포츠강좌이용권으로만신청.일반프로그램고양정원1800명/10.5만원/12월10일마감등을장애인전국조건으로복사하지않음."
+              ]
+            },
+            {
+              "source_id": "999000000036",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999119&bnefType=all&svcId=999000000036",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-21T17:29:40.349298+09:00",
+              "verified_at": "2026-11-21T21:11:11.683777+09:00",
               "claims_supported": [
-                "완전세대gov24-44826151976-1동일IDserviceList조회수43395누적지표,동일대상/차종/기한대조.APIcheckedAt=2026-11-21T07:09:28.943560+09:00,collectionSucceededAt=2026-11-21T07:14:06.816359+09:00;실제공식원문열람시각과구분."
-              ]
-            },
-            {
-              "source_id": "131200000004",
-              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-              "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-21T17:29:40.349298+09:00",
-              "claims_supported": [
-                "현재main허용PNG실제GET SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a와현재image-review 원2026-11-06시각검수PASS/360px기록재대조일치.혜택별자산없어검수rotation2.새직접시각검수아님.금액/대상/기간없는일러스트로본문충돌없음."
+                "완전세대gov24-44892709569-1동일ID serviceList누적조회수42935;원본2026출생연도1957~2021은새2027공식안내1958~2022와연도가달라최신연도공식공지우선.월11만원및방문/전용사이트대조.APIcheckedAt=2026-11-21T19:10:42.842414+09:00,collectionSucceededAt=2026-11-21T19:13:06.862743+09:00;수집성공을현재접수증명으로대체하지않음."
               ]
             }
           ],
@@ -92324,164 +92598,155 @@
             "eligibility_and_units": "PASS",
             "cta_and_no_links": "PASS",
             "length": "PASS",
-            "media": "PASS"
+            "media": "NOT_REQUIRED"
           },
-          "char_count": 406,
+          "char_count": 441,
           "count_method": "python_len_including_spaces_and_newlines",
           "missing_info": [],
           "hold_reasons": [],
           "warnings": [
-            "법령조건부감면안내이며개인별세액·면제확정아님.다른차종전체를배제하지않고본문독자만2000cc승용차로한정.가족범위·대체취득·추징예외는시군구개별확인.",
-            "현재source는내일16시신선도범위초과.발송시최신완전세대·공식상태·증빙유효기간·계정·한도·CAS·미디어교대재검증필수.",
-            "프로필사이트개인신청거래/감면결정기능미검증,보장하지않음."
+            "공식동시접수공지에근거한신규신청안내;개인선정·전액수강료·12개월전부확정지급아님.추가금액/예산잔액/구체강좌가맹·개인카드발급미검증.",
+            "dvoucher직접페이지0행,개인온라인접수거래/승인/프로필사이트신청기능확인못함.주관기관공식및공식재게시원문근거로만경로안내.",
+            "현재source는내일20시24h초과하므로실제발송최신완전세대·공식상태·유효기간·계정/한도/CAS/잠금·교대재검증필수."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
-            "core_question": "차를등록하기전어떤감면요건과등록후유의사항을확인해야하나요?",
-            "reader_scope": "2000cc이하보철/생업용승용차취득을검토하는중증장애인",
+            "core_question": "내년운동강좌지원은누가언제어떤경로로신청하나요?",
+            "reader_scope": "1958~2022년생등록장애인과신청을돕는가족",
             "angles": [
-              "차구입세금부담",
-              "감면대상차종/명의자격",
-              "등록전서류와등록후추징조건"
+              "운동강좌비용부담",
+              "등록장애인자격과선정우선순위",
+              "2027이용과2026신청기간구분"
             ],
-            "chosen_angle": "등록전후준비절차",
+            "chosen_angle": "대상실익→대상/기간/경로목록→일반프로그램과구분",
             "opening_candidates": [
               {
                 "type": "생활 상황형",
                 "group": "A",
-                "text": "차를 새로 마련할 때 세금 부담이 걱정되는 중증장애인이라면, 보철용·생업활동용 자동차 1대의 취득세·자동차세 면제 요건을 확인해봐요. 현금을 지급하는 지원은 아니에요."
+                "text": "운동을 배우는 비용이 부담되는1958~2022년생등록장애인이라면,2027장애인스포츠강좌이용권의월최대11만원수강료지원을확인해요."
               },
               {
                 "type": "대상·혜택형",
                 "group": "B",
-                "text": "중증장애인의 보철용·생업활동용 자동차는 차종과 명의 요건을 갖춘 1대에 취득세·자동차세 면제가 적용돼요."
+                "text": "1958~2022년생 등록장애인은 2027년 장애인스포츠강좌이용권을 신청할 수 있어요. 선정되면 스포츠강좌 수강료를 1인당 월 최대 11만원까지 이용권으로 지원받아요."
               },
               {
                 "type": "조건 설명형",
                 "group": null,
-                "text": "장애인 자동차 세금 감면은 차종뿐 아니라 명의와 같은 세대 여부도 확인해야 해요."
+                "text": "장애인스포츠강좌이용권은2027년이용분을2026년11월에미리신청하고심사를거쳐선정돼요."
               }
             ],
-            "chosen_opening": "차를 새로 마련할 때 세금 부담이 걱정되는 중증장애인이라면, 보철용·생업활동용 자동차 1대의 취득세·자동차세 면제 요건을 확인해봐요. 현금을 지급하는 지원은 아니에요.",
-            "opening_type": "생활 상황형",
-            "cohort": "A",
-            "selection_reason": "Nov22 16시A생활상황형,기존08P3보험료·12P5출산급여와다른P6차종확인→등록전서류→등록후유의사항.최근실제20건도입전개비교.공식정확성우선,조회효과미입증.",
+            "chosen_opening": "1958~2022년생 등록장애인은 2027년 장애인스포츠강좌이용권을 신청할 수 있어요. 선정되면 스포츠강좌 수강료를 1인당 월 최대 11만원까지 이용권으로 지원받아요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "Nov22 20시B대상혜택형.기존08P3·12P5·16P6와다른P8대상/기간/경로요약.최근20완료본문및다음3원고대조;11/18일반유청소년스포츠와선택ID/등록장애인대상/11만원한도다름을확인.",
             "history_posts_checked": 20,
             "comparison_eligible": true,
             "comparison_strata": {
-              "geo": "국가법령해당차량",
-              "audience": "중증장애인차량구입",
-              "benefit": "지방세면제",
-              "application": "법정요건부신청",
-              "media": "IMAGE"
+              "geo": "전국동시신청",
+              "audience": "등록장애인5~69",
+              "benefit": "스포츠수강료바우처",
+              "application": "2026-11-09~27",
+              "media": "TEXT"
             },
-            "comparison_group": "기존24h비교가능28건A14/B14중앙값83/75,매칭비교쌍0.독자·혜택·시간·미디어교란,편집비중유지.7일평가보존14일미도래.",
+            "comparison_group": "실제관측114개ID/window,비교가능24h29건A15/B14중앙값64/75,matchedpairs0.독자/지역/혜택/시간/미디어교란.반복우세미입증·비중유지.",
             "applied_elements": [
-              "생활부담과대상첫2문장",
-              "감면/현금구분",
-              "신청전후순서",
-              "추징조건누락방지"
+              "대상과수강료실익첫2문장",
+              "현재접수/다음해이용구분",
+              "짧은3항목목록",
+              "선정조건과일반이용권구분"
             ],
-            "profile_route": "기존사이트검색및개인감면신청거래미검증,직접신청/감면확정약속없음.",
+            "profile_route": "프로필사이트검색/접수거래미검증;dvoucher0행,즉시개인접수성공보장없음.",
             "source_recheck_required_at_publish": true,
             "master_full_used": true,
             "supplemental_full_used_in_current_model_input": true
           }
         },
         "next_history_record": {
-          "program_id": "131200000004",
-          "notice_version": "2026-06-02law21738 article17; official pages reviewed 2026-11-21T17:29:40.349298+09:00",
-          "pattern": "P6",
-          "opening": "차를 새로 마련할 때 세금 부담이 걱정되는 중증장애인이라면, 보철용·생업활동용 자동차 1대의 취득세·자동차세 면제 요건을 확인해봐요. 현금을 지급하는 지원은 아니에요.",
-          "structure": "생활상황→차종/명의→등록전서류→기한/등록후추징",
-          "media_turn": "IMAGE"
+          "program_id": "999000000036",
+          "notice_version": "2027 nationwide application notice KSPO2026-11-09, reviewed 2026-11-21T21:11:11.683777+09:00",
+          "pattern": "P8",
+          "opening": "1958~2022년생 등록장애인은 2027년 장애인스포츠강좌이용권을 신청할 수 있어요. 선정되면 스포츠강좌 수강료를 1인당 월 최대 11만원까지 이용권으로 지원받아요.",
+          "structure": "대상실익→대상/기간/경로목록→등록장애인프로그램구분",
+          "media_turn": "TEXT"
         }
       }
     },
-    "new_entry": {
-      "slot": "2026-11-22T16:00:00+09:00",
-      "benefit_id": "131200000004",
-      "source_fingerprint": "25f8108297b704d5417bf0fc13956def042b9120749144afe1edd0e1257b48dc",
-      "source_generation": "gov24-44954238983-1",
-      "prepared_at": "2026-11-22T16:58:34.337995+09:00",
-      "expires_at": "2026-11-23T16:58:34.337995+09:00",
-      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+    "entry": {
+      "slot": "2026-11-22T20:00:00+09:00",
+      "benefit_id": "999000000036",
+      "source_fingerprint": "0443cfafd529dd83a2fab0a211beb60bc7c4a2fe702e91ca72452dabfdd96f34",
+      "source_generation": "gov24-45010687035-1",
+      "prepared_at": "2026-11-22T20:28:18.726689+09:00",
+      "expires_at": "2026-11-23T20:28:18.726689+09:00",
+      "asset_sha256": null,
       "writer": {
         "schema_version": "supportpick.writer.v1",
         "status": "READY",
-        "selected_program_id": "131200000004",
-        "post_text": "차를 새로 마련할 때 세금 부담이 걱정되는 중증장애인이라면, 보철용·생업활동용 자동차 1대의 취득세·자동차세 면제 요건을 확인해봐요. 현금을 지급하는 지원은 아니에요.\n\n먼저 차종을 확인해요. 배기량 2,000cc 이하 승용차 등이 대상이고, 이 글은 해당 승용차를 기준으로 안내해요. 장애인 본인 명의이거나 법에서 정한 가족과 같은 세대의 공동명의여야 해요.\n\n등록 전에 관할 시군구에 감면 신청서·장애인 증명·차량 등록서류·주민등록등본 등 필요한 서류를 확인해요. 현재 법상 면제 기한은 2027년 12월 31일이에요.\n\n등록 후 1년 안에 부득이한 사유 없이 소유권을 넘기거나 세대를 분리하면 면제된 취득세가 추징될 수 있어요. 기존 감면차가 있다면 대체취득 요건도 별도로 확인해야 해요.\n\n자세한 사항은 프로필링크 확인",
+        "selected_program_id": "999000000036",
+        "post_text": "1958~2022년생 등록장애인은 2027년 장애인스포츠강좌이용권을 신청할 수 있어요. 선정되면 스포츠강좌 수강료를 1인당 월 최대 11만원까지 이용권으로 지원받아요.\n\n신청 전에 세 가지를 살펴봐요.\n• 대상: 소득과 관계없이 신청할 수 있지만, 연령과 수급자격 등에 따른 선정 우선순위가 있어요. 신청이 곧 선정은 아니에요.\n• 기간: 전국 동시 신청은 2026년 11월 9~27일이에요. 이용은 2027년 1월부터 연간 최대 12개월이며, 카드 발급 일정 등에 따라 달라질 수 있어요.\n• 경로: 장애인스포츠강좌이용권 전용 누리집이나 주소지 관할 시군구·행정복지센터로 신청해요. 결과는 12월 중 개별 안내돼요.\n\n5~18세 저소득층이라도 장애인 등록이 되어 있다면 일반 유·청소년 스포츠강좌이용권이 아닌 장애인용으로 신청해요. 현금 지급은 아니에요.\n\n자세한 사항은 프로필링크 확인",
         "draft_text": null,
         "reply_texts": [],
         "media": {
-          "turn": "IMAGE",
-          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-          "check": "MATCHED",
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
           "image_copy": null,
-          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게라는 문구 아래 집, 체크 표시 방패, 체크리스트, 새싹을 배치한 크림색 정사각형 브랜드 이미지. 하단에는 자세한 사항은 프로필링크 확인 문구가 있다."
+          "alt_text": null
         },
         "review": {
-          "planned_at": "2026-11-22T16:00:00+09:00",
+          "planned_at": "2026-11-22T20:00:00+09:00",
           "application_status": "OPEN",
-          "reader": "2000cc이하보철/생업용승용차취득을검토하는중증장애인",
-          "central_message": "현금지원아닌차량1대취득세자동차세감면과등록전후요건",
-          "pattern": "P6",
-          "selection_reason": "Nov22 16시A생활상황형,기존08P3보험료·12P5출산급여와다른P6차종확인→등록전서류→등록후유의사항.최근실제20건도입전개비교.공식정확성우선,조회효과미입증.",
+          "reader": "1958~2022년생등록장애인과신청을돕는가족",
+          "central_message": "2027수강료바우처의대상/한도/접수시기와선정조건",
+          "pattern": "P8",
+          "selection_reason": "Nov22 20시B대상혜택형.기존08P3·12P5·16P6와다른P8대상/기간/경로요약.최근20완료본문및다음3원고대조;11/18일반유청소년스포츠와선택ID/등록장애인대상/11만원한도다름을확인.",
           "interest_basis": "OBSERVED_METRICS",
           "duplicate_check": "CHECKED",
           "evidence": [
             {
-              "source_id": "131200000004",
-              "source_ref": "https://law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1033804697",
+              "source_id": "999000000036",
+              "source_ref": "https://www.kspo.or.kr/kspo/main/main.do",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-22T16:58:34.337995+09:00",
+              "verified_at": "2026-11-22T20:28:18.726689+09:00",
               "claims_supported": [
-                "이번실제22~35행직접열람:법21738호시행2026-06-02제17조1항.보철생업용1대2000cc승용차포함취득세/자동차세2027-12-31면제.현행조건충족시감면신청가능한제도.특정개인승인보장않음."
+                "실제재열람공단공식본문527~530행:2027장애인5~69세1958~2022·월11만원이내수강료·최대12개월·11/9~27접수중 신청가능·선착순아님·연령수급우선·12월개별안내."
               ]
             },
             {
-              "source_id": "131200000004",
-              "source_ref": "https://law.go.kr/LSW/lsLinkCommonInfo.do?lspttninfSeq=64213",
+              "source_id": "999000000036",
+              "source_ref": "https://culture.go.kr/portal/cltBnf/cltSup/view.do?indRow=129&menuNo=200104&rcrtSn=256295&sWord=&selectType=&viewTp=3&weekju=&yearmonth=",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-22T16:58:34.337995+09:00",
+              "verified_at": "2026-11-22T20:28:18.726689+09:00",
               "claims_supported": [
-                "이번실제22~42행직접열람:2026-09-18시행대통령령36587호8조중증장애인/본인또는동일세대법정가족공동명의/대체취득60일.구등급표현으로대상확대않음."
+                "실제재열람문화포털193~217행:2027전국사업/2026-11-09~27현재신청가능·소득무관·1958~2022·2027년1월사용/바우처/방문경로. 일반유청소년액과 구분."
               ]
             },
             {
-              "source_id": "131200000004",
-              "source_ref": "https://www.law.go.kr/LSW/lsLawLinkInfo.do?chrClsCd=010202&lsId=011178&lsJoLnkSeq=1000178097",
+              "source_id": "999000000036",
+              "source_ref": "https://www.sdm.go.kr/news/news/notice.do?mode=view&sdmBoardSeq=316312",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-22T16:58:34.337995+09:00",
+              "verified_at": "2026-11-22T20:28:18.726689+09:00",
               "claims_supported": [
-                "이번실제9~11행직접열람:현행21738호제17조1~3항.면제와대체취득,등록1년이내부득이사유없는소유권이전/세대분가취득세추징및공동등록전환예외.인쇄버전은표제만반환하여근거미사용."
+                "실제재열람서대문510~535행:동일2027대상·월11만원/2027년1~12월 카드발급일정따라변동,선정순위.12/10발표예정은지역조건으로전국공통일단정안함."
               ]
             },
             {
-              "source_id": "131200000004",
-              "source_ref": "https://www.guri.go.kr/www/selectBbsNttView.do?bbsNo=1681&integrDeptCode=&key=7557&nttNo=120729&pageIndex=1&searchCnd=all&searchCtgry=&searchKrwd=",
+              "source_id": "999000000036",
+              "source_ref": "https://www.goyang.go.kr/news/user/bbs/BD_selectBbs.do?q_bbsCode=1030&q_bbscttSn=20261103142758737",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-22T16:58:34.337995+09:00",
+              "verified_at": "2026-11-22T20:28:18.726689+09:00",
               "claims_supported": [
-                "이번실제구리시FAQ1140~1158행직접열람:2025-02-24게시,감면신청서/장애인증명서/등본(가족관계증명서)및세정과문의안내.법정대상은구등급표현아닌이번직접연현행시행령우선.본문서류는관할에확인할준비서류로안내,전국서류동일확정않음."
+                "실제재열람고양135~137행:5~18저소득유청소년이어도등록장애인은장애인용으로만신청. 일반스포츠강좌1,800명정원/10.5만원/12월10일사용끝은장애인전국조건으로복사안함."
               ]
             },
             {
-              "source_id": "131200000004",
-              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999003&bnefType=all&svcId=131200000004",
+              "source_id": "999000000036",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999119&bnefType=all&svcId=999000000036",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-22T16:58:34.337995+09:00",
+              "verified_at": "2026-11-22T20:28:18.726689+09:00",
               "claims_supported": [
-                "동일ID완전검증gov24-44954238983-1 serviceList조회수43404/대상/신청서/시군구방문방법/2027기한실제재대조.APIcheckedAt=2026-11-22T07:01:28.583618+09:00 collectionSucceededAt=2026-11-22T07:06:11.815516+09:00는원문확인과별도시각."
-              ]
-            },
-            {
-              "source_id": "131200000004",
-              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-              "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-22T16:58:34.337995+09:00",
-              "claims_supported": [
-                "이번실제허용PNG GET SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a와main image-review의기존2026-11-06시각검수PASS/360px기록실제재대조일치.새시각검수아님.금액대상기간없는브랜드일러스트와기존alt일치."
+                "동일ID검증완전세대 gov24-45010687035-1 원본2026출생기준은2027공식현재공고와연도달라최신2027공고우선.월11만원/경로대조.APIcheckedAt=2026-11-22T19:09:14.218081+09:00; collectionSucceededAt=2026-11-22T19:11:21.355478+09:00는현재접수증명아님."
               ]
             }
           ],
@@ -92491,86 +92756,84 @@
             "eligibility_and_units": "PASS",
             "cta_and_no_links": "PASS",
             "length": "PASS",
-            "media": "PASS"
+            "media": "NOT_REQUIRED"
           },
-          "char_count": 406,
+          "char_count": 441,
           "count_method": "python_len_including_spaces_and_newlines",
           "missing_info": [],
           "hold_reasons": [],
           "warnings": [
-            "법령조건부감면안내이며개인별세액·면제확정아님.다른차종전체를배제하지않고본문독자만2000cc승용차로한정.가족범위·대체취득·추징예외는시군구개별확인.",
-            "현재source는내일16시신선도범위초과.발송시최신완전세대·공식상태·증빙유효기간·계정·한도·CAS·미디어교대재검증필수.",
-            "프로필사이트개인신청거래/감면결정기능미검증,보장하지않음.",
-            "이번지연대비재검수:기존생활법령본문503을총3회(2/5초간격)확인후중단.법제처현행법/시행령/구리시공식서류안내로실제대체검수완료.이전검수시각을오늘로복사하지않음.정규16시슬롯2h허용창/기존본문406자/이미지/형식/코호트유지.실제게시확인은별도."
+            "공식동시접수공지에근거한신규신청안내;개인선정·전액수강료·12개월전부확정지급아님.추가금액/예산잔액/구체강좌가맹·개인카드발급미검증.",
+            "dvoucher직접페이지0행,개인온라인접수거래/승인/프로필사이트신청기능확인못함.주관기관공식및공식재게시원문근거로만경로안내.",
+            "현재source는내일20시24h초과하므로실제발송최신완전세대·공식상태·유효기간·계정/한도/CAS/잠금·교대재검증필수."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
-            "core_question": "차를등록하기전어떤감면요건과등록후유의사항을확인해야하나요?",
-            "reader_scope": "2000cc이하보철/생업용승용차취득을검토하는중증장애인",
+            "core_question": "내년운동강좌지원은누가언제어떤경로로신청하나요?",
+            "reader_scope": "1958~2022년생등록장애인과신청을돕는가족",
             "angles": [
-              "차구입세금부담",
-              "감면대상차종/명의자격",
-              "등록전서류와등록후추징조건"
+              "운동강좌비용부담",
+              "등록장애인자격과선정우선순위",
+              "2027이용과2026신청기간구분"
             ],
-            "chosen_angle": "등록전후준비절차",
+            "chosen_angle": "대상실익→대상/기간/경로목록→일반프로그램과구분",
             "opening_candidates": [
               {
                 "type": "생활 상황형",
                 "group": "A",
-                "text": "차를 새로 마련할 때 세금 부담이 걱정되는 중증장애인이라면, 보철용·생업활동용 자동차 1대의 취득세·자동차세 면제 요건을 확인해봐요. 현금을 지급하는 지원은 아니에요."
+                "text": "운동을 배우는 비용이 부담되는1958~2022년생등록장애인이라면,2027장애인스포츠강좌이용권의월최대11만원수강료지원을확인해요."
               },
               {
                 "type": "대상·혜택형",
                 "group": "B",
-                "text": "중증장애인의 보철용·생업활동용 자동차는 차종과 명의 요건을 갖춘 1대에 취득세·자동차세 면제가 적용돼요."
+                "text": "1958~2022년생 등록장애인은 2027년 장애인스포츠강좌이용권을 신청할 수 있어요. 선정되면 스포츠강좌 수강료를 1인당 월 최대 11만원까지 이용권으로 지원받아요."
               },
               {
                 "type": "조건 설명형",
                 "group": null,
-                "text": "장애인 자동차 세금 감면은 차종뿐 아니라 명의와 같은 세대 여부도 확인해야 해요."
+                "text": "장애인스포츠강좌이용권은2027년이용분을2026년11월에미리신청하고심사를거쳐선정돼요."
               }
             ],
-            "chosen_opening": "차를 새로 마련할 때 세금 부담이 걱정되는 중증장애인이라면, 보철용·생업활동용 자동차 1대의 취득세·자동차세 면제 요건을 확인해봐요. 현금을 지급하는 지원은 아니에요.",
-            "opening_type": "생활 상황형",
-            "cohort": "A",
-            "selection_reason": "Nov22 16시A생활상황형,기존08P3보험료·12P5출산급여와다른P6차종확인→등록전서류→등록후유의사항.최근실제20건도입전개비교.공식정확성우선,조회효과미입증.",
+            "chosen_opening": "1958~2022년생 등록장애인은 2027년 장애인스포츠강좌이용권을 신청할 수 있어요. 선정되면 스포츠강좌 수강료를 1인당 월 최대 11만원까지 이용권으로 지원받아요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "Nov22 20시B대상혜택형.기존08P3·12P5·16P6와다른P8대상/기간/경로요약.최근20완료본문및다음3원고대조;11/18일반유청소년스포츠와선택ID/등록장애인대상/11만원한도다름을확인.",
             "history_posts_checked": 20,
             "comparison_eligible": true,
             "comparison_strata": {
-              "geo": "국가법령해당차량",
-              "audience": "중증장애인차량구입",
-              "benefit": "지방세면제",
-              "application": "법정요건부신청",
-              "media": "IMAGE"
+              "geo": "전국동시신청",
+              "audience": "등록장애인5~69",
+              "benefit": "스포츠수강료바우처",
+              "application": "2026-11-09~27",
+              "media": "TEXT"
             },
-            "comparison_group": "기존24h비교가능28건A14/B14중앙값83/75,매칭비교쌍0.독자·혜택·시간·미디어교란,편집비중유지.7일평가보존14일미도래.",
+            "comparison_group": "실제관측114개ID/window,비교가능24h29건A15/B14중앙값64/75,matchedpairs0.독자/지역/혜택/시간/미디어교란.반복우세미입증·비중유지.",
             "applied_elements": [
-              "생활부담과대상첫2문장",
-              "감면/현금구분",
-              "신청전후순서",
-              "추징조건누락방지"
+              "대상과수강료실익첫2문장",
+              "현재접수/다음해이용구분",
+              "짧은3항목목록",
+              "선정조건과일반이용권구분"
             ],
-            "profile_route": "기존사이트검색및개인감면신청거래미검증,직접신청/감면확정약속없음.",
+            "profile_route": "프로필사이트검색/접수거래미검증;dvoucher0행,즉시개인접수성공보장없음.",
             "source_recheck_required_at_publish": true,
             "master_full_used": true,
             "supplemental_full_used_in_current_model_input": true
           }
         },
         "next_history_record": {
-          "program_id": "131200000004",
-          "notice_version": "2026-06-02law21738 article17; official pages reviewed 2026-11-21T17:29:40.349298+09:00",
-          "pattern": "P6",
-          "opening": "차를 새로 마련할 때 세금 부담이 걱정되는 중증장애인이라면, 보철용·생업활동용 자동차 1대의 취득세·자동차세 면제 요건을 확인해봐요. 현금을 지급하는 지원은 아니에요.",
-          "structure": "생활상황→차종/명의→등록전서류→기한/등록후추징",
-          "media_turn": "IMAGE"
+          "program_id": "999000000036",
+          "notice_version": "2027 nationwide application notice KSPO2026-11-09, reviewed 2026-11-21T21:11:11.683777+09:00",
+          "pattern": "P8",
+          "opening": "1958~2022년생 등록장애인은 2027년 장애인스포츠강좌이용권을 신청할 수 있어요. 선정되면 스포츠강좌 수강료를 1인당 월 최대 11만원까지 이용권으로 지원받아요.",
+          "structure": "대상실익→대상/기간/경로목록→등록장애인프로그램구분",
+          "media_turn": "TEXT"
         }
       }
     },
-    "original_body_media_pattern_cohort_preserved": true,
-    "genuine_official_re_review": true,
-    "reason": "Original evidence expires17:29before endof18:00grace; delayed regular run not yet observed, no POST/pending.",
-    "queue_commit_sha": "a844d9cbee0966763926bacafadf1527a6d4f51b",
-    "queue_blob_sha": "1e436b1ae22aff6cac51fa18b4f9721bfc5835be",
+    "checked_at": "2026-11-22T20:28:18.726689+09:00",
+    "reason": "Original20regularslot awaitingrun; priorreviewexpires21:11before22grace. Actualofficial4pages reread andsourceSHA reconciled. Body/media/pattern/cohort unchanged; nottimestampcopy.",
+    "queue_commit_sha": "f9dc02fa2de0c259f7a5df536d928c44fa1f41a1",
+    "queue_blob_sha": "171c42e6b0e53da604279f50155e92c78846f4e2",
     "readback_exact": true,
     "slot_window_unchanged": true,
     "publication_separate": true
