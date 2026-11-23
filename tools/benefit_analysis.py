@@ -26,6 +26,7 @@ from reviewed_amount_analysis import REVIEWED_AMOUNT_ARTICLES, review_advisory
 from sunchang_birth_analysis import SUNCHANG_BIRTH_ARTICLES
 from influenza_analysis import INFLUENZA_ARTICLES, influenza_advisory
 from veterans_inspection_analysis import VETERANS_INSPECTION_ARTICLE, VETERANS_INSPECTION_SLUG
+from employment_training_analysis import EMPLOYMENT_TRAINING_ARTICLE, EMPLOYMENT_TRAINING_SLUG
 
 REVIEWED = '2026-11-17'
 ENERGY = 'https://www.energyv.or.kr/info/'
@@ -111,8 +112,11 @@ ARTICLES += REVIEWED_AMOUNT_ARTICLES
 ARTICLES += SUNCHANG_BIRTH_ARTICLES
 ARTICLES += INFLUENZA_ARTICLES
 ARTICLES.append(VETERANS_INSPECTION_ARTICLE)
+ARTICLES.append(EMPLOYMENT_TRAINING_ARTICLE)
 
 BENEFIT_ARTICLES = {
+    '149200000026': EMPLOYMENT_TRAINING_SLUG,
+    '149200005007': EMPLOYMENT_TRAINING_SLUG,
     '135200000115': 'influenza-season-vs-dose-history-2026',
     '626000000649': 'busan-child-care-fee-vs-copayment-2026',
     '557000000250': 'jeungpyeong-insurance-contract-vs-claim-2026',
@@ -160,6 +164,7 @@ BENEFIT_ARTICLES = {
 ARTICLE_REVIEW_DATES = {'influenza-season-vs-dose-history-2026':'2026-11-19', 'busan-child-care-fee-vs-copayment-2026':'2026-11-19', 'jeungpyeong-insurance-contract-vs-claim-2026':'2026-11-19', 'sunchang-birth-total-vs-installments-2026': '2026-11-19', 'school-welfare-vs-education-benefit-2026': '2026-11-19', 'didimdol-cap-collateral-and-closing-2026': '2026-11-19', 'youth-housing-account-announcement-tax-conversion-2026': '2026-11-18', 'youth-mutual-aid-closed-enrollment-maturity-2026': '2026-11-18', 'rental-guarantee-fee-cap-and-dates-2026': '2026-11-18', 'maternal-service-application-use-refund-2026': '2026-11-18', 'incheon-child-dream-birth-year-2026': '2026-11-18', 'incheon-pregnancy-transport-vs-postpartum-2026': '2026-11-18', 'leave-benefit-claim-checklist-2026': '2026-11-18'}
 
 ARTICLE_REVIEW_DATES[VETERANS_INSPECTION_SLUG] = "2026-11-21"
+ARTICLE_REVIEW_DATES[EMPLOYMENT_TRAINING_SLUG] = "2026-11-24"
 
 
 def related_analysis(sid, row=None):
