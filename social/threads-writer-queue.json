@@ -10378,7 +10378,7 @@
               "access_method": "PROVIDED_OFFICIAL_TEXT",
               "verified_at": "2026-11-23T21:22:26.626321+09:00",
               "claims_supported": [
-                "실제 검증한 최신 완전세대 gov24-45156855393-1 동일 ID serviceList 누적38075·기저귀월9만원/분유월11만원 영아단위·신청기한·접수경로 대조. API 소득80% 잔존은 2026-07-01 시행 공식정정100%를 우선. APIcheckedAt=2026-11-23T19:36:18.324435+09:00 collectionSucceededAt=2026-11-23T19:38:18.049578+09:00와 이번 원문 재검수시각은 구분."
+                "실제 검증한 최신 완전세대 gov24-45156855393-1 동일 ID serviceList 누적38280·기저귀월9만원/분유월11만원 영아단위·신청기한·접수경로 대조. API 소득80% 잔존은 2026-07-01 시행 공식정정100%를 우선. APIcheckedAt=2026-11-23T19:36:18.324435+09:00 collectionSucceededAt=2026-11-23T19:38:18.049578+09:00와 이번 원문 재검수시각은 구분."
               ]
             }
           ],
@@ -10463,7 +10463,8 @@
             "all_post_claims_rechecked": true,
             "record_reserved": false,
             "post_or_container_id": null,
-            "maximum_evidence_hours": 24
+            "maximum_evidence_hours": 24,
+            "current_original_serviceList_views": 38280
           }
         },
         "next_history_record": {
@@ -10934,6 +10935,163 @@
           "opening": "월세 계약이나 임금 문제로 막막한 기초생활수급자·장애인 등 취약계층이라면, 법률홈닥터의 무료 1차 법률상담으로 대응 방향을 알아볼 수 있어요. 법무부 소속 변호사가 생활법률 문제를 상담하는 서비스예요.",
           "structure": "생활분쟁상황→배치기관예약→질문정리→상담시간→소송제외/신청제한",
           "media_turn": "IMAGE"
+        }
+      }
+    },
+    {
+      "slot": "2026-11-24T20:00:00+09:00",
+      "benefit_id": "419000000129",
+      "source_fingerprint": "8c82d1cf584e75a48b468bfaf7c0ae5cc057c0583f25177de1ecdb8f7d21d203",
+      "source_generation": "gov24-45156855393-1",
+      "prepared_at": "2026-11-23T21:27:52.881156+09:00",
+      "expires_at": "2026-11-24T21:27:52.881156+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "419000000129",
+        "post_text": "원주사랑상품권 이용자는 원주의 대상 착한가격업소에서 결제하면 사용액의 5%를 캐시백으로 받을 수 있어요. 1인당 월 결제액 60만원까지, 환급액은 월 최대 3만원이에요.\n\n이용 전에 볼 핵심은 세 가지예요.\n• 가게: 원주시 착한가격업소이면서 원주사랑상품권 가맹점이어야 해요. 모든 가맹점에 적용되는 혜택은 아니에요.\n• 결제: 원주사랑상품권 QR이나 카드로 결제해요. 대상 업소에서 3만원을 쓰면 5%인 1,500원이 캐시백되는 방식이에요.\n• 기간: 2026년 9월 28일부터 12월 31일까지이며 자금이 먼저 소진되면 끝나요.\n\n원주시의 추가 할인 대상 업소 목록과 결제 시 적용 여부를 먼저 확인해요. 상품권을 새로 사는 비용은 본인이 부담하며, 충전 가능 물량과 할인 조건도 따로 확인해야 해요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-24T20:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "원주에서원주사랑상품권으로생활소비하는이용자",
+          "central_message": "원주사랑상품권을어디서얼마까지쓰면추가캐시백을받을수있나요?",
+          "pattern": "P8",
+          "selection_reason": "동일ID 원본serviceList 누적조회수35690. 앞서 예약/기작성 사업과 기존74개 상위HOLD/SKIP을 제외한 검증가능 최상위. 최신공식2026-2655 공고 현행9/28~12/31 캐시백을 설명하며11/15 종료한축제추가5%와구분. Nov24 P1/P5/P6와달리 대상혜택→가게/결제/기간목록→적용확인 P8, B 대상·혜택형.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "419000000129",
+              "source_ref": "https://www.wonju.go.kr/www/selectBbsNttView.do?bbsNo=140&key=216&nttNo=492622",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-23T21:27:52.881156+09:00",
+              "claims_supported": [
+                "실제1649~1661행:2026-2655공고,9/28~12/31자금소진까지,원주시착한가격업소중상품권가맹점,QR/카드5%캐시백·1인월사용60만원월최대3만원·3만원1500원예시."
+              ]
+            },
+            {
+              "source_id": "419000000129",
+              "source_ref": "https://www.wonju.go.kr/wonjusarang/user_sub.php?gid=www&mu_idx=7",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-23T21:27:52.881156+09:00",
+              "claims_supported": [
+                "실제79~104행:충전방식·본인계좌등록·가맹점사용·현재구매지원/한도변경가능. 새구매비용은개인부담;충전잔여물량/개별적용거래는미확인·보장않음."
+              ]
+            },
+            {
+              "source_id": "419000000129",
+              "source_ref": "https://www.wonju.go.kr/www/selectBbsNttView.do?bbsNo=145&integrDeptCode=&key=222&nttNo=494700&pageIndex=9&searchCnd=al&searchCtgry=&searchKrwd=",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-23T21:27:52.881156+09:00",
+              "claims_supported": [
+                "실제1654~1656행:10/29~11/15페스티벌한시추가5%종료. 현재공고의착한가격업소5%에과거행사5%를더해10%라고쓰지않음."
+              ]
+            },
+            {
+              "source_id": "419000000129",
+              "source_ref": "https://www.wonju.go.kr/media/selectBbsNttList.do?bbsNo=145&integrDeptCode=&key=3450&pageUnit=10&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-23T21:27:52.881156+09:00",
+              "claims_supported": [
+                "실제최신공식검색목록198~218행:10/29행사와9/29착한가격업소안내대조. 열람범위내별도종료정정없음;자금잔액실시간확정아님."
+              ]
+            },
+            {
+              "source_id": "419000000129",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006198&bnefType=all&svcId=419000000129",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-23T21:27:52.881156+09:00",
+              "claims_supported": [
+                "검증완전세대gov24-45156855393-1 동일ID누적35690. APIcheckedAt=2026-11-23T19:34:38.199622+09:00 collectionSucceededAt=2026-11-23T19:38:18.049578+09:00는원문검수와구분. 기본구매지원설명과착한가격업소별도캐시백구분."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 412,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "자금소진시종료를본문에명시. 잔여예산·개별가게캐시백적용·충전물량·거래성공은미확인으로보장않음.",
+            "지원금픽프로필의링크목표는공식계정진단에서확인했으나실제사이트검색/상세이동·접수기능이번미검증.",
+            "현재20시복구미완료. 원장성공/예약기준미디어재계산필수;현재20미게시시미예약미래슬롯순서를재산정. 현재수집본이내일20시까지신선하다고가정않음. 실제발송시새세대와공식원문필수재검증."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "원주사랑상품권을어디서얼마까지쓰면추가캐시백을받을수있나요?",
+            "reader_scope": "원주에서원주사랑상품권으로생활소비하는이용자",
+            "angles": [
+              "생활소비결제비용",
+              "대상가맹점과5%한도",
+              "결제전업소/기간확인"
+            ],
+            "chosen_angle": "대상가맹점과월캐시백한도",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "원주에서 식사나 생활비를 원주사랑상품권으로 결제한다면, 대상 착한가격업소에서는 사용액의 5%를 캐시백으로 받을 수 있어요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "원주사랑상품권 이용자는 원주의 대상 착한가격업소에서 결제하면 사용액의 5%를 캐시백으로 받을 수 있어요. 1인당 월 결제액 60만원까지, 환급액은 월 최대 3만원이에요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "착한가격업소이면서 원주사랑상품권 가맹점인 곳에서 QR이나 카드로 결제해야 추가 캐시백이 적용돼요."
+              }
+            ],
+            "chosen_opening": "원주사랑상품권 이용자는 원주의 대상 착한가격업소에서 결제하면 사용액의 5%를 캐시백으로 받을 수 있어요. 1인당 월 결제액 60만원까지, 환급액은 월 최대 3만원이에요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "동일ID 원본serviceList 누적조회수35690. 앞서 예약/기작성 사업과 기존74개 상위HOLD/SKIP을 제외한 검증가능 최상위. 최신공식2026-2655 공고 현행9/28~12/31 캐시백을 설명하며11/15 종료한축제추가5%와구분. Nov24 P1/P5/P6와달리 대상혜택→가게/결제/기간목록→적용확인 P8, B 대상·혜택형.",
+            "history_posts_checked": 20,
+            "comparison_eligible": true,
+            "comparison_strata": {
+              "geo": "원주시",
+              "audience": "지역상품권이용자",
+              "benefit": "결제캐시백",
+              "application": "자금소진가능",
+              "media": "TEXT"
+            },
+            "comparison_group": "137공식관측,비교가능24h37건A19/B18중앙값63/62·매칭쌍0.시간·미디어·사업대상교란으로효과미입증·분배유지.",
+            "applied_elements": [
+              "도입에원주대상가맹점5%및월개인한도",
+              "가게→결제예시→기간의정보목록",
+              "과거행사추가혜택미합산"
+            ],
+            "profile_route": "공식진단의프로필목표확인,실제사이트검색/상세는이번미검증",
+            "source_recheck_required_at_publish": true,
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "419000000129",
+          "notice_version": "gov24-45156855393-1; official2026-2655 reread 2026-11-23T21:27:52.881156+09:00",
+          "pattern": "P8",
+          "opening": "원주사랑상품권 이용자는 원주의 대상 착한가격업소에서 결제하면 사용액의 5%를 캐시백으로 받을 수 있어요. 1인당 월 결제액 60만원까지, 환급액은 월 최대 3만원이에요.",
+          "structure": "대상실익한도→가게결제기간3목록→적용/충전확인",
+          "media_turn": "TEXT"
         }
       }
     }
