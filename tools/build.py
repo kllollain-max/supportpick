@@ -1,4 +1,6 @@
 """Build an allowlisted site from an integrity-checked immutable generation."""
+from datetime import datetime, timezone
+
 import argparse,hashlib,json,os,posixpath,re,shutil,subprocess
 from pathlib import Path
 from html.parser import HTMLParser
@@ -9,6 +11,7 @@ from search_metadata import public_metadata, read_verifications, write_sitemap, 
 from detail_pages import write_details, quality_reasons, schedule_metadata
 from application_guides import write_guides
 from benefit_analysis import coverage_report
+from archived_application import archived_round
 from release_policy import fingerprint
 from collect_full import period
 from content_quality import conditions, audit, review_queue
@@ -89,7 +92,12 @@ def build(destination,state=None,allow_sample=False,public_base=None):
                 source_differences[sid]={key:{'list':raw.get('serviceList',{}).get(key),'detail':raw.get('serviceDetail',{}).get(key)} for key in row.get('sourceConflicts',[])}
                 full_rows[sid]={**row,**period(row.get('period','')),'sourceDifferences':source_differences[sid],**conditions(row)}
     public_feed={**feed,'items':[{**{k:v for k,v in row.items() if k in fields},**period(row.get('period','')),'sourceDifferences':source_differences.get(row['id'],{}),**conditions(full_rows.get(row['id'],{})), 'reviewRequired':bool(quality_reasons(full_rows[row['id']],guide_registry)) if row['id'] in full_rows else True} for row in feed['items']]}
+    current = datetime.now(timezone.utc)
     for item in public_feed['items']:
+        if not item['reviewRequired']:
+            archive = archived_round(item, current)
+            if archive:
+                item['closedApplicationNotice'] = archive['notice']
         schedule = schedule_metadata(full_rows[item['id']], guide_registry) if item['id'] in full_rows else None
         if schedule:
             item['verifiedSchedule'] = schedule
@@ -129,7 +137,7 @@ def build(destination,state=None,allow_sample=False,public_base=None):
     (output/'status.json').write_text(json.dumps(status,ensure_ascii=False));(output/'.nojekyll').write_text('')
     guides=json.loads((ROOT/'guides.json').read_text())
     if guides.get('version')!=1 or not isinstance(guides.get('guides'),list):raise ValueError('invalid_own_guide_registry')
-    detail=write_details(output,full_rows,previous_rows,public_base,guides,registry,status['status'])
+    detail=write_details(output,full_rows,previous_rows,public_base,guides,registry,status['status'],current)
     (output/'source-review-report.json').write_text(json.dumps(source_review_audit(full_rows,previous_rows,guides,registry),ensure_ascii=False,indent=2))
     detail['entries'].extend(write_guides(output,public_base,full_rows))
     quality=audit(full_rows)
