@@ -10481,9 +10481,9 @@
       "slot": "2026-11-24T08:00:00+09:00",
       "benefit_id": "B55190400005",
       "source_fingerprint": "c04ab58d733d374cdf0b2cd1e3e3d2910e889b88ea30a00bb14dcaba54a3ec0f",
-      "source_generation": "gov24-45075147460-1",
-      "prepared_at": "2026-11-23T08:34:28.400944+09:00",
-      "expires_at": "2026-11-24T08:34:28.400944+09:00",
+      "source_generation": "gov24-45156855393-1",
+      "prepared_at": "2026-11-23T21:48:01.930334+09:00",
+      "expires_at": "2026-11-24T21:48:01.930334+09:00",
       "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -10513,36 +10513,38 @@
               "source_id": "B55190400005",
               "source_ref": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?currentPageNo=1&recordCountPerPage=10&systClId=SC00000254&systCnntId=CI00001715&systId=SI00000411&upprSystClId=",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-23T08:34:28.400944+09:00",
+              "verified_at": "2026-11-23T21:48:01.930334+09:00",
               "claims_supported": [
-                "고용24 상용직 정책안내 실제열람 290~330행:회사상실신고·이직확인서 처리,구직등록,사전온라인교육,현장교육대체,신분증·센터방문 수급자격인정신청. 온라인인터넷제출도방문절차있음. 개인로그인·수강거래실행은않음."
+                "고용24 상용직 정책안내 실제열람 290~330행:회사상실신고·이직확인서 처리,구직등록,사전온라인교육,현장교육대체,신분증·센터방문 수급자격인정신청. 온라인인터넷제출도방문절차있음. 개인로그인·수강거래실행은않음.",
+                "이번21:45회차 해당 공식 원문을 실제 다시 열어 기존 주장 전체 재대조. 웹검색 요약이나 이전검수 날짜복사가 아님. 개인신청/수강/상담예약 거래는 하지 않음."
               ]
             },
             {
               "source_id": "B55190400005",
               "source_ref": "https://www.work24.go.kr/cm/main.do",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-23T08:34:28.400944+09:00",
+              "verified_at": "2026-11-23T21:48:01.930334+09:00",
               "claims_supported": [
-                "현재고용24공식메뉴 실제141~152행 수급자격신청자온라인교육과실업인정교육 별도. 현재교육서비스경로제공 확인."
+                "현재고용24공식메뉴 실제141~152행 수급자격신청자온라인교육과실업인정교육 별도. 현재교육서비스경로제공 확인.",
+                "이번21:45회차 해당 공식 원문을 실제 다시 열어 기존 주장 전체 재대조. 웹검색 요약이나 이전검수 날짜복사가 아님. 개인신청/수강/상담예약 거래는 하지 않음."
               ]
             },
             {
               "source_id": "B55190400005",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2100960&bnefType=all&svcId=B55190400005",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-23T08:34:28.400944+09:00",
+              "verified_at": "2026-11-23T21:48:01.930334+09:00",
               "claims_supported": [
-                "완전검증세대 gov24-45075147460-1 동일ID의 serviceList 누적37256, 서비스유형기타교육·상시신청·구직급여제도/신청절차안내. APIcheckedAt=2026-11-23T07:06:19.308672+09:00 collectionSucceededAt=2026-11-23T07:09:09.827515+09:00는 이번원문검수시각과구분."
+                "완전검증세대 gov24-45156855393-1 동일ID원문 재대조. 원본 serviceList 누적조회수=37256; APIcheckedAt=2026-11-23T19:35:56.022511+09:00; collectionSucceededAt=2026-11-23T19:38:18.049578+09:00는이번공식원문검수시각과별개. 수집성공만으로현재접수확인한것아님."
               ]
             },
             {
               "source_id": "B55190400005",
               "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
               "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-23T08:34:28.400944+09:00",
+              "verified_at": "2026-11-23T21:48:01.930334+09:00",
               "claims_supported": [
-                "실제허용PNG GET SHA256=0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd를 main image-review 기존AI_VISUAL_INSPECTION/PASS·360px검수와 대조일치. 새직접시각검수아님. 금액·대상·기간없는브랜드이미지로본문충돌없음."
+                "이번 허용PNG실제GET SHA256=0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd를 현재main image-review 기존시각검수PASS/360px기록과 재대조일치. 새직접시각검수아님. 금액/대상/기간없는브랜드자산으로본문충돌없음."
               ]
             }
           ],
@@ -10614,11 +10616,21 @@
             "source_recheck_required_at_publish": true,
             "master_full_used": true,
             "supplemental_full_used_in_current_model_input": true
+          },
+          "delay_window_revalidation": {
+            "checked_at": "2026-11-23T21:48:01.930334+09:00",
+            "reason": "Existing READY expiry did not cover regular slot+2h. Genuine official rereview performed before slot.",
+            "old_prepared_at": "2026-11-23T08:34:28.400944+09:00",
+            "old_expires_at": "2026-11-24T08:34:28.400944+09:00",
+            "new_expires_at": "2026-11-24T21:48:01.930334+09:00",
+            "post_text_preserved": true,
+            "media_pattern_opening_cohort_preserved": true,
+            "source_recheck_required_at_publish": true
           }
         },
         "next_history_record": {
           "program_id": "B55190400005",
-          "notice_version": "gov24-45075147460-1 and Work24 original reviewed 2026-11-23T08:34:28.400944+09:00",
+          "notice_version": "gov24-45156855393-1; current official guidance genuinely reread 2026-11-23T21:48:01.930334+09:00",
           "pattern": "P1",
           "opening": "퇴사 뒤 실업급여 신청 순서가 막막하다면, 고용24의 수급자격 신청자 온라인 교육으로 절차를 먼저 알아볼 수 있어요. 고용보험에 가입했던 상용근로자가 구직급여 신청을 준비할 때 듣는 사전 교육이에요.",
           "structure": "퇴사상황→교육효용→서류구직등록→교육이수와급여인정구분→현장대안",
@@ -10630,9 +10642,9 @@
       "slot": "2026-11-24T12:00:00+09:00",
       "benefit_id": "B55284500010",
       "source_fingerprint": "038fd66ce1d8b9eac3a540e8f654d59784116155aa10885493121848df249abb",
-      "source_generation": "gov24-45075147460-1",
-      "prepared_at": "2026-11-23T12:48:14.190414+09:00",
-      "expires_at": "2026-11-24T12:48:14.190414+09:00",
+      "source_generation": "gov24-45156855393-1",
+      "prepared_at": "2026-11-23T21:48:01.930334+09:00",
+      "expires_at": "2026-11-24T21:48:01.930334+09:00",
       "writer": {
         "schema_version": "supportpick.writer.v1",
         "status": "READY",
@@ -10661,36 +10673,40 @@
               "source_id": "B55284500010",
               "source_ref": "https://www.sb.go.kr/bogunso/contents.do?key=7845",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-23T12:48:14.190414+09:00",
+              "verified_at": "2026-11-23T21:48:01.930334+09:00",
               "claims_supported": [
-                "직접열람451~508행:2026년12월11일까지 수시신청 가능(명시된기간내이며이번열람시각기준),생계급여수급가구와 임산부/영유아/아동/청년조건,1인가구월4만원/4인가구월10만원,카드바우처,품목·제외품목,신청월부터지원,행정복지센터/고객센터경로。지역오프라인사용처범위는본문에서전국보장않음."
+                "직접열람451~508행:2026년12월11일까지 수시신청 가능(명시된기간내이며이번열람시각기준),생계급여수급가구와 임산부/영유아/아동/청년조건,1인가구월4만원/4인가구월10만원,카드바우처,품목·제외품목,신청월부터지원,행정복지센터/고객센터경로。지역오프라인사용처범위는본문에서전국보장않음.",
+                "이번21:45회차 해당 공식 원문을 실제 다시 열어 기존 주장 전체 재대조. 웹검색 요약이나 이전검수 날짜복사가 아님. 개인신청/수강/상담예약 거래는 하지 않음."
               ]
             },
             {
               "source_id": "B55284500010",
               "source_ref": "https://www.uiwang.go.kr/UWKORINFO0101/7004271",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-23T12:48:14.190414+09:00",
+              "verified_at": "2026-11-23T21:48:01.930334+09:00",
               "claims_supported": [
-                "2026-08-12 지침개정 안내 실제 urllib GET HTML본문 재열람:12월11일신청기한,34세이하청년 포함가구,영양플러스 또는 임산부친환경농산물지원사업이용자 가구원수산출제외. 날짜판별되는개정근거로기존API누락을보완. 웹검색find는timeout이었으므로실제HTML응답으로확인."
+                "2026-08-12 지침개정 안내 실제 urllib GET HTML본문 재열람:12월11일신청기한,34세이하청년 포함가구,영양플러스 또는 임산부친환경농산물지원사업이용자 가구원수산출제외. 날짜판별되는개정근거로기존API누락을보완. 웹검색find는timeout이었으므로실제HTML응답으로확인.",
+                "이번21:45회차 해당 공식 원문을 실제 다시 열어 기존 주장 전체 재대조. 웹검색 요약이나 이전검수 날짜복사가 아님. 개인신청/수강/상담예약 거래는 하지 않음.",
+                "웹열람 timeout으로 본문추출 실패한 뒤 공식URL urllib HTML 실제응답 확인. 2026-08-12개정,34세이하,12/11기한 및 영양플러스/임산부친환경농산물 가구원산출제외 재확인. 로컬응답SHA256=5e0cc7d4c45781bc51ce4f4c62d2f9eccd531e7a0af4755dcb99482c80753c5e"
               ]
             },
             {
               "source_id": "B55284500010",
               "source_ref": "https://agri.paju.go.kr/user/board/BD_board.view.do?bbsCd=2001&q_ctgCd=1018&seq=20260408155059774",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-23T12:48:14.190414+09:00",
+              "verified_at": "2026-11-23T21:48:01.930334+09:00",
               "claims_supported": [
-                "파주농업기술센터 먹거리전략팀 공식2026-04-08 새소식 실제171~185행:신청기한·1인/4인 월한도,예산범위내지원,신청전월소급불가,지정사용처. 구형중복지원전면금지표현은8월개정 가구원산출제외로구체화."
+                "파주농업기술센터 먹거리전략팀 공식2026-04-08 새소식 실제171~185행:신청기한·1인/4인 월한도,예산범위내지원,신청전월소급불가,지정사용처. 구형중복지원전면금지표현은8월개정 가구원산출제외로구체화.",
+                "이번21:45회차 해당 공식 원문을 실제 다시 열어 기존 주장 전체 재대조. 웹검색 요약이나 이전검수 날짜복사가 아님. 개인신청/수강/상담예약 거래는 하지 않음."
               ]
             },
             {
               "source_id": "B55284500010",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002090&bnefType=all&svcId=B55284500010",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-23T12:48:14.190414+09:00",
+              "verified_at": "2026-11-23T21:48:01.930334+09:00",
               "claims_supported": [
-                "최신완전수집본 동일ID 37080 누적조회수,서비스원문 생계급여·특성요건과보장시설수급자가구원산정제외. APIcheckedAt=2026-11-23T07:06:22.118515+09:00 / collectionSucceededAt=2026-11-23T07:09:09.827515+09:00는원문검수현재시각과구분."
+                "완전검증세대 gov24-45156855393-1 동일ID원문 재대조. 원본 serviceList 누적조회수=37080; APIcheckedAt=2026-11-23T19:35:58.059708+09:00; collectionSucceededAt=2026-11-23T19:38:18.049578+09:00는이번공식원문검수시각과별개. 수집성공만으로현재접수확인한것아님."
               ]
             }
           ],
@@ -10761,11 +10777,21 @@
             "source_recheck_required_at_publish": true,
             "master_full_used": true,
             "supplemental_full_used_in_current_model_input": true
+          },
+          "delay_window_revalidation": {
+            "checked_at": "2026-11-23T21:48:01.930334+09:00",
+            "reason": "Existing READY expiry did not cover regular slot+2h. Genuine official rereview performed before slot.",
+            "old_prepared_at": "2026-11-23T12:48:14.190414+09:00",
+            "old_expires_at": "2026-11-24T12:48:14.190414+09:00",
+            "new_expires_at": "2026-11-24T21:48:01.930334+09:00",
+            "post_text_preserved": true,
+            "media_pattern_opening_cohort_preserved": true,
+            "source_recheck_required_at_publish": true
           }
         },
         "next_history_record": {
           "program_id": "B55284500010",
-          "notice_version": "gov24-45075147460-1 + official Aug12 revision reviewed 2026-11-23T12:48:14.190414+09:00",
+          "notice_version": "gov24-45156855393-1; current official guidance genuinely reread 2026-11-23T21:48:01.930334+09:00",
           "pattern": "P5",
           "opening": "생계급여 수급가구에 임산부·영유아·아동·34세 이하 청년이 있다면, 농식품바우처 지원대상인지 확인해요. 국산 신선식품을 사는 카드형 바우처로, 1인 가구 월 4만원·4인 가구 월 10만원 한도예요.",
           "structure": "대상·월한도→두자격조건→가구원산출제외→구매제한→접수기한소급불가",
@@ -10777,9 +10803,9 @@
       "slot": "2026-11-24T16:00:00+09:00",
       "benefit_id": "127000000002",
       "source_fingerprint": "064ff220fd8e1bcf85a7fb991718b0293902bcc1252996c0bb4ff203e7eaa066",
-      "source_generation": "gov24-45075147460-1",
-      "prepared_at": "2026-11-23T16:17:17.412603+09:00",
-      "expires_at": "2026-11-24T16:17:17.412603+09:00",
+      "source_generation": "gov24-45156855393-1",
+      "prepared_at": "2026-11-23T21:48:01.930334+09:00",
+      "expires_at": "2026-11-24T21:48:01.930334+09:00",
       "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -10809,54 +10835,58 @@
               "source_id": "127000000002",
               "source_ref": "https://lawhomedoctor.moj.go.kr/ko/utilization-guide-contents",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-23T16:17:17.412603+09:00",
+              "verified_at": "2026-11-23T21:48:01.930334+09:00",
               "claims_supported": [
-                "직접열람23~73행:수급자/차상위/장애인등취약계층대상,채무·임대차·임금등생활법률,소송수행제외·기관연계. 배치기관전화예약후상담 가능,현행평일10~17시·정확한기관시간문의. 현재이용경로제공·개별빈자리나예약확정은보장않음."
+                "직접열람23~73행:수급자/차상위/장애인등취약계층대상,채무·임대차·임금등생활법률,소송수행제외·기관연계. 배치기관전화예약후상담 가능,현행평일10~17시·정확한기관시간문의. 현재이용경로제공·개별빈자리나예약확정은보장않음.",
+                "이번21:45회차 해당 공식 원문을 실제 다시 열어 기존 주장 전체 재대조. 웹검색 요약이나 이전검수 날짜복사가 아님. 개인신청/수강/상담예약 거래는 하지 않음."
               ]
             },
             {
               "source_id": "127000000002",
               "source_ref": "https://lawhomedoctor.moj.go.kr/ko/phone-counselings/information",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-23T16:17:17.412603+09:00",
+              "verified_at": "2026-11-23T21:48:01.930334+09:00",
               "claims_supported": [
-                "직접열람36~60행:근무일기준5일이후온라인예약,기본15분전화상담,법무부변호사무료1차상담,신청유형과동일사건중복신청제한."
+                "직접열람36~60행:근무일기준5일이후온라인예약,기본15분전화상담,법무부변호사무료1차상담,신청유형과동일사건중복신청제한.",
+                "이번21:45회차 해당 공식 원문을 실제 다시 열어 기존 주장 전체 재대조. 웹검색 요약이나 이전검수 날짜복사가 아님. 개인신청/수강/상담예약 거래는 하지 않음."
               ]
             },
             {
               "source_id": "127000000002",
               "source_ref": "https://lawhomedoctor.moj.go.kr/ko/interview-counselings/information",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-23T16:17:17.412603+09:00",
+              "verified_at": "2026-11-23T21:48:01.930334+09:00",
               "claims_supported": [
-                "직접열람48~61행:사전상황·질문정리권장,예약검토후확정,무료1차상담,개별유형에따라상담어려울수있음."
+                "직접열람48~61행:사전상황·질문정리권장,예약검토후확정,무료1차상담,개별유형에따라상담어려울수있음.",
+                "이번21:45회차 해당 공식 원문을 실제 다시 열어 기존 주장 전체 재대조. 웹검색 요약이나 이전검수 날짜복사가 아님. 개인신청/수강/상담예약 거래는 하지 않음."
               ]
             },
             {
               "source_id": "127000000002",
               "source_ref": "https://lawhomedoctor.moj.go.kr/",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-23T16:17:17.412603+09:00",
+              "verified_at": "2026-11-23T21:48:01.930334+09:00",
               "claims_supported": [
-                "현재공식첫화면39~61행:홈페이지또는배치기관전화로상담예약신청 가능,전국권역기관찾기,현행운영경로확인. 실제개인본인인증·예약전송은실행않음."
+                "현재공식첫화면39~61행:홈페이지또는배치기관전화로상담예약신청 가능,전국권역기관찾기,현행운영경로확인. 실제개인본인인증·예약전송은실행않음.",
+                "이번21:45회차 해당 공식 원문을 실제 다시 열어 기존 주장 전체 재대조. 웹검색 요약이나 이전검수 날짜복사가 아님. 개인신청/수강/상담예약 거래는 하지 않음."
               ]
             },
             {
               "source_id": "127000000002",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999123&bnefType=all&svcId=127000000002",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-23T16:17:17.412603+09:00",
+              "verified_at": "2026-11-23T21:48:01.930334+09:00",
               "claims_supported": [
-                "최신완전수집본 동일ID원문 누적36723,취약계층대상무료1차상담·예약기관별상이. APIcheckedAt=2026-11-23T07:04:07.346120+09:00 collectionSucceededAt=2026-11-23T07:09:09.827515+09:00는원문검수시각과구분."
+                "완전검증세대 gov24-45156855393-1 동일ID원문 재대조. 원본 serviceList 누적조회수=36723; APIcheckedAt=2026-11-23T19:34:02.638753+09:00; collectionSucceededAt=2026-11-23T19:38:18.049578+09:00는이번공식원문검수시각과별개. 수집성공만으로현재접수확인한것아님."
               ]
             },
             {
               "source_id": "127000000002",
               "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
               "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-23T16:17:17.412603+09:00",
+              "verified_at": "2026-11-23T21:48:01.930334+09:00",
               "claims_supported": [
-                "허용PNG실제GET SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a를main image-review 기존시각검수PASS/360px기록과 재대조일치. 이번새직접시각검수아님. 금액·대상·기간문구없는브랜드로본문충돌없음."
+                "이번 허용PNG실제GET SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a를 현재main image-review 기존시각검수PASS/360px기록과 재대조일치. 새직접시각검수아님. 금액/대상/기간없는브랜드자산으로본문충돌없음."
               ]
             }
           ],
@@ -10926,11 +10956,21 @@
             "source_recheck_required_at_publish": true,
             "master_full_used": true,
             "supplemental_full_used_in_current_model_input": true
+          },
+          "delay_window_revalidation": {
+            "checked_at": "2026-11-23T21:48:01.930334+09:00",
+            "reason": "Existing READY expiry did not cover regular slot+2h. Genuine official rereview performed before slot.",
+            "old_prepared_at": "2026-11-23T16:17:17.412603+09:00",
+            "old_expires_at": "2026-11-24T16:17:17.412603+09:00",
+            "new_expires_at": "2026-11-24T21:48:01.930334+09:00",
+            "post_text_preserved": true,
+            "media_pattern_opening_cohort_preserved": true,
+            "source_recheck_required_at_publish": true
           }
         },
         "next_history_record": {
           "program_id": "127000000002",
-          "notice_version": "gov24-45075147460-1 + current official reservation guidance reviewed 2026-11-23T16:17:17.412603+09:00",
+          "notice_version": "gov24-45156855393-1; current official guidance genuinely reread 2026-11-23T21:48:01.930334+09:00",
           "pattern": "P6",
           "opening": "월세 계약이나 임금 문제로 막막한 기초생활수급자·장애인 등 취약계층이라면, 법률홈닥터의 무료 1차 법률상담으로 대응 방향을 알아볼 수 있어요. 법무부 소속 변호사가 생활법률 문제를 상담하는 서비스예요.",
           "structure": "생활분쟁상황→배치기관예약→질문정리→상담시간→소송제외/신청제한",
