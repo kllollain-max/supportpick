@@ -10607,6 +10607,153 @@
           "media_turn": "IMAGE"
         }
       }
+    },
+    {
+      "slot": "2026-11-24T12:00:00+09:00",
+      "benefit_id": "B55284500010",
+      "source_fingerprint": "038fd66ce1d8b9eac3a540e8f654d59784116155aa10885493121848df249abb",
+      "source_generation": "gov24-45075147460-1",
+      "prepared_at": "2026-11-23T12:48:14.190414+09:00",
+      "expires_at": "2026-11-24T12:48:14.190414+09:00",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "B55284500010",
+        "post_text": "생계급여 수급가구에 임산부·영유아·아동·34세 이하 청년이 있다면, 농식품바우처 지원대상인지 확인해요. 국산 신선식품을 사는 카드형 바우처로, 1인 가구 월 4만원·4인 가구 월 10만원 한도예요.\n\n자격을 볼 때는 두 가지를 함께 확인해요. 생계급여 수급가구인지, 해당 특성을 가진 수급 가구원이 있는지예요. 보장시설 수급자와 영양플러스·임산부 친환경농산물 지원사업 이용자는 가구원 수 산정에서 제외돼요.\n\n현금으로 받는 돈이 아니에요. 지정 사용처에서 국산 과일·채소·흰우유·신선알류·육류·잡곡·두부·임산물을 살 수 있고, 백미·수산물·외국산 식품은 제외돼요.\n\n2026년 신청은 12월 11일까지이며 예산 범위 안에서 지원해요. 신청 전 달은 소급 지원하지 않아요. 주소지 행정복지센터나 농식품바우처 고객센터에서 신청 조건을 확인해요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-24T12:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "임산부·영유아·아동·34세이하청년이있는 생계급여수급가구",
+          "central_message": "우리 가구가 식품구매 바우처의 대상이고 금액 산정에 누구를 포함하나요?",
+          "pattern": "P5",
+          "selection_reason": "동일 서비스ID 원본 serviceList 누적조회수37080. 기존상위74HOLD/SKIP과 기작성/게시 사업을 제외한 검증가능 최상위. Nov24 12 B/P5 TEXT; Nov24 08 A/P1과 도입·독자·전개 구분. 최근20게시 본문과 도입/절차/목록 비교, 이번에는 자격두조건→가구원산정제외→구매제한→기한·신청경로. 성과효과 추정없음.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "B55284500010",
+              "source_ref": "https://www.sb.go.kr/bogunso/contents.do?key=7845",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-23T12:48:14.190414+09:00",
+              "claims_supported": [
+                "직접열람451~508행:2026년12월11일까지 수시신청 가능(명시된기간내이며이번열람시각기준),생계급여수급가구와 임산부/영유아/아동/청년조건,1인가구월4만원/4인가구월10만원,카드바우처,품목·제외품목,신청월부터지원,행정복지센터/고객센터경로。지역오프라인사용처범위는본문에서전국보장않음."
+              ]
+            },
+            {
+              "source_id": "B55284500010",
+              "source_ref": "https://www.uiwang.go.kr/UWKORINFO0101/7004271",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-23T12:48:14.190414+09:00",
+              "claims_supported": [
+                "2026-08-12 지침개정 안내 실제 urllib GET HTML본문 재열람:12월11일신청기한,34세이하청년 포함가구,영양플러스 또는 임산부친환경농산물지원사업이용자 가구원수산출제외. 날짜판별되는개정근거로기존API누락을보완. 웹검색find는timeout이었으므로실제HTML응답으로확인."
+              ]
+            },
+            {
+              "source_id": "B55284500010",
+              "source_ref": "https://agri.paju.go.kr/user/board/BD_board.view.do?bbsCd=2001&q_ctgCd=1018&seq=20260408155059774",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-23T12:48:14.190414+09:00",
+              "claims_supported": [
+                "파주농업기술센터 먹거리전략팀 공식2026-04-08 새소식 실제171~185행:신청기한·1인/4인 월한도,예산범위내지원,신청전월소급불가,지정사용처. 구형중복지원전면금지표현은8월개정 가구원산출제외로구체화."
+              ]
+            },
+            {
+              "source_id": "B55284500010",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2002090&bnefType=all&svcId=B55284500010",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-23T12:48:14.190414+09:00",
+              "claims_supported": [
+                "최신완전수집본 동일ID 37080 누적조회수,서비스원문 생계급여·특성요건과보장시설수급자가구원산정제외. APIcheckedAt=2026-11-23T07:06:22.118515+09:00 / collectionSucceededAt=2026-11-23T07:09:09.827515+09:00는원문검수현재시각과구분."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 432,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "공식신청플랫폼루트 웹열람400,복지로본문0행으로거래검증불가. 실제개인신청·지원금픽프로필/사업상세경로는확인하지않았으며보장않음. 공식현행기관안내와날짜있는개정문으로제도범위를검수.",
+            "실제발송까지현재수집세대24시간신선도보장않음. 최신완전세대·공식접수/예산·근거유효기간재확인필수. 예산확정지급보장없음."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "우리 가구가 식품구매 바우처의 대상이고 금액 산정에 누구를 포함하나요?",
+            "reader_scope": "임산부·영유아·아동·34세이하청년이있는 생계급여수급가구",
+            "angles": [
+              "생활비중 식재료지출",
+              "가구자격과산정제외확인",
+              "지정품목과신청시기"
+            ],
+            "chosen_angle": "가구자격과산정제외확인",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "식재료 살 비용이 부담되는 생계급여 수급가구라면, 임산부·아동·청년 등 가구원 조건에 맞는 농식품바우처를 확인할 수 있어요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "생계급여 수급가구에 임산부·영유아·아동·34세 이하 청년이 있다면, 농식품바우처 지원대상인지 확인해요. 국산 신선식품을 사는 카드형 바우처로, 1인 가구 월 4만원·4인 가구 월 10만원 한도예요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "농식품바우처는 생계급여 수급 여부와 가구원 특성을 함께 보고 식품구매 한도를 지원해요."
+              }
+            ],
+            "chosen_opening": "생계급여 수급가구에 임산부·영유아·아동·34세 이하 청년이 있다면, 농식품바우처 지원대상인지 확인해요. 국산 신선식품을 사는 카드형 바우처로, 1인 가구 월 4만원·4인 가구 월 10만원 한도예요.",
+            "opening_type": "대상·혜택형",
+            "cohort": "B",
+            "selection_reason": "동일 서비스ID 원본 serviceList 누적조회수37080. 기존상위74HOLD/SKIP과 기작성/게시 사업을 제외한 검증가능 최상위. Nov24 12 B/P5 TEXT; Nov24 08 A/P1과 도입·독자·전개 구분. 최근20게시 본문과 도입/절차/목록 비교, 이번에는 자격두조건→가구원산정제외→구매제한→기한·신청경로. 성과효과 추정없음.",
+            "history_posts_checked": 20,
+            "comparison_eligible": true,
+            "comparison_strata": {
+              "geo": "전국",
+              "audience": "특성가구원포함생계급여가구",
+              "benefit": "식품구매바우처",
+              "application": "12월11일마감",
+              "media": "TEXT"
+            },
+            "comparison_group": "14일비교유지; 기존35표본24h A18/B17·매칭쌍0. 사업대상·시간/미디어교란,효과미입증,비중불변.",
+            "applied_elements": [
+              "첫문단대상·실익과가구월단위",
+              "가구산정제외조건",
+              "구매범위",
+              "소급불가·기한"
+            ],
+            "profile_route": "실제프로필/사이트검색상세 미확인. 플랫폼직접접속400,개인접수미실행.",
+            "source_recheck_required_at_publish": true,
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "B55284500010",
+          "notice_version": "gov24-45075147460-1 + official Aug12 revision reviewed 2026-11-23T12:48:14.190414+09:00",
+          "pattern": "P5",
+          "opening": "생계급여 수급가구에 임산부·영유아·아동·34세 이하 청년이 있다면, 농식품바우처 지원대상인지 확인해요. 국산 신선식품을 사는 카드형 바우처로, 1인 가구 월 4만원·4인 가구 월 10만원 한도예요.",
+          "structure": "대상·월한도→두자격조건→가구원산출제외→구매제한→접수기한소급불가",
+          "media_turn": "TEXT"
+        }
+      }
     }
   ]
 }
