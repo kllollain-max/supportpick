@@ -10321,7 +10321,7 @@
       }
     },
     {
-      "slot": "2026-11-23T20:00:00+09:00",
+      "slot": "2026-11-24T08:00:00+09:00",
       "benefit_id": "WII000000500",
       "source_fingerprint": "d8225c67c0166af2fb4d40e7f940f35a252d041c1508c126e051c7e1af8dca7d",
       "source_generation": "gov24-45156855393-1",
@@ -10343,7 +10343,7 @@
           "alt_text": null
         },
         "review": {
-          "planned_at": "2026-11-23T20:00:00+09:00",
+          "planned_at": "2026-11-24T08:00:00+09:00",
           "application_status": "OPEN",
           "reader": "만2세미만 영아를 양육하며 기저귀 구매 부담을 줄이려는 수급·차상위·법정한부모 또는 소득기준 충족 장애인·다자녀가구",
           "central_message": "기저귀 구매비는 어떤 가구가 얼마를 언제까지 지원받나요?",
@@ -10397,7 +10397,8 @@
           "warnings": [
             "동일ID API와보건복지부일반정책페이지80%잔존. 실제2026-06-29파주7/1시행정정·2026-08-11강남각주로100%현행확인. 예산안만보고시행확정하지않음. 전국사업내용안내이며실제개인접수·자격확정거래아님.",
             "복지로상세직접열람본문0행이라검색요약을직접열람근거로쓰지않음.진천페이지본문추출timeout은미사용. 프로필링크/지원금픽사이트내상세기능실제접속미확인·보장없음.",
-            "현재 원문 실제 재검수와 최신완전세대 대조. 발송 시 원문 상태·수집 신선도·원장 재확인 필수. 기존 24시간 검수 한도·2시간 슬롯 허용창 유지."
+            "현재 원문 실제 재검수와 최신완전세대 대조. 발송 시 원문 상태·수집 신선도·원장 재확인 필수. 기존 24시간 검수 한도·2시간 슬롯 허용창 유지.",
+            "Nov23 20미게시로미예약정규슬롯재배치. 발송시원장/공식상태/신선도/이미지SHA 재검증. 새슬롯본문·형식·미디어·작성된도입군은변경않음."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -10465,6 +10466,16 @@
             "post_or_container_id": null,
             "maximum_evidence_hours": 24,
             "current_original_serviceList_views": 38280
+          },
+          "reslot_after_missed_unreserved": {
+            "checked_at": "2026-11-23T23:06:37.757855+09:00",
+            "old_slot": "2026-11-23T20:00:00+09:00",
+            "new_slot": "2026-11-24T08:00:00+09:00",
+            "failed_run_id": "45167269442",
+            "reason": "OriginalNov23 20h window ended without reservation/POST. Preserve final text/media/pattern; keep sameID cumulative-view priority and success-ledger alternation.",
+            "body_sha256": "f45b53fbd6a66f10eff6d03386e1c81467a03d7187404128ca120aed9cbb0f56",
+            "no_backfill": true,
+            "official_review_not_retimed_by_reslot": true
           }
         },
         "next_history_record": {
@@ -10478,7 +10489,7 @@
       }
     },
     {
-      "slot": "2026-11-24T08:00:00+09:00",
+      "slot": "2026-11-24T12:00:00+09:00",
       "benefit_id": "B55190400005",
       "source_fingerprint": "c04ab58d733d374cdf0b2cd1e3e3d2910e889b88ea30a00bb14dcaba54a3ec0f",
       "source_generation": "gov24-45156855393-1",
@@ -10500,7 +10511,7 @@
           "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게라는 문구 아래 체크리스트가 든 봉투, 동전, 새싹을 배치한 크림색 정사각형 브랜드 이미지. 하단에는 자세한 사항은 프로필링크 확인 문구가 있다."
         },
         "review": {
-          "planned_at": "2026-11-24T08:00:00+09:00",
+          "planned_at": "2026-11-24T12:00:00+09:00",
           "application_status": "ALWAYS",
           "reader": "퇴사 후 구직급여 첫 신청을 준비하는 고용보험 가입 상용근로자",
           "central_message": "수급자격 신청 전에 어디서 어떤 교육을 듣고 무엇을 준비하나요?",
@@ -10563,7 +10574,8 @@
           "warnings": [
             "본원고는교육서비스안내이며급여금액/개인수급확정없음. 현재공식안내의상용직범위로독자한정.",
             "고용센터포털2건 timeout:검색요약14일기한은본문근거로미사용. 파주시민게시판은기관사업공식확인근거로미사용.",
-            "개인로그인수강/지원금픽사이트내경로미확인. 실제발송까지현재수집본24h유효가정않음; 최신완전세대·공식상태·이미지·근거기한재확인필수."
+            "개인로그인수강/지원금픽사이트내경로미확인. 실제발송까지현재수집본24h유효가정않음; 최신완전세대·공식상태·이미지·근거기한재확인필수.",
+            "Nov23 20미게시로미예약정규슬롯재배치. 발송시원장/공식상태/신선도/이미지SHA 재검증. 새슬롯본문·형식·미디어·작성된도입군은변경않음."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -10597,7 +10609,7 @@
             "cohort": "A",
             "selection_reason": "동일ID 누적37256, 기존상위74HOLD/SKIP과 이미작성한4사업 제외 후 검증가능최상위. Nov24 08 A/P1. 최근20도입·Nov23교육P6절차목록과 비교하여 퇴사상황→교육효용→서류·구직등록→교육과급여인정구분으로 전개. 성과개선 추정 없음.",
             "history_posts_checked": 20,
-            "comparison_eligible": true,
+            "comparison_eligible": false,
             "comparison_strata": {
               "geo": "전국",
               "audience": "퇴사상용근로자",
@@ -10615,7 +10627,8 @@
             "profile_route": "실제지원금픽검색상세경로이번미확인·기능보장없음",
             "source_recheck_required_at_publish": true,
             "master_full_used": true,
-            "supplemental_full_used_in_current_model_input": true
+            "supplemental_full_used_in_current_model_input": true,
+            "comparison_exclusion": "Preserved already-written opening after required unreserved-slot move; cohort differs from original Nov24 slot A/B assignment. Exclude from initial A/B comparison; do not retroactively relabel."
           },
           "delay_window_revalidation": {
             "checked_at": "2026-11-23T21:48:01.930334+09:00",
@@ -10626,6 +10639,16 @@
             "post_text_preserved": true,
             "media_pattern_opening_cohort_preserved": true,
             "source_recheck_required_at_publish": true
+          },
+          "reslot_after_missed_unreserved": {
+            "checked_at": "2026-11-23T23:06:37.757855+09:00",
+            "old_slot": "2026-11-24T08:00:00+09:00",
+            "new_slot": "2026-11-24T12:00:00+09:00",
+            "failed_run_id": "45167269442",
+            "reason": "OriginalNov23 20h window ended without reservation/POST. Preserve final text/media/pattern; keep sameID cumulative-view priority and success-ledger alternation.",
+            "body_sha256": "faa2b8b829ad1a18aa9d4c3b2603b7ce55be968e3934a302d8cafe1bf66e9ae4",
+            "no_backfill": true,
+            "official_review_not_retimed_by_reslot": true
           }
         },
         "next_history_record": {
@@ -10639,7 +10662,7 @@
       }
     },
     {
-      "slot": "2026-11-24T12:00:00+09:00",
+      "slot": "2026-11-24T16:00:00+09:00",
       "benefit_id": "B55284500010",
       "source_fingerprint": "038fd66ce1d8b9eac3a540e8f654d59784116155aa10885493121848df249abb",
       "source_generation": "gov24-45156855393-1",
@@ -10660,7 +10683,7 @@
           "alt_text": null
         },
         "review": {
-          "planned_at": "2026-11-24T12:00:00+09:00",
+          "planned_at": "2026-11-24T16:00:00+09:00",
           "application_status": "OPEN",
           "reader": "임산부·영유아·아동·34세이하청년이있는 생계급여수급가구",
           "central_message": "우리 가구가 식품구매 바우처의 대상이고 금액 산정에 누구를 포함하나요?",
@@ -10724,7 +10747,8 @@
           "hold_reasons": [],
           "warnings": [
             "공식신청플랫폼루트 웹열람400,복지로본문0행으로거래검증불가. 실제개인신청·지원금픽프로필/사업상세경로는확인하지않았으며보장않음. 공식현행기관안내와날짜있는개정문으로제도범위를검수.",
-            "실제발송까지현재수집세대24시간신선도보장않음. 최신완전세대·공식접수/예산·근거유효기간재확인필수. 예산확정지급보장없음."
+            "실제발송까지현재수집세대24시간신선도보장않음. 최신완전세대·공식접수/예산·근거유효기간재확인필수. 예산확정지급보장없음.",
+            "Nov23 20미게시로미예약정규슬롯재배치. 발송시원장/공식상태/신선도/이미지SHA 재검증. 새슬롯본문·형식·미디어·작성된도입군은변경않음."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -10758,7 +10782,7 @@
             "cohort": "B",
             "selection_reason": "동일 서비스ID 원본 serviceList 누적조회수37080. 기존상위74HOLD/SKIP과 기작성/게시 사업을 제외한 검증가능 최상위. Nov24 12 B/P5 TEXT; Nov24 08 A/P1과 도입·독자·전개 구분. 최근20게시 본문과 도입/절차/목록 비교, 이번에는 자격두조건→가구원산정제외→구매제한→기한·신청경로. 성과효과 추정없음.",
             "history_posts_checked": 20,
-            "comparison_eligible": true,
+            "comparison_eligible": false,
             "comparison_strata": {
               "geo": "전국",
               "audience": "특성가구원포함생계급여가구",
@@ -10776,7 +10800,8 @@
             "profile_route": "실제프로필/사이트검색상세 미확인. 플랫폼직접접속400,개인접수미실행.",
             "source_recheck_required_at_publish": true,
             "master_full_used": true,
-            "supplemental_full_used_in_current_model_input": true
+            "supplemental_full_used_in_current_model_input": true,
+            "comparison_exclusion": "Preserved already-written opening after required unreserved-slot move; cohort differs from original Nov24 slot A/B assignment. Exclude from initial A/B comparison; do not retroactively relabel."
           },
           "delay_window_revalidation": {
             "checked_at": "2026-11-23T21:48:01.930334+09:00",
@@ -10787,6 +10812,16 @@
             "post_text_preserved": true,
             "media_pattern_opening_cohort_preserved": true,
             "source_recheck_required_at_publish": true
+          },
+          "reslot_after_missed_unreserved": {
+            "checked_at": "2026-11-23T23:06:37.757855+09:00",
+            "old_slot": "2026-11-24T12:00:00+09:00",
+            "new_slot": "2026-11-24T16:00:00+09:00",
+            "failed_run_id": "45167269442",
+            "reason": "OriginalNov23 20h window ended without reservation/POST. Preserve final text/media/pattern; keep sameID cumulative-view priority and success-ledger alternation.",
+            "body_sha256": "9111264428231997475e951d2cbf9506971172eb1b0f071fdc0125412dc709dc",
+            "no_backfill": true,
+            "official_review_not_retimed_by_reslot": true
           }
         },
         "next_history_record": {
@@ -10800,12 +10835,12 @@
       }
     },
     {
-      "slot": "2026-11-24T16:00:00+09:00",
+      "slot": "2026-11-24T20:00:00+09:00",
       "benefit_id": "127000000002",
       "source_fingerprint": "064ff220fd8e1bcf85a7fb991718b0293902bcc1252996c0bb4ff203e7eaa066",
       "source_generation": "gov24-45156855393-1",
-      "prepared_at": "2026-11-23T21:48:01.930334+09:00",
-      "expires_at": "2026-11-24T21:48:01.930334+09:00",
+      "prepared_at": "2026-11-23T23:06:37.757855+09:00",
+      "expires_at": "2026-11-24T23:06:37.757855+09:00",
       "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -10822,7 +10857,7 @@
           "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게라는 문구 아래 집, 체크 표시 방패, 체크리스트, 새싹을 배치한 크림색 정사각형 브랜드 이미지. 하단에는 자세한 사항은 프로필링크 확인 문구가 있다."
         },
         "review": {
-          "planned_at": "2026-11-24T16:00:00+09:00",
+          "planned_at": "2026-11-24T20:00:00+09:00",
           "application_status": "OPEN",
           "reader": "임대차·임금등생활법률문제가있는기초생활수급자·장애인등취약계층",
           "central_message": "무료1차법률상담을받으려면어디에예약하고무엇을준비하나요?",
@@ -10835,58 +10870,62 @@
               "source_id": "127000000002",
               "source_ref": "https://lawhomedoctor.moj.go.kr/ko/utilization-guide-contents",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-23T21:48:01.930334+09:00",
+              "verified_at": "2026-11-23T23:06:37.757855+09:00",
               "claims_supported": [
                 "직접열람23~73행:수급자/차상위/장애인등취약계층대상,채무·임대차·임금등생활법률,소송수행제외·기관연계. 배치기관전화예약후상담 가능,현행평일10~17시·정확한기관시간문의. 현재이용경로제공·개별빈자리나예약확정은보장않음.",
-                "이번21:45회차 해당 공식 원문을 실제 다시 열어 기존 주장 전체 재대조. 웹검색 요약이나 이전검수 날짜복사가 아님. 개인신청/수강/상담예약 거래는 하지 않음."
+                "이번21:45회차 해당 공식 원문을 실제 다시 열어 기존 주장 전체 재대조. 웹검색 요약이나 이전검수 날짜복사가 아님. 개인신청/수강/상담예약 거래는 하지 않음.",
+                "이번23:04회차 해당공식원문 실제 재열람:취약계층,무료1차상담·소송수행제외·기관예약·근무일5일이후·중복신청제한 및질문정리 대조. 개인예약/빈자리확인은실행않음."
               ]
             },
             {
               "source_id": "127000000002",
               "source_ref": "https://lawhomedoctor.moj.go.kr/ko/phone-counselings/information",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-23T21:48:01.930334+09:00",
+              "verified_at": "2026-11-23T23:06:37.757855+09:00",
               "claims_supported": [
                 "직접열람36~60행:근무일기준5일이후온라인예약,기본15분전화상담,법무부변호사무료1차상담,신청유형과동일사건중복신청제한.",
-                "이번21:45회차 해당 공식 원문을 실제 다시 열어 기존 주장 전체 재대조. 웹검색 요약이나 이전검수 날짜복사가 아님. 개인신청/수강/상담예약 거래는 하지 않음."
+                "이번21:45회차 해당 공식 원문을 실제 다시 열어 기존 주장 전체 재대조. 웹검색 요약이나 이전검수 날짜복사가 아님. 개인신청/수강/상담예약 거래는 하지 않음.",
+                "이번23:04회차 해당공식원문 실제 재열람:취약계층,무료1차상담·소송수행제외·기관예약·근무일5일이후·중복신청제한 및질문정리 대조. 개인예약/빈자리확인은실행않음."
               ]
             },
             {
               "source_id": "127000000002",
               "source_ref": "https://lawhomedoctor.moj.go.kr/ko/interview-counselings/information",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-23T21:48:01.930334+09:00",
+              "verified_at": "2026-11-23T23:06:37.757855+09:00",
               "claims_supported": [
                 "직접열람48~61행:사전상황·질문정리권장,예약검토후확정,무료1차상담,개별유형에따라상담어려울수있음.",
-                "이번21:45회차 해당 공식 원문을 실제 다시 열어 기존 주장 전체 재대조. 웹검색 요약이나 이전검수 날짜복사가 아님. 개인신청/수강/상담예약 거래는 하지 않음."
+                "이번21:45회차 해당 공식 원문을 실제 다시 열어 기존 주장 전체 재대조. 웹검색 요약이나 이전검수 날짜복사가 아님. 개인신청/수강/상담예약 거래는 하지 않음.",
+                "이번23:04회차 해당공식원문 실제 재열람:취약계층,무료1차상담·소송수행제외·기관예약·근무일5일이후·중복신청제한 및질문정리 대조. 개인예약/빈자리확인은실행않음."
               ]
             },
             {
               "source_id": "127000000002",
               "source_ref": "https://lawhomedoctor.moj.go.kr/",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-23T21:48:01.930334+09:00",
+              "verified_at": "2026-11-23T23:06:37.757855+09:00",
               "claims_supported": [
                 "현재공식첫화면39~61행:홈페이지또는배치기관전화로상담예약신청 가능,전국권역기관찾기,현행운영경로확인. 실제개인본인인증·예약전송은실행않음.",
-                "이번21:45회차 해당 공식 원문을 실제 다시 열어 기존 주장 전체 재대조. 웹검색 요약이나 이전검수 날짜복사가 아님. 개인신청/수강/상담예약 거래는 하지 않음."
+                "이번21:45회차 해당 공식 원문을 실제 다시 열어 기존 주장 전체 재대조. 웹검색 요약이나 이전검수 날짜복사가 아님. 개인신청/수강/상담예약 거래는 하지 않음.",
+                "이번23:04회차 해당공식원문 실제 재열람:취약계층,무료1차상담·소송수행제외·기관예약·근무일5일이후·중복신청제한 및질문정리 대조. 개인예약/빈자리확인은실행않음."
               ]
             },
             {
               "source_id": "127000000002",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999123&bnefType=all&svcId=127000000002",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-23T21:48:01.930334+09:00",
+              "verified_at": "2026-11-23T23:06:37.757855+09:00",
               "claims_supported": [
-                "완전검증세대 gov24-45156855393-1 동일ID원문 재대조. 원본 serviceList 누적조회수=36723; APIcheckedAt=2026-11-23T19:34:02.638753+09:00; collectionSucceededAt=2026-11-23T19:38:18.049578+09:00는이번공식원문검수시각과별개. 수집성공만으로현재접수확인한것아님."
+                "검증완전세대 gov24-45156855393-1 동일ID 서비스원문 대조. APIcheckedAt=2026-11-23T19:34:02.638753+09:00 수집성공=2026-11-23T19:38:18.049578+09:00와 실제원문검수시각구분."
               ]
             },
             {
               "source_id": "127000000002",
               "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
               "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-23T21:48:01.930334+09:00",
+              "verified_at": "2026-11-23T23:06:37.757855+09:00",
               "claims_supported": [
-                "이번 허용PNG실제GET SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a를 현재main image-review 기존시각검수PASS/360px기록과 재대조일치. 새직접시각검수아님. 금액/대상/기간없는브랜드자산으로본문충돌없음."
+                "이번허용PNG실제GET SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a와현재main 기존시각검수PASS/360px 일치. 새직접시각검수아님. 금액·대상·기간없는브랜드이미지."
               ]
             }
           ],
@@ -10904,7 +10943,8 @@
           "hold_reasons": [],
           "warnings": [
             "현행공식예약안내와기관별상담경로를열람했으며개인인증/예약거래/빈자리/즉시상담은확인·보장않음. 지원금픽프로필/실제사이트검색상세이번미확인.",
-            "현재source가내일16시까지신선하다고가정않음. 실제발송시최신완전세대·공식상태·이미지SHA·근거기한재검증필수."
+            "현재source가내일16시까지신선하다고가정않음. 실제발송시최신완전세대·공식상태·이미지SHA·근거기한재검증필수.",
+            "Nov23 20미게시로미예약정규슬롯재배치. 발송시원장/공식상태/신선도/이미지SHA 재검증. 새슬롯본문·형식·미디어·작성된도입군은변경않음."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -10938,7 +10978,7 @@
             "cohort": "A",
             "selection_reason": "동일ID serviceList 누적조회수36723, 상위74HOLD/SKIP과 게시/기작성사업 제외 후 검증가능최상위. Nov24 16 A/P6 IMAGE. Nov19공단무료상담P4와 운영기관·취약계층범위·예약준비 전개가다름. 최근20본문·도입비교후 상황→배치기관확인→상담준비→시간/소송제외로구성,같은날P1/P5와구분. 성과개선추정없음.",
             "history_posts_checked": 20,
-            "comparison_eligible": true,
+            "comparison_eligible": false,
             "comparison_strata": {
               "geo": "전국배치기관",
               "audience": "법률도움필요취약계층",
@@ -10955,7 +10995,8 @@
             "profile_route": "공식예약안내열람,개인본인인증·예약전송/지원금픽프로필·사이트내경로미확인",
             "source_recheck_required_at_publish": true,
             "master_full_used": true,
-            "supplemental_full_used_in_current_model_input": true
+            "supplemental_full_used_in_current_model_input": true,
+            "comparison_exclusion": "Preserved already-written opening after required unreserved-slot move; cohort differs from original Nov24 slot A/B assignment. Exclude from initial A/B comparison; do not retroactively relabel."
           },
           "delay_window_revalidation": {
             "checked_at": "2026-11-23T21:48:01.930334+09:00",
@@ -10966,172 +11007,25 @@
             "post_text_preserved": true,
             "media_pattern_opening_cohort_preserved": true,
             "source_recheck_required_at_publish": true
+          },
+          "reslot_after_missed_unreserved": {
+            "checked_at": "2026-11-23T23:06:37.757855+09:00",
+            "old_slot": "2026-11-24T16:00:00+09:00",
+            "new_slot": "2026-11-24T20:00:00+09:00",
+            "failed_run_id": "45167269442",
+            "reason": "OriginalNov23 20h window ended without reservation/POST. Preserve final text/media/pattern; keep sameID cumulative-view priority and success-ledger alternation.",
+            "body_sha256": "a974ae6f2830c6141959fc6fbd58237cdbaed865415743966ac4496a447f5f3c",
+            "no_backfill": true,
+            "official_review_not_retimed_by_reslot": true
           }
         },
         "next_history_record": {
           "program_id": "127000000002",
-          "notice_version": "gov24-45156855393-1; current official guidance genuinely reread 2026-11-23T21:48:01.930334+09:00",
+          "notice_version": "gov24-45156855393-1; official pages genuinely reread 2026-11-23T23:06:37.757855+09:00",
           "pattern": "P6",
           "opening": "월세 계약이나 임금 문제로 막막한 기초생활수급자·장애인 등 취약계층이라면, 법률홈닥터의 무료 1차 법률상담으로 대응 방향을 알아볼 수 있어요. 법무부 소속 변호사가 생활법률 문제를 상담하는 서비스예요.",
           "structure": "생활분쟁상황→배치기관예약→질문정리→상담시간→소송제외/신청제한",
           "media_turn": "IMAGE"
-        }
-      }
-    },
-    {
-      "slot": "2026-11-24T20:00:00+09:00",
-      "benefit_id": "419000000129",
-      "source_fingerprint": "8c82d1cf584e75a48b468bfaf7c0ae5cc057c0583f25177de1ecdb8f7d21d203",
-      "source_generation": "gov24-45156855393-1",
-      "prepared_at": "2026-11-23T21:27:52.881156+09:00",
-      "expires_at": "2026-11-24T21:27:52.881156+09:00",
-      "asset_sha256": null,
-      "writer": {
-        "schema_version": "supportpick.writer.v1",
-        "status": "READY",
-        "selected_program_id": "419000000129",
-        "post_text": "원주사랑상품권 이용자는 원주의 대상 착한가격업소에서 결제하면 사용액의 5%를 캐시백으로 받을 수 있어요. 1인당 월 결제액 60만원까지, 환급액은 월 최대 3만원이에요.\n\n이용 전에 볼 핵심은 세 가지예요.\n• 가게: 원주시 착한가격업소이면서 원주사랑상품권 가맹점이어야 해요. 모든 가맹점에 적용되는 혜택은 아니에요.\n• 결제: 원주사랑상품권 QR이나 카드로 결제해요. 대상 업소에서 3만원을 쓰면 5%인 1,500원이 캐시백되는 방식이에요.\n• 기간: 2026년 9월 28일부터 12월 31일까지이며 자금이 먼저 소진되면 끝나요.\n\n원주시의 추가 할인 대상 업소 목록과 결제 시 적용 여부를 먼저 확인해요. 상품권을 새로 사는 비용은 본인이 부담하며, 충전 가능 물량과 할인 조건도 따로 확인해야 해요.\n\n자세한 사항은 프로필링크 확인",
-        "draft_text": null,
-        "reply_texts": [],
-        "media": {
-          "turn": "TEXT",
-          "asset_id": null,
-          "check": "NOT_REQUIRED",
-          "image_copy": null,
-          "alt_text": null
-        },
-        "review": {
-          "planned_at": "2026-11-24T20:00:00+09:00",
-          "application_status": "OPEN",
-          "reader": "원주에서원주사랑상품권으로생활소비하는이용자",
-          "central_message": "원주사랑상품권을어디서얼마까지쓰면추가캐시백을받을수있나요?",
-          "pattern": "P8",
-          "selection_reason": "동일ID 원본serviceList 누적조회수35690. 앞서 예약/기작성 사업과 기존74개 상위HOLD/SKIP을 제외한 검증가능 최상위. 최신공식2026-2655 공고 현행9/28~12/31 캐시백을 설명하며11/15 종료한축제추가5%와구분. Nov24 P1/P5/P6와달리 대상혜택→가게/결제/기간목록→적용확인 P8, B 대상·혜택형.",
-          "interest_basis": "OBSERVED_METRICS",
-          "duplicate_check": "CHECKED",
-          "evidence": [
-            {
-              "source_id": "419000000129",
-              "source_ref": "https://www.wonju.go.kr/www/selectBbsNttView.do?bbsNo=140&key=216&nttNo=492622",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-23T21:27:52.881156+09:00",
-              "claims_supported": [
-                "실제1649~1661행:2026-2655공고,9/28~12/31자금소진까지,원주시착한가격업소중상품권가맹점,QR/카드5%캐시백·1인월사용60만원월최대3만원·3만원1500원예시."
-              ]
-            },
-            {
-              "source_id": "419000000129",
-              "source_ref": "https://www.wonju.go.kr/wonjusarang/user_sub.php?gid=www&mu_idx=7",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-23T21:27:52.881156+09:00",
-              "claims_supported": [
-                "실제79~104행:충전방식·본인계좌등록·가맹점사용·현재구매지원/한도변경가능. 새구매비용은개인부담;충전잔여물량/개별적용거래는미확인·보장않음."
-              ]
-            },
-            {
-              "source_id": "419000000129",
-              "source_ref": "https://www.wonju.go.kr/www/selectBbsNttView.do?bbsNo=145&integrDeptCode=&key=222&nttNo=494700&pageIndex=9&searchCnd=al&searchCtgry=&searchKrwd=",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-23T21:27:52.881156+09:00",
-              "claims_supported": [
-                "실제1654~1656행:10/29~11/15페스티벌한시추가5%종료. 현재공고의착한가격업소5%에과거행사5%를더해10%라고쓰지않음."
-              ]
-            },
-            {
-              "source_id": "419000000129",
-              "source_ref": "https://www.wonju.go.kr/media/selectBbsNttList.do?bbsNo=145&integrDeptCode=&key=3450&pageUnit=10&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-23T21:27:52.881156+09:00",
-              "claims_supported": [
-                "실제최신공식검색목록198~218행:10/29행사와9/29착한가격업소안내대조. 열람범위내별도종료정정없음;자금잔액실시간확정아님."
-              ]
-            },
-            {
-              "source_id": "419000000129",
-              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006198&bnefType=all&svcId=419000000129",
-              "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-23T21:27:52.881156+09:00",
-              "claims_supported": [
-                "검증완전세대gov24-45156855393-1 동일ID누적35690. APIcheckedAt=2026-11-23T19:34:38.199622+09:00 collectionSucceededAt=2026-11-23T19:38:18.049578+09:00는원문검수와구분. 기본구매지원설명과착한가격업소별도캐시백구분."
-              ]
-            }
-          ],
-          "checks": {
-            "facts": "PASS",
-            "current_status": "PASS",
-            "eligibility_and_units": "PASS",
-            "cta_and_no_links": "PASS",
-            "length": "PASS",
-            "media": "NOT_REQUIRED"
-          },
-          "char_count": 412,
-          "count_method": "python_len_including_spaces_and_newlines",
-          "missing_info": [],
-          "hold_reasons": [],
-          "warnings": [
-            "자금소진시종료를본문에명시. 잔여예산·개별가게캐시백적용·충전물량·거래성공은미확인으로보장않음.",
-            "지원금픽프로필의링크목표는공식계정진단에서확인했으나실제사이트검색/상세이동·접수기능이번미검증.",
-            "현재20시복구미완료. 원장성공/예약기준미디어재계산필수;현재20미게시시미예약미래슬롯순서를재산정. 현재수집본이내일20시까지신선하다고가정않음. 실제발송시새세대와공식원문필수재검증."
-          ],
-          "reach_editorial": {
-            "policy_id": "supportpick-threads-reach-v1-20261109",
-            "core_question": "원주사랑상품권을어디서얼마까지쓰면추가캐시백을받을수있나요?",
-            "reader_scope": "원주에서원주사랑상품권으로생활소비하는이용자",
-            "angles": [
-              "생활소비결제비용",
-              "대상가맹점과5%한도",
-              "결제전업소/기간확인"
-            ],
-            "chosen_angle": "대상가맹점과월캐시백한도",
-            "opening_candidates": [
-              {
-                "type": "생활 상황형",
-                "group": "A",
-                "text": "원주에서 식사나 생활비를 원주사랑상품권으로 결제한다면, 대상 착한가격업소에서는 사용액의 5%를 캐시백으로 받을 수 있어요."
-              },
-              {
-                "type": "대상·혜택형",
-                "group": "B",
-                "text": "원주사랑상품권 이용자는 원주의 대상 착한가격업소에서 결제하면 사용액의 5%를 캐시백으로 받을 수 있어요. 1인당 월 결제액 60만원까지, 환급액은 월 최대 3만원이에요."
-              },
-              {
-                "type": "조건 설명형",
-                "group": null,
-                "text": "착한가격업소이면서 원주사랑상품권 가맹점인 곳에서 QR이나 카드로 결제해야 추가 캐시백이 적용돼요."
-              }
-            ],
-            "chosen_opening": "원주사랑상품권 이용자는 원주의 대상 착한가격업소에서 결제하면 사용액의 5%를 캐시백으로 받을 수 있어요. 1인당 월 결제액 60만원까지, 환급액은 월 최대 3만원이에요.",
-            "opening_type": "대상·혜택형",
-            "cohort": "B",
-            "selection_reason": "동일ID 원본serviceList 누적조회수35690. 앞서 예약/기작성 사업과 기존74개 상위HOLD/SKIP을 제외한 검증가능 최상위. 최신공식2026-2655 공고 현행9/28~12/31 캐시백을 설명하며11/15 종료한축제추가5%와구분. Nov24 P1/P5/P6와달리 대상혜택→가게/결제/기간목록→적용확인 P8, B 대상·혜택형.",
-            "history_posts_checked": 20,
-            "comparison_eligible": true,
-            "comparison_strata": {
-              "geo": "원주시",
-              "audience": "지역상품권이용자",
-              "benefit": "결제캐시백",
-              "application": "자금소진가능",
-              "media": "TEXT"
-            },
-            "comparison_group": "137공식관측,비교가능24h37건A19/B18중앙값63/62·매칭쌍0.시간·미디어·사업대상교란으로효과미입증·분배유지.",
-            "applied_elements": [
-              "도입에원주대상가맹점5%및월개인한도",
-              "가게→결제예시→기간의정보목록",
-              "과거행사추가혜택미합산"
-            ],
-            "profile_route": "공식진단의프로필목표확인,실제사이트검색/상세는이번미검증",
-            "source_recheck_required_at_publish": true,
-            "master_full_used": true,
-            "supplemental_full_used_in_current_model_input": true
-          }
-        },
-        "next_history_record": {
-          "program_id": "419000000129",
-          "notice_version": "gov24-45156855393-1; official2026-2655 reread 2026-11-23T21:27:52.881156+09:00",
-          "pattern": "P8",
-          "opening": "원주사랑상품권 이용자는 원주의 대상 착한가격업소에서 결제하면 사용액의 5%를 캐시백으로 받을 수 있어요. 1인당 월 결제액 60만원까지, 환급액은 월 최대 3만원이에요.",
-          "structure": "대상실익한도→가게결제기간3목록→적용/충전확인",
-          "media_turn": "TEXT"
         }
       }
     }
