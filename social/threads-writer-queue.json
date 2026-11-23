@@ -10324,9 +10324,9 @@
       "slot": "2026-11-23T20:00:00+09:00",
       "benefit_id": "WII000000500",
       "source_fingerprint": "d8225c67c0166af2fb4d40e7f940f35a252d041c1508c126e051c7e1af8dca7d",
-      "source_generation": "gov24-45010687035-1",
-      "prepared_at": "2026-11-22T20:28:18.726689+09:00",
-      "expires_at": "2026-11-23T20:28:18.726689+09:00",
+      "source_generation": "gov24-45156855393-1",
+      "prepared_at": "2026-11-23T21:22:26.626321+09:00",
+      "expires_at": "2026-11-24T21:22:26.626321+09:00",
       "asset_sha256": null,
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -10356,27 +10356,29 @@
               "source_id": "WII000000500",
               "source_ref": "https://www.paju.go.kr/user/www_02_01_09_01/board/BD_board.view.do?bbsCd=2001&q_ctgCd=1002&seq=20260629111458897",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-22T20:28:18.726689+09:00",
+              "verified_at": "2026-11-23T21:22:26.626321+09:00",
               "claims_supported": [
-                "실제657~671행2026-06-29모자보건팀공식공고:7월1일시행장애인·다자녀80→100%완화/월9·11만원/추가분유조건/복지로·관할보건소현재신청가능. 구형Gov2480%와충돌을시행일있는최신정정으로해소."
+                "실제657~671행2026-06-29모자보건팀공식공고:7월1일시행장애인·다자녀80→100%완화/월9·11만원/추가분유조건/복지로·관할보건소현재신청가능. 구형Gov2480%와충돌을시행일있는최신정정으로해소.",
+                "2026-11-23 이번 복구회차에서 해당 공식 페이지 실제 재열람·위 주장 전체 재대조. 이전 검수 날짜만 변경한 것이 아님."
               ]
             },
             {
               "source_id": "WII000000500",
               "source_ref": "https://bokji.gangnam.go.kr/board/BBS_QNA/839/view.do?mid=ID03_03&pgno=1",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-22T20:28:18.726689+09:00",
+              "verified_at": "2026-11-23T21:22:26.626321+09:00",
               "claims_supported": [
-                "실제2026-08-11공식66~100행:수급차상위법정한부모·2세미만/장애인다자녀7월부터100%각주/월9·11만원국민행복카드바우처/분유추가조건/두돌전날까지신청가능·신청일기준·생일포함60일이내24개월·주소지보건소주민센터. 전국서비스설명,강남지역한정지원으로표현안함."
+                "실제2026-08-11공식66~100행:수급차상위법정한부모·2세미만/장애인다자녀7월부터100%각주/월9·11만원국민행복카드바우처/분유추가조건/두돌전날까지신청가능·신청일기준·생일포함60일이내24개월·주소지보건소주민센터. 전국서비스설명,강남지역한정지원으로표현안함.",
+                "2026-11-23 이번 복구회차에서 해당 공식 페이지 실제 재열람·위 주장 전체 재대조. 이전 검수 날짜만 변경한 것이 아님."
               ]
             },
             {
               "source_id": "WII000000500",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=165908&bnefType=all&svcId=WII000000500",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-22T20:28:18.726689+09:00",
+              "verified_at": "2026-11-23T21:22:26.626321+09:00",
               "claims_supported": [
-                "검증완전세대 gov24-45010687035-1 동일ID serviceList누적38075·금액/영아단위/신청기한/방문온라인경로대조.원본소득80%는7월시행공식정정100%우선.APIcheckedAt=2026-11-22T19:09:35.505526+09:00 collectionSucceededAt=2026-11-22T19:11:21.355478+09:00는실제원문검수시각과구분."
+                "실제 검증한 최신 완전세대 gov24-45156855393-1 동일 ID serviceList 누적38075·기저귀월9만원/분유월11만원 영아단위·신청기한·접수경로 대조. API 소득80% 잔존은 2026-07-01 시행 공식정정100%를 우선. APIcheckedAt=2026-11-23T19:36:18.324435+09:00 collectionSucceededAt=2026-11-23T19:38:18.049578+09:00와 이번 원문 재검수시각은 구분."
               ]
             }
           ],
@@ -10395,7 +10397,7 @@
           "warnings": [
             "동일ID API와보건복지부일반정책페이지80%잔존. 실제2026-06-29파주7/1시행정정·2026-08-11강남각주로100%현행확인. 예산안만보고시행확정하지않음. 전국사업내용안내이며실제개인접수·자격확정거래아님.",
             "복지로상세직접열람본문0행이라검색요약을직접열람근거로쓰지않음.진천페이지본문추출timeout은미사용. 프로필링크/지원금픽사이트내상세기능실제접속미확인·보장없음.",
-            "내일20시에는현재collection24h초과이므로실제발송시최신완전세대와공식상태필수재검증. 앞20미게시시미예약미래후보/미디어재계산."
+            "현재 원문 실제 재검수와 최신완전세대 대조. 발송 시 원문 상태·수집 신선도·원장 재확인 필수. 기존 24시간 검수 한도·2시간 슬롯 허용창 유지."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -10447,11 +10449,26 @@
             "source_recheck_required_at_publish": true,
             "master_full_used": true,
             "supplemental_full_used_in_current_model_input": true
+          },
+          "recovery_revalidation": {
+            "checked_at": "2026-11-23T21:22:26.626321+09:00",
+            "failed_run_id": "45167269442",
+            "cause": "writer_draft_expired_or_future",
+            "expired_at": "2026-11-23T20:28:18.726689+09:00",
+            "unchanged_post_sha256": "f45b53fbd6a66f10eff6d03386e1c81467a03d7187404128ca120aed9cbb0f56",
+            "original_slot": "2026-11-23T20:00:00+09:00",
+            "recovery_mode": "resume-unreserved-slot",
+            "recovery_cron": "0 11 * * *",
+            "official_pages_actually_reopened": true,
+            "all_post_claims_rechecked": true,
+            "record_reserved": false,
+            "post_or_container_id": null,
+            "maximum_evidence_hours": 24
           }
         },
         "next_history_record": {
           "program_id": "WII000000500",
-          "notice_version": "Gov24source1944 and dated2026July1amendment actuallyreviewed 2026-11-22T20:28:18.726689+09:00",
+          "notice_version": "gov24-45156855393-1; dated2026July1amendment reread 2026-11-23T21:22:26.626321+09:00",
           "pattern": "P8",
           "opening": "기저귀값이 매달 부담되는 영아 가정이라면, 저소득층 기저귀·조제분유 지원을 살펴봐요. 만 2세 미만 아이가 있는 대상 가구는 기저귀 구매비를 영아별 월 9만원, 국민행복카드 바우처로 지원받을 수 있어요.",
           "structure": "생활비구매상황→대상분유기한3목록→신청심사",
