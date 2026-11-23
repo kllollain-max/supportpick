@@ -10754,6 +10754,171 @@
           "media_turn": "TEXT"
         }
       }
+    },
+    {
+      "slot": "2026-11-24T16:00:00+09:00",
+      "benefit_id": "127000000002",
+      "source_fingerprint": "064ff220fd8e1bcf85a7fb991718b0293902bcc1252996c0bb4ff203e7eaa066",
+      "source_generation": "gov24-45075147460-1",
+      "prepared_at": "2026-11-23T16:17:17.412603+09:00",
+      "expires_at": "2026-11-24T16:17:17.412603+09:00",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "127000000002",
+        "post_text": "월세 계약이나 임금 문제로 막막한 기초생활수급자·장애인 등 취약계층이라면, 법률홈닥터의 무료 1차 법률상담으로 대응 방향을 알아볼 수 있어요. 법무부 소속 변호사가 생활법률 문제를 상담하는 서비스예요.\n\n먼저 가까운 법률홈닥터 배치기관을 찾아 전화로 대상 여부와 상담 일정을 확인해요. 예약 후 전화 또는 방문 상담을 받을 수 있어요. 상담할 상황과 질문을 미리 정리하면 도움이 돼요.\n\n평일 10~17시가 기본 상담시간이며 정확한 시간은 기관에 확인해야 해요. 온라인 예약은 근무일 기준 5일 이후부터 가능하므로 당일 상담을 보장하지 않아요.\n\n채무·임대차·임금 등 상담과 소송절차 안내, 관련 기관 연계를 지원하지만 소송을 대신 수행하지는 않아요. 신청 유형이나 같은 사건의 중복 신청에 따라 상담이 제한될 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게라는 문구 아래 집, 체크 표시 방패, 체크리스트, 새싹을 배치한 크림색 정사각형 브랜드 이미지. 하단에는 자세한 사항은 프로필링크 확인 문구가 있다."
+        },
+        "review": {
+          "planned_at": "2026-11-24T16:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "임대차·임금등생활법률문제가있는기초생활수급자·장애인등취약계층",
+          "central_message": "무료1차법률상담을받으려면어디에예약하고무엇을준비하나요?",
+          "pattern": "P6",
+          "selection_reason": "동일ID serviceList 누적조회수36723, 상위74HOLD/SKIP과 게시/기작성사업 제외 후 검증가능최상위. Nov24 16 A/P6 IMAGE. Nov19공단무료상담P4와 운영기관·취약계층범위·예약준비 전개가다름. 최근20본문·도입비교후 상황→배치기관확인→상담준비→시간/소송제외로구성,같은날P1/P5와구분. 성과개선추정없음.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "127000000002",
+              "source_ref": "https://lawhomedoctor.moj.go.kr/ko/utilization-guide-contents",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-23T16:17:17.412603+09:00",
+              "claims_supported": [
+                "직접열람23~73행:수급자/차상위/장애인등취약계층대상,채무·임대차·임금등생활법률,소송수행제외·기관연계. 배치기관전화예약후상담 가능,현행평일10~17시·정확한기관시간문의. 현재이용경로제공·개별빈자리나예약확정은보장않음."
+              ]
+            },
+            {
+              "source_id": "127000000002",
+              "source_ref": "https://lawhomedoctor.moj.go.kr/ko/phone-counselings/information",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-23T16:17:17.412603+09:00",
+              "claims_supported": [
+                "직접열람36~60행:근무일기준5일이후온라인예약,기본15분전화상담,법무부변호사무료1차상담,신청유형과동일사건중복신청제한."
+              ]
+            },
+            {
+              "source_id": "127000000002",
+              "source_ref": "https://lawhomedoctor.moj.go.kr/ko/interview-counselings/information",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-23T16:17:17.412603+09:00",
+              "claims_supported": [
+                "직접열람48~61행:사전상황·질문정리권장,예약검토후확정,무료1차상담,개별유형에따라상담어려울수있음."
+              ]
+            },
+            {
+              "source_id": "127000000002",
+              "source_ref": "https://lawhomedoctor.moj.go.kr/",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-23T16:17:17.412603+09:00",
+              "claims_supported": [
+                "현재공식첫화면39~61행:홈페이지또는배치기관전화로상담예약신청 가능,전국권역기관찾기,현행운영경로확인. 실제개인본인인증·예약전송은실행않음."
+              ]
+            },
+            {
+              "source_id": "127000000002",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999123&bnefType=all&svcId=127000000002",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-23T16:17:17.412603+09:00",
+              "claims_supported": [
+                "최신완전수집본 동일ID원문 누적36723,취약계층대상무료1차상담·예약기관별상이. APIcheckedAt=2026-11-23T07:04:07.346120+09:00 collectionSucceededAt=2026-11-23T07:09:09.827515+09:00는원문검수시각과구분."
+              ]
+            },
+            {
+              "source_id": "127000000002",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-23T16:17:17.412603+09:00",
+              "claims_supported": [
+                "허용PNG실제GET SHA256=a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a를main image-review 기존시각검수PASS/360px기록과 재대조일치. 이번새직접시각검수아님. 금액·대상·기간문구없는브랜드로본문충돌없음."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 422,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "현행공식예약안내와기관별상담경로를열람했으며개인인증/예약거래/빈자리/즉시상담은확인·보장않음. 지원금픽프로필/실제사이트검색상세이번미확인.",
+            "현재source가내일16시까지신선하다고가정않음. 실제발송시최신완전세대·공식상태·이미지SHA·근거기한재검증필수."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "무료1차법률상담을받으려면어디에예약하고무엇을준비하나요?",
+            "reader_scope": "임대차·임금등생활법률문제가있는기초생활수급자·장애인등취약계층",
+            "angles": [
+              "생활법률분쟁대응막막함",
+              "취약계층무료상담대상",
+              "예약전준비와소송수행구분"
+            ],
+            "chosen_angle": "생활법률분쟁상황에서상담예약준비",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "월세 계약이나 임금 문제로 막막한 기초생활수급자·장애인 등 취약계층이라면, 법률홈닥터의 무료 1차 법률상담으로 대응 방향을 알아볼 수 있어요. 법무부 소속 변호사가 생활법률 문제를 상담하는 서비스예요."
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "기초생활수급자·장애인 등 취약계층은 법률홈닥터의 무료 1차 생활법률상담을 이용할 수 있어요."
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "법률홈닥터는 취약계층의 무료 상담과 소송절차 안내를 돕지만 소송 수행은 제외돼요."
+              }
+            ],
+            "chosen_opening": "월세 계약이나 임금 문제로 막막한 기초생활수급자·장애인 등 취약계층이라면, 법률홈닥터의 무료 1차 법률상담으로 대응 방향을 알아볼 수 있어요. 법무부 소속 변호사가 생활법률 문제를 상담하는 서비스예요.",
+            "opening_type": "생활 상황형",
+            "cohort": "A",
+            "selection_reason": "동일ID serviceList 누적조회수36723, 상위74HOLD/SKIP과 게시/기작성사업 제외 후 검증가능최상위. Nov24 16 A/P6 IMAGE. Nov19공단무료상담P4와 운영기관·취약계층범위·예약준비 전개가다름. 최근20본문·도입비교후 상황→배치기관확인→상담준비→시간/소송제외로구성,같은날P1/P5와구분. 성과개선추정없음.",
+            "history_posts_checked": 20,
+            "comparison_eligible": true,
+            "comparison_strata": {
+              "geo": "전국배치기관",
+              "audience": "법률도움필요취약계층",
+              "benefit": "무료상담서비스",
+              "application": "기관별예약",
+              "media": "IMAGE"
+            },
+            "comparison_group": "36eligible24h A18/B18중앙값62/62,매칭쌍0·교란유지·효과미입증·비중유지.",
+            "applied_elements": [
+              "첫문단상황·대상·무료상담실익",
+              "예약경로→질문정리→시간제한",
+              "상담과소송수행구분"
+            ],
+            "profile_route": "공식예약안내열람,개인본인인증·예약전송/지원금픽프로필·사이트내경로미확인",
+            "source_recheck_required_at_publish": true,
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true
+          }
+        },
+        "next_history_record": {
+          "program_id": "127000000002",
+          "notice_version": "gov24-45075147460-1 + current official reservation guidance reviewed 2026-11-23T16:17:17.412603+09:00",
+          "pattern": "P6",
+          "opening": "월세 계약이나 임금 문제로 막막한 기초생활수급자·장애인 등 취약계층이라면, 법률홈닥터의 무료 1차 법률상담으로 대응 방향을 알아볼 수 있어요. 법무부 소속 변호사가 생활법률 문제를 상담하는 서비스예요.",
+          "structure": "생활분쟁상황→배치기관예약→질문정리→상담시간→소송제외/신청제한",
+          "media_turn": "IMAGE"
+        }
+      }
     }
   ]
 }
