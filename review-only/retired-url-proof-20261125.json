@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-11-25",
+  "evidence": "SupportPick_Crawl_Audit_20261111.zip",
+  "evidenceLibraryId": "libfile_88416c59749c819190f691600506fe9b",
+  "evidenceSha256": "5ea7dec70a4e3dc94b4f62a831940420375e0571cee980450802642ccf26ddf0",
+  "oldGeneration": "gov24-42910050871-1",
+  "oldSourceRevision": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
+  "oldFullCheckPassed": true,
+  "restoredIds": [
+    {
+      "id": "478100000037",
+      "oldHtmlSha256": "e45229fc4c144cf448ecd5ce36c6ac5e1c06d97ec7ec8b6ef1fb6c93bd5086a9",
+      "currentHttp": 404
+    },
+    {
+      "id": "497000000103",
+      "oldHtmlSha256": "69e1e430888cd475a743395fcf67af65c8e91109966bddedf436d551daa50fcc",
+      "currentHttp": 404
+    },
+    {
+      "id": "O00027400003",
+      "oldHtmlSha256": "072adb8fa204b0559bdadc93c6dbc0a794f75476c6b50b28b1bf796acb0731be",
+      "currentHttp": 404
+    }
+  ]
+}

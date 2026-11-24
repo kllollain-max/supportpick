@@ -4,6 +4,7 @@ Facts refer to the stated year and review date. The scenarios are our own
 reading aids, not eligibility decisions. Keep sources beside the relevant facts.
 """
 from html import escape
+from youth_employment_analysis import ARTICLE as YOUTH_EMPLOYMENT_ARTICLE, SLUG as YOUTH_EMPLOYMENT_SLUG
 from family_housing_analysis import FOCUS_ARTICLES
 from tax_benefit_analysis import TAX_ARTICLES
 from savings_voucher_analysis import RECORD_ARTICLES
@@ -113,8 +114,10 @@ ARTICLES += SUNCHANG_BIRTH_ARTICLES
 ARTICLES += INFLUENZA_ARTICLES
 ARTICLES.append(VETERANS_INSPECTION_ARTICLE)
 ARTICLES.append(EMPLOYMENT_TRAINING_ARTICLE)
+ARTICLES.append(YOUTH_EMPLOYMENT_ARTICLE)
 
 BENEFIT_ARTICLES = {
+    '149200005016': YOUTH_EMPLOYMENT_SLUG,
     '149200000026': EMPLOYMENT_TRAINING_SLUG,
     '149200005007': EMPLOYMENT_TRAINING_SLUG,
     '135200000115': 'influenza-season-vs-dose-history-2026',
@@ -165,6 +168,7 @@ ARTICLE_REVIEW_DATES = {'influenza-season-vs-dose-history-2026':'2026-11-19', 'b
 
 ARTICLE_REVIEW_DATES[VETERANS_INSPECTION_SLUG] = "2026-11-21"
 ARTICLE_REVIEW_DATES[EMPLOYMENT_TRAINING_SLUG] = "2026-11-24"
+ARTICLE_REVIEW_DATES[YOUTH_EMPLOYMENT_SLUG] = "2026-11-25"
 
 
 def related_analysis(sid, row=None):
