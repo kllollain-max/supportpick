@@ -171,6 +171,96 @@ ROUNDS = {
 <h3>다음 모집을 준비한다면 구성원별 생활권을 점검하세요</h3>
 <p>2026년 공고는 영도구 거주 또는 학교·직장·사업장 등 생활권이 영도구인 청년 4~12명으로 구성된 동아리를 대상으로 했습니다. 다음 회차에서는 인원과 생활권을 확인하는 기준일을 새 공고에서 확인하세요. <a href="https://young.busan.go.kr/policySupport/view.nm?bizSid=SUP0000003093&amp;menuCd=13" target="_blank" rel="noopener noreferrer">부산청년플랫폼 모집·활동 일정 ↗</a></p>''',
     },
+    '129000000008': {
+        'period': '2025. 4. 1. ~ 2026. 3. 31.',
+        'end': '2026-03-31',
+        'notice': '이 자료에 적힌 특수임무수행자 보상 신청 기간은 2026년 3월 31일까지였습니다.',
+        'body': '''
+<h3>마감일에 등기로 보냈다면 접수와 심의 상태를 구분해 확인하세요</h3>
+<p>기한 연장 안내에서는 마감일 우체국 소인분까지 유효하다고 안내했습니다. 등기번호와 발송일을 준비해 보상심의위원회 민원실(02-3476-8010)에 접수 여부를 확인하세요. 접수 여부와 심의 결과는 각각 확인해야 합니다. <a href="https://www.yd.go.kr/DownLoad/etc/%EB%B0%98%EC%83%81%ED%9A%8C%EB%B3%B4%282025%EB%85%84%205%EC%9B%94%ED%98%B8%29.pdf" target="_blank" rel="noopener noreferrer">국방부 제공 접수 안내 PDF ↗</a></p>
+<p>이미 통지를 받았다면 통지서에 기재된 결정과 후속 문의 경로를 확인하세요. 새 신청을 준비 중이라면 위원회에서 추가 접수 공지가 있는지 확인하세요. <a href="https://dep.mnd.go.kr/smc/278/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc21jJTJGMzUwNzExJTJGT180MTE5MjMlMkZhcnRjbFZpZXcuZG8lM0Y%3D" target="_blank" rel="noopener noreferrer">국방부 보상심의위원회 심의결과 안내 ↗</a></p>''',
+    },
+    '305000000167': {
+        'period': '2025.08.06~2025.09.05',
+        'end': '2025-09-05',
+        'notice': '이 자료는 2025년 동대문구 반려동물 전문인력 양성 2기 모집입니다. 해당 회차 접수는 9월 5일에 끝났습니다.',
+        'body': '''
+<h3>취업 교육을 찾는다면 공고 제목과 대상부터 확인하세요</h3>
+<p>2025년 2기는 반려동물 관련 취업을 희망하는 동대문구민 대상이었습니다. 당시 신청서 링크보다 구청 청년정책고용과(02-2127-4974)에서 후속 전문인력 과정과 일정을 확인하세요. <a href="https://www.ddm.go.kr/www/selectBbsNttView.do?bbsNo=38&amp;key=198&amp;nttNo=174763" target="_blank" rel="noopener noreferrer">동대문구 2025년 2기 원문 ↗</a></p>
+<p>키우는 반려견의 행동 교육이 목적이라면 구청의 우리동네 반려동물 교육 안내를 확인하세요. 이 공고는 보호자 대상 교육이며, 일정과 신청 상태는 해당 공고에서 확인할 수 있습니다. <a href="https://www.ddm.go.kr/www/selectBbsNttView.do?bbsNo=38&amp;key=198&amp;nttNo=195456" target="_blank" rel="noopener noreferrer">동대문구 2026년 보호자 교육 안내 ↗</a></p>''',
+    },
+    '318000000132': {
+        'period': '2026.03.03. ~ 2026.03.13.',
+        'end': '2026-03-13',
+        'notice': '이 기록의 영등포 평생교육 바우처 접수 기간은 2026년 3월 13일까지였습니다.',
+        'body': '''
+<h3>이미 받은 바우처를 쓴다면 결제 전에 세 가지를 확인하세요</h3>
+<p>본인 선정 안내에서 해당 연도 사용기한과 남은 금액을 확인하고, 수강 기관에 본인이 선정된 분야의 등록 강좌인지 문의하세요. 교재나 재료가 필요하면 수강료에 포함된 항목과 별도 구매 항목을 나눠 결제 전에 확인하세요.</p>
+<p>선정 안내를 찾기 어렵거나 후속 모집을 기다린다면 YDP미래평생학습관에 올해 사용기한 또는 새 공고를 확인하세요. <a href="https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2109816&amp;bnefType=all&amp;svcId=318000000132" target="_blank" rel="noopener noreferrer">정부24 영등포구 자료·문의처 ↗</a></p>''',
+    },
+    '328000000143': {
+        'period': '2026.04.20~2026.05.10',
+        'end': '2026-05-10',
+        'notice': '영도구 2026년 청년 창업자 임차료 지원 접수는 5월 10일 18시에 마감됐습니다.',
+        'body': '''
+<h3>이미 신청했다면 선정 안내와 정산 상태를 확인하세요</h3>
+<p>부산청년플랫폼의 모집 공고는 5월 20일까지 구청 공지와 개별 연락으로 선정을 안내할 예정이라고 밝혔습니다. 결과나 정산이 불명확하다면 신청한 사업장과 접수 정보를 준비해 영도구 인구청년팀(051-419-4616)에 문의하세요.</p>
+<p>다음 모집을 준비할 때는 대표자 주소와 사업장 주소, 사업자등록일, 실제 월 임차료를 나눠 확인하세요. 새 공고의 대상 요건과 대조하면 어느 서류가 필요한지 판단할 수 있습니다. <a href="https://young.busan.go.kr/policySupport/view.nm?bizSid=SUP0000003060&amp;lang=ko&amp;menuCd=13&amp;url=policySupport" target="_blank" rel="noopener noreferrer">부산청년플랫폼 2026년 공고·영도구 문의처 ↗</a></p>''',
+    },
+    '398000000296': {
+        'period': '2023.02.13~2023.12.20',
+        'end': '2023-12-20',
+        'notice': '이 페이지의 구리시 신입생 체육복 지원 일정은 2023년 자료입니다. 현재 입학연도의 지원 여부는 학교나 구리시에 확인하세요.',
+        'body': '''
+<h3>올해 체육복을 사기 전에 학교에 지원 여부를 확인하세요</h3>
+<p>학교에 입학연도, 입학 당시 주소, 체육복을 학교에서 지급하는지 또는 별도로 구입하는지를 함께 알려주면 확인에 도움이 됩니다. 타 지역 학교나 대안교육기관 입학생은 구리시 교육 담당 부서에 관할과 필요 서류도 확인하세요.</p>
+<p>구리시는 과거 체육복 구입비를 지원했고, 2026년에는 별도로 대안교육기관 등 입학생 교복 지원을 안내했습니다. 2026년 교복 안내를 근거로 체육복까지 지원된다고 판단하지 말고, 구입할 품목이 지원 범위에 포함되는지 문의하세요. <a href="https://www.guri.go.kr/www/selectBbsNttView.do?bbsNo=42&amp;integrDeptCode=&amp;key=393&amp;nttNo=139639&amp;pageIndex=128&amp;searchCnd=all&amp;searchCtgry=&amp;searchKrwd=" target="_blank" rel="noopener noreferrer">구리시 2026년 교복 지원 보도자료 ↗</a></p>''',
+    },
+    '419100000009': {
+        'period': '2026.03.03~2026.03.27',
+        'end': '2026-03-27',
+        'notice': '이 자료는 원주시 2026년 상반기 청년 동아리 활동비 모집입니다. 하반기 모집도 마감됐고 선정 결과가 공개됐습니다.',
+        'body': '''
+<h3>신청한 회차의 결과 공고를 열어보세요</h3>
+<p>3월에 신청한 팀은 4월 2일 상반기 선정 결과를, 하반기에 신청한 팀은 9월 3일 하반기 선정 결과를 확인하세요. 같은 사업명으로 두 공고가 올라왔으므로 신청 회차와 공고 제목을 먼저 대조하면 됩니다. <a href="https://www.wonju.go.kr/www/selectBbsNttList.do?bbsNo=140&amp;integrDeptCode=&amp;key=216&amp;pageUnit=50&amp;searchCnd=SJ&amp;searchCtgry=&amp;searchKrwd=%EB%8F%99%EC%95%84%EB%A6%AC+%ED%99%9C%EB%8F%99%EB%B9%84" target="_blank" rel="noopener noreferrer">원주시 상·하반기 공고 목록 ↗</a></p>
+<p>선정된 팀은 집행 전에 활동비 인정 항목과 증빙 제출 기한을 해당 회차의 안내에서 확인하세요. <a href="https://www.wonju.go.kr/www/selectBbsNttView.do?bbsNo=140&amp;integrDeptCode=&amp;key=216&amp;nttNo=491113&amp;pageIndex=11&amp;searchCnd=all&amp;searchCtgry=&amp;searchKrwd=" target="_blank" rel="noopener noreferrer">원주시 하반기 선정 결과 ↗</a></p>''',
+    },
+    '559000000439': {
+        'period': '2025.02.01~2025.11.30',
+        'end': '2025-11-30',
+        'notice': '이 자료는 양주시 청춘사진관 2025년 일정입니다. 2026년 신청은 양주시청년센터의 해당 연도 안내에서 확인하세요.',
+        'body': '''
+<h3>2026년 접수 기간과 실제 촬영 일정을 따로 확인하세요</h3>
+<p>양주시 통합예약의 2026년 모집 안내에 적힌 신청 기간은 2월 24일부터 11월 30일까지입니다. 촬영일은 별도 협의이므로, 이력서를 보낼 날짜가 정해져 있다면 접수 가능 여부와 촬영·사진 수령 일정을 각각 확인하세요. <a href="https://www.yangju.go.kr/yeyak/eduLctreWebView.do?eduLctreNo=12621&amp;key=2148" target="_blank" rel="noopener noreferrer">양주시 통합예약 2026년 모집 ↗</a></p>
+<p>예약 화면의 정원과 신청 서류 안내를 읽고, 신청 승인이 확인되기 전에 사진관으로 바로 방문해야 하는지 불명확하다면 양주시청년센터(031-8082-6075)에 문의하세요.</p>''',
+    },
+    '628000000129': {
+        'period': '2026.  3. 3. ~ 3. 18.',
+        'end': '2026-03-18',
+        'notice': '2026년 인천 구직청년 드림체크카드 접수는 3월 18일에 끝났으며 4월 13일 선정 결과가 게시됐습니다.',
+        'body': '''
+<h3>선정과 예비선정은 첨부파일을 따로 확인하세요</h3>
+<p>인천청년포털의 4월 13일 공고에는 선정자와 예비선정자 명단이 별도 첨부돼 있습니다. 본인 결과와 마이페이지 상태를 확인하세요. 선정 뒤 지급 수단에 따라 계좌·카드 등록 절차가 달랐으므로, 아직 지급이 확인되지 않았다면 당시 선택한 방식과 처리 상태를 담당 기관에 문의하세요.</p>
+<p>참여 중 취업·창업 또는 전출 등으로 자격 변동이 생기면 공고에 안내된 인천테크노파크 연락처(032-725-3072~3)에 확인하세요. <a href="https://youth.incheon.go.kr/bbs/bbsMsgDetail.do?bcd=notice&amp;msg_seq=454&amp;pgdiv=card" target="_blank" rel="noopener noreferrer">인천청년포털 선정·예비선정 및 후속 절차 ↗</a></p>''',
+    },
+    '641000000111': {
+        'period': '2026.8.18. ~ 2026.9.18.',
+        'end': '2026-09-18',
+        'notice': '2026년 경기 가정보육 어린이 건강과일 일반 접수는 9월 18일에 끝났습니다. 선정 가정에는 11~12월 순차 배송됩니다.',
+        'body': '''
+<h3>배송이 아직 안 왔다면 선정과 배송 주소부터 확인하세요</h3>
+<p>경기민원24의 일반 일정은 11~12월 중 과일 꾸러미를 한 번 배송하는 방식입니다. 선정 안내와 등록된 주소를 확인하세요. 선정 후 이사했거나 배송 문자를 받지 못했다면 관할 시·군에 배송지 수정 및 확인 방법을 문의하세요. 순차 배송이므로 같은 지역이라도 수령일은 다를 수 있습니다.</p>
+<p>신청을 놓쳤다면 본인 시·군의 예외 접수 조건을 확인하세요. 예를 들어 용인시 공고는 8~9월 출생아의 부모급여 소급지원에 별도 조건을 안내합니다. 다른 시·군은 관할 공고를 확인하세요. <a href="https://gg24.gg.go.kr/svcreqst/selectSvcReqst.do?svc_seq=953" target="_blank" rel="noopener noreferrer">경기민원24 일정·문의처 ↗</a> · <a href="https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&amp;q_bbscttSn=20260805134331199&amp;q_clCode=1" target="_blank" rel="noopener noreferrer">용인시 추가 신청 안내 ↗</a></p>''',
+    },
+    '648000001117': {
+        'period': '2025.11.05~2025.12.11',
+        'end': '2025-12-11',
+        'notice': '이 자료의 날짜는 2025년에 접수한 2026년 청년농업인 영농정착지원 1차 모집입니다.',
+        'body': '''
+<h3>모집 공고의 사업연도와 접수연도를 함께 확인하세요</h3>
+<p>농식품부는 2026년 지원사업의 1차 선발을 2025년 11월에 시작했습니다. 접수가 열린 해와 실제 사업연도가 다를 수 있고, 같은 사업연도에도 추가 차수가 있을 수 있습니다. 거제시도 2026년 2차 모집을 별도로 공고했습니다. 다음 신청은 영농 예정지 시·군의 최신 공고에서 사업연도, 차수, 접수기간을 한꺼번에 확인하세요. <a href="https://mafra.go.kr/home/5109/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGaG9tZSUyRjc5MiUyRjU3NTgxMCUyRmFydGNsVmlldy5kbyUzRg%3D%3D" target="_blank" rel="noopener noreferrer">농식품부 2026년 1차 안내 ↗</a> · <a href="https://geoje.go.kr/board/view.geoje?boardId=BBS_0000008&amp;dataSid=306417779&amp;paging=ok&amp;startPage=7" target="_blank" rel="noopener noreferrer">거제시 2026년 2차 공고 ↗</a></p>
+<p>이미 선정됐다면 본인 회차 지침에서 바우처 사용과 의무교육, 경영장부 기록 요건을 확인하세요. 정착지원금과 별도로 융자 자금이 필요한 경우 시·군의 연계 절차도 확인하세요. <a href="https://baro.gyeongnam.go.kr/baro/policyView.es?mid=a10703000000&amp;policy_no=258" target="_blank" rel="noopener noreferrer">경남바로서비스 사업·준수사항 ↗</a></p>''',
+    },
 }
 
 
