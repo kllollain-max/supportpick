@@ -5863,31 +5863,22 @@
     }
   },
   "last_check": {
-    "checked_at": "2026-11-25T03:23:48.810910+09:00",
+    "checked_at": "2026-11-25T04:17:22.419734+09:00",
     "result": "no_update",
-    "maintenance_previous_blob_sha": "569104a02e9d59b17c4f342aca20534221914f07",
+    "maintenance_previous_blob_sha": "3009e02295807c0117a5c6bfcc9a532ef06fc79e",
     "current_main_sha": "890215f6a930d9967a5578b3134413e1dde8a1b7",
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
     "publication_ledger_sha": "3d6c2cd9cb155c3fd8ead9da9ee2f233796ff0fb",
     "queue_blob_sha": "75dff59550ab5fd0be9d0cf8e1cf16b7049b11b6",
-    "changed_run_versions": [
-      {
-        "run_id": "45457220041",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-24T18:13:58Z",
-        "head_sha": "890215f6a930d9967a5578b3134413e1dde8a1b7"
-      }
-    ],
+    "changed_run_versions": [],
     "active_target_runs": [],
     "run_pagination": {
       "per_page": 100,
       "pages": [
         1
       ],
-      "checkpoint_run_id": "45438641837",
+      "checkpoint_run_id": "45457220041",
       "checkpoint_version_unchanged": true,
       "all_new_target_versions_observed": true,
       "latest_completed_operations_run_id": "45374669702"
@@ -6050,7 +6041,7 @@
       "original_notice_rereview_this_check": false
     },
     "writer": {
-      "checked_at": "2026-11-25T03:23:48.810910+09:00",
+      "checked_at": "2026-11-25T04:17:22.419734+09:00",
       "ready": 4,
       "future24h_ready": 4,
       "new_drafts": 0,
@@ -6139,8 +6130,8 @@
       "artifact_id": 14950497072,
       "artifact_digest": "sha256:7a3b5aa562765b6c86d507d6ba6868ffc31b5f3ef58b9669648bc205b57741b9",
       "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": true,
-      "job_logs_retrieved_this_check": true,
+      "artifact_redownloaded_this_check": false,
+      "job_logs_retrieved_this_check": false,
       "observed_at": "2026-11-24T18:13:54.437863+00:00",
       "records": [],
       "due_count": 0,
@@ -6166,7 +6157,7 @@
       "pending": null,
       "lease": null,
       "stage": "read_only_maintenance_complete",
-      "reason": "78completeverifiedpublishedrows/pending/lease unchanged; newofficialmetricsrunemptydue0success0, no newincident/publication/repair.4READY unchanged andwholewindow validationpassed.",
+      "reason": "78completeverifiedpublishedrows/pending/lease unchanged; alltargetrunversionsunchanged, no newincident/publication/repair.4READY unchanged andwholewindow validationpassed.",
       "new_publication_this_check": false,
       "maintenance_new_posts": 0
     },
@@ -6437,7 +6428,7 @@
     },
     "publication_schedule_observation": {
       "slot": "2026-11-24T20:00:00+09:00",
-      "checked_at": "2026-11-25T03:23:48.810910+09:00",
+      "checked_at": "2026-11-25T04:17:22.419734+09:00",
       "status": "published_complete_verified_already_reported",
       "main_id": "18472882234189391",
       "url": "https://www.threads.com/@hid_1004/post/DgH4EXCm_Hj",
@@ -6856,7 +6847,7 @@
     }
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-25T03:23:48.810910+09:00",
+    "checked_at": "2026-11-25T04:17:22.419734+09:00",
     "new_publications": 0,
     "new_incidents": 0,
     "queue_ready": 4,
@@ -129079,6 +129070,592 @@
         "new_v3_READY": 0,
         "new_scores": 0
       }
+    },
+    "2026-11-25T04:17:22.419734+09:00": {
+      "checked_at": "2026-11-25T04:17:22.419734+09:00",
+      "result": "no_update",
+      "maintenance_previous_blob_sha": "3009e02295807c0117a5c6bfcc9a532ef06fc79e",
+      "current_main_sha": "890215f6a930d9967a5578b3134413e1dde8a1b7",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "3d6c2cd9cb155c3fd8ead9da9ee2f233796ff0fb",
+      "queue_blob_sha": "75dff59550ab5fd0be9d0cf8e1cf16b7049b11b6",
+      "changed_run_versions": [],
+      "active_target_runs": [],
+      "run_pagination": {
+        "per_page": 100,
+        "pages": [
+          1
+        ],
+        "checkpoint_run_id": "45457220041",
+        "checkpoint_version_unchanged": true,
+        "all_new_target_versions_observed": true,
+        "latest_completed_operations_run_id": "45374669702"
+      },
+      "publication_ledger_records": 75,
+      "complete_verified_records": 75,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "45374669702",
+        "run_attempt": 1,
+        "conclusion": "failure",
+        "collection_conclusion": "passed",
+        "job_id": 138377561259,
+        "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+        "tests_passed": 306,
+        "artifact_id": 14911047606,
+        "artifact_digest": "sha256:57f606ab48fe6855d705e98cd37c325e659101041824b7f4554110e8f28054ce",
+        "artifact_redownloaded_this_check": false,
+        "artifact_digest_verified": true,
+        "job_logs_retrieved_this_check": false,
+        "read_current_verify_snapshot_load_feed": true,
+        "manifest": {
+          "count": 10895,
+          "generation": "gov24-45374669702-1",
+          "lastSuccessAt": "2026-11-24T19:32:34.172544+09:00",
+          "manifestSha256": "ac91c8918926d5f940cd3f387696e90e0852ba857debdc6972b1a09ef53212ff",
+          "path": "snapshots/gov24-45374669702-1",
+          "version": 1
+        },
+        "collection_report": {
+          "applicationOpenVerified": false,
+          "collectionSucceededAt": "2026-11-24T19:32:34.172544+09:00",
+          "coverage": "Currently connected Gov24 API, all unfiltered pages of three endpoints",
+          "endpoints": {
+            "serviceDetail": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "serviceList": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "supportConditions": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            }
+          },
+          "factsVerified": false,
+          "feedSha256": "857fe88a7dfc20dd84cf60150b827214df8497c0aa59e63a2d55a6f0ddbc302d",
+          "finishedAt": "2026-11-24T19:32:35.298132+09:00",
+          "generation": "gov24-45374669702-1",
+          "normalRequestEstimate": 330,
+          "pageResponses": 327,
+          "project": "supportpick",
+          "published": false,
+          "sampleCount": 0,
+          "scheduled": false,
+          "sourceConsistency": "No snapshot token: totals and boundary pages stable; unique IDs and all endpoint sets matched",
+          "startedAt": "2026-11-24T19:25:52.234580+09:00",
+          "status": "passed",
+          "storedCount": 10895
+        },
+        "publisher_freshness_hours": 24,
+        "current_fresh_until": "2026-11-25T19:32:34.172544+09:00",
+        "collection_is_not_current_application_status_verification": true,
+        "new_candidate_original_official_pages_read": false,
+        "existing4entries_unchanged_fingerprints_pass": true,
+        "public_verification": {
+          "run_id": "45374669702",
+          "run_attempt": 1,
+          "status": "collection_complete_public_verification_unresolved_outside_threads_scope",
+          "stage": "Verify deployed source, generation and every public HTML URL",
+          "failure_fingerprint": "public_generation_mismatch:gov24-45374669702-1:gov24-45277137519-1",
+          "confirmed_cause": "Livepublicmanifeststillreportspriorgeneration, while verifierexpectednewcompletegeneration; observedsourceRevision matcheshead. Underlying deployment/cachecauseunconfirmed. OverallfailureisNOTcollectionfailure.",
+          "last_success": "collection+build+runtimepreservation+deployaction succeeded;306tests passed. Actualpublicverification failed after2manifestattempts.",
+          "expected_generation": "gov24-45374669702-1",
+          "observed_generation": "gov24-45277137519-1",
+          "expected_revision": "cc03a6d64232b37546b3120f9789f94285872fb5",
+          "observed_revision": "cc03a6d64232b37546b3120f9789f94285872fb5",
+          "container_id": null,
+          "main_id": null,
+          "publication_POSTs_by_this_check": 0,
+          "artifact_id": 14911047606,
+          "artifact_digest": "sha256:57f606ab48fe6855d705e98cd37c325e659101041824b7f4554110e8f28054ce",
+          "artifact_digest_verified": true,
+          "complete_manifest_verified": true,
+          "manifest": {
+            "count": 10895,
+            "generation": "gov24-45374669702-1",
+            "lastSuccessAt": "2026-11-24T19:32:34.172544+09:00",
+            "manifestSha256": "ac91c8918926d5f940cd3f387696e90e0852ba857debdc6972b1a09ef53212ff",
+            "path": "snapshots/gov24-45374669702-1",
+            "version": 1
+          },
+          "collection_report": {
+            "applicationOpenVerified": false,
+            "collectionSucceededAt": "2026-11-24T19:32:34.172544+09:00",
+            "coverage": "Currently connected Gov24 API, all unfiltered pages of three endpoints",
+            "endpoints": {
+              "serviceDetail": {
+                "completedPages": 109,
+                "duplicateCount": 0,
+                "expectedPages": 109,
+                "receivedCount": 10895,
+                "reportedTotal": 10895,
+                "uniqueCount": 10895
+              },
+              "serviceList": {
+                "completedPages": 109,
+                "duplicateCount": 0,
+                "expectedPages": 109,
+                "receivedCount": 10895,
+                "reportedTotal": 10895,
+                "uniqueCount": 10895
+              },
+              "supportConditions": {
+                "completedPages": 109,
+                "duplicateCount": 0,
+                "expectedPages": 109,
+                "receivedCount": 10895,
+                "reportedTotal": 10895,
+                "uniqueCount": 10895
+              }
+            },
+            "factsVerified": false,
+            "feedSha256": "857fe88a7dfc20dd84cf60150b827214df8497c0aa59e63a2d55a6f0ddbc302d",
+            "finishedAt": "2026-11-24T19:32:35.298132+09:00",
+            "generation": "gov24-45374669702-1",
+            "normalRequestEstimate": 330,
+            "pageResponses": 327,
+            "project": "supportpick",
+            "published": false,
+            "sampleCount": 0,
+            "scheduled": false,
+            "sourceConsistency": "No snapshot token: totals and boundary pages stable; unique IDs and all endpoint sets matched",
+            "startedAt": "2026-11-24T19:25:52.234580+09:00",
+            "status": "passed",
+            "storedCount": 10895
+          },
+          "public_verification_artifact_id": 14910528644,
+          "public_verification_artifact_digest": "sha256:5826fb80e4d06f9e524bb97728666efb3f5a71343869a9ce5427172401c0c482",
+          "actual_live_manifest_reread_at": "2026-11-24T20:39:17.077343+09:00",
+          "retry_budget": "Workflowalreadyused2manifestchecks; no nestedretry/manualdeployment/rerun. CurrentreadonlyoneGETconfirmsoldgeneration.",
+          "next_condition": "Existingwebsiteoperationsmayreconcilepublicgeneration; no siteUI/banner/publicdeploychange inThreads-onlyscope. Threadsreads latestcompleteactualruntimeartifact and must keep ownaccount/queue/fingerprint/freshnessguards. No collectionfixneeded or falsepublicrecoverysuccess."
+        },
+        "artifact_digest_previously_verified_cached_bytes": true,
+        "original_notice_rereview_this_check": false
+      },
+      "writer": {
+        "checked_at": "2026-11-25T04:17:22.419734+09:00",
+        "ready": 4,
+        "future24h_ready": 4,
+        "new_drafts": 0,
+        "existing_READY_reused": 4,
+        "drafts": [
+          {
+            "slot": "2026-11-25T08:00:00+09:00",
+            "benefit_id": "419000000129",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 315,
+            "expires_at": "2026-11-25T10:40:14.847169+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T12:00:00+09:00",
+            "benefit_id": "PTR000050390",
+            "pattern": "P5",
+            "media_turn": "IMAGE",
+            "char_count": 436,
+            "expires_at": "2026-11-25T14:45:53.443971+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T16:00:00+09:00",
+            "benefit_id": "B49000100208",
+            "pattern": "P6",
+            "media_turn": "TEXT",
+            "char_count": 381,
+            "expires_at": "2026-11-25T19:17:15.962833+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T20:00:00+09:00",
+            "benefit_id": "B01000300013",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 419,
+            "expires_at": "2026-11-25T22:53:00.768308+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source": {
+          "count": 10895,
+          "generation": "gov24-45374669702-1",
+          "lastSuccessAt": "2026-11-24T19:32:34.172544+09:00",
+          "manifestSha256": "ac91c8918926d5f940cd3f387696e90e0852ba857debdc6972b1a09ef53212ff",
+          "path": "snapshots/gov24-45374669702-1",
+          "version": 1
+        },
+        "source_count": 10895,
+        "ledger_records": 78,
+        "pending": null,
+        "lease": null,
+        "new_posts": 0,
+        "new_incidents": 0,
+        "new_metrics": 0,
+        "observations": 151,
+        "due_metrics": 0,
+        "new_evaluation": false,
+        "14day_evaluation_already_recorded": true,
+        "astra_review_invocations": 0,
+        "existing_Astra_review_preserved": true,
+        "current_main_image_review_matches_cached_bytes": true,
+        "image_redownloaded_this_check": false,
+        "new_visual_inspection": false,
+        "source_recheck_required_at_publish": true,
+        "expiry_prevention_revalidations": 0
+      },
+      "metrics": {
+        "run_id": "45457220041",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T18:13:58Z",
+        "head_sha": "890215f6a930d9967a5578b3134413e1dde8a1b7",
+        "job_id": 138669817142,
+        "artifact_id": 14950497072,
+        "artifact_digest": "sha256:7a3b5aa562765b6c86d507d6ba6868ffc31b5f3ef58b9669648bc205b57741b9",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "observed_at": "2026-11-24T18:13:54.437863+00:00",
+        "records": [],
+        "due_count": 0,
+        "success_count": 0,
+        "classification": "normal_no_due_at_run_time",
+        "new_observation_keys": [],
+        "new_observations": 0,
+        "total_observations": 151,
+        "new_evaluation_report_due": false,
+        "weights_unchanged": true,
+        "publication_calls": 0,
+        "workflow_dispatch": false
+      },
+      "recovery": {
+        "original_slot": "2026-11-23T20:00:00+09:00",
+        "original_slot_published": false,
+        "closed_missed_slot_no_backfill": true,
+        "previously_closed_missed_slot_preserved": true,
+        "new_failure_this_check": false,
+        "new_recovery_this_check": false,
+        "dispatches_this_check": 0,
+        "new_posts": 0,
+        "pending": null,
+        "lease": null,
+        "stage": "read_only_maintenance_complete",
+        "reason": "78completeverifiedpublishedrows/pending/lease unchanged; alltargetrunversionsunchanged, no newincident/publication/repair.4READY unchanged andwholewindow validationpassed.",
+        "new_publication_this_check": false,
+        "maintenance_new_posts": 0
+      },
+      "next_condition": "FourfutureREADY unchanged:Nov25 08Wonju315TEXT/P8,12maternal436IMAGE/P5,16condo381TEXT/P6,20newstart419IMAGE/P1. Nominalslotandfull2hwindowdraftvalidationpass; actualsenderlatestcompletefreshsource/currentofficial/account/ledger/pending/CAS/firstattempt/max4 mandatory.19:32completefeednotfreshatNov25 20; awaitnormalcollector, no freshnessassumption. AllactualAstraPASS andexpiryrepairs preserved.78completepublished151actualobservations/formal14dayevaluation unchanged; latestmetricsdue0normal,not measurementfailure. PriorpublicsitegenerationincidentremainsunchangedoutsideThreads-onlyscope. No newpost/Astra/draft/expiryrefresh/recovery/dispatch/rerun/backfill; no repeatreport.",
+      "publication": {
+        "run_id": "45386810330",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T11:44:41Z",
+        "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+        "job_id": 138419746101,
+        "artifact_id": 14917160824,
+        "artifact_digest": "sha256:a2f61a6d967000d4b55cba3ca107b54536ca32e652740dd3a6204391808b8b69",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 138,
+        "new_publication_this_run": false,
+        "main_id": "18472882234189391",
+        "url": "https://www.threads.com/@hid_1004/post/DgH4EXCm_Hj",
+        "slot": "2026-11-24T20:00:00+09:00",
+        "receipt_at": "2026-11-24T20:44:33.742581+09:00",
+        "receipt_time_basis": "GitHubjoblogThreadsreceiptline, notexactplatformtimestamp",
+        "ledger_published_at": "2026-11-24T20:43:48.291443+09:00",
+        "ledger_published_at_is_invocation_not_exact_platform_time": true,
+        "stage": "complete",
+        "verified": true,
+        "body_hash": "a974ae6f2830c6141959fc6fbd58237cdbaed865415743966ac4496a447f5f3c",
+        "content_hash": "5ee78fdd744cdaad39bbfec31d3e3756ca03b74bb573666e8137b1d5370adfae",
+        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "media_turn": "IMAGE",
+        "pattern": "P6",
+        "char_count": 422,
+        "replies": 0,
+        "original_queue_body_asset_exact": true,
+        "previous77records_preserved": true,
+        "maintenance_post_calls": 0,
+        "delay_within_original_2h_window": true,
+        "actual_source_generation": "gov24-45374669702-1",
+        "latest_already_reported": true
+      },
+      "history_reconciliation": {
+        "run_id": "45173485637",
+        "mode": "check-account",
+        "account": "hid_1004",
+        "checked_at": "2026-11-23T21:21:24+09:00",
+        "recent_remote_rows": 100,
+        "more_history": true,
+        "main_ledger_matches_in_page": 49,
+        "latest20_main_matches": 20,
+        "latest_remote_id": "18129410933479829",
+        "target_text_absent": true,
+        "scope": "77durablecompleteverifiedrows;prior76exactpreserved;newreceipt/body/asset/artifactverified. No full28dayremotequery.",
+        "artifact_id": 14818615408,
+        "artifact_digest": "sha256:23cfc165bbd050ec1a12dbde18778345efb01c4d9e20abf69f6279b090e003b3",
+        "artifact_digest_verified": true,
+        "remote_requeried_this_check": false,
+        "previous_remote_evidence_preserved": true
+      },
+      "official_review_recovery": {
+        "new_official_page_review_this_check": false,
+        "new_Astra_calls": 0,
+        "existing_Astra_PASS_preserved": true,
+        "prior22hactual_newstart_expiry_rereview_preserved": true,
+        "image_redownloaded_this_check": false,
+        "cached_image_sha_matches_current_main_review": true
+      },
+      "regular_slot_observation": {
+        "slot": "2026-11-24T08:00:00+09:00",
+        "status": "natural_publication_verified_complete",
+        "main_id": "18123605203752749",
+        "receipt_at": "2026-11-24T08:46:05.901553+09:00",
+        "main_url": "https://www.threads.com/@hid_1004/post/DgGl2ooGuAa"
+      },
+      "main_head_observation": {
+        "latest_observed_run_head": "5732cde848a03907b2505396c34a4d60c713571e",
+        "target_publisher_workflows_master_and_assets_blobs_unchanged": true,
+        "unrelated_changes_not_modified": true
+      },
+      "image_sha_comparisons": [
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:06.502293+09:00"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:14.847084+09:00"
+        }
+      ],
+      "run_status_transitions": [
+        {
+          "run_id": "45277137519",
+          "from": "in_progress",
+          "to": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-23T22:38:20Z"
+        }
+      ],
+      "formal_evaluation": {
+        "policy_id": "supportpick-threads-reach-v1-20261109",
+        "window": "14d_evaluation",
+        "evaluated_at": "2026-11-24T17:20:07.451089+09:00",
+        "period_start": "2026-11-10T17:00:08.835254+09:00",
+        "period_end": "2026-11-24T17:00:08.835254+09:00",
+        "normal_verified_publications": 53,
+        "experiment_regular_slots": 57,
+        "unpublished_slots": [
+          {
+            "slot": "2026-11-16T16:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-18T12:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-23T20:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-24T16:00:00+09:00",
+            "classification": "unreserved_at_evaluation_cutoff_then_published_after_cutoff",
+            "subsequent_main_id": "17974331994194122",
+            "subsequent_receipt_at": "2026-11-24T17:21:06.769138+09:00"
+          }
+        ],
+        "missed_closed_slots": 3,
+        "partial_or_pending": 0,
+        "independent_full_public_rendering_recheck": false,
+        "publication_audit_scope": "76durablecompleteverifiedrecords; priorreceipts/body/media/artifacts retained. No newfull28dayremotequery; Nov24 16unreserved/latestpublisher12only,nofailure-runconfirmed.",
+        "24h_comparison_window_observations": 40,
+        "A_n": 20,
+        "B_n": 20,
+        "24h_comparable_matched_pairs": 0,
+        "24h_group_view_medians": {
+          "A": 62.0,
+          "B": 62.0
+        },
+        "24h_all_view_median": 62.0,
+        "actual_reactions": {
+          "A": {
+            "likes": 29,
+            "replies": 0,
+            "reposts": 6,
+            "shares": 1
+          },
+          "B": {
+            "likes": 27,
+            "replies": 0,
+            "reposts": 5,
+            "shares": 0
+          }
+        },
+        "reaction_rate_used": false,
+        "all_24h_observations_delayed": true,
+        "eligible_elapsed_hours_min": 24.317312148333336,
+        "eligible_elapsed_hours_max": 25.691108017222223,
+        "24h_unavailable_not_zero": [
+          "18117968657159347",
+          "17992859946026940",
+          "17913499947663769",
+          "18001464938830261"
+        ],
+        "24h_not_yet_due": [
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "24h_missing_after_due": [],
+        "7d_measured": 27,
+        "7d_not_yet_due": [
+          "18004106657810124",
+          "18155833435528730",
+          "18061699079561356",
+          "18075899267779249",
+          "18361336213223949",
+          "18100168118443439",
+          "17876108337601849",
+          "17954736195295664",
+          "18136261246743978",
+          "18029579210863916",
+          "18106611944009610",
+          "17995393143022353",
+          "18002356029029330",
+          "18098495828440255",
+          "18121994881961457",
+          "18093412586696162",
+          "18102899498408388",
+          "18214999999364836",
+          "18125366213319496",
+          "18149154712603236",
+          "17879078796637660",
+          "18388999600236313",
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "7d_group_medians": {
+          "A": 105,
+          "B": 87.5
+        },
+        "quotes": "not_provided",
+        "reader_only_replies": "unavailable",
+        "profile_clicks": "account_level_not_available; no_post_attribution",
+        "confounders": [
+          "Differentbusiness/region/readers/benefit/deadline/time/media/length; matchedsimilarpairs0",
+          "PreservedmovedexistingREADYcohorts differfromnewslots;excludeinsteadretroclassify",
+          "Newquestiontitlepolicy changesmorethanopeningalone;newAstrarevieweddraftsexcludedfrompureA/B"
+        ],
+        "minimum_24h_target_per_group": 8,
+        "raw_window_target_met": true,
+        "current_stratified_target_met": false,
+        "decision": "extend_comparison;maintainbalancedA/Bandexistingcontrols.No demonstratedrepeatedadvantage;noeditorialweightchange.",
+        "weight_changed": false,
+        "no_backcalculation": true,
+        "extension_next_condition": "Reassess in existingchecks when comparable similar-business strata have sufficient repeatedactual24hwindows; keep comparison group. No separate schedule.",
+        "reported_at": "2026-11-24T17:20:07.451089+09:00",
+        "evidence_latest_metric_run_id": "45351393999",
+        "24h_measured_but_excluded": [
+          {
+            "main_id": "18122947907049313",
+            "elapsed_hours": 52.64388394083333,
+            "reason": "late_beyond_26h_comparison_tolerance"
+          },
+          {
+            "main_id": "18061699079561356",
+            "elapsed_hours": 25.374772445277777,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18075899267779249",
+            "elapsed_hours": 24.65035752527778,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18361336213223949",
+            "elapsed_hours": 24.39045965972222,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18100168118443439",
+            "elapsed_hours": 24.6578044575,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "17876108337601849",
+            "elapsed_hours": 25.228189436944444,
+            "reason": "Previously written input preserved; no retrospective cohort assignment after failed preceding slot"
+          }
+        ],
+        "7d_group_n": {
+          "A": 13,
+          "B": 14
+        },
+        "7d_due_unmeasured": [
+          "18450932713126961"
+        ],
+        "publication_cutoff_note": "EvaluationperiodendsNov24 17:00:08.16slotwasunreservedatcutoff, laternaturallypublished17:21:06withinits2hwindow; excludedfrom53periodpublications becauseactualinvocation17:20aftercutoff. Notafourthmissedslot.",
+        "unreserved_at_period_end_slots": 1,
+        "currently_open_unreserved_slots_from_period": 0
+      },
+      "publication_schedule_observation": {
+        "slot": "2026-11-24T20:00:00+09:00",
+        "checked_at": "2026-11-25T04:17:22.419734+09:00",
+        "status": "published_complete_verified_already_reported",
+        "main_id": "18472882234189391",
+        "url": "https://www.threads.com/@hid_1004/post/DgH4EXCm_Hj",
+        "receipt_at": "2026-11-24T20:44:33.742581+09:00",
+        "window_end": "2026-11-24T22:00:00+09:00",
+        "pending": null,
+        "lease": null,
+        "workflow_dispatch": false,
+        "daily_main_publications": 4
+      },
+      "new_formal_evaluation_this_check": false,
+      "writer_final_edit_v3_status": {
+        "policy_id": "supportpick-threads-final-edit-v3-20261125",
+        "policy_unchanged": true,
+        "protected_READY": 4,
+        "new_v3_READY": 0,
+        "new_scores": 0
+      }
     }
   },
   "last_reported_prepublication_repair": {
@@ -131473,7 +132050,7 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-25T03:23:48.810910+09:00",
+    "checked_at": "2026-11-25T04:17:22.419734+09:00",
     "ready": 4,
     "future24h_ready": 4,
     "new_drafts": 0,
