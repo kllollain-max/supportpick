@@ -9,7 +9,7 @@ on:
         required: false
         type: string
       deployed_run_id:
-        description: Successful publication run containing the original github-pages artifact
+        description: Successful publication run containing the original Pages artifact
         required: false
         type: string
   workflow_run:
@@ -44,12 +44,15 @@ jobs:
         with:
           python-version: '3.12'
       - name: Verify exact source and successful publication step
+        id: published
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: python verifier/tools/restore_pages_artifact.py --expected-sha "$DEPLOYED_SHA" --run-id "$DEPLOYED_RUN_ID"
+        run: |
+          name=$(python verifier/tools/restore_pages_artifact.py --expected-sha "$DEPLOYED_SHA" --run-id "$DEPLOYED_RUN_ID")
+          echo "name=$name" >> "$GITHUB_OUTPUT"
       - uses: actions/download-artifact@v4
         with:
-          name: github-pages
+          name: ${{ steps.published.outputs.name }}
           run-id: ${{ inputs.deployed_run_id }}
           github-token: ${{ github.token }}
           path: deployed-artifact

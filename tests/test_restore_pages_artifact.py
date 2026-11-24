@@ -6,9 +6,10 @@ import tarfile
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
-from restore_pages_artifact import restore, verify_origin
+from restore_pages_artifact import restore, validate_run, verify_origin
 
 SHA = 'a' * 40
 
@@ -63,3 +64,19 @@ class PublishedArtifactTests(unittest.TestCase):
         for changed_run, changed_jobs in [({**run, 'head_sha': 'c' * 40}, jobs),
                                           ({**run, 'path': 'other.yml'}, jobs), (run, {'jobs': []})]:
             with self.assertRaises(ValueError): verify_origin(changed_run, changed_jobs, SHA)
+
+    def test_readiness_uses_only_the_successful_attempt_artifact(self):
+        run = {'head_sha': SHA, 'path': '.github/workflows/deploy-approved.yml', 'run_attempt': 2}
+        jobs = {'jobs': [{'steps': [{'name': 'Run actions/deploy-pages@v4', 'conclusion': 'success'}]}]}
+        current = {'name': 'github-pages-attempt-2', 'expired': False}
+        prior = {'name': 'github-pages-attempt-1', 'expired': False}
+        for artifacts, expected in [([prior, current], current['name']), ([], 'github-pages')]:
+            with patch.dict('os.environ', {'GITHUB_TOKEN': 'test-token'}), \
+                 patch('restore_pages_artifact.urlopen'), \
+                 patch('restore_pages_artifact.json.load', side_effect=[run, jobs, {'artifacts': artifacts}]):
+                self.assertEqual(validate_run('1234', SHA), expected)
+        with patch.dict('os.environ', {'GITHUB_TOKEN': 'test-token'}), \
+             patch('restore_pages_artifact.urlopen'), \
+             patch('restore_pages_artifact.json.load', side_effect=[run, jobs, {'artifacts': [current, current]}]):
+            with self.assertRaisesRegex(ValueError, 'publication_artifact_unavailable'):
+                validate_run('1234', SHA)
