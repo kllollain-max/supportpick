@@ -221,6 +221,24 @@ class StaticDetailTests(unittest.TestCase):
             self.assertEqual(result['report']['retiredPages'], 1)
             self.assertFalse(any(x[0] == 'benefits/OLD/' for x in result['entries']))
 
+    def test_verified_old_link_still_resolves_after_source_rotates(self):
+        sid = '628000000176'
+        registry = {'retiredIds': [sid]}
+        path = benefit_path(sid)
+        with tempfile.TemporaryDirectory() as temp:
+            out = Path(temp)
+            archived = write_details(out, {}, {}, BASE, registry, {}, 'success', NOW)
+            html = (out / path / 'index.html').read_text()
+            self.assertIn('content="noindex,follow"', html)
+            self.assertIn('현재 지원정보 검색', html)
+            self.assertNotIn(path, [entry[0] for entry in archived['entries']])
+            self.assertEqual(archived['report']['retiredPages'], 1)
+
+            restored = write_details(out, {sid: row(sid)}, {}, BASE, registry, {}, 'success', NOW)
+            self.assertEqual(restored['report']['retiredPages'], 0)
+            self.assertIn(path, [entry[0] for entry in restored['entries']])
+            self.assertNotIn('현재 공식 목록에서 확인되지 않는', (out / path / 'index.html').read_text())
+
     def test_failed_review_withholds_facts_and_does_not_emit_unsafe_official_link(self):
         with tempfile.TemporaryDirectory() as temp:
             output=Path(temp);a=row()
