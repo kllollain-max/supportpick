@@ -14,6 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "45307423892",
     "45206247031",
     "45188571891",
     "45174007083",
@@ -357,14 +358,14 @@
   ],
   "last_health": {
     "unresolved_publications": 0,
-    "published_benefits": 60,
-    "source_run_id": "44625737013",
+    "published_benefits": 75,
+    "source_run_id": "45277137519",
     "source_result": "complete_verified",
-    "source_count": 10891,
-    "source_last_success_at": "2026-11-20T07:15:01.141322+09:00",
+    "source_count": 10895,
+    "source_last_success_at": "2026-11-24T07:18:33.759031+09:00",
     "source_workflow_conclusion": "success",
     "source_failure_classification": null,
-    "last_publisher_run_id": "44639457903",
+    "last_publisher_run_id": "45291493778",
     "writer_queue_ready": 4,
     "writer_schema": "supportpick.writer.v1",
     "account_check": "verified_http_200",
@@ -5648,18 +5649,35 @@
       "conclusion": "success",
       "updated_at": "2026-11-23T23:46:17Z",
       "head_sha": "5732cde848a03907b2505396c34a4d60c713571e"
+    },
+    "45307423892": {
+      "run_id": "45307423892",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-24T01:45:55Z",
+      "head_sha": "404cefd7b4ad1c11963f78f46339e1a51b304096"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-24T10:41:31.220284+09:00",
-    "result": "prepublication_expiry_prevention_revalidated",
-    "maintenance_previous_blob_sha": "e08c2a9e7a14af916e75a69bdc1e8897c4a29873",
-    "current_main_sha": "5732cde848a03907b2505396c34a4d60c713571e",
+    "checked_at": "2026-11-24T11:41:35.516728+09:00",
+    "result": "no_update",
+    "maintenance_previous_blob_sha": "5f0a0b92f4a944487f1cf0412dd4d79fef686a54",
+    "current_main_sha": "7d5a0a73caf81f61db48ab4b396298fd815663b6",
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
     "publication_ledger_sha": "4ade0e8d5ddbca52485886a90fa978d11658fe17",
     "queue_blob_sha": "5009004eb749c9bb6363930e447efbc7922b522c",
-    "changed_run_versions": [],
+    "changed_run_versions": [
+      {
+        "run_id": "45307423892",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T01:45:55Z",
+        "head_sha": "404cefd7b4ad1c11963f78f46339e1a51b304096"
+      }
+    ],
     "active_target_runs": [],
     "run_pagination": {
       "per_page": 100,
@@ -5775,17 +5793,16 @@
         "failures": []
       },
       "no_collection_failure": true,
-      "observed_in_progress_at_start": true,
+      "observed_in_progress_at_start": false,
       "completed_success_before_record": true,
       "artifact_digest_previously_verified_cached_bytes": true
     },
     "writer": {
-      "checked_at": "2026-11-24T10:40:14.847169+09:00",
+      "checked_at": "2026-11-24T11:40:41.583867+09:00",
       "ready": 4,
       "future24h_ready": 4,
       "new_drafts": 0,
       "existing_READY_reused": 4,
-      "expiry_prevention_revalidations": 1,
       "drafts": [
         {
           "slot": "2026-11-24T12:00:00+09:00",
@@ -5842,105 +5859,47 @@
       },
       "source_count": 10895,
       "ledger_records": 75,
-      "pending": null,
-      "lease": null,
+      "queue_entries": 73,
+      "selection_notes": 74,
+      "queue_write": false,
       "new_posts": 0,
       "new_incidents": 0,
       "new_metrics": 0,
       "observations": 143,
+      "due_metrics": 0,
+      "due_post_ids": [],
       "evaluation_due": false,
       "next_evaluation_not_before": "2026-11-24T17:00:08.835254+09:00",
       "astra_review_invocations": 0,
       "existing_Astra_review_preserved": true,
-      "current_image_bytes_sha_recompared": true
+      "current_image_bytes_sha_recompared": true,
+      "new_visual_inspection": false,
+      "pending": null,
+      "lease": null,
+      "source_recheck_required_at_publish": true
     },
     "metrics": {
-      "run_id": "45295446949",
+      "run_id": "45307423892",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-24T00:14:10Z",
-      "head_sha": "5732cde848a03907b2505396c34a4d60c713571e",
-      "job_id": 138114545499,
-      "artifact_id": 14875502729,
-      "artifact_digest": "sha256:22b2b89bc2fa7d662592823e1d0996c218104f065800fd91c1c34e2d025f094d",
+      "updated_at": "2026-11-24T01:45:55Z",
+      "head_sha": "404cefd7b4ad1c11963f78f46339e1a51b304096",
+      "job_id": 138154557459,
+      "artifact_id": 14880849494,
+      "artifact_digest": "sha256:fa72d171c21ddcb91b1e373b29cb0262efefe834d040e3b4bc5db690e96a0f45",
       "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": false,
-      "job_logs_retrieved_this_check": false,
-      "observed_at": "2026-11-24T00:14:04.191101+00:00",
-      "records": [
-        {
-          "post_id": "17916385365476930",
-          "published_at": "2026-11-17T08:38:05.293658+09:00",
-          "observed_at": "2026-11-24T00:14:04.191101+00:00",
-          "window_hours": 168,
-          "elapsed_hours": 168.59969373416666,
-          "timing": "late_available_check",
-          "within_target_tolerance": true,
-          "not_backcalculated": true,
-          "metrics": {
-            "views": 54,
-            "likes": 1,
-            "comments": 0,
-            "reposts": 0,
-            "shares": 0,
-            "saves": null,
-            "profile_visits": null,
-            "new_followers": null,
-            "site_visits": null
-          }
-        },
-        {
-          "post_id": "18002356029029330",
-          "published_at": "2026-11-21T08:42:45.529242+09:00",
-          "observed_at": "2026-11-24T00:14:04.191101+00:00",
-          "window_hours": 72,
-          "elapsed_hours": 72.5218505163889,
-          "timing": "late_available_check",
-          "within_target_tolerance": true,
-          "not_backcalculated": true,
-          "metrics": {
-            "views": 22,
-            "likes": 1,
-            "comments": 0,
-            "reposts": 0,
-            "shares": 0,
-            "saves": null,
-            "profile_visits": null,
-            "new_followers": null,
-            "site_visits": null
-          }
-        },
-        {
-          "post_id": "17879078796637660",
-          "published_at": "2026-11-23T08:37:11.793464+09:00",
-          "observed_at": "2026-11-24T00:14:04.191101+00:00",
-          "window_hours": 24,
-          "elapsed_hours": 24.614554899166667,
-          "timing": "late_available_check",
-          "within_target_tolerance": true,
-          "not_backcalculated": true,
-          "metrics": {
-            "views": 7,
-            "likes": 1,
-            "comments": 0,
-            "reposts": 0,
-            "shares": 0,
-            "saves": null,
-            "profile_visits": null,
-            "new_followers": null,
-            "site_visits": null
-          }
-        }
-      ],
+      "artifact_redownloaded_this_check": true,
+      "job_logs_retrieved_this_check": true,
+      "observed_at": "2026-11-24T01:45:50.413282+00:00",
+      "records": [],
       "new_observation_keys": [],
       "new_observations": 0,
       "total_observations": 143,
-      "due_count": 3,
-      "success_count": 3,
-      "classification": "official_milestones_imported",
-      "publisher_snapshot_due_count": 1,
-      "publisher_snapshot_values_artifact_not_retained": true,
+      "classification": "normal_no_due_milestones_at_run_time",
+      "due_count": 0,
+      "success_count": 0,
+      "actual_log_summary": "Read-only snapshots: due=0 success=0",
       "new_evaluation_report_due": false,
       "weights_unchanged": true,
       "publication_calls": 0,
@@ -5949,35 +5908,19 @@
     },
     "recovery": {
       "original_slot": "2026-11-23T20:00:00+09:00",
-      "recovery_deadline": "2026-11-23T22:00:00+09:00",
       "original_slot_published": false,
-      "original_slot_recovery_dispatches": 0,
-      "no_backfill": true,
-      "ledger_slot_absent_at_followup": true,
-      "ledger_blob_sha_unchanged": "ef37a5540f272e72590277ed07594c300fc09a2c",
-      "last_account_history_verified_at": "2026-11-23T21:21:24+09:00",
-      "remote_history_requeried_this_check": false,
-      "evidence_limit": "Existing account-check100rows and actualpre-reservation failure code/log/unchanged74completeverifiedledger; no laterpublisher/recoveryruns. Do not claim new28dayremote audit.",
-      "future_queue_repaired": true,
-      "future_queue_commit": "32cb8c00beba477eba23ac2c24083c4005c8b3dd",
-      "future_queue_blob_sha": "509a6fa4b9ceb476553d221cfa36ed7f20f0c2cb",
-      "before_preview_ready": 0,
-      "before_failure_reasons": [
-        "writer_text_media_mismatch",
-        "higher_priority_candidate_disposition_required",
-        "writer_text_media_mismatch",
-        "higher_priority_candidate_disposition_required"
-      ],
-      "after_preview_ready": 4,
-      "same_body_media_pattern_preserved": true,
-      "new_posts": 0,
-      "source_refresh_required_at_actual_send": true,
+      "closed_missed_slot_no_backfill": true,
+      "previously_closed_missed_slot_preserved": true,
       "new_failure_this_check": false,
       "new_recovery_this_check": false,
       "dispatches_this_check": 0,
-      "previously_closed_missed_slot_preserved": true
+      "new_posts": 0,
+      "pending": null,
+      "lease": null,
+      "stage": "read_only_maintenance_complete",
+      "reason": "Latest publisher and75 complete verified records unchanged. New scheduled metrics run succeeded due0/success0. Full source snapshot verified; four future READY valid at slot and full2h window. No code fix or publication recovery indicated."
     },
-    "next_condition": "Nov25 08 Wonju expiry gap actually repaired: all5officialpages reread,currentstatus/endedfestival/currentcompletefeed/imageSHA rechecked; exact315char Astra-reviewed body/media/P8/cohort preserved. New preparedNov24 10:40:14/expiryNov25 10:40:14 covers entire08~10slot. All4futureREADY validate atslot and2h-1s,preview4. Actualpublisher must still recheck latestcompletefreshsource/currentfunding/corrections/ledger/account/CAS/pending/firstattempt/max4. Current07:18source not assumed fresh tomorrow08.75completeposts;143officialobservations; no newpublish/metrics/dispatch/code.14dayevaluationnotbeforetoday17:00:08.",
+    "next_condition": "Keep current READY and actual Astra PASS unchanged. Existing Actions publisher alone consumes Nov24 12/16/20 and Nov25 08 regular slots after latest complete fresh source/current official reception/account/ledger/pending/CAS checks. Current07:18 source is not assumed fresh Nov25 08. All4expiry windows pass; prior genuine10:40expiry repair retained. No backfill/rerun/dispatch/additional publication.143 official observations unchanged;14dayevaluation not before Nov24 17:00:08 KST.",
     "publication": {
       "run_id": "45291493778",
       "run_attempt": 1,
@@ -6024,7 +5967,7 @@
       "latest20_main_matches": 20,
       "latest_remote_id": "18129410933479829",
       "target_text_absent": true,
-      "scope": "74 complete verified durable rows unchanged; prior21:21official100rows retained, no new remotequery/currentvisibilityclaim.",
+      "scope": "75 durable complete verified published rows, pending/lease absent. Prior actual remote account history and publication receipt evidence retained; no new remote public-history query or visibility claim.",
       "artifact_id": 14818615408,
       "artifact_digest": "sha256:23cfc165bbd050ec1a12dbde18778345efb01c4d9e20abf69f6279b090e003b3",
       "artifact_digest_verified": true,
@@ -6032,473 +5975,14 @@
       "previous_remote_evidence_preserved": true
     },
     "official_review_recovery": {
-      "new_official_page_review_this_check": true,
-      "program_id": "419000000129",
-      "sources": [
-        "https://www.wonju.go.kr/www/selectBbsNttView.do?bbsNo=140&key=216&nttNo=492622",
-        "https://www.wonju.go.kr/wonjusarang/user_sub.php?gid=www&mu_idx=7",
-        "https://www.wonju.go.kr/media/selectBbsNttView.do?bbsNo=145&integrDeptCode=&key=3450&nttNo=492594&pageIndex=1&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
-        "https://www.wonju.go.kr/media/selectBbsNttView.do?bbsNo=145&integrDeptCode=&key=3450&nttNo=494700&pageIndex=1&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
-        "https://www.wonju.go.kr/media/selectBbsNttList.do?bbsNo=145&integrDeptCode=&key=3450&pageUnit=10&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91"
-      ],
-      "rereview_audit": {
-        "checked_at": "2026-11-24T10:40:14.847169+09:00",
-        "reason": "Prevent recurrence of pre-reservation draft expiry: previous expires08:21 before10:00 full slot window",
-        "previous_entry": {
-          "slot": "2026-11-25T08:00:00+09:00",
-          "benefit_id": "419000000129",
-          "source_fingerprint": "8c82d1cf584e75a48b468bfaf7c0ae5cc057c0583f25177de1ecdb8f7d21d203",
-          "source_generation": "gov24-45277137519-1",
-          "prepared_at": "2026-11-24T08:21:36.436569+09:00",
-          "expires_at": "2026-11-25T08:21:36.436569+09:00",
-          "asset_sha256": null,
-          "writer": {
-            "schema_version": "supportpick.writer.v1",
-            "status": "READY",
-            "selected_program_id": "419000000129",
-            "post_text": "원주사랑상품권, 어느 가게에서 5% 캐시백을 받나요?\n\n원주시 착한가격업소 중 원주사랑상품권 가맹점이 대상이에요. 가게 이름은 원주시 공고 제2026-2655호에 첨부된 추가 할인 대상 업소 목록에 나와 있어요.\n\n대상 가게에서 원주사랑상품권 QR이나 카드로 3만 원을 결제하면 캐시백은 1,500원이에요. 상품권 구매 할인과 별도로, 1인당 월 결제액 60만 원까지 5%가 적용돼 월 최대 3만 원을 돌려받을 수 있어요.\n\n지원 기간은 2026년 9월 28일부터 12월 31일까지예요. 지원 자금이 먼저 소진되면 그 전에 끝나요.\n\n자세한 사항은 프로필링크 확인",
-            "draft_text": null,
-            "reply_texts": [],
-            "media": {
-              "turn": "TEXT",
-              "asset_id": null,
-              "check": "NOT_REQUIRED",
-              "image_copy": null,
-              "alt_text": null
-            },
-            "review": {
-              "planned_at": "2026-11-25T08:00:00+09:00",
-              "application_status": "OPEN",
-              "reader": "원주에서 원주사랑상품권으로 결제하려는 이용자",
-              "central_message": "어느 가게에서 결제해야 5% 캐시백을 받을 수 있는가",
-              "pattern": "P8",
-              "selection_reason": "동일 ID serviceList 누적 조회수 35700 기준. 기존 미전송 우선사업 4건을 투영하고 더 높은 HOLD/SKIP 판단·출처를 보존한 다음 검증가능 후보. 전일 보관본을 그대로 되살리지 않고 공식 공고·구매안내·보도자료·종료행사·검색목록을 실제 다시 열람하여 질문형 초안을 새로 편집하고 독립 검수.",
-              "interest_basis": "OBSERVED_METRICS",
-              "duplicate_check": "CHECKED",
-              "evidence": [
-                {
-                  "source_id": "419000000129",
-                  "source_ref": "https://www.wonju.go.kr/www/selectBbsNttView.do?bbsNo=140&key=216&nttNo=492622",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-24T08:21:36.436569+09:00",
-                  "claims_supported": [
-                    "원주시공고2026-2655 실제1649~1662행: 대상은원주시착한가격업소중상품권가맹점,QR/카드5%,1인월사용60만원월최대3만원,3만원1500원,2026.9.28~12.31자금소진시종료,첨부대상목록."
-                  ]
-                },
-                {
-                  "source_id": "419000000129",
-                  "source_ref": "https://www.wonju.go.kr/wonjusarang/user_sub.php?gid=www&mu_idx=7",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-24T08:21:36.436569+09:00",
-                  "claims_supported": [
-                    "공식구매이용안내79~104행: 앱가입계좌등록충전,구매지원은선할인,구매월한도와캐시백대상월사용한도구별,정책변경가능. 본문은기존상품권이용자의결제혜택한정."
-                  ]
-                },
-                {
-                  "source_id": "419000000129",
-                  "source_ref": "https://www.wonju.go.kr/media/selectBbsNttView.do?bbsNo=145&integrDeptCode=&key=3450&nttNo=492594&pageIndex=1&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-24T08:21:36.436569+09:00",
-                  "claims_supported": [
-                    "공식보도자료196~204행:착한가격업소결제5%추가환급,3만원1500원예시,앱가맹점조회. 공식검색결과제목의표현을관찰했으며실제검색량추정않음."
-                  ]
-                },
-                {
-                  "source_id": "419000000129",
-                  "source_ref": "https://www.wonju.go.kr/media/selectBbsNttView.do?bbsNo=145&integrDeptCode=&key=3450&nttNo=494700&pageIndex=1&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-24T08:21:36.436569+09:00",
-                  "claims_supported": [
-                    "공식10/29보도자료:과거축제추가5%는10/29~11/15종료,현재착한가격5%와합산하지않음."
-                  ]
-                },
-                {
-                  "source_id": "419000000129",
-                  "source_ref": "https://www.wonju.go.kr/media/selectBbsNttList.do?bbsNo=145&integrDeptCode=&key=3450&pageUnit=10&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-24T08:21:36.436569+09:00",
-                  "claims_supported": [
-                    "공식원주사랑검색목록198~218행과현재검색결과대조,열람범위의후속종료정정없음. 실시간잔여자금/개별가게거래는보장않음."
-                  ]
-                },
-                {
-                  "source_id": "419000000129",
-                  "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006198&bnefType=all&svcId=419000000129",
-                  "access_method": "PROVIDED_OFFICIAL_TEXT",
-                  "verified_at": "2026-11-24T08:21:36.436569+09:00",
-                  "claims_supported": [
-                    "실제load_feed/read_current/verify_snapshot완전세대gov24-45277137519-1 동일ID 누적조회수35700,원본checkedAt=2026-11-24T07:14:40.632615+09:00; 수집성공07:18와실제원문열람시각구별. API상시기본구매지원과별도기간캐시백혼동않음."
-                  ]
-                }
-              ],
-              "checks": {
-                "facts": "PASS",
-                "current_status": "PASS",
-                "eligibility_and_units": "PASS",
-                "cta_and_no_links": "PASS",
-                "length": "PASS",
-                "media": "NOT_REQUIRED"
-              },
-              "char_count": 315,
-              "count_method": "python_len_including_spaces_and_newlines",
-              "missing_info": [],
-              "hold_reasons": [],
-              "warnings": [
-                "공식 지원기간 안이지만 잔여 자금·개별 거래 적용 여부는 미확인, 보장하지 않음.",
-                "현재 수집본은 다음날08시까지 신선하다고 가정하지 않음. 실제 발송시 최신 완전 세대 재검증 필수.",
-                "최대24시간 검수기한이 다음날08~10시 전체 허용창보다 먼저 끝나므로 다음날 정규08시 전 기존 시간별 점검에서 공식원문·자금소진/정정·최신수집본·이미지SHA를 실제 재대조해야 함. 날짜만 갱신 금지.",
-                "현재08시 미예약 슬롯이 자연게시되지 않거나 앞 회차 실패/누락 시 미예약 미래 IMAGE/TEXT와 후보순위를 다시 계산. 소급발행·임의dispatch 없음.",
-                "질문형 제목 도입으로 순수A/B 실험조건이 달라 비교 제외; 과거 READY 도입군 소급변경 없음."
-              ],
-              "reach_editorial": {
-                "policy_id": "supportpick-threads-reach-v1-20261109",
-                "core_question": "어느 가게에서 결제해야 5% 캐시백을 받을 수 있는가",
-                "reader_scope": "원주에서 원주사랑상품권으로 결제하려는 이용자",
-                "angles": [
-                  "생활소비에서캐시백혜택",
-                  "대상가게자격확인",
-                  "월개인한도와지원종료조건"
-                ],
-                "chosen_angle": "대상가게자격확인",
-                "opening_candidates": [
-                  {
-                    "type": "생활 상황형",
-                    "group": "A",
-                    "text": "원주에서 식사비를 원주사랑상품권으로 낼 때 어느 가게가 5% 캐시백 대상일까요?"
-                  },
-                  {
-                    "type": "대상·혜택형",
-                    "group": "B",
-                    "text": "원주사랑상품권, 어느 가게에서 5% 캐시백을 받나요?"
-                  },
-                  {
-                    "type": "조건 설명형",
-                    "group": null,
-                    "text": "원주시 착한가격업소라면 모든 가게에서 상품권 캐시백을 받을 수 있나요?"
-                  }
-                ],
-                "chosen_opening": "원주사랑상품권, 어느 가게에서 5% 캐시백을 받나요?",
-                "opening_type": "질문형 대상·혜택",
-                "cohort": "B",
-                "selection_reason": "동일 ID serviceList 누적 조회수 35700 기준. 기존 미전송 우선사업 4건을 투영하고 더 높은 HOLD/SKIP 판단·출처를 보존한 다음 검증가능 후보. 전일 보관본을 그대로 되살리지 않고 공식 공고·구매안내·보도자료·종료행사·검색목록을 실제 다시 열람하여 질문형 초안을 새로 편집하고 독립 검수.",
-                "history_posts_checked": 20,
-                "comparison_eligible": false,
-                "comparison_strata": {
-                  "geo": "원주시",
-                  "audience": "지역상품권이용자",
-                  "benefit": "결제캐시백",
-                  "application": "자금소진가능",
-                  "media": "TEXT"
-                },
-                "comparison_group": "실제관측140건 보존; 비교가능24h A19/B19 중앙값63/72,매칭쌍0·교란존재로효과미입증,비중유지.",
-                "applied_elements": [
-                  "구체적인가맹점질문→첫단락직접답",
-                  "공식거래예시→개인월한도→지원종료조건",
-                  "아스트라독립지적반영후동일모델재검수"
-                ],
-                "profile_route": "공식진단의프로필목표확인,실제사이트검색/상세는이번미검증",
-                "source_recheck_required_at_publish": true,
-                "master_full_used": true,
-                "supplemental_full_used_in_current_model_input": true,
-                "comparison_exclusion": "신규질문형제목정책을함께적용하여도입군만달라지는순수A/B와조건이다름."
-              },
-              "astra_final_review": {
-                "model": "gpt-6.2-astra",
-                "independent_agent": "/root/wonju_final_review",
-                "initial_verdict": "REVISE_THEN_PASS",
-                "initial_changes": [
-                  "대상가게와공식목록위치를첫단락에명확화",
-                  "반복확인행동유도정리",
-                  "공식거래예시와구매할인/결제캐시백구분유지"
-                ],
-                "final_verdict": "PASS",
-                "final_checked_at": "2026-11-24T08:22:30.261658+09:00",
-                "actual_review_calls": 2,
-                "final_text_sha256": "5fd3ac569548415d5d01f8aa2f0553d8f5057b3ec151308e8373b5d1caaee21f",
-                "char_count": 315,
-                "image": null,
-                "image_reason": "TEXT회차,실제이미지없음",
-                "final_result": "제목다음문장이대상가게에답함.공식QR/카드5%,개인월사용60만원/최대3만원,기간/자금소진,3만원1500원예시일치.315자,단독본문,CTA1회,링크/해시태그/추가유도없음.",
-                "remaining_condition": "실제발송전잔여자금/정정/최신완전수집본/검수만료재확인"
-              }
-            },
-            "next_history_record": {
-              "program_id": "419000000129",
-              "notice_version": "gov24-45277137519-1; official2026-2655 reread 2026-11-24T08:21:36.436569+09:00",
-              "pattern": "P8",
-              "opening": "원주사랑상품권, 어느 가게에서 5% 캐시백을 받나요?",
-              "structure": "가게질문→대상업소와공식목록→결제예시와개인월한도→지원기간/자금소진",
-              "media_turn": "TEXT"
-            }
-          },
-          "revalidate_before": "2026-11-25T08:00:00+09:00",
-          "full_delay_window_covered": false,
-          "revalidation_required_reason": "expires_at_before_slot_plus_two_hours"
-        },
-        "refreshed_entry": {
-          "slot": "2026-11-25T08:00:00+09:00",
-          "benefit_id": "419000000129",
-          "source_fingerprint": "8c82d1cf584e75a48b468bfaf7c0ae5cc057c0583f25177de1ecdb8f7d21d203",
-          "source_generation": "gov24-45277137519-1",
-          "prepared_at": "2026-11-24T10:40:14.847169+09:00",
-          "expires_at": "2026-11-25T10:40:14.847169+09:00",
-          "asset_sha256": null,
-          "writer": {
-            "schema_version": "supportpick.writer.v1",
-            "status": "READY",
-            "selected_program_id": "419000000129",
-            "post_text": "원주사랑상품권, 어느 가게에서 5% 캐시백을 받나요?\n\n원주시 착한가격업소 중 원주사랑상품권 가맹점이 대상이에요. 가게 이름은 원주시 공고 제2026-2655호에 첨부된 추가 할인 대상 업소 목록에 나와 있어요.\n\n대상 가게에서 원주사랑상품권 QR이나 카드로 3만 원을 결제하면 캐시백은 1,500원이에요. 상품권 구매 할인과 별도로, 1인당 월 결제액 60만 원까지 5%가 적용돼 월 최대 3만 원을 돌려받을 수 있어요.\n\n지원 기간은 2026년 9월 28일부터 12월 31일까지예요. 지원 자금이 먼저 소진되면 그 전에 끝나요.\n\n자세한 사항은 프로필링크 확인",
-            "draft_text": null,
-            "reply_texts": [],
-            "media": {
-              "turn": "TEXT",
-              "asset_id": null,
-              "check": "NOT_REQUIRED",
-              "image_copy": null,
-              "alt_text": null
-            },
-            "review": {
-              "planned_at": "2026-11-25T08:00:00+09:00",
-              "application_status": "OPEN",
-              "reader": "원주에서 원주사랑상품권으로 결제하려는 이용자",
-              "central_message": "어느 가게에서 결제해야 5% 캐시백을 받을 수 있는가",
-              "pattern": "P8",
-              "selection_reason": "동일 ID serviceList 누적 조회수 35700 기준. 기존 미전송 우선사업 4건을 투영하고 더 높은 HOLD/SKIP 판단·출처를 보존한 다음 검증가능 후보. 전일 보관본을 그대로 되살리지 않고 공식 공고·구매안내·보도자료·종료행사·검색목록을 실제 다시 열람하여 질문형 초안을 새로 편집하고 독립 검수.",
-              "interest_basis": "OBSERVED_METRICS",
-              "duplicate_check": "CHECKED",
-              "evidence": [
-                {
-                  "source_id": "419000000129",
-                  "source_ref": "https://www.wonju.go.kr/www/selectBbsNttView.do?bbsNo=140&key=216&nttNo=492622",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-24T10:40:14.847169+09:00",
-                  "claims_supported": [
-                    "원주시공고2026-2655 실제1649~1662행: 대상은원주시착한가격업소중상품권가맹점,QR/카드5%,1인월사용60만원월최대3만원,3만원1500원,2026.9.28~12.31자금소진시종료,첨부대상목록."
-                  ]
-                },
-                {
-                  "source_id": "419000000129",
-                  "source_ref": "https://www.wonju.go.kr/wonjusarang/user_sub.php?gid=www&mu_idx=7",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-24T10:40:14.847169+09:00",
-                  "claims_supported": [
-                    "공식구매이용안내79~104행: 앱가입계좌등록충전,구매지원은선할인,구매월한도와캐시백대상월사용한도구별,정책변경가능. 본문은기존상품권이용자의결제혜택한정."
-                  ]
-                },
-                {
-                  "source_id": "419000000129",
-                  "source_ref": "https://www.wonju.go.kr/media/selectBbsNttView.do?bbsNo=145&integrDeptCode=&key=3450&nttNo=492594&pageIndex=1&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-24T10:40:14.847169+09:00",
-                  "claims_supported": [
-                    "공식보도자료196~204행:착한가격업소결제5%추가환급,3만원1500원예시,앱가맹점조회. 공식검색결과제목의표현을관찰했으며실제검색량추정않음."
-                  ]
-                },
-                {
-                  "source_id": "419000000129",
-                  "source_ref": "https://www.wonju.go.kr/media/selectBbsNttView.do?bbsNo=145&integrDeptCode=&key=3450&nttNo=494700&pageIndex=1&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-24T10:40:14.847169+09:00",
-                  "claims_supported": [
-                    "공식10/29보도자료:과거축제추가5%는10/29~11/15종료,현재착한가격5%와합산하지않음."
-                  ]
-                },
-                {
-                  "source_id": "419000000129",
-                  "source_ref": "https://www.wonju.go.kr/media/selectBbsNttList.do?bbsNo=145&integrDeptCode=&key=3450&pageUnit=10&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-24T10:40:14.847169+09:00",
-                  "claims_supported": [
-                    "공식원주사랑검색목록198~218행과현재검색결과대조,열람범위의후속종료정정없음. 실시간잔여자금/개별가게거래는보장않음."
-                  ]
-                },
-                {
-                  "source_id": "419000000129",
-                  "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006198&bnefType=all&svcId=419000000129",
-                  "access_method": "PROVIDED_OFFICIAL_TEXT",
-                  "verified_at": "2026-11-24T10:40:14.847169+09:00",
-                  "claims_supported": [
-                    "실제load_feed/read_current/verify_snapshot완전세대gov24-45277137519-1 동일ID 누적조회수35700,원본checkedAt=2026-11-24T07:14:40.632615+09:00; 수집성공07:18와실제원문열람시각구별. API상시기본구매지원과별도기간캐시백혼동않음."
-                  ]
-                }
-              ],
-              "checks": {
-                "facts": "PASS",
-                "current_status": "PASS",
-                "eligibility_and_units": "PASS",
-                "cta_and_no_links": "PASS",
-                "length": "PASS",
-                "media": "NOT_REQUIRED"
-              },
-              "char_count": 315,
-              "count_method": "python_len_including_spaces_and_newlines",
-              "missing_info": [],
-              "hold_reasons": [],
-              "warnings": [
-                "공식 지원기간 안이지만 잔여 자금·개별 거래 적용 여부는 미확인, 보장하지 않음.",
-                "현재 수집본은 다음날08시까지 신선하다고 가정하지 않음. 실제 발송시 최신 완전 세대 재검증 필수.",
-                "최대24시간 검수기한이 다음날08~10시 전체 허용창보다 먼저 끝나므로 다음날 정규08시 전 기존 시간별 점검에서 공식원문·자금소진/정정·최신수집본·이미지SHA를 실제 재대조해야 함. 날짜만 갱신 금지.",
-                "현재08시 미예약 슬롯이 자연게시되지 않거나 앞 회차 실패/누락 시 미예약 미래 IMAGE/TEXT와 후보순위를 다시 계산. 소급발행·임의dispatch 없음.",
-                "질문형 제목 도입으로 순수A/B 실험조건이 달라 비교 제외; 과거 READY 도입군 소급변경 없음."
-              ],
-              "reach_editorial": {
-                "policy_id": "supportpick-threads-reach-v1-20261109",
-                "core_question": "어느 가게에서 결제해야 5% 캐시백을 받을 수 있는가",
-                "reader_scope": "원주에서 원주사랑상품권으로 결제하려는 이용자",
-                "angles": [
-                  "생활소비에서캐시백혜택",
-                  "대상가게자격확인",
-                  "월개인한도와지원종료조건"
-                ],
-                "chosen_angle": "대상가게자격확인",
-                "opening_candidates": [
-                  {
-                    "type": "생활 상황형",
-                    "group": "A",
-                    "text": "원주에서 식사비를 원주사랑상품권으로 낼 때 어느 가게가 5% 캐시백 대상일까요?"
-                  },
-                  {
-                    "type": "대상·혜택형",
-                    "group": "B",
-                    "text": "원주사랑상품권, 어느 가게에서 5% 캐시백을 받나요?"
-                  },
-                  {
-                    "type": "조건 설명형",
-                    "group": null,
-                    "text": "원주시 착한가격업소라면 모든 가게에서 상품권 캐시백을 받을 수 있나요?"
-                  }
-                ],
-                "chosen_opening": "원주사랑상품권, 어느 가게에서 5% 캐시백을 받나요?",
-                "opening_type": "질문형 대상·혜택",
-                "cohort": "B",
-                "selection_reason": "동일 ID serviceList 누적 조회수 35700 기준. 기존 미전송 우선사업 4건을 투영하고 더 높은 HOLD/SKIP 판단·출처를 보존한 다음 검증가능 후보. 전일 보관본을 그대로 되살리지 않고 공식 공고·구매안내·보도자료·종료행사·검색목록을 실제 다시 열람하여 질문형 초안을 새로 편집하고 독립 검수.",
-                "history_posts_checked": 20,
-                "comparison_eligible": false,
-                "comparison_strata": {
-                  "geo": "원주시",
-                  "audience": "지역상품권이용자",
-                  "benefit": "결제캐시백",
-                  "application": "자금소진가능",
-                  "media": "TEXT"
-                },
-                "comparison_group": "실제관측140건 보존; 비교가능24h A19/B19 중앙값63/72,매칭쌍0·교란존재로효과미입증,비중유지.",
-                "applied_elements": [
-                  "구체적인가맹점질문→첫단락직접답",
-                  "공식거래예시→개인월한도→지원종료조건",
-                  "아스트라독립지적반영후동일모델재검수"
-                ],
-                "profile_route": "공식진단의프로필목표확인,실제사이트검색/상세는이번미검증",
-                "source_recheck_required_at_publish": true,
-                "master_full_used": true,
-                "supplemental_full_used_in_current_model_input": true,
-                "comparison_exclusion": "신규질문형제목정책을함께적용하여도입군만달라지는순수A/B와조건이다름."
-              },
-              "astra_final_review": {
-                "model": "gpt-6.2-astra",
-                "independent_agent": "/root/wonju_final_review",
-                "initial_verdict": "REVISE_THEN_PASS",
-                "initial_changes": [
-                  "대상가게와공식목록위치를첫단락에명확화",
-                  "반복확인행동유도정리",
-                  "공식거래예시와구매할인/결제캐시백구분유지"
-                ],
-                "final_verdict": "PASS",
-                "final_checked_at": "2026-11-24T08:22:30.261658+09:00",
-                "actual_review_calls": 2,
-                "final_text_sha256": "5fd3ac569548415d5d01f8aa2f0553d8f5057b3ec151308e8373b5d1caaee21f",
-                "char_count": 315,
-                "image": null,
-                "image_reason": "TEXT회차,실제이미지없음",
-                "final_result": "제목다음문장이대상가게에답함.공식QR/카드5%,개인월사용60만원/최대3만원,기간/자금소진,3만원1500원예시일치.315자,단독본문,CTA1회,링크/해시태그/추가유도없음.",
-                "remaining_condition": "실제발송전잔여자금/정정/최신완전수집본/검수만료재확인"
-              }
-            },
-            "next_history_record": {
-              "program_id": "419000000129",
-              "notice_version": "gov24-45277137519-1; official2026-2655 reread 2026-11-24T08:21:36.436569+09:00",
-              "pattern": "P8",
-              "opening": "원주사랑상품권, 어느 가게에서 5% 캐시백을 받나요?",
-              "structure": "가게질문→대상업소와공식목록→결제예시와개인월한도→지원기간/자금소진",
-              "media_turn": "TEXT"
-            }
-          },
-          "revalidate_before": "2026-11-25T08:00:00+09:00",
-          "full_delay_window_covered": true,
-          "revalidation_required_reason": "expires_at_before_slot_plus_two_hours"
-        },
-        "actual_rereview": true,
-        "official_urls_actually_reopened": [
-          "https://www.wonju.go.kr/www/selectBbsNttView.do?bbsNo=140&key=216&nttNo=492622",
-          "https://www.wonju.go.kr/wonjusarang/user_sub.php?gid=www&mu_idx=7",
-          "https://www.wonju.go.kr/media/selectBbsNttView.do?bbsNo=145&integrDeptCode=&key=3450&nttNo=492594&pageIndex=1&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
-          "https://www.wonju.go.kr/media/selectBbsNttView.do?bbsNo=145&integrDeptCode=&key=3450&nttNo=494700&pageIndex=1&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
-          "https://www.wonju.go.kr/media/selectBbsNttList.do?bbsNo=145&integrDeptCode=&key=3450&pageUnit=10&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91"
-        ],
-        "actual_web_evidence": [
-          "turn749766983view0",
-          "turn749766983view1",
-          "turn749766983view2",
-          "turn749766983view3",
-          "turn749766983view4"
-        ],
-        "supported_rechecked_claims": [
-          "2026-2655 official target merchants and attached list",
-          "QR/card5% and individual monthly60만원 usage/3만원 maximum",
-          "3만원1500원 official example",
-          "Sep28-Dec31 and funding exhaustion",
-          "purchase discount distinct from payment cashback",
-          "pastOct29-Nov15 festival ended, no addition",
-          "official notice list latest75items page1 has no later matching closure/correction within opened scope"
-        ],
-        "limits": [
-          "Remaining funding and individual transaction success not verified or guaranteed",
-          "Current API source_only not currentapplication proof",
-          "Current07:18source not fresh tomorrow08; actual publisher rechecks latest complete generation",
-          "No new visual inspection; raw current image bytes matched existing visual PASS hashes",
-          "No new Astra call: exact same independently reviewed final body SHA retained"
-        ],
-        "body_media_pattern_cohort_unchanged": true,
-        "timestamp_only_extension": false,
-        "images": [
-          {
-            "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-            "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-            "matched_current_main_bytes": true,
-            "new_visual_inspection": false,
-            "compared_at": "2026-11-24T10:40:06.502293+09:00"
-          },
-          {
-            "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-            "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-            "matched_current_main_bytes": true,
-            "new_visual_inspection": false,
-            "compared_at": "2026-11-24T10:40:14.847084+09:00"
-          }
-        ],
-        "source": {
-          "count": 10895,
-          "generation": "gov24-45277137519-1",
-          "lastSuccessAt": "2026-11-24T07:18:33.759031+09:00",
-          "manifestSha256": "5e05c8162eb03678e75209e530dfe4b710d797b95e4d3e834f399502a65de644",
-          "path": "snapshots/gov24-45277137519-1",
-          "version": 1
-        },
-        "source_count": 10895,
-        "full_delay_window_before": false,
-        "full_delay_window_after": true,
-        "all_four_validated": true,
-        "queue_commit": "15c095961bd9200282fa8a30ffbb01398fc5bba7",
-        "queue_blob_sha": "5009004eb749c9bb6363930e447efbc7922b522c",
-        "queue_readback_equal": true,
-        "previous_queue_blob_sha": "bb58e8cede4d286c0ae542e79a1a38d2ffd6af5f",
-        "new_posts": 0,
-        "new_incidents": 0,
-        "workflow_dispatches": 0,
-        "body_sha256": "5fd3ac569548415d5d01f8aa2f0553d8f5057b3ec151308e8373b5d1caaee21f",
-        "review_warning_resolution": "Original editorial warning about08:21expiry is historical; this audited genuine rereview resolves that expiry gap through10:40. General actual-send source/currentstatus recheck remains mandatory."
-      },
+      "new_official_page_review_this_check": false,
+      "evidence_timestamps_preserved": true,
+      "image_bytes_sha_recompared": true,
       "new_visual_inspection": false,
-      "image_bytes_sha_recompared": true
+      "previous_actual_rereview_at": "2026-11-24T10:40:14.847169+09:00",
+      "previous_expiry_repair_preserved": true,
+      "actual_Astra_review_preserved": true,
+      "new_Astra_calls": 0
     },
     "regular_slot_observation": {
       "slot": "2026-11-24T08:00:00+09:00",
@@ -6933,7 +6417,7 @@
     }
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-24T07:39:06.155124+09:00",
+    "checked_at": "2026-11-24T11:41:35.516728+09:00",
     "new_publications": 0,
     "new_incidents": 0,
     "queue_ready": 4,
@@ -6942,7 +6426,8 @@
     "new_ready_drafts": 0,
     "existing_queue_preserved": true,
     "new_normal_metric_runs": 1,
-    "latest_collection_complete_verified": true
+    "latest_collection_complete_verified": true,
+    "all_full_delay_windows_valid": true
   },
   "reach_policy": {
     "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -13942,7 +13427,7 @@
           "not_backcalculated": true
         }
       },
-      "last_availability_check_at": "2026-11-24T09:41:27.195860+09:00",
+      "last_availability_check_at": "2026-11-24T01:45:50.413282+00:00",
       "statistical_decision": "comparison_deferred_confounded_strata_and_no_repeated_advantage; extend matched samples, retain A/B weights",
       "diagnostic_observations_by_run_id": {
         "43163347739": {
@@ -20149,6 +19634,34 @@
           "weights_unchanged": true,
           "publication_calls": 0,
           "workflow_dispatch": false
+        },
+        "45307423892": {
+          "run_id": "45307423892",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-24T01:45:55Z",
+          "head_sha": "404cefd7b4ad1c11963f78f46339e1a51b304096",
+          "job_id": 138154557459,
+          "artifact_id": 14880849494,
+          "artifact_digest": "sha256:fa72d171c21ddcb91b1e373b29cb0262efefe834d040e3b4bc5db690e96a0f45",
+          "artifact_digest_verified": true,
+          "artifact_redownloaded_this_check": true,
+          "job_logs_retrieved_this_check": true,
+          "observed_at": "2026-11-24T01:45:50.413282+00:00",
+          "records": [],
+          "new_observation_keys": [],
+          "new_observations": 0,
+          "total_observations": 143,
+          "classification": "normal_no_due_milestones_at_run_time",
+          "due_count": 0,
+          "success_count": 0,
+          "actual_log_summary": "Read-only snapshots: due=0 success=0",
+          "new_evaluation_report_due": false,
+          "weights_unchanged": true,
+          "publication_calls": 0,
+          "workflow_dispatch": false,
+          "due_count_at_check": 0
         }
       },
       "additional_connector_check": {
@@ -115929,6 +115442,369 @@
           "updated_at": "2026-11-23T22:38:20Z"
         }
       ]
+    },
+    "2026-11-24T11:41:35.516728+09:00": {
+      "checked_at": "2026-11-24T11:41:35.516728+09:00",
+      "result": "no_update",
+      "maintenance_previous_blob_sha": "5f0a0b92f4a944487f1cf0412dd4d79fef686a54",
+      "current_main_sha": "7d5a0a73caf81f61db48ab4b396298fd815663b6",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "4ade0e8d5ddbca52485886a90fa978d11658fe17",
+      "queue_blob_sha": "5009004eb749c9bb6363930e447efbc7922b522c",
+      "changed_run_versions": [
+        {
+          "run_id": "45307423892",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-24T01:45:55Z",
+          "head_sha": "404cefd7b4ad1c11963f78f46339e1a51b304096"
+        }
+      ],
+      "active_target_runs": [],
+      "run_pagination": {
+        "per_page": 100,
+        "pages": [
+          1
+        ],
+        "checkpoint_run_id": "45295446949",
+        "checkpoint_version_unchanged": true,
+        "all_new_target_versions_observed": true
+      },
+      "publication_ledger_records": 75,
+      "complete_verified_records": 75,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "45277137519",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-23T22:38:20Z",
+        "head_sha": "5732cde848a03907b2505396c34a4d60c713571e",
+        "job_id": 138051732020,
+        "artifact_id": 14868507630,
+        "artifact_digest": "sha256:b768e7aa698979de916b7404b321a7e5e8c15302e7ce3847b3dcfba08a734d22",
+        "artifact_redownloaded_this_check": false,
+        "artifact_digest_verified": true,
+        "read_current_verify_snapshot_load_feed": true,
+        "count": 10895,
+        "generation": "gov24-45277137519-1",
+        "lastSuccessAt": "2026-11-24T07:18:33.759031+09:00",
+        "manifestSha256": "5e05c8162eb03678e75209e530dfe4b710d797b95e4d3e834f399502a65de644",
+        "path": "snapshots/gov24-45277137519-1",
+        "version": 1,
+        "source_count": 10895,
+        "collection_report": {
+          "applicationOpenVerified": false,
+          "collectionSucceededAt": "2026-11-24T07:18:33.759031+09:00",
+          "coverage": "Currently connected Gov24 API, all unfiltered pages of three endpoints",
+          "endpoints": {
+            "serviceDetail": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "serviceList": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "supportConditions": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            }
+          },
+          "factsVerified": false,
+          "feedSha256": "30a93adf6cfac6f954420518a1f06aac9c436d92254c2e54b928f966e73c7c64",
+          "finishedAt": "2026-11-24T07:18:34.853540+09:00",
+          "generation": "gov24-45277137519-1",
+          "normalRequestEstimate": 330,
+          "pageResponses": 327,
+          "project": "supportpick",
+          "published": false,
+          "sampleCount": 0,
+          "scheduled": false,
+          "sourceConsistency": "No snapshot token: totals and boundary pages stable; unique IDs and all endpoint sets matched",
+          "startedAt": "2026-11-24T07:11:09.820235+09:00",
+          "status": "passed",
+          "storedCount": 10895
+        },
+        "current_step": "completed",
+        "collection_complete": true,
+        "workflow_complete": true,
+        "all_four_fingerprints_priority_and_full_delay_windows_pass": true,
+        "original_notice_rereview_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 303,
+        "public_verification_artifact_id": 14870600826,
+        "public_verification_digest": "sha256:0b3d702d86e063ff5cc5e19b36dfb264f35f210321aaa6fa28633a900af9a71b",
+        "public_verification": {
+          "publicHtmlChecked": 11048,
+          "sitemapUrls": 11035,
+          "generation": "gov24-45277137519-1",
+          "sourceRevision": "5732cde848a03907b2505396c34a4d60c713571e",
+          "robots": {
+            "http": 200,
+            "crawlAllowed": true,
+            "scope": "host_root"
+          },
+          "missingUrlHttp": 404,
+          "passed": 11048,
+          "failed": 0,
+          "initialFailures": 1,
+          "maxRequestsPerSecond": 10,
+          "rateLimitEpisodes": 0,
+          "stoppedForRateLimit": false,
+          "recoveredAfterRetry": [
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/142100000058/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            }
+          ],
+          "failures": []
+        },
+        "no_collection_failure": true,
+        "observed_in_progress_at_start": false,
+        "completed_success_before_record": true,
+        "artifact_digest_previously_verified_cached_bytes": true
+      },
+      "writer": {
+        "checked_at": "2026-11-24T11:40:41.583867+09:00",
+        "ready": 4,
+        "future24h_ready": 4,
+        "new_drafts": 0,
+        "existing_READY_reused": 4,
+        "drafts": [
+          {
+            "slot": "2026-11-24T12:00:00+09:00",
+            "benefit_id": "B55190400005",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 378,
+            "expires_at": "2026-11-24T21:48:01.930334+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-24T16:00:00+09:00",
+            "benefit_id": "B55284500010",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 432,
+            "expires_at": "2026-11-24T21:48:01.930334+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-24T20:00:00+09:00",
+            "benefit_id": "127000000002",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 422,
+            "expires_at": "2026-11-24T23:06:37.757855+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T08:00:00+09:00",
+            "benefit_id": "419000000129",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 315,
+            "expires_at": "2026-11-25T10:40:14.847169+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source": {
+          "count": 10895,
+          "generation": "gov24-45277137519-1",
+          "lastSuccessAt": "2026-11-24T07:18:33.759031+09:00",
+          "manifestSha256": "5e05c8162eb03678e75209e530dfe4b710d797b95e4d3e834f399502a65de644",
+          "path": "snapshots/gov24-45277137519-1",
+          "version": 1
+        },
+        "source_count": 10895,
+        "ledger_records": 75,
+        "queue_entries": 73,
+        "selection_notes": 74,
+        "queue_write": false,
+        "new_posts": 0,
+        "new_incidents": 0,
+        "new_metrics": 0,
+        "observations": 143,
+        "due_metrics": 0,
+        "due_post_ids": [],
+        "evaluation_due": false,
+        "next_evaluation_not_before": "2026-11-24T17:00:08.835254+09:00",
+        "astra_review_invocations": 0,
+        "existing_Astra_review_preserved": true,
+        "current_image_bytes_sha_recompared": true,
+        "new_visual_inspection": false,
+        "pending": null,
+        "lease": null,
+        "source_recheck_required_at_publish": true
+      },
+      "metrics": {
+        "run_id": "45307423892",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T01:45:55Z",
+        "head_sha": "404cefd7b4ad1c11963f78f46339e1a51b304096",
+        "job_id": 138154557459,
+        "artifact_id": 14880849494,
+        "artifact_digest": "sha256:fa72d171c21ddcb91b1e373b29cb0262efefe834d040e3b4bc5db690e96a0f45",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "observed_at": "2026-11-24T01:45:50.413282+00:00",
+        "records": [],
+        "new_observation_keys": [],
+        "new_observations": 0,
+        "total_observations": 143,
+        "classification": "normal_no_due_milestones_at_run_time",
+        "due_count": 0,
+        "success_count": 0,
+        "actual_log_summary": "Read-only snapshots: due=0 success=0",
+        "new_evaluation_report_due": false,
+        "weights_unchanged": true,
+        "publication_calls": 0,
+        "workflow_dispatch": false,
+        "due_count_at_check": 0
+      },
+      "recovery": {
+        "original_slot": "2026-11-23T20:00:00+09:00",
+        "original_slot_published": false,
+        "closed_missed_slot_no_backfill": true,
+        "previously_closed_missed_slot_preserved": true,
+        "new_failure_this_check": false,
+        "new_recovery_this_check": false,
+        "dispatches_this_check": 0,
+        "new_posts": 0,
+        "pending": null,
+        "lease": null,
+        "stage": "read_only_maintenance_complete",
+        "reason": "Latest publisher and75 complete verified records unchanged. New scheduled metrics run succeeded due0/success0. Full source snapshot verified; four future READY valid at slot and full2h window. No code fix or publication recovery indicated."
+      },
+      "next_condition": "Keep current READY and actual Astra PASS unchanged. Existing Actions publisher alone consumes Nov24 12/16/20 and Nov25 08 regular slots after latest complete fresh source/current official reception/account/ledger/pending/CAS checks. Current07:18 source is not assumed fresh Nov25 08. All4expiry windows pass; prior genuine10:40expiry repair retained. No backfill/rerun/dispatch/additional publication.143 official observations unchanged;14dayevaluation not before Nov24 17:00:08 KST.",
+      "publication": {
+        "run_id": "45291493778",
+        "run_attempt": 1,
+        "status": "published",
+        "conclusion": "success",
+        "updated_at": "2026-11-23T23:46:17Z",
+        "head_sha": "5732cde848a03907b2505396c34a4d60c713571e",
+        "job_id": 138101102433,
+        "artifact_id": 14873828183,
+        "artifact_digest": "sha256:611d8c7e1e7c2e5252e7c29bf88955bbc067d7eebdc288c4ae9d4c169cdfd8af",
+        "artifact_digest_verified": true,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 138,
+        "new_publication_this_run": false,
+        "main_id": "18123605203752749",
+        "url": "https://www.threads.com/@hid_1004/post/DgGl2ooGuAa",
+        "slot": "2026-11-24T08:00:00+09:00",
+        "receipt_at": "2026-11-24T08:46:05.901553+09:00",
+        "ledger_published_at_is_invocation_not_exact_platform_time": true,
+        "stage": "complete",
+        "verified": true,
+        "body_hash": "f45b53fbd6a66f10eff6d03386e1c81467a03d7187404128ca120aed9cbb0f56",
+        "content_hash": "327804dacd1f98a8fe770beaa01f4e9ee96ae9f42d6655e40d24516d43fc8a8a",
+        "asset_sha256": null,
+        "media_turn": "TEXT",
+        "pattern": "P8",
+        "char_count": 446,
+        "replies": 0,
+        "original_queue_body_asset_exact": true,
+        "previous74records_preserved": true,
+        "maintenance_post_calls": 0,
+        "delay_within_original_2h_window": true,
+        "latest_already_reported": true,
+        "artifact_redownloaded_this_check": false
+      },
+      "history_reconciliation": {
+        "run_id": "45173485637",
+        "mode": "check-account",
+        "account": "hid_1004",
+        "checked_at": "2026-11-23T21:21:24+09:00",
+        "recent_remote_rows": 100,
+        "more_history": true,
+        "main_ledger_matches_in_page": 49,
+        "latest20_main_matches": 20,
+        "latest_remote_id": "18129410933479829",
+        "target_text_absent": true,
+        "scope": "75 durable complete verified published rows, pending/lease absent. Prior actual remote account history and publication receipt evidence retained; no new remote public-history query or visibility claim.",
+        "artifact_id": 14818615408,
+        "artifact_digest": "sha256:23cfc165bbd050ec1a12dbde18778345efb01c4d9e20abf69f6279b090e003b3",
+        "artifact_digest_verified": true,
+        "remote_requeried_this_check": false,
+        "previous_remote_evidence_preserved": true
+      },
+      "official_review_recovery": {
+        "new_official_page_review_this_check": false,
+        "evidence_timestamps_preserved": true,
+        "image_bytes_sha_recompared": true,
+        "new_visual_inspection": false,
+        "previous_actual_rereview_at": "2026-11-24T10:40:14.847169+09:00",
+        "previous_expiry_repair_preserved": true,
+        "actual_Astra_review_preserved": true,
+        "new_Astra_calls": 0
+      },
+      "regular_slot_observation": {
+        "slot": "2026-11-24T08:00:00+09:00",
+        "status": "natural_publication_verified_complete",
+        "main_id": "18123605203752749",
+        "receipt_at": "2026-11-24T08:46:05.901553+09:00",
+        "main_url": "https://www.threads.com/@hid_1004/post/DgGl2ooGuAa"
+      },
+      "main_head_observation": {
+        "latest_observed_run_head": "5732cde848a03907b2505396c34a4d60c713571e",
+        "target_publisher_workflows_master_and_assets_blobs_unchanged": true,
+        "unrelated_changes_not_modified": true
+      },
+      "image_sha_comparisons": [
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:06.502293+09:00"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:14.847084+09:00"
+        }
+      ],
+      "run_status_transitions": [
+        {
+          "run_id": "45277137519",
+          "from": "in_progress",
+          "to": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-23T22:38:20Z"
+        }
+      ]
     }
   },
   "last_reported_prepublication_repair": {
@@ -118473,12 +118349,11 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-24T10:40:14.847169+09:00",
+    "checked_at": "2026-11-24T11:40:41.583867+09:00",
     "ready": 4,
     "future24h_ready": 4,
     "new_drafts": 0,
     "existing_READY_reused": 4,
-    "expiry_prevention_revalidations": 1,
     "drafts": [
       {
         "slot": "2026-11-24T12:00:00+09:00",
@@ -118535,17 +118410,24 @@
     },
     "source_count": 10895,
     "ledger_records": 75,
-    "pending": null,
-    "lease": null,
+    "queue_entries": 73,
+    "selection_notes": 74,
+    "queue_write": false,
     "new_posts": 0,
     "new_incidents": 0,
     "new_metrics": 0,
     "observations": 143,
+    "due_metrics": 0,
+    "due_post_ids": [],
     "evaluation_due": false,
     "next_evaluation_not_before": "2026-11-24T17:00:08.835254+09:00",
     "astra_review_invocations": 0,
     "existing_Astra_review_preserved": true,
-    "current_image_bytes_sha_recompared": true
+    "current_image_bytes_sha_recompared": true,
+    "new_visual_inspection": false,
+    "pending": null,
+    "lease": null,
+    "source_recheck_required_at_publish": true
   },
   "last_queue_review_refresh": {
     "checked_at": "2026-11-24T10:40:14.847169+09:00",
