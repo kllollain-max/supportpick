@@ -6059,39 +6059,22 @@
     }
   },
   "last_check": {
-    "checked_at": "2026-11-25T07:59:02.227357+09:00",
-    "result": "source_generation_updated_public_generation_resolved_new20h_priority_block",
-    "maintenance_previous_blob_sha": "551a3b806fb4eba8f3ce097d1ead787116065661",
+    "checked_at": "2026-11-25T08:35:18.970007+09:00",
+    "result": "new_v3_READY_and_higher_candidate_HOLD_evidence_restores_existing20",
+    "maintenance_previous_blob_sha": "c6b24cd658d4d4db88e8aa49be6500425255f957",
     "current_main_sha": "890215f6a930d9967a5578b3134413e1dde8a1b7",
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
     "publication_ledger_sha": "3d6c2cd9cb155c3fd8ead9da9ee2f233796ff0fb",
-    "queue_blob_sha": "75dff59550ab5fd0be9d0cf8e1cf16b7049b11b6",
-    "changed_run_versions": [
-      {
-        "run_id": "45500821206",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-24T22:25:46Z",
-        "head_sha": "890215f6a930d9967a5578b3134413e1dde8a1b7"
-      },
-      {
-        "run_id": "45499312067",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-24T22:42:45Z",
-        "head_sha": "890215f6a930d9967a5578b3134413e1dde8a1b7"
-      }
-    ],
+    "queue_blob_sha": "521beee093f810cc4fea2b5897f136f27ebd80cf",
+    "changed_run_versions": [],
     "active_target_runs": [],
     "run_pagination": {
       "per_page": 100,
       "pages": [
         1
       ],
-      "checkpoint_run_id": "45490265320",
+      "checkpoint_run_id": "45500821206",
       "checkpoint_version_unchanged": true,
       "all_new_target_versions_observed": true,
       "latest_completed_operations_run_id": "45499312067"
@@ -6110,9 +6093,9 @@
       "tests_passed": 310,
       "artifact_id": 14969423204,
       "artifact_digest": "sha256:b2476fdb5e694c3418887a1d95021df8401aca80648b64ada250800d80361e21",
-      "artifact_redownloaded_this_check": true,
+      "artifact_redownloaded_this_check": false,
       "artifact_digest_verified": true,
-      "job_logs_retrieved_this_check": true,
+      "job_logs_retrieved_this_check": false,
       "read_current_verify_snapshot_load_feed": true,
       "manifest": {
         "count": 10895,
@@ -6170,7 +6153,7 @@
       "publisher_freshness_hours": 24,
       "current_fresh_until": "2026-11-26T07:22:49.899473+09:00",
       "collection_is_not_current_application_status_verification": true,
-      "new_candidate_original_official_pages_read": false,
+      "new_candidate_original_official_pages_read": true,
       "existing3entries_unchanged_fingerprints_and_priority_pass": true,
       "newstart20_priority_block": true,
       "public_verification": {
@@ -6254,57 +6237,11 @@
         "site_changes_by_this_check": false,
         "workflow_dispatch": false,
         "posts_created": 0
-      }
+      },
+      "public_verification_recovery_already_reported": true
     },
     "writer": {
-      "checked_at": "2026-11-25T07:59:02.227357+09:00",
-      "ready": 3,
-      "future24h_ready": 3,
-      "queue_READY_entries_preserved": 4,
-      "new_priority_block": 1,
-      "new_drafts": 0,
-      "existing_READY_reused": 3,
-      "drafts": [
-        {
-          "slot": "2026-11-25T08:00:00+09:00",
-          "benefit_id": "419000000129",
-          "pattern": "P8",
-          "media_turn": "TEXT",
-          "char_count": 315,
-          "expires_at": "2026-11-25T10:40:14.847169+09:00",
-          "full_delay_window_valid": true,
-          "source_fresh_at_slot": true,
-          "source_recheck_required_at_publish": true
-        },
-        {
-          "slot": "2026-11-25T12:00:00+09:00",
-          "benefit_id": "PTR000050390",
-          "pattern": "P5",
-          "media_turn": "IMAGE",
-          "char_count": 436,
-          "expires_at": "2026-11-25T14:45:53.443971+09:00",
-          "full_delay_window_valid": true,
-          "source_fresh_at_slot": true,
-          "source_recheck_required_at_publish": true
-        },
-        {
-          "slot": "2026-11-25T16:00:00+09:00",
-          "benefit_id": "B49000100208",
-          "pattern": "P6",
-          "media_turn": "TEXT",
-          "char_count": 381,
-          "expires_at": "2026-11-25T19:17:15.962833+09:00",
-          "full_delay_window_valid": true,
-          "source_fresh_at_slot": true,
-          "source_recheck_required_at_publish": true
-        },
-        {
-          "slot": "2026-11-25T20:00:00+09:00",
-          "benefit_id": "B01000300013",
-          "status": "HOLD",
-          "reason": "higher_priority_candidate_disposition_required"
-        }
-      ],
+      "checked_at": "2026-11-25T08:33:52.430313+09:00",
       "source": {
         "count": 10895,
         "generation": "gov24-45499312067-1",
@@ -6313,40 +6250,68 @@
         "path": "snapshots/gov24-45499312067-1",
         "version": 1
       },
-      "source_count": 10895,
+      "ready": 5,
+      "drafts": [
+        {
+          "slot": "2026-11-25T08:00:00+09:00",
+          "benefit_id": "419000000129",
+          "pattern": "P8",
+          "media_turn": "TEXT",
+          "char_count": 315,
+          "full_delay_window_valid": true,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-25T12:00:00+09:00",
+          "benefit_id": "PTR000050390",
+          "pattern": "P5",
+          "media_turn": "IMAGE",
+          "char_count": 436,
+          "full_delay_window_valid": true,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-25T16:00:00+09:00",
+          "benefit_id": "B49000100208",
+          "pattern": "P6",
+          "media_turn": "TEXT",
+          "char_count": 381,
+          "full_delay_window_valid": true,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-25T20:00:00+09:00",
+          "benefit_id": "B01000300013",
+          "pattern": "P1",
+          "media_turn": "IMAGE",
+          "char_count": 419,
+          "full_delay_window_valid": true,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-26T08:00:00+09:00",
+          "benefit_id": "611000000137",
+          "pattern": "P8",
+          "media_turn": "TEXT",
+          "char_count": 351,
+          "full_delay_window_valid": false,
+          "source_recheck_required_at_publish": true
+        }
+      ],
+      "new_drafts": 1,
+      "new_posts": 0,
+      "score": 97,
+      "new_entry_full_window_revalidation_required": true,
       "ledger_records": 78,
       "pending": null,
       "lease": null,
-      "new_posts": 0,
-      "new_incidents": 0,
       "new_metrics": 0,
       "observations": 151,
-      "due_metrics": 0,
-      "new_evaluation": false,
-      "14day_evaluation_already_recorded": true,
-      "astra_review_invocations": 0,
-      "existing_Astra_review_preserved": true,
-      "current_main_image_review_matches_cached_bytes": true,
-      "image_redownloaded_this_check": false,
-      "new_visual_inspection": false,
-      "source_recheck_required_at_publish": true,
-      "expiry_prevention_revalidations": 0,
-      "priority_block": {
-        "checked_at": "2026-11-25T07:59:02.227357+09:00",
-        "slot": "2026-11-25T20:00:00+09:00",
-        "benefit_id": "B01000300013",
-        "status": "HOLD_BY_EXISTING_VALIDATOR",
-        "reason": "higher_priority_candidate_disposition_required",
-        "higher_candidate_id": "336000000280",
-        "higher_candidate_title": "부산 강서구 입학 및 학습지원비 지원",
-        "higher_candidate_views": 34332,
-        "source_generation": "gov24-45499312067-1",
-        "official_api_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2124002&bnefType=all&svcId=336000000280",
-        "original_notice_review_this_check": false,
-        "independent_editorial_review_this_check": false,
-        "queue_entry_body_image_and_prior_Astra_preserved": true,
-        "next_condition": "Review new higher-ranked candidate original agency current intake and v3 independent edit before deciding eligible replacement or evidenced HOLD. Do not manufacture exclusion note to force old lower-ranked draft.08/12/16 still eligible. Preserve slot20 image turn. No new dispatch/POST."
-      }
+      "astra_review_invocations": 2,
+      "actual_model": "gpt-6.2-astra",
+      "new_ready_body_sha256": "b98e2ee01ac565f3e54a6bb9335fa9192db6f139c3bb8c689415f24a8f4e8904",
+      "queue_readback_exact": true,
+      "new_entry_full_delay_window_revalidation_required": true
     },
     "metrics": {
       "run_id": "45500821206",
@@ -6359,8 +6324,8 @@
       "artifact_id": 14970069203,
       "artifact_digest": "sha256:cc830c3c0790ba7dd218668f7bc9e9b54215922d1b9735806a3139ea614c07b5",
       "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": true,
-      "job_logs_retrieved_this_check": true,
+      "artifact_redownloaded_this_check": false,
+      "job_logs_retrieved_this_check": false,
       "observed_at": "2026-11-24T22:25:43.563738+00:00",
       "records": [],
       "due_count": 0,
@@ -6375,23 +6340,14 @@
       "workflow_dispatch": false
     },
     "recovery": {
-      "original_slot": "2026-11-23T20:00:00+09:00",
-      "original_slot_published": false,
-      "closed_missed_slot_no_backfill": true,
-      "previously_closed_missed_slot_preserved": true,
-      "new_failure_this_check": false,
-      "new_recovery_this_check": true,
-      "dispatches_this_check": 0,
-      "new_posts": 0,
-      "pending": null,
-      "lease": null,
-      "stage": "read_only_maintenance_complete",
-      "reason": "Nextnormaloperationsrunverifiednewcompletegenerationand11049publicHTMLPASS; previousgenerationmismatchresolvedbyexistingoperations.No manualdeploy/dispatch/newPOST/oldslotrecovery.",
       "new_publication_this_check": false,
+      "new_posts": 0,
       "maintenance_new_posts": 0,
-      "new_priority_block_this_check": true
+      "new_recovery_this_check": true,
+      "new_failure_this_check": false,
+      "reason": "Actualagency403/Gov24webunreadable evidencesupportsnewhighercandidateHOLD; existinglower20draftnowpassesoriginalrankvalidatorwithoutbody/mediareplacement. NewNov26draftindependentv3two-call86to97PASS. No codeweakening/dispatch/POST. Previoussourcepublicrecoveryalreadyreported."
     },
-    "next_condition": "08/12/16 existing drafts pass latest complete generation and full2h draft validation;20 newstart blocked by newly higher-view336000000280 without recorded disposition. Preserve four original body/media/Astra/expiry wrappers; no fabricated HOLD note or rank bypass. Review higher candidate official current intake and v3 independent edit for future queue decision. Actualsender freshsource/ledger/lease/pending/CAS/account/daylimit/firstattempt remain mandatory. No newpost,dispatch,rerun,backfill.",
+    "next_condition": "08slotwindowstillopento10,no newpublisher failureconfirmed. Existing08/12/16/20originalbody/media/Astra/expiry unchanged; freshsource andprioritypass. Nov26 08 new351charP8TEXT v3Astra97 approved andqueue readback exact. Its24h expirybefore26 10 requires realofficial/latestcomplete/image-if-needed rereviewaftertoday10 and archive/CAS, no date-onlyextension. Current07:22feednotfreshatNov26 08, actualsenderlatestcompletegenerationmandatory. Keepfirstattempt/account/daylimit/CAS/lease/pending/ambiguousPOSTguards. Currentno newpublication/metrics.",
     "publication": {
       "run_id": "45386810330",
       "run_attempt": 1,
@@ -6449,12 +6405,60 @@
       "previous_remote_evidence_preserved": true
     },
     "official_review_recovery": {
-      "new_official_page_review_this_check": false,
-      "new_Astra_calls": 0,
-      "existing_Astra_PASS_preserved": true,
-      "prior22hactual_newstart_expiry_rereview_preserved": true,
-      "image_redownloaded_this_check": false,
-      "cached_image_sha_matches_current_main_review": true
+      "new_official_page_review_this_check": true,
+      "program_id": "611000000137",
+      "evidence": [
+        {
+          "source_id": "611000000137",
+          "source_ref": "https://wis.seoul.go.kr/sec/ctg/categoryDetail.do?id=40",
+          "access_method": "OPENED_OFFICIAL",
+          "verified_at": "2026-11-25T08:33:52.430313+09:00",
+          "claims_supported": [
+            "실제183~226행: 서울 기초생계·의료급여 수급가구 시설수급자 제외, 저소득보훈가구도 월동대책비 대상. 11월 가구당 연5만원. 생계·의료급여 자격보유자 별도신청/서류없음. 개인지급완료/특정지급일 보장 없음."
+          ]
+        },
+        {
+          "source_id": "611000000137",
+          "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003645&bnefType=all&svcId=611000000137",
+          "access_method": "PROVIDED_OFFICIAL_TEXT",
+          "verified_at": "2026-11-25T08:33:52.430313+09:00",
+          "claims_supported": [
+            "최신완전API 동일ID611000000137 누적33739, 개인신청절차없음·주소지구청에서자격보유자지원·준비서류없음. 수집시각은 접수검증시각 아님."
+          ]
+        }
+      ],
+      "new_Astra_calls": 2,
+      "actual_model": "gpt-6.2-astra",
+      "first_score": 86,
+      "final_score": 97,
+      "score_is_editorial_not_performance": true,
+      "profile_search_detail_route": {
+        "profile": "https://www.threads.com/@hid_1004",
+        "visible_link_target": "https://kllollain-max.github.io/supportpick/",
+        "home_search": "저소득시민 부가급여",
+        "actual_search_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/611000000137/",
+        "method": "CUA public profile visible target; target opened separately; actual home search + result click + detail visible",
+        "redirect_click_completed": false,
+        "checked_at": "2026-11-25T08:33:52.430313+09:00"
+      },
+      "image_turn": "TEXT",
+      "image_inspection": "NOT_REQUIRED",
+      "higher_candidate_HOLD": {
+        "benefit_id": "336000000280",
+        "views": 34332,
+        "decision": "HOLD",
+        "reason": "11월25일 시행기관 현재 공고를 실제 web 직접 열람했으나 403 Forbidden, 정부24 원문도 도구에서 읽지 못함. 최신 완전 API에 11월30일 기간·3월3일 주소지 조건이 있으나 현재 원공고·정정·조기종료를 직접 대조하지 못했으므로 신규 안내 HOLD. 사업 종료 단정 아님. 공식 원문 접근 가능 시 다시 검토. 검색 요약·누적 조회수를 현재 접수 증거로 전용하지 않음.",
+        "sources": [
+          "https://www.bsgangseo.go.kr/portal/board/post/view.do?bcIdx=500&mid=0501010000&idx=407142",
+          "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2124002&bnefType=all&svcId=336000000280"
+        ],
+        "checked_at": "2026-11-25T08:33:52.430313+09:00",
+        "access_results": {
+          "agency": "403 Forbidden",
+          "gov24": "web tool inaccessible"
+        },
+        "source_generation": "gov24-45499312067-1"
+      }
     },
     "regular_slot_observation": {
       "slot": "2026-11-24T08:00:00+09:00",
@@ -6657,25 +6661,23 @@
       "currently_open_unreserved_slots_from_period": 0
     },
     "publication_schedule_observation": {
-      "slot": "2026-11-24T20:00:00+09:00",
-      "checked_at": "2026-11-25T07:59:02.227357+09:00",
-      "status": "published_complete_verified_already_reported",
-      "main_id": "18472882234189391",
-      "url": "https://www.threads.com/@hid_1004/post/DgH4EXCm_Hj",
-      "receipt_at": "2026-11-24T20:44:33.742581+09:00",
-      "window_end": "2026-11-24T22:00:00+09:00",
-      "pending": null,
-      "lease": null,
+      "slot": "2026-11-25T08:00:00+09:00",
+      "checked_at": "2026-11-25T08:35:18.970007+09:00",
+      "status": "unreserved_window_open_no_new_publisher_run",
+      "window_end": "2026-11-25T10:00:00+09:00",
+      "failure_run_confirmed": false,
       "workflow_dispatch": false,
-      "daily_main_publications": 4
+      "next_condition": "Await normal first-attempt publisher; do not infer failure from elapsed scheduled time."
     },
     "new_formal_evaluation_this_check": false,
     "writer_final_edit_v3_status": {
       "policy_id": "supportpick-threads-final-edit-v3-20261125",
-      "policy_unchanged": true,
       "protected_READY": 4,
-      "new_v3_READY": 0,
-      "new_scores": 0
+      "new_v3_READY": 1,
+      "score": 97,
+      "review_calls": 2,
+      "actual_model": "gpt-6.2-astra",
+      "final_review_body_sha_matches_queue": true
     }
   },
   "last_reported_publication": {
@@ -131774,6 +131776,628 @@
         "new_v3_READY": 0,
         "new_scores": 0
       }
+    },
+    "2026-11-25T08:35:18.970007+09:00": {
+      "checked_at": "2026-11-25T08:35:18.970007+09:00",
+      "result": "new_v3_READY_and_higher_candidate_HOLD_evidence_restores_existing20",
+      "maintenance_previous_blob_sha": "c6b24cd658d4d4db88e8aa49be6500425255f957",
+      "current_main_sha": "890215f6a930d9967a5578b3134413e1dde8a1b7",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "3d6c2cd9cb155c3fd8ead9da9ee2f233796ff0fb",
+      "queue_blob_sha": "521beee093f810cc4fea2b5897f136f27ebd80cf",
+      "changed_run_versions": [],
+      "active_target_runs": [],
+      "run_pagination": {
+        "per_page": 100,
+        "pages": [
+          1
+        ],
+        "checkpoint_run_id": "45500821206",
+        "checkpoint_version_unchanged": true,
+        "all_new_target_versions_observed": true,
+        "latest_completed_operations_run_id": "45499312067"
+      },
+      "publication_ledger_records": 75,
+      "complete_verified_records": 75,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "45499312067",
+        "run_attempt": 1,
+        "conclusion": "success",
+        "collection_conclusion": "passed",
+        "job_id": 138818028752,
+        "head_sha": "890215f6a930d9967a5578b3134413e1dde8a1b7",
+        "tests_passed": 310,
+        "artifact_id": 14969423204,
+        "artifact_digest": "sha256:b2476fdb5e694c3418887a1d95021df8401aca80648b64ada250800d80361e21",
+        "artifact_redownloaded_this_check": false,
+        "artifact_digest_verified": true,
+        "job_logs_retrieved_this_check": false,
+        "read_current_verify_snapshot_load_feed": true,
+        "manifest": {
+          "count": 10895,
+          "generation": "gov24-45499312067-1",
+          "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
+          "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
+          "path": "snapshots/gov24-45499312067-1",
+          "version": 1
+        },
+        "collection_report": {
+          "applicationOpenVerified": false,
+          "collectionSucceededAt": "2026-11-25T07:22:49.899473+09:00",
+          "coverage": "Currently connected Gov24 API, all unfiltered pages of three endpoints",
+          "endpoints": {
+            "serviceDetail": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "serviceList": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "supportConditions": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            }
+          },
+          "factsVerified": false,
+          "feedSha256": "e1c29b7aea9fe87bf654575a564eb0860e1dd0d42f172782a8ab82d998b54778",
+          "finishedAt": "2026-11-25T07:22:51.016675+09:00",
+          "generation": "gov24-45499312067-1",
+          "normalRequestEstimate": 330,
+          "pageResponses": 327,
+          "project": "supportpick",
+          "published": false,
+          "sampleCount": 0,
+          "scheduled": false,
+          "sourceConsistency": "No snapshot token: totals and boundary pages stable; unique IDs and all endpoint sets matched",
+          "startedAt": "2026-11-25T07:16:32.014081+09:00",
+          "status": "passed",
+          "storedCount": 10895
+        },
+        "publisher_freshness_hours": 24,
+        "current_fresh_until": "2026-11-26T07:22:49.899473+09:00",
+        "collection_is_not_current_application_status_verification": true,
+        "new_candidate_original_official_pages_read": true,
+        "existing3entries_unchanged_fingerprints_and_priority_pass": true,
+        "newstart20_priority_block": true,
+        "public_verification": {
+          "checked_at": "2026-11-25T07:59:02.227357+09:00",
+          "observed_run_id": "45499312067",
+          "run_attempt": 1,
+          "status": "resolved_by_subsequent_normal_operations_public_verification",
+          "runtime_artifact_id": 14969423204,
+          "runtime_artifact_digest": "sha256:b2476fdb5e694c3418887a1d95021df8401aca80648b64ada250800d80361e21",
+          "runtime_artifact_digest_verified": true,
+          "public_artifact_id": 14972001717,
+          "public_artifact_digest": "sha256:15842e6b6c1032d2f6faf0d893a5dca4c80ed4bfe27bba6d686e9ba47f3634a3",
+          "public_artifact_digest_verified": true,
+          "job_id": 138818028752,
+          "tests_passed": 310,
+          "public_verification": {
+            "publicHtmlChecked": 11049,
+            "sitemapUrls": 11034,
+            "generation": "gov24-45499312067-1",
+            "sourceRevision": "890215f6a930d9967a5578b3134413e1dde8a1b7",
+            "robots": {
+              "http": 200,
+              "crawlAllowed": true,
+              "scope": "host_root"
+            },
+            "missingUrlHttp": 404,
+            "passed": 11049,
+            "failed": 0,
+            "initialFailures": 7,
+            "maxRequestsPerSecond": 10,
+            "rateLimitEpisodes": 0,
+            "stoppedForRateLimit": false,
+            "recoveredAfterRetry": [
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/313000000149/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              },
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/349000000116/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              },
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/355000000123/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              },
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/448000000114/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              },
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/494000000151/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              },
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/643000000141/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              },
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/O00030000003/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              }
+            ],
+            "failures": []
+          },
+          "source": {
+            "count": 10895,
+            "generation": "gov24-45499312067-1",
+            "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
+            "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
+            "path": "snapshots/gov24-45499312067-1",
+            "version": 1
+          },
+          "underlying_previous_deployment_cache_cause": "unconfirmed",
+          "site_changes_by_this_check": false,
+          "workflow_dispatch": false,
+          "posts_created": 0
+        },
+        "public_verification_recovery_already_reported": true
+      },
+      "writer": {
+        "checked_at": "2026-11-25T08:33:52.430313+09:00",
+        "source": {
+          "count": 10895,
+          "generation": "gov24-45499312067-1",
+          "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
+          "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
+          "path": "snapshots/gov24-45499312067-1",
+          "version": 1
+        },
+        "ready": 5,
+        "drafts": [
+          {
+            "slot": "2026-11-25T08:00:00+09:00",
+            "benefit_id": "419000000129",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 315,
+            "full_delay_window_valid": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T12:00:00+09:00",
+            "benefit_id": "PTR000050390",
+            "pattern": "P5",
+            "media_turn": "IMAGE",
+            "char_count": 436,
+            "full_delay_window_valid": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T16:00:00+09:00",
+            "benefit_id": "B49000100208",
+            "pattern": "P6",
+            "media_turn": "TEXT",
+            "char_count": 381,
+            "full_delay_window_valid": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T20:00:00+09:00",
+            "benefit_id": "B01000300013",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 419,
+            "full_delay_window_valid": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-26T08:00:00+09:00",
+            "benefit_id": "611000000137",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 351,
+            "full_delay_window_valid": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "new_drafts": 1,
+        "new_posts": 0,
+        "score": 97,
+        "new_entry_full_window_revalidation_required": true,
+        "ledger_records": 78,
+        "pending": null,
+        "lease": null,
+        "new_metrics": 0,
+        "observations": 151,
+        "astra_review_invocations": 2,
+        "actual_model": "gpt-6.2-astra",
+        "new_ready_body_sha256": "b98e2ee01ac565f3e54a6bb9335fa9192db6f139c3bb8c689415f24a8f4e8904",
+        "queue_readback_exact": true,
+        "new_entry_full_delay_window_revalidation_required": true
+      },
+      "metrics": {
+        "run_id": "45500821206",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T22:25:46Z",
+        "head_sha": "890215f6a930d9967a5578b3134413e1dde8a1b7",
+        "job_id": 138823304604,
+        "artifact_id": 14970069203,
+        "artifact_digest": "sha256:cc830c3c0790ba7dd218668f7bc9e9b54215922d1b9735806a3139ea614c07b5",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "observed_at": "2026-11-24T22:25:43.563738+00:00",
+        "records": [],
+        "due_count": 0,
+        "success_count": 0,
+        "classification": "normal_no_due_at_run_time",
+        "new_observation_keys": [],
+        "new_observations": 0,
+        "total_observations": 151,
+        "new_evaluation_report_due": false,
+        "weights_unchanged": true,
+        "publication_calls": 0,
+        "workflow_dispatch": false
+      },
+      "recovery": {
+        "new_publication_this_check": false,
+        "new_posts": 0,
+        "maintenance_new_posts": 0,
+        "new_recovery_this_check": true,
+        "new_failure_this_check": false,
+        "reason": "Actualagency403/Gov24webunreadable evidencesupportsnewhighercandidateHOLD; existinglower20draftnowpassesoriginalrankvalidatorwithoutbody/mediareplacement. NewNov26draftindependentv3two-call86to97PASS. No codeweakening/dispatch/POST. Previoussourcepublicrecoveryalreadyreported."
+      },
+      "next_condition": "08slotwindowstillopento10,no newpublisher failureconfirmed. Existing08/12/16/20originalbody/media/Astra/expiry unchanged; freshsource andprioritypass. Nov26 08 new351charP8TEXT v3Astra97 approved andqueue readback exact. Its24h expirybefore26 10 requires realofficial/latestcomplete/image-if-needed rereviewaftertoday10 and archive/CAS, no date-onlyextension. Current07:22feednotfreshatNov26 08, actualsenderlatestcompletegenerationmandatory. Keepfirstattempt/account/daylimit/CAS/lease/pending/ambiguousPOSTguards. Currentno newpublication/metrics.",
+      "publication": {
+        "run_id": "45386810330",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T11:44:41Z",
+        "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+        "job_id": 138419746101,
+        "artifact_id": 14917160824,
+        "artifact_digest": "sha256:a2f61a6d967000d4b55cba3ca107b54536ca32e652740dd3a6204391808b8b69",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 138,
+        "new_publication_this_run": false,
+        "main_id": "18472882234189391",
+        "url": "https://www.threads.com/@hid_1004/post/DgH4EXCm_Hj",
+        "slot": "2026-11-24T20:00:00+09:00",
+        "receipt_at": "2026-11-24T20:44:33.742581+09:00",
+        "receipt_time_basis": "GitHubjoblogThreadsreceiptline, notexactplatformtimestamp",
+        "ledger_published_at": "2026-11-24T20:43:48.291443+09:00",
+        "ledger_published_at_is_invocation_not_exact_platform_time": true,
+        "stage": "complete",
+        "verified": true,
+        "body_hash": "a974ae6f2830c6141959fc6fbd58237cdbaed865415743966ac4496a447f5f3c",
+        "content_hash": "5ee78fdd744cdaad39bbfec31d3e3756ca03b74bb573666e8137b1d5370adfae",
+        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "media_turn": "IMAGE",
+        "pattern": "P6",
+        "char_count": 422,
+        "replies": 0,
+        "original_queue_body_asset_exact": true,
+        "previous77records_preserved": true,
+        "maintenance_post_calls": 0,
+        "delay_within_original_2h_window": true,
+        "actual_source_generation": "gov24-45374669702-1",
+        "latest_already_reported": true
+      },
+      "history_reconciliation": {
+        "run_id": "45173485637",
+        "mode": "check-account",
+        "account": "hid_1004",
+        "checked_at": "2026-11-23T21:21:24+09:00",
+        "recent_remote_rows": 100,
+        "more_history": true,
+        "main_ledger_matches_in_page": 49,
+        "latest20_main_matches": 20,
+        "latest_remote_id": "18129410933479829",
+        "target_text_absent": true,
+        "scope": "77durablecompleteverifiedrows;prior76exactpreserved;newreceipt/body/asset/artifactverified. No full28dayremotequery.",
+        "artifact_id": 14818615408,
+        "artifact_digest": "sha256:23cfc165bbd050ec1a12dbde18778345efb01c4d9e20abf69f6279b090e003b3",
+        "artifact_digest_verified": true,
+        "remote_requeried_this_check": false,
+        "previous_remote_evidence_preserved": true
+      },
+      "official_review_recovery": {
+        "new_official_page_review_this_check": true,
+        "program_id": "611000000137",
+        "evidence": [
+          {
+            "source_id": "611000000137",
+            "source_ref": "https://wis.seoul.go.kr/sec/ctg/categoryDetail.do?id=40",
+            "access_method": "OPENED_OFFICIAL",
+            "verified_at": "2026-11-25T08:33:52.430313+09:00",
+            "claims_supported": [
+              "실제183~226행: 서울 기초생계·의료급여 수급가구 시설수급자 제외, 저소득보훈가구도 월동대책비 대상. 11월 가구당 연5만원. 생계·의료급여 자격보유자 별도신청/서류없음. 개인지급완료/특정지급일 보장 없음."
+            ]
+          },
+          {
+            "source_id": "611000000137",
+            "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003645&bnefType=all&svcId=611000000137",
+            "access_method": "PROVIDED_OFFICIAL_TEXT",
+            "verified_at": "2026-11-25T08:33:52.430313+09:00",
+            "claims_supported": [
+              "최신완전API 동일ID611000000137 누적33739, 개인신청절차없음·주소지구청에서자격보유자지원·준비서류없음. 수집시각은 접수검증시각 아님."
+            ]
+          }
+        ],
+        "new_Astra_calls": 2,
+        "actual_model": "gpt-6.2-astra",
+        "first_score": 86,
+        "final_score": 97,
+        "score_is_editorial_not_performance": true,
+        "profile_search_detail_route": {
+          "profile": "https://www.threads.com/@hid_1004",
+          "visible_link_target": "https://kllollain-max.github.io/supportpick/",
+          "home_search": "저소득시민 부가급여",
+          "actual_search_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/611000000137/",
+          "method": "CUA public profile visible target; target opened separately; actual home search + result click + detail visible",
+          "redirect_click_completed": false,
+          "checked_at": "2026-11-25T08:33:52.430313+09:00"
+        },
+        "image_turn": "TEXT",
+        "image_inspection": "NOT_REQUIRED",
+        "higher_candidate_HOLD": {
+          "benefit_id": "336000000280",
+          "views": 34332,
+          "decision": "HOLD",
+          "reason": "11월25일 시행기관 현재 공고를 실제 web 직접 열람했으나 403 Forbidden, 정부24 원문도 도구에서 읽지 못함. 최신 완전 API에 11월30일 기간·3월3일 주소지 조건이 있으나 현재 원공고·정정·조기종료를 직접 대조하지 못했으므로 신규 안내 HOLD. 사업 종료 단정 아님. 공식 원문 접근 가능 시 다시 검토. 검색 요약·누적 조회수를 현재 접수 증거로 전용하지 않음.",
+          "sources": [
+            "https://www.bsgangseo.go.kr/portal/board/post/view.do?bcIdx=500&mid=0501010000&idx=407142",
+            "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2124002&bnefType=all&svcId=336000000280"
+          ],
+          "checked_at": "2026-11-25T08:33:52.430313+09:00",
+          "access_results": {
+            "agency": "403 Forbidden",
+            "gov24": "web tool inaccessible"
+          },
+          "source_generation": "gov24-45499312067-1"
+        }
+      },
+      "regular_slot_observation": {
+        "slot": "2026-11-24T08:00:00+09:00",
+        "status": "natural_publication_verified_complete",
+        "main_id": "18123605203752749",
+        "receipt_at": "2026-11-24T08:46:05.901553+09:00",
+        "main_url": "https://www.threads.com/@hid_1004/post/DgGl2ooGuAa"
+      },
+      "main_head_observation": {
+        "latest_observed_run_head": "5732cde848a03907b2505396c34a4d60c713571e",
+        "target_publisher_workflows_master_and_assets_blobs_unchanged": true,
+        "unrelated_changes_not_modified": true
+      },
+      "image_sha_comparisons": [
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:06.502293+09:00"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:14.847084+09:00"
+        }
+      ],
+      "run_status_transitions": [
+        {
+          "run_id": "45277137519",
+          "from": "in_progress",
+          "to": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-23T22:38:20Z"
+        }
+      ],
+      "formal_evaluation": {
+        "policy_id": "supportpick-threads-reach-v1-20261109",
+        "window": "14d_evaluation",
+        "evaluated_at": "2026-11-24T17:20:07.451089+09:00",
+        "period_start": "2026-11-10T17:00:08.835254+09:00",
+        "period_end": "2026-11-24T17:00:08.835254+09:00",
+        "normal_verified_publications": 53,
+        "experiment_regular_slots": 57,
+        "unpublished_slots": [
+          {
+            "slot": "2026-11-16T16:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-18T12:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-23T20:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-24T16:00:00+09:00",
+            "classification": "unreserved_at_evaluation_cutoff_then_published_after_cutoff",
+            "subsequent_main_id": "17974331994194122",
+            "subsequent_receipt_at": "2026-11-24T17:21:06.769138+09:00"
+          }
+        ],
+        "missed_closed_slots": 3,
+        "partial_or_pending": 0,
+        "independent_full_public_rendering_recheck": false,
+        "publication_audit_scope": "76durablecompleteverifiedrecords; priorreceipts/body/media/artifacts retained. No newfull28dayremotequery; Nov24 16unreserved/latestpublisher12only,nofailure-runconfirmed.",
+        "24h_comparison_window_observations": 40,
+        "A_n": 20,
+        "B_n": 20,
+        "24h_comparable_matched_pairs": 0,
+        "24h_group_view_medians": {
+          "A": 62.0,
+          "B": 62.0
+        },
+        "24h_all_view_median": 62.0,
+        "actual_reactions": {
+          "A": {
+            "likes": 29,
+            "replies": 0,
+            "reposts": 6,
+            "shares": 1
+          },
+          "B": {
+            "likes": 27,
+            "replies": 0,
+            "reposts": 5,
+            "shares": 0
+          }
+        },
+        "reaction_rate_used": false,
+        "all_24h_observations_delayed": true,
+        "eligible_elapsed_hours_min": 24.317312148333336,
+        "eligible_elapsed_hours_max": 25.691108017222223,
+        "24h_unavailable_not_zero": [
+          "18117968657159347",
+          "17992859946026940",
+          "17913499947663769",
+          "18001464938830261"
+        ],
+        "24h_not_yet_due": [
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "24h_missing_after_due": [],
+        "7d_measured": 27,
+        "7d_not_yet_due": [
+          "18004106657810124",
+          "18155833435528730",
+          "18061699079561356",
+          "18075899267779249",
+          "18361336213223949",
+          "18100168118443439",
+          "17876108337601849",
+          "17954736195295664",
+          "18136261246743978",
+          "18029579210863916",
+          "18106611944009610",
+          "17995393143022353",
+          "18002356029029330",
+          "18098495828440255",
+          "18121994881961457",
+          "18093412586696162",
+          "18102899498408388",
+          "18214999999364836",
+          "18125366213319496",
+          "18149154712603236",
+          "17879078796637660",
+          "18388999600236313",
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "7d_group_medians": {
+          "A": 105,
+          "B": 87.5
+        },
+        "quotes": "not_provided",
+        "reader_only_replies": "unavailable",
+        "profile_clicks": "account_level_not_available; no_post_attribution",
+        "confounders": [
+          "Differentbusiness/region/readers/benefit/deadline/time/media/length; matchedsimilarpairs0",
+          "PreservedmovedexistingREADYcohorts differfromnewslots;excludeinsteadretroclassify",
+          "Newquestiontitlepolicy changesmorethanopeningalone;newAstrarevieweddraftsexcludedfrompureA/B"
+        ],
+        "minimum_24h_target_per_group": 8,
+        "raw_window_target_met": true,
+        "current_stratified_target_met": false,
+        "decision": "extend_comparison;maintainbalancedA/Bandexistingcontrols.No demonstratedrepeatedadvantage;noeditorialweightchange.",
+        "weight_changed": false,
+        "no_backcalculation": true,
+        "extension_next_condition": "Reassess in existingchecks when comparable similar-business strata have sufficient repeatedactual24hwindows; keep comparison group. No separate schedule.",
+        "reported_at": "2026-11-24T17:20:07.451089+09:00",
+        "evidence_latest_metric_run_id": "45351393999",
+        "24h_measured_but_excluded": [
+          {
+            "main_id": "18122947907049313",
+            "elapsed_hours": 52.64388394083333,
+            "reason": "late_beyond_26h_comparison_tolerance"
+          },
+          {
+            "main_id": "18061699079561356",
+            "elapsed_hours": 25.374772445277777,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18075899267779249",
+            "elapsed_hours": 24.65035752527778,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18361336213223949",
+            "elapsed_hours": 24.39045965972222,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18100168118443439",
+            "elapsed_hours": 24.6578044575,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "17876108337601849",
+            "elapsed_hours": 25.228189436944444,
+            "reason": "Previously written input preserved; no retrospective cohort assignment after failed preceding slot"
+          }
+        ],
+        "7d_group_n": {
+          "A": 13,
+          "B": 14
+        },
+        "7d_due_unmeasured": [
+          "18450932713126961"
+        ],
+        "publication_cutoff_note": "EvaluationperiodendsNov24 17:00:08.16slotwasunreservedatcutoff, laternaturallypublished17:21:06withinits2hwindow; excludedfrom53periodpublications becauseactualinvocation17:20aftercutoff. Notafourthmissedslot.",
+        "unreserved_at_period_end_slots": 1,
+        "currently_open_unreserved_slots_from_period": 0
+      },
+      "publication_schedule_observation": {
+        "slot": "2026-11-25T08:00:00+09:00",
+        "checked_at": "2026-11-25T08:35:18.970007+09:00",
+        "status": "unreserved_window_open_no_new_publisher_run",
+        "window_end": "2026-11-25T10:00:00+09:00",
+        "failure_run_confirmed": false,
+        "workflow_dispatch": false,
+        "next_condition": "Await normal first-attempt publisher; do not infer failure from elapsed scheduled time."
+      },
+      "new_formal_evaluation_this_check": false,
+      "writer_final_edit_v3_status": {
+        "policy_id": "supportpick-threads-final-edit-v3-20261125",
+        "protected_READY": 4,
+        "new_v3_READY": 1,
+        "score": 97,
+        "review_calls": 2,
+        "actual_model": "gpt-6.2-astra",
+        "final_review_body_sha_matches_queue": true
+      }
     }
   },
   "last_reported_prepublication_repair": {
@@ -131785,17 +132409,18 @@
     "new_post": false
   },
   "last_prepared_queue": {
-    "checked_at": "2026-11-24T20:39:17.077343+09:00",
-    "commit_sha": "91c9c00331f4a26a1f7fb3fd8cb5e9d547c4627c",
-    "queue_blob_sha": "38d525f57e1598ae18ea9aa950d8101e335044f5",
+    "checked_at": "2026-11-25T08:35:18.970007+09:00",
+    "commit_sha": "15be42262185674b5133abd93b4b0faf14ab6fa0",
+    "queue_blob_sha": "521beee093f810cc4fea2b5897f136f27ebd80cf",
     "new_entries": 1,
     "ready": 5,
-    "future24h_ready": 4,
     "active_regular_ready": 1,
-    "program_id": "B01000300013",
-    "slot": "2026-11-25T20:00:00+09:00",
+    "future24h_ready": 4,
+    "program_id": "611000000137",
+    "slot": "2026-11-26T08:00:00+09:00",
     "astra_calls": 2,
     "astra_verdict": "PASS",
+    "v3_score": 97,
     "expiry_revalidation_required": true
   },
   "prevented_input_incidents": {
@@ -134168,54 +134793,7 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-25T07:59:02.227357+09:00",
-    "ready": 3,
-    "future24h_ready": 3,
-    "queue_READY_entries_preserved": 4,
-    "new_priority_block": 1,
-    "new_drafts": 0,
-    "existing_READY_reused": 3,
-    "drafts": [
-      {
-        "slot": "2026-11-25T08:00:00+09:00",
-        "benefit_id": "419000000129",
-        "pattern": "P8",
-        "media_turn": "TEXT",
-        "char_count": 315,
-        "expires_at": "2026-11-25T10:40:14.847169+09:00",
-        "full_delay_window_valid": true,
-        "source_fresh_at_slot": true,
-        "source_recheck_required_at_publish": true
-      },
-      {
-        "slot": "2026-11-25T12:00:00+09:00",
-        "benefit_id": "PTR000050390",
-        "pattern": "P5",
-        "media_turn": "IMAGE",
-        "char_count": 436,
-        "expires_at": "2026-11-25T14:45:53.443971+09:00",
-        "full_delay_window_valid": true,
-        "source_fresh_at_slot": true,
-        "source_recheck_required_at_publish": true
-      },
-      {
-        "slot": "2026-11-25T16:00:00+09:00",
-        "benefit_id": "B49000100208",
-        "pattern": "P6",
-        "media_turn": "TEXT",
-        "char_count": 381,
-        "expires_at": "2026-11-25T19:17:15.962833+09:00",
-        "full_delay_window_valid": true,
-        "source_fresh_at_slot": true,
-        "source_recheck_required_at_publish": true
-      },
-      {
-        "slot": "2026-11-25T20:00:00+09:00",
-        "benefit_id": "B01000300013",
-        "status": "HOLD",
-        "reason": "higher_priority_candidate_disposition_required"
-      }
-    ],
+    "checked_at": "2026-11-25T08:33:52.430313+09:00",
     "source": {
       "count": 10895,
       "generation": "gov24-45499312067-1",
@@ -134224,40 +134802,58 @@
       "path": "snapshots/gov24-45499312067-1",
       "version": 1
     },
-    "source_count": 10895,
-    "ledger_records": 78,
-    "pending": null,
-    "lease": null,
+    "ready": 5,
+    "drafts": [
+      {
+        "slot": "2026-11-25T08:00:00+09:00",
+        "benefit_id": "419000000129",
+        "pattern": "P8",
+        "media_turn": "TEXT",
+        "char_count": 315,
+        "full_delay_window_valid": true,
+        "source_recheck_required_at_publish": true
+      },
+      {
+        "slot": "2026-11-25T12:00:00+09:00",
+        "benefit_id": "PTR000050390",
+        "pattern": "P5",
+        "media_turn": "IMAGE",
+        "char_count": 436,
+        "full_delay_window_valid": true,
+        "source_recheck_required_at_publish": true
+      },
+      {
+        "slot": "2026-11-25T16:00:00+09:00",
+        "benefit_id": "B49000100208",
+        "pattern": "P6",
+        "media_turn": "TEXT",
+        "char_count": 381,
+        "full_delay_window_valid": true,
+        "source_recheck_required_at_publish": true
+      },
+      {
+        "slot": "2026-11-25T20:00:00+09:00",
+        "benefit_id": "B01000300013",
+        "pattern": "P1",
+        "media_turn": "IMAGE",
+        "char_count": 419,
+        "full_delay_window_valid": true,
+        "source_recheck_required_at_publish": true
+      },
+      {
+        "slot": "2026-11-26T08:00:00+09:00",
+        "benefit_id": "611000000137",
+        "pattern": "P8",
+        "media_turn": "TEXT",
+        "char_count": 351,
+        "full_delay_window_valid": false,
+        "source_recheck_required_at_publish": true
+      }
+    ],
+    "new_drafts": 1,
     "new_posts": 0,
-    "new_incidents": 0,
-    "new_metrics": 0,
-    "observations": 151,
-    "due_metrics": 0,
-    "new_evaluation": false,
-    "14day_evaluation_already_recorded": true,
-    "astra_review_invocations": 0,
-    "existing_Astra_review_preserved": true,
-    "current_main_image_review_matches_cached_bytes": true,
-    "image_redownloaded_this_check": false,
-    "new_visual_inspection": false,
-    "source_recheck_required_at_publish": true,
-    "expiry_prevention_revalidations": 0,
-    "priority_block": {
-      "checked_at": "2026-11-25T07:59:02.227357+09:00",
-      "slot": "2026-11-25T20:00:00+09:00",
-      "benefit_id": "B01000300013",
-      "status": "HOLD_BY_EXISTING_VALIDATOR",
-      "reason": "higher_priority_candidate_disposition_required",
-      "higher_candidate_id": "336000000280",
-      "higher_candidate_title": "부산 강서구 입학 및 학습지원비 지원",
-      "higher_candidate_views": 34332,
-      "source_generation": "gov24-45499312067-1",
-      "official_api_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2124002&bnefType=all&svcId=336000000280",
-      "original_notice_review_this_check": false,
-      "independent_editorial_review_this_check": false,
-      "queue_entry_body_image_and_prior_Astra_preserved": true,
-      "next_condition": "Review new higher-ranked candidate original agency current intake and v3 independent edit before deciding eligible replacement or evidenced HOLD. Do not manufacture exclusion note to force old lower-ranked draft.08/12/16 still eligible. Preserve slot20 image turn. No new dispatch/POST."
-    }
+    "score": 97,
+    "new_entry_full_window_revalidation_required": true
   },
   "last_queue_review_refresh": {
     "checked_at": "2026-11-24T22:53:00.768308+09:00",
@@ -147544,6 +148140,21 @@
       "astra_calls": 2,
       "astra_verdict": "PASS",
       "expiry_revalidation_required": true
+    },
+    "2026-11-25T08:35:18.970007+09:00": {
+      "checked_at": "2026-11-25T08:35:18.970007+09:00",
+      "commit_sha": "15be42262185674b5133abd93b4b0faf14ab6fa0",
+      "queue_blob_sha": "521beee093f810cc4fea2b5897f136f27ebd80cf",
+      "new_entries": 1,
+      "ready": 5,
+      "active_regular_ready": 1,
+      "future24h_ready": 4,
+      "program_id": "611000000137",
+      "slot": "2026-11-26T08:00:00+09:00",
+      "astra_calls": 2,
+      "astra_verdict": "PASS",
+      "v3_score": 97,
+      "expiry_revalidation_required": true
     }
   },
   "last_preparation_check": {
@@ -148072,6 +148683,193 @@
       "final_result": "실제동일모델2차PASS419자.대상질문즉답/사업기간/폐업법인제외/원금조건/잔여상환/제외/기존연체금융제약공식일치.CTA1URL0hash0.실제guide2시각확인및SHA일치.",
       "final_text_sha256": "8048d902f3b027b379d27842c3c5f414df4e60a70c1b0116fdb65ea98f7c8ab6",
       "final_checked_at": "2026-11-24T20:37:34.213719+09:00"
+    },
+    "2026-11-25T08:35:18.970007+09:00": {
+      "actual_model": "gpt-6.2-astra",
+      "final_verdict": "PASS",
+      "score": 97,
+      "policy_version": "3.0",
+      "calls": 2,
+      "initial_review": {
+        "reviewer_role": "independent_editor",
+        "model": "gpt-6.2-astra",
+        "phase": "first",
+        "version": "3.0",
+        "slot": "2026-11-26 08:00",
+        "format": "TEXT",
+        "score": 86,
+        "rubric": [
+          {
+            "category": "첫문장",
+            "score": 14,
+            "max": 15,
+            "rationale": "금액과 대상이 구체적이나 가운데점이 두 급여 동시 수급으로 읽힐 여지가 있다."
+          },
+          {
+            "category": "관심의도",
+            "score": 13,
+            "max": 15,
+            "rationale": "질문에 즉답하지만 교통비로 주제가 이동한다."
+          },
+          {
+            "category": "정확성",
+            "score": 18,
+            "max": 20,
+            "rationale": "금액·월·시설수급자 예외 일치. 저소득 보훈대상 가구가 빠졌고 무신청 안내의 적용 범위를 더 명시할 수 있다."
+          },
+          {
+            "category": "완독",
+            "score": 12,
+            "max": 15,
+            "rationale": "교통비 비교와 신청 안내의 반복이 호흡을 끊는다."
+          },
+          {
+            "category": "공유공감",
+            "score": 8,
+            "max": 10,
+            "rationale": "가구 단위라는 설명을 구체적 가구 예시로 바꾸면 전달하기 쉽다."
+          },
+          {
+            "category": "가치차별",
+            "score": 8,
+            "max": 10,
+            "rationale": "가구 단위와 별도 신청 여부는 실제 궁금증을 풀지만 타 급여 비교의 실익이 작다."
+          },
+          {
+            "category": "모바일",
+            "score": 4,
+            "max": 5,
+            "rationale": "단락 구분이 있으나 첫 응답 문단의 정보가 몰렸다."
+          },
+          {
+            "category": "텍스트완성도",
+            "score": 5,
+            "max": 5,
+            "rationale": "단독으로 질문과 답변을 읽을 수 있다."
+          },
+          {
+            "category": "프로필유도",
+            "score": 4,
+            "max": 5,
+            "rationale": "마지막 지정 문구는 정확하지만 직전 문장의 행동 지시가 중복된다."
+          }
+        ],
+        "decision": "HOLD",
+        "blocking_requirements": [
+          "Threads 프로필에서 지원금픽 홈을 거쳐 서비스 611000000137 상세로 도달하는 실제 경로 미확인. 프로필 직접 열람 실패. 상세 단독 HTTP 200은 대체 근거가 될 수 없음."
+        ],
+        "revision": "구조 재작성",
+        "source_verification": {
+          "direct": "서울복지포털 공식 페이지 웹 직접 열람, 185·210~223행. https://wis.seoul.go.kr/sec/ctg/categoryDetail.do?id=40",
+          "supplied": "정부24 동일 서비스의 주소지 구청 안내와 지원금픽 상세 200은 상위 작업 제공 기록. 이 검수에서 지원금픽 상세와 프로필 직접 웹 열람 실패."
+        },
+        "revised_body": "서울 월동대책비 5만 원, 생계급여나 의료급여를 받는 가구도 대상인가요?\n네. 서울에 사는 생계급여 또는 의료급여 수급 가구가 대상이에요. 시설수급자는 제외돼요. 저소득 보훈대상 가구도 지원 대상에 포함돼요.\n\n서울복지포털이 안내하는 지원 시기는 11월이고, 금액은 가구당 연 5만 원이에요. 가구원이 두 명이어도 한 가구에 5만 원이에요.\n\n생계급여나 의료급여 자격이 있으면 별도 신청이나 서류 제출 없이 주소지 구청에서 지원해요. 우리 가구의 지급 여부는 주소지 구청에 문의할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+        "replies": [],
+        "revised_char_count": 293,
+        "text_checks": {
+          "within_500": true,
+          "standalone": true,
+          "exact_cta_once": true,
+          "no_url_or_hashtag": true,
+          "immediate_answer": true
+        },
+        "final_rereview": "pending"
+      },
+      "final_review": {
+        "actual_model": "gpt-6.2-astra",
+        "reviewed_at": "2026-11-24T23:32:35.585824+00:00",
+        "slot": "2026-11-26 08:00",
+        "format": "TEXT",
+        "phase": "final",
+        "version": "3.0",
+        "first_score": 86,
+        "score": 97,
+        "rubric": [
+          {
+            "category": "첫문장",
+            "score": 15,
+            "max": 15,
+            "rationale": "지역·급여·금액을 한 질문에 담고 두 급여 가운데 하나라는 뜻을 명시했다."
+          },
+          {
+            "category": "관심의도",
+            "score": 15,
+            "max": 15,
+            "rationale": "수급 가구의 자격 질문에 즉답하고 신청 및 지급 확인까지 연결한다."
+          },
+          {
+            "category": "정확성",
+            "score": 20,
+            "max": 20,
+            "rationale": "시설 예외와 보훈 가구, 11월과 가구당 연 5만 원은 서울복지포털과 일치한다. 별도 신청·서류는 생계·의료 자격에 한정했다. 지급 완료나 개인별 지급일 보장은 없다."
+          },
+          {
+            "category": "완독",
+            "score": 14,
+            "max": 15,
+            "rationale": "타 급여 비교를 없애고 대상·금액·신청 순서로 정리했다. 마지막 두 단락의 프로필 표현이 겹친다."
+          },
+          {
+            "category": "공유공감",
+            "score": 9,
+            "max": 10,
+            "rationale": "두 명인 가구 예시로 가족에게 금액을 설명하기 쉽다."
+          },
+          {
+            "category": "가치차별",
+            "score": 9,
+            "max": 10,
+            "rationale": "가구 기준, 시설 예외, 지급 확인 창구와 검색어를 함께 준다."
+          },
+          {
+            "category": "모바일",
+            "score": 5,
+            "max": 5,
+            "rationale": "짧은 문단으로 질문·금액·신청·검색을 구분했다."
+          },
+          {
+            "category": "텍스트완성도",
+            "score": 5,
+            "max": 5,
+            "rationale": "추가 댓글이나 이미지 없이 자격·금액·시기를 이해할 수 있다."
+          },
+          {
+            "category": "프로필유도",
+            "score": 5,
+            "max": 5,
+            "rationale": "프로필에서 찾을 서비스명과 확인 항목이 명확하고 지정 CTA가 마지막에 한 번 있다."
+          }
+        ],
+        "change_reason": "질문 무관 교통비 삭제, 저소득 보훈대상 가구 포함, 시설수급자 예외 및 무신청 적용대상 명시, 두 명 가구 예시와 실제 검색할 서비스명 추가. 프로필 링크의 실제 목적지와 홈 검색 결과의 상세 도착 근거 추가.",
+        "final_body": "서울 월동대책비 5만 원, 생계급여나 의료급여를 받는 가구도 대상인가요?\n네. 서울에 사는 생계급여 또는 의료급여 수급 가구가 대상이에요. 시설수급자는 제외돼요. 저소득 보훈대상 가구도 지원 대상에 포함돼요.\n\n서울복지포털이 안내하는 지원 시기는 11월이고, 금액은 가구당 연 5만 원이에요. 가구원이 두 명이어도 한 가구에 5만 원이에요.\n\n생계급여나 의료급여 자격이 있으면 별도 신청이나 서류 제출 없이 주소지 구청에서 지원해요. 우리 가구의 지급 여부는 주소지 구청에 문의할 수 있어요.\n\n프로필에서 ‘저소득시민 부가급여 지원’을 찾으면 대상·신청방법과 공식 안내 경로를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+        "sha256": "b98e2ee01ac565f3e54a6bb9335fa9192db6f139c3bb8c689415f24a8f4e8904",
+        "character_count": 351,
+        "replies": [],
+        "images": [],
+        "checks": {
+          "immediate_answer": true,
+          "standalone": true,
+          "within_500": true,
+          "exact_cta_once_last": true,
+          "no_urls_hashtags": true,
+          "no_replies": true,
+          "text_only": true,
+          "official_facts": true,
+          "no_personal_payment_promise": true,
+          "profile_to_detail_route": true,
+          "score_at_least_95": true
+        },
+        "source_verification": {
+          "official_direct": "서울복지포털 공식 페이지 웹 직접 열람, 185·210~223행. https://wis.seoul.go.kr/sec/ctg/categoryDetail.do?id=40",
+          "gov24": "상위 작업의 API 대조 기록. 정부24 611000000137과 지원금픽 상세의 주소지 구청·개인 신청 절차 없음 안내가 일치.",
+          "route": "상위 작업이 공개 프로필에서 표시 링크 및 리디렉션 URL의 목적지 파라미터를 직접 확인했다. 관측한 정확한 목적지로 홈페이지를 열어 서비스 검색, 단일 결과 클릭 및 상세 URL 도착을 검증했다. 실제 링크 목적지와 홈에서 상세까지의 경로를 식별·검증한다는 요건 충족. 오버레이로 Threads 리디렉션 클릭의 완료 자체는 확인되지 않았다."
+        },
+        "blocking_requirements": [],
+        "decision": "APPROVE"
+      },
+      "body_sha256": "b98e2ee01ac565f3e54a6bb9335fa9192db6f139c3bb8c689415f24a8f4e8904",
+      "asset_sha256": null,
+      "fallback_reason": null
     }
   },
   "expiry_revalidation_required": {
@@ -148859,6 +149657,312 @@
       "new_expires_at": "2026-11-25T22:53:00.768308+09:00",
       "queue_commit": "3f222f91a705dfb1689977b254ecc767b2ec506f",
       "actual_sender_latest_source_recheck_required": true
+    },
+    "2026-11-26T08:00:00+09:00:611000000137": {
+      "status": "REQUIRED_BEFORE_FULL_DELAY_WINDOW",
+      "entry": {
+        "slot": "2026-11-26T08:00:00+09:00",
+        "benefit_id": "611000000137",
+        "source_fingerprint": "73fc4500db1c149826f7f2ffcddb3f456e34a05ef22712f4b871fdf27f1f36cc",
+        "source_generation": "gov24-45499312067-1",
+        "prepared_at": "2026-11-25T08:33:52.430313+09:00",
+        "expires_at": "2026-11-26T08:33:52.430313+09:00",
+        "asset_sha256": null,
+        "writer": {
+          "schema_version": "supportpick.writer.v1",
+          "status": "READY",
+          "selected_program_id": "611000000137",
+          "post_text": "서울 월동대책비 5만 원, 생계급여나 의료급여를 받는 가구도 대상인가요?\n네. 서울에 사는 생계급여 또는 의료급여 수급 가구가 대상이에요. 시설수급자는 제외돼요. 저소득 보훈대상 가구도 지원 대상에 포함돼요.\n\n서울복지포털이 안내하는 지원 시기는 11월이고, 금액은 가구당 연 5만 원이에요. 가구원이 두 명이어도 한 가구에 5만 원이에요.\n\n생계급여나 의료급여 자격이 있으면 별도 신청이나 서류 제출 없이 주소지 구청에서 지원해요. 우리 가구의 지급 여부는 주소지 구청에 문의할 수 있어요.\n\n프로필에서 ‘저소득시민 부가급여 지원’을 찾으면 대상·신청방법과 공식 안내 경로를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+          "draft_text": null,
+          "reply_texts": [],
+          "media": {
+            "turn": "TEXT",
+            "asset_id": null,
+            "check": "NOT_REQUIRED",
+            "image_copy": null,
+            "alt_text": null
+          },
+          "review": {
+            "planned_at": "2026-11-26T08:00:00+09:00",
+            "application_status": "ALWAYS",
+            "reader": "서울 생계급여 또는 의료급여 수급가구·저소득보훈가구",
+            "central_message": "서울 월동대책비 5만 원, 생계급여나 의료급여를 받는 가구도 대상인가요?",
+            "pattern": "P8",
+            "selection_reason": "동일ID누적33739. 상위기존제외근거와새부산강서34332공식원문접근실패HOLD보존. 기존미예약사업은중복제외. 서울수급가구난방부담/가구단위/무신청판단의생활안정정보. 최근20도입대조,질문즉답→가구금액예시→신청없음→검색경로. 신규v3독립2회86→97. 효과나검색량실측주장없음.",
+            "interest_basis": "OBSERVED_METRICS",
+            "duplicate_check": "CHECKED",
+            "evidence": [
+              {
+                "source_id": "611000000137",
+                "source_ref": "https://wis.seoul.go.kr/sec/ctg/categoryDetail.do?id=40",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-25T08:33:52.430313+09:00",
+                "claims_supported": [
+                  "실제183~226행: 서울 기초생계·의료급여 수급가구 시설수급자 제외, 저소득보훈가구도 월동대책비 대상. 11월 가구당 연5만원. 생계·의료급여 자격보유자 별도신청/서류없음. 개인지급완료/특정지급일 보장 없음."
+                ]
+              },
+              {
+                "source_id": "611000000137",
+                "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003645&bnefType=all&svcId=611000000137",
+                "access_method": "PROVIDED_OFFICIAL_TEXT",
+                "verified_at": "2026-11-25T08:33:52.430313+09:00",
+                "claims_supported": [
+                  "최신완전API 동일ID611000000137 누적33739, 개인신청절차없음·주소지구청에서자격보유자지원·준비서류없음. 수집시각은 접수검증시각 아님."
+                ]
+              }
+            ],
+            "checks": {
+              "facts": "PASS",
+              "current_status": "PASS",
+              "eligibility_and_units": "PASS",
+              "cta_and_no_links": "PASS",
+              "length": "PASS",
+              "media": "NOT_REQUIRED"
+            },
+            "char_count": 351,
+            "count_method": "python_len_including_spaces_newlines_CTA",
+            "missing_info": [],
+            "hold_reasons": [],
+            "warnings": [
+              "개별가구 지급여부/지급일은 구청 확인. 24h 만료가 다음날08~10전체창보다 이르므로 오늘10시후 공식/최신완전자료 실제 재검토 후 CAS갱신 필요. 현재수집본은내일08시신선도초과;실제발송최신완전세대필수. 프로필표시링크목적지확인+홈검색상세클릭검증,Threads리디렉션클릭완료자체는로그인오버레이로미확인."
+            ],
+            "reach_editorial": {
+              "policy_id": "supportpick-threads-reach-v1-20261109",
+              "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+              "core_question": "서울 월동대책비 5만 원, 생계급여나 의료급여를 받는 가구도 대상인가요?",
+              "reader_scope": "서울 생계급여 또는 의료급여 수급가구·저소득보훈가구",
+              "angles": [
+                "시설수급자제외자격",
+                "연5만원가구단위",
+                "별도신청절차없음"
+              ],
+              "chosen_angle": "수급가구대상과가구단위혜택",
+              "opening_candidates": [
+                "서울 월동대책비 5만 원, 생계급여나 의료급여를 받는 가구도 대상인가요?",
+                "서울에서 겨울 준비가 부담되는 수급가구라면 월동대책비 기준을 확인해요.",
+                "서울 월동대책비는 가족 수에 따라 금액이 늘어날까요?"
+              ],
+              "chosen_opening": "서울 월동대책비 5만 원, 생계급여나 의료급여를 받는 가구도 대상인가요?",
+              "selection_reason": "동일ID누적33739. 상위기존제외근거와새부산강서34332공식원문접근실패HOLD보존. 기존미예약사업은중복제외. 서울수급가구난방부담/가구단위/무신청판단의생활안정정보. 최근20도입대조,질문즉답→가구금액예시→신청없음→검색경로. 신규v3독립2회86→97. 효과나검색량실측주장없음.",
+              "history_posts_checked": 20,
+              "comparison_eligible": false,
+              "comparison_exclusion": "신규v3질문형·본문동시개편,기존순수도입A/B비교와분리",
+              "profile_route": {
+                "profile": "https://www.threads.com/@hid_1004",
+                "visible_link_target": "https://kllollain-max.github.io/supportpick/",
+                "home_search": "저소득시민 부가급여",
+                "actual_search_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/611000000137/",
+                "method": "CUA public profile visible target; target opened separately; actual home search + result click + detail visible",
+                "redirect_click_completed": false,
+                "checked_at": "2026-11-25T08:33:52.430313+09:00"
+              },
+              "master_full_used": true,
+              "search_evidence": "검색결과 저소득시민 부가급여·월동대책비·가구당5만원 표현 확인. 자동완성/검색량실측 없음.",
+              "observed_metrics_context": "151실제관측과기존14일평가보존;7/30일계정통계·완독/체류/CTA귀속미측정,효과주장없음."
+            },
+            "astra_final_review": {
+              "actual_model": "gpt-6.2-astra",
+              "final_verdict": "PASS",
+              "score": 97,
+              "policy_version": "3.0",
+              "calls": 2,
+              "initial_review": {
+                "reviewer_role": "independent_editor",
+                "model": "gpt-6.2-astra",
+                "phase": "first",
+                "version": "3.0",
+                "slot": "2026-11-26 08:00",
+                "format": "TEXT",
+                "score": 86,
+                "rubric": [
+                  {
+                    "category": "첫문장",
+                    "score": 14,
+                    "max": 15,
+                    "rationale": "금액과 대상이 구체적이나 가운데점이 두 급여 동시 수급으로 읽힐 여지가 있다."
+                  },
+                  {
+                    "category": "관심의도",
+                    "score": 13,
+                    "max": 15,
+                    "rationale": "질문에 즉답하지만 교통비로 주제가 이동한다."
+                  },
+                  {
+                    "category": "정확성",
+                    "score": 18,
+                    "max": 20,
+                    "rationale": "금액·월·시설수급자 예외 일치. 저소득 보훈대상 가구가 빠졌고 무신청 안내의 적용 범위를 더 명시할 수 있다."
+                  },
+                  {
+                    "category": "완독",
+                    "score": 12,
+                    "max": 15,
+                    "rationale": "교통비 비교와 신청 안내의 반복이 호흡을 끊는다."
+                  },
+                  {
+                    "category": "공유공감",
+                    "score": 8,
+                    "max": 10,
+                    "rationale": "가구 단위라는 설명을 구체적 가구 예시로 바꾸면 전달하기 쉽다."
+                  },
+                  {
+                    "category": "가치차별",
+                    "score": 8,
+                    "max": 10,
+                    "rationale": "가구 단위와 별도 신청 여부는 실제 궁금증을 풀지만 타 급여 비교의 실익이 작다."
+                  },
+                  {
+                    "category": "모바일",
+                    "score": 4,
+                    "max": 5,
+                    "rationale": "단락 구분이 있으나 첫 응답 문단의 정보가 몰렸다."
+                  },
+                  {
+                    "category": "텍스트완성도",
+                    "score": 5,
+                    "max": 5,
+                    "rationale": "단독으로 질문과 답변을 읽을 수 있다."
+                  },
+                  {
+                    "category": "프로필유도",
+                    "score": 4,
+                    "max": 5,
+                    "rationale": "마지막 지정 문구는 정확하지만 직전 문장의 행동 지시가 중복된다."
+                  }
+                ],
+                "decision": "HOLD",
+                "blocking_requirements": [
+                  "Threads 프로필에서 지원금픽 홈을 거쳐 서비스 611000000137 상세로 도달하는 실제 경로 미확인. 프로필 직접 열람 실패. 상세 단독 HTTP 200은 대체 근거가 될 수 없음."
+                ],
+                "revision": "구조 재작성",
+                "source_verification": {
+                  "direct": "서울복지포털 공식 페이지 웹 직접 열람, 185·210~223행. https://wis.seoul.go.kr/sec/ctg/categoryDetail.do?id=40",
+                  "supplied": "정부24 동일 서비스의 주소지 구청 안내와 지원금픽 상세 200은 상위 작업 제공 기록. 이 검수에서 지원금픽 상세와 프로필 직접 웹 열람 실패."
+                },
+                "revised_body": "서울 월동대책비 5만 원, 생계급여나 의료급여를 받는 가구도 대상인가요?\n네. 서울에 사는 생계급여 또는 의료급여 수급 가구가 대상이에요. 시설수급자는 제외돼요. 저소득 보훈대상 가구도 지원 대상에 포함돼요.\n\n서울복지포털이 안내하는 지원 시기는 11월이고, 금액은 가구당 연 5만 원이에요. 가구원이 두 명이어도 한 가구에 5만 원이에요.\n\n생계급여나 의료급여 자격이 있으면 별도 신청이나 서류 제출 없이 주소지 구청에서 지원해요. 우리 가구의 지급 여부는 주소지 구청에 문의할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+                "replies": [],
+                "revised_char_count": 293,
+                "text_checks": {
+                  "within_500": true,
+                  "standalone": true,
+                  "exact_cta_once": true,
+                  "no_url_or_hashtag": true,
+                  "immediate_answer": true
+                },
+                "final_rereview": "pending"
+              },
+              "final_review": {
+                "actual_model": "gpt-6.2-astra",
+                "reviewed_at": "2026-11-24T23:32:35.585824+00:00",
+                "slot": "2026-11-26 08:00",
+                "format": "TEXT",
+                "phase": "final",
+                "version": "3.0",
+                "first_score": 86,
+                "score": 97,
+                "rubric": [
+                  {
+                    "category": "첫문장",
+                    "score": 15,
+                    "max": 15,
+                    "rationale": "지역·급여·금액을 한 질문에 담고 두 급여 가운데 하나라는 뜻을 명시했다."
+                  },
+                  {
+                    "category": "관심의도",
+                    "score": 15,
+                    "max": 15,
+                    "rationale": "수급 가구의 자격 질문에 즉답하고 신청 및 지급 확인까지 연결한다."
+                  },
+                  {
+                    "category": "정확성",
+                    "score": 20,
+                    "max": 20,
+                    "rationale": "시설 예외와 보훈 가구, 11월과 가구당 연 5만 원은 서울복지포털과 일치한다. 별도 신청·서류는 생계·의료 자격에 한정했다. 지급 완료나 개인별 지급일 보장은 없다."
+                  },
+                  {
+                    "category": "완독",
+                    "score": 14,
+                    "max": 15,
+                    "rationale": "타 급여 비교를 없애고 대상·금액·신청 순서로 정리했다. 마지막 두 단락의 프로필 표현이 겹친다."
+                  },
+                  {
+                    "category": "공유공감",
+                    "score": 9,
+                    "max": 10,
+                    "rationale": "두 명인 가구 예시로 가족에게 금액을 설명하기 쉽다."
+                  },
+                  {
+                    "category": "가치차별",
+                    "score": 9,
+                    "max": 10,
+                    "rationale": "가구 기준, 시설 예외, 지급 확인 창구와 검색어를 함께 준다."
+                  },
+                  {
+                    "category": "모바일",
+                    "score": 5,
+                    "max": 5,
+                    "rationale": "짧은 문단으로 질문·금액·신청·검색을 구분했다."
+                  },
+                  {
+                    "category": "텍스트완성도",
+                    "score": 5,
+                    "max": 5,
+                    "rationale": "추가 댓글이나 이미지 없이 자격·금액·시기를 이해할 수 있다."
+                  },
+                  {
+                    "category": "프로필유도",
+                    "score": 5,
+                    "max": 5,
+                    "rationale": "프로필에서 찾을 서비스명과 확인 항목이 명확하고 지정 CTA가 마지막에 한 번 있다."
+                  }
+                ],
+                "change_reason": "질문 무관 교통비 삭제, 저소득 보훈대상 가구 포함, 시설수급자 예외 및 무신청 적용대상 명시, 두 명 가구 예시와 실제 검색할 서비스명 추가. 프로필 링크의 실제 목적지와 홈 검색 결과의 상세 도착 근거 추가.",
+                "final_body": "서울 월동대책비 5만 원, 생계급여나 의료급여를 받는 가구도 대상인가요?\n네. 서울에 사는 생계급여 또는 의료급여 수급 가구가 대상이에요. 시설수급자는 제외돼요. 저소득 보훈대상 가구도 지원 대상에 포함돼요.\n\n서울복지포털이 안내하는 지원 시기는 11월이고, 금액은 가구당 연 5만 원이에요. 가구원이 두 명이어도 한 가구에 5만 원이에요.\n\n생계급여나 의료급여 자격이 있으면 별도 신청이나 서류 제출 없이 주소지 구청에서 지원해요. 우리 가구의 지급 여부는 주소지 구청에 문의할 수 있어요.\n\n프로필에서 ‘저소득시민 부가급여 지원’을 찾으면 대상·신청방법과 공식 안내 경로를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+                "sha256": "b98e2ee01ac565f3e54a6bb9335fa9192db6f139c3bb8c689415f24a8f4e8904",
+                "character_count": 351,
+                "replies": [],
+                "images": [],
+                "checks": {
+                  "immediate_answer": true,
+                  "standalone": true,
+                  "within_500": true,
+                  "exact_cta_once_last": true,
+                  "no_urls_hashtags": true,
+                  "no_replies": true,
+                  "text_only": true,
+                  "official_facts": true,
+                  "no_personal_payment_promise": true,
+                  "profile_to_detail_route": true,
+                  "score_at_least_95": true
+                },
+                "source_verification": {
+                  "official_direct": "서울복지포털 공식 페이지 웹 직접 열람, 185·210~223행. https://wis.seoul.go.kr/sec/ctg/categoryDetail.do?id=40",
+                  "gov24": "상위 작업의 API 대조 기록. 정부24 611000000137과 지원금픽 상세의 주소지 구청·개인 신청 절차 없음 안내가 일치.",
+                  "route": "상위 작업이 공개 프로필에서 표시 링크 및 리디렉션 URL의 목적지 파라미터를 직접 확인했다. 관측한 정확한 목적지로 홈페이지를 열어 서비스 검색, 단일 결과 클릭 및 상세 URL 도착을 검증했다. 실제 링크 목적지와 홈에서 상세까지의 경로를 식별·검증한다는 요건 충족. 오버레이로 Threads 리디렉션 클릭의 완료 자체는 확인되지 않았다."
+                },
+                "blocking_requirements": [],
+                "decision": "APPROVE"
+              },
+              "body_sha256": "b98e2ee01ac565f3e54a6bb9335fa9192db6f139c3bb8c689415f24a8f4e8904",
+              "asset_sha256": null,
+              "fallback_reason": null
+            }
+          },
+          "next_history_record": {
+            "program_id": "611000000137",
+            "notice_version": "gov24-45499312067-1;official2026-11-25T08:33:52.430313+09:00",
+            "pattern": "P8",
+            "opening": "서울 월동대책비 5만 원, 생계급여나 의료급여를 받는 가구도 대상인가요?",
+            "structure": "자격질문→즉답→가구금액→무신청→실제검색경로",
+            "media_turn": "TEXT"
+          }
+        },
+        "full_delay_window_covered": false,
+        "revalidation_required_reason": "expires_at_before_slot_plus_two_hours",
+        "revalidate_before": "2026-11-26T08:00:00+09:00"
+      },
+      "reason": "max24h expirybeforeNov26 10; mustrerevieworiginalofficial/currentstatus/latestcompletegenerationafterNov25 10; no date-onlyrefresh",
+      "next_condition": "ExistingcheckafterNov25 10 actuallyreread official/currentstatus/latestcompletefeed, archiveold andCASrefreshmax24h. TEXTnoimage,do notchangeformat."
     }
   },
   "maintenance_calculation_corrections": {
@@ -148940,7 +150044,7 @@
     "full_text": "[지원금픽 Threads 최종 편집 v3.0 · 저장 후 신규 미착수 회차만]\n기존 게시기 직전 승인 큐에 넣기 전, 초안 작성자와 독립된 편집자가 아래를 집행한다. 기존 인증·비용·계정·큐 스키마·잠금·해시·데이터 수집·백업·예약·복구·중복방지와 이미 착수한 슬롯을 보호한다. 아래 모델 대체 기준이 이전의 동일 모델 재확인 지시와 충돌하면 신규 회차에는 v3.0을 적용한다.\n1. 매회 최신 공식 후보의 접수 가능성, 대상 규모, 실질 혜택, 마감, 독자 관심, 최근 중복, 공유·저장 가치, 근거 신뢰도, 사이트 상세 정보, 확인 가능한 검색 수요를 비교한다. 기존 선별 순위 안에서 정부·지자체, 소상공인·근로자·청년·중장년·노인·부모·농어업, 교육·주거·생활·교통·난방·고용·창업·채무, 마감·신규 분야를 순환한다. 추정 검색량을 실측으로 기록하지 않는다.\n2. 독자의 생활상 결정 질문 하나와 첫 문장 후보 3개 이상을 기록한다. 가장 구체적인 도입을 선택해 초반에 결론과 조건을 답하고 대상·혜택·예외·기간·방법 중 결정에 필요한 내용을 담는다. 자격 오해·비교·가족·누락·마감 등 유형을 돌려 쓰고 기존 도입·문단과 비교한다. 광고투·반복·행정용어·낚시·허위 긴급성·핵심 숨김·댓글 구걸을 고친다. 상세 자격·서류 등 사이트를 방문할 실제 이유를 설명하고 프로필에서 해당 정보까지 접근을 확인한다.\n3. 시행기관 공식 자료에서 사업명·기관·지역·연령·소득·재산·금액·최대액의 조건·접수 시작/마감·방법·중복·조기 소진·선착순/심사·현재 상태를 대조한다. 출처와 확인 시각, 지원금픽 상세 경로를 내부에 기록한다. 미확인 사실을 제외하고 결정에 필요한 사실이 불명확하면 보류한다.\n4. KST 08·12·16·20시 하루 최대 4본문, 이미지 교대, 본문 1개, 기본 답글 0개. 실제 게시기 글자 수 제한 및 기존 본문·답글 URL/도메인/우회/단축주소·해시태그 금지. 마지막 줄 “자세한 사항은 프로필링크 확인” 정확히 한 번. 이미지 회차에는 생성·저장된 실제 파일을 열어 모바일 크기에서 명칭·금액·날짜·한글·잘림·깨짐·대비·본문 일치·과밀·중복·권리·공식 홍보물 오인을 점검한다. 실패 시 수정 지시로 기존 제작기에서 재제작하고 다시 연다. 텍스트 대체 금지.\n5. 실제 사용 가능한 gpt-6.2-astra 독립 검수자를 우선 호출한다. 불가하면 사용 가능한 고성능 독립 검수자로 동일 절차 수행. 실제 모델 식별자(확인 불가 시 미확인), 대체 사유, 변경 전후 본문·이미지 식별값·근거·재검수 판정·시간·버전을 기존 내부 기록에 보존한다. 독립 검수 불가 시 보류. 문제를 직접 고치고 최종본을 재검수한다.\n6. 첫 문장15·관심/의도15·정확성20·완독 가능성15·공유/공감10·가치/차별10·모바일5·이미지 또는 텍스트 완성도5·프로필 유도5로 채점하고 항목별 근거를 남긴다. 필수검사 모두 통과하고 95점 이상만 승인, 90~94 수정, 80~89 주요 문장/구조 재작성, 80 미만 전면 재작성. 중대 사실 오류나 운영 위반은 점수 무관 차단. 점수를 실적처럼 표시하지 않는다.\n7. 접근 가능한 공식 7일·30일 통계에서 게시물 조회·좋아요·댓글·공유·재게시·팔로워·프로필·홈 유입/방문 후 행동을 확인한다. 기간·표본·게시 후 관측시간을 기록하고 시간대·매체·분야·첫 문장·길이별 경향을 신규 편집에 반영한다. 측정 불가와 0을 구분하고 완독·체류·CTA 기여도를 추정 실적으로 기록하지 않는다.\n8. 일시 오류 재시도는 기존 단계별 한도 내 최대 2회, 중첩 금지. 불명확한 게시 POST 반복 금지, 실제 게시 ID와 원장 대조. 해당 슬롯만 보류하고 다음 정규 회차 진행. 예약 실행·검수·실제 발행을 각각 기록한다. 권한/인증 조치가 필요하면 보고한다. 게시 전에 신규 검수 기록과 승인본 일치를 확인한다. 오류 기록·기존 버전·프롬프트·변경 이력에 비밀정보를 포함하지 않는다.",
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
     "source": "fullcurrentuserinstruction",
-    "status": "ADOPTED_FOR_FIRST_NEW_UNSTARTED_DRAFT_NOT_YET_APPLIED_TO_NEW_READY",
+    "status": "APPLIED_TO_FIRST_NEW_READY_WITH_ACTUAL_INDEPENDENT_REVIEW_AND_QUEUE_READBACK",
     "protected_existing_READY": [
       {
         "slot": "2026-11-25T08:00:00+09:00",
@@ -148998,7 +150102,9 @@
     "new_draft_site_route_requirement": "Actually verifyprofiletoexactdetail path andrecordit; unknownessentialfacts=>HOLD, do not claimaccessibletransaction withoutverification.",
     "metrics_limit": "Existingofficialobservations haveactual24h/72h/168h windows. No newaccount-level30dayfollowers/profile/homevisit/post-clickaction accesschecked thisrun; missingnotzero. No inventedcompletion/dwell/CTA attribution.",
     "retry_rule": "Existingstagebudget, max2retries,no nesting,GETonly whereallowed; ambiguousPOSTneverrepeat.",
-    "existing_schedule_credentials_costs_account_queue_schema_guards_unchanged": true
+    "existing_schedule_credentials_costs_account_queue_schema_guards_unchanged": true,
+    "first_applied_at": "2026-11-25T08:35:18.970007+09:00",
+    "first_applied_queue_commit": "15be42262185674b5133abd93b4b0faf14ab6fa0"
   },
   "writer_final_edit_policy_history": {
     "2026-11-25T00:37:21.565999+09:00": {
@@ -149068,6 +150174,82 @@
       "metrics_limit": "Existingofficialobservations haveactual24h/72h/168h windows. No newaccount-level30dayfollowers/profile/homevisit/post-clickaction accesschecked thisrun; missingnotzero. No inventedcompletion/dwell/CTA attribution.",
       "retry_rule": "Existingstagebudget, max2retries,no nesting,GETonly whereallowed; ambiguousPOSTneverrepeat.",
       "existing_schedule_credentials_costs_account_queue_schema_guards_unchanged": true
+    },
+    "2026-11-25T08:35:18.970007+09:00": {
+      "event": "FIRST_NEW_READY_ACTUALLY_REVIEWED_AND_SAVED",
+      "prior_policy_state": {
+        "policy_id": "supportpick-threads-final-edit-v3-20261125",
+        "version": "3.0",
+        "recorded_at": "2026-11-25T00:37:21.565999+09:00",
+        "text_sha256": "db59806a4edefdab1d92379992be7bf8d875954f60bddc9c3ba455db1de036d8",
+        "full_text": "[지원금픽 Threads 최종 편집 v3.0 · 저장 후 신규 미착수 회차만]\n기존 게시기 직전 승인 큐에 넣기 전, 초안 작성자와 독립된 편집자가 아래를 집행한다. 기존 인증·비용·계정·큐 스키마·잠금·해시·데이터 수집·백업·예약·복구·중복방지와 이미 착수한 슬롯을 보호한다. 아래 모델 대체 기준이 이전의 동일 모델 재확인 지시와 충돌하면 신규 회차에는 v3.0을 적용한다.\n1. 매회 최신 공식 후보의 접수 가능성, 대상 규모, 실질 혜택, 마감, 독자 관심, 최근 중복, 공유·저장 가치, 근거 신뢰도, 사이트 상세 정보, 확인 가능한 검색 수요를 비교한다. 기존 선별 순위 안에서 정부·지자체, 소상공인·근로자·청년·중장년·노인·부모·농어업, 교육·주거·생활·교통·난방·고용·창업·채무, 마감·신규 분야를 순환한다. 추정 검색량을 실측으로 기록하지 않는다.\n2. 독자의 생활상 결정 질문 하나와 첫 문장 후보 3개 이상을 기록한다. 가장 구체적인 도입을 선택해 초반에 결론과 조건을 답하고 대상·혜택·예외·기간·방법 중 결정에 필요한 내용을 담는다. 자격 오해·비교·가족·누락·마감 등 유형을 돌려 쓰고 기존 도입·문단과 비교한다. 광고투·반복·행정용어·낚시·허위 긴급성·핵심 숨김·댓글 구걸을 고친다. 상세 자격·서류 등 사이트를 방문할 실제 이유를 설명하고 프로필에서 해당 정보까지 접근을 확인한다.\n3. 시행기관 공식 자료에서 사업명·기관·지역·연령·소득·재산·금액·최대액의 조건·접수 시작/마감·방법·중복·조기 소진·선착순/심사·현재 상태를 대조한다. 출처와 확인 시각, 지원금픽 상세 경로를 내부에 기록한다. 미확인 사실을 제외하고 결정에 필요한 사실이 불명확하면 보류한다.\n4. KST 08·12·16·20시 하루 최대 4본문, 이미지 교대, 본문 1개, 기본 답글 0개. 실제 게시기 글자 수 제한 및 기존 본문·답글 URL/도메인/우회/단축주소·해시태그 금지. 마지막 줄 “자세한 사항은 프로필링크 확인” 정확히 한 번. 이미지 회차에는 생성·저장된 실제 파일을 열어 모바일 크기에서 명칭·금액·날짜·한글·잘림·깨짐·대비·본문 일치·과밀·중복·권리·공식 홍보물 오인을 점검한다. 실패 시 수정 지시로 기존 제작기에서 재제작하고 다시 연다. 텍스트 대체 금지.\n5. 실제 사용 가능한 gpt-6.2-astra 독립 검수자를 우선 호출한다. 불가하면 사용 가능한 고성능 독립 검수자로 동일 절차 수행. 실제 모델 식별자(확인 불가 시 미확인), 대체 사유, 변경 전후 본문·이미지 식별값·근거·재검수 판정·시간·버전을 기존 내부 기록에 보존한다. 독립 검수 불가 시 보류. 문제를 직접 고치고 최종본을 재검수한다.\n6. 첫 문장15·관심/의도15·정확성20·완독 가능성15·공유/공감10·가치/차별10·모바일5·이미지 또는 텍스트 완성도5·프로필 유도5로 채점하고 항목별 근거를 남긴다. 필수검사 모두 통과하고 95점 이상만 승인, 90~94 수정, 80~89 주요 문장/구조 재작성, 80 미만 전면 재작성. 중대 사실 오류나 운영 위반은 점수 무관 차단. 점수를 실적처럼 표시하지 않는다.\n7. 접근 가능한 공식 7일·30일 통계에서 게시물 조회·좋아요·댓글·공유·재게시·팔로워·프로필·홈 유입/방문 후 행동을 확인한다. 기간·표본·게시 후 관측시간을 기록하고 시간대·매체·분야·첫 문장·길이별 경향을 신규 편집에 반영한다. 측정 불가와 0을 구분하고 완독·체류·CTA 기여도를 추정 실적으로 기록하지 않는다.\n8. 일시 오류 재시도는 기존 단계별 한도 내 최대 2회, 중첩 금지. 불명확한 게시 POST 반복 금지, 실제 게시 ID와 원장 대조. 해당 슬롯만 보류하고 다음 정규 회차 진행. 예약 실행·검수·실제 발행을 각각 기록한다. 권한/인증 조치가 필요하면 보고한다. 게시 전에 신규 검수 기록과 승인본 일치를 확인한다. 오류 기록·기존 버전·프롬프트·변경 이력에 비밀정보를 포함하지 않는다.",
+        "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+        "source": "fullcurrentuserinstruction",
+        "status": "ADOPTED_FOR_FIRST_NEW_UNSTARTED_DRAFT_NOT_YET_APPLIED_TO_NEW_READY",
+        "protected_existing_READY": [
+          {
+            "slot": "2026-11-25T08:00:00+09:00",
+            "benefit_id": "419000000129",
+            "post_text_sha256": "5fd3ac569548415d5d01f8aa2f0553d8f5057b3ec151308e8373b5d1caaee21f",
+            "asset_sha256": null,
+            "policy_application": "legacy_in_progress_READY_preserved_no_retroactive_v3_score"
+          },
+          {
+            "slot": "2026-11-25T12:00:00+09:00",
+            "benefit_id": "PTR000050390",
+            "post_text_sha256": "2db46127cba440ca73581950d5c1381a28019e962284ffe8a0c17846b7751d38",
+            "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+            "policy_application": "legacy_in_progress_READY_preserved_no_retroactive_v3_score"
+          },
+          {
+            "slot": "2026-11-25T16:00:00+09:00",
+            "benefit_id": "B49000100208",
+            "post_text_sha256": "af1d8576401da0456c0479fb3a36a12667bfb48378b1b61eef5cc9595fa23d0a",
+            "asset_sha256": null,
+            "policy_application": "legacy_in_progress_READY_preserved_no_retroactive_v3_score"
+          },
+          {
+            "slot": "2026-11-25T20:00:00+09:00",
+            "benefit_id": "B01000300013",
+            "post_text_sha256": "8048d902f3b027b379d27842c3c5f414df4e60a70c1b0116fdb65ea98f7c8ab6",
+            "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+            "policy_application": "legacy_in_progress_READY_preserved_no_retroactive_v3_score"
+          }
+        ],
+        "first_possible_new_slot_at_this_check": "2026-11-26T08:00:00+09:00",
+        "first_possible_slot_is_not_new_schedule_or_reservation": true,
+        "new_ready_under_v3_this_check": 0,
+        "review_calls_this_check": 0,
+        "grading_this_check": null,
+        "grading_absence_reason": "No newunstarted24hslot, fouralreadyapprovedREADYpreserved. Do not invent95score or claimv3published.",
+        "independent_review": {
+          "preferred_model": "gpt-6.2-astra",
+          "fallback": "Actually available high-performance independentreviewer only; recordactualidentifier orunknown andfallbackreason. No independence=>HOLD.",
+          "final_recheck_required": true
+        },
+        "score_threshold": 95,
+        "mandatory_checks_override_score": true,
+        "score_weights": {
+          "opening": 15,
+          "reader_intent": 15,
+          "accuracy": 20,
+          "completion": 15,
+          "sharing_empathy": 10,
+          "differentiated_value": 10,
+          "mobile": 5,
+          "media_or_text_finish": 5,
+          "profile_path": 5
+        },
+        "new_draft_site_route_requirement": "Actually verifyprofiletoexactdetail path andrecordit; unknownessentialfacts=>HOLD, do not claimaccessibletransaction withoutverification.",
+        "metrics_limit": "Existingofficialobservations haveactual24h/72h/168h windows. No newaccount-level30dayfollowers/profile/homevisit/post-clickaction accesschecked thisrun; missingnotzero. No inventedcompletion/dwell/CTA attribution.",
+        "retry_rule": "Existingstagebudget, max2retries,no nesting,GETonly whereallowed; ambiguousPOSTneverrepeat.",
+        "existing_schedule_credentials_costs_account_queue_schema_guards_unchanged": true
+      },
+      "program_id": "611000000137",
+      "slot": "2026-11-26T08:00:00+09:00",
+      "score": 97,
+      "body_sha256": "b98e2ee01ac565f3e54a6bb9335fa9192db6f139c3bb8c689415f24a8f4e8904",
+      "queue_commit": "15be42262185674b5133abd93b4b0faf14ab6fa0"
     }
   },
   "last_reported_source_recovery": {
@@ -149157,7 +150339,7 @@
       "checked_at": "2026-11-25T07:59:02.227357+09:00",
       "slot": "2026-11-25T20:00:00+09:00",
       "benefit_id": "B01000300013",
-      "status": "HOLD_BY_EXISTING_VALIDATOR",
+      "status": "RESOLVED_BY_ACTUAL_HIGHER_CANDIDATE_REVIEW_HOLD",
       "reason": "higher_priority_candidate_disposition_required",
       "higher_candidate_id": "336000000280",
       "higher_candidate_title": "부산 강서구 입학 및 학습지원비 지원",
@@ -149167,7 +150349,41 @@
       "original_notice_review_this_check": false,
       "independent_editorial_review_this_check": false,
       "queue_entry_body_image_and_prior_Astra_preserved": true,
-      "next_condition": "Review new higher-ranked candidate original agency current intake and v3 independent edit before deciding eligible replacement or evidenced HOLD. Do not manufacture exclusion note to force old lower-ranked draft.08/12/16 still eligible. Preserve slot20 image turn. No new dispatch/POST."
+      "next_condition": "Review new higher-ranked candidate original agency current intake and v3 independent edit before deciding eligible replacement or evidenced HOLD. Do not manufacture exclusion note to force old lower-ranked draft.08/12/16 still eligible. Preserve slot20 image turn. No new dispatch/POST.",
+      "resolved_at": "2026-11-25T08:35:18.970007+09:00",
+      "queue_commit": "15be42262185674b5133abd93b4b0faf14ab6fa0",
+      "evidence": {
+        "benefit_id": "336000000280",
+        "views": 34332,
+        "decision": "HOLD",
+        "reason": "11월25일 시행기관 현재 공고를 실제 web 직접 열람했으나 403 Forbidden, 정부24 원문도 도구에서 읽지 못함. 최신 완전 API에 11월30일 기간·3월3일 주소지 조건이 있으나 현재 원공고·정정·조기종료를 직접 대조하지 못했으므로 신규 안내 HOLD. 사업 종료 단정 아님. 공식 원문 접근 가능 시 다시 검토. 검색 요약·누적 조회수를 현재 접수 증거로 전용하지 않음.",
+        "sources": [
+          "https://www.bsgangseo.go.kr/portal/board/post/view.do?bcIdx=500&mid=0501010000&idx=407142",
+          "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2124002&bnefType=all&svcId=336000000280"
+        ],
+        "checked_at": "2026-11-25T08:33:52.430313+09:00",
+        "access_results": {
+          "agency": "403 Forbidden",
+          "gov24": "web tool inaccessible"
+        },
+        "source_generation": "gov24-45499312067-1"
+      },
+      "previous_block_snapshot": {
+        "checked_at": "2026-11-25T07:59:02.227357+09:00",
+        "slot": "2026-11-25T20:00:00+09:00",
+        "benefit_id": "B01000300013",
+        "status": "HOLD_BY_EXISTING_VALIDATOR",
+        "reason": "higher_priority_candidate_disposition_required",
+        "higher_candidate_id": "336000000280",
+        "higher_candidate_title": "부산 강서구 입학 및 학습지원비 지원",
+        "higher_candidate_views": 34332,
+        "source_generation": "gov24-45499312067-1",
+        "official_api_url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2124002&bnefType=all&svcId=336000000280",
+        "original_notice_review_this_check": false,
+        "independent_editorial_review_this_check": false,
+        "queue_entry_body_image_and_prior_Astra_preserved": true,
+        "next_condition": "Review new higher-ranked candidate original agency current intake and v3 independent edit before deciding eligible replacement or evidenced HOLD. Do not manufacture exclusion note to force old lower-ranked draft.08/12/16 still eligible. Preserve slot20 image turn. No new dispatch/POST."
+      }
     }
   },
   "last_reported_priority_block": {
@@ -149185,5 +150401,14 @@
     "independent_editorial_review_this_check": false,
     "queue_entry_body_image_and_prior_Astra_preserved": true,
     "next_condition": "Review new higher-ranked candidate original agency current intake and v3 independent edit before deciding eligible replacement or evidenced HOLD. Do not manufacture exclusion note to force old lower-ranked draft.08/12/16 still eligible. Preserve slot20 image turn. No new dispatch/POST."
+  },
+  "last_reported_writer_improvement": {
+    "checked_at": "2026-11-25T08:35:18.970007+09:00",
+    "new_v3_ready": 1,
+    "program_id": "611000000137",
+    "score": 97,
+    "new_posts": 0,
+    "priority_block_resolved": true,
+    "queue_commit": "15be42262185674b5133abd93b4b0faf14ab6fa0"
   }
 }
