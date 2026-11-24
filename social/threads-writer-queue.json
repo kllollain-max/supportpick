@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-24T13:14:28.132838+09:00",
+  "prepared_at": "2026-11-24T14:45:53.443971+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -11235,8 +11235,8 @@
       "benefit_id": "PTR000050390",
       "source_fingerprint": "18fd88694ebfc718e67ac4fc20c1d1493580eb9556d35a56c6dd4290088f78ba",
       "source_generation": "gov24-45277137519-1",
-      "prepared_at": "2026-11-24T13:14:28.132838+09:00",
-      "expires_at": "2026-11-25T13:14:28.132838+09:00",
+      "prepared_at": "2026-11-24T14:45:53.443971+09:00",
+      "expires_at": "2026-11-25T14:45:53.443971+09:00",
       "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -11266,54 +11266,60 @@
               "source_id": "PTR000050390",
               "source_ref": "https://www.e-health.go.kr/gh/heSrvc/selectBbsDtlViewInfo.do?bbsId=U00322&bbsNo=381829&bbsSeCd=Z6&menuId=200040",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-24T13:14:28.132838+09:00",
+              "verified_at": "2026-11-24T14:45:53.443971+09:00",
               "claims_supported": [
-                "실제2026기준129~159행:주민등록/외국인등록,수급차상위 또는건강보험료150%이하,지역예산별예외,방문돌봄바우처,일반40일전~60일후/미숙아선천성이상입원퇴원30일. 본문은국내주민등록가정으로한정."
+                "실제2026기준129~159행:주민등록/외국인등록,수급차상위 또는건강보험료150%이하,지역예산별예외,방문돌봄바우처,일반40일전~60일후/미숙아선천성이상입원퇴원30일. 본문은국내주민등록가정으로한정.",
+                "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
               ]
             },
             {
               "source_id": "PTR000050390",
               "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10711020100",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-24T13:14:28.132838+09:00",
+              "verified_at": "2026-11-24T14:45:53.443971+09:00",
               "claims_supported": [
-                "실제1035~1100행:기본대상/지역예외/주소지보건소자격판정/서비스가격-정부지원금=본인부담.2025가격표를2026금액으로전용않음."
+                "실제1035~1100행:기본대상/지역예외/주소지보건소자격판정/서비스가격-정부지원금=본인부담.2025가격표를2026금액으로전용않음.",
+                "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
               ]
             },
             {
               "source_id": "PTR000050390",
               "source_ref": "https://www.cbcsi.or.kr/content/536",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-24T13:14:28.132838+09:00",
+              "verified_at": "2026-11-24T14:45:53.443971+09:00",
               "claims_supported": [
-                "실제92~134행:가구건강보험료150%,40일전~60일후,보건소조사선정,이용자차액부담."
+                "실제92~134행:가구건강보험료150%,40일전~60일후,보건소조사선정,이용자차액부담.",
+                "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
               ]
             },
             {
               "source_id": "PTR000050390",
               "source_ref": "https://www.guro.go.kr/health/contents.do?key=1329",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-24T13:14:28.132838+09:00",
+              "verified_at": "2026-11-24T14:45:53.443971+09:00",
               "claims_supported": [
-                "실제493~523행:2026구로지역모든가정지원은지역예외사례이며전국으로확대않음. 현재가격미게시."
+                "실제493~523행:2026구로지역모든가정지원은지역예외사례이며전국으로확대않음. 현재가격미게시.",
+                "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
               ]
             },
             {
               "source_id": "PTR000050390",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=741282&bnefType=all&svcId=PTR000050390",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-24T13:14:28.132838+09:00",
+              "verified_at": "2026-11-24T14:45:53.443971+09:00",
               "claims_supported": [
-                "완전세대gov24-45277137519-1 실제동일ID serviceList누적조회35265,checkedAt07:16:28.229346와수집07:18/원문열람시각구별. API선정기준의출산후30일은2026e보건소60일과상이하여최신2026기관안내로해소;가격추정없음."
+                "완전세대gov24-45277137519-1 실제동일ID serviceList누적조회35265,checkedAt07:16:28.229346와수집07:18/원문열람시각구별. API선정기준의출산후30일은2026e보건소60일과상이하여최신2026기관안내로해소;가격추정없음.",
+                "本회차실제artifact ZIP SHA검증/완전snapshot manifest재검증/load_feed/read_current,동일ID및fingerprint재대조. 최신완전세대07:18을내일발송시신선하다고가정않음."
               ]
             },
             {
               "source_id": "PTR000050390",
               "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
               "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-24T13:14:28.132838+09:00",
+              "verified_at": "2026-11-24T14:45:53.443971+09:00",
               "claims_supported": [
-                "현재PNG실제GET SHA와main image-review PASS재대조일치. 일반브랜드만있고사업명/금액/기간없음. 독립아스트라는실물열람. 기존360px검수기록보존."
+                "현재PNG실제GET SHA와main image-review PASS재대조일치. 일반브랜드만있고사업명/금액/기간없음. 독립아스트라는실물열람. 기존360px검수기록보존.",
+                "本회차실제PNG GET후현재main image-review SHA와재대조일치. 새직접시각검수아님."
               ]
             }
           ],
@@ -11417,8 +11423,7 @@
         }
       },
       "revalidate_before": "2026-11-25T12:00:00+09:00",
-      "full_delay_window_covered": false,
-      "revalidation_required_reason": "expires_at_before_slot_plus_two_hours"
+      "full_delay_window_covered": true
     }
   ]
 }
