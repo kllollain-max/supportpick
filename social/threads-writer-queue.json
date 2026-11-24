@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-24T14:45:53.443971+09:00",
+  "prepared_at": "2026-11-24T17:20:07.451089+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -11424,6 +11424,165 @@
       },
       "revalidate_before": "2026-11-25T12:00:00+09:00",
       "full_delay_window_covered": true
+    },
+    {
+      "slot": "2026-11-25T16:00:00+09:00",
+      "benefit_id": "B49000100208",
+      "source_fingerprint": "ff864fb4163cb586a029b371b51500fbbaf874658f501ab1cb0bc819b795d307",
+      "source_generation": "gov24-45277137519-1",
+      "prepared_at": "2026-11-24T17:19:11.117255+09:00",
+      "expires_at": "2026-11-25T17:19:11.117255+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "B49000100208",
+        "post_text": "특수고용직도 근로자 휴양콘도를 신청할 수 있나요?\n네. 특수형태근로종사자(노무제공자 포함)도 평일·주말·성수기 모두 신청할 수 있어요. 근로복지공단이 이용 자격을 확인하고 대상자를 선정해요.\n\n여행비를 현금으로 주는 지원은 아니에요. 근로자와 가족이 콘도를 무기명 법인회원가로 이용하도록 돕는 제도라 이용요금은 별도로 부담해요.\n\n평일은 이용하려는 날 7일 전까지, 주말·성수기는 이용하려는 달의 전월 5일까지 신청해요. 주말·성수기는 전월 10일에 선발하며 월평균 소득과 기업규모 등을 기준으로 우선순위를 정해요.\n\n신청은 근로복지넷 인증서 로그인 후 근로자 휴양콘도 신청서를 작성하는 순서예요. 신청만으로 원하는 날짜의 객실이 확정되지는 않아요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-25T16:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "특수형태근로종사자·노무제공자와가족여행을준비하는노동자",
+          "central_message": "특고·노무제공자도근로자휴양콘도이용을신청할수있는가",
+          "pattern": "P6",
+          "selection_reason": "동일ID serviceList누적조회35145.기존76게시/미예약READY4사업제외,상위75HOLD/SKIP출처보존후검증가능최상위. 최근20도입전개대조,특고대상질문→즉답→이용요금성격→신청선발기한→절차. 순위변경없음.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "B49000100208",
+              "source_ref": "https://www.moel.go.kr/policyitrd/policyItrdList.do?searchMclsCdList=J",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-24T17:19:11.117255+09:00",
+              "claims_supported": [
+                "현공식목록2026휴양콘도지원확인,실제HTML fnView523관찰."
+              ]
+            },
+            {
+              "source_id": "B49000100208",
+              "source_ref": "https://www.moel.go.kr/policyitrd/downloadFile.do?policy_itrd_sn=523",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-24T17:19:11.117255+09:00",
+              "claims_supported": [
+                "공식상세523HTML첨부링크직접GET hwpxZIP/XML전문추출열람:특수형태근로종사자(노무제공자포함)모든요일가능.평일7일전/주말성수기전월5신청및전월10선발/월평균소득기업규모우선.인증서로그인→신청서→적격확인→문자. 구체객실요금확정없음."
+              ]
+            },
+            {
+              "source_id": "B49000100208",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001618&bnefType=all&svcId=B49000100208",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-24T17:19:11.117255+09:00",
+              "claims_supported": [
+                "완전snapshotmanifest검증후load_feed,동일ID원본누적35145/checkedAt07:16:03.552111,상시신청/무기명법인회원가시설이용. API수집과본공식문서열람시각구별.수집성공은잔여객실보장아님."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 381,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "근로복지넷직접open400,개인로그인·접수거래·잔여객실·확정요금/프로필내경로미확인.현재2026부처공식문서절차근거,신청/객실선정보장않음.",
+            "현재07:18완전수집본은내일16시까지신선하다고가정않음.발송시최신완전세대/공식기한정정/원장/이미지교대재검증필수.",
+            "최대24h검수만료가내일16~18전체허용창보다먼저끝나므로기존18시이후점검에서공식문서·현접수상태·최신완전수집본·이미지SHA를실제재대조후CAS갱신/이전본보관.날짜만변경금지.",
+            "현재16시슬롯은아직미예약/미실행조회,18시창열림. 앞회차누락시모든미예약미래순위/교대재계산,소급발행/임의dispatch않음."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "core_question": "특고·노무제공자도근로자휴양콘도이용을신청할수있는가",
+            "reader_scope": "특수형태근로종사자·노무제공자와가족여행을준비하는노동자",
+            "angles": [
+              "가족휴가비부담",
+              "특고대상확인",
+              "날짜별신청준비"
+            ],
+            "chosen_angle": "특고대상확인",
+            "opening_candidates": [
+              {
+                "type": "생활 상황형",
+                "group": "A",
+                "text": "가족여행 숙소를 찾는 특수고용직도 근로자 휴양콘도를 신청할 수 있을까요?"
+              },
+              {
+                "type": "대상·혜택형",
+                "group": "B",
+                "text": "특수고용직도 근로자 휴양콘도를 신청할 수 있나요?"
+              },
+              {
+                "type": "조건 설명형",
+                "group": null,
+                "text": "근로자 휴양콘도는 주말과 평일의 신청기한이 같을까요?"
+              }
+            ],
+            "chosen_opening": "특수고용직도 근로자 휴양콘도를 신청할 수 있나요?",
+            "opening_type": "질문형 대상·혜택",
+            "cohort": "B",
+            "selection_reason": "동일ID serviceList누적조회35145.기존76게시/미예약READY4사업제외,상위75HOLD/SKIP출처보존후검증가능최상위. 최근20도입전개대조,특고대상질문→즉답→이용요금성격→신청선발기한→절차. 순위변경없음.",
+            "history_posts_checked": 20,
+            "comparison_eligible": false,
+            "comparison_exclusion": "신규질문형정책과본문편집동시적용으로순수A/B도입군비교제외. 시간대소급재분류않음.",
+            "comparison_strata": {
+              "geo": "전국",
+              "audience": "특고노동자",
+              "benefit": "회원가시설이용",
+              "media": "TEXT"
+            },
+            "comparison_group": "실제24h A20/B20중앙값62/62,매칭쌍0·교란으로효과미입증,비중유지",
+            "applied_elements": [
+              "제목대상질문직답",
+              "현금지원오인방지",
+              "요일별신청/선발기한구별"
+            ],
+            "master_full_used": true,
+            "supplemental_full_used_in_current_model_input": true,
+            "profile_route": "실제사이트내검색상세이번미검증/접수보장없음"
+          },
+          "astra_final_review": {
+            "model": "gpt-6.2-astra",
+            "independent_agent": "/root/condo_final_review",
+            "initial_verdict": "REVISE",
+            "initial_changes": [
+              "첫답네직답",
+              "특수형태근로종사자(노무제공자포함)공식포함관계복원"
+            ],
+            "final_verdict": "PASS",
+            "actual_review_calls": 2,
+            "final_text_sha256": "af1d8576401da0456c0479fb3a36a12667bfb48378b1b61eef5cc9595fa23d0a",
+            "char_count": 381,
+            "image": null,
+            "image_reason": "TEXT회차실제이미지없음",
+            "final_checked_at": "2026-11-24T17:20:07.451089+09:00",
+            "final_result": "실제동일모델재검수PASS381자.대상질문즉답/포함관계/요일별기한/선발조건공식일치.CTA1/링크0/추가행동0."
+          }
+        },
+        "next_history_record": {
+          "program_id": "B49000100208",
+          "notice_version": "gov24-45277137519-1;MOEL2026doc523actualreread2026-11-24T17:19:11.117255+09:00",
+          "pattern": "P6",
+          "opening": "특수고용직도 근로자 휴양콘도를 신청할 수 있나요?",
+          "structure": "특고대상질문→즉답→시설회원가/요금→요일기한→절차",
+          "media_turn": "TEXT"
+        }
+      },
+      "revalidate_before": "2026-11-25T16:00:00+09:00",
+      "full_delay_window_covered": false,
+      "revalidation_required_reason": "expires_at_before_slot_plus_two_hours"
     }
   ]
 }
