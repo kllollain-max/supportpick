@@ -5687,31 +5687,22 @@
     }
   },
   "last_check": {
-    "checked_at": "2026-11-24T13:44:54.403343+09:00",
-    "result": "no_update",
-    "maintenance_previous_blob_sha": "959b61c144b2fec9eab029ab6786c09846abc208",
+    "checked_at": "2026-11-24T14:46:52.845266+09:00",
+    "result": "prepublication_expiry_prevention_revalidated",
+    "maintenance_previous_blob_sha": "8f038d991a49fa5d3b7c094419b3f7533f622f3a",
     "current_main_sha": "0fe61cdb0f84a771bc123777892138444f5b38e5",
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
     "publication_ledger_sha": "56bb4d20e8c10317791fb4c43b1805b096ccf138",
-    "queue_blob_sha": "10df180f5de43ed54e3eac9268a296dcbf0eacc0",
-    "changed_run_versions": [
-      {
-        "run_id": "45326798251",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-24T04:30:08Z",
-        "head_sha": "0fe61cdb0f84a771bc123777892138444f5b38e5"
-      }
-    ],
+    "queue_blob_sha": "a831db4fe50809d4cf3da5d64c1c393b10b44476",
+    "changed_run_versions": [],
     "active_target_runs": [],
     "run_pagination": {
       "per_page": 100,
       "pages": [
         1
       ],
-      "checkpoint_run_id": "45321813009",
+      "checkpoint_run_id": "45326798251",
       "checkpoint_version_unchanged": true,
       "all_new_target_versions_observed": true
     },
@@ -5729,7 +5720,7 @@
       "job_id": 138051732020,
       "artifact_id": 14868507630,
       "artifact_digest": "sha256:b768e7aa698979de916b7404b321a7e5e8c15302e7ce3847b3dcfba08a734d22",
-      "artifact_redownloaded_this_check": false,
+      "artifact_redownloaded_this_check": true,
       "artifact_digest_verified": true,
       "read_current_verify_snapshot_load_feed": true,
       "count": 10895,
@@ -5787,8 +5778,8 @@
       "current_step": "completed",
       "collection_complete": true,
       "workflow_complete": true,
-      "all_four_fingerprints_priority_and_full_delay_windows_pass": false,
-      "original_notice_rereview_this_check": false,
+      "all_four_fingerprints_priority_and_full_delay_windows_pass": true,
+      "original_notice_rereview_this_check": true,
       "job_logs_retrieved_this_check": false,
       "actual_tests_passed": 303,
       "public_verification_artifact_id": 14870600826,
@@ -5822,12 +5813,12 @@
       "no_collection_failure": true,
       "observed_in_progress_at_start": false,
       "completed_success_before_record": true,
-      "artifact_digest_previously_verified_cached_bytes": true,
+      "artifact_digest_previously_verified_cached_bytes": false,
       "current_complete_snapshot_verified": true,
       "actual_send_latest_complete_source_required": true
     },
     "writer": {
-      "checked_at": "2026-11-24T13:44:54.403343+09:00",
+      "checked_at": "2026-11-24T14:45:53.443971+09:00",
       "ready": 4,
       "future24h_ready": 4,
       "new_drafts": 0,
@@ -5872,8 +5863,8 @@
           "pattern": "P5",
           "media_turn": "IMAGE",
           "char_count": 436,
-          "expires_at": "2026-11-25T13:14:28.132838+09:00",
-          "full_delay_window_valid": false,
+          "expires_at": "2026-11-25T14:45:53.443971+09:00",
+          "full_delay_window_valid": true,
           "source_fresh_at_slot": false,
           "source_recheck_required_at_publish": true
         }
@@ -5891,17 +5882,15 @@
       "pending": null,
       "lease": null,
       "new_posts": 0,
-      "new_incidents": 0,
-      "new_metrics": 3,
+      "new_metrics": 0,
       "observations": 146,
       "evaluation_due": false,
       "next_evaluation_not_before": "2026-11-24T17:00:08.835254+09:00",
       "astra_review_invocations": 0,
       "existing_Astra_review_preserved": true,
       "current_image_bytes_sha_recompared": true,
-      "new_visual_inspection": false,
       "source_recheck_required_at_publish": true,
-      "expiry_revalidation_required": true
+      "expiry_prevention_revalidations": 1
     },
     "metrics": {
       "run_id": "45326798251",
@@ -5914,8 +5903,8 @@
       "artifact_id": 14890341837,
       "artifact_digest": "sha256:68ec777ff6f99a667f5b371d4704213fbe05f8a3294b4fac7e946fb9e169e3ca",
       "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": true,
-      "job_logs_retrieved_this_check": true,
+      "artifact_redownloaded_this_check": false,
+      "job_logs_retrieved_this_check": false,
       "observed_at": "2026-11-24T04:30:02.745668+00:00",
       "records": [
         {
@@ -5982,12 +5971,8 @@
           }
         }
       ],
-      "new_observation_keys": [
-        "17997847203099652:168h",
-        "18098495828440255:72h",
-        "18388999600236313:24h"
-      ],
-      "new_observations": 3,
+      "new_observation_keys": [],
+      "new_observations": 0,
       "total_observations": 146,
       "distinct_posts": 73,
       "due_count": 3,
@@ -6011,10 +5996,10 @@
       "pending": null,
       "lease": null,
       "stage": "read_only_maintenance_complete",
-      "reason": "76completepublishedrowsunchanged, no pending/lease/newfailures.3actualofficialmetricwindowsimported; no publicationrecoveryrequired.",
+      "reason": "Existing maternal READY fullwindow expiry gap prevented through actual primarypage rereview, complete artifact digest and current image SHA. Same436char AstraPASS/body/media/cohort.76completepublishedrowsunchanged; no publishing recovery/dispatch/code needed.",
       "new_publication_this_check": false
     },
-    "next_condition": "Existing4READY unchanged; no newdraft/free24hslot. Maternal Nov25 12 expires13:14 beforefull14:00window. Existingcheck aftertoday14must genuinelyreread official/currentstatus/latestcompletefeed/imageSHA and archiveold/CASrefreshmax24h; no datesonly. Current07:18source not assumed fresh tomorrow.146actualmetrics preserved; no newevaluation or editorialweightchange before14daydue17:00:08KST. No dispatch/rerun/backfill/newPOST.",
+    "next_condition": "All4futureREADY validate atslot andslot+2h-1s,preview4. New maternal expiresNov25 14:45:53 covers12~14fullwindow after actualofficial4pages/feed/imageSHA rereview; originalpre-refreshentryarchived. Current07:18completegeneration not assumed fresh tomorrow: actualpublisher must latestcompletefreshsource/currentofficial/account/ledger/pending/CAS checks.76completeposts/146actualobservations unchanged, no newpublication/newmetrics/newAstra/newdraft.14dayevaluation notbeforetoday17:00:08KST. No backfill/rerun/dispatch/schedule.",
     "publication": {
       "run_id": "45321813009",
       "run_attempt": 1,
@@ -6070,12 +6055,414 @@
       "previous_remote_evidence_preserved": true
     },
     "official_review_recovery": {
-      "new_official_page_review_this_check": false,
+      "new_official_page_review_this_check": true,
+      "program_id": "PTR000050390",
+      "checked_at": "2026-11-24T14:45:53.443971+09:00",
+      "rereview_audit": {
+        "checked_at": "2026-11-24T14:45:53.443971+09:00",
+        "previous_entry": {
+          "slot": "2026-11-25T12:00:00+09:00",
+          "benefit_id": "PTR000050390",
+          "source_fingerprint": "18fd88694ebfc718e67ac4fc20c1d1493580eb9556d35a56c6dd4290088f78ba",
+          "source_generation": "gov24-45277137519-1",
+          "prepared_at": "2026-11-24T13:14:28.132838+09:00",
+          "expires_at": "2026-11-25T13:14:28.132838+09:00",
+          "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "writer": {
+            "schema_version": "supportpick.writer.v1",
+            "status": "READY",
+            "selected_program_id": "PTR000050390",
+            "post_text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?\n150%를 넘어도 산모가 사는 지역의 예외지원 기준에 해당하면 신청할 수 있어요.\n\n국내에 주민등록을 둔 출산가정이라면 기본 소득 기준은 두 가지예요. 산모나 배우자가 생계·의료·주거·교육급여 수급자 또는 차상위계층이거나, 가구의 건강보험료 본인부담금 합산액이 기준중위소득 150% 이하에 해당하는 경우예요.\n\n소득초과 가정의 예외지원은 지자체별 기준과 예산에 따라 달라요. 산모 주소지 보건소가 자격을 판정해요.\n\n건강관리사가 집을 방문해 산모와 아기 돌봄을 돕는 바우처예요. 서비스가격에서 정부지원금을 뺀 금액은 가정이 부담해요.\n\n일반 출산가정의 신청기한은 출산예정일 40일 전부터 출산일로부터 60일까지예요. 미숙아·선천성이상아 입원 등에는 별도 신청기한이 적용돼요.\n\n자세한 사항은 프로필링크 확인",
+            "draft_text": null,
+            "reply_texts": [],
+            "media": {
+              "turn": "IMAGE",
+              "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "check": "MATCHED",
+              "image_copy": null,
+              "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+            },
+            "review": {
+              "planned_at": "2026-11-25T12:00:00+09:00",
+              "application_status": "ALWAYS",
+              "reader": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
+              "central_message": "소득기준을넘어도지역별예외지원대상이될수있는가",
+              "pattern": "P5",
+              "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
+              "interest_basis": "OBSERVED_METRICS",
+              "duplicate_check": "CHECKED",
+              "evidence": [
+                {
+                  "source_id": "PTR000050390",
+                  "source_ref": "https://www.e-health.go.kr/gh/heSrvc/selectBbsDtlViewInfo.do?bbsId=U00322&bbsNo=381829&bbsSeCd=Z6&menuId=200040",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                  "claims_supported": [
+                    "실제2026기준129~159행:주민등록/외국인등록,수급차상위 또는건강보험료150%이하,지역예산별예외,방문돌봄바우처,일반40일전~60일후/미숙아선천성이상입원퇴원30일. 본문은국내주민등록가정으로한정."
+                  ]
+                },
+                {
+                  "source_id": "PTR000050390",
+                  "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10711020100",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                  "claims_supported": [
+                    "실제1035~1100행:기본대상/지역예외/주소지보건소자격판정/서비스가격-정부지원금=본인부담.2025가격표를2026금액으로전용않음."
+                  ]
+                },
+                {
+                  "source_id": "PTR000050390",
+                  "source_ref": "https://www.cbcsi.or.kr/content/536",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                  "claims_supported": [
+                    "실제92~134행:가구건강보험료150%,40일전~60일후,보건소조사선정,이용자차액부담."
+                  ]
+                },
+                {
+                  "source_id": "PTR000050390",
+                  "source_ref": "https://www.guro.go.kr/health/contents.do?key=1329",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                  "claims_supported": [
+                    "실제493~523행:2026구로지역모든가정지원은지역예외사례이며전국으로확대않음. 현재가격미게시."
+                  ]
+                },
+                {
+                  "source_id": "PTR000050390",
+                  "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=741282&bnefType=all&svcId=PTR000050390",
+                  "access_method": "PROVIDED_OFFICIAL_TEXT",
+                  "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                  "claims_supported": [
+                    "완전세대gov24-45277137519-1 실제동일ID serviceList누적조회35265,checkedAt07:16:28.229346와수집07:18/원문열람시각구별. API선정기준의출산후30일은2026e보건소60일과상이하여최신2026기관안내로해소;가격추정없음."
+                  ]
+                },
+                {
+                  "source_id": "PTR000050390",
+                  "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                  "access_method": "UPSTREAM_VERIFIED",
+                  "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                  "claims_supported": [
+                    "현재PNG실제GET SHA와main image-review PASS재대조일치. 일반브랜드만있고사업명/금액/기간없음. 독립아스트라는실물열람. 기존360px검수기록보존."
+                  ]
+                }
+              ],
+              "checks": {
+                "facts": "PASS",
+                "current_status": "PASS",
+                "eligibility_and_units": "PASS",
+                "cta_and_no_links": "PASS",
+                "length": "PASS",
+                "media": "PASS"
+              },
+              "char_count": 436,
+              "count_method": "python_len_including_spaces_and_newlines",
+              "missing_info": [],
+              "hold_reasons": [],
+              "warnings": [
+                "지역별잔여예산/개별선정/거래실행/프로필사이트경로미확인,보장않음.",
+                "현재수집본은내일12시신선하다고가정않음. 실제발송시최신완전세대와공식상태/이미지재검증.",
+                "최대24h검수만료가내일12~14시전체창보다먼저끝남. 다음기존점검에서공식원문·접수상태·최신완전세대·이미지SHA실제재대조후CAS갱신필수;날짜만변경금지."
+              ],
+              "reach_editorial": {
+                "policy_id": "supportpick-threads-reach-v1-20261109",
+                "core_question": "소득기준을넘어도지역별예외지원대상이될수있는가",
+                "reader_scope": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
+                "angles": [
+                  "소득초과자격",
+                  "방문돌봄과본인부담",
+                  "신청기한준비"
+                ],
+                "chosen_angle": "소득초과자격",
+                "opening_candidates": [
+                  {
+                    "type": "생활 상황형",
+                    "group": "A",
+                    "text": "출산 뒤 돌봄이 필요한데 소득 때문에 산모·신생아 건강관리 신청을 망설이고 있나요?"
+                  },
+                  {
+                    "type": "대상·혜택형",
+                    "group": "B",
+                    "text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?"
+                  },
+                  {
+                    "type": "조건 설명형",
+                    "group": null,
+                    "text": "산모·신생아 건강관리의 소득초과 예외지원은 전국에서 같을까요?"
+                  }
+                ],
+                "chosen_opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
+                "opening_type": "질문형 대상·혜택",
+                "cohort": "B",
+                "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
+                "history_posts_checked": 20,
+                "comparison_eligible": false,
+                "comparison_exclusion": "새질문형정책및본문편집동시적용으로순수도입군비교불가. 시간대소급재분류않음.",
+                "comparison_strata": {
+                  "geo": "전국지역별예외",
+                  "audience": "출산가정",
+                  "benefit": "돌봄바우처",
+                  "media": "IMAGE"
+                },
+                "comparison_group": "24h A19/B20중앙값63/62,매칭쌍0·교란으로효과미입증;비중유지",
+                "applied_elements": [
+                  "대상질문직답",
+                  "건강보험료와중위소득구별",
+                  "현금과바우처구별",
+                  "기한특례와지역재량구별"
+                ],
+                "master_full_used": true,
+                "supplemental_full_used_in_current_model_input": true,
+                "profile_route": "실제사이트내검색/상세이번미검증,이동/접수보장없음"
+              },
+              "astra_final_review": {
+                "model": "gpt-6.2-astra",
+                "independent_agent": "/root/maternal_final_review",
+                "initial_verdict": "REVISE",
+                "initial_changes": [
+                  "추가확인CTA삭제",
+                  "기한특례를지자체재량과구별",
+                  "본문독자국내주민등록가정으로한정"
+                ],
+                "final_verdict": "PASS",
+                "final_checked_at": "2026-11-24T13:14:28.132838+09:00",
+                "actual_review_calls": 2,
+                "final_text_sha256": "2db46127cba440ca73581950d5c1381a28019e962284ffe8a0c17846b7751d38",
+                "char_count": 436,
+                "image": {
+                  "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                  "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+                  "actually_viewed_by_reviewer": true
+                },
+                "final_result": "제목다음문장직답,소득예외/기한특례구별,436자,본문CTA1/URL0/추가행동0,실제이미지사업주장없음"
+              }
+            },
+            "next_history_record": {
+              "program_id": "PTR000050390",
+              "notice_version": "gov24-45277137519-1;2026e보건소실제열람2026-11-24T13:14:28.132838+09:00",
+              "pattern": "P5",
+              "opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
+              "structure": "소득초과질문→지역예외직답→기본자격→차액부담→일반신청기간/입원특례",
+              "media_turn": "IMAGE"
+            }
+          },
+          "revalidate_before": "2026-11-25T12:00:00+09:00",
+          "full_delay_window_covered": false,
+          "revalidation_required_reason": "expires_at_before_slot_plus_two_hours"
+        },
+        "refreshed_entry": {
+          "slot": "2026-11-25T12:00:00+09:00",
+          "benefit_id": "PTR000050390",
+          "source_fingerprint": "18fd88694ebfc718e67ac4fc20c1d1493580eb9556d35a56c6dd4290088f78ba",
+          "source_generation": "gov24-45277137519-1",
+          "prepared_at": "2026-11-24T14:45:53.443971+09:00",
+          "expires_at": "2026-11-25T14:45:53.443971+09:00",
+          "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "writer": {
+            "schema_version": "supportpick.writer.v1",
+            "status": "READY",
+            "selected_program_id": "PTR000050390",
+            "post_text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?\n150%를 넘어도 산모가 사는 지역의 예외지원 기준에 해당하면 신청할 수 있어요.\n\n국내에 주민등록을 둔 출산가정이라면 기본 소득 기준은 두 가지예요. 산모나 배우자가 생계·의료·주거·교육급여 수급자 또는 차상위계층이거나, 가구의 건강보험료 본인부담금 합산액이 기준중위소득 150% 이하에 해당하는 경우예요.\n\n소득초과 가정의 예외지원은 지자체별 기준과 예산에 따라 달라요. 산모 주소지 보건소가 자격을 판정해요.\n\n건강관리사가 집을 방문해 산모와 아기 돌봄을 돕는 바우처예요. 서비스가격에서 정부지원금을 뺀 금액은 가정이 부담해요.\n\n일반 출산가정의 신청기한은 출산예정일 40일 전부터 출산일로부터 60일까지예요. 미숙아·선천성이상아 입원 등에는 별도 신청기한이 적용돼요.\n\n자세한 사항은 프로필링크 확인",
+            "draft_text": null,
+            "reply_texts": [],
+            "media": {
+              "turn": "IMAGE",
+              "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "check": "MATCHED",
+              "image_copy": null,
+              "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+            },
+            "review": {
+              "planned_at": "2026-11-25T12:00:00+09:00",
+              "application_status": "ALWAYS",
+              "reader": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
+              "central_message": "소득기준을넘어도지역별예외지원대상이될수있는가",
+              "pattern": "P5",
+              "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
+              "interest_basis": "OBSERVED_METRICS",
+              "duplicate_check": "CHECKED",
+              "evidence": [
+                {
+                  "source_id": "PTR000050390",
+                  "source_ref": "https://www.e-health.go.kr/gh/heSrvc/selectBbsDtlViewInfo.do?bbsId=U00322&bbsNo=381829&bbsSeCd=Z6&menuId=200040",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-24T14:45:53.443971+09:00",
+                  "claims_supported": [
+                    "실제2026기준129~159행:주민등록/외국인등록,수급차상위 또는건강보험료150%이하,지역예산별예외,방문돌봄바우처,일반40일전~60일후/미숙아선천성이상입원퇴원30일. 본문은국내주민등록가정으로한정.",
+                    "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
+                  ]
+                },
+                {
+                  "source_id": "PTR000050390",
+                  "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10711020100",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-24T14:45:53.443971+09:00",
+                  "claims_supported": [
+                    "실제1035~1100행:기본대상/지역예외/주소지보건소자격판정/서비스가격-정부지원금=본인부담.2025가격표를2026금액으로전용않음.",
+                    "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
+                  ]
+                },
+                {
+                  "source_id": "PTR000050390",
+                  "source_ref": "https://www.cbcsi.or.kr/content/536",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-24T14:45:53.443971+09:00",
+                  "claims_supported": [
+                    "실제92~134행:가구건강보험료150%,40일전~60일후,보건소조사선정,이용자차액부담.",
+                    "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
+                  ]
+                },
+                {
+                  "source_id": "PTR000050390",
+                  "source_ref": "https://www.guro.go.kr/health/contents.do?key=1329",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-24T14:45:53.443971+09:00",
+                  "claims_supported": [
+                    "실제493~523행:2026구로지역모든가정지원은지역예외사례이며전국으로확대않음. 현재가격미게시.",
+                    "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
+                  ]
+                },
+                {
+                  "source_id": "PTR000050390",
+                  "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=741282&bnefType=all&svcId=PTR000050390",
+                  "access_method": "PROVIDED_OFFICIAL_TEXT",
+                  "verified_at": "2026-11-24T14:45:53.443971+09:00",
+                  "claims_supported": [
+                    "완전세대gov24-45277137519-1 실제동일ID serviceList누적조회35265,checkedAt07:16:28.229346와수집07:18/원문열람시각구별. API선정기준의출산후30일은2026e보건소60일과상이하여최신2026기관안내로해소;가격추정없음.",
+                    "本회차실제artifact ZIP SHA검증/완전snapshot manifest재검증/load_feed/read_current,동일ID및fingerprint재대조. 최신완전세대07:18을내일발송시신선하다고가정않음."
+                  ]
+                },
+                {
+                  "source_id": "PTR000050390",
+                  "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                  "access_method": "UPSTREAM_VERIFIED",
+                  "verified_at": "2026-11-24T14:45:53.443971+09:00",
+                  "claims_supported": [
+                    "현재PNG실제GET SHA와main image-review PASS재대조일치. 일반브랜드만있고사업명/금액/기간없음. 독립아스트라는실물열람. 기존360px검수기록보존.",
+                    "本회차실제PNG GET후현재main image-review SHA와재대조일치. 새직접시각검수아님."
+                  ]
+                }
+              ],
+              "checks": {
+                "facts": "PASS",
+                "current_status": "PASS",
+                "eligibility_and_units": "PASS",
+                "cta_and_no_links": "PASS",
+                "length": "PASS",
+                "media": "PASS"
+              },
+              "char_count": 436,
+              "count_method": "python_len_including_spaces_and_newlines",
+              "missing_info": [],
+              "hold_reasons": [],
+              "warnings": [
+                "지역별잔여예산/개별선정/거래실행/프로필사이트경로미확인,보장않음.",
+                "현재수집본은내일12시신선하다고가정않음. 실제발송시최신완전세대와공식상태/이미지재검증.",
+                "최대24h검수만료가내일12~14시전체창보다먼저끝남. 다음기존점검에서공식원문·접수상태·최신완전세대·이미지SHA실제재대조후CAS갱신필수;날짜만변경금지."
+              ],
+              "reach_editorial": {
+                "policy_id": "supportpick-threads-reach-v1-20261109",
+                "core_question": "소득기준을넘어도지역별예외지원대상이될수있는가",
+                "reader_scope": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
+                "angles": [
+                  "소득초과자격",
+                  "방문돌봄과본인부담",
+                  "신청기한준비"
+                ],
+                "chosen_angle": "소득초과자격",
+                "opening_candidates": [
+                  {
+                    "type": "생활 상황형",
+                    "group": "A",
+                    "text": "출산 뒤 돌봄이 필요한데 소득 때문에 산모·신생아 건강관리 신청을 망설이고 있나요?"
+                  },
+                  {
+                    "type": "대상·혜택형",
+                    "group": "B",
+                    "text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?"
+                  },
+                  {
+                    "type": "조건 설명형",
+                    "group": null,
+                    "text": "산모·신생아 건강관리의 소득초과 예외지원은 전국에서 같을까요?"
+                  }
+                ],
+                "chosen_opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
+                "opening_type": "질문형 대상·혜택",
+                "cohort": "B",
+                "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
+                "history_posts_checked": 20,
+                "comparison_eligible": false,
+                "comparison_exclusion": "새질문형정책및본문편집동시적용으로순수도입군비교불가. 시간대소급재분류않음.",
+                "comparison_strata": {
+                  "geo": "전국지역별예외",
+                  "audience": "출산가정",
+                  "benefit": "돌봄바우처",
+                  "media": "IMAGE"
+                },
+                "comparison_group": "24h A19/B20중앙값63/62,매칭쌍0·교란으로효과미입증;비중유지",
+                "applied_elements": [
+                  "대상질문직답",
+                  "건강보험료와중위소득구별",
+                  "현금과바우처구별",
+                  "기한특례와지역재량구별"
+                ],
+                "master_full_used": true,
+                "supplemental_full_used_in_current_model_input": true,
+                "profile_route": "실제사이트내검색/상세이번미검증,이동/접수보장없음"
+              },
+              "astra_final_review": {
+                "model": "gpt-6.2-astra",
+                "independent_agent": "/root/maternal_final_review",
+                "initial_verdict": "REVISE",
+                "initial_changes": [
+                  "추가확인CTA삭제",
+                  "기한특례를지자체재량과구별",
+                  "본문독자국내주민등록가정으로한정"
+                ],
+                "final_verdict": "PASS",
+                "final_checked_at": "2026-11-24T13:14:28.132838+09:00",
+                "actual_review_calls": 2,
+                "final_text_sha256": "2db46127cba440ca73581950d5c1381a28019e962284ffe8a0c17846b7751d38",
+                "char_count": 436,
+                "image": {
+                  "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                  "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+                  "actually_viewed_by_reviewer": true
+                },
+                "final_result": "제목다음문장직답,소득예외/기한특례구별,436자,본문CTA1/URL0/추가행동0,실제이미지사업주장없음"
+              }
+            },
+            "next_history_record": {
+              "program_id": "PTR000050390",
+              "notice_version": "gov24-45277137519-1;2026e보건소실제열람2026-11-24T13:14:28.132838+09:00",
+              "pattern": "P5",
+              "opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
+              "structure": "소득초과질문→지역예외직답→기본자격→차액부담→일반신청기간/입원특례",
+              "media_turn": "IMAGE"
+            }
+          },
+          "revalidate_before": "2026-11-25T12:00:00+09:00",
+          "full_delay_window_covered": true
+        },
+        "source": {
+          "count": 10895,
+          "generation": "gov24-45277137519-1",
+          "lastSuccessAt": "2026-11-24T07:18:33.759031+09:00",
+          "manifestSha256": "5e05c8162eb03678e75209e530dfe4b710d797b95e4d3e834f399502a65de644",
+          "path": "snapshots/gov24-45277137519-1",
+          "version": 1
+        },
+        "actual_official_rereview": true,
+        "artifact_redownloaded_and_digest_verified": true,
+        "current_image_bytes_sha_recompared": true,
+        "same_final_body_media_pattern_cohort_astra_review": true
+      },
+      "image_bytes_sha_recompared": true,
+      "new_parent_visual_inspection": false,
       "new_Astra_calls": 0,
-      "current_image_sha_recompared": true,
-      "new_visual_inspection": false,
-      "existing_Astra_PASS_preserved": true,
-      "prior_expiry_revalidation_requirement_preserved": true
+      "existing_two_actual_Astra_reviews_preserved": true,
+      "source_limit": "Opened2026ehealthcurrentprogram and ministry/Chungbuk/Guro details: base/regionexception/copayment/general60day/ICUexception matched. Search checked corrections/termination, no nationwide closure found in scope. Local supplementary-benefit termination not generalized. No individual funding/eligibility/transaction guaranteed."
     },
     "regular_slot_observation": {
       "slot": "2026-11-24T08:00:00+09:00",
@@ -31254,6 +31641,406 @@
       "workflow_dispatches": 0,
       "body_sha256": "5fd3ac569548415d5d01f8aa2f0553d8f5057b3ec151308e8373b5d1caaee21f",
       "review_warning_resolution": "Original editorial warning about08:21expiry is historical; this audited genuine rereview resolves that expiry gap through10:40. General actual-send source/currentstatus recheck remains mandatory."
+    },
+    "2026-11-24T14:45:53.443971+09:00": {
+      "checked_at": "2026-11-24T14:45:53.443971+09:00",
+      "previous_entry": {
+        "slot": "2026-11-25T12:00:00+09:00",
+        "benefit_id": "PTR000050390",
+        "source_fingerprint": "18fd88694ebfc718e67ac4fc20c1d1493580eb9556d35a56c6dd4290088f78ba",
+        "source_generation": "gov24-45277137519-1",
+        "prepared_at": "2026-11-24T13:14:28.132838+09:00",
+        "expires_at": "2026-11-25T13:14:28.132838+09:00",
+        "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+        "writer": {
+          "schema_version": "supportpick.writer.v1",
+          "status": "READY",
+          "selected_program_id": "PTR000050390",
+          "post_text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?\n150%를 넘어도 산모가 사는 지역의 예외지원 기준에 해당하면 신청할 수 있어요.\n\n국내에 주민등록을 둔 출산가정이라면 기본 소득 기준은 두 가지예요. 산모나 배우자가 생계·의료·주거·교육급여 수급자 또는 차상위계층이거나, 가구의 건강보험료 본인부담금 합산액이 기준중위소득 150% 이하에 해당하는 경우예요.\n\n소득초과 가정의 예외지원은 지자체별 기준과 예산에 따라 달라요. 산모 주소지 보건소가 자격을 판정해요.\n\n건강관리사가 집을 방문해 산모와 아기 돌봄을 돕는 바우처예요. 서비스가격에서 정부지원금을 뺀 금액은 가정이 부담해요.\n\n일반 출산가정의 신청기한은 출산예정일 40일 전부터 출산일로부터 60일까지예요. 미숙아·선천성이상아 입원 등에는 별도 신청기한이 적용돼요.\n\n자세한 사항은 프로필링크 확인",
+          "draft_text": null,
+          "reply_texts": [],
+          "media": {
+            "turn": "IMAGE",
+            "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+            "check": "MATCHED",
+            "image_copy": null,
+            "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+          },
+          "review": {
+            "planned_at": "2026-11-25T12:00:00+09:00",
+            "application_status": "ALWAYS",
+            "reader": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
+            "central_message": "소득기준을넘어도지역별예외지원대상이될수있는가",
+            "pattern": "P5",
+            "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
+            "interest_basis": "OBSERVED_METRICS",
+            "duplicate_check": "CHECKED",
+            "evidence": [
+              {
+                "source_id": "PTR000050390",
+                "source_ref": "https://www.e-health.go.kr/gh/heSrvc/selectBbsDtlViewInfo.do?bbsId=U00322&bbsNo=381829&bbsSeCd=Z6&menuId=200040",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                "claims_supported": [
+                  "실제2026기준129~159행:주민등록/외국인등록,수급차상위 또는건강보험료150%이하,지역예산별예외,방문돌봄바우처,일반40일전~60일후/미숙아선천성이상입원퇴원30일. 본문은국내주민등록가정으로한정."
+                ]
+              },
+              {
+                "source_id": "PTR000050390",
+                "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10711020100",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                "claims_supported": [
+                  "실제1035~1100행:기본대상/지역예외/주소지보건소자격판정/서비스가격-정부지원금=본인부담.2025가격표를2026금액으로전용않음."
+                ]
+              },
+              {
+                "source_id": "PTR000050390",
+                "source_ref": "https://www.cbcsi.or.kr/content/536",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                "claims_supported": [
+                  "실제92~134행:가구건강보험료150%,40일전~60일후,보건소조사선정,이용자차액부담."
+                ]
+              },
+              {
+                "source_id": "PTR000050390",
+                "source_ref": "https://www.guro.go.kr/health/contents.do?key=1329",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                "claims_supported": [
+                  "실제493~523행:2026구로지역모든가정지원은지역예외사례이며전국으로확대않음. 현재가격미게시."
+                ]
+              },
+              {
+                "source_id": "PTR000050390",
+                "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=741282&bnefType=all&svcId=PTR000050390",
+                "access_method": "PROVIDED_OFFICIAL_TEXT",
+                "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                "claims_supported": [
+                  "완전세대gov24-45277137519-1 실제동일ID serviceList누적조회35265,checkedAt07:16:28.229346와수집07:18/원문열람시각구별. API선정기준의출산후30일은2026e보건소60일과상이하여최신2026기관안내로해소;가격추정없음."
+                ]
+              },
+              {
+                "source_id": "PTR000050390",
+                "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                "access_method": "UPSTREAM_VERIFIED",
+                "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                "claims_supported": [
+                  "현재PNG실제GET SHA와main image-review PASS재대조일치. 일반브랜드만있고사업명/금액/기간없음. 독립아스트라는실물열람. 기존360px검수기록보존."
+                ]
+              }
+            ],
+            "checks": {
+              "facts": "PASS",
+              "current_status": "PASS",
+              "eligibility_and_units": "PASS",
+              "cta_and_no_links": "PASS",
+              "length": "PASS",
+              "media": "PASS"
+            },
+            "char_count": 436,
+            "count_method": "python_len_including_spaces_and_newlines",
+            "missing_info": [],
+            "hold_reasons": [],
+            "warnings": [
+              "지역별잔여예산/개별선정/거래실행/프로필사이트경로미확인,보장않음.",
+              "현재수집본은내일12시신선하다고가정않음. 실제발송시최신완전세대와공식상태/이미지재검증.",
+              "최대24h검수만료가내일12~14시전체창보다먼저끝남. 다음기존점검에서공식원문·접수상태·최신완전세대·이미지SHA실제재대조후CAS갱신필수;날짜만변경금지."
+            ],
+            "reach_editorial": {
+              "policy_id": "supportpick-threads-reach-v1-20261109",
+              "core_question": "소득기준을넘어도지역별예외지원대상이될수있는가",
+              "reader_scope": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
+              "angles": [
+                "소득초과자격",
+                "방문돌봄과본인부담",
+                "신청기한준비"
+              ],
+              "chosen_angle": "소득초과자격",
+              "opening_candidates": [
+                {
+                  "type": "생활 상황형",
+                  "group": "A",
+                  "text": "출산 뒤 돌봄이 필요한데 소득 때문에 산모·신생아 건강관리 신청을 망설이고 있나요?"
+                },
+                {
+                  "type": "대상·혜택형",
+                  "group": "B",
+                  "text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?"
+                },
+                {
+                  "type": "조건 설명형",
+                  "group": null,
+                  "text": "산모·신생아 건강관리의 소득초과 예외지원은 전국에서 같을까요?"
+                }
+              ],
+              "chosen_opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
+              "opening_type": "질문형 대상·혜택",
+              "cohort": "B",
+              "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
+              "history_posts_checked": 20,
+              "comparison_eligible": false,
+              "comparison_exclusion": "새질문형정책및본문편집동시적용으로순수도입군비교불가. 시간대소급재분류않음.",
+              "comparison_strata": {
+                "geo": "전국지역별예외",
+                "audience": "출산가정",
+                "benefit": "돌봄바우처",
+                "media": "IMAGE"
+              },
+              "comparison_group": "24h A19/B20중앙값63/62,매칭쌍0·교란으로효과미입증;비중유지",
+              "applied_elements": [
+                "대상질문직답",
+                "건강보험료와중위소득구별",
+                "현금과바우처구별",
+                "기한특례와지역재량구별"
+              ],
+              "master_full_used": true,
+              "supplemental_full_used_in_current_model_input": true,
+              "profile_route": "실제사이트내검색/상세이번미검증,이동/접수보장없음"
+            },
+            "astra_final_review": {
+              "model": "gpt-6.2-astra",
+              "independent_agent": "/root/maternal_final_review",
+              "initial_verdict": "REVISE",
+              "initial_changes": [
+                "추가확인CTA삭제",
+                "기한특례를지자체재량과구별",
+                "본문독자국내주민등록가정으로한정"
+              ],
+              "final_verdict": "PASS",
+              "final_checked_at": "2026-11-24T13:14:28.132838+09:00",
+              "actual_review_calls": 2,
+              "final_text_sha256": "2db46127cba440ca73581950d5c1381a28019e962284ffe8a0c17846b7751d38",
+              "char_count": 436,
+              "image": {
+                "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+                "actually_viewed_by_reviewer": true
+              },
+              "final_result": "제목다음문장직답,소득예외/기한특례구별,436자,본문CTA1/URL0/추가행동0,실제이미지사업주장없음"
+            }
+          },
+          "next_history_record": {
+            "program_id": "PTR000050390",
+            "notice_version": "gov24-45277137519-1;2026e보건소실제열람2026-11-24T13:14:28.132838+09:00",
+            "pattern": "P5",
+            "opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
+            "structure": "소득초과질문→지역예외직답→기본자격→차액부담→일반신청기간/입원특례",
+            "media_turn": "IMAGE"
+          }
+        },
+        "revalidate_before": "2026-11-25T12:00:00+09:00",
+        "full_delay_window_covered": false,
+        "revalidation_required_reason": "expires_at_before_slot_plus_two_hours"
+      },
+      "refreshed_entry": {
+        "slot": "2026-11-25T12:00:00+09:00",
+        "benefit_id": "PTR000050390",
+        "source_fingerprint": "18fd88694ebfc718e67ac4fc20c1d1493580eb9556d35a56c6dd4290088f78ba",
+        "source_generation": "gov24-45277137519-1",
+        "prepared_at": "2026-11-24T14:45:53.443971+09:00",
+        "expires_at": "2026-11-25T14:45:53.443971+09:00",
+        "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+        "writer": {
+          "schema_version": "supportpick.writer.v1",
+          "status": "READY",
+          "selected_program_id": "PTR000050390",
+          "post_text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?\n150%를 넘어도 산모가 사는 지역의 예외지원 기준에 해당하면 신청할 수 있어요.\n\n국내에 주민등록을 둔 출산가정이라면 기본 소득 기준은 두 가지예요. 산모나 배우자가 생계·의료·주거·교육급여 수급자 또는 차상위계층이거나, 가구의 건강보험료 본인부담금 합산액이 기준중위소득 150% 이하에 해당하는 경우예요.\n\n소득초과 가정의 예외지원은 지자체별 기준과 예산에 따라 달라요. 산모 주소지 보건소가 자격을 판정해요.\n\n건강관리사가 집을 방문해 산모와 아기 돌봄을 돕는 바우처예요. 서비스가격에서 정부지원금을 뺀 금액은 가정이 부담해요.\n\n일반 출산가정의 신청기한은 출산예정일 40일 전부터 출산일로부터 60일까지예요. 미숙아·선천성이상아 입원 등에는 별도 신청기한이 적용돼요.\n\n자세한 사항은 프로필링크 확인",
+          "draft_text": null,
+          "reply_texts": [],
+          "media": {
+            "turn": "IMAGE",
+            "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+            "check": "MATCHED",
+            "image_copy": null,
+            "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+          },
+          "review": {
+            "planned_at": "2026-11-25T12:00:00+09:00",
+            "application_status": "ALWAYS",
+            "reader": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
+            "central_message": "소득기준을넘어도지역별예외지원대상이될수있는가",
+            "pattern": "P5",
+            "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
+            "interest_basis": "OBSERVED_METRICS",
+            "duplicate_check": "CHECKED",
+            "evidence": [
+              {
+                "source_id": "PTR000050390",
+                "source_ref": "https://www.e-health.go.kr/gh/heSrvc/selectBbsDtlViewInfo.do?bbsId=U00322&bbsNo=381829&bbsSeCd=Z6&menuId=200040",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-24T14:45:53.443971+09:00",
+                "claims_supported": [
+                  "실제2026기준129~159행:주민등록/외국인등록,수급차상위 또는건강보험료150%이하,지역예산별예외,방문돌봄바우처,일반40일전~60일후/미숙아선천성이상입원퇴원30일. 본문은국내주민등록가정으로한정.",
+                  "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
+                ]
+              },
+              {
+                "source_id": "PTR000050390",
+                "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10711020100",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-24T14:45:53.443971+09:00",
+                "claims_supported": [
+                  "실제1035~1100행:기본대상/지역예외/주소지보건소자격판정/서비스가격-정부지원금=본인부담.2025가격표를2026금액으로전용않음.",
+                  "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
+                ]
+              },
+              {
+                "source_id": "PTR000050390",
+                "source_ref": "https://www.cbcsi.or.kr/content/536",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-24T14:45:53.443971+09:00",
+                "claims_supported": [
+                  "실제92~134행:가구건강보험료150%,40일전~60일후,보건소조사선정,이용자차액부담.",
+                  "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
+                ]
+              },
+              {
+                "source_id": "PTR000050390",
+                "source_ref": "https://www.guro.go.kr/health/contents.do?key=1329",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-24T14:45:53.443971+09:00",
+                "claims_supported": [
+                  "실제493~523행:2026구로지역모든가정지원은지역예외사례이며전국으로확대않음. 현재가격미게시.",
+                  "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
+                ]
+              },
+              {
+                "source_id": "PTR000050390",
+                "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=741282&bnefType=all&svcId=PTR000050390",
+                "access_method": "PROVIDED_OFFICIAL_TEXT",
+                "verified_at": "2026-11-24T14:45:53.443971+09:00",
+                "claims_supported": [
+                  "완전세대gov24-45277137519-1 실제동일ID serviceList누적조회35265,checkedAt07:16:28.229346와수집07:18/원문열람시각구별. API선정기준의출산후30일은2026e보건소60일과상이하여최신2026기관안내로해소;가격추정없음.",
+                  "本회차실제artifact ZIP SHA검증/완전snapshot manifest재검증/load_feed/read_current,동일ID및fingerprint재대조. 최신완전세대07:18을내일발송시신선하다고가정않음."
+                ]
+              },
+              {
+                "source_id": "PTR000050390",
+                "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                "access_method": "UPSTREAM_VERIFIED",
+                "verified_at": "2026-11-24T14:45:53.443971+09:00",
+                "claims_supported": [
+                  "현재PNG실제GET SHA와main image-review PASS재대조일치. 일반브랜드만있고사업명/금액/기간없음. 독립아스트라는실물열람. 기존360px검수기록보존.",
+                  "本회차실제PNG GET후현재main image-review SHA와재대조일치. 새직접시각검수아님."
+                ]
+              }
+            ],
+            "checks": {
+              "facts": "PASS",
+              "current_status": "PASS",
+              "eligibility_and_units": "PASS",
+              "cta_and_no_links": "PASS",
+              "length": "PASS",
+              "media": "PASS"
+            },
+            "char_count": 436,
+            "count_method": "python_len_including_spaces_and_newlines",
+            "missing_info": [],
+            "hold_reasons": [],
+            "warnings": [
+              "지역별잔여예산/개별선정/거래실행/프로필사이트경로미확인,보장않음.",
+              "현재수집본은내일12시신선하다고가정않음. 실제발송시최신완전세대와공식상태/이미지재검증.",
+              "최대24h검수만료가내일12~14시전체창보다먼저끝남. 다음기존점검에서공식원문·접수상태·최신완전세대·이미지SHA실제재대조후CAS갱신필수;날짜만변경금지."
+            ],
+            "reach_editorial": {
+              "policy_id": "supportpick-threads-reach-v1-20261109",
+              "core_question": "소득기준을넘어도지역별예외지원대상이될수있는가",
+              "reader_scope": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
+              "angles": [
+                "소득초과자격",
+                "방문돌봄과본인부담",
+                "신청기한준비"
+              ],
+              "chosen_angle": "소득초과자격",
+              "opening_candidates": [
+                {
+                  "type": "생활 상황형",
+                  "group": "A",
+                  "text": "출산 뒤 돌봄이 필요한데 소득 때문에 산모·신생아 건강관리 신청을 망설이고 있나요?"
+                },
+                {
+                  "type": "대상·혜택형",
+                  "group": "B",
+                  "text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?"
+                },
+                {
+                  "type": "조건 설명형",
+                  "group": null,
+                  "text": "산모·신생아 건강관리의 소득초과 예외지원은 전국에서 같을까요?"
+                }
+              ],
+              "chosen_opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
+              "opening_type": "질문형 대상·혜택",
+              "cohort": "B",
+              "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
+              "history_posts_checked": 20,
+              "comparison_eligible": false,
+              "comparison_exclusion": "새질문형정책및본문편집동시적용으로순수도입군비교불가. 시간대소급재분류않음.",
+              "comparison_strata": {
+                "geo": "전국지역별예외",
+                "audience": "출산가정",
+                "benefit": "돌봄바우처",
+                "media": "IMAGE"
+              },
+              "comparison_group": "24h A19/B20중앙값63/62,매칭쌍0·교란으로효과미입증;비중유지",
+              "applied_elements": [
+                "대상질문직답",
+                "건강보험료와중위소득구별",
+                "현금과바우처구별",
+                "기한특례와지역재량구별"
+              ],
+              "master_full_used": true,
+              "supplemental_full_used_in_current_model_input": true,
+              "profile_route": "실제사이트내검색/상세이번미검증,이동/접수보장없음"
+            },
+            "astra_final_review": {
+              "model": "gpt-6.2-astra",
+              "independent_agent": "/root/maternal_final_review",
+              "initial_verdict": "REVISE",
+              "initial_changes": [
+                "추가확인CTA삭제",
+                "기한특례를지자체재량과구별",
+                "본문독자국내주민등록가정으로한정"
+              ],
+              "final_verdict": "PASS",
+              "final_checked_at": "2026-11-24T13:14:28.132838+09:00",
+              "actual_review_calls": 2,
+              "final_text_sha256": "2db46127cba440ca73581950d5c1381a28019e962284ffe8a0c17846b7751d38",
+              "char_count": 436,
+              "image": {
+                "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+                "actually_viewed_by_reviewer": true
+              },
+              "final_result": "제목다음문장직답,소득예외/기한특례구별,436자,본문CTA1/URL0/추가행동0,실제이미지사업주장없음"
+            }
+          },
+          "next_history_record": {
+            "program_id": "PTR000050390",
+            "notice_version": "gov24-45277137519-1;2026e보건소실제열람2026-11-24T13:14:28.132838+09:00",
+            "pattern": "P5",
+            "opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
+            "structure": "소득초과질문→지역예외직답→기본자격→차액부담→일반신청기간/입원특례",
+            "media_turn": "IMAGE"
+          }
+        },
+        "revalidate_before": "2026-11-25T12:00:00+09:00",
+        "full_delay_window_covered": true
+      },
+      "source": {
+        "count": 10895,
+        "generation": "gov24-45277137519-1",
+        "lastSuccessAt": "2026-11-24T07:18:33.759031+09:00",
+        "manifestSha256": "5e05c8162eb03678e75209e530dfe4b710d797b95e4d3e834f399502a65de644",
+        "path": "snapshots/gov24-45277137519-1",
+        "version": 1
+      },
+      "actual_official_rereview": true,
+      "artifact_redownloaded_and_digest_verified": true,
+      "current_image_bytes_sha_recompared": true,
+      "same_final_body_media_pattern_cohort_astra_review": true
     }
   },
   "observed_main_changes": {
@@ -117005,16 +117792,831 @@
           "updated_at": "2026-11-23T22:38:20Z"
         }
       ]
+    },
+    "2026-11-24T14:46:52.845266+09:00": {
+      "checked_at": "2026-11-24T14:46:52.845266+09:00",
+      "result": "prepublication_expiry_prevention_revalidated",
+      "maintenance_previous_blob_sha": "8f038d991a49fa5d3b7c094419b3f7533f622f3a",
+      "current_main_sha": "0fe61cdb0f84a771bc123777892138444f5b38e5",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "56bb4d20e8c10317791fb4c43b1805b096ccf138",
+      "queue_blob_sha": "a831db4fe50809d4cf3da5d64c1c393b10b44476",
+      "changed_run_versions": [],
+      "active_target_runs": [],
+      "run_pagination": {
+        "per_page": 100,
+        "pages": [
+          1
+        ],
+        "checkpoint_run_id": "45326798251",
+        "checkpoint_version_unchanged": true,
+        "all_new_target_versions_observed": true
+      },
+      "publication_ledger_records": 75,
+      "complete_verified_records": 75,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "45277137519",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-23T22:38:20Z",
+        "head_sha": "5732cde848a03907b2505396c34a4d60c713571e",
+        "job_id": 138051732020,
+        "artifact_id": 14868507630,
+        "artifact_digest": "sha256:b768e7aa698979de916b7404b321a7e5e8c15302e7ce3847b3dcfba08a734d22",
+        "artifact_redownloaded_this_check": true,
+        "artifact_digest_verified": true,
+        "read_current_verify_snapshot_load_feed": true,
+        "count": 10895,
+        "generation": "gov24-45277137519-1",
+        "lastSuccessAt": "2026-11-24T07:18:33.759031+09:00",
+        "manifestSha256": "5e05c8162eb03678e75209e530dfe4b710d797b95e4d3e834f399502a65de644",
+        "path": "snapshots/gov24-45277137519-1",
+        "version": 1,
+        "source_count": 10895,
+        "collection_report": {
+          "applicationOpenVerified": false,
+          "collectionSucceededAt": "2026-11-24T07:18:33.759031+09:00",
+          "coverage": "Currently connected Gov24 API, all unfiltered pages of three endpoints",
+          "endpoints": {
+            "serviceDetail": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "serviceList": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "supportConditions": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            }
+          },
+          "factsVerified": false,
+          "feedSha256": "30a93adf6cfac6f954420518a1f06aac9c436d92254c2e54b928f966e73c7c64",
+          "finishedAt": "2026-11-24T07:18:34.853540+09:00",
+          "generation": "gov24-45277137519-1",
+          "normalRequestEstimate": 330,
+          "pageResponses": 327,
+          "project": "supportpick",
+          "published": false,
+          "sampleCount": 0,
+          "scheduled": false,
+          "sourceConsistency": "No snapshot token: totals and boundary pages stable; unique IDs and all endpoint sets matched",
+          "startedAt": "2026-11-24T07:11:09.820235+09:00",
+          "status": "passed",
+          "storedCount": 10895
+        },
+        "current_step": "completed",
+        "collection_complete": true,
+        "workflow_complete": true,
+        "all_four_fingerprints_priority_and_full_delay_windows_pass": true,
+        "original_notice_rereview_this_check": true,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 303,
+        "public_verification_artifact_id": 14870600826,
+        "public_verification_digest": "sha256:0b3d702d86e063ff5cc5e19b36dfb264f35f210321aaa6fa28633a900af9a71b",
+        "public_verification": {
+          "publicHtmlChecked": 11048,
+          "sitemapUrls": 11035,
+          "generation": "gov24-45277137519-1",
+          "sourceRevision": "5732cde848a03907b2505396c34a4d60c713571e",
+          "robots": {
+            "http": 200,
+            "crawlAllowed": true,
+            "scope": "host_root"
+          },
+          "missingUrlHttp": 404,
+          "passed": 11048,
+          "failed": 0,
+          "initialFailures": 1,
+          "maxRequestsPerSecond": 10,
+          "rateLimitEpisodes": 0,
+          "stoppedForRateLimit": false,
+          "recoveredAfterRetry": [
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/142100000058/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            }
+          ],
+          "failures": []
+        },
+        "no_collection_failure": true,
+        "observed_in_progress_at_start": false,
+        "completed_success_before_record": true,
+        "artifact_digest_previously_verified_cached_bytes": false,
+        "current_complete_snapshot_verified": true,
+        "actual_send_latest_complete_source_required": true
+      },
+      "writer": {
+        "checked_at": "2026-11-24T14:45:53.443971+09:00",
+        "ready": 4,
+        "future24h_ready": 4,
+        "new_drafts": 0,
+        "existing_READY_reused": 4,
+        "drafts": [
+          {
+            "slot": "2026-11-24T16:00:00+09:00",
+            "benefit_id": "B55284500010",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 432,
+            "expires_at": "2026-11-24T21:48:01.930334+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-24T20:00:00+09:00",
+            "benefit_id": "127000000002",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 422,
+            "expires_at": "2026-11-24T23:06:37.757855+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T08:00:00+09:00",
+            "benefit_id": "419000000129",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 315,
+            "expires_at": "2026-11-25T10:40:14.847169+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T12:00:00+09:00",
+            "benefit_id": "PTR000050390",
+            "pattern": "P5",
+            "media_turn": "IMAGE",
+            "char_count": 436,
+            "expires_at": "2026-11-25T14:45:53.443971+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source": {
+          "count": 10895,
+          "generation": "gov24-45277137519-1",
+          "lastSuccessAt": "2026-11-24T07:18:33.759031+09:00",
+          "manifestSha256": "5e05c8162eb03678e75209e530dfe4b710d797b95e4d3e834f399502a65de644",
+          "path": "snapshots/gov24-45277137519-1",
+          "version": 1
+        },
+        "source_count": 10895,
+        "ledger_records": 76,
+        "pending": null,
+        "lease": null,
+        "new_posts": 0,
+        "new_metrics": 0,
+        "observations": 146,
+        "evaluation_due": false,
+        "next_evaluation_not_before": "2026-11-24T17:00:08.835254+09:00",
+        "astra_review_invocations": 0,
+        "existing_Astra_review_preserved": true,
+        "current_image_bytes_sha_recompared": true,
+        "source_recheck_required_at_publish": true,
+        "expiry_prevention_revalidations": 1
+      },
+      "metrics": {
+        "run_id": "45326798251",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T04:30:08Z",
+        "head_sha": "0fe61cdb0f84a771bc123777892138444f5b38e5",
+        "job_id": 138218242668,
+        "artifact_id": 14890341837,
+        "artifact_digest": "sha256:68ec777ff6f99a667f5b371d4704213fbe05f8a3294b4fac7e946fb9e169e3ca",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "observed_at": "2026-11-24T04:30:02.745668+00:00",
+        "records": [
+          {
+            "post_id": "17997847203099652",
+            "published_at": "2026-11-17T12:41:15.742434+09:00",
+            "observed_at": "2026-11-24T04:30:02.745668+00:00",
+            "window_hours": 168,
+            "elapsed_hours": 168.81305645388886,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 37,
+              "likes": 1,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          },
+          {
+            "post_id": "18098495828440255",
+            "published_at": "2026-11-21T12:39:49.077785+09:00",
+            "observed_at": "2026-11-24T04:30:02.745668+00:00",
+            "window_hours": 72,
+            "elapsed_hours": 72.83712996749999,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 6,
+              "likes": 1,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          },
+          {
+            "post_id": "18388999600236313",
+            "published_at": "2026-11-23T12:48:36.614928+09:00",
+            "observed_at": "2026-11-24T04:30:02.745668+00:00",
+            "window_hours": 24,
+            "elapsed_hours": 24.69059187222222,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 22,
+              "likes": 2,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          }
+        ],
+        "new_observation_keys": [],
+        "new_observations": 0,
+        "total_observations": 146,
+        "distinct_posts": 73,
+        "due_count": 3,
+        "success_count": 3,
+        "classification": "actual_official_milestones_imported",
+        "due_count_at_check": 0,
+        "new_evaluation_report_due": false,
+        "weights_unchanged": true,
+        "publication_calls": 0,
+        "workflow_dispatch": false
+      },
+      "recovery": {
+        "original_slot": "2026-11-23T20:00:00+09:00",
+        "original_slot_published": false,
+        "closed_missed_slot_no_backfill": true,
+        "previously_closed_missed_slot_preserved": true,
+        "new_failure_this_check": false,
+        "new_recovery_this_check": false,
+        "dispatches_this_check": 0,
+        "new_posts": 0,
+        "pending": null,
+        "lease": null,
+        "stage": "read_only_maintenance_complete",
+        "reason": "Existing maternal READY fullwindow expiry gap prevented through actual primarypage rereview, complete artifact digest and current image SHA. Same436char AstraPASS/body/media/cohort.76completepublishedrowsunchanged; no publishing recovery/dispatch/code needed.",
+        "new_publication_this_check": false
+      },
+      "next_condition": "All4futureREADY validate atslot andslot+2h-1s,preview4. New maternal expiresNov25 14:45:53 covers12~14fullwindow after actualofficial4pages/feed/imageSHA rereview; originalpre-refreshentryarchived. Current07:18completegeneration not assumed fresh tomorrow: actualpublisher must latestcompletefreshsource/currentofficial/account/ledger/pending/CAS checks.76completeposts/146actualobservations unchanged, no newpublication/newmetrics/newAstra/newdraft.14dayevaluation notbeforetoday17:00:08KST. No backfill/rerun/dispatch/schedule.",
+      "publication": {
+        "run_id": "45321813009",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T03:47:35Z",
+        "head_sha": "7d5a0a73caf81f61db48ab4b396298fd815663b6",
+        "job_id": 138201887919,
+        "artifact_id": 14887457802,
+        "artifact_digest": "sha256:302c9608a2ce98eb63c9936d59d4e3222abd0855b463560328ccb421dcae451a",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 138,
+        "new_publication_this_run": false,
+        "main_id": "17897404392435204",
+        "url": "https://www.threads.com/@hid_1004/post/DgHBd-8jPbl",
+        "slot": "2026-11-24T12:00:00+09:00",
+        "receipt_at": "2026-11-24T12:47:27.429895+09:00",
+        "ledger_published_at": "2026-11-24T12:46:42.610970+09:00",
+        "ledger_published_at_is_invocation_not_exact_platform_time": true,
+        "stage": "complete",
+        "verified": true,
+        "body_hash": "faa2b8b829ad1a18aa9d4c3b2603b7ce55be968e3934a302d8cafe1bf66e9ae4",
+        "content_hash": "2bd4ff822ee3112035e138b9c7e4bf6c41c7da98d521e123c8da5a6dc4beb7a6",
+        "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+        "media_turn": "IMAGE",
+        "pattern": "P1",
+        "char_count": 378,
+        "replies": 0,
+        "original_queue_body_asset_exact": true,
+        "previous75records_preserved": true,
+        "maintenance_post_calls": 0,
+        "delay_within_original_2h_window": true,
+        "latest_already_reported": true
+      },
+      "history_reconciliation": {
+        "run_id": "45173485637",
+        "mode": "check-account",
+        "account": "hid_1004",
+        "checked_at": "2026-11-23T21:21:24+09:00",
+        "recent_remote_rows": 100,
+        "more_history": true,
+        "main_ledger_matches_in_page": 49,
+        "latest20_main_matches": 20,
+        "latest_remote_id": "18129410933479829",
+        "target_text_absent": true,
+        "scope": "76 complete verified durable publications; previous75 exact preserved; newreceipt/body/asset/artifact matched. Prior remote100row audit retained; no newfull28dayremote query.",
+        "artifact_id": 14818615408,
+        "artifact_digest": "sha256:23cfc165bbd050ec1a12dbde18778345efb01c4d9e20abf69f6279b090e003b3",
+        "artifact_digest_verified": true,
+        "remote_requeried_this_check": false,
+        "previous_remote_evidence_preserved": true
+      },
+      "official_review_recovery": {
+        "new_official_page_review_this_check": true,
+        "program_id": "PTR000050390",
+        "checked_at": "2026-11-24T14:45:53.443971+09:00",
+        "rereview_audit": {
+          "checked_at": "2026-11-24T14:45:53.443971+09:00",
+          "previous_entry": {
+            "slot": "2026-11-25T12:00:00+09:00",
+            "benefit_id": "PTR000050390",
+            "source_fingerprint": "18fd88694ebfc718e67ac4fc20c1d1493580eb9556d35a56c6dd4290088f78ba",
+            "source_generation": "gov24-45277137519-1",
+            "prepared_at": "2026-11-24T13:14:28.132838+09:00",
+            "expires_at": "2026-11-25T13:14:28.132838+09:00",
+            "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+            "writer": {
+              "schema_version": "supportpick.writer.v1",
+              "status": "READY",
+              "selected_program_id": "PTR000050390",
+              "post_text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?\n150%를 넘어도 산모가 사는 지역의 예외지원 기준에 해당하면 신청할 수 있어요.\n\n국내에 주민등록을 둔 출산가정이라면 기본 소득 기준은 두 가지예요. 산모나 배우자가 생계·의료·주거·교육급여 수급자 또는 차상위계층이거나, 가구의 건강보험료 본인부담금 합산액이 기준중위소득 150% 이하에 해당하는 경우예요.\n\n소득초과 가정의 예외지원은 지자체별 기준과 예산에 따라 달라요. 산모 주소지 보건소가 자격을 판정해요.\n\n건강관리사가 집을 방문해 산모와 아기 돌봄을 돕는 바우처예요. 서비스가격에서 정부지원금을 뺀 금액은 가정이 부담해요.\n\n일반 출산가정의 신청기한은 출산예정일 40일 전부터 출산일로부터 60일까지예요. 미숙아·선천성이상아 입원 등에는 별도 신청기한이 적용돼요.\n\n자세한 사항은 프로필링크 확인",
+              "draft_text": null,
+              "reply_texts": [],
+              "media": {
+                "turn": "IMAGE",
+                "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                "check": "MATCHED",
+                "image_copy": null,
+                "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+              },
+              "review": {
+                "planned_at": "2026-11-25T12:00:00+09:00",
+                "application_status": "ALWAYS",
+                "reader": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
+                "central_message": "소득기준을넘어도지역별예외지원대상이될수있는가",
+                "pattern": "P5",
+                "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
+                "interest_basis": "OBSERVED_METRICS",
+                "duplicate_check": "CHECKED",
+                "evidence": [
+                  {
+                    "source_id": "PTR000050390",
+                    "source_ref": "https://www.e-health.go.kr/gh/heSrvc/selectBbsDtlViewInfo.do?bbsId=U00322&bbsNo=381829&bbsSeCd=Z6&menuId=200040",
+                    "access_method": "OPENED_OFFICIAL",
+                    "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                    "claims_supported": [
+                      "실제2026기준129~159행:주민등록/외국인등록,수급차상위 또는건강보험료150%이하,지역예산별예외,방문돌봄바우처,일반40일전~60일후/미숙아선천성이상입원퇴원30일. 본문은국내주민등록가정으로한정."
+                    ]
+                  },
+                  {
+                    "source_id": "PTR000050390",
+                    "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10711020100",
+                    "access_method": "OPENED_OFFICIAL",
+                    "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                    "claims_supported": [
+                      "실제1035~1100행:기본대상/지역예외/주소지보건소자격판정/서비스가격-정부지원금=본인부담.2025가격표를2026금액으로전용않음."
+                    ]
+                  },
+                  {
+                    "source_id": "PTR000050390",
+                    "source_ref": "https://www.cbcsi.or.kr/content/536",
+                    "access_method": "OPENED_OFFICIAL",
+                    "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                    "claims_supported": [
+                      "실제92~134행:가구건강보험료150%,40일전~60일후,보건소조사선정,이용자차액부담."
+                    ]
+                  },
+                  {
+                    "source_id": "PTR000050390",
+                    "source_ref": "https://www.guro.go.kr/health/contents.do?key=1329",
+                    "access_method": "OPENED_OFFICIAL",
+                    "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                    "claims_supported": [
+                      "실제493~523행:2026구로지역모든가정지원은지역예외사례이며전국으로확대않음. 현재가격미게시."
+                    ]
+                  },
+                  {
+                    "source_id": "PTR000050390",
+                    "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=741282&bnefType=all&svcId=PTR000050390",
+                    "access_method": "PROVIDED_OFFICIAL_TEXT",
+                    "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                    "claims_supported": [
+                      "완전세대gov24-45277137519-1 실제동일ID serviceList누적조회35265,checkedAt07:16:28.229346와수집07:18/원문열람시각구별. API선정기준의출산후30일은2026e보건소60일과상이하여최신2026기관안내로해소;가격추정없음."
+                    ]
+                  },
+                  {
+                    "source_id": "PTR000050390",
+                    "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                    "access_method": "UPSTREAM_VERIFIED",
+                    "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                    "claims_supported": [
+                      "현재PNG실제GET SHA와main image-review PASS재대조일치. 일반브랜드만있고사업명/금액/기간없음. 독립아스트라는실물열람. 기존360px검수기록보존."
+                    ]
+                  }
+                ],
+                "checks": {
+                  "facts": "PASS",
+                  "current_status": "PASS",
+                  "eligibility_and_units": "PASS",
+                  "cta_and_no_links": "PASS",
+                  "length": "PASS",
+                  "media": "PASS"
+                },
+                "char_count": 436,
+                "count_method": "python_len_including_spaces_and_newlines",
+                "missing_info": [],
+                "hold_reasons": [],
+                "warnings": [
+                  "지역별잔여예산/개별선정/거래실행/프로필사이트경로미확인,보장않음.",
+                  "현재수집본은내일12시신선하다고가정않음. 실제발송시최신완전세대와공식상태/이미지재검증.",
+                  "최대24h검수만료가내일12~14시전체창보다먼저끝남. 다음기존점검에서공식원문·접수상태·최신완전세대·이미지SHA실제재대조후CAS갱신필수;날짜만변경금지."
+                ],
+                "reach_editorial": {
+                  "policy_id": "supportpick-threads-reach-v1-20261109",
+                  "core_question": "소득기준을넘어도지역별예외지원대상이될수있는가",
+                  "reader_scope": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
+                  "angles": [
+                    "소득초과자격",
+                    "방문돌봄과본인부담",
+                    "신청기한준비"
+                  ],
+                  "chosen_angle": "소득초과자격",
+                  "opening_candidates": [
+                    {
+                      "type": "생활 상황형",
+                      "group": "A",
+                      "text": "출산 뒤 돌봄이 필요한데 소득 때문에 산모·신생아 건강관리 신청을 망설이고 있나요?"
+                    },
+                    {
+                      "type": "대상·혜택형",
+                      "group": "B",
+                      "text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?"
+                    },
+                    {
+                      "type": "조건 설명형",
+                      "group": null,
+                      "text": "산모·신생아 건강관리의 소득초과 예외지원은 전국에서 같을까요?"
+                    }
+                  ],
+                  "chosen_opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
+                  "opening_type": "질문형 대상·혜택",
+                  "cohort": "B",
+                  "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
+                  "history_posts_checked": 20,
+                  "comparison_eligible": false,
+                  "comparison_exclusion": "새질문형정책및본문편집동시적용으로순수도입군비교불가. 시간대소급재분류않음.",
+                  "comparison_strata": {
+                    "geo": "전국지역별예외",
+                    "audience": "출산가정",
+                    "benefit": "돌봄바우처",
+                    "media": "IMAGE"
+                  },
+                  "comparison_group": "24h A19/B20중앙값63/62,매칭쌍0·교란으로효과미입증;비중유지",
+                  "applied_elements": [
+                    "대상질문직답",
+                    "건강보험료와중위소득구별",
+                    "현금과바우처구별",
+                    "기한특례와지역재량구별"
+                  ],
+                  "master_full_used": true,
+                  "supplemental_full_used_in_current_model_input": true,
+                  "profile_route": "실제사이트내검색/상세이번미검증,이동/접수보장없음"
+                },
+                "astra_final_review": {
+                  "model": "gpt-6.2-astra",
+                  "independent_agent": "/root/maternal_final_review",
+                  "initial_verdict": "REVISE",
+                  "initial_changes": [
+                    "추가확인CTA삭제",
+                    "기한특례를지자체재량과구별",
+                    "본문독자국내주민등록가정으로한정"
+                  ],
+                  "final_verdict": "PASS",
+                  "final_checked_at": "2026-11-24T13:14:28.132838+09:00",
+                  "actual_review_calls": 2,
+                  "final_text_sha256": "2db46127cba440ca73581950d5c1381a28019e962284ffe8a0c17846b7751d38",
+                  "char_count": 436,
+                  "image": {
+                    "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                    "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+                    "actually_viewed_by_reviewer": true
+                  },
+                  "final_result": "제목다음문장직답,소득예외/기한특례구별,436자,본문CTA1/URL0/추가행동0,실제이미지사업주장없음"
+                }
+              },
+              "next_history_record": {
+                "program_id": "PTR000050390",
+                "notice_version": "gov24-45277137519-1;2026e보건소실제열람2026-11-24T13:14:28.132838+09:00",
+                "pattern": "P5",
+                "opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
+                "structure": "소득초과질문→지역예외직답→기본자격→차액부담→일반신청기간/입원특례",
+                "media_turn": "IMAGE"
+              }
+            },
+            "revalidate_before": "2026-11-25T12:00:00+09:00",
+            "full_delay_window_covered": false,
+            "revalidation_required_reason": "expires_at_before_slot_plus_two_hours"
+          },
+          "refreshed_entry": {
+            "slot": "2026-11-25T12:00:00+09:00",
+            "benefit_id": "PTR000050390",
+            "source_fingerprint": "18fd88694ebfc718e67ac4fc20c1d1493580eb9556d35a56c6dd4290088f78ba",
+            "source_generation": "gov24-45277137519-1",
+            "prepared_at": "2026-11-24T14:45:53.443971+09:00",
+            "expires_at": "2026-11-25T14:45:53.443971+09:00",
+            "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+            "writer": {
+              "schema_version": "supportpick.writer.v1",
+              "status": "READY",
+              "selected_program_id": "PTR000050390",
+              "post_text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?\n150%를 넘어도 산모가 사는 지역의 예외지원 기준에 해당하면 신청할 수 있어요.\n\n국내에 주민등록을 둔 출산가정이라면 기본 소득 기준은 두 가지예요. 산모나 배우자가 생계·의료·주거·교육급여 수급자 또는 차상위계층이거나, 가구의 건강보험료 본인부담금 합산액이 기준중위소득 150% 이하에 해당하는 경우예요.\n\n소득초과 가정의 예외지원은 지자체별 기준과 예산에 따라 달라요. 산모 주소지 보건소가 자격을 판정해요.\n\n건강관리사가 집을 방문해 산모와 아기 돌봄을 돕는 바우처예요. 서비스가격에서 정부지원금을 뺀 금액은 가정이 부담해요.\n\n일반 출산가정의 신청기한은 출산예정일 40일 전부터 출산일로부터 60일까지예요. 미숙아·선천성이상아 입원 등에는 별도 신청기한이 적용돼요.\n\n자세한 사항은 프로필링크 확인",
+              "draft_text": null,
+              "reply_texts": [],
+              "media": {
+                "turn": "IMAGE",
+                "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                "check": "MATCHED",
+                "image_copy": null,
+                "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+              },
+              "review": {
+                "planned_at": "2026-11-25T12:00:00+09:00",
+                "application_status": "ALWAYS",
+                "reader": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
+                "central_message": "소득기준을넘어도지역별예외지원대상이될수있는가",
+                "pattern": "P5",
+                "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
+                "interest_basis": "OBSERVED_METRICS",
+                "duplicate_check": "CHECKED",
+                "evidence": [
+                  {
+                    "source_id": "PTR000050390",
+                    "source_ref": "https://www.e-health.go.kr/gh/heSrvc/selectBbsDtlViewInfo.do?bbsId=U00322&bbsNo=381829&bbsSeCd=Z6&menuId=200040",
+                    "access_method": "OPENED_OFFICIAL",
+                    "verified_at": "2026-11-24T14:45:53.443971+09:00",
+                    "claims_supported": [
+                      "실제2026기준129~159행:주민등록/외국인등록,수급차상위 또는건강보험료150%이하,지역예산별예외,방문돌봄바우처,일반40일전~60일후/미숙아선천성이상입원퇴원30일. 본문은국내주민등록가정으로한정.",
+                      "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
+                    ]
+                  },
+                  {
+                    "source_id": "PTR000050390",
+                    "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10711020100",
+                    "access_method": "OPENED_OFFICIAL",
+                    "verified_at": "2026-11-24T14:45:53.443971+09:00",
+                    "claims_supported": [
+                      "실제1035~1100행:기본대상/지역예외/주소지보건소자격판정/서비스가격-정부지원금=본인부담.2025가격표를2026금액으로전용않음.",
+                      "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
+                    ]
+                  },
+                  {
+                    "source_id": "PTR000050390",
+                    "source_ref": "https://www.cbcsi.or.kr/content/536",
+                    "access_method": "OPENED_OFFICIAL",
+                    "verified_at": "2026-11-24T14:45:53.443971+09:00",
+                    "claims_supported": [
+                      "실제92~134행:가구건강보험료150%,40일전~60일후,보건소조사선정,이용자차액부담.",
+                      "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
+                    ]
+                  },
+                  {
+                    "source_id": "PTR000050390",
+                    "source_ref": "https://www.guro.go.kr/health/contents.do?key=1329",
+                    "access_method": "OPENED_OFFICIAL",
+                    "verified_at": "2026-11-24T14:45:53.443971+09:00",
+                    "claims_supported": [
+                      "실제493~523행:2026구로지역모든가정지원은지역예외사례이며전국으로확대않음. 현재가격미게시.",
+                      "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
+                    ]
+                  },
+                  {
+                    "source_id": "PTR000050390",
+                    "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=741282&bnefType=all&svcId=PTR000050390",
+                    "access_method": "PROVIDED_OFFICIAL_TEXT",
+                    "verified_at": "2026-11-24T14:45:53.443971+09:00",
+                    "claims_supported": [
+                      "완전세대gov24-45277137519-1 실제동일ID serviceList누적조회35265,checkedAt07:16:28.229346와수집07:18/원문열람시각구별. API선정기준의출산후30일은2026e보건소60일과상이하여최신2026기관안내로해소;가격추정없음.",
+                      "本회차실제artifact ZIP SHA검증/완전snapshot manifest재검증/load_feed/read_current,동일ID및fingerprint재대조. 최신완전세대07:18을내일발송시신선하다고가정않음."
+                    ]
+                  },
+                  {
+                    "source_id": "PTR000050390",
+                    "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                    "access_method": "UPSTREAM_VERIFIED",
+                    "verified_at": "2026-11-24T14:45:53.443971+09:00",
+                    "claims_supported": [
+                      "현재PNG실제GET SHA와main image-review PASS재대조일치. 일반브랜드만있고사업명/금액/기간없음. 독립아스트라는실물열람. 기존360px검수기록보존.",
+                      "本회차실제PNG GET후현재main image-review SHA와재대조일치. 새직접시각검수아님."
+                    ]
+                  }
+                ],
+                "checks": {
+                  "facts": "PASS",
+                  "current_status": "PASS",
+                  "eligibility_and_units": "PASS",
+                  "cta_and_no_links": "PASS",
+                  "length": "PASS",
+                  "media": "PASS"
+                },
+                "char_count": 436,
+                "count_method": "python_len_including_spaces_and_newlines",
+                "missing_info": [],
+                "hold_reasons": [],
+                "warnings": [
+                  "지역별잔여예산/개별선정/거래실행/프로필사이트경로미확인,보장않음.",
+                  "현재수집본은내일12시신선하다고가정않음. 실제발송시최신완전세대와공식상태/이미지재검증.",
+                  "최대24h검수만료가내일12~14시전체창보다먼저끝남. 다음기존점검에서공식원문·접수상태·최신완전세대·이미지SHA실제재대조후CAS갱신필수;날짜만변경금지."
+                ],
+                "reach_editorial": {
+                  "policy_id": "supportpick-threads-reach-v1-20261109",
+                  "core_question": "소득기준을넘어도지역별예외지원대상이될수있는가",
+                  "reader_scope": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
+                  "angles": [
+                    "소득초과자격",
+                    "방문돌봄과본인부담",
+                    "신청기한준비"
+                  ],
+                  "chosen_angle": "소득초과자격",
+                  "opening_candidates": [
+                    {
+                      "type": "생활 상황형",
+                      "group": "A",
+                      "text": "출산 뒤 돌봄이 필요한데 소득 때문에 산모·신생아 건강관리 신청을 망설이고 있나요?"
+                    },
+                    {
+                      "type": "대상·혜택형",
+                      "group": "B",
+                      "text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?"
+                    },
+                    {
+                      "type": "조건 설명형",
+                      "group": null,
+                      "text": "산모·신생아 건강관리의 소득초과 예외지원은 전국에서 같을까요?"
+                    }
+                  ],
+                  "chosen_opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
+                  "opening_type": "질문형 대상·혜택",
+                  "cohort": "B",
+                  "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
+                  "history_posts_checked": 20,
+                  "comparison_eligible": false,
+                  "comparison_exclusion": "새질문형정책및본문편집동시적용으로순수도입군비교불가. 시간대소급재분류않음.",
+                  "comparison_strata": {
+                    "geo": "전국지역별예외",
+                    "audience": "출산가정",
+                    "benefit": "돌봄바우처",
+                    "media": "IMAGE"
+                  },
+                  "comparison_group": "24h A19/B20중앙값63/62,매칭쌍0·교란으로효과미입증;비중유지",
+                  "applied_elements": [
+                    "대상질문직답",
+                    "건강보험료와중위소득구별",
+                    "현금과바우처구별",
+                    "기한특례와지역재량구별"
+                  ],
+                  "master_full_used": true,
+                  "supplemental_full_used_in_current_model_input": true,
+                  "profile_route": "실제사이트내검색/상세이번미검증,이동/접수보장없음"
+                },
+                "astra_final_review": {
+                  "model": "gpt-6.2-astra",
+                  "independent_agent": "/root/maternal_final_review",
+                  "initial_verdict": "REVISE",
+                  "initial_changes": [
+                    "추가확인CTA삭제",
+                    "기한특례를지자체재량과구별",
+                    "본문독자국내주민등록가정으로한정"
+                  ],
+                  "final_verdict": "PASS",
+                  "final_checked_at": "2026-11-24T13:14:28.132838+09:00",
+                  "actual_review_calls": 2,
+                  "final_text_sha256": "2db46127cba440ca73581950d5c1381a28019e962284ffe8a0c17846b7751d38",
+                  "char_count": 436,
+                  "image": {
+                    "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                    "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+                    "actually_viewed_by_reviewer": true
+                  },
+                  "final_result": "제목다음문장직답,소득예외/기한특례구별,436자,본문CTA1/URL0/추가행동0,실제이미지사업주장없음"
+                }
+              },
+              "next_history_record": {
+                "program_id": "PTR000050390",
+                "notice_version": "gov24-45277137519-1;2026e보건소실제열람2026-11-24T13:14:28.132838+09:00",
+                "pattern": "P5",
+                "opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
+                "structure": "소득초과질문→지역예외직답→기본자격→차액부담→일반신청기간/입원특례",
+                "media_turn": "IMAGE"
+              }
+            },
+            "revalidate_before": "2026-11-25T12:00:00+09:00",
+            "full_delay_window_covered": true
+          },
+          "source": {
+            "count": 10895,
+            "generation": "gov24-45277137519-1",
+            "lastSuccessAt": "2026-11-24T07:18:33.759031+09:00",
+            "manifestSha256": "5e05c8162eb03678e75209e530dfe4b710d797b95e4d3e834f399502a65de644",
+            "path": "snapshots/gov24-45277137519-1",
+            "version": 1
+          },
+          "actual_official_rereview": true,
+          "artifact_redownloaded_and_digest_verified": true,
+          "current_image_bytes_sha_recompared": true,
+          "same_final_body_media_pattern_cohort_astra_review": true
+        },
+        "image_bytes_sha_recompared": true,
+        "new_parent_visual_inspection": false,
+        "new_Astra_calls": 0,
+        "existing_two_actual_Astra_reviews_preserved": true,
+        "source_limit": "Opened2026ehealthcurrentprogram and ministry/Chungbuk/Guro details: base/regionexception/copayment/general60day/ICUexception matched. Search checked corrections/termination, no nationwide closure found in scope. Local supplementary-benefit termination not generalized. No individual funding/eligibility/transaction guaranteed."
+      },
+      "regular_slot_observation": {
+        "slot": "2026-11-24T08:00:00+09:00",
+        "status": "natural_publication_verified_complete",
+        "main_id": "18123605203752749",
+        "receipt_at": "2026-11-24T08:46:05.901553+09:00",
+        "main_url": "https://www.threads.com/@hid_1004/post/DgGl2ooGuAa"
+      },
+      "main_head_observation": {
+        "latest_observed_run_head": "5732cde848a03907b2505396c34a4d60c713571e",
+        "target_publisher_workflows_master_and_assets_blobs_unchanged": true,
+        "unrelated_changes_not_modified": true
+      },
+      "image_sha_comparisons": [
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:06.502293+09:00"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:14.847084+09:00"
+        }
+      ],
+      "run_status_transitions": [
+        {
+          "run_id": "45277137519",
+          "from": "in_progress",
+          "to": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-23T22:38:20Z"
+        }
+      ]
     }
   },
   "last_reported_prepublication_repair": {
-    "checked_at": "2026-11-24T10:41:31.220284+09:00",
-    "benefit_id": "419000000129",
-    "slot": "2026-11-25T08:00:00+09:00",
-    "queue_commit": "15c095961bd9200282fa8a30ffbb01398fc5bba7",
-    "expires_at": "2026-11-25T10:40:14.847169+09:00",
-    "result": "full_two_hour_window_now_covered_actual_rereview",
-    "body_unchanged": true
+    "checked_at": "2026-11-24T14:46:52.845266+09:00",
+    "slot": "2026-11-25T12:00:00+09:00",
+    "reason": "full_delay_window_expiry_prevention",
+    "actual_official_rereview": true,
+    "queue_commit": "2465c1e99071dc204fb42783d0b5f44f65089ec4",
+    "new_post": false
   },
   "last_prepared_queue": {
     "checked_at": "2026-11-24T13:16:02.992130+09:00",
@@ -119398,7 +121000,7 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-24T13:44:54.403343+09:00",
+    "checked_at": "2026-11-24T14:45:53.443971+09:00",
     "ready": 4,
     "future24h_ready": 4,
     "new_drafts": 0,
@@ -119443,8 +121045,8 @@
         "pattern": "P5",
         "media_turn": "IMAGE",
         "char_count": 436,
-        "expires_at": "2026-11-25T13:14:28.132838+09:00",
-        "full_delay_window_valid": false,
+        "expires_at": "2026-11-25T14:45:53.443971+09:00",
+        "full_delay_window_valid": true,
         "source_fresh_at_slot": false,
         "source_recheck_required_at_publish": true
       }
@@ -119462,473 +121064,23 @@
     "pending": null,
     "lease": null,
     "new_posts": 0,
-    "new_incidents": 0,
-    "new_metrics": 3,
+    "new_metrics": 0,
     "observations": 146,
     "evaluation_due": false,
     "next_evaluation_not_before": "2026-11-24T17:00:08.835254+09:00",
     "astra_review_invocations": 0,
     "existing_Astra_review_preserved": true,
     "current_image_bytes_sha_recompared": true,
-    "new_visual_inspection": false,
     "source_recheck_required_at_publish": true,
-    "expiry_revalidation_required": true
+    "expiry_prevention_revalidations": 1
   },
   "last_queue_review_refresh": {
-    "checked_at": "2026-11-24T10:40:14.847169+09:00",
-    "reason": "Prevent recurrence of pre-reservation draft expiry: previous expires08:21 before10:00 full slot window",
-    "previous_entry": {
-      "slot": "2026-11-25T08:00:00+09:00",
-      "benefit_id": "419000000129",
-      "source_fingerprint": "8c82d1cf584e75a48b468bfaf7c0ae5cc057c0583f25177de1ecdb8f7d21d203",
-      "source_generation": "gov24-45277137519-1",
-      "prepared_at": "2026-11-24T08:21:36.436569+09:00",
-      "expires_at": "2026-11-25T08:21:36.436569+09:00",
-      "asset_sha256": null,
-      "writer": {
-        "schema_version": "supportpick.writer.v1",
-        "status": "READY",
-        "selected_program_id": "419000000129",
-        "post_text": "원주사랑상품권, 어느 가게에서 5% 캐시백을 받나요?\n\n원주시 착한가격업소 중 원주사랑상품권 가맹점이 대상이에요. 가게 이름은 원주시 공고 제2026-2655호에 첨부된 추가 할인 대상 업소 목록에 나와 있어요.\n\n대상 가게에서 원주사랑상품권 QR이나 카드로 3만 원을 결제하면 캐시백은 1,500원이에요. 상품권 구매 할인과 별도로, 1인당 월 결제액 60만 원까지 5%가 적용돼 월 최대 3만 원을 돌려받을 수 있어요.\n\n지원 기간은 2026년 9월 28일부터 12월 31일까지예요. 지원 자금이 먼저 소진되면 그 전에 끝나요.\n\n자세한 사항은 프로필링크 확인",
-        "draft_text": null,
-        "reply_texts": [],
-        "media": {
-          "turn": "TEXT",
-          "asset_id": null,
-          "check": "NOT_REQUIRED",
-          "image_copy": null,
-          "alt_text": null
-        },
-        "review": {
-          "planned_at": "2026-11-25T08:00:00+09:00",
-          "application_status": "OPEN",
-          "reader": "원주에서 원주사랑상품권으로 결제하려는 이용자",
-          "central_message": "어느 가게에서 결제해야 5% 캐시백을 받을 수 있는가",
-          "pattern": "P8",
-          "selection_reason": "동일 ID serviceList 누적 조회수 35700 기준. 기존 미전송 우선사업 4건을 투영하고 더 높은 HOLD/SKIP 판단·출처를 보존한 다음 검증가능 후보. 전일 보관본을 그대로 되살리지 않고 공식 공고·구매안내·보도자료·종료행사·검색목록을 실제 다시 열람하여 질문형 초안을 새로 편집하고 독립 검수.",
-          "interest_basis": "OBSERVED_METRICS",
-          "duplicate_check": "CHECKED",
-          "evidence": [
-            {
-              "source_id": "419000000129",
-              "source_ref": "https://www.wonju.go.kr/www/selectBbsNttView.do?bbsNo=140&key=216&nttNo=492622",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-24T08:21:36.436569+09:00",
-              "claims_supported": [
-                "원주시공고2026-2655 실제1649~1662행: 대상은원주시착한가격업소중상품권가맹점,QR/카드5%,1인월사용60만원월최대3만원,3만원1500원,2026.9.28~12.31자금소진시종료,첨부대상목록."
-              ]
-            },
-            {
-              "source_id": "419000000129",
-              "source_ref": "https://www.wonju.go.kr/wonjusarang/user_sub.php?gid=www&mu_idx=7",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-24T08:21:36.436569+09:00",
-              "claims_supported": [
-                "공식구매이용안내79~104행: 앱가입계좌등록충전,구매지원은선할인,구매월한도와캐시백대상월사용한도구별,정책변경가능. 본문은기존상품권이용자의결제혜택한정."
-              ]
-            },
-            {
-              "source_id": "419000000129",
-              "source_ref": "https://www.wonju.go.kr/media/selectBbsNttView.do?bbsNo=145&integrDeptCode=&key=3450&nttNo=492594&pageIndex=1&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-24T08:21:36.436569+09:00",
-              "claims_supported": [
-                "공식보도자료196~204행:착한가격업소결제5%추가환급,3만원1500원예시,앱가맹점조회. 공식검색결과제목의표현을관찰했으며실제검색량추정않음."
-              ]
-            },
-            {
-              "source_id": "419000000129",
-              "source_ref": "https://www.wonju.go.kr/media/selectBbsNttView.do?bbsNo=145&integrDeptCode=&key=3450&nttNo=494700&pageIndex=1&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-24T08:21:36.436569+09:00",
-              "claims_supported": [
-                "공식10/29보도자료:과거축제추가5%는10/29~11/15종료,현재착한가격5%와합산하지않음."
-              ]
-            },
-            {
-              "source_id": "419000000129",
-              "source_ref": "https://www.wonju.go.kr/media/selectBbsNttList.do?bbsNo=145&integrDeptCode=&key=3450&pageUnit=10&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-24T08:21:36.436569+09:00",
-              "claims_supported": [
-                "공식원주사랑검색목록198~218행과현재검색결과대조,열람범위의후속종료정정없음. 실시간잔여자금/개별가게거래는보장않음."
-              ]
-            },
-            {
-              "source_id": "419000000129",
-              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006198&bnefType=all&svcId=419000000129",
-              "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-24T08:21:36.436569+09:00",
-              "claims_supported": [
-                "실제load_feed/read_current/verify_snapshot완전세대gov24-45277137519-1 동일ID 누적조회수35700,원본checkedAt=2026-11-24T07:14:40.632615+09:00; 수집성공07:18와실제원문열람시각구별. API상시기본구매지원과별도기간캐시백혼동않음."
-              ]
-            }
-          ],
-          "checks": {
-            "facts": "PASS",
-            "current_status": "PASS",
-            "eligibility_and_units": "PASS",
-            "cta_and_no_links": "PASS",
-            "length": "PASS",
-            "media": "NOT_REQUIRED"
-          },
-          "char_count": 315,
-          "count_method": "python_len_including_spaces_and_newlines",
-          "missing_info": [],
-          "hold_reasons": [],
-          "warnings": [
-            "공식 지원기간 안이지만 잔여 자금·개별 거래 적용 여부는 미확인, 보장하지 않음.",
-            "현재 수집본은 다음날08시까지 신선하다고 가정하지 않음. 실제 발송시 최신 완전 세대 재검증 필수.",
-            "최대24시간 검수기한이 다음날08~10시 전체 허용창보다 먼저 끝나므로 다음날 정규08시 전 기존 시간별 점검에서 공식원문·자금소진/정정·최신수집본·이미지SHA를 실제 재대조해야 함. 날짜만 갱신 금지.",
-            "현재08시 미예약 슬롯이 자연게시되지 않거나 앞 회차 실패/누락 시 미예약 미래 IMAGE/TEXT와 후보순위를 다시 계산. 소급발행·임의dispatch 없음.",
-            "질문형 제목 도입으로 순수A/B 실험조건이 달라 비교 제외; 과거 READY 도입군 소급변경 없음."
-          ],
-          "reach_editorial": {
-            "policy_id": "supportpick-threads-reach-v1-20261109",
-            "core_question": "어느 가게에서 결제해야 5% 캐시백을 받을 수 있는가",
-            "reader_scope": "원주에서 원주사랑상품권으로 결제하려는 이용자",
-            "angles": [
-              "생활소비에서캐시백혜택",
-              "대상가게자격확인",
-              "월개인한도와지원종료조건"
-            ],
-            "chosen_angle": "대상가게자격확인",
-            "opening_candidates": [
-              {
-                "type": "생활 상황형",
-                "group": "A",
-                "text": "원주에서 식사비를 원주사랑상품권으로 낼 때 어느 가게가 5% 캐시백 대상일까요?"
-              },
-              {
-                "type": "대상·혜택형",
-                "group": "B",
-                "text": "원주사랑상품권, 어느 가게에서 5% 캐시백을 받나요?"
-              },
-              {
-                "type": "조건 설명형",
-                "group": null,
-                "text": "원주시 착한가격업소라면 모든 가게에서 상품권 캐시백을 받을 수 있나요?"
-              }
-            ],
-            "chosen_opening": "원주사랑상품권, 어느 가게에서 5% 캐시백을 받나요?",
-            "opening_type": "질문형 대상·혜택",
-            "cohort": "B",
-            "selection_reason": "동일 ID serviceList 누적 조회수 35700 기준. 기존 미전송 우선사업 4건을 투영하고 더 높은 HOLD/SKIP 판단·출처를 보존한 다음 검증가능 후보. 전일 보관본을 그대로 되살리지 않고 공식 공고·구매안내·보도자료·종료행사·검색목록을 실제 다시 열람하여 질문형 초안을 새로 편집하고 독립 검수.",
-            "history_posts_checked": 20,
-            "comparison_eligible": false,
-            "comparison_strata": {
-              "geo": "원주시",
-              "audience": "지역상품권이용자",
-              "benefit": "결제캐시백",
-              "application": "자금소진가능",
-              "media": "TEXT"
-            },
-            "comparison_group": "실제관측140건 보존; 비교가능24h A19/B19 중앙값63/72,매칭쌍0·교란존재로효과미입증,비중유지.",
-            "applied_elements": [
-              "구체적인가맹점질문→첫단락직접답",
-              "공식거래예시→개인월한도→지원종료조건",
-              "아스트라독립지적반영후동일모델재검수"
-            ],
-            "profile_route": "공식진단의프로필목표확인,실제사이트검색/상세는이번미검증",
-            "source_recheck_required_at_publish": true,
-            "master_full_used": true,
-            "supplemental_full_used_in_current_model_input": true,
-            "comparison_exclusion": "신규질문형제목정책을함께적용하여도입군만달라지는순수A/B와조건이다름."
-          },
-          "astra_final_review": {
-            "model": "gpt-6.2-astra",
-            "independent_agent": "/root/wonju_final_review",
-            "initial_verdict": "REVISE_THEN_PASS",
-            "initial_changes": [
-              "대상가게와공식목록위치를첫단락에명확화",
-              "반복확인행동유도정리",
-              "공식거래예시와구매할인/결제캐시백구분유지"
-            ],
-            "final_verdict": "PASS",
-            "final_checked_at": "2026-11-24T08:22:30.261658+09:00",
-            "actual_review_calls": 2,
-            "final_text_sha256": "5fd3ac569548415d5d01f8aa2f0553d8f5057b3ec151308e8373b5d1caaee21f",
-            "char_count": 315,
-            "image": null,
-            "image_reason": "TEXT회차,실제이미지없음",
-            "final_result": "제목다음문장이대상가게에답함.공식QR/카드5%,개인월사용60만원/최대3만원,기간/자금소진,3만원1500원예시일치.315자,단독본문,CTA1회,링크/해시태그/추가유도없음.",
-            "remaining_condition": "실제발송전잔여자금/정정/최신완전수집본/검수만료재확인"
-          }
-        },
-        "next_history_record": {
-          "program_id": "419000000129",
-          "notice_version": "gov24-45277137519-1; official2026-2655 reread 2026-11-24T08:21:36.436569+09:00",
-          "pattern": "P8",
-          "opening": "원주사랑상품권, 어느 가게에서 5% 캐시백을 받나요?",
-          "structure": "가게질문→대상업소와공식목록→결제예시와개인월한도→지원기간/자금소진",
-          "media_turn": "TEXT"
-        }
-      },
-      "revalidate_before": "2026-11-25T08:00:00+09:00",
-      "full_delay_window_covered": false,
-      "revalidation_required_reason": "expires_at_before_slot_plus_two_hours"
-    },
-    "refreshed_entry": {
-      "slot": "2026-11-25T08:00:00+09:00",
-      "benefit_id": "419000000129",
-      "source_fingerprint": "8c82d1cf584e75a48b468bfaf7c0ae5cc057c0583f25177de1ecdb8f7d21d203",
-      "source_generation": "gov24-45277137519-1",
-      "prepared_at": "2026-11-24T10:40:14.847169+09:00",
-      "expires_at": "2026-11-25T10:40:14.847169+09:00",
-      "asset_sha256": null,
-      "writer": {
-        "schema_version": "supportpick.writer.v1",
-        "status": "READY",
-        "selected_program_id": "419000000129",
-        "post_text": "원주사랑상품권, 어느 가게에서 5% 캐시백을 받나요?\n\n원주시 착한가격업소 중 원주사랑상품권 가맹점이 대상이에요. 가게 이름은 원주시 공고 제2026-2655호에 첨부된 추가 할인 대상 업소 목록에 나와 있어요.\n\n대상 가게에서 원주사랑상품권 QR이나 카드로 3만 원을 결제하면 캐시백은 1,500원이에요. 상품권 구매 할인과 별도로, 1인당 월 결제액 60만 원까지 5%가 적용돼 월 최대 3만 원을 돌려받을 수 있어요.\n\n지원 기간은 2026년 9월 28일부터 12월 31일까지예요. 지원 자금이 먼저 소진되면 그 전에 끝나요.\n\n자세한 사항은 프로필링크 확인",
-        "draft_text": null,
-        "reply_texts": [],
-        "media": {
-          "turn": "TEXT",
-          "asset_id": null,
-          "check": "NOT_REQUIRED",
-          "image_copy": null,
-          "alt_text": null
-        },
-        "review": {
-          "planned_at": "2026-11-25T08:00:00+09:00",
-          "application_status": "OPEN",
-          "reader": "원주에서 원주사랑상품권으로 결제하려는 이용자",
-          "central_message": "어느 가게에서 결제해야 5% 캐시백을 받을 수 있는가",
-          "pattern": "P8",
-          "selection_reason": "동일 ID serviceList 누적 조회수 35700 기준. 기존 미전송 우선사업 4건을 투영하고 더 높은 HOLD/SKIP 판단·출처를 보존한 다음 검증가능 후보. 전일 보관본을 그대로 되살리지 않고 공식 공고·구매안내·보도자료·종료행사·검색목록을 실제 다시 열람하여 질문형 초안을 새로 편집하고 독립 검수.",
-          "interest_basis": "OBSERVED_METRICS",
-          "duplicate_check": "CHECKED",
-          "evidence": [
-            {
-              "source_id": "419000000129",
-              "source_ref": "https://www.wonju.go.kr/www/selectBbsNttView.do?bbsNo=140&key=216&nttNo=492622",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-24T10:40:14.847169+09:00",
-              "claims_supported": [
-                "원주시공고2026-2655 실제1649~1662행: 대상은원주시착한가격업소중상품권가맹점,QR/카드5%,1인월사용60만원월최대3만원,3만원1500원,2026.9.28~12.31자금소진시종료,첨부대상목록."
-              ]
-            },
-            {
-              "source_id": "419000000129",
-              "source_ref": "https://www.wonju.go.kr/wonjusarang/user_sub.php?gid=www&mu_idx=7",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-24T10:40:14.847169+09:00",
-              "claims_supported": [
-                "공식구매이용안내79~104행: 앱가입계좌등록충전,구매지원은선할인,구매월한도와캐시백대상월사용한도구별,정책변경가능. 본문은기존상품권이용자의결제혜택한정."
-              ]
-            },
-            {
-              "source_id": "419000000129",
-              "source_ref": "https://www.wonju.go.kr/media/selectBbsNttView.do?bbsNo=145&integrDeptCode=&key=3450&nttNo=492594&pageIndex=1&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-24T10:40:14.847169+09:00",
-              "claims_supported": [
-                "공식보도자료196~204행:착한가격업소결제5%추가환급,3만원1500원예시,앱가맹점조회. 공식검색결과제목의표현을관찰했으며실제검색량추정않음."
-              ]
-            },
-            {
-              "source_id": "419000000129",
-              "source_ref": "https://www.wonju.go.kr/media/selectBbsNttView.do?bbsNo=145&integrDeptCode=&key=3450&nttNo=494700&pageIndex=1&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-24T10:40:14.847169+09:00",
-              "claims_supported": [
-                "공식10/29보도자료:과거축제추가5%는10/29~11/15종료,현재착한가격5%와합산하지않음."
-              ]
-            },
-            {
-              "source_id": "419000000129",
-              "source_ref": "https://www.wonju.go.kr/media/selectBbsNttList.do?bbsNo=145&integrDeptCode=&key=3450&pageUnit=10&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-24T10:40:14.847169+09:00",
-              "claims_supported": [
-                "공식원주사랑검색목록198~218행과현재검색결과대조,열람범위의후속종료정정없음. 실시간잔여자금/개별가게거래는보장않음."
-              ]
-            },
-            {
-              "source_id": "419000000129",
-              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1006198&bnefType=all&svcId=419000000129",
-              "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-24T10:40:14.847169+09:00",
-              "claims_supported": [
-                "실제load_feed/read_current/verify_snapshot완전세대gov24-45277137519-1 동일ID 누적조회수35700,원본checkedAt=2026-11-24T07:14:40.632615+09:00; 수집성공07:18와실제원문열람시각구별. API상시기본구매지원과별도기간캐시백혼동않음."
-              ]
-            }
-          ],
-          "checks": {
-            "facts": "PASS",
-            "current_status": "PASS",
-            "eligibility_and_units": "PASS",
-            "cta_and_no_links": "PASS",
-            "length": "PASS",
-            "media": "NOT_REQUIRED"
-          },
-          "char_count": 315,
-          "count_method": "python_len_including_spaces_and_newlines",
-          "missing_info": [],
-          "hold_reasons": [],
-          "warnings": [
-            "공식 지원기간 안이지만 잔여 자금·개별 거래 적용 여부는 미확인, 보장하지 않음.",
-            "현재 수집본은 다음날08시까지 신선하다고 가정하지 않음. 실제 발송시 최신 완전 세대 재검증 필수.",
-            "최대24시간 검수기한이 다음날08~10시 전체 허용창보다 먼저 끝나므로 다음날 정규08시 전 기존 시간별 점검에서 공식원문·자금소진/정정·최신수집본·이미지SHA를 실제 재대조해야 함. 날짜만 갱신 금지.",
-            "현재08시 미예약 슬롯이 자연게시되지 않거나 앞 회차 실패/누락 시 미예약 미래 IMAGE/TEXT와 후보순위를 다시 계산. 소급발행·임의dispatch 없음.",
-            "질문형 제목 도입으로 순수A/B 실험조건이 달라 비교 제외; 과거 READY 도입군 소급변경 없음."
-          ],
-          "reach_editorial": {
-            "policy_id": "supportpick-threads-reach-v1-20261109",
-            "core_question": "어느 가게에서 결제해야 5% 캐시백을 받을 수 있는가",
-            "reader_scope": "원주에서 원주사랑상품권으로 결제하려는 이용자",
-            "angles": [
-              "생활소비에서캐시백혜택",
-              "대상가게자격확인",
-              "월개인한도와지원종료조건"
-            ],
-            "chosen_angle": "대상가게자격확인",
-            "opening_candidates": [
-              {
-                "type": "생활 상황형",
-                "group": "A",
-                "text": "원주에서 식사비를 원주사랑상품권으로 낼 때 어느 가게가 5% 캐시백 대상일까요?"
-              },
-              {
-                "type": "대상·혜택형",
-                "group": "B",
-                "text": "원주사랑상품권, 어느 가게에서 5% 캐시백을 받나요?"
-              },
-              {
-                "type": "조건 설명형",
-                "group": null,
-                "text": "원주시 착한가격업소라면 모든 가게에서 상품권 캐시백을 받을 수 있나요?"
-              }
-            ],
-            "chosen_opening": "원주사랑상품권, 어느 가게에서 5% 캐시백을 받나요?",
-            "opening_type": "질문형 대상·혜택",
-            "cohort": "B",
-            "selection_reason": "동일 ID serviceList 누적 조회수 35700 기준. 기존 미전송 우선사업 4건을 투영하고 더 높은 HOLD/SKIP 판단·출처를 보존한 다음 검증가능 후보. 전일 보관본을 그대로 되살리지 않고 공식 공고·구매안내·보도자료·종료행사·검색목록을 실제 다시 열람하여 질문형 초안을 새로 편집하고 독립 검수.",
-            "history_posts_checked": 20,
-            "comparison_eligible": false,
-            "comparison_strata": {
-              "geo": "원주시",
-              "audience": "지역상품권이용자",
-              "benefit": "결제캐시백",
-              "application": "자금소진가능",
-              "media": "TEXT"
-            },
-            "comparison_group": "실제관측140건 보존; 비교가능24h A19/B19 중앙값63/72,매칭쌍0·교란존재로효과미입증,비중유지.",
-            "applied_elements": [
-              "구체적인가맹점질문→첫단락직접답",
-              "공식거래예시→개인월한도→지원종료조건",
-              "아스트라독립지적반영후동일모델재검수"
-            ],
-            "profile_route": "공식진단의프로필목표확인,실제사이트검색/상세는이번미검증",
-            "source_recheck_required_at_publish": true,
-            "master_full_used": true,
-            "supplemental_full_used_in_current_model_input": true,
-            "comparison_exclusion": "신규질문형제목정책을함께적용하여도입군만달라지는순수A/B와조건이다름."
-          },
-          "astra_final_review": {
-            "model": "gpt-6.2-astra",
-            "independent_agent": "/root/wonju_final_review",
-            "initial_verdict": "REVISE_THEN_PASS",
-            "initial_changes": [
-              "대상가게와공식목록위치를첫단락에명확화",
-              "반복확인행동유도정리",
-              "공식거래예시와구매할인/결제캐시백구분유지"
-            ],
-            "final_verdict": "PASS",
-            "final_checked_at": "2026-11-24T08:22:30.261658+09:00",
-            "actual_review_calls": 2,
-            "final_text_sha256": "5fd3ac569548415d5d01f8aa2f0553d8f5057b3ec151308e8373b5d1caaee21f",
-            "char_count": 315,
-            "image": null,
-            "image_reason": "TEXT회차,실제이미지없음",
-            "final_result": "제목다음문장이대상가게에답함.공식QR/카드5%,개인월사용60만원/최대3만원,기간/자금소진,3만원1500원예시일치.315자,단독본문,CTA1회,링크/해시태그/추가유도없음.",
-            "remaining_condition": "실제발송전잔여자금/정정/최신완전수집본/검수만료재확인"
-          }
-        },
-        "next_history_record": {
-          "program_id": "419000000129",
-          "notice_version": "gov24-45277137519-1; official2026-2655 reread 2026-11-24T08:21:36.436569+09:00",
-          "pattern": "P8",
-          "opening": "원주사랑상품권, 어느 가게에서 5% 캐시백을 받나요?",
-          "structure": "가게질문→대상업소와공식목록→결제예시와개인월한도→지원기간/자금소진",
-          "media_turn": "TEXT"
-        }
-      },
-      "revalidate_before": "2026-11-25T08:00:00+09:00",
-      "full_delay_window_covered": true,
-      "revalidation_required_reason": "expires_at_before_slot_plus_two_hours"
-    },
-    "actual_rereview": true,
-    "official_urls_actually_reopened": [
-      "https://www.wonju.go.kr/www/selectBbsNttView.do?bbsNo=140&key=216&nttNo=492622",
-      "https://www.wonju.go.kr/wonjusarang/user_sub.php?gid=www&mu_idx=7",
-      "https://www.wonju.go.kr/media/selectBbsNttView.do?bbsNo=145&integrDeptCode=&key=3450&nttNo=492594&pageIndex=1&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
-      "https://www.wonju.go.kr/media/selectBbsNttView.do?bbsNo=145&integrDeptCode=&key=3450&nttNo=494700&pageIndex=1&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91",
-      "https://www.wonju.go.kr/media/selectBbsNttList.do?bbsNo=145&integrDeptCode=&key=3450&pageUnit=10&searchCnd=SJ&searchCtgry=&searchKrwd=%EC%9B%90%EC%A3%BC%EC%82%AC%EB%9E%91"
-    ],
-    "actual_web_evidence": [
-      "turn749766983view0",
-      "turn749766983view1",
-      "turn749766983view2",
-      "turn749766983view3",
-      "turn749766983view4"
-    ],
-    "supported_rechecked_claims": [
-      "2026-2655 official target merchants and attached list",
-      "QR/card5% and individual monthly60만원 usage/3만원 maximum",
-      "3만원1500원 official example",
-      "Sep28-Dec31 and funding exhaustion",
-      "purchase discount distinct from payment cashback",
-      "pastOct29-Nov15 festival ended, no addition",
-      "official notice list latest75items page1 has no later matching closure/correction within opened scope"
-    ],
-    "limits": [
-      "Remaining funding and individual transaction success not verified or guaranteed",
-      "Current API source_only not currentapplication proof",
-      "Current07:18source not fresh tomorrow08; actual publisher rechecks latest complete generation",
-      "No new visual inspection; raw current image bytes matched existing visual PASS hashes",
-      "No new Astra call: exact same independently reviewed final body SHA retained"
-    ],
-    "body_media_pattern_cohort_unchanged": true,
-    "timestamp_only_extension": false,
-    "images": [
-      {
-        "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-        "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-        "matched_current_main_bytes": true,
-        "new_visual_inspection": false,
-        "compared_at": "2026-11-24T10:40:06.502293+09:00"
-      },
-      {
-        "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-        "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-        "matched_current_main_bytes": true,
-        "new_visual_inspection": false,
-        "compared_at": "2026-11-24T10:40:14.847084+09:00"
-      }
-    ],
-    "source": {
-      "count": 10895,
-      "generation": "gov24-45277137519-1",
-      "lastSuccessAt": "2026-11-24T07:18:33.759031+09:00",
-      "manifestSha256": "5e05c8162eb03678e75209e530dfe4b710d797b95e4d3e834f399502a65de644",
-      "path": "snapshots/gov24-45277137519-1",
-      "version": 1
-    },
-    "source_count": 10895,
-    "full_delay_window_before": false,
-    "full_delay_window_after": true,
-    "all_four_validated": true,
-    "queue_commit": "15c095961bd9200282fa8a30ffbb01398fc5bba7",
-    "queue_blob_sha": "5009004eb749c9bb6363930e447efbc7922b522c",
-    "queue_readback_equal": true,
-    "previous_queue_blob_sha": "bb58e8cede4d286c0ae542e79a1a38d2ffd6af5f",
-    "new_posts": 0,
-    "new_incidents": 0,
-    "workflow_dispatches": 0,
-    "body_sha256": "5fd3ac569548415d5d01f8aa2f0553d8f5057b3ec151308e8373b5d1caaee21f",
-    "review_warning_resolution": "Original editorial warning about08:21expiry is historical; this audited genuine rereview resolves that expiry gap through10:40. General actual-send source/currentstatus recheck remains mandatory."
+    "checked_at": "2026-11-24T14:45:53.443971+09:00",
+    "slot": "2026-11-25T12:00:00+09:00",
+    "reason": "actualofficial/feed/imageSHA rereview to cover full2hwindow",
+    "queue_commit": "2465c1e99071dc204fb42783d0b5f44f65089ec4",
+    "queue_blob_sha": "a831db4fe50809d4cf3da5d64c1c393b10b44476",
+    "body_media_pattern_cohort_preserved": true
   },
   "prepared_queue_history": {
     "prior_before_20261123_0831": {
@@ -133891,199 +135043,206 @@
       "source_current_status_recheck_still_required_at_send": true
     },
     "2026-11-25T12:00:00+09:00:PTR000050390": {
-      "status": "REQUIRED_BEFORE_FULL_DELAY_WINDOW",
-      "entry": {
-        "slot": "2026-11-25T12:00:00+09:00",
-        "benefit_id": "PTR000050390",
-        "source_fingerprint": "18fd88694ebfc718e67ac4fc20c1d1493580eb9556d35a56c6dd4290088f78ba",
-        "source_generation": "gov24-45277137519-1",
-        "prepared_at": "2026-11-24T13:14:28.132838+09:00",
-        "expires_at": "2026-11-25T13:14:28.132838+09:00",
-        "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-        "writer": {
-          "schema_version": "supportpick.writer.v1",
-          "status": "READY",
-          "selected_program_id": "PTR000050390",
-          "post_text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?\n150%를 넘어도 산모가 사는 지역의 예외지원 기준에 해당하면 신청할 수 있어요.\n\n국내에 주민등록을 둔 출산가정이라면 기본 소득 기준은 두 가지예요. 산모나 배우자가 생계·의료·주거·교육급여 수급자 또는 차상위계층이거나, 가구의 건강보험료 본인부담금 합산액이 기준중위소득 150% 이하에 해당하는 경우예요.\n\n소득초과 가정의 예외지원은 지자체별 기준과 예산에 따라 달라요. 산모 주소지 보건소가 자격을 판정해요.\n\n건강관리사가 집을 방문해 산모와 아기 돌봄을 돕는 바우처예요. 서비스가격에서 정부지원금을 뺀 금액은 가정이 부담해요.\n\n일반 출산가정의 신청기한은 출산예정일 40일 전부터 출산일로부터 60일까지예요. 미숙아·선천성이상아 입원 등에는 별도 신청기한이 적용돼요.\n\n자세한 사항은 프로필링크 확인",
-          "draft_text": null,
-          "reply_texts": [],
-          "media": {
-            "turn": "IMAGE",
-            "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-            "check": "MATCHED",
-            "image_copy": null,
-            "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
-          },
-          "review": {
-            "planned_at": "2026-11-25T12:00:00+09:00",
-            "application_status": "ALWAYS",
-            "reader": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
-            "central_message": "소득기준을넘어도지역별예외지원대상이될수있는가",
-            "pattern": "P5",
-            "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
-            "interest_basis": "OBSERVED_METRICS",
-            "duplicate_check": "CHECKED",
-            "evidence": [
-              {
-                "source_id": "PTR000050390",
-                "source_ref": "https://www.e-health.go.kr/gh/heSrvc/selectBbsDtlViewInfo.do?bbsId=U00322&bbsNo=381829&bbsSeCd=Z6&menuId=200040",
-                "access_method": "OPENED_OFFICIAL",
-                "verified_at": "2026-11-24T13:14:28.132838+09:00",
-                "claims_supported": [
-                  "실제2026기준129~159행:주민등록/외국인등록,수급차상위 또는건강보험료150%이하,지역예산별예외,방문돌봄바우처,일반40일전~60일후/미숙아선천성이상입원퇴원30일. 본문은국내주민등록가정으로한정."
-                ]
-              },
-              {
-                "source_id": "PTR000050390",
-                "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10711020100",
-                "access_method": "OPENED_OFFICIAL",
-                "verified_at": "2026-11-24T13:14:28.132838+09:00",
-                "claims_supported": [
-                  "실제1035~1100행:기본대상/지역예외/주소지보건소자격판정/서비스가격-정부지원금=본인부담.2025가격표를2026금액으로전용않음."
-                ]
-              },
-              {
-                "source_id": "PTR000050390",
-                "source_ref": "https://www.cbcsi.or.kr/content/536",
-                "access_method": "OPENED_OFFICIAL",
-                "verified_at": "2026-11-24T13:14:28.132838+09:00",
-                "claims_supported": [
-                  "실제92~134행:가구건강보험료150%,40일전~60일후,보건소조사선정,이용자차액부담."
-                ]
-              },
-              {
-                "source_id": "PTR000050390",
-                "source_ref": "https://www.guro.go.kr/health/contents.do?key=1329",
-                "access_method": "OPENED_OFFICIAL",
-                "verified_at": "2026-11-24T13:14:28.132838+09:00",
-                "claims_supported": [
-                  "실제493~523행:2026구로지역모든가정지원은지역예외사례이며전국으로확대않음. 현재가격미게시."
-                ]
-              },
-              {
-                "source_id": "PTR000050390",
-                "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=741282&bnefType=all&svcId=PTR000050390",
-                "access_method": "PROVIDED_OFFICIAL_TEXT",
-                "verified_at": "2026-11-24T13:14:28.132838+09:00",
-                "claims_supported": [
-                  "완전세대gov24-45277137519-1 실제동일ID serviceList누적조회35265,checkedAt07:16:28.229346와수집07:18/원문열람시각구별. API선정기준의출산후30일은2026e보건소60일과상이하여최신2026기관안내로해소;가격추정없음."
-                ]
-              },
-              {
-                "source_id": "PTR000050390",
-                "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-                "access_method": "UPSTREAM_VERIFIED",
-                "verified_at": "2026-11-24T13:14:28.132838+09:00",
-                "claims_supported": [
-                  "현재PNG실제GET SHA와main image-review PASS재대조일치. 일반브랜드만있고사업명/금액/기간없음. 독립아스트라는실물열람. 기존360px검수기록보존."
-                ]
-              }
-            ],
-            "checks": {
-              "facts": "PASS",
-              "current_status": "PASS",
-              "eligibility_and_units": "PASS",
-              "cta_and_no_links": "PASS",
-              "length": "PASS",
-              "media": "PASS"
+      "status": "RESOLVED_ACTUAL_OFFICIAL_REREVIEW_FULL_WINDOW_COVERED",
+      "checked_at": "2026-11-24T14:45:53.443971+09:00",
+      "previous_requirement": {
+        "status": "REQUIRED_BEFORE_FULL_DELAY_WINDOW",
+        "entry": {
+          "slot": "2026-11-25T12:00:00+09:00",
+          "benefit_id": "PTR000050390",
+          "source_fingerprint": "18fd88694ebfc718e67ac4fc20c1d1493580eb9556d35a56c6dd4290088f78ba",
+          "source_generation": "gov24-45277137519-1",
+          "prepared_at": "2026-11-24T13:14:28.132838+09:00",
+          "expires_at": "2026-11-25T13:14:28.132838+09:00",
+          "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "writer": {
+            "schema_version": "supportpick.writer.v1",
+            "status": "READY",
+            "selected_program_id": "PTR000050390",
+            "post_text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?\n150%를 넘어도 산모가 사는 지역의 예외지원 기준에 해당하면 신청할 수 있어요.\n\n국내에 주민등록을 둔 출산가정이라면 기본 소득 기준은 두 가지예요. 산모나 배우자가 생계·의료·주거·교육급여 수급자 또는 차상위계층이거나, 가구의 건강보험료 본인부담금 합산액이 기준중위소득 150% 이하에 해당하는 경우예요.\n\n소득초과 가정의 예외지원은 지자체별 기준과 예산에 따라 달라요. 산모 주소지 보건소가 자격을 판정해요.\n\n건강관리사가 집을 방문해 산모와 아기 돌봄을 돕는 바우처예요. 서비스가격에서 정부지원금을 뺀 금액은 가정이 부담해요.\n\n일반 출산가정의 신청기한은 출산예정일 40일 전부터 출산일로부터 60일까지예요. 미숙아·선천성이상아 입원 등에는 별도 신청기한이 적용돼요.\n\n자세한 사항은 프로필링크 확인",
+            "draft_text": null,
+            "reply_texts": [],
+            "media": {
+              "turn": "IMAGE",
+              "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "check": "MATCHED",
+              "image_copy": null,
+              "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
             },
-            "char_count": 436,
-            "count_method": "python_len_including_spaces_and_newlines",
-            "missing_info": [],
-            "hold_reasons": [],
-            "warnings": [
-              "지역별잔여예산/개별선정/거래실행/프로필사이트경로미확인,보장않음.",
-              "현재수집본은내일12시신선하다고가정않음. 실제발송시최신완전세대와공식상태/이미지재검증.",
-              "최대24h검수만료가내일12~14시전체창보다먼저끝남. 다음기존점검에서공식원문·접수상태·최신완전세대·이미지SHA실제재대조후CAS갱신필수;날짜만변경금지."
-            ],
-            "reach_editorial": {
-              "policy_id": "supportpick-threads-reach-v1-20261109",
-              "core_question": "소득기준을넘어도지역별예외지원대상이될수있는가",
-              "reader_scope": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
-              "angles": [
-                "소득초과자격",
-                "방문돌봄과본인부담",
-                "신청기한준비"
-              ],
-              "chosen_angle": "소득초과자격",
-              "opening_candidates": [
+            "review": {
+              "planned_at": "2026-11-25T12:00:00+09:00",
+              "application_status": "ALWAYS",
+              "reader": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
+              "central_message": "소득기준을넘어도지역별예외지원대상이될수있는가",
+              "pattern": "P5",
+              "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
+              "interest_basis": "OBSERVED_METRICS",
+              "duplicate_check": "CHECKED",
+              "evidence": [
                 {
-                  "type": "생활 상황형",
-                  "group": "A",
-                  "text": "출산 뒤 돌봄이 필요한데 소득 때문에 산모·신생아 건강관리 신청을 망설이고 있나요?"
+                  "source_id": "PTR000050390",
+                  "source_ref": "https://www.e-health.go.kr/gh/heSrvc/selectBbsDtlViewInfo.do?bbsId=U00322&bbsNo=381829&bbsSeCd=Z6&menuId=200040",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                  "claims_supported": [
+                    "실제2026기준129~159행:주민등록/외국인등록,수급차상위 또는건강보험료150%이하,지역예산별예외,방문돌봄바우처,일반40일전~60일후/미숙아선천성이상입원퇴원30일. 본문은국내주민등록가정으로한정."
+                  ]
                 },
                 {
-                  "type": "대상·혜택형",
-                  "group": "B",
-                  "text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?"
+                  "source_id": "PTR000050390",
+                  "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10711020100",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                  "claims_supported": [
+                    "실제1035~1100행:기본대상/지역예외/주소지보건소자격판정/서비스가격-정부지원금=본인부담.2025가격표를2026금액으로전용않음."
+                  ]
                 },
                 {
-                  "type": "조건 설명형",
-                  "group": null,
-                  "text": "산모·신생아 건강관리의 소득초과 예외지원은 전국에서 같을까요?"
+                  "source_id": "PTR000050390",
+                  "source_ref": "https://www.cbcsi.or.kr/content/536",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                  "claims_supported": [
+                    "실제92~134행:가구건강보험료150%,40일전~60일후,보건소조사선정,이용자차액부담."
+                  ]
+                },
+                {
+                  "source_id": "PTR000050390",
+                  "source_ref": "https://www.guro.go.kr/health/contents.do?key=1329",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                  "claims_supported": [
+                    "실제493~523행:2026구로지역모든가정지원은지역예외사례이며전국으로확대않음. 현재가격미게시."
+                  ]
+                },
+                {
+                  "source_id": "PTR000050390",
+                  "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=741282&bnefType=all&svcId=PTR000050390",
+                  "access_method": "PROVIDED_OFFICIAL_TEXT",
+                  "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                  "claims_supported": [
+                    "완전세대gov24-45277137519-1 실제동일ID serviceList누적조회35265,checkedAt07:16:28.229346와수집07:18/원문열람시각구별. API선정기준의출산후30일은2026e보건소60일과상이하여최신2026기관안내로해소;가격추정없음."
+                  ]
+                },
+                {
+                  "source_id": "PTR000050390",
+                  "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                  "access_method": "UPSTREAM_VERIFIED",
+                  "verified_at": "2026-11-24T13:14:28.132838+09:00",
+                  "claims_supported": [
+                    "현재PNG실제GET SHA와main image-review PASS재대조일치. 일반브랜드만있고사업명/금액/기간없음. 독립아스트라는실물열람. 기존360px검수기록보존."
+                  ]
                 }
               ],
-              "chosen_opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
-              "opening_type": "질문형 대상·혜택",
-              "cohort": "B",
-              "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
-              "history_posts_checked": 20,
-              "comparison_eligible": false,
-              "comparison_exclusion": "새질문형정책및본문편집동시적용으로순수도입군비교불가. 시간대소급재분류않음.",
-              "comparison_strata": {
-                "geo": "전국지역별예외",
-                "audience": "출산가정",
-                "benefit": "돌봄바우처",
-                "media": "IMAGE"
+              "checks": {
+                "facts": "PASS",
+                "current_status": "PASS",
+                "eligibility_and_units": "PASS",
+                "cta_and_no_links": "PASS",
+                "length": "PASS",
+                "media": "PASS"
               },
-              "comparison_group": "24h A19/B20중앙값63/62,매칭쌍0·교란으로효과미입증;비중유지",
-              "applied_elements": [
-                "대상질문직답",
-                "건강보험료와중위소득구별",
-                "현금과바우처구별",
-                "기한특례와지역재량구별"
-              ],
-              "master_full_used": true,
-              "supplemental_full_used_in_current_model_input": true,
-              "profile_route": "실제사이트내검색/상세이번미검증,이동/접수보장없음"
-            },
-            "astra_final_review": {
-              "model": "gpt-6.2-astra",
-              "independent_agent": "/root/maternal_final_review",
-              "initial_verdict": "REVISE",
-              "initial_changes": [
-                "추가확인CTA삭제",
-                "기한특례를지자체재량과구별",
-                "본문독자국내주민등록가정으로한정"
-              ],
-              "final_verdict": "PASS",
-              "final_checked_at": "2026-11-24T13:14:28.132838+09:00",
-              "actual_review_calls": 2,
-              "final_text_sha256": "2db46127cba440ca73581950d5c1381a28019e962284ffe8a0c17846b7751d38",
               "char_count": 436,
-              "image": {
-                "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-                "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-                "actually_viewed_by_reviewer": true
+              "count_method": "python_len_including_spaces_and_newlines",
+              "missing_info": [],
+              "hold_reasons": [],
+              "warnings": [
+                "지역별잔여예산/개별선정/거래실행/프로필사이트경로미확인,보장않음.",
+                "현재수집본은내일12시신선하다고가정않음. 실제발송시최신완전세대와공식상태/이미지재검증.",
+                "최대24h검수만료가내일12~14시전체창보다먼저끝남. 다음기존점검에서공식원문·접수상태·최신완전세대·이미지SHA실제재대조후CAS갱신필수;날짜만변경금지."
+              ],
+              "reach_editorial": {
+                "policy_id": "supportpick-threads-reach-v1-20261109",
+                "core_question": "소득기준을넘어도지역별예외지원대상이될수있는가",
+                "reader_scope": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
+                "angles": [
+                  "소득초과자격",
+                  "방문돌봄과본인부담",
+                  "신청기한준비"
+                ],
+                "chosen_angle": "소득초과자격",
+                "opening_candidates": [
+                  {
+                    "type": "생활 상황형",
+                    "group": "A",
+                    "text": "출산 뒤 돌봄이 필요한데 소득 때문에 산모·신생아 건강관리 신청을 망설이고 있나요?"
+                  },
+                  {
+                    "type": "대상·혜택형",
+                    "group": "B",
+                    "text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?"
+                  },
+                  {
+                    "type": "조건 설명형",
+                    "group": null,
+                    "text": "산모·신생아 건강관리의 소득초과 예외지원은 전국에서 같을까요?"
+                  }
+                ],
+                "chosen_opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
+                "opening_type": "질문형 대상·혜택",
+                "cohort": "B",
+                "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
+                "history_posts_checked": 20,
+                "comparison_eligible": false,
+                "comparison_exclusion": "새질문형정책및본문편집동시적용으로순수도입군비교불가. 시간대소급재분류않음.",
+                "comparison_strata": {
+                  "geo": "전국지역별예외",
+                  "audience": "출산가정",
+                  "benefit": "돌봄바우처",
+                  "media": "IMAGE"
+                },
+                "comparison_group": "24h A19/B20중앙값63/62,매칭쌍0·교란으로효과미입증;비중유지",
+                "applied_elements": [
+                  "대상질문직답",
+                  "건강보험료와중위소득구별",
+                  "현금과바우처구별",
+                  "기한특례와지역재량구별"
+                ],
+                "master_full_used": true,
+                "supplemental_full_used_in_current_model_input": true,
+                "profile_route": "실제사이트내검색/상세이번미검증,이동/접수보장없음"
               },
-              "final_result": "제목다음문장직답,소득예외/기한특례구별,436자,본문CTA1/URL0/추가행동0,실제이미지사업주장없음"
+              "astra_final_review": {
+                "model": "gpt-6.2-astra",
+                "independent_agent": "/root/maternal_final_review",
+                "initial_verdict": "REVISE",
+                "initial_changes": [
+                  "추가확인CTA삭제",
+                  "기한특례를지자체재량과구별",
+                  "본문독자국내주민등록가정으로한정"
+                ],
+                "final_verdict": "PASS",
+                "final_checked_at": "2026-11-24T13:14:28.132838+09:00",
+                "actual_review_calls": 2,
+                "final_text_sha256": "2db46127cba440ca73581950d5c1381a28019e962284ffe8a0c17846b7751d38",
+                "char_count": 436,
+                "image": {
+                  "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                  "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+                  "actually_viewed_by_reviewer": true
+                },
+                "final_result": "제목다음문장직답,소득예외/기한특례구별,436자,본문CTA1/URL0/추가행동0,실제이미지사업주장없음"
+              }
+            },
+            "next_history_record": {
+              "program_id": "PTR000050390",
+              "notice_version": "gov24-45277137519-1;2026e보건소실제열람2026-11-24T13:14:28.132838+09:00",
+              "pattern": "P5",
+              "opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
+              "structure": "소득초과질문→지역예외직답→기본자격→차액부담→일반신청기간/입원특례",
+              "media_turn": "IMAGE"
             }
           },
-          "next_history_record": {
-            "program_id": "PTR000050390",
-            "notice_version": "gov24-45277137519-1;2026e보건소실제열람2026-11-24T13:14:28.132838+09:00",
-            "pattern": "P5",
-            "opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
-            "structure": "소득초과질문→지역예외직답→기본자격→차액부담→일반신청기간/입원특례",
-            "media_turn": "IMAGE"
-          }
+          "revalidate_before": "2026-11-25T12:00:00+09:00",
+          "full_delay_window_covered": false,
+          "revalidation_required_reason": "expires_at_before_slot_plus_two_hours"
         },
-        "revalidate_before": "2026-11-25T12:00:00+09:00",
-        "full_delay_window_covered": false,
-        "revalidation_required_reason": "expires_at_before_slot_plus_two_hours"
+        "reason": "max24h expires13:14before14:00; original retained; no guessed extension",
+        "next_condition": "existingcheckafterNov24 14 genuineofficial/status/feed/imageSHA recompare, CASrefreshmax24h before plannedslot"
       },
-      "reason": "max24h expires13:14before14:00; original retained; no guessed extension",
-      "next_condition": "existingcheckafterNov24 14 genuineofficial/status/feed/imageSHA recompare, CASrefreshmax24h before plannedslot"
+      "new_expires_at": "2026-11-25T14:45:53.443971+09:00",
+      "queue_commit": "2465c1e99071dc204fb42783d0b5f44f65089ec4",
+      "actual_sender_latest_source_recheck_required": true
     }
   }
 }
