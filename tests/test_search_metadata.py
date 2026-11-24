@@ -9,14 +9,40 @@ from xml.etree import ElementTree as ET
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
 from build import build
 from collect_full import collect
-from refresh import install_candidate
+from refresh import install_candidate, read_current
 from search_metadata import PageHead, public_metadata, read_verifications, version_local_assets
-from test_collection import Client
+from test_collection import Client, rows
 
 BASE = 'https://kllollain-max.github.io/supportpick/'
 
 
 class SearchMetadataTests(unittest.TestCase):
+    def test_confirmed_demo_is_hidden_but_its_url_and_source_are_preserved(self):
+        demo_id = '174100000034'
+        data = rows(2)
+        data[0].update({'서비스ID': demo_id, '서비스명': '온라인 신청 시연 테스트(운영)',
+                        '지원내용': '운영 시연용 데이터'})
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            collect(Client(data=data), root / 'run', 'demo-test')
+            install_candidate(root / 'run', root / 'state')
+            _, original = read_current(root / 'state')
+            out = root / 'public'
+            result = build(out, root / 'state', public_base=BASE)
+
+            self.assertEqual(result['benefits'], 1)
+            self.assertIn(demo_id, (original / 'data.json').read_text())
+            public_feed = json.loads((out / 'data.json').read_text())
+            self.assertEqual([record['id'] for record in public_feed['items']], ['B00001'])
+            self.assertNotIn(demo_id, (out / 'data-bootstrap.js').read_text())
+            self.assertNotIn(demo_id, (out / 'sitemap.xml').read_text())
+            for shard in (out / 'details').rglob('*.json'):
+                self.assertNotIn(demo_id, json.loads(shard.read_text())['items'])
+            detail = (out / 'benefits' / demo_id / 'index.html').read_text()
+            self.assertIn('content="noindex,follow"', detail)
+            self.assertIn('온라인 신청 시연용 테스트로 확인했습니다', detail)
+            self.assertNotIn('운영 시연용 데이터', detail)
+
     def test_public_build_has_unique_page_metadata_and_only_real_sitemap_urls(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
