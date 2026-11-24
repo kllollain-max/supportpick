@@ -50,6 +50,10 @@ class StaticDetailTests(unittest.TestCase):
             ('611000000127', '2025.6.11.(수) 10:00 ~ 6. 24.(화)18:00', '마이페이지'),
             ('135200005013', '2026.05.04~2026.05.20', '자립역량교육 이수 시간'),
             ('GES000000110', '2026-2학기 신청기간 : 2026.7.1.~2026.11.17.', '전환대출의 마감은 별도였습니다'),
+            ('611000019611', '2025.02.24~2025.11.30', '서울시 2026년 신청·이용 안내'),
+            ('626000000633', '2026.8.18.~8.24.', '마이페이지'),
+            ('628000000155', '2026년 3월 30일(월) 09:00 ~ 5월 29일(금) 16:00', '인천청년포털 사업안내'),
+            ('O00388400004', '연 1회 / 2025.07.15~2025.08.25', '강원인재원 2026년 최종 선발결과'),
         )
         for sid, dates, followup in cases:
             with self.subTest(sid=sid):
@@ -71,7 +75,14 @@ class StaticDetailTests(unittest.TestCase):
         current = datetime(2026, 11, 19, 6, tzinfo=timezone.utc)
         html = render_benefit(loan, None, None, [], [], BASE, current, 'success')
         self.assertNotIn('id="closed-application"', html)
-        self.assertIn('공식 신청 창구', html)
+        self.assertIn('기존 신청 링크 · 현재 접수 여부 확인', html)
+
+    def test_past_listed_period_marks_existing_link_and_keeps_its_destination(self):
+        dates = '2026.10.01~2026.11.03'
+        expired = {**row(), 'period': dates, **period(dates)}
+        html = render_benefit(expired, None, None, [], [], BASE, NOW, 'success')
+        self.assertNotIn('공식 신청 창구', html)
+        self.assertIn('href="https://apply.go.kr/" target="_blank" rel="noopener noreferrer">기존 신청 링크 · 현재 접수 여부 확인', html)
 
     def test_api_only_detail_does_not_manufacture_a_repeated_preparation_essay(self):
         a=row()
