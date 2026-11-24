@@ -15,6 +15,7 @@ from zoneinfo import ZoneInfo
 from collect_full import safe_url, valid_id
 from search_metadata import public_metadata
 from benefit_analysis import related_analysis
+from archived_application import archived_round, REVIEWED as ARCHIVE_REVIEWED
 from content_quality import reading_gaps, summary_view, malformed_amounts
 import verified_schedule
 
@@ -320,12 +321,14 @@ def render_benefit(row, guide, blog, reasons, related, base, current, feed_statu
     description = (row['title'] + ': ' + row['organization'] + ' 안내. ' + summary)[:155]
     crumbs = ('<nav class="breadcrumbs" aria-label="현재 위치"><a href="../../">홈</a><span>›</span>'
               '<a href="../">혜택 전체</a><span>›</span><span>' + escape(row['title']) + '</span></nav>')
+    archive = archived_round(row, current) if not reasons else None
+    source_label = '정부24 지난 회차 자료 확인 ↗' if archive else '정부24 공식 안내 확인 ↗'
     actions = (f'<a class="primary" href="{escape(safe_url(row.get("officialUrl")) or "https://plus.gov.kr/", quote=True)}" '
-               'target="_blank" rel="noopener noreferrer">정부24 공식 안내 확인 ↗</a>'
+               f'target="_blank" rel="noopener noreferrer">{source_label}</a>'
                '<button class="quiet" data-save disabled>☆ 관심 저장</button>'
                '<button class="quiet" data-track disabled>내 신청에 기록</button>'
                '<button class="quiet" type="button" data-share-benefit>↗ 이 지원금 공유</button>')
-    if safe_url(row.get('applicationUrl')):
+    if safe_url(row.get('applicationUrl')) and not archive:
         actions += ('<a class="quiet" href="' + escape(row['applicationUrl'], quote=True)
                     + '" target="_blank" rel="noopener noreferrer">공식 신청 창구 ↗</a>')
     body = crumbs + '<div class="warning" id="record-warning" role="alert" hidden></div>'
@@ -349,14 +352,18 @@ def render_benefit(row, guide, blog, reasons, related, base, current, feed_statu
         return shell(row.get('_identityTitle') or document_title(row, withheld=True),
                      row['organization']+'의 지원정보를 확인 중입니다. 최신 공식 안내를 확인하세요.',
                      body,path,'../../',base,False,record=record)
+    archive_notice = '<p class="warning">' + escape(archive['notice']) + '</p>' if archive else ''
     body += (f'<article class="detail-header"><span class="category-badge">{escape(row["category"])}</span> '
              f'<span class="badge" id="period-status">{escape(status(row, current))}</span>'
              f'<h1>{escape(row["title"])}</h1><p class="organization">{escape(row["organization"])}</p>'
-             f'{summary_html}<dl class="card-meta"><dt>신청기간</dt><dd>{escape(row["period"])}</dd>'
+             f'{archive_notice}{summary_html}<dl class="card-meta"><dt>신청기간</dt><dd>{escape(row["period"])}</dd>'
              f'<dt>지원방식</dt><dd>{support_html}</dd><dt>자료조회</dt><dd>{escape(stamp(row.get("checkedAt")))}</dd></dl>'
              '<p class="context-note">공식 API 안내와 지원금픽의 준비 해설을 구분해 제공합니다. API 조회 성공은 현재 접수·개인 자격 확인을 뜻하지 않습니다.</p>'
              '<div class="detail-actions">' + actions + '</div>'
              '<noscript><p class="context-note">핵심 안내는 JavaScript 없이 읽을 수 있습니다. 관심 저장·내 신청 기록은 JavaScript를 켜거나 홈에서 이용하세요.</p></noscript></article>')
+    if archive:
+        body += ('<section class="detail-block" id="closed-application"><h2>신청 마감 후 확인할 일</h2>'
+                 + archive['body'] + '<p class="source-meta">공식 안내 확인 ' + ARCHIVE_REVIEWED + '</p></section>')
     body += verified_schedule.render(row.get('verifiedSchedule'), current)
     body += editorial_html(row, guide)
     body += related_analysis(row['id'], row)
@@ -458,6 +465,8 @@ def write_details(output, rows, previous, base, registry, blogs, feed_status, cu
             held[row['id']] = reasons
         elif base:
             modified = max(filter(None, [TEMPLATE_MODIFIED, source_date(row), guide['reviewedAt'][:10] if guide else None, min(CLASSIFICATION_MODIFIED,current.astimezone(KST).date().isoformat()) if classification_difference(row) else None, min(IDENTITY_METADATA_MODIFIED,current.astimezone(KST).date().isoformat()) if repeated or malformed_amounts(row) else None]))
+            if archived_round(row, current):
+                modified = max(modified, min(ARCHIVE_REVIEWED, current.astimezone(KST).date().isoformat()))
             if row['id'] in previous and material_hash(previous[row['id']])!=material_hash(row) and source_date(previous[row['id']])==source_date(row):
                 modified=None  # Content changed, but the authority did not supply a new modification time.
             entries.append((path, modified))

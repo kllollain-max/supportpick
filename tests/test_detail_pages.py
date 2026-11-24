@@ -11,7 +11,8 @@ from xml.etree import ElementTree as ET
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
 from detail_pages import (benefit_path, material_hash, popularity, reviewed_guide,
-                          matching_blog, source_date, write_details, editorial_html)
+                          matching_blog, source_date, write_details, editorial_html, render_benefit)
+from collect_full import period
 from search_metadata import write_sitemap
 from build import Links
 
@@ -42,6 +43,25 @@ class Text(HTMLParser):
 
 
 class StaticDetailTests(unittest.TestCase):
+    def test_closed_round_shows_followup_and_removes_old_application_action(self):
+        cases = (
+            ('142100000062', '2025.09.15~2025.12.31', '디지털 온누리상품권 앱'),
+            ('611000000127', '2025.6.11.(수) 10:00 ~ 6. 24.(화)18:00', '마이페이지'),
+        )
+        for sid, dates, followup in cases:
+            with self.subTest(sid=sid):
+                archived = {**row(sid), 'period': dates, **period(dates)}
+                html = render_benefit(archived, None, None, [], [], BASE, NOW, 'success')
+                self.assertIn('id="closed-application"', html)
+                self.assertIn(followup, html)
+                self.assertNotIn('공식 신청 창구', html)
+
+                new_dates = '2026.11.01~2026.12.31'
+                new_round = {**archived, 'period': new_dates, **period(new_dates)}
+                html = render_benefit(new_round, None, None, [], [], BASE, NOW, 'success')
+                self.assertNotIn('id="closed-application"', html)
+                self.assertIn('공식 신청 창구', html)
+
     def test_api_only_detail_does_not_manufacture_a_repeated_preparation_essay(self):
         a=row()
         self.assertEqual(editorial_html(a,None),'')
