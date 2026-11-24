@@ -511,9 +511,19 @@ def write_details(output, rows, previous, base, registry, blogs, feed_status, cu
     home_links = '<section id="staticDiscovery" class="detail-block"><span class="eyebrow">BENEFIT GUIDES</span><h2>많이 찾는 지원정보와 신청 준비 해설</h2><p>공식 누적 조회수가 높은 정보부터 확인하세요. 실제 접수 여부는 사업별 공식 창구에서 확인해야 합니다.</p><ul class="discovery-links">'
     home_links += ''.join('<li><a href="' + benefit_path(r['id']) + '">' + escape(r['title']) + '</a></li>' for r in home_rows)
     home_links += '</ul><a class="editorial-link" href="benefits/">지원정보 전체 목록 →</a></section>'
+    followup_rows = [row for row in listed if archived_round(row, current)]
+    if followup_rows:
+        home_links += ('<section id="closedBenefitFollowups" class="detail-block">'
+                       '<h2>접수 마감 후 확인할 일</h2>'
+                       '<p>신청 결과, 지급·사용기한 또는 다음 모집 공고를 사업별로 확인하세요.</p>'
+                       '<ul class="discovery-links">')
+        home_links += ''.join('<li><a href="' + benefit_path(row['id']) + '#closed-application">'
+                              + escape(row['title']) + '</a></li>' for row in followup_rows[:6])
+        home_links += '</ul></section>'
     return {'entries': entries, 'home': home_links, 'report': {
         'detailPages': len(rows), 'indexableDetails': len(rows) - len(held),
         'heldDetails': len(held), 'reviewedGuides': len(guides), 'guideIds': guides,
+        'closedApplicationFollowupIds': sorted(row['id'] for row in followup_rows),
         'blogLinks': blog_count, 'directoryPages': total_pages, 'retiredPages': len(retired),
         'heldReasons': held, 'rankingBasis': 'rawSource.serviceList.조회수',
         'sourceGeneration': next(iter(rows.values())).get('generation') if rows else None}}
