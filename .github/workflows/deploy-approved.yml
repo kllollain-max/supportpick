@@ -68,6 +68,9 @@ jobs:
           done
           echo "::error::The current attempt's Pages artifact is not visible through the Actions API."
           exit 1
+      - name: Allow the Pages artifact index to catch up
+        # deploy-pages uses the Actions artifact service, whose index can lag the REST API above.
+        run: sleep 25
       - name: Protect newer main changes before publication
         run: python tools/check_approved_head.py --approved-sha "$APPROVED_SHA"
       - uses: actions/deploy-pages@v4
