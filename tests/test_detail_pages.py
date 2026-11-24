@@ -44,23 +44,34 @@ class Text(HTMLParser):
 
 class StaticDetailTests(unittest.TestCase):
     def test_closed_round_shows_followup_and_removes_old_application_action(self):
+        current = datetime(2026, 11, 24, tzinfo=timezone.utc)
         cases = (
             ('142100000062', '2025.09.15~2025.12.31', '디지털 온누리상품권 앱'),
             ('611000000127', '2025.6.11.(수) 10:00 ~ 6. 24.(화)18:00', '마이페이지'),
+            ('135200005013', '2026.05.04~2026.05.20', '자립역량교육 이수 시간'),
+            ('GES000000110', '2026-2학기 신청기간 : 2026.7.1.~2026.11.17.', '전환대출의 마감은 별도였습니다'),
         )
         for sid, dates, followup in cases:
             with self.subTest(sid=sid):
                 archived = {**row(sid), 'period': dates, **period(dates)}
-                html = render_benefit(archived, None, None, [], [], BASE, NOW, 'success')
+                html = render_benefit(archived, None, None, [], [], BASE, current, 'success')
                 self.assertIn('id="closed-application"', html)
                 self.assertIn(followup, html)
                 self.assertNotIn('공식 신청 창구', html)
 
                 new_dates = '2026.11.01~2026.12.31'
                 new_round = {**archived, 'period': new_dates, **period(new_dates)}
-                html = render_benefit(new_round, None, None, [], [], BASE, NOW, 'success')
+                html = render_benefit(new_round, None, None, [], [], BASE, current, 'success')
                 self.assertNotIn('id="closed-application"', html)
                 self.assertIn('공식 신청 창구', html)
+
+    def test_loan_notice_waits_until_conversion_execution_ends(self):
+        dates = '2026-2학기 신청기간 : 2026.7.1.~2026.11.17.'
+        loan = {**row('GES000000110'), 'period': dates, **period(dates)}
+        current = datetime(2026, 11, 19, 6, tzinfo=timezone.utc)
+        html = render_benefit(loan, None, None, [], [], BASE, current, 'success')
+        self.assertNotIn('id="closed-application"', html)
+        self.assertIn('공식 신청 창구', html)
 
     def test_api_only_detail_does_not_manufacture_a_repeated_preparation_essay(self):
         a=row()

@@ -42,7 +42,7 @@ const { chromium } = require('playwright');
           assert.equal(await page.locator('.reviewed-amount-advisory').count(),1);
           assert.equal(await page.locator('.amount-source-notice').count(),1);
         }
-        if (['benefits/142100000062/', 'benefits/611000000127/'].includes(entry)) {
+        if (['benefits/142100000062/', 'benefits/611000000127/', 'benefits/135200005013/', 'benefits/GES000000110/'].includes(entry)) {
           await page.getByRole('heading', {name: '신청 마감 후 확인할 일', exact: true}).waitFor();
           assert.equal(await page.getByRole('link', {name: '공식 신청 창구 ↗', exact: true}).count(), 0);
         }
