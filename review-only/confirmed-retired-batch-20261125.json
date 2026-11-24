@@ -1,0 +1,788 @@
+{
+  "checkedAtKST": "2026-11-25T08:40:58+09:00",
+  "oldSource": "3c8a60a6f6129c82107145f380b9aeea69f3c4bc",
+  "oldGeneration": "gov24-42910050871-1",
+  "evidenceLibraryId": "libfile_88416c59749c819190f691600506fe9b",
+  "evidenceZipSha256": "5ea7dec70a4e3dc94b4f62a831940420375e0571cee980450802642ccf26ddf0",
+  "evidence": "Old published manifest includes every path, and the same source/generation public HTML verification passed 11058/11058. Current manifest and official catalog contain none of these IDs; each direct URL returned404.",
+  "baseSource": "8848bf496e677e20334ac568131400347d1035cd",
+  "existingRetiredIdsPreserved": [
+    "628000000176",
+    "478100000037",
+    "497000000103",
+    "O00027400003"
+  ],
+  "otherRegistryFieldsUnchanged": true,
+  "records": [
+    {
+      "id": "154300000136",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/154300000136/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "74816509b7611103e1ed86c6f62f23a1bb4bd223e5f46ad38137692fd69541ab"
+    },
+    {
+      "id": "304000000108",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/304000000108/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "d989e66fb2339fdcdf85403da43c9aae211c535608e7317a561f8ce006383295"
+    },
+    {
+      "id": "304000000243",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/304000000243/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "1161bba1e81f7b9788600779ddae4d73767eeb2dc37b842c6105b7eeaceceb19"
+    },
+    {
+      "id": "312000000107",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/312000000107/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "ebfc7c0018742094c4d6265d50d37f0b717a72e94bb82360d4b0be4dce127500"
+    },
+    {
+      "id": "312000000115",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/312000000115/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "b29fdfb9c66c1d4a99b1546fa17a523aebf435a5d5cd5e366cb5f7c3bd0d7ab6"
+    },
+    {
+      "id": "312000000121",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/312000000121/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "23826e16e4efef8fe1c94555dfd662c156842ff2c883b581b62b8bc9916d4487"
+    },
+    {
+      "id": "320000000102",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/320000000102/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "0d478c4d3c86dcdb6c9822d713bd025a163d553f6f6ed647533018a28e6059d0"
+    },
+    {
+      "id": "320000000298",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/320000000298/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "1908d2eb247d1008d27c6b7dd8a10d1a9afe35d2502c0e3cd7dad3739700c0e0"
+    },
+    {
+      "id": "320000000317",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/320000000317/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "ff68c4c5704d936cde30a3f4351263165937b60cb1c8066f3f13285da3f83502"
+    },
+    {
+      "id": "359000000450",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/359000000450/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "5809915542d83208f55d29ec5a10fb3c9af6b9e2ea2379610723105e18f459f2"
+    },
+    {
+      "id": "363000000235",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/363000000235/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "0d47c4bd5228bc974ca18812d1786b5f5572d4466d4f4fb0c5535654c9772e11"
+    },
+    {
+      "id": "371000000103",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/371000000103/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "bd76eb94f65093c426dbdd4dd0accee7ea042a546de24e661852282fcfb1a740"
+    },
+    {
+      "id": "383000000107",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/383000000107/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "bec5e58c03e79d1808a9c86cc0489eb69913b3e330eb52f72d0b43e617cfaa99"
+    },
+    {
+      "id": "383000000114",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/383000000114/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "32a2797cf92560922292d563e6fa08cef012237effe078f70f66f4dee34506d3"
+    },
+    {
+      "id": "383000000122",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/383000000122/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "08dd4a0125da526684d4a3725eb6e38e2173812b6749fc976d04793f4e84b8cd"
+    },
+    {
+      "id": "383000000160",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/383000000160/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "3a4732eef77e20540ecfbdb9d92cb806214d0845dadcfbe1d5a8f3fe0a0c716d"
+    },
+    {
+      "id": "383000000176",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/383000000176/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "f449af56054c82631757c3c89273a5b321f053537f446acdb1e0b4067131e2eb"
+    },
+    {
+      "id": "383000000180",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/383000000180/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "e7d249807a754c6689539460c3a5c871ce8fbcecaace2ced11fdb1e6dec249dd"
+    },
+    {
+      "id": "383000000181",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/383000000181/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "f9550bdd96703fc86d83fc51570321200733ff9e5dfef3eb792b5354d9cb419c"
+    },
+    {
+      "id": "383000000182",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/383000000182/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "bf7ba5dd90ec8697a78a699c8e75006369f3bdf33a04c20c3855dfc927f83721"
+    },
+    {
+      "id": "383000000554",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/383000000554/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "0b88c66276e601b924765b66876905fde64a4f33008a098748634f591d097a5f"
+    },
+    {
+      "id": "399000000112",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/399000000112/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "44137e6078ad6a703e78270296ad963321782e86bf5e902536bd130e34a9bb14"
+    },
+    {
+      "id": "401000000485",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/401000000485/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "47830714abf18eb25092432cb53e615fc5c593775d1693d7899f08743b50e28d"
+    },
+    {
+      "id": "401000000507",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/401000000507/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "6c80a493a25caf6f3585b44265ec03d5aa2ab40a5942ba43effa107c0a35a239"
+    },
+    {
+      "id": "404000000118",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/404000000118/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "78fdb9314f7fb9c4eb9c5b315934e0c1ce998c7899a4c3c287e85c921f16ad0a"
+    },
+    {
+      "id": "406000000102",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/406000000102/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "177aeb08e1f0b3a7a10b1b77e1d4b410c3684e7b2c80b5823a8fd2fbe493c3f9"
+    },
+    {
+      "id": "406000000515",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/406000000515/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "5b2c729494f7a068a68dd86ab1d20161da4abf92e9db29414cc282bda6148f90"
+    },
+    {
+      "id": "406000000532",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/406000000532/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "4ec2e83af39e105d8d43bfc59cd76bee1d9b281f381005555d90f106732afee7"
+    },
+    {
+      "id": "444000000107",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/444000000107/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "77de7d00fed5bde29d5306eebf2468deab28ca0ced4e71cabb9c32f53e7e359b"
+    },
+    {
+      "id": "444000000131",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/444000000131/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "cefc68e63412f3c4cd4facc58021c75f5df5f1a03a6eab60834f5e16db3e4d41"
+    },
+    {
+      "id": "444000000132",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/444000000132/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "caf666cfc3aa9e6614bc6bf26ebac2e84f9ba9fa49a43f1f962cfa185d2087a2"
+    },
+    {
+      "id": "444000000133",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/444000000133/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "1dc2d671d9bad6ff167cc32c1860bc29e794c92cb78ecee65727d4e7bcf0c637"
+    },
+    {
+      "id": "450000000138",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/450000000138/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "571a082b509edafb08a2e27fa1f7aaeab108efcd427718eb34c6119dcaf7b2ad"
+    },
+    {
+      "id": "452000000103",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000103/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "2824aa520d5b4f474414eebf63aa6df3753bc0cec2c906bada7a97a3ca7cd50d"
+    },
+    {
+      "id": "452000000107",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000107/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "df56110b4f9ac63ebde14f7fb2ea4ebb4bfbbc513ede5c2604d402d15ed0e33f"
+    },
+    {
+      "id": "452000000109",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000109/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "0d7034ea7932363f711f8870e8341e937888f211d62b59b5066554a01dd9328e"
+    },
+    {
+      "id": "452000000112",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000112/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "6145a76b564ea09ec9820e85c67f42363cfbe03f5bf6c42852de361133a226fb"
+    },
+    {
+      "id": "452000000114",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000114/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "8b2c70bf0391b5c39255589d4ed98e0245ad3dd12cfda8a3ffe4d6e975b2af57"
+    },
+    {
+      "id": "452000000121",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000121/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "31bbf8930a711ae5e65c7a797443f3e8a4d9e33e7e8934b4abc0ba16e4ba07e6"
+    },
+    {
+      "id": "452000000127",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000127/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "b1d7ae9920bc5815f3bf393c2bdfa9438d81ba7084c2f7b28e2c32c231e36cf5"
+    },
+    {
+      "id": "452000000143",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000143/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "efd9338f91c85325abe64b031a07161cda30bda7d0140ff5e9fc8d68867c27d2"
+    },
+    {
+      "id": "452000000144",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000144/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "015a219c24f8462154f5b0155f5a75d80c87591a08ec2d1b408f0971c31d06c1"
+    },
+    {
+      "id": "452000000146",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000146/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "7005fbdde6922bfbf05789190125b9ef48e74deedbc0fe50dc0e8a1491249899"
+    },
+    {
+      "id": "452000000155",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000155/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "1437b01978852c0fcfcd7dc07f10414559626005622c1551d2860d595daae4dc"
+    },
+    {
+      "id": "452000000156",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000156/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "414d4f9058dc6803811d8f39b361565e13d6ac2a684a54fe28ab55e1a44fce1f"
+    },
+    {
+      "id": "452000000172",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000172/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "94f9644d4963fc6c048223b3cf6d04874ba08f933bf79d35c50860f5fe1be3cf"
+    },
+    {
+      "id": "452000000177",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000177/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "89dafb5cba5ee5ef10cacacf0a1b19935215d5771b1dc7e7a7adf1e1127d500d"
+    },
+    {
+      "id": "452000000308",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000308/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "44e64075d4db958f34762730f1f66fc8690d869e80cb1e1c4f9aac8866b3b835"
+    },
+    {
+      "id": "452000000320",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000320/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "735eb745ba1ec3a01d2fbaaa12820d09b5f2be52ebda5668235251d40916a8e4"
+    },
+    {
+      "id": "452000000325",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000325/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "a0714347838f2f5c64e2244b7cf56c42a23b0dc511966e2cf3a4135063f5d628"
+    },
+    {
+      "id": "452000000333",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000333/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "d2b811a42e3b04ed14c30882c9cf0a200de68ff2fe9fc2762ab8e4c83ffef2e3"
+    },
+    {
+      "id": "452000000340",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000340/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "05d67656f6b316ba3b47c05bb1f93eaad288db12c813ac89fa72cc8f74c75ce9"
+    },
+    {
+      "id": "452000000346",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/452000000346/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "de714f4dfbb1c5ca4ea1ac8424562076b098ed32f1ea53a543fac2297416134d"
+    },
+    {
+      "id": "459000000119",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/459000000119/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "803a7d7964f377b40920309d8630f37a21f5b4d9d024b1081000116583d5297a"
+    },
+    {
+      "id": "475100000005",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/475100000005/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "f64ff9117c50dbb41f7120872da879f46a0355e7987bf4e324fe5dbc738a7971"
+    },
+    {
+      "id": "476000000169",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/476000000169/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "03fb786d4bdff4e8128058472b45a3f0de11c28a50d3540ede3a315df73df7ad"
+    },
+    {
+      "id": "481000000105",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/481000000105/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "0e33f297dac944ba22037f90588bad8d486742f924911f170f922aca4211cceb"
+    },
+    {
+      "id": "489000000143",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/489000000143/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "c583ad8c1e6b01bfe27f562a52f4ea3653b52ac79b5a4625acf975dafdd7c221"
+    },
+    {
+      "id": "494000000155",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/494000000155/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "1fc63fcaf1ea9fa316ad784de383c47143edcdb5513e88bab7132bbd185ccf65"
+    },
+    {
+      "id": "494000000156",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/494000000156/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "e2d09f38027bc377d7a2d310b38983f6df1964c63044b265f1068739bef035d7"
+    },
+    {
+      "id": "494000000157",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/494000000157/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "6ba4d6e05acb7a54337daa7b4afa82e5643725b4206263c746a6dd7200ccfc9e"
+    },
+    {
+      "id": "494000000159",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/494000000159/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "4cbd7c9f053ae01a5014da610722ce0cabeda3dcd5e5eaaaf49a2e393da5a809"
+    },
+    {
+      "id": "494000000160",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/494000000160/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "5ea8fc2ec02d798392199edf88208b4ee140e6312149db30b4a9529548d90efa"
+    },
+    {
+      "id": "494000000161",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/494000000161/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "08b3fbf6393f7990ec8927a907938d1eab4753bf258ba73ec89e24a944208229"
+    },
+    {
+      "id": "494000000162",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/494000000162/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "a3e221b5446d499bc40724e386e6a22ae0902dc72330a4bdf0acaeed9227194e"
+    },
+    {
+      "id": "494000000163",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/494000000163/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "4560bdd98d08448fd3a6cc7122b83c3ccf173c7420a63e86493f0babb22ce42d"
+    },
+    {
+      "id": "494000000178",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/494000000178/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "a42ee292e32fee7e8cedda77b942f2892e73c6979a220f5321ffaac6616ec7bb"
+    },
+    {
+      "id": "494000000237",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/494000000237/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "09e08b4b03760215d501ed66c9d6fced15ccbbd041bdaddbc3aff557c7262817"
+    },
+    {
+      "id": "536000000102",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/536000000102/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "faf422e16912a1896653ef5d5d6f8218249772a0f376422809cc294c25568907"
+    },
+    {
+      "id": "536000000107",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/536000000107/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "8ed38e1d2b27db5f2cab7778b185f1fb996d40749fa3bed68066ccb8f10f6728"
+    },
+    {
+      "id": "536000000114",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/536000000114/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "a695df4c04c1ce2f039e80b75c0df3ce31d51dabf63cf1388cb01abf215f2fcd"
+    },
+    {
+      "id": "536000000116",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/536000000116/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "52b68b6450b5f3a1d579ea9ca95a1c6cb7fdb4a3041c5eb138c14309a222f3a7"
+    },
+    {
+      "id": "536000000609",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/536000000609/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "5ae7d8e461ec28e07632f7cd19dacbe148b43a5f43b63903ae057423460a4114"
+    },
+    {
+      "id": "537000001450",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/537000001450/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "666991736dadf796288d593b423d577fc117b3378a9d384e838b965988cc5b8e"
+    },
+    {
+      "id": "548000000106",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/548000000106/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "d4d7b0856708917703f911062448dc04dc3c78f46e5dda0f20b67b7587ebe045"
+    },
+    {
+      "id": "569000000336",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/569000000336/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "962e4075bdeaab36a4d29b1999427cd5a78b2bbd768635ee42903f71ffb03646"
+    },
+    {
+      "id": "569000000346",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/569000000346/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "f0df083b17e93f964aa3a0a4644bfe0625e88b6b5f188f2940da0e3678162bf2"
+    },
+    {
+      "id": "569000000379",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/569000000379/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "421e7602dbe055fa58661772c2bb7910beac03f7c1572eaddfa605c4991a7063"
+    },
+    {
+      "id": "569000000389",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/569000000389/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "a08bd477db47eeb240725e6d52b1acbd20b1cbc940b408cd54ccf876ce88df8f"
+    },
+    {
+      "id": "570000000104",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/570000000104/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "895a5a412da4e24556c5b0415e0777d0bf7fc234524736743583bccd7069688f"
+    },
+    {
+      "id": "627000000113",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/627000000113/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "e43ab5083fcac2e9b1198810c3fa3eb31c8fd841e005569c552bb8e5589e452a"
+    },
+    {
+      "id": "627000000128",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/627000000128/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "025b2bc966b44d64ac4bc5f6e69b151d1fb5a2bc2d4e8508342c3d9ce5466e99"
+    },
+    {
+      "id": "627000000749",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/627000000749/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "a436adc7018c697d0294570cdff37a8e0aa78bb61495b46636327d055d6e5a90"
+    },
+    {
+      "id": "641000000668",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/641000000668/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "518097300611d41ee4bd56239c4964752b00c3db6074fd1eb13b314a3d9fb23d"
+    },
+    {
+      "id": "641000000874",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/641000000874/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "1f5529b9c7f3f448246668245149064595dff40878ec617d0fa0803939e7fae6"
+    },
+    {
+      "id": "643000000101",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/643000000101/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "50ff2b021d40264d5ffc6a64c95a8a0c6f64bc00665d2d134b773171c70ac106"
+    },
+    {
+      "id": "644000000853",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/644000000853/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "3d34aca581be0887fdff9012dcc2c54f13bcfb29f0a530de6a113f2fd0c697d7"
+    },
+    {
+      "id": "644000000863",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/644000000863/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "13084c3a293f1cd4abe57b845c321638e94f24f69d66617ca9bf657eaa295607"
+    },
+    {
+      "id": "645000000110",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/645000000110/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "025f40c0888d875cdd77e68586709711c5ed957a75c49d1c85cc40c5f35f2154"
+    },
+    {
+      "id": "646000000194",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/646000000194/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "7559548d3d6876070c256fcbd4ece16f0314b6561fac67671487d6a861275dd3"
+    },
+    {
+      "id": "648000001102",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/648000001102/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "8bf5a1098aa12138629d82fab784407354f1a54085b988c086970657bec7b78b"
+    },
+    {
+      "id": "654000000034",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/654000000034/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "fd95cfdaee1772a5526c4431cf6c60966738731ce346dfacf67060b7187a7fd9"
+    },
+    {
+      "id": "B55139800005",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/B55139800005/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "a9d04a5b6d243e6ea0efadd48fc5c6a8a609304fb9726677c6f26369c4496073"
+    },
+    {
+      "id": "B55139800008",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/B55139800008/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "1675a55bf76078d936f4cd78e57a0231ad9843023c1dc3c7b4ba2a9397638b68"
+    },
+    {
+      "id": "B55369400011",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/B55369400011/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "d522c1779683c5eb6a0520a3c6cd1ac77dd464c12422f4c93b498de74b76fc71"
+    },
+    {
+      "id": "O00045000001",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/O00045000001/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "fdcb6e01755f7bc25040ff72c8325fcbd31b100cf336ff5af60f9e9d0acc53d8"
+    },
+    {
+      "id": "O00045000002",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/O00045000002/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "67f8f0aad3ef2632f9706b382e0ab1d77214a886179826f14d0903d44b6ff0b7"
+    },
+    {
+      "id": "O00045000003",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/O00045000003/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "a4ae294f98782c1965b770548fbe4213131b9a41922ef9ae8179efb76728edfb"
+    },
+    {
+      "id": "O00046700001",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/O00046700001/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "e5302a877461485e51d055c07193b42b0f66cb536f9f044748321e271a1dd14d"
+    },
+    {
+      "id": "O00046700010",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/O00046700010/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "6fbaf5ccb7bd2bd3dcb373cacc068129362b73a0c55656cced00b20a0a609515"
+    },
+    {
+      "id": "O00046700012",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/O00046700012/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "1899ffecfb18ad3c21b7c6386cf45f53c879868f826fae948a40c897a80035b4"
+    },
+    {
+      "id": "O00051300004",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/O00051300004/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "4fc74b0025a98eea0a903a001b9980b0766436e0d6c917f5c3285efc88cda977"
+    },
+    {
+      "id": "O00051300006",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/O00051300006/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "af5a89523b4a01ad2a9b8e8a5e2479737eb3b15f9e6d764be45040740a921b27"
+    },
+    {
+      "id": "O00051300015",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/O00051300015/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "a7f81060f1c0e085564b63633dabd4fddeb9a24deca2d642e5bc647312c98021"
+    },
+    {
+      "id": "O00051300016",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/O00051300016/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "ef0a24a453e7a426d00297258a351d0fab274c0fc9b7b673ebdd0a8fd6a67dbe"
+    },
+    {
+      "id": "O00051300017",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/O00051300017/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "17045651925b9aac1ccd5a0d01604a6c4d597e8f893152a5c6f38363ec380e47"
+    },
+    {
+      "id": "O00059700007",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/O00059700007/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "0e9eac70619d5726ee8dc5f4dad3292cc9ab73729d187a1d5fd15a2ed485c4ba"
+    },
+    {
+      "id": "O00059700008",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/O00059700008/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "10a8607bf5c283ce9325674cd65cdbab779e6077234c37fd01379958d4d5e935"
+    },
+    {
+      "id": "O00059700009",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/O00059700009/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "ff123a3be50daa9870380b1e61e4d0254ca32fa4c0403e8220cb22d976095c83"
+    },
+    {
+      "id": "O00072800005",
+      "url": "https://kllollain-max.github.io/supportpick/benefits/O00072800005/",
+      "http": 404,
+      "initialError": null,
+      "oldSha256": "2799eba2f625a6815748c890895b4968048a52c436e2ef345d960950ca25c4bf"
+    }
+  ]
+}
