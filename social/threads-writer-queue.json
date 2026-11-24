@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-24T22:53:00.768308+09:00",
+  "prepared_at": "2026-11-25T08:33:52.430313+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -873,6 +873,22 @@
         "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003734&bnefType=all&svcId=627000000136",
         "https://youthdream.daegu.go.kr/"
       ]
+    },
+    {
+      "benefit_id": "336000000280",
+      "views": 34332,
+      "decision": "HOLD",
+      "reason": "11월25일 시행기관 현재 공고를 실제 web 직접 열람했으나 403 Forbidden, 정부24 원문도 도구에서 읽지 못함. 최신 완전 API에 11월30일 기간·3월3일 주소지 조건이 있으나 현재 원공고·정정·조기종료를 직접 대조하지 못했으므로 신규 안내 HOLD. 사업 종료 단정 아님. 공식 원문 접근 가능 시 다시 검토. 검색 요약·누적 조회수를 현재 접수 증거로 전용하지 않음.",
+      "sources": [
+        "https://www.bsgangseo.go.kr/portal/board/post/view.do?bcIdx=500&mid=0501010000&idx=407142",
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2124002&bnefType=all&svcId=336000000280"
+      ],
+      "checked_at": "2026-11-25T08:33:52.430313+09:00",
+      "access_results": {
+        "agency": "403 Forbidden",
+        "gov24": "web tool inaccessible"
+      },
+      "source_generation": "gov24-45499312067-1"
     }
   ],
   "entries": [
@@ -11786,6 +11802,307 @@
       },
       "revalidate_before": "2026-11-25T20:00:00+09:00",
       "full_delay_window_covered": true
+    },
+    {
+      "slot": "2026-11-26T08:00:00+09:00",
+      "benefit_id": "611000000137",
+      "source_fingerprint": "73fc4500db1c149826f7f2ffcddb3f456e34a05ef22712f4b871fdf27f1f36cc",
+      "source_generation": "gov24-45499312067-1",
+      "prepared_at": "2026-11-25T08:33:52.430313+09:00",
+      "expires_at": "2026-11-26T08:33:52.430313+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "611000000137",
+        "post_text": "서울 월동대책비 5만 원, 생계급여나 의료급여를 받는 가구도 대상인가요?\n네. 서울에 사는 생계급여 또는 의료급여 수급 가구가 대상이에요. 시설수급자는 제외돼요. 저소득 보훈대상 가구도 지원 대상에 포함돼요.\n\n서울복지포털이 안내하는 지원 시기는 11월이고, 금액은 가구당 연 5만 원이에요. 가구원이 두 명이어도 한 가구에 5만 원이에요.\n\n생계급여나 의료급여 자격이 있으면 별도 신청이나 서류 제출 없이 주소지 구청에서 지원해요. 우리 가구의 지급 여부는 주소지 구청에 문의할 수 있어요.\n\n프로필에서 ‘저소득시민 부가급여 지원’을 찾으면 대상·신청방법과 공식 안내 경로를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-26T08:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "서울 생계급여 또는 의료급여 수급가구·저소득보훈가구",
+          "central_message": "서울 월동대책비 5만 원, 생계급여나 의료급여를 받는 가구도 대상인가요?",
+          "pattern": "P8",
+          "selection_reason": "동일ID누적33739. 상위기존제외근거와새부산강서34332공식원문접근실패HOLD보존. 기존미예약사업은중복제외. 서울수급가구난방부담/가구단위/무신청판단의생활안정정보. 최근20도입대조,질문즉답→가구금액예시→신청없음→검색경로. 신규v3독립2회86→97. 효과나검색량실측주장없음.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "611000000137",
+              "source_ref": "https://wis.seoul.go.kr/sec/ctg/categoryDetail.do?id=40",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-25T08:33:52.430313+09:00",
+              "claims_supported": [
+                "실제183~226행: 서울 기초생계·의료급여 수급가구 시설수급자 제외, 저소득보훈가구도 월동대책비 대상. 11월 가구당 연5만원. 생계·의료급여 자격보유자 별도신청/서류없음. 개인지급완료/특정지급일 보장 없음."
+              ]
+            },
+            {
+              "source_id": "611000000137",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003645&bnefType=all&svcId=611000000137",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-25T08:33:52.430313+09:00",
+              "claims_supported": [
+                "최신완전API 동일ID611000000137 누적33739, 개인신청절차없음·주소지구청에서자격보유자지원·준비서류없음. 수집시각은 접수검증시각 아님."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 351,
+          "count_method": "python_len_including_spaces_newlines_CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "개별가구 지급여부/지급일은 구청 확인. 24h 만료가 다음날08~10전체창보다 이르므로 오늘10시후 공식/최신완전자료 실제 재검토 후 CAS갱신 필요. 현재수집본은내일08시신선도초과;실제발송최신완전세대필수. 프로필표시링크목적지확인+홈검색상세클릭검증,Threads리디렉션클릭완료자체는로그인오버레이로미확인."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+            "core_question": "서울 월동대책비 5만 원, 생계급여나 의료급여를 받는 가구도 대상인가요?",
+            "reader_scope": "서울 생계급여 또는 의료급여 수급가구·저소득보훈가구",
+            "angles": [
+              "시설수급자제외자격",
+              "연5만원가구단위",
+              "별도신청절차없음"
+            ],
+            "chosen_angle": "수급가구대상과가구단위혜택",
+            "opening_candidates": [
+              "서울 월동대책비 5만 원, 생계급여나 의료급여를 받는 가구도 대상인가요?",
+              "서울에서 겨울 준비가 부담되는 수급가구라면 월동대책비 기준을 확인해요.",
+              "서울 월동대책비는 가족 수에 따라 금액이 늘어날까요?"
+            ],
+            "chosen_opening": "서울 월동대책비 5만 원, 생계급여나 의료급여를 받는 가구도 대상인가요?",
+            "selection_reason": "동일ID누적33739. 상위기존제외근거와새부산강서34332공식원문접근실패HOLD보존. 기존미예약사업은중복제외. 서울수급가구난방부담/가구단위/무신청판단의생활안정정보. 최근20도입대조,질문즉답→가구금액예시→신청없음→검색경로. 신규v3독립2회86→97. 효과나검색량실측주장없음.",
+            "history_posts_checked": 20,
+            "comparison_eligible": false,
+            "comparison_exclusion": "신규v3질문형·본문동시개편,기존순수도입A/B비교와분리",
+            "profile_route": {
+              "profile": "https://www.threads.com/@hid_1004",
+              "visible_link_target": "https://kllollain-max.github.io/supportpick/",
+              "home_search": "저소득시민 부가급여",
+              "actual_search_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/611000000137/",
+              "method": "CUA public profile visible target; target opened separately; actual home search + result click + detail visible",
+              "redirect_click_completed": false,
+              "checked_at": "2026-11-25T08:33:52.430313+09:00"
+            },
+            "master_full_used": true,
+            "search_evidence": "검색결과 저소득시민 부가급여·월동대책비·가구당5만원 표현 확인. 자동완성/검색량실측 없음.",
+            "observed_metrics_context": "151실제관측과기존14일평가보존;7/30일계정통계·완독/체류/CTA귀속미측정,효과주장없음."
+          },
+          "astra_final_review": {
+            "actual_model": "gpt-6.2-astra",
+            "final_verdict": "PASS",
+            "score": 97,
+            "policy_version": "3.0",
+            "calls": 2,
+            "initial_review": {
+              "reviewer_role": "independent_editor",
+              "model": "gpt-6.2-astra",
+              "phase": "first",
+              "version": "3.0",
+              "slot": "2026-11-26 08:00",
+              "format": "TEXT",
+              "score": 86,
+              "rubric": [
+                {
+                  "category": "첫문장",
+                  "score": 14,
+                  "max": 15,
+                  "rationale": "금액과 대상이 구체적이나 가운데점이 두 급여 동시 수급으로 읽힐 여지가 있다."
+                },
+                {
+                  "category": "관심의도",
+                  "score": 13,
+                  "max": 15,
+                  "rationale": "질문에 즉답하지만 교통비로 주제가 이동한다."
+                },
+                {
+                  "category": "정확성",
+                  "score": 18,
+                  "max": 20,
+                  "rationale": "금액·월·시설수급자 예외 일치. 저소득 보훈대상 가구가 빠졌고 무신청 안내의 적용 범위를 더 명시할 수 있다."
+                },
+                {
+                  "category": "완독",
+                  "score": 12,
+                  "max": 15,
+                  "rationale": "교통비 비교와 신청 안내의 반복이 호흡을 끊는다."
+                },
+                {
+                  "category": "공유공감",
+                  "score": 8,
+                  "max": 10,
+                  "rationale": "가구 단위라는 설명을 구체적 가구 예시로 바꾸면 전달하기 쉽다."
+                },
+                {
+                  "category": "가치차별",
+                  "score": 8,
+                  "max": 10,
+                  "rationale": "가구 단위와 별도 신청 여부는 실제 궁금증을 풀지만 타 급여 비교의 실익이 작다."
+                },
+                {
+                  "category": "모바일",
+                  "score": 4,
+                  "max": 5,
+                  "rationale": "단락 구분이 있으나 첫 응답 문단의 정보가 몰렸다."
+                },
+                {
+                  "category": "텍스트완성도",
+                  "score": 5,
+                  "max": 5,
+                  "rationale": "단독으로 질문과 답변을 읽을 수 있다."
+                },
+                {
+                  "category": "프로필유도",
+                  "score": 4,
+                  "max": 5,
+                  "rationale": "마지막 지정 문구는 정확하지만 직전 문장의 행동 지시가 중복된다."
+                }
+              ],
+              "decision": "HOLD",
+              "blocking_requirements": [
+                "Threads 프로필에서 지원금픽 홈을 거쳐 서비스 611000000137 상세로 도달하는 실제 경로 미확인. 프로필 직접 열람 실패. 상세 단독 HTTP 200은 대체 근거가 될 수 없음."
+              ],
+              "revision": "구조 재작성",
+              "source_verification": {
+                "direct": "서울복지포털 공식 페이지 웹 직접 열람, 185·210~223행. https://wis.seoul.go.kr/sec/ctg/categoryDetail.do?id=40",
+                "supplied": "정부24 동일 서비스의 주소지 구청 안내와 지원금픽 상세 200은 상위 작업 제공 기록. 이 검수에서 지원금픽 상세와 프로필 직접 웹 열람 실패."
+              },
+              "revised_body": "서울 월동대책비 5만 원, 생계급여나 의료급여를 받는 가구도 대상인가요?\n네. 서울에 사는 생계급여 또는 의료급여 수급 가구가 대상이에요. 시설수급자는 제외돼요. 저소득 보훈대상 가구도 지원 대상에 포함돼요.\n\n서울복지포털이 안내하는 지원 시기는 11월이고, 금액은 가구당 연 5만 원이에요. 가구원이 두 명이어도 한 가구에 5만 원이에요.\n\n생계급여나 의료급여 자격이 있으면 별도 신청이나 서류 제출 없이 주소지 구청에서 지원해요. 우리 가구의 지급 여부는 주소지 구청에 문의할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+              "replies": [],
+              "revised_char_count": 293,
+              "text_checks": {
+                "within_500": true,
+                "standalone": true,
+                "exact_cta_once": true,
+                "no_url_or_hashtag": true,
+                "immediate_answer": true
+              },
+              "final_rereview": "pending"
+            },
+            "final_review": {
+              "actual_model": "gpt-6.2-astra",
+              "reviewed_at": "2026-11-24T23:32:35.585824+00:00",
+              "slot": "2026-11-26 08:00",
+              "format": "TEXT",
+              "phase": "final",
+              "version": "3.0",
+              "first_score": 86,
+              "score": 97,
+              "rubric": [
+                {
+                  "category": "첫문장",
+                  "score": 15,
+                  "max": 15,
+                  "rationale": "지역·급여·금액을 한 질문에 담고 두 급여 가운데 하나라는 뜻을 명시했다."
+                },
+                {
+                  "category": "관심의도",
+                  "score": 15,
+                  "max": 15,
+                  "rationale": "수급 가구의 자격 질문에 즉답하고 신청 및 지급 확인까지 연결한다."
+                },
+                {
+                  "category": "정확성",
+                  "score": 20,
+                  "max": 20,
+                  "rationale": "시설 예외와 보훈 가구, 11월과 가구당 연 5만 원은 서울복지포털과 일치한다. 별도 신청·서류는 생계·의료 자격에 한정했다. 지급 완료나 개인별 지급일 보장은 없다."
+                },
+                {
+                  "category": "완독",
+                  "score": 14,
+                  "max": 15,
+                  "rationale": "타 급여 비교를 없애고 대상·금액·신청 순서로 정리했다. 마지막 두 단락의 프로필 표현이 겹친다."
+                },
+                {
+                  "category": "공유공감",
+                  "score": 9,
+                  "max": 10,
+                  "rationale": "두 명인 가구 예시로 가족에게 금액을 설명하기 쉽다."
+                },
+                {
+                  "category": "가치차별",
+                  "score": 9,
+                  "max": 10,
+                  "rationale": "가구 기준, 시설 예외, 지급 확인 창구와 검색어를 함께 준다."
+                },
+                {
+                  "category": "모바일",
+                  "score": 5,
+                  "max": 5,
+                  "rationale": "짧은 문단으로 질문·금액·신청·검색을 구분했다."
+                },
+                {
+                  "category": "텍스트완성도",
+                  "score": 5,
+                  "max": 5,
+                  "rationale": "추가 댓글이나 이미지 없이 자격·금액·시기를 이해할 수 있다."
+                },
+                {
+                  "category": "프로필유도",
+                  "score": 5,
+                  "max": 5,
+                  "rationale": "프로필에서 찾을 서비스명과 확인 항목이 명확하고 지정 CTA가 마지막에 한 번 있다."
+                }
+              ],
+              "change_reason": "질문 무관 교통비 삭제, 저소득 보훈대상 가구 포함, 시설수급자 예외 및 무신청 적용대상 명시, 두 명 가구 예시와 실제 검색할 서비스명 추가. 프로필 링크의 실제 목적지와 홈 검색 결과의 상세 도착 근거 추가.",
+              "final_body": "서울 월동대책비 5만 원, 생계급여나 의료급여를 받는 가구도 대상인가요?\n네. 서울에 사는 생계급여 또는 의료급여 수급 가구가 대상이에요. 시설수급자는 제외돼요. 저소득 보훈대상 가구도 지원 대상에 포함돼요.\n\n서울복지포털이 안내하는 지원 시기는 11월이고, 금액은 가구당 연 5만 원이에요. 가구원이 두 명이어도 한 가구에 5만 원이에요.\n\n생계급여나 의료급여 자격이 있으면 별도 신청이나 서류 제출 없이 주소지 구청에서 지원해요. 우리 가구의 지급 여부는 주소지 구청에 문의할 수 있어요.\n\n프로필에서 ‘저소득시민 부가급여 지원’을 찾으면 대상·신청방법과 공식 안내 경로를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+              "sha256": "b98e2ee01ac565f3e54a6bb9335fa9192db6f139c3bb8c689415f24a8f4e8904",
+              "character_count": 351,
+              "replies": [],
+              "images": [],
+              "checks": {
+                "immediate_answer": true,
+                "standalone": true,
+                "within_500": true,
+                "exact_cta_once_last": true,
+                "no_urls_hashtags": true,
+                "no_replies": true,
+                "text_only": true,
+                "official_facts": true,
+                "no_personal_payment_promise": true,
+                "profile_to_detail_route": true,
+                "score_at_least_95": true
+              },
+              "source_verification": {
+                "official_direct": "서울복지포털 공식 페이지 웹 직접 열람, 185·210~223행. https://wis.seoul.go.kr/sec/ctg/categoryDetail.do?id=40",
+                "gov24": "상위 작업의 API 대조 기록. 정부24 611000000137과 지원금픽 상세의 주소지 구청·개인 신청 절차 없음 안내가 일치.",
+                "route": "상위 작업이 공개 프로필에서 표시 링크 및 리디렉션 URL의 목적지 파라미터를 직접 확인했다. 관측한 정확한 목적지로 홈페이지를 열어 서비스 검색, 단일 결과 클릭 및 상세 URL 도착을 검증했다. 실제 링크 목적지와 홈에서 상세까지의 경로를 식별·검증한다는 요건 충족. 오버레이로 Threads 리디렉션 클릭의 완료 자체는 확인되지 않았다."
+              },
+              "blocking_requirements": [],
+              "decision": "APPROVE"
+            },
+            "body_sha256": "b98e2ee01ac565f3e54a6bb9335fa9192db6f139c3bb8c689415f24a8f4e8904",
+            "asset_sha256": null,
+            "fallback_reason": null
+          }
+        },
+        "next_history_record": {
+          "program_id": "611000000137",
+          "notice_version": "gov24-45499312067-1;official2026-11-25T08:33:52.430313+09:00",
+          "pattern": "P8",
+          "opening": "서울 월동대책비 5만 원, 생계급여나 의료급여를 받는 가구도 대상인가요?",
+          "structure": "자격질문→즉답→가구금액→무신청→실제검색경로",
+          "media_turn": "TEXT"
+        }
+      },
+      "full_delay_window_covered": false,
+      "revalidation_required_reason": "expires_at_before_slot_plus_two_hours",
+      "revalidate_before": "2026-11-26T08:00:00+09:00"
     }
   ]
 }
