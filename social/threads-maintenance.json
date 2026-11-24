@@ -5687,10 +5687,10 @@
     }
   },
   "last_check": {
-    "checked_at": "2026-11-24T14:46:52.845266+09:00",
-    "result": "prepublication_expiry_prevention_revalidated",
-    "maintenance_previous_blob_sha": "8f038d991a49fa5d3b7c094419b3f7533f622f3a",
-    "current_main_sha": "0fe61cdb0f84a771bc123777892138444f5b38e5",
+    "checked_at": "2026-11-24T15:20:04.534414+09:00",
+    "result": "no_update",
+    "maintenance_previous_blob_sha": "4ea2dd181b74130ceeb2296eba8000f3d1c6c4cd",
+    "current_main_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
     "publication_ledger_sha": "56bb4d20e8c10317791fb4c43b1805b096ccf138",
@@ -5720,7 +5720,7 @@
       "job_id": 138051732020,
       "artifact_id": 14868507630,
       "artifact_digest": "sha256:b768e7aa698979de916b7404b321a7e5e8c15302e7ce3847b3dcfba08a734d22",
-      "artifact_redownloaded_this_check": true,
+      "artifact_redownloaded_this_check": false,
       "artifact_digest_verified": true,
       "read_current_verify_snapshot_load_feed": true,
       "count": 10895,
@@ -5779,7 +5779,7 @@
       "collection_complete": true,
       "workflow_complete": true,
       "all_four_fingerprints_priority_and_full_delay_windows_pass": true,
-      "original_notice_rereview_this_check": true,
+      "original_notice_rereview_this_check": false,
       "job_logs_retrieved_this_check": false,
       "actual_tests_passed": 303,
       "public_verification_artifact_id": 14870600826,
@@ -5813,12 +5813,12 @@
       "no_collection_failure": true,
       "observed_in_progress_at_start": false,
       "completed_success_before_record": true,
-      "artifact_digest_previously_verified_cached_bytes": false,
+      "artifact_digest_previously_verified_cached_bytes": true,
       "current_complete_snapshot_verified": true,
       "actual_send_latest_complete_source_required": true
     },
     "writer": {
-      "checked_at": "2026-11-24T14:45:53.443971+09:00",
+      "checked_at": "2026-11-24T15:20:04.534414+09:00",
       "ready": 4,
       "future24h_ready": 4,
       "new_drafts": 0,
@@ -5882,6 +5882,7 @@
       "pending": null,
       "lease": null,
       "new_posts": 0,
+      "new_incidents": 0,
       "new_metrics": 0,
       "observations": 146,
       "evaluation_due": false,
@@ -5889,8 +5890,9 @@
       "astra_review_invocations": 0,
       "existing_Astra_review_preserved": true,
       "current_image_bytes_sha_recompared": true,
+      "new_visual_inspection": false,
       "source_recheck_required_at_publish": true,
-      "expiry_prevention_revalidations": 1
+      "expiry_prevention_revalidations": 0
     },
     "metrics": {
       "run_id": "45326798251",
@@ -5996,10 +5998,10 @@
       "pending": null,
       "lease": null,
       "stage": "read_only_maintenance_complete",
-      "reason": "Existing maternal READY fullwindow expiry gap prevented through actual primarypage rereview, complete artifact digest and current image SHA. Same436char AstraPASS/body/media/cohort.76completepublishedrowsunchanged; no publishing recovery/dispatch/code needed.",
+      "reason": "76completeverifiedpublishedrowsandpending/lease unchanged; no newtargetrunversion.4futureREADY passnominal/full2hwindow,actualimageSHArecompared. No publicationrecovery/codefixrequired.",
       "new_publication_this_check": false
     },
-    "next_condition": "All4futureREADY validate atslot andslot+2h-1s,preview4. New maternal expiresNov25 14:45:53 covers12~14fullwindow after actualofficial4pages/feed/imageSHA rereview; originalpre-refreshentryarchived. Current07:18completegeneration not assumed fresh tomorrow: actualpublisher must latestcompletefreshsource/currentofficial/account/ledger/pending/CAS checks.76completeposts/146actualobservations unchanged, no newpublication/newmetrics/newAstra/newdraft.14dayevaluation notbeforetoday17:00:08KST. No backfill/rerun/dispatch/schedule.",
+    "next_condition": "Keep fourREADY unchanged. Existingregularpublisher consumes16/20/Nov25 08/12 only afterlatestcompletefreshsource/currentofficial/account/ledger/pending/CAS/firstattempt/max4checks. Current07:18source notassumedfresh tomorrow; nominal/full2hpreview simulation doesnotguaranteefuturefacts. Prior14:45maternal genuineexpiryrepair and actualAstraPASS preserved.146metrics/no currentlyduewindows;14dayevaluationnotbeforetoday17:00:08. No newdraft/free24hslot/dispatch/rerun/backfill/POST/schedule.",
     "publication": {
       "run_id": "45321813009",
       "run_attempt": 1,
@@ -6055,414 +6057,13 @@
       "previous_remote_evidence_preserved": true
     },
     "official_review_recovery": {
-      "new_official_page_review_this_check": true,
-      "program_id": "PTR000050390",
-      "checked_at": "2026-11-24T14:45:53.443971+09:00",
-      "rereview_audit": {
-        "checked_at": "2026-11-24T14:45:53.443971+09:00",
-        "previous_entry": {
-          "slot": "2026-11-25T12:00:00+09:00",
-          "benefit_id": "PTR000050390",
-          "source_fingerprint": "18fd88694ebfc718e67ac4fc20c1d1493580eb9556d35a56c6dd4290088f78ba",
-          "source_generation": "gov24-45277137519-1",
-          "prepared_at": "2026-11-24T13:14:28.132838+09:00",
-          "expires_at": "2026-11-25T13:14:28.132838+09:00",
-          "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-          "writer": {
-            "schema_version": "supportpick.writer.v1",
-            "status": "READY",
-            "selected_program_id": "PTR000050390",
-            "post_text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?\n150%를 넘어도 산모가 사는 지역의 예외지원 기준에 해당하면 신청할 수 있어요.\n\n국내에 주민등록을 둔 출산가정이라면 기본 소득 기준은 두 가지예요. 산모나 배우자가 생계·의료·주거·교육급여 수급자 또는 차상위계층이거나, 가구의 건강보험료 본인부담금 합산액이 기준중위소득 150% 이하에 해당하는 경우예요.\n\n소득초과 가정의 예외지원은 지자체별 기준과 예산에 따라 달라요. 산모 주소지 보건소가 자격을 판정해요.\n\n건강관리사가 집을 방문해 산모와 아기 돌봄을 돕는 바우처예요. 서비스가격에서 정부지원금을 뺀 금액은 가정이 부담해요.\n\n일반 출산가정의 신청기한은 출산예정일 40일 전부터 출산일로부터 60일까지예요. 미숙아·선천성이상아 입원 등에는 별도 신청기한이 적용돼요.\n\n자세한 사항은 프로필링크 확인",
-            "draft_text": null,
-            "reply_texts": [],
-            "media": {
-              "turn": "IMAGE",
-              "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-              "check": "MATCHED",
-              "image_copy": null,
-              "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
-            },
-            "review": {
-              "planned_at": "2026-11-25T12:00:00+09:00",
-              "application_status": "ALWAYS",
-              "reader": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
-              "central_message": "소득기준을넘어도지역별예외지원대상이될수있는가",
-              "pattern": "P5",
-              "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
-              "interest_basis": "OBSERVED_METRICS",
-              "duplicate_check": "CHECKED",
-              "evidence": [
-                {
-                  "source_id": "PTR000050390",
-                  "source_ref": "https://www.e-health.go.kr/gh/heSrvc/selectBbsDtlViewInfo.do?bbsId=U00322&bbsNo=381829&bbsSeCd=Z6&menuId=200040",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-24T13:14:28.132838+09:00",
-                  "claims_supported": [
-                    "실제2026기준129~159행:주민등록/외국인등록,수급차상위 또는건강보험료150%이하,지역예산별예외,방문돌봄바우처,일반40일전~60일후/미숙아선천성이상입원퇴원30일. 본문은국내주민등록가정으로한정."
-                  ]
-                },
-                {
-                  "source_id": "PTR000050390",
-                  "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10711020100",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-24T13:14:28.132838+09:00",
-                  "claims_supported": [
-                    "실제1035~1100행:기본대상/지역예외/주소지보건소자격판정/서비스가격-정부지원금=본인부담.2025가격표를2026금액으로전용않음."
-                  ]
-                },
-                {
-                  "source_id": "PTR000050390",
-                  "source_ref": "https://www.cbcsi.or.kr/content/536",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-24T13:14:28.132838+09:00",
-                  "claims_supported": [
-                    "실제92~134행:가구건강보험료150%,40일전~60일후,보건소조사선정,이용자차액부담."
-                  ]
-                },
-                {
-                  "source_id": "PTR000050390",
-                  "source_ref": "https://www.guro.go.kr/health/contents.do?key=1329",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-24T13:14:28.132838+09:00",
-                  "claims_supported": [
-                    "실제493~523행:2026구로지역모든가정지원은지역예외사례이며전국으로확대않음. 현재가격미게시."
-                  ]
-                },
-                {
-                  "source_id": "PTR000050390",
-                  "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=741282&bnefType=all&svcId=PTR000050390",
-                  "access_method": "PROVIDED_OFFICIAL_TEXT",
-                  "verified_at": "2026-11-24T13:14:28.132838+09:00",
-                  "claims_supported": [
-                    "완전세대gov24-45277137519-1 실제동일ID serviceList누적조회35265,checkedAt07:16:28.229346와수집07:18/원문열람시각구별. API선정기준의출산후30일은2026e보건소60일과상이하여최신2026기관안내로해소;가격추정없음."
-                  ]
-                },
-                {
-                  "source_id": "PTR000050390",
-                  "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-                  "access_method": "UPSTREAM_VERIFIED",
-                  "verified_at": "2026-11-24T13:14:28.132838+09:00",
-                  "claims_supported": [
-                    "현재PNG실제GET SHA와main image-review PASS재대조일치. 일반브랜드만있고사업명/금액/기간없음. 독립아스트라는실물열람. 기존360px검수기록보존."
-                  ]
-                }
-              ],
-              "checks": {
-                "facts": "PASS",
-                "current_status": "PASS",
-                "eligibility_and_units": "PASS",
-                "cta_and_no_links": "PASS",
-                "length": "PASS",
-                "media": "PASS"
-              },
-              "char_count": 436,
-              "count_method": "python_len_including_spaces_and_newlines",
-              "missing_info": [],
-              "hold_reasons": [],
-              "warnings": [
-                "지역별잔여예산/개별선정/거래실행/프로필사이트경로미확인,보장않음.",
-                "현재수집본은내일12시신선하다고가정않음. 실제발송시최신완전세대와공식상태/이미지재검증.",
-                "최대24h검수만료가내일12~14시전체창보다먼저끝남. 다음기존점검에서공식원문·접수상태·최신완전세대·이미지SHA실제재대조후CAS갱신필수;날짜만변경금지."
-              ],
-              "reach_editorial": {
-                "policy_id": "supportpick-threads-reach-v1-20261109",
-                "core_question": "소득기준을넘어도지역별예외지원대상이될수있는가",
-                "reader_scope": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
-                "angles": [
-                  "소득초과자격",
-                  "방문돌봄과본인부담",
-                  "신청기한준비"
-                ],
-                "chosen_angle": "소득초과자격",
-                "opening_candidates": [
-                  {
-                    "type": "생활 상황형",
-                    "group": "A",
-                    "text": "출산 뒤 돌봄이 필요한데 소득 때문에 산모·신생아 건강관리 신청을 망설이고 있나요?"
-                  },
-                  {
-                    "type": "대상·혜택형",
-                    "group": "B",
-                    "text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?"
-                  },
-                  {
-                    "type": "조건 설명형",
-                    "group": null,
-                    "text": "산모·신생아 건강관리의 소득초과 예외지원은 전국에서 같을까요?"
-                  }
-                ],
-                "chosen_opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
-                "opening_type": "질문형 대상·혜택",
-                "cohort": "B",
-                "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
-                "history_posts_checked": 20,
-                "comparison_eligible": false,
-                "comparison_exclusion": "새질문형정책및본문편집동시적용으로순수도입군비교불가. 시간대소급재분류않음.",
-                "comparison_strata": {
-                  "geo": "전국지역별예외",
-                  "audience": "출산가정",
-                  "benefit": "돌봄바우처",
-                  "media": "IMAGE"
-                },
-                "comparison_group": "24h A19/B20중앙값63/62,매칭쌍0·교란으로효과미입증;비중유지",
-                "applied_elements": [
-                  "대상질문직답",
-                  "건강보험료와중위소득구별",
-                  "현금과바우처구별",
-                  "기한특례와지역재량구별"
-                ],
-                "master_full_used": true,
-                "supplemental_full_used_in_current_model_input": true,
-                "profile_route": "실제사이트내검색/상세이번미검증,이동/접수보장없음"
-              },
-              "astra_final_review": {
-                "model": "gpt-6.2-astra",
-                "independent_agent": "/root/maternal_final_review",
-                "initial_verdict": "REVISE",
-                "initial_changes": [
-                  "추가확인CTA삭제",
-                  "기한특례를지자체재량과구별",
-                  "본문독자국내주민등록가정으로한정"
-                ],
-                "final_verdict": "PASS",
-                "final_checked_at": "2026-11-24T13:14:28.132838+09:00",
-                "actual_review_calls": 2,
-                "final_text_sha256": "2db46127cba440ca73581950d5c1381a28019e962284ffe8a0c17846b7751d38",
-                "char_count": 436,
-                "image": {
-                  "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-                  "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-                  "actually_viewed_by_reviewer": true
-                },
-                "final_result": "제목다음문장직답,소득예외/기한특례구별,436자,본문CTA1/URL0/추가행동0,실제이미지사업주장없음"
-              }
-            },
-            "next_history_record": {
-              "program_id": "PTR000050390",
-              "notice_version": "gov24-45277137519-1;2026e보건소실제열람2026-11-24T13:14:28.132838+09:00",
-              "pattern": "P5",
-              "opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
-              "structure": "소득초과질문→지역예외직답→기본자격→차액부담→일반신청기간/입원특례",
-              "media_turn": "IMAGE"
-            }
-          },
-          "revalidate_before": "2026-11-25T12:00:00+09:00",
-          "full_delay_window_covered": false,
-          "revalidation_required_reason": "expires_at_before_slot_plus_two_hours"
-        },
-        "refreshed_entry": {
-          "slot": "2026-11-25T12:00:00+09:00",
-          "benefit_id": "PTR000050390",
-          "source_fingerprint": "18fd88694ebfc718e67ac4fc20c1d1493580eb9556d35a56c6dd4290088f78ba",
-          "source_generation": "gov24-45277137519-1",
-          "prepared_at": "2026-11-24T14:45:53.443971+09:00",
-          "expires_at": "2026-11-25T14:45:53.443971+09:00",
-          "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-          "writer": {
-            "schema_version": "supportpick.writer.v1",
-            "status": "READY",
-            "selected_program_id": "PTR000050390",
-            "post_text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?\n150%를 넘어도 산모가 사는 지역의 예외지원 기준에 해당하면 신청할 수 있어요.\n\n국내에 주민등록을 둔 출산가정이라면 기본 소득 기준은 두 가지예요. 산모나 배우자가 생계·의료·주거·교육급여 수급자 또는 차상위계층이거나, 가구의 건강보험료 본인부담금 합산액이 기준중위소득 150% 이하에 해당하는 경우예요.\n\n소득초과 가정의 예외지원은 지자체별 기준과 예산에 따라 달라요. 산모 주소지 보건소가 자격을 판정해요.\n\n건강관리사가 집을 방문해 산모와 아기 돌봄을 돕는 바우처예요. 서비스가격에서 정부지원금을 뺀 금액은 가정이 부담해요.\n\n일반 출산가정의 신청기한은 출산예정일 40일 전부터 출산일로부터 60일까지예요. 미숙아·선천성이상아 입원 등에는 별도 신청기한이 적용돼요.\n\n자세한 사항은 프로필링크 확인",
-            "draft_text": null,
-            "reply_texts": [],
-            "media": {
-              "turn": "IMAGE",
-              "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-              "check": "MATCHED",
-              "image_copy": null,
-              "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
-            },
-            "review": {
-              "planned_at": "2026-11-25T12:00:00+09:00",
-              "application_status": "ALWAYS",
-              "reader": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
-              "central_message": "소득기준을넘어도지역별예외지원대상이될수있는가",
-              "pattern": "P5",
-              "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
-              "interest_basis": "OBSERVED_METRICS",
-              "duplicate_check": "CHECKED",
-              "evidence": [
-                {
-                  "source_id": "PTR000050390",
-                  "source_ref": "https://www.e-health.go.kr/gh/heSrvc/selectBbsDtlViewInfo.do?bbsId=U00322&bbsNo=381829&bbsSeCd=Z6&menuId=200040",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-24T14:45:53.443971+09:00",
-                  "claims_supported": [
-                    "실제2026기준129~159행:주민등록/외국인등록,수급차상위 또는건강보험료150%이하,지역예산별예외,방문돌봄바우처,일반40일전~60일후/미숙아선천성이상입원퇴원30일. 본문은국내주민등록가정으로한정.",
-                    "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
-                  ]
-                },
-                {
-                  "source_id": "PTR000050390",
-                  "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10711020100",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-24T14:45:53.443971+09:00",
-                  "claims_supported": [
-                    "실제1035~1100행:기본대상/지역예외/주소지보건소자격판정/서비스가격-정부지원금=본인부담.2025가격표를2026금액으로전용않음.",
-                    "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
-                  ]
-                },
-                {
-                  "source_id": "PTR000050390",
-                  "source_ref": "https://www.cbcsi.or.kr/content/536",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-24T14:45:53.443971+09:00",
-                  "claims_supported": [
-                    "실제92~134행:가구건강보험료150%,40일전~60일후,보건소조사선정,이용자차액부담.",
-                    "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
-                  ]
-                },
-                {
-                  "source_id": "PTR000050390",
-                  "source_ref": "https://www.guro.go.kr/health/contents.do?key=1329",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-24T14:45:53.443971+09:00",
-                  "claims_supported": [
-                    "실제493~523행:2026구로지역모든가정지원은지역예외사례이며전국으로확대않음. 현재가격미게시.",
-                    "本회차14시대 해당공식페이지실제open/find재열람.2026e보건소131~159/보건부1062~1100/충북92~134/구로493~523재대조;조건/기한/본인부담변경없음. 지역추가지원종료를전국제도종료로확대하지않음. 개별지역예산/선정은보장않음."
-                  ]
-                },
-                {
-                  "source_id": "PTR000050390",
-                  "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=741282&bnefType=all&svcId=PTR000050390",
-                  "access_method": "PROVIDED_OFFICIAL_TEXT",
-                  "verified_at": "2026-11-24T14:45:53.443971+09:00",
-                  "claims_supported": [
-                    "완전세대gov24-45277137519-1 실제동일ID serviceList누적조회35265,checkedAt07:16:28.229346와수집07:18/원문열람시각구별. API선정기준의출산후30일은2026e보건소60일과상이하여최신2026기관안내로해소;가격추정없음.",
-                    "本회차실제artifact ZIP SHA검증/완전snapshot manifest재검증/load_feed/read_current,동일ID및fingerprint재대조. 최신완전세대07:18을내일발송시신선하다고가정않음."
-                  ]
-                },
-                {
-                  "source_id": "PTR000050390",
-                  "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-                  "access_method": "UPSTREAM_VERIFIED",
-                  "verified_at": "2026-11-24T14:45:53.443971+09:00",
-                  "claims_supported": [
-                    "현재PNG실제GET SHA와main image-review PASS재대조일치. 일반브랜드만있고사업명/금액/기간없음. 독립아스트라는실물열람. 기존360px검수기록보존.",
-                    "本회차실제PNG GET후현재main image-review SHA와재대조일치. 새직접시각검수아님."
-                  ]
-                }
-              ],
-              "checks": {
-                "facts": "PASS",
-                "current_status": "PASS",
-                "eligibility_and_units": "PASS",
-                "cta_and_no_links": "PASS",
-                "length": "PASS",
-                "media": "PASS"
-              },
-              "char_count": 436,
-              "count_method": "python_len_including_spaces_and_newlines",
-              "missing_info": [],
-              "hold_reasons": [],
-              "warnings": [
-                "지역별잔여예산/개별선정/거래실행/프로필사이트경로미확인,보장않음.",
-                "현재수집본은내일12시신선하다고가정않음. 실제발송시최신완전세대와공식상태/이미지재검증.",
-                "최대24h검수만료가내일12~14시전체창보다먼저끝남. 다음기존점검에서공식원문·접수상태·최신완전세대·이미지SHA실제재대조후CAS갱신필수;날짜만변경금지."
-              ],
-              "reach_editorial": {
-                "policy_id": "supportpick-threads-reach-v1-20261109",
-                "core_question": "소득기준을넘어도지역별예외지원대상이될수있는가",
-                "reader_scope": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
-                "angles": [
-                  "소득초과자격",
-                  "방문돌봄과본인부담",
-                  "신청기한준비"
-                ],
-                "chosen_angle": "소득초과자격",
-                "opening_candidates": [
-                  {
-                    "type": "생활 상황형",
-                    "group": "A",
-                    "text": "출산 뒤 돌봄이 필요한데 소득 때문에 산모·신생아 건강관리 신청을 망설이고 있나요?"
-                  },
-                  {
-                    "type": "대상·혜택형",
-                    "group": "B",
-                    "text": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?"
-                  },
-                  {
-                    "type": "조건 설명형",
-                    "group": null,
-                    "text": "산모·신생아 건강관리의 소득초과 예외지원은 전국에서 같을까요?"
-                  }
-                ],
-                "chosen_opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
-                "opening_type": "질문형 대상·혜택",
-                "cohort": "B",
-                "selection_reason": "동일ID보조금24누적조회35265. 이미게시76건과미래READY3건제외,상위74판단보존;바로상위건설휴가지원35684는현기관검색자료마감단서/직접본문불가로HOLD. 최근20도입대조,기존생활상황형과달리소득초과자격질문→지역예외직답→기본요건→본인부담→일반기한.",
-                "history_posts_checked": 20,
-                "comparison_eligible": false,
-                "comparison_exclusion": "새질문형정책및본문편집동시적용으로순수도입군비교불가. 시간대소급재분류않음.",
-                "comparison_strata": {
-                  "geo": "전국지역별예외",
-                  "audience": "출산가정",
-                  "benefit": "돌봄바우처",
-                  "media": "IMAGE"
-                },
-                "comparison_group": "24h A19/B20중앙값63/62,매칭쌍0·교란으로효과미입증;비중유지",
-                "applied_elements": [
-                  "대상질문직답",
-                  "건강보험료와중위소득구별",
-                  "현금과바우처구별",
-                  "기한특례와지역재량구별"
-                ],
-                "master_full_used": true,
-                "supplemental_full_used_in_current_model_input": true,
-                "profile_route": "실제사이트내검색/상세이번미검증,이동/접수보장없음"
-              },
-              "astra_final_review": {
-                "model": "gpt-6.2-astra",
-                "independent_agent": "/root/maternal_final_review",
-                "initial_verdict": "REVISE",
-                "initial_changes": [
-                  "추가확인CTA삭제",
-                  "기한특례를지자체재량과구별",
-                  "본문독자국내주민등록가정으로한정"
-                ],
-                "final_verdict": "PASS",
-                "final_checked_at": "2026-11-24T13:14:28.132838+09:00",
-                "actual_review_calls": 2,
-                "final_text_sha256": "2db46127cba440ca73581950d5c1381a28019e962284ffe8a0c17846b7751d38",
-                "char_count": 436,
-                "image": {
-                  "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-                  "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-                  "actually_viewed_by_reviewer": true
-                },
-                "final_result": "제목다음문장직답,소득예외/기한특례구별,436자,본문CTA1/URL0/추가행동0,실제이미지사업주장없음"
-              }
-            },
-            "next_history_record": {
-              "program_id": "PTR000050390",
-              "notice_version": "gov24-45277137519-1;2026e보건소실제열람2026-11-24T13:14:28.132838+09:00",
-              "pattern": "P5",
-              "opening": "산모·신생아 건강관리, 기준중위소득 150%를 넘으면 신청할 수 없나요?",
-              "structure": "소득초과질문→지역예외직답→기본자격→차액부담→일반신청기간/입원특례",
-              "media_turn": "IMAGE"
-            }
-          },
-          "revalidate_before": "2026-11-25T12:00:00+09:00",
-          "full_delay_window_covered": true
-        },
-        "source": {
-          "count": 10895,
-          "generation": "gov24-45277137519-1",
-          "lastSuccessAt": "2026-11-24T07:18:33.759031+09:00",
-          "manifestSha256": "5e05c8162eb03678e75209e530dfe4b710d797b95e4d3e834f399502a65de644",
-          "path": "snapshots/gov24-45277137519-1",
-          "version": 1
-        },
-        "actual_official_rereview": true,
-        "artifact_redownloaded_and_digest_verified": true,
-        "current_image_bytes_sha_recompared": true,
-        "same_final_body_media_pattern_cohort_astra_review": true
-      },
-      "image_bytes_sha_recompared": true,
-      "new_parent_visual_inspection": false,
+      "new_official_page_review_this_check": false,
       "new_Astra_calls": 0,
-      "existing_two_actual_Astra_reviews_preserved": true,
-      "source_limit": "Opened2026ehealthcurrentprogram and ministry/Chungbuk/Guro details: base/regionexception/copayment/general60day/ICUexception matched. Search checked corrections/termination, no nationwide closure found in scope. Local supplementary-benefit termination not generalized. No individual funding/eligibility/transaction guaranteed."
+      "image_bytes_sha_recompared": true,
+      "new_visual_inspection": false,
+      "previous_actual_rereview_at": "2026-11-24T14:45:53.443971+09:00",
+      "previous_full_window_expiry_repair_preserved": true,
+      "existing_Astra_PASS_preserved": true
     },
     "regular_slot_observation": {
       "slot": "2026-11-24T08:00:00+09:00",
@@ -6899,14 +6500,15 @@
     }
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-24T13:44:54.403343+09:00",
+    "checked_at": "2026-11-24T15:20:04.534414+09:00",
     "new_publications": 0,
     "new_incidents": 0,
     "queue_ready": 4,
-    "new_metric_observations": 3,
+    "new_metric_observations": 0,
     "new_evaluation_due": false,
     "new_ready_drafts": 0,
-    "existing_queue_preserved": true
+    "existing_queue_preserved": true,
+    "all_full_delay_windows_valid": true
   },
   "reach_policy": {
     "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -118608,6 +118210,423 @@
           "updated_at": "2026-11-23T22:38:20Z"
         }
       ]
+    },
+    "2026-11-24T15:20:04.534414+09:00": {
+      "checked_at": "2026-11-24T15:20:04.534414+09:00",
+      "result": "no_update",
+      "maintenance_previous_blob_sha": "4ea2dd181b74130ceeb2296eba8000f3d1c6c4cd",
+      "current_main_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "56bb4d20e8c10317791fb4c43b1805b096ccf138",
+      "queue_blob_sha": "a831db4fe50809d4cf3da5d64c1c393b10b44476",
+      "changed_run_versions": [],
+      "active_target_runs": [],
+      "run_pagination": {
+        "per_page": 100,
+        "pages": [
+          1
+        ],
+        "checkpoint_run_id": "45326798251",
+        "checkpoint_version_unchanged": true,
+        "all_new_target_versions_observed": true
+      },
+      "publication_ledger_records": 75,
+      "complete_verified_records": 75,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "45277137519",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-23T22:38:20Z",
+        "head_sha": "5732cde848a03907b2505396c34a4d60c713571e",
+        "job_id": 138051732020,
+        "artifact_id": 14868507630,
+        "artifact_digest": "sha256:b768e7aa698979de916b7404b321a7e5e8c15302e7ce3847b3dcfba08a734d22",
+        "artifact_redownloaded_this_check": false,
+        "artifact_digest_verified": true,
+        "read_current_verify_snapshot_load_feed": true,
+        "count": 10895,
+        "generation": "gov24-45277137519-1",
+        "lastSuccessAt": "2026-11-24T07:18:33.759031+09:00",
+        "manifestSha256": "5e05c8162eb03678e75209e530dfe4b710d797b95e4d3e834f399502a65de644",
+        "path": "snapshots/gov24-45277137519-1",
+        "version": 1,
+        "source_count": 10895,
+        "collection_report": {
+          "applicationOpenVerified": false,
+          "collectionSucceededAt": "2026-11-24T07:18:33.759031+09:00",
+          "coverage": "Currently connected Gov24 API, all unfiltered pages of three endpoints",
+          "endpoints": {
+            "serviceDetail": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "serviceList": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "supportConditions": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            }
+          },
+          "factsVerified": false,
+          "feedSha256": "30a93adf6cfac6f954420518a1f06aac9c436d92254c2e54b928f966e73c7c64",
+          "finishedAt": "2026-11-24T07:18:34.853540+09:00",
+          "generation": "gov24-45277137519-1",
+          "normalRequestEstimate": 330,
+          "pageResponses": 327,
+          "project": "supportpick",
+          "published": false,
+          "sampleCount": 0,
+          "scheduled": false,
+          "sourceConsistency": "No snapshot token: totals and boundary pages stable; unique IDs and all endpoint sets matched",
+          "startedAt": "2026-11-24T07:11:09.820235+09:00",
+          "status": "passed",
+          "storedCount": 10895
+        },
+        "current_step": "completed",
+        "collection_complete": true,
+        "workflow_complete": true,
+        "all_four_fingerprints_priority_and_full_delay_windows_pass": true,
+        "original_notice_rereview_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 303,
+        "public_verification_artifact_id": 14870600826,
+        "public_verification_digest": "sha256:0b3d702d86e063ff5cc5e19b36dfb264f35f210321aaa6fa28633a900af9a71b",
+        "public_verification": {
+          "publicHtmlChecked": 11048,
+          "sitemapUrls": 11035,
+          "generation": "gov24-45277137519-1",
+          "sourceRevision": "5732cde848a03907b2505396c34a4d60c713571e",
+          "robots": {
+            "http": 200,
+            "crawlAllowed": true,
+            "scope": "host_root"
+          },
+          "missingUrlHttp": 404,
+          "passed": 11048,
+          "failed": 0,
+          "initialFailures": 1,
+          "maxRequestsPerSecond": 10,
+          "rateLimitEpisodes": 0,
+          "stoppedForRateLimit": false,
+          "recoveredAfterRetry": [
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/142100000058/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            }
+          ],
+          "failures": []
+        },
+        "no_collection_failure": true,
+        "observed_in_progress_at_start": false,
+        "completed_success_before_record": true,
+        "artifact_digest_previously_verified_cached_bytes": true,
+        "current_complete_snapshot_verified": true,
+        "actual_send_latest_complete_source_required": true
+      },
+      "writer": {
+        "checked_at": "2026-11-24T15:20:04.534414+09:00",
+        "ready": 4,
+        "future24h_ready": 4,
+        "new_drafts": 0,
+        "existing_READY_reused": 4,
+        "drafts": [
+          {
+            "slot": "2026-11-24T16:00:00+09:00",
+            "benefit_id": "B55284500010",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 432,
+            "expires_at": "2026-11-24T21:48:01.930334+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-24T20:00:00+09:00",
+            "benefit_id": "127000000002",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 422,
+            "expires_at": "2026-11-24T23:06:37.757855+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T08:00:00+09:00",
+            "benefit_id": "419000000129",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 315,
+            "expires_at": "2026-11-25T10:40:14.847169+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T12:00:00+09:00",
+            "benefit_id": "PTR000050390",
+            "pattern": "P5",
+            "media_turn": "IMAGE",
+            "char_count": 436,
+            "expires_at": "2026-11-25T14:45:53.443971+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source": {
+          "count": 10895,
+          "generation": "gov24-45277137519-1",
+          "lastSuccessAt": "2026-11-24T07:18:33.759031+09:00",
+          "manifestSha256": "5e05c8162eb03678e75209e530dfe4b710d797b95e4d3e834f399502a65de644",
+          "path": "snapshots/gov24-45277137519-1",
+          "version": 1
+        },
+        "source_count": 10895,
+        "ledger_records": 76,
+        "pending": null,
+        "lease": null,
+        "new_posts": 0,
+        "new_incidents": 0,
+        "new_metrics": 0,
+        "observations": 146,
+        "evaluation_due": false,
+        "next_evaluation_not_before": "2026-11-24T17:00:08.835254+09:00",
+        "astra_review_invocations": 0,
+        "existing_Astra_review_preserved": true,
+        "current_image_bytes_sha_recompared": true,
+        "new_visual_inspection": false,
+        "source_recheck_required_at_publish": true,
+        "expiry_prevention_revalidations": 0
+      },
+      "metrics": {
+        "run_id": "45326798251",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T04:30:08Z",
+        "head_sha": "0fe61cdb0f84a771bc123777892138444f5b38e5",
+        "job_id": 138218242668,
+        "artifact_id": 14890341837,
+        "artifact_digest": "sha256:68ec777ff6f99a667f5b371d4704213fbe05f8a3294b4fac7e946fb9e169e3ca",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "observed_at": "2026-11-24T04:30:02.745668+00:00",
+        "records": [
+          {
+            "post_id": "17997847203099652",
+            "published_at": "2026-11-17T12:41:15.742434+09:00",
+            "observed_at": "2026-11-24T04:30:02.745668+00:00",
+            "window_hours": 168,
+            "elapsed_hours": 168.81305645388886,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 37,
+              "likes": 1,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          },
+          {
+            "post_id": "18098495828440255",
+            "published_at": "2026-11-21T12:39:49.077785+09:00",
+            "observed_at": "2026-11-24T04:30:02.745668+00:00",
+            "window_hours": 72,
+            "elapsed_hours": 72.83712996749999,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 6,
+              "likes": 1,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          },
+          {
+            "post_id": "18388999600236313",
+            "published_at": "2026-11-23T12:48:36.614928+09:00",
+            "observed_at": "2026-11-24T04:30:02.745668+00:00",
+            "window_hours": 24,
+            "elapsed_hours": 24.69059187222222,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 22,
+              "likes": 2,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          }
+        ],
+        "new_observation_keys": [],
+        "new_observations": 0,
+        "total_observations": 146,
+        "distinct_posts": 73,
+        "due_count": 3,
+        "success_count": 3,
+        "classification": "actual_official_milestones_imported",
+        "due_count_at_check": 0,
+        "new_evaluation_report_due": false,
+        "weights_unchanged": true,
+        "publication_calls": 0,
+        "workflow_dispatch": false
+      },
+      "recovery": {
+        "original_slot": "2026-11-23T20:00:00+09:00",
+        "original_slot_published": false,
+        "closed_missed_slot_no_backfill": true,
+        "previously_closed_missed_slot_preserved": true,
+        "new_failure_this_check": false,
+        "new_recovery_this_check": false,
+        "dispatches_this_check": 0,
+        "new_posts": 0,
+        "pending": null,
+        "lease": null,
+        "stage": "read_only_maintenance_complete",
+        "reason": "76completeverifiedpublishedrowsandpending/lease unchanged; no newtargetrunversion.4futureREADY passnominal/full2hwindow,actualimageSHArecompared. No publicationrecovery/codefixrequired.",
+        "new_publication_this_check": false
+      },
+      "next_condition": "Keep fourREADY unchanged. Existingregularpublisher consumes16/20/Nov25 08/12 only afterlatestcompletefreshsource/currentofficial/account/ledger/pending/CAS/firstattempt/max4checks. Current07:18source notassumedfresh tomorrow; nominal/full2hpreview simulation doesnotguaranteefuturefacts. Prior14:45maternal genuineexpiryrepair and actualAstraPASS preserved.146metrics/no currentlyduewindows;14dayevaluationnotbeforetoday17:00:08. No newdraft/free24hslot/dispatch/rerun/backfill/POST/schedule.",
+      "publication": {
+        "run_id": "45321813009",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T03:47:35Z",
+        "head_sha": "7d5a0a73caf81f61db48ab4b396298fd815663b6",
+        "job_id": 138201887919,
+        "artifact_id": 14887457802,
+        "artifact_digest": "sha256:302c9608a2ce98eb63c9936d59d4e3222abd0855b463560328ccb421dcae451a",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 138,
+        "new_publication_this_run": false,
+        "main_id": "17897404392435204",
+        "url": "https://www.threads.com/@hid_1004/post/DgHBd-8jPbl",
+        "slot": "2026-11-24T12:00:00+09:00",
+        "receipt_at": "2026-11-24T12:47:27.429895+09:00",
+        "ledger_published_at": "2026-11-24T12:46:42.610970+09:00",
+        "ledger_published_at_is_invocation_not_exact_platform_time": true,
+        "stage": "complete",
+        "verified": true,
+        "body_hash": "faa2b8b829ad1a18aa9d4c3b2603b7ce55be968e3934a302d8cafe1bf66e9ae4",
+        "content_hash": "2bd4ff822ee3112035e138b9c7e4bf6c41c7da98d521e123c8da5a6dc4beb7a6",
+        "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+        "media_turn": "IMAGE",
+        "pattern": "P1",
+        "char_count": 378,
+        "replies": 0,
+        "original_queue_body_asset_exact": true,
+        "previous75records_preserved": true,
+        "maintenance_post_calls": 0,
+        "delay_within_original_2h_window": true,
+        "latest_already_reported": true
+      },
+      "history_reconciliation": {
+        "run_id": "45173485637",
+        "mode": "check-account",
+        "account": "hid_1004",
+        "checked_at": "2026-11-23T21:21:24+09:00",
+        "recent_remote_rows": 100,
+        "more_history": true,
+        "main_ledger_matches_in_page": 49,
+        "latest20_main_matches": 20,
+        "latest_remote_id": "18129410933479829",
+        "target_text_absent": true,
+        "scope": "76 complete verified durable publications; previous75 exact preserved; newreceipt/body/asset/artifact matched. Prior remote100row audit retained; no newfull28dayremote query.",
+        "artifact_id": 14818615408,
+        "artifact_digest": "sha256:23cfc165bbd050ec1a12dbde18778345efb01c4d9e20abf69f6279b090e003b3",
+        "artifact_digest_verified": true,
+        "remote_requeried_this_check": false,
+        "previous_remote_evidence_preserved": true
+      },
+      "official_review_recovery": {
+        "new_official_page_review_this_check": false,
+        "new_Astra_calls": 0,
+        "image_bytes_sha_recompared": true,
+        "new_visual_inspection": false,
+        "previous_actual_rereview_at": "2026-11-24T14:45:53.443971+09:00",
+        "previous_full_window_expiry_repair_preserved": true,
+        "existing_Astra_PASS_preserved": true
+      },
+      "regular_slot_observation": {
+        "slot": "2026-11-24T08:00:00+09:00",
+        "status": "natural_publication_verified_complete",
+        "main_id": "18123605203752749",
+        "receipt_at": "2026-11-24T08:46:05.901553+09:00",
+        "main_url": "https://www.threads.com/@hid_1004/post/DgGl2ooGuAa"
+      },
+      "main_head_observation": {
+        "latest_observed_run_head": "5732cde848a03907b2505396c34a4d60c713571e",
+        "target_publisher_workflows_master_and_assets_blobs_unchanged": true,
+        "unrelated_changes_not_modified": true
+      },
+      "image_sha_comparisons": [
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:06.502293+09:00"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:14.847084+09:00"
+        }
+      ],
+      "run_status_transitions": [
+        {
+          "run_id": "45277137519",
+          "from": "in_progress",
+          "to": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-23T22:38:20Z"
+        }
+      ]
     }
   },
   "last_reported_prepublication_repair": {
@@ -121000,7 +121019,7 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-24T14:45:53.443971+09:00",
+    "checked_at": "2026-11-24T15:20:04.534414+09:00",
     "ready": 4,
     "future24h_ready": 4,
     "new_drafts": 0,
@@ -121064,6 +121083,7 @@
     "pending": null,
     "lease": null,
     "new_posts": 0,
+    "new_incidents": 0,
     "new_metrics": 0,
     "observations": 146,
     "evaluation_due": false,
@@ -121071,8 +121091,9 @@
     "astra_review_invocations": 0,
     "existing_Astra_review_preserved": true,
     "current_image_bytes_sha_recompared": true,
+    "new_visual_inspection": false,
     "source_recheck_required_at_publish": true,
-    "expiry_prevention_revalidations": 1
+    "expiry_prevention_revalidations": 0
   },
   "last_queue_review_refresh": {
     "checked_at": "2026-11-24T14:45:53.443971+09:00",
