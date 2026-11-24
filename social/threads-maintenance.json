@@ -14,6 +14,9 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "45355210766",
+    "45351393999",
+    "45339814811",
     "45326798251",
     "45321813009",
     "45318715673",
@@ -361,14 +364,14 @@
   ],
   "last_health": {
     "unresolved_publications": 0,
-    "published_benefits": 76,
+    "published_benefits": 77,
     "source_run_id": "45277137519",
     "source_result": "complete_verified",
     "source_count": 10895,
     "source_last_success_at": "2026-11-24T07:18:33.759031+09:00",
     "source_workflow_conclusion": "success",
     "source_failure_classification": null,
-    "last_publisher_run_id": "45321813009",
+    "last_publisher_run_id": "45355210766",
     "writer_queue_ready": 4,
     "writer_schema": "supportpick.writer.v1",
     "account_check": "verified_http_200",
@@ -5684,18 +5687,67 @@
       "conclusion": "success",
       "updated_at": "2026-11-24T04:30:08Z",
       "head_sha": "0fe61cdb0f84a771bc123777892138444f5b38e5"
+    },
+    "45351393999": {
+      "run_id": "45351393999",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-24T07:52:55Z",
+      "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5"
+    },
+    "45339814811": {
+      "run_id": "45339814811",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-24T06:21:31Z",
+      "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5"
+    },
+    "45355210766": {
+      "run_id": "45355210766",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-24T08:21:17Z",
+      "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-24T15:20:04.534414+09:00",
-    "result": "no_update",
-    "maintenance_previous_blob_sha": "4ea2dd181b74130ceeb2296eba8000f3d1c6c4cd",
+    "checked_at": "2026-11-24T17:23:46.351457+09:00",
+    "result": "new_publication_14day_evaluation_and_astra_draft_prepared",
+    "maintenance_previous_blob_sha": "c35f1c2baf317b82922dd77894c2f513ea533c51",
     "current_main_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-    "publication_ledger_sha": "56bb4d20e8c10317791fb4c43b1805b096ccf138",
-    "queue_blob_sha": "a831db4fe50809d4cf3da5d64c1c393b10b44476",
-    "changed_run_versions": [],
+    "publication_ledger_sha": "5d033f77c6d86e826956219d1bd4a034b05daffc",
+    "queue_blob_sha": "1bd619d3c68be53bf1e652c9bddbc25660b28569",
+    "changed_run_versions": [
+      {
+        "run_id": "45351393999",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T07:52:55Z",
+        "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5"
+      },
+      {
+        "run_id": "45339814811",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T06:21:31Z",
+        "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5"
+      },
+      {
+        "run_id": "45355210766",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T08:21:17Z",
+        "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5"
+      }
+    ],
     "active_target_runs": [],
     "run_pagination": {
       "per_page": 100,
@@ -5778,8 +5830,8 @@
       "current_step": "completed",
       "collection_complete": true,
       "workflow_complete": true,
-      "all_four_fingerprints_priority_and_full_delay_windows_pass": true,
-      "original_notice_rereview_this_check": false,
+      "all_four_fingerprints_priority_and_full_delay_windows_pass": false,
+      "original_notice_rereview_this_check": true,
       "job_logs_retrieved_this_check": false,
       "actual_tests_passed": 303,
       "public_verification_artifact_id": 14870600826,
@@ -5815,26 +5867,17 @@
       "completed_success_before_record": true,
       "artifact_digest_previously_verified_cached_bytes": true,
       "current_complete_snapshot_verified": true,
-      "actual_send_latest_complete_source_required": true
+      "actual_send_latest_complete_source_required": true,
+      "complete_snapshot_reverified": true
     },
     "writer": {
-      "checked_at": "2026-11-24T15:20:04.534414+09:00",
+      "checked_at": "2026-11-24T17:20:07.451089+09:00",
       "ready": 4,
       "future24h_ready": 4,
-      "new_drafts": 0,
+      "active_regular_ready": 0,
+      "new_drafts": 1,
       "existing_READY_reused": 4,
       "drafts": [
-        {
-          "slot": "2026-11-24T16:00:00+09:00",
-          "benefit_id": "B55284500010",
-          "pattern": "P5",
-          "media_turn": "TEXT",
-          "char_count": 432,
-          "expires_at": "2026-11-24T21:48:01.930334+09:00",
-          "full_delay_window_valid": true,
-          "source_fresh_at_slot": true,
-          "source_recheck_required_at_publish": true
-        },
         {
           "slot": "2026-11-24T20:00:00+09:00",
           "benefit_id": "127000000002",
@@ -5843,7 +5886,6 @@
           "char_count": 422,
           "expires_at": "2026-11-24T23:06:37.757855+09:00",
           "full_delay_window_valid": true,
-          "source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true
         },
         {
@@ -5854,7 +5896,6 @@
           "char_count": 315,
           "expires_at": "2026-11-25T10:40:14.847169+09:00",
           "full_delay_window_valid": true,
-          "source_fresh_at_slot": false,
           "source_recheck_required_at_publish": true
         },
         {
@@ -5865,122 +5906,55 @@
           "char_count": 436,
           "expires_at": "2026-11-25T14:45:53.443971+09:00",
           "full_delay_window_valid": true,
-          "source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-25T16:00:00+09:00",
+          "benefit_id": "B49000100208",
+          "pattern": "P6",
+          "media_turn": "TEXT",
+          "char_count": 381,
+          "expires_at": "2026-11-25T17:19:11.117255+09:00",
+          "full_delay_window_valid": false,
           "source_recheck_required_at_publish": true
         }
       ],
-      "source": {
-        "count": 10895,
-        "generation": "gov24-45277137519-1",
-        "lastSuccessAt": "2026-11-24T07:18:33.759031+09:00",
-        "manifestSha256": "5e05c8162eb03678e75209e530dfe4b710d797b95e4d3e834f399502a65de644",
-        "path": "snapshots/gov24-45277137519-1",
-        "version": 1
-      },
-      "source_count": 10895,
-      "ledger_records": 76,
+      "ledger_records": 77,
       "pending": null,
       "lease": null,
-      "new_posts": 0,
-      "new_incidents": 0,
+      "new_posts": 1,
       "new_metrics": 0,
       "observations": 146,
-      "evaluation_due": false,
-      "next_evaluation_not_before": "2026-11-24T17:00:08.835254+09:00",
-      "astra_review_invocations": 0,
-      "existing_Astra_review_preserved": true,
+      "new_evaluation": true,
+      "astra_review_invocations": 2,
       "current_image_bytes_sha_recompared": true,
-      "new_visual_inspection": false,
       "source_recheck_required_at_publish": true,
-      "expiry_prevention_revalidations": 0
+      "due_post_ids": [
+        "18450932713126961",
+        "18121994881961457"
+      ]
     },
     "metrics": {
-      "run_id": "45326798251",
+      "run_id": "45351393999",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-24T04:30:08Z",
-      "head_sha": "0fe61cdb0f84a771bc123777892138444f5b38e5",
-      "job_id": 138218242668,
-      "artifact_id": 14890341837,
-      "artifact_digest": "sha256:68ec777ff6f99a667f5b371d4704213fbe05f8a3294b4fac7e946fb9e169e3ca",
+      "updated_at": "2026-11-24T07:52:55Z",
+      "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+      "job_id": 138298437534,
+      "artifact_id": 14900003455,
+      "artifact_digest": "sha256:2a8b1a99d04e9c6df64c8a69e0e03acf4836289a11042b2e63b57efd67522d86",
       "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": false,
-      "job_logs_retrieved_this_check": false,
-      "observed_at": "2026-11-24T04:30:02.745668+00:00",
-      "records": [
-        {
-          "post_id": "17997847203099652",
-          "published_at": "2026-11-17T12:41:15.742434+09:00",
-          "observed_at": "2026-11-24T04:30:02.745668+00:00",
-          "window_hours": 168,
-          "elapsed_hours": 168.81305645388886,
-          "timing": "late_available_check",
-          "within_target_tolerance": true,
-          "not_backcalculated": true,
-          "metrics": {
-            "views": 37,
-            "likes": 1,
-            "comments": 0,
-            "reposts": 0,
-            "shares": 0,
-            "saves": null,
-            "profile_visits": null,
-            "new_followers": null,
-            "site_visits": null
-          }
-        },
-        {
-          "post_id": "18098495828440255",
-          "published_at": "2026-11-21T12:39:49.077785+09:00",
-          "observed_at": "2026-11-24T04:30:02.745668+00:00",
-          "window_hours": 72,
-          "elapsed_hours": 72.83712996749999,
-          "timing": "late_available_check",
-          "within_target_tolerance": true,
-          "not_backcalculated": true,
-          "metrics": {
-            "views": 6,
-            "likes": 1,
-            "comments": 0,
-            "reposts": 0,
-            "shares": 0,
-            "saves": null,
-            "profile_visits": null,
-            "new_followers": null,
-            "site_visits": null
-          }
-        },
-        {
-          "post_id": "18388999600236313",
-          "published_at": "2026-11-23T12:48:36.614928+09:00",
-          "observed_at": "2026-11-24T04:30:02.745668+00:00",
-          "window_hours": 24,
-          "elapsed_hours": 24.69059187222222,
-          "timing": "late_available_check",
-          "within_target_tolerance": true,
-          "not_backcalculated": true,
-          "metrics": {
-            "views": 22,
-            "likes": 2,
-            "comments": 0,
-            "reposts": 0,
-            "shares": 0,
-            "saves": null,
-            "profile_visits": null,
-            "new_followers": null,
-            "site_visits": null
-          }
-        }
-      ],
+      "artifact_redownloaded_this_check": true,
+      "job_logs_retrieved_this_check": true,
+      "observed_at": "2026-11-24T07:52:50.869414+00:00",
+      "records": [],
+      "due_count": 0,
+      "success_count": 0,
+      "classification": "normal_no_due_at_run_time",
       "new_observation_keys": [],
       "new_observations": 0,
       "total_observations": 146,
-      "distinct_posts": 73,
-      "due_count": 3,
-      "success_count": 3,
-      "classification": "actual_official_milestones_imported",
-      "due_count_at_check": 0,
       "new_evaluation_report_due": false,
       "weights_unchanged": true,
       "publication_calls": 0,
@@ -5994,49 +5968,48 @@
       "new_failure_this_check": false,
       "new_recovery_this_check": false,
       "dispatches_this_check": 0,
-      "new_posts": 0,
+      "new_posts": 1,
       "pending": null,
       "lease": null,
       "stage": "read_only_maintenance_complete",
-      "reason": "76completeverifiedpublishedrowsandpending/lease unchanged; no newtargetrunversion.4futureREADY passnominal/full2hwindow,actualimageSHArecompared. No publicationrecovery/codefixrequired.",
-      "new_publication_this_check": false
+      "reason": "16slotnaturalpublishercompletedwithinwindowduringmaintenance. CASguarddetectedchangedstate; rereadandverifiedreceipt/log/artifact/body/nomedia,77complete rows/old76exact preserved. No duplicatePOST/dispatch.",
+      "new_publication_this_check": true
     },
-    "next_condition": "Keep fourREADY unchanged. Existingregularpublisher consumes16/20/Nov25 08/12 only afterlatestcompletefreshsource/currentofficial/account/ledger/pending/CAS/firstattempt/max4checks. Current07:18source notassumedfresh tomorrow; nominal/full2hpreview simulation doesnotguaranteefuturefacts. Prior14:45maternal genuineexpiryrepair and actualAstraPASS preserved.146metrics/no currentlyduewindows;14dayevaluationnotbeforetoday17:00:08. No newdraft/free24hslot/dispatch/rerun/backfill/POST/schedule.",
+    "next_condition": "Nov24 16naturallyposted17:21within2hwindow,notrecovery.77completeposts,146observations; next24h4READY20/Nov25 08/12/16,preview4androtationI/T/I/Tconfirmed. New381charcondoTEXT/P6Astra2PASS remainsunmodified;expiresNov25 17:19requiresactualofficial/fullsource/imageSHAreviewaftertoday18existingchecktocover18end.14daycutoff17:00evaluation53periodpublications+3closedmisses+1unreservedatcutoffsubsequentlyposted:40delayed24hwindowsA20/B20medians62/62,no matchedpairs; extendcomparison no weightchange. No extraPOST/dispatch/rerun/backfill/schedule. Actualsenderlatestcompletefreshsource/currentofficialaccountledgerchecksmandatory.",
     "publication": {
-      "run_id": "45321813009",
+      "run_id": "45355210766",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-24T03:47:35Z",
-      "head_sha": "7d5a0a73caf81f61db48ab4b396298fd815663b6",
-      "job_id": 138201887919,
-      "artifact_id": 14887457802,
-      "artifact_digest": "sha256:302c9608a2ce98eb63c9936d59d4e3222abd0855b463560328ccb421dcae451a",
+      "updated_at": "2026-11-24T08:21:17Z",
+      "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+      "job_id": 138311217348,
+      "artifact_id": 14902391035,
+      "artifact_digest": "sha256:a03c06242420c816848ccdc09ac67db74dc41ad2bbd5f57ed0b53159732e3779",
       "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": false,
-      "job_logs_retrieved_this_check": false,
+      "artifact_redownloaded_this_check": true,
+      "job_logs_retrieved_this_check": true,
       "actual_tests_passed": 138,
-      "new_publication_this_run": false,
-      "main_id": "17897404392435204",
-      "url": "https://www.threads.com/@hid_1004/post/DgHBd-8jPbl",
-      "slot": "2026-11-24T12:00:00+09:00",
-      "receipt_at": "2026-11-24T12:47:27.429895+09:00",
-      "ledger_published_at": "2026-11-24T12:46:42.610970+09:00",
+      "new_publication_this_run": true,
+      "main_id": "17974331994194122",
+      "url": "https://www.threads.com/@hid_1004/post/DgHgym4mz2o",
+      "slot": "2026-11-24T16:00:00+09:00",
+      "receipt_at": "2026-11-24T17:21:06.769138+09:00",
+      "ledger_published_at": "2026-11-24T17:20:24.263616+09:00",
       "ledger_published_at_is_invocation_not_exact_platform_time": true,
       "stage": "complete",
       "verified": true,
-      "body_hash": "faa2b8b829ad1a18aa9d4c3b2603b7ce55be968e3934a302d8cafe1bf66e9ae4",
-      "content_hash": "2bd4ff822ee3112035e138b9c7e4bf6c41c7da98d521e123c8da5a6dc4beb7a6",
-      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-      "media_turn": "IMAGE",
-      "pattern": "P1",
-      "char_count": 378,
+      "body_hash": "9111264428231997475e951d2cbf9506971172eb1b0f071fdc0125412dc709dc",
+      "content_hash": "d293bdb33a61f1c05d361f5f57b6bc85cb9c63c9fce8355cc5caa749b80e4f16",
+      "asset_sha256": null,
+      "media_turn": "TEXT",
+      "pattern": "P5",
+      "char_count": 432,
       "replies": 0,
       "original_queue_body_asset_exact": true,
-      "previous75records_preserved": true,
+      "previous76records_preserved": true,
       "maintenance_post_calls": 0,
-      "delay_within_original_2h_window": true,
-      "latest_already_reported": true
+      "delay_within_original_2h_window": true
     },
     "history_reconciliation": {
       "run_id": "45173485637",
@@ -6049,7 +6022,7 @@
       "latest20_main_matches": 20,
       "latest_remote_id": "18129410933479829",
       "target_text_absent": true,
-      "scope": "76 complete verified durable publications; previous75 exact preserved; newreceipt/body/asset/artifact matched. Prior remote100row audit retained; no newfull28dayremote query.",
+      "scope": "77durablecompleteverifiedrows;prior76exactpreserved;newreceipt/body/asset/artifactverified. No full28dayremotequery.",
       "artifact_id": 14818615408,
       "artifact_digest": "sha256:23cfc165bbd050ec1a12dbde18778345efb01c4d9e20abf69f6279b090e003b3",
       "artifact_digest_verified": true,
@@ -6057,13 +6030,57 @@
       "previous_remote_evidence_preserved": true
     },
     "official_review_recovery": {
-      "new_official_page_review_this_check": false,
-      "new_Astra_calls": 0,
+      "new_official_page_review_this_check": true,
+      "program_id": "B49000100208",
+      "evidence": [
+        {
+          "source_id": "B49000100208",
+          "source_ref": "https://www.moel.go.kr/policyitrd/policyItrdList.do?searchMclsCdList=J",
+          "access_method": "OPENED_OFFICIAL",
+          "verified_at": "2026-11-24T17:19:11.117255+09:00",
+          "claims_supported": [
+            "현공식목록2026휴양콘도지원확인,실제HTML fnView523관찰."
+          ]
+        },
+        {
+          "source_id": "B49000100208",
+          "source_ref": "https://www.moel.go.kr/policyitrd/downloadFile.do?policy_itrd_sn=523",
+          "access_method": "OPENED_OFFICIAL",
+          "verified_at": "2026-11-24T17:19:11.117255+09:00",
+          "claims_supported": [
+            "공식상세523HTML첨부링크직접GET hwpxZIP/XML전문추출열람:특수형태근로종사자(노무제공자포함)모든요일가능.평일7일전/주말성수기전월5신청및전월10선발/월평균소득기업규모우선.인증서로그인→신청서→적격확인→문자. 구체객실요금확정없음."
+          ]
+        },
+        {
+          "source_id": "B49000100208",
+          "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001618&bnefType=all&svcId=B49000100208",
+          "access_method": "PROVIDED_OFFICIAL_TEXT",
+          "verified_at": "2026-11-24T17:19:11.117255+09:00",
+          "claims_supported": [
+            "완전snapshotmanifest검증후load_feed,동일ID원본누적35145/checkedAt07:16:03.552111,상시신청/무기명법인회원가시설이용. API수집과본공식문서열람시각구별.수집성공은잔여객실보장아님."
+          ]
+        }
+      ],
+      "actual_Astra_review": {
+        "model": "gpt-6.2-astra",
+        "independent_agent": "/root/condo_final_review",
+        "initial_verdict": "REVISE",
+        "initial_changes": [
+          "첫답네직답",
+          "특수형태근로종사자(노무제공자포함)공식포함관계복원"
+        ],
+        "final_verdict": "PASS",
+        "actual_review_calls": 2,
+        "final_text_sha256": "af1d8576401da0456c0479fb3a36a12667bfb48378b1b61eef5cc9595fa23d0a",
+        "char_count": 381,
+        "image": null,
+        "image_reason": "TEXT회차실제이미지없음",
+        "final_checked_at": "2026-11-24T17:20:07.451089+09:00",
+        "final_result": "실제동일모델재검수PASS381자.대상질문즉답/포함관계/요일별기한/선발조건공식일치.CTA1/링크0/추가행동0."
+      },
+      "new_Astra_calls": 2,
       "image_bytes_sha_recompared": true,
-      "new_visual_inspection": false,
-      "previous_actual_rereview_at": "2026-11-24T14:45:53.443971+09:00",
-      "previous_full_window_expiry_repair_preserved": true,
-      "existing_Astra_PASS_preserved": true
+      "new_visual_inspection": false
     },
     "regular_slot_observation": {
       "slot": "2026-11-24T08:00:00+09:00",
@@ -6101,40 +6118,272 @@
         "conclusion": "success",
         "updated_at": "2026-11-23T22:38:20Z"
       }
-    ]
+    ],
+    "metric_runs_checked": [
+      {
+        "run_id": "45339814811",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T06:21:31Z",
+        "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+        "job_id": 138260491460,
+        "artifact_id": 14894624479,
+        "artifact_digest": "sha256:a04dc1e1383351e2beb4e896b890448c4070deacbac5e3d2bbd63baae794cc54",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "observed_at": "2026-11-24T06:21:25.900659+00:00",
+        "records": [],
+        "due_count": 0,
+        "success_count": 0,
+        "classification": "normal_no_due_at_run_time",
+        "new_observation_keys": [],
+        "new_observations": 0,
+        "total_observations": 146,
+        "new_evaluation_report_due": false,
+        "weights_unchanged": true,
+        "publication_calls": 0,
+        "workflow_dispatch": false
+      },
+      {
+        "run_id": "45351393999",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T07:52:55Z",
+        "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+        "job_id": 138298437534,
+        "artifact_id": 14900003455,
+        "artifact_digest": "sha256:2a8b1a99d04e9c6df64c8a69e0e03acf4836289a11042b2e63b57efd67522d86",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "observed_at": "2026-11-24T07:52:50.869414+00:00",
+        "records": [],
+        "due_count": 0,
+        "success_count": 0,
+        "classification": "normal_no_due_at_run_time",
+        "new_observation_keys": [],
+        "new_observations": 0,
+        "total_observations": 146,
+        "new_evaluation_report_due": false,
+        "weights_unchanged": true,
+        "publication_calls": 0,
+        "workflow_dispatch": false
+      }
+    ],
+    "formal_evaluation": {
+      "policy_id": "supportpick-threads-reach-v1-20261109",
+      "window": "14d_evaluation",
+      "evaluated_at": "2026-11-24T17:20:07.451089+09:00",
+      "period_start": "2026-11-10T17:00:08.835254+09:00",
+      "period_end": "2026-11-24T17:00:08.835254+09:00",
+      "normal_verified_publications": 53,
+      "experiment_regular_slots": 57,
+      "unpublished_slots": [
+        {
+          "slot": "2026-11-16T16:00:00+09:00",
+          "classification": "missed_window_closed"
+        },
+        {
+          "slot": "2026-11-18T12:00:00+09:00",
+          "classification": "missed_window_closed"
+        },
+        {
+          "slot": "2026-11-23T20:00:00+09:00",
+          "classification": "missed_window_closed"
+        },
+        {
+          "slot": "2026-11-24T16:00:00+09:00",
+          "classification": "unreserved_at_evaluation_cutoff_then_published_after_cutoff",
+          "subsequent_main_id": "17974331994194122",
+          "subsequent_receipt_at": "2026-11-24T17:21:06.769138+09:00"
+        }
+      ],
+      "missed_closed_slots": 3,
+      "partial_or_pending": 0,
+      "independent_full_public_rendering_recheck": false,
+      "publication_audit_scope": "76durablecompleteverifiedrecords; priorreceipts/body/media/artifacts retained. No newfull28dayremotequery; Nov24 16unreserved/latestpublisher12only,nofailure-runconfirmed.",
+      "24h_comparison_window_observations": 40,
+      "A_n": 20,
+      "B_n": 20,
+      "24h_comparable_matched_pairs": 0,
+      "24h_group_view_medians": {
+        "A": 62.0,
+        "B": 62.0
+      },
+      "24h_all_view_median": 62.0,
+      "actual_reactions": {
+        "A": {
+          "likes": 29,
+          "replies": 0,
+          "reposts": 6,
+          "shares": 1
+        },
+        "B": {
+          "likes": 27,
+          "replies": 0,
+          "reposts": 5,
+          "shares": 0
+        }
+      },
+      "reaction_rate_used": false,
+      "all_24h_observations_delayed": true,
+      "eligible_elapsed_hours_min": 24.317312148333336,
+      "eligible_elapsed_hours_max": 25.691108017222223,
+      "24h_unavailable_not_zero": [
+        "18117968657159347",
+        "17992859946026940",
+        "17913499947663769",
+        "18001464938830261"
+      ],
+      "24h_not_yet_due": [
+        "18129410933479829",
+        "18123605203752749",
+        "17897404392435204"
+      ],
+      "24h_missing_after_due": [],
+      "7d_measured": 27,
+      "7d_not_yet_due": [
+        "18004106657810124",
+        "18155833435528730",
+        "18061699079561356",
+        "18075899267779249",
+        "18361336213223949",
+        "18100168118443439",
+        "17876108337601849",
+        "17954736195295664",
+        "18136261246743978",
+        "18029579210863916",
+        "18106611944009610",
+        "17995393143022353",
+        "18002356029029330",
+        "18098495828440255",
+        "18121994881961457",
+        "18093412586696162",
+        "18102899498408388",
+        "18214999999364836",
+        "18125366213319496",
+        "18149154712603236",
+        "17879078796637660",
+        "18388999600236313",
+        "18129410933479829",
+        "18123605203752749",
+        "17897404392435204"
+      ],
+      "7d_group_medians": {
+        "A": 105,
+        "B": 87.5
+      },
+      "quotes": "not_provided",
+      "reader_only_replies": "unavailable",
+      "profile_clicks": "account_level_not_available; no_post_attribution",
+      "confounders": [
+        "Differentbusiness/region/readers/benefit/deadline/time/media/length; matchedsimilarpairs0",
+        "PreservedmovedexistingREADYcohorts differfromnewslots;excludeinsteadretroclassify",
+        "Newquestiontitlepolicy changesmorethanopeningalone;newAstrarevieweddraftsexcludedfrompureA/B"
+      ],
+      "minimum_24h_target_per_group": 8,
+      "raw_window_target_met": true,
+      "current_stratified_target_met": false,
+      "decision": "extend_comparison;maintainbalancedA/Bandexistingcontrols.No demonstratedrepeatedadvantage;noeditorialweightchange.",
+      "weight_changed": false,
+      "no_backcalculation": true,
+      "extension_next_condition": "Reassess in existingchecks when comparable similar-business strata have sufficient repeatedactual24hwindows; keep comparison group. No separate schedule.",
+      "reported_at": "2026-11-24T17:20:07.451089+09:00",
+      "evidence_latest_metric_run_id": "45351393999",
+      "24h_measured_but_excluded": [
+        {
+          "main_id": "18122947907049313",
+          "elapsed_hours": 52.64388394083333,
+          "reason": "late_beyond_26h_comparison_tolerance"
+        },
+        {
+          "main_id": "18061699079561356",
+          "elapsed_hours": 25.374772445277777,
+          "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+        },
+        {
+          "main_id": "18075899267779249",
+          "elapsed_hours": 24.65035752527778,
+          "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+        },
+        {
+          "main_id": "18361336213223949",
+          "elapsed_hours": 24.39045965972222,
+          "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+        },
+        {
+          "main_id": "18100168118443439",
+          "elapsed_hours": 24.6578044575,
+          "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+        },
+        {
+          "main_id": "17876108337601849",
+          "elapsed_hours": 25.228189436944444,
+          "reason": "Previously written input preserved; no retrospective cohort assignment after failed preceding slot"
+        }
+      ],
+      "7d_group_n": {
+        "A": 13,
+        "B": 14
+      },
+      "7d_due_unmeasured": [
+        "18450932713126961"
+      ],
+      "publication_cutoff_note": "EvaluationperiodendsNov24 17:00:08.16slotwasunreservedatcutoff, laternaturallypublished17:21:06withinits2hwindow; excludedfrom53periodpublications becauseactualinvocation17:20aftercutoff. Notafourthmissedslot.",
+      "unreserved_at_period_end_slots": 1,
+      "currently_open_unreserved_slots_from_period": 0
+    },
+    "publication_schedule_observation": {
+      "slot": "2026-11-24T16:00:00+09:00",
+      "checked_at": "2026-11-24T17:21:34.248683+09:00",
+      "status": "naturally_published_within_original_window",
+      "window_end": "2026-11-24T18:00:00+09:00",
+      "latest_publisher_run_id": "45321813009",
+      "ledger_slot_absent": false,
+      "pending": null,
+      "lease": null,
+      "failure_run_confirmed": false,
+      "workflow_dispatch": false,
+      "next_condition": "Complete verified naturalpublication. No recovery/dispatch/backfill required; original candidate/media projection nowconfirmed.",
+      "main_id": "17974331994194122",
+      "receipt_at": "2026-11-24T17:21:06.769138+09:00"
+    }
   },
   "last_reported_publication": {
-    "run_id": "45321813009",
+    "run_id": "45355210766",
     "run_attempt": 1,
     "status": "completed",
     "conclusion": "success",
-    "updated_at": "2026-11-24T03:47:35Z",
-    "head_sha": "7d5a0a73caf81f61db48ab4b396298fd815663b6",
-    "job_id": 138201887919,
-    "artifact_id": 14887457802,
-    "artifact_digest": "sha256:302c9608a2ce98eb63c9936d59d4e3222abd0855b463560328ccb421dcae451a",
+    "updated_at": "2026-11-24T08:21:17Z",
+    "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+    "job_id": 138311217348,
+    "artifact_id": 14902391035,
+    "artifact_digest": "sha256:a03c06242420c816848ccdc09ac67db74dc41ad2bbd5f57ed0b53159732e3779",
     "artifact_digest_verified": true,
     "artifact_redownloaded_this_check": true,
     "job_logs_retrieved_this_check": true,
     "actual_tests_passed": 138,
     "new_publication_this_run": true,
-    "main_id": "17897404392435204",
-    "url": "https://www.threads.com/@hid_1004/post/DgHBd-8jPbl",
-    "slot": "2026-11-24T12:00:00+09:00",
-    "receipt_at": "2026-11-24T12:47:27.429895+09:00",
-    "ledger_published_at": "2026-11-24T12:46:42.610970+09:00",
+    "main_id": "17974331994194122",
+    "url": "https://www.threads.com/@hid_1004/post/DgHgym4mz2o",
+    "slot": "2026-11-24T16:00:00+09:00",
+    "receipt_at": "2026-11-24T17:21:06.769138+09:00",
+    "ledger_published_at": "2026-11-24T17:20:24.263616+09:00",
     "ledger_published_at_is_invocation_not_exact_platform_time": true,
     "stage": "complete",
     "verified": true,
-    "body_hash": "faa2b8b829ad1a18aa9d4c3b2603b7ce55be968e3934a302d8cafe1bf66e9ae4",
-    "content_hash": "2bd4ff822ee3112035e138b9c7e4bf6c41c7da98d521e123c8da5a6dc4beb7a6",
-    "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-    "media_turn": "IMAGE",
-    "pattern": "P1",
-    "char_count": 378,
+    "body_hash": "9111264428231997475e951d2cbf9506971172eb1b0f071fdc0125412dc709dc",
+    "content_hash": "d293bdb33a61f1c05d361f5f57b6bc85cb9c63c9fce8355cc5caa749b80e4f16",
+    "asset_sha256": null,
+    "media_turn": "TEXT",
+    "pattern": "P5",
+    "char_count": 432,
     "replies": 0,
     "original_queue_body_asset_exact": true,
-    "previous75records_preserved": true,
+    "previous76records_preserved": true,
     "maintenance_post_calls": 0,
     "delay_within_original_2h_window": true
   },
@@ -13616,7 +13865,7 @@
           "not_backcalculated": true
         }
       },
-      "last_availability_check_at": "2026-11-24T04:30:02.745668+00:00",
+      "last_availability_check_at": "2026-11-24T07:52:50.869414+00:00",
       "statistical_decision": "comparison_deferred_confounded_strata_and_no_repeated_advantage; extend matched samples, retain A/B weights",
       "diagnostic_observations_by_run_id": {
         "43163347739": {
@@ -19980,6 +20229,58 @@
           "weights_unchanged": true,
           "publication_calls": 0,
           "workflow_dispatch": false
+        },
+        "45339814811": {
+          "run_id": "45339814811",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-24T06:21:31Z",
+          "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+          "job_id": 138260491460,
+          "artifact_id": 14894624479,
+          "artifact_digest": "sha256:a04dc1e1383351e2beb4e896b890448c4070deacbac5e3d2bbd63baae794cc54",
+          "artifact_digest_verified": true,
+          "artifact_redownloaded_this_check": true,
+          "job_logs_retrieved_this_check": true,
+          "observed_at": "2026-11-24T06:21:25.900659+00:00",
+          "records": [],
+          "due_count": 0,
+          "success_count": 0,
+          "classification": "normal_no_due_at_run_time",
+          "new_observation_keys": [],
+          "new_observations": 0,
+          "total_observations": 146,
+          "new_evaluation_report_due": false,
+          "weights_unchanged": true,
+          "publication_calls": 0,
+          "workflow_dispatch": false
+        },
+        "45351393999": {
+          "run_id": "45351393999",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-24T07:52:55Z",
+          "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+          "job_id": 138298437534,
+          "artifact_id": 14900003455,
+          "artifact_digest": "sha256:2a8b1a99d04e9c6df64c8a69e0e03acf4836289a11042b2e63b57efd67522d86",
+          "artifact_digest_verified": true,
+          "artifact_redownloaded_this_check": true,
+          "job_logs_retrieved_this_check": true,
+          "observed_at": "2026-11-24T07:52:50.869414+00:00",
+          "records": [],
+          "due_count": 0,
+          "success_count": 0,
+          "classification": "normal_no_due_at_run_time",
+          "new_observation_keys": [],
+          "new_observations": 0,
+          "total_observations": 146,
+          "new_evaluation_report_due": false,
+          "weights_unchanged": true,
+          "publication_calls": 0,
+          "workflow_dispatch": false
         }
       },
       "additional_connector_check": {
@@ -20044,7 +20345,7 @@
           24.614554899166667,
           24.69059187222222
         ],
-        "decision": "comparison_deferred_confounded_strata_and_no_repeated_advantage",
+        "decision": "extend_comparison_confounded_strata_no_matched_pairs",
         "weight_changed": false,
         "seven_day_interim_due": false,
         "fourteen_day_evaluation_due": false,
@@ -20110,7 +20411,8 @@
         "delayed_over_26h_excluded": [
           "18122947907049313:24h"
         ],
-        "seven_day_experiment_measured_n": 10
+        "seven_day_experiment_measured_n": 10,
+        "fourteen_day_evaluation_completed_at": "2026-11-24T17:21:34.248683+09:00"
       },
       "evaluations_by_window": {
         "7d_interim": {
@@ -20195,6 +20497,169 @@
           "current_stratified_target_met": false,
           "reported_at": "2026-11-17T08:22:56.915209+00:00",
           "evidence_run_id": "44045494792"
+        },
+        "14d_evaluation": {
+          "policy_id": "supportpick-threads-reach-v1-20261109",
+          "window": "14d_evaluation",
+          "evaluated_at": "2026-11-24T17:20:07.451089+09:00",
+          "period_start": "2026-11-10T17:00:08.835254+09:00",
+          "period_end": "2026-11-24T17:00:08.835254+09:00",
+          "normal_verified_publications": 53,
+          "experiment_regular_slots": 57,
+          "unpublished_slots": [
+            {
+              "slot": "2026-11-16T16:00:00+09:00",
+              "classification": "missed_window_closed"
+            },
+            {
+              "slot": "2026-11-18T12:00:00+09:00",
+              "classification": "missed_window_closed"
+            },
+            {
+              "slot": "2026-11-23T20:00:00+09:00",
+              "classification": "missed_window_closed"
+            },
+            {
+              "slot": "2026-11-24T16:00:00+09:00",
+              "classification": "unreserved_at_evaluation_cutoff_then_published_after_cutoff",
+              "subsequent_main_id": "17974331994194122",
+              "subsequent_receipt_at": "2026-11-24T17:21:06.769138+09:00"
+            }
+          ],
+          "missed_closed_slots": 3,
+          "partial_or_pending": 0,
+          "independent_full_public_rendering_recheck": false,
+          "publication_audit_scope": "76durablecompleteverifiedrecords; priorreceipts/body/media/artifacts retained. No newfull28dayremotequery; Nov24 16unreserved/latestpublisher12only,nofailure-runconfirmed.",
+          "24h_comparison_window_observations": 40,
+          "A_n": 20,
+          "B_n": 20,
+          "24h_comparable_matched_pairs": 0,
+          "24h_group_view_medians": {
+            "A": 62.0,
+            "B": 62.0
+          },
+          "24h_all_view_median": 62.0,
+          "actual_reactions": {
+            "A": {
+              "likes": 29,
+              "replies": 0,
+              "reposts": 6,
+              "shares": 1
+            },
+            "B": {
+              "likes": 27,
+              "replies": 0,
+              "reposts": 5,
+              "shares": 0
+            }
+          },
+          "reaction_rate_used": false,
+          "all_24h_observations_delayed": true,
+          "eligible_elapsed_hours_min": 24.317312148333336,
+          "eligible_elapsed_hours_max": 25.691108017222223,
+          "24h_unavailable_not_zero": [
+            "18117968657159347",
+            "17992859946026940",
+            "17913499947663769",
+            "18001464938830261"
+          ],
+          "24h_not_yet_due": [
+            "18129410933479829",
+            "18123605203752749",
+            "17897404392435204"
+          ],
+          "24h_missing_after_due": [],
+          "7d_measured": 27,
+          "7d_not_yet_due": [
+            "18004106657810124",
+            "18155833435528730",
+            "18061699079561356",
+            "18075899267779249",
+            "18361336213223949",
+            "18100168118443439",
+            "17876108337601849",
+            "17954736195295664",
+            "18136261246743978",
+            "18029579210863916",
+            "18106611944009610",
+            "17995393143022353",
+            "18002356029029330",
+            "18098495828440255",
+            "18121994881961457",
+            "18093412586696162",
+            "18102899498408388",
+            "18214999999364836",
+            "18125366213319496",
+            "18149154712603236",
+            "17879078796637660",
+            "18388999600236313",
+            "18129410933479829",
+            "18123605203752749",
+            "17897404392435204"
+          ],
+          "7d_group_medians": {
+            "A": 105,
+            "B": 87.5
+          },
+          "quotes": "not_provided",
+          "reader_only_replies": "unavailable",
+          "profile_clicks": "account_level_not_available; no_post_attribution",
+          "confounders": [
+            "Differentbusiness/region/readers/benefit/deadline/time/media/length; matchedsimilarpairs0",
+            "PreservedmovedexistingREADYcohorts differfromnewslots;excludeinsteadretroclassify",
+            "Newquestiontitlepolicy changesmorethanopeningalone;newAstrarevieweddraftsexcludedfrompureA/B"
+          ],
+          "minimum_24h_target_per_group": 8,
+          "raw_window_target_met": true,
+          "current_stratified_target_met": false,
+          "decision": "extend_comparison;maintainbalancedA/Bandexistingcontrols.No demonstratedrepeatedadvantage;noeditorialweightchange.",
+          "weight_changed": false,
+          "no_backcalculation": true,
+          "extension_next_condition": "Reassess in existingchecks when comparable similar-business strata have sufficient repeatedactual24hwindows; keep comparison group. No separate schedule.",
+          "reported_at": "2026-11-24T17:20:07.451089+09:00",
+          "evidence_latest_metric_run_id": "45351393999",
+          "24h_measured_but_excluded": [
+            {
+              "main_id": "18122947907049313",
+              "elapsed_hours": 52.64388394083333,
+              "reason": "late_beyond_26h_comparison_tolerance"
+            },
+            {
+              "main_id": "18061699079561356",
+              "elapsed_hours": 25.374772445277777,
+              "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+            },
+            {
+              "main_id": "18075899267779249",
+              "elapsed_hours": 24.65035752527778,
+              "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+            },
+            {
+              "main_id": "18361336213223949",
+              "elapsed_hours": 24.39045965972222,
+              "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+            },
+            {
+              "main_id": "18100168118443439",
+              "elapsed_hours": 24.6578044575,
+              "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+            },
+            {
+              "main_id": "17876108337601849",
+              "elapsed_hours": 25.228189436944444,
+              "reason": "Previously written input preserved; no retrospective cohort assignment after failed preceding slot"
+            }
+          ],
+          "7d_group_n": {
+            "A": 13,
+            "B": 14
+          },
+          "7d_due_unmeasured": [
+            "18450932713126961"
+          ],
+          "publication_cutoff_note": "EvaluationperiodendsNov24 17:00:08.16slotwasunreservedatcutoff, laternaturallypublished17:21:06withinits2hwindow; excludedfrom53periodpublications becauseactualinvocation17:20aftercutoff. Notafourthmissedslot.",
+          "unreserved_at_period_end_slots": 1,
+          "currently_open_unreserved_slots_from_period": 0
         }
       },
       "last_reported_evaluation": {
@@ -118627,6 +119092,1281 @@
           "updated_at": "2026-11-23T22:38:20Z"
         }
       ]
+    },
+    "2026-11-24T17:21:34.248683+09:00": {
+      "checked_at": "2026-11-24T17:21:34.248683+09:00",
+      "result": "14day_evaluation_and_new_astra_draft_prepared",
+      "maintenance_previous_blob_sha": "c35f1c2baf317b82922dd77894c2f513ea533c51",
+      "current_main_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "56bb4d20e8c10317791fb4c43b1805b096ccf138",
+      "queue_blob_sha": "1bd619d3c68be53bf1e652c9bddbc25660b28569",
+      "changed_run_versions": [
+        {
+          "run_id": "45351393999",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-24T07:52:55Z",
+          "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5"
+        },
+        {
+          "run_id": "45339814811",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-24T06:21:31Z",
+          "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5"
+        }
+      ],
+      "active_target_runs": [],
+      "run_pagination": {
+        "per_page": 100,
+        "pages": [
+          1
+        ],
+        "checkpoint_run_id": "45326798251",
+        "checkpoint_version_unchanged": true,
+        "all_new_target_versions_observed": true
+      },
+      "publication_ledger_records": 75,
+      "complete_verified_records": 75,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "45277137519",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-23T22:38:20Z",
+        "head_sha": "5732cde848a03907b2505396c34a4d60c713571e",
+        "job_id": 138051732020,
+        "artifact_id": 14868507630,
+        "artifact_digest": "sha256:b768e7aa698979de916b7404b321a7e5e8c15302e7ce3847b3dcfba08a734d22",
+        "artifact_redownloaded_this_check": false,
+        "artifact_digest_verified": true,
+        "read_current_verify_snapshot_load_feed": true,
+        "count": 10895,
+        "generation": "gov24-45277137519-1",
+        "lastSuccessAt": "2026-11-24T07:18:33.759031+09:00",
+        "manifestSha256": "5e05c8162eb03678e75209e530dfe4b710d797b95e4d3e834f399502a65de644",
+        "path": "snapshots/gov24-45277137519-1",
+        "version": 1,
+        "source_count": 10895,
+        "collection_report": {
+          "applicationOpenVerified": false,
+          "collectionSucceededAt": "2026-11-24T07:18:33.759031+09:00",
+          "coverage": "Currently connected Gov24 API, all unfiltered pages of three endpoints",
+          "endpoints": {
+            "serviceDetail": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "serviceList": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "supportConditions": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            }
+          },
+          "factsVerified": false,
+          "feedSha256": "30a93adf6cfac6f954420518a1f06aac9c436d92254c2e54b928f966e73c7c64",
+          "finishedAt": "2026-11-24T07:18:34.853540+09:00",
+          "generation": "gov24-45277137519-1",
+          "normalRequestEstimate": 330,
+          "pageResponses": 327,
+          "project": "supportpick",
+          "published": false,
+          "sampleCount": 0,
+          "scheduled": false,
+          "sourceConsistency": "No snapshot token: totals and boundary pages stable; unique IDs and all endpoint sets matched",
+          "startedAt": "2026-11-24T07:11:09.820235+09:00",
+          "status": "passed",
+          "storedCount": 10895
+        },
+        "current_step": "completed",
+        "collection_complete": true,
+        "workflow_complete": true,
+        "all_four_fingerprints_priority_and_full_delay_windows_pass": false,
+        "original_notice_rereview_this_check": true,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 303,
+        "public_verification_artifact_id": 14870600826,
+        "public_verification_digest": "sha256:0b3d702d86e063ff5cc5e19b36dfb264f35f210321aaa6fa28633a900af9a71b",
+        "public_verification": {
+          "publicHtmlChecked": 11048,
+          "sitemapUrls": 11035,
+          "generation": "gov24-45277137519-1",
+          "sourceRevision": "5732cde848a03907b2505396c34a4d60c713571e",
+          "robots": {
+            "http": 200,
+            "crawlAllowed": true,
+            "scope": "host_root"
+          },
+          "missingUrlHttp": 404,
+          "passed": 11048,
+          "failed": 0,
+          "initialFailures": 1,
+          "maxRequestsPerSecond": 10,
+          "rateLimitEpisodes": 0,
+          "stoppedForRateLimit": false,
+          "recoveredAfterRetry": [
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/142100000058/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            }
+          ],
+          "failures": []
+        },
+        "no_collection_failure": true,
+        "observed_in_progress_at_start": false,
+        "completed_success_before_record": true,
+        "artifact_digest_previously_verified_cached_bytes": true,
+        "current_complete_snapshot_verified": true,
+        "actual_send_latest_complete_source_required": true,
+        "complete_snapshot_reverified": true
+      },
+      "writer": {
+        "checked_at": "2026-11-24T17:20:07.451089+09:00",
+        "ready": 5,
+        "future24h_ready": 4,
+        "active_regular_ready": 1,
+        "new_drafts": 1,
+        "existing_READY_reused": 4,
+        "drafts": [
+          {
+            "slot": "2026-11-24T16:00:00+09:00",
+            "benefit_id": "B55284500010",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 432,
+            "expires_at": "2026-11-24T21:48:01.930334+09:00",
+            "full_delay_window_valid": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-24T20:00:00+09:00",
+            "benefit_id": "127000000002",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 422,
+            "expires_at": "2026-11-24T23:06:37.757855+09:00",
+            "full_delay_window_valid": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T08:00:00+09:00",
+            "benefit_id": "419000000129",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 315,
+            "expires_at": "2026-11-25T10:40:14.847169+09:00",
+            "full_delay_window_valid": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T12:00:00+09:00",
+            "benefit_id": "PTR000050390",
+            "pattern": "P5",
+            "media_turn": "IMAGE",
+            "char_count": 436,
+            "expires_at": "2026-11-25T14:45:53.443971+09:00",
+            "full_delay_window_valid": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T16:00:00+09:00",
+            "benefit_id": "B49000100208",
+            "pattern": "P6",
+            "media_turn": "TEXT",
+            "char_count": 381,
+            "expires_at": "2026-11-25T17:19:11.117255+09:00",
+            "full_delay_window_valid": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "ledger_records": 76,
+        "pending": null,
+        "lease": null,
+        "new_posts": 0,
+        "new_metrics": 0,
+        "observations": 146,
+        "new_evaluation": true,
+        "astra_review_invocations": 2,
+        "current_image_bytes_sha_recompared": true,
+        "source_recheck_required_at_publish": true,
+        "due_post_ids": [
+          "18450932713126961",
+          "18121994881961457"
+        ]
+      },
+      "metrics": {
+        "run_id": "45351393999",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T07:52:55Z",
+        "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+        "job_id": 138298437534,
+        "artifact_id": 14900003455,
+        "artifact_digest": "sha256:2a8b1a99d04e9c6df64c8a69e0e03acf4836289a11042b2e63b57efd67522d86",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "observed_at": "2026-11-24T07:52:50.869414+00:00",
+        "records": [],
+        "due_count": 0,
+        "success_count": 0,
+        "classification": "normal_no_due_at_run_time",
+        "new_observation_keys": [],
+        "new_observations": 0,
+        "total_observations": 146,
+        "new_evaluation_report_due": false,
+        "weights_unchanged": true,
+        "publication_calls": 0,
+        "workflow_dispatch": false
+      },
+      "recovery": {
+        "original_slot": "2026-11-23T20:00:00+09:00",
+        "original_slot_published": false,
+        "closed_missed_slot_no_backfill": true,
+        "previously_closed_missed_slot_preserved": true,
+        "new_failure_this_check": false,
+        "new_recovery_this_check": false,
+        "dispatches_this_check": 0,
+        "new_posts": 0,
+        "pending": null,
+        "lease": null,
+        "stage": "read_only_maintenance_complete",
+        "reason": "16slotnotyetreserved/noactualpublisherfailure-runobserved andwindowopen. Keep existingdraft; no duplicatePOST/dispatch. PriorNov23closedmissedincident unchanged.",
+        "new_publication_this_check": false
+      },
+      "next_condition": "Nov24 16stillunreserved andwindowopenuntil18; latestpublisher12only observed. No failureguess or extraPOST/dispatch. Afterwindowcloseifunreservedarchiveand recomputefuturepriority/media withoutbackfill. CurrentactiveREADY1+next24h4saved:20/Nov25 08/12/16. New381charcondoTEXT/P6twoAstraPASS; expiryNov25 17:19before16~18fullwindow, genuineofficial/currentstatus/latestcompletefeed/imageSHA revalidation aftertoday18existingcheck required witholdarchive/CASmax24h.14dayevaluationsavedonce:53normal/3closedmisses/1open,40actual24hwindows A20/B20medians62/62,matchedpairs0/confounded; extendcomparison and no weightchange.76posts146observations unchanged. Realpublisherfreshsourcecheckmandatory;no current07:18tomorrowfreshnessassumption.",
+      "publication": {
+        "run_id": "45321813009",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T03:47:35Z",
+        "head_sha": "7d5a0a73caf81f61db48ab4b396298fd815663b6",
+        "job_id": 138201887919,
+        "artifact_id": 14887457802,
+        "artifact_digest": "sha256:302c9608a2ce98eb63c9936d59d4e3222abd0855b463560328ccb421dcae451a",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 138,
+        "new_publication_this_run": false,
+        "main_id": "17897404392435204",
+        "url": "https://www.threads.com/@hid_1004/post/DgHBd-8jPbl",
+        "slot": "2026-11-24T12:00:00+09:00",
+        "receipt_at": "2026-11-24T12:47:27.429895+09:00",
+        "ledger_published_at": "2026-11-24T12:46:42.610970+09:00",
+        "ledger_published_at_is_invocation_not_exact_platform_time": true,
+        "stage": "complete",
+        "verified": true,
+        "body_hash": "faa2b8b829ad1a18aa9d4c3b2603b7ce55be968e3934a302d8cafe1bf66e9ae4",
+        "content_hash": "2bd4ff822ee3112035e138b9c7e4bf6c41c7da98d521e123c8da5a6dc4beb7a6",
+        "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+        "media_turn": "IMAGE",
+        "pattern": "P1",
+        "char_count": 378,
+        "replies": 0,
+        "original_queue_body_asset_exact": true,
+        "previous75records_preserved": true,
+        "maintenance_post_calls": 0,
+        "delay_within_original_2h_window": true,
+        "latest_already_reported": true
+      },
+      "history_reconciliation": {
+        "run_id": "45173485637",
+        "mode": "check-account",
+        "account": "hid_1004",
+        "checked_at": "2026-11-23T21:21:24+09:00",
+        "recent_remote_rows": 100,
+        "more_history": true,
+        "main_ledger_matches_in_page": 49,
+        "latest20_main_matches": 20,
+        "latest_remote_id": "18129410933479829",
+        "target_text_absent": true,
+        "scope": "76 complete verified durable publications; previous75 exact preserved; newreceipt/body/asset/artifact matched. Prior remote100row audit retained; no newfull28dayremote query.",
+        "artifact_id": 14818615408,
+        "artifact_digest": "sha256:23cfc165bbd050ec1a12dbde18778345efb01c4d9e20abf69f6279b090e003b3",
+        "artifact_digest_verified": true,
+        "remote_requeried_this_check": false,
+        "previous_remote_evidence_preserved": true
+      },
+      "official_review_recovery": {
+        "new_official_page_review_this_check": true,
+        "program_id": "B49000100208",
+        "evidence": [
+          {
+            "source_id": "B49000100208",
+            "source_ref": "https://www.moel.go.kr/policyitrd/policyItrdList.do?searchMclsCdList=J",
+            "access_method": "OPENED_OFFICIAL",
+            "verified_at": "2026-11-24T17:19:11.117255+09:00",
+            "claims_supported": [
+              "현공식목록2026휴양콘도지원확인,실제HTML fnView523관찰."
+            ]
+          },
+          {
+            "source_id": "B49000100208",
+            "source_ref": "https://www.moel.go.kr/policyitrd/downloadFile.do?policy_itrd_sn=523",
+            "access_method": "OPENED_OFFICIAL",
+            "verified_at": "2026-11-24T17:19:11.117255+09:00",
+            "claims_supported": [
+              "공식상세523HTML첨부링크직접GET hwpxZIP/XML전문추출열람:특수형태근로종사자(노무제공자포함)모든요일가능.평일7일전/주말성수기전월5신청및전월10선발/월평균소득기업규모우선.인증서로그인→신청서→적격확인→문자. 구체객실요금확정없음."
+            ]
+          },
+          {
+            "source_id": "B49000100208",
+            "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001618&bnefType=all&svcId=B49000100208",
+            "access_method": "PROVIDED_OFFICIAL_TEXT",
+            "verified_at": "2026-11-24T17:19:11.117255+09:00",
+            "claims_supported": [
+              "완전snapshotmanifest검증후load_feed,동일ID원본누적35145/checkedAt07:16:03.552111,상시신청/무기명법인회원가시설이용. API수집과본공식문서열람시각구별.수집성공은잔여객실보장아님."
+            ]
+          }
+        ],
+        "actual_Astra_review": {
+          "model": "gpt-6.2-astra",
+          "independent_agent": "/root/condo_final_review",
+          "initial_verdict": "REVISE",
+          "initial_changes": [
+            "첫답네직답",
+            "특수형태근로종사자(노무제공자포함)공식포함관계복원"
+          ],
+          "final_verdict": "PASS",
+          "actual_review_calls": 2,
+          "final_text_sha256": "af1d8576401da0456c0479fb3a36a12667bfb48378b1b61eef5cc9595fa23d0a",
+          "char_count": 381,
+          "image": null,
+          "image_reason": "TEXT회차실제이미지없음",
+          "final_checked_at": "2026-11-24T17:20:07.451089+09:00",
+          "final_result": "실제동일모델재검수PASS381자.대상질문즉답/포함관계/요일별기한/선발조건공식일치.CTA1/링크0/추가행동0."
+        },
+        "new_Astra_calls": 2,
+        "image_bytes_sha_recompared": true,
+        "new_visual_inspection": false
+      },
+      "regular_slot_observation": {
+        "slot": "2026-11-24T08:00:00+09:00",
+        "status": "natural_publication_verified_complete",
+        "main_id": "18123605203752749",
+        "receipt_at": "2026-11-24T08:46:05.901553+09:00",
+        "main_url": "https://www.threads.com/@hid_1004/post/DgGl2ooGuAa"
+      },
+      "main_head_observation": {
+        "latest_observed_run_head": "5732cde848a03907b2505396c34a4d60c713571e",
+        "target_publisher_workflows_master_and_assets_blobs_unchanged": true,
+        "unrelated_changes_not_modified": true
+      },
+      "image_sha_comparisons": [
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:06.502293+09:00"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:14.847084+09:00"
+        }
+      ],
+      "run_status_transitions": [
+        {
+          "run_id": "45277137519",
+          "from": "in_progress",
+          "to": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-23T22:38:20Z"
+        }
+      ],
+      "metric_runs_checked": [
+        {
+          "run_id": "45339814811",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-24T06:21:31Z",
+          "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+          "job_id": 138260491460,
+          "artifact_id": 14894624479,
+          "artifact_digest": "sha256:a04dc1e1383351e2beb4e896b890448c4070deacbac5e3d2bbd63baae794cc54",
+          "artifact_digest_verified": true,
+          "artifact_redownloaded_this_check": true,
+          "job_logs_retrieved_this_check": true,
+          "observed_at": "2026-11-24T06:21:25.900659+00:00",
+          "records": [],
+          "due_count": 0,
+          "success_count": 0,
+          "classification": "normal_no_due_at_run_time",
+          "new_observation_keys": [],
+          "new_observations": 0,
+          "total_observations": 146,
+          "new_evaluation_report_due": false,
+          "weights_unchanged": true,
+          "publication_calls": 0,
+          "workflow_dispatch": false
+        },
+        {
+          "run_id": "45351393999",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-24T07:52:55Z",
+          "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+          "job_id": 138298437534,
+          "artifact_id": 14900003455,
+          "artifact_digest": "sha256:2a8b1a99d04e9c6df64c8a69e0e03acf4836289a11042b2e63b57efd67522d86",
+          "artifact_digest_verified": true,
+          "artifact_redownloaded_this_check": true,
+          "job_logs_retrieved_this_check": true,
+          "observed_at": "2026-11-24T07:52:50.869414+00:00",
+          "records": [],
+          "due_count": 0,
+          "success_count": 0,
+          "classification": "normal_no_due_at_run_time",
+          "new_observation_keys": [],
+          "new_observations": 0,
+          "total_observations": 146,
+          "new_evaluation_report_due": false,
+          "weights_unchanged": true,
+          "publication_calls": 0,
+          "workflow_dispatch": false
+        }
+      ],
+      "formal_evaluation": {
+        "policy_id": "supportpick-threads-reach-v1-20261109",
+        "window": "14d_evaluation",
+        "evaluated_at": "2026-11-24T17:20:07.451089+09:00",
+        "period_start": "2026-11-10T17:00:08.835254+09:00",
+        "period_end": "2026-11-24T17:00:08.835254+09:00",
+        "normal_verified_publications": 53,
+        "experiment_regular_slots": 57,
+        "unpublished_slots": [
+          {
+            "slot": "2026-11-16T16:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-18T12:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-23T20:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-24T16:00:00+09:00",
+            "classification": "unreserved_window_open"
+          }
+        ],
+        "missed_closed_slots": 3,
+        "still_open_unreserved_slots": 1,
+        "partial_or_pending": 0,
+        "independent_full_public_rendering_recheck": false,
+        "publication_audit_scope": "76durablecompleteverifiedrecords; priorreceipts/body/media/artifacts retained. No newfull28dayremotequery; Nov24 16unreserved/latestpublisher12only,nofailure-runconfirmed.",
+        "24h_comparison_window_observations": 40,
+        "A_n": 20,
+        "B_n": 20,
+        "24h_comparable_matched_pairs": 0,
+        "24h_group_view_medians": {
+          "A": 62.0,
+          "B": 62.0
+        },
+        "24h_all_view_median": 62.0,
+        "actual_reactions": {
+          "A": {
+            "likes": 29,
+            "replies": 0,
+            "reposts": 6,
+            "shares": 1
+          },
+          "B": {
+            "likes": 27,
+            "replies": 0,
+            "reposts": 5,
+            "shares": 0
+          }
+        },
+        "reaction_rate_used": false,
+        "all_24h_observations_delayed": true,
+        "eligible_elapsed_hours_min": 24.317312148333336,
+        "eligible_elapsed_hours_max": 25.691108017222223,
+        "24h_unavailable_not_zero": [
+          "18117968657159347",
+          "17992859946026940",
+          "17913499947663769",
+          "18001464938830261"
+        ],
+        "24h_not_yet_due": [
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "24h_missing_after_due": [],
+        "7d_measured": 27,
+        "7d_not_yet_due": [
+          "18004106657810124",
+          "18155833435528730",
+          "18061699079561356",
+          "18075899267779249",
+          "18361336213223949",
+          "18100168118443439",
+          "17876108337601849",
+          "17954736195295664",
+          "18136261246743978",
+          "18029579210863916",
+          "18106611944009610",
+          "17995393143022353",
+          "18002356029029330",
+          "18098495828440255",
+          "18121994881961457",
+          "18093412586696162",
+          "18102899498408388",
+          "18214999999364836",
+          "18125366213319496",
+          "18149154712603236",
+          "17879078796637660",
+          "18388999600236313",
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "7d_group_medians": {
+          "A": 105,
+          "B": 87.5
+        },
+        "quotes": "not_provided",
+        "reader_only_replies": "unavailable",
+        "profile_clicks": "account_level_not_available; no_post_attribution",
+        "confounders": [
+          "Differentbusiness/region/readers/benefit/deadline/time/media/length; matchedsimilarpairs0",
+          "PreservedmovedexistingREADYcohorts differfromnewslots;excludeinsteadretroclassify",
+          "Newquestiontitlepolicy changesmorethanopeningalone;newAstrarevieweddraftsexcludedfrompureA/B"
+        ],
+        "minimum_24h_target_per_group": 8,
+        "raw_window_target_met": true,
+        "current_stratified_target_met": false,
+        "decision": "extend_comparison;maintainbalancedA/Bandexistingcontrols.No demonstratedrepeatedadvantage;noeditorialweightchange.",
+        "weight_changed": false,
+        "no_backcalculation": true,
+        "extension_next_condition": "Reassess in existingchecks when comparable similar-business strata have sufficient repeatedactual24hwindows; keep comparison group. No separate schedule.",
+        "reported_at": "2026-11-24T17:20:07.451089+09:00",
+        "evidence_latest_metric_run_id": "45351393999",
+        "24h_measured_but_excluded": [
+          {
+            "main_id": "18122947907049313",
+            "elapsed_hours": 52.64388394083333,
+            "reason": "late_beyond_26h_comparison_tolerance"
+          },
+          {
+            "main_id": "18061699079561356",
+            "elapsed_hours": 25.374772445277777,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18075899267779249",
+            "elapsed_hours": 24.65035752527778,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18361336213223949",
+            "elapsed_hours": 24.39045965972222,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18100168118443439",
+            "elapsed_hours": 24.6578044575,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "17876108337601849",
+            "elapsed_hours": 25.228189436944444,
+            "reason": "Previously written input preserved; no retrospective cohort assignment after failed preceding slot"
+          }
+        ],
+        "7d_group_n": {
+          "A": 13,
+          "B": 14
+        },
+        "7d_due_unmeasured": [
+          "18450932713126961"
+        ]
+      },
+      "publication_schedule_observation": {
+        "slot": "2026-11-24T16:00:00+09:00",
+        "checked_at": "2026-11-24T17:21:34.248683+09:00",
+        "status": "unreserved_run_not_observed_window_still_open",
+        "window_end": "2026-11-24T18:00:00+09:00",
+        "latest_publisher_run_id": "45321813009",
+        "ledger_slot_absent": true,
+        "pending": null,
+        "lease": null,
+        "failure_run_confirmed": false,
+        "workflow_dispatch": false,
+        "next_condition": "ExistingnormalActionsmaystillrunbefore18. No duplicate/dispatchedrecoverywithoutconfirmedfailure. Ifwindowclosesunreservedarchiveandreslotonlyfutureaccordingactualledger/media/priority."
+      }
+    },
+    "2026-11-24T17:23:46.351457+09:00": {
+      "checked_at": "2026-11-24T17:23:46.351457+09:00",
+      "result": "new_publication_14day_evaluation_and_astra_draft_prepared",
+      "maintenance_previous_blob_sha": "c35f1c2baf317b82922dd77894c2f513ea533c51",
+      "current_main_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "5d033f77c6d86e826956219d1bd4a034b05daffc",
+      "queue_blob_sha": "1bd619d3c68be53bf1e652c9bddbc25660b28569",
+      "changed_run_versions": [
+        {
+          "run_id": "45351393999",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-24T07:52:55Z",
+          "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5"
+        },
+        {
+          "run_id": "45339814811",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-24T06:21:31Z",
+          "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5"
+        },
+        {
+          "run_id": "45355210766",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-24T08:21:17Z",
+          "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5"
+        }
+      ],
+      "active_target_runs": [],
+      "run_pagination": {
+        "per_page": 100,
+        "pages": [
+          1
+        ],
+        "checkpoint_run_id": "45326798251",
+        "checkpoint_version_unchanged": true,
+        "all_new_target_versions_observed": true
+      },
+      "publication_ledger_records": 75,
+      "complete_verified_records": 75,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "45277137519",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-23T22:38:20Z",
+        "head_sha": "5732cde848a03907b2505396c34a4d60c713571e",
+        "job_id": 138051732020,
+        "artifact_id": 14868507630,
+        "artifact_digest": "sha256:b768e7aa698979de916b7404b321a7e5e8c15302e7ce3847b3dcfba08a734d22",
+        "artifact_redownloaded_this_check": false,
+        "artifact_digest_verified": true,
+        "read_current_verify_snapshot_load_feed": true,
+        "count": 10895,
+        "generation": "gov24-45277137519-1",
+        "lastSuccessAt": "2026-11-24T07:18:33.759031+09:00",
+        "manifestSha256": "5e05c8162eb03678e75209e530dfe4b710d797b95e4d3e834f399502a65de644",
+        "path": "snapshots/gov24-45277137519-1",
+        "version": 1,
+        "source_count": 10895,
+        "collection_report": {
+          "applicationOpenVerified": false,
+          "collectionSucceededAt": "2026-11-24T07:18:33.759031+09:00",
+          "coverage": "Currently connected Gov24 API, all unfiltered pages of three endpoints",
+          "endpoints": {
+            "serviceDetail": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "serviceList": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "supportConditions": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            }
+          },
+          "factsVerified": false,
+          "feedSha256": "30a93adf6cfac6f954420518a1f06aac9c436d92254c2e54b928f966e73c7c64",
+          "finishedAt": "2026-11-24T07:18:34.853540+09:00",
+          "generation": "gov24-45277137519-1",
+          "normalRequestEstimate": 330,
+          "pageResponses": 327,
+          "project": "supportpick",
+          "published": false,
+          "sampleCount": 0,
+          "scheduled": false,
+          "sourceConsistency": "No snapshot token: totals and boundary pages stable; unique IDs and all endpoint sets matched",
+          "startedAt": "2026-11-24T07:11:09.820235+09:00",
+          "status": "passed",
+          "storedCount": 10895
+        },
+        "current_step": "completed",
+        "collection_complete": true,
+        "workflow_complete": true,
+        "all_four_fingerprints_priority_and_full_delay_windows_pass": false,
+        "original_notice_rereview_this_check": true,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 303,
+        "public_verification_artifact_id": 14870600826,
+        "public_verification_digest": "sha256:0b3d702d86e063ff5cc5e19b36dfb264f35f210321aaa6fa28633a900af9a71b",
+        "public_verification": {
+          "publicHtmlChecked": 11048,
+          "sitemapUrls": 11035,
+          "generation": "gov24-45277137519-1",
+          "sourceRevision": "5732cde848a03907b2505396c34a4d60c713571e",
+          "robots": {
+            "http": 200,
+            "crawlAllowed": true,
+            "scope": "host_root"
+          },
+          "missingUrlHttp": 404,
+          "passed": 11048,
+          "failed": 0,
+          "initialFailures": 1,
+          "maxRequestsPerSecond": 10,
+          "rateLimitEpisodes": 0,
+          "stoppedForRateLimit": false,
+          "recoveredAfterRetry": [
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/142100000058/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            }
+          ],
+          "failures": []
+        },
+        "no_collection_failure": true,
+        "observed_in_progress_at_start": false,
+        "completed_success_before_record": true,
+        "artifact_digest_previously_verified_cached_bytes": true,
+        "current_complete_snapshot_verified": true,
+        "actual_send_latest_complete_source_required": true,
+        "complete_snapshot_reverified": true
+      },
+      "writer": {
+        "checked_at": "2026-11-24T17:20:07.451089+09:00",
+        "ready": 4,
+        "future24h_ready": 4,
+        "active_regular_ready": 0,
+        "new_drafts": 1,
+        "existing_READY_reused": 4,
+        "drafts": [
+          {
+            "slot": "2026-11-24T20:00:00+09:00",
+            "benefit_id": "127000000002",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 422,
+            "expires_at": "2026-11-24T23:06:37.757855+09:00",
+            "full_delay_window_valid": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T08:00:00+09:00",
+            "benefit_id": "419000000129",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 315,
+            "expires_at": "2026-11-25T10:40:14.847169+09:00",
+            "full_delay_window_valid": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T12:00:00+09:00",
+            "benefit_id": "PTR000050390",
+            "pattern": "P5",
+            "media_turn": "IMAGE",
+            "char_count": 436,
+            "expires_at": "2026-11-25T14:45:53.443971+09:00",
+            "full_delay_window_valid": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T16:00:00+09:00",
+            "benefit_id": "B49000100208",
+            "pattern": "P6",
+            "media_turn": "TEXT",
+            "char_count": 381,
+            "expires_at": "2026-11-25T17:19:11.117255+09:00",
+            "full_delay_window_valid": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "ledger_records": 77,
+        "pending": null,
+        "lease": null,
+        "new_posts": 1,
+        "new_metrics": 0,
+        "observations": 146,
+        "new_evaluation": true,
+        "astra_review_invocations": 2,
+        "current_image_bytes_sha_recompared": true,
+        "source_recheck_required_at_publish": true,
+        "due_post_ids": [
+          "18450932713126961",
+          "18121994881961457"
+        ]
+      },
+      "metrics": {
+        "run_id": "45351393999",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T07:52:55Z",
+        "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+        "job_id": 138298437534,
+        "artifact_id": 14900003455,
+        "artifact_digest": "sha256:2a8b1a99d04e9c6df64c8a69e0e03acf4836289a11042b2e63b57efd67522d86",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "observed_at": "2026-11-24T07:52:50.869414+00:00",
+        "records": [],
+        "due_count": 0,
+        "success_count": 0,
+        "classification": "normal_no_due_at_run_time",
+        "new_observation_keys": [],
+        "new_observations": 0,
+        "total_observations": 146,
+        "new_evaluation_report_due": false,
+        "weights_unchanged": true,
+        "publication_calls": 0,
+        "workflow_dispatch": false
+      },
+      "recovery": {
+        "original_slot": "2026-11-23T20:00:00+09:00",
+        "original_slot_published": false,
+        "closed_missed_slot_no_backfill": true,
+        "previously_closed_missed_slot_preserved": true,
+        "new_failure_this_check": false,
+        "new_recovery_this_check": false,
+        "dispatches_this_check": 0,
+        "new_posts": 1,
+        "pending": null,
+        "lease": null,
+        "stage": "read_only_maintenance_complete",
+        "reason": "16slotnaturalpublishercompletedwithinwindowduringmaintenance. CASguarddetectedchangedstate; rereadandverifiedreceipt/log/artifact/body/nomedia,77complete rows/old76exact preserved. No duplicatePOST/dispatch.",
+        "new_publication_this_check": true
+      },
+      "next_condition": "Nov24 16naturallyposted17:21within2hwindow,notrecovery.77completeposts,146observations; next24h4READY20/Nov25 08/12/16,preview4androtationI/T/I/Tconfirmed. New381charcondoTEXT/P6Astra2PASS remainsunmodified;expiresNov25 17:19requiresactualofficial/fullsource/imageSHAreviewaftertoday18existingchecktocover18end.14daycutoff17:00evaluation53periodpublications+3closedmisses+1unreservedatcutoffsubsequentlyposted:40delayed24hwindowsA20/B20medians62/62,no matchedpairs; extendcomparison no weightchange. No extraPOST/dispatch/rerun/backfill/schedule. Actualsenderlatestcompletefreshsource/currentofficialaccountledgerchecksmandatory.",
+      "publication": {
+        "run_id": "45355210766",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T08:21:17Z",
+        "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+        "job_id": 138311217348,
+        "artifact_id": 14902391035,
+        "artifact_digest": "sha256:a03c06242420c816848ccdc09ac67db74dc41ad2bbd5f57ed0b53159732e3779",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "actual_tests_passed": 138,
+        "new_publication_this_run": true,
+        "main_id": "17974331994194122",
+        "url": "https://www.threads.com/@hid_1004/post/DgHgym4mz2o",
+        "slot": "2026-11-24T16:00:00+09:00",
+        "receipt_at": "2026-11-24T17:21:06.769138+09:00",
+        "ledger_published_at": "2026-11-24T17:20:24.263616+09:00",
+        "ledger_published_at_is_invocation_not_exact_platform_time": true,
+        "stage": "complete",
+        "verified": true,
+        "body_hash": "9111264428231997475e951d2cbf9506971172eb1b0f071fdc0125412dc709dc",
+        "content_hash": "d293bdb33a61f1c05d361f5f57b6bc85cb9c63c9fce8355cc5caa749b80e4f16",
+        "asset_sha256": null,
+        "media_turn": "TEXT",
+        "pattern": "P5",
+        "char_count": 432,
+        "replies": 0,
+        "original_queue_body_asset_exact": true,
+        "previous76records_preserved": true,
+        "maintenance_post_calls": 0,
+        "delay_within_original_2h_window": true
+      },
+      "history_reconciliation": {
+        "run_id": "45173485637",
+        "mode": "check-account",
+        "account": "hid_1004",
+        "checked_at": "2026-11-23T21:21:24+09:00",
+        "recent_remote_rows": 100,
+        "more_history": true,
+        "main_ledger_matches_in_page": 49,
+        "latest20_main_matches": 20,
+        "latest_remote_id": "18129410933479829",
+        "target_text_absent": true,
+        "scope": "77durablecompleteverifiedrows;prior76exactpreserved;newreceipt/body/asset/artifactverified. No full28dayremotequery.",
+        "artifact_id": 14818615408,
+        "artifact_digest": "sha256:23cfc165bbd050ec1a12dbde18778345efb01c4d9e20abf69f6279b090e003b3",
+        "artifact_digest_verified": true,
+        "remote_requeried_this_check": false,
+        "previous_remote_evidence_preserved": true
+      },
+      "official_review_recovery": {
+        "new_official_page_review_this_check": true,
+        "program_id": "B49000100208",
+        "evidence": [
+          {
+            "source_id": "B49000100208",
+            "source_ref": "https://www.moel.go.kr/policyitrd/policyItrdList.do?searchMclsCdList=J",
+            "access_method": "OPENED_OFFICIAL",
+            "verified_at": "2026-11-24T17:19:11.117255+09:00",
+            "claims_supported": [
+              "현공식목록2026휴양콘도지원확인,실제HTML fnView523관찰."
+            ]
+          },
+          {
+            "source_id": "B49000100208",
+            "source_ref": "https://www.moel.go.kr/policyitrd/downloadFile.do?policy_itrd_sn=523",
+            "access_method": "OPENED_OFFICIAL",
+            "verified_at": "2026-11-24T17:19:11.117255+09:00",
+            "claims_supported": [
+              "공식상세523HTML첨부링크직접GET hwpxZIP/XML전문추출열람:특수형태근로종사자(노무제공자포함)모든요일가능.평일7일전/주말성수기전월5신청및전월10선발/월평균소득기업규모우선.인증서로그인→신청서→적격확인→문자. 구체객실요금확정없음."
+            ]
+          },
+          {
+            "source_id": "B49000100208",
+            "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001618&bnefType=all&svcId=B49000100208",
+            "access_method": "PROVIDED_OFFICIAL_TEXT",
+            "verified_at": "2026-11-24T17:19:11.117255+09:00",
+            "claims_supported": [
+              "완전snapshotmanifest검증후load_feed,동일ID원본누적35145/checkedAt07:16:03.552111,상시신청/무기명법인회원가시설이용. API수집과본공식문서열람시각구별.수집성공은잔여객실보장아님."
+            ]
+          }
+        ],
+        "actual_Astra_review": {
+          "model": "gpt-6.2-astra",
+          "independent_agent": "/root/condo_final_review",
+          "initial_verdict": "REVISE",
+          "initial_changes": [
+            "첫답네직답",
+            "특수형태근로종사자(노무제공자포함)공식포함관계복원"
+          ],
+          "final_verdict": "PASS",
+          "actual_review_calls": 2,
+          "final_text_sha256": "af1d8576401da0456c0479fb3a36a12667bfb48378b1b61eef5cc9595fa23d0a",
+          "char_count": 381,
+          "image": null,
+          "image_reason": "TEXT회차실제이미지없음",
+          "final_checked_at": "2026-11-24T17:20:07.451089+09:00",
+          "final_result": "실제동일모델재검수PASS381자.대상질문즉답/포함관계/요일별기한/선발조건공식일치.CTA1/링크0/추가행동0."
+        },
+        "new_Astra_calls": 2,
+        "image_bytes_sha_recompared": true,
+        "new_visual_inspection": false
+      },
+      "regular_slot_observation": {
+        "slot": "2026-11-24T08:00:00+09:00",
+        "status": "natural_publication_verified_complete",
+        "main_id": "18123605203752749",
+        "receipt_at": "2026-11-24T08:46:05.901553+09:00",
+        "main_url": "https://www.threads.com/@hid_1004/post/DgGl2ooGuAa"
+      },
+      "main_head_observation": {
+        "latest_observed_run_head": "5732cde848a03907b2505396c34a4d60c713571e",
+        "target_publisher_workflows_master_and_assets_blobs_unchanged": true,
+        "unrelated_changes_not_modified": true
+      },
+      "image_sha_comparisons": [
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:06.502293+09:00"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:14.847084+09:00"
+        }
+      ],
+      "run_status_transitions": [
+        {
+          "run_id": "45277137519",
+          "from": "in_progress",
+          "to": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-23T22:38:20Z"
+        }
+      ],
+      "metric_runs_checked": [
+        {
+          "run_id": "45339814811",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-24T06:21:31Z",
+          "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+          "job_id": 138260491460,
+          "artifact_id": 14894624479,
+          "artifact_digest": "sha256:a04dc1e1383351e2beb4e896b890448c4070deacbac5e3d2bbd63baae794cc54",
+          "artifact_digest_verified": true,
+          "artifact_redownloaded_this_check": true,
+          "job_logs_retrieved_this_check": true,
+          "observed_at": "2026-11-24T06:21:25.900659+00:00",
+          "records": [],
+          "due_count": 0,
+          "success_count": 0,
+          "classification": "normal_no_due_at_run_time",
+          "new_observation_keys": [],
+          "new_observations": 0,
+          "total_observations": 146,
+          "new_evaluation_report_due": false,
+          "weights_unchanged": true,
+          "publication_calls": 0,
+          "workflow_dispatch": false
+        },
+        {
+          "run_id": "45351393999",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-24T07:52:55Z",
+          "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+          "job_id": 138298437534,
+          "artifact_id": 14900003455,
+          "artifact_digest": "sha256:2a8b1a99d04e9c6df64c8a69e0e03acf4836289a11042b2e63b57efd67522d86",
+          "artifact_digest_verified": true,
+          "artifact_redownloaded_this_check": true,
+          "job_logs_retrieved_this_check": true,
+          "observed_at": "2026-11-24T07:52:50.869414+00:00",
+          "records": [],
+          "due_count": 0,
+          "success_count": 0,
+          "classification": "normal_no_due_at_run_time",
+          "new_observation_keys": [],
+          "new_observations": 0,
+          "total_observations": 146,
+          "new_evaluation_report_due": false,
+          "weights_unchanged": true,
+          "publication_calls": 0,
+          "workflow_dispatch": false
+        }
+      ],
+      "formal_evaluation": {
+        "policy_id": "supportpick-threads-reach-v1-20261109",
+        "window": "14d_evaluation",
+        "evaluated_at": "2026-11-24T17:20:07.451089+09:00",
+        "period_start": "2026-11-10T17:00:08.835254+09:00",
+        "period_end": "2026-11-24T17:00:08.835254+09:00",
+        "normal_verified_publications": 53,
+        "experiment_regular_slots": 57,
+        "unpublished_slots": [
+          {
+            "slot": "2026-11-16T16:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-18T12:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-23T20:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-24T16:00:00+09:00",
+            "classification": "unreserved_at_evaluation_cutoff_then_published_after_cutoff",
+            "subsequent_main_id": "17974331994194122",
+            "subsequent_receipt_at": "2026-11-24T17:21:06.769138+09:00"
+          }
+        ],
+        "missed_closed_slots": 3,
+        "partial_or_pending": 0,
+        "independent_full_public_rendering_recheck": false,
+        "publication_audit_scope": "76durablecompleteverifiedrecords; priorreceipts/body/media/artifacts retained. No newfull28dayremotequery; Nov24 16unreserved/latestpublisher12only,nofailure-runconfirmed.",
+        "24h_comparison_window_observations": 40,
+        "A_n": 20,
+        "B_n": 20,
+        "24h_comparable_matched_pairs": 0,
+        "24h_group_view_medians": {
+          "A": 62.0,
+          "B": 62.0
+        },
+        "24h_all_view_median": 62.0,
+        "actual_reactions": {
+          "A": {
+            "likes": 29,
+            "replies": 0,
+            "reposts": 6,
+            "shares": 1
+          },
+          "B": {
+            "likes": 27,
+            "replies": 0,
+            "reposts": 5,
+            "shares": 0
+          }
+        },
+        "reaction_rate_used": false,
+        "all_24h_observations_delayed": true,
+        "eligible_elapsed_hours_min": 24.317312148333336,
+        "eligible_elapsed_hours_max": 25.691108017222223,
+        "24h_unavailable_not_zero": [
+          "18117968657159347",
+          "17992859946026940",
+          "17913499947663769",
+          "18001464938830261"
+        ],
+        "24h_not_yet_due": [
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "24h_missing_after_due": [],
+        "7d_measured": 27,
+        "7d_not_yet_due": [
+          "18004106657810124",
+          "18155833435528730",
+          "18061699079561356",
+          "18075899267779249",
+          "18361336213223949",
+          "18100168118443439",
+          "17876108337601849",
+          "17954736195295664",
+          "18136261246743978",
+          "18029579210863916",
+          "18106611944009610",
+          "17995393143022353",
+          "18002356029029330",
+          "18098495828440255",
+          "18121994881961457",
+          "18093412586696162",
+          "18102899498408388",
+          "18214999999364836",
+          "18125366213319496",
+          "18149154712603236",
+          "17879078796637660",
+          "18388999600236313",
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "7d_group_medians": {
+          "A": 105,
+          "B": 87.5
+        },
+        "quotes": "not_provided",
+        "reader_only_replies": "unavailable",
+        "profile_clicks": "account_level_not_available; no_post_attribution",
+        "confounders": [
+          "Differentbusiness/region/readers/benefit/deadline/time/media/length; matchedsimilarpairs0",
+          "PreservedmovedexistingREADYcohorts differfromnewslots;excludeinsteadretroclassify",
+          "Newquestiontitlepolicy changesmorethanopeningalone;newAstrarevieweddraftsexcludedfrompureA/B"
+        ],
+        "minimum_24h_target_per_group": 8,
+        "raw_window_target_met": true,
+        "current_stratified_target_met": false,
+        "decision": "extend_comparison;maintainbalancedA/Bandexistingcontrols.No demonstratedrepeatedadvantage;noeditorialweightchange.",
+        "weight_changed": false,
+        "no_backcalculation": true,
+        "extension_next_condition": "Reassess in existingchecks when comparable similar-business strata have sufficient repeatedactual24hwindows; keep comparison group. No separate schedule.",
+        "reported_at": "2026-11-24T17:20:07.451089+09:00",
+        "evidence_latest_metric_run_id": "45351393999",
+        "24h_measured_but_excluded": [
+          {
+            "main_id": "18122947907049313",
+            "elapsed_hours": 52.64388394083333,
+            "reason": "late_beyond_26h_comparison_tolerance"
+          },
+          {
+            "main_id": "18061699079561356",
+            "elapsed_hours": 25.374772445277777,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18075899267779249",
+            "elapsed_hours": 24.65035752527778,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18361336213223949",
+            "elapsed_hours": 24.39045965972222,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18100168118443439",
+            "elapsed_hours": 24.6578044575,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "17876108337601849",
+            "elapsed_hours": 25.228189436944444,
+            "reason": "Previously written input preserved; no retrospective cohort assignment after failed preceding slot"
+          }
+        ],
+        "7d_group_n": {
+          "A": 13,
+          "B": 14
+        },
+        "7d_due_unmeasured": [
+          "18450932713126961"
+        ],
+        "publication_cutoff_note": "EvaluationperiodendsNov24 17:00:08.16slotwasunreservedatcutoff, laternaturallypublished17:21:06withinits2hwindow; excludedfrom53periodpublications becauseactualinvocation17:20aftercutoff. Notafourthmissedslot.",
+        "unreserved_at_period_end_slots": 1,
+        "currently_open_unreserved_slots_from_period": 0
+      },
+      "publication_schedule_observation": {
+        "slot": "2026-11-24T16:00:00+09:00",
+        "checked_at": "2026-11-24T17:21:34.248683+09:00",
+        "status": "naturally_published_within_original_window",
+        "window_end": "2026-11-24T18:00:00+09:00",
+        "latest_publisher_run_id": "45321813009",
+        "ledger_slot_absent": false,
+        "pending": null,
+        "lease": null,
+        "failure_run_confirmed": false,
+        "workflow_dispatch": false,
+        "next_condition": "Complete verified naturalpublication. No recovery/dispatch/backfill required; original candidate/media projection nowconfirmed.",
+        "main_id": "17974331994194122",
+        "receipt_at": "2026-11-24T17:21:06.769138+09:00"
+      }
     }
   },
   "last_reported_prepublication_repair": {
@@ -118638,13 +120378,15 @@
     "new_post": false
   },
   "last_prepared_queue": {
-    "checked_at": "2026-11-24T13:16:02.992130+09:00",
-    "commit_sha": "417c4c03a25cba0dc7159b6db42fe6e49ca07381",
-    "queue_blob_sha": "10df180f5de43ed54e3eac9268a296dcbf0eacc0",
+    "checked_at": "2026-11-24T17:21:34.248683+09:00",
+    "commit_sha": "ff5ca4e659a3038c9af29e24a152465fe0f2bbe5",
+    "queue_blob_sha": "1bd619d3c68be53bf1e652c9bddbc25660b28569",
     "new_entries": 1,
     "ready": 4,
-    "program_id": "PTR000050390",
-    "slot": "2026-11-25T12:00:00+09:00",
+    "future24h_ready": 4,
+    "active_regular_ready": 0,
+    "program_id": "B49000100208",
+    "slot": "2026-11-25T16:00:00+09:00",
     "astra_calls": 2,
     "astra_verdict": "PASS",
     "expiry_revalidation_required": true
@@ -121019,23 +122761,13 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-24T15:20:04.534414+09:00",
+    "checked_at": "2026-11-24T17:20:07.451089+09:00",
     "ready": 4,
     "future24h_ready": 4,
-    "new_drafts": 0,
+    "active_regular_ready": 0,
+    "new_drafts": 1,
     "existing_READY_reused": 4,
     "drafts": [
-      {
-        "slot": "2026-11-24T16:00:00+09:00",
-        "benefit_id": "B55284500010",
-        "pattern": "P5",
-        "media_turn": "TEXT",
-        "char_count": 432,
-        "expires_at": "2026-11-24T21:48:01.930334+09:00",
-        "full_delay_window_valid": true,
-        "source_fresh_at_slot": true,
-        "source_recheck_required_at_publish": true
-      },
       {
         "slot": "2026-11-24T20:00:00+09:00",
         "benefit_id": "127000000002",
@@ -121044,7 +122776,6 @@
         "char_count": 422,
         "expires_at": "2026-11-24T23:06:37.757855+09:00",
         "full_delay_window_valid": true,
-        "source_fresh_at_slot": true,
         "source_recheck_required_at_publish": true
       },
       {
@@ -121055,7 +122786,6 @@
         "char_count": 315,
         "expires_at": "2026-11-25T10:40:14.847169+09:00",
         "full_delay_window_valid": true,
-        "source_fresh_at_slot": false,
         "source_recheck_required_at_publish": true
       },
       {
@@ -121066,34 +122796,33 @@
         "char_count": 436,
         "expires_at": "2026-11-25T14:45:53.443971+09:00",
         "full_delay_window_valid": true,
-        "source_fresh_at_slot": false,
+        "source_recheck_required_at_publish": true
+      },
+      {
+        "slot": "2026-11-25T16:00:00+09:00",
+        "benefit_id": "B49000100208",
+        "pattern": "P6",
+        "media_turn": "TEXT",
+        "char_count": 381,
+        "expires_at": "2026-11-25T17:19:11.117255+09:00",
+        "full_delay_window_valid": false,
         "source_recheck_required_at_publish": true
       }
     ],
-    "source": {
-      "count": 10895,
-      "generation": "gov24-45277137519-1",
-      "lastSuccessAt": "2026-11-24T07:18:33.759031+09:00",
-      "manifestSha256": "5e05c8162eb03678e75209e530dfe4b710d797b95e4d3e834f399502a65de644",
-      "path": "snapshots/gov24-45277137519-1",
-      "version": 1
-    },
-    "source_count": 10895,
-    "ledger_records": 76,
+    "ledger_records": 77,
     "pending": null,
     "lease": null,
-    "new_posts": 0,
-    "new_incidents": 0,
+    "new_posts": 1,
     "new_metrics": 0,
     "observations": 146,
-    "evaluation_due": false,
-    "next_evaluation_not_before": "2026-11-24T17:00:08.835254+09:00",
-    "astra_review_invocations": 0,
-    "existing_Astra_review_preserved": true,
+    "new_evaluation": true,
+    "astra_review_invocations": 2,
     "current_image_bytes_sha_recompared": true,
-    "new_visual_inspection": false,
     "source_recheck_required_at_publish": true,
-    "expiry_prevention_revalidations": 0
+    "due_post_ids": [
+      "18450932713126961",
+      "18121994881961457"
+    ]
   },
   "last_queue_review_refresh": {
     "checked_at": "2026-11-24T14:45:53.443971+09:00",
@@ -134352,6 +136081,20 @@
       "astra_calls": 2,
       "astra_verdict": "PASS",
       "expiry_revalidation_required": true
+    },
+    "2026-11-24T17:21:34.248683+09:00": {
+      "checked_at": "2026-11-24T17:21:34.248683+09:00",
+      "commit_sha": "ff5ca4e659a3038c9af29e24a152465fe0f2bbe5",
+      "queue_blob_sha": "1bd619d3c68be53bf1e652c9bddbc25660b28569",
+      "new_entries": 1,
+      "ready": 5,
+      "future24h_ready": 4,
+      "active_regular_ready": 1,
+      "program_id": "B49000100208",
+      "slot": "2026-11-25T16:00:00+09:00",
+      "astra_calls": 2,
+      "astra_verdict": "PASS",
+      "expiry_revalidation_required": true
     }
   },
   "last_preparation_check": {
@@ -134846,6 +136589,23 @@
         "actually_viewed_by_reviewer": true
       },
       "final_result": "제목다음문장직답,소득예외/기한특례구별,436자,본문CTA1/URL0/추가행동0,실제이미지사업주장없음"
+    },
+    "2026-11-24T17:21:34.248683+09:00": {
+      "model": "gpt-6.2-astra",
+      "independent_agent": "/root/condo_final_review",
+      "initial_verdict": "REVISE",
+      "initial_changes": [
+        "첫답네직답",
+        "특수형태근로종사자(노무제공자포함)공식포함관계복원"
+      ],
+      "final_verdict": "PASS",
+      "actual_review_calls": 2,
+      "final_text_sha256": "af1d8576401da0456c0479fb3a36a12667bfb48378b1b61eef5cc9595fa23d0a",
+      "char_count": 381,
+      "image": null,
+      "image_reason": "TEXT회차실제이미지없음",
+      "final_checked_at": "2026-11-24T17:20:07.451089+09:00",
+      "final_result": "실제동일모델재검수PASS381자.대상질문즉답/포함관계/요일별기한/선발조건공식일치.CTA1/링크0/추가행동0."
     }
   },
   "expiry_revalidation_required": {
@@ -135264,6 +137024,170 @@
       "new_expires_at": "2026-11-25T14:45:53.443971+09:00",
       "queue_commit": "2465c1e99071dc204fb42783d0b5f44f65089ec4",
       "actual_sender_latest_source_recheck_required": true
+    },
+    "2026-11-25T16:00:00+09:00:B49000100208": {
+      "status": "REQUIRED_BEFORE_FULL_DELAY_WINDOW",
+      "entry": {
+        "slot": "2026-11-25T16:00:00+09:00",
+        "benefit_id": "B49000100208",
+        "source_fingerprint": "ff864fb4163cb586a029b371b51500fbbaf874658f501ab1cb0bc819b795d307",
+        "source_generation": "gov24-45277137519-1",
+        "prepared_at": "2026-11-24T17:19:11.117255+09:00",
+        "expires_at": "2026-11-25T17:19:11.117255+09:00",
+        "asset_sha256": null,
+        "writer": {
+          "schema_version": "supportpick.writer.v1",
+          "status": "READY",
+          "selected_program_id": "B49000100208",
+          "post_text": "특수고용직도 근로자 휴양콘도를 신청할 수 있나요?\n네. 특수형태근로종사자(노무제공자 포함)도 평일·주말·성수기 모두 신청할 수 있어요. 근로복지공단이 이용 자격을 확인하고 대상자를 선정해요.\n\n여행비를 현금으로 주는 지원은 아니에요. 근로자와 가족이 콘도를 무기명 법인회원가로 이용하도록 돕는 제도라 이용요금은 별도로 부담해요.\n\n평일은 이용하려는 날 7일 전까지, 주말·성수기는 이용하려는 달의 전월 5일까지 신청해요. 주말·성수기는 전월 10일에 선발하며 월평균 소득과 기업규모 등을 기준으로 우선순위를 정해요.\n\n신청은 근로복지넷 인증서 로그인 후 근로자 휴양콘도 신청서를 작성하는 순서예요. 신청만으로 원하는 날짜의 객실이 확정되지는 않아요.\n\n자세한 사항은 프로필링크 확인",
+          "draft_text": null,
+          "reply_texts": [],
+          "media": {
+            "turn": "TEXT",
+            "asset_id": null,
+            "check": "NOT_REQUIRED",
+            "image_copy": null,
+            "alt_text": null
+          },
+          "review": {
+            "planned_at": "2026-11-25T16:00:00+09:00",
+            "application_status": "ALWAYS",
+            "reader": "특수형태근로종사자·노무제공자와가족여행을준비하는노동자",
+            "central_message": "특고·노무제공자도근로자휴양콘도이용을신청할수있는가",
+            "pattern": "P6",
+            "selection_reason": "동일ID serviceList누적조회35145.기존76게시/미예약READY4사업제외,상위75HOLD/SKIP출처보존후검증가능최상위. 최근20도입전개대조,특고대상질문→즉답→이용요금성격→신청선발기한→절차. 순위변경없음.",
+            "interest_basis": "OBSERVED_METRICS",
+            "duplicate_check": "CHECKED",
+            "evidence": [
+              {
+                "source_id": "B49000100208",
+                "source_ref": "https://www.moel.go.kr/policyitrd/policyItrdList.do?searchMclsCdList=J",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-24T17:19:11.117255+09:00",
+                "claims_supported": [
+                  "현공식목록2026휴양콘도지원확인,실제HTML fnView523관찰."
+                ]
+              },
+              {
+                "source_id": "B49000100208",
+                "source_ref": "https://www.moel.go.kr/policyitrd/downloadFile.do?policy_itrd_sn=523",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-24T17:19:11.117255+09:00",
+                "claims_supported": [
+                  "공식상세523HTML첨부링크직접GET hwpxZIP/XML전문추출열람:특수형태근로종사자(노무제공자포함)모든요일가능.평일7일전/주말성수기전월5신청및전월10선발/월평균소득기업규모우선.인증서로그인→신청서→적격확인→문자. 구체객실요금확정없음."
+                ]
+              },
+              {
+                "source_id": "B49000100208",
+                "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2001618&bnefType=all&svcId=B49000100208",
+                "access_method": "PROVIDED_OFFICIAL_TEXT",
+                "verified_at": "2026-11-24T17:19:11.117255+09:00",
+                "claims_supported": [
+                  "완전snapshotmanifest검증후load_feed,동일ID원본누적35145/checkedAt07:16:03.552111,상시신청/무기명법인회원가시설이용. API수집과본공식문서열람시각구별.수집성공은잔여객실보장아님."
+                ]
+              }
+            ],
+            "checks": {
+              "facts": "PASS",
+              "current_status": "PASS",
+              "eligibility_and_units": "PASS",
+              "cta_and_no_links": "PASS",
+              "length": "PASS",
+              "media": "NOT_REQUIRED"
+            },
+            "char_count": 381,
+            "count_method": "python_len_including_spaces_and_newlines",
+            "missing_info": [],
+            "hold_reasons": [],
+            "warnings": [
+              "근로복지넷직접open400,개인로그인·접수거래·잔여객실·확정요금/프로필내경로미확인.현재2026부처공식문서절차근거,신청/객실선정보장않음.",
+              "현재07:18완전수집본은내일16시까지신선하다고가정않음.발송시최신완전세대/공식기한정정/원장/이미지교대재검증필수.",
+              "최대24h검수만료가내일16~18전체허용창보다먼저끝나므로기존18시이후점검에서공식문서·현접수상태·최신완전수집본·이미지SHA를실제재대조후CAS갱신/이전본보관.날짜만변경금지.",
+              "현재16시슬롯은아직미예약/미실행조회,18시창열림. 앞회차누락시모든미예약미래순위/교대재계산,소급발행/임의dispatch않음."
+            ],
+            "reach_editorial": {
+              "policy_id": "supportpick-threads-reach-v1-20261109",
+              "core_question": "특고·노무제공자도근로자휴양콘도이용을신청할수있는가",
+              "reader_scope": "특수형태근로종사자·노무제공자와가족여행을준비하는노동자",
+              "angles": [
+                "가족휴가비부담",
+                "특고대상확인",
+                "날짜별신청준비"
+              ],
+              "chosen_angle": "특고대상확인",
+              "opening_candidates": [
+                {
+                  "type": "생활 상황형",
+                  "group": "A",
+                  "text": "가족여행 숙소를 찾는 특수고용직도 근로자 휴양콘도를 신청할 수 있을까요?"
+                },
+                {
+                  "type": "대상·혜택형",
+                  "group": "B",
+                  "text": "특수고용직도 근로자 휴양콘도를 신청할 수 있나요?"
+                },
+                {
+                  "type": "조건 설명형",
+                  "group": null,
+                  "text": "근로자 휴양콘도는 주말과 평일의 신청기한이 같을까요?"
+                }
+              ],
+              "chosen_opening": "특수고용직도 근로자 휴양콘도를 신청할 수 있나요?",
+              "opening_type": "질문형 대상·혜택",
+              "cohort": "B",
+              "selection_reason": "동일ID serviceList누적조회35145.기존76게시/미예약READY4사업제외,상위75HOLD/SKIP출처보존후검증가능최상위. 최근20도입전개대조,특고대상질문→즉답→이용요금성격→신청선발기한→절차. 순위변경없음.",
+              "history_posts_checked": 20,
+              "comparison_eligible": false,
+              "comparison_exclusion": "신규질문형정책과본문편집동시적용으로순수A/B도입군비교제외. 시간대소급재분류않음.",
+              "comparison_strata": {
+                "geo": "전국",
+                "audience": "특고노동자",
+                "benefit": "회원가시설이용",
+                "media": "TEXT"
+              },
+              "comparison_group": "실제24h A20/B20중앙값62/62,매칭쌍0·교란으로효과미입증,비중유지",
+              "applied_elements": [
+                "제목대상질문직답",
+                "현금지원오인방지",
+                "요일별신청/선발기한구별"
+              ],
+              "master_full_used": true,
+              "supplemental_full_used_in_current_model_input": true,
+              "profile_route": "실제사이트내검색상세이번미검증/접수보장없음"
+            },
+            "astra_final_review": {
+              "model": "gpt-6.2-astra",
+              "independent_agent": "/root/condo_final_review",
+              "initial_verdict": "REVISE",
+              "initial_changes": [
+                "첫답네직답",
+                "특수형태근로종사자(노무제공자포함)공식포함관계복원"
+              ],
+              "final_verdict": "PASS",
+              "actual_review_calls": 2,
+              "final_text_sha256": "af1d8576401da0456c0479fb3a36a12667bfb48378b1b61eef5cc9595fa23d0a",
+              "char_count": 381,
+              "image": null,
+              "image_reason": "TEXT회차실제이미지없음",
+              "final_checked_at": "2026-11-24T17:20:07.451089+09:00",
+              "final_result": "실제동일모델재검수PASS381자.대상질문즉답/포함관계/요일별기한/선발조건공식일치.CTA1/링크0/추가행동0."
+            }
+          },
+          "next_history_record": {
+            "program_id": "B49000100208",
+            "notice_version": "gov24-45277137519-1;MOEL2026doc523actualreread2026-11-24T17:19:11.117255+09:00",
+            "pattern": "P6",
+            "opening": "특수고용직도 근로자 휴양콘도를 신청할 수 있나요?",
+            "structure": "특고대상질문→즉답→시설회원가/요금→요일기한→절차",
+            "media_turn": "TEXT"
+          }
+        },
+        "revalidate_before": "2026-11-25T16:00:00+09:00",
+        "full_delay_window_covered": false,
+        "revalidation_required_reason": "expires_at_before_slot_plus_two_hours"
+      },
+      "reason": "max24h expires17:19before18:00; original retained; no guessed extension",
+      "next_condition": "existingcheckafterNov24 18 actualofficial/currentstatus/latestcompletefeed/imageSHA rereview/archive/CASrefreshmax24h beforeplannedslot"
     }
   }
 }
