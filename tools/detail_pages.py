@@ -77,12 +77,17 @@ def popularity(row):
     return (count is None, -(count or 0), row.get('endDate') or '9999', row['id'])
 
 
+def listed_period_ended(row, current):
+    end = row.get('endDate') or ''
+    return bool(re.fullmatch(r'\d{4}-\d{2}-\d{2}', end) and end < current.astimezone(KST).date().isoformat())
+
+
 def status(row, current):
     verified = verified_schedule.label(row.get('verifiedSchedule'), current)
     if verified:
         return verified
     today = current.astimezone(KST).date().isoformat()
-    if re.fullmatch(r'\d{4}-\d{2}-\d{2}', row.get('endDate') or '') and row['endDate'] < today:
+    if listed_period_ended(row, current):
         return '안내 기한 경과 · 새 공고 확인'
     if re.fullmatch(r'\d{4}-\d{2}-\d{2}', row.get('startDate') or '') and row['startDate'] > today:
         return '안내 기간 전 · 접수일 확인'
@@ -329,8 +334,11 @@ def render_benefit(row, guide, blog, reasons, related, base, current, feed_statu
                '<button class="quiet" data-track disabled>내 신청에 기록</button>'
                '<button class="quiet" type="button" data-share-benefit>↗ 이 지원금 공유</button>')
     if safe_url(row.get('applicationUrl')) and not archive:
+        verified_state = verified_schedule.state(row.get('verifiedSchedule'), current)
+        ended = verified_state == 'ended' if verified_state else listed_period_ended(row, current)
+        label = '기존 신청 링크 · 현재 접수 여부 확인 ↗' if ended else '공식 신청 창구 ↗'
         actions += ('<a class="quiet" href="' + escape(row['applicationUrl'], quote=True)
-                    + '" target="_blank" rel="noopener noreferrer">공식 신청 창구 ↗</a>')
+                    + '" target="_blank" rel="noopener noreferrer">' + label + '</a>')
     body = crumbs + '<div class="warning" id="record-warning" role="alert" hidden></div>'
     body += '<div class="warning" id="freshness-warning" role="status" hidden></div>'
     if feed_status != 'success':
