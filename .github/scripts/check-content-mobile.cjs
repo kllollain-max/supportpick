@@ -177,7 +177,8 @@ const { chromium } = require('playwright');
           const search = await page.locator('#query').boundingBox();
           const analysis = await page.locator('#benefitAnalysis').boundingBox();
           assert(search && analysis && search.y + search.height < analysis.y, 'search must precede editorial guides');
-          assert(search.y + search.height < (width <= 390 ? 600 : 900), 'search must fit above the fold');
+          assert(search.y + search.height < (width <= 390 ? 600 : 900),
+                 `search ends at ${search.y + search.height}px at ${width}px wide`);
           await page.getByRole('link', {name: '지원금픽 제도 해설 보기', exact: true}).click();
           assert.equal(new URL(page.url()).hash, '#benefitAnalysis');
           await page.waitForFunction(() => {
