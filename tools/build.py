@@ -78,6 +78,8 @@ def build(destination,state=None,allow_sample=False,public_base=None):
             (output/name).write_text(text)
     registry=json.loads((ROOT/'editorials.json').read_text())
     guide_registry=json.loads((ROOT/'guides.json').read_text())
+    hidden_from_catalog = {sid for sid, hold in guide_registry.get('holds', {}).items()
+                           if hold.get('hideFromCatalog') is True}
     if registry.get('version')!=1 or not isinstance(registry.get('articles'),list):raise ValueError('invalid_editorial_registry')
     registry_json=json.dumps(registry,ensure_ascii=False,separators=(',',':'))
     (output/'editorial-data.js').write_text('window.SUPPORTPICK_EDITORIALS = '+registry_json.replace('<','\\u003c')+';\n')
@@ -91,7 +93,21 @@ def build(destination,state=None,allow_sample=False,public_base=None):
                 raw=row.get('rawSource',{})
                 source_differences[sid]={key:{'list':raw.get('serviceList',{}).get(key),'detail':raw.get('serviceDetail',{}).get(key)} for key in row.get('sourceConflicts',[])}
                 full_rows[sid]={**row,**period(row.get('period','')),'sourceDifferences':source_differences[sid],**conditions(row)}
-    public_feed={**feed,'items':[{**{k:v for k,v in row.items() if k in fields},**period(row.get('period','')),'sourceDifferences':source_differences.get(row['id'],{}),**conditions(full_rows.get(row['id'],{})), 'reviewRequired':bool(quality_reasons(full_rows[row['id']],guide_registry)) if row['id'] in full_rows else True} for row in feed['items']]}
+    public_items = []
+    for row in feed['items']:
+        sid = row['id']
+        if sid in hidden_from_catalog:
+            continue
+        detail = full_rows.get(sid)
+        public_items.append({
+            **{key: value for key, value in row.items() if key in fields},
+            **period(row.get('period', '')),
+            'sourceDifferences': source_differences.get(sid, {}),
+            **conditions(detail if detail is not None else {}),
+            'reviewRequired': detail is None or bool(quality_reasons(detail, guide_registry)),
+        })
+    # The browser matches the full catalog length against this public count.
+    public_feed = {**feed, 'sourceCount': len(public_items), 'items': public_items}
     current = datetime.now(timezone.utc)
     for item in public_feed['items']:
         if not item['reviewRequired']:
@@ -126,6 +142,8 @@ def build(destination,state=None,allow_sample=False,public_base=None):
                     shard=json.loads(shard_path.read_text());public_rows={}
                     for sid,row in shard['items'].items():
                         if candidate!=snapshot:previous_rows[sid]=row
+                        if sid in hidden_from_catalog:
+                            continue
                         public={**{k:v for k,v in row.items() if k!='rawSource'},**period(row.get('period','')),**conditions(row)}
                         raw=row.get('rawSource',{})
                         public['sourceDifferences']={key:{'list':raw.get('serviceList',{}).get(key),'detail':raw.get('serviceDetail',{}).get(key)} for key in row.get('sourceConflicts',[])}
@@ -185,7 +203,7 @@ def build(destination,state=None,allow_sample=False,public_base=None):
     size=sum(p.stat().st_size for p in output.rglob('*') if p.is_file())
     if size>300*1024*1024:raise ValueError('public_size_budget')
     revision=subprocess.run(['git','rev-parse','HEAD'],cwd=ROOT,capture_output=True,text=True,check=True).stdout.strip()
-    report={'publicFiles':len(files)+1,'bytes':size,'benefits':len(feed['items']),'generation':feed.get('generation'),'sourceRevision':revision,'isSample':not bool(pointer),'published':False,'status':status['status'],**{k:v for k,v in detail['report'].items() if k in ('detailPages','indexableDetails','heldDetails','reviewedGuides','blogLinks','directoryPages','retiredPages')},'files':files}
+    report={'publicFiles':len(files)+1,'bytes':size,'benefits':len(public_feed['items']),'generation':feed.get('generation'),'sourceRevision':revision,'isSample':not bool(pointer),'published':False,'status':status['status'],**{k:v for k,v in detail['report'].items() if k in ('detailPages','indexableDetails','heldDetails','reviewedGuides','blogLinks','directoryPages','retiredPages')},'files':files}
     report['contentFingerprint']=fingerprint(ROOT,feed,full_rows,previous_rows,status,detail['report'],STATIC)
     (output/'site-manifest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
     return {k:v for k,v in report.items() if k!='files'}
