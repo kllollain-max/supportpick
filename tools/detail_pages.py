@@ -481,11 +481,19 @@ def write_details(output, rows, previous, base, registry, blogs, feed_status, cu
         if guide and not reasons:
             guides.append(row['id'])
         blog_count += bool(blog)
-    retired = sorted(set(previous) - set(rows))
+    # Keep individually verified old links beyond the retained source generations.
+    retired = sorted((set(previous) | set(registry.get('retiredIds', []))) - set(rows))
     for sid in retired:
         path = benefit_path(sid)
+        if path.casefold() in paths:
+            raise ValueError('benefit_path_collision')
+        paths.add(path.casefold())
         target = output / path / 'index.html'; target.parent.mkdir(parents=True, exist_ok=True)
-        text = '<article class="detail-block"><h1>현재 공식 목록에서 확인되지 않는 지원정보</h1><p>' + escape(previous[sid]['title']) + '</p><p>이전 공유 주소를 보존했습니다. 현재 모집·폐지 여부는 담당기관에서 확인하세요. 저장·신청 기록은 삭제하지 않았습니다.</p><a href="../../">현재 지원정보 검색</a></article>'
+        previous_title = previous.get(sid, {}).get('title')
+        text = '<article class="detail-block"><h1>현재 공식 목록에서 확인되지 않는 지원정보</h1>'
+        if previous_title:
+            text += '<p>' + escape(previous_title) + '</p>'
+        text += '<p>이전 공유 주소를 보존했습니다. 현재 모집·폐지 여부는 담당기관에서 확인하세요. 저장·신청 기록은 삭제하지 않았습니다.</p><a href="../../">현재 지원정보 검색</a></article>'
         target.write_text(shell('현재 자료 확인 필요 | 지원금픽', '이전 지원정보의 현재 공식 안내를 확인하세요.', text, path, '../../', base, False), encoding='utf-8')
     listed = [r for r in sorted_rows if r['id'] not in held]
     total_pages = max(1, math.ceil(len(listed) / PAGE_SIZE))

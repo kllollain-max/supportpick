@@ -1,5 +1,6 @@
 {
   "version": 1,
+  "retiredIds": ["628000000176"],
   "selection": {
     "basis": "실제 보조금24 serviceList.조회수 내림차순",
     "sourceGeneration": "gov24-41805765326-1",

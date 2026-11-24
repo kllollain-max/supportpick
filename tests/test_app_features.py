@@ -39,9 +39,12 @@ class AppFeatureBuildTests(unittest.TestCase):
             self.assertIn('data-share-site', home)
             self.assertIn('data-install-app', home)
             self.assertIn('rel="manifest"', home)
+            current = json.loads((root / 'public/data.json').read_text())['items']
             details = list((root / 'public/benefits').glob('*/index.html'))
-            self.assertEqual(len(details), result['detailPages'])
-            for path in details:
+            self.assertEqual(len(current), result['detailPages'])
+            self.assertEqual(len(details), result['detailPages'] + result['retiredPages'])
+            for record in current:
+                path = root / 'public/benefits' / record['id'] / 'index.html'
                 text = path.read_text()
                 self.assertIn('data-share-benefit', text)
                 self.assertIn('data-save', text)
