@@ -189,6 +189,7 @@ def coverage_report(search, rows):
         'version': 1, 'asOf': REVIEWED,
         'indexableDetails': search['indexableDetails'],
         'matchedPreparationGuides': len(matched),
+        'closedApplicationFollowupIds': search.get('closedApplicationFollowupIds', []),
         'detailsWithoutMatchedPreparationGuide': search['indexableDetails'] - len(matched),
         'substantiveAnalysisArticles': len(ARTICLES),
         'analysisLinkedBenefitIds': linked,

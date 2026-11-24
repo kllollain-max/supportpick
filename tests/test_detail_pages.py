@@ -77,6 +77,22 @@ class StaticDetailTests(unittest.TestCase):
                 self.assertNotIn('id="closed-application"', html)
                 self.assertIn('공식 신청 창구', html)
 
+    def test_home_links_only_to_public_matching_followup_sections(self):
+        current = datetime(2026, 11, 24, tzinfo=timezone.utc)
+        dates = '2025.09.15~2025.12.31'
+        valid = {**row('142100000062'), 'period': dates, **period(dates)}
+        dates = '2026.11.01~2026.12.31'
+        future = {**row('611000000127'), 'period': dates, **period(dates)}
+        dates = '2026.05.04~2026.05.20'
+        held = {**row('135200005013'), 'period': dates, **period(dates)}
+        with tempfile.TemporaryDirectory() as temp:
+            report = write_details(Path(temp), {r['id']: r for r in (valid, future, held)}, {}, BASE,
+                                   {'holds': {held['id']: {'reason': '검증 필요'}}}, {}, 'success', current)
+            self.assertEqual(report['report']['closedApplicationFollowupIds'], [valid['id']])
+            self.assertIn('benefits/142100000062/#closed-application', report['home'])
+            self.assertNotIn('benefits/611000000127/#closed-application', report['home'])
+            self.assertNotIn('benefits/135200005013/#closed-application', report['home'])
+
     def test_loan_notice_waits_until_conversion_execution_ends(self):
         dates = '2026-2학기 신청기간 : 2026.7.1.~2026.11.17.'
         loan = {**row('GES000000110'), 'period': dates, **period(dates)}
