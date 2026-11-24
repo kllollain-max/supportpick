@@ -14,6 +14,8 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "45383134036",
+    "45374669702",
     "45367251213",
     "45355210766",
     "45351393999",
@@ -2957,6 +2959,84 @@
         },
         "reason": "22h recovery deadline elapsed. No ledger slot, no subsequent publication run; original account diagnostic confirmed no sent target. No retroactive publish permitted."
       }
+    },
+    "45374669702": {
+      "run_id": "45374669702",
+      "run_attempt": 1,
+      "status": "collection_complete_public_verification_unresolved_outside_threads_scope",
+      "stage": "Verify deployed source, generation and every public HTML URL",
+      "failure_fingerprint": "public_generation_mismatch:gov24-45374669702-1:gov24-45277137519-1",
+      "confirmed_cause": "Livepublicmanifeststillreportspriorgeneration, while verifierexpectednewcompletegeneration; observedsourceRevision matcheshead. Underlying deployment/cachecauseunconfirmed. OverallfailureisNOTcollectionfailure.",
+      "last_success": "collection+build+runtimepreservation+deployaction succeeded;306tests passed. Actualpublicverification failed after2manifestattempts.",
+      "expected_generation": "gov24-45374669702-1",
+      "observed_generation": "gov24-45277137519-1",
+      "expected_revision": "cc03a6d64232b37546b3120f9789f94285872fb5",
+      "observed_revision": "cc03a6d64232b37546b3120f9789f94285872fb5",
+      "container_id": null,
+      "main_id": null,
+      "publication_POSTs_by_this_check": 0,
+      "artifact_id": 14911047606,
+      "artifact_digest": "sha256:57f606ab48fe6855d705e98cd37c325e659101041824b7f4554110e8f28054ce",
+      "artifact_digest_verified": true,
+      "complete_manifest_verified": true,
+      "manifest": {
+        "count": 10895,
+        "generation": "gov24-45374669702-1",
+        "lastSuccessAt": "2026-11-24T19:32:34.172544+09:00",
+        "manifestSha256": "ac91c8918926d5f940cd3f387696e90e0852ba857debdc6972b1a09ef53212ff",
+        "path": "snapshots/gov24-45374669702-1",
+        "version": 1
+      },
+      "collection_report": {
+        "applicationOpenVerified": false,
+        "collectionSucceededAt": "2026-11-24T19:32:34.172544+09:00",
+        "coverage": "Currently connected Gov24 API, all unfiltered pages of three endpoints",
+        "endpoints": {
+          "serviceDetail": {
+            "completedPages": 109,
+            "duplicateCount": 0,
+            "expectedPages": 109,
+            "receivedCount": 10895,
+            "reportedTotal": 10895,
+            "uniqueCount": 10895
+          },
+          "serviceList": {
+            "completedPages": 109,
+            "duplicateCount": 0,
+            "expectedPages": 109,
+            "receivedCount": 10895,
+            "reportedTotal": 10895,
+            "uniqueCount": 10895
+          },
+          "supportConditions": {
+            "completedPages": 109,
+            "duplicateCount": 0,
+            "expectedPages": 109,
+            "receivedCount": 10895,
+            "reportedTotal": 10895,
+            "uniqueCount": 10895
+          }
+        },
+        "factsVerified": false,
+        "feedSha256": "857fe88a7dfc20dd84cf60150b827214df8497c0aa59e63a2d55a6f0ddbc302d",
+        "finishedAt": "2026-11-24T19:32:35.298132+09:00",
+        "generation": "gov24-45374669702-1",
+        "normalRequestEstimate": 330,
+        "pageResponses": 327,
+        "project": "supportpick",
+        "published": false,
+        "sampleCount": 0,
+        "scheduled": false,
+        "sourceConsistency": "No snapshot token: totals and boundary pages stable; unique IDs and all endpoint sets matched",
+        "startedAt": "2026-11-24T19:25:52.234580+09:00",
+        "status": "passed",
+        "storedCount": 10895
+      },
+      "public_verification_artifact_id": 14910528644,
+      "public_verification_artifact_digest": "sha256:5826fb80e4d06f9e524bb97728666efb3f5a71343869a9ce5427172401c0c482",
+      "actual_live_manifest_reread_at": "2026-11-24T20:39:17.077343+09:00",
+      "retry_budget": "Workflowalreadyused2manifestchecks; no nestedretry/manualdeployment/rerun. CurrentreadonlyoneGETconfirmsoldgeneration.",
+      "next_condition": "Existingwebsiteoperationsmayreconcilepublicgeneration; no siteUI/banner/publicdeploychange inThreads-onlyscope. Threadsreads latestcompleteactualruntimeartifact and must keep ownaccount/queue/fingerprint/freshnessguards. No collectionfixneeded or falsepublicrecoverysuccess."
     }
   },
   "guardrails": {
@@ -5720,18 +5800,51 @@
       "conclusion": "success",
       "updated_at": "2026-11-24T09:39:35Z",
       "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5"
+    },
+    "45383134036": {
+      "run_id": "45383134036",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-24T11:19:47Z",
+      "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5"
+    },
+    "45374669702": {
+      "run_id": "45374669702",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "updated_at": "2026-11-24T10:34:25Z",
+      "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-24T19:25:55.868918+09:00",
-    "result": "maintenance_freshness_calculation_corrected_no_publication_change",
-    "maintenance_previous_blob_sha": "dc1477e0e0b44c8031f4195dd6b0ec85af78939a",
+    "checked_at": "2026-11-24T20:39:17.077343+09:00",
+    "result": "new_astra_READY_and_complete_source_verified_partial_operations_failure_classified",
+    "maintenance_previous_blob_sha": "1750eec82a3e6ff24cf99f368ee5df26df1463e1",
     "current_main_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
     "publication_ledger_sha": "5d033f77c6d86e826956219d1bd4a034b05daffc",
-    "queue_blob_sha": "d8eb139dcfb1fea667d712ad0a6bbe5fcdb61828",
-    "changed_run_versions": [],
+    "queue_blob_sha": "38d525f57e1598ae18ea9aa950d8101e335044f5",
+    "changed_run_versions": [
+      {
+        "run_id": "45383134036",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T11:19:47Z",
+        "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5"
+      },
+      {
+        "run_id": "45374669702",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "failure",
+        "updated_at": "2026-11-24T10:34:25Z",
+        "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5"
+      }
+    ],
     "active_target_runs": [],
     "run_pagination": {
       "per_page": 100,
@@ -5740,36 +5853,37 @@
       ],
       "checkpoint_run_id": "45367251213",
       "checkpoint_version_unchanged": true,
-      "all_new_target_versions_observed": true,
-      "latest_completed_operations_run_id": "45277137519"
+      "all_new_target_versions_observed": true
     },
     "publication_ledger_records": 75,
     "complete_verified_records": 75,
     "pending": null,
     "lease": null,
     "source": {
-      "run_id": "45277137519",
+      "run_id": "45374669702",
       "run_attempt": 1,
-      "status": "completed",
-      "conclusion": "success",
-      "updated_at": "2026-11-23T22:38:20Z",
-      "head_sha": "5732cde848a03907b2505396c34a4d60c713571e",
-      "job_id": 138051732020,
-      "artifact_id": 14868507630,
-      "artifact_digest": "sha256:b768e7aa698979de916b7404b321a7e5e8c15302e7ce3847b3dcfba08a734d22",
-      "artifact_redownloaded_this_check": false,
+      "conclusion": "failure",
+      "collection_conclusion": "passed",
+      "job_id": 138377561259,
+      "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+      "tests_passed": 306,
+      "artifact_id": 14911047606,
+      "artifact_digest": "sha256:57f606ab48fe6855d705e98cd37c325e659101041824b7f4554110e8f28054ce",
+      "artifact_redownloaded_this_check": true,
       "artifact_digest_verified": true,
+      "job_logs_retrieved_this_check": true,
       "read_current_verify_snapshot_load_feed": true,
-      "count": 10895,
-      "generation": "gov24-45277137519-1",
-      "lastSuccessAt": "2026-11-24T07:18:33.759031+09:00",
-      "manifestSha256": "5e05c8162eb03678e75209e530dfe4b710d797b95e4d3e834f399502a65de644",
-      "path": "snapshots/gov24-45277137519-1",
-      "version": 1,
-      "source_count": 10895,
+      "manifest": {
+        "count": 10895,
+        "generation": "gov24-45374669702-1",
+        "lastSuccessAt": "2026-11-24T19:32:34.172544+09:00",
+        "manifestSha256": "ac91c8918926d5f940cd3f387696e90e0852ba857debdc6972b1a09ef53212ff",
+        "path": "snapshots/gov24-45374669702-1",
+        "version": 1
+      },
       "collection_report": {
         "applicationOpenVerified": false,
-        "collectionSucceededAt": "2026-11-24T07:18:33.759031+09:00",
+        "collectionSucceededAt": "2026-11-24T19:32:34.172544+09:00",
         "coverage": "Currently connected Gov24 API, all unfiltered pages of three endpoints",
         "endpoints": {
           "serviceDetail": {
@@ -5798,9 +5912,9 @@
           }
         },
         "factsVerified": false,
-        "feedSha256": "30a93adf6cfac6f954420518a1f06aac9c436d92254c2e54b928f966e73c7c64",
-        "finishedAt": "2026-11-24T07:18:34.853540+09:00",
-        "generation": "gov24-45277137519-1",
+        "feedSha256": "857fe88a7dfc20dd84cf60150b827214df8497c0aa59e63a2d55a6f0ddbc302d",
+        "finishedAt": "2026-11-24T19:32:35.298132+09:00",
+        "generation": "gov24-45374669702-1",
         "normalRequestEstimate": 330,
         "pageResponses": 327,
         "project": "supportpick",
@@ -5808,61 +5922,100 @@
         "sampleCount": 0,
         "scheduled": false,
         "sourceConsistency": "No snapshot token: totals and boundary pages stable; unique IDs and all endpoint sets matched",
-        "startedAt": "2026-11-24T07:11:09.820235+09:00",
+        "startedAt": "2026-11-24T19:25:52.234580+09:00",
         "status": "passed",
         "storedCount": 10895
       },
-      "current_step": "completed",
-      "collection_complete": true,
-      "workflow_complete": true,
-      "all_four_fingerprints_priority_and_full_delay_windows_pass": true,
-      "original_notice_rereview_this_check": false,
-      "job_logs_retrieved_this_check": false,
-      "actual_tests_passed": 303,
-      "public_verification_artifact_id": 14870600826,
-      "public_verification_digest": "sha256:0b3d702d86e063ff5cc5e19b36dfb264f35f210321aaa6fa28633a900af9a71b",
+      "publisher_freshness_hours": 24,
+      "current_fresh_until": "2026-11-25T19:32:34.172544+09:00",
+      "collection_is_not_current_application_status_verification": true,
+      "new_candidate_original_official_pages_read": true,
+      "existing4entries_unchanged_fingerprints_pass": true,
       "public_verification": {
-        "publicHtmlChecked": 11048,
-        "sitemapUrls": 11035,
-        "generation": "gov24-45277137519-1",
-        "sourceRevision": "5732cde848a03907b2505396c34a4d60c713571e",
-        "robots": {
-          "http": 200,
-          "crawlAllowed": true,
-          "scope": "host_root"
+        "run_id": "45374669702",
+        "run_attempt": 1,
+        "status": "collection_complete_public_verification_unresolved_outside_threads_scope",
+        "stage": "Verify deployed source, generation and every public HTML URL",
+        "failure_fingerprint": "public_generation_mismatch:gov24-45374669702-1:gov24-45277137519-1",
+        "confirmed_cause": "Livepublicmanifeststillreportspriorgeneration, while verifierexpectednewcompletegeneration; observedsourceRevision matcheshead. Underlying deployment/cachecauseunconfirmed. OverallfailureisNOTcollectionfailure.",
+        "last_success": "collection+build+runtimepreservation+deployaction succeeded;306tests passed. Actualpublicverification failed after2manifestattempts.",
+        "expected_generation": "gov24-45374669702-1",
+        "observed_generation": "gov24-45277137519-1",
+        "expected_revision": "cc03a6d64232b37546b3120f9789f94285872fb5",
+        "observed_revision": "cc03a6d64232b37546b3120f9789f94285872fb5",
+        "container_id": null,
+        "main_id": null,
+        "publication_POSTs_by_this_check": 0,
+        "artifact_id": 14911047606,
+        "artifact_digest": "sha256:57f606ab48fe6855d705e98cd37c325e659101041824b7f4554110e8f28054ce",
+        "artifact_digest_verified": true,
+        "complete_manifest_verified": true,
+        "manifest": {
+          "count": 10895,
+          "generation": "gov24-45374669702-1",
+          "lastSuccessAt": "2026-11-24T19:32:34.172544+09:00",
+          "manifestSha256": "ac91c8918926d5f940cd3f387696e90e0852ba857debdc6972b1a09ef53212ff",
+          "path": "snapshots/gov24-45374669702-1",
+          "version": 1
         },
-        "missingUrlHttp": 404,
-        "passed": 11048,
-        "failed": 0,
-        "initialFailures": 1,
-        "maxRequestsPerSecond": 10,
-        "rateLimitEpisodes": 0,
-        "stoppedForRateLimit": false,
-        "recoveredAfterRetry": [
-          {
-            "url": "https://kllollain-max.github.io/supportpick/benefits/142100000058/",
-            "initialError": "HTTP Error 503: Service Unavailable",
-            "retryHttp": 200
-          }
-        ],
-        "failures": []
-      },
-      "no_collection_failure": true,
-      "observed_in_progress_at_start": false,
-      "completed_success_before_record": true,
-      "artifact_digest_previously_verified_cached_bytes": true,
-      "current_complete_snapshot_verified": true,
-      "actual_send_latest_complete_source_required": true,
-      "complete_snapshot_reverified": true,
-      "current_fresh_until": "2026-11-25T07:18:33.759031+09:00",
-      "source_recheck_required_at_publish": true,
-      "publisher_freshness_hours": 24
+        "collection_report": {
+          "applicationOpenVerified": false,
+          "collectionSucceededAt": "2026-11-24T19:32:34.172544+09:00",
+          "coverage": "Currently connected Gov24 API, all unfiltered pages of three endpoints",
+          "endpoints": {
+            "serviceDetail": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "serviceList": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "supportConditions": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            }
+          },
+          "factsVerified": false,
+          "feedSha256": "857fe88a7dfc20dd84cf60150b827214df8497c0aa59e63a2d55a6f0ddbc302d",
+          "finishedAt": "2026-11-24T19:32:35.298132+09:00",
+          "generation": "gov24-45374669702-1",
+          "normalRequestEstimate": 330,
+          "pageResponses": 327,
+          "project": "supportpick",
+          "published": false,
+          "sampleCount": 0,
+          "scheduled": false,
+          "sourceConsistency": "No snapshot token: totals and boundary pages stable; unique IDs and all endpoint sets matched",
+          "startedAt": "2026-11-24T19:25:52.234580+09:00",
+          "status": "passed",
+          "storedCount": 10895
+        },
+        "public_verification_artifact_id": 14910528644,
+        "public_verification_artifact_digest": "sha256:5826fb80e4d06f9e524bb97728666efb3f5a71343869a9ce5427172401c0c482",
+        "actual_live_manifest_reread_at": "2026-11-24T20:39:17.077343+09:00",
+        "retry_budget": "Workflowalreadyused2manifestchecks; no nestedretry/manualdeployment/rerun. CurrentreadonlyoneGETconfirmsoldgeneration.",
+        "next_condition": "Existingwebsiteoperationsmayreconcilepublicgeneration; no siteUI/banner/publicdeploychange inThreads-onlyscope. Threadsreads latestcompleteactualruntimeartifact and must keep ownaccount/queue/fingerprint/freshnessguards. No collectionfixneeded or falsepublicrecoverysuccess."
+      }
     },
     "writer": {
-      "checked_at": "2026-11-24T19:25:55.868918+09:00",
-      "ready": 4,
+      "checked_at": "2026-11-24T20:37:37.953621+09:00",
+      "ready": 5,
+      "active_regular_ready": 1,
       "future24h_ready": 4,
-      "new_drafts": 0,
+      "new_drafts": 1,
       "existing_READY_reused": 4,
       "drafts": [
         {
@@ -5873,10 +6026,6 @@
           "char_count": 422,
           "expires_at": "2026-11-24T23:06:37.757855+09:00",
           "full_delay_window_valid": true,
-          "source_fresh_at_slot": true,
-          "source_fresh_at_window_end": true,
-          "row_fresh_at_window_end": true,
-          "row_fresh_until": "2026-11-25T07:14:01.419947+09:00",
           "source_recheck_required_at_publish": true
         },
         {
@@ -5887,10 +6036,6 @@
           "char_count": 315,
           "expires_at": "2026-11-25T10:40:14.847169+09:00",
           "full_delay_window_valid": true,
-          "source_fresh_at_slot": false,
-          "source_fresh_at_window_end": false,
-          "row_fresh_at_window_end": false,
-          "row_fresh_until": "2026-11-25T07:14:40.632615+09:00",
           "source_recheck_required_at_publish": true
         },
         {
@@ -5901,10 +6046,6 @@
           "char_count": 436,
           "expires_at": "2026-11-25T14:45:53.443971+09:00",
           "full_delay_window_valid": true,
-          "source_fresh_at_slot": false,
-          "source_fresh_at_window_end": false,
-          "row_fresh_at_window_end": false,
-          "row_fresh_until": "2026-11-25T07:16:28.229346+09:00",
           "source_recheck_required_at_publish": true
         },
         {
@@ -5915,150 +6056,82 @@
           "char_count": 381,
           "expires_at": "2026-11-25T19:17:15.962833+09:00",
           "full_delay_window_valid": true,
-          "source_fresh_at_slot": false,
-          "source_fresh_at_window_end": false,
-          "row_fresh_at_window_end": false,
-          "row_fresh_until": "2026-11-25T07:16:03.552111+09:00",
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-25T20:00:00+09:00",
+          "benefit_id": "B01000300013",
+          "pattern": "P1",
+          "media_turn": "IMAGE",
+          "char_count": 419,
+          "expires_at": "2026-11-25T20:37:37.953621+09:00",
+          "full_delay_window_valid": false,
           "source_recheck_required_at_publish": true
         }
       ],
       "source": {
         "count": 10895,
-        "generation": "gov24-45277137519-1",
-        "lastSuccessAt": "2026-11-24T07:18:33.759031+09:00",
-        "manifestSha256": "5e05c8162eb03678e75209e530dfe4b710d797b95e4d3e834f399502a65de644",
-        "path": "snapshots/gov24-45277137519-1",
+        "generation": "gov24-45374669702-1",
+        "lastSuccessAt": "2026-11-24T19:32:34.172544+09:00",
+        "manifestSha256": "ac91c8918926d5f940cd3f387696e90e0852ba857debdc6972b1a09ef53212ff",
+        "path": "snapshots/gov24-45374669702-1",
         "version": 1
       },
       "source_count": 10895,
-      "source_fresh_now": true,
-      "publisher_freshness_hours": 24,
-      "source_current_fresh_until": "2026-11-25T07:18:33.759031+09:00",
-      "source_recheck_required_at_publish": true,
-      "future_slot_simulation_requires_latest_source": true,
       "ledger_records": 77,
       "pending": null,
       "lease": null,
       "new_posts": 0,
-      "new_incidents": 0,
       "new_metrics": 0,
       "observations": 149,
-      "due_metrics": 0,
       "new_evaluation": false,
-      "14day_evaluation_already_recorded": true,
-      "astra_review_invocations": 0,
-      "existing_Astra_review_preserved": true,
-      "current_main_image_review_matches_cached_bytes": true,
-      "image_redownloaded_this_check": false,
-      "new_visual_inspection": false,
-      "expiry_prevention_revalidations": 0
+      "astra_review_invocations": 2,
+      "current_image_bytes_sha_recompared": true,
+      "source_recheck_required_at_publish": true,
+      "new_entry_full_window_revalidation_required": true
     },
     "metrics": {
-      "run_id": "45367251213",
+      "run_id": "45383134036",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-24T09:39:35Z",
+      "updated_at": "2026-11-24T11:19:47Z",
       "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
-      "job_id": 138352081861,
-      "artifact_id": 14907183134,
-      "artifact_digest": "sha256:52ddaaa54e291524e7475021ed09005255902fbdc3dd2c6793b7324905d75225",
+      "job_id": 138407046378,
+      "artifact_id": 14914962093,
+      "artifact_digest": "sha256:fc0b2d2e52e22e710e940303a10a3a6272f8f34293af0d6cf1b0ea3a788c7fce",
       "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": false,
-      "job_logs_retrieved_this_check": false,
-      "observed_at": "2026-11-24T09:39:30.389848+00:00",
-      "records": [
-        {
-          "post_id": "18450932713126961",
-          "published_at": "2026-11-17T17:11:25.529110+09:00",
-          "observed_at": "2026-11-24T09:39:30.389848+00:00",
-          "window_hours": 168,
-          "elapsed_hours": 169.46801687166666,
-          "timing": "late_available_check",
-          "within_target_tolerance": true,
-          "not_backcalculated": true,
-          "metrics": {
-            "views": 23,
-            "likes": 1,
-            "comments": 0,
-            "reposts": 0,
-            "shares": 0,
-            "saves": null,
-            "profile_visits": null,
-            "new_followers": null,
-            "site_visits": null
-          }
-        },
-        {
-          "post_id": "18121994881961457",
-          "published_at": "2026-11-21T17:01:36.675228+09:00",
-          "observed_at": "2026-11-24T09:39:30.389848+00:00",
-          "window_hours": 72,
-          "elapsed_hours": 73.63158739444444,
-          "timing": "late_available_check",
-          "within_target_tolerance": true,
-          "not_backcalculated": true,
-          "metrics": {
-            "views": 31,
-            "likes": 1,
-            "comments": 0,
-            "reposts": 0,
-            "shares": 0,
-            "saves": null,
-            "profile_visits": null,
-            "new_followers": null,
-            "site_visits": null
-          }
-        },
-        {
-          "post_id": "18129410933479829",
-          "published_at": "2026-11-23T17:20:54.074674+09:00",
-          "observed_at": "2026-11-24T09:39:30.389848+00:00",
-          "window_hours": 24,
-          "elapsed_hours": 25.310087548333335,
-          "timing": "late_available_check",
-          "within_target_tolerance": true,
-          "not_backcalculated": true,
-          "metrics": {
-            "views": 18,
-            "likes": 2,
-            "comments": 0,
-            "reposts": 0,
-            "shares": 0,
-            "saves": null,
-            "profile_visits": null,
-            "new_followers": null,
-            "site_visits": null
-          }
-        }
-      ],
-      "due_count": 3,
-      "success_count": 3,
+      "artifact_redownloaded_this_check": true,
+      "job_logs_retrieved_this_check": true,
+      "observed_at": "2026-11-24T11:19:42.461856+00:00",
+      "records": [],
+      "due_count": 0,
+      "success_count": 0,
+      "classification": "normal_no_due_at_run_time",
       "new_observation_keys": [],
       "new_observations": 0,
       "total_observations": 149,
       "new_evaluation_report_due": false,
       "weights_unchanged": true,
       "publication_calls": 0,
-      "workflow_dispatch": false,
-      "due_count_at_check": 0
+      "workflow_dispatch": false
     },
     "recovery": {
       "original_slot": "2026-11-23T20:00:00+09:00",
       "original_slot_published": false,
       "closed_missed_slot_no_backfill": true,
       "previously_closed_missed_slot_preserved": true,
-      "new_failure_this_check": false,
+      "new_failure_this_check": true,
       "new_recovery_this_check": false,
       "dispatches_this_check": 0,
       "new_posts": 0,
       "pending": null,
       "lease": null,
       "stage": "read_only_maintenance_complete",
-      "reason": "No targetrunversion/pending/lease/publicationchange. Correct maintenance12h narrative to actual unchanged24hpublisher, preserve allguards. No recovery dispatch or POST.",
+      "reason": "Newoperationsoverallfailure confirmed publicgenerationmismatch, not collectionfailure/ThreadsPOSTfailure. Runtime10895completeusable and5READYpreviewpass. PublicsitechangesoutsideThreads-onlyscope.20slotstillunreserved/windowopen; no guessedpublisherfailure/dispatch.",
       "new_publication_this_check": false
     },
-    "next_condition": "Existing4READY unchanged,preview4 andallfullwindowdraftchecks pass. Actualmainfresh24h:complete07:18:33 remainsfresh untilNov25 07:18:33, andtonight20~22 matchingrowtimestamps alsofresh. Correct prior12hmaintenanceassumption; no publisherguard changes. Actual20sender still latestcompletegeneration/account/pending/lease/CAS/firstattempt/max4/currentofficial/imagechecks mandatory. Tomorrow08/12/16requires newercompletefeed. CondoexpiryNov25 19:17preserved.77completepublished149actualobservations andformal14dayeval unchanged. No newdraft/Astra/POST/dispatch/rerun/backfill.",
+    "next_condition": "Existing20hslotunreserved andwindowopento22;awaitnormalpublisher,do notdispatchwithoutconfirmedfailure. NewNov25 20P1IMAGE419charAstra2callPASS queued; expiry20:37before22wholewindow requires genuineofficial/currentstatus/latestcompletefeed/imageSHA rereview atnextcheckaftertoday22witholdarchive/CASmax24h. Current19:32complete10895feedverified; nextday20needsnewersource. Existing4READYpreserved. Sourceoverallfailureispublicgenerationmismatchonly, no collectionfailureclaim/publicsiterepair/extraPOST.77published149metrics unchanged;14dayevaluationpreserved.",
     "publication": {
       "run_id": "45355210766",
       "run_attempt": 1,
@@ -6114,12 +6187,85 @@
       "previous_remote_evidence_preserved": true
     },
     "official_review_recovery": {
-      "new_official_page_review_this_check": false,
-      "new_Astra_calls": 0,
-      "existing_Astra_PASS_preserved": true,
-      "prior19hactual_condo_expiry_rereview_preserved": true,
-      "image_redownloaded_this_check": false,
-      "cached_image_sha_matches_current_main_review": true
+      "new_official_page_review_this_check": true,
+      "program_id": "B01000300013",
+      "evidence": [
+        {
+          "source_id": "B01000300013",
+          "source_ref": "https://www.newstartfund.or.kr/Contents/Prod.do",
+          "access_method": "OPENED_OFFICIAL",
+          "verified_at": "2026-11-24T20:37:37.953621+09:00",
+          "claims_supported": [
+            "실제열람32/97~121행:2020.4~2025.6사업영위/폐업개인포함/폐업법인제외/3개월부실또는장기연체위험/금리기간원금개별조정과상환."
+          ]
+        },
+        {
+          "source_id": "B01000300013",
+          "source_ref": "https://www.newstartfund.or.kr/Faq/List.do?pageIndex=3",
+          "access_method": "OPENED_OFFICIAL",
+          "verified_at": "2026-11-24T20:37:37.953621+09:00",
+          "claims_supported": [
+            "실제Q24~27열람:폐업개인가능/법인불가,주업종제외/미협약·개인자산형성대출제외,기존연체정보따라신규대출카드제약.개인선정/금융거래성공보장없음."
+          ]
+        },
+        {
+          "source_id": "B01000300013",
+          "source_ref": "https://www.newstartfund.or.kr/Faq/List.do?pageIndex=2",
+          "access_method": "OPENED_OFFICIAL",
+          "verified_at": "2026-11-24T20:37:37.953621+09:00",
+          "claims_supported": [
+            "실제Q12연체없어도폐업등부실우려요건해당가능.Q13타채무조정/개인회생상환중불가확인.새원고는개별취소권유나중복가능주장없음."
+          ]
+        },
+        {
+          "source_id": "B01000300013",
+          "source_ref": "https://www.newstartfund.or.kr/Index.do",
+          "access_method": "OPENED_OFFICIAL",
+          "verified_at": "2026-11-24T20:37:37.953621+09:00",
+          "claims_supported": [
+            "현재2026공지/공식신청메뉴실제열람.10월5서비스점검일은과거이며현재중단이라고표현않음.개인로그인거래미실행/접수선정보장없음."
+          ]
+        },
+        {
+          "source_id": "B01000300013",
+          "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2105847&bnefType=all&svcId=B01000300013",
+          "access_method": "PROVIDED_OFFICIAL_TEXT",
+          "verified_at": "2026-11-24T20:37:37.953621+09:00",
+          "claims_supported": [
+            "19:32완전세대manifest검증/read_current/load_feed동일ID34304·2026.12.31원본기간대조.원문과수집시각구별/source_only유지.신청기간질문아니므로추측2027연장/마감압박표현없음."
+          ]
+        },
+        {
+          "source_id": "B01000300013",
+          "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "access_method": "UPSTREAM_VERIFIED",
+          "verified_at": "2026-11-24T20:37:37.953621+09:00",
+          "claims_supported": [
+            "이번실제PNG GET SHA와현재main image-review PASS/360px기록재대조일치.새부모시각검수아님.혜택별자산없어승인rotation2,금액대상기간주장없음.실제alt유지."
+          ]
+        }
+      ],
+      "actual_Astra_review": {
+        "model": "gpt-6.2-astra",
+        "independent_agent": "/root/newstart_final_review",
+        "initial_verdict": "REVISE",
+        "initial_changes": [
+          "부실/부실우려를3개월연체/장기연체위험으로구체화",
+          "주업종제외/미협약대출구별"
+        ],
+        "final_verdict": "PASS",
+        "actual_review_calls": 2,
+        "char_count": 419,
+        "image": "social/images/benefit-guide-2.png",
+        "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "final_result": "실제동일모델2차PASS419자.대상질문즉답/사업기간/폐업법인제외/원금조건/잔여상환/제외/기존연체금융제약공식일치.CTA1URL0hash0.실제guide2시각확인및SHA일치.",
+        "final_text_sha256": "8048d902f3b027b379d27842c3c5f414df4e60a70c1b0116fdb65ea98f7c8ab6",
+        "final_checked_at": "2026-11-24T20:37:34.213719+09:00"
+      },
+      "new_Astra_calls": 2,
+      "image_bytes_sha_recompared": true,
+      "new_parent_visual_inspection": false,
+      "independent_Astra_visual_inspection": true
     },
     "regular_slot_observation": {
       "slot": "2026-11-24T08:00:00+09:00",
@@ -6322,53 +6468,19 @@
       "currently_open_unreserved_slots_from_period": 0
     },
     "publication_schedule_observation": {
-      "slot": "2026-11-24T16:00:00+09:00",
-      "checked_at": "2026-11-24T17:21:34.248683+09:00",
-      "status": "naturally_published_within_original_window",
-      "window_end": "2026-11-24T18:00:00+09:00",
-      "latest_publisher_run_id": "45321813009",
-      "ledger_slot_absent": false,
+      "slot": "2026-11-24T20:00:00+09:00",
+      "checked_at": "2026-11-24T20:39:17.077343+09:00",
+      "status": "unreserved_no_new_publisher_run_observed_window_open",
+      "window_end": "2026-11-24T22:00:00+09:00",
+      "latest_publisher_run_id": "45355210766",
+      "ledger_slot_absent": true,
       "pending": null,
       "lease": null,
       "failure_run_confirmed": false,
       "workflow_dispatch": false,
-      "next_condition": "Complete verified naturalpublication. No recovery/dispatch/backfill required; original candidate/media projection nowconfirmed.",
-      "main_id": "17974331994194122",
-      "receipt_at": "2026-11-24T17:21:06.769138+09:00"
+      "next_condition": "Keepcurrentreviewedimagebodyfornormalpublisher. No duplicatePOST/reservedcontentchange/dispatchwithoutactualconfirmedfailure."
     },
-    "new_formal_evaluation_this_check": false,
-    "read_path_limits_this_check": [
-      {
-        "path": "github_fetch workflow-specific runs endpoint",
-        "error_code": "INVALID_ARGUMENT",
-        "http_status": 400,
-        "reason": "Connector rejects endpoint shape; repository-wide100runs already supplied latest operations and last checkpoint. Not an operations-run failure. No permission changes or dispatch."
-      }
-    ],
-    "freshness_calculation_correction": {
-      "checked_at": "2026-11-24T19:25:55.868918+09:00",
-      "supersedes_check_at": "2026-11-24T19:19:13.565911+09:00",
-      "scope": "sourcefreshnessdeadline fields and narrative in19:12check, not publicationguards/history",
-      "incorrect_deadline": "2026-11-24T19:18:33.759031+09:00",
-      "correct_deadline": "2026-11-25T07:18:33.759031+09:00",
-      "cause": "Maintenance narrative mistakenly assumed12h; actual unchanged main supportpick_threads.fresh uses24h inclusive. No publishercode/guard changed.",
-      "evidence": {
-        "publisher_blob_sha": "5180bfb05f6e768aa515ed1f2f36b283a161ee74",
-        "function": "fresh(value,now)",
-        "hours": 24,
-        "actual_boundary_24h_pass": true,
-        "boundary_24h_plus1s_fail": true,
-        "actual_current_preview_ready": 4,
-        "tonight20to22_source_and_row_fresh": true
-      },
-      "previous_claims_superseded": [
-        "source_current_fresh_until19:18",
-        "20hsourcealreadyoutsidethreshold",
-        "sourceCurrentFreshUntil12hinterpretation"
-      ],
-      "historical_original_preserved": true,
-      "new_Astra_calls": 0
-    }
+    "new_formal_evaluation_this_check": false
   },
   "last_reported_publication": {
     "run_id": "45355210766",
@@ -13991,7 +14103,7 @@
           "not_backcalculated": true
         }
       },
-      "last_availability_check_at": "2026-11-24T09:39:30.389848+00:00",
+      "last_availability_check_at": "2026-11-24T11:19:42.461856+00:00",
       "statistical_decision": "comparison_deferred_confounded_strata_and_no_repeated_advantage; extend matched samples, retain A/B weights",
       "diagnostic_observations_by_run_id": {
         "43163347739": {
@@ -20495,6 +20607,32 @@
             "18129410933479829:24h"
           ],
           "new_observations": 3,
+          "total_observations": 149,
+          "new_evaluation_report_due": false,
+          "weights_unchanged": true,
+          "publication_calls": 0,
+          "workflow_dispatch": false
+        },
+        "45383134036": {
+          "run_id": "45383134036",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-24T11:19:47Z",
+          "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+          "job_id": 138407046378,
+          "artifact_id": 14914962093,
+          "artifact_digest": "sha256:fc0b2d2e52e22e710e940303a10a3a6272f8f34293af0d6cf1b0ea3a788c7fce",
+          "artifact_digest_verified": true,
+          "artifact_redownloaded_this_check": true,
+          "job_logs_retrieved_this_check": true,
+          "observed_at": "2026-11-24T11:19:42.461856+00:00",
+          "records": [],
+          "due_count": 0,
+          "success_count": 0,
+          "classification": "normal_no_due_at_run_time",
+          "new_observation_keys": [],
+          "new_observations": 0,
           "total_observations": 149,
           "new_evaluation_report_due": false,
           "weights_unchanged": true,
@@ -123090,6 +123228,670 @@
         "historical_original_preserved": true,
         "new_Astra_calls": 0
       }
+    },
+    "2026-11-24T20:39:17.077343+09:00": {
+      "checked_at": "2026-11-24T20:39:17.077343+09:00",
+      "result": "new_astra_READY_and_complete_source_verified_partial_operations_failure_classified",
+      "maintenance_previous_blob_sha": "1750eec82a3e6ff24cf99f368ee5df26df1463e1",
+      "current_main_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "5d033f77c6d86e826956219d1bd4a034b05daffc",
+      "queue_blob_sha": "38d525f57e1598ae18ea9aa950d8101e335044f5",
+      "changed_run_versions": [
+        {
+          "run_id": "45383134036",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-24T11:19:47Z",
+          "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5"
+        },
+        {
+          "run_id": "45374669702",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "failure",
+          "updated_at": "2026-11-24T10:34:25Z",
+          "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5"
+        }
+      ],
+      "active_target_runs": [],
+      "run_pagination": {
+        "per_page": 100,
+        "pages": [
+          1
+        ],
+        "checkpoint_run_id": "45367251213",
+        "checkpoint_version_unchanged": true,
+        "all_new_target_versions_observed": true
+      },
+      "publication_ledger_records": 75,
+      "complete_verified_records": 75,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "45374669702",
+        "run_attempt": 1,
+        "conclusion": "failure",
+        "collection_conclusion": "passed",
+        "job_id": 138377561259,
+        "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+        "tests_passed": 306,
+        "artifact_id": 14911047606,
+        "artifact_digest": "sha256:57f606ab48fe6855d705e98cd37c325e659101041824b7f4554110e8f28054ce",
+        "artifact_redownloaded_this_check": true,
+        "artifact_digest_verified": true,
+        "job_logs_retrieved_this_check": true,
+        "read_current_verify_snapshot_load_feed": true,
+        "manifest": {
+          "count": 10895,
+          "generation": "gov24-45374669702-1",
+          "lastSuccessAt": "2026-11-24T19:32:34.172544+09:00",
+          "manifestSha256": "ac91c8918926d5f940cd3f387696e90e0852ba857debdc6972b1a09ef53212ff",
+          "path": "snapshots/gov24-45374669702-1",
+          "version": 1
+        },
+        "collection_report": {
+          "applicationOpenVerified": false,
+          "collectionSucceededAt": "2026-11-24T19:32:34.172544+09:00",
+          "coverage": "Currently connected Gov24 API, all unfiltered pages of three endpoints",
+          "endpoints": {
+            "serviceDetail": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "serviceList": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "supportConditions": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            }
+          },
+          "factsVerified": false,
+          "feedSha256": "857fe88a7dfc20dd84cf60150b827214df8497c0aa59e63a2d55a6f0ddbc302d",
+          "finishedAt": "2026-11-24T19:32:35.298132+09:00",
+          "generation": "gov24-45374669702-1",
+          "normalRequestEstimate": 330,
+          "pageResponses": 327,
+          "project": "supportpick",
+          "published": false,
+          "sampleCount": 0,
+          "scheduled": false,
+          "sourceConsistency": "No snapshot token: totals and boundary pages stable; unique IDs and all endpoint sets matched",
+          "startedAt": "2026-11-24T19:25:52.234580+09:00",
+          "status": "passed",
+          "storedCount": 10895
+        },
+        "publisher_freshness_hours": 24,
+        "current_fresh_until": "2026-11-25T19:32:34.172544+09:00",
+        "collection_is_not_current_application_status_verification": true,
+        "new_candidate_original_official_pages_read": true,
+        "existing4entries_unchanged_fingerprints_pass": true,
+        "public_verification": {
+          "run_id": "45374669702",
+          "run_attempt": 1,
+          "status": "collection_complete_public_verification_unresolved_outside_threads_scope",
+          "stage": "Verify deployed source, generation and every public HTML URL",
+          "failure_fingerprint": "public_generation_mismatch:gov24-45374669702-1:gov24-45277137519-1",
+          "confirmed_cause": "Livepublicmanifeststillreportspriorgeneration, while verifierexpectednewcompletegeneration; observedsourceRevision matcheshead. Underlying deployment/cachecauseunconfirmed. OverallfailureisNOTcollectionfailure.",
+          "last_success": "collection+build+runtimepreservation+deployaction succeeded;306tests passed. Actualpublicverification failed after2manifestattempts.",
+          "expected_generation": "gov24-45374669702-1",
+          "observed_generation": "gov24-45277137519-1",
+          "expected_revision": "cc03a6d64232b37546b3120f9789f94285872fb5",
+          "observed_revision": "cc03a6d64232b37546b3120f9789f94285872fb5",
+          "container_id": null,
+          "main_id": null,
+          "publication_POSTs_by_this_check": 0,
+          "artifact_id": 14911047606,
+          "artifact_digest": "sha256:57f606ab48fe6855d705e98cd37c325e659101041824b7f4554110e8f28054ce",
+          "artifact_digest_verified": true,
+          "complete_manifest_verified": true,
+          "manifest": {
+            "count": 10895,
+            "generation": "gov24-45374669702-1",
+            "lastSuccessAt": "2026-11-24T19:32:34.172544+09:00",
+            "manifestSha256": "ac91c8918926d5f940cd3f387696e90e0852ba857debdc6972b1a09ef53212ff",
+            "path": "snapshots/gov24-45374669702-1",
+            "version": 1
+          },
+          "collection_report": {
+            "applicationOpenVerified": false,
+            "collectionSucceededAt": "2026-11-24T19:32:34.172544+09:00",
+            "coverage": "Currently connected Gov24 API, all unfiltered pages of three endpoints",
+            "endpoints": {
+              "serviceDetail": {
+                "completedPages": 109,
+                "duplicateCount": 0,
+                "expectedPages": 109,
+                "receivedCount": 10895,
+                "reportedTotal": 10895,
+                "uniqueCount": 10895
+              },
+              "serviceList": {
+                "completedPages": 109,
+                "duplicateCount": 0,
+                "expectedPages": 109,
+                "receivedCount": 10895,
+                "reportedTotal": 10895,
+                "uniqueCount": 10895
+              },
+              "supportConditions": {
+                "completedPages": 109,
+                "duplicateCount": 0,
+                "expectedPages": 109,
+                "receivedCount": 10895,
+                "reportedTotal": 10895,
+                "uniqueCount": 10895
+              }
+            },
+            "factsVerified": false,
+            "feedSha256": "857fe88a7dfc20dd84cf60150b827214df8497c0aa59e63a2d55a6f0ddbc302d",
+            "finishedAt": "2026-11-24T19:32:35.298132+09:00",
+            "generation": "gov24-45374669702-1",
+            "normalRequestEstimate": 330,
+            "pageResponses": 327,
+            "project": "supportpick",
+            "published": false,
+            "sampleCount": 0,
+            "scheduled": false,
+            "sourceConsistency": "No snapshot token: totals and boundary pages stable; unique IDs and all endpoint sets matched",
+            "startedAt": "2026-11-24T19:25:52.234580+09:00",
+            "status": "passed",
+            "storedCount": 10895
+          },
+          "public_verification_artifact_id": 14910528644,
+          "public_verification_artifact_digest": "sha256:5826fb80e4d06f9e524bb97728666efb3f5a71343869a9ce5427172401c0c482",
+          "actual_live_manifest_reread_at": "2026-11-24T20:39:17.077343+09:00",
+          "retry_budget": "Workflowalreadyused2manifestchecks; no nestedretry/manualdeployment/rerun. CurrentreadonlyoneGETconfirmsoldgeneration.",
+          "next_condition": "Existingwebsiteoperationsmayreconcilepublicgeneration; no siteUI/banner/publicdeploychange inThreads-onlyscope. Threadsreads latestcompleteactualruntimeartifact and must keep ownaccount/queue/fingerprint/freshnessguards. No collectionfixneeded or falsepublicrecoverysuccess."
+        }
+      },
+      "writer": {
+        "checked_at": "2026-11-24T20:37:37.953621+09:00",
+        "ready": 5,
+        "active_regular_ready": 1,
+        "future24h_ready": 4,
+        "new_drafts": 1,
+        "existing_READY_reused": 4,
+        "drafts": [
+          {
+            "slot": "2026-11-24T20:00:00+09:00",
+            "benefit_id": "127000000002",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 422,
+            "expires_at": "2026-11-24T23:06:37.757855+09:00",
+            "full_delay_window_valid": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T08:00:00+09:00",
+            "benefit_id": "419000000129",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 315,
+            "expires_at": "2026-11-25T10:40:14.847169+09:00",
+            "full_delay_window_valid": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T12:00:00+09:00",
+            "benefit_id": "PTR000050390",
+            "pattern": "P5",
+            "media_turn": "IMAGE",
+            "char_count": 436,
+            "expires_at": "2026-11-25T14:45:53.443971+09:00",
+            "full_delay_window_valid": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T16:00:00+09:00",
+            "benefit_id": "B49000100208",
+            "pattern": "P6",
+            "media_turn": "TEXT",
+            "char_count": 381,
+            "expires_at": "2026-11-25T19:17:15.962833+09:00",
+            "full_delay_window_valid": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T20:00:00+09:00",
+            "benefit_id": "B01000300013",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 419,
+            "expires_at": "2026-11-25T20:37:37.953621+09:00",
+            "full_delay_window_valid": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source": {
+          "count": 10895,
+          "generation": "gov24-45374669702-1",
+          "lastSuccessAt": "2026-11-24T19:32:34.172544+09:00",
+          "manifestSha256": "ac91c8918926d5f940cd3f387696e90e0852ba857debdc6972b1a09ef53212ff",
+          "path": "snapshots/gov24-45374669702-1",
+          "version": 1
+        },
+        "source_count": 10895,
+        "ledger_records": 77,
+        "pending": null,
+        "lease": null,
+        "new_posts": 0,
+        "new_metrics": 0,
+        "observations": 149,
+        "new_evaluation": false,
+        "astra_review_invocations": 2,
+        "current_image_bytes_sha_recompared": true,
+        "source_recheck_required_at_publish": true,
+        "new_entry_full_window_revalidation_required": true
+      },
+      "metrics": {
+        "run_id": "45383134036",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T11:19:47Z",
+        "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+        "job_id": 138407046378,
+        "artifact_id": 14914962093,
+        "artifact_digest": "sha256:fc0b2d2e52e22e710e940303a10a3a6272f8f34293af0d6cf1b0ea3a788c7fce",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "observed_at": "2026-11-24T11:19:42.461856+00:00",
+        "records": [],
+        "due_count": 0,
+        "success_count": 0,
+        "classification": "normal_no_due_at_run_time",
+        "new_observation_keys": [],
+        "new_observations": 0,
+        "total_observations": 149,
+        "new_evaluation_report_due": false,
+        "weights_unchanged": true,
+        "publication_calls": 0,
+        "workflow_dispatch": false
+      },
+      "recovery": {
+        "original_slot": "2026-11-23T20:00:00+09:00",
+        "original_slot_published": false,
+        "closed_missed_slot_no_backfill": true,
+        "previously_closed_missed_slot_preserved": true,
+        "new_failure_this_check": true,
+        "new_recovery_this_check": false,
+        "dispatches_this_check": 0,
+        "new_posts": 0,
+        "pending": null,
+        "lease": null,
+        "stage": "read_only_maintenance_complete",
+        "reason": "Newoperationsoverallfailure confirmed publicgenerationmismatch, not collectionfailure/ThreadsPOSTfailure. Runtime10895completeusable and5READYpreviewpass. PublicsitechangesoutsideThreads-onlyscope.20slotstillunreserved/windowopen; no guessedpublisherfailure/dispatch.",
+        "new_publication_this_check": false
+      },
+      "next_condition": "Existing20hslotunreserved andwindowopento22;awaitnormalpublisher,do notdispatchwithoutconfirmedfailure. NewNov25 20P1IMAGE419charAstra2callPASS queued; expiry20:37before22wholewindow requires genuineofficial/currentstatus/latestcompletefeed/imageSHA rereview atnextcheckaftertoday22witholdarchive/CASmax24h. Current19:32complete10895feedverified; nextday20needsnewersource. Existing4READYpreserved. Sourceoverallfailureispublicgenerationmismatchonly, no collectionfailureclaim/publicsiterepair/extraPOST.77published149metrics unchanged;14dayevaluationpreserved.",
+      "publication": {
+        "run_id": "45355210766",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-24T08:21:17Z",
+        "head_sha": "cc03a6d64232b37546b3120f9789f94285872fb5",
+        "job_id": 138311217348,
+        "artifact_id": 14902391035,
+        "artifact_digest": "sha256:a03c06242420c816848ccdc09ac67db74dc41ad2bbd5f57ed0b53159732e3779",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 138,
+        "new_publication_this_run": false,
+        "main_id": "17974331994194122",
+        "url": "https://www.threads.com/@hid_1004/post/DgHgym4mz2o",
+        "slot": "2026-11-24T16:00:00+09:00",
+        "receipt_at": "2026-11-24T17:21:06.769138+09:00",
+        "ledger_published_at": "2026-11-24T17:20:24.263616+09:00",
+        "ledger_published_at_is_invocation_not_exact_platform_time": true,
+        "stage": "complete",
+        "verified": true,
+        "body_hash": "9111264428231997475e951d2cbf9506971172eb1b0f071fdc0125412dc709dc",
+        "content_hash": "d293bdb33a61f1c05d361f5f57b6bc85cb9c63c9fce8355cc5caa749b80e4f16",
+        "asset_sha256": null,
+        "media_turn": "TEXT",
+        "pattern": "P5",
+        "char_count": 432,
+        "replies": 0,
+        "original_queue_body_asset_exact": true,
+        "previous76records_preserved": true,
+        "maintenance_post_calls": 0,
+        "delay_within_original_2h_window": true,
+        "latest_already_reported": true
+      },
+      "history_reconciliation": {
+        "run_id": "45173485637",
+        "mode": "check-account",
+        "account": "hid_1004",
+        "checked_at": "2026-11-23T21:21:24+09:00",
+        "recent_remote_rows": 100,
+        "more_history": true,
+        "main_ledger_matches_in_page": 49,
+        "latest20_main_matches": 20,
+        "latest_remote_id": "18129410933479829",
+        "target_text_absent": true,
+        "scope": "77durablecompleteverifiedrows;prior76exactpreserved;newreceipt/body/asset/artifactverified. No full28dayremotequery.",
+        "artifact_id": 14818615408,
+        "artifact_digest": "sha256:23cfc165bbd050ec1a12dbde18778345efb01c4d9e20abf69f6279b090e003b3",
+        "artifact_digest_verified": true,
+        "remote_requeried_this_check": false,
+        "previous_remote_evidence_preserved": true
+      },
+      "official_review_recovery": {
+        "new_official_page_review_this_check": true,
+        "program_id": "B01000300013",
+        "evidence": [
+          {
+            "source_id": "B01000300013",
+            "source_ref": "https://www.newstartfund.or.kr/Contents/Prod.do",
+            "access_method": "OPENED_OFFICIAL",
+            "verified_at": "2026-11-24T20:37:37.953621+09:00",
+            "claims_supported": [
+              "실제열람32/97~121행:2020.4~2025.6사업영위/폐업개인포함/폐업법인제외/3개월부실또는장기연체위험/금리기간원금개별조정과상환."
+            ]
+          },
+          {
+            "source_id": "B01000300013",
+            "source_ref": "https://www.newstartfund.or.kr/Faq/List.do?pageIndex=3",
+            "access_method": "OPENED_OFFICIAL",
+            "verified_at": "2026-11-24T20:37:37.953621+09:00",
+            "claims_supported": [
+              "실제Q24~27열람:폐업개인가능/법인불가,주업종제외/미협약·개인자산형성대출제외,기존연체정보따라신규대출카드제약.개인선정/금융거래성공보장없음."
+            ]
+          },
+          {
+            "source_id": "B01000300013",
+            "source_ref": "https://www.newstartfund.or.kr/Faq/List.do?pageIndex=2",
+            "access_method": "OPENED_OFFICIAL",
+            "verified_at": "2026-11-24T20:37:37.953621+09:00",
+            "claims_supported": [
+              "실제Q12연체없어도폐업등부실우려요건해당가능.Q13타채무조정/개인회생상환중불가확인.새원고는개별취소권유나중복가능주장없음."
+            ]
+          },
+          {
+            "source_id": "B01000300013",
+            "source_ref": "https://www.newstartfund.or.kr/Index.do",
+            "access_method": "OPENED_OFFICIAL",
+            "verified_at": "2026-11-24T20:37:37.953621+09:00",
+            "claims_supported": [
+              "현재2026공지/공식신청메뉴실제열람.10월5서비스점검일은과거이며현재중단이라고표현않음.개인로그인거래미실행/접수선정보장없음."
+            ]
+          },
+          {
+            "source_id": "B01000300013",
+            "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2105847&bnefType=all&svcId=B01000300013",
+            "access_method": "PROVIDED_OFFICIAL_TEXT",
+            "verified_at": "2026-11-24T20:37:37.953621+09:00",
+            "claims_supported": [
+              "19:32완전세대manifest검증/read_current/load_feed동일ID34304·2026.12.31원본기간대조.원문과수집시각구별/source_only유지.신청기간질문아니므로추측2027연장/마감압박표현없음."
+            ]
+          },
+          {
+            "source_id": "B01000300013",
+            "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+            "access_method": "UPSTREAM_VERIFIED",
+            "verified_at": "2026-11-24T20:37:37.953621+09:00",
+            "claims_supported": [
+              "이번실제PNG GET SHA와현재main image-review PASS/360px기록재대조일치.새부모시각검수아님.혜택별자산없어승인rotation2,금액대상기간주장없음.실제alt유지."
+            ]
+          }
+        ],
+        "actual_Astra_review": {
+          "model": "gpt-6.2-astra",
+          "independent_agent": "/root/newstart_final_review",
+          "initial_verdict": "REVISE",
+          "initial_changes": [
+            "부실/부실우려를3개월연체/장기연체위험으로구체화",
+            "주업종제외/미협약대출구별"
+          ],
+          "final_verdict": "PASS",
+          "actual_review_calls": 2,
+          "char_count": 419,
+          "image": "social/images/benefit-guide-2.png",
+          "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "final_result": "실제동일모델2차PASS419자.대상질문즉답/사업기간/폐업법인제외/원금조건/잔여상환/제외/기존연체금융제약공식일치.CTA1URL0hash0.실제guide2시각확인및SHA일치.",
+          "final_text_sha256": "8048d902f3b027b379d27842c3c5f414df4e60a70c1b0116fdb65ea98f7c8ab6",
+          "final_checked_at": "2026-11-24T20:37:34.213719+09:00"
+        },
+        "new_Astra_calls": 2,
+        "image_bytes_sha_recompared": true,
+        "new_parent_visual_inspection": false,
+        "independent_Astra_visual_inspection": true
+      },
+      "regular_slot_observation": {
+        "slot": "2026-11-24T08:00:00+09:00",
+        "status": "natural_publication_verified_complete",
+        "main_id": "18123605203752749",
+        "receipt_at": "2026-11-24T08:46:05.901553+09:00",
+        "main_url": "https://www.threads.com/@hid_1004/post/DgGl2ooGuAa"
+      },
+      "main_head_observation": {
+        "latest_observed_run_head": "5732cde848a03907b2505396c34a4d60c713571e",
+        "target_publisher_workflows_master_and_assets_blobs_unchanged": true,
+        "unrelated_changes_not_modified": true
+      },
+      "image_sha_comparisons": [
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:06.502293+09:00"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:14.847084+09:00"
+        }
+      ],
+      "run_status_transitions": [
+        {
+          "run_id": "45277137519",
+          "from": "in_progress",
+          "to": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-23T22:38:20Z"
+        }
+      ],
+      "formal_evaluation": {
+        "policy_id": "supportpick-threads-reach-v1-20261109",
+        "window": "14d_evaluation",
+        "evaluated_at": "2026-11-24T17:20:07.451089+09:00",
+        "period_start": "2026-11-10T17:00:08.835254+09:00",
+        "period_end": "2026-11-24T17:00:08.835254+09:00",
+        "normal_verified_publications": 53,
+        "experiment_regular_slots": 57,
+        "unpublished_slots": [
+          {
+            "slot": "2026-11-16T16:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-18T12:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-23T20:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-24T16:00:00+09:00",
+            "classification": "unreserved_at_evaluation_cutoff_then_published_after_cutoff",
+            "subsequent_main_id": "17974331994194122",
+            "subsequent_receipt_at": "2026-11-24T17:21:06.769138+09:00"
+          }
+        ],
+        "missed_closed_slots": 3,
+        "partial_or_pending": 0,
+        "independent_full_public_rendering_recheck": false,
+        "publication_audit_scope": "76durablecompleteverifiedrecords; priorreceipts/body/media/artifacts retained. No newfull28dayremotequery; Nov24 16unreserved/latestpublisher12only,nofailure-runconfirmed.",
+        "24h_comparison_window_observations": 40,
+        "A_n": 20,
+        "B_n": 20,
+        "24h_comparable_matched_pairs": 0,
+        "24h_group_view_medians": {
+          "A": 62.0,
+          "B": 62.0
+        },
+        "24h_all_view_median": 62.0,
+        "actual_reactions": {
+          "A": {
+            "likes": 29,
+            "replies": 0,
+            "reposts": 6,
+            "shares": 1
+          },
+          "B": {
+            "likes": 27,
+            "replies": 0,
+            "reposts": 5,
+            "shares": 0
+          }
+        },
+        "reaction_rate_used": false,
+        "all_24h_observations_delayed": true,
+        "eligible_elapsed_hours_min": 24.317312148333336,
+        "eligible_elapsed_hours_max": 25.691108017222223,
+        "24h_unavailable_not_zero": [
+          "18117968657159347",
+          "17992859946026940",
+          "17913499947663769",
+          "18001464938830261"
+        ],
+        "24h_not_yet_due": [
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "24h_missing_after_due": [],
+        "7d_measured": 27,
+        "7d_not_yet_due": [
+          "18004106657810124",
+          "18155833435528730",
+          "18061699079561356",
+          "18075899267779249",
+          "18361336213223949",
+          "18100168118443439",
+          "17876108337601849",
+          "17954736195295664",
+          "18136261246743978",
+          "18029579210863916",
+          "18106611944009610",
+          "17995393143022353",
+          "18002356029029330",
+          "18098495828440255",
+          "18121994881961457",
+          "18093412586696162",
+          "18102899498408388",
+          "18214999999364836",
+          "18125366213319496",
+          "18149154712603236",
+          "17879078796637660",
+          "18388999600236313",
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "7d_group_medians": {
+          "A": 105,
+          "B": 87.5
+        },
+        "quotes": "not_provided",
+        "reader_only_replies": "unavailable",
+        "profile_clicks": "account_level_not_available; no_post_attribution",
+        "confounders": [
+          "Differentbusiness/region/readers/benefit/deadline/time/media/length; matchedsimilarpairs0",
+          "PreservedmovedexistingREADYcohorts differfromnewslots;excludeinsteadretroclassify",
+          "Newquestiontitlepolicy changesmorethanopeningalone;newAstrarevieweddraftsexcludedfrompureA/B"
+        ],
+        "minimum_24h_target_per_group": 8,
+        "raw_window_target_met": true,
+        "current_stratified_target_met": false,
+        "decision": "extend_comparison;maintainbalancedA/Bandexistingcontrols.No demonstratedrepeatedadvantage;noeditorialweightchange.",
+        "weight_changed": false,
+        "no_backcalculation": true,
+        "extension_next_condition": "Reassess in existingchecks when comparable similar-business strata have sufficient repeatedactual24hwindows; keep comparison group. No separate schedule.",
+        "reported_at": "2026-11-24T17:20:07.451089+09:00",
+        "evidence_latest_metric_run_id": "45351393999",
+        "24h_measured_but_excluded": [
+          {
+            "main_id": "18122947907049313",
+            "elapsed_hours": 52.64388394083333,
+            "reason": "late_beyond_26h_comparison_tolerance"
+          },
+          {
+            "main_id": "18061699079561356",
+            "elapsed_hours": 25.374772445277777,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18075899267779249",
+            "elapsed_hours": 24.65035752527778,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18361336213223949",
+            "elapsed_hours": 24.39045965972222,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18100168118443439",
+            "elapsed_hours": 24.6578044575,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "17876108337601849",
+            "elapsed_hours": 25.228189436944444,
+            "reason": "Previously written input preserved; no retrospective cohort assignment after failed preceding slot"
+          }
+        ],
+        "7d_group_n": {
+          "A": 13,
+          "B": 14
+        },
+        "7d_due_unmeasured": [
+          "18450932713126961"
+        ],
+        "publication_cutoff_note": "EvaluationperiodendsNov24 17:00:08.16slotwasunreservedatcutoff, laternaturallypublished17:21:06withinits2hwindow; excludedfrom53periodpublications becauseactualinvocation17:20aftercutoff. Notafourthmissedslot.",
+        "unreserved_at_period_end_slots": 1,
+        "currently_open_unreserved_slots_from_period": 0
+      },
+      "publication_schedule_observation": {
+        "slot": "2026-11-24T20:00:00+09:00",
+        "checked_at": "2026-11-24T20:39:17.077343+09:00",
+        "status": "unreserved_no_new_publisher_run_observed_window_open",
+        "window_end": "2026-11-24T22:00:00+09:00",
+        "latest_publisher_run_id": "45355210766",
+        "ledger_slot_absent": true,
+        "pending": null,
+        "lease": null,
+        "failure_run_confirmed": false,
+        "workflow_dispatch": false,
+        "next_condition": "Keepcurrentreviewedimagebodyfornormalpublisher. No duplicatePOST/reservedcontentchange/dispatchwithoutactualconfirmedfailure."
+      },
+      "new_formal_evaluation_this_check": false
     }
   },
   "last_reported_prepublication_repair": {
@@ -123101,15 +123903,15 @@
     "new_post": false
   },
   "last_prepared_queue": {
-    "checked_at": "2026-11-24T17:21:34.248683+09:00",
-    "commit_sha": "ff5ca4e659a3038c9af29e24a152465fe0f2bbe5",
-    "queue_blob_sha": "1bd619d3c68be53bf1e652c9bddbc25660b28569",
+    "checked_at": "2026-11-24T20:39:17.077343+09:00",
+    "commit_sha": "91c9c00331f4a26a1f7fb3fd8cb5e9d547c4627c",
+    "queue_blob_sha": "38d525f57e1598ae18ea9aa950d8101e335044f5",
     "new_entries": 1,
-    "ready": 4,
+    "ready": 5,
     "future24h_ready": 4,
-    "active_regular_ready": 0,
-    "program_id": "B49000100208",
-    "slot": "2026-11-25T16:00:00+09:00",
+    "active_regular_ready": 1,
+    "program_id": "B01000300013",
+    "slot": "2026-11-25T20:00:00+09:00",
     "astra_calls": 2,
     "astra_verdict": "PASS",
     "expiry_revalidation_required": true
@@ -125484,10 +126286,11 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-24T19:25:55.868918+09:00",
-    "ready": 4,
+    "checked_at": "2026-11-24T20:37:37.953621+09:00",
+    "ready": 5,
+    "active_regular_ready": 1,
     "future24h_ready": 4,
-    "new_drafts": 0,
+    "new_drafts": 1,
     "existing_READY_reused": 4,
     "drafts": [
       {
@@ -125498,10 +126301,6 @@
         "char_count": 422,
         "expires_at": "2026-11-24T23:06:37.757855+09:00",
         "full_delay_window_valid": true,
-        "source_fresh_at_slot": true,
-        "source_fresh_at_window_end": true,
-        "row_fresh_at_window_end": true,
-        "row_fresh_until": "2026-11-25T07:14:01.419947+09:00",
         "source_recheck_required_at_publish": true
       },
       {
@@ -125512,10 +126311,6 @@
         "char_count": 315,
         "expires_at": "2026-11-25T10:40:14.847169+09:00",
         "full_delay_window_valid": true,
-        "source_fresh_at_slot": false,
-        "source_fresh_at_window_end": false,
-        "row_fresh_at_window_end": false,
-        "row_fresh_until": "2026-11-25T07:14:40.632615+09:00",
         "source_recheck_required_at_publish": true
       },
       {
@@ -125526,10 +126321,6 @@
         "char_count": 436,
         "expires_at": "2026-11-25T14:45:53.443971+09:00",
         "full_delay_window_valid": true,
-        "source_fresh_at_slot": false,
-        "source_fresh_at_window_end": false,
-        "row_fresh_at_window_end": false,
-        "row_fresh_until": "2026-11-25T07:16:28.229346+09:00",
         "source_recheck_required_at_publish": true
       },
       {
@@ -125540,43 +126331,39 @@
         "char_count": 381,
         "expires_at": "2026-11-25T19:17:15.962833+09:00",
         "full_delay_window_valid": true,
-        "source_fresh_at_slot": false,
-        "source_fresh_at_window_end": false,
-        "row_fresh_at_window_end": false,
-        "row_fresh_until": "2026-11-25T07:16:03.552111+09:00",
+        "source_recheck_required_at_publish": true
+      },
+      {
+        "slot": "2026-11-25T20:00:00+09:00",
+        "benefit_id": "B01000300013",
+        "pattern": "P1",
+        "media_turn": "IMAGE",
+        "char_count": 419,
+        "expires_at": "2026-11-25T20:37:37.953621+09:00",
+        "full_delay_window_valid": false,
         "source_recheck_required_at_publish": true
       }
     ],
     "source": {
       "count": 10895,
-      "generation": "gov24-45277137519-1",
-      "lastSuccessAt": "2026-11-24T07:18:33.759031+09:00",
-      "manifestSha256": "5e05c8162eb03678e75209e530dfe4b710d797b95e4d3e834f399502a65de644",
-      "path": "snapshots/gov24-45277137519-1",
+      "generation": "gov24-45374669702-1",
+      "lastSuccessAt": "2026-11-24T19:32:34.172544+09:00",
+      "manifestSha256": "ac91c8918926d5f940cd3f387696e90e0852ba857debdc6972b1a09ef53212ff",
+      "path": "snapshots/gov24-45374669702-1",
       "version": 1
     },
     "source_count": 10895,
-    "source_fresh_now": true,
-    "publisher_freshness_hours": 24,
-    "source_current_fresh_until": "2026-11-25T07:18:33.759031+09:00",
-    "source_recheck_required_at_publish": true,
-    "future_slot_simulation_requires_latest_source": true,
     "ledger_records": 77,
     "pending": null,
     "lease": null,
     "new_posts": 0,
-    "new_incidents": 0,
     "new_metrics": 0,
     "observations": 149,
-    "due_metrics": 0,
     "new_evaluation": false,
-    "14day_evaluation_already_recorded": true,
-    "astra_review_invocations": 0,
-    "existing_Astra_review_preserved": true,
-    "current_main_image_review_matches_cached_bytes": true,
-    "image_redownloaded_this_check": false,
-    "new_visual_inspection": false,
-    "expiry_prevention_revalidations": 0
+    "astra_review_invocations": 2,
+    "current_image_bytes_sha_recompared": true,
+    "source_recheck_required_at_publish": true,
+    "new_entry_full_window_revalidation_required": true
   },
   "last_queue_review_refresh": {
     "checked_at": "2026-11-24T19:17:15.962833+09:00",
@@ -138849,6 +139636,20 @@
       "astra_calls": 2,
       "astra_verdict": "PASS",
       "expiry_revalidation_required": true
+    },
+    "2026-11-24T20:39:17.077343+09:00": {
+      "checked_at": "2026-11-24T20:39:17.077343+09:00",
+      "commit_sha": "91c9c00331f4a26a1f7fb3fd8cb5e9d547c4627c",
+      "queue_blob_sha": "38d525f57e1598ae18ea9aa950d8101e335044f5",
+      "new_entries": 1,
+      "ready": 5,
+      "future24h_ready": 4,
+      "active_regular_ready": 1,
+      "program_id": "B01000300013",
+      "slot": "2026-11-25T20:00:00+09:00",
+      "astra_calls": 2,
+      "astra_verdict": "PASS",
+      "expiry_revalidation_required": true
     }
   },
   "last_preparation_check": {
@@ -139360,6 +140161,23 @@
       "image_reason": "TEXT회차실제이미지없음",
       "final_checked_at": "2026-11-24T17:20:07.451089+09:00",
       "final_result": "실제동일모델재검수PASS381자.대상질문즉답/포함관계/요일별기한/선발조건공식일치.CTA1/링크0/추가행동0."
+    },
+    "2026-11-24T20:39:17.077343+09:00": {
+      "model": "gpt-6.2-astra",
+      "independent_agent": "/root/newstart_final_review",
+      "initial_verdict": "REVISE",
+      "initial_changes": [
+        "부실/부실우려를3개월연체/장기연체위험으로구체화",
+        "주업종제외/미협약대출구별"
+      ],
+      "final_verdict": "PASS",
+      "actual_review_calls": 2,
+      "char_count": 419,
+      "image": "social/images/benefit-guide-2.png",
+      "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "final_result": "실제동일모델2차PASS419자.대상질문즉답/사업기간/폐업법인제외/원금조건/잔여상환/제외/기존연체금융제약공식일치.CTA1URL0hash0.실제guide2시각확인및SHA일치.",
+      "final_text_sha256": "8048d902f3b027b379d27842c3c5f414df4e60a70c1b0116fdb65ea98f7c8ab6",
+      "final_checked_at": "2026-11-24T20:37:34.213719+09:00"
     }
   },
   "expiry_revalidation_required": {
@@ -139949,6 +140767,197 @@
       "new_expires_at": "2026-11-25T19:17:15.962833+09:00",
       "queue_commit": "1e496596e6b7619751e8497f0074171391dd3fd6",
       "actual_sender_latest_source_recheck_required": true
+    },
+    "2026-11-25T20:00:00+09:00:B01000300013": {
+      "status": "REQUIRED_BEFORE_FULL_DELAY_WINDOW",
+      "entry": {
+        "slot": "2026-11-25T20:00:00+09:00",
+        "benefit_id": "B01000300013",
+        "source_fingerprint": "b27c8641d7defe9fb62e955581438e4e2757a20d2dcceef96fa0ea1be6ee46b4",
+        "source_generation": "gov24-45374669702-1",
+        "prepared_at": "2026-11-24T20:37:37.953621+09:00",
+        "expires_at": "2026-11-25T20:37:37.953621+09:00",
+        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "writer": {
+          "schema_version": "supportpick.writer.v1",
+          "status": "READY",
+          "selected_program_id": "B01000300013",
+          "post_text": "폐업한 개인사업자도 새출발기금을 신청할 수 있나요?\n네, 2020년 4월부터 2025년 6월 사이에 사업을 했고 대출 상환금을 3개월 이상 연체했거나 가까운 시일 안에 장기 연체할 위험이 크다면 신청할 수 있어요. 폐업한 법인은 신청할 수 없어요.\n\n새출발기금은 대출 상환기간이나 금리를 조정해 주는 제도예요. 원금 조정 여부는 연체 상태와 담보 유무, 보유 재산 등에 따라 달라져요. 조정 후 남은 빚은 갚아야 해요.\n\n주업종이 부동산 임대업 등 제외 업종이면 지원이 어려워요. 새출발기금과 협약하지 않은 금융회사의 대출이나 개인 자산을 마련하려고 받은 대출은 대상에서 제외돼요.\n\n새출발기금 공식 누리집에서 신청 자격과 조정 가능한 대출을 확인해 보세요. 기존 연체정보에 따라 대출·카드 이용이 제한될 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+          "draft_text": null,
+          "reply_texts": [],
+          "media": {
+            "turn": "IMAGE",
+            "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+            "check": "MATCHED",
+            "image_copy": null,
+            "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+          },
+          "review": {
+            "planned_at": "2026-11-25T20:00:00+09:00",
+            "application_status": "OPEN",
+            "reader": "2020.4~2025.6중사업한폐업개인사업자중부실/부실우려차주",
+            "central_message": "폐업한개인사업자도새출발기금신청대상인가",
+            "pattern": "P1",
+            "selection_reason": "동일ID원본누적34304.상위75기존HOLD/SKIP출처보존+대구34460현재신규모집근거미확보HOLD.77게시/기존미예약4사업제외후검증가능최상위.최근20도입전개대조,폐업대상질문→즉답→상환부담생활상황→제외채무→확인행동.P1,내일P8/P5/P6와구분.",
+            "interest_basis": "OBSERVED_METRICS",
+            "duplicate_check": "CHECKED",
+            "evidence": [
+              {
+                "source_id": "B01000300013",
+                "source_ref": "https://www.newstartfund.or.kr/Contents/Prod.do",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-24T20:37:37.953621+09:00",
+                "claims_supported": [
+                  "실제열람32/97~121행:2020.4~2025.6사업영위/폐업개인포함/폐업법인제외/3개월부실또는장기연체위험/금리기간원금개별조정과상환."
+                ]
+              },
+              {
+                "source_id": "B01000300013",
+                "source_ref": "https://www.newstartfund.or.kr/Faq/List.do?pageIndex=3",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-24T20:37:37.953621+09:00",
+                "claims_supported": [
+                  "실제Q24~27열람:폐업개인가능/법인불가,주업종제외/미협약·개인자산형성대출제외,기존연체정보따라신규대출카드제약.개인선정/금융거래성공보장없음."
+                ]
+              },
+              {
+                "source_id": "B01000300013",
+                "source_ref": "https://www.newstartfund.or.kr/Faq/List.do?pageIndex=2",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-24T20:37:37.953621+09:00",
+                "claims_supported": [
+                  "실제Q12연체없어도폐업등부실우려요건해당가능.Q13타채무조정/개인회생상환중불가확인.새원고는개별취소권유나중복가능주장없음."
+                ]
+              },
+              {
+                "source_id": "B01000300013",
+                "source_ref": "https://www.newstartfund.or.kr/Index.do",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-24T20:37:37.953621+09:00",
+                "claims_supported": [
+                  "현재2026공지/공식신청메뉴실제열람.10월5서비스점검일은과거이며현재중단이라고표현않음.개인로그인거래미실행/접수선정보장없음."
+                ]
+              },
+              {
+                "source_id": "B01000300013",
+                "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2105847&bnefType=all&svcId=B01000300013",
+                "access_method": "PROVIDED_OFFICIAL_TEXT",
+                "verified_at": "2026-11-24T20:37:37.953621+09:00",
+                "claims_supported": [
+                  "19:32완전세대manifest검증/read_current/load_feed동일ID34304·2026.12.31원본기간대조.원문과수집시각구별/source_only유지.신청기간질문아니므로추측2027연장/마감압박표현없음."
+                ]
+              },
+              {
+                "source_id": "B01000300013",
+                "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+                "access_method": "UPSTREAM_VERIFIED",
+                "verified_at": "2026-11-24T20:37:37.953621+09:00",
+                "claims_supported": [
+                  "이번실제PNG GET SHA와현재main image-review PASS/360px기록재대조일치.새부모시각검수아님.혜택별자산없어승인rotation2,금액대상기간주장없음.실제alt유지."
+                ]
+              }
+            ],
+            "checks": {
+              "facts": "PASS",
+              "current_status": "PASS",
+              "eligibility_and_units": "PASS",
+              "cta_and_no_links": "PASS",
+              "length": "PASS",
+              "media": "PASS"
+            },
+            "char_count": 419,
+            "count_method": "python_len_including_spaces_and_newlines",
+            "missing_info": [],
+            "hold_reasons": [],
+            "warnings": [
+              "개인선정/지원액/로그인신청거래/프로필내이동미확인.새출발기금상환조건개별심사,잔여채무상환/기존연체정보금융제약본문유지.",
+              "최대24h기한은내일20~22전체창보다먼저끝남.다음기존점검에서공식원문/접수상태/최신완전세대/이미지SHA실제재대조후이전본보관/CAS갱신필요.날짜만갱신금지.",
+              "현재19:32수집본은내일20시에24h초과.실제발송최신완전세대/원장/잠금/계정/미디어/기간재검증필수."
+            ],
+            "reach_editorial": {
+              "policy_id": "supportpick-threads-reach-v1-20261109",
+              "core_question": "폐업한개인사업자도새출발기금신청대상인가",
+              "reader_scope": "2020.4~2025.6중사업한폐업개인사업자중부실/부실우려차주",
+              "angles": [
+                "폐업후빚상환부담",
+                "사업자형태별자격",
+                "제외대출확인"
+              ],
+              "chosen_angle": "폐업후상환부담과대상확인",
+              "opening_candidates": [
+                {
+                  "type": "생활 상황형",
+                  "group": "A",
+                  "text": "가게를접은뒤빚상환이막막한개인사업자도새출발기금을신청할수있을까요?"
+                },
+                {
+                  "type": "대상·혜택형",
+                  "group": "B",
+                  "text": "폐업한 개인사업자도 새출발기금을 신청할 수 있나요?"
+                },
+                {
+                  "type": "조건 설명형",
+                  "group": null,
+                  "text": "폐업개인사업자와폐업법인은새출발기금대상이같을까요?"
+                }
+              ],
+              "chosen_opening": "폐업한 개인사업자도 새출발기금을 신청할 수 있나요?",
+              "opening_type": "질문형 대상·혜택",
+              "cohort": "B",
+              "selection_reason": "동일ID원본누적34304.상위75기존HOLD/SKIP출처보존+대구34460현재신규모집근거미확보HOLD.77게시/기존미예약4사업제외후검증가능최상위.최근20도입전개대조,폐업대상질문→즉답→상환부담생활상황→제외채무→확인행동.P1,내일P8/P5/P6와구분.",
+              "history_posts_checked": 20,
+              "comparison_eligible": false,
+              "comparison_exclusion": "질문형정책/본문동시편집및생활상황전개,순수도입A/B비교제외.기존시간군소급재분류없음.",
+              "comparison_strata": {
+                "geo": "전국",
+                "audience": "폐업개인사업자",
+                "benefit": "채무조정",
+                "media": "IMAGE"
+              },
+              "comparison_group": "실제149관측/정식14일평가유지,매칭쌍0효과미입증",
+              "applied_elements": [
+                "폐업개인과법인구별",
+                "연체위험구체화",
+                "잔여채무상환과신용제약"
+              ],
+              "master_full_used": true,
+              "supplemental_full_used_in_current_model_input": true,
+              "search_evidence": "공식검색결과폐업법인신청불가/FAQ대상질문실제확인.자동완성/검색량주장없음.",
+              "profile_route": "실제사이트내개인검색상세이번미확인/이동보장없음"
+            },
+            "astra_final_review": {
+              "model": "gpt-6.2-astra",
+              "independent_agent": "/root/newstart_final_review",
+              "initial_verdict": "REVISE",
+              "initial_changes": [
+                "부실/부실우려를3개월연체/장기연체위험으로구체화",
+                "주업종제외/미협약대출구별"
+              ],
+              "final_verdict": "PASS",
+              "actual_review_calls": 2,
+              "char_count": 419,
+              "image": "social/images/benefit-guide-2.png",
+              "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+              "final_result": "실제동일모델2차PASS419자.대상질문즉답/사업기간/폐업법인제외/원금조건/잔여상환/제외/기존연체금융제약공식일치.CTA1URL0hash0.실제guide2시각확인및SHA일치.",
+              "final_text_sha256": "8048d902f3b027b379d27842c3c5f414df4e60a70c1b0116fdb65ea98f7c8ab6",
+              "final_checked_at": "2026-11-24T20:37:34.213719+09:00"
+            }
+          },
+          "next_history_record": {
+            "program_id": "B01000300013",
+            "notice_version": "gov24-45374669702-1;newstartofficialactualreread2026-11-24T20:37:37.953621+09:00",
+            "pattern": "P1",
+            "opening": "폐업한 개인사업자도 새출발기금을 신청할 수 있나요?",
+            "structure": "폐업대상질문→즉답→상환생활부담→제외→신청확인",
+            "media_turn": "IMAGE"
+          }
+        },
+        "revalidate_before": "2026-11-25T20:00:00+09:00",
+        "full_delay_window_covered": false,
+        "revalidation_required_reason": "expires_at_before_slot_plus_two_hours"
+      },
+      "reason": "max24h expiry20:37before22wholewindow;originalretained;no guessedextension",
+      "next_condition": "ExistingcheckafterNov24 22 actuallyreread official/currentstatus/latestcompletefeed/imageSHA,archiveoldandCASrefreshmax24hbeforeplannedslot"
     }
   },
   "maintenance_calculation_corrections": {
