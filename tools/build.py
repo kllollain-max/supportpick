@@ -106,7 +106,8 @@ def build(destination,state=None,allow_sample=False,public_base=None):
             **conditions(detail if detail is not None else {}),
             'reviewRequired': detail is None or bool(quality_reasons(detail, guide_registry)),
         })
-    public_feed = {**feed, 'items': public_items}
+    # The browser matches the full catalog length against this public count.
+    public_feed = {**feed, 'sourceCount': len(public_items), 'items': public_items}
     current = datetime.now(timezone.utc)
     for item in public_feed['items']:
         if not item['reviewRequired']:

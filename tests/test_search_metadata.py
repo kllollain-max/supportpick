@@ -34,7 +34,12 @@ class SearchMetadataTests(unittest.TestCase):
             self.assertIn(demo_id, (original / 'data.json').read_text())
             public_feed = json.loads((out / 'data.json').read_text())
             self.assertEqual([record['id'] for record in public_feed['items']], ['B00001'])
-            self.assertNotIn(demo_id, (out / 'data-bootstrap.js').read_text())
+            bootstrap_script = (out / 'data-bootstrap.js').read_text()
+            self.assertNotIn(demo_id, bootstrap_script)
+            bootstrap = json.loads(bootstrap_script.removeprefix('window.SUPPORTPICK_DATA = ').strip().removesuffix(';'))
+            catalog = json.loads((out / bootstrap['catalogUrl']).read_text())
+            self.assertEqual(bootstrap['sourceCount'], len(catalog['items']))
+            self.assertEqual(catalog, public_feed)
             self.assertNotIn(demo_id, (out / 'sitemap.xml').read_text())
             for shard in (out / 'details').rglob('*.json'):
                 self.assertNotIn(demo_id, json.loads(shard.read_text())['items'])
