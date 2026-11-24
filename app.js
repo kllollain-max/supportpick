@@ -53,6 +53,7 @@
     document.querySelectorAll('[data-tab]').forEach(b=>{if(b.dataset.tab===view.tab)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
     const isDetail=location.hash.startsWith('#benefit=');
     if($('benefitAnalysis'))$('benefitAnalysis').hidden=isDetail||view.tab!=='all';
+    $('analysisShortcut').hidden=isDetail||view.tab!=='all';
     if($('staticDiscovery'))$('staticDiscovery').hidden=isDetail||view.tab!=='all';
     $('detailSection').hidden=!isDetail;$('hero').hidden=isDetail||view.tab!=='all';$('browseSection').hidden=isDetail||view.tab==='guide';$('guideSection').hidden=isDetail||view.tab!=='guide';$('portals').hidden=isDetail;
     if(isDetail){renderDetail();return;}
@@ -201,7 +202,7 @@
   $('importTextButton').onclick=()=>{try{restoreText($('backupText').value);}catch(e){$('recordsError').textContent=e.message;}};
   $('exportButton').onclick=()=>{try{const text=backupText();$('backupText').value=text;const blob=new Blob([text],{type:'application/json;charset=utf-8'});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='supportpick-records-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);toast('백업 다운로드를 요청했어요. 저장한 파일을 확인하세요.');}catch(e){$('recordsError').textContent=e.message;}};
   $('importInput').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{if(file.size>2*1024*1024)throw Error('백업은 2MB 이하의 JSON 파일만 가져올 수 있습니다.');restoreText(await file.text());}catch(error){$('recordsError').textContent=error.message;}finally{e.target.value='';}};
-  window.addEventListener('popstate',()=>{render();if(!location.hash.startsWith('#benefit=')){document.title='지원금픽 · 한눈에 보는 생활혜택';requestAnimationFrame(()=>window.scrollTo(0,view.scroll||0));}});
+  window.addEventListener('popstate',()=>{render();if(!location.hash.startsWith('#benefit=')){document.title='지원금픽 · 한눈에 보는 생활혜택';if(!location.hash)requestAnimationFrame(()=>window.scrollTo(0,view.scroll||0));}});
   window.addEventListener('hashchange',()=>render());
   window.addEventListener('storage',e=>{if(e.key!==C.KEY)return;if(drafts.size){warn('다른 탭에서 기록이 변경되었습니다. 입력 중인 메모를 보관한 뒤 새로고침하세요.');return;}try{snapshot=C.load(localStorage);render();toast('다른 탭에서 변경한 기록을 반영했어요.');}catch(error){writable=false;warn(error.message);}});
   window.addEventListener('pagehide',()=>{if(!location.hash){view.scroll=window.scrollY;remember();}});
