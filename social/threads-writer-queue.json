@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-24T20:37:37.953621+09:00",
+  "prepared_at": "2026-11-24T22:53:00.768308+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -11601,8 +11601,8 @@
       "benefit_id": "B01000300013",
       "source_fingerprint": "b27c8641d7defe9fb62e955581438e4e2757a20d2dcceef96fa0ea1be6ee46b4",
       "source_generation": "gov24-45374669702-1",
-      "prepared_at": "2026-11-24T20:37:37.953621+09:00",
-      "expires_at": "2026-11-25T20:37:37.953621+09:00",
+      "prepared_at": "2026-11-24T22:53:00.768308+09:00",
+      "expires_at": "2026-11-25T22:53:00.768308+09:00",
       "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -11632,54 +11632,60 @@
               "source_id": "B01000300013",
               "source_ref": "https://www.newstartfund.or.kr/Contents/Prod.do",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-24T20:37:37.953621+09:00",
+              "verified_at": "2026-11-24T22:53:00.768308+09:00",
               "claims_supported": [
-                "실제열람32/97~121행:2020.4~2025.6사업영위/폐업개인포함/폐업법인제외/3개월부실또는장기연체위험/금리기간원금개별조정과상환."
+                "실제열람32/97~121행:2020.4~2025.6사업영위/폐업개인포함/폐업법인제외/3개월부실또는장기연체위험/금리기간원금개별조정과상환.",
+                "本회차22시대공식Prod32/97~131,FAQ2Q12~13,FAQ3Q24~27,Index현재공지/10월5일과거점검안내실제재열람.폐업개인/법인구별·사업기간·연체조건·상환·제외·기존연체금융제약과본문일치.개별접수거래/선정미확인.새현재종료공고는확인한검색범위에서찾지못함."
               ]
             },
             {
               "source_id": "B01000300013",
               "source_ref": "https://www.newstartfund.or.kr/Faq/List.do?pageIndex=3",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-24T20:37:37.953621+09:00",
+              "verified_at": "2026-11-24T22:53:00.768308+09:00",
               "claims_supported": [
-                "실제Q24~27열람:폐업개인가능/법인불가,주업종제외/미협약·개인자산형성대출제외,기존연체정보따라신규대출카드제약.개인선정/금융거래성공보장없음."
+                "실제Q24~27열람:폐업개인가능/법인불가,주업종제외/미협약·개인자산형성대출제외,기존연체정보따라신규대출카드제약.개인선정/금융거래성공보장없음.",
+                "本회차22시대공식Prod32/97~131,FAQ2Q12~13,FAQ3Q24~27,Index현재공지/10월5일과거점검안내실제재열람.폐업개인/법인구별·사업기간·연체조건·상환·제외·기존연체금융제약과본문일치.개별접수거래/선정미확인.새현재종료공고는확인한검색범위에서찾지못함."
               ]
             },
             {
               "source_id": "B01000300013",
               "source_ref": "https://www.newstartfund.or.kr/Faq/List.do?pageIndex=2",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-24T20:37:37.953621+09:00",
+              "verified_at": "2026-11-24T22:53:00.768308+09:00",
               "claims_supported": [
-                "실제Q12연체없어도폐업등부실우려요건해당가능.Q13타채무조정/개인회생상환중불가확인.새원고는개별취소권유나중복가능주장없음."
+                "실제Q12연체없어도폐업등부실우려요건해당가능.Q13타채무조정/개인회생상환중불가확인.새원고는개별취소권유나중복가능주장없음.",
+                "本회차22시대공식Prod32/97~131,FAQ2Q12~13,FAQ3Q24~27,Index현재공지/10월5일과거점검안내실제재열람.폐업개인/법인구별·사업기간·연체조건·상환·제외·기존연체금융제약과본문일치.개별접수거래/선정미확인.새현재종료공고는확인한검색범위에서찾지못함."
               ]
             },
             {
               "source_id": "B01000300013",
               "source_ref": "https://www.newstartfund.or.kr/Index.do",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-24T20:37:37.953621+09:00",
+              "verified_at": "2026-11-24T22:53:00.768308+09:00",
               "claims_supported": [
-                "현재2026공지/공식신청메뉴실제열람.10월5서비스점검일은과거이며현재중단이라고표현않음.개인로그인거래미실행/접수선정보장없음."
+                "현재2026공지/공식신청메뉴실제열람.10월5서비스점검일은과거이며현재중단이라고표현않음.개인로그인거래미실행/접수선정보장없음.",
+                "本회차22시대공식Prod32/97~131,FAQ2Q12~13,FAQ3Q24~27,Index현재공지/10월5일과거점검안내실제재열람.폐업개인/법인구별·사업기간·연체조건·상환·제외·기존연체금융제약과본문일치.개별접수거래/선정미확인.새현재종료공고는확인한검색범위에서찾지못함."
               ]
             },
             {
               "source_id": "B01000300013",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2105847&bnefType=all&svcId=B01000300013",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-24T20:37:37.953621+09:00",
+              "verified_at": "2026-11-24T22:53:00.768308+09:00",
               "claims_supported": [
-                "19:32완전세대manifest검증/read_current/load_feed동일ID34304·2026.12.31원본기간대조.원문과수집시각구별/source_only유지.신청기간질문아니므로추측2027연장/마감압박표현없음."
+                "19:32완전세대manifest검증/read_current/load_feed동일ID34304·2026.12.31원본기간대조.원문과수집시각구별/source_only유지.신청기간질문아니므로추측2027연장/마감압박표현없음.",
+                "本회차실제이전검증artifact캐시의완전snapshotmanifest재검증/load_feed/read_current,동일ID원본34304및fingerprint재대조. 최신완전세대19:32를내일20발송시신선하다고가정않음."
               ]
             },
             {
               "source_id": "B01000300013",
               "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
               "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-24T20:37:37.953621+09:00",
+              "verified_at": "2026-11-24T22:53:00.768308+09:00",
               "claims_supported": [
-                "이번실제PNG GET SHA와현재main image-review PASS/360px기록재대조일치.새부모시각검수아님.혜택별자산없어승인rotation2,금액대상기간주장없음.실제alt유지."
+                "이번실제PNG GET SHA와현재main image-review PASS/360px기록재대조일치.새부모시각검수아님.혜택별자산없어승인rotation2,금액대상기간주장없음.실제alt유지.",
+                "本회차실제PNG GET후현재main image-review SHA와재대조일치. 새직접시각검수아님."
               ]
             }
           ],
@@ -11779,8 +11785,7 @@
         }
       },
       "revalidate_before": "2026-11-25T20:00:00+09:00",
-      "full_delay_window_covered": false,
-      "revalidation_required_reason": "expires_at_before_slot_plus_two_hours"
+      "full_delay_window_covered": true
     }
   ]
 }
