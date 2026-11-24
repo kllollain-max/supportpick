@@ -23,6 +23,7 @@ jobs:
     environment: github-pages
     env:
       APPROVED_SHA: ${{ inputs.approved_sha }}
+      PAGES_ARTIFACT_NAME: github-pages-attempt-${{ github.run_attempt }}
     steps:
       - name: Validate SHA format
         run: '[[ "$APPROVED_SHA" =~ ^[0-9a-f]{40}$ ]]'
@@ -45,11 +46,33 @@ jobs:
       - run: python tools/verify_release.py --output dist
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
+        id: pages-artifact
         with:
+          name: ${{ env.PAGES_ARTIFACT_NAME }}
           path: dist
+      - name: Wait for the uploaded Pages artifact to be discoverable
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PAGES_ARTIFACT_ID: ${{ steps.pages-artifact.outputs.artifact_id }}
+        run: |
+          [[ "$PAGES_ARTIFACT_ID" =~ ^[1-9][0-9]*$ ]] || exit 1
+          for attempt in {1..10}; do
+            if gh api -X GET "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts" \
+                -f name="$PAGES_ARTIFACT_NAME" |
+              jq -e --arg id "$PAGES_ARTIFACT_ID" --arg name "$PAGES_ARTIFACT_NAME" '
+                [.artifacts[] | select(.name == $name and .expired == false)]
+                | length == 1 and (.[0].id | tostring) == $id' >/dev/null; then
+              exit 0
+            fi
+            sleep 4
+          done
+          echo "::error::The current attempt's Pages artifact is not visible through the Actions API."
+          exit 1
       - name: Protect newer main changes before publication
         run: python tools/check_approved_head.py --approved-sha "$APPROVED_SHA"
       - uses: actions/deploy-pages@v4
+        with:
+          artifact_name: ${{ env.PAGES_ARTIFACT_NAME }}
       - name: Verify the public HTML release and restored data generation
         run: python tools/verify_release.py --output dist --live --expect-sha "$APPROVED_SHA" --expect-generation "$(python -c 'import json;print(json.load(open("dist/data.json"))["generation"])')" --report public-verification.json
       - uses: actions/upload-artifact@v4

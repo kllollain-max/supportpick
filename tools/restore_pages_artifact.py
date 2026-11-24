@@ -6,6 +6,7 @@ import os
 import re
 import tarfile
 from pathlib import Path, PurePosixPath
+from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 API = 'https://api.github.com/repos/kllollain-max/supportpick'
@@ -28,7 +29,20 @@ def validate_run(run_id, sha):
     def get(path):
         with urlopen(Request(API + path, headers=headers), timeout=30) as response:
             return json.load(response)
-    verify_origin(get('/actions/runs/' + str(run_id)), get('/actions/runs/' + str(run_id) + '/jobs'), sha)
+    path = '/actions/runs/' + str(run_id)
+    run = get(path)
+    verify_origin(run, get(path + '/jobs'), sha)
+    attempt = run.get('run_attempt')
+    if type(attempt) is not int or attempt < 1:
+        raise ValueError('invalid_run_attempt')
+    name = f'github-pages-attempt-{attempt}'
+    result = get(path + '/artifacts?' + urlencode({'name': name}))
+    matches = [a for a in result.get('artifacts', []) if a.get('name') == name]
+    if not matches:
+        return 'github-pages'  # Releases built before attempt-specific names.
+    if len(matches) != 1 or matches[0].get('expired') is not False:
+        raise ValueError('publication_artifact_unavailable')
+    return name
 
 
 def relative(name):
@@ -82,8 +96,7 @@ if __name__ == '__main__':
     if not re.fullmatch(r'[0-9a-f]{40}', args.expected_sha):
         raise ValueError('invalid_source_sha')
     if args.run_id:
-        validate_run(args.run_id, args.expected_sha)
-        print('Published run identity verified')
+        print(validate_run(args.run_id, args.expected_sha))
     elif args.archive and args.output:
         print(json.dumps(restore(args.archive, args.output, args.expected_sha)))
     else:
