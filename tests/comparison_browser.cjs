@@ -85,3 +85,27 @@ test('a mismatched detail generation cannot become a comparison table',async()=>
     await page.getByRole('button',{name:'비교 닫기',exact:true}).click();
   }finally{await context.close();}
 });
+
+test('home editorial links jump by topic and reopen from a saved tab',async()=>{
+  const {context,page,errors}=await fixture(320);
+  try{
+    const hub=page.locator('#benefitAnalysis');
+    await page.locator('#analysisShortcut a').click();
+    assert.equal(new URL(page.url()).hash,'#benefitAnalysis');
+    const topic=hub.getByRole('link',{name:'주거·전세',exact:true});
+    await topic.click();
+    assert.equal(new URL(page.url()).hash,'#analysis-housing');
+    await page.waitForFunction(()=>document.getElementById('analysis-housing').getBoundingClientRect().top>=0
+      && document.getElementById('analysis-housing').getBoundingClientRect().top<innerHeight);
+    assert.equal(await hub.getByRole('heading',{level:3}).count(),5);
+    assert.equal(await hub.locator('a[href^="guides/"]').count(),34);
+    assert.equal(await hub.getByRole('navigation',{name:'제도 해설 분야'}).evaluate(el=>el.scrollWidth),await hub.getByRole('navigation',{name:'제도 해설 분야'}).evaluate(el=>el.clientWidth));
+    await page.locator('[data-tab="saved"]').click();
+    assert.equal(new URL(page.url()).hash,'');
+    assert.equal(await hub.isVisible(),false);
+    await page.goto(ORIGIN+'/supportpick/#analysis-housing');
+    assert.equal(await hub.isVisible(),true);
+    assert.equal(await page.locator('[data-tab="all"]').getAttribute('aria-current'),'page');
+    assert.deepEqual(errors,[]);
+  }finally{await context.close();}
+});
