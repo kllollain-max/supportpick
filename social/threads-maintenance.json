@@ -6113,31 +6113,22 @@
     }
   },
   "last_check": {
-    "checked_at": "2026-11-25T14:56:37.827914+09:00",
-    "result": "education_full_window_expiry_prevented_after_actual_rereview",
-    "maintenance_previous_blob_sha": "b69e39f321a13d63c29d3bf3547005bb4454f6e2",
+    "checked_at": "2026-11-25T15:32:37.219587+09:00",
+    "result": "no_update",
+    "maintenance_previous_blob_sha": "a8d7afe1336ab73b8f7814eeb30b07e6451c543e",
     "current_main_sha": "5c4084549223723b566cfe560d2e418903ad4337",
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
     "publication_ledger_sha": "fe81406861b708990053779230fcbbc0d080b13d",
     "queue_blob_sha": "9f7219455772be33efdf50001b0c178426e39053",
-    "changed_run_versions": [
-      {
-        "run_id": "45553988112",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-25T05:30:13Z",
-        "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
-      }
-    ],
+    "changed_run_versions": [],
     "active_target_runs": [],
     "run_pagination": {
       "per_page": 100,
       "pages": [
         1
       ],
-      "checkpoint_run_id": "45542670692",
+      "checkpoint_run_id": "45553988112",
       "checkpoint_version_unchanged": true,
       "all_new_target_versions_observed": true,
       "latest_completed_operations_run_id": "45499312067"
@@ -6216,7 +6207,7 @@
       "publisher_freshness_hours": 24,
       "current_fresh_until": "2026-11-26T07:22:49.899473+09:00",
       "collection_is_not_current_application_status_verification": true,
-      "new_candidate_original_official_pages_read": true,
+      "new_candidate_original_official_pages_read": false,
       "existing3entries_unchanged_fingerprints_and_priority_pass": true,
       "newstart20_priority_block": true,
       "public_verification": {
@@ -6304,20 +6295,14 @@
       "public_verification_recovery_already_reported": true,
       "existing4entries_unchanged_fingerprints_and_priority_pass": true,
       "artifact_digest_previously_verified_cached_bytes": true,
-      "original_notice_rereview_this_check": true
+      "original_notice_rereview_this_check": false
     },
     "writer": {
-      "checked_at": "2026-11-25T14:54:59.197830+09:00",
-      "source": {
-        "count": 10895,
-        "generation": "gov24-45499312067-1",
-        "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
-        "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
-        "path": "snapshots/gov24-45499312067-1",
-        "version": 1
-      },
+      "checked_at": "2026-11-25T15:32:37.219587+09:00",
       "ready": 4,
       "future24h_ready": 4,
+      "new_drafts": 0,
+      "existing_READY_reused": 4,
       "drafts": [
         {
           "slot": "2026-11-25T16:00:00+09:00",
@@ -6364,18 +6349,32 @@
           "source_recheck_required_at_publish": true
         }
       ],
-      "new_drafts": 0,
-      "existing_READY_reused": 4,
-      "new_publications_observed": 0,
-      "maintenance_post_calls": 0,
-      "expiry_prevention_revalidations": 1,
-      "astra_review_invocations": 0,
+      "source": {
+        "count": 10895,
+        "generation": "gov24-45499312067-1",
+        "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
+        "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
+        "path": "snapshots/gov24-45499312067-1",
+        "version": 1
+      },
+      "source_count": 10895,
       "ledger_records": 80,
       "pending": null,
       "lease": null,
-      "new_metrics": 2,
+      "new_posts": 0,
+      "new_incidents": 0,
+      "new_metrics": 0,
       "observations": 156,
-      "new_evaluation": false
+      "due_metrics": 0,
+      "new_evaluation": false,
+      "14day_evaluation_already_recorded": true,
+      "astra_review_invocations": 0,
+      "existing_Astra_review_preserved": true,
+      "current_main_image_review_matches_cached_bytes": true,
+      "image_redownloaded_this_check": false,
+      "new_visual_inspection": false,
+      "source_recheck_required_at_publish": true,
+      "expiry_prevention_revalidations": 0
     },
     "metrics": {
       "run_id": "45553988112",
@@ -6388,8 +6387,8 @@
       "artifact_id": 14994079981,
       "artifact_digest": "sha256:833bf608bbc7afe42b9e927a45dc517a947dc40f4e24af6026fec349e6474684",
       "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": true,
-      "job_logs_retrieved_this_check": true,
+      "artifact_redownloaded_this_check": false,
+      "job_logs_retrieved_this_check": false,
       "observed_at": "2026-11-25T05:30:07.816043+00:00",
       "records": [
         {
@@ -6437,14 +6436,13 @@
       ],
       "due_count": 2,
       "success_count": 2,
-      "new_observation_keys": [
-        "18214999999364836:72h",
-        "17897404392435204:24h"
-      ],
-      "new_observations": 2,
+      "new_observation_keys": [],
+      "new_observations": 0,
       "total_observations": 156,
       "new_evaluation_report_due": false,
-      "weights_unchanged": true
+      "weights_unchanged": true,
+      "publication_calls": 0,
+      "workflow_dispatch": false
     },
     "recovery": {
       "new_publication_this_check": false,
@@ -6452,9 +6450,9 @@
       "maintenance_new_posts": 0,
       "new_recovery_this_check": false,
       "new_failure_this_check": false,
-      "reason": "Education fullwindow expiration prevention after actualofficialpages/currentstatus/latestcompletesource/detailHTTP200/PNGGETSHA rereview. Oldentryarchived,body377/image/Astra97 unchanged;4preview nominal+fullwindow PASS. No POST/dispatch/rerun/backfill/codechange."
+      "reason": "80completeverifiedpublishedrows/pending/lease unchanged; alltargetrunversionsunchanged, no newincident/publication/repair.4READY unchanged andwholewindow validationpassed."
     },
-    "next_condition": "Future4READY16TEXT/P6,20IMAGE/P1,Nov26 08TEXT/P8,12IMAGE/P6 nominal+whole2h PASS. EducationexpiresNov26 14:54 afteractualofficial/currentstatus/latestcomplete/sourcefingerprint/PNGGETSHA/detailHTTP200recheck;oldentryarchivedandCASsaved. Body377/Astra97/imageunchanged, nonewmodel/visual/profileclaim.80publishedunchanged156realmetrics;new24h18views2likes at25.724h delayed excludesrelocatedcohortA;new72h194views2likesat73.814h not24h;formal14devaluationweightsunchanged. Current07:22sourceNOTfreshNov26 actualsenderlatestcompletefreshmandatory.",
+    "next_condition": "FourfutureREADY Nov25 16TEXT/P6,20IMAGE/P1,Nov26 08TEXT/P8,12IMAGE/P6; nominal+whole2h validationpassed. Education actualofficial/currentstatus/latestcomplete/PNG_SHA revalidation14:54 archivedandCAScompleted,originalbody377/Astra97 unchanged;expiresNov26 14:54. Seoul prioractualrereview/body351/Astra97preserved.80published156actualnumericobservations unchanged;alltargetrunversionsunchanged;no newincident/publication/repair/draft/metrics/eval/modelcall/dispatch. Current07:22completefeednotfreshNov26,actualsenderlatestcompletefreshsourcemandatory.",
     "publication": {
       "run_id": "45542670692",
       "run_attempt": 1,
@@ -6512,709 +6510,13 @@
       "previous_remote_evidence_preserved": true
     },
     "official_review_recovery": {
-      "new_official_page_review_this_check": true,
-      "program_id": "SD0000001491",
-      "rereview_audit": {
-        "checked_at": "2026-11-25T14:54:59.197830+09:00",
-        "previous_entry": {
-          "slot": "2026-11-26T12:00:00+09:00",
-          "benefit_id": "SD0000001491",
-          "source_fingerprint": "ae81c96fa51885effbc7f0c4e53fb34b005b821134476b46fe71377d31424206",
-          "source_generation": "gov24-45499312067-1",
-          "prepared_at": "2026-11-25T12:23:52.951888+09:00",
-          "expires_at": "2026-11-26T12:23:52.951888+09:00",
-          "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-          "writer": {
-            "schema_version": "supportpick.writer.v1",
-            "status": "READY",
-            "selected_program_id": "SD0000001491",
-            "post_text": "창업 준비 중인데, 사업계획서 쓰는 법을 온라인으로 배울 수 있나요?\n네. 소상공인 지식배움터에 사업계획서 작성 강의가 있어요. 소상공인과 예비창업자를 위한 경영교육이에요. 소상공인 정책자금 지원 제외 업종을 운영하는 소상공인은 지원 대상에서 제외돼요.\n\n회원가입 후 로그인해 원하는 강의를 신청하면 ‘나의강의실’에서 들을 수 있어요. 가게 홍보나 직원 채용을 준비한다면 홍보 콘텐츠 제작·노무관리 강의도 찾아볼 수 있어요.\n\n현장교육은 과정마다 일정·지역·정원·본인부담금이 달라 개별 공고를 확인해야 해요.\n\n프로필에서 ‘소상공인 온·오프라인 교육’의 중소벤처기업부 자료를 찾으면 제외 업종·준비서류·정부24 원문 경로를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
-            "draft_text": null,
-            "reply_texts": [],
-            "media": {
-              "turn": "IMAGE",
-              "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-              "check": "MATCHED",
-              "image_copy": null,
-              "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
-            },
-            "review": {
-              "planned_at": "2026-11-26T12:00:00+09:00",
-              "application_status": "ALWAYS",
-              "reader": "사업계획서 작성·홍보·노무관리를 준비하는 소상공인 및 예비창업자",
-              "central_message": "창업 준비 중인데, 사업계획서 쓰는 법을 온라인으로 배울 수 있나요?",
-              "pattern": "P6",
-              "selection_reason": "동일ID누적조회33712. 상위HOLD/SKIP출처·구체사유보존, 앞미예약3개+착수12시는기존READY보호. 소상공인교육분야순환, 현금/상환주장없이사업계획서온라인학습판단. 실제검색표현확인,검색량실측없음.",
-              "interest_basis": "OBSERVED_METRICS",
-              "duplicate_check": "CHECKED",
-              "evidence": [
-                {
-                  "source_id": "SD0000001491",
-                  "source_ref": "https://edu.sbiz.or.kr/edu/main/main.do",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-25T12:23:52.951888+09:00",
-                  "claims_supported": [
-                    "현재사업계획서작성·홍보콘텐츠·노무관리온라인강의목록직접열람. 특정현장과정모집확정하지않음."
-                  ]
-                },
-                {
-                  "source_id": "SD0000001491",
-                  "source_ref": "https://edu.sbiz.or.kr/edu/online/onlineEduInfo.do?menuCode=WWW001001",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-25T12:23:52.951888+09:00",
-                  "claims_supported": [
-                    "가입로그인→강의탐색→수강신청→나의강의실. 로그인후개별신청성공까지확인한것아님."
-                  ]
-                },
-                {
-                  "source_id": "SD0000001491",
-                  "source_ref": "https://edu.sbiz.or.kr/edu/user/spt/sptInfo.do?menuCode=WWW002001",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-25T12:23:52.951888+09:00",
-                  "claims_supported": [
-                    "현장업종전문기술기초국비100%,심화고급10%자부담/10월31일예산소진조기종료/정원조기마감. 전체교육무료/상시라하지않음."
-                  ]
-                },
-                {
-                  "source_id": "SD0000001491",
-                  "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=78964&bnefType=all&svcId=SD0000001491",
-                  "access_method": "PROVIDED_OFFICIAL_TEXT",
-                  "verified_at": "2026-11-25T12:23:52.951888+09:00",
-                  "claims_supported": [
-                    "최신완전API동일ID33712,소상공인예비창업자대상/정책자금제외업종제외/기관별기간/사업자등록증임대차계약서등. 수집시각은원문검수시각과구분."
-                  ]
-                },
-                {
-                  "source_id": "SD0000001491",
-                  "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-                  "access_method": "UPSTREAM_VERIFIED",
-                  "verified_at": "2026-11-25T12:23:52.951888+09:00",
-                  "claims_supported": [
-                    "실제PNG GET bytes/SHA현재mainimage-review일치. 원본및360px이미지직접열람후명칭한글잘림깨짐대비과밀공식오인권리기존승인PASS. 사업명금액날짜없는일반브랜드회전카드. 동일그림반복은승인로테이션범위이며직전IMAGEguide2와교대."
-                  ]
-                }
-              ],
-              "checks": {
-                "facts": "PASS",
-                "current_status": "PASS",
-                "eligibility_and_units": "PASS",
-                "cta_and_no_links": "PASS",
-                "length": "PASS",
-                "media": "PASS"
-              },
-              "char_count": 377,
-              "count_method": "python_len_including_spaces_newlines_CTA",
-              "missing_info": [],
-              "hold_reasons": [],
-              "warnings": [
-                "현장개별과정접수·비용은본문보장없음. 로그인후개별수강성공미시험. 프로필리디렉션클릭완료미확인;08:30목적지증빙과이번홈검색상세클릭증빙구분.",
-                "현재prepared+24h는Nov26 14전체지연창전만료. 오늘14시후실제공식원문/현재상태/최신완전자료/이미지SHA재대조후에만최대24hCAS갱신필수. 현재07:22수집본발송시신선하지않음."
-              ],
-              "reach_editorial": {
-                "policy_id": "supportpick-threads-reach-v1-20261109",
-                "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
-                "core_question": "창업 준비 중인데, 사업계획서 쓰는 법을 온라인으로 배울 수 있나요?",
-                "reader_scope": "사업계획서 작성·홍보·노무관리를 준비하는 소상공인 및 예비창업자",
-                "angles": [
-                  "창업사업계획서작성",
-                  "가게홍보학습",
-                  "온라인신청준비"
-                ],
-                "chosen_angle": "창업사업계획서온라인학습",
-                "opening_candidates": [
-                  "창업 준비 중인데, 사업계획서 쓰는 법을 온라인으로 배울 수 있나요?",
-                  "가게 홍보를 직접 준비하는 예비창업자도 온라인 경영교육을 들을 수 있나요?",
-                  "소상공인 교육은 모든 과정이 무료로 상시 열릴까요?"
-                ],
-                "chosen_opening": "창업 준비 중인데, 사업계획서 쓰는 법을 온라인으로 배울 수 있나요?",
-                "selection_reason": "구체적인준비결정하나에즉답,확인가능한강의명과신청순서제공",
-                "history_posts_checked": 20,
-                "comparison_eligible": false,
-                "comparison_exclusion": "v3질문형본문개편;순수A/B도입비교제외",
-                "profile_route": {
-                  "previous_profile_target_evidence": {
-                    "profile": "https://www.threads.com/@hid_1004",
-                    "visible_link_target": "https://kllollain-max.github.io/supportpick/",
-                    "home_search": "저소득시민 부가급여",
-                    "actual_search_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/611000000137/",
-                    "method": "CUA public profile visible target; target opened separately; actual home search + result click + detail visible",
-                    "redirect_click_completed": false,
-                    "checked_at": "2026-11-25T08:33:52.430313+09:00"
-                  },
-                  "recorded_at": "2026-11-25T12:23:52.951888+09:00",
-                  "exact_browser_action_timestamp": "not_exported",
-                  "method": "CUA actual home search exactname=>2results=>中소벤처기업부sameIDclick=>detail",
-                  "detail": "https://kllollain-max.github.io/supportpick/benefits/SD0000001491/",
-                  "government24_link_visible": true,
-                  "direct_education_site_link_on_detail": false
-                },
-                "master_full_used": true,
-                "search_evidence": "실제공식검색결과 지식배움터/온라인교육/사업계획서 표현. 자동완성·검색량측정없음.",
-                "observed_metrics_context": "154실제관측/기존14일평가유지.7/30일계정통계체류완독CTA미측정."
-              },
-              "astra_final_review": {
-                "actual_model": "gpt-6.2-astra",
-                "final_verdict": "PASS",
-                "score": 97,
-                "policy_version": "3.0",
-                "calls": 2,
-                "initial_review": {
-                  "reviewer_role": "independent_editor",
-                  "model": "gpt-6.2-astra",
-                  "phase": "first",
-                  "version": "3.0",
-                  "slot": "2026-11-26 12:00 KST",
-                  "format": "IMAGE",
-                  "score": 86,
-                  "rubric": [
-                    {
-                      "category": "첫문장",
-                      "score": 14,
-                      "max": 15,
-                      "rationale": "창업 준비자의 실제 질문이나 도입에서 낯선 플랫폼 이름이 먼저 나온다."
-                    },
-                    {
-                      "category": "관심의도",
-                      "score": 14,
-                      "max": 15,
-                      "rationale": "질문 직후 대상과 수강 가능 여부를 답한다."
-                    },
-                    {
-                      "category": "정확성",
-                      "score": 17,
-                      "max": 20,
-                      "rationale": "교육 내용·절차·접수 범위는 일치한다. 정부24 제외 업종 기준을 짧게 덧붙일 필요가 있다."
-                    },
-                    {
-                      "category": "완독",
-                      "score": 12,
-                      "max": 15,
-                      "rationale": "홍보와 노무 예시가 두 차례 겹치고 현장교육 단서가 반복된다."
-                    },
-                    {
-                      "category": "공유공감",
-                      "score": 8,
-                      "max": 10,
-                      "rationale": "예비창업자가 활용할 예가 있으나 실제 상황과 연결하면 전달하기 쉽다."
-                    },
-                    {
-                      "category": "가치차별",
-                      "score": 8,
-                      "max": 10,
-                      "rationale": "수강 단계가 실용적이나 금융교육 게시물과 현금 대비 문구가 겹친다."
-                    },
-                    {
-                      "category": "모바일",
-                      "score": 4,
-                      "max": 5,
-                      "rationale": "원본·360px 브랜드 및 하단 CTA 판독 가능. 본문 화살표 구간이 빽빽하다."
-                    },
-                    {
-                      "category": "텍스트완성도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "교육임이 첫 문단에서 분명하며 단독 본문으로 읽힌다."
-                    },
-                    {
-                      "category": "프로필유도",
-                      "score": 4,
-                      "max": 5,
-                      "rationale": "정확한 검색어가 있지만 현재 해당 사업 검색 경로 증빙 대기."
-                    }
-                  ],
-                  "decision": "HOLD",
-                  "blocking_requirements": [
-                    "해당 사업명 검색 후 동일 ID 상세 도달 증거 대기",
-                    "수정 본문 같은 모델 재검수 대기"
-                  ],
-                  "revised_body": "창업을 준비하는데 사업계획서는 어떻게 쓰고, 가게 홍보는 어디서 배울 수 있나요?\n소상공인 지식배움터에 사업계획서 작성과 SNS 홍보 콘텐츠 제작을 다루는 온라인 강의가 있어요. 소상공인과 예비창업자를 위한 경영교육이에요. 소상공인 정책자금 지원 제외 업종을 운영하는 소상공인은 지원 대상에서 제외돼요.\n\n온라인 강의는 회원가입 후 로그인해 원하는 강의를 신청하면 ‘나의강의실’에서 들을 수 있어요. 직원을 고용할 계획이라면 노무관리 강의도 찾아보세요.\n\n현장교육은 과정마다 일정과 지역, 정원, 본인부담금이 달라요. 프로필에서 ‘소상공인 온·오프라인 교육’을 검색하면 지원 대상과 신청 안내를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
-                  "replies": [],
-                  "revised_char_count": 361,
-                  "image_check": {
-                    "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-                    "verdict": "PASS",
-                    "note": "원본 및 360px 실물에서 브랜드·생활 혜택·CTA 판독. 동전 그림은 일반 브랜드 요소이고 액수나 현금 지급 주장이 없으며 본문에서 교육임을 곧바로 밝힘."
-                  },
-                  "evidence": "동일 ID SD0000001491의 API 상세·목록과 최근 20건 직접 확인. 지식배움터 공식 안내 및 현재 강의 목록은 상위 검증기록 기준. 누적 조회수 33712로 계정 성과·접수 중 상태를 추론하지 않음.",
-                  "pattern": "P6, 직전 예정 P8과 구별. 질문 도입 자체는 기존 P8에도 있으나 창업 상황·사업명 고유함.",
-                  "final_rereview": "pending"
-                },
-                "final_review": {
-                  "model": "gpt-6.2-astra",
-                  "reviewer_role": "independent_editor",
-                  "phase": "final",
-                  "version": "3.0",
-                  "checked_at": "2026-11-25T12:22:49+09:00",
-                  "slot": "2026-11-26 12:00 KST",
-                  "format": "IMAGE",
-                  "score": 97,
-                  "decision": "PASS",
-                  "decision_scope": "editorial_only",
-                  "rubric": [
-                    {
-                      "category": "첫문장",
-                      "score": 15,
-                      "max": 15,
-                      "rationale": "예비창업자가 사업계획서 작성법을 온라인에서 배울 수 있는지 한 가지를 묻는다."
-                    },
-                    {
-                      "category": "관심의도",
-                      "score": 15,
-                      "max": 15,
-                      "rationale": "첫 답변에서 실제 강의와 지식배움터를 바로 알려 준다."
-                    },
-                    {
-                      "category": "정확성",
-                      "score": 20,
-                      "max": 20,
-                      "rationale": "API 대상·제외 업종과 공식 강의목록·수강 단계가 일치한다. 현장교육은 개별 공고 조건으로 한정했다."
-                    },
-                    {
-                      "category": "완독",
-                      "score": 14,
-                      "max": 15,
-                      "rationale": "신청에서 현장교육, 상세 확인까지 순서가 명확하다. 첫 문단에서 소상공인이라는 말이 반복된다."
-                    },
-                    {
-                      "category": "공유공감",
-                      "score": 9,
-                      "max": 10,
-                      "rationale": "사업계획·홍보·채용이라는 실제 상황에서 읽을 강의를 구체화한다."
-                    },
-                    {
-                      "category": "가치차별",
-                      "score": 9,
-                      "max": 10,
-                      "rationale": "온라인 수강 동선과 현장교육 비용 확인을 구별한다. 카드는 일반 브랜드 이미지다."
-                    },
-                    {
-                      "category": "모바일",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "짧은 문단으로 분리되고 360px에서 브랜드 카드 CTA를 판독했다."
-                    },
-                    {
-                      "category": "텍스트완성도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "독립된 본문에 대상·수강 방법·예외가 담겼다."
-                    },
-                    {
-                      "category": "프로필유도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "검색 제목과 동명 항목을 구별할 중소벤처기업부를 명시한다. 상세에 실제로 있는 항목만 약속한다."
-                    }
-                  ],
-                  "body_sha256": "e916a468314c83784b3f023d002436414ca62cffc64135946b499d456de6648a",
-                  "image_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-                  "required_checks": {
-                    "chars": 377,
-                    "within_500": true,
-                    "cta_once": true,
-                    "cta_final": true,
-                    "no_url_or_hashtag": true,
-                    "replies": [],
-                    "same_id": "SD0000001491",
-                    "official_course_list_verified": true,
-                    "source_eligibility_verified": true,
-                    "image_original_and_360": "PASS",
-                    "image_caption_match": true,
-                    "pattern": "P6",
-                    "prior_planned_pattern": "P8",
-                    "no_same_benefit_in_ledger": "상위 원장 전체 확인 기록",
-                    "duplicate_intro_recent20": false,
-                    "profile_destination_evidence": "08:30 KST 상위 공개 프로필 목적지 기록. 직접 Threads 리디렉션 완료 미확인.",
-                    "benefit_detail_path": "상위 CUA 기록 시각 12:25 KST, 홈 검색 동명 2건 중 중소벤처기업부 클릭, 동일 ID 상세에서 대상·제외·서류·정부24 원문 경로 확인.",
-                    "performance_claim": false
-                  },
-                  "dispatch_approved": false,
-                  "dispatch_gate": "24시간 TTL상 11월25일 14시 KST 이후 최신 완전 소스·공식사이트·이미지 재대조 및 CAS 갱신 필요. 발송 시점 최신 소스 검증 필요."
-                },
-                "body_sha256": "e916a468314c83784b3f023d002436414ca62cffc64135946b499d456de6648a",
-                "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-                "fallback_reason": null
-              }
-            },
-            "next_history_record": {
-              "program_id": "SD0000001491",
-              "notice_version": "gov24-45499312067-1;official2026-11-25T12:23:52.951888+09:00",
-              "pattern": "P6",
-              "opening": "창업 준비 중인데, 사업계획서 쓰는 법을 온라인으로 배울 수 있나요?",
-              "structure": "창업준비질문→온라인강의즉답→제외업종→수강절차→현장조건→동명자료구별",
-              "media_turn": "IMAGE"
-            }
-          },
-          "revalidate_before": "2026-11-26T12:00:00+09:00",
-          "full_delay_window_covered": false
-        },
-        "refreshed_entry": {
-          "slot": "2026-11-26T12:00:00+09:00",
-          "benefit_id": "SD0000001491",
-          "source_fingerprint": "ae81c96fa51885effbc7f0c4e53fb34b005b821134476b46fe71377d31424206",
-          "source_generation": "gov24-45499312067-1",
-          "prepared_at": "2026-11-25T14:54:59.197830+09:00",
-          "expires_at": "2026-11-26T14:54:59.197830+09:00",
-          "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-          "writer": {
-            "schema_version": "supportpick.writer.v1",
-            "status": "READY",
-            "selected_program_id": "SD0000001491",
-            "post_text": "창업 준비 중인데, 사업계획서 쓰는 법을 온라인으로 배울 수 있나요?\n네. 소상공인 지식배움터에 사업계획서 작성 강의가 있어요. 소상공인과 예비창업자를 위한 경영교육이에요. 소상공인 정책자금 지원 제외 업종을 운영하는 소상공인은 지원 대상에서 제외돼요.\n\n회원가입 후 로그인해 원하는 강의를 신청하면 ‘나의강의실’에서 들을 수 있어요. 가게 홍보나 직원 채용을 준비한다면 홍보 콘텐츠 제작·노무관리 강의도 찾아볼 수 있어요.\n\n현장교육은 과정마다 일정·지역·정원·본인부담금이 달라 개별 공고를 확인해야 해요.\n\n프로필에서 ‘소상공인 온·오프라인 교육’의 중소벤처기업부 자료를 찾으면 제외 업종·준비서류·정부24 원문 경로를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
-            "draft_text": null,
-            "reply_texts": [],
-            "media": {
-              "turn": "IMAGE",
-              "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-              "check": "MATCHED",
-              "image_copy": null,
-              "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
-            },
-            "review": {
-              "planned_at": "2026-11-26T12:00:00+09:00",
-              "application_status": "ALWAYS",
-              "reader": "사업계획서 작성·홍보·노무관리를 준비하는 소상공인 및 예비창업자",
-              "central_message": "창업 준비 중인데, 사업계획서 쓰는 법을 온라인으로 배울 수 있나요?",
-              "pattern": "P6",
-              "selection_reason": "동일ID누적조회33712. 상위HOLD/SKIP출처·구체사유보존, 앞미예약3개+착수12시는기존READY보호. 소상공인교육분야순환, 현금/상환주장없이사업계획서온라인학습판단. 실제검색표현확인,검색량실측없음.",
-              "interest_basis": "OBSERVED_METRICS",
-              "duplicate_check": "CHECKED",
-              "evidence": [
-                {
-                  "source_id": "SD0000001491",
-                  "source_ref": "https://edu.sbiz.or.kr/edu/main/main.do",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-25T14:54:59.197830+09:00",
-                  "claims_supported": [
-                    "현재사업계획서작성·홍보콘텐츠·노무관리온라인강의목록직접열람. 특정현장과정모집확정하지않음.",
-                    "이번14시대 지식배움터공식목록/온라인교육안내/현장교육안내 실제재열람: 사업계획서·노무강의목록, 가입로그인→신청→나의강의실, 현장일정/자부담/정원별기준확인. 홈페이지추천목록변동은강의종료증거아님;특정현장모집중보장없음."
-                  ]
-                },
-                {
-                  "source_id": "SD0000001491",
-                  "source_ref": "https://edu.sbiz.or.kr/edu/online/onlineEduInfo.do?menuCode=WWW001001",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-25T14:54:59.197830+09:00",
-                  "claims_supported": [
-                    "가입로그인→강의탐색→수강신청→나의강의실. 로그인후개별신청성공까지확인한것아님.",
-                    "이번14시대 지식배움터공식목록/온라인교육안내/현장교육안내 실제재열람: 사업계획서·노무강의목록, 가입로그인→신청→나의강의실, 현장일정/자부담/정원별기준확인. 홈페이지추천목록변동은강의종료증거아님;특정현장모집중보장없음."
-                  ]
-                },
-                {
-                  "source_id": "SD0000001491",
-                  "source_ref": "https://edu.sbiz.or.kr/edu/user/spt/sptInfo.do?menuCode=WWW002001",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-25T14:54:59.197830+09:00",
-                  "claims_supported": [
-                    "현장업종전문기술기초국비100%,심화고급10%자부담/10월31일예산소진조기종료/정원조기마감. 전체교육무료/상시라하지않음.",
-                    "이번14시대 지식배움터공식목록/온라인교육안내/현장교육안내 실제재열람: 사업계획서·노무강의목록, 가입로그인→신청→나의강의실, 현장일정/자부담/정원별기준확인. 홈페이지추천목록변동은강의종료증거아님;특정현장모집중보장없음."
-                  ]
-                },
-                {
-                  "source_id": "SD0000001491",
-                  "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=78964&bnefType=all&svcId=SD0000001491",
-                  "access_method": "PROVIDED_OFFICIAL_TEXT",
-                  "verified_at": "2026-11-25T14:54:59.197830+09:00",
-                  "claims_supported": [
-                    "최신완전API동일ID33712,소상공인예비창업자대상/정책자금제외업종제외/기관별기간/사업자등록증임대차계약서등. 수집시각은원문검수시각과구분.",
-                    "이번14시대 최신완료operations45499312067 runtime캐시read_current/verify_snapshot/load_feed 실제재검증,동일IDfingerprint일치. 같은사업상세HTTP200/제외업종/준비서류재대조.내일발송현재07:22세대신선도보장않음."
-                  ]
-                },
-                {
-                  "source_id": "SD0000001491",
-                  "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
-                  "access_method": "UPSTREAM_VERIFIED",
-                  "verified_at": "2026-11-25T14:54:59.197830+09:00",
-                  "claims_supported": [
-                    "실제PNG GET bytes/SHA현재mainimage-review일치. 원본및360px이미지직접열람후명칭한글잘림깨짐대비과밀공식오인권리기존승인PASS. 사업명금액날짜없는일반브랜드회전카드. 동일그림반복은승인로테이션범위이며직전IMAGEguide2와교대.",
-                    "이번14시대 실제PNG GET bytes/SHA 현재main image-reviewPASS대조일치. 원본·360px시각검수12시기록보존, 이번새시각검수아님."
-                  ]
-                }
-              ],
-              "checks": {
-                "facts": "PASS",
-                "current_status": "PASS",
-                "eligibility_and_units": "PASS",
-                "cta_and_no_links": "PASS",
-                "length": "PASS",
-                "media": "PASS"
-              },
-              "char_count": 377,
-              "count_method": "python_len_including_spaces_newlines_CTA",
-              "missing_info": [],
-              "hold_reasons": [],
-              "warnings": [
-                "현장개별과정접수·비용은본문보장없음. 로그인후개별수강성공미시험. 프로필리디렉션클릭완료미확인;08:30목적지증빙과이번홈검색상세클릭증빙구분.",
-                "현재prepared+24h는Nov26 14전체지연창전만료. 오늘14시후실제공식원문/현재상태/최신완전자료/이미지SHA재대조후에만최대24hCAS갱신필수. 현재07:22수집본발송시신선하지않음."
-              ],
-              "reach_editorial": {
-                "policy_id": "supportpick-threads-reach-v1-20261109",
-                "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
-                "core_question": "창업 준비 중인데, 사업계획서 쓰는 법을 온라인으로 배울 수 있나요?",
-                "reader_scope": "사업계획서 작성·홍보·노무관리를 준비하는 소상공인 및 예비창업자",
-                "angles": [
-                  "창업사업계획서작성",
-                  "가게홍보학습",
-                  "온라인신청준비"
-                ],
-                "chosen_angle": "창업사업계획서온라인학습",
-                "opening_candidates": [
-                  "창업 준비 중인데, 사업계획서 쓰는 법을 온라인으로 배울 수 있나요?",
-                  "가게 홍보를 직접 준비하는 예비창업자도 온라인 경영교육을 들을 수 있나요?",
-                  "소상공인 교육은 모든 과정이 무료로 상시 열릴까요?"
-                ],
-                "chosen_opening": "창업 준비 중인데, 사업계획서 쓰는 법을 온라인으로 배울 수 있나요?",
-                "selection_reason": "구체적인준비결정하나에즉답,확인가능한강의명과신청순서제공",
-                "history_posts_checked": 20,
-                "comparison_eligible": false,
-                "comparison_exclusion": "v3질문형본문개편;순수A/B도입비교제외",
-                "profile_route": {
-                  "previous_profile_target_evidence": {
-                    "profile": "https://www.threads.com/@hid_1004",
-                    "visible_link_target": "https://kllollain-max.github.io/supportpick/",
-                    "home_search": "저소득시민 부가급여",
-                    "actual_search_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/611000000137/",
-                    "method": "CUA public profile visible target; target opened separately; actual home search + result click + detail visible",
-                    "redirect_click_completed": false,
-                    "checked_at": "2026-11-25T08:33:52.430313+09:00"
-                  },
-                  "recorded_at": "2026-11-25T12:23:52.951888+09:00",
-                  "exact_browser_action_timestamp": "not_exported",
-                  "method": "CUA actual home search exactname=>2results=>中소벤처기업부sameIDclick=>detail",
-                  "detail": "https://kllollain-max.github.io/supportpick/benefits/SD0000001491/",
-                  "government24_link_visible": true,
-                  "direct_education_site_link_on_detail": false
-                },
-                "master_full_used": true,
-                "search_evidence": "실제공식검색결과 지식배움터/온라인교육/사업계획서 표현. 자동완성·검색량측정없음.",
-                "observed_metrics_context": "154실제관측/기존14일평가유지.7/30일계정통계체류완독CTA미측정."
-              },
-              "astra_final_review": {
-                "actual_model": "gpt-6.2-astra",
-                "final_verdict": "PASS",
-                "score": 97,
-                "policy_version": "3.0",
-                "calls": 2,
-                "initial_review": {
-                  "reviewer_role": "independent_editor",
-                  "model": "gpt-6.2-astra",
-                  "phase": "first",
-                  "version": "3.0",
-                  "slot": "2026-11-26 12:00 KST",
-                  "format": "IMAGE",
-                  "score": 86,
-                  "rubric": [
-                    {
-                      "category": "첫문장",
-                      "score": 14,
-                      "max": 15,
-                      "rationale": "창업 준비자의 실제 질문이나 도입에서 낯선 플랫폼 이름이 먼저 나온다."
-                    },
-                    {
-                      "category": "관심의도",
-                      "score": 14,
-                      "max": 15,
-                      "rationale": "질문 직후 대상과 수강 가능 여부를 답한다."
-                    },
-                    {
-                      "category": "정확성",
-                      "score": 17,
-                      "max": 20,
-                      "rationale": "교육 내용·절차·접수 범위는 일치한다. 정부24 제외 업종 기준을 짧게 덧붙일 필요가 있다."
-                    },
-                    {
-                      "category": "완독",
-                      "score": 12,
-                      "max": 15,
-                      "rationale": "홍보와 노무 예시가 두 차례 겹치고 현장교육 단서가 반복된다."
-                    },
-                    {
-                      "category": "공유공감",
-                      "score": 8,
-                      "max": 10,
-                      "rationale": "예비창업자가 활용할 예가 있으나 실제 상황과 연결하면 전달하기 쉽다."
-                    },
-                    {
-                      "category": "가치차별",
-                      "score": 8,
-                      "max": 10,
-                      "rationale": "수강 단계가 실용적이나 금융교육 게시물과 현금 대비 문구가 겹친다."
-                    },
-                    {
-                      "category": "모바일",
-                      "score": 4,
-                      "max": 5,
-                      "rationale": "원본·360px 브랜드 및 하단 CTA 판독 가능. 본문 화살표 구간이 빽빽하다."
-                    },
-                    {
-                      "category": "텍스트완성도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "교육임이 첫 문단에서 분명하며 단독 본문으로 읽힌다."
-                    },
-                    {
-                      "category": "프로필유도",
-                      "score": 4,
-                      "max": 5,
-                      "rationale": "정확한 검색어가 있지만 현재 해당 사업 검색 경로 증빙 대기."
-                    }
-                  ],
-                  "decision": "HOLD",
-                  "blocking_requirements": [
-                    "해당 사업명 검색 후 동일 ID 상세 도달 증거 대기",
-                    "수정 본문 같은 모델 재검수 대기"
-                  ],
-                  "revised_body": "창업을 준비하는데 사업계획서는 어떻게 쓰고, 가게 홍보는 어디서 배울 수 있나요?\n소상공인 지식배움터에 사업계획서 작성과 SNS 홍보 콘텐츠 제작을 다루는 온라인 강의가 있어요. 소상공인과 예비창업자를 위한 경영교육이에요. 소상공인 정책자금 지원 제외 업종을 운영하는 소상공인은 지원 대상에서 제외돼요.\n\n온라인 강의는 회원가입 후 로그인해 원하는 강의를 신청하면 ‘나의강의실’에서 들을 수 있어요. 직원을 고용할 계획이라면 노무관리 강의도 찾아보세요.\n\n현장교육은 과정마다 일정과 지역, 정원, 본인부담금이 달라요. 프로필에서 ‘소상공인 온·오프라인 교육’을 검색하면 지원 대상과 신청 안내를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
-                  "replies": [],
-                  "revised_char_count": 361,
-                  "image_check": {
-                    "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-                    "verdict": "PASS",
-                    "note": "원본 및 360px 실물에서 브랜드·생활 혜택·CTA 판독. 동전 그림은 일반 브랜드 요소이고 액수나 현금 지급 주장이 없으며 본문에서 교육임을 곧바로 밝힘."
-                  },
-                  "evidence": "동일 ID SD0000001491의 API 상세·목록과 최근 20건 직접 확인. 지식배움터 공식 안내 및 현재 강의 목록은 상위 검증기록 기준. 누적 조회수 33712로 계정 성과·접수 중 상태를 추론하지 않음.",
-                  "pattern": "P6, 직전 예정 P8과 구별. 질문 도입 자체는 기존 P8에도 있으나 창업 상황·사업명 고유함.",
-                  "final_rereview": "pending"
-                },
-                "final_review": {
-                  "model": "gpt-6.2-astra",
-                  "reviewer_role": "independent_editor",
-                  "phase": "final",
-                  "version": "3.0",
-                  "checked_at": "2026-11-25T12:22:49+09:00",
-                  "slot": "2026-11-26 12:00 KST",
-                  "format": "IMAGE",
-                  "score": 97,
-                  "decision": "PASS",
-                  "decision_scope": "editorial_only",
-                  "rubric": [
-                    {
-                      "category": "첫문장",
-                      "score": 15,
-                      "max": 15,
-                      "rationale": "예비창업자가 사업계획서 작성법을 온라인에서 배울 수 있는지 한 가지를 묻는다."
-                    },
-                    {
-                      "category": "관심의도",
-                      "score": 15,
-                      "max": 15,
-                      "rationale": "첫 답변에서 실제 강의와 지식배움터를 바로 알려 준다."
-                    },
-                    {
-                      "category": "정확성",
-                      "score": 20,
-                      "max": 20,
-                      "rationale": "API 대상·제외 업종과 공식 강의목록·수강 단계가 일치한다. 현장교육은 개별 공고 조건으로 한정했다."
-                    },
-                    {
-                      "category": "완독",
-                      "score": 14,
-                      "max": 15,
-                      "rationale": "신청에서 현장교육, 상세 확인까지 순서가 명확하다. 첫 문단에서 소상공인이라는 말이 반복된다."
-                    },
-                    {
-                      "category": "공유공감",
-                      "score": 9,
-                      "max": 10,
-                      "rationale": "사업계획·홍보·채용이라는 실제 상황에서 읽을 강의를 구체화한다."
-                    },
-                    {
-                      "category": "가치차별",
-                      "score": 9,
-                      "max": 10,
-                      "rationale": "온라인 수강 동선과 현장교육 비용 확인을 구별한다. 카드는 일반 브랜드 이미지다."
-                    },
-                    {
-                      "category": "모바일",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "짧은 문단으로 분리되고 360px에서 브랜드 카드 CTA를 판독했다."
-                    },
-                    {
-                      "category": "텍스트완성도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "독립된 본문에 대상·수강 방법·예외가 담겼다."
-                    },
-                    {
-                      "category": "프로필유도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "검색 제목과 동명 항목을 구별할 중소벤처기업부를 명시한다. 상세에 실제로 있는 항목만 약속한다."
-                    }
-                  ],
-                  "body_sha256": "e916a468314c83784b3f023d002436414ca62cffc64135946b499d456de6648a",
-                  "image_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-                  "required_checks": {
-                    "chars": 377,
-                    "within_500": true,
-                    "cta_once": true,
-                    "cta_final": true,
-                    "no_url_or_hashtag": true,
-                    "replies": [],
-                    "same_id": "SD0000001491",
-                    "official_course_list_verified": true,
-                    "source_eligibility_verified": true,
-                    "image_original_and_360": "PASS",
-                    "image_caption_match": true,
-                    "pattern": "P6",
-                    "prior_planned_pattern": "P8",
-                    "no_same_benefit_in_ledger": "상위 원장 전체 확인 기록",
-                    "duplicate_intro_recent20": false,
-                    "profile_destination_evidence": "08:30 KST 상위 공개 프로필 목적지 기록. 직접 Threads 리디렉션 완료 미확인.",
-                    "benefit_detail_path": "상위 CUA 기록 시각 12:25 KST, 홈 검색 동명 2건 중 중소벤처기업부 클릭, 동일 ID 상세에서 대상·제외·서류·정부24 원문 경로 확인.",
-                    "performance_claim": false
-                  },
-                  "dispatch_approved": false,
-                  "dispatch_gate": "24시간 TTL상 11월25일 14시 KST 이후 최신 완전 소스·공식사이트·이미지 재대조 및 CAS 갱신 필요. 발송 시점 최신 소스 검증 필요."
-                },
-                "body_sha256": "e916a468314c83784b3f023d002436414ca62cffc64135946b499d456de6648a",
-                "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-                "fallback_reason": null
-              }
-            },
-            "next_history_record": {
-              "program_id": "SD0000001491",
-              "notice_version": "gov24-45499312067-1;official2026-11-25T12:23:52.951888+09:00",
-              "pattern": "P6",
-              "opening": "창업 준비 중인데, 사업계획서 쓰는 법을 온라인으로 배울 수 있나요?",
-              "structure": "창업준비질문→온라인강의즉답→제외업종→수강절차→현장조건→동명자료구별",
-              "media_turn": "IMAGE"
-            }
-          },
-          "revalidate_before": "2026-11-26T12:00:00+09:00",
-          "full_delay_window_covered": true
-        },
-        "source": {
-          "count": 10895,
-          "generation": "gov24-45499312067-1",
-          "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
-          "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
-          "path": "snapshots/gov24-45499312067-1",
-          "version": 1
-        },
-        "actual_official_rereview": true,
-        "web_refs": [
-          "turn496814260view0",
-          "turn161278954view1",
-          "turn161278954view2",
-          "turn902342963view1",
-          "turn671517631view0"
-        ],
-        "site_detail_actual_http200": true,
-        "site_detail_sha256": "5ba6020a560b1cd6a8a707d8b9f52d942105e92285ff94507a65071d963c1778",
-        "cached_artifact_manifest_reverified": true,
-        "source_recheck_required_at_publish": true,
-        "same_final_body_media_pattern_cohort_astra_review": true,
-        "new_visual_inspection": false,
-        "image_turn": "IMAGE",
-        "actual_png_GET_sha_match": true
-      },
+      "new_official_page_review_this_check": false,
       "new_Astra_calls": 0,
-      "original_Astra97_body377_image_pattern_preserved": true,
-      "actual_png_GET_SHA_verified": true,
-      "new_visual_inspection": false,
-      "original_visual_and_profile_timestamps_preserved": true
+      "existing_Astra_PASS_preserved": true,
+      "prior22hactual_newstart_expiry_rereview_preserved": true,
+      "education14hactual_expiry_rereview_preserved": true,
+      "image_redownloaded_this_check": false,
+      "cached_image_sha_matches_current_main_review": true
     },
     "regular_slot_observation": {
       "slot": "2026-11-24T08:00:00+09:00",
@@ -7418,7 +6720,7 @@
     },
     "publication_schedule_observation": {
       "slot": "2026-11-25T12:00:00+09:00",
-      "checked_at": "2026-11-25T14:56:37.827914+09:00",
+      "checked_at": "2026-11-25T15:32:37.219587+09:00",
       "status": "published_complete_verified_already_reported",
       "main_id": "18112545461459863",
       "url": "https://www.threads.com/@hid_1004/post/DgJmrW1DbzX",
@@ -7431,10 +6733,11 @@
     "new_formal_evaluation_this_check": false,
     "writer_final_edit_v3_status": {
       "policy_id": "supportpick-threads-final-edit-v3-20261125",
+      "policy_unchanged": true,
+      "protected_READY": 4,
       "new_v3_READY": 0,
       "previous_actual_v3_READY_preserved": 2,
-      "new_scores": 0,
-      "new_model_calls": 0
+      "new_scores": 0
     }
   },
   "last_reported_publication": {
@@ -7836,7 +7139,7 @@
     }
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-25T11:22:38.361554+09:00",
+    "checked_at": "2026-11-25T15:32:37.219587+09:00",
     "new_publications": 0,
     "new_incidents": 0,
     "queue_ready": 4,
@@ -143068,6 +142371,634 @@
         "new_scores": 0,
         "new_model_calls": 0
       }
+    },
+    "2026-11-25T15:32:37.219587+09:00": {
+      "checked_at": "2026-11-25T15:32:37.219587+09:00",
+      "result": "no_update",
+      "maintenance_previous_blob_sha": "a8d7afe1336ab73b8f7814eeb30b07e6451c543e",
+      "current_main_sha": "5c4084549223723b566cfe560d2e418903ad4337",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "fe81406861b708990053779230fcbbc0d080b13d",
+      "queue_blob_sha": "9f7219455772be33efdf50001b0c178426e39053",
+      "changed_run_versions": [],
+      "active_target_runs": [],
+      "run_pagination": {
+        "per_page": 100,
+        "pages": [
+          1
+        ],
+        "checkpoint_run_id": "45553988112",
+        "checkpoint_version_unchanged": true,
+        "all_new_target_versions_observed": true,
+        "latest_completed_operations_run_id": "45499312067"
+      },
+      "publication_ledger_records": 75,
+      "complete_verified_records": 75,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "45499312067",
+        "run_attempt": 1,
+        "conclusion": "success",
+        "collection_conclusion": "passed",
+        "job_id": 138818028752,
+        "head_sha": "890215f6a930d9967a5578b3134413e1dde8a1b7",
+        "tests_passed": 310,
+        "artifact_id": 14969423204,
+        "artifact_digest": "sha256:b2476fdb5e694c3418887a1d95021df8401aca80648b64ada250800d80361e21",
+        "artifact_redownloaded_this_check": false,
+        "artifact_digest_verified": true,
+        "job_logs_retrieved_this_check": false,
+        "read_current_verify_snapshot_load_feed": true,
+        "manifest": {
+          "count": 10895,
+          "generation": "gov24-45499312067-1",
+          "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
+          "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
+          "path": "snapshots/gov24-45499312067-1",
+          "version": 1
+        },
+        "collection_report": {
+          "applicationOpenVerified": false,
+          "collectionSucceededAt": "2026-11-25T07:22:49.899473+09:00",
+          "coverage": "Currently connected Gov24 API, all unfiltered pages of three endpoints",
+          "endpoints": {
+            "serviceDetail": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "serviceList": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "supportConditions": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            }
+          },
+          "factsVerified": false,
+          "feedSha256": "e1c29b7aea9fe87bf654575a564eb0860e1dd0d42f172782a8ab82d998b54778",
+          "finishedAt": "2026-11-25T07:22:51.016675+09:00",
+          "generation": "gov24-45499312067-1",
+          "normalRequestEstimate": 330,
+          "pageResponses": 327,
+          "project": "supportpick",
+          "published": false,
+          "sampleCount": 0,
+          "scheduled": false,
+          "sourceConsistency": "No snapshot token: totals and boundary pages stable; unique IDs and all endpoint sets matched",
+          "startedAt": "2026-11-25T07:16:32.014081+09:00",
+          "status": "passed",
+          "storedCount": 10895
+        },
+        "publisher_freshness_hours": 24,
+        "current_fresh_until": "2026-11-26T07:22:49.899473+09:00",
+        "collection_is_not_current_application_status_verification": true,
+        "new_candidate_original_official_pages_read": false,
+        "existing3entries_unchanged_fingerprints_and_priority_pass": true,
+        "newstart20_priority_block": true,
+        "public_verification": {
+          "checked_at": "2026-11-25T07:59:02.227357+09:00",
+          "observed_run_id": "45499312067",
+          "run_attempt": 1,
+          "status": "resolved_by_subsequent_normal_operations_public_verification",
+          "runtime_artifact_id": 14969423204,
+          "runtime_artifact_digest": "sha256:b2476fdb5e694c3418887a1d95021df8401aca80648b64ada250800d80361e21",
+          "runtime_artifact_digest_verified": true,
+          "public_artifact_id": 14972001717,
+          "public_artifact_digest": "sha256:15842e6b6c1032d2f6faf0d893a5dca4c80ed4bfe27bba6d686e9ba47f3634a3",
+          "public_artifact_digest_verified": true,
+          "job_id": 138818028752,
+          "tests_passed": 310,
+          "public_verification": {
+            "publicHtmlChecked": 11049,
+            "sitemapUrls": 11034,
+            "generation": "gov24-45499312067-1",
+            "sourceRevision": "890215f6a930d9967a5578b3134413e1dde8a1b7",
+            "robots": {
+              "http": 200,
+              "crawlAllowed": true,
+              "scope": "host_root"
+            },
+            "missingUrlHttp": 404,
+            "passed": 11049,
+            "failed": 0,
+            "initialFailures": 7,
+            "maxRequestsPerSecond": 10,
+            "rateLimitEpisodes": 0,
+            "stoppedForRateLimit": false,
+            "recoveredAfterRetry": [
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/313000000149/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              },
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/349000000116/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              },
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/355000000123/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              },
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/448000000114/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              },
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/494000000151/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              },
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/643000000141/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              },
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/O00030000003/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              }
+            ],
+            "failures": []
+          },
+          "source": {
+            "count": 10895,
+            "generation": "gov24-45499312067-1",
+            "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
+            "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
+            "path": "snapshots/gov24-45499312067-1",
+            "version": 1
+          },
+          "underlying_previous_deployment_cache_cause": "unconfirmed",
+          "site_changes_by_this_check": false,
+          "workflow_dispatch": false,
+          "posts_created": 0
+        },
+        "public_verification_recovery_already_reported": true,
+        "existing4entries_unchanged_fingerprints_and_priority_pass": true,
+        "artifact_digest_previously_verified_cached_bytes": true,
+        "original_notice_rereview_this_check": false
+      },
+      "writer": {
+        "checked_at": "2026-11-25T15:32:37.219587+09:00",
+        "ready": 4,
+        "future24h_ready": 4,
+        "new_drafts": 0,
+        "existing_READY_reused": 4,
+        "drafts": [
+          {
+            "slot": "2026-11-25T16:00:00+09:00",
+            "benefit_id": "B49000100208",
+            "pattern": "P6",
+            "media_turn": "TEXT",
+            "char_count": 381,
+            "expires_at": "2026-11-25T19:17:15.962833+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-25T20:00:00+09:00",
+            "benefit_id": "B01000300013",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 419,
+            "expires_at": "2026-11-25T22:53:00.768308+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-26T08:00:00+09:00",
+            "benefit_id": "611000000137",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 351,
+            "expires_at": "2026-11-26T10:13:46.980394+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-26T12:00:00+09:00",
+            "benefit_id": "SD0000001491",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 377,
+            "expires_at": "2026-11-26T14:54:59.197830+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source": {
+          "count": 10895,
+          "generation": "gov24-45499312067-1",
+          "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
+          "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
+          "path": "snapshots/gov24-45499312067-1",
+          "version": 1
+        },
+        "source_count": 10895,
+        "ledger_records": 80,
+        "pending": null,
+        "lease": null,
+        "new_posts": 0,
+        "new_incidents": 0,
+        "new_metrics": 0,
+        "observations": 156,
+        "due_metrics": 0,
+        "new_evaluation": false,
+        "14day_evaluation_already_recorded": true,
+        "astra_review_invocations": 0,
+        "existing_Astra_review_preserved": true,
+        "current_main_image_review_matches_cached_bytes": true,
+        "image_redownloaded_this_check": false,
+        "new_visual_inspection": false,
+        "source_recheck_required_at_publish": true,
+        "expiry_prevention_revalidations": 0
+      },
+      "metrics": {
+        "run_id": "45553988112",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-25T05:30:13Z",
+        "head_sha": "5c4084549223723b566cfe560d2e418903ad4337",
+        "job_id": 139001555358,
+        "artifact_id": 14994079981,
+        "artifact_digest": "sha256:833bf608bbc7afe42b9e927a45dc517a947dc40f4e24af6026fec349e6474684",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "observed_at": "2026-11-25T05:30:07.816043+00:00",
+        "records": [
+          {
+            "post_id": "18214999999364836",
+            "published_at": "2026-11-22T12:41:18.809010+09:00",
+            "observed_at": "2026-11-25T05:30:07.816043+00:00",
+            "window_hours": 72,
+            "elapsed_hours": 73.81361306472222,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 194,
+              "likes": 2,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          },
+          {
+            "post_id": "17897404392435204",
+            "published_at": "2026-11-24T12:46:42.610970+09:00",
+            "observed_at": "2026-11-25T05:30:07.816043+00:00",
+            "window_hours": 24,
+            "elapsed_hours": 25.723668075833334,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 18,
+              "likes": 2,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          }
+        ],
+        "due_count": 2,
+        "success_count": 2,
+        "new_observation_keys": [],
+        "new_observations": 0,
+        "total_observations": 156,
+        "new_evaluation_report_due": false,
+        "weights_unchanged": true,
+        "publication_calls": 0,
+        "workflow_dispatch": false
+      },
+      "recovery": {
+        "new_publication_this_check": false,
+        "new_posts": 0,
+        "maintenance_new_posts": 0,
+        "new_recovery_this_check": false,
+        "new_failure_this_check": false,
+        "reason": "80completeverifiedpublishedrows/pending/lease unchanged; alltargetrunversionsunchanged, no newincident/publication/repair.4READY unchanged andwholewindow validationpassed."
+      },
+      "next_condition": "FourfutureREADY Nov25 16TEXT/P6,20IMAGE/P1,Nov26 08TEXT/P8,12IMAGE/P6; nominal+whole2h validationpassed. Education actualofficial/currentstatus/latestcomplete/PNG_SHA revalidation14:54 archivedandCAScompleted,originalbody377/Astra97 unchanged;expiresNov26 14:54. Seoul prioractualrereview/body351/Astra97preserved.80published156actualnumericobservations unchanged;alltargetrunversionsunchanged;no newincident/publication/repair/draft/metrics/eval/modelcall/dispatch. Current07:22completefeednotfreshNov26,actualsenderlatestcompletefreshsourcemandatory.",
+      "publication": {
+        "run_id": "45542670692",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-25T03:51:17Z",
+        "head_sha": "5c4084549223723b566cfe560d2e418903ad4337",
+        "job_id": 138964693200,
+        "artifact_id": 14989723075,
+        "artifact_digest": "sha256:38173bb65547b7aea893e2b84bc87f174a5d1fc73d28d422cd4fc99d63260dc2",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 138,
+        "new_publication_this_run": false,
+        "main_id": "18112545461459863",
+        "url": "https://www.threads.com/@hid_1004/post/DgJmrW1DbzX",
+        "slot": "2026-11-25T12:00:00+09:00",
+        "receipt_at": "2026-11-25T12:51:05.7180606+09:00",
+        "receipt_time_basis": "Actual GitHub job Threads receipt line; exact platform timestamp unavailable.",
+        "ledger_published_at": "2026-11-25T12:50:17.357375+09:00",
+        "ledger_published_at_is_invocation_not_exact_platform_time": true,
+        "stage": "complete",
+        "verified": true,
+        "body_hash": "2db46127cba440ca73581950d5c1381a28019e962284ffe8a0c17846b7751d38",
+        "content_hash": "1fd1f0883fb5e9cac291bf5a9598e4ce607830b85aaf5e6ae87c2d5e49ad2294",
+        "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+        "media_turn": "IMAGE",
+        "pattern": "P5",
+        "char_count": 436,
+        "replies": 0,
+        "original_queue_body_asset_exact": true,
+        "previous79records_preserved": true,
+        "maintenance_post_calls": 0,
+        "delay_within_original_2h_window": true,
+        "actual_source_generation": "gov24-45499312067-1",
+        "latest_already_reported": true
+      },
+      "history_reconciliation": {
+        "run_id": "45173485637",
+        "mode": "check-account",
+        "account": "hid_1004",
+        "checked_at": "2026-11-23T21:21:24+09:00",
+        "recent_remote_rows": 100,
+        "more_history": true,
+        "main_ledger_matches_in_page": 49,
+        "latest20_main_matches": 20,
+        "latest_remote_id": "18129410933479829",
+        "target_text_absent": true,
+        "scope": "77durablecompleteverifiedrows;prior76exactpreserved;newreceipt/body/asset/artifactverified. No full28dayremotequery.",
+        "artifact_id": 14818615408,
+        "artifact_digest": "sha256:23cfc165bbd050ec1a12dbde18778345efb01c4d9e20abf69f6279b090e003b3",
+        "artifact_digest_verified": true,
+        "remote_requeried_this_check": false,
+        "previous_remote_evidence_preserved": true
+      },
+      "official_review_recovery": {
+        "new_official_page_review_this_check": false,
+        "new_Astra_calls": 0,
+        "existing_Astra_PASS_preserved": true,
+        "prior22hactual_newstart_expiry_rereview_preserved": true,
+        "education14hactual_expiry_rereview_preserved": true,
+        "image_redownloaded_this_check": false,
+        "cached_image_sha_matches_current_main_review": true
+      },
+      "regular_slot_observation": {
+        "slot": "2026-11-24T08:00:00+09:00",
+        "status": "natural_publication_verified_complete",
+        "main_id": "18123605203752749",
+        "receipt_at": "2026-11-24T08:46:05.901553+09:00",
+        "main_url": "https://www.threads.com/@hid_1004/post/DgGl2ooGuAa"
+      },
+      "main_head_observation": {
+        "latest_observed_run_head": "5732cde848a03907b2505396c34a4d60c713571e",
+        "target_publisher_workflows_master_and_assets_blobs_unchanged": true,
+        "unrelated_changes_not_modified": true
+      },
+      "image_sha_comparisons": [
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:06.502293+09:00"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:14.847084+09:00"
+        }
+      ],
+      "run_status_transitions": [
+        {
+          "run_id": "45277137519",
+          "from": "in_progress",
+          "to": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-23T22:38:20Z"
+        }
+      ],
+      "formal_evaluation": {
+        "policy_id": "supportpick-threads-reach-v1-20261109",
+        "window": "14d_evaluation",
+        "evaluated_at": "2026-11-24T17:20:07.451089+09:00",
+        "period_start": "2026-11-10T17:00:08.835254+09:00",
+        "period_end": "2026-11-24T17:00:08.835254+09:00",
+        "normal_verified_publications": 53,
+        "experiment_regular_slots": 57,
+        "unpublished_slots": [
+          {
+            "slot": "2026-11-16T16:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-18T12:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-23T20:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-24T16:00:00+09:00",
+            "classification": "unreserved_at_evaluation_cutoff_then_published_after_cutoff",
+            "subsequent_main_id": "17974331994194122",
+            "subsequent_receipt_at": "2026-11-24T17:21:06.769138+09:00"
+          }
+        ],
+        "missed_closed_slots": 3,
+        "partial_or_pending": 0,
+        "independent_full_public_rendering_recheck": false,
+        "publication_audit_scope": "76durablecompleteverifiedrecords; priorreceipts/body/media/artifacts retained. No newfull28dayremotequery; Nov24 16unreserved/latestpublisher12only,nofailure-runconfirmed.",
+        "24h_comparison_window_observations": 40,
+        "A_n": 20,
+        "B_n": 20,
+        "24h_comparable_matched_pairs": 0,
+        "24h_group_view_medians": {
+          "A": 62.0,
+          "B": 62.0
+        },
+        "24h_all_view_median": 62.0,
+        "actual_reactions": {
+          "A": {
+            "likes": 29,
+            "replies": 0,
+            "reposts": 6,
+            "shares": 1
+          },
+          "B": {
+            "likes": 27,
+            "replies": 0,
+            "reposts": 5,
+            "shares": 0
+          }
+        },
+        "reaction_rate_used": false,
+        "all_24h_observations_delayed": true,
+        "eligible_elapsed_hours_min": 24.317312148333336,
+        "eligible_elapsed_hours_max": 25.691108017222223,
+        "24h_unavailable_not_zero": [
+          "18117968657159347",
+          "17992859946026940",
+          "17913499947663769",
+          "18001464938830261"
+        ],
+        "24h_not_yet_due": [
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "24h_missing_after_due": [],
+        "7d_measured": 27,
+        "7d_not_yet_due": [
+          "18004106657810124",
+          "18155833435528730",
+          "18061699079561356",
+          "18075899267779249",
+          "18361336213223949",
+          "18100168118443439",
+          "17876108337601849",
+          "17954736195295664",
+          "18136261246743978",
+          "18029579210863916",
+          "18106611944009610",
+          "17995393143022353",
+          "18002356029029330",
+          "18098495828440255",
+          "18121994881961457",
+          "18093412586696162",
+          "18102899498408388",
+          "18214999999364836",
+          "18125366213319496",
+          "18149154712603236",
+          "17879078796637660",
+          "18388999600236313",
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "7d_group_medians": {
+          "A": 105,
+          "B": 87.5
+        },
+        "quotes": "not_provided",
+        "reader_only_replies": "unavailable",
+        "profile_clicks": "account_level_not_available; no_post_attribution",
+        "confounders": [
+          "Differentbusiness/region/readers/benefit/deadline/time/media/length; matchedsimilarpairs0",
+          "PreservedmovedexistingREADYcohorts differfromnewslots;excludeinsteadretroclassify",
+          "Newquestiontitlepolicy changesmorethanopeningalone;newAstrarevieweddraftsexcludedfrompureA/B"
+        ],
+        "minimum_24h_target_per_group": 8,
+        "raw_window_target_met": true,
+        "current_stratified_target_met": false,
+        "decision": "extend_comparison;maintainbalancedA/Bandexistingcontrols.No demonstratedrepeatedadvantage;noeditorialweightchange.",
+        "weight_changed": false,
+        "no_backcalculation": true,
+        "extension_next_condition": "Reassess in existingchecks when comparable similar-business strata have sufficient repeatedactual24hwindows; keep comparison group. No separate schedule.",
+        "reported_at": "2026-11-24T17:20:07.451089+09:00",
+        "evidence_latest_metric_run_id": "45351393999",
+        "24h_measured_but_excluded": [
+          {
+            "main_id": "18122947907049313",
+            "elapsed_hours": 52.64388394083333,
+            "reason": "late_beyond_26h_comparison_tolerance"
+          },
+          {
+            "main_id": "18061699079561356",
+            "elapsed_hours": 25.374772445277777,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18075899267779249",
+            "elapsed_hours": 24.65035752527778,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18361336213223949",
+            "elapsed_hours": 24.39045965972222,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18100168118443439",
+            "elapsed_hours": 24.6578044575,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "17876108337601849",
+            "elapsed_hours": 25.228189436944444,
+            "reason": "Previously written input preserved; no retrospective cohort assignment after failed preceding slot"
+          }
+        ],
+        "7d_group_n": {
+          "A": 13,
+          "B": 14
+        },
+        "7d_due_unmeasured": [
+          "18450932713126961"
+        ],
+        "publication_cutoff_note": "EvaluationperiodendsNov24 17:00:08.16slotwasunreservedatcutoff, laternaturallypublished17:21:06withinits2hwindow; excludedfrom53periodpublications becauseactualinvocation17:20aftercutoff. Notafourthmissedslot.",
+        "unreserved_at_period_end_slots": 1,
+        "currently_open_unreserved_slots_from_period": 0
+      },
+      "publication_schedule_observation": {
+        "slot": "2026-11-25T12:00:00+09:00",
+        "checked_at": "2026-11-25T15:32:37.219587+09:00",
+        "status": "published_complete_verified_already_reported",
+        "main_id": "18112545461459863",
+        "url": "https://www.threads.com/@hid_1004/post/DgJmrW1DbzX",
+        "receipt_at": "2026-11-25T12:51:05.7180606+09:00",
+        "pending": null,
+        "lease": null,
+        "workflow_dispatch": false,
+        "daily_main_publications": 2
+      },
+      "new_formal_evaluation_this_check": false,
+      "writer_final_edit_v3_status": {
+        "policy_id": "supportpick-threads-final-edit-v3-20261125",
+        "policy_unchanged": true,
+        "protected_READY": 4,
+        "new_v3_READY": 0,
+        "previous_actual_v3_READY_preserved": 2,
+        "new_scores": 0
+      }
     }
   },
   "last_reported_prepublication_repair": {
@@ -145464,17 +145395,11 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-25T14:54:59.197830+09:00",
-    "source": {
-      "count": 10895,
-      "generation": "gov24-45499312067-1",
-      "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
-      "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
-      "path": "snapshots/gov24-45499312067-1",
-      "version": 1
-    },
+    "checked_at": "2026-11-25T15:32:37.219587+09:00",
     "ready": 4,
     "future24h_ready": 4,
+    "new_drafts": 0,
+    "existing_READY_reused": 4,
     "drafts": [
       {
         "slot": "2026-11-25T16:00:00+09:00",
@@ -145521,18 +145446,32 @@
         "source_recheck_required_at_publish": true
       }
     ],
-    "new_drafts": 0,
-    "existing_READY_reused": 4,
-    "new_publications_observed": 0,
-    "maintenance_post_calls": 0,
-    "expiry_prevention_revalidations": 1,
-    "astra_review_invocations": 0,
+    "source": {
+      "count": 10895,
+      "generation": "gov24-45499312067-1",
+      "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
+      "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
+      "path": "snapshots/gov24-45499312067-1",
+      "version": 1
+    },
+    "source_count": 10895,
     "ledger_records": 80,
     "pending": null,
     "lease": null,
-    "new_metrics": 2,
+    "new_posts": 0,
+    "new_incidents": 0,
+    "new_metrics": 0,
     "observations": 156,
-    "new_evaluation": false
+    "due_metrics": 0,
+    "new_evaluation": false,
+    "14day_evaluation_already_recorded": true,
+    "astra_review_invocations": 0,
+    "existing_Astra_review_preserved": true,
+    "current_main_image_review_matches_cached_bytes": true,
+    "image_redownloaded_this_check": false,
+    "new_visual_inspection": false,
+    "source_recheck_required_at_publish": true,
+    "expiry_prevention_revalidations": 0
   },
   "last_queue_review_refresh": {
     "checked_at": "2026-11-25T14:54:59.197830+09:00",
