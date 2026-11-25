@@ -1,6 +1,7 @@
 """Record-specific reading aids for actual source ambiguities found in review."""
 
 VOUCHER_PDF = 'https://gwangyang.go.kr/boardDownload.es?bid=0170&list_no=196475&seq=1'
+VOUCHER_ROUNDS_PDF = 'https://gwangyang.go.kr/boardDownload.es?bid=0174&list_no=197073&seq=1'
 SAVINGS = 'https://m.bokjiro.go.kr/ssis-tem/cms/mob/news/news/1309724_1122.html'
 API_VOUCHER_A = 'https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003085&bnefType=all&svcId=646000000145'
 API_VOUCHER_B = 'https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005831&bnefType=all&svcId=629000000182'
@@ -21,7 +22,8 @@ RECORD_ARTICLES = [
 <p>광양시 다압면이 배포한 2026년 안내는 2026년 1월 1일 기준 도내 1년 이상 거주·실제 영농·사업년도 20~80세 요건을 함께 제시하고, 연 20만원을 안내합니다. API 첫째 자료의 75세 상한과 달라 해당 상세의 현재 조건 표시는 보류했습니다. 둘째 자료까지 같은 나이로 바꾸거나 다른 지역에 이 기준을 확대하지 않습니다. <a href="https://gwangyang.go.kr/boardDownload.es?bid=0170&amp;list_no=196475&amp;seq=1#page=26" target="_blank" rel="noopener noreferrer">광양시 공식 PDF · 파일 26쪽 / 인쇄 쪽 24 ‘여성농업인 행복바우처’ ↗</a></p>
 <p>예를 들어 78세 이용자는 오래된 75세 표기만 보고 포기하기 전에 본인 거주지의 해당 연도 공고를 찾아야 합니다. 반대로 같은 이름의 다른 지역 자료에 80세를 그대로 대입해도 된다는 뜻은 아닙니다. 주소지와 나이 기준일을 함께 제시해 담당기관에 문의하세요.</p>
 <h2>신청기한과 이미 받은 포인트의 사용기한은 다릅니다</h2>
-<p>이 PDF의 해당 접수 기간은 2026.1.16.~2.27., 포인트 사용기한은 2026.12.31.입니다. 11월에 사용기한이 남아 있다는 사실로 그 접수가 계속 열려 있다고 읽지 마세요. 이 글은 추가 모집을 확인한 안내가 아니며, 새 모집·미사용 포인트 처리·현행 담당 창구는 해당 지역에서 확인해야 합니다.</p>
+<p>광양시 다압면 자료의 접수 기간은 2026년 1월 16일~2월 27일이고, 받은 포인트의 사용기한은 2026년 12월 31일입니다. 이미 포인트를 받았다면 사용기한을 먼저 확인하세요.</p>
+<p>광양시의 다른 공식 자료에는 <strong>2차 접수 예정 기간이 2026년 4월 1일~30일</strong>로 적혀 있습니다. 다만 1차 접수에서 사업량을 모두 쓰면 2차를 진행하지 않는다는 조건이 붙었습니다. 이 자료로 실제 2차 접수가 열렸는지 확인할 수는 없습니다. 올해 신청하지 못했다면 거주지 읍면동에 새 모집 공고가 있는지 확인하세요.</p>
 <h2>금액 비교보다 먼저 준비할 질문</h2>
 <div class="guide-table"><table><caption>관할 창구에 물을 내용</caption><thead><tr><th scope="col">상황</th><th scope="col">질문</th></tr></thead><tbody>
 <tr><th scope="row">두 자료의 금액이 다르게 보임</th><td>제 주소지와 농어업 유형에는 어느 공고가 적용되며, 카드 총액과 자부담은 각각 얼마인가요?</td></tr>
@@ -30,7 +32,8 @@ RECORD_ARTICLES = [
 </tbody></table></div>
 <p>위 광양시 자료는 유사 복지서비스, 직업·사업자등록, 농외소득 등의 제외 조항도 담고 있습니다. 일부 나이·금액이 맞는다는 이유만으로 선정되었다고 판단하지 말고 전체 공고를 읽으세요. 필요한 서류는 접수기관에서 요청한 양식을 사용하고 증빙을 지원금픽에 제출하지 않습니다.</p>
 ''', [(API_VOUCHER_A,'정부24 OpenAPI 첫째 서비스 연결'), (API_VOUCHER_B,'정부24 OpenAPI 둘째 서비스 연결'),
-      (VOUCHER_PDF,'광양시 다압면 2026년 공식 안내 · 인쇄 쪽 24')]),
+      (VOUCHER_PDF,'광양시 다압면 2026년 공식 안내 · 인쇄 쪽 24'),
+      (VOUCHER_ROUNDS_PDF,'광양시 2026년 공식 안내 · 인쇄 쪽 5 · 2차 접수 조건')]),
 ('youth-savings-contribution-2026', '2026 청년내일저축계좌: 저축액·정부 월 30만원·만기 조건을 나누어 읽기',
  '정부 지원을 모든 본인 납입액의 세 배로 계산하지 않고, 신규 모집과 가입 후 유지·만기 절차를 구분합니다.', '''
 <h2>‘1:3’이라는 짧은 설명을 모든 납입액에 곱하지 마세요</h2>
