@@ -53,6 +53,11 @@ a.title-link{text-decoration:none;color:inherit;display:inline-block}.static-ben
 /* Search, preparation guides and comparison use the existing record store. */
 .guide-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
 .guide-links a{padding:16px;border:1px solid #cbded5;border-radius:12px;color:#095b45;background:#f3faf6;font-weight:700;line-height:1.6}
+.analysis-topics{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.analysis-topics a{display:inline-flex;align-items:center;min-height:44px;padding:6px 12px;border:1px solid #cbded5;border-radius:10px;color:#095b45;font-size:.875rem;font-weight:700}
+.analysis-topics a:hover,.analysis-topics a:focus-visible{background:#e5f3ec;text-decoration:underline}
+#benefitAnalysis h3{margin:24px 0 0;scroll-margin-top:20px}
+#benefitAnalysis .guide-links{margin-top:10px}
 .filters input[type=number]{width:100%;min-height:44px;border:1px solid #cbd5d1;border-radius:10px;padding:10px;background:var(--surface,#fff);color:inherit;font:inherit}
 .unknown-toggle{display:flex!important;align-items:center;gap:8px;grid-column:1/-1}
 .unknown-toggle input{width:20px;height:20px}

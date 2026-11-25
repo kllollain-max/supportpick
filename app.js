@@ -17,6 +17,7 @@
   try{items=C.parseFeed(window.SUPPORTPICK_DATA);}catch(e){feedError=e.message;}
   const requestedTab=new URLSearchParams(location.search).get('tab');
   if(['all','matched','saved','apps','guide'].includes(requestedTab)){view.tab=requestedTab;remember();const params=new URLSearchParams(location.search);params.delete('tab');history.replaceState(null,'',location.pathname+(params.toString()?'?'+params.toString():'')+location.hash);}
+  function isAnalysisHash(){return Boolean($(location.hash.slice(1))?.closest('#benefitAnalysis'));}
   if(location.hash.startsWith('#benefit=')){try{const oldId=decodeURIComponent(location.hash.slice(9));if(items.some(x=>x.id===oldId)){location.replace('benefits/'+encodeURIComponent(oldId)+'/');return;}}catch(e){}}
   $('audience').innerHTML='<option value="">모든 대상</option>'+[...new Set(items.flatMap(p=>p.audience||[]))].sort().map(s=>`<option>${esc(s)}</option>`).join('');
   $('supportType').innerHTML='<option value="">모든 방식</option>'+[...new Set(items.flatMap(p=>p.supportTypes||[p.supportType]))].sort().map(s=>`<option>${esc(s)}</option>`).join('');
@@ -27,7 +28,7 @@
   function persist(next){if(!writable)throw Error('기존 기록을 확인할 수 없어 변경을 중단했습니다.');snapshot=C.save(localStorage,snapshot.raw,next);return snapshot.data;}
   function change(update){try{persist(update(structuredClone(snapshot.data)));render();return true;}catch(e){toast(e.message);warn(e.message);return false;}}
   function koreanTime(value){const d=new Date(value);return Number.isFinite(+d)?new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(d):'시각 미확인';}
-  function setTab(tab){view.tab=tab;view.scroll=0;view.limit=30;remember();if(location.hash.startsWith('#benefit='))history.replaceState(null,'',location.pathname+location.search);render();window.scrollTo({top:0,behavior:'auto'});}
+  function setTab(tab){view.tab=tab;view.scroll=0;view.limit=30;remember();if(location.hash.startsWith('#benefit=')||isAnalysisHash())history.replaceState(null,'',location.pathname+location.search);render();window.scrollTo({top:0,behavior:'auto'});}
   function categories(){const all=['전체',...new Set([...C.CATEGORIES,...items.map(x=>x.category)])];$('categories').innerHTML=all.map(x=>`<button class="chip" type="button" data-category="${esc(x==='전체'?'':x)}" aria-pressed="${(x==='전체'?'':x)===view.category}">${esc(x)}</button>`).join('');}
   function card(p){
     const saved=snapshot.data.saved.includes(p.id),tracked=C.own(snapshot.data.apps,p.id),reason=view.tab==='matched'?C.matchReasons(p,snapshot.data.prefs):null;
@@ -49,6 +50,7 @@
   }
   function empty(title,text,action='reset'){return `<div class="empty-state"><span class="empty-mark" aria-hidden="true">◎</span><h3>${esc(title)}</h3><p>${esc(text)}</p>${action==='preferences'?'<button class="primary" data-open-preferences>관심 조건 설정하기</button>':action==='all'?'<button class="quiet" data-show-all>전체 혜택 보기</button>':action==='reset'?'<button class="quiet" data-reset>검색·필터 초기화</button>':''}</div>`;}
   function render(){
+    if(isAnalysisHash())view.tab='all';
     $('savedCount').textContent=snapshot.data.saved.length;$('appCount').textContent=Object.keys(snapshot.data.apps).length;
     document.querySelectorAll('[data-tab]').forEach(b=>{if(b.dataset.tab===view.tab)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
     const isDetail=location.hash.startsWith('#benefit=');
