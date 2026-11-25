@@ -14,6 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "45594952230",
     "45588123983",
     "45576054845",
     "45571691812",
@@ -6137,12 +6138,20 @@
       "conclusion": "success",
       "updated_at": "2026-11-25T09:43:45Z",
       "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
+    },
+    "45594952230": {
+      "run_id": "45594952230",
+      "run_attempt": 1,
+      "status": "in_progress",
+      "conclusion": null,
+      "updated_at": "2026-11-25T10:26:15Z",
+      "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-25T18:55:55.886398+09:00",
-    "result": "loan_full_window_expiry_prevented_after_actual_rereview",
-    "maintenance_previous_blob_sha": "711268e0540399aecbe6d9f33301b40259747982",
+    "checked_at": "2026-11-25T19:44:33.465977+09:00",
+    "result": "no_update",
+    "maintenance_previous_blob_sha": "a764ddece9fbb8d7983f99b6b5f48f090e6bae5c",
     "current_main_sha": "5c4084549223723b566cfe560d2e418903ad4337",
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
@@ -6150,21 +6159,30 @@
     "queue_blob_sha": "21afa31b55c40426bb72be61d39a1b2070eb8a68",
     "changed_run_versions": [
       {
-        "run_id": "45588123983",
+        "run_id": "45594952230",
         "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-25T09:43:45Z",
+        "status": "in_progress",
+        "conclusion": null,
+        "updated_at": "2026-11-25T10:26:15Z",
         "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
       }
     ],
-    "active_target_runs": [],
+    "active_target_runs": [
+      {
+        "run_id": "45594952230",
+        "run_attempt": 1,
+        "status": "in_progress",
+        "conclusion": null,
+        "updated_at": "2026-11-25T10:26:15Z",
+        "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
+      }
+    ],
     "run_pagination": {
       "per_page": 100,
       "pages": [
         1
       ],
-      "checkpoint_run_id": "45576054845",
+      "checkpoint_run_id": "45588123983",
       "checkpoint_version_unchanged": true,
       "all_new_target_versions_observed": true,
       "latest_completed_operations_run_id": "45499312067"
@@ -6243,7 +6261,7 @@
       "publisher_freshness_hours": 24,
       "current_fresh_until": "2026-11-26T07:22:49.899473+09:00",
       "collection_is_not_current_application_status_verification": true,
-      "new_candidate_original_official_pages_read": true,
+      "new_candidate_original_official_pages_read": false,
       "existing3entries_unchanged_fingerprints_and_priority_pass": true,
       "newstart20_priority_block": true,
       "public_verification": {
@@ -6331,20 +6349,14 @@
       "public_verification_recovery_already_reported": true,
       "existing4entries_unchanged_fingerprints_and_priority_pass": true,
       "artifact_digest_previously_verified_cached_bytes": true,
-      "original_notice_rereview_this_check": true
+      "original_notice_rereview_this_check": false
     },
     "writer": {
-      "checked_at": "2026-11-25T18:54:53.927829+09:00",
-      "source": {
-        "count": 10895,
-        "generation": "gov24-45499312067-1",
-        "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
-        "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
-        "path": "snapshots/gov24-45499312067-1",
-        "version": 1
-      },
+      "checked_at": "2026-11-25T19:44:33.465977+09:00",
       "ready": 4,
       "future24h_ready": 4,
+      "new_drafts": 0,
+      "existing_READY_reused": 4,
       "drafts": [
         {
           "slot": "2026-11-25T20:00:00+09:00",
@@ -6391,18 +6403,32 @@
           "source_recheck_required_at_publish": true
         }
       ],
-      "new_drafts": 0,
-      "existing_READY_reused": 4,
-      "new_publications_observed": 0,
-      "maintenance_post_calls": 0,
-      "expiry_prevention_revalidations": 1,
-      "astra_review_invocations": 0,
+      "source": {
+        "count": 10895,
+        "generation": "gov24-45499312067-1",
+        "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
+        "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
+        "path": "snapshots/gov24-45499312067-1",
+        "version": 1
+      },
+      "source_count": 10895,
       "ledger_records": 81,
       "pending": null,
       "lease": null,
-      "new_metrics": 3,
+      "new_posts": 0,
+      "new_incidents": 0,
+      "new_metrics": 0,
       "observations": 159,
-      "new_evaluation": false
+      "due_metrics": 0,
+      "new_evaluation": false,
+      "14day_evaluation_already_recorded": true,
+      "astra_review_invocations": 0,
+      "existing_Astra_review_preserved": true,
+      "current_main_image_review_matches_cached_bytes": true,
+      "image_redownloaded_this_check": false,
+      "new_visual_inspection": false,
+      "source_recheck_required_at_publish": true,
+      "expiry_prevention_revalidations": 0
     },
     "metrics": {
       "run_id": "45588123983",
@@ -6415,8 +6441,8 @@
       "artifact_id": 15009866791,
       "artifact_digest": "sha256:d59ff946f80c9f0bd871766200051b977e00ac8717c2e2a9ddac083960a59e04",
       "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": true,
-      "job_logs_retrieved_this_check": true,
+      "artifact_redownloaded_this_check": false,
+      "job_logs_retrieved_this_check": false,
       "observed_at": "2026-11-25T09:43:41.145561+00:00",
       "records": [
         {
@@ -6485,15 +6511,13 @@
       ],
       "due_count": 3,
       "success_count": 3,
-      "new_observation_keys": [
-        "18061699079561356:168h",
-        "18125366213319496:72h",
-        "17974331994194122:24h"
-      ],
-      "new_observations": 3,
+      "new_observation_keys": [],
+      "new_observations": 0,
       "total_observations": 159,
       "new_evaluation_report_due": false,
-      "weights_unchanged": true
+      "weights_unchanged": true,
+      "publication_calls": 0,
+      "workflow_dispatch": false
     },
     "recovery": {
       "new_publication_this_check": false,
@@ -6501,9 +6525,9 @@
       "maintenance_new_posts": 0,
       "new_recovery_this_check": false,
       "new_failure_this_check": false,
-      "reason": "Loan fullwindow expiration prevention after actualagencyPDF GET/SHA/textreread,currentKBHTMLGET/currentstatus/latestcomplete/sourcefingerprint/detailHTTP200. Oldentryarchived,body459/TEXT/Astra97 unchanged;4preview nominal+fullwindow PASS. No POST/dispatch/rerun/backfill/codechange."
+      "reason": "81completeverifiedpublishedrows/pending/lease unchanged. Operations45594952230 inprogress,notfailure;latestcomplete45499312067 verifiedcacheused.4READY nominalandwholewindowpassed. No newincident/publication/repair."
     },
-    "next_condition": "FourfutureREADY Nov25 20IMAGE/P1,Nov26 08TEXT/P8,12IMAGE/P6,16TEXT/P5 nominal+whole2h PASS. LoanexpiresNov26 18:54 afteractualofficial2026PDF/KBHTML/currentstatus/latestcomplete/sourcefingerprint/detailHTTP200 rereview;oldentryarchived/CASsaved. Body459/Astra97/TEXT unchanged,no newmodel/visual/profileclaim.81published unchanged159realmetrics. New24h6views1like at25.388h excludes relocatedcohortB;72h188views2likes1share and168h12views1like not24h. No causal CTA/dwell/account7/30inference. Formal14dayweightsunchanged. Current07:22sourceNOTfreshNov26 actualsenderlatestcompletefreshmandatory.",
+    "next_condition": "FourfutureREADY Nov25 20IMAGE/P1,Nov26 08TEXT/P8,12IMAGE/P6,16TEXT/P5 nominal andwhole2hPASS. Loan18:54actualPDF/KB rereviewandCASpreviouslycompleted;no date-onlyrefresh.81published159numericobservations unchanged. Operations45594952230 inprogress,latestcompleted45499312067 07:22completeverifiedcacheused;incompletegenerationnotassumedcomplete. Recheckcompletedoperationsartifactandmanifestwhenavailable. Current07:22sourceNOTfreshNov26;actualsenderlatestcompletefreshsource mandatory. No newpublication/failure/repair/draft/modelcall/metrics/evaluation/dispatch.",
     "publication": {
       "run_id": "45576054845",
       "run_attempt": 1,
@@ -6561,1009 +6585,14 @@
       "previous_remote_evidence_preserved": true
     },
     "official_review_recovery": {
-      "new_official_page_review_this_check": true,
-      "program_id": "PTR000051390",
-      "rereview_audit": {
-        "checked_at": "2026-11-25T18:54:53.927829+09:00",
-        "previous_entry": {
-          "slot": "2026-11-26T16:00:00+09:00",
-          "benefit_id": "PTR000051390",
-          "source_fingerprint": "0f6dd13233549e14079b657325ab7a6aaebb4a32d9644561693c6ec6da57ba22",
-          "source_generation": "gov24-45499312067-1",
-          "prepared_at": "2026-11-25T17:03:15.614707+09:00",
-          "expires_at": "2026-11-26T17:03:15.614707+09:00",
-          "asset_sha256": null,
-          "writer": {
-            "schema_version": "supportpick.writer.v1",
-            "status": "READY",
-            "selected_program_id": "PTR000051390",
-            "post_text": "국가유공자 생활안정대부, 올해 받았으면 긴급 의료비도 추가로 못 빌리나요?\n일반지원은 원칙적으로 연 1건이지만, 본인·배우자·직계존비속의 3일 이상 입원비 등 긴급자금 요건에 맞고, 3개월 이내 지출 또는 지출 예정인 경우에는 1회 추가지원이 가능해요. 기존 긴급자금 대부 1건이 있다면 먼저 전액 상환해야 해요.\n\nKB나라사랑대출은 보훈부의 전자문서 추천을 받은 대상자가 신청해요. 일반 생활안정자금 추천액은 300만 원이며, 실제 대출액은 추천액과 대출 가능액 중 작은 금액이에요.\n\n국가유공자 기준 연 2.0%, 3년 원리금균등상환이에요. 소액보증보험을 쓰면 보험료는 본인 부담이에요. 상환 중인 건수·체납 등으로 지원이 제한될 수 있어요.\n\n자금이 필요할 때 국민은행 영업점에서 신청해요. 프로필의 ‘국가보훈대상자 대부지원’에는 대상 범위·제외 조건·다른 신청 경로가 나와 있어요.\n\n자세한 사항은 프로필링크 확인",
-            "draft_text": null,
-            "reply_texts": [],
-            "media": {
-              "turn": "TEXT",
-              "asset_id": null,
-              "check": "NOT_REQUIRED",
-              "image_copy": null,
-              "alt_text": null
-            },
-            "review": {
-              "planned_at": "2026-11-26T16:00:00+09:00",
-              "application_status": "ALWAYS",
-              "reader": "국가유공자 중 생활안정대부 일반지원 또는 긴급 의료비 추가지원 조건을 확인하는 가구",
-              "central_message": "국가유공자 생활안정대부, 올해 받았으면 긴급 의료비도 추가로 못 빌리나요?",
-              "pattern": "P5",
-              "selection_reason": "동일ID원본누적33570;상위HOLD/SKIP출처보존·기존미예약원고중복제외순위준수. 국가유공자생활안정융자정보순환. 연1건예외의료비추가지원판단을실제2026지침으로정정. 검색량·성과추정없음.",
-              "interest_basis": "OBSERVED_METRICS",
-              "duplicate_check": "CHECKED",
-              "evidence": [
-                {
-                  "source_id": "PTR000051390",
-                  "source_ref": "https://www.mpva.go.kr/mpva/downloadBbsFile.do?atchmnflNo=163298",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-25T17:03:15.614707+09:00",
-                  "claims_supported": [
-                    "2026시행지침원본PDF929883bytes SHA6ca4923b52e3f13403fd364a3b0953d97836d6a883f93e81789cc374f1d41b95 실제다운로드·pdftotext617~714:일반300만원2%3년/수시신청/긴급의료비본인배우자직계존비속3일이상입원등/3개월이내지출또는지출예정/일반연1건이나긴급1회추가/기존긴급1건전액상환조건.120~163체납등제외."
-                  ]
-                },
-                {
-                  "source_id": "PTR000051390",
-                  "source_ref": "https://obank.kbstar.com/quics?cc=b032425:b033525&isNew=N&page=C020709&prcode=LN20000114",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-25T17:03:15.614707+09:00",
-                  "claims_supported": [
-                    "현재상품공시2026.01.01~2027.11.30유효. 전자문서추천/추천액과가능금액중작은금액/국가유공자연2%제대군인2.5%구분/생활안정3년원리금균등/소액보증보험고객보험료/신용심사제한/소요자금필요시영업점."
-                  ]
-                },
-                {
-                  "source_id": "PTR000051390",
-                  "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=106347&bnefType=all&svcId=PTR000051390",
-                  "access_method": "PROVIDED_OFFICIAL_TEXT",
-                  "verified_at": "2026-11-25T17:03:15.614707+09:00",
-                  "claims_supported": [
-                    "최신완전동일ID누적33570/대상범위/다른신청경로/수시접수. API연1건·3건단순안내는2026기관지침의긴급예외와세부건수구분으로보완.수집시각은현재원문확인시각아님."
-                  ]
-                }
-              ],
-              "checks": {
-                "facts": "PASS",
-                "current_status": "PASS",
-                "eligibility_and_units": "PASS",
-                "cta_and_no_links": "PASS",
-                "length": "PASS",
-                "media": "NOT_REQUIRED"
-              },
-              "char_count": 459,
-              "count_method": "python_len_including_spaces_newlines_CTA",
-              "missing_info": [],
-              "hold_reasons": [],
-              "warnings": [
-                "2026보훈해설별도PDF는webtimeout2회실패. 별개2026시행지침첨부163298은실제PDF다운로드/텍스트추출성공,혼동금지.",
-                "생활안정일반긴급특례만안내;개별추천/신용/예산/승인보장없음. 실제대출신청없음.",
-                "prepared+24h는내일16~18전체창전만료. 오늘18시이후원문·현재상태·최신완전자료실제재대조후archive/CAS최대24h갱신필수. 현재07:22수집본내일발송신선도보장않음."
-              ],
-              "reach_editorial": {
-                "policy_id": "supportpick-threads-reach-v1-20261109",
-                "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
-                "core_question": "국가유공자 생활안정대부, 올해 받았으면 긴급 의료비도 추가로 못 빌리나요?",
-                "reader_scope": "국가유공자 중 생활안정대부 일반지원 또는 긴급 의료비 추가지원 조건을 확인하는 가구",
-                "angles": [
-                  "연간이용긴급의료비특례",
-                  "300만원실제추천액",
-                  "은행신청전조건준비"
-                ],
-                "chosen_angle": "긴급의료비추가지원조건",
-                "opening_candidates": [
-                  "국가유공자 생활안정대부, 올해 받았으면 긴급 의료비도 추가로 못 빌리나요?",
-                  "국가유공자 일반 생활안정대부는 300만 원을 모두 받을 수 있나요?",
-                  "생활비가 더 필요한 국가유공자라면 기존 대부 이용 내역부터 확인해요."
-                ],
-                "chosen_opening": "국가유공자 생활안정대부, 올해 받았으면 긴급 의료비도 추가로 못 빌리나요?",
-                "selection_reason": "실제지침에있는추가예외로한가지결정질문에즉답;입원대상·지출기한·상환조건보존",
-                "history_posts_checked": 20,
-                "comparison_eligible": false,
-                "comparison_exclusion": "v3질문형·본문재편동시적용,순수A/B비교제외",
-                "master_full_used": true,
-                "search_evidence": "공식검색결과국가보훈대부/나라사랑대출/생활안정자금표현. 실제검색량미측정",
-                "profile_route": {
-                  "previous_profile_target_evidence": {
-                    "profile": "https://www.threads.com/@hid_1004",
-                    "visible_link_target": "https://kllollain-max.github.io/supportpick/",
-                    "home_search": "저소득시민 부가급여",
-                    "actual_search_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/611000000137/",
-                    "method": "CUA public profile visible target; target opened separately; actual home search + result click + detail visible",
-                    "redirect_click_completed": false,
-                    "checked_at": "2026-11-25T08:33:52.430313+09:00"
-                  },
-                  "recorded_at": "2026-11-25T17:03:15.614707+09:00",
-                  "method": "CUA actualhome search exactname1result=>sameIDdetailclick",
-                  "detail": "https://kllollain-max.github.io/supportpick/benefits/PTR000051390/",
-                  "government24_link_visible": true,
-                  "direct_Threads_redirect_complete": false
-                },
-                "observed_metrics_context": "156실제관측·기존14일평가유지;계정7/30일/체류/완독/CTA미측정"
-              },
-              "astra_final_review": {
-                "actual_model": "gpt-6.2-astra",
-                "model_confirmation": "parent spawn_agent explicit model succeeded;reviewer fineridentifier unavailable",
-                "final_verdict": "PASS",
-                "score": 97,
-                "policy_version": "3.0",
-                "calls": 4,
-                "initial_review": {
-                  "version": "3.0",
-                  "model": "GPT-6 (Codex; finer runtime model identifier unavailable to reviewer)",
-                  "phase": "first",
-                  "reviewed_at": "2026-11-25T07:58:42.018728+00:00",
-                  "slot": "2026-11-26 16:00 KST",
-                  "original_body_sha256": "f0208ac2da2a11c59748461bff9e91ff59e887f8f17ab93d3269e7a14bf451e1",
-                  "source_file_sha256": "f0208ac2da2a11c59748461bff9e91ff59e887f8f17ab93d3269e7a14bf451e1",
-                  "char_count": 398,
-                  "rubric": [
-                    {
-                      "category": "첫문장",
-                      "score": 11,
-                      "max": 15,
-                      "rationale": "혜택 금액을 앞세운 오해 정정형으로, 예정된 P5 자격 점검과 어긋난다."
-                    },
-                    {
-                      "category": "관심의도",
-                      "score": 14,
-                      "max": 15,
-                      "rationale": "자금이 필요한 국가유공자에게 해당한다."
-                    },
-                    {
-                      "category": "정확성",
-                      "score": 18,
-                      "max": 20,
-                      "rationale": "확인된 대출 조건은 일치한다. 3건 집계 대상을 생활안정대부로 명시할 필요가 있다."
-                    },
-                    {
-                      "category": "완독",
-                      "score": 13,
-                      "max": 15,
-                      "rationale": "답변과 긴 추천액 설명보다 두 가지 이용 제한을 먼저 읽는 편이 쉽다."
-                    },
-                    {
-                      "category": "공유공감",
-                      "score": 8,
-                      "max": 10,
-                      "rationale": "이용 횟수와 실제 대출 가능액은 대상자가 공유할 구체적 정보다."
-                    },
-                    {
-                      "category": "가치차별",
-                      "score": 8,
-                      "max": 10,
-                      "rationale": "동일 사업은 최근 20건에 없다. 지원금 여부 질문은 기존의 현금 대비 도입과 겹친다."
-                    },
-                    {
-                      "category": "모바일",
-                      "score": 4,
-                      "max": 5,
-                      "rationale": "문단 내 행정용어가 밀집돼 있다."
-                    },
-                    {
-                      "category": "텍스트완성도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "글만으로 금리와 상환 의무를 이해할 수 있다."
-                    },
-                    {
-                      "category": "프로필유도",
-                      "score": 3,
-                      "max": 5,
-                      "rationale": "고정 문구 이외에도 별도 확인 요청이 있다. 프로필 검색 경로 증빙은 대기 중이다."
-                    }
-                  ],
-                  "score": 84,
-                  "decision": "REVISE",
-                  "revised_body": "국가유공자가 생활비를 빌릴 때는 올해 생활안정대부를 이용했는지, 지금 몇 건을 갚고 있는지가 중요해요.\n\n생활안정대부는 1년에 1건까지예요. 현재 생활안정대부를 3건 이상 갚고 있다면 대상에서 제외돼요. KB나라사랑대출은 국가보훈부의 전자문서 추천을 받은 사람이 신청할 수 있어요.\n\n일반 생활안정자금의 추천액은 300만 원이에요. 실제로 빌릴 수 있는 금액은 추천액과 은행 심사로 정한 대출 가능액 중 작은 금액이에요. 국가유공자 기준 연 2.0%로, 원금과 이자를 합쳐 3년 동안 균등하게 갚아요. 소액보증보험을 이용하면 보험료는 본인이 내요.\n\n자금이 필요할 때 국민은행 영업점에서 신청할 수 있어요. 프로필에서 ‘국가보훈대상자 대부지원’을 검색하면 다른 신청 경로와 제외 조건도 볼 수 있어요.\n\n자세한 사항은 프로필링크 확인",
-                  "replies": [],
-                  "media": "NOT_REQUIRED",
-                  "revised_char_count": 410,
-                  "blocking_requirements": [
-                    "P5에 맞게 도입 수정, CTA 하나만 유지",
-                    "프로필 사업명 검색 결과와 상세 경로 확인 후 동일 모델 재검수"
-                  ],
-                  "duplicate_check": "CHECKED: records[-20:], same ID absent; last five P1 P5 P6 P8 P5, planned 08 P8 / 12 P6.",
-                  "metrics": "156 observed, 14-day window. Account 7/30, dwell, CTA unmeasured. Gov24 cumulative 33570.",
-                  "evidence": "제공된 정부24 동일 ID 상세 직접 대조, KB상품과 보훈부 목록은 상위 열람기록. 2026 해설 PDF 미열람."
-                },
-                "superseded_382_review": {
-                  "model": "gpt-6.2-astra",
-                  "model_evidence": "상위 실행자가 명시적 spawn 모델과 성공·fallback 없음 확인. 하위 런타임에서 추가 식별자 미노출.",
-                  "phase": "final",
-                  "reviewed_at": "2026-11-25T08:00:20.215546+00:00",
-                  "slot": "2026-11-26 16:00 KST",
-                  "score": 97,
-                  "rubric": [
-                    {
-                      "category": "첫문장",
-                      "score": 15,
-                      "max": 15,
-                      "rationale": "올해 이미 이용한 국가유공자가 다시 지원받을 수 있는지 묻는다."
-                    },
-                    {
-                      "category": "관심의도",
-                      "score": 15,
-                      "max": 15,
-                      "rationale": "바로 이어 연 1건과 현재 3건 상환 제한을 각각 명시한다."
-                    },
-                    {
-                      "category": "정확성",
-                      "score": 20,
-                      "max": 20,
-                      "rationale": "정부24 동일 ID 및 상위 KB 공식 상품 대조. 국가유공자 금리, 일반자금 추천액, 실제 대출액, 상환 기간과 보험료 주체가 정확하다."
-                    },
-                    {
-                      "category": "완독",
-                      "score": 14,
-                      "max": 15,
-                      "rationale": "자격에서 금액·비용·경로 순으로 읽힌다. 추천액 설명은 다소 길다."
-                    },
-                    {
-                      "category": "공유공감",
-                      "score": 9,
-                      "max": 10,
-                      "rationale": "추가 대출이 필요한 당사자에게 이용 이력을 판단할 기준을 준다."
-                    },
-                    {
-                      "category": "가치차별",
-                      "score": 9,
-                      "max": 10,
-                      "rationale": "최근 20건에 동일 사업이 없으며 같은 날 P8·P6과 다른 P5다. 질문형 첫 문장 자체는 이전 글에도 있다."
-                    },
-                    {
-                      "category": "모바일",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "세 문단과 독립 마지막 줄이 자격·비용·신청 순서를 구분한다."
-                    },
-                    {
-                      "category": "텍스트완성도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "텍스트만으로 제한·추천·상환·비용·신청을 파악할 수 있다."
-                    },
-                    {
-                      "category": "프로필유도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "프로필 검색 결과 상세의 실재 항목과 안내가 일치하며 요청은 고정 CTA 한 번이다."
-                    }
-                  ],
-                  "decision": "PASS",
-                  "editorial_pass": true,
-                  "body_sha256": "09a53b6c1938bfa26d755f94d3889f72e4b3170dec6518e071349d3a744db967",
-                  "char_count": 382,
-                  "count_method": "Python len, including spaces, newlines, fixed CTA",
-                  "replies": [],
-                  "media": "NOT_REQUIRED",
-                  "pattern": "P5",
-                  "cta_count": 1,
-                  "url_count": 0,
-                  "hashtag_count": 0,
-                  "publication_approved": false,
-                  "verification": "정부24 제공 원문 직접 대조. 상위 실제 확인 기록: KB 상품, 보훈부 시행지침 게시글 269846, 검색 결과 1건 → PTR000051390 상세 및 정부24 원문 경로. 프로필 목적지 08:30 증빙 재사용. Threads 리디렉션 완료 및 직접 신청 미확인. 시행지침 첨부 163298 원문 독립 확인 전이며 2026 보훈 해설 PDF 2회 시간 초과. 향후 직접 지침에서 충돌 발견 시 HOLD.",
-                  "metrics": "156 observed / 14-day evaluation; account 7/30, dwell, CTA unmeasured",
-                  "publication_gate": "11월 26일 18:00 KST까지의 전체 창은 현재 24시간 TTL 범위 밖. 11월 25일 18:00 KST 이후 원문·상태·본문을 실제 재대조하고 archive CAS 필요. 편집 PASS는 게시 승인 또는 승인큐 등록을 뜻하지 않는다."
-                },
-                "superseded_reason": "Agency2026originalguideline emergencyexception discovered beforeREADY;382verdictwithdrawn",
-                "intermediate_429_review": {
-                  "model": "gpt-6.2-astra",
-                  "model_evidence": "상위 실행자가 명시적 spawn 모델과 성공·fallback 없음 확인. 하위 런타임에서 추가 식별자 미노출.",
-                  "phase": "final",
-                  "reviewed_at": "2026-11-25T08:01:36.269844+00:00",
-                  "slot": "2026-11-26 16:00 KST",
-                  "score": 92,
-                  "rubric": [
-                    {
-                      "category": "첫문장",
-                      "score": 15,
-                      "max": 15,
-                      "rationale": "연내 긴급 의료비 추가 가능성을 묻는다."
-                    },
-                    {
-                      "category": "관심의도",
-                      "score": 15,
-                      "max": 15,
-                      "rationale": "첫 문단에서 일반 원칙과 긴급 예외를 구분한다."
-                    },
-                    {
-                      "category": "정확성",
-                      "score": 15,
-                      "max": 20,
-                      "rationale": "3일 입원 적용 대상과 3개월 이내 지출 또는 지출 예정 기준을 추가해야 한다."
-                    },
-                    {
-                      "category": "완독",
-                      "score": 14,
-                      "max": 15,
-                      "rationale": "자격·금액·비용·경로 순서가 분명하다."
-                    },
-                    {
-                      "category": "공유공감",
-                      "score": 9,
-                      "max": 10,
-                      "rationale": "입원비 필요 상황에 적용 가능하다."
-                    },
-                    {
-                      "category": "가치차별",
-                      "score": 9,
-                      "max": 10,
-                      "rationale": "일반 대부 연 1건의 공식 예외에 집중한다."
-                    },
-                    {
-                      "category": "모바일",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "단락이 짧다."
-                    },
-                    {
-                      "category": "텍스트완성도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "추천액과 실제액 및 상환 의무를 구분한다."
-                    },
-                    {
-                      "category": "프로필유도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "검색 상세 실재 및 고정 CTA 1회."
-                    }
-                  ],
-                  "decision": "HOLD",
-                  "editorial_pass": false,
-                  "body_sha256": "1eaa542ef3167291ed6cf1f76397066b6f27be34ca8783143f40eb0768aa6ebb",
-                  "char_count": 429,
-                  "count_method": "Python len, including spaces, newlines, fixed CTA",
-                  "replies": [],
-                  "media": "NOT_REQUIRED",
-                  "pattern": "P5",
-                  "cta_count": 1,
-                  "url_count": 0,
-                  "hashtag_count": 0,
-                  "publication_approved": false,
-                  "verification": "시행지침 원본 추출문 120–163, 617–714 직접 대조. 일반지원 연 1건·긴급자금 추가 1회·기존 긴급자금 전액상환·건수 제한과 체납 제외 확인.",
-                  "metrics": "156 observed / 14-day evaluation; account 7/30, dwell, CTA unmeasured",
-                  "publication_gate": "11월 26일 18:00 KST까지의 전체 창은 현재 24시간 TTL 범위 밖. 11월 25일 18:00 KST 이후 원문·상태·본문을 실제 재대조하고 archive CAS 필요. 편집 PASS는 게시 승인 또는 승인큐 등록을 뜻하지 않는다.",
-                  "superseded_reason": "382자 이전 원고(97점)는 READY 등록 전에 기관 시행지침에서 긴급자금 추가 예외가 확인되어 폐기. 단계별 원본 보존.",
-                  "blocking_requirements": [
-                    "중심 주제인 긴급자금 의료비의 3개월 이내 지출·지출 예정 단서 및 입원 대상 범위를 명시"
-                  ]
-                },
-                "final_review": {
-                  "model": "gpt-6.2-astra",
-                  "model_evidence": "상위 실행자가 명시적 spawn 모델과 성공·fallback 없음 확인. 하위 런타임에서 추가 식별자 미노출.",
-                  "phase": "final",
-                  "reviewed_at": "2026-11-25T08:02:20.980618+00:00",
-                  "slot": "2026-11-26 16:00 KST",
-                  "score": 97,
-                  "rubric": [
-                    {
-                      "category": "첫문장",
-                      "score": 15,
-                      "max": 15,
-                      "rationale": "연내 긴급 의료비 추가 가능성을 묻는다."
-                    },
-                    {
-                      "category": "관심의도",
-                      "score": 15,
-                      "max": 15,
-                      "rationale": "첫 문단에서 일반 원칙과 긴급 예외를 구분한다."
-                    },
-                    {
-                      "category": "정확성",
-                      "score": 20,
-                      "max": 20,
-                      "rationale": "공식 지침의 가족 범위·입원일수·지출 시기·추가지원 횟수와 전액 상환 조건이 일치한다. 추천액과 실제 대출액 및 금리를 구분했다."
-                    },
-                    {
-                      "category": "완독",
-                      "score": 14,
-                      "max": 15,
-                      "rationale": "질문에 바로 답하고 추천·금액·비용·경로로 진행한다. 첫 답변은 세 가지 조건이 들어가 길다."
-                    },
-                    {
-                      "category": "공유공감",
-                      "score": 9,
-                      "max": 10,
-                      "rationale": "입원비 필요 상황에 적용 가능하다."
-                    },
-                    {
-                      "category": "가치차별",
-                      "score": 9,
-                      "max": 10,
-                      "rationale": "일반 대부 연 1건의 공식 예외에 집중한다."
-                    },
-                    {
-                      "category": "모바일",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "단락이 짧다."
-                    },
-                    {
-                      "category": "텍스트완성도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "추천액과 실제액 및 상환 의무를 구분한다."
-                    },
-                    {
-                      "category": "프로필유도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "검색 상세 실재 및 고정 CTA 1회."
-                    }
-                  ],
-                  "decision": "PASS",
-                  "editorial_pass": true,
-                  "body_sha256": "15fbbe084e5d8fc7433372e3c0ddc9b1bfbb59803c030b78a46e46ca511623eb",
-                  "char_count": 459,
-                  "count_method": "Python len, including spaces, newlines, fixed CTA",
-                  "replies": [],
-                  "media": "NOT_REQUIRED",
-                  "pattern": "P5",
-                  "cta_count": 1,
-                  "url_count": 0,
-                  "hashtag_count": 0,
-                  "publication_approved": false,
-                  "verification": "기관 시행지침 120~163, 617~714 대조. 본인·배우자·직계존비속 3일 이상 입원비, 3개월 이내 지출 또는 지출 예정, 연 1건 원칙과 긴급 추가 1회, 기존 긴급 대부 전액 상환 조건이 들어갔다. KB 상품 근거·정부24 동일 ID·프로필 상세 도달은 이전 대조와 동일. 프로필 목적지 기존 증빙 재사용, Threads 리디렉션 미확인. 별개 2026 해설 PDF 미열람.",
-                  "metrics": "156 observed / 14-day evaluation; account 7/30, dwell, CTA unmeasured",
-                  "publication_gate": "11월 26일 18:00 KST까지의 전체 창은 현재 24시간 TTL 범위 밖. 11월 25일 18:00 KST 이후 원문·상태·본문을 실제 재대조하고 archive CAS 필요. 편집 PASS는 게시 승인 또는 승인큐 등록을 뜻하지 않는다.",
-                  "superseded_reason": "382자 이전 원고(97점)는 READY 등록 전에 기관 시행지침에서 긴급자금 추가 예외가 확인되어 폐기. 단계별 원본 보존.",
-                  "blocking_requirements": [],
-                  "revision_history": [
-                    "398자 84점 수정 요구",
-                    "382자 97점 판정 후 시행지침상 긴급 추가 예외 발견으로 등록 전 폐기",
-                    "429자 92점 HOLD: 입원자 범위·3개월 조건 누락",
-                    "459자 원문 재대조 PASS"
-                  ],
-                  "checks": {
-                    "facts": "PASS",
-                    "current_status": "PASS",
-                    "eligibility_and_units": "PASS",
-                    "cta_and_no_links": "PASS",
-                    "length": "PASS",
-                    "media": "NOT_REQUIRED",
-                    "duplicate": "CHECKED"
-                  }
-                },
-                "body_sha256": "15fbbe084e5d8fc7433372e3c0ddc9b1bfbb59803c030b78a46e46ca511623eb",
-                "asset_sha256": null,
-                "fallback_reason": null
-              }
-            },
-            "next_history_record": {
-              "program_id": "PTR000051390",
-              "notice_version": "gov24-45499312067-1;official2026-11-25T17:03:15.614707+09:00",
-              "pattern": "P5",
-              "opening": "국가유공자 생활안정대부, 올해 받았으면 긴급 의료비도 추가로 못 빌리나요?",
-              "structure": "의료비추가지원질문→원칙예외와대상기한→추천액과가능액→상환보험료→신청프로필상세",
-              "media_turn": "TEXT"
-            }
-          },
-          "full_delay_window_covered": false,
-          "revalidate_before": "2026-11-26T16:00:00+09:00",
-          "revalidation_required_reason": "expires_before_slot_plus_two_hours"
-        },
-        "refreshed_entry": {
-          "slot": "2026-11-26T16:00:00+09:00",
-          "benefit_id": "PTR000051390",
-          "source_fingerprint": "0f6dd13233549e14079b657325ab7a6aaebb4a32d9644561693c6ec6da57ba22",
-          "source_generation": "gov24-45499312067-1",
-          "prepared_at": "2026-11-25T18:54:53.927829+09:00",
-          "expires_at": "2026-11-26T18:54:53.927829+09:00",
-          "asset_sha256": null,
-          "writer": {
-            "schema_version": "supportpick.writer.v1",
-            "status": "READY",
-            "selected_program_id": "PTR000051390",
-            "post_text": "국가유공자 생활안정대부, 올해 받았으면 긴급 의료비도 추가로 못 빌리나요?\n일반지원은 원칙적으로 연 1건이지만, 본인·배우자·직계존비속의 3일 이상 입원비 등 긴급자금 요건에 맞고, 3개월 이내 지출 또는 지출 예정인 경우에는 1회 추가지원이 가능해요. 기존 긴급자금 대부 1건이 있다면 먼저 전액 상환해야 해요.\n\nKB나라사랑대출은 보훈부의 전자문서 추천을 받은 대상자가 신청해요. 일반 생활안정자금 추천액은 300만 원이며, 실제 대출액은 추천액과 대출 가능액 중 작은 금액이에요.\n\n국가유공자 기준 연 2.0%, 3년 원리금균등상환이에요. 소액보증보험을 쓰면 보험료는 본인 부담이에요. 상환 중인 건수·체납 등으로 지원이 제한될 수 있어요.\n\n자금이 필요할 때 국민은행 영업점에서 신청해요. 프로필의 ‘국가보훈대상자 대부지원’에는 대상 범위·제외 조건·다른 신청 경로가 나와 있어요.\n\n자세한 사항은 프로필링크 확인",
-            "draft_text": null,
-            "reply_texts": [],
-            "media": {
-              "turn": "TEXT",
-              "asset_id": null,
-              "check": "NOT_REQUIRED",
-              "image_copy": null,
-              "alt_text": null
-            },
-            "review": {
-              "planned_at": "2026-11-26T16:00:00+09:00",
-              "application_status": "ALWAYS",
-              "reader": "국가유공자 중 생활안정대부 일반지원 또는 긴급 의료비 추가지원 조건을 확인하는 가구",
-              "central_message": "국가유공자 생활안정대부, 올해 받았으면 긴급 의료비도 추가로 못 빌리나요?",
-              "pattern": "P5",
-              "selection_reason": "동일ID원본누적33570;상위HOLD/SKIP출처보존·기존미예약원고중복제외순위준수. 국가유공자생활안정융자정보순환. 연1건예외의료비추가지원판단을실제2026지침으로정정. 검색량·성과추정없음.",
-              "interest_basis": "OBSERVED_METRICS",
-              "duplicate_check": "CHECKED",
-              "evidence": [
-                {
-                  "source_id": "PTR000051390",
-                  "source_ref": "https://www.mpva.go.kr/mpva/downloadBbsFile.do?atchmnflNo=163298",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-25T18:54:53.927829+09:00",
-                  "claims_supported": [
-                    "2026시행지침원본PDF929883bytes SHA6ca4923b52e3f13403fd364a3b0953d97836d6a883f93e81789cc374f1d41b95 실제다운로드·pdftotext617~714:일반300만원2%3년/수시신청/긴급의료비본인배우자직계존비속3일이상입원등/3개월이내지출또는지출예정/일반연1건이나긴급1회추가/기존긴급1건전액상환조건.120~163체납등제외.",
-                    "이번18시대 보훈부 현행목록·2026시행지침 게시글·업무재개 안내 실제재열람, 첨부PDF 실제GET/SHA일치/본문617~714 재대조. 가족범위·3일입원·3개월지출/예정·긴급1회추가·기존긴급전액상환 확인. KB상품 실제HTML GET/대조:전자추천/추천300만원/실제작은액/2%/3년/고객보험료/필요시신청. 신규종료정정 열람범위미발견,개인승인보장없음."
-                  ]
-                },
-                {
-                  "source_id": "PTR000051390",
-                  "source_ref": "https://obank.kbstar.com/quics?cc=b032425:b033525&isNew=N&page=C020709&prcode=LN20000114",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-25T18:54:53.927829+09:00",
-                  "claims_supported": [
-                    "현재상품공시2026.01.01~2027.11.30유효. 전자문서추천/추천액과가능금액중작은금액/국가유공자연2%제대군인2.5%구분/생활안정3년원리금균등/소액보증보험고객보험료/신용심사제한/소요자금필요시영업점.",
-                    "이번18시대 보훈부 현행목록·2026시행지침 게시글·업무재개 안내 실제재열람, 첨부PDF 실제GET/SHA일치/본문617~714 재대조. 가족범위·3일입원·3개월지출/예정·긴급1회추가·기존긴급전액상환 확인. KB상품 실제HTML GET/대조:전자추천/추천300만원/실제작은액/2%/3년/고객보험료/필요시신청. 신규종료정정 열람범위미발견,개인승인보장없음."
-                  ]
-                },
-                {
-                  "source_id": "PTR000051390",
-                  "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=106347&bnefType=all&svcId=PTR000051390",
-                  "access_method": "PROVIDED_OFFICIAL_TEXT",
-                  "verified_at": "2026-11-25T18:54:53.927829+09:00",
-                  "claims_supported": [
-                    "최신완전동일ID누적33570/대상범위/다른신청경로/수시접수. API연1건·3건단순안내는2026기관지침의긴급예외와세부건수구분으로보완.수집시각은현재원문확인시각아님.",
-                    "이번18시대 최신완료operations45499312067 runtime캐시read_current/verify_snapshot/load_feed 실제재검증,동일IDfingerprint일치. 같은사업상세HTTP200/제외업종/준비서류재대조.내일발송현재07:22세대신선도보장않음."
-                  ]
-                }
-              ],
-              "checks": {
-                "facts": "PASS",
-                "current_status": "PASS",
-                "eligibility_and_units": "PASS",
-                "cta_and_no_links": "PASS",
-                "length": "PASS",
-                "media": "NOT_REQUIRED"
-              },
-              "char_count": 459,
-              "count_method": "python_len_including_spaces_newlines_CTA",
-              "missing_info": [],
-              "hold_reasons": [],
-              "warnings": [
-                "2026보훈해설별도PDF는webtimeout2회실패. 별개2026시행지침첨부163298은실제PDF다운로드/텍스트추출성공,혼동금지.",
-                "생활안정일반긴급특례만안내;개별추천/신용/예산/승인보장없음. 실제대출신청없음.",
-                "prepared+24h는내일16~18전체창전만료. 오늘18시이후원문·현재상태·최신완전자료실제재대조후archive/CAS최대24h갱신필수. 현재07:22수집본내일발송신선도보장않음."
-              ],
-              "reach_editorial": {
-                "policy_id": "supportpick-threads-reach-v1-20261109",
-                "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
-                "core_question": "국가유공자 생활안정대부, 올해 받았으면 긴급 의료비도 추가로 못 빌리나요?",
-                "reader_scope": "국가유공자 중 생활안정대부 일반지원 또는 긴급 의료비 추가지원 조건을 확인하는 가구",
-                "angles": [
-                  "연간이용긴급의료비특례",
-                  "300만원실제추천액",
-                  "은행신청전조건준비"
-                ],
-                "chosen_angle": "긴급의료비추가지원조건",
-                "opening_candidates": [
-                  "국가유공자 생활안정대부, 올해 받았으면 긴급 의료비도 추가로 못 빌리나요?",
-                  "국가유공자 일반 생활안정대부는 300만 원을 모두 받을 수 있나요?",
-                  "생활비가 더 필요한 국가유공자라면 기존 대부 이용 내역부터 확인해요."
-                ],
-                "chosen_opening": "국가유공자 생활안정대부, 올해 받았으면 긴급 의료비도 추가로 못 빌리나요?",
-                "selection_reason": "실제지침에있는추가예외로한가지결정질문에즉답;입원대상·지출기한·상환조건보존",
-                "history_posts_checked": 20,
-                "comparison_eligible": false,
-                "comparison_exclusion": "v3질문형·본문재편동시적용,순수A/B비교제외",
-                "master_full_used": true,
-                "search_evidence": "공식검색결과국가보훈대부/나라사랑대출/생활안정자금표현. 실제검색량미측정",
-                "profile_route": {
-                  "previous_profile_target_evidence": {
-                    "profile": "https://www.threads.com/@hid_1004",
-                    "visible_link_target": "https://kllollain-max.github.io/supportpick/",
-                    "home_search": "저소득시민 부가급여",
-                    "actual_search_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/611000000137/",
-                    "method": "CUA public profile visible target; target opened separately; actual home search + result click + detail visible",
-                    "redirect_click_completed": false,
-                    "checked_at": "2026-11-25T08:33:52.430313+09:00"
-                  },
-                  "recorded_at": "2026-11-25T17:03:15.614707+09:00",
-                  "method": "CUA actualhome search exactname1result=>sameIDdetailclick",
-                  "detail": "https://kllollain-max.github.io/supportpick/benefits/PTR000051390/",
-                  "government24_link_visible": true,
-                  "direct_Threads_redirect_complete": false
-                },
-                "observed_metrics_context": "156실제관측·기존14일평가유지;계정7/30일/체류/완독/CTA미측정"
-              },
-              "astra_final_review": {
-                "actual_model": "gpt-6.2-astra",
-                "model_confirmation": "parent spawn_agent explicit model succeeded;reviewer fineridentifier unavailable",
-                "final_verdict": "PASS",
-                "score": 97,
-                "policy_version": "3.0",
-                "calls": 4,
-                "initial_review": {
-                  "version": "3.0",
-                  "model": "GPT-6 (Codex; finer runtime model identifier unavailable to reviewer)",
-                  "phase": "first",
-                  "reviewed_at": "2026-11-25T07:58:42.018728+00:00",
-                  "slot": "2026-11-26 16:00 KST",
-                  "original_body_sha256": "f0208ac2da2a11c59748461bff9e91ff59e887f8f17ab93d3269e7a14bf451e1",
-                  "source_file_sha256": "f0208ac2da2a11c59748461bff9e91ff59e887f8f17ab93d3269e7a14bf451e1",
-                  "char_count": 398,
-                  "rubric": [
-                    {
-                      "category": "첫문장",
-                      "score": 11,
-                      "max": 15,
-                      "rationale": "혜택 금액을 앞세운 오해 정정형으로, 예정된 P5 자격 점검과 어긋난다."
-                    },
-                    {
-                      "category": "관심의도",
-                      "score": 14,
-                      "max": 15,
-                      "rationale": "자금이 필요한 국가유공자에게 해당한다."
-                    },
-                    {
-                      "category": "정확성",
-                      "score": 18,
-                      "max": 20,
-                      "rationale": "확인된 대출 조건은 일치한다. 3건 집계 대상을 생활안정대부로 명시할 필요가 있다."
-                    },
-                    {
-                      "category": "완독",
-                      "score": 13,
-                      "max": 15,
-                      "rationale": "답변과 긴 추천액 설명보다 두 가지 이용 제한을 먼저 읽는 편이 쉽다."
-                    },
-                    {
-                      "category": "공유공감",
-                      "score": 8,
-                      "max": 10,
-                      "rationale": "이용 횟수와 실제 대출 가능액은 대상자가 공유할 구체적 정보다."
-                    },
-                    {
-                      "category": "가치차별",
-                      "score": 8,
-                      "max": 10,
-                      "rationale": "동일 사업은 최근 20건에 없다. 지원금 여부 질문은 기존의 현금 대비 도입과 겹친다."
-                    },
-                    {
-                      "category": "모바일",
-                      "score": 4,
-                      "max": 5,
-                      "rationale": "문단 내 행정용어가 밀집돼 있다."
-                    },
-                    {
-                      "category": "텍스트완성도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "글만으로 금리와 상환 의무를 이해할 수 있다."
-                    },
-                    {
-                      "category": "프로필유도",
-                      "score": 3,
-                      "max": 5,
-                      "rationale": "고정 문구 이외에도 별도 확인 요청이 있다. 프로필 검색 경로 증빙은 대기 중이다."
-                    }
-                  ],
-                  "score": 84,
-                  "decision": "REVISE",
-                  "revised_body": "국가유공자가 생활비를 빌릴 때는 올해 생활안정대부를 이용했는지, 지금 몇 건을 갚고 있는지가 중요해요.\n\n생활안정대부는 1년에 1건까지예요. 현재 생활안정대부를 3건 이상 갚고 있다면 대상에서 제외돼요. KB나라사랑대출은 국가보훈부의 전자문서 추천을 받은 사람이 신청할 수 있어요.\n\n일반 생활안정자금의 추천액은 300만 원이에요. 실제로 빌릴 수 있는 금액은 추천액과 은행 심사로 정한 대출 가능액 중 작은 금액이에요. 국가유공자 기준 연 2.0%로, 원금과 이자를 합쳐 3년 동안 균등하게 갚아요. 소액보증보험을 이용하면 보험료는 본인이 내요.\n\n자금이 필요할 때 국민은행 영업점에서 신청할 수 있어요. 프로필에서 ‘국가보훈대상자 대부지원’을 검색하면 다른 신청 경로와 제외 조건도 볼 수 있어요.\n\n자세한 사항은 프로필링크 확인",
-                  "replies": [],
-                  "media": "NOT_REQUIRED",
-                  "revised_char_count": 410,
-                  "blocking_requirements": [
-                    "P5에 맞게 도입 수정, CTA 하나만 유지",
-                    "프로필 사업명 검색 결과와 상세 경로 확인 후 동일 모델 재검수"
-                  ],
-                  "duplicate_check": "CHECKED: records[-20:], same ID absent; last five P1 P5 P6 P8 P5, planned 08 P8 / 12 P6.",
-                  "metrics": "156 observed, 14-day window. Account 7/30, dwell, CTA unmeasured. Gov24 cumulative 33570.",
-                  "evidence": "제공된 정부24 동일 ID 상세 직접 대조, KB상품과 보훈부 목록은 상위 열람기록. 2026 해설 PDF 미열람."
-                },
-                "superseded_382_review": {
-                  "model": "gpt-6.2-astra",
-                  "model_evidence": "상위 실행자가 명시적 spawn 모델과 성공·fallback 없음 확인. 하위 런타임에서 추가 식별자 미노출.",
-                  "phase": "final",
-                  "reviewed_at": "2026-11-25T08:00:20.215546+00:00",
-                  "slot": "2026-11-26 16:00 KST",
-                  "score": 97,
-                  "rubric": [
-                    {
-                      "category": "첫문장",
-                      "score": 15,
-                      "max": 15,
-                      "rationale": "올해 이미 이용한 국가유공자가 다시 지원받을 수 있는지 묻는다."
-                    },
-                    {
-                      "category": "관심의도",
-                      "score": 15,
-                      "max": 15,
-                      "rationale": "바로 이어 연 1건과 현재 3건 상환 제한을 각각 명시한다."
-                    },
-                    {
-                      "category": "정확성",
-                      "score": 20,
-                      "max": 20,
-                      "rationale": "정부24 동일 ID 및 상위 KB 공식 상품 대조. 국가유공자 금리, 일반자금 추천액, 실제 대출액, 상환 기간과 보험료 주체가 정확하다."
-                    },
-                    {
-                      "category": "완독",
-                      "score": 14,
-                      "max": 15,
-                      "rationale": "자격에서 금액·비용·경로 순으로 읽힌다. 추천액 설명은 다소 길다."
-                    },
-                    {
-                      "category": "공유공감",
-                      "score": 9,
-                      "max": 10,
-                      "rationale": "추가 대출이 필요한 당사자에게 이용 이력을 판단할 기준을 준다."
-                    },
-                    {
-                      "category": "가치차별",
-                      "score": 9,
-                      "max": 10,
-                      "rationale": "최근 20건에 동일 사업이 없으며 같은 날 P8·P6과 다른 P5다. 질문형 첫 문장 자체는 이전 글에도 있다."
-                    },
-                    {
-                      "category": "모바일",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "세 문단과 독립 마지막 줄이 자격·비용·신청 순서를 구분한다."
-                    },
-                    {
-                      "category": "텍스트완성도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "텍스트만으로 제한·추천·상환·비용·신청을 파악할 수 있다."
-                    },
-                    {
-                      "category": "프로필유도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "프로필 검색 결과 상세의 실재 항목과 안내가 일치하며 요청은 고정 CTA 한 번이다."
-                    }
-                  ],
-                  "decision": "PASS",
-                  "editorial_pass": true,
-                  "body_sha256": "09a53b6c1938bfa26d755f94d3889f72e4b3170dec6518e071349d3a744db967",
-                  "char_count": 382,
-                  "count_method": "Python len, including spaces, newlines, fixed CTA",
-                  "replies": [],
-                  "media": "NOT_REQUIRED",
-                  "pattern": "P5",
-                  "cta_count": 1,
-                  "url_count": 0,
-                  "hashtag_count": 0,
-                  "publication_approved": false,
-                  "verification": "정부24 제공 원문 직접 대조. 상위 실제 확인 기록: KB 상품, 보훈부 시행지침 게시글 269846, 검색 결과 1건 → PTR000051390 상세 및 정부24 원문 경로. 프로필 목적지 08:30 증빙 재사용. Threads 리디렉션 완료 및 직접 신청 미확인. 시행지침 첨부 163298 원문 독립 확인 전이며 2026 보훈 해설 PDF 2회 시간 초과. 향후 직접 지침에서 충돌 발견 시 HOLD.",
-                  "metrics": "156 observed / 14-day evaluation; account 7/30, dwell, CTA unmeasured",
-                  "publication_gate": "11월 26일 18:00 KST까지의 전체 창은 현재 24시간 TTL 범위 밖. 11월 25일 18:00 KST 이후 원문·상태·본문을 실제 재대조하고 archive CAS 필요. 편집 PASS는 게시 승인 또는 승인큐 등록을 뜻하지 않는다."
-                },
-                "superseded_reason": "Agency2026originalguideline emergencyexception discovered beforeREADY;382verdictwithdrawn",
-                "intermediate_429_review": {
-                  "model": "gpt-6.2-astra",
-                  "model_evidence": "상위 실행자가 명시적 spawn 모델과 성공·fallback 없음 확인. 하위 런타임에서 추가 식별자 미노출.",
-                  "phase": "final",
-                  "reviewed_at": "2026-11-25T08:01:36.269844+00:00",
-                  "slot": "2026-11-26 16:00 KST",
-                  "score": 92,
-                  "rubric": [
-                    {
-                      "category": "첫문장",
-                      "score": 15,
-                      "max": 15,
-                      "rationale": "연내 긴급 의료비 추가 가능성을 묻는다."
-                    },
-                    {
-                      "category": "관심의도",
-                      "score": 15,
-                      "max": 15,
-                      "rationale": "첫 문단에서 일반 원칙과 긴급 예외를 구분한다."
-                    },
-                    {
-                      "category": "정확성",
-                      "score": 15,
-                      "max": 20,
-                      "rationale": "3일 입원 적용 대상과 3개월 이내 지출 또는 지출 예정 기준을 추가해야 한다."
-                    },
-                    {
-                      "category": "완독",
-                      "score": 14,
-                      "max": 15,
-                      "rationale": "자격·금액·비용·경로 순서가 분명하다."
-                    },
-                    {
-                      "category": "공유공감",
-                      "score": 9,
-                      "max": 10,
-                      "rationale": "입원비 필요 상황에 적용 가능하다."
-                    },
-                    {
-                      "category": "가치차별",
-                      "score": 9,
-                      "max": 10,
-                      "rationale": "일반 대부 연 1건의 공식 예외에 집중한다."
-                    },
-                    {
-                      "category": "모바일",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "단락이 짧다."
-                    },
-                    {
-                      "category": "텍스트완성도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "추천액과 실제액 및 상환 의무를 구분한다."
-                    },
-                    {
-                      "category": "프로필유도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "검색 상세 실재 및 고정 CTA 1회."
-                    }
-                  ],
-                  "decision": "HOLD",
-                  "editorial_pass": false,
-                  "body_sha256": "1eaa542ef3167291ed6cf1f76397066b6f27be34ca8783143f40eb0768aa6ebb",
-                  "char_count": 429,
-                  "count_method": "Python len, including spaces, newlines, fixed CTA",
-                  "replies": [],
-                  "media": "NOT_REQUIRED",
-                  "pattern": "P5",
-                  "cta_count": 1,
-                  "url_count": 0,
-                  "hashtag_count": 0,
-                  "publication_approved": false,
-                  "verification": "시행지침 원본 추출문 120–163, 617–714 직접 대조. 일반지원 연 1건·긴급자금 추가 1회·기존 긴급자금 전액상환·건수 제한과 체납 제외 확인.",
-                  "metrics": "156 observed / 14-day evaluation; account 7/30, dwell, CTA unmeasured",
-                  "publication_gate": "11월 26일 18:00 KST까지의 전체 창은 현재 24시간 TTL 범위 밖. 11월 25일 18:00 KST 이후 원문·상태·본문을 실제 재대조하고 archive CAS 필요. 편집 PASS는 게시 승인 또는 승인큐 등록을 뜻하지 않는다.",
-                  "superseded_reason": "382자 이전 원고(97점)는 READY 등록 전에 기관 시행지침에서 긴급자금 추가 예외가 확인되어 폐기. 단계별 원본 보존.",
-                  "blocking_requirements": [
-                    "중심 주제인 긴급자금 의료비의 3개월 이내 지출·지출 예정 단서 및 입원 대상 범위를 명시"
-                  ]
-                },
-                "final_review": {
-                  "model": "gpt-6.2-astra",
-                  "model_evidence": "상위 실행자가 명시적 spawn 모델과 성공·fallback 없음 확인. 하위 런타임에서 추가 식별자 미노출.",
-                  "phase": "final",
-                  "reviewed_at": "2026-11-25T08:02:20.980618+00:00",
-                  "slot": "2026-11-26 16:00 KST",
-                  "score": 97,
-                  "rubric": [
-                    {
-                      "category": "첫문장",
-                      "score": 15,
-                      "max": 15,
-                      "rationale": "연내 긴급 의료비 추가 가능성을 묻는다."
-                    },
-                    {
-                      "category": "관심의도",
-                      "score": 15,
-                      "max": 15,
-                      "rationale": "첫 문단에서 일반 원칙과 긴급 예외를 구분한다."
-                    },
-                    {
-                      "category": "정확성",
-                      "score": 20,
-                      "max": 20,
-                      "rationale": "공식 지침의 가족 범위·입원일수·지출 시기·추가지원 횟수와 전액 상환 조건이 일치한다. 추천액과 실제 대출액 및 금리를 구분했다."
-                    },
-                    {
-                      "category": "완독",
-                      "score": 14,
-                      "max": 15,
-                      "rationale": "질문에 바로 답하고 추천·금액·비용·경로로 진행한다. 첫 답변은 세 가지 조건이 들어가 길다."
-                    },
-                    {
-                      "category": "공유공감",
-                      "score": 9,
-                      "max": 10,
-                      "rationale": "입원비 필요 상황에 적용 가능하다."
-                    },
-                    {
-                      "category": "가치차별",
-                      "score": 9,
-                      "max": 10,
-                      "rationale": "일반 대부 연 1건의 공식 예외에 집중한다."
-                    },
-                    {
-                      "category": "모바일",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "단락이 짧다."
-                    },
-                    {
-                      "category": "텍스트완성도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "추천액과 실제액 및 상환 의무를 구분한다."
-                    },
-                    {
-                      "category": "프로필유도",
-                      "score": 5,
-                      "max": 5,
-                      "rationale": "검색 상세 실재 및 고정 CTA 1회."
-                    }
-                  ],
-                  "decision": "PASS",
-                  "editorial_pass": true,
-                  "body_sha256": "15fbbe084e5d8fc7433372e3c0ddc9b1bfbb59803c030b78a46e46ca511623eb",
-                  "char_count": 459,
-                  "count_method": "Python len, including spaces, newlines, fixed CTA",
-                  "replies": [],
-                  "media": "NOT_REQUIRED",
-                  "pattern": "P5",
-                  "cta_count": 1,
-                  "url_count": 0,
-                  "hashtag_count": 0,
-                  "publication_approved": false,
-                  "verification": "기관 시행지침 120~163, 617~714 대조. 본인·배우자·직계존비속 3일 이상 입원비, 3개월 이내 지출 또는 지출 예정, 연 1건 원칙과 긴급 추가 1회, 기존 긴급 대부 전액 상환 조건이 들어갔다. KB 상품 근거·정부24 동일 ID·프로필 상세 도달은 이전 대조와 동일. 프로필 목적지 기존 증빙 재사용, Threads 리디렉션 미확인. 별개 2026 해설 PDF 미열람.",
-                  "metrics": "156 observed / 14-day evaluation; account 7/30, dwell, CTA unmeasured",
-                  "publication_gate": "11월 26일 18:00 KST까지의 전체 창은 현재 24시간 TTL 범위 밖. 11월 25일 18:00 KST 이후 원문·상태·본문을 실제 재대조하고 archive CAS 필요. 편집 PASS는 게시 승인 또는 승인큐 등록을 뜻하지 않는다.",
-                  "superseded_reason": "382자 이전 원고(97점)는 READY 등록 전에 기관 시행지침에서 긴급자금 추가 예외가 확인되어 폐기. 단계별 원본 보존.",
-                  "blocking_requirements": [],
-                  "revision_history": [
-                    "398자 84점 수정 요구",
-                    "382자 97점 판정 후 시행지침상 긴급 추가 예외 발견으로 등록 전 폐기",
-                    "429자 92점 HOLD: 입원자 범위·3개월 조건 누락",
-                    "459자 원문 재대조 PASS"
-                  ],
-                  "checks": {
-                    "facts": "PASS",
-                    "current_status": "PASS",
-                    "eligibility_and_units": "PASS",
-                    "cta_and_no_links": "PASS",
-                    "length": "PASS",
-                    "media": "NOT_REQUIRED",
-                    "duplicate": "CHECKED"
-                  }
-                },
-                "body_sha256": "15fbbe084e5d8fc7433372e3c0ddc9b1bfbb59803c030b78a46e46ca511623eb",
-                "asset_sha256": null,
-                "fallback_reason": null
-              }
-            },
-            "next_history_record": {
-              "program_id": "PTR000051390",
-              "notice_version": "gov24-45499312067-1;official2026-11-25T17:03:15.614707+09:00",
-              "pattern": "P5",
-              "opening": "국가유공자 생활안정대부, 올해 받았으면 긴급 의료비도 추가로 못 빌리나요?",
-              "structure": "의료비추가지원질문→원칙예외와대상기한→추천액과가능액→상환보험료→신청프로필상세",
-              "media_turn": "TEXT"
-            }
-          },
-          "full_delay_window_covered": true,
-          "revalidate_before": "2026-11-26T16:00:00+09:00"
-        },
-        "source": {
-          "count": 10895,
-          "generation": "gov24-45499312067-1",
-          "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
-          "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
-          "path": "snapshots/gov24-45499312067-1",
-          "version": 1
-        },
-        "actual_official_rereview": true,
-        "web_refs": [
-          "turn653350266view1",
-          "turn875474339view0",
-          "turn875474339view1"
-        ],
-        "site_detail_actual_http200": true,
-        "site_detail_sha256": "3f6e1645947c30a19cf0a23868ab96efb031a768502f8e2b40de5f5b89309e7a",
-        "cached_artifact_manifest_reverified": true,
-        "source_recheck_required_at_publish": true,
-        "same_final_body_media_pattern_cohort_astra_review": true,
-        "new_visual_inspection": false,
-        "image_turn": "TEXT",
-        "actual_png_GET_sha_match": null,
-        "image_check": "NOT_REQUIRED",
-        "actual_pdf_GET_sha256": "6ca4923b52e3f13403fd364a3b0953d97836d6a883f93e81789cc374f1d41b95",
-        "actual_pdf_text_matches_previous": true,
-        "actual_kb_HTML_GET": true,
-        "kb_web_open_failed_restricted_url_actual_urllib_read_succeeded": true
-      },
+      "new_official_page_review_this_check": false,
       "new_Astra_calls": 0,
-      "original_Astra97_body459_TEXT_pattern_preserved": true,
-      "actual_pdf_GET_SHA_verified": true,
-      "actual_KB_HTML_GET": true,
-      "image_NOT_REQUIRED": true,
-      "new_visual_inspection": false,
-      "original_visual_and_profile_timestamps_preserved": true
+      "existing_Astra_PASS_preserved": true,
+      "prior22hactual_newstart_expiry_rereview_preserved": true,
+      "loan18hactual_expiry_rereview_preserved": true,
+      "education14hactual_expiry_rereview_preserved": true,
+      "image_redownloaded_this_check": false,
+      "cached_image_sha_matches_current_main_review": true
     },
     "regular_slot_observation": {
       "slot": "2026-11-25T16:00:00+09:00",
@@ -7766,7 +6795,7 @@
     },
     "publication_schedule_observation": {
       "slot": "2026-11-25T16:00:00+09:00",
-      "checked_at": "2026-11-25T18:55:55.886398+09:00",
+      "checked_at": "2026-11-25T19:44:33.465977+09:00",
       "status": "published_complete_verified_already_reported",
       "main_id": "18151709077569738",
       "url": "https://www.threads.com/@hid_1004/post/DgKGIKqFsLC",
@@ -7779,10 +6808,25 @@
     "new_formal_evaluation_this_check": false,
     "writer_final_edit_v3_status": {
       "policy_id": "supportpick-threads-final-edit-v3-20261125",
+      "policy_unchanged": true,
+      "protected_READY": 4,
       "new_v3_READY": 0,
       "previous_actual_v3_READY_preserved": 3,
-      "new_scores": 0,
-      "new_model_calls": 0
+      "new_scores": 0
+    },
+    "active_operations_observation": {
+      "run_id": "45594952230",
+      "run_attempt": 1,
+      "status": "in_progress",
+      "conclusion": null,
+      "job_id": 139138455355,
+      "stage": "Verify deployed source, generation and every public HTML URL",
+      "job_status_retrieved_this_check": true,
+      "logs_not_available_until_job_completed": true,
+      "artifact_not_assumed_complete": true,
+      "latest_completed_operations_run_id": "45499312067",
+      "source_used": "previous_complete_manifest_verified_cache",
+      "is_failure": false
     }
   },
   "last_reported_publication": {
@@ -8184,7 +7228,7 @@
     }
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-25T15:32:37.219587+09:00",
+    "checked_at": "2026-11-25T19:44:33.465977+09:00",
     "new_publications": 0,
     "new_incidents": 0,
     "queue_ready": 4,
@@ -151257,6 +150301,687 @@
         "new_scores": 0,
         "new_model_calls": 0
       }
+    },
+    "2026-11-25T19:44:33.465977+09:00": {
+      "checked_at": "2026-11-25T19:44:33.465977+09:00",
+      "result": "no_update",
+      "maintenance_previous_blob_sha": "a764ddece9fbb8d7983f99b6b5f48f090e6bae5c",
+      "current_main_sha": "5c4084549223723b566cfe560d2e418903ad4337",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "6cf66c6029897eb55121b1fecc57741d45794e3c",
+      "queue_blob_sha": "21afa31b55c40426bb72be61d39a1b2070eb8a68",
+      "changed_run_versions": [
+        {
+          "run_id": "45594952230",
+          "run_attempt": 1,
+          "status": "in_progress",
+          "conclusion": null,
+          "updated_at": "2026-11-25T10:26:15Z",
+          "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
+        }
+      ],
+      "active_target_runs": [
+        {
+          "run_id": "45594952230",
+          "run_attempt": 1,
+          "status": "in_progress",
+          "conclusion": null,
+          "updated_at": "2026-11-25T10:26:15Z",
+          "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
+        }
+      ],
+      "run_pagination": {
+        "per_page": 100,
+        "pages": [
+          1
+        ],
+        "checkpoint_run_id": "45588123983",
+        "checkpoint_version_unchanged": true,
+        "all_new_target_versions_observed": true,
+        "latest_completed_operations_run_id": "45499312067"
+      },
+      "publication_ledger_records": 81,
+      "complete_verified_records": 81,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "45499312067",
+        "run_attempt": 1,
+        "conclusion": "success",
+        "collection_conclusion": "passed",
+        "job_id": 138818028752,
+        "head_sha": "890215f6a930d9967a5578b3134413e1dde8a1b7",
+        "tests_passed": 310,
+        "artifact_id": 14969423204,
+        "artifact_digest": "sha256:b2476fdb5e694c3418887a1d95021df8401aca80648b64ada250800d80361e21",
+        "artifact_redownloaded_this_check": false,
+        "artifact_digest_verified": true,
+        "job_logs_retrieved_this_check": false,
+        "read_current_verify_snapshot_load_feed": true,
+        "manifest": {
+          "count": 10895,
+          "generation": "gov24-45499312067-1",
+          "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
+          "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
+          "path": "snapshots/gov24-45499312067-1",
+          "version": 1
+        },
+        "collection_report": {
+          "applicationOpenVerified": false,
+          "collectionSucceededAt": "2026-11-25T07:22:49.899473+09:00",
+          "coverage": "Currently connected Gov24 API, all unfiltered pages of three endpoints",
+          "endpoints": {
+            "serviceDetail": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "serviceList": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            },
+            "supportConditions": {
+              "completedPages": 109,
+              "duplicateCount": 0,
+              "expectedPages": 109,
+              "receivedCount": 10895,
+              "reportedTotal": 10895,
+              "uniqueCount": 10895
+            }
+          },
+          "factsVerified": false,
+          "feedSha256": "e1c29b7aea9fe87bf654575a564eb0860e1dd0d42f172782a8ab82d998b54778",
+          "finishedAt": "2026-11-25T07:22:51.016675+09:00",
+          "generation": "gov24-45499312067-1",
+          "normalRequestEstimate": 330,
+          "pageResponses": 327,
+          "project": "supportpick",
+          "published": false,
+          "sampleCount": 0,
+          "scheduled": false,
+          "sourceConsistency": "No snapshot token: totals and boundary pages stable; unique IDs and all endpoint sets matched",
+          "startedAt": "2026-11-25T07:16:32.014081+09:00",
+          "status": "passed",
+          "storedCount": 10895
+        },
+        "publisher_freshness_hours": 24,
+        "current_fresh_until": "2026-11-26T07:22:49.899473+09:00",
+        "collection_is_not_current_application_status_verification": true,
+        "new_candidate_original_official_pages_read": false,
+        "existing3entries_unchanged_fingerprints_and_priority_pass": true,
+        "newstart20_priority_block": true,
+        "public_verification": {
+          "checked_at": "2026-11-25T07:59:02.227357+09:00",
+          "observed_run_id": "45499312067",
+          "run_attempt": 1,
+          "status": "resolved_by_subsequent_normal_operations_public_verification",
+          "runtime_artifact_id": 14969423204,
+          "runtime_artifact_digest": "sha256:b2476fdb5e694c3418887a1d95021df8401aca80648b64ada250800d80361e21",
+          "runtime_artifact_digest_verified": true,
+          "public_artifact_id": 14972001717,
+          "public_artifact_digest": "sha256:15842e6b6c1032d2f6faf0d893a5dca4c80ed4bfe27bba6d686e9ba47f3634a3",
+          "public_artifact_digest_verified": true,
+          "job_id": 138818028752,
+          "tests_passed": 310,
+          "public_verification": {
+            "publicHtmlChecked": 11049,
+            "sitemapUrls": 11034,
+            "generation": "gov24-45499312067-1",
+            "sourceRevision": "890215f6a930d9967a5578b3134413e1dde8a1b7",
+            "robots": {
+              "http": 200,
+              "crawlAllowed": true,
+              "scope": "host_root"
+            },
+            "missingUrlHttp": 404,
+            "passed": 11049,
+            "failed": 0,
+            "initialFailures": 7,
+            "maxRequestsPerSecond": 10,
+            "rateLimitEpisodes": 0,
+            "stoppedForRateLimit": false,
+            "recoveredAfterRetry": [
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/313000000149/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              },
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/349000000116/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              },
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/355000000123/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              },
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/448000000114/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              },
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/494000000151/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              },
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/643000000141/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              },
+              {
+                "url": "https://kllollain-max.github.io/supportpick/benefits/O00030000003/",
+                "initialError": "HTTP Error 503: Service Unavailable",
+                "retryHttp": 200
+              }
+            ],
+            "failures": []
+          },
+          "source": {
+            "count": 10895,
+            "generation": "gov24-45499312067-1",
+            "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
+            "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
+            "path": "snapshots/gov24-45499312067-1",
+            "version": 1
+          },
+          "underlying_previous_deployment_cache_cause": "unconfirmed",
+          "site_changes_by_this_check": false,
+          "workflow_dispatch": false,
+          "posts_created": 0
+        },
+        "public_verification_recovery_already_reported": true,
+        "existing4entries_unchanged_fingerprints_and_priority_pass": true,
+        "artifact_digest_previously_verified_cached_bytes": true,
+        "original_notice_rereview_this_check": false
+      },
+      "writer": {
+        "checked_at": "2026-11-25T19:44:33.465977+09:00",
+        "ready": 4,
+        "future24h_ready": 4,
+        "new_drafts": 0,
+        "existing_READY_reused": 4,
+        "drafts": [
+          {
+            "slot": "2026-11-25T20:00:00+09:00",
+            "benefit_id": "B01000300013",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 419,
+            "expires_at": "2026-11-25T22:53:00.768308+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-26T08:00:00+09:00",
+            "benefit_id": "611000000137",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 351,
+            "expires_at": "2026-11-26T10:13:46.980394+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-26T12:00:00+09:00",
+            "benefit_id": "SD0000001491",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 377,
+            "expires_at": "2026-11-26T14:54:59.197830+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-26T16:00:00+09:00",
+            "benefit_id": "PTR000051390",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 459,
+            "expires_at": "2026-11-26T18:54:53.927829+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source": {
+          "count": 10895,
+          "generation": "gov24-45499312067-1",
+          "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
+          "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
+          "path": "snapshots/gov24-45499312067-1",
+          "version": 1
+        },
+        "source_count": 10895,
+        "ledger_records": 81,
+        "pending": null,
+        "lease": null,
+        "new_posts": 0,
+        "new_incidents": 0,
+        "new_metrics": 0,
+        "observations": 159,
+        "due_metrics": 0,
+        "new_evaluation": false,
+        "14day_evaluation_already_recorded": true,
+        "astra_review_invocations": 0,
+        "existing_Astra_review_preserved": true,
+        "current_main_image_review_matches_cached_bytes": true,
+        "image_redownloaded_this_check": false,
+        "new_visual_inspection": false,
+        "source_recheck_required_at_publish": true,
+        "expiry_prevention_revalidations": 0
+      },
+      "metrics": {
+        "run_id": "45588123983",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-25T09:43:45Z",
+        "head_sha": "5c4084549223723b566cfe560d2e418903ad4337",
+        "job_id": 139114888343,
+        "artifact_id": 15009866791,
+        "artifact_digest": "sha256:d59ff946f80c9f0bd871766200051b977e00ac8717c2e2a9ddac083960a59e04",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "observed_at": "2026-11-25T09:43:41.145561+00:00",
+        "records": [
+          {
+            "post_id": "18061699079561356",
+            "published_at": "2026-11-18T17:08:46.989186+09:00",
+            "observed_at": "2026-11-25T09:43:41.145561+00:00",
+            "window_hours": 168,
+            "elapsed_hours": 169.58171010416666,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 12,
+              "likes": 1,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          },
+          {
+            "post_id": "18125366213319496",
+            "published_at": "2026-11-22T17:01:34.472048+09:00",
+            "observed_at": "2026-11-25T09:43:41.145561+00:00",
+            "window_hours": 72,
+            "elapsed_hours": 73.70185375361112,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 188,
+              "likes": 2,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 1,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          },
+          {
+            "post_id": "17974331994194122",
+            "published_at": "2026-11-24T17:20:24.263616+09:00",
+            "observed_at": "2026-11-25T09:43:41.145561+00:00",
+            "window_hours": 24,
+            "elapsed_hours": 25.3880227625,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 6,
+              "likes": 1,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          }
+        ],
+        "due_count": 3,
+        "success_count": 3,
+        "new_observation_keys": [],
+        "new_observations": 0,
+        "total_observations": 159,
+        "new_evaluation_report_due": false,
+        "weights_unchanged": true,
+        "publication_calls": 0,
+        "workflow_dispatch": false
+      },
+      "recovery": {
+        "new_publication_this_check": false,
+        "new_posts": 0,
+        "maintenance_new_posts": 0,
+        "new_recovery_this_check": false,
+        "new_failure_this_check": false,
+        "reason": "81completeverifiedpublishedrows/pending/lease unchanged. Operations45594952230 inprogress,notfailure;latestcomplete45499312067 verifiedcacheused.4READY nominalandwholewindowpassed. No newincident/publication/repair."
+      },
+      "next_condition": "FourfutureREADY Nov25 20IMAGE/P1,Nov26 08TEXT/P8,12IMAGE/P6,16TEXT/P5 nominal andwhole2hPASS. Loan18:54actualPDF/KB rereviewandCASpreviouslycompleted;no date-onlyrefresh.81published159numericobservations unchanged. Operations45594952230 inprogress,latestcompleted45499312067 07:22completeverifiedcacheused;incompletegenerationnotassumedcomplete. Recheckcompletedoperationsartifactandmanifestwhenavailable. Current07:22sourceNOTfreshNov26;actualsenderlatestcompletefreshsource mandatory. No newpublication/failure/repair/draft/modelcall/metrics/evaluation/dispatch.",
+      "publication": {
+        "run_id": "45576054845",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-25T08:26:01Z",
+        "head_sha": "5c4084549223723b566cfe560d2e418903ad4337",
+        "job_id": 139074151391,
+        "artifact_id": 15004906014,
+        "artifact_digest": "sha256:2f802f87fe12423252b0b00cb73b69fa1442283ef714f2a693dc9fa3bfe138c4",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 138,
+        "new_publication_this_run": false,
+        "main_id": "18151709077569738",
+        "url": "https://www.threads.com/@hid_1004/post/DgKGIKqFsLC",
+        "slot": "2026-11-25T16:00:00+09:00",
+        "receipt_at": "2026-11-25T17:25:50.7902549+09:00",
+        "receipt_time_basis": "Actual GitHub job Threads receipt line; exact platform timestamp unavailable.",
+        "ledger_published_at": "2026-11-25T17:25:07.978574+09:00",
+        "ledger_published_at_is_invocation_not_exact_platform_time": true,
+        "stage": "complete",
+        "verified": true,
+        "body_hash": "af1d8576401da0456c0479fb3a36a12667bfb48378b1b61eef5cc9595fa23d0a",
+        "content_hash": "9004e63bca88d1329c136134c7f4ff64f99fe0d29ff9aa536f13a03d47d6784b",
+        "asset_sha256": null,
+        "media_turn": "TEXT",
+        "pattern": "P6",
+        "char_count": 381,
+        "replies": 0,
+        "original_queue_body_asset_exact": true,
+        "previous80records_preserved": true,
+        "maintenance_post_calls": 0,
+        "delay_within_original_2h_window": true,
+        "actual_source_generation": "gov24-45499312067-1",
+        "latest_already_reported": true
+      },
+      "history_reconciliation": {
+        "run_id": "45173485637",
+        "mode": "check-account",
+        "account": "hid_1004",
+        "checked_at": "2026-11-23T21:21:24+09:00",
+        "recent_remote_rows": 100,
+        "more_history": true,
+        "main_ledger_matches_in_page": 49,
+        "latest20_main_matches": 20,
+        "latest_remote_id": "18129410933479829",
+        "target_text_absent": true,
+        "scope": "77durablecompleteverifiedrows;prior76exactpreserved;newreceipt/body/asset/artifactverified. No full28dayremotequery.",
+        "artifact_id": 14818615408,
+        "artifact_digest": "sha256:23cfc165bbd050ec1a12dbde18778345efb01c4d9e20abf69f6279b090e003b3",
+        "artifact_digest_verified": true,
+        "remote_requeried_this_check": false,
+        "previous_remote_evidence_preserved": true
+      },
+      "official_review_recovery": {
+        "new_official_page_review_this_check": false,
+        "new_Astra_calls": 0,
+        "existing_Astra_PASS_preserved": true,
+        "prior22hactual_newstart_expiry_rereview_preserved": true,
+        "loan18hactual_expiry_rereview_preserved": true,
+        "education14hactual_expiry_rereview_preserved": true,
+        "image_redownloaded_this_check": false,
+        "cached_image_sha_matches_current_main_review": true
+      },
+      "regular_slot_observation": {
+        "slot": "2026-11-25T16:00:00+09:00",
+        "status": "published_complete_verified",
+        "within_two_hour_window": true,
+        "schedule_not_modified": true
+      },
+      "main_head_observation": {
+        "latest_observed_run_head": "5732cde848a03907b2505396c34a4d60c713571e",
+        "target_publisher_workflows_master_and_assets_blobs_unchanged": true,
+        "unrelated_changes_not_modified": true
+      },
+      "image_sha_comparisons": [
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:06.502293+09:00"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:14.847084+09:00"
+        }
+      ],
+      "run_status_transitions": [
+        {
+          "run_id": "45277137519",
+          "from": "in_progress",
+          "to": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-23T22:38:20Z"
+        }
+      ],
+      "formal_evaluation": {
+        "policy_id": "supportpick-threads-reach-v1-20261109",
+        "window": "14d_evaluation",
+        "evaluated_at": "2026-11-24T17:20:07.451089+09:00",
+        "period_start": "2026-11-10T17:00:08.835254+09:00",
+        "period_end": "2026-11-24T17:00:08.835254+09:00",
+        "normal_verified_publications": 53,
+        "experiment_regular_slots": 57,
+        "unpublished_slots": [
+          {
+            "slot": "2026-11-16T16:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-18T12:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-23T20:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-24T16:00:00+09:00",
+            "classification": "unreserved_at_evaluation_cutoff_then_published_after_cutoff",
+            "subsequent_main_id": "17974331994194122",
+            "subsequent_receipt_at": "2026-11-24T17:21:06.769138+09:00"
+          }
+        ],
+        "missed_closed_slots": 3,
+        "partial_or_pending": 0,
+        "independent_full_public_rendering_recheck": false,
+        "publication_audit_scope": "76durablecompleteverifiedrecords; priorreceipts/body/media/artifacts retained. No newfull28dayremotequery; Nov24 16unreserved/latestpublisher12only,nofailure-runconfirmed.",
+        "24h_comparison_window_observations": 40,
+        "A_n": 20,
+        "B_n": 20,
+        "24h_comparable_matched_pairs": 0,
+        "24h_group_view_medians": {
+          "A": 62.0,
+          "B": 62.0
+        },
+        "24h_all_view_median": 62.0,
+        "actual_reactions": {
+          "A": {
+            "likes": 29,
+            "replies": 0,
+            "reposts": 6,
+            "shares": 1
+          },
+          "B": {
+            "likes": 27,
+            "replies": 0,
+            "reposts": 5,
+            "shares": 0
+          }
+        },
+        "reaction_rate_used": false,
+        "all_24h_observations_delayed": true,
+        "eligible_elapsed_hours_min": 24.317312148333336,
+        "eligible_elapsed_hours_max": 25.691108017222223,
+        "24h_unavailable_not_zero": [
+          "18117968657159347",
+          "17992859946026940",
+          "17913499947663769",
+          "18001464938830261"
+        ],
+        "24h_not_yet_due": [
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "24h_missing_after_due": [],
+        "7d_measured": 27,
+        "7d_not_yet_due": [
+          "18004106657810124",
+          "18155833435528730",
+          "18061699079561356",
+          "18075899267779249",
+          "18361336213223949",
+          "18100168118443439",
+          "17876108337601849",
+          "17954736195295664",
+          "18136261246743978",
+          "18029579210863916",
+          "18106611944009610",
+          "17995393143022353",
+          "18002356029029330",
+          "18098495828440255",
+          "18121994881961457",
+          "18093412586696162",
+          "18102899498408388",
+          "18214999999364836",
+          "18125366213319496",
+          "18149154712603236",
+          "17879078796637660",
+          "18388999600236313",
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "7d_group_medians": {
+          "A": 105,
+          "B": 87.5
+        },
+        "quotes": "not_provided",
+        "reader_only_replies": "unavailable",
+        "profile_clicks": "account_level_not_available; no_post_attribution",
+        "confounders": [
+          "Differentbusiness/region/readers/benefit/deadline/time/media/length; matchedsimilarpairs0",
+          "PreservedmovedexistingREADYcohorts differfromnewslots;excludeinsteadretroclassify",
+          "Newquestiontitlepolicy changesmorethanopeningalone;newAstrarevieweddraftsexcludedfrompureA/B"
+        ],
+        "minimum_24h_target_per_group": 8,
+        "raw_window_target_met": true,
+        "current_stratified_target_met": false,
+        "decision": "extend_comparison;maintainbalancedA/Bandexistingcontrols.No demonstratedrepeatedadvantage;noeditorialweightchange.",
+        "weight_changed": false,
+        "no_backcalculation": true,
+        "extension_next_condition": "Reassess in existingchecks when comparable similar-business strata have sufficient repeatedactual24hwindows; keep comparison group. No separate schedule.",
+        "reported_at": "2026-11-24T17:20:07.451089+09:00",
+        "evidence_latest_metric_run_id": "45351393999",
+        "24h_measured_but_excluded": [
+          {
+            "main_id": "18122947907049313",
+            "elapsed_hours": 52.64388394083333,
+            "reason": "late_beyond_26h_comparison_tolerance"
+          },
+          {
+            "main_id": "18061699079561356",
+            "elapsed_hours": 25.374772445277777,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18075899267779249",
+            "elapsed_hours": 24.65035752527778,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18361336213223949",
+            "elapsed_hours": 24.39045965972222,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18100168118443439",
+            "elapsed_hours": 24.6578044575,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "17876108337601849",
+            "elapsed_hours": 25.228189436944444,
+            "reason": "Previously written input preserved; no retrospective cohort assignment after failed preceding slot"
+          }
+        ],
+        "7d_group_n": {
+          "A": 13,
+          "B": 14
+        },
+        "7d_due_unmeasured": [
+          "18450932713126961"
+        ],
+        "publication_cutoff_note": "EvaluationperiodendsNov24 17:00:08.16slotwasunreservedatcutoff, laternaturallypublished17:21:06withinits2hwindow; excludedfrom53periodpublications becauseactualinvocation17:20aftercutoff. Notafourthmissedslot.",
+        "unreserved_at_period_end_slots": 1,
+        "currently_open_unreserved_slots_from_period": 0
+      },
+      "publication_schedule_observation": {
+        "slot": "2026-11-25T16:00:00+09:00",
+        "checked_at": "2026-11-25T19:44:33.465977+09:00",
+        "status": "published_complete_verified_already_reported",
+        "main_id": "18151709077569738",
+        "url": "https://www.threads.com/@hid_1004/post/DgKGIKqFsLC",
+        "receipt_at": "2026-11-25T17:25:50.7902549+09:00",
+        "pending": null,
+        "lease": null,
+        "workflow_dispatch": false,
+        "daily_main_publications": 3
+      },
+      "new_formal_evaluation_this_check": false,
+      "writer_final_edit_v3_status": {
+        "policy_id": "supportpick-threads-final-edit-v3-20261125",
+        "policy_unchanged": true,
+        "protected_READY": 4,
+        "new_v3_READY": 0,
+        "previous_actual_v3_READY_preserved": 3,
+        "new_scores": 0
+      },
+      "active_operations_observation": {
+        "run_id": "45594952230",
+        "run_attempt": 1,
+        "status": "in_progress",
+        "conclusion": null,
+        "job_id": 139138455355,
+        "stage": "Verify deployed source, generation and every public HTML URL",
+        "job_status_retrieved_this_check": true,
+        "logs_not_available_until_job_completed": true,
+        "artifact_not_assumed_complete": true,
+        "latest_completed_operations_run_id": "45499312067",
+        "source_used": "previous_complete_manifest_verified_cache",
+        "is_failure": false
+      }
     }
   },
   "last_reported_prepublication_repair": {
@@ -153655,17 +153380,11 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-25T18:54:53.927829+09:00",
-    "source": {
-      "count": 10895,
-      "generation": "gov24-45499312067-1",
-      "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
-      "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
-      "path": "snapshots/gov24-45499312067-1",
-      "version": 1
-    },
+    "checked_at": "2026-11-25T19:44:33.465977+09:00",
     "ready": 4,
     "future24h_ready": 4,
+    "new_drafts": 0,
+    "existing_READY_reused": 4,
     "drafts": [
       {
         "slot": "2026-11-25T20:00:00+09:00",
@@ -153712,18 +153431,32 @@
         "source_recheck_required_at_publish": true
       }
     ],
-    "new_drafts": 0,
-    "existing_READY_reused": 4,
-    "new_publications_observed": 0,
-    "maintenance_post_calls": 0,
-    "expiry_prevention_revalidations": 1,
-    "astra_review_invocations": 0,
+    "source": {
+      "count": 10895,
+      "generation": "gov24-45499312067-1",
+      "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
+      "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
+      "path": "snapshots/gov24-45499312067-1",
+      "version": 1
+    },
+    "source_count": 10895,
     "ledger_records": 81,
     "pending": null,
     "lease": null,
-    "new_metrics": 3,
+    "new_posts": 0,
+    "new_incidents": 0,
+    "new_metrics": 0,
     "observations": 159,
-    "new_evaluation": false
+    "due_metrics": 0,
+    "new_evaluation": false,
+    "14day_evaluation_already_recorded": true,
+    "astra_review_invocations": 0,
+    "existing_Astra_review_preserved": true,
+    "current_main_image_review_matches_cached_bytes": true,
+    "image_redownloaded_this_check": false,
+    "new_visual_inspection": false,
+    "source_recheck_required_at_publish": true,
+    "expiry_prevention_revalidations": 0
   },
   "last_queue_review_refresh": {
     "checked_at": "2026-11-25T18:54:53.927829+09:00",
