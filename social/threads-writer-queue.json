@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-25T12:23:52.951888+09:00",
+  "prepared_at": "2026-11-25T14:54:59.197830+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -12110,8 +12110,8 @@
       "benefit_id": "SD0000001491",
       "source_fingerprint": "ae81c96fa51885effbc7f0c4e53fb34b005b821134476b46fe71377d31424206",
       "source_generation": "gov24-45499312067-1",
-      "prepared_at": "2026-11-25T12:23:52.951888+09:00",
-      "expires_at": "2026-11-26T12:23:52.951888+09:00",
+      "prepared_at": "2026-11-25T14:54:59.197830+09:00",
+      "expires_at": "2026-11-26T14:54:59.197830+09:00",
       "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -12141,45 +12141,50 @@
               "source_id": "SD0000001491",
               "source_ref": "https://edu.sbiz.or.kr/edu/main/main.do",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-25T12:23:52.951888+09:00",
+              "verified_at": "2026-11-25T14:54:59.197830+09:00",
               "claims_supported": [
-                "현재사업계획서작성·홍보콘텐츠·노무관리온라인강의목록직접열람. 특정현장과정모집확정하지않음."
+                "현재사업계획서작성·홍보콘텐츠·노무관리온라인강의목록직접열람. 특정현장과정모집확정하지않음.",
+                "이번14시대 지식배움터공식목록/온라인교육안내/현장교육안내 실제재열람: 사업계획서·노무강의목록, 가입로그인→신청→나의강의실, 현장일정/자부담/정원별기준확인. 홈페이지추천목록변동은강의종료증거아님;특정현장모집중보장없음."
               ]
             },
             {
               "source_id": "SD0000001491",
               "source_ref": "https://edu.sbiz.or.kr/edu/online/onlineEduInfo.do?menuCode=WWW001001",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-25T12:23:52.951888+09:00",
+              "verified_at": "2026-11-25T14:54:59.197830+09:00",
               "claims_supported": [
-                "가입로그인→강의탐색→수강신청→나의강의실. 로그인후개별신청성공까지확인한것아님."
+                "가입로그인→강의탐색→수강신청→나의강의실. 로그인후개별신청성공까지확인한것아님.",
+                "이번14시대 지식배움터공식목록/온라인교육안내/현장교육안내 실제재열람: 사업계획서·노무강의목록, 가입로그인→신청→나의강의실, 현장일정/자부담/정원별기준확인. 홈페이지추천목록변동은강의종료증거아님;특정현장모집중보장없음."
               ]
             },
             {
               "source_id": "SD0000001491",
               "source_ref": "https://edu.sbiz.or.kr/edu/user/spt/sptInfo.do?menuCode=WWW002001",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-25T12:23:52.951888+09:00",
+              "verified_at": "2026-11-25T14:54:59.197830+09:00",
               "claims_supported": [
-                "현장업종전문기술기초국비100%,심화고급10%자부담/10월31일예산소진조기종료/정원조기마감. 전체교육무료/상시라하지않음."
+                "현장업종전문기술기초국비100%,심화고급10%자부담/10월31일예산소진조기종료/정원조기마감. 전체교육무료/상시라하지않음.",
+                "이번14시대 지식배움터공식목록/온라인교육안내/현장교육안내 실제재열람: 사업계획서·노무강의목록, 가입로그인→신청→나의강의실, 현장일정/자부담/정원별기준확인. 홈페이지추천목록변동은강의종료증거아님;특정현장모집중보장없음."
               ]
             },
             {
               "source_id": "SD0000001491",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=78964&bnefType=all&svcId=SD0000001491",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-25T12:23:52.951888+09:00",
+              "verified_at": "2026-11-25T14:54:59.197830+09:00",
               "claims_supported": [
-                "최신완전API동일ID33712,소상공인예비창업자대상/정책자금제외업종제외/기관별기간/사업자등록증임대차계약서등. 수집시각은원문검수시각과구분."
+                "최신완전API동일ID33712,소상공인예비창업자대상/정책자금제외업종제외/기관별기간/사업자등록증임대차계약서등. 수집시각은원문검수시각과구분.",
+                "이번14시대 최신완료operations45499312067 runtime캐시read_current/verify_snapshot/load_feed 실제재검증,동일IDfingerprint일치. 같은사업상세HTTP200/제외업종/준비서류재대조.내일발송현재07:22세대신선도보장않음."
               ]
             },
             {
               "source_id": "SD0000001491",
               "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
               "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-25T12:23:52.951888+09:00",
+              "verified_at": "2026-11-25T14:54:59.197830+09:00",
               "claims_supported": [
-                "실제PNG GET bytes/SHA현재mainimage-review일치. 원본및360px이미지직접열람후명칭한글잘림깨짐대비과밀공식오인권리기존승인PASS. 사업명금액날짜없는일반브랜드회전카드. 동일그림반복은승인로테이션범위이며직전IMAGEguide2와교대."
+                "실제PNG GET bytes/SHA현재mainimage-review일치. 원본및360px이미지직접열람후명칭한글잘림깨짐대비과밀공식오인권리기존승인PASS. 사업명금액날짜없는일반브랜드회전카드. 동일그림반복은승인로테이션범위이며직전IMAGEguide2와교대.",
+                "이번14시대 실제PNG GET bytes/SHA 현재main image-reviewPASS대조일치. 원본·360px시각검수12시기록보존, 이번새시각검수아님."
               ]
             }
           ],
@@ -12435,7 +12440,7 @@
         }
       },
       "revalidate_before": "2026-11-26T12:00:00+09:00",
-      "full_delay_window_covered": false
+      "full_delay_window_covered": true
     }
   ]
 }
