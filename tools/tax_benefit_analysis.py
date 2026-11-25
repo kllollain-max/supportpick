@@ -15,6 +15,9 @@ TAX_ARTICLES=[
 <tr><th scope="row">2026.12.2. 이후</th><td>위 기한 후 신청기간 경과</td><td>다른 귀속연도나 반기 일정과 섞어 연장된 것으로 읽지 않습니다.</td></tr>
 </tbody></table></div>
 <p>위 일정은 2025년 귀속분에 관한 것입니다. 2026년 소득을 대상으로 하는 반기 신청과는 확인할 귀속연도가 다릅니다. 신청내역 화면에서 ‘근로장려금’이라는 이름뿐 아니라 귀속연도와 신청 유형을 함께 확인하세요. <a href="https://www.korea.kr/multi/visualNewsView.do?newsId=148974865" target="_blank" rel="noopener noreferrer">국세청의 신청기간별 안내 ↗</a></p>
+<h2>안내문을 못 받았다면 홈택스에서 직접 신청하세요</h2>
+<p>2025년 소득분을 아직 신청하지 않았고 소득·재산 요건을 충족한다면 안내문 없이도 신청할 수 있습니다. <a href="https://www.hometax.go.kr/" target="_blank" rel="noopener noreferrer">홈택스 ↗</a>에 로그인한 뒤 ‘장려금’ → ‘근로·자녀장려금 정기 신청’ → ‘직접입력 신청’으로 들어가세요. 필요한 경우 근무처의 소득확인서 등 증빙을 첨부합니다.</p>
+<p>국세청 신청 안내 대상자라면 우편 안내문의 QR코드, 모바일 안내문의 ‘신청하기’, 또는 ARS(1544-9944)를 이용할 수 있습니다. 안내 대상에서 빠졌다면 홈택스나 서면으로 신청하세요. ARS 신청은 안내 대상자에게 제공됩니다. 제출 후에는 홈택스에서 2025년 귀속 신청내역을 확인하세요.</p>
 <h2>소득 기준은 지급액이 아닙니다</h2>
 <div class="guide-table"><table><caption>2025년 부부합산 연간 총소득 기준 · 금액 미만 조건</caption><thead><tr><th scope="col">가구 구분</th><th scope="col">근로장려금</th><th scope="col">자녀장려금</th></tr></thead><tbody>
 <tr><th scope="row">단독</th><td>2,200만원 미만</td><td>해당 없음</td></tr>
