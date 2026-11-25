@@ -14,6 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "45614926642",
     "45607532189",
     "45604153836",
     "45594952230",
@@ -6164,18 +6165,35 @@
       "conclusion": "success",
       "updated_at": "2026-11-25T11:24:41Z",
       "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
+    },
+    "45614926642": {
+      "run_id": "45614926642",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-25T12:33:53Z",
+      "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-25T21:20:32.833741+09:00",
-    "result": "no_update",
-    "maintenance_previous_blob_sha": "3948043521393eec6cc7ab26b8b456119b2ea5f5",
+    "checked_at": "2026-11-25T22:26:47.930300+09:00",
+    "result": "disability_full_window_expiry_prevented_after_actual_rereview",
+    "maintenance_previous_blob_sha": "345d6fad1a7603533f7d455ddb7f98022a586f67",
     "current_main_sha": "5c4084549223723b566cfe560d2e418903ad4337",
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
     "publication_ledger_sha": "928048d72700fa933f404f887ff750901b8efa84",
-    "queue_blob_sha": "607997a60207b36c3838340507e56e753792f2a5",
-    "changed_run_versions": [],
+    "queue_blob_sha": "b277cffb6cb4f1d4210b469750ceaa3dad99bc55",
+    "changed_run_versions": [
+      {
+        "run_id": "45614926642",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-25T12:33:53Z",
+        "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
+      }
+    ],
     "active_target_runs": [],
     "run_pagination": {
       "per_page": 100,
@@ -6185,7 +6203,7 @@
       "checkpoint_run_id": "45607532189",
       "checkpoint_version_unchanged": true,
       "all_new_target_versions_observed": true,
-      "latest_completed_operations_run_id": "45594952230"
+      "latest_completed_operations_run_id": "45499312067"
     },
     "publication_ledger_records": 82,
     "complete_verified_records": 82,
@@ -6217,8 +6235,8 @@
       "source_count": 10895,
       "complete": true,
       "actual_application_status_not_inferred_from_collection": true,
-      "new_candidate_original_official_pages_read": false,
-      "original_notice_rereview_this_check": false,
+      "new_candidate_original_official_pages_read": true,
+      "original_notice_rereview_this_check": true,
       "public_verification_artifact_id": 15014218636,
       "public_verification_digest": "sha256:015e6c329277471a79f2de19058ebaff259ce2e6e03834016212f7738dea72e4",
       "public_verification": {
@@ -6254,11 +6272,17 @@
       }
     },
     "writer": {
-      "checked_at": "2026-11-25T21:20:32.833741+09:00",
+      "checked_at": "2026-11-25T22:25:37.852042+09:00",
+      "source": {
+        "count": 10895,
+        "generation": "gov24-45594952230-1",
+        "lastSuccessAt": "2026-11-25T19:34:23.343783+09:00",
+        "manifestSha256": "00e96a3f0a1dc21bb339ad656eca9c6fff0b40b6f5446eaef436071ad8595b3e",
+        "path": "snapshots/gov24-45594952230-1",
+        "version": 1
+      },
       "ready": 4,
       "future24h_ready": 4,
-      "new_drafts": 0,
-      "existing_READY_reused": 4,
       "drafts": [
         {
           "slot": "2026-11-26T08:00:00+09:00",
@@ -6299,56 +6323,113 @@
           "pattern": "P1",
           "media_turn": "IMAGE",
           "char_count": 395,
-          "expires_at": "2026-11-26T21:14:03.344880+09:00",
-          "full_delay_window_valid": false,
+          "expires_at": "2026-11-26T22:25:37.852042+09:00",
+          "full_delay_window_valid": true,
           "source_fresh_at_slot": false,
           "source_recheck_required_at_publish": true
         }
       ],
-      "source": {
-        "count": 10895,
-        "generation": "gov24-45594952230-1",
-        "lastSuccessAt": "2026-11-25T19:34:23.343783+09:00",
-        "manifestSha256": "00e96a3f0a1dc21bb339ad656eca9c6fff0b40b6f5446eaef436071ad8595b3e",
-        "path": "snapshots/gov24-45594952230-1",
-        "version": 1
-      },
-      "source_count": 10895,
+      "new_drafts": 0,
+      "existing_READY_reused": 4,
+      "new_publications_observed": 0,
+      "maintenance_post_calls": 0,
+      "expiry_prevention_revalidations": 1,
+      "astra_review_invocations": 0,
       "ledger_records": 82,
       "pending": null,
       "lease": null,
-      "new_posts": 0,
-      "new_incidents": 0,
-      "new_metrics": 0,
-      "observations": 159,
-      "new_evaluation": false,
-      "astra_review_invocations": 0,
-      "existing_Astra_review_preserved": true,
-      "new_visual_inspection": false,
-      "image_redownloaded_this_check": false,
-      "current_main_image_review_matches_cached_bytes": true,
-      "expiry_prevention_revalidations": 0
+      "new_metrics": 3,
+      "observations": 162,
+      "new_evaluation": false
     },
     "metrics": {
-      "run_id": "45604153836",
+      "run_id": "45614926642",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-25T11:24:41Z",
+      "updated_at": "2026-11-25T12:33:53Z",
       "head_sha": "5c4084549223723b566cfe560d2e418903ad4337",
-      "job_id": 139170510580,
-      "artifact_id": 15015958282,
-      "artifact_digest": "sha256:5203af210f6746795605997a7485c4e3c822014c63c301a79375c1c9f2adaad8",
+      "job_id": 139207743335,
+      "artifact_id": 15021573326,
+      "artifact_digest": "sha256:ae170937cc993c3064b10ca33eb3ba0fb78be02f24bcc23460b91507cbaca66b",
       "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": false,
-      "job_logs_retrieved_this_check": false,
-      "observed_at": "2026-11-25T11:24:38.066142+00:00",
-      "records": [],
-      "due_count": 0,
-      "success_count": 0,
-      "new_observations": 0,
-      "new_observation_keys": [],
-      "total_observations": 159,
+      "artifact_redownloaded_this_check": true,
+      "job_logs_retrieved_this_check": true,
+      "observed_at": "2026-11-25T12:33:47.259006+00:00",
+      "records": [
+        {
+          "post_id": "18075899267779249",
+          "published_at": "2026-11-18T20:45:51.478162+09:00",
+          "observed_at": "2026-11-25T12:33:47.259006+00:00",
+          "window_hours": 168,
+          "elapsed_hours": 168.79882801222223,
+          "timing": "late_available_check",
+          "within_target_tolerance": true,
+          "not_backcalculated": true,
+          "metrics": {
+            "views": 30,
+            "likes": 2,
+            "comments": 0,
+            "reposts": 0,
+            "shares": 0,
+            "saves": null,
+            "profile_visits": null,
+            "new_followers": null,
+            "site_visits": null
+          }
+        },
+        {
+          "post_id": "18149154712603236",
+          "published_at": "2026-11-22T20:31:29.184832+09:00",
+          "observed_at": "2026-11-25T12:33:47.259006+00:00",
+          "window_hours": 72,
+          "elapsed_hours": 73.03835393722223,
+          "timing": "late_available_check",
+          "within_target_tolerance": true,
+          "not_backcalculated": true,
+          "metrics": {
+            "views": 82,
+            "likes": 2,
+            "comments": 0,
+            "reposts": 0,
+            "shares": 0,
+            "saves": null,
+            "profile_visits": null,
+            "new_followers": null,
+            "site_visits": null
+          }
+        },
+        {
+          "post_id": "18472882234189391",
+          "published_at": "2026-11-24T20:43:48.291443+09:00",
+          "observed_at": "2026-11-25T12:33:47.259006+00:00",
+          "window_hours": 24,
+          "elapsed_hours": 24.833046545277778,
+          "timing": "late_available_check",
+          "within_target_tolerance": true,
+          "not_backcalculated": true,
+          "metrics": {
+            "views": 7,
+            "likes": 2,
+            "comments": 0,
+            "reposts": 0,
+            "shares": 0,
+            "saves": null,
+            "profile_visits": null,
+            "new_followers": null,
+            "site_visits": null
+          }
+        }
+      ],
+      "due_count": 3,
+      "success_count": 3,
+      "new_observation_keys": [
+        "18075899267779249:168h",
+        "18149154712603236:72h",
+        "18472882234189391:24h"
+      ],
+      "new_observations": 3,
+      "total_observations": 162,
       "new_evaluation_report_due": false,
       "weights_unchanged": true
     },
@@ -6358,9 +6439,9 @@
       "maintenance_new_posts": 0,
       "new_recovery_this_check": false,
       "new_failure_this_check": false,
-      "reason": "82verifiedcompletepublished/no pendinglease,alltargetrunversionsunchanged. FourREADY unchanged nominalPASS;first3fullwindowPASS. Disability actualrereviewafter22stillrequired. No newincident/repair/publication/draft/model/metrics/evaluation/dispatch."
+      "reason": "Disability fullwindow expiry prevention after actualMOHWofficialpolicy/current2026rates/currentstatus/latestcomplete/sourcefingerprint/detailHTTP200/PNGGETSHA rereview. Oldentryarchived,body395/image/Astra97 unchanged;4preview nominal+fullwindowPASS. NoPOST/dispatch/rerun/backfill/codechange."
     },
-    "next_condition": "FourfutureREADY Nov26 08TEXT/P8,12IMAGE/P6,16TEXT/P5,20IMAGE/P1. Disability395/Astra97/guide2 preserved:expiresbeforeNov26 22 wholewindow;existingcheckaftertoday22actualofficial/currentstatus/latestcomplete/PNG_SHA rereview thenarchive/CASmax24h. No date-onlyrefresh.19:34completegenerationNOTfreshNov26 20;actualsenderlatestfreshcompletegenerationmandatory.82published159numericobservations unchanged;no newevent toreport.",
+    "next_condition": "FourfutureREADY Nov26 08TEXT/P8,12IMAGE/P6,16TEXT/P5,20IMAGE/P1 nominal+whole2hPASS. DisabilityexpiresNov26 22:25 afteractualMOHWpolicy/2026rates/currentstatus/latestcomplete/sourcefingerprint/detail/PNGGETSHA rereview;oldentryarchived/CASsaved. Body395/Astra97/image unchanged,no newmodel/visual/profileclaim.82published162realmetrics. New24h7views2likes at24.833h excludes relocatedcohortA;72h82views2likes and168h30views2likes not24h. No causalCTA/dwell/account7/30inference. Formal14dayweightsunchanged. Current19:34sourceNOTfreshNov26 20 actualsenderlatestcompletefreshmandatory.",
     "publication": {
       "run_id": "45607532189",
       "run_attempt": 1,
@@ -6418,13 +6499,674 @@
       "previous_remote_evidence_preserved": true
     },
     "official_review_recovery": {
-      "new_official_page_review_this_check": false,
+      "new_official_page_review_this_check": true,
+      "program_id": "SPE000000010",
+      "rereview_audit": {
+        "checked_at": "2026-11-25T22:25:37.852042+09:00",
+        "previous_entry": {
+          "slot": "2026-11-26T20:00:00+09:00",
+          "benefit_id": "SPE000000010",
+          "source_fingerprint": "2cf3c0a79b4cbd1c2e6528015a2988015ed9747764d7c0b7cd4bc3628b987751",
+          "source_generation": "gov24-45594952230-1",
+          "prepared_at": "2026-11-25T21:14:03.344880+09:00",
+          "expires_at": "2026-11-26T21:14:03.344880+09:00",
+          "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "writer": {
+            "schema_version": "supportpick.writer.v1",
+            "status": "READY",
+            "selected_program_id": "SPE000000010",
+            "post_text": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+            "draft_text": null,
+            "reply_texts": [],
+            "media": {
+              "turn": "IMAGE",
+              "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "check": "MATCHED",
+              "image_copy": null,
+              "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래 집, 방패, 체크리스트가 있고 하단에 자세한 사항은 프로필링크 확인 문구가 있는 정사각형 일러스트."
+            },
+            "review": {
+              "planned_at": "2026-11-26T20:00:00+09:00",
+              "application_status": "ALWAYS",
+              "reader": "생활비를 점검하는 저소득 등록장애인과 가족",
+              "central_message": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+              "pattern": "P1",
+              "selection_reason": "동일ID원본누적32949 내림차순,기존82게시/다른미예약READY3제외. 상위HOLD/SKIP출처보존. 생활비상황에서연금비수급/재가시설지급액/학생예외/준비서류로판단. 최근20도입전개실제비교. 검색량추정없음.",
+              "interest_basis": "OBSERVED_METRICS",
+              "duplicate_check": "CHECKED",
+              "evidence": [
+                {
+                  "source_id": "SPE000000010",
+                  "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710030200",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                  "claims_supported": [
+                    "오늘실제열람850~881:18세이상등록/연금법중증아님/기초수급차상위/18~20학교특수포함재학휴학의무교육유예제외/재가월6만원/시설생계의료월3만원/주민센터복지로."
+                  ]
+                },
+                {
+                  "source_id": "SPE000000010",
+                  "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710030100",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                  "claims_supported": [
+                    "오늘실제열람977~988행2026년1월기준명시월6만원재가/시설3만원. 구팝업3만원과충돌해소. 최종수정2026.3.31."
+                  ]
+                },
+                {
+                  "source_id": "SPE000000010",
+                  "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=681344&bnefType=all&svcId=SPE000000010",
+                  "access_method": "PROVIDED_OFFICIAL_TEXT",
+                  "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                  "claims_supported": [
+                    "실제완전snapshot/load_feed/read_current/verify_snapshot 동일ID누적32949/상시신청/준비서류원문. 수집성공은접수거래나개별수급보장아님."
+                  ]
+                },
+                {
+                  "source_id": "SPE000000010",
+                  "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+                  "access_method": "UPSTREAM_VERIFIED",
+                  "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                  "claims_supported": [
+                    "이번실제PNG GET bytes/SHA현재main image-reviewPASS일치. 원본1254px와360px실제열람,한글/잘림/깨짐/대비/과밀/공식오인확인PASS. 사업명금액날짜없는승인브랜드_rotation. 직전미래IMAGEguide1과교대. 실측성과주장없음."
+                  ]
+                }
+              ],
+              "checks": {
+                "facts": "PASS",
+                "current_status": "PASS",
+                "eligibility_and_units": "PASS",
+                "cta_and_no_links": "PASS",
+                "length": "PASS",
+                "media": "PASS"
+              },
+              "char_count": 395,
+              "count_method": "python_len_including_spaces_newlines_CTA",
+              "missing_info": [],
+              "hold_reasons": [],
+              "warnings": [
+                "일반장애인복지법심한장애와장애인연금법중증판정은단순등치하지않음. 본문은연금법기준사용.",
+                "구MOHW popup 월3만원은현행정책본문과2026.1명시개요6만원/시설3만원으로대조해구자료로분리. 복지로직접본문400/0행,실제신청거래미확인.",
+                "프로필목적지는이전08:30관찰재사용;이번홈검색17결과중정확명보건복지부장애수당→동일ID상세실제CUA확인. Threads리디렉션완료미확인.",
+                "최대24h검수기한이내일20~22전체창보다먼저끝남. 오늘22시이후공식본문/상태/최신완전세대/PNG_SHA실제재대조후archive/CAS갱신필수.19:34수집본내일20시신선도보장않음."
+              ],
+              "reach_editorial": {
+                "policy_id": "supportpick-threads-reach-v1-20261109",
+                "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+                "core_question": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                "reader_scope": "생활비를 점검하는 저소득 등록장애인과 가족",
+                "angles": [
+                  "매월생활비",
+                  "연금비수급자대상",
+                  "학생예외와서류"
+                ],
+                "chosen_angle": "생활비상황에서신청가능조건",
+                "opening_candidates": [
+                  "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                  "등록장애인이라면 월 6만 원을 모두 받을까요?",
+                  "집과 보장시설, 장애수당 지급액은 같을까요?"
+                ],
+                "chosen_opening": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                "opening_type": "생활상황질문",
+                "cohort": null,
+                "selection_reason": "생활비장면+즉답;행정적학교범위정정;가구반복문장삭제",
+                "history_posts_checked": 20,
+                "comparison_eligible": false,
+                "comparison_exclusion": "v3질문형·본문편집동시적용으로순수A/B비교제외",
+                "master_full_used": true,
+                "search_evidence": "공식검색결과 장애수당/장애인연금/월6만원 표현확인;검색량미측정",
+                "profile_route": {
+                  "previous_profile_target_checked_at": "2026-11-25T08:30:00+09:00",
+                  "current_site_route_checked_at": "2026-11-25T21:14:03.344880+09:00",
+                  "method": "CUA home장애수당검색17결과→보건복지부정확명클릭→SPE000000010상세/금융동의신고서실제표시",
+                  "detail": "https://kllollain-max.github.io/supportpick/benefits/SPE000000010/",
+                  "direct_Threads_redirect_complete": false
+                },
+                "observed_metrics_context": "159실제관측,기존14일평가유지;계정7/30·체류완독CTA기여미측정"
+              },
+              "astra_final_review": {
+                "actual_model": "gpt-6.2-astra",
+                "model_confirmation": "parent explicit model spawn succeeded; finer identity unavailable",
+                "independent_agent": "/root/disability_final_review",
+                "final_verdict": "PASS",
+                "score": 97,
+                "policy_version": "3.0",
+                "calls": 2,
+                "initial_review": {
+                  "version": "3.0",
+                  "round": 1,
+                  "model_identifier": "미확인",
+                  "reviewer": "/root/disability_final_review",
+                  "reviewed_at": "2026-11-25T21:11:56.099507+09:00",
+                  "body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+                  "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                  "char_count": 395,
+                  "scores": [
+                    [
+                      "첫 문장",
+                      12,
+                      15,
+                      "질문은 구체적이나 직전 네 건과 같은 질문형, 실제 생활 상황이 약하다."
+                    ],
+                    [
+                      "관심/의도",
+                      14,
+                      15,
+                      "연금 미수급자 판단에 직접 답하나 생활비 결정 맥락을 보강할 수 있다."
+                    ],
+                    [
+                      "정확성",
+                      18,
+                      20,
+                      "18~20세 학교 유형을 닫힌 열거로 제시하여 각종학교 등 누락 가능. 금액·경로·소득 조건은 일치."
+                    ],
+                    [
+                      "완독 가능성",
+                      14,
+                      15,
+                      "의미 단위 문단은 명료하나 가구 전체와 비교하는 문장은 중복."
+                    ],
+                    [
+                      "공유/공감",
+                      9,
+                      10,
+                      "연령 예외와 서류가 가족에게 전달하기 좋다."
+                    ],
+                    [
+                      "가치/차별",
+                      9,
+                      10,
+                      "재가·시설 금액의 판단과 연금 구분. 구조는 P2에 가깝다."
+                    ],
+                    [
+                      "모바일",
+                      5,
+                      5,
+                      "단문과 공백 적절."
+                    ],
+                    [
+                      "이미지 완성도",
+                      5,
+                      5,
+                      "원본·360px 실물 열람. 로고·문구 읽힘, 잘림·금액·날짜·정부 표식 없음. 자체 브랜드 승인 자산."
+                    ],
+                    [
+                      "프로필 유도",
+                      4,
+                      5,
+                      "준비서류 명시. 08:30 홈페이지 목적지와 상세 HTTP 성공은 상위 근거. 현재 프로필 리디렉션 완료 미확인."
+                    ]
+                  ],
+                  "total": 90,
+                  "decision": "REVISE",
+                  "checks": {
+                    "body": 1,
+                    "replies": 0,
+                    "exact_final_cta": 1,
+                    "url": 0,
+                    "hashtag": 0,
+                    "limit": 500,
+                    "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+                    "history": "최근 20개 동일 ID 없음. 직전 4개 질문형. 익일 P8/P6/P5와 다른 P1 필요.",
+                    "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정."
+                  },
+                  "changes": [
+                    "생활비 장면과 대상자 결정을 직접 제시하는 평서문으로 변경",
+                    "초·중등교육법상 학교(특수학교 포함)로 학교 범위 보완",
+                    "가구 전체 비교 문장 삭제",
+                    "프로필 확인 범위 과장 금지"
+                  ]
+                },
+                "final_review": {
+                  "version": "3.0",
+                  "round": 2,
+                  "model_identifier": "미확인",
+                  "reviewer": "/root/disability_final_review",
+                  "reviewed_at": "2026-11-25T21:12:38.567319+09:00",
+                  "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+                  "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                  "char_count": 395,
+                  "scores": [
+                    [
+                      "첫 문장",
+                      14,
+                      15,
+                      "생활비 상황과 신청 여부를 직접 질문. 첫줄 연금 명칭은 다음 문장에서 특정."
+                    ],
+                    [
+                      "관심/의도",
+                      15,
+                      15,
+                      "네 다음 문장에 필수 연령·소득·장애 기준을 모두 제시."
+                    ],
+                    [
+                      "정확성",
+                      20,
+                      20,
+                      "대상 및 재가·시설 월별 금액, 학생 예외, 상시 신청과 두 경로, 서류가 공식 근거에 부합."
+                    ],
+                    [
+                      "완독 가능성",
+                      14,
+                      15,
+                      "가구 비교를 제거하고 한 문단에 한 판단을 담음. 법령명 문장에는 다소 집중이 필요."
+                    ],
+                    [
+                      "공유/공감",
+                      9,
+                      10,
+                      "생활비를 점검하는 가족에게 유용한 시설 금액·학생 예외가 드러남."
+                    ],
+                    [
+                      "가치/차별",
+                      10,
+                      10,
+                      "생활비→연금 비수급→거주 유형별 개인 월액→학생 예외→서류로 전개."
+                    ],
+                    [
+                      "모바일",
+                      5,
+                      5,
+                      "본문 문단 간 여백, 360픽셀 카드 문구의 식별 확인."
+                    ],
+                    [
+                      "이미지 완성도",
+                      5,
+                      5,
+                      "원본 및 축소본 다시 열람. 승인 범용 카드 내 소실·잘림·공식 표식·혼동 금액 없음."
+                    ],
+                    [
+                      "프로필 유도",
+                      5,
+                      5,
+                      "기관과 사업명을 명시해 동명 항목 구별. 실제 상세 서류로 연결됨."
+                    ]
+                  ],
+                  "total": 97,
+                  "decision": "EDITORIAL_PASS",
+                  "checks": {
+                    "body": 1,
+                    "replies": 0,
+                    "exact_final_cta": 1,
+                    "url": 0,
+                    "hashtag": 0,
+                    "limit": 500,
+                    "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+                    "history": "최근 20건 동일 ID 없음. 사용자 지정 질문형을 유지하며 생활비 장면으로 차별화.",
+                    "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정.",
+                    "profile": "상위 실제 CUA: 홈페이지 장애수당 검색 17건→보건복지부 장애수당 선택→동일 ID 상세 서류·정부24 링크 확인. 프로필 홈페이지 목적지는 08:30 근거 재사용. 현재 Threads 리디렉션 완료 미확인."
+                  },
+                  "changes": [],
+                  "previous_body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+                  "publication_status": "미게시. 11월 26일 20~22시 KST 전체 창을 포괄하는 유효 근거로 재확인·갱신 필요."
+                },
+                "body_before": "장애인연금을 못 받는다면 월 6만 원 장애수당 대상일까요?\n장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요. 가구 전체에 한 번 지급하는 금액과 달라요.\n\n18~20세로 초·중·고등학교나 특수학교에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+                "body_after": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+                "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+                "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                "fallback_reason": null
+              }
+            },
+            "next_history_record": {
+              "program_id": "SPE000000010",
+              "notice_version": "gov24-45594952230-1;official2026-11-25T21:14:03.344880+09:00",
+              "pattern": "P1",
+              "opening": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+              "structure": "생활비상황→대상즉답→재가시설금액→학생예외→서류",
+              "media_turn": "IMAGE"
+            }
+          },
+          "full_delay_window_covered": false,
+          "revalidate_before": "2026-11-26T20:00:00+09:00",
+          "revalidation_required_reason": "expires_before_slot_plus_two_hours"
+        },
+        "refreshed_entry": {
+          "slot": "2026-11-26T20:00:00+09:00",
+          "benefit_id": "SPE000000010",
+          "source_fingerprint": "2cf3c0a79b4cbd1c2e6528015a2988015ed9747764d7c0b7cd4bc3628b987751",
+          "source_generation": "gov24-45594952230-1",
+          "prepared_at": "2026-11-25T22:25:37.852042+09:00",
+          "expires_at": "2026-11-26T22:25:37.852042+09:00",
+          "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "writer": {
+            "schema_version": "supportpick.writer.v1",
+            "status": "READY",
+            "selected_program_id": "SPE000000010",
+            "post_text": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+            "draft_text": null,
+            "reply_texts": [],
+            "media": {
+              "turn": "IMAGE",
+              "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "check": "MATCHED",
+              "image_copy": null,
+              "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래 집, 방패, 체크리스트가 있고 하단에 자세한 사항은 프로필링크 확인 문구가 있는 정사각형 일러스트."
+            },
+            "review": {
+              "planned_at": "2026-11-26T20:00:00+09:00",
+              "application_status": "ALWAYS",
+              "reader": "생활비를 점검하는 저소득 등록장애인과 가족",
+              "central_message": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+              "pattern": "P1",
+              "selection_reason": "동일ID원본누적32949 내림차순,기존82게시/다른미예약READY3제외. 상위HOLD/SKIP출처보존. 생활비상황에서연금비수급/재가시설지급액/학생예외/준비서류로판단. 최근20도입전개실제비교. 검색량추정없음.",
+              "interest_basis": "OBSERVED_METRICS",
+              "duplicate_check": "CHECKED",
+              "evidence": [
+                {
+                  "source_id": "SPE000000010",
+                  "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710030200",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-25T22:25:37.852042+09:00",
+                  "claims_supported": [
+                    "오늘실제열람850~881:18세이상등록/연금법중증아님/기초수급차상위/18~20학교특수포함재학휴학의무교육유예제외/재가월6만원/시설생계의료월3만원/주민센터복지로.",
+                    "이번22시대 보건복지부 장애수당정책본문과2026년1월기준명시연금개요를실제다시열람:대상/연금법중증아님/18~20학교특수포함재학휴학유예제외/재가6만원시설생계의료3만원/주민센터복지로. 열람범위종료정정미발견,개별신청거래나선정보장없음."
+                  ]
+                },
+                {
+                  "source_id": "SPE000000010",
+                  "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710030100",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-25T22:25:37.852042+09:00",
+                  "claims_supported": [
+                    "오늘실제열람977~988행2026년1월기준명시월6만원재가/시설3만원. 구팝업3만원과충돌해소. 최종수정2026.3.31.",
+                    "이번22시대 보건복지부 장애수당정책본문과2026년1월기준명시연금개요를실제다시열람:대상/연금법중증아님/18~20학교특수포함재학휴학유예제외/재가6만원시설생계의료3만원/주민센터복지로. 열람범위종료정정미발견,개별신청거래나선정보장없음."
+                  ]
+                },
+                {
+                  "source_id": "SPE000000010",
+                  "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=681344&bnefType=all&svcId=SPE000000010",
+                  "access_method": "PROVIDED_OFFICIAL_TEXT",
+                  "verified_at": "2026-11-25T22:25:37.852042+09:00",
+                  "claims_supported": [
+                    "실제완전snapshot/load_feed/read_current/verify_snapshot 동일ID누적32949/상시신청/준비서류원문. 수집성공은접수거래나개별수급보장아님.",
+                    "이번22시대최신완료operations45594952230 runtime read_current/verify_snapshot/load_feed 실제재검증,동일IDfingerprint일치. 상세HTTP200/준비서류재대조. 19:34수집본내일20시신선도보장않음."
+                  ]
+                },
+                {
+                  "source_id": "SPE000000010",
+                  "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+                  "access_method": "UPSTREAM_VERIFIED",
+                  "verified_at": "2026-11-25T22:25:37.852042+09:00",
+                  "claims_supported": [
+                    "이번실제PNG GET bytes/SHA현재main image-reviewPASS일치. 원본1254px와360px실제열람,한글/잘림/깨짐/대비/과밀/공식오인확인PASS. 사업명금액날짜없는승인브랜드_rotation. 직전미래IMAGEguide1과교대. 실측성과주장없음.",
+                    "이번22시대실제PNG GET bytes/SHA현재main image-review일치. 기존21시원본360시각검수보존,이번새시각검수아님."
+                  ]
+                }
+              ],
+              "checks": {
+                "facts": "PASS",
+                "current_status": "PASS",
+                "eligibility_and_units": "PASS",
+                "cta_and_no_links": "PASS",
+                "length": "PASS",
+                "media": "PASS"
+              },
+              "char_count": 395,
+              "count_method": "python_len_including_spaces_newlines_CTA",
+              "missing_info": [],
+              "hold_reasons": [],
+              "warnings": [
+                "일반장애인복지법심한장애와장애인연금법중증판정은단순등치하지않음. 본문은연금법기준사용.",
+                "구MOHW popup 월3만원은현행정책본문과2026.1명시개요6만원/시설3만원으로대조해구자료로분리. 복지로직접본문400/0행,실제신청거래미확인.",
+                "프로필목적지는이전08:30관찰재사용;이번홈검색17결과중정확명보건복지부장애수당→동일ID상세실제CUA확인. Threads리디렉션완료미확인.",
+                "최대24h검수기한이내일20~22전체창보다먼저끝남. 오늘22시이후공식본문/상태/최신완전세대/PNG_SHA실제재대조후archive/CAS갱신필수.19:34수집본내일20시신선도보장않음."
+              ],
+              "reach_editorial": {
+                "policy_id": "supportpick-threads-reach-v1-20261109",
+                "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+                "core_question": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                "reader_scope": "생활비를 점검하는 저소득 등록장애인과 가족",
+                "angles": [
+                  "매월생활비",
+                  "연금비수급자대상",
+                  "학생예외와서류"
+                ],
+                "chosen_angle": "생활비상황에서신청가능조건",
+                "opening_candidates": [
+                  "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                  "등록장애인이라면 월 6만 원을 모두 받을까요?",
+                  "집과 보장시설, 장애수당 지급액은 같을까요?"
+                ],
+                "chosen_opening": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                "opening_type": "생활상황질문",
+                "cohort": null,
+                "selection_reason": "생활비장면+즉답;행정적학교범위정정;가구반복문장삭제",
+                "history_posts_checked": 20,
+                "comparison_eligible": false,
+                "comparison_exclusion": "v3질문형·본문편집동시적용으로순수A/B비교제외",
+                "master_full_used": true,
+                "search_evidence": "공식검색결과 장애수당/장애인연금/월6만원 표현확인;검색량미측정",
+                "profile_route": {
+                  "previous_profile_target_checked_at": "2026-11-25T08:30:00+09:00",
+                  "current_site_route_checked_at": "2026-11-25T21:14:03.344880+09:00",
+                  "method": "CUA home장애수당검색17결과→보건복지부정확명클릭→SPE000000010상세/금융동의신고서실제표시",
+                  "detail": "https://kllollain-max.github.io/supportpick/benefits/SPE000000010/",
+                  "direct_Threads_redirect_complete": false
+                },
+                "observed_metrics_context": "159실제관측,기존14일평가유지;계정7/30·체류완독CTA기여미측정"
+              },
+              "astra_final_review": {
+                "actual_model": "gpt-6.2-astra",
+                "model_confirmation": "parent explicit model spawn succeeded; finer identity unavailable",
+                "independent_agent": "/root/disability_final_review",
+                "final_verdict": "PASS",
+                "score": 97,
+                "policy_version": "3.0",
+                "calls": 2,
+                "initial_review": {
+                  "version": "3.0",
+                  "round": 1,
+                  "model_identifier": "미확인",
+                  "reviewer": "/root/disability_final_review",
+                  "reviewed_at": "2026-11-25T21:11:56.099507+09:00",
+                  "body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+                  "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                  "char_count": 395,
+                  "scores": [
+                    [
+                      "첫 문장",
+                      12,
+                      15,
+                      "질문은 구체적이나 직전 네 건과 같은 질문형, 실제 생활 상황이 약하다."
+                    ],
+                    [
+                      "관심/의도",
+                      14,
+                      15,
+                      "연금 미수급자 판단에 직접 답하나 생활비 결정 맥락을 보강할 수 있다."
+                    ],
+                    [
+                      "정확성",
+                      18,
+                      20,
+                      "18~20세 학교 유형을 닫힌 열거로 제시하여 각종학교 등 누락 가능. 금액·경로·소득 조건은 일치."
+                    ],
+                    [
+                      "완독 가능성",
+                      14,
+                      15,
+                      "의미 단위 문단은 명료하나 가구 전체와 비교하는 문장은 중복."
+                    ],
+                    [
+                      "공유/공감",
+                      9,
+                      10,
+                      "연령 예외와 서류가 가족에게 전달하기 좋다."
+                    ],
+                    [
+                      "가치/차별",
+                      9,
+                      10,
+                      "재가·시설 금액의 판단과 연금 구분. 구조는 P2에 가깝다."
+                    ],
+                    [
+                      "모바일",
+                      5,
+                      5,
+                      "단문과 공백 적절."
+                    ],
+                    [
+                      "이미지 완성도",
+                      5,
+                      5,
+                      "원본·360px 실물 열람. 로고·문구 읽힘, 잘림·금액·날짜·정부 표식 없음. 자체 브랜드 승인 자산."
+                    ],
+                    [
+                      "프로필 유도",
+                      4,
+                      5,
+                      "준비서류 명시. 08:30 홈페이지 목적지와 상세 HTTP 성공은 상위 근거. 현재 프로필 리디렉션 완료 미확인."
+                    ]
+                  ],
+                  "total": 90,
+                  "decision": "REVISE",
+                  "checks": {
+                    "body": 1,
+                    "replies": 0,
+                    "exact_final_cta": 1,
+                    "url": 0,
+                    "hashtag": 0,
+                    "limit": 500,
+                    "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+                    "history": "최근 20개 동일 ID 없음. 직전 4개 질문형. 익일 P8/P6/P5와 다른 P1 필요.",
+                    "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정."
+                  },
+                  "changes": [
+                    "생활비 장면과 대상자 결정을 직접 제시하는 평서문으로 변경",
+                    "초·중등교육법상 학교(특수학교 포함)로 학교 범위 보완",
+                    "가구 전체 비교 문장 삭제",
+                    "프로필 확인 범위 과장 금지"
+                  ]
+                },
+                "final_review": {
+                  "version": "3.0",
+                  "round": 2,
+                  "model_identifier": "미확인",
+                  "reviewer": "/root/disability_final_review",
+                  "reviewed_at": "2026-11-25T21:12:38.567319+09:00",
+                  "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+                  "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                  "char_count": 395,
+                  "scores": [
+                    [
+                      "첫 문장",
+                      14,
+                      15,
+                      "생활비 상황과 신청 여부를 직접 질문. 첫줄 연금 명칭은 다음 문장에서 특정."
+                    ],
+                    [
+                      "관심/의도",
+                      15,
+                      15,
+                      "네 다음 문장에 필수 연령·소득·장애 기준을 모두 제시."
+                    ],
+                    [
+                      "정확성",
+                      20,
+                      20,
+                      "대상 및 재가·시설 월별 금액, 학생 예외, 상시 신청과 두 경로, 서류가 공식 근거에 부합."
+                    ],
+                    [
+                      "완독 가능성",
+                      14,
+                      15,
+                      "가구 비교를 제거하고 한 문단에 한 판단을 담음. 법령명 문장에는 다소 집중이 필요."
+                    ],
+                    [
+                      "공유/공감",
+                      9,
+                      10,
+                      "생활비를 점검하는 가족에게 유용한 시설 금액·학생 예외가 드러남."
+                    ],
+                    [
+                      "가치/차별",
+                      10,
+                      10,
+                      "생활비→연금 비수급→거주 유형별 개인 월액→학생 예외→서류로 전개."
+                    ],
+                    [
+                      "모바일",
+                      5,
+                      5,
+                      "본문 문단 간 여백, 360픽셀 카드 문구의 식별 확인."
+                    ],
+                    [
+                      "이미지 완성도",
+                      5,
+                      5,
+                      "원본 및 축소본 다시 열람. 승인 범용 카드 내 소실·잘림·공식 표식·혼동 금액 없음."
+                    ],
+                    [
+                      "프로필 유도",
+                      5,
+                      5,
+                      "기관과 사업명을 명시해 동명 항목 구별. 실제 상세 서류로 연결됨."
+                    ]
+                  ],
+                  "total": 97,
+                  "decision": "EDITORIAL_PASS",
+                  "checks": {
+                    "body": 1,
+                    "replies": 0,
+                    "exact_final_cta": 1,
+                    "url": 0,
+                    "hashtag": 0,
+                    "limit": 500,
+                    "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+                    "history": "최근 20건 동일 ID 없음. 사용자 지정 질문형을 유지하며 생활비 장면으로 차별화.",
+                    "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정.",
+                    "profile": "상위 실제 CUA: 홈페이지 장애수당 검색 17건→보건복지부 장애수당 선택→동일 ID 상세 서류·정부24 링크 확인. 프로필 홈페이지 목적지는 08:30 근거 재사용. 현재 Threads 리디렉션 완료 미확인."
+                  },
+                  "changes": [],
+                  "previous_body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+                  "publication_status": "미게시. 11월 26일 20~22시 KST 전체 창을 포괄하는 유효 근거로 재확인·갱신 필요."
+                },
+                "body_before": "장애인연금을 못 받는다면 월 6만 원 장애수당 대상일까요?\n장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요. 가구 전체에 한 번 지급하는 금액과 달라요.\n\n18~20세로 초·중·고등학교나 특수학교에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+                "body_after": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+                "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+                "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                "fallback_reason": null
+              }
+            },
+            "next_history_record": {
+              "program_id": "SPE000000010",
+              "notice_version": "gov24-45594952230-1;official2026-11-25T21:14:03.344880+09:00",
+              "pattern": "P1",
+              "opening": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+              "structure": "생활비상황→대상즉답→재가시설금액→학생예외→서류",
+              "media_turn": "IMAGE"
+            }
+          },
+          "full_delay_window_covered": true,
+          "revalidate_before": "2026-11-26T20:00:00+09:00"
+        },
+        "source": {
+          "count": 10895,
+          "generation": "gov24-45594952230-1",
+          "lastSuccessAt": "2026-11-25T19:34:23.343783+09:00",
+          "manifestSha256": "00e96a3f0a1dc21bb339ad656eca9c6fff0b40b6f5446eaef436071ad8595b3e",
+          "path": "snapshots/gov24-45594952230-1",
+          "version": 1
+        },
+        "actual_official_rereview": true,
+        "web_refs": [
+          "turn169486083view0",
+          "turn169486083view1"
+        ],
+        "site_detail_actual_http200": true,
+        "site_detail_sha256": "5596c1082ccd66f8a3935c9b9cf0650757f374f1bc74ecc2eb3b75c0b73d9896",
+        "cached_artifact_manifest_reverified": true,
+        "source_recheck_required_at_publish": true,
+        "same_final_body_media_pattern_cohort_astra_review": true,
+        "new_visual_inspection": false,
+        "image_turn": "IMAGE",
+        "actual_png_GET_sha_match": true
+      },
       "new_Astra_calls": 0,
-      "existing_Astra_reviews_preserved": true,
-      "image_redownloaded_this_check": false,
+      "original_Astra97_body395_image_pattern_preserved": true,
+      "actual_png_GET_SHA_verified": true,
       "new_visual_inspection": false,
-      "cached_image_sha_matches_current_main_review": true,
-      "previous_actual_profile_and_site_route_evidence_preserved": true
+      "original_visual_and_profile_timestamps_preserved": true
     },
     "regular_slot_observation": {
       "slot": "2026-11-25T20:00:00+09:00",
@@ -6627,7 +7369,7 @@
     },
     "publication_schedule_observation": {
       "slot": "2026-11-25T20:00:00+09:00",
-      "checked_at": "2026-11-25T21:20:32.833741+09:00",
+      "checked_at": "2026-11-25T22:26:47.930300+09:00",
       "status": "published_complete_verified_already_reported",
       "main_id": "17950017192359863",
       "url": "https://www.threads.com/@hid_1004/post/DgKdNkOEYk3",
@@ -14635,9 +15377,120 @@
           "automatic_author_replies_in_original_record": 0,
           "not_backcalculated": true,
           "timestamp_basis": "Publisher invocation durable ledger, actual observed elapsed preserved."
+        },
+        "18075899267779249:168h": {
+          "main_id": "18075899267779249",
+          "window_hours": 168,
+          "scheduled_at": "2026-11-18T20:00:00+09:00",
+          "published_at": "2026-11-18T20:45:51.478162+09:00",
+          "benefit_id": "135200005005",
+          "reader_scope": "중한 질병·부상으로 수술·입원이 필요하며 의료비 감당이 어려운 저소득 1인가구",
+          "opening_type": "생활 상황형",
+          "cohort": "A",
+          "pattern": "P5",
+          "char_count": 476,
+          "media_turn": "TEXT",
+          "checked_at": "2026-11-25T12:33:47.259006+00:00",
+          "elapsed_hours": 168.79882801222223,
+          "due_at": "2026-11-25T20:45:51.478162+09:00",
+          "timing": "late_available_check",
+          "within_target_tolerance": true,
+          "status": "measured_official_api",
+          "views": 30,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "shares": 0,
+          "quotes": null,
+          "saves": null,
+          "profile_visits": null,
+          "new_followers": null,
+          "site_visits": null,
+          "source_run_id": "45614926642",
+          "artifact_id": 15021573326,
+          "artifact_digest": "sha256:ae170937cc993c3064b10ca33eb3ba0fb78be02f24bcc23460b91507cbaca66b",
+          "comparison_eligible": false,
+          "comparison_exclusion": "window_not_24h",
+          "automatic_author_replies_in_original_record": 0,
+          "not_backcalculated": true,
+          "timestamp_basis": "Publisher invocation durable ledger, actual observed elapsed preserved."
+        },
+        "18149154712603236:72h": {
+          "main_id": "18149154712603236",
+          "window_hours": 72,
+          "scheduled_at": "2026-11-22T20:00:00+09:00",
+          "published_at": "2026-11-22T20:31:29.184832+09:00",
+          "benefit_id": "999000000036",
+          "reader_scope": "1958~2022년생등록장애인과신청을돕는가족",
+          "opening_type": "대상·혜택형",
+          "cohort": "B",
+          "pattern": "P8",
+          "char_count": 441,
+          "media_turn": "TEXT",
+          "checked_at": "2026-11-25T12:33:47.259006+00:00",
+          "elapsed_hours": 73.03835393722223,
+          "due_at": "2026-11-25T20:31:29.184832+09:00",
+          "timing": "late_available_check",
+          "within_target_tolerance": true,
+          "status": "measured_official_api",
+          "views": 82,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "shares": 0,
+          "quotes": null,
+          "saves": null,
+          "profile_visits": null,
+          "new_followers": null,
+          "site_visits": null,
+          "source_run_id": "45614926642",
+          "artifact_id": 15021573326,
+          "artifact_digest": "sha256:ae170937cc993c3064b10ca33eb3ba0fb78be02f24bcc23460b91507cbaca66b",
+          "comparison_eligible": false,
+          "comparison_exclusion": "window_not_24h",
+          "automatic_author_replies_in_original_record": 0,
+          "not_backcalculated": true,
+          "timestamp_basis": "Publisher invocation durable ledger, actual observed elapsed preserved."
+        },
+        "18472882234189391:24h": {
+          "main_id": "18472882234189391",
+          "window_hours": 24,
+          "scheduled_at": "2026-11-24T20:00:00+09:00",
+          "published_at": "2026-11-24T20:43:48.291443+09:00",
+          "benefit_id": "127000000002",
+          "reader_scope": "임대차·임금등생활법률문제가있는기초생활수급자·장애인등취약계층",
+          "opening_type": "생활 상황형",
+          "cohort": "A",
+          "pattern": "P6",
+          "char_count": 422,
+          "media_turn": "IMAGE",
+          "checked_at": "2026-11-25T12:33:47.259006+00:00",
+          "elapsed_hours": 24.833046545277778,
+          "due_at": "2026-11-25T20:43:48.291443+09:00",
+          "timing": "late_available_check",
+          "within_target_tolerance": true,
+          "status": "measured_official_api",
+          "views": 7,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "shares": 0,
+          "quotes": null,
+          "saves": null,
+          "profile_visits": null,
+          "new_followers": null,
+          "site_visits": null,
+          "source_run_id": "45614926642",
+          "artifact_id": 15021573326,
+          "artifact_digest": "sha256:ae170937cc993c3064b10ca33eb3ba0fb78be02f24bcc23460b91507cbaca66b",
+          "comparison_eligible": false,
+          "comparison_exclusion": "Preserved already-written opening after required unreserved-slot move; cohort differs from original Nov24 slot A/B assignment. Exclude from initial A/B comparison; do not retroactively relabel.",
+          "automatic_author_replies_in_original_record": 0,
+          "not_backcalculated": true,
+          "timestamp_basis": "Publisher invocation durable ledger, actual observed elapsed preserved."
         }
       },
-      "last_availability_check_at": "2026-11-25T11:24:38.066142+00:00",
+      "last_availability_check_at": "2026-11-25T12:33:47.259006+00:00",
       "statistical_decision": "comparison_deferred_confounded_strata_and_no_repeated_advantage; extend matched samples, retain A/B weights",
       "diagnostic_observations_by_run_id": {
         "43163347739": {
@@ -21782,6 +22635,97 @@
           "new_observations": 0,
           "new_observation_keys": [],
           "total_observations": 159,
+          "new_evaluation_report_due": false,
+          "weights_unchanged": true
+        },
+        "45614926642": {
+          "run_id": "45614926642",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-25T12:33:53Z",
+          "head_sha": "5c4084549223723b566cfe560d2e418903ad4337",
+          "job_id": 139207743335,
+          "artifact_id": 15021573326,
+          "artifact_digest": "sha256:ae170937cc993c3064b10ca33eb3ba0fb78be02f24bcc23460b91507cbaca66b",
+          "artifact_digest_verified": true,
+          "artifact_redownloaded_this_check": true,
+          "job_logs_retrieved_this_check": true,
+          "observed_at": "2026-11-25T12:33:47.259006+00:00",
+          "records": [
+            {
+              "post_id": "18075899267779249",
+              "published_at": "2026-11-18T20:45:51.478162+09:00",
+              "observed_at": "2026-11-25T12:33:47.259006+00:00",
+              "window_hours": 168,
+              "elapsed_hours": 168.79882801222223,
+              "timing": "late_available_check",
+              "within_target_tolerance": true,
+              "not_backcalculated": true,
+              "metrics": {
+                "views": 30,
+                "likes": 2,
+                "comments": 0,
+                "reposts": 0,
+                "shares": 0,
+                "saves": null,
+                "profile_visits": null,
+                "new_followers": null,
+                "site_visits": null
+              }
+            },
+            {
+              "post_id": "18149154712603236",
+              "published_at": "2026-11-22T20:31:29.184832+09:00",
+              "observed_at": "2026-11-25T12:33:47.259006+00:00",
+              "window_hours": 72,
+              "elapsed_hours": 73.03835393722223,
+              "timing": "late_available_check",
+              "within_target_tolerance": true,
+              "not_backcalculated": true,
+              "metrics": {
+                "views": 82,
+                "likes": 2,
+                "comments": 0,
+                "reposts": 0,
+                "shares": 0,
+                "saves": null,
+                "profile_visits": null,
+                "new_followers": null,
+                "site_visits": null
+              }
+            },
+            {
+              "post_id": "18472882234189391",
+              "published_at": "2026-11-24T20:43:48.291443+09:00",
+              "observed_at": "2026-11-25T12:33:47.259006+00:00",
+              "window_hours": 24,
+              "elapsed_hours": 24.833046545277778,
+              "timing": "late_available_check",
+              "within_target_tolerance": true,
+              "not_backcalculated": true,
+              "metrics": {
+                "views": 7,
+                "likes": 2,
+                "comments": 0,
+                "reposts": 0,
+                "shares": 0,
+                "saves": null,
+                "profile_visits": null,
+                "new_followers": null,
+                "site_visits": null
+              }
+            }
+          ],
+          "due_count": 3,
+          "success_count": 3,
+          "new_observation_keys": [
+            "18075899267779249:168h",
+            "18149154712603236:72h",
+            "18472882234189391:24h"
+          ],
+          "new_observations": 3,
+          "total_observations": 162,
           "new_evaluation_report_due": false,
           "weights_unchanged": true
         }
@@ -36669,6 +37613,667 @@
       "actual_pdf_text_matches_previous": true,
       "actual_kb_HTML_GET": true,
       "kb_web_open_failed_restricted_url_actual_urllib_read_succeeded": true
+    },
+    "2026-11-25T22:25:37.852042+09:00": {
+      "checked_at": "2026-11-25T22:25:37.852042+09:00",
+      "previous_entry": {
+        "slot": "2026-11-26T20:00:00+09:00",
+        "benefit_id": "SPE000000010",
+        "source_fingerprint": "2cf3c0a79b4cbd1c2e6528015a2988015ed9747764d7c0b7cd4bc3628b987751",
+        "source_generation": "gov24-45594952230-1",
+        "prepared_at": "2026-11-25T21:14:03.344880+09:00",
+        "expires_at": "2026-11-26T21:14:03.344880+09:00",
+        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "writer": {
+          "schema_version": "supportpick.writer.v1",
+          "status": "READY",
+          "selected_program_id": "SPE000000010",
+          "post_text": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+          "draft_text": null,
+          "reply_texts": [],
+          "media": {
+            "turn": "IMAGE",
+            "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+            "check": "MATCHED",
+            "image_copy": null,
+            "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래 집, 방패, 체크리스트가 있고 하단에 자세한 사항은 프로필링크 확인 문구가 있는 정사각형 일러스트."
+          },
+          "review": {
+            "planned_at": "2026-11-26T20:00:00+09:00",
+            "application_status": "ALWAYS",
+            "reader": "생활비를 점검하는 저소득 등록장애인과 가족",
+            "central_message": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+            "pattern": "P1",
+            "selection_reason": "동일ID원본누적32949 내림차순,기존82게시/다른미예약READY3제외. 상위HOLD/SKIP출처보존. 생활비상황에서연금비수급/재가시설지급액/학생예외/준비서류로판단. 최근20도입전개실제비교. 검색량추정없음.",
+            "interest_basis": "OBSERVED_METRICS",
+            "duplicate_check": "CHECKED",
+            "evidence": [
+              {
+                "source_id": "SPE000000010",
+                "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710030200",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                "claims_supported": [
+                  "오늘실제열람850~881:18세이상등록/연금법중증아님/기초수급차상위/18~20학교특수포함재학휴학의무교육유예제외/재가월6만원/시설생계의료월3만원/주민센터복지로."
+                ]
+              },
+              {
+                "source_id": "SPE000000010",
+                "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710030100",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                "claims_supported": [
+                  "오늘실제열람977~988행2026년1월기준명시월6만원재가/시설3만원. 구팝업3만원과충돌해소. 최종수정2026.3.31."
+                ]
+              },
+              {
+                "source_id": "SPE000000010",
+                "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=681344&bnefType=all&svcId=SPE000000010",
+                "access_method": "PROVIDED_OFFICIAL_TEXT",
+                "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                "claims_supported": [
+                  "실제완전snapshot/load_feed/read_current/verify_snapshot 동일ID누적32949/상시신청/준비서류원문. 수집성공은접수거래나개별수급보장아님."
+                ]
+              },
+              {
+                "source_id": "SPE000000010",
+                "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+                "access_method": "UPSTREAM_VERIFIED",
+                "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                "claims_supported": [
+                  "이번실제PNG GET bytes/SHA현재main image-reviewPASS일치. 원본1254px와360px실제열람,한글/잘림/깨짐/대비/과밀/공식오인확인PASS. 사업명금액날짜없는승인브랜드_rotation. 직전미래IMAGEguide1과교대. 실측성과주장없음."
+                ]
+              }
+            ],
+            "checks": {
+              "facts": "PASS",
+              "current_status": "PASS",
+              "eligibility_and_units": "PASS",
+              "cta_and_no_links": "PASS",
+              "length": "PASS",
+              "media": "PASS"
+            },
+            "char_count": 395,
+            "count_method": "python_len_including_spaces_newlines_CTA",
+            "missing_info": [],
+            "hold_reasons": [],
+            "warnings": [
+              "일반장애인복지법심한장애와장애인연금법중증판정은단순등치하지않음. 본문은연금법기준사용.",
+              "구MOHW popup 월3만원은현행정책본문과2026.1명시개요6만원/시설3만원으로대조해구자료로분리. 복지로직접본문400/0행,실제신청거래미확인.",
+              "프로필목적지는이전08:30관찰재사용;이번홈검색17결과중정확명보건복지부장애수당→동일ID상세실제CUA확인. Threads리디렉션완료미확인.",
+              "최대24h검수기한이내일20~22전체창보다먼저끝남. 오늘22시이후공식본문/상태/최신완전세대/PNG_SHA실제재대조후archive/CAS갱신필수.19:34수집본내일20시신선도보장않음."
+            ],
+            "reach_editorial": {
+              "policy_id": "supportpick-threads-reach-v1-20261109",
+              "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+              "core_question": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+              "reader_scope": "생활비를 점검하는 저소득 등록장애인과 가족",
+              "angles": [
+                "매월생활비",
+                "연금비수급자대상",
+                "학생예외와서류"
+              ],
+              "chosen_angle": "생활비상황에서신청가능조건",
+              "opening_candidates": [
+                "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                "등록장애인이라면 월 6만 원을 모두 받을까요?",
+                "집과 보장시설, 장애수당 지급액은 같을까요?"
+              ],
+              "chosen_opening": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+              "opening_type": "생활상황질문",
+              "cohort": null,
+              "selection_reason": "생활비장면+즉답;행정적학교범위정정;가구반복문장삭제",
+              "history_posts_checked": 20,
+              "comparison_eligible": false,
+              "comparison_exclusion": "v3질문형·본문편집동시적용으로순수A/B비교제외",
+              "master_full_used": true,
+              "search_evidence": "공식검색결과 장애수당/장애인연금/월6만원 표현확인;검색량미측정",
+              "profile_route": {
+                "previous_profile_target_checked_at": "2026-11-25T08:30:00+09:00",
+                "current_site_route_checked_at": "2026-11-25T21:14:03.344880+09:00",
+                "method": "CUA home장애수당검색17결과→보건복지부정확명클릭→SPE000000010상세/금융동의신고서실제표시",
+                "detail": "https://kllollain-max.github.io/supportpick/benefits/SPE000000010/",
+                "direct_Threads_redirect_complete": false
+              },
+              "observed_metrics_context": "159실제관측,기존14일평가유지;계정7/30·체류완독CTA기여미측정"
+            },
+            "astra_final_review": {
+              "actual_model": "gpt-6.2-astra",
+              "model_confirmation": "parent explicit model spawn succeeded; finer identity unavailable",
+              "independent_agent": "/root/disability_final_review",
+              "final_verdict": "PASS",
+              "score": 97,
+              "policy_version": "3.0",
+              "calls": 2,
+              "initial_review": {
+                "version": "3.0",
+                "round": 1,
+                "model_identifier": "미확인",
+                "reviewer": "/root/disability_final_review",
+                "reviewed_at": "2026-11-25T21:11:56.099507+09:00",
+                "body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+                "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                "char_count": 395,
+                "scores": [
+                  [
+                    "첫 문장",
+                    12,
+                    15,
+                    "질문은 구체적이나 직전 네 건과 같은 질문형, 실제 생활 상황이 약하다."
+                  ],
+                  [
+                    "관심/의도",
+                    14,
+                    15,
+                    "연금 미수급자 판단에 직접 답하나 생활비 결정 맥락을 보강할 수 있다."
+                  ],
+                  [
+                    "정확성",
+                    18,
+                    20,
+                    "18~20세 학교 유형을 닫힌 열거로 제시하여 각종학교 등 누락 가능. 금액·경로·소득 조건은 일치."
+                  ],
+                  [
+                    "완독 가능성",
+                    14,
+                    15,
+                    "의미 단위 문단은 명료하나 가구 전체와 비교하는 문장은 중복."
+                  ],
+                  [
+                    "공유/공감",
+                    9,
+                    10,
+                    "연령 예외와 서류가 가족에게 전달하기 좋다."
+                  ],
+                  [
+                    "가치/차별",
+                    9,
+                    10,
+                    "재가·시설 금액의 판단과 연금 구분. 구조는 P2에 가깝다."
+                  ],
+                  [
+                    "모바일",
+                    5,
+                    5,
+                    "단문과 공백 적절."
+                  ],
+                  [
+                    "이미지 완성도",
+                    5,
+                    5,
+                    "원본·360px 실물 열람. 로고·문구 읽힘, 잘림·금액·날짜·정부 표식 없음. 자체 브랜드 승인 자산."
+                  ],
+                  [
+                    "프로필 유도",
+                    4,
+                    5,
+                    "준비서류 명시. 08:30 홈페이지 목적지와 상세 HTTP 성공은 상위 근거. 현재 프로필 리디렉션 완료 미확인."
+                  ]
+                ],
+                "total": 90,
+                "decision": "REVISE",
+                "checks": {
+                  "body": 1,
+                  "replies": 0,
+                  "exact_final_cta": 1,
+                  "url": 0,
+                  "hashtag": 0,
+                  "limit": 500,
+                  "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+                  "history": "최근 20개 동일 ID 없음. 직전 4개 질문형. 익일 P8/P6/P5와 다른 P1 필요.",
+                  "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정."
+                },
+                "changes": [
+                  "생활비 장면과 대상자 결정을 직접 제시하는 평서문으로 변경",
+                  "초·중등교육법상 학교(특수학교 포함)로 학교 범위 보완",
+                  "가구 전체 비교 문장 삭제",
+                  "프로필 확인 범위 과장 금지"
+                ]
+              },
+              "final_review": {
+                "version": "3.0",
+                "round": 2,
+                "model_identifier": "미확인",
+                "reviewer": "/root/disability_final_review",
+                "reviewed_at": "2026-11-25T21:12:38.567319+09:00",
+                "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+                "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                "char_count": 395,
+                "scores": [
+                  [
+                    "첫 문장",
+                    14,
+                    15,
+                    "생활비 상황과 신청 여부를 직접 질문. 첫줄 연금 명칭은 다음 문장에서 특정."
+                  ],
+                  [
+                    "관심/의도",
+                    15,
+                    15,
+                    "네 다음 문장에 필수 연령·소득·장애 기준을 모두 제시."
+                  ],
+                  [
+                    "정확성",
+                    20,
+                    20,
+                    "대상 및 재가·시설 월별 금액, 학생 예외, 상시 신청과 두 경로, 서류가 공식 근거에 부합."
+                  ],
+                  [
+                    "완독 가능성",
+                    14,
+                    15,
+                    "가구 비교를 제거하고 한 문단에 한 판단을 담음. 법령명 문장에는 다소 집중이 필요."
+                  ],
+                  [
+                    "공유/공감",
+                    9,
+                    10,
+                    "생활비를 점검하는 가족에게 유용한 시설 금액·학생 예외가 드러남."
+                  ],
+                  [
+                    "가치/차별",
+                    10,
+                    10,
+                    "생활비→연금 비수급→거주 유형별 개인 월액→학생 예외→서류로 전개."
+                  ],
+                  [
+                    "모바일",
+                    5,
+                    5,
+                    "본문 문단 간 여백, 360픽셀 카드 문구의 식별 확인."
+                  ],
+                  [
+                    "이미지 완성도",
+                    5,
+                    5,
+                    "원본 및 축소본 다시 열람. 승인 범용 카드 내 소실·잘림·공식 표식·혼동 금액 없음."
+                  ],
+                  [
+                    "프로필 유도",
+                    5,
+                    5,
+                    "기관과 사업명을 명시해 동명 항목 구별. 실제 상세 서류로 연결됨."
+                  ]
+                ],
+                "total": 97,
+                "decision": "EDITORIAL_PASS",
+                "checks": {
+                  "body": 1,
+                  "replies": 0,
+                  "exact_final_cta": 1,
+                  "url": 0,
+                  "hashtag": 0,
+                  "limit": 500,
+                  "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+                  "history": "최근 20건 동일 ID 없음. 사용자 지정 질문형을 유지하며 생활비 장면으로 차별화.",
+                  "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정.",
+                  "profile": "상위 실제 CUA: 홈페이지 장애수당 검색 17건→보건복지부 장애수당 선택→동일 ID 상세 서류·정부24 링크 확인. 프로필 홈페이지 목적지는 08:30 근거 재사용. 현재 Threads 리디렉션 완료 미확인."
+                },
+                "changes": [],
+                "previous_body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+                "publication_status": "미게시. 11월 26일 20~22시 KST 전체 창을 포괄하는 유효 근거로 재확인·갱신 필요."
+              },
+              "body_before": "장애인연금을 못 받는다면 월 6만 원 장애수당 대상일까요?\n장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요. 가구 전체에 한 번 지급하는 금액과 달라요.\n\n18~20세로 초·중·고등학교나 특수학교에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+              "body_after": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+              "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+              "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+              "fallback_reason": null
+            }
+          },
+          "next_history_record": {
+            "program_id": "SPE000000010",
+            "notice_version": "gov24-45594952230-1;official2026-11-25T21:14:03.344880+09:00",
+            "pattern": "P1",
+            "opening": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+            "structure": "생활비상황→대상즉답→재가시설금액→학생예외→서류",
+            "media_turn": "IMAGE"
+          }
+        },
+        "full_delay_window_covered": false,
+        "revalidate_before": "2026-11-26T20:00:00+09:00",
+        "revalidation_required_reason": "expires_before_slot_plus_two_hours"
+      },
+      "refreshed_entry": {
+        "slot": "2026-11-26T20:00:00+09:00",
+        "benefit_id": "SPE000000010",
+        "source_fingerprint": "2cf3c0a79b4cbd1c2e6528015a2988015ed9747764d7c0b7cd4bc3628b987751",
+        "source_generation": "gov24-45594952230-1",
+        "prepared_at": "2026-11-25T22:25:37.852042+09:00",
+        "expires_at": "2026-11-26T22:25:37.852042+09:00",
+        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "writer": {
+          "schema_version": "supportpick.writer.v1",
+          "status": "READY",
+          "selected_program_id": "SPE000000010",
+          "post_text": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+          "draft_text": null,
+          "reply_texts": [],
+          "media": {
+            "turn": "IMAGE",
+            "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+            "check": "MATCHED",
+            "image_copy": null,
+            "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래 집, 방패, 체크리스트가 있고 하단에 자세한 사항은 프로필링크 확인 문구가 있는 정사각형 일러스트."
+          },
+          "review": {
+            "planned_at": "2026-11-26T20:00:00+09:00",
+            "application_status": "ALWAYS",
+            "reader": "생활비를 점검하는 저소득 등록장애인과 가족",
+            "central_message": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+            "pattern": "P1",
+            "selection_reason": "동일ID원본누적32949 내림차순,기존82게시/다른미예약READY3제외. 상위HOLD/SKIP출처보존. 생활비상황에서연금비수급/재가시설지급액/학생예외/준비서류로판단. 최근20도입전개실제비교. 검색량추정없음.",
+            "interest_basis": "OBSERVED_METRICS",
+            "duplicate_check": "CHECKED",
+            "evidence": [
+              {
+                "source_id": "SPE000000010",
+                "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710030200",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-25T22:25:37.852042+09:00",
+                "claims_supported": [
+                  "오늘실제열람850~881:18세이상등록/연금법중증아님/기초수급차상위/18~20학교특수포함재학휴학의무교육유예제외/재가월6만원/시설생계의료월3만원/주민센터복지로.",
+                  "이번22시대 보건복지부 장애수당정책본문과2026년1월기준명시연금개요를실제다시열람:대상/연금법중증아님/18~20학교특수포함재학휴학유예제외/재가6만원시설생계의료3만원/주민센터복지로. 열람범위종료정정미발견,개별신청거래나선정보장없음."
+                ]
+              },
+              {
+                "source_id": "SPE000000010",
+                "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710030100",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-25T22:25:37.852042+09:00",
+                "claims_supported": [
+                  "오늘실제열람977~988행2026년1월기준명시월6만원재가/시설3만원. 구팝업3만원과충돌해소. 최종수정2026.3.31.",
+                  "이번22시대 보건복지부 장애수당정책본문과2026년1월기준명시연금개요를실제다시열람:대상/연금법중증아님/18~20학교특수포함재학휴학유예제외/재가6만원시설생계의료3만원/주민센터복지로. 열람범위종료정정미발견,개별신청거래나선정보장없음."
+                ]
+              },
+              {
+                "source_id": "SPE000000010",
+                "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=681344&bnefType=all&svcId=SPE000000010",
+                "access_method": "PROVIDED_OFFICIAL_TEXT",
+                "verified_at": "2026-11-25T22:25:37.852042+09:00",
+                "claims_supported": [
+                  "실제완전snapshot/load_feed/read_current/verify_snapshot 동일ID누적32949/상시신청/준비서류원문. 수집성공은접수거래나개별수급보장아님.",
+                  "이번22시대최신완료operations45594952230 runtime read_current/verify_snapshot/load_feed 실제재검증,동일IDfingerprint일치. 상세HTTP200/준비서류재대조. 19:34수집본내일20시신선도보장않음."
+                ]
+              },
+              {
+                "source_id": "SPE000000010",
+                "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+                "access_method": "UPSTREAM_VERIFIED",
+                "verified_at": "2026-11-25T22:25:37.852042+09:00",
+                "claims_supported": [
+                  "이번실제PNG GET bytes/SHA현재main image-reviewPASS일치. 원본1254px와360px실제열람,한글/잘림/깨짐/대비/과밀/공식오인확인PASS. 사업명금액날짜없는승인브랜드_rotation. 직전미래IMAGEguide1과교대. 실측성과주장없음.",
+                  "이번22시대실제PNG GET bytes/SHA현재main image-review일치. 기존21시원본360시각검수보존,이번새시각검수아님."
+                ]
+              }
+            ],
+            "checks": {
+              "facts": "PASS",
+              "current_status": "PASS",
+              "eligibility_and_units": "PASS",
+              "cta_and_no_links": "PASS",
+              "length": "PASS",
+              "media": "PASS"
+            },
+            "char_count": 395,
+            "count_method": "python_len_including_spaces_newlines_CTA",
+            "missing_info": [],
+            "hold_reasons": [],
+            "warnings": [
+              "일반장애인복지법심한장애와장애인연금법중증판정은단순등치하지않음. 본문은연금법기준사용.",
+              "구MOHW popup 월3만원은현행정책본문과2026.1명시개요6만원/시설3만원으로대조해구자료로분리. 복지로직접본문400/0행,실제신청거래미확인.",
+              "프로필목적지는이전08:30관찰재사용;이번홈검색17결과중정확명보건복지부장애수당→동일ID상세실제CUA확인. Threads리디렉션완료미확인.",
+              "최대24h검수기한이내일20~22전체창보다먼저끝남. 오늘22시이후공식본문/상태/최신완전세대/PNG_SHA실제재대조후archive/CAS갱신필수.19:34수집본내일20시신선도보장않음."
+            ],
+            "reach_editorial": {
+              "policy_id": "supportpick-threads-reach-v1-20261109",
+              "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+              "core_question": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+              "reader_scope": "생활비를 점검하는 저소득 등록장애인과 가족",
+              "angles": [
+                "매월생활비",
+                "연금비수급자대상",
+                "학생예외와서류"
+              ],
+              "chosen_angle": "생활비상황에서신청가능조건",
+              "opening_candidates": [
+                "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                "등록장애인이라면 월 6만 원을 모두 받을까요?",
+                "집과 보장시설, 장애수당 지급액은 같을까요?"
+              ],
+              "chosen_opening": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+              "opening_type": "생활상황질문",
+              "cohort": null,
+              "selection_reason": "생활비장면+즉답;행정적학교범위정정;가구반복문장삭제",
+              "history_posts_checked": 20,
+              "comparison_eligible": false,
+              "comparison_exclusion": "v3질문형·본문편집동시적용으로순수A/B비교제외",
+              "master_full_used": true,
+              "search_evidence": "공식검색결과 장애수당/장애인연금/월6만원 표현확인;검색량미측정",
+              "profile_route": {
+                "previous_profile_target_checked_at": "2026-11-25T08:30:00+09:00",
+                "current_site_route_checked_at": "2026-11-25T21:14:03.344880+09:00",
+                "method": "CUA home장애수당검색17결과→보건복지부정확명클릭→SPE000000010상세/금융동의신고서실제표시",
+                "detail": "https://kllollain-max.github.io/supportpick/benefits/SPE000000010/",
+                "direct_Threads_redirect_complete": false
+              },
+              "observed_metrics_context": "159실제관측,기존14일평가유지;계정7/30·체류완독CTA기여미측정"
+            },
+            "astra_final_review": {
+              "actual_model": "gpt-6.2-astra",
+              "model_confirmation": "parent explicit model spawn succeeded; finer identity unavailable",
+              "independent_agent": "/root/disability_final_review",
+              "final_verdict": "PASS",
+              "score": 97,
+              "policy_version": "3.0",
+              "calls": 2,
+              "initial_review": {
+                "version": "3.0",
+                "round": 1,
+                "model_identifier": "미확인",
+                "reviewer": "/root/disability_final_review",
+                "reviewed_at": "2026-11-25T21:11:56.099507+09:00",
+                "body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+                "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                "char_count": 395,
+                "scores": [
+                  [
+                    "첫 문장",
+                    12,
+                    15,
+                    "질문은 구체적이나 직전 네 건과 같은 질문형, 실제 생활 상황이 약하다."
+                  ],
+                  [
+                    "관심/의도",
+                    14,
+                    15,
+                    "연금 미수급자 판단에 직접 답하나 생활비 결정 맥락을 보강할 수 있다."
+                  ],
+                  [
+                    "정확성",
+                    18,
+                    20,
+                    "18~20세 학교 유형을 닫힌 열거로 제시하여 각종학교 등 누락 가능. 금액·경로·소득 조건은 일치."
+                  ],
+                  [
+                    "완독 가능성",
+                    14,
+                    15,
+                    "의미 단위 문단은 명료하나 가구 전체와 비교하는 문장은 중복."
+                  ],
+                  [
+                    "공유/공감",
+                    9,
+                    10,
+                    "연령 예외와 서류가 가족에게 전달하기 좋다."
+                  ],
+                  [
+                    "가치/차별",
+                    9,
+                    10,
+                    "재가·시설 금액의 판단과 연금 구분. 구조는 P2에 가깝다."
+                  ],
+                  [
+                    "모바일",
+                    5,
+                    5,
+                    "단문과 공백 적절."
+                  ],
+                  [
+                    "이미지 완성도",
+                    5,
+                    5,
+                    "원본·360px 실물 열람. 로고·문구 읽힘, 잘림·금액·날짜·정부 표식 없음. 자체 브랜드 승인 자산."
+                  ],
+                  [
+                    "프로필 유도",
+                    4,
+                    5,
+                    "준비서류 명시. 08:30 홈페이지 목적지와 상세 HTTP 성공은 상위 근거. 현재 프로필 리디렉션 완료 미확인."
+                  ]
+                ],
+                "total": 90,
+                "decision": "REVISE",
+                "checks": {
+                  "body": 1,
+                  "replies": 0,
+                  "exact_final_cta": 1,
+                  "url": 0,
+                  "hashtag": 0,
+                  "limit": 500,
+                  "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+                  "history": "최근 20개 동일 ID 없음. 직전 4개 질문형. 익일 P8/P6/P5와 다른 P1 필요.",
+                  "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정."
+                },
+                "changes": [
+                  "생활비 장면과 대상자 결정을 직접 제시하는 평서문으로 변경",
+                  "초·중등교육법상 학교(특수학교 포함)로 학교 범위 보완",
+                  "가구 전체 비교 문장 삭제",
+                  "프로필 확인 범위 과장 금지"
+                ]
+              },
+              "final_review": {
+                "version": "3.0",
+                "round": 2,
+                "model_identifier": "미확인",
+                "reviewer": "/root/disability_final_review",
+                "reviewed_at": "2026-11-25T21:12:38.567319+09:00",
+                "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+                "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                "char_count": 395,
+                "scores": [
+                  [
+                    "첫 문장",
+                    14,
+                    15,
+                    "생활비 상황과 신청 여부를 직접 질문. 첫줄 연금 명칭은 다음 문장에서 특정."
+                  ],
+                  [
+                    "관심/의도",
+                    15,
+                    15,
+                    "네 다음 문장에 필수 연령·소득·장애 기준을 모두 제시."
+                  ],
+                  [
+                    "정확성",
+                    20,
+                    20,
+                    "대상 및 재가·시설 월별 금액, 학생 예외, 상시 신청과 두 경로, 서류가 공식 근거에 부합."
+                  ],
+                  [
+                    "완독 가능성",
+                    14,
+                    15,
+                    "가구 비교를 제거하고 한 문단에 한 판단을 담음. 법령명 문장에는 다소 집중이 필요."
+                  ],
+                  [
+                    "공유/공감",
+                    9,
+                    10,
+                    "생활비를 점검하는 가족에게 유용한 시설 금액·학생 예외가 드러남."
+                  ],
+                  [
+                    "가치/차별",
+                    10,
+                    10,
+                    "생활비→연금 비수급→거주 유형별 개인 월액→학생 예외→서류로 전개."
+                  ],
+                  [
+                    "모바일",
+                    5,
+                    5,
+                    "본문 문단 간 여백, 360픽셀 카드 문구의 식별 확인."
+                  ],
+                  [
+                    "이미지 완성도",
+                    5,
+                    5,
+                    "원본 및 축소본 다시 열람. 승인 범용 카드 내 소실·잘림·공식 표식·혼동 금액 없음."
+                  ],
+                  [
+                    "프로필 유도",
+                    5,
+                    5,
+                    "기관과 사업명을 명시해 동명 항목 구별. 실제 상세 서류로 연결됨."
+                  ]
+                ],
+                "total": 97,
+                "decision": "EDITORIAL_PASS",
+                "checks": {
+                  "body": 1,
+                  "replies": 0,
+                  "exact_final_cta": 1,
+                  "url": 0,
+                  "hashtag": 0,
+                  "limit": 500,
+                  "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+                  "history": "최근 20건 동일 ID 없음. 사용자 지정 질문형을 유지하며 생활비 장면으로 차별화.",
+                  "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정.",
+                  "profile": "상위 실제 CUA: 홈페이지 장애수당 검색 17건→보건복지부 장애수당 선택→동일 ID 상세 서류·정부24 링크 확인. 프로필 홈페이지 목적지는 08:30 근거 재사용. 현재 Threads 리디렉션 완료 미확인."
+                },
+                "changes": [],
+                "previous_body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+                "publication_status": "미게시. 11월 26일 20~22시 KST 전체 창을 포괄하는 유효 근거로 재확인·갱신 필요."
+              },
+              "body_before": "장애인연금을 못 받는다면 월 6만 원 장애수당 대상일까요?\n장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요. 가구 전체에 한 번 지급하는 금액과 달라요.\n\n18~20세로 초·중·고등학교나 특수학교에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+              "body_after": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+              "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+              "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+              "fallback_reason": null
+            }
+          },
+          "next_history_record": {
+            "program_id": "SPE000000010",
+            "notice_version": "gov24-45594952230-1;official2026-11-25T21:14:03.344880+09:00",
+            "pattern": "P1",
+            "opening": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+            "structure": "생활비상황→대상즉답→재가시설금액→학생예외→서류",
+            "media_turn": "IMAGE"
+          }
+        },
+        "full_delay_window_covered": true,
+        "revalidate_before": "2026-11-26T20:00:00+09:00"
+      },
+      "source": {
+        "count": 10895,
+        "generation": "gov24-45594952230-1",
+        "lastSuccessAt": "2026-11-25T19:34:23.343783+09:00",
+        "manifestSha256": "00e96a3f0a1dc21bb339ad656eca9c6fff0b40b6f5446eaef436071ad8595b3e",
+        "path": "snapshots/gov24-45594952230-1",
+        "version": 1
+      },
+      "actual_official_rereview": true,
+      "web_refs": [
+        "turn169486083view0",
+        "turn169486083view1"
+      ],
+      "site_detail_actual_http200": true,
+      "site_detail_sha256": "5596c1082ccd66f8a3935c9b9cf0650757f374f1bc74ecc2eb3b75c0b73d9896",
+      "cached_artifact_manifest_reverified": true,
+      "source_recheck_required_at_publish": true,
+      "same_final_body_media_pattern_cohort_astra_review": true,
+      "new_visual_inspection": false,
+      "image_turn": "IMAGE",
+      "actual_png_GET_sha_match": true
     }
   },
   "observed_main_changes": {
@@ -151996,17 +153601,1228 @@
         "new_scores": 0,
         "new_model_calls": 0
       }
+    },
+    "2026-11-25T22:26:47.930300+09:00": {
+      "checked_at": "2026-11-25T22:26:47.930300+09:00",
+      "result": "disability_full_window_expiry_prevented_after_actual_rereview",
+      "maintenance_previous_blob_sha": "345d6fad1a7603533f7d455ddb7f98022a586f67",
+      "current_main_sha": "5c4084549223723b566cfe560d2e418903ad4337",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "928048d72700fa933f404f887ff750901b8efa84",
+      "queue_blob_sha": "b277cffb6cb4f1d4210b469750ceaa3dad99bc55",
+      "changed_run_versions": [
+        {
+          "run_id": "45614926642",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-25T12:33:53Z",
+          "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
+        }
+      ],
+      "active_target_runs": [],
+      "run_pagination": {
+        "per_page": 100,
+        "pages": [
+          1
+        ],
+        "checkpoint_run_id": "45607532189",
+        "checkpoint_version_unchanged": true,
+        "all_new_target_versions_observed": true,
+        "latest_completed_operations_run_id": "45499312067"
+      },
+      "publication_ledger_records": 82,
+      "complete_verified_records": 82,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "45594952230",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-25T10:55:39Z",
+        "head_sha": "5c4084549223723b566cfe560d2e418903ad4337",
+        "job_id": 139138455355,
+        "artifact_id": 15012793307,
+        "artifact_digest": "sha256:32b47b8f137cc9fb85c4c6966ab1ec5250f38ff0d2c1d668c8fa21dcd673e41f",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 315,
+        "read_current_verify_snapshot_load_feed": true,
+        "manifest": {
+          "count": 10895,
+          "generation": "gov24-45594952230-1",
+          "lastSuccessAt": "2026-11-25T19:34:23.343783+09:00",
+          "manifestSha256": "00e96a3f0a1dc21bb339ad656eca9c6fff0b40b6f5446eaef436071ad8595b3e",
+          "path": "snapshots/gov24-45594952230-1",
+          "version": 1
+        },
+        "source_count": 10895,
+        "complete": true,
+        "actual_application_status_not_inferred_from_collection": true,
+        "new_candidate_original_official_pages_read": true,
+        "original_notice_rereview_this_check": true,
+        "public_verification_artifact_id": 15014218636,
+        "public_verification_digest": "sha256:015e6c329277471a79f2de19058ebaff259ce2e6e03834016212f7738dea72e4",
+        "public_verification": {
+          "publicHtmlChecked": 11162,
+          "sitemapUrls": 11035,
+          "generation": "gov24-45594952230-1",
+          "sourceRevision": "5c4084549223723b566cfe560d2e418903ad4337",
+          "robots": {
+            "http": 200,
+            "crawlAllowed": true,
+            "scope": "host_root"
+          },
+          "missingUrlHttp": 404,
+          "passed": 11162,
+          "failed": 0,
+          "initialFailures": 2,
+          "maxRequestsPerSecond": 10,
+          "rateLimitEpisodes": 0,
+          "stoppedForRateLimit": false,
+          "recoveredAfterRetry": [
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/383000000185/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            },
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/631000000117/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            }
+          ],
+          "failures": []
+        }
+      },
+      "writer": {
+        "checked_at": "2026-11-25T22:25:37.852042+09:00",
+        "source": {
+          "count": 10895,
+          "generation": "gov24-45594952230-1",
+          "lastSuccessAt": "2026-11-25T19:34:23.343783+09:00",
+          "manifestSha256": "00e96a3f0a1dc21bb339ad656eca9c6fff0b40b6f5446eaef436071ad8595b3e",
+          "path": "snapshots/gov24-45594952230-1",
+          "version": 1
+        },
+        "ready": 4,
+        "future24h_ready": 4,
+        "drafts": [
+          {
+            "slot": "2026-11-26T08:00:00+09:00",
+            "benefit_id": "611000000137",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 351,
+            "expires_at": "2026-11-26T10:13:46.980394+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-26T12:00:00+09:00",
+            "benefit_id": "SD0000001491",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 377,
+            "expires_at": "2026-11-26T14:54:59.197830+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-26T16:00:00+09:00",
+            "benefit_id": "PTR000051390",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 459,
+            "expires_at": "2026-11-26T18:54:53.927829+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-26T20:00:00+09:00",
+            "benefit_id": "SPE000000010",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 395,
+            "expires_at": "2026-11-26T22:25:37.852042+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "new_drafts": 0,
+        "existing_READY_reused": 4,
+        "new_publications_observed": 0,
+        "maintenance_post_calls": 0,
+        "expiry_prevention_revalidations": 1,
+        "astra_review_invocations": 0,
+        "ledger_records": 82,
+        "pending": null,
+        "lease": null,
+        "new_metrics": 3,
+        "observations": 162,
+        "new_evaluation": false
+      },
+      "metrics": {
+        "run_id": "45614926642",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-25T12:33:53Z",
+        "head_sha": "5c4084549223723b566cfe560d2e418903ad4337",
+        "job_id": 139207743335,
+        "artifact_id": 15021573326,
+        "artifact_digest": "sha256:ae170937cc993c3064b10ca33eb3ba0fb78be02f24bcc23460b91507cbaca66b",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "observed_at": "2026-11-25T12:33:47.259006+00:00",
+        "records": [
+          {
+            "post_id": "18075899267779249",
+            "published_at": "2026-11-18T20:45:51.478162+09:00",
+            "observed_at": "2026-11-25T12:33:47.259006+00:00",
+            "window_hours": 168,
+            "elapsed_hours": 168.79882801222223,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 30,
+              "likes": 2,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          },
+          {
+            "post_id": "18149154712603236",
+            "published_at": "2026-11-22T20:31:29.184832+09:00",
+            "observed_at": "2026-11-25T12:33:47.259006+00:00",
+            "window_hours": 72,
+            "elapsed_hours": 73.03835393722223,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 82,
+              "likes": 2,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          },
+          {
+            "post_id": "18472882234189391",
+            "published_at": "2026-11-24T20:43:48.291443+09:00",
+            "observed_at": "2026-11-25T12:33:47.259006+00:00",
+            "window_hours": 24,
+            "elapsed_hours": 24.833046545277778,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 7,
+              "likes": 2,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          }
+        ],
+        "due_count": 3,
+        "success_count": 3,
+        "new_observation_keys": [
+          "18075899267779249:168h",
+          "18149154712603236:72h",
+          "18472882234189391:24h"
+        ],
+        "new_observations": 3,
+        "total_observations": 162,
+        "new_evaluation_report_due": false,
+        "weights_unchanged": true
+      },
+      "recovery": {
+        "new_publication_this_check": false,
+        "new_posts": 0,
+        "maintenance_new_posts": 0,
+        "new_recovery_this_check": false,
+        "new_failure_this_check": false,
+        "reason": "Disability fullwindow expiry prevention after actualMOHWofficialpolicy/current2026rates/currentstatus/latestcomplete/sourcefingerprint/detailHTTP200/PNGGETSHA rereview. Oldentryarchived,body395/image/Astra97 unchanged;4preview nominal+fullwindowPASS. NoPOST/dispatch/rerun/backfill/codechange."
+      },
+      "next_condition": "FourfutureREADY Nov26 08TEXT/P8,12IMAGE/P6,16TEXT/P5,20IMAGE/P1 nominal+whole2hPASS. DisabilityexpiresNov26 22:25 afteractualMOHWpolicy/2026rates/currentstatus/latestcomplete/sourcefingerprint/detail/PNGGETSHA rereview;oldentryarchived/CASsaved. Body395/Astra97/image unchanged,no newmodel/visual/profileclaim.82published162realmetrics. New24h7views2likes at24.833h excludes relocatedcohortA;72h82views2likes and168h30views2likes not24h. No causalCTA/dwell/account7/30inference. Formal14dayweightsunchanged. Current19:34sourceNOTfreshNov26 20 actualsenderlatestcompletefreshmandatory.",
+      "publication": {
+        "run_id": "45607532189",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-25T11:47:51Z",
+        "head_sha": "5c4084549223723b566cfe560d2e418903ad4337",
+        "job_id": 139182173784,
+        "artifact_id": 15018920831,
+        "artifact_digest": "sha256:89d2122464cb7e770d66b8654d40bc3a43ec521c64131413ad88b63ae7d7d0cf",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 138,
+        "new_publication_this_run": false,
+        "main_id": "17950017192359863",
+        "url": "https://www.threads.com/@hid_1004/post/DgKdNkOEYk3",
+        "slot": "2026-11-25T20:00:00+09:00",
+        "receipt_at": "2026-11-25T20:47:38.1663121+09:00",
+        "receipt_time_basis": "Actual GitHub job Threads receipt line; exact platform timestamp unavailable",
+        "ledger_published_at": "2026-11-25T20:46:47.256597+09:00",
+        "ledger_published_at_is_invocation_not_exact_platform_time": true,
+        "stage": "complete",
+        "verified": true,
+        "body_hash": "8048d902f3b027b379d27842c3c5f414df4e60a70c1b0116fdb65ea98f7c8ab6",
+        "content_hash": "776f8be9e294e4b39fbadb30901decd7bf12949f5430cf6f861eeb48edd42de3",
+        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "media_turn": "IMAGE",
+        "pattern": "P1",
+        "char_count": 419,
+        "replies": 0,
+        "original_queue_body_asset_exact": true,
+        "previous81records_preserved": true,
+        "maintenance_post_calls": 0,
+        "delay_within_original_2h_window": true,
+        "actual_source_generation": "gov24-45594952230-1",
+        "latest_already_reported": true
+      },
+      "history_reconciliation": {
+        "run_id": "45173485637",
+        "mode": "check-account",
+        "account": "hid_1004",
+        "checked_at": "2026-11-23T21:21:24+09:00",
+        "recent_remote_rows": 100,
+        "more_history": true,
+        "main_ledger_matches_in_page": 49,
+        "latest20_main_matches": 20,
+        "latest_remote_id": "18129410933479829",
+        "target_text_absent": true,
+        "scope": "77durablecompleteverifiedrows;prior76exactpreserved;newreceipt/body/asset/artifactverified. No full28dayremotequery.",
+        "artifact_id": 14818615408,
+        "artifact_digest": "sha256:23cfc165bbd050ec1a12dbde18778345efb01c4d9e20abf69f6279b090e003b3",
+        "artifact_digest_verified": true,
+        "remote_requeried_this_check": false,
+        "previous_remote_evidence_preserved": true
+      },
+      "official_review_recovery": {
+        "new_official_page_review_this_check": true,
+        "program_id": "SPE000000010",
+        "rereview_audit": {
+          "checked_at": "2026-11-25T22:25:37.852042+09:00",
+          "previous_entry": {
+            "slot": "2026-11-26T20:00:00+09:00",
+            "benefit_id": "SPE000000010",
+            "source_fingerprint": "2cf3c0a79b4cbd1c2e6528015a2988015ed9747764d7c0b7cd4bc3628b987751",
+            "source_generation": "gov24-45594952230-1",
+            "prepared_at": "2026-11-25T21:14:03.344880+09:00",
+            "expires_at": "2026-11-26T21:14:03.344880+09:00",
+            "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+            "writer": {
+              "schema_version": "supportpick.writer.v1",
+              "status": "READY",
+              "selected_program_id": "SPE000000010",
+              "post_text": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+              "draft_text": null,
+              "reply_texts": [],
+              "media": {
+                "turn": "IMAGE",
+                "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+                "check": "MATCHED",
+                "image_copy": null,
+                "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래 집, 방패, 체크리스트가 있고 하단에 자세한 사항은 프로필링크 확인 문구가 있는 정사각형 일러스트."
+              },
+              "review": {
+                "planned_at": "2026-11-26T20:00:00+09:00",
+                "application_status": "ALWAYS",
+                "reader": "생활비를 점검하는 저소득 등록장애인과 가족",
+                "central_message": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                "pattern": "P1",
+                "selection_reason": "동일ID원본누적32949 내림차순,기존82게시/다른미예약READY3제외. 상위HOLD/SKIP출처보존. 생활비상황에서연금비수급/재가시설지급액/학생예외/준비서류로판단. 최근20도입전개실제비교. 검색량추정없음.",
+                "interest_basis": "OBSERVED_METRICS",
+                "duplicate_check": "CHECKED",
+                "evidence": [
+                  {
+                    "source_id": "SPE000000010",
+                    "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710030200",
+                    "access_method": "OPENED_OFFICIAL",
+                    "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                    "claims_supported": [
+                      "오늘실제열람850~881:18세이상등록/연금법중증아님/기초수급차상위/18~20학교특수포함재학휴학의무교육유예제외/재가월6만원/시설생계의료월3만원/주민센터복지로."
+                    ]
+                  },
+                  {
+                    "source_id": "SPE000000010",
+                    "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710030100",
+                    "access_method": "OPENED_OFFICIAL",
+                    "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                    "claims_supported": [
+                      "오늘실제열람977~988행2026년1월기준명시월6만원재가/시설3만원. 구팝업3만원과충돌해소. 최종수정2026.3.31."
+                    ]
+                  },
+                  {
+                    "source_id": "SPE000000010",
+                    "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=681344&bnefType=all&svcId=SPE000000010",
+                    "access_method": "PROVIDED_OFFICIAL_TEXT",
+                    "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                    "claims_supported": [
+                      "실제완전snapshot/load_feed/read_current/verify_snapshot 동일ID누적32949/상시신청/준비서류원문. 수집성공은접수거래나개별수급보장아님."
+                    ]
+                  },
+                  {
+                    "source_id": "SPE000000010",
+                    "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+                    "access_method": "UPSTREAM_VERIFIED",
+                    "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                    "claims_supported": [
+                      "이번실제PNG GET bytes/SHA현재main image-reviewPASS일치. 원본1254px와360px실제열람,한글/잘림/깨짐/대비/과밀/공식오인확인PASS. 사업명금액날짜없는승인브랜드_rotation. 직전미래IMAGEguide1과교대. 실측성과주장없음."
+                    ]
+                  }
+                ],
+                "checks": {
+                  "facts": "PASS",
+                  "current_status": "PASS",
+                  "eligibility_and_units": "PASS",
+                  "cta_and_no_links": "PASS",
+                  "length": "PASS",
+                  "media": "PASS"
+                },
+                "char_count": 395,
+                "count_method": "python_len_including_spaces_newlines_CTA",
+                "missing_info": [],
+                "hold_reasons": [],
+                "warnings": [
+                  "일반장애인복지법심한장애와장애인연금법중증판정은단순등치하지않음. 본문은연금법기준사용.",
+                  "구MOHW popup 월3만원은현행정책본문과2026.1명시개요6만원/시설3만원으로대조해구자료로분리. 복지로직접본문400/0행,실제신청거래미확인.",
+                  "프로필목적지는이전08:30관찰재사용;이번홈검색17결과중정확명보건복지부장애수당→동일ID상세실제CUA확인. Threads리디렉션완료미확인.",
+                  "최대24h검수기한이내일20~22전체창보다먼저끝남. 오늘22시이후공식본문/상태/최신완전세대/PNG_SHA실제재대조후archive/CAS갱신필수.19:34수집본내일20시신선도보장않음."
+                ],
+                "reach_editorial": {
+                  "policy_id": "supportpick-threads-reach-v1-20261109",
+                  "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+                  "core_question": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                  "reader_scope": "생활비를 점검하는 저소득 등록장애인과 가족",
+                  "angles": [
+                    "매월생활비",
+                    "연금비수급자대상",
+                    "학생예외와서류"
+                  ],
+                  "chosen_angle": "생활비상황에서신청가능조건",
+                  "opening_candidates": [
+                    "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                    "등록장애인이라면 월 6만 원을 모두 받을까요?",
+                    "집과 보장시설, 장애수당 지급액은 같을까요?"
+                  ],
+                  "chosen_opening": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                  "opening_type": "생활상황질문",
+                  "cohort": null,
+                  "selection_reason": "생활비장면+즉답;행정적학교범위정정;가구반복문장삭제",
+                  "history_posts_checked": 20,
+                  "comparison_eligible": false,
+                  "comparison_exclusion": "v3질문형·본문편집동시적용으로순수A/B비교제외",
+                  "master_full_used": true,
+                  "search_evidence": "공식검색결과 장애수당/장애인연금/월6만원 표현확인;검색량미측정",
+                  "profile_route": {
+                    "previous_profile_target_checked_at": "2026-11-25T08:30:00+09:00",
+                    "current_site_route_checked_at": "2026-11-25T21:14:03.344880+09:00",
+                    "method": "CUA home장애수당검색17결과→보건복지부정확명클릭→SPE000000010상세/금융동의신고서실제표시",
+                    "detail": "https://kllollain-max.github.io/supportpick/benefits/SPE000000010/",
+                    "direct_Threads_redirect_complete": false
+                  },
+                  "observed_metrics_context": "159실제관측,기존14일평가유지;계정7/30·체류완독CTA기여미측정"
+                },
+                "astra_final_review": {
+                  "actual_model": "gpt-6.2-astra",
+                  "model_confirmation": "parent explicit model spawn succeeded; finer identity unavailable",
+                  "independent_agent": "/root/disability_final_review",
+                  "final_verdict": "PASS",
+                  "score": 97,
+                  "policy_version": "3.0",
+                  "calls": 2,
+                  "initial_review": {
+                    "version": "3.0",
+                    "round": 1,
+                    "model_identifier": "미확인",
+                    "reviewer": "/root/disability_final_review",
+                    "reviewed_at": "2026-11-25T21:11:56.099507+09:00",
+                    "body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+                    "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                    "char_count": 395,
+                    "scores": [
+                      [
+                        "첫 문장",
+                        12,
+                        15,
+                        "질문은 구체적이나 직전 네 건과 같은 질문형, 실제 생활 상황이 약하다."
+                      ],
+                      [
+                        "관심/의도",
+                        14,
+                        15,
+                        "연금 미수급자 판단에 직접 답하나 생활비 결정 맥락을 보강할 수 있다."
+                      ],
+                      [
+                        "정확성",
+                        18,
+                        20,
+                        "18~20세 학교 유형을 닫힌 열거로 제시하여 각종학교 등 누락 가능. 금액·경로·소득 조건은 일치."
+                      ],
+                      [
+                        "완독 가능성",
+                        14,
+                        15,
+                        "의미 단위 문단은 명료하나 가구 전체와 비교하는 문장은 중복."
+                      ],
+                      [
+                        "공유/공감",
+                        9,
+                        10,
+                        "연령 예외와 서류가 가족에게 전달하기 좋다."
+                      ],
+                      [
+                        "가치/차별",
+                        9,
+                        10,
+                        "재가·시설 금액의 판단과 연금 구분. 구조는 P2에 가깝다."
+                      ],
+                      [
+                        "모바일",
+                        5,
+                        5,
+                        "단문과 공백 적절."
+                      ],
+                      [
+                        "이미지 완성도",
+                        5,
+                        5,
+                        "원본·360px 실물 열람. 로고·문구 읽힘, 잘림·금액·날짜·정부 표식 없음. 자체 브랜드 승인 자산."
+                      ],
+                      [
+                        "프로필 유도",
+                        4,
+                        5,
+                        "준비서류 명시. 08:30 홈페이지 목적지와 상세 HTTP 성공은 상위 근거. 현재 프로필 리디렉션 완료 미확인."
+                      ]
+                    ],
+                    "total": 90,
+                    "decision": "REVISE",
+                    "checks": {
+                      "body": 1,
+                      "replies": 0,
+                      "exact_final_cta": 1,
+                      "url": 0,
+                      "hashtag": 0,
+                      "limit": 500,
+                      "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+                      "history": "최근 20개 동일 ID 없음. 직전 4개 질문형. 익일 P8/P6/P5와 다른 P1 필요.",
+                      "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정."
+                    },
+                    "changes": [
+                      "생활비 장면과 대상자 결정을 직접 제시하는 평서문으로 변경",
+                      "초·중등교육법상 학교(특수학교 포함)로 학교 범위 보완",
+                      "가구 전체 비교 문장 삭제",
+                      "프로필 확인 범위 과장 금지"
+                    ]
+                  },
+                  "final_review": {
+                    "version": "3.0",
+                    "round": 2,
+                    "model_identifier": "미확인",
+                    "reviewer": "/root/disability_final_review",
+                    "reviewed_at": "2026-11-25T21:12:38.567319+09:00",
+                    "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+                    "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                    "char_count": 395,
+                    "scores": [
+                      [
+                        "첫 문장",
+                        14,
+                        15,
+                        "생활비 상황과 신청 여부를 직접 질문. 첫줄 연금 명칭은 다음 문장에서 특정."
+                      ],
+                      [
+                        "관심/의도",
+                        15,
+                        15,
+                        "네 다음 문장에 필수 연령·소득·장애 기준을 모두 제시."
+                      ],
+                      [
+                        "정확성",
+                        20,
+                        20,
+                        "대상 및 재가·시설 월별 금액, 학생 예외, 상시 신청과 두 경로, 서류가 공식 근거에 부합."
+                      ],
+                      [
+                        "완독 가능성",
+                        14,
+                        15,
+                        "가구 비교를 제거하고 한 문단에 한 판단을 담음. 법령명 문장에는 다소 집중이 필요."
+                      ],
+                      [
+                        "공유/공감",
+                        9,
+                        10,
+                        "생활비를 점검하는 가족에게 유용한 시설 금액·학생 예외가 드러남."
+                      ],
+                      [
+                        "가치/차별",
+                        10,
+                        10,
+                        "생활비→연금 비수급→거주 유형별 개인 월액→학생 예외→서류로 전개."
+                      ],
+                      [
+                        "모바일",
+                        5,
+                        5,
+                        "본문 문단 간 여백, 360픽셀 카드 문구의 식별 확인."
+                      ],
+                      [
+                        "이미지 완성도",
+                        5,
+                        5,
+                        "원본 및 축소본 다시 열람. 승인 범용 카드 내 소실·잘림·공식 표식·혼동 금액 없음."
+                      ],
+                      [
+                        "프로필 유도",
+                        5,
+                        5,
+                        "기관과 사업명을 명시해 동명 항목 구별. 실제 상세 서류로 연결됨."
+                      ]
+                    ],
+                    "total": 97,
+                    "decision": "EDITORIAL_PASS",
+                    "checks": {
+                      "body": 1,
+                      "replies": 0,
+                      "exact_final_cta": 1,
+                      "url": 0,
+                      "hashtag": 0,
+                      "limit": 500,
+                      "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+                      "history": "최근 20건 동일 ID 없음. 사용자 지정 질문형을 유지하며 생활비 장면으로 차별화.",
+                      "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정.",
+                      "profile": "상위 실제 CUA: 홈페이지 장애수당 검색 17건→보건복지부 장애수당 선택→동일 ID 상세 서류·정부24 링크 확인. 프로필 홈페이지 목적지는 08:30 근거 재사용. 현재 Threads 리디렉션 완료 미확인."
+                    },
+                    "changes": [],
+                    "previous_body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+                    "publication_status": "미게시. 11월 26일 20~22시 KST 전체 창을 포괄하는 유효 근거로 재확인·갱신 필요."
+                  },
+                  "body_before": "장애인연금을 못 받는다면 월 6만 원 장애수당 대상일까요?\n장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요. 가구 전체에 한 번 지급하는 금액과 달라요.\n\n18~20세로 초·중·고등학교나 특수학교에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+                  "body_after": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+                  "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+                  "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                  "fallback_reason": null
+                }
+              },
+              "next_history_record": {
+                "program_id": "SPE000000010",
+                "notice_version": "gov24-45594952230-1;official2026-11-25T21:14:03.344880+09:00",
+                "pattern": "P1",
+                "opening": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                "structure": "생활비상황→대상즉답→재가시설금액→학생예외→서류",
+                "media_turn": "IMAGE"
+              }
+            },
+            "full_delay_window_covered": false,
+            "revalidate_before": "2026-11-26T20:00:00+09:00",
+            "revalidation_required_reason": "expires_before_slot_plus_two_hours"
+          },
+          "refreshed_entry": {
+            "slot": "2026-11-26T20:00:00+09:00",
+            "benefit_id": "SPE000000010",
+            "source_fingerprint": "2cf3c0a79b4cbd1c2e6528015a2988015ed9747764d7c0b7cd4bc3628b987751",
+            "source_generation": "gov24-45594952230-1",
+            "prepared_at": "2026-11-25T22:25:37.852042+09:00",
+            "expires_at": "2026-11-26T22:25:37.852042+09:00",
+            "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+            "writer": {
+              "schema_version": "supportpick.writer.v1",
+              "status": "READY",
+              "selected_program_id": "SPE000000010",
+              "post_text": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+              "draft_text": null,
+              "reply_texts": [],
+              "media": {
+                "turn": "IMAGE",
+                "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+                "check": "MATCHED",
+                "image_copy": null,
+                "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래 집, 방패, 체크리스트가 있고 하단에 자세한 사항은 프로필링크 확인 문구가 있는 정사각형 일러스트."
+              },
+              "review": {
+                "planned_at": "2026-11-26T20:00:00+09:00",
+                "application_status": "ALWAYS",
+                "reader": "생활비를 점검하는 저소득 등록장애인과 가족",
+                "central_message": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                "pattern": "P1",
+                "selection_reason": "동일ID원본누적32949 내림차순,기존82게시/다른미예약READY3제외. 상위HOLD/SKIP출처보존. 생활비상황에서연금비수급/재가시설지급액/학생예외/준비서류로판단. 최근20도입전개실제비교. 검색량추정없음.",
+                "interest_basis": "OBSERVED_METRICS",
+                "duplicate_check": "CHECKED",
+                "evidence": [
+                  {
+                    "source_id": "SPE000000010",
+                    "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710030200",
+                    "access_method": "OPENED_OFFICIAL",
+                    "verified_at": "2026-11-25T22:25:37.852042+09:00",
+                    "claims_supported": [
+                      "오늘실제열람850~881:18세이상등록/연금법중증아님/기초수급차상위/18~20학교특수포함재학휴학의무교육유예제외/재가월6만원/시설생계의료월3만원/주민센터복지로.",
+                      "이번22시대 보건복지부 장애수당정책본문과2026년1월기준명시연금개요를실제다시열람:대상/연금법중증아님/18~20학교특수포함재학휴학유예제외/재가6만원시설생계의료3만원/주민센터복지로. 열람범위종료정정미발견,개별신청거래나선정보장없음."
+                    ]
+                  },
+                  {
+                    "source_id": "SPE000000010",
+                    "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710030100",
+                    "access_method": "OPENED_OFFICIAL",
+                    "verified_at": "2026-11-25T22:25:37.852042+09:00",
+                    "claims_supported": [
+                      "오늘실제열람977~988행2026년1월기준명시월6만원재가/시설3만원. 구팝업3만원과충돌해소. 최종수정2026.3.31.",
+                      "이번22시대 보건복지부 장애수당정책본문과2026년1월기준명시연금개요를실제다시열람:대상/연금법중증아님/18~20학교특수포함재학휴학유예제외/재가6만원시설생계의료3만원/주민센터복지로. 열람범위종료정정미발견,개별신청거래나선정보장없음."
+                    ]
+                  },
+                  {
+                    "source_id": "SPE000000010",
+                    "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=681344&bnefType=all&svcId=SPE000000010",
+                    "access_method": "PROVIDED_OFFICIAL_TEXT",
+                    "verified_at": "2026-11-25T22:25:37.852042+09:00",
+                    "claims_supported": [
+                      "실제완전snapshot/load_feed/read_current/verify_snapshot 동일ID누적32949/상시신청/준비서류원문. 수집성공은접수거래나개별수급보장아님.",
+                      "이번22시대최신완료operations45594952230 runtime read_current/verify_snapshot/load_feed 실제재검증,동일IDfingerprint일치. 상세HTTP200/준비서류재대조. 19:34수집본내일20시신선도보장않음."
+                    ]
+                  },
+                  {
+                    "source_id": "SPE000000010",
+                    "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+                    "access_method": "UPSTREAM_VERIFIED",
+                    "verified_at": "2026-11-25T22:25:37.852042+09:00",
+                    "claims_supported": [
+                      "이번실제PNG GET bytes/SHA현재main image-reviewPASS일치. 원본1254px와360px실제열람,한글/잘림/깨짐/대비/과밀/공식오인확인PASS. 사업명금액날짜없는승인브랜드_rotation. 직전미래IMAGEguide1과교대. 실측성과주장없음.",
+                      "이번22시대실제PNG GET bytes/SHA현재main image-review일치. 기존21시원본360시각검수보존,이번새시각검수아님."
+                    ]
+                  }
+                ],
+                "checks": {
+                  "facts": "PASS",
+                  "current_status": "PASS",
+                  "eligibility_and_units": "PASS",
+                  "cta_and_no_links": "PASS",
+                  "length": "PASS",
+                  "media": "PASS"
+                },
+                "char_count": 395,
+                "count_method": "python_len_including_spaces_newlines_CTA",
+                "missing_info": [],
+                "hold_reasons": [],
+                "warnings": [
+                  "일반장애인복지법심한장애와장애인연금법중증판정은단순등치하지않음. 본문은연금법기준사용.",
+                  "구MOHW popup 월3만원은현행정책본문과2026.1명시개요6만원/시설3만원으로대조해구자료로분리. 복지로직접본문400/0행,실제신청거래미확인.",
+                  "프로필목적지는이전08:30관찰재사용;이번홈검색17결과중정확명보건복지부장애수당→동일ID상세실제CUA확인. Threads리디렉션완료미확인.",
+                  "최대24h검수기한이내일20~22전체창보다먼저끝남. 오늘22시이후공식본문/상태/최신완전세대/PNG_SHA실제재대조후archive/CAS갱신필수.19:34수집본내일20시신선도보장않음."
+                ],
+                "reach_editorial": {
+                  "policy_id": "supportpick-threads-reach-v1-20261109",
+                  "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+                  "core_question": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                  "reader_scope": "생활비를 점검하는 저소득 등록장애인과 가족",
+                  "angles": [
+                    "매월생활비",
+                    "연금비수급자대상",
+                    "학생예외와서류"
+                  ],
+                  "chosen_angle": "생활비상황에서신청가능조건",
+                  "opening_candidates": [
+                    "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                    "등록장애인이라면 월 6만 원을 모두 받을까요?",
+                    "집과 보장시설, 장애수당 지급액은 같을까요?"
+                  ],
+                  "chosen_opening": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                  "opening_type": "생활상황질문",
+                  "cohort": null,
+                  "selection_reason": "생활비장면+즉답;행정적학교범위정정;가구반복문장삭제",
+                  "history_posts_checked": 20,
+                  "comparison_eligible": false,
+                  "comparison_exclusion": "v3질문형·본문편집동시적용으로순수A/B비교제외",
+                  "master_full_used": true,
+                  "search_evidence": "공식검색결과 장애수당/장애인연금/월6만원 표현확인;검색량미측정",
+                  "profile_route": {
+                    "previous_profile_target_checked_at": "2026-11-25T08:30:00+09:00",
+                    "current_site_route_checked_at": "2026-11-25T21:14:03.344880+09:00",
+                    "method": "CUA home장애수당검색17결과→보건복지부정확명클릭→SPE000000010상세/금융동의신고서실제표시",
+                    "detail": "https://kllollain-max.github.io/supportpick/benefits/SPE000000010/",
+                    "direct_Threads_redirect_complete": false
+                  },
+                  "observed_metrics_context": "159실제관측,기존14일평가유지;계정7/30·체류완독CTA기여미측정"
+                },
+                "astra_final_review": {
+                  "actual_model": "gpt-6.2-astra",
+                  "model_confirmation": "parent explicit model spawn succeeded; finer identity unavailable",
+                  "independent_agent": "/root/disability_final_review",
+                  "final_verdict": "PASS",
+                  "score": 97,
+                  "policy_version": "3.0",
+                  "calls": 2,
+                  "initial_review": {
+                    "version": "3.0",
+                    "round": 1,
+                    "model_identifier": "미확인",
+                    "reviewer": "/root/disability_final_review",
+                    "reviewed_at": "2026-11-25T21:11:56.099507+09:00",
+                    "body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+                    "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                    "char_count": 395,
+                    "scores": [
+                      [
+                        "첫 문장",
+                        12,
+                        15,
+                        "질문은 구체적이나 직전 네 건과 같은 질문형, 실제 생활 상황이 약하다."
+                      ],
+                      [
+                        "관심/의도",
+                        14,
+                        15,
+                        "연금 미수급자 판단에 직접 답하나 생활비 결정 맥락을 보강할 수 있다."
+                      ],
+                      [
+                        "정확성",
+                        18,
+                        20,
+                        "18~20세 학교 유형을 닫힌 열거로 제시하여 각종학교 등 누락 가능. 금액·경로·소득 조건은 일치."
+                      ],
+                      [
+                        "완독 가능성",
+                        14,
+                        15,
+                        "의미 단위 문단은 명료하나 가구 전체와 비교하는 문장은 중복."
+                      ],
+                      [
+                        "공유/공감",
+                        9,
+                        10,
+                        "연령 예외와 서류가 가족에게 전달하기 좋다."
+                      ],
+                      [
+                        "가치/차별",
+                        9,
+                        10,
+                        "재가·시설 금액의 판단과 연금 구분. 구조는 P2에 가깝다."
+                      ],
+                      [
+                        "모바일",
+                        5,
+                        5,
+                        "단문과 공백 적절."
+                      ],
+                      [
+                        "이미지 완성도",
+                        5,
+                        5,
+                        "원본·360px 실물 열람. 로고·문구 읽힘, 잘림·금액·날짜·정부 표식 없음. 자체 브랜드 승인 자산."
+                      ],
+                      [
+                        "프로필 유도",
+                        4,
+                        5,
+                        "준비서류 명시. 08:30 홈페이지 목적지와 상세 HTTP 성공은 상위 근거. 현재 프로필 리디렉션 완료 미확인."
+                      ]
+                    ],
+                    "total": 90,
+                    "decision": "REVISE",
+                    "checks": {
+                      "body": 1,
+                      "replies": 0,
+                      "exact_final_cta": 1,
+                      "url": 0,
+                      "hashtag": 0,
+                      "limit": 500,
+                      "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+                      "history": "최근 20개 동일 ID 없음. 직전 4개 질문형. 익일 P8/P6/P5와 다른 P1 필요.",
+                      "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정."
+                    },
+                    "changes": [
+                      "생활비 장면과 대상자 결정을 직접 제시하는 평서문으로 변경",
+                      "초·중등교육법상 학교(특수학교 포함)로 학교 범위 보완",
+                      "가구 전체 비교 문장 삭제",
+                      "프로필 확인 범위 과장 금지"
+                    ]
+                  },
+                  "final_review": {
+                    "version": "3.0",
+                    "round": 2,
+                    "model_identifier": "미확인",
+                    "reviewer": "/root/disability_final_review",
+                    "reviewed_at": "2026-11-25T21:12:38.567319+09:00",
+                    "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+                    "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                    "char_count": 395,
+                    "scores": [
+                      [
+                        "첫 문장",
+                        14,
+                        15,
+                        "생활비 상황과 신청 여부를 직접 질문. 첫줄 연금 명칭은 다음 문장에서 특정."
+                      ],
+                      [
+                        "관심/의도",
+                        15,
+                        15,
+                        "네 다음 문장에 필수 연령·소득·장애 기준을 모두 제시."
+                      ],
+                      [
+                        "정확성",
+                        20,
+                        20,
+                        "대상 및 재가·시설 월별 금액, 학생 예외, 상시 신청과 두 경로, 서류가 공식 근거에 부합."
+                      ],
+                      [
+                        "완독 가능성",
+                        14,
+                        15,
+                        "가구 비교를 제거하고 한 문단에 한 판단을 담음. 법령명 문장에는 다소 집중이 필요."
+                      ],
+                      [
+                        "공유/공감",
+                        9,
+                        10,
+                        "생활비를 점검하는 가족에게 유용한 시설 금액·학생 예외가 드러남."
+                      ],
+                      [
+                        "가치/차별",
+                        10,
+                        10,
+                        "생활비→연금 비수급→거주 유형별 개인 월액→학생 예외→서류로 전개."
+                      ],
+                      [
+                        "모바일",
+                        5,
+                        5,
+                        "본문 문단 간 여백, 360픽셀 카드 문구의 식별 확인."
+                      ],
+                      [
+                        "이미지 완성도",
+                        5,
+                        5,
+                        "원본 및 축소본 다시 열람. 승인 범용 카드 내 소실·잘림·공식 표식·혼동 금액 없음."
+                      ],
+                      [
+                        "프로필 유도",
+                        5,
+                        5,
+                        "기관과 사업명을 명시해 동명 항목 구별. 실제 상세 서류로 연결됨."
+                      ]
+                    ],
+                    "total": 97,
+                    "decision": "EDITORIAL_PASS",
+                    "checks": {
+                      "body": 1,
+                      "replies": 0,
+                      "exact_final_cta": 1,
+                      "url": 0,
+                      "hashtag": 0,
+                      "limit": 500,
+                      "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+                      "history": "최근 20건 동일 ID 없음. 사용자 지정 질문형을 유지하며 생활비 장면으로 차별화.",
+                      "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정.",
+                      "profile": "상위 실제 CUA: 홈페이지 장애수당 검색 17건→보건복지부 장애수당 선택→동일 ID 상세 서류·정부24 링크 확인. 프로필 홈페이지 목적지는 08:30 근거 재사용. 현재 Threads 리디렉션 완료 미확인."
+                    },
+                    "changes": [],
+                    "previous_body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+                    "publication_status": "미게시. 11월 26일 20~22시 KST 전체 창을 포괄하는 유효 근거로 재확인·갱신 필요."
+                  },
+                  "body_before": "장애인연금을 못 받는다면 월 6만 원 장애수당 대상일까요?\n장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요. 가구 전체에 한 번 지급하는 금액과 달라요.\n\n18~20세로 초·중·고등학교나 특수학교에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+                  "body_after": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+                  "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+                  "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                  "fallback_reason": null
+                }
+              },
+              "next_history_record": {
+                "program_id": "SPE000000010",
+                "notice_version": "gov24-45594952230-1;official2026-11-25T21:14:03.344880+09:00",
+                "pattern": "P1",
+                "opening": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                "structure": "생활비상황→대상즉답→재가시설금액→학생예외→서류",
+                "media_turn": "IMAGE"
+              }
+            },
+            "full_delay_window_covered": true,
+            "revalidate_before": "2026-11-26T20:00:00+09:00"
+          },
+          "source": {
+            "count": 10895,
+            "generation": "gov24-45594952230-1",
+            "lastSuccessAt": "2026-11-25T19:34:23.343783+09:00",
+            "manifestSha256": "00e96a3f0a1dc21bb339ad656eca9c6fff0b40b6f5446eaef436071ad8595b3e",
+            "path": "snapshots/gov24-45594952230-1",
+            "version": 1
+          },
+          "actual_official_rereview": true,
+          "web_refs": [
+            "turn169486083view0",
+            "turn169486083view1"
+          ],
+          "site_detail_actual_http200": true,
+          "site_detail_sha256": "5596c1082ccd66f8a3935c9b9cf0650757f374f1bc74ecc2eb3b75c0b73d9896",
+          "cached_artifact_manifest_reverified": true,
+          "source_recheck_required_at_publish": true,
+          "same_final_body_media_pattern_cohort_astra_review": true,
+          "new_visual_inspection": false,
+          "image_turn": "IMAGE",
+          "actual_png_GET_sha_match": true
+        },
+        "new_Astra_calls": 0,
+        "original_Astra97_body395_image_pattern_preserved": true,
+        "actual_png_GET_SHA_verified": true,
+        "new_visual_inspection": false,
+        "original_visual_and_profile_timestamps_preserved": true
+      },
+      "regular_slot_observation": {
+        "slot": "2026-11-25T20:00:00+09:00",
+        "status": "published_complete_verified_already_reported",
+        "within_two_hour_window": true,
+        "schedule_not_modified": true
+      },
+      "main_head_observation": {
+        "latest_observed_run_head": "5732cde848a03907b2505396c34a4d60c713571e",
+        "target_publisher_workflows_master_and_assets_blobs_unchanged": true,
+        "unrelated_changes_not_modified": true
+      },
+      "image_sha_comparisons": [
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:06.502293+09:00"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:14.847084+09:00"
+        }
+      ],
+      "run_status_transitions": [
+        {
+          "run_id": "45277137519",
+          "from": "in_progress",
+          "to": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-23T22:38:20Z"
+        }
+      ],
+      "formal_evaluation": {
+        "policy_id": "supportpick-threads-reach-v1-20261109",
+        "window": "14d_evaluation",
+        "evaluated_at": "2026-11-24T17:20:07.451089+09:00",
+        "period_start": "2026-11-10T17:00:08.835254+09:00",
+        "period_end": "2026-11-24T17:00:08.835254+09:00",
+        "normal_verified_publications": 53,
+        "experiment_regular_slots": 57,
+        "unpublished_slots": [
+          {
+            "slot": "2026-11-16T16:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-18T12:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-23T20:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-24T16:00:00+09:00",
+            "classification": "unreserved_at_evaluation_cutoff_then_published_after_cutoff",
+            "subsequent_main_id": "17974331994194122",
+            "subsequent_receipt_at": "2026-11-24T17:21:06.769138+09:00"
+          }
+        ],
+        "missed_closed_slots": 3,
+        "partial_or_pending": 0,
+        "independent_full_public_rendering_recheck": false,
+        "publication_audit_scope": "76durablecompleteverifiedrecords; priorreceipts/body/media/artifacts retained. No newfull28dayremotequery; Nov24 16unreserved/latestpublisher12only,nofailure-runconfirmed.",
+        "24h_comparison_window_observations": 40,
+        "A_n": 20,
+        "B_n": 20,
+        "24h_comparable_matched_pairs": 0,
+        "24h_group_view_medians": {
+          "A": 62.0,
+          "B": 62.0
+        },
+        "24h_all_view_median": 62.0,
+        "actual_reactions": {
+          "A": {
+            "likes": 29,
+            "replies": 0,
+            "reposts": 6,
+            "shares": 1
+          },
+          "B": {
+            "likes": 27,
+            "replies": 0,
+            "reposts": 5,
+            "shares": 0
+          }
+        },
+        "reaction_rate_used": false,
+        "all_24h_observations_delayed": true,
+        "eligible_elapsed_hours_min": 24.317312148333336,
+        "eligible_elapsed_hours_max": 25.691108017222223,
+        "24h_unavailable_not_zero": [
+          "18117968657159347",
+          "17992859946026940",
+          "17913499947663769",
+          "18001464938830261"
+        ],
+        "24h_not_yet_due": [
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "24h_missing_after_due": [],
+        "7d_measured": 27,
+        "7d_not_yet_due": [
+          "18004106657810124",
+          "18155833435528730",
+          "18061699079561356",
+          "18075899267779249",
+          "18361336213223949",
+          "18100168118443439",
+          "17876108337601849",
+          "17954736195295664",
+          "18136261246743978",
+          "18029579210863916",
+          "18106611944009610",
+          "17995393143022353",
+          "18002356029029330",
+          "18098495828440255",
+          "18121994881961457",
+          "18093412586696162",
+          "18102899498408388",
+          "18214999999364836",
+          "18125366213319496",
+          "18149154712603236",
+          "17879078796637660",
+          "18388999600236313",
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "7d_group_medians": {
+          "A": 105,
+          "B": 87.5
+        },
+        "quotes": "not_provided",
+        "reader_only_replies": "unavailable",
+        "profile_clicks": "account_level_not_available; no_post_attribution",
+        "confounders": [
+          "Differentbusiness/region/readers/benefit/deadline/time/media/length; matchedsimilarpairs0",
+          "PreservedmovedexistingREADYcohorts differfromnewslots;excludeinsteadretroclassify",
+          "Newquestiontitlepolicy changesmorethanopeningalone;newAstrarevieweddraftsexcludedfrompureA/B"
+        ],
+        "minimum_24h_target_per_group": 8,
+        "raw_window_target_met": true,
+        "current_stratified_target_met": false,
+        "decision": "extend_comparison;maintainbalancedA/Bandexistingcontrols.No demonstratedrepeatedadvantage;noeditorialweightchange.",
+        "weight_changed": false,
+        "no_backcalculation": true,
+        "extension_next_condition": "Reassess in existingchecks when comparable similar-business strata have sufficient repeatedactual24hwindows; keep comparison group. No separate schedule.",
+        "reported_at": "2026-11-24T17:20:07.451089+09:00",
+        "evidence_latest_metric_run_id": "45351393999",
+        "24h_measured_but_excluded": [
+          {
+            "main_id": "18122947907049313",
+            "elapsed_hours": 52.64388394083333,
+            "reason": "late_beyond_26h_comparison_tolerance"
+          },
+          {
+            "main_id": "18061699079561356",
+            "elapsed_hours": 25.374772445277777,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18075899267779249",
+            "elapsed_hours": 24.65035752527778,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18361336213223949",
+            "elapsed_hours": 24.39045965972222,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18100168118443439",
+            "elapsed_hours": 24.6578044575,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "17876108337601849",
+            "elapsed_hours": 25.228189436944444,
+            "reason": "Previously written input preserved; no retrospective cohort assignment after failed preceding slot"
+          }
+        ],
+        "7d_group_n": {
+          "A": 13,
+          "B": 14
+        },
+        "7d_due_unmeasured": [
+          "18450932713126961"
+        ],
+        "publication_cutoff_note": "EvaluationperiodendsNov24 17:00:08.16slotwasunreservedatcutoff, laternaturallypublished17:21:06withinits2hwindow; excludedfrom53periodpublications becauseactualinvocation17:20aftercutoff. Notafourthmissedslot.",
+        "unreserved_at_period_end_slots": 1,
+        "currently_open_unreserved_slots_from_period": 0
+      },
+      "publication_schedule_observation": {
+        "slot": "2026-11-25T20:00:00+09:00",
+        "checked_at": "2026-11-25T22:26:47.930300+09:00",
+        "status": "published_complete_verified_already_reported",
+        "main_id": "17950017192359863",
+        "url": "https://www.threads.com/@hid_1004/post/DgKdNkOEYk3",
+        "receipt_at": "2026-11-25T20:47:38.1663121+09:00",
+        "pending": null,
+        "lease": null,
+        "workflow_dispatch": false,
+        "daily_main_publications": 4
+      },
+      "new_formal_evaluation_this_check": false,
+      "writer_final_edit_v3_status": {
+        "policy_id": "supportpick-threads-final-edit-v3-20261125",
+        "new_v3_READY": 0,
+        "previous_actual_v3_READY_preserved": 4,
+        "new_scores": 0,
+        "new_model_calls": 0
+      }
     }
   },
   "last_reported_prepublication_repair": {
-    "checked_at": "2026-11-25T18:55:55.886398+09:00",
-    "slot": "2026-11-26T16:00:00+09:00",
+    "checked_at": "2026-11-25T22:26:47.930300+09:00",
+    "slot": "2026-11-26T20:00:00+09:00",
     "reason": "full_delay_window_expiry_prevention",
     "actual_official_rereview": true,
-    "actual_pdf_GET_SHA_verified": true,
-    "actual_KB_HTML_GET": true,
-    "image_NOT_REQUIRED": true,
-    "queue_commit": "28bcf81b366ecbfef2b235611ce140517354f4e4",
+    "actual_png_GET_SHA_verified": true,
+    "queue_commit": "beb4981e1caaa5e15df96a6ea89394fa1519cf15",
     "new_post": false
   },
   "last_prepared_queue": {
@@ -154393,11 +157209,17 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-25T21:20:32.833741+09:00",
+    "checked_at": "2026-11-25T22:25:37.852042+09:00",
+    "source": {
+      "count": 10895,
+      "generation": "gov24-45594952230-1",
+      "lastSuccessAt": "2026-11-25T19:34:23.343783+09:00",
+      "manifestSha256": "00e96a3f0a1dc21bb339ad656eca9c6fff0b40b6f5446eaef436071ad8595b3e",
+      "path": "snapshots/gov24-45594952230-1",
+      "version": 1
+    },
     "ready": 4,
     "future24h_ready": 4,
-    "new_drafts": 0,
-    "existing_READY_reused": 4,
     "drafts": [
       {
         "slot": "2026-11-26T08:00:00+09:00",
@@ -154438,42 +157260,31 @@
         "pattern": "P1",
         "media_turn": "IMAGE",
         "char_count": 395,
-        "expires_at": "2026-11-26T21:14:03.344880+09:00",
-        "full_delay_window_valid": false,
+        "expires_at": "2026-11-26T22:25:37.852042+09:00",
+        "full_delay_window_valid": true,
         "source_fresh_at_slot": false,
         "source_recheck_required_at_publish": true
       }
     ],
-    "source": {
-      "count": 10895,
-      "generation": "gov24-45594952230-1",
-      "lastSuccessAt": "2026-11-25T19:34:23.343783+09:00",
-      "manifestSha256": "00e96a3f0a1dc21bb339ad656eca9c6fff0b40b6f5446eaef436071ad8595b3e",
-      "path": "snapshots/gov24-45594952230-1",
-      "version": 1
-    },
-    "source_count": 10895,
+    "new_drafts": 0,
+    "existing_READY_reused": 4,
+    "new_publications_observed": 0,
+    "maintenance_post_calls": 0,
+    "expiry_prevention_revalidations": 1,
+    "astra_review_invocations": 0,
     "ledger_records": 82,
     "pending": null,
     "lease": null,
-    "new_posts": 0,
-    "new_incidents": 0,
-    "new_metrics": 0,
-    "observations": 159,
-    "new_evaluation": false,
-    "astra_review_invocations": 0,
-    "existing_Astra_review_preserved": true,
-    "new_visual_inspection": false,
-    "image_redownloaded_this_check": false,
-    "current_main_image_review_matches_cached_bytes": true,
-    "expiry_prevention_revalidations": 0
+    "new_metrics": 3,
+    "observations": 162,
+    "new_evaluation": false
   },
   "last_queue_review_refresh": {
-    "checked_at": "2026-11-25T18:54:53.927829+09:00",
-    "slot": "2026-11-26T16:00:00+09:00",
-    "reason": "actualagencyPDF/KBHTML/currentstatus/latestcomplete/sourcefingerprint/site rereview coverswhole2hwindow",
-    "queue_commit": "28bcf81b366ecbfef2b235611ce140517354f4e4",
-    "queue_blob_sha": "21afa31b55c40426bb72be61d39a1b2070eb8a68",
+    "checked_at": "2026-11-25T22:25:37.852042+09:00",
+    "slot": "2026-11-26T20:00:00+09:00",
+    "reason": "actualMOHWpolicy/currentstatus/latestcomplete/sourcefingerprint/PNG_SHA/site rereview coverswhole2hwindow",
+    "queue_commit": "beb4981e1caaa5e15df96a6ea89394fa1519cf15",
+    "queue_blob_sha": "b277cffb6cb4f1d4210b469750ceaa3dad99bc55",
     "body_media_pattern_cohort_Astra97_preserved": true
   },
   "prepared_queue_history": {
@@ -171176,327 +173987,334 @@
       "actual_sender_latest_source_recheck_required": true
     },
     "2026-11-26T20:00:00+09:00:SPE000000010": {
-      "status": "REQUIRED_BEFORE_FULL_DELAY_WINDOW",
-      "entry": {
-        "slot": "2026-11-26T20:00:00+09:00",
-        "benefit_id": "SPE000000010",
-        "source_fingerprint": "2cf3c0a79b4cbd1c2e6528015a2988015ed9747764d7c0b7cd4bc3628b987751",
-        "source_generation": "gov24-45594952230-1",
-        "prepared_at": "2026-11-25T21:14:03.344880+09:00",
-        "expires_at": "2026-11-26T21:14:03.344880+09:00",
-        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-        "writer": {
-          "schema_version": "supportpick.writer.v1",
-          "status": "READY",
-          "selected_program_id": "SPE000000010",
-          "post_text": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
-          "draft_text": null,
-          "reply_texts": [],
-          "media": {
-            "turn": "IMAGE",
-            "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-            "check": "MATCHED",
-            "image_copy": null,
-            "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래 집, 방패, 체크리스트가 있고 하단에 자세한 사항은 프로필링크 확인 문구가 있는 정사각형 일러스트."
-          },
-          "review": {
-            "planned_at": "2026-11-26T20:00:00+09:00",
-            "application_status": "ALWAYS",
-            "reader": "생활비를 점검하는 저소득 등록장애인과 가족",
-            "central_message": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
-            "pattern": "P1",
-            "selection_reason": "동일ID원본누적32949 내림차순,기존82게시/다른미예약READY3제외. 상위HOLD/SKIP출처보존. 생활비상황에서연금비수급/재가시설지급액/학생예외/준비서류로판단. 최근20도입전개실제비교. 검색량추정없음.",
-            "interest_basis": "OBSERVED_METRICS",
-            "duplicate_check": "CHECKED",
-            "evidence": [
-              {
-                "source_id": "SPE000000010",
-                "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710030200",
-                "access_method": "OPENED_OFFICIAL",
-                "verified_at": "2026-11-25T21:14:03.344880+09:00",
-                "claims_supported": [
-                  "오늘실제열람850~881:18세이상등록/연금법중증아님/기초수급차상위/18~20학교특수포함재학휴학의무교육유예제외/재가월6만원/시설생계의료월3만원/주민센터복지로."
-                ]
-              },
-              {
-                "source_id": "SPE000000010",
-                "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710030100",
-                "access_method": "OPENED_OFFICIAL",
-                "verified_at": "2026-11-25T21:14:03.344880+09:00",
-                "claims_supported": [
-                  "오늘실제열람977~988행2026년1월기준명시월6만원재가/시설3만원. 구팝업3만원과충돌해소. 최종수정2026.3.31."
-                ]
-              },
-              {
-                "source_id": "SPE000000010",
-                "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=681344&bnefType=all&svcId=SPE000000010",
-                "access_method": "PROVIDED_OFFICIAL_TEXT",
-                "verified_at": "2026-11-25T21:14:03.344880+09:00",
-                "claims_supported": [
-                  "실제완전snapshot/load_feed/read_current/verify_snapshot 동일ID누적32949/상시신청/준비서류원문. 수집성공은접수거래나개별수급보장아님."
-                ]
-              },
-              {
-                "source_id": "SPE000000010",
-                "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
-                "access_method": "UPSTREAM_VERIFIED",
-                "verified_at": "2026-11-25T21:14:03.344880+09:00",
-                "claims_supported": [
-                  "이번실제PNG GET bytes/SHA현재main image-reviewPASS일치. 원본1254px와360px실제열람,한글/잘림/깨짐/대비/과밀/공식오인확인PASS. 사업명금액날짜없는승인브랜드_rotation. 직전미래IMAGEguide1과교대. 실측성과주장없음."
-                ]
-              }
-            ],
-            "checks": {
-              "facts": "PASS",
-              "current_status": "PASS",
-              "eligibility_and_units": "PASS",
-              "cta_and_no_links": "PASS",
-              "length": "PASS",
-              "media": "PASS"
+      "status": "RESOLVED_ACTUAL_OFFICIAL_REREVIEW_FULL_WINDOW_COVERED",
+      "checked_at": "2026-11-25T22:25:37.852042+09:00",
+      "previous_requirement": {
+        "status": "REQUIRED_BEFORE_FULL_DELAY_WINDOW",
+        "entry": {
+          "slot": "2026-11-26T20:00:00+09:00",
+          "benefit_id": "SPE000000010",
+          "source_fingerprint": "2cf3c0a79b4cbd1c2e6528015a2988015ed9747764d7c0b7cd4bc3628b987751",
+          "source_generation": "gov24-45594952230-1",
+          "prepared_at": "2026-11-25T21:14:03.344880+09:00",
+          "expires_at": "2026-11-26T21:14:03.344880+09:00",
+          "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "writer": {
+            "schema_version": "supportpick.writer.v1",
+            "status": "READY",
+            "selected_program_id": "SPE000000010",
+            "post_text": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+            "draft_text": null,
+            "reply_texts": [],
+            "media": {
+              "turn": "IMAGE",
+              "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "check": "MATCHED",
+              "image_copy": null,
+              "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래 집, 방패, 체크리스트가 있고 하단에 자세한 사항은 프로필링크 확인 문구가 있는 정사각형 일러스트."
             },
-            "char_count": 395,
-            "count_method": "python_len_including_spaces_newlines_CTA",
-            "missing_info": [],
-            "hold_reasons": [],
-            "warnings": [
-              "일반장애인복지법심한장애와장애인연금법중증판정은단순등치하지않음. 본문은연금법기준사용.",
-              "구MOHW popup 월3만원은현행정책본문과2026.1명시개요6만원/시설3만원으로대조해구자료로분리. 복지로직접본문400/0행,실제신청거래미확인.",
-              "프로필목적지는이전08:30관찰재사용;이번홈검색17결과중정확명보건복지부장애수당→동일ID상세실제CUA확인. Threads리디렉션완료미확인.",
-              "최대24h검수기한이내일20~22전체창보다먼저끝남. 오늘22시이후공식본문/상태/최신완전세대/PNG_SHA실제재대조후archive/CAS갱신필수.19:34수집본내일20시신선도보장않음."
-            ],
-            "reach_editorial": {
-              "policy_id": "supportpick-threads-reach-v1-20261109",
-              "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
-              "core_question": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
-              "reader_scope": "생활비를 점검하는 저소득 등록장애인과 가족",
-              "angles": [
-                "매월생활비",
-                "연금비수급자대상",
-                "학생예외와서류"
-              ],
-              "chosen_angle": "생활비상황에서신청가능조건",
-              "opening_candidates": [
-                "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
-                "등록장애인이라면 월 6만 원을 모두 받을까요?",
-                "집과 보장시설, 장애수당 지급액은 같을까요?"
-              ],
-              "chosen_opening": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
-              "opening_type": "생활상황질문",
-              "cohort": null,
-              "selection_reason": "생활비장면+즉답;행정적학교범위정정;가구반복문장삭제",
-              "history_posts_checked": 20,
-              "comparison_eligible": false,
-              "comparison_exclusion": "v3질문형·본문편집동시적용으로순수A/B비교제외",
-              "master_full_used": true,
-              "search_evidence": "공식검색결과 장애수당/장애인연금/월6만원 표현확인;검색량미측정",
-              "profile_route": {
-                "previous_profile_target_checked_at": "2026-11-25T08:30:00+09:00",
-                "current_site_route_checked_at": "2026-11-25T21:14:03.344880+09:00",
-                "method": "CUA home장애수당검색17결과→보건복지부정확명클릭→SPE000000010상세/금융동의신고서실제표시",
-                "detail": "https://kllollain-max.github.io/supportpick/benefits/SPE000000010/",
-                "direct_Threads_redirect_complete": false
-              },
-              "observed_metrics_context": "159실제관측,기존14일평가유지;계정7/30·체류완독CTA기여미측정"
-            },
-            "astra_final_review": {
-              "actual_model": "gpt-6.2-astra",
-              "model_confirmation": "parent explicit model spawn succeeded; finer identity unavailable",
-              "independent_agent": "/root/disability_final_review",
-              "final_verdict": "PASS",
-              "score": 97,
-              "policy_version": "3.0",
-              "calls": 2,
-              "initial_review": {
-                "version": "3.0",
-                "round": 1,
-                "model_identifier": "미확인",
-                "reviewer": "/root/disability_final_review",
-                "reviewed_at": "2026-11-25T21:11:56.099507+09:00",
-                "body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
-                "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-                "char_count": 395,
-                "scores": [
-                  [
-                    "첫 문장",
-                    12,
-                    15,
-                    "질문은 구체적이나 직전 네 건과 같은 질문형, 실제 생활 상황이 약하다."
-                  ],
-                  [
-                    "관심/의도",
-                    14,
-                    15,
-                    "연금 미수급자 판단에 직접 답하나 생활비 결정 맥락을 보강할 수 있다."
-                  ],
-                  [
-                    "정확성",
-                    18,
-                    20,
-                    "18~20세 학교 유형을 닫힌 열거로 제시하여 각종학교 등 누락 가능. 금액·경로·소득 조건은 일치."
-                  ],
-                  [
-                    "완독 가능성",
-                    14,
-                    15,
-                    "의미 단위 문단은 명료하나 가구 전체와 비교하는 문장은 중복."
-                  ],
-                  [
-                    "공유/공감",
-                    9,
-                    10,
-                    "연령 예외와 서류가 가족에게 전달하기 좋다."
-                  ],
-                  [
-                    "가치/차별",
-                    9,
-                    10,
-                    "재가·시설 금액의 판단과 연금 구분. 구조는 P2에 가깝다."
-                  ],
-                  [
-                    "모바일",
-                    5,
-                    5,
-                    "단문과 공백 적절."
-                  ],
-                  [
-                    "이미지 완성도",
-                    5,
-                    5,
-                    "원본·360px 실물 열람. 로고·문구 읽힘, 잘림·금액·날짜·정부 표식 없음. 자체 브랜드 승인 자산."
-                  ],
-                  [
-                    "프로필 유도",
-                    4,
-                    5,
-                    "준비서류 명시. 08:30 홈페이지 목적지와 상세 HTTP 성공은 상위 근거. 현재 프로필 리디렉션 완료 미확인."
+            "review": {
+              "planned_at": "2026-11-26T20:00:00+09:00",
+              "application_status": "ALWAYS",
+              "reader": "생활비를 점검하는 저소득 등록장애인과 가족",
+              "central_message": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+              "pattern": "P1",
+              "selection_reason": "동일ID원본누적32949 내림차순,기존82게시/다른미예약READY3제외. 상위HOLD/SKIP출처보존. 생활비상황에서연금비수급/재가시설지급액/학생예외/준비서류로판단. 최근20도입전개실제비교. 검색량추정없음.",
+              "interest_basis": "OBSERVED_METRICS",
+              "duplicate_check": "CHECKED",
+              "evidence": [
+                {
+                  "source_id": "SPE000000010",
+                  "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710030200",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                  "claims_supported": [
+                    "오늘실제열람850~881:18세이상등록/연금법중증아님/기초수급차상위/18~20학교특수포함재학휴학의무교육유예제외/재가월6만원/시설생계의료월3만원/주민센터복지로."
                   ]
-                ],
-                "total": 90,
-                "decision": "REVISE",
-                "checks": {
-                  "body": 1,
-                  "replies": 0,
-                  "exact_final_cta": 1,
-                  "url": 0,
-                  "hashtag": 0,
-                  "limit": 500,
-                  "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
-                  "history": "최근 20개 동일 ID 없음. 직전 4개 질문형. 익일 P8/P6/P5와 다른 P1 필요.",
-                  "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정."
                 },
-                "changes": [
-                  "생활비 장면과 대상자 결정을 직접 제시하는 평서문으로 변경",
-                  "초·중등교육법상 학교(특수학교 포함)로 학교 범위 보완",
-                  "가구 전체 비교 문장 삭제",
-                  "프로필 확인 범위 과장 금지"
-                ]
+                {
+                  "source_id": "SPE000000010",
+                  "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710030100",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                  "claims_supported": [
+                    "오늘실제열람977~988행2026년1월기준명시월6만원재가/시설3만원. 구팝업3만원과충돌해소. 최종수정2026.3.31."
+                  ]
+                },
+                {
+                  "source_id": "SPE000000010",
+                  "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=681344&bnefType=all&svcId=SPE000000010",
+                  "access_method": "PROVIDED_OFFICIAL_TEXT",
+                  "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                  "claims_supported": [
+                    "실제완전snapshot/load_feed/read_current/verify_snapshot 동일ID누적32949/상시신청/준비서류원문. 수집성공은접수거래나개별수급보장아님."
+                  ]
+                },
+                {
+                  "source_id": "SPE000000010",
+                  "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+                  "access_method": "UPSTREAM_VERIFIED",
+                  "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                  "claims_supported": [
+                    "이번실제PNG GET bytes/SHA현재main image-reviewPASS일치. 원본1254px와360px실제열람,한글/잘림/깨짐/대비/과밀/공식오인확인PASS. 사업명금액날짜없는승인브랜드_rotation. 직전미래IMAGEguide1과교대. 실측성과주장없음."
+                  ]
+                }
+              ],
+              "checks": {
+                "facts": "PASS",
+                "current_status": "PASS",
+                "eligibility_and_units": "PASS",
+                "cta_and_no_links": "PASS",
+                "length": "PASS",
+                "media": "PASS"
               },
-              "final_review": {
-                "version": "3.0",
-                "round": 2,
-                "model_identifier": "미확인",
-                "reviewer": "/root/disability_final_review",
-                "reviewed_at": "2026-11-25T21:12:38.567319+09:00",
+              "char_count": 395,
+              "count_method": "python_len_including_spaces_newlines_CTA",
+              "missing_info": [],
+              "hold_reasons": [],
+              "warnings": [
+                "일반장애인복지법심한장애와장애인연금법중증판정은단순등치하지않음. 본문은연금법기준사용.",
+                "구MOHW popup 월3만원은현행정책본문과2026.1명시개요6만원/시설3만원으로대조해구자료로분리. 복지로직접본문400/0행,실제신청거래미확인.",
+                "프로필목적지는이전08:30관찰재사용;이번홈검색17결과중정확명보건복지부장애수당→동일ID상세실제CUA확인. Threads리디렉션완료미확인.",
+                "최대24h검수기한이내일20~22전체창보다먼저끝남. 오늘22시이후공식본문/상태/최신완전세대/PNG_SHA실제재대조후archive/CAS갱신필수.19:34수집본내일20시신선도보장않음."
+              ],
+              "reach_editorial": {
+                "policy_id": "supportpick-threads-reach-v1-20261109",
+                "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+                "core_question": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                "reader_scope": "생활비를 점검하는 저소득 등록장애인과 가족",
+                "angles": [
+                  "매월생활비",
+                  "연금비수급자대상",
+                  "학생예외와서류"
+                ],
+                "chosen_angle": "생활비상황에서신청가능조건",
+                "opening_candidates": [
+                  "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                  "등록장애인이라면 월 6만 원을 모두 받을까요?",
+                  "집과 보장시설, 장애수당 지급액은 같을까요?"
+                ],
+                "chosen_opening": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                "opening_type": "생활상황질문",
+                "cohort": null,
+                "selection_reason": "생활비장면+즉답;행정적학교범위정정;가구반복문장삭제",
+                "history_posts_checked": 20,
+                "comparison_eligible": false,
+                "comparison_exclusion": "v3질문형·본문편집동시적용으로순수A/B비교제외",
+                "master_full_used": true,
+                "search_evidence": "공식검색결과 장애수당/장애인연금/월6만원 표현확인;검색량미측정",
+                "profile_route": {
+                  "previous_profile_target_checked_at": "2026-11-25T08:30:00+09:00",
+                  "current_site_route_checked_at": "2026-11-25T21:14:03.344880+09:00",
+                  "method": "CUA home장애수당검색17결과→보건복지부정확명클릭→SPE000000010상세/금융동의신고서실제표시",
+                  "detail": "https://kllollain-max.github.io/supportpick/benefits/SPE000000010/",
+                  "direct_Threads_redirect_complete": false
+                },
+                "observed_metrics_context": "159실제관측,기존14일평가유지;계정7/30·체류완독CTA기여미측정"
+              },
+              "astra_final_review": {
+                "actual_model": "gpt-6.2-astra",
+                "model_confirmation": "parent explicit model spawn succeeded; finer identity unavailable",
+                "independent_agent": "/root/disability_final_review",
+                "final_verdict": "PASS",
+                "score": 97,
+                "policy_version": "3.0",
+                "calls": 2,
+                "initial_review": {
+                  "version": "3.0",
+                  "round": 1,
+                  "model_identifier": "미확인",
+                  "reviewer": "/root/disability_final_review",
+                  "reviewed_at": "2026-11-25T21:11:56.099507+09:00",
+                  "body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+                  "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                  "char_count": 395,
+                  "scores": [
+                    [
+                      "첫 문장",
+                      12,
+                      15,
+                      "질문은 구체적이나 직전 네 건과 같은 질문형, 실제 생활 상황이 약하다."
+                    ],
+                    [
+                      "관심/의도",
+                      14,
+                      15,
+                      "연금 미수급자 판단에 직접 답하나 생활비 결정 맥락을 보강할 수 있다."
+                    ],
+                    [
+                      "정확성",
+                      18,
+                      20,
+                      "18~20세 학교 유형을 닫힌 열거로 제시하여 각종학교 등 누락 가능. 금액·경로·소득 조건은 일치."
+                    ],
+                    [
+                      "완독 가능성",
+                      14,
+                      15,
+                      "의미 단위 문단은 명료하나 가구 전체와 비교하는 문장은 중복."
+                    ],
+                    [
+                      "공유/공감",
+                      9,
+                      10,
+                      "연령 예외와 서류가 가족에게 전달하기 좋다."
+                    ],
+                    [
+                      "가치/차별",
+                      9,
+                      10,
+                      "재가·시설 금액의 판단과 연금 구분. 구조는 P2에 가깝다."
+                    ],
+                    [
+                      "모바일",
+                      5,
+                      5,
+                      "단문과 공백 적절."
+                    ],
+                    [
+                      "이미지 완성도",
+                      5,
+                      5,
+                      "원본·360px 실물 열람. 로고·문구 읽힘, 잘림·금액·날짜·정부 표식 없음. 자체 브랜드 승인 자산."
+                    ],
+                    [
+                      "프로필 유도",
+                      4,
+                      5,
+                      "준비서류 명시. 08:30 홈페이지 목적지와 상세 HTTP 성공은 상위 근거. 현재 프로필 리디렉션 완료 미확인."
+                    ]
+                  ],
+                  "total": 90,
+                  "decision": "REVISE",
+                  "checks": {
+                    "body": 1,
+                    "replies": 0,
+                    "exact_final_cta": 1,
+                    "url": 0,
+                    "hashtag": 0,
+                    "limit": 500,
+                    "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+                    "history": "최근 20개 동일 ID 없음. 직전 4개 질문형. 익일 P8/P6/P5와 다른 P1 필요.",
+                    "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정."
+                  },
+                  "changes": [
+                    "생활비 장면과 대상자 결정을 직접 제시하는 평서문으로 변경",
+                    "초·중등교육법상 학교(특수학교 포함)로 학교 범위 보완",
+                    "가구 전체 비교 문장 삭제",
+                    "프로필 확인 범위 과장 금지"
+                  ]
+                },
+                "final_review": {
+                  "version": "3.0",
+                  "round": 2,
+                  "model_identifier": "미확인",
+                  "reviewer": "/root/disability_final_review",
+                  "reviewed_at": "2026-11-25T21:12:38.567319+09:00",
+                  "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+                  "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                  "char_count": 395,
+                  "scores": [
+                    [
+                      "첫 문장",
+                      14,
+                      15,
+                      "생활비 상황과 신청 여부를 직접 질문. 첫줄 연금 명칭은 다음 문장에서 특정."
+                    ],
+                    [
+                      "관심/의도",
+                      15,
+                      15,
+                      "네 다음 문장에 필수 연령·소득·장애 기준을 모두 제시."
+                    ],
+                    [
+                      "정확성",
+                      20,
+                      20,
+                      "대상 및 재가·시설 월별 금액, 학생 예외, 상시 신청과 두 경로, 서류가 공식 근거에 부합."
+                    ],
+                    [
+                      "완독 가능성",
+                      14,
+                      15,
+                      "가구 비교를 제거하고 한 문단에 한 판단을 담음. 법령명 문장에는 다소 집중이 필요."
+                    ],
+                    [
+                      "공유/공감",
+                      9,
+                      10,
+                      "생활비를 점검하는 가족에게 유용한 시설 금액·학생 예외가 드러남."
+                    ],
+                    [
+                      "가치/차별",
+                      10,
+                      10,
+                      "생활비→연금 비수급→거주 유형별 개인 월액→학생 예외→서류로 전개."
+                    ],
+                    [
+                      "모바일",
+                      5,
+                      5,
+                      "본문 문단 간 여백, 360픽셀 카드 문구의 식별 확인."
+                    ],
+                    [
+                      "이미지 완성도",
+                      5,
+                      5,
+                      "원본 및 축소본 다시 열람. 승인 범용 카드 내 소실·잘림·공식 표식·혼동 금액 없음."
+                    ],
+                    [
+                      "프로필 유도",
+                      5,
+                      5,
+                      "기관과 사업명을 명시해 동명 항목 구별. 실제 상세 서류로 연결됨."
+                    ]
+                  ],
+                  "total": 97,
+                  "decision": "EDITORIAL_PASS",
+                  "checks": {
+                    "body": 1,
+                    "replies": 0,
+                    "exact_final_cta": 1,
+                    "url": 0,
+                    "hashtag": 0,
+                    "limit": 500,
+                    "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+                    "history": "최근 20건 동일 ID 없음. 사용자 지정 질문형을 유지하며 생활비 장면으로 차별화.",
+                    "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정.",
+                    "profile": "상위 실제 CUA: 홈페이지 장애수당 검색 17건→보건복지부 장애수당 선택→동일 ID 상세 서류·정부24 링크 확인. 프로필 홈페이지 목적지는 08:30 근거 재사용. 현재 Threads 리디렉션 완료 미확인."
+                  },
+                  "changes": [],
+                  "previous_body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+                  "publication_status": "미게시. 11월 26일 20~22시 KST 전체 창을 포괄하는 유효 근거로 재확인·갱신 필요."
+                },
+                "body_before": "장애인연금을 못 받는다면 월 6만 원 장애수당 대상일까요?\n장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요. 가구 전체에 한 번 지급하는 금액과 달라요.\n\n18~20세로 초·중·고등학교나 특수학교에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+                "body_after": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
                 "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
-                "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-                "char_count": 395,
-                "scores": [
-                  [
-                    "첫 문장",
-                    14,
-                    15,
-                    "생활비 상황과 신청 여부를 직접 질문. 첫줄 연금 명칭은 다음 문장에서 특정."
-                  ],
-                  [
-                    "관심/의도",
-                    15,
-                    15,
-                    "네 다음 문장에 필수 연령·소득·장애 기준을 모두 제시."
-                  ],
-                  [
-                    "정확성",
-                    20,
-                    20,
-                    "대상 및 재가·시설 월별 금액, 학생 예외, 상시 신청과 두 경로, 서류가 공식 근거에 부합."
-                  ],
-                  [
-                    "완독 가능성",
-                    14,
-                    15,
-                    "가구 비교를 제거하고 한 문단에 한 판단을 담음. 법령명 문장에는 다소 집중이 필요."
-                  ],
-                  [
-                    "공유/공감",
-                    9,
-                    10,
-                    "생활비를 점검하는 가족에게 유용한 시설 금액·학생 예외가 드러남."
-                  ],
-                  [
-                    "가치/차별",
-                    10,
-                    10,
-                    "생활비→연금 비수급→거주 유형별 개인 월액→학생 예외→서류로 전개."
-                  ],
-                  [
-                    "모바일",
-                    5,
-                    5,
-                    "본문 문단 간 여백, 360픽셀 카드 문구의 식별 확인."
-                  ],
-                  [
-                    "이미지 완성도",
-                    5,
-                    5,
-                    "원본 및 축소본 다시 열람. 승인 범용 카드 내 소실·잘림·공식 표식·혼동 금액 없음."
-                  ],
-                  [
-                    "프로필 유도",
-                    5,
-                    5,
-                    "기관과 사업명을 명시해 동명 항목 구별. 실제 상세 서류로 연결됨."
-                  ]
-                ],
-                "total": 97,
-                "decision": "EDITORIAL_PASS",
-                "checks": {
-                  "body": 1,
-                  "replies": 0,
-                  "exact_final_cta": 1,
-                  "url": 0,
-                  "hashtag": 0,
-                  "limit": 500,
-                  "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
-                  "history": "최근 20건 동일 ID 없음. 사용자 지정 질문형을 유지하며 생활비 장면으로 차별화.",
-                  "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정.",
-                  "profile": "상위 실제 CUA: 홈페이지 장애수당 검색 17건→보건복지부 장애수당 선택→동일 ID 상세 서류·정부24 링크 확인. 프로필 홈페이지 목적지는 08:30 근거 재사용. 현재 Threads 리디렉션 완료 미확인."
-                },
-                "changes": [],
-                "previous_body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
-                "publication_status": "미게시. 11월 26일 20~22시 KST 전체 창을 포괄하는 유효 근거로 재확인·갱신 필요."
-              },
-              "body_before": "장애인연금을 못 받는다면 월 6만 원 장애수당 대상일까요?\n장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요. 가구 전체에 한 번 지급하는 금액과 달라요.\n\n18~20세로 초·중·고등학교나 특수학교에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
-              "body_after": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
-              "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
-              "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-              "fallback_reason": null
+                "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                "fallback_reason": null
+              }
+            },
+            "next_history_record": {
+              "program_id": "SPE000000010",
+              "notice_version": "gov24-45594952230-1;official2026-11-25T21:14:03.344880+09:00",
+              "pattern": "P1",
+              "opening": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+              "structure": "생활비상황→대상즉답→재가시설금액→학생예외→서류",
+              "media_turn": "IMAGE"
             }
           },
-          "next_history_record": {
-            "program_id": "SPE000000010",
-            "notice_version": "gov24-45594952230-1;official2026-11-25T21:14:03.344880+09:00",
-            "pattern": "P1",
-            "opening": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
-            "structure": "생활비상황→대상즉답→재가시설금액→학생예외→서류",
-            "media_turn": "IMAGE"
-          }
+          "full_delay_window_covered": false,
+          "revalidate_before": "2026-11-26T20:00:00+09:00",
+          "revalidation_required_reason": "expires_before_slot_plus_two_hours"
         },
-        "full_delay_window_covered": false,
-        "revalidate_before": "2026-11-26T20:00:00+09:00",
-        "revalidation_required_reason": "expires_before_slot_plus_two_hours"
+        "current_expires_at": "2026-11-26T21:14:03.344880+09:00",
+        "slot_window_ends": "2026-11-26T22:00:00+09:00",
+        "reason": "max24h expiry before fullslot+2h; actualofficial/currentstatus/latestcomplete/imageSHA rereviewafterNov25 22 thenarchiveCAS required"
       },
-      "current_expires_at": "2026-11-26T21:14:03.344880+09:00",
-      "slot_window_ends": "2026-11-26T22:00:00+09:00",
-      "reason": "max24h expiry before fullslot+2h; actualofficial/currentstatus/latestcomplete/imageSHA rereviewafterNov25 22 thenarchiveCAS required"
+      "new_expires_at": "2026-11-26T22:25:37.852042+09:00",
+      "queue_commit": "beb4981e1caaa5e15df96a6ea89394fa1519cf15",
+      "actual_sender_latest_source_recheck_required": true
     }
   },
   "maintenance_calculation_corrections": {
