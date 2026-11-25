@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-25T10:13:46.980394+09:00",
+  "prepared_at": "2026-11-25T12:23:52.951888+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -12104,6 +12104,338 @@
       },
       "full_delay_window_covered": true,
       "revalidate_before": "2026-11-26T08:00:00+09:00"
+    },
+    {
+      "slot": "2026-11-26T12:00:00+09:00",
+      "benefit_id": "SD0000001491",
+      "source_fingerprint": "ae81c96fa51885effbc7f0c4e53fb34b005b821134476b46fe71377d31424206",
+      "source_generation": "gov24-45499312067-1",
+      "prepared_at": "2026-11-25T12:23:52.951888+09:00",
+      "expires_at": "2026-11-26T12:23:52.951888+09:00",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "SD0000001491",
+        "post_text": "창업 준비 중인데, 사업계획서 쓰는 법을 온라인으로 배울 수 있나요?\n네. 소상공인 지식배움터에 사업계획서 작성 강의가 있어요. 소상공인과 예비창업자를 위한 경영교육이에요. 소상공인 정책자금 지원 제외 업종을 운영하는 소상공인은 지원 대상에서 제외돼요.\n\n회원가입 후 로그인해 원하는 강의를 신청하면 ‘나의강의실’에서 들을 수 있어요. 가게 홍보나 직원 채용을 준비한다면 홍보 콘텐츠 제작·노무관리 강의도 찾아볼 수 있어요.\n\n현장교육은 과정마다 일정·지역·정원·본인부담금이 달라 개별 공고를 확인해야 해요.\n\n프로필에서 ‘소상공인 온·오프라인 교육’의 중소벤처기업부 자료를 찾으면 제외 업종·준비서류·정부24 원문 경로를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-26T12:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "사업계획서 작성·홍보·노무관리를 준비하는 소상공인 및 예비창업자",
+          "central_message": "창업 준비 중인데, 사업계획서 쓰는 법을 온라인으로 배울 수 있나요?",
+          "pattern": "P6",
+          "selection_reason": "동일ID누적조회33712. 상위HOLD/SKIP출처·구체사유보존, 앞미예약3개+착수12시는기존READY보호. 소상공인교육분야순환, 현금/상환주장없이사업계획서온라인학습판단. 실제검색표현확인,검색량실측없음.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "SD0000001491",
+              "source_ref": "https://edu.sbiz.or.kr/edu/main/main.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-25T12:23:52.951888+09:00",
+              "claims_supported": [
+                "현재사업계획서작성·홍보콘텐츠·노무관리온라인강의목록직접열람. 특정현장과정모집확정하지않음."
+              ]
+            },
+            {
+              "source_id": "SD0000001491",
+              "source_ref": "https://edu.sbiz.or.kr/edu/online/onlineEduInfo.do?menuCode=WWW001001",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-25T12:23:52.951888+09:00",
+              "claims_supported": [
+                "가입로그인→강의탐색→수강신청→나의강의실. 로그인후개별신청성공까지확인한것아님."
+              ]
+            },
+            {
+              "source_id": "SD0000001491",
+              "source_ref": "https://edu.sbiz.or.kr/edu/user/spt/sptInfo.do?menuCode=WWW002001",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-25T12:23:52.951888+09:00",
+              "claims_supported": [
+                "현장업종전문기술기초국비100%,심화고급10%자부담/10월31일예산소진조기종료/정원조기마감. 전체교육무료/상시라하지않음."
+              ]
+            },
+            {
+              "source_id": "SD0000001491",
+              "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=78964&bnefType=all&svcId=SD0000001491",
+              "access_method": "PROVIDED_OFFICIAL_TEXT",
+              "verified_at": "2026-11-25T12:23:52.951888+09:00",
+              "claims_supported": [
+                "최신완전API동일ID33712,소상공인예비창업자대상/정책자금제외업종제외/기관별기간/사업자등록증임대차계약서등. 수집시각은원문검수시각과구분."
+              ]
+            },
+            {
+              "source_id": "SD0000001491",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-25T12:23:52.951888+09:00",
+              "claims_supported": [
+                "실제PNG GET bytes/SHA현재mainimage-review일치. 원본및360px이미지직접열람후명칭한글잘림깨짐대비과밀공식오인권리기존승인PASS. 사업명금액날짜없는일반브랜드회전카드. 동일그림반복은승인로테이션범위이며직전IMAGEguide2와교대."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 377,
+          "count_method": "python_len_including_spaces_newlines_CTA",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "현장개별과정접수·비용은본문보장없음. 로그인후개별수강성공미시험. 프로필리디렉션클릭완료미확인;08:30목적지증빙과이번홈검색상세클릭증빙구분.",
+            "현재prepared+24h는Nov26 14전체지연창전만료. 오늘14시후실제공식원문/현재상태/최신완전자료/이미지SHA재대조후에만최대24hCAS갱신필수. 현재07:22수집본발송시신선하지않음."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+            "core_question": "창업 준비 중인데, 사업계획서 쓰는 법을 온라인으로 배울 수 있나요?",
+            "reader_scope": "사업계획서 작성·홍보·노무관리를 준비하는 소상공인 및 예비창업자",
+            "angles": [
+              "창업사업계획서작성",
+              "가게홍보학습",
+              "온라인신청준비"
+            ],
+            "chosen_angle": "창업사업계획서온라인학습",
+            "opening_candidates": [
+              "창업 준비 중인데, 사업계획서 쓰는 법을 온라인으로 배울 수 있나요?",
+              "가게 홍보를 직접 준비하는 예비창업자도 온라인 경영교육을 들을 수 있나요?",
+              "소상공인 교육은 모든 과정이 무료로 상시 열릴까요?"
+            ],
+            "chosen_opening": "창업 준비 중인데, 사업계획서 쓰는 법을 온라인으로 배울 수 있나요?",
+            "selection_reason": "구체적인준비결정하나에즉답,확인가능한강의명과신청순서제공",
+            "history_posts_checked": 20,
+            "comparison_eligible": false,
+            "comparison_exclusion": "v3질문형본문개편;순수A/B도입비교제외",
+            "profile_route": {
+              "previous_profile_target_evidence": {
+                "profile": "https://www.threads.com/@hid_1004",
+                "visible_link_target": "https://kllollain-max.github.io/supportpick/",
+                "home_search": "저소득시민 부가급여",
+                "actual_search_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/611000000137/",
+                "method": "CUA public profile visible target; target opened separately; actual home search + result click + detail visible",
+                "redirect_click_completed": false,
+                "checked_at": "2026-11-25T08:33:52.430313+09:00"
+              },
+              "recorded_at": "2026-11-25T12:23:52.951888+09:00",
+              "exact_browser_action_timestamp": "not_exported",
+              "method": "CUA actual home search exactname=>2results=>中소벤처기업부sameIDclick=>detail",
+              "detail": "https://kllollain-max.github.io/supportpick/benefits/SD0000001491/",
+              "government24_link_visible": true,
+              "direct_education_site_link_on_detail": false
+            },
+            "master_full_used": true,
+            "search_evidence": "실제공식검색결과 지식배움터/온라인교육/사업계획서 표현. 자동완성·검색량측정없음.",
+            "observed_metrics_context": "154실제관측/기존14일평가유지.7/30일계정통계체류완독CTA미측정."
+          },
+          "astra_final_review": {
+            "actual_model": "gpt-6.2-astra",
+            "final_verdict": "PASS",
+            "score": 97,
+            "policy_version": "3.0",
+            "calls": 2,
+            "initial_review": {
+              "reviewer_role": "independent_editor",
+              "model": "gpt-6.2-astra",
+              "phase": "first",
+              "version": "3.0",
+              "slot": "2026-11-26 12:00 KST",
+              "format": "IMAGE",
+              "score": 86,
+              "rubric": [
+                {
+                  "category": "첫문장",
+                  "score": 14,
+                  "max": 15,
+                  "rationale": "창업 준비자의 실제 질문이나 도입에서 낯선 플랫폼 이름이 먼저 나온다."
+                },
+                {
+                  "category": "관심의도",
+                  "score": 14,
+                  "max": 15,
+                  "rationale": "질문 직후 대상과 수강 가능 여부를 답한다."
+                },
+                {
+                  "category": "정확성",
+                  "score": 17,
+                  "max": 20,
+                  "rationale": "교육 내용·절차·접수 범위는 일치한다. 정부24 제외 업종 기준을 짧게 덧붙일 필요가 있다."
+                },
+                {
+                  "category": "완독",
+                  "score": 12,
+                  "max": 15,
+                  "rationale": "홍보와 노무 예시가 두 차례 겹치고 현장교육 단서가 반복된다."
+                },
+                {
+                  "category": "공유공감",
+                  "score": 8,
+                  "max": 10,
+                  "rationale": "예비창업자가 활용할 예가 있으나 실제 상황과 연결하면 전달하기 쉽다."
+                },
+                {
+                  "category": "가치차별",
+                  "score": 8,
+                  "max": 10,
+                  "rationale": "수강 단계가 실용적이나 금융교육 게시물과 현금 대비 문구가 겹친다."
+                },
+                {
+                  "category": "모바일",
+                  "score": 4,
+                  "max": 5,
+                  "rationale": "원본·360px 브랜드 및 하단 CTA 판독 가능. 본문 화살표 구간이 빽빽하다."
+                },
+                {
+                  "category": "텍스트완성도",
+                  "score": 5,
+                  "max": 5,
+                  "rationale": "교육임이 첫 문단에서 분명하며 단독 본문으로 읽힌다."
+                },
+                {
+                  "category": "프로필유도",
+                  "score": 4,
+                  "max": 5,
+                  "rationale": "정확한 검색어가 있지만 현재 해당 사업 검색 경로 증빙 대기."
+                }
+              ],
+              "decision": "HOLD",
+              "blocking_requirements": [
+                "해당 사업명 검색 후 동일 ID 상세 도달 증거 대기",
+                "수정 본문 같은 모델 재검수 대기"
+              ],
+              "revised_body": "창업을 준비하는데 사업계획서는 어떻게 쓰고, 가게 홍보는 어디서 배울 수 있나요?\n소상공인 지식배움터에 사업계획서 작성과 SNS 홍보 콘텐츠 제작을 다루는 온라인 강의가 있어요. 소상공인과 예비창업자를 위한 경영교육이에요. 소상공인 정책자금 지원 제외 업종을 운영하는 소상공인은 지원 대상에서 제외돼요.\n\n온라인 강의는 회원가입 후 로그인해 원하는 강의를 신청하면 ‘나의강의실’에서 들을 수 있어요. 직원을 고용할 계획이라면 노무관리 강의도 찾아보세요.\n\n현장교육은 과정마다 일정과 지역, 정원, 본인부담금이 달라요. 프로필에서 ‘소상공인 온·오프라인 교육’을 검색하면 지원 대상과 신청 안내를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+              "replies": [],
+              "revised_char_count": 361,
+              "image_check": {
+                "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+                "verdict": "PASS",
+                "note": "원본 및 360px 실물에서 브랜드·생활 혜택·CTA 판독. 동전 그림은 일반 브랜드 요소이고 액수나 현금 지급 주장이 없으며 본문에서 교육임을 곧바로 밝힘."
+              },
+              "evidence": "동일 ID SD0000001491의 API 상세·목록과 최근 20건 직접 확인. 지식배움터 공식 안내 및 현재 강의 목록은 상위 검증기록 기준. 누적 조회수 33712로 계정 성과·접수 중 상태를 추론하지 않음.",
+              "pattern": "P6, 직전 예정 P8과 구별. 질문 도입 자체는 기존 P8에도 있으나 창업 상황·사업명 고유함.",
+              "final_rereview": "pending"
+            },
+            "final_review": {
+              "model": "gpt-6.2-astra",
+              "reviewer_role": "independent_editor",
+              "phase": "final",
+              "version": "3.0",
+              "checked_at": "2026-11-25T12:22:49+09:00",
+              "slot": "2026-11-26 12:00 KST",
+              "format": "IMAGE",
+              "score": 97,
+              "decision": "PASS",
+              "decision_scope": "editorial_only",
+              "rubric": [
+                {
+                  "category": "첫문장",
+                  "score": 15,
+                  "max": 15,
+                  "rationale": "예비창업자가 사업계획서 작성법을 온라인에서 배울 수 있는지 한 가지를 묻는다."
+                },
+                {
+                  "category": "관심의도",
+                  "score": 15,
+                  "max": 15,
+                  "rationale": "첫 답변에서 실제 강의와 지식배움터를 바로 알려 준다."
+                },
+                {
+                  "category": "정확성",
+                  "score": 20,
+                  "max": 20,
+                  "rationale": "API 대상·제외 업종과 공식 강의목록·수강 단계가 일치한다. 현장교육은 개별 공고 조건으로 한정했다."
+                },
+                {
+                  "category": "완독",
+                  "score": 14,
+                  "max": 15,
+                  "rationale": "신청에서 현장교육, 상세 확인까지 순서가 명확하다. 첫 문단에서 소상공인이라는 말이 반복된다."
+                },
+                {
+                  "category": "공유공감",
+                  "score": 9,
+                  "max": 10,
+                  "rationale": "사업계획·홍보·채용이라는 실제 상황에서 읽을 강의를 구체화한다."
+                },
+                {
+                  "category": "가치차별",
+                  "score": 9,
+                  "max": 10,
+                  "rationale": "온라인 수강 동선과 현장교육 비용 확인을 구별한다. 카드는 일반 브랜드 이미지다."
+                },
+                {
+                  "category": "모바일",
+                  "score": 5,
+                  "max": 5,
+                  "rationale": "짧은 문단으로 분리되고 360px에서 브랜드 카드 CTA를 판독했다."
+                },
+                {
+                  "category": "텍스트완성도",
+                  "score": 5,
+                  "max": 5,
+                  "rationale": "독립된 본문에 대상·수강 방법·예외가 담겼다."
+                },
+                {
+                  "category": "프로필유도",
+                  "score": 5,
+                  "max": 5,
+                  "rationale": "검색 제목과 동명 항목을 구별할 중소벤처기업부를 명시한다. 상세에 실제로 있는 항목만 약속한다."
+                }
+              ],
+              "body_sha256": "e916a468314c83784b3f023d002436414ca62cffc64135946b499d456de6648a",
+              "image_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+              "required_checks": {
+                "chars": 377,
+                "within_500": true,
+                "cta_once": true,
+                "cta_final": true,
+                "no_url_or_hashtag": true,
+                "replies": [],
+                "same_id": "SD0000001491",
+                "official_course_list_verified": true,
+                "source_eligibility_verified": true,
+                "image_original_and_360": "PASS",
+                "image_caption_match": true,
+                "pattern": "P6",
+                "prior_planned_pattern": "P8",
+                "no_same_benefit_in_ledger": "상위 원장 전체 확인 기록",
+                "duplicate_intro_recent20": false,
+                "profile_destination_evidence": "08:30 KST 상위 공개 프로필 목적지 기록. 직접 Threads 리디렉션 완료 미확인.",
+                "benefit_detail_path": "상위 CUA 기록 시각 12:25 KST, 홈 검색 동명 2건 중 중소벤처기업부 클릭, 동일 ID 상세에서 대상·제외·서류·정부24 원문 경로 확인.",
+                "performance_claim": false
+              },
+              "dispatch_approved": false,
+              "dispatch_gate": "24시간 TTL상 11월25일 14시 KST 이후 최신 완전 소스·공식사이트·이미지 재대조 및 CAS 갱신 필요. 발송 시점 최신 소스 검증 필요."
+            },
+            "body_sha256": "e916a468314c83784b3f023d002436414ca62cffc64135946b499d456de6648a",
+            "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+            "fallback_reason": null
+          }
+        },
+        "next_history_record": {
+          "program_id": "SD0000001491",
+          "notice_version": "gov24-45499312067-1;official2026-11-25T12:23:52.951888+09:00",
+          "pattern": "P6",
+          "opening": "창업 준비 중인데, 사업계획서 쓰는 법을 온라인으로 배울 수 있나요?",
+          "structure": "창업준비질문→온라인강의즉답→제외업종→수강절차→현장조건→동명자료구별",
+          "media_turn": "IMAGE"
+        }
+      },
+      "revalidate_before": "2026-11-26T12:00:00+09:00",
+      "full_delay_window_covered": false
     }
   ]
 }
