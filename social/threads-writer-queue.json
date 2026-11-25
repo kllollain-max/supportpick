@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-25T08:33:52.430313+09:00",
+  "prepared_at": "2026-11-25T10:13:46.980394+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -11808,8 +11808,8 @@
       "benefit_id": "611000000137",
       "source_fingerprint": "73fc4500db1c149826f7f2ffcddb3f456e34a05ef22712f4b871fdf27f1f36cc",
       "source_generation": "gov24-45499312067-1",
-      "prepared_at": "2026-11-25T08:33:52.430313+09:00",
-      "expires_at": "2026-11-26T08:33:52.430313+09:00",
+      "prepared_at": "2026-11-25T10:13:46.980394+09:00",
+      "expires_at": "2026-11-26T10:13:46.980394+09:00",
       "asset_sha256": null,
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -11839,18 +11839,20 @@
               "source_id": "611000000137",
               "source_ref": "https://wis.seoul.go.kr/sec/ctg/categoryDetail.do?id=40",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-25T08:33:52.430313+09:00",
+              "verified_at": "2026-11-25T10:13:46.980394+09:00",
               "claims_supported": [
-                "실제183~226행: 서울 기초생계·의료급여 수급가구 시설수급자 제외, 저소득보훈가구도 월동대책비 대상. 11월 가구당 연5만원. 생계·의료급여 자격보유자 별도신청/서류없음. 개인지급완료/특정지급일 보장 없음."
+                "실제183~226행: 서울 기초생계·의료급여 수급가구 시설수급자 제외, 저소득보훈가구도 월동대책비 대상. 11월 가구당 연5만원. 생계·의료급여 자격보유자 별도신청/서류없음. 개인지급완료/특정지급일 보장 없음.",
+                "이번10시대 서울복지포털183~223행 실제재열람: 시설수급자제외·저소득보훈가구·11월가구당연5만원, 생계/의료자격보유자별도신청/서류없음. 현재안내일치;개별지급완료/지급일미확인."
               ]
             },
             {
               "source_id": "611000000137",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003645&bnefType=all&svcId=611000000137",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-25T08:33:52.430313+09:00",
+              "verified_at": "2026-11-25T10:13:46.980394+09:00",
               "claims_supported": [
-                "최신완전API 동일ID611000000137 누적33739, 개인신청절차없음·주소지구청에서자격보유자지원·준비서류없음. 수집시각은 접수검증시각 아님."
+                "최신완전API 동일ID611000000137 누적33739, 개인신청절차없음·주소지구청에서자격보유자지원·준비서류없음. 수집시각은 접수검증시각 아님.",
+                "이번10시대 최신완료operations45499312067 runtime캐시의read_current/verify_snapshot/load_feed 실제재검증,동일IDfingerprint일치. 지원금픽동일ID상세 HTTP200 재열람:개인신청절차없음/주소지구청.내일발송현재07:22세대신선도보장않음."
               ]
             }
           ],
@@ -12100,8 +12102,7 @@
           "media_turn": "TEXT"
         }
       },
-      "full_delay_window_covered": false,
-      "revalidation_required_reason": "expires_at_before_slot_plus_two_hours",
+      "full_delay_window_covered": true,
       "revalidate_before": "2026-11-26T08:00:00+09:00"
     }
   ]
