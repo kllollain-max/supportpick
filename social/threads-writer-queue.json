@@ -3,7 +3,7 @@
   "brand": "supportpick",
   "username": "hid_1004",
   "prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-  "prepared_at": "2026-11-25T17:03:15.614707+09:00",
+  "prepared_at": "2026-11-25T18:54:53.927829+09:00",
   "selection_notes": [
     {
       "benefit_id": "161300000103",
@@ -12447,8 +12447,8 @@
       "benefit_id": "PTR000051390",
       "source_fingerprint": "0f6dd13233549e14079b657325ab7a6aaebb4a32d9644561693c6ec6da57ba22",
       "source_generation": "gov24-45499312067-1",
-      "prepared_at": "2026-11-25T17:03:15.614707+09:00",
-      "expires_at": "2026-11-26T17:03:15.614707+09:00",
+      "prepared_at": "2026-11-25T18:54:53.927829+09:00",
+      "expires_at": "2026-11-26T18:54:53.927829+09:00",
       "asset_sha256": null,
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -12478,27 +12478,30 @@
               "source_id": "PTR000051390",
               "source_ref": "https://www.mpva.go.kr/mpva/downloadBbsFile.do?atchmnflNo=163298",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-25T17:03:15.614707+09:00",
+              "verified_at": "2026-11-25T18:54:53.927829+09:00",
               "claims_supported": [
-                "2026시행지침원본PDF929883bytes SHA6ca4923b52e3f13403fd364a3b0953d97836d6a883f93e81789cc374f1d41b95 실제다운로드·pdftotext617~714:일반300만원2%3년/수시신청/긴급의료비본인배우자직계존비속3일이상입원등/3개월이내지출또는지출예정/일반연1건이나긴급1회추가/기존긴급1건전액상환조건.120~163체납등제외."
+                "2026시행지침원본PDF929883bytes SHA6ca4923b52e3f13403fd364a3b0953d97836d6a883f93e81789cc374f1d41b95 실제다운로드·pdftotext617~714:일반300만원2%3년/수시신청/긴급의료비본인배우자직계존비속3일이상입원등/3개월이내지출또는지출예정/일반연1건이나긴급1회추가/기존긴급1건전액상환조건.120~163체납등제외.",
+                "이번18시대 보훈부 현행목록·2026시행지침 게시글·업무재개 안내 실제재열람, 첨부PDF 실제GET/SHA일치/본문617~714 재대조. 가족범위·3일입원·3개월지출/예정·긴급1회추가·기존긴급전액상환 확인. KB상품 실제HTML GET/대조:전자추천/추천300만원/실제작은액/2%/3년/고객보험료/필요시신청. 신규종료정정 열람범위미발견,개인승인보장없음."
               ]
             },
             {
               "source_id": "PTR000051390",
               "source_ref": "https://obank.kbstar.com/quics?cc=b032425:b033525&isNew=N&page=C020709&prcode=LN20000114",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-25T17:03:15.614707+09:00",
+              "verified_at": "2026-11-25T18:54:53.927829+09:00",
               "claims_supported": [
-                "현재상품공시2026.01.01~2027.11.30유효. 전자문서추천/추천액과가능금액중작은금액/국가유공자연2%제대군인2.5%구분/생활안정3년원리금균등/소액보증보험고객보험료/신용심사제한/소요자금필요시영업점."
+                "현재상품공시2026.01.01~2027.11.30유효. 전자문서추천/추천액과가능금액중작은금액/국가유공자연2%제대군인2.5%구분/생활안정3년원리금균등/소액보증보험고객보험료/신용심사제한/소요자금필요시영업점.",
+                "이번18시대 보훈부 현행목록·2026시행지침 게시글·업무재개 안내 실제재열람, 첨부PDF 실제GET/SHA일치/본문617~714 재대조. 가족범위·3일입원·3개월지출/예정·긴급1회추가·기존긴급전액상환 확인. KB상품 실제HTML GET/대조:전자추천/추천300만원/실제작은액/2%/3년/고객보험료/필요시신청. 신규종료정정 열람범위미발견,개인승인보장없음."
               ]
             },
             {
               "source_id": "PTR000051390",
               "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=106347&bnefType=all&svcId=PTR000051390",
               "access_method": "PROVIDED_OFFICIAL_TEXT",
-              "verified_at": "2026-11-25T17:03:15.614707+09:00",
+              "verified_at": "2026-11-25T18:54:53.927829+09:00",
               "claims_supported": [
-                "최신완전동일ID누적33570/대상범위/다른신청경로/수시접수. API연1건·3건단순안내는2026기관지침의긴급예외와세부건수구분으로보완.수집시각은현재원문확인시각아님."
+                "최신완전동일ID누적33570/대상범위/다른신청경로/수시접수. API연1건·3건단순안내는2026기관지침의긴급예외와세부건수구분으로보완.수집시각은현재원문확인시각아님.",
+                "이번18시대 최신완료operations45499312067 runtime캐시read_current/verify_snapshot/load_feed 실제재검증,동일IDfingerprint일치. 같은사업상세HTTP200/제외업종/준비서류재대조.내일발송현재07:22세대신선도보장않음."
               ]
             }
           ],
@@ -12919,9 +12922,8 @@
           "media_turn": "TEXT"
         }
       },
-      "full_delay_window_covered": false,
-      "revalidate_before": "2026-11-26T16:00:00+09:00",
-      "revalidation_required_reason": "expires_before_slot_plus_two_hours"
+      "full_delay_window_covered": true,
+      "revalidate_before": "2026-11-26T16:00:00+09:00"
     }
   ]
 }
