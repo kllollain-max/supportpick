@@ -73,6 +73,9 @@ class SearchMetadataTests(unittest.TestCase):
                 self.assertIn('property="og:title" content="' + head.title, text)
                 self.assertNotIn('site-verification', text)
             text = (root / 'public/index.html').read_text()
+            youth_hiring_path = 'guides/youth-hiring-participation-vs-payment-2026.html'
+            self.assertEqual(text.count(f'href="{youth_hiring_path}"'), 1)
+            self.assertIn(BASE + youth_hiring_path, urls)
             veterans_path = 'guides/veterans-vehicle-inspection-discount-2026.html'
             self.assertIn(f'href="{veterans_path}"', text)
             veterans = (root / 'public' / veterans_path).read_text()
