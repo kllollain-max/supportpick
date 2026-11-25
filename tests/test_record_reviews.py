@@ -81,7 +81,9 @@ class RecordReviewTests(unittest.TestCase):
         savings=articles['youth-savings-contribution-2026'][3]
         self.assertIn('현행 자격 확정표 아님',voucher)
         self.assertIn('다른 지역에 이 기준을 확대하지 않습니다',voucher)
-        self.assertIn('추가 모집을 확인한 안내가 아니며',voucher)
+        self.assertIn('2차 접수 예정 기간이 2026년 4월 1일~30일',voucher)
+        self.assertIn('1차 접수에서 사업량을 모두 쓰면 2차를 진행하지 않는다는 조건',voucher)
+        self.assertIn('실제 2차 접수가 열렸는지 확인할 수는 없습니다',voucher)
         self.assertIn('정부가 60만원을 붙여준다는 뜻',savings)
         self.assertIn('1,800만원',savings)
         self.assertIn('이 접수 기간은 현재 경과했습니다',savings)
