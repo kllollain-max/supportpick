@@ -14,6 +14,8 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "45607532189",
+    "45604153836",
     "45594952230",
     "45588123983",
     "45576054845",
@@ -6142,41 +6144,64 @@
     "45594952230": {
       "run_id": "45594952230",
       "run_attempt": 1,
-      "status": "in_progress",
-      "conclusion": null,
-      "updated_at": "2026-11-25T10:26:15Z",
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-25T10:55:39Z",
+      "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
+    },
+    "45607532189": {
+      "run_id": "45607532189",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-25T11:47:51Z",
+      "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
+    },
+    "45604153836": {
+      "run_id": "45604153836",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-25T11:24:41Z",
       "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-25T19:44:33.465977+09:00",
-    "result": "no_update",
-    "maintenance_previous_blob_sha": "a764ddece9fbb8d7983f99b6b5f48f090e6bae5c",
+    "checked_at": "2026-11-25T21:15:35.728990+09:00",
+    "result": "normal20h_IMAGE_publication_verified_and_new_v3_READY_saved",
+    "maintenance_previous_blob_sha": "3c43b8a63eb7a9de0ffc170ef4709662a7734cc4",
     "current_main_sha": "5c4084549223723b566cfe560d2e418903ad4337",
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-    "publication_ledger_sha": "6cf66c6029897eb55121b1fecc57741d45794e3c",
-    "queue_blob_sha": "21afa31b55c40426bb72be61d39a1b2070eb8a68",
+    "publication_ledger_sha": "928048d72700fa933f404f887ff750901b8efa84",
+    "queue_blob_sha": "607997a60207b36c3838340507e56e753792f2a5",
     "changed_run_versions": [
       {
-        "run_id": "45594952230",
+        "run_id": "45607532189",
         "run_attempt": 1,
-        "status": "in_progress",
-        "conclusion": null,
-        "updated_at": "2026-11-25T10:26:15Z",
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-25T11:47:51Z",
         "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
-      }
-    ],
-    "active_target_runs": [
+      },
+      {
+        "run_id": "45604153836",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-25T11:24:41Z",
+        "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
+      },
       {
         "run_id": "45594952230",
         "run_attempt": 1,
-        "status": "in_progress",
-        "conclusion": null,
-        "updated_at": "2026-11-25T10:26:15Z",
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-25T10:55:39Z",
         "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
       }
     ],
+    "active_target_runs": [],
     "run_pagination": {
       "per_page": 100,
       "pages": [
@@ -6185,190 +6210,81 @@
       "checkpoint_run_id": "45588123983",
       "checkpoint_version_unchanged": true,
       "all_new_target_versions_observed": true,
-      "latest_completed_operations_run_id": "45499312067"
+      "latest_completed_operations_run_id": "45594952230"
     },
-    "publication_ledger_records": 81,
-    "complete_verified_records": 81,
+    "publication_ledger_records": 82,
+    "complete_verified_records": 82,
     "pending": null,
     "lease": null,
     "source": {
-      "run_id": "45499312067",
+      "run_id": "45594952230",
       "run_attempt": 1,
+      "status": "completed",
       "conclusion": "success",
-      "collection_conclusion": "passed",
-      "job_id": 138818028752,
-      "head_sha": "890215f6a930d9967a5578b3134413e1dde8a1b7",
-      "tests_passed": 310,
-      "artifact_id": 14969423204,
-      "artifact_digest": "sha256:b2476fdb5e694c3418887a1d95021df8401aca80648b64ada250800d80361e21",
-      "artifact_redownloaded_this_check": false,
+      "updated_at": "2026-11-25T10:55:39Z",
+      "head_sha": "5c4084549223723b566cfe560d2e418903ad4337",
+      "job_id": 139138455355,
+      "artifact_id": 15012793307,
+      "artifact_digest": "sha256:32b47b8f137cc9fb85c4c6966ab1ec5250f38ff0d2c1d668c8fa21dcd673e41f",
       "artifact_digest_verified": true,
-      "job_logs_retrieved_this_check": false,
+      "artifact_redownloaded_this_check": true,
+      "job_logs_retrieved_this_check": true,
+      "actual_tests_passed": 315,
       "read_current_verify_snapshot_load_feed": true,
       "manifest": {
         "count": 10895,
-        "generation": "gov24-45499312067-1",
-        "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
-        "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
-        "path": "snapshots/gov24-45499312067-1",
+        "generation": "gov24-45594952230-1",
+        "lastSuccessAt": "2026-11-25T19:34:23.343783+09:00",
+        "manifestSha256": "00e96a3f0a1dc21bb339ad656eca9c6fff0b40b6f5446eaef436071ad8595b3e",
+        "path": "snapshots/gov24-45594952230-1",
         "version": 1
       },
-      "collection_report": {
-        "applicationOpenVerified": false,
-        "collectionSucceededAt": "2026-11-25T07:22:49.899473+09:00",
-        "coverage": "Currently connected Gov24 API, all unfiltered pages of three endpoints",
-        "endpoints": {
-          "serviceDetail": {
-            "completedPages": 109,
-            "duplicateCount": 0,
-            "expectedPages": 109,
-            "receivedCount": 10895,
-            "reportedTotal": 10895,
-            "uniqueCount": 10895
-          },
-          "serviceList": {
-            "completedPages": 109,
-            "duplicateCount": 0,
-            "expectedPages": 109,
-            "receivedCount": 10895,
-            "reportedTotal": 10895,
-            "uniqueCount": 10895
-          },
-          "supportConditions": {
-            "completedPages": 109,
-            "duplicateCount": 0,
-            "expectedPages": 109,
-            "receivedCount": 10895,
-            "reportedTotal": 10895,
-            "uniqueCount": 10895
-          }
-        },
-        "factsVerified": false,
-        "feedSha256": "e1c29b7aea9fe87bf654575a564eb0860e1dd0d42f172782a8ab82d998b54778",
-        "finishedAt": "2026-11-25T07:22:51.016675+09:00",
-        "generation": "gov24-45499312067-1",
-        "normalRequestEstimate": 330,
-        "pageResponses": 327,
-        "project": "supportpick",
-        "published": false,
-        "sampleCount": 0,
-        "scheduled": false,
-        "sourceConsistency": "No snapshot token: totals and boundary pages stable; unique IDs and all endpoint sets matched",
-        "startedAt": "2026-11-25T07:16:32.014081+09:00",
-        "status": "passed",
-        "storedCount": 10895
-      },
-      "publisher_freshness_hours": 24,
-      "current_fresh_until": "2026-11-26T07:22:49.899473+09:00",
-      "collection_is_not_current_application_status_verification": true,
-      "new_candidate_original_official_pages_read": false,
-      "existing3entries_unchanged_fingerprints_and_priority_pass": true,
-      "newstart20_priority_block": true,
+      "source_count": 10895,
+      "complete": true,
+      "actual_application_status_not_inferred_from_collection": true,
+      "new_candidate_original_official_pages_read": true,
+      "original_notice_rereview_this_check": true,
+      "public_verification_artifact_id": 15014218636,
+      "public_verification_digest": "sha256:015e6c329277471a79f2de19058ebaff259ce2e6e03834016212f7738dea72e4",
       "public_verification": {
-        "checked_at": "2026-11-25T07:59:02.227357+09:00",
-        "observed_run_id": "45499312067",
-        "run_attempt": 1,
-        "status": "resolved_by_subsequent_normal_operations_public_verification",
-        "runtime_artifact_id": 14969423204,
-        "runtime_artifact_digest": "sha256:b2476fdb5e694c3418887a1d95021df8401aca80648b64ada250800d80361e21",
-        "runtime_artifact_digest_verified": true,
-        "public_artifact_id": 14972001717,
-        "public_artifact_digest": "sha256:15842e6b6c1032d2f6faf0d893a5dca4c80ed4bfe27bba6d686e9ba47f3634a3",
-        "public_artifact_digest_verified": true,
-        "job_id": 138818028752,
-        "tests_passed": 310,
-        "public_verification": {
-          "publicHtmlChecked": 11049,
-          "sitemapUrls": 11034,
-          "generation": "gov24-45499312067-1",
-          "sourceRevision": "890215f6a930d9967a5578b3134413e1dde8a1b7",
-          "robots": {
-            "http": 200,
-            "crawlAllowed": true,
-            "scope": "host_root"
+        "publicHtmlChecked": 11162,
+        "sitemapUrls": 11035,
+        "generation": "gov24-45594952230-1",
+        "sourceRevision": "5c4084549223723b566cfe560d2e418903ad4337",
+        "robots": {
+          "http": 200,
+          "crawlAllowed": true,
+          "scope": "host_root"
+        },
+        "missingUrlHttp": 404,
+        "passed": 11162,
+        "failed": 0,
+        "initialFailures": 2,
+        "maxRequestsPerSecond": 10,
+        "rateLimitEpisodes": 0,
+        "stoppedForRateLimit": false,
+        "recoveredAfterRetry": [
+          {
+            "url": "https://kllollain-max.github.io/supportpick/benefits/383000000185/",
+            "initialError": "HTTP Error 503: Service Unavailable",
+            "retryHttp": 200
           },
-          "missingUrlHttp": 404,
-          "passed": 11049,
-          "failed": 0,
-          "initialFailures": 7,
-          "maxRequestsPerSecond": 10,
-          "rateLimitEpisodes": 0,
-          "stoppedForRateLimit": false,
-          "recoveredAfterRetry": [
-            {
-              "url": "https://kllollain-max.github.io/supportpick/benefits/313000000149/",
-              "initialError": "HTTP Error 503: Service Unavailable",
-              "retryHttp": 200
-            },
-            {
-              "url": "https://kllollain-max.github.io/supportpick/benefits/349000000116/",
-              "initialError": "HTTP Error 503: Service Unavailable",
-              "retryHttp": 200
-            },
-            {
-              "url": "https://kllollain-max.github.io/supportpick/benefits/355000000123/",
-              "initialError": "HTTP Error 503: Service Unavailable",
-              "retryHttp": 200
-            },
-            {
-              "url": "https://kllollain-max.github.io/supportpick/benefits/448000000114/",
-              "initialError": "HTTP Error 503: Service Unavailable",
-              "retryHttp": 200
-            },
-            {
-              "url": "https://kllollain-max.github.io/supportpick/benefits/494000000151/",
-              "initialError": "HTTP Error 503: Service Unavailable",
-              "retryHttp": 200
-            },
-            {
-              "url": "https://kllollain-max.github.io/supportpick/benefits/643000000141/",
-              "initialError": "HTTP Error 503: Service Unavailable",
-              "retryHttp": 200
-            },
-            {
-              "url": "https://kllollain-max.github.io/supportpick/benefits/O00030000003/",
-              "initialError": "HTTP Error 503: Service Unavailable",
-              "retryHttp": 200
-            }
-          ],
-          "failures": []
-        },
-        "source": {
-          "count": 10895,
-          "generation": "gov24-45499312067-1",
-          "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
-          "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
-          "path": "snapshots/gov24-45499312067-1",
-          "version": 1
-        },
-        "underlying_previous_deployment_cache_cause": "unconfirmed",
-        "site_changes_by_this_check": false,
-        "workflow_dispatch": false,
-        "posts_created": 0
-      },
-      "public_verification_recovery_already_reported": true,
-      "existing4entries_unchanged_fingerprints_and_priority_pass": true,
-      "artifact_digest_previously_verified_cached_bytes": true,
-      "original_notice_rereview_this_check": false
+          {
+            "url": "https://kllollain-max.github.io/supportpick/benefits/631000000117/",
+            "initialError": "HTTP Error 503: Service Unavailable",
+            "retryHttp": 200
+          }
+        ],
+        "failures": []
+      }
     },
     "writer": {
-      "checked_at": "2026-11-25T19:44:33.465977+09:00",
+      "checked_at": "2026-11-25T21:14:03.344880+09:00",
       "ready": 4,
       "future24h_ready": 4,
-      "new_drafts": 0,
-      "existing_READY_reused": 4,
+      "new_drafts": 1,
+      "existing_READY_reused": 3,
       "drafts": [
-        {
-          "slot": "2026-11-25T20:00:00+09:00",
-          "benefit_id": "B01000300013",
-          "pattern": "P1",
-          "media_turn": "IMAGE",
-          "char_count": 419,
-          "expires_at": "2026-11-25T22:53:00.768308+09:00",
-          "full_delay_window_valid": true,
-          "source_fresh_at_slot": true,
-          "source_recheck_required_at_publish": true
-        },
         {
           "slot": "2026-11-26T08:00:00+09:00",
           "benefit_id": "611000000137",
@@ -6377,7 +6293,7 @@
           "char_count": 351,
           "expires_at": "2026-11-26T10:13:46.980394+09:00",
           "full_delay_window_valid": true,
-          "source_fresh_at_slot": false,
+          "source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true
         },
         {
@@ -6388,7 +6304,7 @@
           "char_count": 377,
           "expires_at": "2026-11-26T14:54:59.197830+09:00",
           "full_delay_window_valid": true,
-          "source_fresh_at_slot": false,
+          "source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true
         },
         {
@@ -6399,172 +6315,108 @@
           "char_count": 459,
           "expires_at": "2026-11-26T18:54:53.927829+09:00",
           "full_delay_window_valid": true,
+          "source_fresh_at_slot": true,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-26T20:00:00+09:00",
+          "benefit_id": "SPE000000010",
+          "pattern": "P1",
+          "media_turn": "IMAGE",
+          "char_count": 395,
+          "expires_at": "2026-11-26T21:14:03.344880+09:00",
+          "full_delay_window_valid": false,
           "source_fresh_at_slot": false,
           "source_recheck_required_at_publish": true
         }
       ],
       "source": {
         "count": 10895,
-        "generation": "gov24-45499312067-1",
-        "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
-        "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
-        "path": "snapshots/gov24-45499312067-1",
+        "generation": "gov24-45594952230-1",
+        "lastSuccessAt": "2026-11-25T19:34:23.343783+09:00",
+        "manifestSha256": "00e96a3f0a1dc21bb339ad656eca9c6fff0b40b6f5446eaef436071ad8595b3e",
+        "path": "snapshots/gov24-45594952230-1",
         "version": 1
       },
-      "source_count": 10895,
-      "ledger_records": 81,
+      "ledger_records": 82,
       "pending": null,
       "lease": null,
-      "new_posts": 0,
-      "new_incidents": 0,
+      "new_posts": 1,
+      "maintenance_new_posts": 0,
       "new_metrics": 0,
       "observations": 159,
-      "due_metrics": 0,
-      "new_evaluation": false,
-      "14day_evaluation_already_recorded": true,
-      "astra_review_invocations": 0,
-      "existing_Astra_review_preserved": true,
-      "current_main_image_review_matches_cached_bytes": true,
-      "image_redownloaded_this_check": false,
-      "new_visual_inspection": false,
-      "source_recheck_required_at_publish": true,
-      "expiry_prevention_revalidations": 0
+      "astra_review_invocations": 2,
+      "new_visual_inspection": true,
+      "image_redownloaded_this_check": true
     },
     "metrics": {
-      "run_id": "45588123983",
+      "run_id": "45604153836",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-25T09:43:45Z",
+      "updated_at": "2026-11-25T11:24:41Z",
       "head_sha": "5c4084549223723b566cfe560d2e418903ad4337",
-      "job_id": 139114888343,
-      "artifact_id": 15009866791,
-      "artifact_digest": "sha256:d59ff946f80c9f0bd871766200051b977e00ac8717c2e2a9ddac083960a59e04",
+      "job_id": 139170510580,
+      "artifact_id": 15015958282,
+      "artifact_digest": "sha256:5203af210f6746795605997a7485c4e3c822014c63c301a79375c1c9f2adaad8",
       "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": false,
-      "job_logs_retrieved_this_check": false,
-      "observed_at": "2026-11-25T09:43:41.145561+00:00",
-      "records": [
-        {
-          "post_id": "18061699079561356",
-          "published_at": "2026-11-18T17:08:46.989186+09:00",
-          "observed_at": "2026-11-25T09:43:41.145561+00:00",
-          "window_hours": 168,
-          "elapsed_hours": 169.58171010416666,
-          "timing": "late_available_check",
-          "within_target_tolerance": true,
-          "not_backcalculated": true,
-          "metrics": {
-            "views": 12,
-            "likes": 1,
-            "comments": 0,
-            "reposts": 0,
-            "shares": 0,
-            "saves": null,
-            "profile_visits": null,
-            "new_followers": null,
-            "site_visits": null
-          }
-        },
-        {
-          "post_id": "18125366213319496",
-          "published_at": "2026-11-22T17:01:34.472048+09:00",
-          "observed_at": "2026-11-25T09:43:41.145561+00:00",
-          "window_hours": 72,
-          "elapsed_hours": 73.70185375361112,
-          "timing": "late_available_check",
-          "within_target_tolerance": true,
-          "not_backcalculated": true,
-          "metrics": {
-            "views": 188,
-            "likes": 2,
-            "comments": 0,
-            "reposts": 0,
-            "shares": 1,
-            "saves": null,
-            "profile_visits": null,
-            "new_followers": null,
-            "site_visits": null
-          }
-        },
-        {
-          "post_id": "17974331994194122",
-          "published_at": "2026-11-24T17:20:24.263616+09:00",
-          "observed_at": "2026-11-25T09:43:41.145561+00:00",
-          "window_hours": 24,
-          "elapsed_hours": 25.3880227625,
-          "timing": "late_available_check",
-          "within_target_tolerance": true,
-          "not_backcalculated": true,
-          "metrics": {
-            "views": 6,
-            "likes": 1,
-            "comments": 0,
-            "reposts": 0,
-            "shares": 0,
-            "saves": null,
-            "profile_visits": null,
-            "new_followers": null,
-            "site_visits": null
-          }
-        }
-      ],
-      "due_count": 3,
-      "success_count": 3,
-      "new_observation_keys": [],
+      "artifact_redownloaded_this_check": true,
+      "job_logs_retrieved_this_check": true,
+      "observed_at": "2026-11-25T11:24:38.066142+00:00",
+      "records": [],
+      "due_count": 0,
+      "success_count": 0,
       "new_observations": 0,
+      "new_observation_keys": [],
       "total_observations": 159,
       "new_evaluation_report_due": false,
-      "weights_unchanged": true,
-      "publication_calls": 0,
-      "workflow_dispatch": false
+      "weights_unchanged": true
     },
     "recovery": {
-      "new_publication_this_check": false,
-      "new_posts": 0,
+      "new_publication_this_check": true,
+      "new_posts": 1,
       "maintenance_new_posts": 0,
       "new_recovery_this_check": false,
       "new_failure_this_check": false,
-      "reason": "81completeverifiedpublishedrows/pending/lease unchanged. Operations45594952230 inprogress,notfailure;latestcomplete45499312067 verifiedcacheused.4READY nominalandwholewindowpassed. No newincident/publication/repair."
+      "reason": "Normal scheduled20h IMAGE verified ledger/receipt/artifact/body/imagehash. Latestoperationscompleted source fullyverified. Newfuture20h IMAGE395actual2Astrareviews90=>97 saved. NoPOST/dispatch/rerun/backfill/codechange."
     },
-    "next_condition": "FourfutureREADY Nov25 20IMAGE/P1,Nov26 08TEXT/P8,12IMAGE/P6,16TEXT/P5 nominal andwhole2hPASS. Loan18:54actualPDF/KB rereviewandCASpreviouslycompleted;no date-onlyrefresh.81published159numericobservations unchanged. Operations45594952230 inprogress,latestcompleted45499312067 07:22completeverifiedcacheused;incompletegenerationnotassumedcomplete. Recheckcompletedoperationsartifactandmanifestwhenavailable. Current07:22sourceNOTfreshNov26;actualsenderlatestcompletefreshsource mandatory. No newpublication/failure/repair/draft/modelcall/metrics/evaluation/dispatch.",
+    "next_condition": "82completeverifiedpublished/no pendinglease. Next4 Nov26 08TEXT/P8,12IMAGE/P6,16TEXT/P5,20IMAGE/P1. Nominal4PASS/first3whole2hPASS. Newdisability395/Astra97/guide2 expiresbeforeNov26 22:today22afteractualofficial/status/latestcomplete/imageSHA rereview thenarchiveCASmax24h required. New19:34completegenerationNOTfreshNov26 20;actualsenderlatestfreshcompletegenerationmandatory.159numericobservationsunchanged,emptyofficialsnapshotnormal;publisher/operationsdue1success1 numericunexported notinvented. No newfailure/repair/evaluation.",
     "publication": {
-      "run_id": "45576054845",
+      "run_id": "45607532189",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-25T08:26:01Z",
+      "updated_at": "2026-11-25T11:47:51Z",
       "head_sha": "5c4084549223723b566cfe560d2e418903ad4337",
-      "job_id": 139074151391,
-      "artifact_id": 15004906014,
-      "artifact_digest": "sha256:2f802f87fe12423252b0b00cb73b69fa1442283ef714f2a693dc9fa3bfe138c4",
+      "job_id": 139182173784,
+      "artifact_id": 15018920831,
+      "artifact_digest": "sha256:89d2122464cb7e770d66b8654d40bc3a43ec521c64131413ad88b63ae7d7d0cf",
       "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": false,
-      "job_logs_retrieved_this_check": false,
+      "artifact_redownloaded_this_check": true,
+      "job_logs_retrieved_this_check": true,
       "actual_tests_passed": 138,
-      "new_publication_this_run": false,
-      "main_id": "18151709077569738",
-      "url": "https://www.threads.com/@hid_1004/post/DgKGIKqFsLC",
-      "slot": "2026-11-25T16:00:00+09:00",
-      "receipt_at": "2026-11-25T17:25:50.7902549+09:00",
-      "receipt_time_basis": "Actual GitHub job Threads receipt line; exact platform timestamp unavailable.",
-      "ledger_published_at": "2026-11-25T17:25:07.978574+09:00",
+      "new_publication_this_run": true,
+      "main_id": "17950017192359863",
+      "url": "https://www.threads.com/@hid_1004/post/DgKdNkOEYk3",
+      "slot": "2026-11-25T20:00:00+09:00",
+      "receipt_at": "2026-11-25T20:47:38.1663121+09:00",
+      "receipt_time_basis": "Actual GitHub job Threads receipt line; exact platform timestamp unavailable",
+      "ledger_published_at": "2026-11-25T20:46:47.256597+09:00",
       "ledger_published_at_is_invocation_not_exact_platform_time": true,
       "stage": "complete",
       "verified": true,
-      "body_hash": "af1d8576401da0456c0479fb3a36a12667bfb48378b1b61eef5cc9595fa23d0a",
-      "content_hash": "9004e63bca88d1329c136134c7f4ff64f99fe0d29ff9aa536f13a03d47d6784b",
-      "asset_sha256": null,
-      "media_turn": "TEXT",
-      "pattern": "P6",
-      "char_count": 381,
+      "body_hash": "8048d902f3b027b379d27842c3c5f414df4e60a70c1b0116fdb65ea98f7c8ab6",
+      "content_hash": "776f8be9e294e4b39fbadb30901decd7bf12949f5430cf6f861eeb48edd42de3",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "media_turn": "IMAGE",
+      "pattern": "P1",
+      "char_count": 419,
       "replies": 0,
       "original_queue_body_asset_exact": true,
-      "previous80records_preserved": true,
+      "previous81records_preserved": true,
       "maintenance_post_calls": 0,
       "delay_within_original_2h_window": true,
-      "actual_source_generation": "gov24-45499312067-1",
-      "latest_already_reported": true
+      "actual_source_generation": "gov24-45594952230-1"
     },
     "history_reconciliation": {
       "run_id": "45173485637",
@@ -6585,17 +6437,193 @@
       "previous_remote_evidence_preserved": true
     },
     "official_review_recovery": {
-      "new_official_page_review_this_check": false,
-      "new_Astra_calls": 0,
-      "existing_Astra_PASS_preserved": true,
-      "prior22hactual_newstart_expiry_rereview_preserved": true,
-      "loan18hactual_expiry_rereview_preserved": true,
-      "education14hactual_expiry_rereview_preserved": true,
-      "image_redownloaded_this_check": false,
-      "cached_image_sha_matches_current_main_review": true
+      "new_official_page_review_this_check": true,
+      "program_id": "SPE000000010",
+      "web_refs": [
+        "turn906945631view0",
+        "turn940527372view0",
+        "turn940527372view1"
+      ],
+      "old_popup_conflict_resolved_by_current2026_policy": true,
+      "bokjiro_direct_read_failed_not_claimed": true,
+      "new_Astra_calls": 2,
+      "actual_requested_model": "gpt-6.2-astra",
+      "finer_model_id_from_reviewer": "미확인",
+      "first_review": {
+        "version": "3.0",
+        "round": 1,
+        "model_identifier": "미확인",
+        "reviewer": "/root/disability_final_review",
+        "reviewed_at": "2026-11-25T21:11:56.099507+09:00",
+        "body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+        "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "char_count": 395,
+        "scores": [
+          [
+            "첫 문장",
+            12,
+            15,
+            "질문은 구체적이나 직전 네 건과 같은 질문형, 실제 생활 상황이 약하다."
+          ],
+          [
+            "관심/의도",
+            14,
+            15,
+            "연금 미수급자 판단에 직접 답하나 생활비 결정 맥락을 보강할 수 있다."
+          ],
+          [
+            "정확성",
+            18,
+            20,
+            "18~20세 학교 유형을 닫힌 열거로 제시하여 각종학교 등 누락 가능. 금액·경로·소득 조건은 일치."
+          ],
+          [
+            "완독 가능성",
+            14,
+            15,
+            "의미 단위 문단은 명료하나 가구 전체와 비교하는 문장은 중복."
+          ],
+          [
+            "공유/공감",
+            9,
+            10,
+            "연령 예외와 서류가 가족에게 전달하기 좋다."
+          ],
+          [
+            "가치/차별",
+            9,
+            10,
+            "재가·시설 금액의 판단과 연금 구분. 구조는 P2에 가깝다."
+          ],
+          [
+            "모바일",
+            5,
+            5,
+            "단문과 공백 적절."
+          ],
+          [
+            "이미지 완성도",
+            5,
+            5,
+            "원본·360px 실물 열람. 로고·문구 읽힘, 잘림·금액·날짜·정부 표식 없음. 자체 브랜드 승인 자산."
+          ],
+          [
+            "프로필 유도",
+            4,
+            5,
+            "준비서류 명시. 08:30 홈페이지 목적지와 상세 HTTP 성공은 상위 근거. 현재 프로필 리디렉션 완료 미확인."
+          ]
+        ],
+        "total": 90,
+        "decision": "REVISE",
+        "checks": {
+          "body": 1,
+          "replies": 0,
+          "exact_final_cta": 1,
+          "url": 0,
+          "hashtag": 0,
+          "limit": 500,
+          "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+          "history": "최근 20개 동일 ID 없음. 직전 4개 질문형. 익일 P8/P6/P5와 다른 P1 필요.",
+          "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정."
+        },
+        "changes": [
+          "생활비 장면과 대상자 결정을 직접 제시하는 평서문으로 변경",
+          "초·중등교육법상 학교(특수학교 포함)로 학교 범위 보완",
+          "가구 전체 비교 문장 삭제",
+          "프로필 확인 범위 과장 금지"
+        ]
+      },
+      "final_review": {
+        "version": "3.0",
+        "round": 2,
+        "model_identifier": "미확인",
+        "reviewer": "/root/disability_final_review",
+        "reviewed_at": "2026-11-25T21:12:38.567319+09:00",
+        "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+        "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "char_count": 395,
+        "scores": [
+          [
+            "첫 문장",
+            14,
+            15,
+            "생활비 상황과 신청 여부를 직접 질문. 첫줄 연금 명칭은 다음 문장에서 특정."
+          ],
+          [
+            "관심/의도",
+            15,
+            15,
+            "네 다음 문장에 필수 연령·소득·장애 기준을 모두 제시."
+          ],
+          [
+            "정확성",
+            20,
+            20,
+            "대상 및 재가·시설 월별 금액, 학생 예외, 상시 신청과 두 경로, 서류가 공식 근거에 부합."
+          ],
+          [
+            "완독 가능성",
+            14,
+            15,
+            "가구 비교를 제거하고 한 문단에 한 판단을 담음. 법령명 문장에는 다소 집중이 필요."
+          ],
+          [
+            "공유/공감",
+            9,
+            10,
+            "생활비를 점검하는 가족에게 유용한 시설 금액·학생 예외가 드러남."
+          ],
+          [
+            "가치/차별",
+            10,
+            10,
+            "생활비→연금 비수급→거주 유형별 개인 월액→학생 예외→서류로 전개."
+          ],
+          [
+            "모바일",
+            5,
+            5,
+            "본문 문단 간 여백, 360픽셀 카드 문구의 식별 확인."
+          ],
+          [
+            "이미지 완성도",
+            5,
+            5,
+            "원본 및 축소본 다시 열람. 승인 범용 카드 내 소실·잘림·공식 표식·혼동 금액 없음."
+          ],
+          [
+            "프로필 유도",
+            5,
+            5,
+            "기관과 사업명을 명시해 동명 항목 구별. 실제 상세 서류로 연결됨."
+          ]
+        ],
+        "total": 97,
+        "decision": "EDITORIAL_PASS",
+        "checks": {
+          "body": 1,
+          "replies": 0,
+          "exact_final_cta": 1,
+          "url": 0,
+          "hashtag": 0,
+          "limit": 500,
+          "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+          "history": "최근 20건 동일 ID 없음. 사용자 지정 질문형을 유지하며 생활비 장면으로 차별화.",
+          "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정.",
+          "profile": "상위 실제 CUA: 홈페이지 장애수당 검색 17건→보건복지부 장애수당 선택→동일 ID 상세 서류·정부24 링크 확인. 프로필 홈페이지 목적지는 08:30 근거 재사용. 현재 Threads 리디렉션 완료 미확인."
+        },
+        "changes": [],
+        "previous_body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+        "publication_status": "미게시. 11월 26일 20~22시 KST 전체 창을 포괄하는 유효 근거로 재확인·갱신 필요."
+      },
+      "actual_image_GET_SHA_verified": true,
+      "new_visual_inspection": true,
+      "actual_site_home_search_and_detail_click": true,
+      "Threads_redirect_completed": false
     },
     "regular_slot_observation": {
-      "slot": "2026-11-25T16:00:00+09:00",
+      "slot": "2026-11-25T20:00:00+09:00",
       "status": "published_complete_verified",
       "within_two_hour_window": true,
       "schedule_not_modified": true
@@ -6794,77 +6822,64 @@
       "currently_open_unreserved_slots_from_period": 0
     },
     "publication_schedule_observation": {
-      "slot": "2026-11-25T16:00:00+09:00",
-      "checked_at": "2026-11-25T19:44:33.465977+09:00",
-      "status": "published_complete_verified_already_reported",
-      "main_id": "18151709077569738",
-      "url": "https://www.threads.com/@hid_1004/post/DgKGIKqFsLC",
-      "receipt_at": "2026-11-25T17:25:50.7902549+09:00",
+      "slot": "2026-11-25T20:00:00+09:00",
+      "checked_at": "2026-11-25T21:15:35.728990+09:00",
+      "status": "published_complete_verified",
+      "main_id": "17950017192359863",
+      "url": "https://www.threads.com/@hid_1004/post/DgKdNkOEYk3",
+      "receipt_at": "2026-11-25T20:47:38.1663121+09:00",
       "pending": null,
       "lease": null,
       "workflow_dispatch": false,
-      "daily_main_publications": 3
+      "daily_main_publications": 4
     },
     "new_formal_evaluation_this_check": false,
     "writer_final_edit_v3_status": {
       "policy_id": "supportpick-threads-final-edit-v3-20261125",
-      "policy_unchanged": true,
-      "protected_READY": 4,
-      "new_v3_READY": 0,
+      "new_v3_READY": 1,
       "previous_actual_v3_READY_preserved": 3,
-      "new_scores": 0
-    },
-    "active_operations_observation": {
-      "run_id": "45594952230",
-      "run_attempt": 1,
-      "status": "in_progress",
-      "conclusion": null,
-      "job_id": 139138455355,
-      "stage": "Verify deployed source, generation and every public HTML URL",
-      "job_status_retrieved_this_check": true,
-      "logs_not_available_until_job_completed": true,
-      "artifact_not_assumed_complete": true,
-      "latest_completed_operations_run_id": "45499312067",
-      "source_used": "previous_complete_manifest_verified_cache",
-      "is_failure": false
+      "new_scores": 1,
+      "new_model_calls": 2,
+      "actual_requested_model": "gpt-6.2-astra",
+      "new_score_is_editorial_not_performance": true
     }
   },
   "last_reported_publication": {
-    "run_id": "45576054845",
+    "run_id": "45607532189",
     "run_attempt": 1,
     "status": "completed",
     "conclusion": "success",
-    "updated_at": "2026-11-25T08:26:01Z",
+    "updated_at": "2026-11-25T11:47:51Z",
     "head_sha": "5c4084549223723b566cfe560d2e418903ad4337",
-    "job_id": 139074151391,
-    "artifact_id": 15004906014,
-    "artifact_digest": "sha256:2f802f87fe12423252b0b00cb73b69fa1442283ef714f2a693dc9fa3bfe138c4",
+    "job_id": 139182173784,
+    "artifact_id": 15018920831,
+    "artifact_digest": "sha256:89d2122464cb7e770d66b8654d40bc3a43ec521c64131413ad88b63ae7d7d0cf",
     "artifact_digest_verified": true,
     "artifact_redownloaded_this_check": true,
     "job_logs_retrieved_this_check": true,
     "actual_tests_passed": 138,
     "new_publication_this_run": true,
-    "main_id": "18151709077569738",
-    "url": "https://www.threads.com/@hid_1004/post/DgKGIKqFsLC",
-    "slot": "2026-11-25T16:00:00+09:00",
-    "receipt_at": "2026-11-25T17:25:50.7902549+09:00",
-    "receipt_time_basis": "Actual GitHub job Threads receipt line; exact platform timestamp unavailable.",
-    "ledger_published_at": "2026-11-25T17:25:07.978574+09:00",
+    "main_id": "17950017192359863",
+    "url": "https://www.threads.com/@hid_1004/post/DgKdNkOEYk3",
+    "slot": "2026-11-25T20:00:00+09:00",
+    "receipt_at": "2026-11-25T20:47:38.1663121+09:00",
+    "receipt_time_basis": "Actual GitHub job Threads receipt line; exact platform timestamp unavailable",
+    "ledger_published_at": "2026-11-25T20:46:47.256597+09:00",
     "ledger_published_at_is_invocation_not_exact_platform_time": true,
     "stage": "complete",
     "verified": true,
-    "body_hash": "af1d8576401da0456c0479fb3a36a12667bfb48378b1b61eef5cc9595fa23d0a",
-    "content_hash": "9004e63bca88d1329c136134c7f4ff64f99fe0d29ff9aa536f13a03d47d6784b",
-    "asset_sha256": null,
-    "media_turn": "TEXT",
-    "pattern": "P6",
-    "char_count": 381,
+    "body_hash": "8048d902f3b027b379d27842c3c5f414df4e60a70c1b0116fdb65ea98f7c8ab6",
+    "content_hash": "776f8be9e294e4b39fbadb30901decd7bf12949f5430cf6f861eeb48edd42de3",
+    "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+    "media_turn": "IMAGE",
+    "pattern": "P1",
+    "char_count": 419,
     "replies": 0,
     "original_queue_body_asset_exact": true,
-    "previous80records_preserved": true,
+    "previous81records_preserved": true,
     "maintenance_post_calls": 0,
     "delay_within_original_2h_window": true,
-    "actual_source_generation": "gov24-45499312067-1"
+    "actual_source_generation": "gov24-45594952230-1"
   },
   "policy_changes": [
     {
@@ -14820,7 +14835,7 @@
           "timestamp_basis": "Publisher invocation durable ledger, actual observed elapsed preserved."
         }
       },
-      "last_availability_check_at": "2026-11-25T09:43:41.145561+00:00",
+      "last_availability_check_at": "2026-11-25T11:24:38.066142+00:00",
       "statistical_decision": "comparison_deferred_confounded_strata_and_no_repeated_advantage; extend matched samples, retain A/B weights",
       "diagnostic_observations_by_run_id": {
         "43163347739": {
@@ -14977,6 +14992,22 @@
           "numeric_snapshot_not_in_exported_threads_result_artifact": true,
           "numeric_measurement_imported_from_this_publisher_run": false,
           "next_action": "Import actual numeric scheduled snapshot artifact when available; do not reconstruct unpublished values."
+        },
+        "45607532189": {
+          "checked_at": "2026-11-25T21:15:35.728990+09:00",
+          "due_count_from_actual_job_log": 1,
+          "success_count_from_actual_job_log": 1,
+          "numeric_snapshot_not_in_exported_artifact": true,
+          "numeric_measurement_imported_from_this_run": false,
+          "next_action": "Import actual scheduled numeric snapshot when available; no reconstruction."
+        },
+        "45594952230": {
+          "checked_at": "2026-11-25T21:15:35.728990+09:00",
+          "due_count_from_actual_job_log": 1,
+          "success_count_from_actual_job_log": 1,
+          "numeric_snapshot_not_in_exported_artifact": true,
+          "numeric_measurement_imported_from_this_run": false,
+          "next_action": "Import actual scheduled numeric snapshot when available; no reconstruction."
         }
       },
       "official_read_path": {
@@ -21925,6 +21956,29 @@
             "17974331994194122:24h"
           ],
           "new_observations": 3,
+          "total_observations": 159,
+          "new_evaluation_report_due": false,
+          "weights_unchanged": true
+        },
+        "45604153836": {
+          "run_id": "45604153836",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-25T11:24:41Z",
+          "head_sha": "5c4084549223723b566cfe560d2e418903ad4337",
+          "job_id": 139170510580,
+          "artifact_id": 15015958282,
+          "artifact_digest": "sha256:5203af210f6746795605997a7485c4e3c822014c63c301a79375c1c9f2adaad8",
+          "artifact_digest_verified": true,
+          "artifact_redownloaded_this_check": true,
+          "job_logs_retrieved_this_check": true,
+          "observed_at": "2026-11-25T11:24:38.066142+00:00",
+          "records": [],
+          "due_count": 0,
+          "success_count": 0,
+          "new_observations": 0,
+          "new_observation_keys": [],
           "total_observations": 159,
           "new_evaluation_report_due": false,
           "weights_unchanged": true
@@ -150982,6 +151036,684 @@
         "source_used": "previous_complete_manifest_verified_cache",
         "is_failure": false
       }
+    },
+    "2026-11-25T21:15:35.728990+09:00": {
+      "checked_at": "2026-11-25T21:15:35.728990+09:00",
+      "result": "normal20h_IMAGE_publication_verified_and_new_v3_READY_saved",
+      "maintenance_previous_blob_sha": "3c43b8a63eb7a9de0ffc170ef4709662a7734cc4",
+      "current_main_sha": "5c4084549223723b566cfe560d2e418903ad4337",
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "928048d72700fa933f404f887ff750901b8efa84",
+      "queue_blob_sha": "607997a60207b36c3838340507e56e753792f2a5",
+      "changed_run_versions": [
+        {
+          "run_id": "45607532189",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-25T11:47:51Z",
+          "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
+        },
+        {
+          "run_id": "45604153836",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-25T11:24:41Z",
+          "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
+        },
+        {
+          "run_id": "45594952230",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-25T10:55:39Z",
+          "head_sha": "5c4084549223723b566cfe560d2e418903ad4337"
+        }
+      ],
+      "active_target_runs": [],
+      "run_pagination": {
+        "per_page": 100,
+        "pages": [
+          1
+        ],
+        "checkpoint_run_id": "45588123983",
+        "checkpoint_version_unchanged": true,
+        "all_new_target_versions_observed": true,
+        "latest_completed_operations_run_id": "45594952230"
+      },
+      "publication_ledger_records": 82,
+      "complete_verified_records": 82,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "45594952230",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-25T10:55:39Z",
+        "head_sha": "5c4084549223723b566cfe560d2e418903ad4337",
+        "job_id": 139138455355,
+        "artifact_id": 15012793307,
+        "artifact_digest": "sha256:32b47b8f137cc9fb85c4c6966ab1ec5250f38ff0d2c1d668c8fa21dcd673e41f",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "actual_tests_passed": 315,
+        "read_current_verify_snapshot_load_feed": true,
+        "manifest": {
+          "count": 10895,
+          "generation": "gov24-45594952230-1",
+          "lastSuccessAt": "2026-11-25T19:34:23.343783+09:00",
+          "manifestSha256": "00e96a3f0a1dc21bb339ad656eca9c6fff0b40b6f5446eaef436071ad8595b3e",
+          "path": "snapshots/gov24-45594952230-1",
+          "version": 1
+        },
+        "source_count": 10895,
+        "complete": true,
+        "actual_application_status_not_inferred_from_collection": true,
+        "new_candidate_original_official_pages_read": true,
+        "original_notice_rereview_this_check": true,
+        "public_verification_artifact_id": 15014218636,
+        "public_verification_digest": "sha256:015e6c329277471a79f2de19058ebaff259ce2e6e03834016212f7738dea72e4",
+        "public_verification": {
+          "publicHtmlChecked": 11162,
+          "sitemapUrls": 11035,
+          "generation": "gov24-45594952230-1",
+          "sourceRevision": "5c4084549223723b566cfe560d2e418903ad4337",
+          "robots": {
+            "http": 200,
+            "crawlAllowed": true,
+            "scope": "host_root"
+          },
+          "missingUrlHttp": 404,
+          "passed": 11162,
+          "failed": 0,
+          "initialFailures": 2,
+          "maxRequestsPerSecond": 10,
+          "rateLimitEpisodes": 0,
+          "stoppedForRateLimit": false,
+          "recoveredAfterRetry": [
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/383000000185/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            },
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/631000000117/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            }
+          ],
+          "failures": []
+        }
+      },
+      "writer": {
+        "checked_at": "2026-11-25T21:14:03.344880+09:00",
+        "ready": 4,
+        "future24h_ready": 4,
+        "new_drafts": 1,
+        "existing_READY_reused": 3,
+        "drafts": [
+          {
+            "slot": "2026-11-26T08:00:00+09:00",
+            "benefit_id": "611000000137",
+            "pattern": "P8",
+            "media_turn": "TEXT",
+            "char_count": 351,
+            "expires_at": "2026-11-26T10:13:46.980394+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-26T12:00:00+09:00",
+            "benefit_id": "SD0000001491",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 377,
+            "expires_at": "2026-11-26T14:54:59.197830+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-26T16:00:00+09:00",
+            "benefit_id": "PTR000051390",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 459,
+            "expires_at": "2026-11-26T18:54:53.927829+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-26T20:00:00+09:00",
+            "benefit_id": "SPE000000010",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 395,
+            "expires_at": "2026-11-26T21:14:03.344880+09:00",
+            "full_delay_window_valid": false,
+            "source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source": {
+          "count": 10895,
+          "generation": "gov24-45594952230-1",
+          "lastSuccessAt": "2026-11-25T19:34:23.343783+09:00",
+          "manifestSha256": "00e96a3f0a1dc21bb339ad656eca9c6fff0b40b6f5446eaef436071ad8595b3e",
+          "path": "snapshots/gov24-45594952230-1",
+          "version": 1
+        },
+        "ledger_records": 82,
+        "pending": null,
+        "lease": null,
+        "new_posts": 1,
+        "maintenance_new_posts": 0,
+        "new_metrics": 0,
+        "observations": 159,
+        "astra_review_invocations": 2,
+        "new_visual_inspection": true,
+        "image_redownloaded_this_check": true
+      },
+      "metrics": {
+        "run_id": "45604153836",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-25T11:24:41Z",
+        "head_sha": "5c4084549223723b566cfe560d2e418903ad4337",
+        "job_id": 139170510580,
+        "artifact_id": 15015958282,
+        "artifact_digest": "sha256:5203af210f6746795605997a7485c4e3c822014c63c301a79375c1c9f2adaad8",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "observed_at": "2026-11-25T11:24:38.066142+00:00",
+        "records": [],
+        "due_count": 0,
+        "success_count": 0,
+        "new_observations": 0,
+        "new_observation_keys": [],
+        "total_observations": 159,
+        "new_evaluation_report_due": false,
+        "weights_unchanged": true
+      },
+      "recovery": {
+        "new_publication_this_check": true,
+        "new_posts": 1,
+        "maintenance_new_posts": 0,
+        "new_recovery_this_check": false,
+        "new_failure_this_check": false,
+        "reason": "Normal scheduled20h IMAGE verified ledger/receipt/artifact/body/imagehash. Latestoperationscompleted source fullyverified. Newfuture20h IMAGE395actual2Astrareviews90=>97 saved. NoPOST/dispatch/rerun/backfill/codechange."
+      },
+      "next_condition": "82completeverifiedpublished/no pendinglease. Next4 Nov26 08TEXT/P8,12IMAGE/P6,16TEXT/P5,20IMAGE/P1. Nominal4PASS/first3whole2hPASS. Newdisability395/Astra97/guide2 expiresbeforeNov26 22:today22afteractualofficial/status/latestcomplete/imageSHA rereview thenarchiveCASmax24h required. New19:34completegenerationNOTfreshNov26 20;actualsenderlatestfreshcompletegenerationmandatory.159numericobservationsunchanged,emptyofficialsnapshotnormal;publisher/operationsdue1success1 numericunexported notinvented. No newfailure/repair/evaluation.",
+      "publication": {
+        "run_id": "45607532189",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-25T11:47:51Z",
+        "head_sha": "5c4084549223723b566cfe560d2e418903ad4337",
+        "job_id": 139182173784,
+        "artifact_id": 15018920831,
+        "artifact_digest": "sha256:89d2122464cb7e770d66b8654d40bc3a43ec521c64131413ad88b63ae7d7d0cf",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "actual_tests_passed": 138,
+        "new_publication_this_run": true,
+        "main_id": "17950017192359863",
+        "url": "https://www.threads.com/@hid_1004/post/DgKdNkOEYk3",
+        "slot": "2026-11-25T20:00:00+09:00",
+        "receipt_at": "2026-11-25T20:47:38.1663121+09:00",
+        "receipt_time_basis": "Actual GitHub job Threads receipt line; exact platform timestamp unavailable",
+        "ledger_published_at": "2026-11-25T20:46:47.256597+09:00",
+        "ledger_published_at_is_invocation_not_exact_platform_time": true,
+        "stage": "complete",
+        "verified": true,
+        "body_hash": "8048d902f3b027b379d27842c3c5f414df4e60a70c1b0116fdb65ea98f7c8ab6",
+        "content_hash": "776f8be9e294e4b39fbadb30901decd7bf12949f5430cf6f861eeb48edd42de3",
+        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "media_turn": "IMAGE",
+        "pattern": "P1",
+        "char_count": 419,
+        "replies": 0,
+        "original_queue_body_asset_exact": true,
+        "previous81records_preserved": true,
+        "maintenance_post_calls": 0,
+        "delay_within_original_2h_window": true,
+        "actual_source_generation": "gov24-45594952230-1"
+      },
+      "history_reconciliation": {
+        "run_id": "45173485637",
+        "mode": "check-account",
+        "account": "hid_1004",
+        "checked_at": "2026-11-23T21:21:24+09:00",
+        "recent_remote_rows": 100,
+        "more_history": true,
+        "main_ledger_matches_in_page": 49,
+        "latest20_main_matches": 20,
+        "latest_remote_id": "18129410933479829",
+        "target_text_absent": true,
+        "scope": "77durablecompleteverifiedrows;prior76exactpreserved;newreceipt/body/asset/artifactverified. No full28dayremotequery.",
+        "artifact_id": 14818615408,
+        "artifact_digest": "sha256:23cfc165bbd050ec1a12dbde18778345efb01c4d9e20abf69f6279b090e003b3",
+        "artifact_digest_verified": true,
+        "remote_requeried_this_check": false,
+        "previous_remote_evidence_preserved": true
+      },
+      "official_review_recovery": {
+        "new_official_page_review_this_check": true,
+        "program_id": "SPE000000010",
+        "web_refs": [
+          "turn906945631view0",
+          "turn940527372view0",
+          "turn940527372view1"
+        ],
+        "old_popup_conflict_resolved_by_current2026_policy": true,
+        "bokjiro_direct_read_failed_not_claimed": true,
+        "new_Astra_calls": 2,
+        "actual_requested_model": "gpt-6.2-astra",
+        "finer_model_id_from_reviewer": "미확인",
+        "first_review": {
+          "version": "3.0",
+          "round": 1,
+          "model_identifier": "미확인",
+          "reviewer": "/root/disability_final_review",
+          "reviewed_at": "2026-11-25T21:11:56.099507+09:00",
+          "body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+          "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "char_count": 395,
+          "scores": [
+            [
+              "첫 문장",
+              12,
+              15,
+              "질문은 구체적이나 직전 네 건과 같은 질문형, 실제 생활 상황이 약하다."
+            ],
+            [
+              "관심/의도",
+              14,
+              15,
+              "연금 미수급자 판단에 직접 답하나 생활비 결정 맥락을 보강할 수 있다."
+            ],
+            [
+              "정확성",
+              18,
+              20,
+              "18~20세 학교 유형을 닫힌 열거로 제시하여 각종학교 등 누락 가능. 금액·경로·소득 조건은 일치."
+            ],
+            [
+              "완독 가능성",
+              14,
+              15,
+              "의미 단위 문단은 명료하나 가구 전체와 비교하는 문장은 중복."
+            ],
+            [
+              "공유/공감",
+              9,
+              10,
+              "연령 예외와 서류가 가족에게 전달하기 좋다."
+            ],
+            [
+              "가치/차별",
+              9,
+              10,
+              "재가·시설 금액의 판단과 연금 구분. 구조는 P2에 가깝다."
+            ],
+            [
+              "모바일",
+              5,
+              5,
+              "단문과 공백 적절."
+            ],
+            [
+              "이미지 완성도",
+              5,
+              5,
+              "원본·360px 실물 열람. 로고·문구 읽힘, 잘림·금액·날짜·정부 표식 없음. 자체 브랜드 승인 자산."
+            ],
+            [
+              "프로필 유도",
+              4,
+              5,
+              "준비서류 명시. 08:30 홈페이지 목적지와 상세 HTTP 성공은 상위 근거. 현재 프로필 리디렉션 완료 미확인."
+            ]
+          ],
+          "total": 90,
+          "decision": "REVISE",
+          "checks": {
+            "body": 1,
+            "replies": 0,
+            "exact_final_cta": 1,
+            "url": 0,
+            "hashtag": 0,
+            "limit": 500,
+            "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+            "history": "최근 20개 동일 ID 없음. 직전 4개 질문형. 익일 P8/P6/P5와 다른 P1 필요.",
+            "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정."
+          },
+          "changes": [
+            "생활비 장면과 대상자 결정을 직접 제시하는 평서문으로 변경",
+            "초·중등교육법상 학교(특수학교 포함)로 학교 범위 보완",
+            "가구 전체 비교 문장 삭제",
+            "프로필 확인 범위 과장 금지"
+          ]
+        },
+        "final_review": {
+          "version": "3.0",
+          "round": 2,
+          "model_identifier": "미확인",
+          "reviewer": "/root/disability_final_review",
+          "reviewed_at": "2026-11-25T21:12:38.567319+09:00",
+          "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+          "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "char_count": 395,
+          "scores": [
+            [
+              "첫 문장",
+              14,
+              15,
+              "생활비 상황과 신청 여부를 직접 질문. 첫줄 연금 명칭은 다음 문장에서 특정."
+            ],
+            [
+              "관심/의도",
+              15,
+              15,
+              "네 다음 문장에 필수 연령·소득·장애 기준을 모두 제시."
+            ],
+            [
+              "정확성",
+              20,
+              20,
+              "대상 및 재가·시설 월별 금액, 학생 예외, 상시 신청과 두 경로, 서류가 공식 근거에 부합."
+            ],
+            [
+              "완독 가능성",
+              14,
+              15,
+              "가구 비교를 제거하고 한 문단에 한 판단을 담음. 법령명 문장에는 다소 집중이 필요."
+            ],
+            [
+              "공유/공감",
+              9,
+              10,
+              "생활비를 점검하는 가족에게 유용한 시설 금액·학생 예외가 드러남."
+            ],
+            [
+              "가치/차별",
+              10,
+              10,
+              "생활비→연금 비수급→거주 유형별 개인 월액→학생 예외→서류로 전개."
+            ],
+            [
+              "모바일",
+              5,
+              5,
+              "본문 문단 간 여백, 360픽셀 카드 문구의 식별 확인."
+            ],
+            [
+              "이미지 완성도",
+              5,
+              5,
+              "원본 및 축소본 다시 열람. 승인 범용 카드 내 소실·잘림·공식 표식·혼동 금액 없음."
+            ],
+            [
+              "프로필 유도",
+              5,
+              5,
+              "기관과 사업명을 명시해 동명 항목 구별. 실제 상세 서류로 연결됨."
+            ]
+          ],
+          "total": 97,
+          "decision": "EDITORIAL_PASS",
+          "checks": {
+            "body": 1,
+            "replies": 0,
+            "exact_final_cta": 1,
+            "url": 0,
+            "hashtag": 0,
+            "limit": 500,
+            "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+            "history": "최근 20건 동일 ID 없음. 사용자 지정 질문형을 유지하며 생활비 장면으로 차별화.",
+            "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정.",
+            "profile": "상위 실제 CUA: 홈페이지 장애수당 검색 17건→보건복지부 장애수당 선택→동일 ID 상세 서류·정부24 링크 확인. 프로필 홈페이지 목적지는 08:30 근거 재사용. 현재 Threads 리디렉션 완료 미확인."
+          },
+          "changes": [],
+          "previous_body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+          "publication_status": "미게시. 11월 26일 20~22시 KST 전체 창을 포괄하는 유효 근거로 재확인·갱신 필요."
+        },
+        "actual_image_GET_SHA_verified": true,
+        "new_visual_inspection": true,
+        "actual_site_home_search_and_detail_click": true,
+        "Threads_redirect_completed": false
+      },
+      "regular_slot_observation": {
+        "slot": "2026-11-25T20:00:00+09:00",
+        "status": "published_complete_verified",
+        "within_two_hour_window": true,
+        "schedule_not_modified": true
+      },
+      "main_head_observation": {
+        "latest_observed_run_head": "5732cde848a03907b2505396c34a4d60c713571e",
+        "target_publisher_workflows_master_and_assets_blobs_unchanged": true,
+        "unrelated_changes_not_modified": true
+      },
+      "image_sha_comparisons": [
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:06.502293+09:00"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "matched_current_main_bytes": true,
+          "new_visual_inspection": false,
+          "compared_at": "2026-11-24T10:40:14.847084+09:00"
+        }
+      ],
+      "run_status_transitions": [
+        {
+          "run_id": "45277137519",
+          "from": "in_progress",
+          "to": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-23T22:38:20Z"
+        }
+      ],
+      "formal_evaluation": {
+        "policy_id": "supportpick-threads-reach-v1-20261109",
+        "window": "14d_evaluation",
+        "evaluated_at": "2026-11-24T17:20:07.451089+09:00",
+        "period_start": "2026-11-10T17:00:08.835254+09:00",
+        "period_end": "2026-11-24T17:00:08.835254+09:00",
+        "normal_verified_publications": 53,
+        "experiment_regular_slots": 57,
+        "unpublished_slots": [
+          {
+            "slot": "2026-11-16T16:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-18T12:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-23T20:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-24T16:00:00+09:00",
+            "classification": "unreserved_at_evaluation_cutoff_then_published_after_cutoff",
+            "subsequent_main_id": "17974331994194122",
+            "subsequent_receipt_at": "2026-11-24T17:21:06.769138+09:00"
+          }
+        ],
+        "missed_closed_slots": 3,
+        "partial_or_pending": 0,
+        "independent_full_public_rendering_recheck": false,
+        "publication_audit_scope": "76durablecompleteverifiedrecords; priorreceipts/body/media/artifacts retained. No newfull28dayremotequery; Nov24 16unreserved/latestpublisher12only,nofailure-runconfirmed.",
+        "24h_comparison_window_observations": 40,
+        "A_n": 20,
+        "B_n": 20,
+        "24h_comparable_matched_pairs": 0,
+        "24h_group_view_medians": {
+          "A": 62.0,
+          "B": 62.0
+        },
+        "24h_all_view_median": 62.0,
+        "actual_reactions": {
+          "A": {
+            "likes": 29,
+            "replies": 0,
+            "reposts": 6,
+            "shares": 1
+          },
+          "B": {
+            "likes": 27,
+            "replies": 0,
+            "reposts": 5,
+            "shares": 0
+          }
+        },
+        "reaction_rate_used": false,
+        "all_24h_observations_delayed": true,
+        "eligible_elapsed_hours_min": 24.317312148333336,
+        "eligible_elapsed_hours_max": 25.691108017222223,
+        "24h_unavailable_not_zero": [
+          "18117968657159347",
+          "17992859946026940",
+          "17913499947663769",
+          "18001464938830261"
+        ],
+        "24h_not_yet_due": [
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "24h_missing_after_due": [],
+        "7d_measured": 27,
+        "7d_not_yet_due": [
+          "18004106657810124",
+          "18155833435528730",
+          "18061699079561356",
+          "18075899267779249",
+          "18361336213223949",
+          "18100168118443439",
+          "17876108337601849",
+          "17954736195295664",
+          "18136261246743978",
+          "18029579210863916",
+          "18106611944009610",
+          "17995393143022353",
+          "18002356029029330",
+          "18098495828440255",
+          "18121994881961457",
+          "18093412586696162",
+          "18102899498408388",
+          "18214999999364836",
+          "18125366213319496",
+          "18149154712603236",
+          "17879078796637660",
+          "18388999600236313",
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "7d_group_medians": {
+          "A": 105,
+          "B": 87.5
+        },
+        "quotes": "not_provided",
+        "reader_only_replies": "unavailable",
+        "profile_clicks": "account_level_not_available; no_post_attribution",
+        "confounders": [
+          "Differentbusiness/region/readers/benefit/deadline/time/media/length; matchedsimilarpairs0",
+          "PreservedmovedexistingREADYcohorts differfromnewslots;excludeinsteadretroclassify",
+          "Newquestiontitlepolicy changesmorethanopeningalone;newAstrarevieweddraftsexcludedfrompureA/B"
+        ],
+        "minimum_24h_target_per_group": 8,
+        "raw_window_target_met": true,
+        "current_stratified_target_met": false,
+        "decision": "extend_comparison;maintainbalancedA/Bandexistingcontrols.No demonstratedrepeatedadvantage;noeditorialweightchange.",
+        "weight_changed": false,
+        "no_backcalculation": true,
+        "extension_next_condition": "Reassess in existingchecks when comparable similar-business strata have sufficient repeatedactual24hwindows; keep comparison group. No separate schedule.",
+        "reported_at": "2026-11-24T17:20:07.451089+09:00",
+        "evidence_latest_metric_run_id": "45351393999",
+        "24h_measured_but_excluded": [
+          {
+            "main_id": "18122947907049313",
+            "elapsed_hours": 52.64388394083333,
+            "reason": "late_beyond_26h_comparison_tolerance"
+          },
+          {
+            "main_id": "18061699079561356",
+            "elapsed_hours": 25.374772445277777,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18075899267779249",
+            "elapsed_hours": 24.65035752527778,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18361336213223949",
+            "elapsed_hours": 24.39045965972222,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18100168118443439",
+            "elapsed_hours": 24.6578044575,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "17876108337601849",
+            "elapsed_hours": 25.228189436944444,
+            "reason": "Previously written input preserved; no retrospective cohort assignment after failed preceding slot"
+          }
+        ],
+        "7d_group_n": {
+          "A": 13,
+          "B": 14
+        },
+        "7d_due_unmeasured": [
+          "18450932713126961"
+        ],
+        "publication_cutoff_note": "EvaluationperiodendsNov24 17:00:08.16slotwasunreservedatcutoff, laternaturallypublished17:21:06withinits2hwindow; excludedfrom53periodpublications becauseactualinvocation17:20aftercutoff. Notafourthmissedslot.",
+        "unreserved_at_period_end_slots": 1,
+        "currently_open_unreserved_slots_from_period": 0
+      },
+      "publication_schedule_observation": {
+        "slot": "2026-11-25T20:00:00+09:00",
+        "checked_at": "2026-11-25T21:15:35.728990+09:00",
+        "status": "published_complete_verified",
+        "main_id": "17950017192359863",
+        "url": "https://www.threads.com/@hid_1004/post/DgKdNkOEYk3",
+        "receipt_at": "2026-11-25T20:47:38.1663121+09:00",
+        "pending": null,
+        "lease": null,
+        "workflow_dispatch": false,
+        "daily_main_publications": 4
+      },
+      "new_formal_evaluation_this_check": false,
+      "writer_final_edit_v3_status": {
+        "policy_id": "supportpick-threads-final-edit-v3-20261125",
+        "new_v3_READY": 1,
+        "previous_actual_v3_READY_preserved": 3,
+        "new_scores": 1,
+        "new_model_calls": 2,
+        "actual_requested_model": "gpt-6.2-astra",
+        "new_score_is_editorial_not_performance": true
+      }
     }
   },
   "last_reported_prepublication_repair": {
@@ -150996,19 +151728,18 @@
     "new_post": false
   },
   "last_prepared_queue": {
-    "checked_at": "2026-11-25T17:04:44.563677+09:00",
-    "commit_sha": "7d23f8d9fddc7c5c4a2f3fe6c3ef2bf0015f38e9",
-    "queue_blob_sha": "611f2b8e7afa2e6b6dbbd95c456e2d767deb711f",
-    "new_entries": 1,
-    "ready": 5,
-    "active_regular_ready": 1,
-    "future24h_ready": 4,
-    "program_id": "PTR000051390",
-    "slot": "2026-11-26T16:00:00+09:00",
-    "astra_calls": 4,
-    "astra_verdict": "PASS",
-    "v3_score": 97,
-    "expiry_revalidation_required": true
+    "checked_at": "2026-11-25T21:15:35.728990+09:00",
+    "queue_commit": "db377247a5e13a92a7227745bbb6e185b4119067",
+    "queue_blob_sha": "607997a60207b36c3838340507e56e753792f2a5",
+    "new_READY": 1,
+    "reused_READY": 3,
+    "future24h_READY": 4,
+    "new_program_id": "SPE000000010",
+    "new_slot": "2026-11-26T20:00:00+09:00",
+    "actual_independent_review_calls": 2,
+    "score": 97,
+    "new_post": false,
+    "expiry_prevention_required_after": "2026-11-25T22:00:00+09:00"
   },
   "prevented_input_incidents": {
     "same_queue_existing_READY_candidate_view_rank_crossover_disposition_missing:gov24-44408666268-1": {
@@ -153380,23 +154111,12 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-25T19:44:33.465977+09:00",
+    "checked_at": "2026-11-25T21:14:03.344880+09:00",
     "ready": 4,
     "future24h_ready": 4,
-    "new_drafts": 0,
-    "existing_READY_reused": 4,
+    "new_drafts": 1,
+    "existing_READY_reused": 3,
     "drafts": [
-      {
-        "slot": "2026-11-25T20:00:00+09:00",
-        "benefit_id": "B01000300013",
-        "pattern": "P1",
-        "media_turn": "IMAGE",
-        "char_count": 419,
-        "expires_at": "2026-11-25T22:53:00.768308+09:00",
-        "full_delay_window_valid": true,
-        "source_fresh_at_slot": true,
-        "source_recheck_required_at_publish": true
-      },
       {
         "slot": "2026-11-26T08:00:00+09:00",
         "benefit_id": "611000000137",
@@ -153405,7 +154125,7 @@
         "char_count": 351,
         "expires_at": "2026-11-26T10:13:46.980394+09:00",
         "full_delay_window_valid": true,
-        "source_fresh_at_slot": false,
+        "source_fresh_at_slot": true,
         "source_recheck_required_at_publish": true
       },
       {
@@ -153416,7 +154136,7 @@
         "char_count": 377,
         "expires_at": "2026-11-26T14:54:59.197830+09:00",
         "full_delay_window_valid": true,
-        "source_fresh_at_slot": false,
+        "source_fresh_at_slot": true,
         "source_recheck_required_at_publish": true
       },
       {
@@ -153427,36 +154147,39 @@
         "char_count": 459,
         "expires_at": "2026-11-26T18:54:53.927829+09:00",
         "full_delay_window_valid": true,
+        "source_fresh_at_slot": true,
+        "source_recheck_required_at_publish": true
+      },
+      {
+        "slot": "2026-11-26T20:00:00+09:00",
+        "benefit_id": "SPE000000010",
+        "pattern": "P1",
+        "media_turn": "IMAGE",
+        "char_count": 395,
+        "expires_at": "2026-11-26T21:14:03.344880+09:00",
+        "full_delay_window_valid": false,
         "source_fresh_at_slot": false,
         "source_recheck_required_at_publish": true
       }
     ],
     "source": {
       "count": 10895,
-      "generation": "gov24-45499312067-1",
-      "lastSuccessAt": "2026-11-25T07:22:49.899473+09:00",
-      "manifestSha256": "62a71da2c797de70633606d93c74d69d43df0bb67f7a13e83cfbf3149dff05b7",
-      "path": "snapshots/gov24-45499312067-1",
+      "generation": "gov24-45594952230-1",
+      "lastSuccessAt": "2026-11-25T19:34:23.343783+09:00",
+      "manifestSha256": "00e96a3f0a1dc21bb339ad656eca9c6fff0b40b6f5446eaef436071ad8595b3e",
+      "path": "snapshots/gov24-45594952230-1",
       "version": 1
     },
-    "source_count": 10895,
-    "ledger_records": 81,
+    "ledger_records": 82,
     "pending": null,
     "lease": null,
-    "new_posts": 0,
-    "new_incidents": 0,
+    "new_posts": 1,
+    "maintenance_new_posts": 0,
     "new_metrics": 0,
     "observations": 159,
-    "due_metrics": 0,
-    "new_evaluation": false,
-    "14day_evaluation_already_recorded": true,
-    "astra_review_invocations": 0,
-    "existing_Astra_review_preserved": true,
-    "current_main_image_review_matches_cached_bytes": true,
-    "image_redownloaded_this_check": false,
-    "new_visual_inspection": false,
-    "source_recheck_required_at_publish": true,
-    "expiry_prevention_revalidations": 0
+    "astra_review_invocations": 2,
+    "new_visual_inspection": true,
+    "image_redownloaded_this_check": true
   },
   "last_queue_review_refresh": {
     "checked_at": "2026-11-25T18:54:53.927829+09:00",
@@ -168035,6 +168758,198 @@
       "body_sha256": "15fbbe084e5d8fc7433372e3c0ddc9b1bfbb59803c030b78a46e46ca511623eb",
       "asset_sha256": null,
       "fallback_reason": null
+    },
+    "2026-11-26T20:00:00+09:00:SPE000000010": {
+      "prepared_at": "2026-11-25T21:14:03.344880+09:00",
+      "independent_agent": "/root/disability_final_review",
+      "actual_requested_model": "gpt-6.2-astra",
+      "finer_id_unavailable": true,
+      "fallback_reason": null,
+      "initial_body": "장애인연금을 못 받는다면 월 6만 원 장애수당 대상일까요?\n장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요. 가구 전체에 한 번 지급하는 금액과 달라요.\n\n18~20세로 초·중·고등학교나 특수학교에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+      "final_body": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+      "review": {
+        "actual_model": "gpt-6.2-astra",
+        "model_confirmation": "parent explicit model spawn succeeded; finer identity unavailable",
+        "independent_agent": "/root/disability_final_review",
+        "final_verdict": "PASS",
+        "score": 97,
+        "policy_version": "3.0",
+        "calls": 2,
+        "initial_review": {
+          "version": "3.0",
+          "round": 1,
+          "model_identifier": "미확인",
+          "reviewer": "/root/disability_final_review",
+          "reviewed_at": "2026-11-25T21:11:56.099507+09:00",
+          "body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+          "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "char_count": 395,
+          "scores": [
+            [
+              "첫 문장",
+              12,
+              15,
+              "질문은 구체적이나 직전 네 건과 같은 질문형, 실제 생활 상황이 약하다."
+            ],
+            [
+              "관심/의도",
+              14,
+              15,
+              "연금 미수급자 판단에 직접 답하나 생활비 결정 맥락을 보강할 수 있다."
+            ],
+            [
+              "정확성",
+              18,
+              20,
+              "18~20세 학교 유형을 닫힌 열거로 제시하여 각종학교 등 누락 가능. 금액·경로·소득 조건은 일치."
+            ],
+            [
+              "완독 가능성",
+              14,
+              15,
+              "의미 단위 문단은 명료하나 가구 전체와 비교하는 문장은 중복."
+            ],
+            [
+              "공유/공감",
+              9,
+              10,
+              "연령 예외와 서류가 가족에게 전달하기 좋다."
+            ],
+            [
+              "가치/차별",
+              9,
+              10,
+              "재가·시설 금액의 판단과 연금 구분. 구조는 P2에 가깝다."
+            ],
+            [
+              "모바일",
+              5,
+              5,
+              "단문과 공백 적절."
+            ],
+            [
+              "이미지 완성도",
+              5,
+              5,
+              "원본·360px 실물 열람. 로고·문구 읽힘, 잘림·금액·날짜·정부 표식 없음. 자체 브랜드 승인 자산."
+            ],
+            [
+              "프로필 유도",
+              4,
+              5,
+              "준비서류 명시. 08:30 홈페이지 목적지와 상세 HTTP 성공은 상위 근거. 현재 프로필 리디렉션 완료 미확인."
+            ]
+          ],
+          "total": 90,
+          "decision": "REVISE",
+          "checks": {
+            "body": 1,
+            "replies": 0,
+            "exact_final_cta": 1,
+            "url": 0,
+            "hashtag": 0,
+            "limit": 500,
+            "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+            "history": "최근 20개 동일 ID 없음. 직전 4개 질문형. 익일 P8/P6/P5와 다른 P1 필요.",
+            "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정."
+          },
+          "changes": [
+            "생활비 장면과 대상자 결정을 직접 제시하는 평서문으로 변경",
+            "초·중등교육법상 학교(특수학교 포함)로 학교 범위 보완",
+            "가구 전체 비교 문장 삭제",
+            "프로필 확인 범위 과장 금지"
+          ]
+        },
+        "final_review": {
+          "version": "3.0",
+          "round": 2,
+          "model_identifier": "미확인",
+          "reviewer": "/root/disability_final_review",
+          "reviewed_at": "2026-11-25T21:12:38.567319+09:00",
+          "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+          "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "char_count": 395,
+          "scores": [
+            [
+              "첫 문장",
+              14,
+              15,
+              "생활비 상황과 신청 여부를 직접 질문. 첫줄 연금 명칭은 다음 문장에서 특정."
+            ],
+            [
+              "관심/의도",
+              15,
+              15,
+              "네 다음 문장에 필수 연령·소득·장애 기준을 모두 제시."
+            ],
+            [
+              "정확성",
+              20,
+              20,
+              "대상 및 재가·시설 월별 금액, 학생 예외, 상시 신청과 두 경로, 서류가 공식 근거에 부합."
+            ],
+            [
+              "완독 가능성",
+              14,
+              15,
+              "가구 비교를 제거하고 한 문단에 한 판단을 담음. 법령명 문장에는 다소 집중이 필요."
+            ],
+            [
+              "공유/공감",
+              9,
+              10,
+              "생활비를 점검하는 가족에게 유용한 시설 금액·학생 예외가 드러남."
+            ],
+            [
+              "가치/차별",
+              10,
+              10,
+              "생활비→연금 비수급→거주 유형별 개인 월액→학생 예외→서류로 전개."
+            ],
+            [
+              "모바일",
+              5,
+              5,
+              "본문 문단 간 여백, 360픽셀 카드 문구의 식별 확인."
+            ],
+            [
+              "이미지 완성도",
+              5,
+              5,
+              "원본 및 축소본 다시 열람. 승인 범용 카드 내 소실·잘림·공식 표식·혼동 금액 없음."
+            ],
+            [
+              "프로필 유도",
+              5,
+              5,
+              "기관과 사업명을 명시해 동명 항목 구별. 실제 상세 서류로 연결됨."
+            ]
+          ],
+          "total": 97,
+          "decision": "EDITORIAL_PASS",
+          "checks": {
+            "body": 1,
+            "replies": 0,
+            "exact_final_cta": 1,
+            "url": 0,
+            "hashtag": 0,
+            "limit": 500,
+            "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+            "history": "최근 20건 동일 ID 없음. 사용자 지정 질문형을 유지하며 생활비 장면으로 차별화.",
+            "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정.",
+            "profile": "상위 실제 CUA: 홈페이지 장애수당 검색 17건→보건복지부 장애수당 선택→동일 ID 상세 서류·정부24 링크 확인. 프로필 홈페이지 목적지는 08:30 근거 재사용. 현재 Threads 리디렉션 완료 미확인."
+          },
+          "changes": [],
+          "previous_body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+          "publication_status": "미게시. 11월 26일 20~22시 KST 전체 창을 포괄하는 유효 근거로 재확인·갱신 필요."
+        },
+        "body_before": "장애인연금을 못 받는다면 월 6만 원 장애수당 대상일까요?\n장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요. 가구 전체에 한 번 지급하는 금액과 달라요.\n\n18~20세로 초·중·고등학교나 특수학교에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+        "body_after": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+        "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "fallback_reason": null
+      },
+      "queue_commit": "db377247a5e13a92a7227745bbb6e185b4119067"
     }
   },
   "expiry_revalidation_required": {
@@ -169972,6 +170887,329 @@
       "new_expires_at": "2026-11-26T18:54:53.927829+09:00",
       "queue_commit": "28bcf81b366ecbfef2b235611ce140517354f4e4",
       "actual_sender_latest_source_recheck_required": true
+    },
+    "2026-11-26T20:00:00+09:00:SPE000000010": {
+      "status": "REQUIRED_BEFORE_FULL_DELAY_WINDOW",
+      "entry": {
+        "slot": "2026-11-26T20:00:00+09:00",
+        "benefit_id": "SPE000000010",
+        "source_fingerprint": "2cf3c0a79b4cbd1c2e6528015a2988015ed9747764d7c0b7cd4bc3628b987751",
+        "source_generation": "gov24-45594952230-1",
+        "prepared_at": "2026-11-25T21:14:03.344880+09:00",
+        "expires_at": "2026-11-26T21:14:03.344880+09:00",
+        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "writer": {
+          "schema_version": "supportpick.writer.v1",
+          "status": "READY",
+          "selected_program_id": "SPE000000010",
+          "post_text": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+          "draft_text": null,
+          "reply_texts": [],
+          "media": {
+            "turn": "IMAGE",
+            "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+            "check": "MATCHED",
+            "image_copy": null,
+            "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래 집, 방패, 체크리스트가 있고 하단에 자세한 사항은 프로필링크 확인 문구가 있는 정사각형 일러스트."
+          },
+          "review": {
+            "planned_at": "2026-11-26T20:00:00+09:00",
+            "application_status": "ALWAYS",
+            "reader": "생활비를 점검하는 저소득 등록장애인과 가족",
+            "central_message": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+            "pattern": "P1",
+            "selection_reason": "동일ID원본누적32949 내림차순,기존82게시/다른미예약READY3제외. 상위HOLD/SKIP출처보존. 생활비상황에서연금비수급/재가시설지급액/학생예외/준비서류로판단. 최근20도입전개실제비교. 검색량추정없음.",
+            "interest_basis": "OBSERVED_METRICS",
+            "duplicate_check": "CHECKED",
+            "evidence": [
+              {
+                "source_id": "SPE000000010",
+                "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710030200",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                "claims_supported": [
+                  "오늘실제열람850~881:18세이상등록/연금법중증아님/기초수급차상위/18~20학교특수포함재학휴학의무교육유예제외/재가월6만원/시설생계의료월3만원/주민센터복지로."
+                ]
+              },
+              {
+                "source_id": "SPE000000010",
+                "source_ref": "https://www.mohw.go.kr/menu.es?mid=a10710030100",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                "claims_supported": [
+                  "오늘실제열람977~988행2026년1월기준명시월6만원재가/시설3만원. 구팝업3만원과충돌해소. 최종수정2026.3.31."
+                ]
+              },
+              {
+                "source_id": "SPE000000010",
+                "source_ref": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=681344&bnefType=all&svcId=SPE000000010",
+                "access_method": "PROVIDED_OFFICIAL_TEXT",
+                "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                "claims_supported": [
+                  "실제완전snapshot/load_feed/read_current/verify_snapshot 동일ID누적32949/상시신청/준비서류원문. 수집성공은접수거래나개별수급보장아님."
+                ]
+              },
+              {
+                "source_id": "SPE000000010",
+                "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+                "access_method": "UPSTREAM_VERIFIED",
+                "verified_at": "2026-11-25T21:14:03.344880+09:00",
+                "claims_supported": [
+                  "이번실제PNG GET bytes/SHA현재main image-reviewPASS일치. 원본1254px와360px실제열람,한글/잘림/깨짐/대비/과밀/공식오인확인PASS. 사업명금액날짜없는승인브랜드_rotation. 직전미래IMAGEguide1과교대. 실측성과주장없음."
+                ]
+              }
+            ],
+            "checks": {
+              "facts": "PASS",
+              "current_status": "PASS",
+              "eligibility_and_units": "PASS",
+              "cta_and_no_links": "PASS",
+              "length": "PASS",
+              "media": "PASS"
+            },
+            "char_count": 395,
+            "count_method": "python_len_including_spaces_newlines_CTA",
+            "missing_info": [],
+            "hold_reasons": [],
+            "warnings": [
+              "일반장애인복지법심한장애와장애인연금법중증판정은단순등치하지않음. 본문은연금법기준사용.",
+              "구MOHW popup 월3만원은현행정책본문과2026.1명시개요6만원/시설3만원으로대조해구자료로분리. 복지로직접본문400/0행,실제신청거래미확인.",
+              "프로필목적지는이전08:30관찰재사용;이번홈검색17결과중정확명보건복지부장애수당→동일ID상세실제CUA확인. Threads리디렉션완료미확인.",
+              "최대24h검수기한이내일20~22전체창보다먼저끝남. 오늘22시이후공식본문/상태/최신완전세대/PNG_SHA실제재대조후archive/CAS갱신필수.19:34수집본내일20시신선도보장않음."
+            ],
+            "reach_editorial": {
+              "policy_id": "supportpick-threads-reach-v1-20261109",
+              "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+              "core_question": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+              "reader_scope": "생활비를 점검하는 저소득 등록장애인과 가족",
+              "angles": [
+                "매월생활비",
+                "연금비수급자대상",
+                "학생예외와서류"
+              ],
+              "chosen_angle": "생활비상황에서신청가능조건",
+              "opening_candidates": [
+                "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+                "등록장애인이라면 월 6만 원을 모두 받을까요?",
+                "집과 보장시설, 장애수당 지급액은 같을까요?"
+              ],
+              "chosen_opening": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+              "opening_type": "생활상황질문",
+              "cohort": null,
+              "selection_reason": "생활비장면+즉답;행정적학교범위정정;가구반복문장삭제",
+              "history_posts_checked": 20,
+              "comparison_eligible": false,
+              "comparison_exclusion": "v3질문형·본문편집동시적용으로순수A/B비교제외",
+              "master_full_used": true,
+              "search_evidence": "공식검색결과 장애수당/장애인연금/월6만원 표현확인;검색량미측정",
+              "profile_route": {
+                "previous_profile_target_checked_at": "2026-11-25T08:30:00+09:00",
+                "current_site_route_checked_at": "2026-11-25T21:14:03.344880+09:00",
+                "method": "CUA home장애수당검색17결과→보건복지부정확명클릭→SPE000000010상세/금융동의신고서실제표시",
+                "detail": "https://kllollain-max.github.io/supportpick/benefits/SPE000000010/",
+                "direct_Threads_redirect_complete": false
+              },
+              "observed_metrics_context": "159실제관측,기존14일평가유지;계정7/30·체류완독CTA기여미측정"
+            },
+            "astra_final_review": {
+              "actual_model": "gpt-6.2-astra",
+              "model_confirmation": "parent explicit model spawn succeeded; finer identity unavailable",
+              "independent_agent": "/root/disability_final_review",
+              "final_verdict": "PASS",
+              "score": 97,
+              "policy_version": "3.0",
+              "calls": 2,
+              "initial_review": {
+                "version": "3.0",
+                "round": 1,
+                "model_identifier": "미확인",
+                "reviewer": "/root/disability_final_review",
+                "reviewed_at": "2026-11-25T21:11:56.099507+09:00",
+                "body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+                "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                "char_count": 395,
+                "scores": [
+                  [
+                    "첫 문장",
+                    12,
+                    15,
+                    "질문은 구체적이나 직전 네 건과 같은 질문형, 실제 생활 상황이 약하다."
+                  ],
+                  [
+                    "관심/의도",
+                    14,
+                    15,
+                    "연금 미수급자 판단에 직접 답하나 생활비 결정 맥락을 보강할 수 있다."
+                  ],
+                  [
+                    "정확성",
+                    18,
+                    20,
+                    "18~20세 학교 유형을 닫힌 열거로 제시하여 각종학교 등 누락 가능. 금액·경로·소득 조건은 일치."
+                  ],
+                  [
+                    "완독 가능성",
+                    14,
+                    15,
+                    "의미 단위 문단은 명료하나 가구 전체와 비교하는 문장은 중복."
+                  ],
+                  [
+                    "공유/공감",
+                    9,
+                    10,
+                    "연령 예외와 서류가 가족에게 전달하기 좋다."
+                  ],
+                  [
+                    "가치/차별",
+                    9,
+                    10,
+                    "재가·시설 금액의 판단과 연금 구분. 구조는 P2에 가깝다."
+                  ],
+                  [
+                    "모바일",
+                    5,
+                    5,
+                    "단문과 공백 적절."
+                  ],
+                  [
+                    "이미지 완성도",
+                    5,
+                    5,
+                    "원본·360px 실물 열람. 로고·문구 읽힘, 잘림·금액·날짜·정부 표식 없음. 자체 브랜드 승인 자산."
+                  ],
+                  [
+                    "프로필 유도",
+                    4,
+                    5,
+                    "준비서류 명시. 08:30 홈페이지 목적지와 상세 HTTP 성공은 상위 근거. 현재 프로필 리디렉션 완료 미확인."
+                  ]
+                ],
+                "total": 90,
+                "decision": "REVISE",
+                "checks": {
+                  "body": 1,
+                  "replies": 0,
+                  "exact_final_cta": 1,
+                  "url": 0,
+                  "hashtag": 0,
+                  "limit": 500,
+                  "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+                  "history": "최근 20개 동일 ID 없음. 직전 4개 질문형. 익일 P8/P6/P5와 다른 P1 필요.",
+                  "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정."
+                },
+                "changes": [
+                  "생활비 장면과 대상자 결정을 직접 제시하는 평서문으로 변경",
+                  "초·중등교육법상 학교(특수학교 포함)로 학교 범위 보완",
+                  "가구 전체 비교 문장 삭제",
+                  "프로필 확인 범위 과장 금지"
+                ]
+              },
+              "final_review": {
+                "version": "3.0",
+                "round": 2,
+                "model_identifier": "미확인",
+                "reviewer": "/root/disability_final_review",
+                "reviewed_at": "2026-11-25T21:12:38.567319+09:00",
+                "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+                "image_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                "char_count": 395,
+                "scores": [
+                  [
+                    "첫 문장",
+                    14,
+                    15,
+                    "생활비 상황과 신청 여부를 직접 질문. 첫줄 연금 명칭은 다음 문장에서 특정."
+                  ],
+                  [
+                    "관심/의도",
+                    15,
+                    15,
+                    "네 다음 문장에 필수 연령·소득·장애 기준을 모두 제시."
+                  ],
+                  [
+                    "정확성",
+                    20,
+                    20,
+                    "대상 및 재가·시설 월별 금액, 학생 예외, 상시 신청과 두 경로, 서류가 공식 근거에 부합."
+                  ],
+                  [
+                    "완독 가능성",
+                    14,
+                    15,
+                    "가구 비교를 제거하고 한 문단에 한 판단을 담음. 법령명 문장에는 다소 집중이 필요."
+                  ],
+                  [
+                    "공유/공감",
+                    9,
+                    10,
+                    "생활비를 점검하는 가족에게 유용한 시설 금액·학생 예외가 드러남."
+                  ],
+                  [
+                    "가치/차별",
+                    10,
+                    10,
+                    "생활비→연금 비수급→거주 유형별 개인 월액→학생 예외→서류로 전개."
+                  ],
+                  [
+                    "모바일",
+                    5,
+                    5,
+                    "본문 문단 간 여백, 360픽셀 카드 문구의 식별 확인."
+                  ],
+                  [
+                    "이미지 완성도",
+                    5,
+                    5,
+                    "원본 및 축소본 다시 열람. 승인 범용 카드 내 소실·잘림·공식 표식·혼동 금액 없음."
+                  ],
+                  [
+                    "프로필 유도",
+                    5,
+                    5,
+                    "기관과 사업명을 명시해 동명 항목 구별. 실제 상세 서류로 연결됨."
+                  ]
+                ],
+                "total": 97,
+                "decision": "EDITORIAL_PASS",
+                "checks": {
+                  "body": 1,
+                  "replies": 0,
+                  "exact_final_cta": 1,
+                  "url": 0,
+                  "hashtag": 0,
+                  "limit": 500,
+                  "source": "복지부 장애수당 페이지 850~881행 직접 열람, 정부24 동일 ID 원문 상시 및 필요서류 대조. 구 팝업 금액은 현행 정책페이지로 배제. 복지로 검색요약 미사용.",
+                  "history": "최근 20건 동일 ID 없음. 사용자 지정 질문형을 유지하며 생활비 장면으로 차별화.",
+                  "metrics": "82게시 159관측. 누적 조회수 32949이며 7/30일 계정지표, 완독·체류·CTA 기여 미측정.",
+                  "profile": "상위 실제 CUA: 홈페이지 장애수당 검색 17건→보건복지부 장애수당 선택→동일 ID 상세 서류·정부24 링크 확인. 프로필 홈페이지 목적지는 08:30 근거 재사용. 현재 Threads 리디렉션 완료 미확인."
+                },
+                "changes": [],
+                "previous_body_sha256": "f5869062ae2942c70a39c0a73f9e72a3ef0d5db9bc0bdcaaf336a382d2bcdb2a",
+                "publication_status": "미게시. 11월 26일 20~22시 KST 전체 창을 포괄하는 유효 근거로 재확인·갱신 필요."
+              },
+              "body_before": "장애인연금을 못 받는다면 월 6만 원 장애수당 대상일까요?\n장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요. 가구 전체에 한 번 지급하는 금액과 달라요.\n\n18~20세로 초·중·고등학교나 특수학교에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+              "body_after": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?\n네. 장애인연금법상 중증장애인이 아닌 18세 이상 등록장애인 중 기초생활수급자·차상위계층이 대상이에요. 연금을 못 받는다는 이유만으로 자동 지급되지는 않아요.\n\n집에서 생활하는 대상자는 1인당 월 6만 원, 보장시설의 생계·의료급여 수급자는 월 3만 원이에요.\n\n18~20세로 초·중등교육법상 학교(특수학교 포함)에 재학·휴학 중이거나 의무교육이 유예된 사람은 장애수당에서 제외돼요. 장애아동수당 기준을 따로 살펴야 해요.\n\n연중 주민센터를 방문하거나 복지로에서 신청할 수 있어요. 프로필에서 보건복지부 ‘장애수당’을 찾으면 신청서·소득재산 신고서·금융정보 동의서 등 준비서류를 확인할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+              "body_sha256": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+              "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+              "fallback_reason": null
+            }
+          },
+          "next_history_record": {
+            "program_id": "SPE000000010",
+            "notice_version": "gov24-45594952230-1;official2026-11-25T21:14:03.344880+09:00",
+            "pattern": "P1",
+            "opening": "생활비가 빠듯한 등록장애인, 연금을 못 받아도 장애수당을 신청할 수 있나요?",
+            "structure": "생활비상황→대상즉답→재가시설금액→학생예외→서류",
+            "media_turn": "IMAGE"
+          }
+        },
+        "full_delay_window_covered": false,
+        "revalidate_before": "2026-11-26T20:00:00+09:00",
+        "revalidation_required_reason": "expires_before_slot_plus_two_hours"
+      },
+      "current_expires_at": "2026-11-26T21:14:03.344880+09:00",
+      "slot_window_ends": "2026-11-26T22:00:00+09:00",
+      "reason": "max24h expiry before fullslot+2h; actualofficial/currentstatus/latestcomplete/imageSHA rereviewafterNov25 22 thenarchiveCAS required"
     }
   },
   "maintenance_calculation_corrections": {
@@ -170154,6 +171392,43 @@
       "maintenance_post_calls": 0,
       "delay_within_original_2h_window": true,
       "actual_source_generation": "gov24-45499312067-1"
+    },
+    "17950017192359863": {
+      "run_id": "45607532189",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-25T11:47:51Z",
+      "head_sha": "5c4084549223723b566cfe560d2e418903ad4337",
+      "job_id": 139182173784,
+      "artifact_id": 15018920831,
+      "artifact_digest": "sha256:89d2122464cb7e770d66b8654d40bc3a43ec521c64131413ad88b63ae7d7d0cf",
+      "artifact_digest_verified": true,
+      "artifact_redownloaded_this_check": true,
+      "job_logs_retrieved_this_check": true,
+      "actual_tests_passed": 138,
+      "new_publication_this_run": true,
+      "main_id": "17950017192359863",
+      "url": "https://www.threads.com/@hid_1004/post/DgKdNkOEYk3",
+      "slot": "2026-11-25T20:00:00+09:00",
+      "receipt_at": "2026-11-25T20:47:38.1663121+09:00",
+      "receipt_time_basis": "Actual GitHub job Threads receipt line; exact platform timestamp unavailable",
+      "ledger_published_at": "2026-11-25T20:46:47.256597+09:00",
+      "ledger_published_at_is_invocation_not_exact_platform_time": true,
+      "stage": "complete",
+      "verified": true,
+      "body_hash": "8048d902f3b027b379d27842c3c5f414df4e60a70c1b0116fdb65ea98f7c8ab6",
+      "content_hash": "776f8be9e294e4b39fbadb30901decd7bf12949f5430cf6f861eeb48edd42de3",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "media_turn": "IMAGE",
+      "pattern": "P1",
+      "char_count": 419,
+      "replies": 0,
+      "original_queue_body_asset_exact": true,
+      "previous81records_preserved": true,
+      "maintenance_post_calls": 0,
+      "delay_within_original_2h_window": true,
+      "actual_source_generation": "gov24-45594952230-1"
     }
   },
   "writer_final_edit_policy": {
