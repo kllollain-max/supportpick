@@ -889,6 +889,19 @@
         "gov24": "web tool inaccessible"
       },
       "source_generation": "gov24-45499312067-1"
+    },
+    {
+      "benefit_id": "O00045400020",
+      "views": 31806,
+      "decision": "HOLD",
+      "reason": "최신동일IDAPI는2자녀이상막내15세미만/30%/제외항목안내지만현재시행기관세부원문으로연령·감면범위·적용상태를대조하지못함. 정부24직접도구접근불가,경기도현재카드안내open timeout,실제열린의료원공식보도자료는2012년3자녀조건이라2026세부기준증거로사용안함. 카드발급연령18세검색을의료비감면기준15세와같은제도로합치지않음.종료단정아님.",
+      "sources": [
+        "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2100976&bnefType=all&svcId=O00045400020",
+        "https://www.gg.go.kr/contents/contents.do?ciIdx=1401&menuId=3318",
+        "https://www.medical.or.kr/front/boardList.do?brd_mgrno=186&keykind=&keyword=&menu_no=730&page_now=37"
+      ],
+      "checked_at": "2026-11-26T20:15:00.513417+09:00",
+      "source_generation": "gov24-45801560315-1"
     }
   ],
   "entries": [
@@ -14482,6 +14495,667 @@
       "revalidate_after": "2026-11-26T18:00:00+09:00",
       "revalidate_before": "2026-11-27T16:00:00+09:00",
       "expiry_revalidated_at": "2026-11-26T18:14:39.119648+09:00"
+    },
+    {
+      "slot": "2026-11-27T20:00:00+09:00",
+      "benefit_id": "999000000005",
+      "source_fingerprint": "86f0216017673d9dea82d52389f0cbe411cbd38a2d870ab7c6359b3184fd2e2f",
+      "source_generation": "gov24-45801560315-1",
+      "prepared_at": "2026-11-26T20:15:00.513417+09:00",
+      "expires_at": "2026-11-27T20:15:00.513417+09:00",
+      "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "999000000005",
+        "post_text": "실업신고 후 아파서 구직활동을 못했다면, 상병급여는 언제 신청하나요?\n취업할 수 없던 사유가 없어진 날부터 14일 이내예요. 취업할 수 없던 기간 중 구직급여 수급기간이 끝났다면 종료 후 30일 이내가 기준이에요. 천재지변 등 부득이한 사유가 있다면 그 사유가 없어진 날부터 7일 이내예요.\n\n실업신고 이후 질병·부상으로 7일 이상 취업할 수 없어 실업인정을 받지 못한 수급자격자가 대상이에요. 구직급여일액과 같은 금액을 대신 지급하며, 남은 구직급여 지급일수가 한도예요.\n\n산재 휴업급여 등 법에서 정한 보상·급여를 받을 수 있는 경우나 구직급여 지급정지 기간에는 지급하지 않아요.\n\n청구서와 진단서 등 증명서류를 준비해 관할 고용센터에 신청해요. 실업신고 전부터 취업할 수 없었다면 수급기간 연장 대상인지 확인해요.\n\n프로필에서 ‘상병급여’를 찾으면 대상·구비서류·관할 고용센터 신청방법을 대조할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-27T20:00:00+09:00",
+          "application_status": "OPEN",
+          "reader": "실업신고후질병부상으로취업하지못한구직급여수급자격자",
+          "central_message": "신고후질병부상수급자의개인별14/30/7일청구기한과잔여일수·중복제외·증빙방문절차",
+          "pattern": "P6",
+          "selection_reason": "동일ID원본누적31746,상위공식검증보류사유보존.다자녀31806현재감면기준미확인HOLD추가.같은ID게시예약큐없음.고용분야신청기한의구체판단정보로순위범위안분야순환.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "999000000005",
+              "source_ref": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032427053",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-26T20:15:00.513417+09:00",
+              "claims_supported": [
+                "현행2026.9.18법63조22~28직접열람:실업신고후질병취업불가수급자격자,구직급여일액대체,잔여지급일수한도,지급정지와법정보상급여제외.개인별청구요건내현재신청가능."
+              ]
+            },
+            {
+              "source_id": "999000000005",
+              "source_ref": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1021785653",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-26T20:15:00.513417+09:00",
+              "claims_supported": [
+                "현행2026.9.18시행령82조22~27직접열람:취업불가사유해소14일/그취업불가기간중수급기간종료면종료30일/불가항력해소7일/청구서와증명서/본인또는대리인제출.개인별법정기한내신청가능."
+              ]
+            },
+            {
+              "source_id": "999000000005",
+              "source_ref": "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001204",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-26T20:15:00.513417+09:00",
+              "claims_supported": [
+                "고용부FAQ105~106행직접:7일이상질병부상,진단서소견서와고용센터방문,구직급여일액동일대체지급.2022작성은현행법/2026동일ID원본과대조."
+              ]
+            },
+            {
+              "source_id": "999000000005",
+              "source_ref": "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001205",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-26T20:15:00.513417+09:00",
+              "claims_supported": [
+                "고용부105~106직접:7일이상기간상병급여,그외기간구직활동필요.질병부상으로범위한정."
+              ]
+            },
+            {
+              "source_id": "999000000005",
+              "source_ref": "https://easylaw.go.kr/CSP/OnhunqueansInfoRetrieve.laf?onhunqnaAstSeq=82&onhunqueSeq=3866",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-26T20:15:00.513417+09:00",
+              "claims_supported": [
+                "법제처141~152직접:신고전취업불가는상병급여아닌수급기간연장.2025기준자료는현행2026법과대조."
+              ]
+            },
+            {
+              "source_id": "999000000005",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-26T20:15:00.513417+09:00",
+              "claims_supported": [
+                "현재main실제PNG GET/SHA와기존승인image-review일치. 부모와독립검수자가이번원본및360px실제열람:한글/대비/잘림/깨짐/본문일치/과밀/권리/공식홍보물오인PASS. 범용자체브랜드,금액날짜사업조건주장없음.혜택별승인자산없어기존_rotation사용."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 472,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "출산특례45일은이글의질병부상범위밖,출산자에게일반화하지않음",
+            "개인별법정기한내청구제도이며모집마감/확정지급/전국민지급아님",
+            "실제발송시최신완전수집세대필수,현재19:36본을내일20시까지신선하다고가정하지않음",
+            "24시간상한으로내일20~22전체창미충족.오늘22시이후공식/현재청구상태/최신완전본/이미지SHA실재대조후CAS갱신필수",
+            "현재20시미예약이며아직실패확정아님.실제결과따라미예약미디어순서재검증필수"
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+            "core_question": "실업신고 후 아파서 구직활동을 못했다면, 상병급여는 언제 신청하나요?",
+            "reader_scope": "실업신고후질병부상으로취업하지못한구직급여수급자격자",
+            "angles": [
+              "구직급여를못받을까걱정",
+              "청구14일과30일예외계산",
+              "증명서류와고용센터신청준비"
+            ],
+            "chosen_angle": "개인별청구기한과예외→대체급여조건→잔여일수/중복제외→서류와신청",
+            "opening_candidates": [
+              "실업신고 후 아파서 구직활동을 못했다면, 상병급여는 언제 신청하나요?",
+              "실업급여를 받다 입원했다면, 아픈 기간도 급여를 받을 수 있나요?",
+              "상병급여 14일, 퇴원일과 수급기간 종료일 중 어느 날부터 셀까요?"
+            ],
+            "chosen_opening": "실업신고 후 아파서 구직활동을 못했다면, 상병급여는 언제 신청하나요?",
+            "opening_type": "신청기한질문형",
+            "cohort": null,
+            "comparison_eligible": false,
+            "comparison_exclusion": "v3질문·기한예외·절차동시편집으로순수A/B에소급배정않음",
+            "history_posts_checked": 20,
+            "selection_reason": "동일ID원본누적31746,상위공식검증보류사유보존.다자녀31806현재감면기준미확인HOLD추가.같은ID게시예약큐없음.고용분야신청기한의구체판단정보로순위범위안분야순환.",
+            "profile_route": {
+              "profile": "https://www.threads.com/@hid_1004",
+              "visible_link_target": "https://kllollain-max.github.io/supportpick/",
+              "checks_completed_by": "2026-11-26T20:12:22+09:00",
+              "individual_click_timestamp_retained": false,
+              "home_search": "상병급여",
+              "results": 1,
+              "actual_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/999000000005/",
+              "redirect_click_completed": false,
+              "detail_claims_verified": [
+                "대상",
+                "구비서류",
+                "관할고용센터방문"
+              ],
+              "limits": [
+                "API18~44분류는법정자격나이제한으로사용하지않음",
+                "사이트기본14일표시외예외는현재법령추가검증",
+                "프로필목적지실제표시와홈검색상세클릭각각확인.중간리디렉션완료주장없음"
+              ]
+            },
+            "search_evidence": "실제공식검색표현 상병급여/14일/7일/질병부상 확인,실측검색량없음.",
+            "observed_metrics_context": "85완료게시171공식실제관측,7/30계정프로필/홈/완독체류CTA미측정0아님.실험결론은기존표본한계로보류.",
+            "master_full_used": true
+          },
+          "astra_final_review": {
+            "requested_model": "gpt-6.2-astra",
+            "actual_model": "미확인",
+            "invoked_model_identifier": "gpt-6.2-astra",
+            "fallback_reason": null,
+            "version": "3.0",
+            "independent_agent": "/root/sickness_final_review",
+            "first_review": {
+              "review_round": 1,
+              "planned_slot": "2026-11-27T20:00:00+09:00",
+              "benefit_id": "999000000005",
+              "reviewed_at": "2026-11-26T20:12:18.286965+09:00",
+              "reviewer": {
+                "independent": true,
+                "selected_model": "gpt-6.2-astra",
+                "runtime_build_identifier": "미확인",
+                "fallback": false
+              },
+              "review_policy": "지원금픽 Threads 최종 편집 v3.0",
+              "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+              "post_text_reviewed": "실업신고 후 아파서 구직활동을 못했다면, 상병급여는 언제 신청하나요?\n질병·부상으로 취업할 수 없던 사유가 없어진 날부터 14일 이내에 신청해요. 아픈 기간 중 구직급여 수급기간이 끝났다면, 수급기간 종료 후 30일 이내가 기준이에요.\n\n실업신고 이후 질병·부상으로 7일 이상 취업할 수 없어 실업인정을 받지 못한 수급자격자를 위한 제도예요. 구직급여일액과 같은 금액을 대신 지급하며, 두 급여를 같은 날에 겹쳐 받는 지원은 아니에요.\n\n청구서와 진단서 등 취업할 수 없었던 기간을 증명하는 서류를 준비해 관할 고용센터에 신청해요. 실업신고 전부터 아팠다면 상병급여 대신 수급기간 연장 대상인지 확인해야 해요.\n\n프로필에서 ‘상병급여’를 찾으면 대상·구비서류·관할 고용센터 신청방법을 대조할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+              "body_sha256": "ad76ac495c60a40572810451417340298e128ea80639e521e84a884efda00373",
+              "char_count": 411,
+              "count_method": "공백·개행·CTA 포함 Unicode code point",
+              "reply_texts": [],
+              "media_turn": "IMAGE",
+              "pattern": "P6",
+              "source_context": {
+                "generation": "gov24-45801560315-1",
+                "observed_source_views": 31746,
+                "search_volume": null,
+                "history": "최근 원장 20개 본문과 큐 도입부 20개 대조. 같은 ID 없음. 당일 기존 P5/P8/P2.",
+                "upstream_higher_candidate": "O00045400020 의료비 감면은 최신 기관별 세부 요건 미확인으로 보류.",
+                "status": "ALWAYS",
+                "status_scope": "법정 제도, 개인별 청구기한 적용"
+              },
+              "visual": {
+                "inspect_method": "view_image 원본 및 실제 360px 렌더 모두 직접 육안 확인",
+                "original": "social/images/benefit-guide-2.png",
+                "original_size": [
+                  1254,
+                  1254
+                ],
+                "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                "preview": "medical1312-mobile.png",
+                "preview_size": [
+                  360,
+                  360
+                ],
+                "preview_sha256": "ea6f03f5401b91876c16b83c853433c177cacec2fe8715e510b817fad02c5a5f",
+                "result": "PASS",
+                "evidence": "지원금픽, 생활 혜택, 꼼꼼하게, 하단 프로필링크 안내. 집·체크판·방패 자체 브랜드 일러스트. 한글 깨짐·잘림·과밀·대비 문제 없음. 정부 문장·외부 로고·실존 인물·공식 기관 명의·금액·기한 등 제도 주장 없음. 기존 승인 로테이션 파일 SHA 일치, 새 권리 주장 없음. 승인된 브랜드 이미지 반복 사용."
+              },
+              "evidence": [
+                {
+                  "name": "고용보험법 제63조 현행 2026-09-18",
+                  "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032427053",
+                  "method": "OPENED_OFFICIAL",
+                  "claims": "대체 급여·남은 일수·휴업급여 등 수급 가능 시 제외"
+                },
+                {
+                  "name": "고용보험법 시행령 제82조 현행 2026-09-18",
+                  "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1021785653",
+                  "method": "OPENED_OFFICIAL",
+                  "claims": "14일·30일·부득이한 사유 해소 후 7일 및 증명서·신청지 관할기관. 전달받은 변경조문 URL은 404로 이 현행 조문 본문을 직접 열었다."
+                },
+                {
+                  "name": "고용노동부 고객상담센터 FAQ 1000001204·1000001205",
+                  "urls": [
+                    "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001204",
+                    "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001205"
+                  ],
+                  "method": "OPENED_OFFICIAL",
+                  "claims": "질병·부상 7일 이상, 구직급여일액, 증명서, 치료 후 청구"
+                },
+                {
+                  "name": "법제처 찾기 쉬운 생활법령 상병급여 본문(2026-09-15 기준)",
+                  "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=5&cnpClsNo=1&csmSeq=722&menuType=cnpcls&popMenu=ov",
+                  "method": "OPENED_OFFICIAL",
+                  "claims": "실업신고 전에 취업 불가능한 경우 수급기간 연장 검토. 전달받은 Q&A는 메인으로 이동하여 동일 기관 주제 본문 이용."
+                }
+              ],
+              "checks": {
+                "facts_and_eligibility": "FAIL",
+                "current_status": "PASS",
+                "profile_path": "NOT_CHECKED",
+                "no_url_domain_hashtag": "PASS",
+                "last_cta_exact_once": "PASS",
+                "length": "PASS",
+                "media": "PASS",
+                "one_post_no_replies": "PASS",
+                "recent_history": "PASS"
+              },
+              "score_items": [
+                {
+                  "item": "첫 문장",
+                  "score": 14,
+                  "max": 15,
+                  "reason": "실업신고 뒤 아파진 사람의 청구기한을 묻고 바로 다음 문장에서 답한다. 당일 아침 개별연장급여의 기한 질문과 형식이 비슷하다."
+                },
+                {
+                  "item": "관심/의도",
+                  "score": 15,
+                  "max": 15,
+                  "reason": "실업인정을 놓쳤을 때 행동을 결정하는 절차형 글이다. 수집 조회수 31,746은 원본 누적치이며 검색 수요나 게시 성과로 환산하지 않았다."
+                },
+                {
+                  "item": "정확성",
+                  "score": 15,
+                  "max": 20,
+                  "reason": "14일·30일, 7일 이상, 구직급여일액 대체, 증명서·고용센터는 대조됨. 잔여일수, 휴업급여 등 제외 및 기한 예외가 빠졌다. 신고 전 단순 질병과 취업불능도 구분해야 한다."
+                },
+                {
+                  "item": "완독 가능성",
+                  "score": 14,
+                  "max": 15,
+                  "reason": "첫 답과 구비서류·접수처가 분명하고 문단 경계가 보인다. 신고·질병 문구가 겹친다."
+                },
+                {
+                  "item": "공유/공감",
+                  "score": 9,
+                  "max": 10,
+                  "reason": "실업인정을 앞둔 수급자와 가족에게 전달할 수 있으며 신상 공개나 상호작용을 요구하지 않는다."
+                },
+                {
+                  "item": "가치/차별",
+                  "score": 9,
+                  "max": 10,
+                  "reason": "당일 08시 연장급여와 대상·법적 효과가 다르고 준비서류까지 안내한다."
+                },
+                {
+                  "item": "모바일",
+                  "score": 5,
+                  "max": 5,
+                  "reason": "411자. 짧은 질문과 문단 사이 여백, 360px에서 브랜드명과 하단 안내를 읽을 수 있다."
+                },
+                {
+                  "item": "이미지 완성도",
+                  "score": 5,
+                  "max": 5,
+                  "reason": "승인 파일 원본과 모바일 축소본을 직접 열어 브랜드명·한글·대비·여백을 확인했다."
+                },
+                {
+                  "item": "프로필 유도",
+                  "score": 4,
+                  "max": 5,
+                  "reason": "검색할 제도명과 자료를 적었다. 현행 프로필 경로의 실제 도달 여부는 검수 시점 증빙 대기."
+                }
+              ],
+              "score_total": 90,
+              "threshold": 95,
+              "decision": "REVISE",
+              "approved": false,
+              "required_revisions": [
+                "남은 구직급여 지급일수 한도와 산재 휴업급여 등을 받을 수 있는 경우의 제외를 명시.",
+                "기한 중심 글이므로 천재지변 등 부득이한 사유가 없어진 날부터 7일의 특례를 간결히 표시.",
+                "신고 전 단순 질병이 아닌 취업 불가능 상태로 안내 범위를 정확히 제한.",
+                "프로필 사이트의 대상·서류·접수 경로가 실제 표시되는지 증빙 후 최종본 재검수."
+              ]
+            },
+            "intermediate_review": {
+              "review_round": 2,
+              "planned_slot": "2026-11-27T20:00:00+09:00",
+              "benefit_id": "999000000005",
+              "reviewed_at": null,
+              "reviewer": {
+                "independent": true,
+                "selected_model": "gpt-6.2-astra",
+                "runtime_build_identifier": "미확인",
+                "fallback": false
+              },
+              "review_policy": "지원금픽 Threads 최종 편집 v3.0",
+              "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+              "post_text_reviewed": "실업신고 후 아파서 구직활동을 못했다면, 상병급여는 언제 신청하나요?\n취업할 수 없던 사유가 없어진 날부터 14일 이내예요. 그 기간 중 구직급여 수급기간이 끝났다면 종료 후 30일 이내가 기준이에요. 천재지변 등 부득이한 사유가 있다면 그 사유가 없어진 날부터 7일 이내예요.\n\n실업신고 이후 질병·부상으로 7일 이상 취업할 수 없어 실업인정을 받지 못한 수급자격자가 대상이에요. 구직급여일액과 같은 금액을 대신 지급하며, 남은 구직급여 지급일수가 한도예요.\n\n산재 휴업급여 등 법에서 정한 보상·급여를 받을 수 있는 경우나 구직급여 지급정지 기간에는 지급하지 않아요.\n\n청구서와 진단서 등 증명서류를 준비해 관할 고용센터에 신청해요. 실업신고 전부터 취업할 수 없었다면 수급기간 연장 대상인지 확인해요.\n\n프로필에서 ‘상병급여’를 찾으면 대상·구비서류·관할 고용센터 신청방법을 대조할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+              "body_sha256": "d90d608607285998197e6fb568009d5361afd5d8f4c75162b74d992b62275ddc",
+              "char_count": 465,
+              "count_method": "공백·개행·CTA 포함 Unicode code point",
+              "reply_texts": [],
+              "media_turn": "IMAGE",
+              "pattern": "P6",
+              "source_context": {
+                "generation": "gov24-45801560315-1",
+                "observed_source_views": 31746,
+                "search_volume": null,
+                "history": "최근 원장 20개 본문과 큐 도입부 20개 대조. 같은 ID 없음. 당일 기존 P5/P8/P2.",
+                "upstream_higher_candidate": "O00045400020 의료비 감면은 최신 기관별 세부 요건 미확인으로 보류.",
+                "status": "OPEN",
+                "status_scope": "현행 개인별 법정 청구기간 내 신청 가능. 공통 모집 마감일 의미 아님."
+              },
+              "visual": {
+                "inspect_method": "view_image 원본 및 실제 360px 렌더 모두 직접 육안 확인",
+                "original": "social/images/benefit-guide-2.png",
+                "original_size": [
+                  1254,
+                  1254
+                ],
+                "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                "preview": "medical1312-mobile.png",
+                "preview_size": [
+                  360,
+                  360
+                ],
+                "preview_sha256": "ea6f03f5401b91876c16b83c853433c177cacec2fe8715e510b817fad02c5a5f",
+                "result": "PASS",
+                "evidence": "지원금픽, 생활 혜택, 꼼꼼하게, 하단 프로필링크 안내. 집·체크판·방패 자체 브랜드 일러스트. 한글 깨짐·잘림·과밀·대비 문제 없음. 정부 문장·외부 로고·실존 인물·공식 기관 명의·금액·기한 등 제도 주장 없음. 기존 승인 로테이션 파일 SHA 일치, 새 권리 주장 없음. 승인된 브랜드 이미지 반복 사용."
+              },
+              "evidence": [
+                {
+                  "name": "고용보험법 제63조 현행 2026-09-18",
+                  "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032427053",
+                  "method": "OPENED_OFFICIAL",
+                  "claims": "대체 급여·남은 일수·휴업급여 등 수급 가능 시 제외"
+                },
+                {
+                  "name": "고용보험법 시행령 제82조 현행 2026-09-18",
+                  "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1021785653",
+                  "method": "OPENED_OFFICIAL",
+                  "claims": "14일·30일·부득이한 사유 해소 후 7일 및 증명서·신청지 관할기관. 전달받은 변경조문 URL은 404로 이 현행 조문 본문을 직접 열었다."
+                },
+                {
+                  "name": "고용노동부 고객상담센터 FAQ 1000001204·1000001205",
+                  "urls": [
+                    "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001204",
+                    "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001205"
+                  ],
+                  "method": "OPENED_OFFICIAL",
+                  "claims": "질병·부상 7일 이상, 구직급여일액, 증명서, 치료 후 청구"
+                },
+                {
+                  "name": "법제처 찾기 쉬운 생활법령 상병급여 본문(2026-09-15 기준)",
+                  "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=5&cnpClsNo=1&csmSeq=722&menuType=cnpcls&popMenu=ov",
+                  "method": "OPENED_OFFICIAL",
+                  "claims": "실업신고 전에 취업 불가능한 경우 수급기간 연장 검토. 전달받은 Q&A는 메인으로 이동하여 동일 기관 주제 본문 이용."
+                }
+              ],
+              "checks": {
+                "facts_and_eligibility": "FAIL",
+                "current_status": "PASS",
+                "profile_path": "PASS",
+                "no_url_domain_hashtag": "PASS",
+                "last_cta_exact_once": "PASS",
+                "length": "PASS",
+                "media": "PASS",
+                "one_post_no_replies": "PASS",
+                "recent_history": "PASS"
+              },
+              "score_items": [
+                {
+                  "item": "첫 문장",
+                  "score": 14,
+                  "max": 15,
+                  "reason": "상병급여 신청 시점을 묻고 다음 문장 첫머리에서 14일을 답한다. 08시 질문의 기한 중심 형식과 일부 겹친다."
+                },
+                {
+                  "item": "관심/의도",
+                  "score": 15,
+                  "max": 15,
+                  "reason": "실업신고 뒤 질병·부상 때문에 취업할 수 없었던 수급자격자가 신청 여부와 시기를 판단할 수 있다."
+                },
+                {
+                  "item": "정확성",
+                  "score": 17,
+                  "max": 20,
+                  "reason": "제63조 잔여일수·휴업급여 등 수급 가능 시 제외, 구직급여 지급정지, 시행령 제82조 불가항력 7일, 신고 전 취업불능 모두 반영. “그 기간 중”이 직전 14일을 가리킬 수 있어 30일 예외의 기준이 불명확하다."
+                },
+                {
+                  "item": "완독 가능성",
+                  "score": 14,
+                  "max": 15,
+                  "reason": "절차 중심으로 기한→대상·한도→제외→서류를 배열했다. 첫 답 문단의 세 기한을 함께 읽어야 한다."
+                },
+                {
+                  "item": "공유/공감",
+                  "score": 9,
+                  "max": 10,
+                  "reason": "가족이나 구직 중인 동료에게 전달할 실용성이 있고 개인 사정을 공개하도록 요구하지 않는다."
+                },
+                {
+                  "item": "가치/차별",
+                  "score": 10,
+                  "max": 10,
+                  "reason": "같은 날의 개별연장급여와 구별되며 기한 예외·지급 일수·중복 제한과 신청 경로가 구체적이다."
+                },
+                {
+                  "item": "모바일",
+                  "score": 5,
+                  "max": 5,
+                  "reason": "465자, 500자 이하. 편집 권장 범위 450자를 넘지만 필수 기한·제한을 유지하고 단락에 여백을 두었다."
+                },
+                {
+                  "item": "이미지 완성도",
+                  "score": 5,
+                  "max": 5,
+                  "reason": "프로필 안내 브랜드 카드 원본·360px와 고정 SHA 일치. 숫자·제도 세부 주장·기관 로고가 없고 한글, 잘림, 대비, 배치 PASS."
+                },
+                {
+                  "item": "프로필 유도",
+                  "score": 5,
+                  "max": 5,
+                  "reason": "검색어·상세 확인 내용과 상위 편집자가 직접 열어 확인한 검색 결과 및 상세 화면이 일치한다."
+                }
+              ],
+              "score_total": 94,
+              "threshold": 95,
+              "decision": "REVISE",
+              "approved": false,
+              "required_revisions": [
+                "30일 예외는 앞선 14일 청구기간이 아니라 취업할 수 없던 기간 중 수급기간이 끝날 때 적용됨을 명시."
+              ],
+              "clock_reference": "2026-11-26T20:12:49+09:00",
+              "time_note": "중간검토는 이 시각 전에 수행, 독립된 정확한 완료시각 미보존.",
+              "profile_route": {
+                "method": "UPSTREAM_VERIFIED",
+                "verified_by": "부모 편집자 공개 프로필 및 사이트 UI 직접 확인",
+                "confirmed_by_kst": "2026-11-26T20:12:22+09:00",
+                "direct_detail": "https://kllollain-max.github.io/supportpick/benefits/999000000005/",
+                "evidence": "프로필 공개 링크 목적지와 홈페이지 일치. 홈 검색창 상병급여 입력→1건→상세 화면에서 대상·구비서류·관할 고용센터 신청 방식 확인. 개별 클릭 시각 미보존, 프로필 중간 리디렉션 클릭 경유 미검증. 집계 분류 18~44를 법적 제한으로 사용하지 않음."
+              },
+              "previous_body_sha256": "ad76ac495c60a40572810451417340298e128ea80639e521e84a884efda00373",
+              "release_scope": "원고와 지정 이미지의 편집 판정. 실제 예약·발행을 뜻하지 않는다.",
+              "publication_dependencies": [
+                "11월 27일 20시 IMAGE는 앞 회차 발행·이미지 원장 대조가 필요함.",
+                "이번 근거 24시간 유효기간은 다음 날 22시까지의 지연창 전체를 덮지 않음. 실제 게시 전 공식 근거·현재 신청 상태·최신 완전 수집·자산 SHA와 큐 승인본 일치 및 유효시간 재확인 필요."
+              ]
+            },
+            "final_review": {
+              "review_round": 3,
+              "planned_slot": "2026-11-27T20:00:00+09:00",
+              "benefit_id": "999000000005",
+              "reviewed_at": "2026-11-26T20:13:23.127976+09:00",
+              "reviewer": {
+                "independent": true,
+                "selected_model": "gpt-6.2-astra",
+                "runtime_build_identifier": "미확인",
+                "fallback": false
+              },
+              "review_policy": "지원금픽 Threads 최종 편집 v3.0",
+              "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+              "post_text_reviewed": "실업신고 후 아파서 구직활동을 못했다면, 상병급여는 언제 신청하나요?\n취업할 수 없던 사유가 없어진 날부터 14일 이내예요. 취업할 수 없던 기간 중 구직급여 수급기간이 끝났다면 종료 후 30일 이내가 기준이에요. 천재지변 등 부득이한 사유가 있다면 그 사유가 없어진 날부터 7일 이내예요.\n\n실업신고 이후 질병·부상으로 7일 이상 취업할 수 없어 실업인정을 받지 못한 수급자격자가 대상이에요. 구직급여일액과 같은 금액을 대신 지급하며, 남은 구직급여 지급일수가 한도예요.\n\n산재 휴업급여 등 법에서 정한 보상·급여를 받을 수 있는 경우나 구직급여 지급정지 기간에는 지급하지 않아요.\n\n청구서와 진단서 등 증명서류를 준비해 관할 고용센터에 신청해요. 실업신고 전부터 취업할 수 없었다면 수급기간 연장 대상인지 확인해요.\n\n프로필에서 ‘상병급여’를 찾으면 대상·구비서류·관할 고용센터 신청방법을 대조할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+              "body_sha256": "dcaa883c004e76aab3670acb881253162540f92c9b009bdecd3b444e11b4a5eb",
+              "char_count": 472,
+              "count_method": "공백·개행·CTA 포함 Unicode code point",
+              "reply_texts": [],
+              "media_turn": "IMAGE",
+              "pattern": "P6",
+              "source_context": {
+                "generation": "gov24-45801560315-1",
+                "observed_source_views": 31746,
+                "search_volume": null,
+                "history": "최근 원장 20개 본문과 큐 도입부 20개 대조. 같은 ID 없음. 당일 기존 P5/P8/P2.",
+                "upstream_higher_candidate": "O00045400020 의료비 감면은 최신 기관별 세부 요건 미확인으로 보류.",
+                "status": "OPEN",
+                "status_scope": "현행 개인별 법정 청구기간 내 신청 가능. 공통 모집 마감일 의미 아님."
+              },
+              "visual": {
+                "inspect_method": "view_image 원본 및 실제 360px 렌더 모두 직접 육안 확인",
+                "original": "social/images/benefit-guide-2.png",
+                "original_size": [
+                  1254,
+                  1254
+                ],
+                "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                "preview": "medical1312-mobile.png",
+                "preview_size": [
+                  360,
+                  360
+                ],
+                "preview_sha256": "ea6f03f5401b91876c16b83c853433c177cacec2fe8715e510b817fad02c5a5f",
+                "result": "PASS",
+                "evidence": "지원금픽, 생활 혜택, 꼼꼼하게, 하단 프로필링크 안내. 집·체크판·방패 자체 브랜드 일러스트. 한글 깨짐·잘림·과밀·대비 문제 없음. 정부 문장·외부 로고·실존 인물·공식 기관 명의·금액·기한 등 제도 주장 없음. 기존 승인 로테이션 파일 SHA 일치, 새 권리 주장 없음. 승인된 브랜드 이미지 반복 사용."
+              },
+              "evidence": [
+                {
+                  "name": "고용보험법 제63조 현행 2026-09-18",
+                  "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032427053",
+                  "method": "OPENED_OFFICIAL",
+                  "claims": "대체 급여·남은 일수·휴업급여 등 수급 가능 시 제외"
+                },
+                {
+                  "name": "고용보험법 시행령 제82조 현행 2026-09-18",
+                  "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1021785653",
+                  "method": "OPENED_OFFICIAL",
+                  "claims": "14일·30일·부득이한 사유 해소 후 7일 및 증명서·신청지 관할기관. 전달받은 변경조문 URL은 404로 이 현행 조문 본문을 직접 열었다."
+                },
+                {
+                  "name": "고용노동부 고객상담센터 FAQ 1000001204·1000001205",
+                  "urls": [
+                    "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001204",
+                    "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001205"
+                  ],
+                  "method": "OPENED_OFFICIAL",
+                  "claims": "질병·부상 7일 이상, 구직급여일액, 증명서, 치료 후 청구"
+                },
+                {
+                  "name": "법제처 찾기 쉬운 생활법령 상병급여 본문(2026-09-15 기준)",
+                  "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=5&cnpClsNo=1&csmSeq=722&menuType=cnpcls&popMenu=ov",
+                  "method": "OPENED_OFFICIAL",
+                  "claims": "실업신고 전에 취업 불가능한 경우 수급기간 연장 검토. 전달받은 Q&A는 메인으로 이동하여 동일 기관 주제 본문 이용."
+                }
+              ],
+              "checks": {
+                "facts_and_eligibility": "PASS",
+                "current_status": "PASS",
+                "profile_path": "PASS",
+                "no_url_domain_hashtag": "PASS",
+                "last_cta_exact_once": "PASS",
+                "length": "PASS",
+                "media": "PASS",
+                "one_post_no_replies": "PASS",
+                "recent_history": "PASS"
+              },
+              "score_items": [
+                {
+                  "item": "첫 문장",
+                  "score": 14,
+                  "max": 15,
+                  "reason": "상병급여 신청 시점을 묻고 다음 문장 첫머리에서 14일을 답한다. 08시 질문의 기한 중심 형식과 일부 겹친다."
+                },
+                {
+                  "item": "관심/의도",
+                  "score": 15,
+                  "max": 15,
+                  "reason": "실업신고 뒤 질병·부상 때문에 취업할 수 없었던 수급자격자가 신청 여부와 시기를 판단할 수 있다."
+                },
+                {
+                  "item": "정확성",
+                  "score": 20,
+                  "max": 20,
+                  "reason": "제63조 잔여일수·휴업급여 등 수급 가능 시 제외, 구직급여 지급정지, 시행령 제82조 불가항력 7일, 신고 전 취업불능 모두 반영. 30일 예외의 적용 기간을 취업 불가능 기간으로 명시했다. 7일 이상 질병·부상 기준과 증명서·관할 고용센터 절차도 공식 문헌과 일치한다."
+                },
+                {
+                  "item": "완독 가능성",
+                  "score": 14,
+                  "max": 15,
+                  "reason": "절차 중심으로 기한→대상·한도→제외→서류를 배열했다. 첫 답 문단의 세 기한을 함께 읽어야 한다."
+                },
+                {
+                  "item": "공유/공감",
+                  "score": 9,
+                  "max": 10,
+                  "reason": "가족이나 구직 중인 동료에게 전달할 실용성이 있고 개인 사정을 공개하도록 요구하지 않는다."
+                },
+                {
+                  "item": "가치/차별",
+                  "score": 10,
+                  "max": 10,
+                  "reason": "같은 날의 개별연장급여와 구별되며 기한 예외·지급 일수·중복 제한과 신청 경로가 구체적이다."
+                },
+                {
+                  "item": "모바일",
+                  "score": 5,
+                  "max": 5,
+                  "reason": "472자, 500자 이하. 편집 권장 범위 450자를 넘지만 필수 기한·제한을 유지하고 단락에 여백을 두었다."
+                },
+                {
+                  "item": "이미지 완성도",
+                  "score": 5,
+                  "max": 5,
+                  "reason": "프로필 안내 브랜드 카드 원본·360px와 고정 SHA 일치. 숫자·제도 세부 주장·기관 로고가 없고 한글, 잘림, 대비, 배치 PASS."
+                },
+                {
+                  "item": "프로필 유도",
+                  "score": 5,
+                  "max": 5,
+                  "reason": "검색어·상세 확인 내용과 상위 편집자가 직접 열어 확인한 검색 결과 및 상세 화면이 일치한다."
+                }
+              ],
+              "score_total": 97,
+              "threshold": 95,
+              "decision": "APPROVE",
+              "approved": true,
+              "required_revisions": [],
+              "clock_reference": "2026-11-26T20:12:49+09:00",
+              "time_note": "최종본 전문·원본·축소본 직접 열람 시각, reviewed_at은 최종 판정 기록 시각.",
+              "profile_route": {
+                "method": "UPSTREAM_VERIFIED",
+                "verified_by": "부모 편집자 공개 프로필 및 사이트 UI 직접 확인",
+                "confirmed_by_kst": "2026-11-26T20:12:22+09:00",
+                "direct_detail": "https://kllollain-max.github.io/supportpick/benefits/999000000005/",
+                "evidence": "프로필 공개 링크 목적지와 홈페이지 일치. 홈 검색창 상병급여 입력→1건→상세 화면에서 대상·구비서류·관할 고용센터 신청 방식 확인. 개별 클릭 시각 미보존, 프로필 중간 리디렉션 클릭 경유 미검증. 집계 분류 18~44를 법적 제한으로 사용하지 않음."
+              },
+              "previous_body_sha256": "d90d608607285998197e6fb568009d5361afd5d8f4c75162b74d992b62275ddc",
+              "release_scope": "원고와 지정 이미지의 편집 판정. 실제 예약·발행을 뜻하지 않는다.",
+              "publication_dependencies": [
+                "11월 27일 20시 IMAGE는 앞 회차 발행·이미지 원장 대조가 필요함.",
+                "이번 근거 24시간 유효기간은 다음 날 22시까지의 지연창 전체를 덮지 않음. 실제 게시 전 공식 근거·현재 신청 상태·최신 완전 수집·자산 SHA와 큐 승인본 일치 및 유효시간 재확인 필요."
+              ]
+            },
+            "final_verdict": "PASS",
+            "body_sha256": "dcaa883c004e76aab3670acb881253162540f92c9b009bdecd3b444e11b4a5eb",
+            "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+            "score": 97,
+            "actual_review_calls": 3
+          }
+        },
+        "next_history_record": {
+          "program_id": "999000000005",
+          "notice_version": "2026-11-13",
+          "pattern": "P6",
+          "opening": "실업신고 후 아파서 구직활동을 못했다면, 상병급여는 언제 신청하나요?",
+          "structure": "청구기한질문즉답과예외→대상과급여→잔여일수중복제외→서류/방문→사이트실제확인항목",
+          "media_turn": "IMAGE"
+        }
+      },
+      "full_delay_window_covered": false,
+      "revalidate_after": "2026-11-26T22:00:00+09:00",
+      "revalidate_before": "2026-11-27T20:00:00+09:00"
     }
   ]
 }
