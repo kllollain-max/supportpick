@@ -5928,39 +5928,22 @@
     }
   },
   "last_check": {
-    "checked_at": "2026-11-26T10:05:58.071964+09:00",
-    "result": "new_publication_and_queue_prepared",
-    "maintenance_previous_blob_sha": "2cca6b3acef2327f18edccd5ddc4f4601f1dcb49",
+    "checked_at": "2026-11-26T10:17:01.561782+09:00",
+    "result": "no_update",
+    "maintenance_previous_blob_sha": "4e56a308f6f96fcdc27c94efa7ecb000d7e213da",
     "current_main_sha": null,
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
     "publication_ledger_sha": "69808d0a4ade712124cbf1b88f6279ecde985379",
     "queue_blob_sha": "02c53294c0fa3d2d11dc51bc97ca31928506ebf8",
-    "changed_run_versions": [
-      {
-        "run_id": "45727306345",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-26T00:14:41Z",
-        "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e"
-      },
-      {
-        "run_id": "45723710675",
-        "run_attempt": 1,
-        "status": "completed",
-        "conclusion": "success",
-        "updated_at": "2026-11-25T23:46:05Z",
-        "head_sha": "60898e3da47a73d806cb0559b31ec87a473887a4"
-      }
-    ],
+    "changed_run_versions": [],
     "active_target_runs": [],
     "run_pagination": {
       "per_page": 100,
       "pages": [
         1
       ],
-      "checkpoint_run_id": "45713364969",
+      "checkpoint_run_id": "45727306345",
       "checkpoint_version_unchanged": true,
       "all_new_target_versions_observed": true,
       "latest_completed_operations_run_id": "45711701521"
@@ -5995,8 +5978,8 @@
       "source_count": 10898,
       "complete": true,
       "actual_application_status_not_inferred_from_collection": true,
-      "new_candidate_original_official_pages_read": true,
-      "original_notice_rereview_this_check": true,
+      "new_candidate_original_official_pages_read": false,
+      "original_notice_rereview_this_check": false,
       "public_verification_artifact_id": 15070021281,
       "public_verification_digest": "sha256:1f9f71df490f4a9e4c8580607afacd0b3d2cbc67acc9225327afabf99b50b0a3",
       "public_verification": {
@@ -6033,7 +6016,57 @@
       }
     },
     "writer": {
-      "checked_at": "2026-11-26T10:02:35.655519+09:00",
+      "checked_at": "2026-11-26T10:17:01.561782+09:00",
+      "ready": 4,
+      "future24h_ready": 4,
+      "new_drafts": 0,
+      "existing_READY_reused": 4,
+      "drafts": [
+        {
+          "slot": "2026-11-26T12:00:00+09:00",
+          "benefit_id": "SD0000001491",
+          "pattern": "P6",
+          "media_turn": "IMAGE",
+          "char_count": 377,
+          "expires_at": "2026-11-26T14:54:59.197830+09:00",
+          "full_delay_window_valid": true,
+          "source_fresh_at_slot": true,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-26T16:00:00+09:00",
+          "benefit_id": "PTR000051390",
+          "pattern": "P5",
+          "media_turn": "TEXT",
+          "char_count": 459,
+          "expires_at": "2026-11-26T18:54:53.927829+09:00",
+          "full_delay_window_valid": true,
+          "source_fresh_at_slot": true,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-26T20:00:00+09:00",
+          "benefit_id": "SPE000000010",
+          "pattern": "P1",
+          "media_turn": "IMAGE",
+          "char_count": 395,
+          "expires_at": "2026-11-26T22:25:37.852042+09:00",
+          "full_delay_window_valid": true,
+          "source_fresh_at_slot": true,
+          "source_recheck_required_at_publish": true
+        },
+        {
+          "slot": "2026-11-27T08:00:00+09:00",
+          "benefit_id": "999000000002",
+          "pattern": "P5",
+          "media_turn": "TEXT",
+          "char_count": 444,
+          "expires_at": "2026-11-27T10:02:35.655519+09:00",
+          "full_delay_window_valid": true,
+          "source_fresh_at_slot": false,
+          "source_recheck_required_at_publish": true
+        }
+      ],
       "source": {
         "count": 10898,
         "generation": "gov24-45711701521-1",
@@ -6042,475 +6075,37 @@
         "path": "snapshots/gov24-45711701521-1",
         "version": 1
       },
-      "ready": 4,
-      "new_READY": 1,
-      "reused_READY": 3,
-      "drafts": [
+      "source_count": 10898,
+      "ledger_records": 83,
+      "pending": null,
+      "lease": null,
+      "new_posts": 0,
+      "new_incidents": 0,
+      "new_metrics": 0,
+      "observations": 165,
+      "new_evaluation": false,
+      "astra_review_invocations": 0,
+      "existing_Astra_review_preserved": true,
+      "exact_approved_body_hashes_pass": true,
+      "new_visual_inspection": false,
+      "image_redownloaded_this_check": true,
+      "image_sha_comparisons": [
         {
-          "slot": "2026-11-26T12:00:00+09:00",
-          "benefit_id": "SD0000001491",
-          "pattern": "P6",
-          "media_turn": "IMAGE",
-          "char_count": 377
+          "path": "social/images/benefit-guide-1.png",
+          "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "actual_download_sha_matches_current_review": true,
+          "checked_at": "2026-11-26T10:17:06.501090+09:00",
+          "new_visual_inspection": false
         },
         {
-          "slot": "2026-11-26T16:00:00+09:00",
-          "benefit_id": "PTR000051390",
-          "pattern": "P5",
-          "media_turn": "TEXT",
-          "char_count": 459
-        },
-        {
-          "slot": "2026-11-26T20:00:00+09:00",
-          "benefit_id": "SPE000000010",
-          "pattern": "P1",
-          "media_turn": "IMAGE",
-          "char_count": 395
-        },
-        {
-          "slot": "2026-11-27T08:00:00+09:00",
-          "benefit_id": "999000000002",
-          "pattern": "P5",
-          "media_turn": "TEXT",
-          "char_count": 444
+          "path": "social/images/benefit-guide-2.png",
+          "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "actual_download_sha_matches_current_review": true,
+          "checked_at": "2026-11-26T10:17:10.404600+09:00",
+          "new_visual_inspection": false
         }
       ],
-      "full_delay_windows_pass": true,
-      "new_post": false,
-      "source_fresh_at_new_slot": false,
-      "final": {
-        "requested_model": "gpt-6.2-astra",
-        "actual_model": "미확인",
-        "reviewed_at": "2026-11-26T00:58:32.341500+00:00",
-        "independent_reviewer": "동일 검수 에이전트의 재검수",
-        "sha256": "538ed5d76c00e9aca77aae6c880fd16982ecd83a6f03464c36a673f26924db91",
-        "characters": 444,
-        "reply_count": 0,
-        "format": "TEXT",
-        "url_absent": true,
-        "exact_cta_count": 1,
-        "scores": [
-          {
-            "항목": "첫문장",
-            "배점": 15,
-            "초안": 15,
-            "최종": 15,
-            "근거": "종료가 임박한 독자의 실제 질문을 첫 문장에 배치"
-          },
-          {
-            "항목": "관심의도",
-            "배점": 15,
-            "초안": 15,
-            "최종": 15,
-            "근거": "신청 마감부터 답하고 수급 가능성 판단에 필요한 요건 제공"
-          },
-          {
-            "항목": "정확성",
-            "배점": 20,
-            "초안": 17,
-            "최종": 20,
-            "근거": "초안에는 직업소개 산정 기간이 빠짐. 최종본은 상담 포함, 부양가족 필수성, 심사·금액 하한·상한 및 재산 분기 조건이 원문과 일치"
-          },
-          {
-            "항목": "완독",
-            "배점": 15,
-            "초안": 13,
-            "최종": 14,
-            "근거": "초안의 기한 반복 삭제. 최종 재산 단락의 수치 밀도는 높음"
-          },
-          {
-            "항목": "공유공감",
-            "배점": 10,
-            "초안": 9,
-            "최종": 9,
-            "근거": "구직급여 종료가 가까운 가족에게 전달할 실익이 구체적"
-          },
-          {
-            "항목": "가치차별",
-            "배점": 10,
-            "초안": 10,
-            "최종": 10,
-            "근거": "일반적인 연장 안내에서 자주 빠지는 부부 과세액과 무주택·무건물 재산 기준을 모두 제시"
-          },
-          {
-            "항목": "모바일",
-            "배점": 5,
-            "초안": 4,
-            "최종": 4,
-            "근거": "문단 구분 양호. 부부 재산 관련 문장이 길어 모바일에서 여러 줄을 차지"
-          },
-          {
-            "항목": "텍스트완성도",
-            "배점": 5,
-            "초안": 4,
-            "최종": 5,
-            "근거": "최종본은 기한 반복을 줄이고 상담 인정 범위와 관할 신청처까지 단독 텍스트로 설명"
-          },
-          {
-            "항목": "프로필유도",
-            "배점": 5,
-            "초안": 2,
-            "최종": 5,
-            "근거": "초안 시점 경로 보류. 최종본의 구체적 검색어·서류 안내를 상위 검수자의 실제 홈 검색 및 상세 클릭 기록과 대조"
-          }
-        ],
-        "first_review": {
-          "provisional_total": 88,
-          "specified_rubric_total": 89,
-          "status": "HOLD",
-          "original_record": "extension0953-review-first.json",
-          "note": "당시 사이트 경로 미확인. 지정배점에 의한 소급 재채점이며 원본 파일 보존."
-        },
-        "total": 97,
-        "status": "APPROVED",
-        "mandatory_checks_passed": true,
-        "re_review_required": false,
-        "verification": {
-          "official": "OPENED_OFFICIAL. 생활법령 모바일 표 138~140행과 지급 산식·기간·기한 직접 확인. 현행 시행령 73조 열람. 고시 원표 자체는 미확인.",
-          "profile": "UPSTREAM_VERIFIED. 11월25일 Threads에 표시된 목적지 홈 확인 기록을 재사용. 당시 리다이렉트 완료 미확인. 오늘 부모가 홈에서 사업명 검색, 1건 결과 클릭, 상세 준비서류와 신청방법 확인. 오늘 프로필 자체 클릭은 검증하지 않음.",
-          "detail_url": "https://kllollain-max.github.io/supportpick/benefits/999000000002/",
-          "dependencies": "소득 없는 배우자는 적법한 예시이며 “등 법정 부양가족이 있어야”가 나머지 유형도 허용하면서 필수성을 보존. 신청기한·심사 후 최대 60일, 일액 70%와 최저 보장 조건 충족."
-        },
-        "changes": [
-          "직업소개 산정기간과 센터 심층·집단상담 포함 명시",
-          "부부 재산세 과세액 합산 명시",
-          "신청지 관할 센터 명시",
-          "기한 반복 삭제",
-          "프로필 홈에서 상세까지 실제 탐색 기록 대조"
-        ]
-      },
-      "entry": {
-        "slot": "2026-11-27T08:00:00+09:00",
-        "benefit_id": "999000000002",
-        "source_fingerprint": "ecea1a41cf792fb85d90a054d7835d2ad29709ef696adb3bcce3f830c88d794e",
-        "source_generation": "gov24-45711701521-1",
-        "prepared_at": "2026-11-26T10:02:35.655519+09:00",
-        "expires_at": "2026-11-27T10:02:35.655519+09:00",
-        "asset_sha256": null,
-        "writer": {
-          "schema_version": "supportpick.writer.v1",
-          "status": "READY",
-          "selected_program_id": "999000000002",
-          "post_text": "구직급여가 끝나가는데 재취업이 안 됐다면, 연장 신청은 언제까지 할까요?\n개별연장급여는 구직급여 지급일수 종료일까지 신청해야 해요. 심사를 통과하면 최대 60일 더 받을 수 있어요.\n\n실업신고일부터 구직급여가 끝날 때까지 고용센터 직업소개에 3회 이상 응했지만 미취업이고, 소득 없는 배우자 등 법정 부양가족이 있어야 해요. 센터 심층·집단상담 참여도 포함해요.\n\n이직 전 최종사업장 급여기초임금일액은 8만8천 원 이하가 기준이에요. 본인·배우자 소유 주택·건물이 있으면 두 사람의 재산세 과세액 합계 16만 원 이하, 없으면 재산 합계 2억4천만 원 이하여야 해요.\n\n하루 지급액은 기존 구직급여일액의 70%이며 최저구직급여일액보다 낮으면 최저액을 적용해요. 신청지 관할 고용센터에 신청하고, 프로필의 ‘개별연장급여’에서 재산 증빙서류와 신청 경로를 확인해요.\n\n자세한 사항은 프로필링크 확인",
-          "draft_text": null,
-          "reply_texts": [],
-          "media": {
-            "turn": "TEXT",
-            "asset_id": null,
-            "check": "NOT_REQUIRED",
-            "image_copy": null,
-            "alt_text": null
-          },
-          "review": {
-            "planned_at": "2026-11-27T08:00:00+09:00",
-            "application_status": "OPEN",
-            "reader": "구직급여 종료가 임박하고 재취업이 안 된 생활곤란 수급자",
-            "central_message": "개별연장급여는구직급여지급일수종료일까지신청하며법정요건심사를거친다",
-            "pattern": "P5",
-            "selection_reason": "동일ID32312누적조회수순위. 상위HOLD/SKIP근거보존,기예약/게시사업제외. 종료임박구직자생계결정에기한·실질급여·배우자재산조건제공. 최근20과질문·전개비교,250~450자444자. 별도상환없는현금급여,선정확정없음.",
-            "interest_basis": "OBSERVED_METRICS",
-            "duplicate_check": "CHECKED",
-            "evidence": [
-              {
-                "source_id": "999000000002",
-                "source_ref": "https://m.easylaw.go.kr/MOB/CsmInfoRetrieve.laf?ccfNo=2&cciNo=4&cnpClsNo=2&csmSeq=722",
-                "access_method": "OPENED_OFFICIAL",
-                "verified_at": "2026-11-26T10:02:31.655060+09:00",
-                "claims_supported": [
-                  "現行개별연장급여 대상·임금88000·재산세160000·재산2억4천·기간최대60·일액70%와하한·종료일까지신청·중복조정"
-                ]
-              },
-              {
-                "source_id": "999000000002",
-                "source_ref": "https://www.gov.kr/mw/AA020InfoCappView.do?CappBizCD=14900000298",
-                "access_method": "OPENED_OFFICIAL",
-                "verified_at": "2026-11-26T10:02:31.655060+09:00",
-                "claims_supported": [
-                  "개별연장급여 신청 가능:개인별구직급여일수종료일까지 관할고용센터심사,인터넷/방문/FAX 및재산증빙. 연중누구나가아니며개인별자격·잔여기간확인필수"
-                ]
-              },
-              {
-                "source_id": "999000000002",
-                "source_ref": "https://law.go.kr/lsLawLinkInfo.do?chrClsCd=010202&lsJoLnkSeq=1000770584",
-                "access_method": "OPENED_OFFICIAL",
-                "verified_at": "2026-11-26T10:02:31.655060+09:00",
-                "claims_supported": [
-                  "시행2026-09-18 제73조:직업소개기간3회·부양가족·임금재산·60일최대·종료일까지신청"
-                ]
-              }
-            ],
-            "checks": {
-              "facts": "PASS",
-              "current_status": "PASS",
-              "eligibility_and_units": "PASS",
-              "cta_and_no_links": "PASS",
-              "length": "PASS",
-              "media": "NOT_REQUIRED"
-            },
-            "char_count": 444,
-            "count_method": "python_len_including_spaces_and_newlines",
-            "missing_info": [],
-            "hold_reasons": [],
-            "warnings": [
-              "수급기간은개인별이며다음날개인신청가능성보장없음",
-              "구1350FAQ74000/1억4천은최신공식모바일표88000/2억4천과다름:사용하지않음",
-              "현재수집본은다음날08시신선하지않아실제발송시최신완전세대재검증필수",
-              "Threads프로필리디렉션클릭완료는미확인,실제표시target기록과오늘홈상세탐색확인"
-            ],
-            "reach_editorial": {
-              "policy_id": "supportpick-threads-reach-v1-20261109",
-              "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
-              "core_question": "구직급여가 끝나가는데 재취업이 안 됐다면, 연장 신청은 언제까지 할까요?",
-              "reader_scope": "구직급여 종료가 임박하고 재취업이 안 된 생활곤란 수급자",
-              "angles": [
-                "신청기한:끝난후가아닌종료일까지",
-                "배우자·재산조건자격체크",
-                "일액70%와최저보장/최대60일"
-              ],
-              "chosen_angle": "종료전신청시점과법정요건판단",
-              "opening_candidates": [
-                "구직급여가 끝나가는데 재취업이 안 됐다면, 연장 신청은 언제까지 할까요?",
-                "구직급여 연장, 소득 없는 배우자를 부양하면 신청할 수 있나요?",
-                "개별연장급여는 지금 받는 구직급여와 금액이 같을까요?"
-              ],
-              "chosen_opening": "구직급여가 끝나가는데 재취업이 안 됐다면, 연장 신청은 언제까지 할까요?",
-              "selection_reason": "동일ID32312누적조회수순위. 상위HOLD/SKIP근거보존,기예약/게시사업제외. 종료임박구직자생계결정에기한·실질급여·배우자재산조건제공. 최근20과질문·전개비교,250~450자444자. 별도상환없는현금급여,선정확정없음.",
-              "history_posts_checked": 20,
-              "comparison_eligible": false,
-              "comparison_exclusion": "v3 질문형/요건동시편집으로 기존순수A/B와분리",
-              "profile_route": {
-                "profile": "https://www.threads.com/@hid_1004",
-                "visible_link_target": "https://kllollain-max.github.io/supportpick/",
-                "profile_target_checked_at": "2026-11-25T08:33:52.430313+09:00",
-                "home_search": "개별연장급여",
-                "results": 1,
-                "actual_search_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/999000000002/",
-                "method": "CUA actual home search, result click, visible detail documents/method; reuse prior actual profile visible target with original timestamp",
-                "redirect_click_completed": false,
-                "checked_at": null,
-                "actual_route_verified_before": "2026-11-26T00:58:32.341500+00:00",
-                "timestamp_note": "Exact CUA route timestamp not retained in this export; completed before final review; official refresh time is separate"
-              },
-              "master_full_used": true,
-              "search_evidence": "공식검색표현:개별연장급여/구직급여종료일까지/급여기초임금일액,검색량실측없음",
-              "observed_metrics_context": "165실제관측.원주24h조회4·좋아요1은사업/시간/미디어차이로원인귀속불가.계정7/30프로필/홈/완독·체류/CTA미측정"
-            },
-            "astra_final_review": {
-              "requested_model": "gpt-6.2-astra",
-              "actual_model": "미확인",
-              "invoked_model_identifier": "gpt-6.2-astra",
-              "invocation_identifier_source": "parent successful spawn_agent explicit model selection",
-              "fallback_reason": null,
-              "version": "3.0",
-              "independent_agent": "/root/extension_final_review",
-              "first_review": {
-                "requested_model": "gpt-6.2-astra",
-                "actual_model": "미확인",
-                "review": "독립 초안 검수",
-                "method": "OPENED_OFFICIAL",
-                "sources": [
-                  "turn564908181view0",
-                  "turn799945468view0",
-                  "turn564908181view1",
-                  "turn564908181view2"
-                ],
-                "source_scope": "현행 시행령 및 생활법령 표를 직접 읽음. 고시 원문표는 직접 검증하지 않음. 정부24 민원 페이지는 열람. 개별 사이트 경로는 미확인.",
-                "scores": [
-                  {
-                    "item": "정확성",
-                    "max": 20,
-                    "score": 19,
-                    "reason": "기한, 급여액, 3개 금액 기준을 직접 대조"
-                  },
-                  {
-                    "item": "대상·요건",
-                    "max": 15,
-                    "score": 12,
-                    "reason": "직업소개 실적 산정기간 누락"
-                  },
-                  {
-                    "item": "신청 안내",
-                    "max": 10,
-                    "score": 9,
-                    "reason": "관할 센터로 명시 권장"
-                  },
-                  {
-                    "item": "출처",
-                    "max": 10,
-                    "score": 10,
-                    "reason": "생활법령 본문, 정부24, 시행령 열람"
-                  },
-                  {
-                    "item": "도입",
-                    "max": 10,
-                    "score": 10,
-                    "reason": "수급 종료 임박자의 기한 질문에 바로 답함"
-                  },
-                  {
-                    "item": "가독성",
-                    "max": 10,
-                    "score": 9,
-                    "reason": "기한과 프로필 유도 반복"
-                  },
-                  {
-                    "item": "혜택 설명",
-                    "max": 10,
-                    "score": 10,
-                    "reason": "최대 기간과 지급액 하한 정확"
-                  },
-                  {
-                    "item": "프로필 경로",
-                    "max": 10,
-                    "score": 4,
-                    "reason": "목적지 미확인"
-                  },
-                  {
-                    "item": "형식",
-                    "max": 5,
-                    "score": 5,
-                    "reason": "TEXT, 말미 CTA, 본문 URL 없음"
-                  }
-                ],
-                "scoring_basis": "지정 배점표 수신 전 임시 9항목 평가",
-                "total": 88,
-                "status": "HOLD",
-                "re_review_required": true,
-                "fixes": [
-                  "실업신고일부터 구직급여 지급이 끝날 때까지 고용센터 직업소개에 3회 이상 응했지만 취업하지 못한 경우라고 명시. 센터 심층·집단상담 참여도 포함.",
-                  "신청지 관할 고용센터로 구체화.",
-                  "부부 재산세 과세액 합계임을 명시.",
-                  "최종 프로필 경로와 화면상 신청·증빙 안내 대조. 최종본 500자 검사."
-                ]
-              },
-              "final_review": {
-                "requested_model": "gpt-6.2-astra",
-                "actual_model": "미확인",
-                "reviewed_at": "2026-11-26T00:58:32.341500+00:00",
-                "independent_reviewer": "동일 검수 에이전트의 재검수",
-                "sha256": "538ed5d76c00e9aca77aae6c880fd16982ecd83a6f03464c36a673f26924db91",
-                "characters": 444,
-                "reply_count": 0,
-                "format": "TEXT",
-                "url_absent": true,
-                "exact_cta_count": 1,
-                "scores": [
-                  {
-                    "항목": "첫문장",
-                    "배점": 15,
-                    "초안": 15,
-                    "최종": 15,
-                    "근거": "종료가 임박한 독자의 실제 질문을 첫 문장에 배치"
-                  },
-                  {
-                    "항목": "관심의도",
-                    "배점": 15,
-                    "초안": 15,
-                    "최종": 15,
-                    "근거": "신청 마감부터 답하고 수급 가능성 판단에 필요한 요건 제공"
-                  },
-                  {
-                    "항목": "정확성",
-                    "배점": 20,
-                    "초안": 17,
-                    "최종": 20,
-                    "근거": "초안에는 직업소개 산정 기간이 빠짐. 최종본은 상담 포함, 부양가족 필수성, 심사·금액 하한·상한 및 재산 분기 조건이 원문과 일치"
-                  },
-                  {
-                    "항목": "완독",
-                    "배점": 15,
-                    "초안": 13,
-                    "최종": 14,
-                    "근거": "초안의 기한 반복 삭제. 최종 재산 단락의 수치 밀도는 높음"
-                  },
-                  {
-                    "항목": "공유공감",
-                    "배점": 10,
-                    "초안": 9,
-                    "최종": 9,
-                    "근거": "구직급여 종료가 가까운 가족에게 전달할 실익이 구체적"
-                  },
-                  {
-                    "항목": "가치차별",
-                    "배점": 10,
-                    "초안": 10,
-                    "최종": 10,
-                    "근거": "일반적인 연장 안내에서 자주 빠지는 부부 과세액과 무주택·무건물 재산 기준을 모두 제시"
-                  },
-                  {
-                    "항목": "모바일",
-                    "배점": 5,
-                    "초안": 4,
-                    "최종": 4,
-                    "근거": "문단 구분 양호. 부부 재산 관련 문장이 길어 모바일에서 여러 줄을 차지"
-                  },
-                  {
-                    "항목": "텍스트완성도",
-                    "배점": 5,
-                    "초안": 4,
-                    "최종": 5,
-                    "근거": "최종본은 기한 반복을 줄이고 상담 인정 범위와 관할 신청처까지 단독 텍스트로 설명"
-                  },
-                  {
-                    "항목": "프로필유도",
-                    "배점": 5,
-                    "초안": 2,
-                    "최종": 5,
-                    "근거": "초안 시점 경로 보류. 최종본의 구체적 검색어·서류 안내를 상위 검수자의 실제 홈 검색 및 상세 클릭 기록과 대조"
-                  }
-                ],
-                "first_review": {
-                  "provisional_total": 88,
-                  "specified_rubric_total": 89,
-                  "status": "HOLD",
-                  "original_record": "extension0953-review-first.json",
-                  "note": "당시 사이트 경로 미확인. 지정배점에 의한 소급 재채점이며 원본 파일 보존."
-                },
-                "total": 97,
-                "status": "APPROVED",
-                "mandatory_checks_passed": true,
-                "re_review_required": false,
-                "verification": {
-                  "official": "OPENED_OFFICIAL. 생활법령 모바일 표 138~140행과 지급 산식·기간·기한 직접 확인. 현행 시행령 73조 열람. 고시 원표 자체는 미확인.",
-                  "profile": "UPSTREAM_VERIFIED. 11월25일 Threads에 표시된 목적지 홈 확인 기록을 재사용. 당시 리다이렉트 완료 미확인. 오늘 부모가 홈에서 사업명 검색, 1건 결과 클릭, 상세 준비서류와 신청방법 확인. 오늘 프로필 자체 클릭은 검증하지 않음.",
-                  "detail_url": "https://kllollain-max.github.io/supportpick/benefits/999000000002/",
-                  "dependencies": "소득 없는 배우자는 적법한 예시이며 “등 법정 부양가족이 있어야”가 나머지 유형도 허용하면서 필수성을 보존. 신청기한·심사 후 최대 60일, 일액 70%와 최저 보장 조건 충족."
-                },
-                "changes": [
-                  "직업소개 산정기간과 센터 심층·집단상담 포함 명시",
-                  "부부 재산세 과세액 합산 명시",
-                  "신청지 관할 센터 명시",
-                  "기한 반복 삭제",
-                  "프로필 홈에서 상세까지 실제 탐색 기록 대조"
-                ]
-              },
-              "final_verdict": "PASS",
-              "body_sha256": "538ed5d76c00e9aca77aae6c880fd16982ecd83a6f03464c36a673f26924db91",
-              "asset_sha256": null,
-              "score": 97
-            }
-          },
-          "next_history_record": {
-            "program_id": "999000000002",
-            "notice_version": "2026-11-13",
-            "pattern": "P5",
-            "opening": "구직급여가 끝나가는데 재취업이 안 됐다면, 연장 신청은 언제까지 할까요?",
-            "structure": "종료전신청질문즉답→직업소개/부양가족→임금재산→급여산식과신청처/서류",
-            "media_turn": "TEXT"
-          }
-        },
-        "full_delay_window_covered": true,
-        "revalidate_before": "2026-11-27T08:00:00+09:00"
-      },
-      "ledger_records": 83,
-      "future24h_ready": 4,
-      "existing_READY_preserved": true,
-      "actual_independent_review_calls": 2,
-      "new_publications_by_regular_publisher": 1,
-      "maintenance_new_posts": 0,
-      "observations": 165,
-      "new_metrics": 3,
-      "new_visual_inspection": false,
-      "current_source_not_fresh_at_new_slot": true
+      "expiry_prevention_revalidations": 0
     },
     "metrics": {
       "run_id": "45727306345",
@@ -6523,8 +6118,8 @@
       "artifact_id": 15075725294,
       "artifact_digest": "sha256:93daf058f9033a86de865262bfa39d3787184ff9987a2271dcd88811fb1e258c",
       "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": true,
-      "job_logs_retrieved_this_check": true,
+      "artifact_redownloaded_this_check": false,
+      "job_logs_retrieved_this_check": false,
       "observed_at": "2026-11-26T00:14:36.537866+00:00",
       "records": [
         {
@@ -6593,23 +6188,19 @@
       ],
       "due_count": 3,
       "success_count": 3,
-      "new_observations": 3,
-      "new_observation_keys": [
-        "18361336213223949:168h",
-        "17879078796637660:72h",
-        "18104537720379679:24h"
-      ],
+      "new_observations": 0,
+      "new_observation_keys": [],
       "total_observations": 165,
       "new_evaluation_report_due": false,
       "weights_unchanged": true
     },
     "recovery": {
-      "new_publication_this_check": true,
-      "new_posts": 1,
+      "new_publication_this_check": false,
+      "new_posts": 0,
       "maintenance_new_posts": 0,
       "new_recovery_this_check": false,
       "new_failure_this_check": false,
-      "reason": "Original scheduled first attempt published Seoul 08 within its allowed window. 83 records complete and verified; no pending or lease. No new code fault or recovery dispatch. 3 existing future READY preserved plus 1 new independently reviewed TEXT. All nominal/full2h-window checks pass. Closed historical incidents remain unchanged."
+      "reason": "83 complete verified publications, no pending or lease. All four existing future READY pass approved-body hash, nominal/full2h-window and candidate ranking checks. Current approved image bytes redownloaded and SHA matched; no new visual review. All target run versions unchanged. Latest complete source reverified from cached artifact. No queue mutation, draft, new model call, dispatch, rerun or POST."
     },
     "next_condition": "Existing publisher consumes Nov26 12 IMAGE/P6,16 TEXT/P5,20 IMAGE/P1,Nov27 08 TEXT/P5. Sender must verify newest fresh complete source and exact approved hashes/reviews at actual send. Cached Nov26 07:22 source is not certified fresh for Nov27 08. Preserve daily4/rotation/CAS/pending controls; no past-slot dispatch/rerun/test posts.",
     "publication": {
@@ -6623,10 +6214,10 @@
       "artifact_id": 15074065468,
       "artifact_digest": "sha256:f3d0ed66c1e49d2470c25eca9a29e53d609dc08a265744844e990a6d69fa0800",
       "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": true,
-      "job_logs_retrieved_this_check": true,
+      "artifact_redownloaded_this_check": false,
+      "job_logs_retrieved_this_check": false,
       "actual_tests_passed": 138,
-      "new_publication_this_run": true,
+      "new_publication_this_run": false,
       "main_id": "18026493176944984",
       "url": "https://www.threads.com/@hid_1004/post/DgLva4AG2rL",
       "slot": "2026-11-26T08:00:00+09:00",
@@ -6647,7 +6238,8 @@
       "previous82records_preserved": true,
       "maintenance_post_calls": 0,
       "delay_within_original_2h_window": true,
-      "actual_source_generation": "gov24-45711701521-1"
+      "actual_source_generation": "gov24-45711701521-1",
+      "latest_already_reported": true
     },
     "history_reconciliation": {
       "run_id": "45173485637",
@@ -6668,14 +6260,12 @@
       "previous_remote_evidence_preserved": true
     },
     "official_review_recovery": {
-      "new_official_page_review_this_check": true,
-      "new_Astra_calls": 2,
+      "new_official_page_review_this_check": false,
+      "new_Astra_calls": 0,
       "existing_Astra_reviews_preserved": true,
+      "image_redownloaded_this_check": true,
       "new_visual_inspection": false,
-      "new_media_turn": "TEXT",
-      "previous_actual_profile_visible_target_evidence_preserved": true,
-      "today_home_search_detail_route_actual": true,
-      "today_profile_redirect_completion_verified": false
+      "previous_actual_profile_and_site_route_evidence_preserved": true
     },
     "main_head_observation": {
       "latest_observed_target_run_head": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
@@ -6684,18 +6274,18 @@
     },
     "image_sha_comparisons": [
       {
-        "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+        "path": "social/images/benefit-guide-1.png",
         "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-        "matched_current_main_bytes": true,
-        "new_visual_inspection": false,
-        "compared_at": "2026-11-24T10:40:06.502293+09:00"
+        "actual_download_sha_matches_current_review": true,
+        "checked_at": "2026-11-26T10:17:06.501090+09:00",
+        "new_visual_inspection": false
       },
       {
-        "url": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+        "path": "social/images/benefit-guide-2.png",
         "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-        "matched_current_main_bytes": true,
-        "new_visual_inspection": false,
-        "compared_at": "2026-11-24T10:40:14.847084+09:00"
+        "actual_download_sha_matches_current_review": true,
+        "checked_at": "2026-11-26T10:17:10.404600+09:00",
+        "new_visual_inspection": false
       }
     ],
     "formal_evaluation": {
@@ -6864,10 +6454,10 @@
     "new_formal_evaluation_this_check": false,
     "writer_final_edit_v3_status": {
       "policy_id": "supportpick-threads-final-edit-v3-20261125",
-      "new_v3_READY": 1,
-      "previous_actual_v3_READY_preserved": 3,
-      "new_scores": 1,
-      "new_model_calls": 2
+      "new_v3_READY": 0,
+      "previous_actual_v3_READY_preserved": 4,
+      "new_scores": 0,
+      "new_model_calls": 0
     },
     "workspace_preflight": {
       "cached_operational_files_available": true,
@@ -7293,7 +6883,7 @@
     }
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-26T08:41:23.459968+09:00",
+    "checked_at": "2026-11-26T10:17:01.561782+09:00",
     "new_publications": 0,
     "new_incidents": 0,
     "queue_ready": 4,
@@ -160744,6 +160334,563 @@
         "completion_dwell_cta_attribution_not_measured": true,
         "no_inferred_performance": true
       }
+    },
+    "2026-11-26T10:17:01.561782+09:00": {
+      "checked_at": "2026-11-26T10:17:01.561782+09:00",
+      "result": "no_update",
+      "maintenance_previous_blob_sha": "4e56a308f6f96fcdc27c94efa7ecb000d7e213da",
+      "current_main_sha": null,
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "69808d0a4ade712124cbf1b88f6279ecde985379",
+      "queue_blob_sha": "02c53294c0fa3d2d11dc51bc97ca31928506ebf8",
+      "changed_run_versions": [],
+      "active_target_runs": [],
+      "run_pagination": {
+        "per_page": 100,
+        "pages": [
+          1
+        ],
+        "checkpoint_run_id": "45727306345",
+        "checkpoint_version_unchanged": true,
+        "all_new_target_versions_observed": true,
+        "latest_completed_operations_run_id": "45711701521"
+      },
+      "publication_ledger_records": 83,
+      "complete_verified_records": 83,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "45711701521",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-25T22:43:40Z",
+        "head_sha": "60898e3da47a73d806cb0559b31ec87a473887a4",
+        "job_id": 139547468983,
+        "artifact_id": 15067603852,
+        "artifact_digest": "sha256:09e7356294ebe880b1e23684cb717858dc81715acddf95260c7390c0462bc5e3",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 315,
+        "read_current_verify_snapshot_load_feed": true,
+        "manifest": {
+          "count": 10898,
+          "generation": "gov24-45711701521-1",
+          "lastSuccessAt": "2026-11-26T07:22:33.333588+09:00",
+          "manifestSha256": "0b74902d1fc91f8ab33552d804e03ee390f95843a035adb4d4b5683d2c720ed6",
+          "path": "snapshots/gov24-45711701521-1",
+          "version": 1
+        },
+        "source_count": 10898,
+        "complete": true,
+        "actual_application_status_not_inferred_from_collection": true,
+        "new_candidate_original_official_pages_read": false,
+        "original_notice_rereview_this_check": false,
+        "public_verification_artifact_id": 15070021281,
+        "public_verification_digest": "sha256:1f9f71df490f4a9e4c8580607afacd0b3d2cbc67acc9225327afabf99b50b0a3",
+        "public_verification": {
+          "publicHtmlChecked": 11164,
+          "sitemapUrls": 11038,
+          "generation": "gov24-45711701521-1",
+          "sourceRevision": "60898e3da47a73d806cb0559b31ec87a473887a4",
+          "robots": {
+            "http": 200,
+            "crawlAllowed": true,
+            "scope": "host_root"
+          },
+          "missingUrlHttp": 404,
+          "passed": 11164,
+          "failed": 0,
+          "initialFailures": 1,
+          "maxRequestsPerSecond": 10,
+          "rateLimitEpisodes": 0,
+          "stoppedForRateLimit": false,
+          "recoveredAfterRetry": [
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/305000000293/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            }
+          ],
+          "failures": []
+        },
+        "job_insights_diagnostic": {
+          "due": 1,
+          "success": 1,
+          "numeric_export_available": false,
+          "not_added_as_numeric_observation": true
+        }
+      },
+      "writer": {
+        "checked_at": "2026-11-26T10:17:01.561782+09:00",
+        "ready": 4,
+        "future24h_ready": 4,
+        "new_drafts": 0,
+        "existing_READY_reused": 4,
+        "drafts": [
+          {
+            "slot": "2026-11-26T12:00:00+09:00",
+            "benefit_id": "SD0000001491",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 377,
+            "expires_at": "2026-11-26T14:54:59.197830+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-26T16:00:00+09:00",
+            "benefit_id": "PTR000051390",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 459,
+            "expires_at": "2026-11-26T18:54:53.927829+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-26T20:00:00+09:00",
+            "benefit_id": "SPE000000010",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 395,
+            "expires_at": "2026-11-26T22:25:37.852042+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-27T08:00:00+09:00",
+            "benefit_id": "999000000002",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 444,
+            "expires_at": "2026-11-27T10:02:35.655519+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source": {
+          "count": 10898,
+          "generation": "gov24-45711701521-1",
+          "lastSuccessAt": "2026-11-26T07:22:33.333588+09:00",
+          "manifestSha256": "0b74902d1fc91f8ab33552d804e03ee390f95843a035adb4d4b5683d2c720ed6",
+          "path": "snapshots/gov24-45711701521-1",
+          "version": 1
+        },
+        "source_count": 10898,
+        "ledger_records": 83,
+        "pending": null,
+        "lease": null,
+        "new_posts": 0,
+        "new_incidents": 0,
+        "new_metrics": 0,
+        "observations": 165,
+        "new_evaluation": false,
+        "astra_review_invocations": 0,
+        "existing_Astra_review_preserved": true,
+        "exact_approved_body_hashes_pass": true,
+        "new_visual_inspection": false,
+        "image_redownloaded_this_check": true,
+        "image_sha_comparisons": [
+          {
+            "path": "social/images/benefit-guide-1.png",
+            "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+            "actual_download_sha_matches_current_review": true,
+            "checked_at": "2026-11-26T10:17:06.501090+09:00",
+            "new_visual_inspection": false
+          },
+          {
+            "path": "social/images/benefit-guide-2.png",
+            "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+            "actual_download_sha_matches_current_review": true,
+            "checked_at": "2026-11-26T10:17:10.404600+09:00",
+            "new_visual_inspection": false
+          }
+        ],
+        "expiry_prevention_revalidations": 0
+      },
+      "metrics": {
+        "run_id": "45727306345",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-26T00:14:41Z",
+        "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
+        "job_id": 139600288781,
+        "artifact_id": 15075725294,
+        "artifact_digest": "sha256:93daf058f9033a86de865262bfa39d3787184ff9987a2271dcd88811fb1e258c",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "observed_at": "2026-11-26T00:14:36.537866+00:00",
+        "records": [
+          {
+            "post_id": "18361336213223949",
+            "published_at": "2026-11-19T08:45:16.395779+09:00",
+            "observed_at": "2026-11-26T00:14:36.537866+00:00",
+            "window_hours": 168,
+            "elapsed_hours": 168.4889283575,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 10,
+              "likes": 2,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          },
+          {
+            "post_id": "17879078796637660",
+            "published_at": "2026-11-23T08:37:11.793464+09:00",
+            "observed_at": "2026-11-26T00:14:36.537866+00:00",
+            "window_hours": 72,
+            "elapsed_hours": 72.62354011166667,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 8,
+              "likes": 1,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          },
+          {
+            "post_id": "18104537720379679",
+            "published_at": "2026-11-25T08:45:18.598166+09:00",
+            "observed_at": "2026-11-26T00:14:36.537866+00:00",
+            "window_hours": 24,
+            "elapsed_hours": 24.488316583333333,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 4,
+              "likes": 1,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          }
+        ],
+        "due_count": 3,
+        "success_count": 3,
+        "new_observations": 0,
+        "new_observation_keys": [],
+        "total_observations": 165,
+        "new_evaluation_report_due": false,
+        "weights_unchanged": true
+      },
+      "recovery": {
+        "new_publication_this_check": false,
+        "new_posts": 0,
+        "maintenance_new_posts": 0,
+        "new_recovery_this_check": false,
+        "new_failure_this_check": false,
+        "reason": "83 complete verified publications, no pending or lease. All four existing future READY pass approved-body hash, nominal/full2h-window and candidate ranking checks. Current approved image bytes redownloaded and SHA matched; no new visual review. All target run versions unchanged. Latest complete source reverified from cached artifact. No queue mutation, draft, new model call, dispatch, rerun or POST."
+      },
+      "next_condition": "Existing publisher consumes Nov26 12 IMAGE/P6,16 TEXT/P5,20 IMAGE/P1,Nov27 08 TEXT/P5. Sender must verify newest fresh complete source and exact approved hashes/reviews at actual send. Cached Nov26 07:22 source is not certified fresh for Nov27 08. Preserve daily4/rotation/CAS/pending controls; no past-slot dispatch/rerun/test posts.",
+      "publication": {
+        "run_id": "45723710675",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-25T23:46:05Z",
+        "head_sha": "60898e3da47a73d806cb0559b31ec87a473887a4",
+        "job_id": 139588118468,
+        "artifact_id": 15074065468,
+        "artifact_digest": "sha256:f3d0ed66c1e49d2470c25eca9a29e53d609dc08a265744844e990a6d69fa0800",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 138,
+        "new_publication_this_run": false,
+        "main_id": "18026493176944984",
+        "url": "https://www.threads.com/@hid_1004/post/DgLva4AG2rL",
+        "slot": "2026-11-26T08:00:00+09:00",
+        "receipt_at": "2026-11-26T08:46:00.8530888+09:00",
+        "receipt_time_basis": "Actual GitHub job Threads receipt line; exact platform timestamp unavailable",
+        "ledger_published_at": "2026-11-26T08:45:11.756993+09:00",
+        "ledger_published_at_is_invocation_not_exact_platform_time": true,
+        "stage": "complete",
+        "verified": true,
+        "body_hash": "b98e2ee01ac565f3e54a6bb9335fa9192db6f139c3bb8c689415f24a8f4e8904",
+        "content_hash": "ed09da6b31e92cb310838004c8ee97b1c182ba7d2243b9adda649e261939217e",
+        "asset_sha256": null,
+        "media_turn": "TEXT",
+        "pattern": "P8",
+        "char_count": 351,
+        "replies": 0,
+        "original_queue_body_asset_exact": true,
+        "previous82records_preserved": true,
+        "maintenance_post_calls": 0,
+        "delay_within_original_2h_window": true,
+        "actual_source_generation": "gov24-45711701521-1",
+        "latest_already_reported": true
+      },
+      "history_reconciliation": {
+        "run_id": "45173485637",
+        "mode": "check-account",
+        "account": "hid_1004",
+        "checked_at": "2026-11-23T21:21:24+09:00",
+        "recent_remote_rows": 100,
+        "more_history": true,
+        "main_ledger_matches_in_page": 49,
+        "latest20_main_matches": 20,
+        "latest_remote_id": "18129410933479829",
+        "target_text_absent": true,
+        "scope": "83 durable complete verified records, previous82 exact preserved; new83rd receipt/body/result artifact reconciled. Prior remote100-row evidence retained. No new full28day remote query.",
+        "artifact_id": 14818615408,
+        "artifact_digest": "sha256:23cfc165bbd050ec1a12dbde18778345efb01c4d9e20abf69f6279b090e003b3",
+        "artifact_digest_verified": true,
+        "remote_requeried_this_check": false,
+        "previous_remote_evidence_preserved": true
+      },
+      "official_review_recovery": {
+        "new_official_page_review_this_check": false,
+        "new_Astra_calls": 0,
+        "existing_Astra_reviews_preserved": true,
+        "image_redownloaded_this_check": true,
+        "new_visual_inspection": false,
+        "previous_actual_profile_and_site_route_evidence_preserved": true
+      },
+      "main_head_observation": {
+        "latest_observed_target_run_head": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
+        "target_publisher_workflows_master_and_assets_blobs_unchanged": true,
+        "unrelated_changes_not_modified": true
+      },
+      "image_sha_comparisons": [
+        {
+          "path": "social/images/benefit-guide-1.png",
+          "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "actual_download_sha_matches_current_review": true,
+          "checked_at": "2026-11-26T10:17:06.501090+09:00",
+          "new_visual_inspection": false
+        },
+        {
+          "path": "social/images/benefit-guide-2.png",
+          "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "actual_download_sha_matches_current_review": true,
+          "checked_at": "2026-11-26T10:17:10.404600+09:00",
+          "new_visual_inspection": false
+        }
+      ],
+      "formal_evaluation": {
+        "policy_id": "supportpick-threads-reach-v1-20261109",
+        "window": "14d_evaluation",
+        "evaluated_at": "2026-11-24T17:20:07.451089+09:00",
+        "period_start": "2026-11-10T17:00:08.835254+09:00",
+        "period_end": "2026-11-24T17:00:08.835254+09:00",
+        "normal_verified_publications": 53,
+        "experiment_regular_slots": 57,
+        "unpublished_slots": [
+          {
+            "slot": "2026-11-16T16:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-18T12:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-23T20:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-24T16:00:00+09:00",
+            "classification": "unreserved_at_evaluation_cutoff_then_published_after_cutoff",
+            "subsequent_main_id": "17974331994194122",
+            "subsequent_receipt_at": "2026-11-24T17:21:06.769138+09:00"
+          }
+        ],
+        "missed_closed_slots": 3,
+        "partial_or_pending": 0,
+        "independent_full_public_rendering_recheck": false,
+        "publication_audit_scope": "76durablecompleteverifiedrecords; priorreceipts/body/media/artifacts retained. No newfull28dayremotequery; Nov24 16unreserved/latestpublisher12only,nofailure-runconfirmed.",
+        "24h_comparison_window_observations": 40,
+        "A_n": 20,
+        "B_n": 20,
+        "24h_comparable_matched_pairs": 0,
+        "24h_group_view_medians": {
+          "A": 62.0,
+          "B": 62.0
+        },
+        "24h_all_view_median": 62.0,
+        "actual_reactions": {
+          "A": {
+            "likes": 29,
+            "replies": 0,
+            "reposts": 6,
+            "shares": 1
+          },
+          "B": {
+            "likes": 27,
+            "replies": 0,
+            "reposts": 5,
+            "shares": 0
+          }
+        },
+        "reaction_rate_used": false,
+        "all_24h_observations_delayed": true,
+        "eligible_elapsed_hours_min": 24.317312148333336,
+        "eligible_elapsed_hours_max": 25.691108017222223,
+        "24h_unavailable_not_zero": [
+          "18117968657159347",
+          "17992859946026940",
+          "17913499947663769",
+          "18001464938830261"
+        ],
+        "24h_not_yet_due": [
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "24h_missing_after_due": [],
+        "7d_measured": 27,
+        "7d_not_yet_due": [
+          "18004106657810124",
+          "18155833435528730",
+          "18061699079561356",
+          "18075899267779249",
+          "18361336213223949",
+          "18100168118443439",
+          "17876108337601849",
+          "17954736195295664",
+          "18136261246743978",
+          "18029579210863916",
+          "18106611944009610",
+          "17995393143022353",
+          "18002356029029330",
+          "18098495828440255",
+          "18121994881961457",
+          "18093412586696162",
+          "18102899498408388",
+          "18214999999364836",
+          "18125366213319496",
+          "18149154712603236",
+          "17879078796637660",
+          "18388999600236313",
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "7d_group_medians": {
+          "A": 105,
+          "B": 87.5
+        },
+        "quotes": "not_provided",
+        "reader_only_replies": "unavailable",
+        "profile_clicks": "account_level_not_available; no_post_attribution",
+        "confounders": [
+          "Differentbusiness/region/readers/benefit/deadline/time/media/length; matchedsimilarpairs0",
+          "PreservedmovedexistingREADYcohorts differfromnewslots;excludeinsteadretroclassify",
+          "Newquestiontitlepolicy changesmorethanopeningalone;newAstrarevieweddraftsexcludedfrompureA/B"
+        ],
+        "minimum_24h_target_per_group": 8,
+        "raw_window_target_met": true,
+        "current_stratified_target_met": false,
+        "decision": "extend_comparison;maintainbalancedA/Bandexistingcontrols.No demonstratedrepeatedadvantage;noeditorialweightchange.",
+        "weight_changed": false,
+        "no_backcalculation": true,
+        "extension_next_condition": "Reassess in existingchecks when comparable similar-business strata have sufficient repeatedactual24hwindows; keep comparison group. No separate schedule.",
+        "reported_at": "2026-11-24T17:20:07.451089+09:00",
+        "evidence_latest_metric_run_id": "45351393999",
+        "24h_measured_but_excluded": [
+          {
+            "main_id": "18122947907049313",
+            "elapsed_hours": 52.64388394083333,
+            "reason": "late_beyond_26h_comparison_tolerance"
+          },
+          {
+            "main_id": "18061699079561356",
+            "elapsed_hours": 25.374772445277777,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18075899267779249",
+            "elapsed_hours": 24.65035752527778,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18361336213223949",
+            "elapsed_hours": 24.39045965972222,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18100168118443439",
+            "elapsed_hours": 24.6578044575,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "17876108337601849",
+            "elapsed_hours": 25.228189436944444,
+            "reason": "Previously written input preserved; no retrospective cohort assignment after failed preceding slot"
+          }
+        ],
+        "7d_group_n": {
+          "A": 13,
+          "B": 14
+        },
+        "7d_due_unmeasured": [
+          "18450932713126961"
+        ],
+        "publication_cutoff_note": "EvaluationperiodendsNov24 17:00:08.16slotwasunreservedatcutoff, laternaturallypublished17:21:06withinits2hwindow; excludedfrom53periodpublications becauseactualinvocation17:20aftercutoff. Notafourthmissedslot.",
+        "unreserved_at_period_end_slots": 1,
+        "currently_open_unreserved_slots_from_period": 0
+      },
+      "new_formal_evaluation_this_check": false,
+      "writer_final_edit_v3_status": {
+        "policy_id": "supportpick-threads-final-edit-v3-20261125",
+        "new_v3_READY": 0,
+        "previous_actual_v3_READY_preserved": 4,
+        "new_scores": 0,
+        "new_model_calls": 0
+      },
+      "workspace_preflight": {
+        "cached_operational_files_available": true,
+        "new_storage_failure": false
+      },
+      "regular_slot_observation": {
+        "slot": "2026-11-26T08:00:00+09:00",
+        "status": "published_verified_complete",
+        "run_id": "45723710675",
+        "main_id": "18026493176944984",
+        "receipt_at": "2026-11-26T08:46:00.8530888+09:00",
+        "original_two_hour_window_pass": true
+      },
+      "account_7d_30d_statistics": {
+        "official_post_windows_available": [
+          24,
+          72,
+          168
+        ],
+        "post_observations": 165,
+        "account_profile_home_followers_shares_30d_read_available": false,
+        "unavailable_not_zero": true,
+        "completion_dwell_cta_attribution_not_measured": true,
+        "no_inferred_performance": true
+      }
     }
   },
   "last_reported_prepublication_repair": {
@@ -163141,7 +163288,57 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-26T10:02:35.655519+09:00",
+    "checked_at": "2026-11-26T10:17:01.561782+09:00",
+    "ready": 4,
+    "future24h_ready": 4,
+    "new_drafts": 0,
+    "existing_READY_reused": 4,
+    "drafts": [
+      {
+        "slot": "2026-11-26T12:00:00+09:00",
+        "benefit_id": "SD0000001491",
+        "pattern": "P6",
+        "media_turn": "IMAGE",
+        "char_count": 377,
+        "expires_at": "2026-11-26T14:54:59.197830+09:00",
+        "full_delay_window_valid": true,
+        "source_fresh_at_slot": true,
+        "source_recheck_required_at_publish": true
+      },
+      {
+        "slot": "2026-11-26T16:00:00+09:00",
+        "benefit_id": "PTR000051390",
+        "pattern": "P5",
+        "media_turn": "TEXT",
+        "char_count": 459,
+        "expires_at": "2026-11-26T18:54:53.927829+09:00",
+        "full_delay_window_valid": true,
+        "source_fresh_at_slot": true,
+        "source_recheck_required_at_publish": true
+      },
+      {
+        "slot": "2026-11-26T20:00:00+09:00",
+        "benefit_id": "SPE000000010",
+        "pattern": "P1",
+        "media_turn": "IMAGE",
+        "char_count": 395,
+        "expires_at": "2026-11-26T22:25:37.852042+09:00",
+        "full_delay_window_valid": true,
+        "source_fresh_at_slot": true,
+        "source_recheck_required_at_publish": true
+      },
+      {
+        "slot": "2026-11-27T08:00:00+09:00",
+        "benefit_id": "999000000002",
+        "pattern": "P5",
+        "media_turn": "TEXT",
+        "char_count": 444,
+        "expires_at": "2026-11-27T10:02:35.655519+09:00",
+        "full_delay_window_valid": true,
+        "source_fresh_at_slot": false,
+        "source_recheck_required_at_publish": true
+      }
+    ],
     "source": {
       "count": 10898,
       "generation": "gov24-45711701521-1",
@@ -163150,475 +163347,37 @@
       "path": "snapshots/gov24-45711701521-1",
       "version": 1
     },
-    "ready": 4,
-    "new_READY": 1,
-    "reused_READY": 3,
-    "drafts": [
+    "source_count": 10898,
+    "ledger_records": 83,
+    "pending": null,
+    "lease": null,
+    "new_posts": 0,
+    "new_incidents": 0,
+    "new_metrics": 0,
+    "observations": 165,
+    "new_evaluation": false,
+    "astra_review_invocations": 0,
+    "existing_Astra_review_preserved": true,
+    "exact_approved_body_hashes_pass": true,
+    "new_visual_inspection": false,
+    "image_redownloaded_this_check": true,
+    "image_sha_comparisons": [
       {
-        "slot": "2026-11-26T12:00:00+09:00",
-        "benefit_id": "SD0000001491",
-        "pattern": "P6",
-        "media_turn": "IMAGE",
-        "char_count": 377
+        "path": "social/images/benefit-guide-1.png",
+        "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+        "actual_download_sha_matches_current_review": true,
+        "checked_at": "2026-11-26T10:17:06.501090+09:00",
+        "new_visual_inspection": false
       },
       {
-        "slot": "2026-11-26T16:00:00+09:00",
-        "benefit_id": "PTR000051390",
-        "pattern": "P5",
-        "media_turn": "TEXT",
-        "char_count": 459
-      },
-      {
-        "slot": "2026-11-26T20:00:00+09:00",
-        "benefit_id": "SPE000000010",
-        "pattern": "P1",
-        "media_turn": "IMAGE",
-        "char_count": 395
-      },
-      {
-        "slot": "2026-11-27T08:00:00+09:00",
-        "benefit_id": "999000000002",
-        "pattern": "P5",
-        "media_turn": "TEXT",
-        "char_count": 444
+        "path": "social/images/benefit-guide-2.png",
+        "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "actual_download_sha_matches_current_review": true,
+        "checked_at": "2026-11-26T10:17:10.404600+09:00",
+        "new_visual_inspection": false
       }
     ],
-    "full_delay_windows_pass": true,
-    "new_post": false,
-    "source_fresh_at_new_slot": false,
-    "final": {
-      "requested_model": "gpt-6.2-astra",
-      "actual_model": "미확인",
-      "reviewed_at": "2026-11-26T00:58:32.341500+00:00",
-      "independent_reviewer": "동일 검수 에이전트의 재검수",
-      "sha256": "538ed5d76c00e9aca77aae6c880fd16982ecd83a6f03464c36a673f26924db91",
-      "characters": 444,
-      "reply_count": 0,
-      "format": "TEXT",
-      "url_absent": true,
-      "exact_cta_count": 1,
-      "scores": [
-        {
-          "항목": "첫문장",
-          "배점": 15,
-          "초안": 15,
-          "최종": 15,
-          "근거": "종료가 임박한 독자의 실제 질문을 첫 문장에 배치"
-        },
-        {
-          "항목": "관심의도",
-          "배점": 15,
-          "초안": 15,
-          "최종": 15,
-          "근거": "신청 마감부터 답하고 수급 가능성 판단에 필요한 요건 제공"
-        },
-        {
-          "항목": "정확성",
-          "배점": 20,
-          "초안": 17,
-          "최종": 20,
-          "근거": "초안에는 직업소개 산정 기간이 빠짐. 최종본은 상담 포함, 부양가족 필수성, 심사·금액 하한·상한 및 재산 분기 조건이 원문과 일치"
-        },
-        {
-          "항목": "완독",
-          "배점": 15,
-          "초안": 13,
-          "최종": 14,
-          "근거": "초안의 기한 반복 삭제. 최종 재산 단락의 수치 밀도는 높음"
-        },
-        {
-          "항목": "공유공감",
-          "배점": 10,
-          "초안": 9,
-          "최종": 9,
-          "근거": "구직급여 종료가 가까운 가족에게 전달할 실익이 구체적"
-        },
-        {
-          "항목": "가치차별",
-          "배점": 10,
-          "초안": 10,
-          "최종": 10,
-          "근거": "일반적인 연장 안내에서 자주 빠지는 부부 과세액과 무주택·무건물 재산 기준을 모두 제시"
-        },
-        {
-          "항목": "모바일",
-          "배점": 5,
-          "초안": 4,
-          "최종": 4,
-          "근거": "문단 구분 양호. 부부 재산 관련 문장이 길어 모바일에서 여러 줄을 차지"
-        },
-        {
-          "항목": "텍스트완성도",
-          "배점": 5,
-          "초안": 4,
-          "최종": 5,
-          "근거": "최종본은 기한 반복을 줄이고 상담 인정 범위와 관할 신청처까지 단독 텍스트로 설명"
-        },
-        {
-          "항목": "프로필유도",
-          "배점": 5,
-          "초안": 2,
-          "최종": 5,
-          "근거": "초안 시점 경로 보류. 최종본의 구체적 검색어·서류 안내를 상위 검수자의 실제 홈 검색 및 상세 클릭 기록과 대조"
-        }
-      ],
-      "first_review": {
-        "provisional_total": 88,
-        "specified_rubric_total": 89,
-        "status": "HOLD",
-        "original_record": "extension0953-review-first.json",
-        "note": "당시 사이트 경로 미확인. 지정배점에 의한 소급 재채점이며 원본 파일 보존."
-      },
-      "total": 97,
-      "status": "APPROVED",
-      "mandatory_checks_passed": true,
-      "re_review_required": false,
-      "verification": {
-        "official": "OPENED_OFFICIAL. 생활법령 모바일 표 138~140행과 지급 산식·기간·기한 직접 확인. 현행 시행령 73조 열람. 고시 원표 자체는 미확인.",
-        "profile": "UPSTREAM_VERIFIED. 11월25일 Threads에 표시된 목적지 홈 확인 기록을 재사용. 당시 리다이렉트 완료 미확인. 오늘 부모가 홈에서 사업명 검색, 1건 결과 클릭, 상세 준비서류와 신청방법 확인. 오늘 프로필 자체 클릭은 검증하지 않음.",
-        "detail_url": "https://kllollain-max.github.io/supportpick/benefits/999000000002/",
-        "dependencies": "소득 없는 배우자는 적법한 예시이며 “등 법정 부양가족이 있어야”가 나머지 유형도 허용하면서 필수성을 보존. 신청기한·심사 후 최대 60일, 일액 70%와 최저 보장 조건 충족."
-      },
-      "changes": [
-        "직업소개 산정기간과 센터 심층·집단상담 포함 명시",
-        "부부 재산세 과세액 합산 명시",
-        "신청지 관할 센터 명시",
-        "기한 반복 삭제",
-        "프로필 홈에서 상세까지 실제 탐색 기록 대조"
-      ]
-    },
-    "entry": {
-      "slot": "2026-11-27T08:00:00+09:00",
-      "benefit_id": "999000000002",
-      "source_fingerprint": "ecea1a41cf792fb85d90a054d7835d2ad29709ef696adb3bcce3f830c88d794e",
-      "source_generation": "gov24-45711701521-1",
-      "prepared_at": "2026-11-26T10:02:35.655519+09:00",
-      "expires_at": "2026-11-27T10:02:35.655519+09:00",
-      "asset_sha256": null,
-      "writer": {
-        "schema_version": "supportpick.writer.v1",
-        "status": "READY",
-        "selected_program_id": "999000000002",
-        "post_text": "구직급여가 끝나가는데 재취업이 안 됐다면, 연장 신청은 언제까지 할까요?\n개별연장급여는 구직급여 지급일수 종료일까지 신청해야 해요. 심사를 통과하면 최대 60일 더 받을 수 있어요.\n\n실업신고일부터 구직급여가 끝날 때까지 고용센터 직업소개에 3회 이상 응했지만 미취업이고, 소득 없는 배우자 등 법정 부양가족이 있어야 해요. 센터 심층·집단상담 참여도 포함해요.\n\n이직 전 최종사업장 급여기초임금일액은 8만8천 원 이하가 기준이에요. 본인·배우자 소유 주택·건물이 있으면 두 사람의 재산세 과세액 합계 16만 원 이하, 없으면 재산 합계 2억4천만 원 이하여야 해요.\n\n하루 지급액은 기존 구직급여일액의 70%이며 최저구직급여일액보다 낮으면 최저액을 적용해요. 신청지 관할 고용센터에 신청하고, 프로필의 ‘개별연장급여’에서 재산 증빙서류와 신청 경로를 확인해요.\n\n자세한 사항은 프로필링크 확인",
-        "draft_text": null,
-        "reply_texts": [],
-        "media": {
-          "turn": "TEXT",
-          "asset_id": null,
-          "check": "NOT_REQUIRED",
-          "image_copy": null,
-          "alt_text": null
-        },
-        "review": {
-          "planned_at": "2026-11-27T08:00:00+09:00",
-          "application_status": "OPEN",
-          "reader": "구직급여 종료가 임박하고 재취업이 안 된 생활곤란 수급자",
-          "central_message": "개별연장급여는구직급여지급일수종료일까지신청하며법정요건심사를거친다",
-          "pattern": "P5",
-          "selection_reason": "동일ID32312누적조회수순위. 상위HOLD/SKIP근거보존,기예약/게시사업제외. 종료임박구직자생계결정에기한·실질급여·배우자재산조건제공. 최근20과질문·전개비교,250~450자444자. 별도상환없는현금급여,선정확정없음.",
-          "interest_basis": "OBSERVED_METRICS",
-          "duplicate_check": "CHECKED",
-          "evidence": [
-            {
-              "source_id": "999000000002",
-              "source_ref": "https://m.easylaw.go.kr/MOB/CsmInfoRetrieve.laf?ccfNo=2&cciNo=4&cnpClsNo=2&csmSeq=722",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-26T10:02:31.655060+09:00",
-              "claims_supported": [
-                "現行개별연장급여 대상·임금88000·재산세160000·재산2억4천·기간최대60·일액70%와하한·종료일까지신청·중복조정"
-              ]
-            },
-            {
-              "source_id": "999000000002",
-              "source_ref": "https://www.gov.kr/mw/AA020InfoCappView.do?CappBizCD=14900000298",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-26T10:02:31.655060+09:00",
-              "claims_supported": [
-                "개별연장급여 신청 가능:개인별구직급여일수종료일까지 관할고용센터심사,인터넷/방문/FAX 및재산증빙. 연중누구나가아니며개인별자격·잔여기간확인필수"
-              ]
-            },
-            {
-              "source_id": "999000000002",
-              "source_ref": "https://law.go.kr/lsLawLinkInfo.do?chrClsCd=010202&lsJoLnkSeq=1000770584",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-26T10:02:31.655060+09:00",
-              "claims_supported": [
-                "시행2026-09-18 제73조:직업소개기간3회·부양가족·임금재산·60일최대·종료일까지신청"
-              ]
-            }
-          ],
-          "checks": {
-            "facts": "PASS",
-            "current_status": "PASS",
-            "eligibility_and_units": "PASS",
-            "cta_and_no_links": "PASS",
-            "length": "PASS",
-            "media": "NOT_REQUIRED"
-          },
-          "char_count": 444,
-          "count_method": "python_len_including_spaces_and_newlines",
-          "missing_info": [],
-          "hold_reasons": [],
-          "warnings": [
-            "수급기간은개인별이며다음날개인신청가능성보장없음",
-            "구1350FAQ74000/1억4천은최신공식모바일표88000/2억4천과다름:사용하지않음",
-            "현재수집본은다음날08시신선하지않아실제발송시최신완전세대재검증필수",
-            "Threads프로필리디렉션클릭완료는미확인,실제표시target기록과오늘홈상세탐색확인"
-          ],
-          "reach_editorial": {
-            "policy_id": "supportpick-threads-reach-v1-20261109",
-            "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
-            "core_question": "구직급여가 끝나가는데 재취업이 안 됐다면, 연장 신청은 언제까지 할까요?",
-            "reader_scope": "구직급여 종료가 임박하고 재취업이 안 된 생활곤란 수급자",
-            "angles": [
-              "신청기한:끝난후가아닌종료일까지",
-              "배우자·재산조건자격체크",
-              "일액70%와최저보장/최대60일"
-            ],
-            "chosen_angle": "종료전신청시점과법정요건판단",
-            "opening_candidates": [
-              "구직급여가 끝나가는데 재취업이 안 됐다면, 연장 신청은 언제까지 할까요?",
-              "구직급여 연장, 소득 없는 배우자를 부양하면 신청할 수 있나요?",
-              "개별연장급여는 지금 받는 구직급여와 금액이 같을까요?"
-            ],
-            "chosen_opening": "구직급여가 끝나가는데 재취업이 안 됐다면, 연장 신청은 언제까지 할까요?",
-            "selection_reason": "동일ID32312누적조회수순위. 상위HOLD/SKIP근거보존,기예약/게시사업제외. 종료임박구직자생계결정에기한·실질급여·배우자재산조건제공. 최근20과질문·전개비교,250~450자444자. 별도상환없는현금급여,선정확정없음.",
-            "history_posts_checked": 20,
-            "comparison_eligible": false,
-            "comparison_exclusion": "v3 질문형/요건동시편집으로 기존순수A/B와분리",
-            "profile_route": {
-              "profile": "https://www.threads.com/@hid_1004",
-              "visible_link_target": "https://kllollain-max.github.io/supportpick/",
-              "profile_target_checked_at": "2026-11-25T08:33:52.430313+09:00",
-              "home_search": "개별연장급여",
-              "results": 1,
-              "actual_search_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/999000000002/",
-              "method": "CUA actual home search, result click, visible detail documents/method; reuse prior actual profile visible target with original timestamp",
-              "redirect_click_completed": false,
-              "checked_at": null,
-              "actual_route_verified_before": "2026-11-26T00:58:32.341500+00:00",
-              "timestamp_note": "Exact CUA route timestamp not retained in this export; completed before final review; official refresh time is separate"
-            },
-            "master_full_used": true,
-            "search_evidence": "공식검색표현:개별연장급여/구직급여종료일까지/급여기초임금일액,검색량실측없음",
-            "observed_metrics_context": "165실제관측.원주24h조회4·좋아요1은사업/시간/미디어차이로원인귀속불가.계정7/30프로필/홈/완독·체류/CTA미측정"
-          },
-          "astra_final_review": {
-            "requested_model": "gpt-6.2-astra",
-            "actual_model": "미확인",
-            "invoked_model_identifier": "gpt-6.2-astra",
-            "invocation_identifier_source": "parent successful spawn_agent explicit model selection",
-            "fallback_reason": null,
-            "version": "3.0",
-            "independent_agent": "/root/extension_final_review",
-            "first_review": {
-              "requested_model": "gpt-6.2-astra",
-              "actual_model": "미확인",
-              "review": "독립 초안 검수",
-              "method": "OPENED_OFFICIAL",
-              "sources": [
-                "turn564908181view0",
-                "turn799945468view0",
-                "turn564908181view1",
-                "turn564908181view2"
-              ],
-              "source_scope": "현행 시행령 및 생활법령 표를 직접 읽음. 고시 원문표는 직접 검증하지 않음. 정부24 민원 페이지는 열람. 개별 사이트 경로는 미확인.",
-              "scores": [
-                {
-                  "item": "정확성",
-                  "max": 20,
-                  "score": 19,
-                  "reason": "기한, 급여액, 3개 금액 기준을 직접 대조"
-                },
-                {
-                  "item": "대상·요건",
-                  "max": 15,
-                  "score": 12,
-                  "reason": "직업소개 실적 산정기간 누락"
-                },
-                {
-                  "item": "신청 안내",
-                  "max": 10,
-                  "score": 9,
-                  "reason": "관할 센터로 명시 권장"
-                },
-                {
-                  "item": "출처",
-                  "max": 10,
-                  "score": 10,
-                  "reason": "생활법령 본문, 정부24, 시행령 열람"
-                },
-                {
-                  "item": "도입",
-                  "max": 10,
-                  "score": 10,
-                  "reason": "수급 종료 임박자의 기한 질문에 바로 답함"
-                },
-                {
-                  "item": "가독성",
-                  "max": 10,
-                  "score": 9,
-                  "reason": "기한과 프로필 유도 반복"
-                },
-                {
-                  "item": "혜택 설명",
-                  "max": 10,
-                  "score": 10,
-                  "reason": "최대 기간과 지급액 하한 정확"
-                },
-                {
-                  "item": "프로필 경로",
-                  "max": 10,
-                  "score": 4,
-                  "reason": "목적지 미확인"
-                },
-                {
-                  "item": "형식",
-                  "max": 5,
-                  "score": 5,
-                  "reason": "TEXT, 말미 CTA, 본문 URL 없음"
-                }
-              ],
-              "scoring_basis": "지정 배점표 수신 전 임시 9항목 평가",
-              "total": 88,
-              "status": "HOLD",
-              "re_review_required": true,
-              "fixes": [
-                "실업신고일부터 구직급여 지급이 끝날 때까지 고용센터 직업소개에 3회 이상 응했지만 취업하지 못한 경우라고 명시. 센터 심층·집단상담 참여도 포함.",
-                "신청지 관할 고용센터로 구체화.",
-                "부부 재산세 과세액 합계임을 명시.",
-                "최종 프로필 경로와 화면상 신청·증빙 안내 대조. 최종본 500자 검사."
-              ]
-            },
-            "final_review": {
-              "requested_model": "gpt-6.2-astra",
-              "actual_model": "미확인",
-              "reviewed_at": "2026-11-26T00:58:32.341500+00:00",
-              "independent_reviewer": "동일 검수 에이전트의 재검수",
-              "sha256": "538ed5d76c00e9aca77aae6c880fd16982ecd83a6f03464c36a673f26924db91",
-              "characters": 444,
-              "reply_count": 0,
-              "format": "TEXT",
-              "url_absent": true,
-              "exact_cta_count": 1,
-              "scores": [
-                {
-                  "항목": "첫문장",
-                  "배점": 15,
-                  "초안": 15,
-                  "최종": 15,
-                  "근거": "종료가 임박한 독자의 실제 질문을 첫 문장에 배치"
-                },
-                {
-                  "항목": "관심의도",
-                  "배점": 15,
-                  "초안": 15,
-                  "최종": 15,
-                  "근거": "신청 마감부터 답하고 수급 가능성 판단에 필요한 요건 제공"
-                },
-                {
-                  "항목": "정확성",
-                  "배점": 20,
-                  "초안": 17,
-                  "최종": 20,
-                  "근거": "초안에는 직업소개 산정 기간이 빠짐. 최종본은 상담 포함, 부양가족 필수성, 심사·금액 하한·상한 및 재산 분기 조건이 원문과 일치"
-                },
-                {
-                  "항목": "완독",
-                  "배점": 15,
-                  "초안": 13,
-                  "최종": 14,
-                  "근거": "초안의 기한 반복 삭제. 최종 재산 단락의 수치 밀도는 높음"
-                },
-                {
-                  "항목": "공유공감",
-                  "배점": 10,
-                  "초안": 9,
-                  "최종": 9,
-                  "근거": "구직급여 종료가 가까운 가족에게 전달할 실익이 구체적"
-                },
-                {
-                  "항목": "가치차별",
-                  "배점": 10,
-                  "초안": 10,
-                  "최종": 10,
-                  "근거": "일반적인 연장 안내에서 자주 빠지는 부부 과세액과 무주택·무건물 재산 기준을 모두 제시"
-                },
-                {
-                  "항목": "모바일",
-                  "배점": 5,
-                  "초안": 4,
-                  "최종": 4,
-                  "근거": "문단 구분 양호. 부부 재산 관련 문장이 길어 모바일에서 여러 줄을 차지"
-                },
-                {
-                  "항목": "텍스트완성도",
-                  "배점": 5,
-                  "초안": 4,
-                  "최종": 5,
-                  "근거": "최종본은 기한 반복을 줄이고 상담 인정 범위와 관할 신청처까지 단독 텍스트로 설명"
-                },
-                {
-                  "항목": "프로필유도",
-                  "배점": 5,
-                  "초안": 2,
-                  "최종": 5,
-                  "근거": "초안 시점 경로 보류. 최종본의 구체적 검색어·서류 안내를 상위 검수자의 실제 홈 검색 및 상세 클릭 기록과 대조"
-                }
-              ],
-              "first_review": {
-                "provisional_total": 88,
-                "specified_rubric_total": 89,
-                "status": "HOLD",
-                "original_record": "extension0953-review-first.json",
-                "note": "당시 사이트 경로 미확인. 지정배점에 의한 소급 재채점이며 원본 파일 보존."
-              },
-              "total": 97,
-              "status": "APPROVED",
-              "mandatory_checks_passed": true,
-              "re_review_required": false,
-              "verification": {
-                "official": "OPENED_OFFICIAL. 생활법령 모바일 표 138~140행과 지급 산식·기간·기한 직접 확인. 현행 시행령 73조 열람. 고시 원표 자체는 미확인.",
-                "profile": "UPSTREAM_VERIFIED. 11월25일 Threads에 표시된 목적지 홈 확인 기록을 재사용. 당시 리다이렉트 완료 미확인. 오늘 부모가 홈에서 사업명 검색, 1건 결과 클릭, 상세 준비서류와 신청방법 확인. 오늘 프로필 자체 클릭은 검증하지 않음.",
-                "detail_url": "https://kllollain-max.github.io/supportpick/benefits/999000000002/",
-                "dependencies": "소득 없는 배우자는 적법한 예시이며 “등 법정 부양가족이 있어야”가 나머지 유형도 허용하면서 필수성을 보존. 신청기한·심사 후 최대 60일, 일액 70%와 최저 보장 조건 충족."
-              },
-              "changes": [
-                "직업소개 산정기간과 센터 심층·집단상담 포함 명시",
-                "부부 재산세 과세액 합산 명시",
-                "신청지 관할 센터 명시",
-                "기한 반복 삭제",
-                "프로필 홈에서 상세까지 실제 탐색 기록 대조"
-              ]
-            },
-            "final_verdict": "PASS",
-            "body_sha256": "538ed5d76c00e9aca77aae6c880fd16982ecd83a6f03464c36a673f26924db91",
-            "asset_sha256": null,
-            "score": 97
-          }
-        },
-        "next_history_record": {
-          "program_id": "999000000002",
-          "notice_version": "2026-11-13",
-          "pattern": "P5",
-          "opening": "구직급여가 끝나가는데 재취업이 안 됐다면, 연장 신청은 언제까지 할까요?",
-          "structure": "종료전신청질문즉답→직업소개/부양가족→임금재산→급여산식과신청처/서류",
-          "media_turn": "TEXT"
-        }
-      },
-      "full_delay_window_covered": true,
-      "revalidate_before": "2026-11-27T08:00:00+09:00"
-    },
-    "ledger_records": 83,
-    "future24h_ready": 4,
-    "existing_READY_preserved": true,
-    "actual_independent_review_calls": 2,
-    "new_publications_by_regular_publisher": 1,
-    "maintenance_new_posts": 0,
-    "observations": 165,
-    "new_metrics": 3,
-    "new_visual_inspection": false,
-    "current_source_not_fresh_at_new_slot": true
+    "expiry_prevention_revalidations": 0
   },
   "last_queue_review_refresh": {
     "checked_at": "2026-11-25T22:25:37.852042+09:00",
