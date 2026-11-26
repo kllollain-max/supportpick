@@ -14006,6 +14006,470 @@
       "revalidate_after": "2026-11-26T14:00:00+09:00",
       "revalidate_before": "2026-11-27T12:00:00+09:00",
       "expiry_revalidated_at": "2026-11-26T15:09:45.786887+09:00"
+    },
+    {
+      "slot": "2026-11-27T16:00:00+09:00",
+      "benefit_id": "641000000164",
+      "source_fingerprint": "e61f9dd27dfb52098fb4c6f9df2577889a10b16f9b8ee0eab5ca7c3ff03d1e20",
+      "source_generation": "gov24-45711701521-1",
+      "prepared_at": "2026-11-26T16:54:25.208147+09:00",
+      "expires_at": "2026-11-27T16:54:25.208147+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "641000000164",
+        "post_text": "국가 긴급복지 소득기준을 넘으면 경기도형도 못 받나요?\n그렇지는 않아요. 소득기준은 국가형이 기준 중위소득 75% 이하, 경기도형은 100% 이하예요. 최근 1년 안에 생긴 위기로 생계가 어렵고 재산·금융재산 기준도 충족해야 해요.\n\n경기도에 주민등록을 두고 실제 거주하는 가구가 원칙이며, 체류지 신고 외국인은 법상 특례가 적용돼요.\n\n기존 제도의 지원을 받기 어렵거나 국가 긴급복지를 받고도 위기가 계속되는 가구에 생계비·주거비 등을 지원해요. 실직·휴폐업으로 소득을 잃은 경우 등이 위기사유에 포함돼요.\n\n상시 신청할 수 있고, 주소지 행정복지센터나 시·군청에서 상담 후 신청해요. 소득기준만 맞는다고 지급이 확정되지는 않아요.\n\n프로필에서 ‘경기도형긴급복지지원’을 찾으면 지역별 재산기준과 방문 신청 창구를 대조할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-27T16:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "경기도에거주하며실직·휴폐업등위기로생활이어려워국가긴급복지소득기준초과여부를걱정하는가구",
+          "central_message": "국가형75%소득기준초과만으로도형대상도아니라고판단하지말고도형100%및위기·거주·재산·금융·보완대상조건상담",
+          "pattern": "P2",
+          "selection_reason": "동일ID원본누적조회수32116.상위선정제외사유출처보존,앞선4사업기큐동일ID중복제외.구체적국가형/도형소득차이가위기가구의신청판단에필요.정부·지자체생활안정분야순환은기존순위를바꾸지않음.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "641000000164",
+              "source_ref": "https://www.gg.go.kr/welfarehotline/contents/contents.do?ciIdx=1423&menuId=3895",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-26T16:54:00+09:00",
+              "claims_supported": [
+                "도형100%소득/지역별재산·금융/실직·휴폐업등위기/생계·주거지원/151행상담접수창구직접확인"
+              ]
+            },
+            {
+              "source_id": "641000000164",
+              "source_ref": "https://housing.gg.go.kr/html/24404.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-26T16:54:00+09:00",
+              "claims_supported": [
+                "94~105행기존제도로지원받기어렵거나국가형지원후위기지속가정,경기도주민등록실거주원칙및체류지신고외국인특례,위기1년,307~309행요청후현장확인·필요성인정후지원"
+              ]
+            },
+            {
+              "source_id": "641000000164",
+              "source_ref": "https://www.gimpo.go.kr/portal/contents.do?key=1329",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-26T16:54:00+09:00",
+              "claims_supported": [
+                "2026현재안내1124~1159행위기1년/생계주거/소득100가구별기준확인.금액단위상충부분은게시하지않음"
+              ]
+            },
+            {
+              "source_id": "641000000164",
+              "source_ref": "https://web1.gg.go.kr/contents/contents.do?ciIdx=1445&menuId=3242",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-26T16:54:00+09:00",
+              "claims_supported": [
+                "독립검수자실제열람1705~1714행국가형기준중위소득75%이하직접확인.부모는동일URLopen했으나특정본문재조회timeout이므로부모직접본문확인으로꾸미지않음"
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 428,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "금액·횟수·기간의공식자료별표현차이로해당금액숫자미게시. 핵심질문은소득기준/기본자격판단이며지급확정아님.",
+            "원문정부24도구접근불가.2026도·시공식본문현재사업안내와원본API상시신청대조.",
+            "PDFweboctet-stream미지원,CLI503총2시도후종료. PDF본문을열람근거로쓰지않음.",
+            "현재수집본은내일16시까지신선하지않아실제발송시최신완전세대필수.",
+            "24시간상한:내일16시정각은유효하나16~18전체창은오늘18시이후실제공식/접수/최신완전본재대조후CAS갱신필수.날짜만바꾸지않음.",
+            "현재16시원고미예약/실패미확정. 실제16시결과따라이후미예약미디어교대/우선순위재검증필수."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+            "core_question": "국가 긴급복지 소득기준을 넘으면 경기도형도 못 받나요?",
+            "reader_scope": "경기도에거주하며실직·휴폐업등위기로생활이어려워국가긴급복지소득기준초과여부를걱정하는가구",
+            "angles": [
+              "실직후생활비부담",
+              "국가형과도형소득기준차이",
+              "방문상담전거주·위기기간·재산확인"
+            ],
+            "chosen_angle": "국가형75%와도형100%비교후추가필수조건",
+            "opening_candidates": [
+              "국가 긴급복지 소득기준을 넘으면 경기도형도 못 받나요?",
+              "실직한 경기도 가구, 국가 긴급복지 대상이 아니면 어디에 상담할까요?",
+              "경기도형 긴급복지, 소득만 기준에 맞으면 받을 수 있나요?"
+            ],
+            "chosen_opening": "국가 긴급복지 소득기준을 넘으면 경기도형도 못 받나요?",
+            "opening_type": "조건비교질문형",
+            "selection_reason": "동일ID원본누적조회수32116.상위선정제외사유출처보존,앞선4사업기큐동일ID중복제외.구체적국가형/도형소득차이가위기가구의신청판단에필요.정부·지자체생활안정분야순환은기존순위를바꾸지않음.",
+            "cohort": null,
+            "comparison_eligible": false,
+            "comparison_exclusion": "v3조건비교질문과구조동시편집으로순수A/B생활상황vs혜택실험에소급배정하지않음",
+            "history_posts_checked": 20,
+            "profile_route": {
+              "profile": "https://www.threads.com/@hid_1004",
+              "visible_link_target": "https://kllollain-max.github.io/supportpick/",
+              "profile_target_checked_at": "2026-11-26T16:50:00+09:00",
+              "home_search": "경기도형긴급복지지원",
+              "results": 1,
+              "actual_search_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/641000000164/",
+              "redirect_click_completed": false,
+              "method": "Actual browser homepage search -> one result -> actual click -> detail eligibility/regional property rules/visit method confirmed. Actual public profile shows matching home target. No redirect click or sign in.",
+              "site_limitations": "API금액반올림및기간표현차이가있어본문은비율기준과자격판단/방문기관범위로한정. 사이트제공연령분류는실제나이제한으로사용하지않음."
+            },
+            "search_evidence": "공식검색표현 경기도형긴급복지/국가형/기준중위소득/실직·휴폐업 실제공식페이지제목및본문확인. 실측검색량은없음.",
+            "actual_applied_elements": [
+              "첫질문직후75/100답",
+              "1년위기/재산/금융추가조건",
+              "거주원칙과외국인특례",
+              "국가제도보완·생계주거중심",
+              "상시방문접수와소득만으로확정아님"
+            ],
+            "observed_metrics_context": "84완료게시168공식게시물관측.7/30계정프로필/홈/완독/체류/CTA기여도미측정은0아님.비교표본교란으로효과단정없음.",
+            "master_full_used": true
+          },
+          "astra_final_review": {
+            "requested_model": "gpt-6.2-astra",
+            "actual_model": "미확인",
+            "invoked_model_identifier": "gpt-6.2-astra",
+            "invocation_identifier_source": "Successful parent explicit model selection; finer actual identity unavailable",
+            "fallback_reason": null,
+            "version": "3.0",
+            "independent_agent": "/root/gyeonggi_final_review",
+            "first_review": {
+              "policy_version": "v3.0",
+              "stage": "first",
+              "reviewed_at": "2026-11-26T16:52:37+09:00",
+              "planned_slot": "2026-11-27T16:00:00+09:00",
+              "independent_reviewer": true,
+              "reviewer_model_selected": "gpt-6.2-astra",
+              "provider_snapshot_model_id": "미확인",
+              "fallback_reason": null,
+              "program_id": "641000000164",
+              "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+              "master_digest_matches": true,
+              "body_sha256": "1e61e88d575561ee9584eaafba195822f463d59a26b9ba453c6a62e74cab678c",
+              "body": "국가 긴급복지 소득기준을 넘으면 경기도형 지원도 못 받나요?\n그렇지는 않아요. 경기도형은 기준 중위소득 100% 이하까지 검토해요. 다만 경기도에 주민등록을 두고 실제 거주하며, 최근 1년 안에 생긴 위기로 생계가 어렵고 재산·금융재산 기준도 충족해야 해요.\n\n실직·휴폐업으로 소득을 잃거나 중한 질병 등으로 생활이 어려운 가구에 생계비·의료비·주거비 등을 지원해요. 소득기준만 맞는다고 지급이 확정되지는 않아요.\n\n재산기준은 특례시·시·군에 따라 달라요. 이미 다른 지원을 받는다면 같은 내용의 중복지원 여부도 확인해야 해요.\n\n상시 신청할 수 있고, 주소지 행정복지센터나 시·군청에서 상담 후 신청해요. 필요한 지원과 실제 금액은 가구 상황을 확인해 결정해요.\n\n프로필에서 ‘경기도형긴급복지지원’을 찾으면 지역별 재산기준과 방문 신청 창구를 대조할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+              "asset_sha256": null,
+              "media": "TEXT",
+              "reply_texts": [],
+              "score": 90,
+              "scores": [
+                {
+                  "item": "첫 문장",
+                  "points": 14,
+                  "maximum": 15,
+                  "reason": "경기도형 가능성을 묻는 구체적 질문이지만 11/25 12시 소득기준 초과 질문과 일부 유사하다."
+                },
+                {
+                  "item": "관심/의도",
+                  "points": 14,
+                  "maximum": 15,
+                  "reason": "국가형 소득 기준을 넘는 위기 가구의 상담 결정을 돕는다. 비교 기준값 중 하나가 빠졌다."
+                },
+                {
+                  "item": "정확성",
+                  "points": 17,
+                  "maximum": 20,
+                  "reason": "100%, 1년, 위기 사유와 자산 요건, 상시 방문 신청은 공식 근거와 맞다. 주민등록의 예외를 닫는 단정, 국가형 보완 조건 생략은 수정 대상이다."
+                },
+                {
+                  "item": "완독 가능성",
+                  "points": 13,
+                  "maximum": 15,
+                  "reason": "문단 순서는 명확하다. 첫 답변의 다중 조건과 지급 비확정 반복으로 정보가 밀집한다."
+                },
+                {
+                  "item": "공유/공감",
+                  "points": 9,
+                  "maximum": 10,
+                  "reason": "실직·휴폐업 상황은 가족에게 공유할 이유를 준다. 반응·성과 추정 없음."
+                },
+                {
+                  "item": "가치/차별",
+                  "points": 9,
+                  "maximum": 10,
+                  "reason": "동일 날짜의 P5·P8과 다른 제도 간 조건 정정형이다. 75% 유무가 비교 가치를 가른다."
+                },
+                {
+                  "item": "모바일",
+                  "points": 4,
+                  "maximum": 5,
+                  "reason": "문단 여백은 적절하나 2행에 예외·거주·위기·자산을 모았다."
+                },
+                {
+                  "item": "텍스트 완성도",
+                  "points": 5,
+                  "maximum": 5,
+                  "reason": "단독 해요체 본문과 문자 제한, 마지막 CTA를 충족한다."
+                },
+                {
+                  "item": "프로필 유도",
+                  "points": 5,
+                  "maximum": 5,
+                  "reason": "실제 사업명과 확인할 두 항목을 특정한다."
+                }
+              ],
+              "decision": "HOLD",
+              "editorial_action": "REVISE",
+              "checks": {
+                "question_and_immediate_answer": "PASS",
+                "app_status": "ALWAYS",
+                "current_status": "PASS",
+                "eligibility_exceptions": "FAIL",
+                "comparison_completeness": "REVISE",
+                "no_unverified_amounts_dates_selection_promises": "PASS",
+                "single_body_empty_replies": "PASS (제공된 TEXT 설계 기준, 게시 검증 아님)",
+                "cta_exact_once_at_end": true,
+                "links_domains_obfuscated_links_hashtags": "PASS",
+                "length": "PASS",
+                "chars_including_spaces_and_lf": 445,
+                "max_chars": 500,
+                "length_method": "Python len; 원본 텍스트, 공백·개행·CTA 포함",
+                "image": "NOT_REQUIRED",
+                "same_day_patterns": "P2 vs 08시 P5, 12시 P8",
+                "history": "queue 최근 20개 도입, state 최근 20개 본문 확인. 동일 ID 없음. 11/25 12시 소득초과 질문과 일부 유사하나 국가/경기도 소득기준 비교로 구별.",
+                "site_path": "UPSTREAM_VERIFIED: 부모가 공개 프로필의 홈 목적지 일치와 홈 검색 1건→상세 클릭, 재산기준/방문기관을 확인. 중간 리디렉트 클릭 미수행. 독립 웹 도구로 상세 페이지 접근 불가."
+              },
+              "evidence": [
+                {
+                  "method": "OPENED_OFFICIAL",
+                  "url": "https://web1.gg.go.kr/contents/contents.do?ciIdx=1445&menuId=3242",
+                  "scope": "1705–1714 국가 긴급복지 소득 75% 이하. 원래 국가형 핫라인 URL은 직접 열기 실패."
+                },
+                {
+                  "method": "OPENED_OFFICIAL",
+                  "url": "https://www.gg.go.kr/welfarehotline/contents/contents.do?ciIdx=1423&menuId=3895",
+                  "scope": "44–67·83–116·151 도형 100%, 특례시·시·군 재산 구분, 금융재산, 위기사유, 생계·의료·주거, 관할 시·군청·읍면동."
+                },
+                {
+                  "method": "OPENED_OFFICIAL",
+                  "url": "https://housing.gg.go.kr/html/24404.do",
+                  "scope": "81–105·123–125·303–311 국가 제도 보완·위기 지속·주민등록 및 실거주·체류지 신고 외국인 특례·의료 주민등록 6개월·1년 이내 위기·현장 확인 및 필요성 판단."
+                },
+                {
+                  "method": "OPENED_OFFICIAL",
+                  "url": "https://www.gimpo.go.kr/portal/contents.do?key=1329",
+                  "scope": "1128–1159 김포의 2026년 기준, 1년 이내 위기·생계/의료/주거 확인. 10/20 최종수정."
+                },
+                {
+                  "method": "PROVIDED_OFFICIAL_TEXT",
+                  "source": "candidates1312.json 동일ID 보조금24 OpenAPI rawSource.serviceDetail 및 serviceList",
+                  "scope": "11월7일 수정, 상시 신청, 관할 읍면동/시군구 방문. 정부24 공개 상세 HTML 열람으로 기록하지 않음."
+                }
+              ],
+              "required_changes": [
+                "필수로 단정한 주민등록 문장을 원칙으로 한정하거나 해당 독자군을 명시한다.",
+                "기존 제도 지원을 받기 어렵거나 국가 긴급복지 후에도 위기가 지속되는 가구를 대상으로 하는 점을 명시한다."
+              ],
+              "suggested_changes": [
+                "국가형과 경기도형의 가구원 수별 기준 중위소득 기준을 75% 이하/100% 이하로 명확히 비교한다.",
+                "의료지원 예시를 유지하면 신청일 기준 6개월 전부터 경기도 연속 주민등록 요건을 함께 밝히거나 생계·주거 지원으로 한정한다.",
+                "첫 답 다음 줄에 거주/위기/재산 요건을 나누고 비확정 고지를 한번으로 줄인다."
+              ],
+              "limits": [
+                "공식 자료 간 지원액·정밀도·기간 차이가 있어 지급액·횟수·금융재산 수치를 본문 근거에서 제외했다.",
+                "첨부 PDF 본문은 검수자가 열람하지 않았다.",
+                "프로필 실제 연결 및 예약/발행을 이 검수에서 실행한 것으로 표시하지 않는다."
+              ],
+              "body_source": "gyeonggi1644-body-before.txt (original immutable snapshot)"
+            },
+            "final_review": {
+              "policy_version": "v3.0",
+              "stage": "final_recheck",
+              "reviewed_at": "2026-11-26T16:53:20+09:00",
+              "planned_slot": "2026-11-27T16:00:00+09:00",
+              "independent_reviewer": true,
+              "reviewer_model_selected": "gpt-6.2-astra",
+              "provider_snapshot_model_id": "미확인",
+              "fallback_reason": null,
+              "program_id": "641000000164",
+              "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+              "master_digest_matches": true,
+              "body_sha256": "c1317caf7bcab8218423b0a2d9fadbaf4a6dd1638c6ab44cf3f02b9e47426947",
+              "body": "국가 긴급복지 소득기준을 넘으면 경기도형도 못 받나요?\n그렇지는 않아요. 소득기준은 국가형이 기준 중위소득 75% 이하, 경기도형은 100% 이하예요. 최근 1년 안에 생긴 위기로 생계가 어렵고 재산·금융재산 기준도 충족해야 해요.\n\n경기도에 주민등록을 두고 실제 거주하는 가구가 원칙이며, 체류지 신고 외국인은 법상 특례가 적용돼요.\n\n기존 제도의 지원을 받기 어렵거나 국가 긴급복지를 받고도 위기가 계속되는 가구에 생계비·주거비 등을 지원해요. 실직·휴폐업으로 소득을 잃은 경우 등이 위기사유에 포함돼요.\n\n상시 신청할 수 있고, 주소지 행정복지센터나 시·군청에서 상담 후 신청해요. 소득기준만 맞는다고 지급이 확정되지는 않아요.\n\n프로필에서 ‘경기도형긴급복지지원’을 찾으면 지역별 재산기준과 방문 신청 창구를 대조할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+              "asset_sha256": null,
+              "media": "TEXT",
+              "reply_texts": [],
+              "score": 97,
+              "scores": [
+                {
+                  "item": "첫 문장",
+                  "points": 14,
+                  "maximum": 15,
+                  "reason": "30자 질문으로 두 제도의 소득요건이 같다고 단정할 수 있는지를 묻고 바로 아래에서 수치를 비교한다. 최근 11/25 소득 초과 질문과 일부 구문이 닮았으나 다른 제도 간 비교가 중심이다."
+                },
+                {
+                  "item": "관심/의도",
+                  "points": 15,
+                  "maximum": 15,
+                  "reason": "소득으로 국가형 지원이 어려운 경기 거주 가구가 도형 상담을 고려할 수 있는지를 답한다."
+                },
+                {
+                  "item": "정확성",
+                  "points": 20,
+                  "maximum": 20,
+                  "reason": "국가형 75% 이하, 도형 100% 이하 및 1년·위기·재산과 금융재산·거주 원칙 및 외국인 특례·기존 제도 보완·급여 종류·신청경로가 근거와 일치한다. 개별 지급 확정 없이 안내한다."
+                },
+                {
+                  "item": "완독 가능성",
+                  "points": 14,
+                  "maximum": 15,
+                  "reason": "답·주거 요건·국가제도 보완·신청 경로 순으로 전개한다. 첫 답변 문단에 두 기준과 추가 요건이 모여 있다."
+                },
+                {
+                  "item": "공유/공감",
+                  "points": 9,
+                  "maximum": 10,
+                  "reason": "실직하거나 가게를 닫은 도민과 가족이 문의할 제도를 구체적으로 가늠할 수 있다. 경험이나 독자 반응의 단정이 없다."
+                },
+                {
+                  "item": "가치/차별",
+                  "points": 10,
+                  "maximum": 10,
+                  "reason": "두 제도의 기준을 숫자로 나란히 제시해 같은 날의 개인 체크형·작은 목록형과 구별한다."
+                },
+                {
+                  "item": "모바일",
+                  "points": 5,
+                  "maximum": 5,
+                  "reason": "질문 바로 아래 답이 있고 이후 다섯 문단을 여백으로 구분했다. 표·긴 목록 없이 읽힌다."
+                },
+                {
+                  "item": "텍스트 완성도",
+                  "points": 5,
+                  "maximum": 5,
+                  "reason": "본문 하나로 핵심 판단과 신청을 안내한다. 428자로 길이·링크·CTA 검사를 충족한다."
+                },
+                {
+                  "item": "프로필 유도",
+                  "points": 5,
+                  "maximum": 5,
+                  "reason": "검색할 정확한 사업명과 상세 페이지에서 대조할 지역별 재산기준 및 방문 창구를 구체화했다."
+                }
+              ],
+              "decision": "PASS",
+              "editorial_action": "APPROVE_FINAL_COPY",
+              "checks": {
+                "question_and_immediate_answer": "PASS: 첫 줄 질문 및 바로 다음 줄 75%와 100% 비교",
+                "app_status": "ALWAYS",
+                "current_status": "PASS",
+                "eligibility_exceptions": "PASS",
+                "comparison_completeness": "PASS",
+                "no_unverified_amounts_dates_selection_promises": "PASS",
+                "single_body_empty_replies": "PASS (제공된 TEXT 설계 기준, 게시 검증 아님)",
+                "cta_exact_once_at_end": true,
+                "links_domains_obfuscated_links_hashtags": "PASS (정규 표현식 및 원문 육안 대조)",
+                "length": "PASS",
+                "chars_including_spaces_and_lf": 428,
+                "max_chars": 500,
+                "length_method": "Python len; 원본 텍스트, 공백·개행·CTA 포함",
+                "image": "NOT_REQUIRED",
+                "same_day_patterns": "P2 vs 08시 P5, 12시 P8",
+                "history": "queue 최근 20개 도입, state 최근 20개 본문 확인. 동일 ID 없음. 11/25 12시 소득초과 질문과 일부 유사하나 국가/경기도 소득기준 비교로 구별.",
+                "site_path": "UPSTREAM_VERIFIED: 부모가 공개 프로필의 홈 목적지 일치와 홈 검색 1건→상세 클릭, 재산기준/방문기관을 확인. 중간 리디렉트 클릭 미수행. 독립 웹 도구로 상세 페이지 접근 불가.",
+                "facts": "PASS",
+                "eligibility_and_units": "PASS",
+                "benefit_scope": "PASS: 생계·주거에 한정해 의료 6개월 특례를 적용하지 않음",
+                "privacy_and_unverified_fomo": "PASS",
+                "media": "NOT_REQUIRED (TEXT)",
+                "profile_value": "PASS (홈 검색 이동 및 실제 제공 정보는 상위 검수 기록)",
+                "same_day_slots": "08시·12시 큐 + 본 16시, 4본문 상한 이내",
+                "source_discrepancies": "PASS: 편차 있는 지원액·횟수·금융재산 금액 미사용"
+              },
+              "evidence": [
+                {
+                  "method": "OPENED_OFFICIAL",
+                  "url": "https://web1.gg.go.kr/contents/contents.do?ciIdx=1445&menuId=3242",
+                  "scope": "1705–1714 국가 긴급복지 소득 75% 이하. 원래 국가형 핫라인 URL은 직접 열기 실패.",
+                  "web_open_ref": "turn707735472view1",
+                  "web_find_ref": "turn707735472view2",
+                  "lines": "1705–1714",
+                  "finding": "경기도청이 경기도형과 구분해 안내하는 국가 긴급복지 선정 요건에서 가구 규모별 기준 중위소득의 75퍼센트까지를 소득 기준으로 제시한다."
+                },
+                {
+                  "method": "OPENED_OFFICIAL",
+                  "url": "https://www.gg.go.kr/welfarehotline/contents/contents.do?ciIdx=1423&menuId=3895",
+                  "scope": "44–67·83–116·151 도형 100%, 특례시·시·군 재산 구분, 금융재산, 위기사유, 생계·의료·주거, 관할 시·군청·읍면동."
+                },
+                {
+                  "method": "OPENED_OFFICIAL",
+                  "url": "https://housing.gg.go.kr/html/24404.do",
+                  "scope": "81–105·123–125·303–311 국가 제도 보완·위기 지속·주민등록 및 실거주·체류지 신고 외국인 특례·의료 주민등록 6개월·1년 이내 위기·현장 확인 및 필요성 판단."
+                },
+                {
+                  "method": "OPENED_OFFICIAL",
+                  "url": "https://www.gimpo.go.kr/portal/contents.do?key=1329",
+                  "scope": "1128–1159 김포의 2026년 기준, 1년 이내 위기·생계/의료/주거 확인. 10/20 최종수정."
+                },
+                {
+                  "method": "PROVIDED_OFFICIAL_TEXT",
+                  "source": "candidates1312.json 동일ID 보조금24 OpenAPI rawSource.serviceDetail 및 serviceList",
+                  "scope": "11월7일 수정, 상시 신청, 관할 읍면동/시군구 방문. 정부24 공개 상세 HTML 열람으로 기록하지 않음."
+                }
+              ],
+              "required_changes": [],
+              "suggested_changes": [],
+              "limits": [
+                "공식 자료 간 지원액·정밀도·기간 차이가 있어 지급액·횟수·금융재산 수치를 본문 근거에서 제외했다.",
+                "첨부 PDF 본문은 검수자가 열람하지 않았다.",
+                "프로필 실제 연결 및 예약/발행을 이 검수에서 실행한 것으로 표시하지 않는다."
+              ],
+              "body_source": "gyeonggi1644-body.txt",
+              "first_reviewed_at": "2026-11-26T16:52:37+09:00",
+              "first_review_sha256": "fabc0dcedf464a651408bbcd75a7773b2e32488deff63e049cd1bdd4b864eab4",
+              "previous_score": 90,
+              "before_body_sha256": "1e61e88d575561ee9584eaafba195822f463d59a26b9ba453c6a62e74cab678c",
+              "after_body_sha256": "c1317caf7bcab8218423b0a2d9fadbaf4a6dd1638c6ab44cf3f02b9e47426947",
+              "before_asset_sha256": null,
+              "after_asset_sha256": null,
+              "changes_rechecked": [
+                "첫 답에 국가형 75%와 경기도형 100%를 명시",
+                "주민등록 및 실거주를 원칙으로 한정하고 체류지 신고 외국인의 법상 특례 명시",
+                "기존 제도 지원 곤란 또는 국가형 지원 후 지속하는 위기를 적시",
+                "지원 예시는 생계·주거로 한정하고 의료비 삭제",
+                "소득 기준 충족과 지급 확정을 구분"
+              ],
+              "comparison_files": {
+                "before": "gyeonggi1644-body-before.txt",
+                "after": "gyeonggi1644-body.txt",
+                "first_chars": 445,
+                "final_chars": 428
+              },
+              "first_review_snapshot_correction": "동시 수정된 작업 파일을 가리켰던 최초 저장값을 독립 검수에서 읽은 445자 보존 원문과 대조하여 1차 파일의 원문·해시·글자 수를 정정했다. 1차 평점은 동일하다."
+            },
+            "final_verdict": "PASS",
+            "body_sha256": "c1317caf7bcab8218423b0a2d9fadbaf4a6dd1638c6ab44cf3f02b9e47426947",
+            "asset_sha256": null,
+            "score": 97,
+            "actual_review_calls": 2
+          }
+        },
+        "next_history_record": {
+          "program_id": "641000000164",
+          "notice_version": "2026-11-07",
+          "pattern": "P2",
+          "opening": "국가 긴급복지 소득기준을 넘으면 경기도형도 못 받나요?",
+          "structure": "국가/도형비교질문즉답→소득외필수조건→거주특례→보완대상과생계주거→상시방문과판정→사이트확인경로",
+          "media_turn": "TEXT"
+        }
+      },
+      "full_delay_window_covered": false,
+      "revalidate_after": "2026-11-26T18:00:00+09:00",
+      "revalidate_before": "2026-11-27T16:00:00+09:00"
     }
   ]
 }
