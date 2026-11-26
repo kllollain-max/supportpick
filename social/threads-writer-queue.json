@@ -14012,8 +14012,8 @@
       "benefit_id": "641000000164",
       "source_fingerprint": "e61f9dd27dfb52098fb4c6f9df2577889a10b16f9b8ee0eab5ca7c3ff03d1e20",
       "source_generation": "gov24-45711701521-1",
-      "prepared_at": "2026-11-26T16:54:25.208147+09:00",
-      "expires_at": "2026-11-27T16:54:25.208147+09:00",
+      "prepared_at": "2026-11-26T18:14:39.119648+09:00",
+      "expires_at": "2026-11-27T18:14:39.119648+09:00",
       "asset_sha256": null,
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -14043,36 +14043,48 @@
               "source_id": "641000000164",
               "source_ref": "https://www.gg.go.kr/welfarehotline/contents/contents.do?ciIdx=1423&menuId=3895",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-26T16:54:00+09:00",
+              "verified_at": "2026-11-26T18:14:39.119648+09:00",
               "claims_supported": [
-                "도형100%소득/지역별재산·금융/실직·휴폐업등위기/생계·주거지원/151행상담접수창구직접확인"
+                "도형100%소득/지역별재산·금융/실직·휴폐업등위기/생계·주거지원/151행상담접수창구직접확인",
+                "After18KST actual current official body rechecked; same conditional eligibility/consultation facts remain. Numeric amount/term discrepancies excluded from approved text."
               ]
             },
             {
               "source_id": "641000000164",
               "source_ref": "https://housing.gg.go.kr/html/24404.do",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-26T16:54:00+09:00",
+              "verified_at": "2026-11-26T18:14:39.119648+09:00",
               "claims_supported": [
-                "94~105행기존제도로지원받기어렵거나국가형지원후위기지속가정,경기도주민등록실거주원칙및체류지신고외국인특례,위기1년,307~309행요청후현장확인·필요성인정후지원"
+                "94~105행기존제도로지원받기어렵거나국가형지원후위기지속가정,경기도주민등록실거주원칙및체류지신고외국인특례,위기1년,307~309행요청후현장확인·필요성인정후지원",
+                "After18KST actual current official body rechecked; same conditional eligibility/consultation facts remain. Numeric amount/term discrepancies excluded from approved text."
               ]
             },
             {
               "source_id": "641000000164",
               "source_ref": "https://www.gimpo.go.kr/portal/contents.do?key=1329",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-26T16:54:00+09:00",
+              "verified_at": "2026-11-26T18:14:39.119648+09:00",
               "claims_supported": [
-                "2026현재안내1124~1159행위기1년/생계주거/소득100가구별기준확인.금액단위상충부분은게시하지않음"
+                "2026현재안내1124~1159행위기1년/생계주거/소득100가구별기준확인.금액단위상충부분은게시하지않음",
+                "After18KST actual current official body rechecked; same conditional eligibility/consultation facts remain. Numeric amount/term discrepancies excluded from approved text."
               ]
             },
             {
               "source_id": "641000000164",
-              "source_ref": "https://web1.gg.go.kr/contents/contents.do?ciIdx=1445&menuId=3242",
+              "source_ref": "https://www.gg.go.kr/welfarehotline/contents/contents.do?ciIdx=1422&menuId=3894",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-26T16:54:00+09:00",
+              "verified_at": "2026-11-26T18:14:39.119648+09:00",
               "claims_supported": [
-                "독립검수자실제열람1705~1714행국가형기준중위소득75%이하직접확인.부모는동일URLopen했으나특정본문재조회timeout이므로부모직접본문확인으로꾸미지않음"
+                "Actual national75% official body51 verified. Replaces reliance on timed-out national duplicate URL for this recheck."
+              ]
+            },
+            {
+              "source_id": "641000000164",
+              "source_ref": "https://www.gg.go.kr/welfarehotline/welfarehotline/welfarehotline_complaint_list.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-26T18:14:39.119648+09:00",
+              "claims_supported": [
+                "Current public official list shows Nov25 program-specific eligibility consultations processed, Nov26 current handling. Public list only; no private complaint opened, no individual data retained. Confirms consultation operation, not available funds or award."
               ]
             }
           ],
@@ -14093,8 +14105,7 @@
             "원문정부24도구접근불가.2026도·시공식본문현재사업안내와원본API상시신청대조.",
             "PDFweboctet-stream미지원,CLI503총2시도후종료. PDF본문을열람근거로쓰지않음.",
             "현재수집본은내일16시까지신선하지않아실제발송시최신완전세대필수.",
-            "24시간상한:내일16시정각은유효하나16~18전체창은오늘18시이후실제공식/접수/최신완전본재대조후CAS갱신필수.날짜만바꾸지않음.",
-            "현재16시원고미예약/실패미확정. 실제16시결과따라이후미예약미디어교대/우선순위재검증필수."
+            "지역별잔여예산과개인지급확정은미확인. 공식현재상담처리와2026조건을대조했으며본문은자격상담안내에한정. 실제발송시최신접수/공식변경다시확인."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -14467,9 +14478,10 @@
           "media_turn": "TEXT"
         }
       },
-      "full_delay_window_covered": false,
+      "full_delay_window_covered": true,
       "revalidate_after": "2026-11-26T18:00:00+09:00",
-      "revalidate_before": "2026-11-27T16:00:00+09:00"
+      "revalidate_before": "2026-11-27T16:00:00+09:00",
+      "expiry_revalidated_at": "2026-11-26T18:14:39.119648+09:00"
     }
   ]
 }
