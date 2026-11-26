@@ -39,6 +39,18 @@ def material_hash(row):
     return hashlib.sha256(payload({k: row.get(k) for k in MATERIAL_FIELDS}).encode()).hexdigest()
 
 
+def editorial_modified(guide, current):
+    """Authored content date is separate from source verification and expiry."""
+    value = (guide or {}).get('contentModifiedAt')
+    if not isinstance(value, str) or not re.fullmatch(r'\d{4}-\d{2}-\d{2}', value):
+        return None
+    try:
+        day = datetime.strptime(value, '%Y-%m-%d').date()
+    except ValueError:
+        return None
+    return value if day <= current.astimezone(KST).date() else None
+
+
 def benefit_path(sid):
     if not valid_id(sid) or sid in {'__proto__', 'prototype', 'constructor'}:
         raise ValueError('unsafe_benefit_id')
@@ -472,7 +484,7 @@ def write_details(output, rows, previous, base, registry, blogs, feed_status, cu
         if reasons:
             held[row['id']] = reasons
         elif base:
-            modified = max(filter(None, [TEMPLATE_MODIFIED, source_date(row), guide['reviewedAt'][:10] if guide else None, min(CLASSIFICATION_MODIFIED,current.astimezone(KST).date().isoformat()) if classification_difference(row) else None, min(IDENTITY_METADATA_MODIFIED,current.astimezone(KST).date().isoformat()) if repeated or malformed_amounts(row) else None]))
+            modified = max(filter(None, [TEMPLATE_MODIFIED, source_date(row), editorial_modified(guide, current), guide['reviewedAt'][:10] if guide else None, min(CLASSIFICATION_MODIFIED,current.astimezone(KST).date().isoformat()) if classification_difference(row) else None, min(IDENTITY_METADATA_MODIFIED,current.astimezone(KST).date().isoformat()) if repeated or malformed_amounts(row) else None]))
             if archived_round(row, current):
                 modified = max(modified, min(ARCHIVE_REVIEWED, current.astimezone(KST).date().isoformat()))
             if row['id'] in previous and material_hash(previous[row['id']])!=material_hash(row) and source_date(previous[row['id']])==source_date(row):
