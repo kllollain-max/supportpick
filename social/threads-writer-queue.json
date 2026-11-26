@@ -14501,8 +14501,8 @@
       "benefit_id": "999000000005",
       "source_fingerprint": "86f0216017673d9dea82d52389f0cbe411cbd38a2d870ab7c6359b3184fd2e2f",
       "source_generation": "gov24-45801560315-1",
-      "prepared_at": "2026-11-26T20:15:00.513417+09:00",
-      "expires_at": "2026-11-27T20:15:00.513417+09:00",
+      "prepared_at": "2026-11-26T22:14:12.802098+09:00",
+      "expires_at": "2026-11-27T22:14:12.802098+09:00",
       "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -14532,54 +14532,63 @@
               "source_id": "999000000005",
               "source_ref": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032427053",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-26T20:15:00.513417+09:00",
+              "verified_at": "2026-11-26T22:14:12.802098+09:00",
               "claims_supported": [
-                "현행2026.9.18법63조22~28직접열람:실업신고후질병취업불가수급자격자,구직급여일액대체,잔여지급일수한도,지급정지와법정보상급여제외.개인별청구요건내현재신청가능."
+                "22시이후실제재대조. 현행2026.9.18법63조22~28:실업신고후취업불가,일액대체,남은일수한도,지급정지와보상급여제외.개인별요건내신청가능."
               ]
             },
             {
               "source_id": "999000000005",
               "source_ref": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1021785653",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-26T20:15:00.513417+09:00",
+              "verified_at": "2026-11-26T22:14:12.802098+09:00",
               "claims_supported": [
-                "현행2026.9.18시행령82조22~27직접열람:취업불가사유해소14일/그취업불가기간중수급기간종료면종료30일/불가항력해소7일/청구서와증명서/본인또는대리인제출.개인별법정기한내신청가능."
+                "22시이후실제재대조. 현행2026.9.18시행령82조22~27:취업불가사유해소14일,취업불가기간중수급기간종료면종료30일,불가항력해소7일.청구서와증명서,관할기관제출.개인별법정기한내현재청구가능."
               ]
             },
             {
               "source_id": "999000000005",
               "source_ref": "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001204",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-26T20:15:00.513417+09:00",
+              "verified_at": "2026-11-26T22:14:12.802098+09:00",
               "claims_supported": [
-                "고용부FAQ105~106행직접:7일이상질병부상,진단서소견서와고용센터방문,구직급여일액동일대체지급.2022작성은현행법/2026동일ID원본과대조."
+                "22시이후실제재대조. 105~106직접열람:7일이상질병부상,진단서/소견서고용센터방문,구직급여일액대체.2022FAQ를현행법과대조."
               ]
             },
             {
               "source_id": "999000000005",
               "source_ref": "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001205",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-26T20:15:00.513417+09:00",
+              "verified_at": "2026-11-26T22:14:12.802098+09:00",
               "claims_supported": [
-                "고용부105~106직접:7일이상기간상병급여,그외기간구직활동필요.질병부상으로범위한정."
+                "22시이후실제재대조. 105~106직접열람:7일이상질병부상기간,그외구직활동원칙."
               ]
             },
             {
               "source_id": "999000000005",
-              "source_ref": "https://easylaw.go.kr/CSP/OnhunqueansInfoRetrieve.laf?onhunqnaAstSeq=82&onhunqueSeq=3866",
+              "source_ref": "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000000747",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-26T20:15:00.513417+09:00",
+              "verified_at": "2026-11-26T22:14:12.802098+09:00",
               "claims_supported": [
-                "법제처141~152직접:신고전취업불가는상병급여아닌수급기간연장.2025기준자료는현행2026법과대조."
+                "22시이후실제재대조. 105직접열람:이직후계속취업불가는수급기간연기,인정후발생질병은상병급여선택.신고전취업불가는연장확인이라는기존문장지지.2021FAQ를현행법과대조."
+              ]
+            },
+            {
+              "source_id": "999000000005",
+              "source_ref": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1029336825",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-26T22:14:12.802098+09:00",
+              "claims_supported": [
+                "22시이후실제재대조. 현행2026.9.18법48조22~29직접열람:취업불가사유신고에따른수급기간연장.개인신청승인보장아님."
               ]
             },
             {
               "source_id": "999000000005",
               "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
               "access_method": "UPSTREAM_VERIFIED",
-              "verified_at": "2026-11-26T20:15:00.513417+09:00",
+              "verified_at": "2026-11-26T22:14:12.802098+09:00",
               "claims_supported": [
-                "현재main실제PNG GET/SHA와기존승인image-review일치. 부모와독립검수자가이번원본및360px실제열람:한글/대비/잘림/깨짐/본문일치/과밀/권리/공식홍보물오인PASS. 범용자체브랜드,금액날짜사업조건주장없음.혜택별승인자산없어기존_rotation사용."
+                "22시이후실제PNG GET bytes/SHA현재main image-review와대조일치.기존20시실물/360px시각검수보존,이번새시각검수아님.금액날짜없는자체브랜드rotation."
               ]
             }
           ],
@@ -14599,8 +14608,7 @@
             "출산특례45일은이글의질병부상범위밖,출산자에게일반화하지않음",
             "개인별법정기한내청구제도이며모집마감/확정지급/전국민지급아님",
             "실제발송시최신완전수집세대필수,현재19:36본을내일20시까지신선하다고가정하지않음",
-            "24시간상한으로내일20~22전체창미충족.오늘22시이후공식/현재청구상태/최신완전본/이미지SHA실재대조후CAS갱신필수",
-            "현재20시미예약이며아직실패확정아님.실제결과따라미예약미디어순서재검증필수"
+            "22시이후현행법/현재청구요건/최신완전snapshot/이미지SHA실제재대조로내일20~22전체창만료예방갱신.실제발송은그시점최신완전세대와공식변경재확인필수.현재19:36본을내일20시신선하다고가정하지않음."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -15153,9 +15161,10 @@
           "media_turn": "IMAGE"
         }
       },
-      "full_delay_window_covered": false,
+      "full_delay_window_covered": true,
       "revalidate_after": "2026-11-26T22:00:00+09:00",
-      "revalidate_before": "2026-11-27T20:00:00+09:00"
+      "revalidate_before": "2026-11-27T20:00:00+09:00",
+      "expiry_revalidated_at": "2026-11-26T22:14:12.802098+09:00"
     }
   ]
 }
