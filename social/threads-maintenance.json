@@ -14,6 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "45762036386",
     "45751040449",
     "45748825901",
     "45738431503",
@@ -65,8 +66,7 @@
     "45277137519",
     "45267892781",
     "45249316402",
-    "45227625787",
-    "45206247031"
+    "45227625787"
   ],
   "last_health": {
     "unresolved_publications": 0,
@@ -5951,18 +5951,35 @@
       "conclusion": "success",
       "updated_at": "2026-11-26T03:25:47Z",
       "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e"
+    },
+    "45762036386": {
+      "run_id": "45762036386",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-26T05:30:36Z",
+      "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-26T13:41:38.294243+09:00",
-    "result": "no_update",
-    "maintenance_previous_blob_sha": "f19d96f81635ffc91eda4cd4384bc88b5c9b9de7",
+    "checked_at": "2026-11-26T15:09:45.786887+09:00",
+    "result": "expiry_prevention_revalidated",
+    "maintenance_previous_blob_sha": "fc2d5df23dc589c3ed2cf7dfddcb1bca4d97eb26",
     "current_main_sha": null,
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
     "publication_ledger_sha": "a260e5a91f0fd6605255156a13995520ba6b7bcb",
-    "queue_blob_sha": "935a25f9e634ab4f1923a7d8185bdbaf76357312",
-    "changed_run_versions": [],
+    "queue_blob_sha": "036571d81a8324eb47af68e6d91b89eef0e21fb1",
+    "changed_run_versions": [
+      {
+        "run_id": "45762036386",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-26T05:30:36Z",
+        "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e"
+      }
+    ],
     "active_target_runs": [],
     "run_pagination": {
       "per_page": 100,
@@ -6004,8 +6021,8 @@
       "source_count": 10898,
       "complete": true,
       "actual_application_status_not_inferred_from_collection": true,
-      "new_candidate_original_official_pages_read": false,
-      "original_notice_rereview_this_check": false,
+      "new_candidate_original_official_pages_read": true,
+      "original_notice_rereview_this_check": true,
       "public_verification_artifact_id": 15070021281,
       "public_verification_digest": "sha256:1f9f71df490f4a9e4c8580607afacd0b3d2cbc67acc9225327afabf99b50b0a3",
       "public_verification": {
@@ -6042,7 +6059,7 @@
       }
     },
     "writer": {
-      "checked_at": "2026-11-26T13:41:38.294243+09:00",
+      "checked_at": "2026-11-26T15:09:45.786887+09:00",
       "ready": 4,
       "future24h_ready": 4,
       "new_drafts": 0,
@@ -6056,7 +6073,6 @@
           "char_count": 459,
           "expires_at": "2026-11-26T18:54:53.927829+09:00",
           "full_delay_window_valid": true,
-          "full_delay_window_error": null,
           "source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true
         },
@@ -6068,7 +6084,6 @@
           "char_count": 395,
           "expires_at": "2026-11-26T22:25:37.852042+09:00",
           "full_delay_window_valid": true,
-          "full_delay_window_error": null,
           "source_fresh_at_slot": true,
           "source_recheck_required_at_publish": true
         },
@@ -6080,7 +6095,6 @@
           "char_count": 444,
           "expires_at": "2026-11-27T10:02:35.655519+09:00",
           "full_delay_window_valid": true,
-          "full_delay_window_error": null,
           "source_fresh_at_slot": false,
           "source_recheck_required_at_publish": true
         },
@@ -6090,9 +6104,8 @@
           "pattern": "P8",
           "media_turn": "IMAGE",
           "char_count": 433,
-          "expires_at": "2026-11-27T13:20:31.524401+09:00",
-          "full_delay_window_valid": false,
-          "full_delay_window_error": "writer_draft_expired_or_future",
+          "expires_at": "2026-11-27T15:09:45.786887+09:00",
+          "full_delay_window_valid": true,
           "source_fresh_at_slot": false,
           "source_recheck_required_at_publish": true
         }
@@ -6111,8 +6124,8 @@
       "lease": null,
       "new_posts": 0,
       "new_incidents": 0,
-      "new_metrics": 0,
-      "observations": 165,
+      "new_metrics": 3,
+      "observations": 168,
       "new_evaluation": false,
       "astra_review_invocations": 0,
       "existing_Astra_review_preserved": true,
@@ -6124,39 +6137,107 @@
           "path": "social/images/benefit-guide-1.png",
           "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
           "actual_download_sha_matches_current_review": true,
-          "checked_at": "2026-11-26T13:41:45.565091+09:00",
+          "checked_at": "2026-11-26T15:09:45.794078+09:00",
           "new_visual_inspection": false
         },
         {
           "path": "social/images/benefit-guide-2.png",
           "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
           "actual_download_sha_matches_current_review": true,
-          "checked_at": "2026-11-26T13:41:53.081883+09:00",
+          "checked_at": "2026-11-26T15:09:45.802512+09:00",
           "new_visual_inspection": false
         }
       ],
-      "expiry_prevention_revalidations": 0
+      "expiry_prevention_revalidations": 1
     },
     "metrics": {
-      "run_id": "45748825901",
+      "run_id": "45762036386",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-26T03:25:47Z",
+      "updated_at": "2026-11-26T05:30:36Z",
       "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
-      "job_id": 139671379046,
-      "artifact_id": 15084891917,
-      "artifact_digest": "sha256:28ae988c62609a90d6b8735f92074e47c1a816cc511d887da2bb4417cd05f506",
+      "job_id": 139714059115,
+      "artifact_id": 15089919782,
+      "artifact_digest": "sha256:bd390f485b40b937758bb695dd94d6e4f5113f010f0a7fe190a39025883c434e",
       "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": false,
-      "job_logs_retrieved_this_check": false,
-      "observed_at": "2026-11-26T03:25:42.808442+00:00",
-      "records": [],
-      "due_count": 0,
-      "success_count": 0,
-      "new_observations": 0,
-      "new_observation_keys": [],
-      "total_observations": 165,
+      "artifact_redownloaded_this_check": true,
+      "job_logs_retrieved_this_check": true,
+      "observed_at": "2026-11-26T05:30:32.027285+00:00",
+      "records": [
+        {
+          "post_id": "18100168118443439",
+          "published_at": "2026-11-19T12:44:40.760361+09:00",
+          "observed_at": "2026-11-26T05:30:32.027285+00:00",
+          "window_hours": 168,
+          "elapsed_hours": 169.76424081222223,
+          "timing": "late_available_check",
+          "within_target_tolerance": true,
+          "not_backcalculated": true,
+          "metrics": {
+            "views": 65,
+            "likes": 1,
+            "comments": 0,
+            "reposts": 0,
+            "shares": 0,
+            "saves": null,
+            "profile_visits": null,
+            "new_followers": null,
+            "site_visits": null
+          }
+        },
+        {
+          "post_id": "18388999600236313",
+          "published_at": "2026-11-23T12:48:36.614928+09:00",
+          "observed_at": "2026-11-26T05:30:32.027285+00:00",
+          "window_hours": 72,
+          "elapsed_hours": 73.69872565472222,
+          "timing": "late_available_check",
+          "within_target_tolerance": true,
+          "not_backcalculated": true,
+          "metrics": {
+            "views": 27,
+            "likes": 2,
+            "comments": 0,
+            "reposts": 0,
+            "shares": 0,
+            "saves": null,
+            "profile_visits": null,
+            "new_followers": null,
+            "site_visits": null
+          }
+        },
+        {
+          "post_id": "18112545461459863",
+          "published_at": "2026-11-25T12:50:17.357375+09:00",
+          "observed_at": "2026-11-26T05:30:32.027285+00:00",
+          "window_hours": 24,
+          "elapsed_hours": 25.670741641666666,
+          "timing": "late_available_check",
+          "within_target_tolerance": true,
+          "not_backcalculated": true,
+          "metrics": {
+            "views": 10,
+            "likes": 1,
+            "comments": 0,
+            "reposts": 0,
+            "shares": 0,
+            "saves": null,
+            "profile_visits": null,
+            "new_followers": null,
+            "site_visits": null
+          }
+        }
+      ],
+      "due_count": 3,
+      "success_count": 3,
+      "new_observations": 3,
+      "new_observation_keys": [
+        "18100168118443439:168h",
+        "18388999600236313:72h",
+        "18112545461459863:24h"
+      ],
+      "total_observations": 168,
       "new_evaluation_report_due": false,
       "weights_unchanged": true
     },
@@ -6166,9 +6247,9 @@
       "maintenance_new_posts": 0,
       "new_recovery_this_check": false,
       "new_failure_this_check": false,
-      "reason": "84 complete verified publications, no pending or lease. All four existing future READY pass approved-body hash, nominal and candidate ranking checks. Existing first3 full2h windows pass. Known Nov27 noon end-of-window expires remains recorded; Nov26 14 revalidation condition not yet reached, so no date-only extension. Current approved image bytes redownloaded and SHA matched; no new visual review. All target run versions unchanged. Latest complete source reverified from cached artifact. No queue mutation, draft, new model call, dispatch, rerun or POST."
+      "reason": "84 complete verified publications, no pending/lease; actual official/source/image comparisons completed after14KST. Medical noon metadata renewed under max24h while approved body/media/pattern/independent review remain exact. All four nominal and full2h windows pass. New3 official metrics imported without backcalculation; no publishing POST/dispatch/rerun/code change."
     },
-    "next_condition": "Preserve Nov26 16 TEXT/P5,20 IMAGE/P1 and Nov27 08 TEXT/P5,12 IMAGE/P8. Nov27 noon entry needs actual official/current-status/source/image recheck after Nov26 14 and CAS renewal before dispatch to cover full12-14 window under max24h. Do not date-only renew. Actual sender must use newest complete fresh source, maintain body/asset hashes and block expired draft. No backfill/rerun/testpost.",
+    "next_condition": "Preserve all four approved manuscripts. Nov27 noon full12-14 window now covered by actual15KST source/official/image revalidation. Actual sender must still verify newest fresh complete generation and exact reviewed body/asset hashes. No past-slot recovery or test publication.",
     "publication": {
       "run_id": "45751040449",
       "run_attempt": 1,
@@ -6226,7 +6307,7 @@
       "previous_remote_evidence_preserved": true
     },
     "official_review_recovery": {
-      "new_official_page_review_this_check": false,
+      "new_official_page_review_this_check": true,
       "new_Astra_calls": 0,
       "existing_Astra_reviews_preserved": true,
       "image_redownloaded_this_check": true,
@@ -6243,14 +6324,14 @@
         "path": "social/images/benefit-guide-1.png",
         "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
         "actual_download_sha_matches_current_review": true,
-        "checked_at": "2026-11-26T13:41:45.565091+09:00",
+        "checked_at": "2026-11-26T15:09:45.794078+09:00",
         "new_visual_inspection": false
       },
       {
         "path": "social/images/benefit-guide-2.png",
         "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
         "actual_download_sha_matches_current_review": true,
-        "checked_at": "2026-11-26T13:41:53.081883+09:00",
+        "checked_at": "2026-11-26T15:09:45.802512+09:00",
         "new_visual_inspection": false
       }
     ],
@@ -6435,7 +6516,7 @@
         72,
         168
       ],
-      "post_observations": 165,
+      "post_observations": 168,
       "account_profile_home_followers_shares_30d_read_available": false,
       "unavailable_not_zero": true,
       "completion_dwell_cta_attribution_not_measured": true,
@@ -6449,7 +6530,472 @@
       "receipt_at": "2026-11-26T12:47:29.8911823+09:00",
       "original_two_hour_window_pass": true
     },
-    "next_condition_previous": "Existing publisher consumes Nov26 12 IMAGE/P6,16 TEXT/P5,20 IMAGE/P1,Nov27 08 TEXT/P5. Sender must verify newest fresh complete source and exact approved hashes/reviews at actual send. Cached Nov26 07:22 source is not certified fresh for Nov27 08. Preserve daily4/rotation/CAS/pending controls; no past-slot dispatch/rerun/test posts."
+    "next_condition_previous": "Existing publisher consumes Nov26 12 IMAGE/P6,16 TEXT/P5,20 IMAGE/P1,Nov27 08 TEXT/P5. Sender must verify newest fresh complete source and exact approved hashes/reviews at actual send. Cached Nov26 07:22 source is not certified fresh for Nov27 08. Preserve daily4/rotation/CAS/pending controls; no past-slot dispatch/rerun/test posts.",
+    "expiry_prevention_revalidation": {
+      "checked_at": "2026-11-26T15:09:45.786887+09:00",
+      "status": "RESOLVED_ACTUAL_OFFICIAL_REREVIEW_FULL_WINDOW_COVERED",
+      "previous_entry": {
+        "slot": "2026-11-27T12:00:00+09:00",
+        "benefit_id": "GMW000000210",
+        "source_fingerprint": "422af02f4af6a4a7caed6e6b3c04151d2c0a3b185f01d05bb6a89ff5527630cb",
+        "source_generation": "gov24-45711701521-1",
+        "prepared_at": "2026-11-26T13:20:31.524401+09:00",
+        "expires_at": "2026-11-27T13:20:31.524401+09:00",
+        "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+        "writer": {
+          "schema_version": "supportpick.writer.v1",
+          "status": "READY",
+          "selected_program_id": "GMW000000210",
+          "post_text": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?\n아니요. 이 사업의 진료비·약제비 감면은 만 65세 이상 등록환자가 대상이에요.\n\n주민등록상 광명시에 사는 만 30세 이상 고혈압 또는 당뇨병 환자는 연중 등록할 수 있어요.\n\n만 30~64세: 교육·상담과 진료일 알림을 이용해요.\n만 65세 이상: 일반 안내 기준 월 1회 진료비 1인당 1,500원, 약제비 질병당 2,000원을 감면해요. 실제 본인부담금과 자격에 따라 지원액이 달라질 수 있어요.\n\n참여 의료기관에서 설명을 듣고 등록관리 동의서를 제출해요. 약제비 감면은 처방전을 등록관리 약국에 내야 적용돼요.\n\n프로필에서 ‘고혈압·당뇨병 등록관리서비스’를 찾으면 19개 사업지역과 방문 신청방법을 대조할 수 있어요. 다른 지역의 지원 연령·금액은 관할 보건소에 확인해요.\n\n자세한 사항은 프로필링크 확인",
+          "draft_text": null,
+          "reply_texts": [],
+          "media": {
+            "turn": "IMAGE",
+            "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+            "check": "MATCHED",
+            "image_copy": null,
+            "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+          },
+          "review": {
+            "planned_at": "2026-11-27T12:00:00+09:00",
+            "application_status": "ALWAYS",
+            "reader": "광명거주30세이상고혈압·당뇨병환자와가족,특히60세의의료비지원판단",
+            "central_message": "등록30세이상과의료비감면65세이상은다르며광명공식연령별기준과신청경로확인",
+            "pattern": "P8",
+            "selection_reason": "동일ID원본누적32167.최근20동일사업없음,기존미큐/미게시중최상위검증후보.상위HOLD/SKIP판단출처및기예약사업제외보존.65세미만등록과약값감면차이가가족의실제판단정보.지역금액차이를숨기지않고광명공식예시로범위한정.",
+            "interest_basis": "OBSERVED_METRICS",
+            "duplicate_check": "CHECKED",
+            "evidence": [
+              {
+                "source_id": "GMW000000210",
+                "source_ref": "https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-26T13:16:50+09:00",
+                "claims_supported": [
+                  "광명주민30세이상고혈압또는당뇨병등록대상·연중·30~64본인부담지원없음·65세이상월1회진료인당1500/약제질병당2000,등록기관과처방전등록약국,동의서직접본문236~285행확인"
+                ]
+              },
+              {
+                "source_id": "GMW000000210",
+                "source_ref": "https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-26T13:16:50+09:00",
+                "claims_supported": [
+                  "질병관리청현재19개사업지역·30세이상등록·65세이상의료비감면·지역별연령금액차이·교육상담과알림·참여의료기관신청직접236~272행"
+                ]
+              },
+              {
+                "source_id": "GMW000000210",
+                "source_ref": "https://www.korea.kr/news/policyNewsView.do?newsId=148972869",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-26T13:16:50+09:00",
+                "claims_supported": [
+                  "2026-10-01질병관리청직접안내250~274행:사업중단아니며현재19지역,2027하반기확대예정.현재8만원지급으로표현하지않음"
+                ]
+              },
+              {
+                "source_id": "GMW000000210",
+                "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                "access_method": "UPSTREAM_VERIFIED",
+                "verified_at": "2026-11-26T13:20:31.524401+09:00",
+                "claims_supported": [
+                  "현재mainPNG실제GET과기존승인image-review SHA재대조일치. 이번부모와독립검수자가원본및360px실제열람.명칭/한글/잘림/깨짐/대비/과밀/본문일치/권리/정부공식홍보물오인검수PASS.범용승인자체브랜드이며사업별금액·날짜·대상주장없음. 실제교대투영에따라guide2초기검수에서guide1최종묶음재검수로수정."
+                ]
+              }
+            ],
+            "checks": {
+              "facts": "PASS",
+              "current_status": "PASS",
+              "eligibility_and_units": "PASS",
+              "cta_and_no_links": "PASS",
+              "length": "PASS",
+              "media": "PASS"
+            },
+            "char_count": 433,
+            "count_method": "python_len_including_spaces_and_newlines",
+            "missing_info": [],
+            "hold_reasons": [],
+            "warnings": [
+              "개인자격별최종감면액은참여기관확인",
+              "2027전환혜택은현재수혜로쓰지않음",
+              "PDF특별한도상세본문열람timeout으로900원숫자미사용",
+              "현재수집본은내일12시까지신선하지않으므로실제발송시최신완전세대필수",
+              "24h상한으로현재준비본은내일14시전체창끝까지유효하지않음:오늘14시이후공식/접수/이미지SHA/최신완전본실재대조후CAS갱신필수.날짜만변경금지"
+            ],
+            "reach_editorial": {
+              "policy_id": "supportpick-threads-reach-v1-20261109",
+              "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+              "core_question": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+              "reader_scope": "광명거주30세이상고혈압·당뇨병환자와가족,특히60세의의료비지원판단",
+              "angles": [
+                "매월약값부담",
+                "등록자격과의료비지원연령구분",
+                "의료기관/약국등록절차"
+              ],
+              "chosen_angle": "60세생활질문즉답→연령별혜택목록→참여방법",
+              "opening_candidates": [
+                "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+                "광명에 사는 65세 고혈압 환자, 약값 감면은 어디서 신청할까요?",
+                "고혈압·당뇨병 등록과 약값 감면은 나이 조건이 같을까요?"
+              ],
+              "chosen_opening": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+              "opening_type": "구체적나이생활질문형",
+              "cohort": null,
+              "comparison_eligible": false,
+              "comparison_exclusion": "v3 질문형/연령목록동시편집은순수A/B와조건이다름",
+              "selection_reason": "동일ID원본누적32167.최근20동일사업없음,기존미큐/미게시중최상위검증후보.상위HOLD/SKIP판단출처및기예약사업제외보존.65세미만등록과약값감면차이가가족의실제판단정보.지역금액차이를숨기지않고광명공식예시로범위한정.",
+              "history_posts_checked": 20,
+              "profile_route": {
+                "profile": "https://www.threads.com/@hid_1004",
+                "visible_link_target": "https://kllollain-max.github.io/supportpick/",
+                "profile_target_checked_at": "2026-11-26T13:17:54+09:00",
+                "home_search": "고혈압·당뇨병 등록관리서비스",
+                "results": 1,
+                "actual_search_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/GMW000000210/",
+                "redirect_click_completed": false,
+                "limitation": "오늘프로필공개표시목적지확인,링크클릭단계가입오버레이로리디렉션완료미확인. 실제홈검색→결과클릭→상세대상/19지역/신청방법도착은확인.",
+                "transient_site_error": "InitialGitHubUnicornpage recovered with one reload; no code/site modification."
+              },
+              "search_evidence": "공식검색표현 고혈압·당뇨병등록관리/65세/진료비약제비. 실측검색량없음.",
+              "observed_metrics_context": "84완료게시165공식관측.7/30계정프로필/홈/완독·체류·CTA미측정0아님,성과효과단정없음.",
+              "master_full_used": true
+            },
+            "astra_final_review": {
+              "requested_model": "gpt-6.2-astra",
+              "actual_model": "미확인",
+              "invoked_model_identifier": "gpt-6.2-astra",
+              "invocation_identifier_source": "Successful parent explicit model selection; finer identity unavailable",
+              "fallback_reason": null,
+              "version": "3.0",
+              "independent_agent": "/root/medical_final_review",
+              "first_review": {
+                "version": "supportpick review v3 / first",
+                "model_id": "미확인",
+                "reviewed_at": "2026-11-26T13:17:20.624997+09:00",
+                "slot": "2026-11-27T12:00:00+09:00",
+                "body_sha256": "291be486e3cd140cedc1682c259de2dbfceed86702fe3fce5da1316bb06519b0",
+                "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                "rules_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+                "operations_sha256": "e8edca3b7b3066acc88a71281e06fbbf283751fbc64d70b8d489a60e47bc37c5",
+                "pattern": "P8",
+                "media": "IMAGE",
+                "scores": {
+                  "첫문장": [
+                    13,
+                    15,
+                    "첫 질문 바로 아래 65세 기준 답변. 최근 11/25 16·20시와 같은 질문 틀"
+                  ],
+                  "관심의도": [
+                    15,
+                    15,
+                    "광명 만 60세 약값이라는 생활 판단이 구체적"
+                  ],
+                  "정확성": [
+                    18,
+                    20,
+                    "연중 참여 문장에 만 30세 이상과 대상 질환 누락. 처방 약국 조건을 감면 범위에 한정할 필요"
+                  ],
+                  "완독": [
+                    13,
+                    15,
+                    "나이별 답 사이에 절차가 끼고 등록비 설명이 길다"
+                  ],
+                  "공유공감": [
+                    9,
+                    10,
+                    "부모·가족이 연령별 이용 차이를 전달 가능"
+                  ],
+                  "가치차별": [
+                    10,
+                    10,
+                    "등록비 지급주체와 약제비 단위 구분"
+                  ],
+                  "모바일": [
+                    4,
+                    5,
+                    "P8 대상별 두 줄 목록 필요"
+                  ],
+                  "이미지완성": [
+                    5,
+                    5,
+                    "원본과 360px에서 실제 제목·하단 CTA 가독. 금액·지역·기한 표기 없음"
+                  ],
+                  "프로필": [
+                    5,
+                    5,
+                    "상세에서 확인 가능한 19곳과 방문 신청방법 제시"
+                  ]
+                },
+                "total": 92,
+                "decision": "수정 후 재검수 / 현재 발행 차단",
+                "char_count": 455,
+                "count_method": "Unicode code points, 공백·줄바꿈 포함",
+                "checks": {
+                  "single_body": 1,
+                  "replies": 0,
+                  "end_cta": true,
+                  "cta_count": 1,
+                  "links_domains_hashtags_obfuscated": "없음 / 직접 읽음",
+                  "limit500": true,
+                  "first_question_then_answer": true,
+                  "eligibility": "만 30세 이상 등록 대상 명시 필요",
+                  "status": "ALWAYS 광명 연중",
+                  "units": "월 1회 인당/질병당",
+                  "privacy_hype_guarantee": "없음",
+                  "history": "최근 실게시 20개 중 동일 사업 없음. 직전 5개 중 1회 P8. 수 있나요 틀 반복",
+                  "image": "원본/360px 모두 직접 열람. 동일 자산 해시 확인",
+                  "destination": "상위검수 오늘 홈 일시 오류 후 다시 로드, 사업명 검색결과 1건→상세 클릭. 프로필 표시는 11/25 08:33 근거. 오늘 Threads 리디렉션 미확인"
+                },
+                "sources": {
+                  "광명시": "직접 열람 https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+                  "질병관리청": "직접 열람 https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+                  "정책브리핑": "직접 열람 https://www.korea.kr/news/policyNewsView.do?newsId=148972869 2027년 하반기 확대계획",
+                  "지침": "https://www.kdca.go.kr/bbs/kdca/55/304420/download.do 직접 열람 timeout. 900원 예외 원문 미확인, 확정 금액 추가 금지"
+                },
+                "selection": "상위 검수 기록 gov24-45711701521-1 완전행 10898개, GMW000000210 원본 누적 32167. 최근 실게시 84건·통계 관측 165개. 7/30일 프로필·홈·완독·체류·CTA 미측정",
+                "required_edits": [
+                  "광명시 주민등록 만 30세 이상 고혈압 또는 당뇨병 환자 명시",
+                  "두 연령대의 혜택을 인접한 줄로 배열하고 첫 문장은 기존 질문 틀을 변주",
+                  "등록약국 조건을 약제비 감면에 한정. 등록비 지급주체를 간결하게 표시"
+                ]
+              },
+              "intermediate_review": {
+                "version": "supportpick review v3 / final",
+                "model_id": "미확인",
+                "reviewed_at": "2026-11-26T13:18:27.199377+09:00",
+                "slot": "2026-11-27T12:00:00+09:00",
+                "body_sha256": "09caec61a73f3059e9b5648eaac8142cf04902c17c42bf309ab7d624864d89b8",
+                "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                "rules_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+                "operations_sha256": "e8edca3b7b3066acc88a71281e06fbbf283751fbc64d70b8d489a60e47bc37c5",
+                "pattern": "P8",
+                "media": "IMAGE",
+                "scores": {
+                  "첫문장": [
+                    15,
+                    15,
+                    "만 60세 실제 약값 질문 후 바로 아니요와 65세 기준"
+                  ],
+                  "관심의도": [
+                    15,
+                    15,
+                    "실제 독자가 자기 연령과 비용 절감을 바로 판단"
+                  ],
+                  "정확성": [
+                    20,
+                    20,
+                    "광명 주민등록·만 30세 이상·고혈압 또는 당뇨병·연중, 월 1회와 진료 1인/약제 질병별, 자격·실제부담 변동·등록약국을 정확히 명시"
+                  ],
+                  "완독": [
+                    14,
+                    15,
+                    "나이별 목록과 짧은 다음 단계. 65세 이상 문장이 다소 길다"
+                  ],
+                  "공유공감": [
+                    9,
+                    10,
+                    "다른 연령대 가족에게 전달하기 쉬움. 지역 밖은 개별 확인 필요"
+                  ],
+                  "가치차별": [
+                    10,
+                    10,
+                    "진료와 약제 감면 단위 및 수급 가능 연령을 구별"
+                  ],
+                  "모바일": [
+                    5,
+                    5,
+                    "짧은 문단에 연령을 줄 앞에 표시"
+                  ],
+                  "이미지완성": [
+                    5,
+                    5,
+                    "같은 SHA의 승인 원본과 360px 시각 대조, 가독·내용 일치"
+                  ],
+                  "프로필": [
+                    5,
+                    5,
+                    "사이트에서 찾을 이름과 확인 가능한 지역 목록·방문 신청방법 제시"
+                  ]
+                },
+                "total": 98,
+                "decision": "최종 편집 검수 PASS / READY. 운영상 전체 창 만료 갱신 별도 필요, 발행되지 않음.",
+                "char_count": 433,
+                "count_method": "Unicode code points, 공백·줄바꿈 포함",
+                "checks": {
+                  "single_body": 1,
+                  "replies": 0,
+                  "end_cta": true,
+                  "cta_count": 1,
+                  "links_domains_hashtags_obfuscated": "없음 / 직접 읽음",
+                  "limit500": true,
+                  "first_question_then_answer": true,
+                  "eligibility": "PASS 광명 연령·질환·주민등록과 등록 조건",
+                  "status": "ALWAYS 광명 연중",
+                  "units": "월 1회 인당/질병당",
+                  "privacy_hype_guarantee": "없음",
+                  "history": "최근 실게시 20개 동일사업 없음. 기존 수 있나요 문형 변주. 연령 두 줄 P8",
+                  "image": "원본/360px 모두 직접 열람. 동일 자산 해시 확인",
+                  "destination": "상위검수 11/26 13:17 KST 공개 프로필 표시 목적지 확인. 클릭 시 가입 오버레이, Threads→목적지 실제 리디렉션 완료 미확인. 별도로 홈→사업 검색→상세 도착. 첫 일시 오류 reload로 복구. 팔로워 표시 2는 7/30일 실적이 아님.",
+                  "content_verification": "본문 직접 읽음, 단독 본문 1·답글 0 원고 계약, 해시태그·도메인·우회 URL 없음, 현행/예정 혼동 없음"
+                },
+                "sources": {
+                  "광명시": "직접 열람 https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+                  "질병관리청": "직접 열람 https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+                  "정책브리핑": "직접 열람 https://www.korea.kr/news/policyNewsView.do?newsId=148972869 2027년 하반기 확대계획",
+                  "지침": "https://www.kdca.go.kr/bbs/kdca/55/304420/download.do 직접 열람 timeout. 900원 예외 원문 미확인, 확정 금액 추가 금지"
+                },
+                "selection": "상위 검수 기록 gov24-45711701521-1 완전행 10898개, GMW000000210 원본 누적 32167. 최근 실게시 84건·통계 관측 165개. 7/30일 프로필·홈·완독·체류·CTA 미측정",
+                "required_edits": [],
+                "operational_dependency": "24시간 유효기간. 11/27 12:00~14:00 KST 전체 창은 이 시점 준비분으로 포괄되지 않음. 11/26 14시 이후 공식자료·이미지 해시·완전 수집본과 대상 실제 존재 여부 재검수하고 최신 blob SHA로 조건부 큐 갱신 필요. 실제 예약·발행 별도."
+              },
+              "final_review": {
+                "version": "supportpick review v3 / final corrected asset",
+                "model_id": "미확인",
+                "reviewed_at": "2026-11-26T13:19:22.000921+09:00",
+                "slot": "2026-11-27T12:00:00+09:00",
+                "body_sha256": "09caec61a73f3059e9b5648eaac8142cf04902c17c42bf309ab7d624864d89b8",
+                "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+                "rules_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+                "operations_sha256": "e8edca3b7b3066acc88a71281e06fbbf283751fbc64d70b8d489a60e47bc37c5",
+                "pattern": "P8",
+                "media": "IMAGE",
+                "scores": {
+                  "첫문장": [
+                    15,
+                    15,
+                    "만 60세 실제 약값 질문 후 바로 아니요와 65세 기준"
+                  ],
+                  "관심의도": [
+                    15,
+                    15,
+                    "실제 독자가 자기 연령과 비용 절감을 바로 판단"
+                  ],
+                  "정확성": [
+                    20,
+                    20,
+                    "광명 주민등록·만 30세 이상·고혈압 또는 당뇨병·연중, 월 1회와 진료 1인/약제 질병별, 자격·실제부담 변동·등록약국을 정확히 명시"
+                  ],
+                  "완독": [
+                    14,
+                    15,
+                    "나이별 목록과 짧은 다음 단계. 65세 이상 문장이 다소 길다"
+                  ],
+                  "공유공감": [
+                    9,
+                    10,
+                    "다른 연령대 가족에게 전달하기 쉬움. 지역 밖은 개별 확인 필요"
+                  ],
+                  "가치차별": [
+                    10,
+                    10,
+                    "진료와 약제 감면 단위 및 수급 가능 연령을 구별"
+                  ],
+                  "모바일": [
+                    5,
+                    5,
+                    "짧은 문단에 연령을 줄 앞에 표시"
+                  ],
+                  "이미지완성": [
+                    5,
+                    5,
+                    "guide1 원본 및 360px 재검수. 금액·현금 지급 문구 없음. 브랜드·CTA 가독."
+                  ],
+                  "프로필": [
+                    5,
+                    5,
+                    "사이트에서 찾을 이름과 확인 가능한 지역 목록·방문 신청방법 제시"
+                  ]
+                },
+                "total": 98,
+                "decision": "최종 편집 검수 PASS / READY. 운영상 전체 창 만료 갱신 별도 필요, 발행되지 않음.",
+                "char_count": 433,
+                "count_method": "Unicode code points, 공백·줄바꿈 포함",
+                "checks": {
+                  "single_body": 1,
+                  "replies": 0,
+                  "end_cta": true,
+                  "cta_count": 1,
+                  "links_domains_hashtags_obfuscated": "없음 / 직접 읽음",
+                  "limit500": true,
+                  "first_question_then_answer": true,
+                  "eligibility": "PASS 광명 연령·질환·주민등록과 등록 조건",
+                  "status": "ALWAYS 광명 연중",
+                  "units": "월 1회 인당/질병당",
+                  "privacy_hype_guarantee": "없음",
+                  "history": "최근 실게시 20개 동일사업 없음. 기존 수 있나요 문형 변주. 연령 두 줄 P8",
+                  "image": "PASS. guide1 원본과 360px 직접 열람. 봉투·체크리스트·동전·싹과 브랜드 문구, 하단 CTA가 읽힘. 개별 지급액·질환·조건·기한 표기 없음. 감면형 본문과 상충 없음.",
+                  "destination": "상위검수 11/26 13:17 KST 공개 프로필 표시 목적지 확인. 클릭 시 가입 오버레이, Threads→목적지 실제 리디렉션 완료 미확인. 별도로 홈→사업 검색→상세 도착. 첫 일시 오류 reload로 복구. 팔로워 표시 2는 7/30일 실적이 아님.",
+                  "content_verification": "본문 직접 읽음, 단독 본문 1·답글 0 원고 계약, 해시태그·도메인·우회 URL 없음, 현행/예정 혼동 없음"
+                },
+                "sources": {
+                  "광명시": "직접 열람 https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+                  "질병관리청": "직접 열람 https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+                  "정책브리핑": "직접 열람 https://www.korea.kr/news/policyNewsView.do?newsId=148972869 2027년 하반기 확대계획",
+                  "지침": "https://www.kdca.go.kr/bbs/kdca/55/304420/download.do 직접 열람 timeout. 900원 예외 원문 미확인, 확정 금액 추가 금지"
+                },
+                "selection": "상위 검수 기록 gov24-45711701521-1 완전행 10898개, GMW000000210 원본 누적 32167. 최근 실게시 84건·통계 관측 165개. 7/30일 프로필·홈·완독·체류·CTA 미측정",
+                "required_edits": [],
+                "operational_dependency": "24시간 유효기간. 11/27 12:00~14:00 KST 전체 창은 이 시점 준비분으로 포괄되지 않음. 11/26 14시 이후 공식자료·이미지 해시·완전 수집본과 대상 실제 존재 여부 재검수하고 최신 blob SHA로 조건부 큐 갱신 필요. 실제 예약·발행 별도.",
+                "review_round": 3,
+                "previous_asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                "asset_path": "social/images/benefit-guide-1.png",
+                "mobile_preview": "medical1312-mobile-final.png",
+                "asset_correction_reason": "상위 검수에서 성공 84건 후 20시 guide2, 다음 08시 TEXT를 투영하니 기존 select_image가 11/27 12시 guide1 선택"
+              },
+              "final_verdict": "PASS",
+              "body_sha256": "09caec61a73f3059e9b5648eaac8142cf04902c17c42bf309ab7d624864d89b8",
+              "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+              "score": 98,
+              "actual_review_calls": 3
+            }
+          },
+          "next_history_record": {
+            "program_id": "GMW000000210",
+            "notice_version": "2026-10-23",
+            "pattern": "P8",
+            "opening": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+            "structure": "구체적나이질문즉답→광명등록대상→두연령대목록→처방전등록약국조건→19지역신청경로",
+            "media_turn": "IMAGE"
+          }
+        },
+        "full_delay_window_covered": false,
+        "revalidate_after": "2026-11-26T14:00:00+09:00",
+        "revalidate_before": "2026-11-27T12:00:00+09:00"
+      },
+      "new_prepared_at": "2026-11-26T15:09:45.786887+09:00",
+      "new_expires_at": "2026-11-27T15:09:45.786887+09:00",
+      "source": {
+        "count": 10898,
+        "generation": "gov24-45711701521-1",
+        "lastSuccessAt": "2026-11-26T07:22:33.333588+09:00",
+        "manifestSha256": "0b74902d1fc91f8ab33552d804e03ee390f95843a035adb4d4b5683d2c720ed6",
+        "path": "snapshots/gov24-45711701521-1",
+        "version": 1
+      },
+      "source_fingerprint_unchanged": true,
+      "official_sources_reopened": {
+        "verified_at": "2026-11-26T06:07:11.038823+00:00",
+        "source_refs": [
+          "turn521388175view0",
+          "turn521388175view1",
+          "turn521388175view2"
+        ],
+        "method": "Actual reopened three official full relevant bodies, ages/amounts/year-round/registration pharmacy and 2027 future transition reviewed; no facts changed."
+      },
+      "followup_notices_rechecked": [
+        "KDCA Nov5 313366 direct body",
+        "KDCA Nov25 313567 direct body; session-bound URL omitted"
+      ],
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "current_image_GET_SHA_verified": true,
+      "new_visual_inspection": false,
+      "body_media_pattern_and_independent_review_exact_preserved": true,
+      "new_model_calls": 0,
+      "new_scores": 0,
+      "new_queue_blob_sha": "036571d81a8324eb47af68e6d91b89eef0e21fb1",
+      "actual_sender_latest_fresh_source_required": true,
+      "queue_commit": "ea92faca7c23380d1f2d5db9d893e55e393f8252"
+    }
   },
   "last_reported_publication": {
     "run_id": "45751040449",
@@ -6932,7 +7478,7 @@
       "status": "official_milestone_observations_available",
       "reason": "Nov22 18:11KST official existing-read snapshot supplied3new ID/windows, actual elapsed25.171/72.947/169.286h retained. No new evaluation or weighting change.",
       "reference": "https://www.postman.com/meta/threads/request/34203612-385abc7d-b3cc-4e5d-9937-ebbe7174e041",
-      "observed_posts_with_metrics": 79,
+      "observed_posts_with_metrics": 80,
       "views_24h": null,
       "views_7d": null,
       "reactions": null,
@@ -7882,7 +8428,9 @@
             {
               "hours": 168,
               "due_at": "2026-11-26T12:44:40.760361+09:00",
-              "status": "awaiting_due_time"
+              "status": "measured_official_api",
+              "checked_at": "2026-11-26T05:30:32.027285+00:00",
+              "elapsed_hours": 169.76424081222223
             }
           ]
         },
@@ -14704,9 +15252,120 @@
           "automatic_author_replies_in_original_record": 0,
           "not_backcalculated": true,
           "timestamp_basis": "Publisher invocation durable ledger, actual observed elapsed preserved."
+        },
+        "18100168118443439:168h": {
+          "main_id": "18100168118443439",
+          "window_hours": 168,
+          "scheduled_at": "2026-11-19T12:00:00+09:00",
+          "published_at": "2026-11-19T12:44:40.760361+09:00",
+          "benefit_id": "VOU000000020",
+          "reader_scope": "일상생활·이동 지원이 필요한 등록 장애인과 가족",
+          "opening_type": "대상·혜택형",
+          "cohort": "B",
+          "pattern": "P5",
+          "char_count": 381,
+          "media_turn": "TEXT",
+          "checked_at": "2026-11-26T05:30:32.027285+00:00",
+          "elapsed_hours": 169.76424081222223,
+          "due_at": "2026-11-26T12:44:40.760361+09:00",
+          "timing": "late_available_check",
+          "within_target_tolerance": true,
+          "status": "measured_official_api",
+          "views": 65,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "shares": 0,
+          "quotes": null,
+          "saves": null,
+          "profile_visits": null,
+          "new_followers": null,
+          "site_visits": null,
+          "source_run_id": "45762036386",
+          "artifact_id": 15089919782,
+          "artifact_digest": "sha256:bd390f485b40b937758bb695dd94d6e4f5113f010f0a7fe190a39025883c434e",
+          "comparison_eligible": false,
+          "comparison_exclusion": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment",
+          "automatic_author_replies_in_original_record": 0,
+          "not_backcalculated": true,
+          "timestamp_basis": "Publisher invocation durable ledger, actual observed elapsed preserved."
+        },
+        "18388999600236313:72h": {
+          "main_id": "18388999600236313",
+          "window_hours": 72,
+          "scheduled_at": "2026-11-23T12:00:00+09:00",
+          "published_at": "2026-11-23T12:48:36.614928+09:00",
+          "benefit_id": "627000000120",
+          "reader_scope": "대구거주·중위소득150%이하·2026출산·산모신생아건강관리미이용가정",
+          "opening_type": "생활 상황형",
+          "cohort": "A",
+          "pattern": "P1",
+          "char_count": 401,
+          "media_turn": "TEXT",
+          "checked_at": "2026-11-26T05:30:32.027285+00:00",
+          "elapsed_hours": 73.69872565472222,
+          "due_at": "2026-11-26T12:48:36.614928+09:00",
+          "timing": "late_available_check",
+          "within_target_tolerance": true,
+          "status": "measured_official_api",
+          "views": 27,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "shares": 0,
+          "quotes": null,
+          "saves": null,
+          "profile_visits": null,
+          "new_followers": null,
+          "site_visits": null,
+          "source_run_id": "45762036386",
+          "artifact_id": 15089919782,
+          "artifact_digest": "sha256:bd390f485b40b937758bb695dd94d6e4f5113f010f0a7fe190a39025883c434e",
+          "comparison_eligible": true,
+          "comparison_exclusion": null,
+          "automatic_author_replies_in_original_record": 0,
+          "not_backcalculated": true,
+          "timestamp_basis": "Publisher invocation durable ledger, actual observed elapsed preserved."
+        },
+        "18112545461459863:24h": {
+          "main_id": "18112545461459863",
+          "window_hours": 24,
+          "scheduled_at": "2026-11-25T12:00:00+09:00",
+          "published_at": "2026-11-25T12:50:17.357375+09:00",
+          "benefit_id": "PTR000050390",
+          "reader_scope": "국내주민등록을두고기준중위소득150%초과가능성을판단하려는출산가정",
+          "opening_type": "질문형 대상·혜택",
+          "cohort": "B",
+          "pattern": "P5",
+          "char_count": 436,
+          "media_turn": "IMAGE",
+          "checked_at": "2026-11-26T05:30:32.027285+00:00",
+          "elapsed_hours": 25.670741641666666,
+          "due_at": "2026-11-26T12:50:17.357375+09:00",
+          "timing": "late_available_check",
+          "within_target_tolerance": true,
+          "status": "measured_official_api",
+          "views": 10,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "shares": 0,
+          "quotes": null,
+          "saves": null,
+          "profile_visits": null,
+          "new_followers": null,
+          "site_visits": null,
+          "source_run_id": "45762036386",
+          "artifact_id": 15089919782,
+          "artifact_digest": "sha256:bd390f485b40b937758bb695dd94d6e4f5113f010f0a7fe190a39025883c434e",
+          "comparison_eligible": false,
+          "comparison_exclusion": "새질문형정책및본문편집동시적용으로순수도입군비교불가. 시간대소급재분류않음.",
+          "automatic_author_replies_in_original_record": 0,
+          "not_backcalculated": true,
+          "timestamp_basis": "Publisher invocation durable ledger, actual observed elapsed preserved."
         }
       },
-      "last_availability_check_at": "2026-11-26T03:25:42.808442+00:00",
+      "last_availability_check_at": "2026-11-26T05:30:32.027285+00:00",
       "statistical_decision": "comparison_deferred_confounded_strata_and_no_repeated_advantage; extend matched samples, retain A/B weights",
       "diagnostic_observations_by_run_id": {
         "43163347739": {
@@ -22217,6 +22876,97 @@
           "new_observations": 0,
           "new_observation_keys": [],
           "total_observations": 165,
+          "new_evaluation_report_due": false,
+          "weights_unchanged": true
+        },
+        "45762036386": {
+          "run_id": "45762036386",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-26T05:30:36Z",
+          "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
+          "job_id": 139714059115,
+          "artifact_id": 15089919782,
+          "artifact_digest": "sha256:bd390f485b40b937758bb695dd94d6e4f5113f010f0a7fe190a39025883c434e",
+          "artifact_digest_verified": true,
+          "artifact_redownloaded_this_check": true,
+          "job_logs_retrieved_this_check": true,
+          "observed_at": "2026-11-26T05:30:32.027285+00:00",
+          "records": [
+            {
+              "post_id": "18100168118443439",
+              "published_at": "2026-11-19T12:44:40.760361+09:00",
+              "observed_at": "2026-11-26T05:30:32.027285+00:00",
+              "window_hours": 168,
+              "elapsed_hours": 169.76424081222223,
+              "timing": "late_available_check",
+              "within_target_tolerance": true,
+              "not_backcalculated": true,
+              "metrics": {
+                "views": 65,
+                "likes": 1,
+                "comments": 0,
+                "reposts": 0,
+                "shares": 0,
+                "saves": null,
+                "profile_visits": null,
+                "new_followers": null,
+                "site_visits": null
+              }
+            },
+            {
+              "post_id": "18388999600236313",
+              "published_at": "2026-11-23T12:48:36.614928+09:00",
+              "observed_at": "2026-11-26T05:30:32.027285+00:00",
+              "window_hours": 72,
+              "elapsed_hours": 73.69872565472222,
+              "timing": "late_available_check",
+              "within_target_tolerance": true,
+              "not_backcalculated": true,
+              "metrics": {
+                "views": 27,
+                "likes": 2,
+                "comments": 0,
+                "reposts": 0,
+                "shares": 0,
+                "saves": null,
+                "profile_visits": null,
+                "new_followers": null,
+                "site_visits": null
+              }
+            },
+            {
+              "post_id": "18112545461459863",
+              "published_at": "2026-11-25T12:50:17.357375+09:00",
+              "observed_at": "2026-11-26T05:30:32.027285+00:00",
+              "window_hours": 24,
+              "elapsed_hours": 25.670741641666666,
+              "timing": "late_available_check",
+              "within_target_tolerance": true,
+              "not_backcalculated": true,
+              "metrics": {
+                "views": 10,
+                "likes": 1,
+                "comments": 0,
+                "reposts": 0,
+                "shares": 0,
+                "saves": null,
+                "profile_visits": null,
+                "new_followers": null,
+                "site_visits": null
+              }
+            }
+          ],
+          "due_count": 3,
+          "success_count": 3,
+          "new_observations": 3,
+          "new_observation_keys": [
+            "18100168118443439:168h",
+            "18388999600236313:72h",
+            "18112545461459863:24h"
+          ],
+          "total_observations": 168,
           "new_evaluation_report_due": false,
           "weights_unchanged": true
         }
@@ -37765,6 +38515,471 @@
       "new_visual_inspection": false,
       "image_turn": "IMAGE",
       "actual_png_GET_sha_match": true
+    },
+    "2026-11-26T15:09:45.786887+09:00:2026-11-27T12:00:00+09:00:GMW000000210": {
+      "checked_at": "2026-11-26T15:09:45.786887+09:00",
+      "status": "RESOLVED_ACTUAL_OFFICIAL_REREVIEW_FULL_WINDOW_COVERED",
+      "previous_entry": {
+        "slot": "2026-11-27T12:00:00+09:00",
+        "benefit_id": "GMW000000210",
+        "source_fingerprint": "422af02f4af6a4a7caed6e6b3c04151d2c0a3b185f01d05bb6a89ff5527630cb",
+        "source_generation": "gov24-45711701521-1",
+        "prepared_at": "2026-11-26T13:20:31.524401+09:00",
+        "expires_at": "2026-11-27T13:20:31.524401+09:00",
+        "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+        "writer": {
+          "schema_version": "supportpick.writer.v1",
+          "status": "READY",
+          "selected_program_id": "GMW000000210",
+          "post_text": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?\n아니요. 이 사업의 진료비·약제비 감면은 만 65세 이상 등록환자가 대상이에요.\n\n주민등록상 광명시에 사는 만 30세 이상 고혈압 또는 당뇨병 환자는 연중 등록할 수 있어요.\n\n만 30~64세: 교육·상담과 진료일 알림을 이용해요.\n만 65세 이상: 일반 안내 기준 월 1회 진료비 1인당 1,500원, 약제비 질병당 2,000원을 감면해요. 실제 본인부담금과 자격에 따라 지원액이 달라질 수 있어요.\n\n참여 의료기관에서 설명을 듣고 등록관리 동의서를 제출해요. 약제비 감면은 처방전을 등록관리 약국에 내야 적용돼요.\n\n프로필에서 ‘고혈압·당뇨병 등록관리서비스’를 찾으면 19개 사업지역과 방문 신청방법을 대조할 수 있어요. 다른 지역의 지원 연령·금액은 관할 보건소에 확인해요.\n\n자세한 사항은 프로필링크 확인",
+          "draft_text": null,
+          "reply_texts": [],
+          "media": {
+            "turn": "IMAGE",
+            "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+            "check": "MATCHED",
+            "image_copy": null,
+            "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+          },
+          "review": {
+            "planned_at": "2026-11-27T12:00:00+09:00",
+            "application_status": "ALWAYS",
+            "reader": "광명거주30세이상고혈압·당뇨병환자와가족,특히60세의의료비지원판단",
+            "central_message": "등록30세이상과의료비감면65세이상은다르며광명공식연령별기준과신청경로확인",
+            "pattern": "P8",
+            "selection_reason": "동일ID원본누적32167.최근20동일사업없음,기존미큐/미게시중최상위검증후보.상위HOLD/SKIP판단출처및기예약사업제외보존.65세미만등록과약값감면차이가가족의실제판단정보.지역금액차이를숨기지않고광명공식예시로범위한정.",
+            "interest_basis": "OBSERVED_METRICS",
+            "duplicate_check": "CHECKED",
+            "evidence": [
+              {
+                "source_id": "GMW000000210",
+                "source_ref": "https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-26T13:16:50+09:00",
+                "claims_supported": [
+                  "광명주민30세이상고혈압또는당뇨병등록대상·연중·30~64본인부담지원없음·65세이상월1회진료인당1500/약제질병당2000,등록기관과처방전등록약국,동의서직접본문236~285행확인"
+                ]
+              },
+              {
+                "source_id": "GMW000000210",
+                "source_ref": "https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-26T13:16:50+09:00",
+                "claims_supported": [
+                  "질병관리청현재19개사업지역·30세이상등록·65세이상의료비감면·지역별연령금액차이·교육상담과알림·참여의료기관신청직접236~272행"
+                ]
+              },
+              {
+                "source_id": "GMW000000210",
+                "source_ref": "https://www.korea.kr/news/policyNewsView.do?newsId=148972869",
+                "access_method": "OPENED_OFFICIAL",
+                "verified_at": "2026-11-26T13:16:50+09:00",
+                "claims_supported": [
+                  "2026-10-01질병관리청직접안내250~274행:사업중단아니며현재19지역,2027하반기확대예정.현재8만원지급으로표현하지않음"
+                ]
+              },
+              {
+                "source_id": "GMW000000210",
+                "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                "access_method": "UPSTREAM_VERIFIED",
+                "verified_at": "2026-11-26T13:20:31.524401+09:00",
+                "claims_supported": [
+                  "현재mainPNG실제GET과기존승인image-review SHA재대조일치. 이번부모와독립검수자가원본및360px실제열람.명칭/한글/잘림/깨짐/대비/과밀/본문일치/권리/정부공식홍보물오인검수PASS.범용승인자체브랜드이며사업별금액·날짜·대상주장없음. 실제교대투영에따라guide2초기검수에서guide1최종묶음재검수로수정."
+                ]
+              }
+            ],
+            "checks": {
+              "facts": "PASS",
+              "current_status": "PASS",
+              "eligibility_and_units": "PASS",
+              "cta_and_no_links": "PASS",
+              "length": "PASS",
+              "media": "PASS"
+            },
+            "char_count": 433,
+            "count_method": "python_len_including_spaces_and_newlines",
+            "missing_info": [],
+            "hold_reasons": [],
+            "warnings": [
+              "개인자격별최종감면액은참여기관확인",
+              "2027전환혜택은현재수혜로쓰지않음",
+              "PDF특별한도상세본문열람timeout으로900원숫자미사용",
+              "현재수집본은내일12시까지신선하지않으므로실제발송시최신완전세대필수",
+              "24h상한으로현재준비본은내일14시전체창끝까지유효하지않음:오늘14시이후공식/접수/이미지SHA/최신완전본실재대조후CAS갱신필수.날짜만변경금지"
+            ],
+            "reach_editorial": {
+              "policy_id": "supportpick-threads-reach-v1-20261109",
+              "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+              "core_question": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+              "reader_scope": "광명거주30세이상고혈압·당뇨병환자와가족,특히60세의의료비지원판단",
+              "angles": [
+                "매월약값부담",
+                "등록자격과의료비지원연령구분",
+                "의료기관/약국등록절차"
+              ],
+              "chosen_angle": "60세생활질문즉답→연령별혜택목록→참여방법",
+              "opening_candidates": [
+                "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+                "광명에 사는 65세 고혈압 환자, 약값 감면은 어디서 신청할까요?",
+                "고혈압·당뇨병 등록과 약값 감면은 나이 조건이 같을까요?"
+              ],
+              "chosen_opening": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+              "opening_type": "구체적나이생활질문형",
+              "cohort": null,
+              "comparison_eligible": false,
+              "comparison_exclusion": "v3 질문형/연령목록동시편집은순수A/B와조건이다름",
+              "selection_reason": "동일ID원본누적32167.최근20동일사업없음,기존미큐/미게시중최상위검증후보.상위HOLD/SKIP판단출처및기예약사업제외보존.65세미만등록과약값감면차이가가족의실제판단정보.지역금액차이를숨기지않고광명공식예시로범위한정.",
+              "history_posts_checked": 20,
+              "profile_route": {
+                "profile": "https://www.threads.com/@hid_1004",
+                "visible_link_target": "https://kllollain-max.github.io/supportpick/",
+                "profile_target_checked_at": "2026-11-26T13:17:54+09:00",
+                "home_search": "고혈압·당뇨병 등록관리서비스",
+                "results": 1,
+                "actual_search_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/GMW000000210/",
+                "redirect_click_completed": false,
+                "limitation": "오늘프로필공개표시목적지확인,링크클릭단계가입오버레이로리디렉션완료미확인. 실제홈검색→결과클릭→상세대상/19지역/신청방법도착은확인.",
+                "transient_site_error": "InitialGitHubUnicornpage recovered with one reload; no code/site modification."
+              },
+              "search_evidence": "공식검색표현 고혈압·당뇨병등록관리/65세/진료비약제비. 실측검색량없음.",
+              "observed_metrics_context": "84완료게시165공식관측.7/30계정프로필/홈/완독·체류·CTA미측정0아님,성과효과단정없음.",
+              "master_full_used": true
+            },
+            "astra_final_review": {
+              "requested_model": "gpt-6.2-astra",
+              "actual_model": "미확인",
+              "invoked_model_identifier": "gpt-6.2-astra",
+              "invocation_identifier_source": "Successful parent explicit model selection; finer identity unavailable",
+              "fallback_reason": null,
+              "version": "3.0",
+              "independent_agent": "/root/medical_final_review",
+              "first_review": {
+                "version": "supportpick review v3 / first",
+                "model_id": "미확인",
+                "reviewed_at": "2026-11-26T13:17:20.624997+09:00",
+                "slot": "2026-11-27T12:00:00+09:00",
+                "body_sha256": "291be486e3cd140cedc1682c259de2dbfceed86702fe3fce5da1316bb06519b0",
+                "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                "rules_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+                "operations_sha256": "e8edca3b7b3066acc88a71281e06fbbf283751fbc64d70b8d489a60e47bc37c5",
+                "pattern": "P8",
+                "media": "IMAGE",
+                "scores": {
+                  "첫문장": [
+                    13,
+                    15,
+                    "첫 질문 바로 아래 65세 기준 답변. 최근 11/25 16·20시와 같은 질문 틀"
+                  ],
+                  "관심의도": [
+                    15,
+                    15,
+                    "광명 만 60세 약값이라는 생활 판단이 구체적"
+                  ],
+                  "정확성": [
+                    18,
+                    20,
+                    "연중 참여 문장에 만 30세 이상과 대상 질환 누락. 처방 약국 조건을 감면 범위에 한정할 필요"
+                  ],
+                  "완독": [
+                    13,
+                    15,
+                    "나이별 답 사이에 절차가 끼고 등록비 설명이 길다"
+                  ],
+                  "공유공감": [
+                    9,
+                    10,
+                    "부모·가족이 연령별 이용 차이를 전달 가능"
+                  ],
+                  "가치차별": [
+                    10,
+                    10,
+                    "등록비 지급주체와 약제비 단위 구분"
+                  ],
+                  "모바일": [
+                    4,
+                    5,
+                    "P8 대상별 두 줄 목록 필요"
+                  ],
+                  "이미지완성": [
+                    5,
+                    5,
+                    "원본과 360px에서 실제 제목·하단 CTA 가독. 금액·지역·기한 표기 없음"
+                  ],
+                  "프로필": [
+                    5,
+                    5,
+                    "상세에서 확인 가능한 19곳과 방문 신청방법 제시"
+                  ]
+                },
+                "total": 92,
+                "decision": "수정 후 재검수 / 현재 발행 차단",
+                "char_count": 455,
+                "count_method": "Unicode code points, 공백·줄바꿈 포함",
+                "checks": {
+                  "single_body": 1,
+                  "replies": 0,
+                  "end_cta": true,
+                  "cta_count": 1,
+                  "links_domains_hashtags_obfuscated": "없음 / 직접 읽음",
+                  "limit500": true,
+                  "first_question_then_answer": true,
+                  "eligibility": "만 30세 이상 등록 대상 명시 필요",
+                  "status": "ALWAYS 광명 연중",
+                  "units": "월 1회 인당/질병당",
+                  "privacy_hype_guarantee": "없음",
+                  "history": "최근 실게시 20개 중 동일 사업 없음. 직전 5개 중 1회 P8. 수 있나요 틀 반복",
+                  "image": "원본/360px 모두 직접 열람. 동일 자산 해시 확인",
+                  "destination": "상위검수 오늘 홈 일시 오류 후 다시 로드, 사업명 검색결과 1건→상세 클릭. 프로필 표시는 11/25 08:33 근거. 오늘 Threads 리디렉션 미확인"
+                },
+                "sources": {
+                  "광명시": "직접 열람 https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+                  "질병관리청": "직접 열람 https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+                  "정책브리핑": "직접 열람 https://www.korea.kr/news/policyNewsView.do?newsId=148972869 2027년 하반기 확대계획",
+                  "지침": "https://www.kdca.go.kr/bbs/kdca/55/304420/download.do 직접 열람 timeout. 900원 예외 원문 미확인, 확정 금액 추가 금지"
+                },
+                "selection": "상위 검수 기록 gov24-45711701521-1 완전행 10898개, GMW000000210 원본 누적 32167. 최근 실게시 84건·통계 관측 165개. 7/30일 프로필·홈·완독·체류·CTA 미측정",
+                "required_edits": [
+                  "광명시 주민등록 만 30세 이상 고혈압 또는 당뇨병 환자 명시",
+                  "두 연령대의 혜택을 인접한 줄로 배열하고 첫 문장은 기존 질문 틀을 변주",
+                  "등록약국 조건을 약제비 감면에 한정. 등록비 지급주체를 간결하게 표시"
+                ]
+              },
+              "intermediate_review": {
+                "version": "supportpick review v3 / final",
+                "model_id": "미확인",
+                "reviewed_at": "2026-11-26T13:18:27.199377+09:00",
+                "slot": "2026-11-27T12:00:00+09:00",
+                "body_sha256": "09caec61a73f3059e9b5648eaac8142cf04902c17c42bf309ab7d624864d89b8",
+                "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                "rules_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+                "operations_sha256": "e8edca3b7b3066acc88a71281e06fbbf283751fbc64d70b8d489a60e47bc37c5",
+                "pattern": "P8",
+                "media": "IMAGE",
+                "scores": {
+                  "첫문장": [
+                    15,
+                    15,
+                    "만 60세 실제 약값 질문 후 바로 아니요와 65세 기준"
+                  ],
+                  "관심의도": [
+                    15,
+                    15,
+                    "실제 독자가 자기 연령과 비용 절감을 바로 판단"
+                  ],
+                  "정확성": [
+                    20,
+                    20,
+                    "광명 주민등록·만 30세 이상·고혈압 또는 당뇨병·연중, 월 1회와 진료 1인/약제 질병별, 자격·실제부담 변동·등록약국을 정확히 명시"
+                  ],
+                  "완독": [
+                    14,
+                    15,
+                    "나이별 목록과 짧은 다음 단계. 65세 이상 문장이 다소 길다"
+                  ],
+                  "공유공감": [
+                    9,
+                    10,
+                    "다른 연령대 가족에게 전달하기 쉬움. 지역 밖은 개별 확인 필요"
+                  ],
+                  "가치차별": [
+                    10,
+                    10,
+                    "진료와 약제 감면 단위 및 수급 가능 연령을 구별"
+                  ],
+                  "모바일": [
+                    5,
+                    5,
+                    "짧은 문단에 연령을 줄 앞에 표시"
+                  ],
+                  "이미지완성": [
+                    5,
+                    5,
+                    "같은 SHA의 승인 원본과 360px 시각 대조, 가독·내용 일치"
+                  ],
+                  "프로필": [
+                    5,
+                    5,
+                    "사이트에서 찾을 이름과 확인 가능한 지역 목록·방문 신청방법 제시"
+                  ]
+                },
+                "total": 98,
+                "decision": "최종 편집 검수 PASS / READY. 운영상 전체 창 만료 갱신 별도 필요, 발행되지 않음.",
+                "char_count": 433,
+                "count_method": "Unicode code points, 공백·줄바꿈 포함",
+                "checks": {
+                  "single_body": 1,
+                  "replies": 0,
+                  "end_cta": true,
+                  "cta_count": 1,
+                  "links_domains_hashtags_obfuscated": "없음 / 직접 읽음",
+                  "limit500": true,
+                  "first_question_then_answer": true,
+                  "eligibility": "PASS 광명 연령·질환·주민등록과 등록 조건",
+                  "status": "ALWAYS 광명 연중",
+                  "units": "월 1회 인당/질병당",
+                  "privacy_hype_guarantee": "없음",
+                  "history": "최근 실게시 20개 동일사업 없음. 기존 수 있나요 문형 변주. 연령 두 줄 P8",
+                  "image": "원본/360px 모두 직접 열람. 동일 자산 해시 확인",
+                  "destination": "상위검수 11/26 13:17 KST 공개 프로필 표시 목적지 확인. 클릭 시 가입 오버레이, Threads→목적지 실제 리디렉션 완료 미확인. 별도로 홈→사업 검색→상세 도착. 첫 일시 오류 reload로 복구. 팔로워 표시 2는 7/30일 실적이 아님.",
+                  "content_verification": "본문 직접 읽음, 단독 본문 1·답글 0 원고 계약, 해시태그·도메인·우회 URL 없음, 현행/예정 혼동 없음"
+                },
+                "sources": {
+                  "광명시": "직접 열람 https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+                  "질병관리청": "직접 열람 https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+                  "정책브리핑": "직접 열람 https://www.korea.kr/news/policyNewsView.do?newsId=148972869 2027년 하반기 확대계획",
+                  "지침": "https://www.kdca.go.kr/bbs/kdca/55/304420/download.do 직접 열람 timeout. 900원 예외 원문 미확인, 확정 금액 추가 금지"
+                },
+                "selection": "상위 검수 기록 gov24-45711701521-1 완전행 10898개, GMW000000210 원본 누적 32167. 최근 실게시 84건·통계 관측 165개. 7/30일 프로필·홈·완독·체류·CTA 미측정",
+                "required_edits": [],
+                "operational_dependency": "24시간 유효기간. 11/27 12:00~14:00 KST 전체 창은 이 시점 준비분으로 포괄되지 않음. 11/26 14시 이후 공식자료·이미지 해시·완전 수집본과 대상 실제 존재 여부 재검수하고 최신 blob SHA로 조건부 큐 갱신 필요. 실제 예약·발행 별도."
+              },
+              "final_review": {
+                "version": "supportpick review v3 / final corrected asset",
+                "model_id": "미확인",
+                "reviewed_at": "2026-11-26T13:19:22.000921+09:00",
+                "slot": "2026-11-27T12:00:00+09:00",
+                "body_sha256": "09caec61a73f3059e9b5648eaac8142cf04902c17c42bf309ab7d624864d89b8",
+                "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+                "rules_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+                "operations_sha256": "e8edca3b7b3066acc88a71281e06fbbf283751fbc64d70b8d489a60e47bc37c5",
+                "pattern": "P8",
+                "media": "IMAGE",
+                "scores": {
+                  "첫문장": [
+                    15,
+                    15,
+                    "만 60세 실제 약값 질문 후 바로 아니요와 65세 기준"
+                  ],
+                  "관심의도": [
+                    15,
+                    15,
+                    "실제 독자가 자기 연령과 비용 절감을 바로 판단"
+                  ],
+                  "정확성": [
+                    20,
+                    20,
+                    "광명 주민등록·만 30세 이상·고혈압 또는 당뇨병·연중, 월 1회와 진료 1인/약제 질병별, 자격·실제부담 변동·등록약국을 정확히 명시"
+                  ],
+                  "완독": [
+                    14,
+                    15,
+                    "나이별 목록과 짧은 다음 단계. 65세 이상 문장이 다소 길다"
+                  ],
+                  "공유공감": [
+                    9,
+                    10,
+                    "다른 연령대 가족에게 전달하기 쉬움. 지역 밖은 개별 확인 필요"
+                  ],
+                  "가치차별": [
+                    10,
+                    10,
+                    "진료와 약제 감면 단위 및 수급 가능 연령을 구별"
+                  ],
+                  "모바일": [
+                    5,
+                    5,
+                    "짧은 문단에 연령을 줄 앞에 표시"
+                  ],
+                  "이미지완성": [
+                    5,
+                    5,
+                    "guide1 원본 및 360px 재검수. 금액·현금 지급 문구 없음. 브랜드·CTA 가독."
+                  ],
+                  "프로필": [
+                    5,
+                    5,
+                    "사이트에서 찾을 이름과 확인 가능한 지역 목록·방문 신청방법 제시"
+                  ]
+                },
+                "total": 98,
+                "decision": "최종 편집 검수 PASS / READY. 운영상 전체 창 만료 갱신 별도 필요, 발행되지 않음.",
+                "char_count": 433,
+                "count_method": "Unicode code points, 공백·줄바꿈 포함",
+                "checks": {
+                  "single_body": 1,
+                  "replies": 0,
+                  "end_cta": true,
+                  "cta_count": 1,
+                  "links_domains_hashtags_obfuscated": "없음 / 직접 읽음",
+                  "limit500": true,
+                  "first_question_then_answer": true,
+                  "eligibility": "PASS 광명 연령·질환·주민등록과 등록 조건",
+                  "status": "ALWAYS 광명 연중",
+                  "units": "월 1회 인당/질병당",
+                  "privacy_hype_guarantee": "없음",
+                  "history": "최근 실게시 20개 동일사업 없음. 기존 수 있나요 문형 변주. 연령 두 줄 P8",
+                  "image": "PASS. guide1 원본과 360px 직접 열람. 봉투·체크리스트·동전·싹과 브랜드 문구, 하단 CTA가 읽힘. 개별 지급액·질환·조건·기한 표기 없음. 감면형 본문과 상충 없음.",
+                  "destination": "상위검수 11/26 13:17 KST 공개 프로필 표시 목적지 확인. 클릭 시 가입 오버레이, Threads→목적지 실제 리디렉션 완료 미확인. 별도로 홈→사업 검색→상세 도착. 첫 일시 오류 reload로 복구. 팔로워 표시 2는 7/30일 실적이 아님.",
+                  "content_verification": "본문 직접 읽음, 단독 본문 1·답글 0 원고 계약, 해시태그·도메인·우회 URL 없음, 현행/예정 혼동 없음"
+                },
+                "sources": {
+                  "광명시": "직접 열람 https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+                  "질병관리청": "직접 열람 https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+                  "정책브리핑": "직접 열람 https://www.korea.kr/news/policyNewsView.do?newsId=148972869 2027년 하반기 확대계획",
+                  "지침": "https://www.kdca.go.kr/bbs/kdca/55/304420/download.do 직접 열람 timeout. 900원 예외 원문 미확인, 확정 금액 추가 금지"
+                },
+                "selection": "상위 검수 기록 gov24-45711701521-1 완전행 10898개, GMW000000210 원본 누적 32167. 최근 실게시 84건·통계 관측 165개. 7/30일 프로필·홈·완독·체류·CTA 미측정",
+                "required_edits": [],
+                "operational_dependency": "24시간 유효기간. 11/27 12:00~14:00 KST 전체 창은 이 시점 준비분으로 포괄되지 않음. 11/26 14시 이후 공식자료·이미지 해시·완전 수집본과 대상 실제 존재 여부 재검수하고 최신 blob SHA로 조건부 큐 갱신 필요. 실제 예약·발행 별도.",
+                "review_round": 3,
+                "previous_asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                "asset_path": "social/images/benefit-guide-1.png",
+                "mobile_preview": "medical1312-mobile-final.png",
+                "asset_correction_reason": "상위 검수에서 성공 84건 후 20시 guide2, 다음 08시 TEXT를 투영하니 기존 select_image가 11/27 12시 guide1 선택"
+              },
+              "final_verdict": "PASS",
+              "body_sha256": "09caec61a73f3059e9b5648eaac8142cf04902c17c42bf309ab7d624864d89b8",
+              "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+              "score": 98,
+              "actual_review_calls": 3
+            }
+          },
+          "next_history_record": {
+            "program_id": "GMW000000210",
+            "notice_version": "2026-10-23",
+            "pattern": "P8",
+            "opening": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+            "structure": "구체적나이질문즉답→광명등록대상→두연령대목록→처방전등록약국조건→19지역신청경로",
+            "media_turn": "IMAGE"
+          }
+        },
+        "full_delay_window_covered": false,
+        "revalidate_after": "2026-11-26T14:00:00+09:00",
+        "revalidate_before": "2026-11-27T12:00:00+09:00"
+      },
+      "new_prepared_at": "2026-11-26T15:09:45.786887+09:00",
+      "new_expires_at": "2026-11-27T15:09:45.786887+09:00",
+      "source": {
+        "count": 10898,
+        "generation": "gov24-45711701521-1",
+        "lastSuccessAt": "2026-11-26T07:22:33.333588+09:00",
+        "manifestSha256": "0b74902d1fc91f8ab33552d804e03ee390f95843a035adb4d4b5683d2c720ed6",
+        "path": "snapshots/gov24-45711701521-1",
+        "version": 1
+      },
+      "source_fingerprint_unchanged": true,
+      "official_sources_reopened": {
+        "verified_at": "2026-11-26T06:07:11.038823+00:00",
+        "source_refs": [
+          "turn521388175view0",
+          "turn521388175view1",
+          "turn521388175view2"
+        ],
+        "method": "Actual reopened three official full relevant bodies, ages/amounts/year-round/registration pharmacy and 2027 future transition reviewed; no facts changed."
+      },
+      "followup_notices_rechecked": [
+        "KDCA Nov5 313366 direct body",
+        "KDCA Nov25 313567 direct body; session-bound URL omitted"
+      ],
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "current_image_GET_SHA_verified": true,
+      "new_visual_inspection": false,
+      "body_media_pattern_and_independent_review_exact_preserved": true,
+      "new_model_calls": 0,
+      "new_scores": 0,
+      "new_queue_blob_sha": "036571d81a8324eb47af68e6d91b89eef0e21fb1",
+      "actual_sender_latest_fresh_source_required": true,
+      "queue_commit": "ea92faca7c23380d1f2d5db9d893e55e393f8252"
     }
   },
   "observed_main_changes": {
@@ -162943,6 +164158,1042 @@
         "original_two_hour_window_pass": true
       },
       "next_condition_previous": "Existing publisher consumes Nov26 12 IMAGE/P6,16 TEXT/P5,20 IMAGE/P1,Nov27 08 TEXT/P5. Sender must verify newest fresh complete source and exact approved hashes/reviews at actual send. Cached Nov26 07:22 source is not certified fresh for Nov27 08. Preserve daily4/rotation/CAS/pending controls; no past-slot dispatch/rerun/test posts."
+    },
+    "2026-11-26T15:09:45.786887+09:00": {
+      "checked_at": "2026-11-26T15:09:45.786887+09:00",
+      "result": "expiry_prevention_revalidated",
+      "maintenance_previous_blob_sha": "fc2d5df23dc589c3ed2cf7dfddcb1bca4d97eb26",
+      "current_main_sha": null,
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "a260e5a91f0fd6605255156a13995520ba6b7bcb",
+      "queue_blob_sha": "036571d81a8324eb47af68e6d91b89eef0e21fb1",
+      "changed_run_versions": [
+        {
+          "run_id": "45762036386",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-26T05:30:36Z",
+          "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e"
+        }
+      ],
+      "active_target_runs": [],
+      "run_pagination": {
+        "per_page": 100,
+        "pages": [
+          1
+        ],
+        "checkpoint_run_id": "45751040449",
+        "checkpoint_version_unchanged": true,
+        "all_new_target_versions_observed": true,
+        "latest_completed_operations_run_id": "45711701521"
+      },
+      "publication_ledger_records": 84,
+      "complete_verified_records": 84,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "45711701521",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-25T22:43:40Z",
+        "head_sha": "60898e3da47a73d806cb0559b31ec87a473887a4",
+        "job_id": 139547468983,
+        "artifact_id": 15067603852,
+        "artifact_digest": "sha256:09e7356294ebe880b1e23684cb717858dc81715acddf95260c7390c0462bc5e3",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 315,
+        "read_current_verify_snapshot_load_feed": true,
+        "manifest": {
+          "count": 10898,
+          "generation": "gov24-45711701521-1",
+          "lastSuccessAt": "2026-11-26T07:22:33.333588+09:00",
+          "manifestSha256": "0b74902d1fc91f8ab33552d804e03ee390f95843a035adb4d4b5683d2c720ed6",
+          "path": "snapshots/gov24-45711701521-1",
+          "version": 1
+        },
+        "source_count": 10898,
+        "complete": true,
+        "actual_application_status_not_inferred_from_collection": true,
+        "new_candidate_original_official_pages_read": true,
+        "original_notice_rereview_this_check": true,
+        "public_verification_artifact_id": 15070021281,
+        "public_verification_digest": "sha256:1f9f71df490f4a9e4c8580607afacd0b3d2cbc67acc9225327afabf99b50b0a3",
+        "public_verification": {
+          "publicHtmlChecked": 11164,
+          "sitemapUrls": 11038,
+          "generation": "gov24-45711701521-1",
+          "sourceRevision": "60898e3da47a73d806cb0559b31ec87a473887a4",
+          "robots": {
+            "http": 200,
+            "crawlAllowed": true,
+            "scope": "host_root"
+          },
+          "missingUrlHttp": 404,
+          "passed": 11164,
+          "failed": 0,
+          "initialFailures": 1,
+          "maxRequestsPerSecond": 10,
+          "rateLimitEpisodes": 0,
+          "stoppedForRateLimit": false,
+          "recoveredAfterRetry": [
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/305000000293/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            }
+          ],
+          "failures": []
+        },
+        "job_insights_diagnostic": {
+          "due": 1,
+          "success": 1,
+          "numeric_export_available": false,
+          "not_added_as_numeric_observation": true
+        }
+      },
+      "writer": {
+        "checked_at": "2026-11-26T15:09:45.786887+09:00",
+        "ready": 4,
+        "future24h_ready": 4,
+        "new_drafts": 0,
+        "existing_READY_reused": 4,
+        "drafts": [
+          {
+            "slot": "2026-11-26T16:00:00+09:00",
+            "benefit_id": "PTR000051390",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 459,
+            "expires_at": "2026-11-26T18:54:53.927829+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-26T20:00:00+09:00",
+            "benefit_id": "SPE000000010",
+            "pattern": "P1",
+            "media_turn": "IMAGE",
+            "char_count": 395,
+            "expires_at": "2026-11-26T22:25:37.852042+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-27T08:00:00+09:00",
+            "benefit_id": "999000000002",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 444,
+            "expires_at": "2026-11-27T10:02:35.655519+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-27T12:00:00+09:00",
+            "benefit_id": "GMW000000210",
+            "pattern": "P8",
+            "media_turn": "IMAGE",
+            "char_count": 433,
+            "expires_at": "2026-11-27T15:09:45.786887+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source": {
+          "count": 10898,
+          "generation": "gov24-45711701521-1",
+          "lastSuccessAt": "2026-11-26T07:22:33.333588+09:00",
+          "manifestSha256": "0b74902d1fc91f8ab33552d804e03ee390f95843a035adb4d4b5683d2c720ed6",
+          "path": "snapshots/gov24-45711701521-1",
+          "version": 1
+        },
+        "source_count": 10898,
+        "ledger_records": 84,
+        "pending": null,
+        "lease": null,
+        "new_posts": 0,
+        "new_incidents": 0,
+        "new_metrics": 3,
+        "observations": 168,
+        "new_evaluation": false,
+        "astra_review_invocations": 0,
+        "existing_Astra_review_preserved": true,
+        "exact_approved_body_hashes_pass": true,
+        "new_visual_inspection": false,
+        "image_redownloaded_this_check": true,
+        "image_sha_comparisons": [
+          {
+            "path": "social/images/benefit-guide-1.png",
+            "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+            "actual_download_sha_matches_current_review": true,
+            "checked_at": "2026-11-26T15:09:45.794078+09:00",
+            "new_visual_inspection": false
+          },
+          {
+            "path": "social/images/benefit-guide-2.png",
+            "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+            "actual_download_sha_matches_current_review": true,
+            "checked_at": "2026-11-26T15:09:45.802512+09:00",
+            "new_visual_inspection": false
+          }
+        ],
+        "expiry_prevention_revalidations": 1
+      },
+      "metrics": {
+        "run_id": "45762036386",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-26T05:30:36Z",
+        "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
+        "job_id": 139714059115,
+        "artifact_id": 15089919782,
+        "artifact_digest": "sha256:bd390f485b40b937758bb695dd94d6e4f5113f010f0a7fe190a39025883c434e",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "observed_at": "2026-11-26T05:30:32.027285+00:00",
+        "records": [
+          {
+            "post_id": "18100168118443439",
+            "published_at": "2026-11-19T12:44:40.760361+09:00",
+            "observed_at": "2026-11-26T05:30:32.027285+00:00",
+            "window_hours": 168,
+            "elapsed_hours": 169.76424081222223,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 65,
+              "likes": 1,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          },
+          {
+            "post_id": "18388999600236313",
+            "published_at": "2026-11-23T12:48:36.614928+09:00",
+            "observed_at": "2026-11-26T05:30:32.027285+00:00",
+            "window_hours": 72,
+            "elapsed_hours": 73.69872565472222,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 27,
+              "likes": 2,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          },
+          {
+            "post_id": "18112545461459863",
+            "published_at": "2026-11-25T12:50:17.357375+09:00",
+            "observed_at": "2026-11-26T05:30:32.027285+00:00",
+            "window_hours": 24,
+            "elapsed_hours": 25.670741641666666,
+            "timing": "late_available_check",
+            "within_target_tolerance": true,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 10,
+              "likes": 1,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          }
+        ],
+        "due_count": 3,
+        "success_count": 3,
+        "new_observations": 3,
+        "new_observation_keys": [
+          "18100168118443439:168h",
+          "18388999600236313:72h",
+          "18112545461459863:24h"
+        ],
+        "total_observations": 168,
+        "new_evaluation_report_due": false,
+        "weights_unchanged": true
+      },
+      "recovery": {
+        "new_publication_this_check": false,
+        "new_posts": 0,
+        "maintenance_new_posts": 0,
+        "new_recovery_this_check": false,
+        "new_failure_this_check": false,
+        "reason": "84 complete verified publications, no pending/lease; actual official/source/image comparisons completed after14KST. Medical noon metadata renewed under max24h while approved body/media/pattern/independent review remain exact. All four nominal and full2h windows pass. New3 official metrics imported without backcalculation; no publishing POST/dispatch/rerun/code change."
+      },
+      "next_condition": "Preserve all four approved manuscripts. Nov27 noon full12-14 window now covered by actual15KST source/official/image revalidation. Actual sender must still verify newest fresh complete generation and exact reviewed body/asset hashes. No past-slot recovery or test publication.",
+      "publication": {
+        "run_id": "45751040449",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-26T03:47:43Z",
+        "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
+        "job_id": 139678606420,
+        "artifact_id": 15085352732,
+        "artifact_digest": "sha256:6553e00a0561799f94680649512f95d8d1f7451960cb492b75a27921ed6782d1",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 138,
+        "new_publication_this_run": false,
+        "main_id": "17979971556140609",
+        "url": "https://www.threads.com/@hid_1004/post/DgMLD8LkQQC",
+        "slot": "2026-11-26T12:00:00+09:00",
+        "receipt_at": "2026-11-26T12:47:29.8911823+09:00",
+        "receipt_time_basis": "Actual GitHub job Threads receipt line; exact platform timestamp unavailable",
+        "ledger_published_at": "2026-11-26T12:46:41.496550+09:00",
+        "ledger_published_at_is_invocation_not_exact_platform_time": true,
+        "stage": "complete",
+        "verified": true,
+        "body_hash": "e916a468314c83784b3f023d002436414ca62cffc64135946b499d456de6648a",
+        "content_hash": "627df09dc4f41d32537c074266d83062caaee0ee9245224faa4f2a77d7d65155",
+        "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+        "media_turn": "IMAGE",
+        "pattern": "P6",
+        "char_count": 377,
+        "replies": 0,
+        "original_queue_body_asset_exact": true,
+        "previous83records_preserved": true,
+        "maintenance_post_calls": 0,
+        "delay_within_original_2h_window": true,
+        "actual_source_generation": "gov24-45711701521-1",
+        "latest_already_reported": true
+      },
+      "history_reconciliation": {
+        "run_id": "45173485637",
+        "mode": "check-account",
+        "account": "hid_1004",
+        "checked_at": "2026-11-23T21:21:24+09:00",
+        "recent_remote_rows": 100,
+        "more_history": true,
+        "main_ledger_matches_in_page": 49,
+        "latest20_main_matches": 20,
+        "latest_remote_id": "18129410933479829",
+        "target_text_absent": true,
+        "scope": "84 durable complete verified records, previous83 exact preserved; new84th receipt/body/result artifact reconciled. Prior remote100-row evidence retained. No new full28day remote query.",
+        "artifact_id": 14818615408,
+        "artifact_digest": "sha256:23cfc165bbd050ec1a12dbde18778345efb01c4d9e20abf69f6279b090e003b3",
+        "artifact_digest_verified": true,
+        "remote_requeried_this_check": false,
+        "previous_remote_evidence_preserved": true
+      },
+      "official_review_recovery": {
+        "new_official_page_review_this_check": true,
+        "new_Astra_calls": 0,
+        "existing_Astra_reviews_preserved": true,
+        "image_redownloaded_this_check": true,
+        "new_visual_inspection": false,
+        "previous_actual_profile_and_site_route_evidence_preserved": true
+      },
+      "main_head_observation": {
+        "latest_observed_target_run_head": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
+        "target_publisher_workflows_master_and_assets_blobs_unchanged": true,
+        "unrelated_changes_not_modified": true
+      },
+      "image_sha_comparisons": [
+        {
+          "path": "social/images/benefit-guide-1.png",
+          "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "actual_download_sha_matches_current_review": true,
+          "checked_at": "2026-11-26T15:09:45.794078+09:00",
+          "new_visual_inspection": false
+        },
+        {
+          "path": "social/images/benefit-guide-2.png",
+          "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "actual_download_sha_matches_current_review": true,
+          "checked_at": "2026-11-26T15:09:45.802512+09:00",
+          "new_visual_inspection": false
+        }
+      ],
+      "formal_evaluation": {
+        "policy_id": "supportpick-threads-reach-v1-20261109",
+        "window": "14d_evaluation",
+        "evaluated_at": "2026-11-24T17:20:07.451089+09:00",
+        "period_start": "2026-11-10T17:00:08.835254+09:00",
+        "period_end": "2026-11-24T17:00:08.835254+09:00",
+        "normal_verified_publications": 53,
+        "experiment_regular_slots": 57,
+        "unpublished_slots": [
+          {
+            "slot": "2026-11-16T16:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-18T12:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-23T20:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-24T16:00:00+09:00",
+            "classification": "unreserved_at_evaluation_cutoff_then_published_after_cutoff",
+            "subsequent_main_id": "17974331994194122",
+            "subsequent_receipt_at": "2026-11-24T17:21:06.769138+09:00"
+          }
+        ],
+        "missed_closed_slots": 3,
+        "partial_or_pending": 0,
+        "independent_full_public_rendering_recheck": false,
+        "publication_audit_scope": "76durablecompleteverifiedrecords; priorreceipts/body/media/artifacts retained. No newfull28dayremotequery; Nov24 16unreserved/latestpublisher12only,nofailure-runconfirmed.",
+        "24h_comparison_window_observations": 40,
+        "A_n": 20,
+        "B_n": 20,
+        "24h_comparable_matched_pairs": 0,
+        "24h_group_view_medians": {
+          "A": 62.0,
+          "B": 62.0
+        },
+        "24h_all_view_median": 62.0,
+        "actual_reactions": {
+          "A": {
+            "likes": 29,
+            "replies": 0,
+            "reposts": 6,
+            "shares": 1
+          },
+          "B": {
+            "likes": 27,
+            "replies": 0,
+            "reposts": 5,
+            "shares": 0
+          }
+        },
+        "reaction_rate_used": false,
+        "all_24h_observations_delayed": true,
+        "eligible_elapsed_hours_min": 24.317312148333336,
+        "eligible_elapsed_hours_max": 25.691108017222223,
+        "24h_unavailable_not_zero": [
+          "18117968657159347",
+          "17992859946026940",
+          "17913499947663769",
+          "18001464938830261"
+        ],
+        "24h_not_yet_due": [
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "24h_missing_after_due": [],
+        "7d_measured": 27,
+        "7d_not_yet_due": [
+          "18004106657810124",
+          "18155833435528730",
+          "18061699079561356",
+          "18075899267779249",
+          "18361336213223949",
+          "18100168118443439",
+          "17876108337601849",
+          "17954736195295664",
+          "18136261246743978",
+          "18029579210863916",
+          "18106611944009610",
+          "17995393143022353",
+          "18002356029029330",
+          "18098495828440255",
+          "18121994881961457",
+          "18093412586696162",
+          "18102899498408388",
+          "18214999999364836",
+          "18125366213319496",
+          "18149154712603236",
+          "17879078796637660",
+          "18388999600236313",
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "7d_group_medians": {
+          "A": 105,
+          "B": 87.5
+        },
+        "quotes": "not_provided",
+        "reader_only_replies": "unavailable",
+        "profile_clicks": "account_level_not_available; no_post_attribution",
+        "confounders": [
+          "Differentbusiness/region/readers/benefit/deadline/time/media/length; matchedsimilarpairs0",
+          "PreservedmovedexistingREADYcohorts differfromnewslots;excludeinsteadretroclassify",
+          "Newquestiontitlepolicy changesmorethanopeningalone;newAstrarevieweddraftsexcludedfrompureA/B"
+        ],
+        "minimum_24h_target_per_group": 8,
+        "raw_window_target_met": true,
+        "current_stratified_target_met": false,
+        "decision": "extend_comparison;maintainbalancedA/Bandexistingcontrols.No demonstratedrepeatedadvantage;noeditorialweightchange.",
+        "weight_changed": false,
+        "no_backcalculation": true,
+        "extension_next_condition": "Reassess in existingchecks when comparable similar-business strata have sufficient repeatedactual24hwindows; keep comparison group. No separate schedule.",
+        "reported_at": "2026-11-24T17:20:07.451089+09:00",
+        "evidence_latest_metric_run_id": "45351393999",
+        "24h_measured_but_excluded": [
+          {
+            "main_id": "18122947907049313",
+            "elapsed_hours": 52.64388394083333,
+            "reason": "late_beyond_26h_comparison_tolerance"
+          },
+          {
+            "main_id": "18061699079561356",
+            "elapsed_hours": 25.374772445277777,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18075899267779249",
+            "elapsed_hours": 24.65035752527778,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18361336213223949",
+            "elapsed_hours": 24.39045965972222,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18100168118443439",
+            "elapsed_hours": 24.6578044575,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "17876108337601849",
+            "elapsed_hours": 25.228189436944444,
+            "reason": "Previously written input preserved; no retrospective cohort assignment after failed preceding slot"
+          }
+        ],
+        "7d_group_n": {
+          "A": 13,
+          "B": 14
+        },
+        "7d_due_unmeasured": [
+          "18450932713126961"
+        ],
+        "publication_cutoff_note": "EvaluationperiodendsNov24 17:00:08.16slotwasunreservedatcutoff, laternaturallypublished17:21:06withinits2hwindow; excludedfrom53periodpublications becauseactualinvocation17:20aftercutoff. Notafourthmissedslot.",
+        "unreserved_at_period_end_slots": 1,
+        "currently_open_unreserved_slots_from_period": 0
+      },
+      "new_formal_evaluation_this_check": false,
+      "writer_final_edit_v3_status": {
+        "policy_id": "supportpick-threads-final-edit-v3-20261125",
+        "new_v3_READY": 0,
+        "previous_actual_v3_READY_preserved": 4,
+        "new_scores": 0,
+        "new_model_calls": 0
+      },
+      "workspace_preflight": {
+        "cached_operational_files_available": true,
+        "new_storage_failure": false
+      },
+      "account_7d_30d_statistics": {
+        "official_post_windows_available": [
+          24,
+          72,
+          168
+        ],
+        "post_observations": 168,
+        "account_profile_home_followers_shares_30d_read_available": false,
+        "unavailable_not_zero": true,
+        "completion_dwell_cta_attribution_not_measured": true,
+        "no_inferred_performance": true
+      },
+      "regular_slot_observation": {
+        "slot": "2026-11-26T12:00:00+09:00",
+        "status": "published_verified_complete",
+        "run_id": "45751040449",
+        "main_id": "17979971556140609",
+        "receipt_at": "2026-11-26T12:47:29.8911823+09:00",
+        "original_two_hour_window_pass": true
+      },
+      "next_condition_previous": "Existing publisher consumes Nov26 12 IMAGE/P6,16 TEXT/P5,20 IMAGE/P1,Nov27 08 TEXT/P5. Sender must verify newest fresh complete source and exact approved hashes/reviews at actual send. Cached Nov26 07:22 source is not certified fresh for Nov27 08. Preserve daily4/rotation/CAS/pending controls; no past-slot dispatch/rerun/test posts.",
+      "expiry_prevention_revalidation": {
+        "checked_at": "2026-11-26T15:09:45.786887+09:00",
+        "status": "RESOLVED_ACTUAL_OFFICIAL_REREVIEW_FULL_WINDOW_COVERED",
+        "previous_entry": {
+          "slot": "2026-11-27T12:00:00+09:00",
+          "benefit_id": "GMW000000210",
+          "source_fingerprint": "422af02f4af6a4a7caed6e6b3c04151d2c0a3b185f01d05bb6a89ff5527630cb",
+          "source_generation": "gov24-45711701521-1",
+          "prepared_at": "2026-11-26T13:20:31.524401+09:00",
+          "expires_at": "2026-11-27T13:20:31.524401+09:00",
+          "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "writer": {
+            "schema_version": "supportpick.writer.v1",
+            "status": "READY",
+            "selected_program_id": "GMW000000210",
+            "post_text": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?\n아니요. 이 사업의 진료비·약제비 감면은 만 65세 이상 등록환자가 대상이에요.\n\n주민등록상 광명시에 사는 만 30세 이상 고혈압 또는 당뇨병 환자는 연중 등록할 수 있어요.\n\n만 30~64세: 교육·상담과 진료일 알림을 이용해요.\n만 65세 이상: 일반 안내 기준 월 1회 진료비 1인당 1,500원, 약제비 질병당 2,000원을 감면해요. 실제 본인부담금과 자격에 따라 지원액이 달라질 수 있어요.\n\n참여 의료기관에서 설명을 듣고 등록관리 동의서를 제출해요. 약제비 감면은 처방전을 등록관리 약국에 내야 적용돼요.\n\n프로필에서 ‘고혈압·당뇨병 등록관리서비스’를 찾으면 19개 사업지역과 방문 신청방법을 대조할 수 있어요. 다른 지역의 지원 연령·금액은 관할 보건소에 확인해요.\n\n자세한 사항은 프로필링크 확인",
+            "draft_text": null,
+            "reply_texts": [],
+            "media": {
+              "turn": "IMAGE",
+              "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "check": "MATCHED",
+              "image_copy": null,
+              "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+            },
+            "review": {
+              "planned_at": "2026-11-27T12:00:00+09:00",
+              "application_status": "ALWAYS",
+              "reader": "광명거주30세이상고혈압·당뇨병환자와가족,특히60세의의료비지원판단",
+              "central_message": "등록30세이상과의료비감면65세이상은다르며광명공식연령별기준과신청경로확인",
+              "pattern": "P8",
+              "selection_reason": "동일ID원본누적32167.최근20동일사업없음,기존미큐/미게시중최상위검증후보.상위HOLD/SKIP판단출처및기예약사업제외보존.65세미만등록과약값감면차이가가족의실제판단정보.지역금액차이를숨기지않고광명공식예시로범위한정.",
+              "interest_basis": "OBSERVED_METRICS",
+              "duplicate_check": "CHECKED",
+              "evidence": [
+                {
+                  "source_id": "GMW000000210",
+                  "source_ref": "https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-26T13:16:50+09:00",
+                  "claims_supported": [
+                    "광명주민30세이상고혈압또는당뇨병등록대상·연중·30~64본인부담지원없음·65세이상월1회진료인당1500/약제질병당2000,등록기관과처방전등록약국,동의서직접본문236~285행확인"
+                  ]
+                },
+                {
+                  "source_id": "GMW000000210",
+                  "source_ref": "https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-26T13:16:50+09:00",
+                  "claims_supported": [
+                    "질병관리청현재19개사업지역·30세이상등록·65세이상의료비감면·지역별연령금액차이·교육상담과알림·참여의료기관신청직접236~272행"
+                  ]
+                },
+                {
+                  "source_id": "GMW000000210",
+                  "source_ref": "https://www.korea.kr/news/policyNewsView.do?newsId=148972869",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-26T13:16:50+09:00",
+                  "claims_supported": [
+                    "2026-10-01질병관리청직접안내250~274행:사업중단아니며현재19지역,2027하반기확대예정.현재8만원지급으로표현하지않음"
+                  ]
+                },
+                {
+                  "source_id": "GMW000000210",
+                  "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                  "access_method": "UPSTREAM_VERIFIED",
+                  "verified_at": "2026-11-26T13:20:31.524401+09:00",
+                  "claims_supported": [
+                    "현재mainPNG실제GET과기존승인image-review SHA재대조일치. 이번부모와독립검수자가원본및360px실제열람.명칭/한글/잘림/깨짐/대비/과밀/본문일치/권리/정부공식홍보물오인검수PASS.범용승인자체브랜드이며사업별금액·날짜·대상주장없음. 실제교대투영에따라guide2초기검수에서guide1최종묶음재검수로수정."
+                  ]
+                }
+              ],
+              "checks": {
+                "facts": "PASS",
+                "current_status": "PASS",
+                "eligibility_and_units": "PASS",
+                "cta_and_no_links": "PASS",
+                "length": "PASS",
+                "media": "PASS"
+              },
+              "char_count": 433,
+              "count_method": "python_len_including_spaces_and_newlines",
+              "missing_info": [],
+              "hold_reasons": [],
+              "warnings": [
+                "개인자격별최종감면액은참여기관확인",
+                "2027전환혜택은현재수혜로쓰지않음",
+                "PDF특별한도상세본문열람timeout으로900원숫자미사용",
+                "현재수집본은내일12시까지신선하지않으므로실제발송시최신완전세대필수",
+                "24h상한으로현재준비본은내일14시전체창끝까지유효하지않음:오늘14시이후공식/접수/이미지SHA/최신완전본실재대조후CAS갱신필수.날짜만변경금지"
+              ],
+              "reach_editorial": {
+                "policy_id": "supportpick-threads-reach-v1-20261109",
+                "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+                "core_question": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+                "reader_scope": "광명거주30세이상고혈압·당뇨병환자와가족,특히60세의의료비지원판단",
+                "angles": [
+                  "매월약값부담",
+                  "등록자격과의료비지원연령구분",
+                  "의료기관/약국등록절차"
+                ],
+                "chosen_angle": "60세생활질문즉답→연령별혜택목록→참여방법",
+                "opening_candidates": [
+                  "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+                  "광명에 사는 65세 고혈압 환자, 약값 감면은 어디서 신청할까요?",
+                  "고혈압·당뇨병 등록과 약값 감면은 나이 조건이 같을까요?"
+                ],
+                "chosen_opening": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+                "opening_type": "구체적나이생활질문형",
+                "cohort": null,
+                "comparison_eligible": false,
+                "comparison_exclusion": "v3 질문형/연령목록동시편집은순수A/B와조건이다름",
+                "selection_reason": "동일ID원본누적32167.최근20동일사업없음,기존미큐/미게시중최상위검증후보.상위HOLD/SKIP판단출처및기예약사업제외보존.65세미만등록과약값감면차이가가족의실제판단정보.지역금액차이를숨기지않고광명공식예시로범위한정.",
+                "history_posts_checked": 20,
+                "profile_route": {
+                  "profile": "https://www.threads.com/@hid_1004",
+                  "visible_link_target": "https://kllollain-max.github.io/supportpick/",
+                  "profile_target_checked_at": "2026-11-26T13:17:54+09:00",
+                  "home_search": "고혈압·당뇨병 등록관리서비스",
+                  "results": 1,
+                  "actual_search_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/GMW000000210/",
+                  "redirect_click_completed": false,
+                  "limitation": "오늘프로필공개표시목적지확인,링크클릭단계가입오버레이로리디렉션완료미확인. 실제홈검색→결과클릭→상세대상/19지역/신청방법도착은확인.",
+                  "transient_site_error": "InitialGitHubUnicornpage recovered with one reload; no code/site modification."
+                },
+                "search_evidence": "공식검색표현 고혈압·당뇨병등록관리/65세/진료비약제비. 실측검색량없음.",
+                "observed_metrics_context": "84완료게시165공식관측.7/30계정프로필/홈/완독·체류·CTA미측정0아님,성과효과단정없음.",
+                "master_full_used": true
+              },
+              "astra_final_review": {
+                "requested_model": "gpt-6.2-astra",
+                "actual_model": "미확인",
+                "invoked_model_identifier": "gpt-6.2-astra",
+                "invocation_identifier_source": "Successful parent explicit model selection; finer identity unavailable",
+                "fallback_reason": null,
+                "version": "3.0",
+                "independent_agent": "/root/medical_final_review",
+                "first_review": {
+                  "version": "supportpick review v3 / first",
+                  "model_id": "미확인",
+                  "reviewed_at": "2026-11-26T13:17:20.624997+09:00",
+                  "slot": "2026-11-27T12:00:00+09:00",
+                  "body_sha256": "291be486e3cd140cedc1682c259de2dbfceed86702fe3fce5da1316bb06519b0",
+                  "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                  "rules_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+                  "operations_sha256": "e8edca3b7b3066acc88a71281e06fbbf283751fbc64d70b8d489a60e47bc37c5",
+                  "pattern": "P8",
+                  "media": "IMAGE",
+                  "scores": {
+                    "첫문장": [
+                      13,
+                      15,
+                      "첫 질문 바로 아래 65세 기준 답변. 최근 11/25 16·20시와 같은 질문 틀"
+                    ],
+                    "관심의도": [
+                      15,
+                      15,
+                      "광명 만 60세 약값이라는 생활 판단이 구체적"
+                    ],
+                    "정확성": [
+                      18,
+                      20,
+                      "연중 참여 문장에 만 30세 이상과 대상 질환 누락. 처방 약국 조건을 감면 범위에 한정할 필요"
+                    ],
+                    "완독": [
+                      13,
+                      15,
+                      "나이별 답 사이에 절차가 끼고 등록비 설명이 길다"
+                    ],
+                    "공유공감": [
+                      9,
+                      10,
+                      "부모·가족이 연령별 이용 차이를 전달 가능"
+                    ],
+                    "가치차별": [
+                      10,
+                      10,
+                      "등록비 지급주체와 약제비 단위 구분"
+                    ],
+                    "모바일": [
+                      4,
+                      5,
+                      "P8 대상별 두 줄 목록 필요"
+                    ],
+                    "이미지완성": [
+                      5,
+                      5,
+                      "원본과 360px에서 실제 제목·하단 CTA 가독. 금액·지역·기한 표기 없음"
+                    ],
+                    "프로필": [
+                      5,
+                      5,
+                      "상세에서 확인 가능한 19곳과 방문 신청방법 제시"
+                    ]
+                  },
+                  "total": 92,
+                  "decision": "수정 후 재검수 / 현재 발행 차단",
+                  "char_count": 455,
+                  "count_method": "Unicode code points, 공백·줄바꿈 포함",
+                  "checks": {
+                    "single_body": 1,
+                    "replies": 0,
+                    "end_cta": true,
+                    "cta_count": 1,
+                    "links_domains_hashtags_obfuscated": "없음 / 직접 읽음",
+                    "limit500": true,
+                    "first_question_then_answer": true,
+                    "eligibility": "만 30세 이상 등록 대상 명시 필요",
+                    "status": "ALWAYS 광명 연중",
+                    "units": "월 1회 인당/질병당",
+                    "privacy_hype_guarantee": "없음",
+                    "history": "최근 실게시 20개 중 동일 사업 없음. 직전 5개 중 1회 P8. 수 있나요 틀 반복",
+                    "image": "원본/360px 모두 직접 열람. 동일 자산 해시 확인",
+                    "destination": "상위검수 오늘 홈 일시 오류 후 다시 로드, 사업명 검색결과 1건→상세 클릭. 프로필 표시는 11/25 08:33 근거. 오늘 Threads 리디렉션 미확인"
+                  },
+                  "sources": {
+                    "광명시": "직접 열람 https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+                    "질병관리청": "직접 열람 https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+                    "정책브리핑": "직접 열람 https://www.korea.kr/news/policyNewsView.do?newsId=148972869 2027년 하반기 확대계획",
+                    "지침": "https://www.kdca.go.kr/bbs/kdca/55/304420/download.do 직접 열람 timeout. 900원 예외 원문 미확인, 확정 금액 추가 금지"
+                  },
+                  "selection": "상위 검수 기록 gov24-45711701521-1 완전행 10898개, GMW000000210 원본 누적 32167. 최근 실게시 84건·통계 관측 165개. 7/30일 프로필·홈·완독·체류·CTA 미측정",
+                  "required_edits": [
+                    "광명시 주민등록 만 30세 이상 고혈압 또는 당뇨병 환자 명시",
+                    "두 연령대의 혜택을 인접한 줄로 배열하고 첫 문장은 기존 질문 틀을 변주",
+                    "등록약국 조건을 약제비 감면에 한정. 등록비 지급주체를 간결하게 표시"
+                  ]
+                },
+                "intermediate_review": {
+                  "version": "supportpick review v3 / final",
+                  "model_id": "미확인",
+                  "reviewed_at": "2026-11-26T13:18:27.199377+09:00",
+                  "slot": "2026-11-27T12:00:00+09:00",
+                  "body_sha256": "09caec61a73f3059e9b5648eaac8142cf04902c17c42bf309ab7d624864d89b8",
+                  "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                  "rules_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+                  "operations_sha256": "e8edca3b7b3066acc88a71281e06fbbf283751fbc64d70b8d489a60e47bc37c5",
+                  "pattern": "P8",
+                  "media": "IMAGE",
+                  "scores": {
+                    "첫문장": [
+                      15,
+                      15,
+                      "만 60세 실제 약값 질문 후 바로 아니요와 65세 기준"
+                    ],
+                    "관심의도": [
+                      15,
+                      15,
+                      "실제 독자가 자기 연령과 비용 절감을 바로 판단"
+                    ],
+                    "정확성": [
+                      20,
+                      20,
+                      "광명 주민등록·만 30세 이상·고혈압 또는 당뇨병·연중, 월 1회와 진료 1인/약제 질병별, 자격·실제부담 변동·등록약국을 정확히 명시"
+                    ],
+                    "완독": [
+                      14,
+                      15,
+                      "나이별 목록과 짧은 다음 단계. 65세 이상 문장이 다소 길다"
+                    ],
+                    "공유공감": [
+                      9,
+                      10,
+                      "다른 연령대 가족에게 전달하기 쉬움. 지역 밖은 개별 확인 필요"
+                    ],
+                    "가치차별": [
+                      10,
+                      10,
+                      "진료와 약제 감면 단위 및 수급 가능 연령을 구별"
+                    ],
+                    "모바일": [
+                      5,
+                      5,
+                      "짧은 문단에 연령을 줄 앞에 표시"
+                    ],
+                    "이미지완성": [
+                      5,
+                      5,
+                      "같은 SHA의 승인 원본과 360px 시각 대조, 가독·내용 일치"
+                    ],
+                    "프로필": [
+                      5,
+                      5,
+                      "사이트에서 찾을 이름과 확인 가능한 지역 목록·방문 신청방법 제시"
+                    ]
+                  },
+                  "total": 98,
+                  "decision": "최종 편집 검수 PASS / READY. 운영상 전체 창 만료 갱신 별도 필요, 발행되지 않음.",
+                  "char_count": 433,
+                  "count_method": "Unicode code points, 공백·줄바꿈 포함",
+                  "checks": {
+                    "single_body": 1,
+                    "replies": 0,
+                    "end_cta": true,
+                    "cta_count": 1,
+                    "links_domains_hashtags_obfuscated": "없음 / 직접 읽음",
+                    "limit500": true,
+                    "first_question_then_answer": true,
+                    "eligibility": "PASS 광명 연령·질환·주민등록과 등록 조건",
+                    "status": "ALWAYS 광명 연중",
+                    "units": "월 1회 인당/질병당",
+                    "privacy_hype_guarantee": "없음",
+                    "history": "최근 실게시 20개 동일사업 없음. 기존 수 있나요 문형 변주. 연령 두 줄 P8",
+                    "image": "원본/360px 모두 직접 열람. 동일 자산 해시 확인",
+                    "destination": "상위검수 11/26 13:17 KST 공개 프로필 표시 목적지 확인. 클릭 시 가입 오버레이, Threads→목적지 실제 리디렉션 완료 미확인. 별도로 홈→사업 검색→상세 도착. 첫 일시 오류 reload로 복구. 팔로워 표시 2는 7/30일 실적이 아님.",
+                    "content_verification": "본문 직접 읽음, 단독 본문 1·답글 0 원고 계약, 해시태그·도메인·우회 URL 없음, 현행/예정 혼동 없음"
+                  },
+                  "sources": {
+                    "광명시": "직접 열람 https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+                    "질병관리청": "직접 열람 https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+                    "정책브리핑": "직접 열람 https://www.korea.kr/news/policyNewsView.do?newsId=148972869 2027년 하반기 확대계획",
+                    "지침": "https://www.kdca.go.kr/bbs/kdca/55/304420/download.do 직접 열람 timeout. 900원 예외 원문 미확인, 확정 금액 추가 금지"
+                  },
+                  "selection": "상위 검수 기록 gov24-45711701521-1 완전행 10898개, GMW000000210 원본 누적 32167. 최근 실게시 84건·통계 관측 165개. 7/30일 프로필·홈·완독·체류·CTA 미측정",
+                  "required_edits": [],
+                  "operational_dependency": "24시간 유효기간. 11/27 12:00~14:00 KST 전체 창은 이 시점 준비분으로 포괄되지 않음. 11/26 14시 이후 공식자료·이미지 해시·완전 수집본과 대상 실제 존재 여부 재검수하고 최신 blob SHA로 조건부 큐 갱신 필요. 실제 예약·발행 별도."
+                },
+                "final_review": {
+                  "version": "supportpick review v3 / final corrected asset",
+                  "model_id": "미확인",
+                  "reviewed_at": "2026-11-26T13:19:22.000921+09:00",
+                  "slot": "2026-11-27T12:00:00+09:00",
+                  "body_sha256": "09caec61a73f3059e9b5648eaac8142cf04902c17c42bf309ab7d624864d89b8",
+                  "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+                  "rules_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+                  "operations_sha256": "e8edca3b7b3066acc88a71281e06fbbf283751fbc64d70b8d489a60e47bc37c5",
+                  "pattern": "P8",
+                  "media": "IMAGE",
+                  "scores": {
+                    "첫문장": [
+                      15,
+                      15,
+                      "만 60세 실제 약값 질문 후 바로 아니요와 65세 기준"
+                    ],
+                    "관심의도": [
+                      15,
+                      15,
+                      "실제 독자가 자기 연령과 비용 절감을 바로 판단"
+                    ],
+                    "정확성": [
+                      20,
+                      20,
+                      "광명 주민등록·만 30세 이상·고혈압 또는 당뇨병·연중, 월 1회와 진료 1인/약제 질병별, 자격·실제부담 변동·등록약국을 정확히 명시"
+                    ],
+                    "완독": [
+                      14,
+                      15,
+                      "나이별 목록과 짧은 다음 단계. 65세 이상 문장이 다소 길다"
+                    ],
+                    "공유공감": [
+                      9,
+                      10,
+                      "다른 연령대 가족에게 전달하기 쉬움. 지역 밖은 개별 확인 필요"
+                    ],
+                    "가치차별": [
+                      10,
+                      10,
+                      "진료와 약제 감면 단위 및 수급 가능 연령을 구별"
+                    ],
+                    "모바일": [
+                      5,
+                      5,
+                      "짧은 문단에 연령을 줄 앞에 표시"
+                    ],
+                    "이미지완성": [
+                      5,
+                      5,
+                      "guide1 원본 및 360px 재검수. 금액·현금 지급 문구 없음. 브랜드·CTA 가독."
+                    ],
+                    "프로필": [
+                      5,
+                      5,
+                      "사이트에서 찾을 이름과 확인 가능한 지역 목록·방문 신청방법 제시"
+                    ]
+                  },
+                  "total": 98,
+                  "decision": "최종 편집 검수 PASS / READY. 운영상 전체 창 만료 갱신 별도 필요, 발행되지 않음.",
+                  "char_count": 433,
+                  "count_method": "Unicode code points, 공백·줄바꿈 포함",
+                  "checks": {
+                    "single_body": 1,
+                    "replies": 0,
+                    "end_cta": true,
+                    "cta_count": 1,
+                    "links_domains_hashtags_obfuscated": "없음 / 직접 읽음",
+                    "limit500": true,
+                    "first_question_then_answer": true,
+                    "eligibility": "PASS 광명 연령·질환·주민등록과 등록 조건",
+                    "status": "ALWAYS 광명 연중",
+                    "units": "월 1회 인당/질병당",
+                    "privacy_hype_guarantee": "없음",
+                    "history": "최근 실게시 20개 동일사업 없음. 기존 수 있나요 문형 변주. 연령 두 줄 P8",
+                    "image": "PASS. guide1 원본과 360px 직접 열람. 봉투·체크리스트·동전·싹과 브랜드 문구, 하단 CTA가 읽힘. 개별 지급액·질환·조건·기한 표기 없음. 감면형 본문과 상충 없음.",
+                    "destination": "상위검수 11/26 13:17 KST 공개 프로필 표시 목적지 확인. 클릭 시 가입 오버레이, Threads→목적지 실제 리디렉션 완료 미확인. 별도로 홈→사업 검색→상세 도착. 첫 일시 오류 reload로 복구. 팔로워 표시 2는 7/30일 실적이 아님.",
+                    "content_verification": "본문 직접 읽음, 단독 본문 1·답글 0 원고 계약, 해시태그·도메인·우회 URL 없음, 현행/예정 혼동 없음"
+                  },
+                  "sources": {
+                    "광명시": "직접 열람 https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+                    "질병관리청": "직접 열람 https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+                    "정책브리핑": "직접 열람 https://www.korea.kr/news/policyNewsView.do?newsId=148972869 2027년 하반기 확대계획",
+                    "지침": "https://www.kdca.go.kr/bbs/kdca/55/304420/download.do 직접 열람 timeout. 900원 예외 원문 미확인, 확정 금액 추가 금지"
+                  },
+                  "selection": "상위 검수 기록 gov24-45711701521-1 완전행 10898개, GMW000000210 원본 누적 32167. 최근 실게시 84건·통계 관측 165개. 7/30일 프로필·홈·완독·체류·CTA 미측정",
+                  "required_edits": [],
+                  "operational_dependency": "24시간 유효기간. 11/27 12:00~14:00 KST 전체 창은 이 시점 준비분으로 포괄되지 않음. 11/26 14시 이후 공식자료·이미지 해시·완전 수집본과 대상 실제 존재 여부 재검수하고 최신 blob SHA로 조건부 큐 갱신 필요. 실제 예약·발행 별도.",
+                  "review_round": 3,
+                  "previous_asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                  "asset_path": "social/images/benefit-guide-1.png",
+                  "mobile_preview": "medical1312-mobile-final.png",
+                  "asset_correction_reason": "상위 검수에서 성공 84건 후 20시 guide2, 다음 08시 TEXT를 투영하니 기존 select_image가 11/27 12시 guide1 선택"
+                },
+                "final_verdict": "PASS",
+                "body_sha256": "09caec61a73f3059e9b5648eaac8142cf04902c17c42bf309ab7d624864d89b8",
+                "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+                "score": 98,
+                "actual_review_calls": 3
+              }
+            },
+            "next_history_record": {
+              "program_id": "GMW000000210",
+              "notice_version": "2026-10-23",
+              "pattern": "P8",
+              "opening": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+              "structure": "구체적나이질문즉답→광명등록대상→두연령대목록→처방전등록약국조건→19지역신청경로",
+              "media_turn": "IMAGE"
+            }
+          },
+          "full_delay_window_covered": false,
+          "revalidate_after": "2026-11-26T14:00:00+09:00",
+          "revalidate_before": "2026-11-27T12:00:00+09:00"
+        },
+        "new_prepared_at": "2026-11-26T15:09:45.786887+09:00",
+        "new_expires_at": "2026-11-27T15:09:45.786887+09:00",
+        "source": {
+          "count": 10898,
+          "generation": "gov24-45711701521-1",
+          "lastSuccessAt": "2026-11-26T07:22:33.333588+09:00",
+          "manifestSha256": "0b74902d1fc91f8ab33552d804e03ee390f95843a035adb4d4b5683d2c720ed6",
+          "path": "snapshots/gov24-45711701521-1",
+          "version": 1
+        },
+        "source_fingerprint_unchanged": true,
+        "official_sources_reopened": {
+          "verified_at": "2026-11-26T06:07:11.038823+00:00",
+          "source_refs": [
+            "turn521388175view0",
+            "turn521388175view1",
+            "turn521388175view2"
+          ],
+          "method": "Actual reopened three official full relevant bodies, ages/amounts/year-round/registration pharmacy and 2027 future transition reviewed; no facts changed."
+        },
+        "followup_notices_rechecked": [
+          "KDCA Nov5 313366 direct body",
+          "KDCA Nov25 313567 direct body; session-bound URL omitted"
+        ],
+        "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+        "current_image_GET_SHA_verified": true,
+        "new_visual_inspection": false,
+        "body_media_pattern_and_independent_review_exact_preserved": true,
+        "new_model_calls": 0,
+        "new_scores": 0,
+        "new_queue_blob_sha": "036571d81a8324eb47af68e6d91b89eef0e21fb1",
+        "actual_sender_latest_fresh_source_required": true,
+        "queue_commit": "ea92faca7c23380d1f2d5db9d893e55e393f8252"
+      }
     }
   },
   "last_reported_prepublication_repair": {
@@ -165340,7 +167591,7 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-26T13:41:38.294243+09:00",
+    "checked_at": "2026-11-26T15:09:45.786887+09:00",
     "ready": 4,
     "future24h_ready": 4,
     "new_drafts": 0,
@@ -165354,7 +167605,6 @@
         "char_count": 459,
         "expires_at": "2026-11-26T18:54:53.927829+09:00",
         "full_delay_window_valid": true,
-        "full_delay_window_error": null,
         "source_fresh_at_slot": true,
         "source_recheck_required_at_publish": true
       },
@@ -165366,7 +167616,6 @@
         "char_count": 395,
         "expires_at": "2026-11-26T22:25:37.852042+09:00",
         "full_delay_window_valid": true,
-        "full_delay_window_error": null,
         "source_fresh_at_slot": true,
         "source_recheck_required_at_publish": true
       },
@@ -165378,7 +167627,6 @@
         "char_count": 444,
         "expires_at": "2026-11-27T10:02:35.655519+09:00",
         "full_delay_window_valid": true,
-        "full_delay_window_error": null,
         "source_fresh_at_slot": false,
         "source_recheck_required_at_publish": true
       },
@@ -165388,9 +167636,8 @@
         "pattern": "P8",
         "media_turn": "IMAGE",
         "char_count": 433,
-        "expires_at": "2026-11-27T13:20:31.524401+09:00",
-        "full_delay_window_valid": false,
-        "full_delay_window_error": "writer_draft_expired_or_future",
+        "expires_at": "2026-11-27T15:09:45.786887+09:00",
+        "full_delay_window_valid": true,
         "source_fresh_at_slot": false,
         "source_recheck_required_at_publish": true
       }
@@ -165409,8 +167656,8 @@
     "lease": null,
     "new_posts": 0,
     "new_incidents": 0,
-    "new_metrics": 0,
-    "observations": 165,
+    "new_metrics": 3,
+    "observations": 168,
     "new_evaluation": false,
     "astra_review_invocations": 0,
     "existing_Astra_review_preserved": true,
@@ -165422,18 +167669,18 @@
         "path": "social/images/benefit-guide-1.png",
         "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
         "actual_download_sha_matches_current_review": true,
-        "checked_at": "2026-11-26T13:41:45.565091+09:00",
+        "checked_at": "2026-11-26T15:09:45.794078+09:00",
         "new_visual_inspection": false
       },
       {
         "path": "social/images/benefit-guide-2.png",
         "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
         "actual_download_sha_matches_current_review": true,
-        "checked_at": "2026-11-26T13:41:53.081883+09:00",
+        "checked_at": "2026-11-26T15:09:45.802512+09:00",
         "new_visual_inspection": false
       }
     ],
-    "expiry_prevention_revalidations": 0
+    "expiry_prevention_revalidations": 1
   },
   "last_queue_review_refresh": {
     "checked_at": "2026-11-25T22:25:37.852042+09:00",
@@ -183075,10 +185322,10 @@
       "actual_sender_latest_source_recheck_required": true
     },
     "2026-11-27T12:00:00+09:00:GMW000000210": {
-      "status": "REQUIRED_AFTER_14KST_BEFORE_DISPATCH",
+      "status": "RESOLVED_ACTUAL_OFFICIAL_REREVIEW_FULL_WINDOW_COVERED",
       "revalidate_after": "2026-11-26T14:00:00+09:00",
       "revalidate_before": "2026-11-27T12:00:00+09:00",
-      "current_expires_at": "2026-11-27T13:20:31.524401+09:00",
+      "current_expires_at": "2026-11-27T15:09:45.786887+09:00",
       "slot_window_ends": "2026-11-27T14:00:00+09:00",
       "preserve_fields": [
         "post_text",
@@ -183525,6 +185772,472 @@
         "pass": false,
         "error": "writer_draft_expired_or_future",
         "required": "Actual official/source/image recheck after Nov26 14, CAS renew before dispatch; expired draft remains blocked."
+      },
+      "resolved_at": "2026-11-26T15:09:45.786887+09:00",
+      "actual_checks": {
+        "checked_at": "2026-11-26T15:09:45.786887+09:00",
+        "status": "RESOLVED_ACTUAL_OFFICIAL_REREVIEW_FULL_WINDOW_COVERED",
+        "previous_entry": {
+          "slot": "2026-11-27T12:00:00+09:00",
+          "benefit_id": "GMW000000210",
+          "source_fingerprint": "422af02f4af6a4a7caed6e6b3c04151d2c0a3b185f01d05bb6a89ff5527630cb",
+          "source_generation": "gov24-45711701521-1",
+          "prepared_at": "2026-11-26T13:20:31.524401+09:00",
+          "expires_at": "2026-11-27T13:20:31.524401+09:00",
+          "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "writer": {
+            "schema_version": "supportpick.writer.v1",
+            "status": "READY",
+            "selected_program_id": "GMW000000210",
+            "post_text": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?\n아니요. 이 사업의 진료비·약제비 감면은 만 65세 이상 등록환자가 대상이에요.\n\n주민등록상 광명시에 사는 만 30세 이상 고혈압 또는 당뇨병 환자는 연중 등록할 수 있어요.\n\n만 30~64세: 교육·상담과 진료일 알림을 이용해요.\n만 65세 이상: 일반 안내 기준 월 1회 진료비 1인당 1,500원, 약제비 질병당 2,000원을 감면해요. 실제 본인부담금과 자격에 따라 지원액이 달라질 수 있어요.\n\n참여 의료기관에서 설명을 듣고 등록관리 동의서를 제출해요. 약제비 감면은 처방전을 등록관리 약국에 내야 적용돼요.\n\n프로필에서 ‘고혈압·당뇨병 등록관리서비스’를 찾으면 19개 사업지역과 방문 신청방법을 대조할 수 있어요. 다른 지역의 지원 연령·금액은 관할 보건소에 확인해요.\n\n자세한 사항은 프로필링크 확인",
+            "draft_text": null,
+            "reply_texts": [],
+            "media": {
+              "turn": "IMAGE",
+              "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "check": "MATCHED",
+              "image_copy": null,
+              "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+            },
+            "review": {
+              "planned_at": "2026-11-27T12:00:00+09:00",
+              "application_status": "ALWAYS",
+              "reader": "광명거주30세이상고혈압·당뇨병환자와가족,특히60세의의료비지원판단",
+              "central_message": "등록30세이상과의료비감면65세이상은다르며광명공식연령별기준과신청경로확인",
+              "pattern": "P8",
+              "selection_reason": "동일ID원본누적32167.최근20동일사업없음,기존미큐/미게시중최상위검증후보.상위HOLD/SKIP판단출처및기예약사업제외보존.65세미만등록과약값감면차이가가족의실제판단정보.지역금액차이를숨기지않고광명공식예시로범위한정.",
+              "interest_basis": "OBSERVED_METRICS",
+              "duplicate_check": "CHECKED",
+              "evidence": [
+                {
+                  "source_id": "GMW000000210",
+                  "source_ref": "https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-26T13:16:50+09:00",
+                  "claims_supported": [
+                    "광명주민30세이상고혈압또는당뇨병등록대상·연중·30~64본인부담지원없음·65세이상월1회진료인당1500/약제질병당2000,등록기관과처방전등록약국,동의서직접본문236~285행확인"
+                  ]
+                },
+                {
+                  "source_id": "GMW000000210",
+                  "source_ref": "https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-26T13:16:50+09:00",
+                  "claims_supported": [
+                    "질병관리청현재19개사업지역·30세이상등록·65세이상의료비감면·지역별연령금액차이·교육상담과알림·참여의료기관신청직접236~272행"
+                  ]
+                },
+                {
+                  "source_id": "GMW000000210",
+                  "source_ref": "https://www.korea.kr/news/policyNewsView.do?newsId=148972869",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-26T13:16:50+09:00",
+                  "claims_supported": [
+                    "2026-10-01질병관리청직접안내250~274행:사업중단아니며현재19지역,2027하반기확대예정.현재8만원지급으로표현하지않음"
+                  ]
+                },
+                {
+                  "source_id": "GMW000000210",
+                  "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+                  "access_method": "UPSTREAM_VERIFIED",
+                  "verified_at": "2026-11-26T13:20:31.524401+09:00",
+                  "claims_supported": [
+                    "현재mainPNG실제GET과기존승인image-review SHA재대조일치. 이번부모와독립검수자가원본및360px실제열람.명칭/한글/잘림/깨짐/대비/과밀/본문일치/권리/정부공식홍보물오인검수PASS.범용승인자체브랜드이며사업별금액·날짜·대상주장없음. 실제교대투영에따라guide2초기검수에서guide1최종묶음재검수로수정."
+                  ]
+                }
+              ],
+              "checks": {
+                "facts": "PASS",
+                "current_status": "PASS",
+                "eligibility_and_units": "PASS",
+                "cta_and_no_links": "PASS",
+                "length": "PASS",
+                "media": "PASS"
+              },
+              "char_count": 433,
+              "count_method": "python_len_including_spaces_and_newlines",
+              "missing_info": [],
+              "hold_reasons": [],
+              "warnings": [
+                "개인자격별최종감면액은참여기관확인",
+                "2027전환혜택은현재수혜로쓰지않음",
+                "PDF특별한도상세본문열람timeout으로900원숫자미사용",
+                "현재수집본은내일12시까지신선하지않으므로실제발송시최신완전세대필수",
+                "24h상한으로현재준비본은내일14시전체창끝까지유효하지않음:오늘14시이후공식/접수/이미지SHA/최신완전본실재대조후CAS갱신필수.날짜만변경금지"
+              ],
+              "reach_editorial": {
+                "policy_id": "supportpick-threads-reach-v1-20261109",
+                "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+                "core_question": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+                "reader_scope": "광명거주30세이상고혈압·당뇨병환자와가족,특히60세의의료비지원판단",
+                "angles": [
+                  "매월약값부담",
+                  "등록자격과의료비지원연령구분",
+                  "의료기관/약국등록절차"
+                ],
+                "chosen_angle": "60세생활질문즉답→연령별혜택목록→참여방법",
+                "opening_candidates": [
+                  "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+                  "광명에 사는 65세 고혈압 환자, 약값 감면은 어디서 신청할까요?",
+                  "고혈압·당뇨병 등록과 약값 감면은 나이 조건이 같을까요?"
+                ],
+                "chosen_opening": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+                "opening_type": "구체적나이생활질문형",
+                "cohort": null,
+                "comparison_eligible": false,
+                "comparison_exclusion": "v3 질문형/연령목록동시편집은순수A/B와조건이다름",
+                "selection_reason": "동일ID원본누적32167.최근20동일사업없음,기존미큐/미게시중최상위검증후보.상위HOLD/SKIP판단출처및기예약사업제외보존.65세미만등록과약값감면차이가가족의실제판단정보.지역금액차이를숨기지않고광명공식예시로범위한정.",
+                "history_posts_checked": 20,
+                "profile_route": {
+                  "profile": "https://www.threads.com/@hid_1004",
+                  "visible_link_target": "https://kllollain-max.github.io/supportpick/",
+                  "profile_target_checked_at": "2026-11-26T13:17:54+09:00",
+                  "home_search": "고혈압·당뇨병 등록관리서비스",
+                  "results": 1,
+                  "actual_search_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/GMW000000210/",
+                  "redirect_click_completed": false,
+                  "limitation": "오늘프로필공개표시목적지확인,링크클릭단계가입오버레이로리디렉션완료미확인. 실제홈검색→결과클릭→상세대상/19지역/신청방법도착은확인.",
+                  "transient_site_error": "InitialGitHubUnicornpage recovered with one reload; no code/site modification."
+                },
+                "search_evidence": "공식검색표현 고혈압·당뇨병등록관리/65세/진료비약제비. 실측검색량없음.",
+                "observed_metrics_context": "84완료게시165공식관측.7/30계정프로필/홈/완독·체류·CTA미측정0아님,성과효과단정없음.",
+                "master_full_used": true
+              },
+              "astra_final_review": {
+                "requested_model": "gpt-6.2-astra",
+                "actual_model": "미확인",
+                "invoked_model_identifier": "gpt-6.2-astra",
+                "invocation_identifier_source": "Successful parent explicit model selection; finer identity unavailable",
+                "fallback_reason": null,
+                "version": "3.0",
+                "independent_agent": "/root/medical_final_review",
+                "first_review": {
+                  "version": "supportpick review v3 / first",
+                  "model_id": "미확인",
+                  "reviewed_at": "2026-11-26T13:17:20.624997+09:00",
+                  "slot": "2026-11-27T12:00:00+09:00",
+                  "body_sha256": "291be486e3cd140cedc1682c259de2dbfceed86702fe3fce5da1316bb06519b0",
+                  "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                  "rules_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+                  "operations_sha256": "e8edca3b7b3066acc88a71281e06fbbf283751fbc64d70b8d489a60e47bc37c5",
+                  "pattern": "P8",
+                  "media": "IMAGE",
+                  "scores": {
+                    "첫문장": [
+                      13,
+                      15,
+                      "첫 질문 바로 아래 65세 기준 답변. 최근 11/25 16·20시와 같은 질문 틀"
+                    ],
+                    "관심의도": [
+                      15,
+                      15,
+                      "광명 만 60세 약값이라는 생활 판단이 구체적"
+                    ],
+                    "정확성": [
+                      18,
+                      20,
+                      "연중 참여 문장에 만 30세 이상과 대상 질환 누락. 처방 약국 조건을 감면 범위에 한정할 필요"
+                    ],
+                    "완독": [
+                      13,
+                      15,
+                      "나이별 답 사이에 절차가 끼고 등록비 설명이 길다"
+                    ],
+                    "공유공감": [
+                      9,
+                      10,
+                      "부모·가족이 연령별 이용 차이를 전달 가능"
+                    ],
+                    "가치차별": [
+                      10,
+                      10,
+                      "등록비 지급주체와 약제비 단위 구분"
+                    ],
+                    "모바일": [
+                      4,
+                      5,
+                      "P8 대상별 두 줄 목록 필요"
+                    ],
+                    "이미지완성": [
+                      5,
+                      5,
+                      "원본과 360px에서 실제 제목·하단 CTA 가독. 금액·지역·기한 표기 없음"
+                    ],
+                    "프로필": [
+                      5,
+                      5,
+                      "상세에서 확인 가능한 19곳과 방문 신청방법 제시"
+                    ]
+                  },
+                  "total": 92,
+                  "decision": "수정 후 재검수 / 현재 발행 차단",
+                  "char_count": 455,
+                  "count_method": "Unicode code points, 공백·줄바꿈 포함",
+                  "checks": {
+                    "single_body": 1,
+                    "replies": 0,
+                    "end_cta": true,
+                    "cta_count": 1,
+                    "links_domains_hashtags_obfuscated": "없음 / 직접 읽음",
+                    "limit500": true,
+                    "first_question_then_answer": true,
+                    "eligibility": "만 30세 이상 등록 대상 명시 필요",
+                    "status": "ALWAYS 광명 연중",
+                    "units": "월 1회 인당/질병당",
+                    "privacy_hype_guarantee": "없음",
+                    "history": "최근 실게시 20개 중 동일 사업 없음. 직전 5개 중 1회 P8. 수 있나요 틀 반복",
+                    "image": "원본/360px 모두 직접 열람. 동일 자산 해시 확인",
+                    "destination": "상위검수 오늘 홈 일시 오류 후 다시 로드, 사업명 검색결과 1건→상세 클릭. 프로필 표시는 11/25 08:33 근거. 오늘 Threads 리디렉션 미확인"
+                  },
+                  "sources": {
+                    "광명시": "직접 열람 https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+                    "질병관리청": "직접 열람 https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+                    "정책브리핑": "직접 열람 https://www.korea.kr/news/policyNewsView.do?newsId=148972869 2027년 하반기 확대계획",
+                    "지침": "https://www.kdca.go.kr/bbs/kdca/55/304420/download.do 직접 열람 timeout. 900원 예외 원문 미확인, 확정 금액 추가 금지"
+                  },
+                  "selection": "상위 검수 기록 gov24-45711701521-1 완전행 10898개, GMW000000210 원본 누적 32167. 최근 실게시 84건·통계 관측 165개. 7/30일 프로필·홈·완독·체류·CTA 미측정",
+                  "required_edits": [
+                    "광명시 주민등록 만 30세 이상 고혈압 또는 당뇨병 환자 명시",
+                    "두 연령대의 혜택을 인접한 줄로 배열하고 첫 문장은 기존 질문 틀을 변주",
+                    "등록약국 조건을 약제비 감면에 한정. 등록비 지급주체를 간결하게 표시"
+                  ]
+                },
+                "intermediate_review": {
+                  "version": "supportpick review v3 / final",
+                  "model_id": "미확인",
+                  "reviewed_at": "2026-11-26T13:18:27.199377+09:00",
+                  "slot": "2026-11-27T12:00:00+09:00",
+                  "body_sha256": "09caec61a73f3059e9b5648eaac8142cf04902c17c42bf309ab7d624864d89b8",
+                  "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                  "rules_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+                  "operations_sha256": "e8edca3b7b3066acc88a71281e06fbbf283751fbc64d70b8d489a60e47bc37c5",
+                  "pattern": "P8",
+                  "media": "IMAGE",
+                  "scores": {
+                    "첫문장": [
+                      15,
+                      15,
+                      "만 60세 실제 약값 질문 후 바로 아니요와 65세 기준"
+                    ],
+                    "관심의도": [
+                      15,
+                      15,
+                      "실제 독자가 자기 연령과 비용 절감을 바로 판단"
+                    ],
+                    "정확성": [
+                      20,
+                      20,
+                      "광명 주민등록·만 30세 이상·고혈압 또는 당뇨병·연중, 월 1회와 진료 1인/약제 질병별, 자격·실제부담 변동·등록약국을 정확히 명시"
+                    ],
+                    "완독": [
+                      14,
+                      15,
+                      "나이별 목록과 짧은 다음 단계. 65세 이상 문장이 다소 길다"
+                    ],
+                    "공유공감": [
+                      9,
+                      10,
+                      "다른 연령대 가족에게 전달하기 쉬움. 지역 밖은 개별 확인 필요"
+                    ],
+                    "가치차별": [
+                      10,
+                      10,
+                      "진료와 약제 감면 단위 및 수급 가능 연령을 구별"
+                    ],
+                    "모바일": [
+                      5,
+                      5,
+                      "짧은 문단에 연령을 줄 앞에 표시"
+                    ],
+                    "이미지완성": [
+                      5,
+                      5,
+                      "같은 SHA의 승인 원본과 360px 시각 대조, 가독·내용 일치"
+                    ],
+                    "프로필": [
+                      5,
+                      5,
+                      "사이트에서 찾을 이름과 확인 가능한 지역 목록·방문 신청방법 제시"
+                    ]
+                  },
+                  "total": 98,
+                  "decision": "최종 편집 검수 PASS / READY. 운영상 전체 창 만료 갱신 별도 필요, 발행되지 않음.",
+                  "char_count": 433,
+                  "count_method": "Unicode code points, 공백·줄바꿈 포함",
+                  "checks": {
+                    "single_body": 1,
+                    "replies": 0,
+                    "end_cta": true,
+                    "cta_count": 1,
+                    "links_domains_hashtags_obfuscated": "없음 / 직접 읽음",
+                    "limit500": true,
+                    "first_question_then_answer": true,
+                    "eligibility": "PASS 광명 연령·질환·주민등록과 등록 조건",
+                    "status": "ALWAYS 광명 연중",
+                    "units": "월 1회 인당/질병당",
+                    "privacy_hype_guarantee": "없음",
+                    "history": "최근 실게시 20개 동일사업 없음. 기존 수 있나요 문형 변주. 연령 두 줄 P8",
+                    "image": "원본/360px 모두 직접 열람. 동일 자산 해시 확인",
+                    "destination": "상위검수 11/26 13:17 KST 공개 프로필 표시 목적지 확인. 클릭 시 가입 오버레이, Threads→목적지 실제 리디렉션 완료 미확인. 별도로 홈→사업 검색→상세 도착. 첫 일시 오류 reload로 복구. 팔로워 표시 2는 7/30일 실적이 아님.",
+                    "content_verification": "본문 직접 읽음, 단독 본문 1·답글 0 원고 계약, 해시태그·도메인·우회 URL 없음, 현행/예정 혼동 없음"
+                  },
+                  "sources": {
+                    "광명시": "직접 열람 https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+                    "질병관리청": "직접 열람 https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+                    "정책브리핑": "직접 열람 https://www.korea.kr/news/policyNewsView.do?newsId=148972869 2027년 하반기 확대계획",
+                    "지침": "https://www.kdca.go.kr/bbs/kdca/55/304420/download.do 직접 열람 timeout. 900원 예외 원문 미확인, 확정 금액 추가 금지"
+                  },
+                  "selection": "상위 검수 기록 gov24-45711701521-1 완전행 10898개, GMW000000210 원본 누적 32167. 최근 실게시 84건·통계 관측 165개. 7/30일 프로필·홈·완독·체류·CTA 미측정",
+                  "required_edits": [],
+                  "operational_dependency": "24시간 유효기간. 11/27 12:00~14:00 KST 전체 창은 이 시점 준비분으로 포괄되지 않음. 11/26 14시 이후 공식자료·이미지 해시·완전 수집본과 대상 실제 존재 여부 재검수하고 최신 blob SHA로 조건부 큐 갱신 필요. 실제 예약·발행 별도."
+                },
+                "final_review": {
+                  "version": "supportpick review v3 / final corrected asset",
+                  "model_id": "미확인",
+                  "reviewed_at": "2026-11-26T13:19:22.000921+09:00",
+                  "slot": "2026-11-27T12:00:00+09:00",
+                  "body_sha256": "09caec61a73f3059e9b5648eaac8142cf04902c17c42bf309ab7d624864d89b8",
+                  "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+                  "rules_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+                  "operations_sha256": "e8edca3b7b3066acc88a71281e06fbbf283751fbc64d70b8d489a60e47bc37c5",
+                  "pattern": "P8",
+                  "media": "IMAGE",
+                  "scores": {
+                    "첫문장": [
+                      15,
+                      15,
+                      "만 60세 실제 약값 질문 후 바로 아니요와 65세 기준"
+                    ],
+                    "관심의도": [
+                      15,
+                      15,
+                      "실제 독자가 자기 연령과 비용 절감을 바로 판단"
+                    ],
+                    "정확성": [
+                      20,
+                      20,
+                      "광명 주민등록·만 30세 이상·고혈압 또는 당뇨병·연중, 월 1회와 진료 1인/약제 질병별, 자격·실제부담 변동·등록약국을 정확히 명시"
+                    ],
+                    "완독": [
+                      14,
+                      15,
+                      "나이별 목록과 짧은 다음 단계. 65세 이상 문장이 다소 길다"
+                    ],
+                    "공유공감": [
+                      9,
+                      10,
+                      "다른 연령대 가족에게 전달하기 쉬움. 지역 밖은 개별 확인 필요"
+                    ],
+                    "가치차별": [
+                      10,
+                      10,
+                      "진료와 약제 감면 단위 및 수급 가능 연령을 구별"
+                    ],
+                    "모바일": [
+                      5,
+                      5,
+                      "짧은 문단에 연령을 줄 앞에 표시"
+                    ],
+                    "이미지완성": [
+                      5,
+                      5,
+                      "guide1 원본 및 360px 재검수. 금액·현금 지급 문구 없음. 브랜드·CTA 가독."
+                    ],
+                    "프로필": [
+                      5,
+                      5,
+                      "사이트에서 찾을 이름과 확인 가능한 지역 목록·방문 신청방법 제시"
+                    ]
+                  },
+                  "total": 98,
+                  "decision": "최종 편집 검수 PASS / READY. 운영상 전체 창 만료 갱신 별도 필요, 발행되지 않음.",
+                  "char_count": 433,
+                  "count_method": "Unicode code points, 공백·줄바꿈 포함",
+                  "checks": {
+                    "single_body": 1,
+                    "replies": 0,
+                    "end_cta": true,
+                    "cta_count": 1,
+                    "links_domains_hashtags_obfuscated": "없음 / 직접 읽음",
+                    "limit500": true,
+                    "first_question_then_answer": true,
+                    "eligibility": "PASS 광명 연령·질환·주민등록과 등록 조건",
+                    "status": "ALWAYS 광명 연중",
+                    "units": "월 1회 인당/질병당",
+                    "privacy_hype_guarantee": "없음",
+                    "history": "최근 실게시 20개 동일사업 없음. 기존 수 있나요 문형 변주. 연령 두 줄 P8",
+                    "image": "PASS. guide1 원본과 360px 직접 열람. 봉투·체크리스트·동전·싹과 브랜드 문구, 하단 CTA가 읽힘. 개별 지급액·질환·조건·기한 표기 없음. 감면형 본문과 상충 없음.",
+                    "destination": "상위검수 11/26 13:17 KST 공개 프로필 표시 목적지 확인. 클릭 시 가입 오버레이, Threads→목적지 실제 리디렉션 완료 미확인. 별도로 홈→사업 검색→상세 도착. 첫 일시 오류 reload로 복구. 팔로워 표시 2는 7/30일 실적이 아님.",
+                    "content_verification": "본문 직접 읽음, 단독 본문 1·답글 0 원고 계약, 해시태그·도메인·우회 URL 없음, 현행/예정 혼동 없음"
+                  },
+                  "sources": {
+                    "광명시": "직접 열람 https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+                    "질병관리청": "직접 열람 https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+                    "정책브리핑": "직접 열람 https://www.korea.kr/news/policyNewsView.do?newsId=148972869 2027년 하반기 확대계획",
+                    "지침": "https://www.kdca.go.kr/bbs/kdca/55/304420/download.do 직접 열람 timeout. 900원 예외 원문 미확인, 확정 금액 추가 금지"
+                  },
+                  "selection": "상위 검수 기록 gov24-45711701521-1 완전행 10898개, GMW000000210 원본 누적 32167. 최근 실게시 84건·통계 관측 165개. 7/30일 프로필·홈·완독·체류·CTA 미측정",
+                  "required_edits": [],
+                  "operational_dependency": "24시간 유효기간. 11/27 12:00~14:00 KST 전체 창은 이 시점 준비분으로 포괄되지 않음. 11/26 14시 이후 공식자료·이미지 해시·완전 수집본과 대상 실제 존재 여부 재검수하고 최신 blob SHA로 조건부 큐 갱신 필요. 실제 예약·발행 별도.",
+                  "review_round": 3,
+                  "previous_asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                  "asset_path": "social/images/benefit-guide-1.png",
+                  "mobile_preview": "medical1312-mobile-final.png",
+                  "asset_correction_reason": "상위 검수에서 성공 84건 후 20시 guide2, 다음 08시 TEXT를 투영하니 기존 select_image가 11/27 12시 guide1 선택"
+                },
+                "final_verdict": "PASS",
+                "body_sha256": "09caec61a73f3059e9b5648eaac8142cf04902c17c42bf309ab7d624864d89b8",
+                "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+                "score": 98,
+                "actual_review_calls": 3
+              }
+            },
+            "next_history_record": {
+              "program_id": "GMW000000210",
+              "notice_version": "2026-10-23",
+              "pattern": "P8",
+              "opening": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+              "structure": "구체적나이질문즉답→광명등록대상→두연령대목록→처방전등록약국조건→19지역신청경로",
+              "media_turn": "IMAGE"
+            }
+          },
+          "full_delay_window_covered": false,
+          "revalidate_after": "2026-11-26T14:00:00+09:00",
+          "revalidate_before": "2026-11-27T12:00:00+09:00"
+        },
+        "new_prepared_at": "2026-11-26T15:09:45.786887+09:00",
+        "new_expires_at": "2026-11-27T15:09:45.786887+09:00",
+        "source": {
+          "count": 10898,
+          "generation": "gov24-45711701521-1",
+          "lastSuccessAt": "2026-11-26T07:22:33.333588+09:00",
+          "manifestSha256": "0b74902d1fc91f8ab33552d804e03ee390f95843a035adb4d4b5683d2c720ed6",
+          "path": "snapshots/gov24-45711701521-1",
+          "version": 1
+        },
+        "source_fingerprint_unchanged": true,
+        "official_sources_reopened": {
+          "verified_at": "2026-11-26T06:07:11.038823+00:00",
+          "source_refs": [
+            "turn521388175view0",
+            "turn521388175view1",
+            "turn521388175view2"
+          ],
+          "method": "Actual reopened three official full relevant bodies, ages/amounts/year-round/registration pharmacy and 2027 future transition reviewed; no facts changed."
+        },
+        "followup_notices_rechecked": [
+          "KDCA Nov5 313366 direct body",
+          "KDCA Nov25 313567 direct body; session-bound URL omitted"
+        ],
+        "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+        "current_image_GET_SHA_verified": true,
+        "new_visual_inspection": false,
+        "body_media_pattern_and_independent_review_exact_preserved": true,
+        "new_model_calls": 0,
+        "new_scores": 0,
+        "new_queue_blob_sha": "036571d81a8324eb47af68e6d91b89eef0e21fb1",
+        "actual_sender_latest_fresh_source_required": true,
+        "queue_commit": "ea92faca7c23380d1f2d5db9d893e55e393f8252"
       }
     }
   },
@@ -184211,5 +186924,470 @@
     "new_posts": 0,
     "priority_block_resolved": false,
     "queue_commit": "7d23f8d9fddc7c5c4a2f3fe6c3ef2bf0015f38e9"
+  },
+  "last_expiry_prevention_revalidation": {
+    "checked_at": "2026-11-26T15:09:45.786887+09:00",
+    "status": "RESOLVED_ACTUAL_OFFICIAL_REREVIEW_FULL_WINDOW_COVERED",
+    "previous_entry": {
+      "slot": "2026-11-27T12:00:00+09:00",
+      "benefit_id": "GMW000000210",
+      "source_fingerprint": "422af02f4af6a4a7caed6e6b3c04151d2c0a3b185f01d05bb6a89ff5527630cb",
+      "source_generation": "gov24-45711701521-1",
+      "prepared_at": "2026-11-26T13:20:31.524401+09:00",
+      "expires_at": "2026-11-27T13:20:31.524401+09:00",
+      "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "GMW000000210",
+        "post_text": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?\n아니요. 이 사업의 진료비·약제비 감면은 만 65세 이상 등록환자가 대상이에요.\n\n주민등록상 광명시에 사는 만 30세 이상 고혈압 또는 당뇨병 환자는 연중 등록할 수 있어요.\n\n만 30~64세: 교육·상담과 진료일 알림을 이용해요.\n만 65세 이상: 일반 안내 기준 월 1회 진료비 1인당 1,500원, 약제비 질병당 2,000원을 감면해요. 실제 본인부담금과 자격에 따라 지원액이 달라질 수 있어요.\n\n참여 의료기관에서 설명을 듣고 등록관리 동의서를 제출해요. 약제비 감면은 처방전을 등록관리 약국에 내야 적용돼요.\n\n프로필에서 ‘고혈압·당뇨병 등록관리서비스’를 찾으면 19개 사업지역과 방문 신청방법을 대조할 수 있어요. 다른 지역의 지원 연령·금액은 관할 보건소에 확인해요.\n\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "IMAGE",
+          "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+          "check": "MATCHED",
+          "image_copy": null,
+          "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 체크리스트가 든 봉투, 동전과 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+        },
+        "review": {
+          "planned_at": "2026-11-27T12:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "광명거주30세이상고혈압·당뇨병환자와가족,특히60세의의료비지원판단",
+          "central_message": "등록30세이상과의료비감면65세이상은다르며광명공식연령별기준과신청경로확인",
+          "pattern": "P8",
+          "selection_reason": "동일ID원본누적32167.최근20동일사업없음,기존미큐/미게시중최상위검증후보.상위HOLD/SKIP판단출처및기예약사업제외보존.65세미만등록과약값감면차이가가족의실제판단정보.지역금액차이를숨기지않고광명공식예시로범위한정.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "GMW000000210",
+              "source_ref": "https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-26T13:16:50+09:00",
+              "claims_supported": [
+                "광명주민30세이상고혈압또는당뇨병등록대상·연중·30~64본인부담지원없음·65세이상월1회진료인당1500/약제질병당2000,등록기관과처방전등록약국,동의서직접본문236~285행확인"
+              ]
+            },
+            {
+              "source_id": "GMW000000210",
+              "source_ref": "https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-26T13:16:50+09:00",
+              "claims_supported": [
+                "질병관리청현재19개사업지역·30세이상등록·65세이상의료비감면·지역별연령금액차이·교육상담과알림·참여의료기관신청직접236~272행"
+              ]
+            },
+            {
+              "source_id": "GMW000000210",
+              "source_ref": "https://www.korea.kr/news/policyNewsView.do?newsId=148972869",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-26T13:16:50+09:00",
+              "claims_supported": [
+                "2026-10-01질병관리청직접안내250~274행:사업중단아니며현재19지역,2027하반기확대예정.현재8만원지급으로표현하지않음"
+              ]
+            },
+            {
+              "source_id": "GMW000000210",
+              "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-1.png",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-26T13:20:31.524401+09:00",
+              "claims_supported": [
+                "현재mainPNG실제GET과기존승인image-review SHA재대조일치. 이번부모와독립검수자가원본및360px실제열람.명칭/한글/잘림/깨짐/대비/과밀/본문일치/권리/정부공식홍보물오인검수PASS.범용승인자체브랜드이며사업별금액·날짜·대상주장없음. 실제교대투영에따라guide2초기검수에서guide1최종묶음재검수로수정."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "PASS"
+          },
+          "char_count": 433,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "개인자격별최종감면액은참여기관확인",
+            "2027전환혜택은현재수혜로쓰지않음",
+            "PDF특별한도상세본문열람timeout으로900원숫자미사용",
+            "현재수집본은내일12시까지신선하지않으므로실제발송시최신완전세대필수",
+            "24h상한으로현재준비본은내일14시전체창끝까지유효하지않음:오늘14시이후공식/접수/이미지SHA/최신완전본실재대조후CAS갱신필수.날짜만변경금지"
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+            "core_question": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+            "reader_scope": "광명거주30세이상고혈압·당뇨병환자와가족,특히60세의의료비지원판단",
+            "angles": [
+              "매월약값부담",
+              "등록자격과의료비지원연령구분",
+              "의료기관/약국등록절차"
+            ],
+            "chosen_angle": "60세생활질문즉답→연령별혜택목록→참여방법",
+            "opening_candidates": [
+              "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+              "광명에 사는 65세 고혈압 환자, 약값 감면은 어디서 신청할까요?",
+              "고혈압·당뇨병 등록과 약값 감면은 나이 조건이 같을까요?"
+            ],
+            "chosen_opening": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+            "opening_type": "구체적나이생활질문형",
+            "cohort": null,
+            "comparison_eligible": false,
+            "comparison_exclusion": "v3 질문형/연령목록동시편집은순수A/B와조건이다름",
+            "selection_reason": "동일ID원본누적32167.최근20동일사업없음,기존미큐/미게시중최상위검증후보.상위HOLD/SKIP판단출처및기예약사업제외보존.65세미만등록과약값감면차이가가족의실제판단정보.지역금액차이를숨기지않고광명공식예시로범위한정.",
+            "history_posts_checked": 20,
+            "profile_route": {
+              "profile": "https://www.threads.com/@hid_1004",
+              "visible_link_target": "https://kllollain-max.github.io/supportpick/",
+              "profile_target_checked_at": "2026-11-26T13:17:54+09:00",
+              "home_search": "고혈압·당뇨병 등록관리서비스",
+              "results": 1,
+              "actual_search_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/GMW000000210/",
+              "redirect_click_completed": false,
+              "limitation": "오늘프로필공개표시목적지확인,링크클릭단계가입오버레이로리디렉션완료미확인. 실제홈검색→결과클릭→상세대상/19지역/신청방법도착은확인.",
+              "transient_site_error": "InitialGitHubUnicornpage recovered with one reload; no code/site modification."
+            },
+            "search_evidence": "공식검색표현 고혈압·당뇨병등록관리/65세/진료비약제비. 실측검색량없음.",
+            "observed_metrics_context": "84완료게시165공식관측.7/30계정프로필/홈/완독·체류·CTA미측정0아님,성과효과단정없음.",
+            "master_full_used": true
+          },
+          "astra_final_review": {
+            "requested_model": "gpt-6.2-astra",
+            "actual_model": "미확인",
+            "invoked_model_identifier": "gpt-6.2-astra",
+            "invocation_identifier_source": "Successful parent explicit model selection; finer identity unavailable",
+            "fallback_reason": null,
+            "version": "3.0",
+            "independent_agent": "/root/medical_final_review",
+            "first_review": {
+              "version": "supportpick review v3 / first",
+              "model_id": "미확인",
+              "reviewed_at": "2026-11-26T13:17:20.624997+09:00",
+              "slot": "2026-11-27T12:00:00+09:00",
+              "body_sha256": "291be486e3cd140cedc1682c259de2dbfceed86702fe3fce5da1316bb06519b0",
+              "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+              "rules_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+              "operations_sha256": "e8edca3b7b3066acc88a71281e06fbbf283751fbc64d70b8d489a60e47bc37c5",
+              "pattern": "P8",
+              "media": "IMAGE",
+              "scores": {
+                "첫문장": [
+                  13,
+                  15,
+                  "첫 질문 바로 아래 65세 기준 답변. 최근 11/25 16·20시와 같은 질문 틀"
+                ],
+                "관심의도": [
+                  15,
+                  15,
+                  "광명 만 60세 약값이라는 생활 판단이 구체적"
+                ],
+                "정확성": [
+                  18,
+                  20,
+                  "연중 참여 문장에 만 30세 이상과 대상 질환 누락. 처방 약국 조건을 감면 범위에 한정할 필요"
+                ],
+                "완독": [
+                  13,
+                  15,
+                  "나이별 답 사이에 절차가 끼고 등록비 설명이 길다"
+                ],
+                "공유공감": [
+                  9,
+                  10,
+                  "부모·가족이 연령별 이용 차이를 전달 가능"
+                ],
+                "가치차별": [
+                  10,
+                  10,
+                  "등록비 지급주체와 약제비 단위 구분"
+                ],
+                "모바일": [
+                  4,
+                  5,
+                  "P8 대상별 두 줄 목록 필요"
+                ],
+                "이미지완성": [
+                  5,
+                  5,
+                  "원본과 360px에서 실제 제목·하단 CTA 가독. 금액·지역·기한 표기 없음"
+                ],
+                "프로필": [
+                  5,
+                  5,
+                  "상세에서 확인 가능한 19곳과 방문 신청방법 제시"
+                ]
+              },
+              "total": 92,
+              "decision": "수정 후 재검수 / 현재 발행 차단",
+              "char_count": 455,
+              "count_method": "Unicode code points, 공백·줄바꿈 포함",
+              "checks": {
+                "single_body": 1,
+                "replies": 0,
+                "end_cta": true,
+                "cta_count": 1,
+                "links_domains_hashtags_obfuscated": "없음 / 직접 읽음",
+                "limit500": true,
+                "first_question_then_answer": true,
+                "eligibility": "만 30세 이상 등록 대상 명시 필요",
+                "status": "ALWAYS 광명 연중",
+                "units": "월 1회 인당/질병당",
+                "privacy_hype_guarantee": "없음",
+                "history": "최근 실게시 20개 중 동일 사업 없음. 직전 5개 중 1회 P8. 수 있나요 틀 반복",
+                "image": "원본/360px 모두 직접 열람. 동일 자산 해시 확인",
+                "destination": "상위검수 오늘 홈 일시 오류 후 다시 로드, 사업명 검색결과 1건→상세 클릭. 프로필 표시는 11/25 08:33 근거. 오늘 Threads 리디렉션 미확인"
+              },
+              "sources": {
+                "광명시": "직접 열람 https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+                "질병관리청": "직접 열람 https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+                "정책브리핑": "직접 열람 https://www.korea.kr/news/policyNewsView.do?newsId=148972869 2027년 하반기 확대계획",
+                "지침": "https://www.kdca.go.kr/bbs/kdca/55/304420/download.do 직접 열람 timeout. 900원 예외 원문 미확인, 확정 금액 추가 금지"
+              },
+              "selection": "상위 검수 기록 gov24-45711701521-1 완전행 10898개, GMW000000210 원본 누적 32167. 최근 실게시 84건·통계 관측 165개. 7/30일 프로필·홈·완독·체류·CTA 미측정",
+              "required_edits": [
+                "광명시 주민등록 만 30세 이상 고혈압 또는 당뇨병 환자 명시",
+                "두 연령대의 혜택을 인접한 줄로 배열하고 첫 문장은 기존 질문 틀을 변주",
+                "등록약국 조건을 약제비 감면에 한정. 등록비 지급주체를 간결하게 표시"
+              ]
+            },
+            "intermediate_review": {
+              "version": "supportpick review v3 / final",
+              "model_id": "미확인",
+              "reviewed_at": "2026-11-26T13:18:27.199377+09:00",
+              "slot": "2026-11-27T12:00:00+09:00",
+              "body_sha256": "09caec61a73f3059e9b5648eaac8142cf04902c17c42bf309ab7d624864d89b8",
+              "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+              "rules_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+              "operations_sha256": "e8edca3b7b3066acc88a71281e06fbbf283751fbc64d70b8d489a60e47bc37c5",
+              "pattern": "P8",
+              "media": "IMAGE",
+              "scores": {
+                "첫문장": [
+                  15,
+                  15,
+                  "만 60세 실제 약값 질문 후 바로 아니요와 65세 기준"
+                ],
+                "관심의도": [
+                  15,
+                  15,
+                  "실제 독자가 자기 연령과 비용 절감을 바로 판단"
+                ],
+                "정확성": [
+                  20,
+                  20,
+                  "광명 주민등록·만 30세 이상·고혈압 또는 당뇨병·연중, 월 1회와 진료 1인/약제 질병별, 자격·실제부담 변동·등록약국을 정확히 명시"
+                ],
+                "완독": [
+                  14,
+                  15,
+                  "나이별 목록과 짧은 다음 단계. 65세 이상 문장이 다소 길다"
+                ],
+                "공유공감": [
+                  9,
+                  10,
+                  "다른 연령대 가족에게 전달하기 쉬움. 지역 밖은 개별 확인 필요"
+                ],
+                "가치차별": [
+                  10,
+                  10,
+                  "진료와 약제 감면 단위 및 수급 가능 연령을 구별"
+                ],
+                "모바일": [
+                  5,
+                  5,
+                  "짧은 문단에 연령을 줄 앞에 표시"
+                ],
+                "이미지완성": [
+                  5,
+                  5,
+                  "같은 SHA의 승인 원본과 360px 시각 대조, 가독·내용 일치"
+                ],
+                "프로필": [
+                  5,
+                  5,
+                  "사이트에서 찾을 이름과 확인 가능한 지역 목록·방문 신청방법 제시"
+                ]
+              },
+              "total": 98,
+              "decision": "최종 편집 검수 PASS / READY. 운영상 전체 창 만료 갱신 별도 필요, 발행되지 않음.",
+              "char_count": 433,
+              "count_method": "Unicode code points, 공백·줄바꿈 포함",
+              "checks": {
+                "single_body": 1,
+                "replies": 0,
+                "end_cta": true,
+                "cta_count": 1,
+                "links_domains_hashtags_obfuscated": "없음 / 직접 읽음",
+                "limit500": true,
+                "first_question_then_answer": true,
+                "eligibility": "PASS 광명 연령·질환·주민등록과 등록 조건",
+                "status": "ALWAYS 광명 연중",
+                "units": "월 1회 인당/질병당",
+                "privacy_hype_guarantee": "없음",
+                "history": "최근 실게시 20개 동일사업 없음. 기존 수 있나요 문형 변주. 연령 두 줄 P8",
+                "image": "원본/360px 모두 직접 열람. 동일 자산 해시 확인",
+                "destination": "상위검수 11/26 13:17 KST 공개 프로필 표시 목적지 확인. 클릭 시 가입 오버레이, Threads→목적지 실제 리디렉션 완료 미확인. 별도로 홈→사업 검색→상세 도착. 첫 일시 오류 reload로 복구. 팔로워 표시 2는 7/30일 실적이 아님.",
+                "content_verification": "본문 직접 읽음, 단독 본문 1·답글 0 원고 계약, 해시태그·도메인·우회 URL 없음, 현행/예정 혼동 없음"
+              },
+              "sources": {
+                "광명시": "직접 열람 https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+                "질병관리청": "직접 열람 https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+                "정책브리핑": "직접 열람 https://www.korea.kr/news/policyNewsView.do?newsId=148972869 2027년 하반기 확대계획",
+                "지침": "https://www.kdca.go.kr/bbs/kdca/55/304420/download.do 직접 열람 timeout. 900원 예외 원문 미확인, 확정 금액 추가 금지"
+              },
+              "selection": "상위 검수 기록 gov24-45711701521-1 완전행 10898개, GMW000000210 원본 누적 32167. 최근 실게시 84건·통계 관측 165개. 7/30일 프로필·홈·완독·체류·CTA 미측정",
+              "required_edits": [],
+              "operational_dependency": "24시간 유효기간. 11/27 12:00~14:00 KST 전체 창은 이 시점 준비분으로 포괄되지 않음. 11/26 14시 이후 공식자료·이미지 해시·완전 수집본과 대상 실제 존재 여부 재검수하고 최신 blob SHA로 조건부 큐 갱신 필요. 실제 예약·발행 별도."
+            },
+            "final_review": {
+              "version": "supportpick review v3 / final corrected asset",
+              "model_id": "미확인",
+              "reviewed_at": "2026-11-26T13:19:22.000921+09:00",
+              "slot": "2026-11-27T12:00:00+09:00",
+              "body_sha256": "09caec61a73f3059e9b5648eaac8142cf04902c17c42bf309ab7d624864d89b8",
+              "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+              "rules_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+              "operations_sha256": "e8edca3b7b3066acc88a71281e06fbbf283751fbc64d70b8d489a60e47bc37c5",
+              "pattern": "P8",
+              "media": "IMAGE",
+              "scores": {
+                "첫문장": [
+                  15,
+                  15,
+                  "만 60세 실제 약값 질문 후 바로 아니요와 65세 기준"
+                ],
+                "관심의도": [
+                  15,
+                  15,
+                  "실제 독자가 자기 연령과 비용 절감을 바로 판단"
+                ],
+                "정확성": [
+                  20,
+                  20,
+                  "광명 주민등록·만 30세 이상·고혈압 또는 당뇨병·연중, 월 1회와 진료 1인/약제 질병별, 자격·실제부담 변동·등록약국을 정확히 명시"
+                ],
+                "완독": [
+                  14,
+                  15,
+                  "나이별 목록과 짧은 다음 단계. 65세 이상 문장이 다소 길다"
+                ],
+                "공유공감": [
+                  9,
+                  10,
+                  "다른 연령대 가족에게 전달하기 쉬움. 지역 밖은 개별 확인 필요"
+                ],
+                "가치차별": [
+                  10,
+                  10,
+                  "진료와 약제 감면 단위 및 수급 가능 연령을 구별"
+                ],
+                "모바일": [
+                  5,
+                  5,
+                  "짧은 문단에 연령을 줄 앞에 표시"
+                ],
+                "이미지완성": [
+                  5,
+                  5,
+                  "guide1 원본 및 360px 재검수. 금액·현금 지급 문구 없음. 브랜드·CTA 가독."
+                ],
+                "프로필": [
+                  5,
+                  5,
+                  "사이트에서 찾을 이름과 확인 가능한 지역 목록·방문 신청방법 제시"
+                ]
+              },
+              "total": 98,
+              "decision": "최종 편집 검수 PASS / READY. 운영상 전체 창 만료 갱신 별도 필요, 발행되지 않음.",
+              "char_count": 433,
+              "count_method": "Unicode code points, 공백·줄바꿈 포함",
+              "checks": {
+                "single_body": 1,
+                "replies": 0,
+                "end_cta": true,
+                "cta_count": 1,
+                "links_domains_hashtags_obfuscated": "없음 / 직접 읽음",
+                "limit500": true,
+                "first_question_then_answer": true,
+                "eligibility": "PASS 광명 연령·질환·주민등록과 등록 조건",
+                "status": "ALWAYS 광명 연중",
+                "units": "월 1회 인당/질병당",
+                "privacy_hype_guarantee": "없음",
+                "history": "최근 실게시 20개 동일사업 없음. 기존 수 있나요 문형 변주. 연령 두 줄 P8",
+                "image": "PASS. guide1 원본과 360px 직접 열람. 봉투·체크리스트·동전·싹과 브랜드 문구, 하단 CTA가 읽힘. 개별 지급액·질환·조건·기한 표기 없음. 감면형 본문과 상충 없음.",
+                "destination": "상위검수 11/26 13:17 KST 공개 프로필 표시 목적지 확인. 클릭 시 가입 오버레이, Threads→목적지 실제 리디렉션 완료 미확인. 별도로 홈→사업 검색→상세 도착. 첫 일시 오류 reload로 복구. 팔로워 표시 2는 7/30일 실적이 아님.",
+                "content_verification": "본문 직접 읽음, 단독 본문 1·답글 0 원고 계약, 해시태그·도메인·우회 URL 없음, 현행/예정 혼동 없음"
+              },
+              "sources": {
+                "광명시": "직접 열람 https://www.gm.go.kr/health/helthBsns/hhprsGlycsr/registManage.jsp",
+                "질병관리청": "직접 열람 https://www.kdca.go.kr/KDCAtemp/5161/subview.do",
+                "정책브리핑": "직접 열람 https://www.korea.kr/news/policyNewsView.do?newsId=148972869 2027년 하반기 확대계획",
+                "지침": "https://www.kdca.go.kr/bbs/kdca/55/304420/download.do 직접 열람 timeout. 900원 예외 원문 미확인, 확정 금액 추가 금지"
+              },
+              "selection": "상위 검수 기록 gov24-45711701521-1 완전행 10898개, GMW000000210 원본 누적 32167. 최근 실게시 84건·통계 관측 165개. 7/30일 프로필·홈·완독·체류·CTA 미측정",
+              "required_edits": [],
+              "operational_dependency": "24시간 유효기간. 11/27 12:00~14:00 KST 전체 창은 이 시점 준비분으로 포괄되지 않음. 11/26 14시 이후 공식자료·이미지 해시·완전 수집본과 대상 실제 존재 여부 재검수하고 최신 blob SHA로 조건부 큐 갱신 필요. 실제 예약·발행 별도.",
+              "review_round": 3,
+              "previous_asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+              "asset_path": "social/images/benefit-guide-1.png",
+              "mobile_preview": "medical1312-mobile-final.png",
+              "asset_correction_reason": "상위 검수에서 성공 84건 후 20시 guide2, 다음 08시 TEXT를 투영하니 기존 select_image가 11/27 12시 guide1 선택"
+            },
+            "final_verdict": "PASS",
+            "body_sha256": "09caec61a73f3059e9b5648eaac8142cf04902c17c42bf309ab7d624864d89b8",
+            "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+            "score": 98,
+            "actual_review_calls": 3
+          }
+        },
+        "next_history_record": {
+          "program_id": "GMW000000210",
+          "notice_version": "2026-10-23",
+          "pattern": "P8",
+          "opening": "광명에서 고혈압약을 먹는 만 60세, 등록하면 약값이 줄까요?",
+          "structure": "구체적나이질문즉답→광명등록대상→두연령대목록→처방전등록약국조건→19지역신청경로",
+          "media_turn": "IMAGE"
+        }
+      },
+      "full_delay_window_covered": false,
+      "revalidate_after": "2026-11-26T14:00:00+09:00",
+      "revalidate_before": "2026-11-27T12:00:00+09:00"
+    },
+    "new_prepared_at": "2026-11-26T15:09:45.786887+09:00",
+    "new_expires_at": "2026-11-27T15:09:45.786887+09:00",
+    "source": {
+      "count": 10898,
+      "generation": "gov24-45711701521-1",
+      "lastSuccessAt": "2026-11-26T07:22:33.333588+09:00",
+      "manifestSha256": "0b74902d1fc91f8ab33552d804e03ee390f95843a035adb4d4b5683d2c720ed6",
+      "path": "snapshots/gov24-45711701521-1",
+      "version": 1
+    },
+    "source_fingerprint_unchanged": true,
+    "official_sources_reopened": {
+      "verified_at": "2026-11-26T06:07:11.038823+00:00",
+      "source_refs": [
+        "turn521388175view0",
+        "turn521388175view1",
+        "turn521388175view2"
+      ],
+      "method": "Actual reopened three official full relevant bodies, ages/amounts/year-round/registration pharmacy and 2027 future transition reviewed; no facts changed."
+    },
+    "followup_notices_rechecked": [
+      "KDCA Nov5 313366 direct body",
+      "KDCA Nov25 313567 direct body; session-bound URL omitted"
+    ],
+    "asset_sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+    "current_image_GET_SHA_verified": true,
+    "new_visual_inspection": false,
+    "body_media_pattern_and_independent_review_exact_preserved": true,
+    "new_model_calls": 0,
+    "new_scores": 0,
+    "new_queue_blob_sha": "036571d81a8324eb47af68e6d91b89eef0e21fb1",
+    "actual_sender_latest_fresh_source_required": true,
+    "queue_commit": "ea92faca7c23380d1f2d5db9d893e55e393f8252"
   }
 }
