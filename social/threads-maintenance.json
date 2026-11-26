@@ -14,6 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "45859361103",
     "45840632016",
     "45820380061",
     "45813297475",
@@ -67,8 +68,7 @@
     "45321813009",
     "45318715673",
     "45307423892",
-    "45295446949",
-    "45291493778"
+    "45295446949"
   ],
   "last_health": {
     "unresolved_publications": 0,
@@ -6025,18 +6025,35 @@
       "conclusion": "success",
       "updated_at": "2026-11-26T14:36:10Z",
       "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e"
+    },
+    "45859361103": {
+      "run_id": "45859361103",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-26T16:30:28Z",
+      "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-27T01:19:59.298174+09:00",
+    "checked_at": "2026-11-27T02:18:59.479054+09:00",
     "result": "no_update",
-    "maintenance_previous_blob_sha": "0ac57f2d7e4e4b2ad77164573fc5ed45e7522158",
+    "maintenance_previous_blob_sha": "a74948fe0ef0750ff4ee34eefd99f5b4ae319f2a",
     "current_main_sha": null,
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
     "publication_ledger_sha": "08f3f242d22522414fccde31fd2602bf953e6fad",
     "queue_blob_sha": "b3c807fd779b7633aa7c5824de31ed5bc23070c7",
-    "changed_run_versions": [],
+    "changed_run_versions": [
+      {
+        "run_id": "45859361103",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-26T16:30:28Z",
+        "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e"
+      }
+    ],
     "active_target_runs": [],
     "run_pagination": {
       "per_page": 100,
@@ -6179,7 +6196,7 @@
       }
     },
     "writer": {
-      "checked_at": "2026-11-27T01:19:59.298174+09:00",
+      "checked_at": "2026-11-27T02:18:59.479054+09:00",
       "ready": 4,
       "future24h_ready": 4,
       "new_drafts": 0,
@@ -6257,33 +6274,33 @@
           "path": "social/images/benefit-guide-1.png",
           "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
           "actual_download_sha_matches_current_review": true,
-          "checked_at": "2026-11-27T01:20:04.361573+09:00",
+          "checked_at": "2026-11-27T02:19:05.898080+09:00",
           "new_visual_inspection": false
         },
         {
           "path": "social/images/benefit-guide-2.png",
           "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
           "actual_download_sha_matches_current_review": true,
-          "checked_at": "2026-11-27T01:20:07.649808+09:00",
+          "checked_at": "2026-11-27T02:19:11.721385+09:00",
           "new_visual_inspection": false
         }
       ],
       "expiry_prevention_revalidations": 0
     },
     "metrics": {
-      "run_id": "45840632016",
+      "run_id": "45859361103",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-26T14:36:10Z",
+      "updated_at": "2026-11-26T16:30:28Z",
       "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
-      "job_id": 139981009814,
-      "artifact_id": 15128205965,
-      "artifact_digest": "sha256:a58beb492b977c48a2a174bb44b91d0fe4928d92fa6ef0430bb0ed5d486947b7",
+      "job_id": 140046034862,
+      "artifact_id": 15138335406,
+      "artifact_digest": "sha256:a6d49f94a64c562c680aa251b510333a343434742113756da8cc2c53a1aa5e63",
       "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": false,
-      "job_logs_retrieved_this_check": false,
-      "observed_at": "2026-11-26T14:36:06.243286+00:00",
+      "artifact_redownloaded_this_check": true,
+      "job_logs_retrieved_this_check": true,
+      "observed_at": "2026-11-26T16:30:24.227904+00:00",
       "records": [],
       "due_count": 0,
       "success_count": 0,
@@ -6292,7 +6309,7 @@
       "total_observations": 173,
       "new_evaluation_report_due": false,
       "weights_unchanged": true,
-      "cached_artifact_rechecked_this_check": true
+      "cached_artifact_rechecked_this_check": false
     },
     "recovery": {
       "new_publication_this_check": false,
@@ -6300,7 +6317,7 @@
       "maintenance_new_posts": 0,
       "new_recovery_this_check": false,
       "new_failure_this_check": false,
-      "reason": "86 complete verified publications, no pending or lease. All four existing future READY pass approved-body hash, nominal/full2h-window and candidate ranking checks. Current approved image bytes redownloaded and SHA matched; no new visual review. All observed run versions unchanged. Latest cached official snapshot artifact remains due0/empty;173 existing observations preserved. No snapshot redownload or job-log read claimed in this run. No new failure, recovery, publication, draft, expiry renewal or evaluation. Latest complete source reverified from cached artifact. No queue mutation, draft, new model call, dispatch, rerun or POST."
+      "reason": "86 complete verified publications, no pending or lease. All four existing future READY pass approved-body hash, nominal/full2h-window and candidate ranking checks. Current approved image bytes redownloaded and SHA matched; no new visual review. New metric run45859361103 actual job logs/artifact due0/empty.173 existing observations preserved. No other target run versions changed. No new failure, recovery, publication, draft, expiry renewal or evaluation. Latest complete source reverified from cached artifact. No queue mutation, draft, new model call, dispatch, rerun or POST."
     },
     "next_condition": "Nov27 08TEXT/P5,12IMAGE/P8,16TEXT/P2,20IMAGE/P6 approved unchanged. All4full2h windows covered; actual sender still must revalidate newest complete fresh source, current official changes and approved body/image/review hashes. Current19:36source is not assumed fresh at tomorrow20. Preserve resolved incidents; no past-slot recovery.",
     "publication": {
@@ -6367,14 +6384,14 @@
         "path": "social/images/benefit-guide-1.png",
         "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
         "actual_download_sha_matches_current_review": true,
-        "checked_at": "2026-11-27T01:20:04.361573+09:00",
+        "checked_at": "2026-11-27T02:19:05.898080+09:00",
         "new_visual_inspection": false
       },
       {
         "path": "social/images/benefit-guide-2.png",
         "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
         "actual_download_sha_matches_current_review": true,
-        "checked_at": "2026-11-27T01:20:07.649808+09:00",
+        "checked_at": "2026-11-27T02:19:11.721385+09:00",
         "new_visual_inspection": false
       }
     ],
@@ -7703,7 +7720,7 @@
     }
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-27T01:19:59.298174+09:00",
+    "checked_at": "2026-11-27T02:18:59.479054+09:00",
     "new_publications": 0,
     "new_incidents": 0,
     "queue_ready": 4,
@@ -15897,7 +15914,7 @@
           "timestamp_basis": "Publisher invocation durable ledger, actual observed elapsed preserved."
         }
       },
-      "last_availability_check_at": "2026-11-26T14:36:06.243286+00:00",
+      "last_availability_check_at": "2026-11-26T16:30:24.227904+00:00",
       "statistical_decision": "comparison_deferred_confounded_strata_and_no_repeated_advantage; extend matched samples, retain A/B weights",
       "diagnostic_observations_by_run_id": {
         "43163347739": {
@@ -23730,6 +23747,30 @@
           "total_observations": 173,
           "new_evaluation_report_due": false,
           "weights_unchanged": true
+        },
+        "45859361103": {
+          "run_id": "45859361103",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-26T16:30:28Z",
+          "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
+          "job_id": 140046034862,
+          "artifact_id": 15138335406,
+          "artifact_digest": "sha256:a6d49f94a64c562c680aa251b510333a343434742113756da8cc2c53a1aa5e63",
+          "artifact_digest_verified": true,
+          "artifact_redownloaded_this_check": true,
+          "job_logs_retrieved_this_check": true,
+          "observed_at": "2026-11-26T16:30:24.227904+00:00",
+          "records": [],
+          "due_count": 0,
+          "success_count": 0,
+          "new_observations": 0,
+          "new_observation_keys": [],
+          "total_observations": 173,
+          "new_evaluation_report_due": false,
+          "weights_unchanged": true,
+          "cached_artifact_rechecked_this_check": false
         }
       },
       "additional_connector_check": {
@@ -181933,6 +181974,1292 @@
         "queue_readback_verified": true
       },
       "queue_commit": "02e6ff1df84d69780e2da6cb82edc7731415b230"
+    },
+    "2026-11-27T02:18:59.479054+09:00": {
+      "checked_at": "2026-11-27T02:18:59.479054+09:00",
+      "result": "no_update",
+      "maintenance_previous_blob_sha": "a74948fe0ef0750ff4ee34eefd99f5b4ae319f2a",
+      "current_main_sha": null,
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "08f3f242d22522414fccde31fd2602bf953e6fad",
+      "queue_blob_sha": "b3c807fd779b7633aa7c5824de31ed5bc23070c7",
+      "changed_run_versions": [
+        {
+          "run_id": "45859361103",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-26T16:30:28Z",
+          "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e"
+        }
+      ],
+      "active_target_runs": [],
+      "run_pagination": {
+        "per_page": 100,
+        "pages": [
+          1
+        ],
+        "checkpoint_run_id": "45840632016",
+        "checkpoint_version_unchanged": true,
+        "all_new_target_versions_observed": true,
+        "latest_completed_operations_run_id": "45801560315"
+      },
+      "publication_ledger_records": 86,
+      "complete_verified_records": 86,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "45801560315",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-26T10:56:35Z",
+        "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
+        "job_id": 139845808962,
+        "artifact_id": 15107218266,
+        "artifact_digest": "sha256:44ed780af5881727253865c78c8394897e7f9d0645116754d8592ae0893650a3",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 316,
+        "read_current_verify_snapshot_load_feed": true,
+        "manifest": {
+          "count": 10898,
+          "generation": "gov24-45801560315-1",
+          "lastSuccessAt": "2026-11-26T19:36:15.912377+09:00",
+          "manifestSha256": "1b4afd5cf431b50eedf054faea4a06b9edbac81f3ce4d35b2b0380ceb1c0b0a4",
+          "path": "snapshots/gov24-45801560315-1",
+          "version": 1
+        },
+        "source_count": 10898,
+        "complete": true,
+        "actual_application_status_not_inferred_from_collection": true,
+        "new_candidate_original_official_pages_read": false,
+        "original_notice_rereview_this_check": false,
+        "public_verification_artifact_id": 15109761035,
+        "public_verification_digest": "sha256:ca5e8bd9338f2353a68fb7531bf62bb0b7df046b5e4fdcab8cd558675b1a2272",
+        "public_verification": {
+          "publicHtmlChecked": 11164,
+          "sitemapUrls": 11038,
+          "generation": "gov24-45801560315-1",
+          "sourceRevision": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
+          "robots": {
+            "http": 200,
+            "crawlAllowed": true,
+            "scope": "host_root"
+          },
+          "missingUrlHttp": 404,
+          "passed": 11164,
+          "failed": 0,
+          "initialFailures": 14,
+          "maxRequestsPerSecond": 10,
+          "rateLimitEpisodes": 0,
+          "stoppedForRateLimit": false,
+          "recoveredAfterRetry": [
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/358000000109/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            },
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/462000000346/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            },
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/491000000119/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            },
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/524000000102/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            },
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/540000000121/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            },
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/543000000119/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            },
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/611000000181/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            },
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/611000019607/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            },
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/901000000007/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            },
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/B01000300003/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            },
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/B27000100046/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            },
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/O00011000004/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            },
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/O00032900002/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            },
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/O00039900001/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            }
+          ],
+          "failures": []
+        },
+        "job_insights_diagnostic": {
+          "actual_numeric_observations_not_imported_from_job_log": true,
+          "prior_run_diagnostic_not_reused_as_current": true
+        }
+      },
+      "writer": {
+        "checked_at": "2026-11-27T02:18:59.479054+09:00",
+        "ready": 4,
+        "future24h_ready": 4,
+        "new_drafts": 0,
+        "existing_READY_reused": 4,
+        "drafts": [
+          {
+            "slot": "2026-11-27T08:00:00+09:00",
+            "benefit_id": "999000000002",
+            "pattern": "P5",
+            "media_turn": "TEXT",
+            "char_count": 444,
+            "expires_at": "2026-11-27T10:02:35.655519+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-27T12:00:00+09:00",
+            "benefit_id": "GMW000000210",
+            "pattern": "P8",
+            "media_turn": "IMAGE",
+            "char_count": 433,
+            "expires_at": "2026-11-27T15:09:45.786887+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-27T16:00:00+09:00",
+            "benefit_id": "641000000164",
+            "pattern": "P2",
+            "media_turn": "TEXT",
+            "char_count": 428,
+            "expires_at": "2026-11-27T18:14:39.119648+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-27T20:00:00+09:00",
+            "benefit_id": "999000000005",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 472,
+            "expires_at": "2026-11-27T22:14:12.802098+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source": {
+          "count": 10898,
+          "generation": "gov24-45801560315-1",
+          "lastSuccessAt": "2026-11-26T19:36:15.912377+09:00",
+          "manifestSha256": "1b4afd5cf431b50eedf054faea4a06b9edbac81f3ce4d35b2b0380ceb1c0b0a4",
+          "path": "snapshots/gov24-45801560315-1",
+          "version": 1
+        },
+        "source_count": 10898,
+        "ledger_records": 86,
+        "pending": null,
+        "lease": null,
+        "new_posts": 0,
+        "new_incidents": 0,
+        "new_metrics": 0,
+        "observations": 173,
+        "new_evaluation": false,
+        "astra_review_invocations": 0,
+        "existing_Astra_review_preserved": true,
+        "exact_approved_body_hashes_pass": true,
+        "new_visual_inspection": false,
+        "image_redownloaded_this_check": true,
+        "image_sha_comparisons": [
+          {
+            "path": "social/images/benefit-guide-1.png",
+            "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+            "actual_download_sha_matches_current_review": true,
+            "checked_at": "2026-11-27T02:19:05.898080+09:00",
+            "new_visual_inspection": false
+          },
+          {
+            "path": "social/images/benefit-guide-2.png",
+            "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+            "actual_download_sha_matches_current_review": true,
+            "checked_at": "2026-11-27T02:19:11.721385+09:00",
+            "new_visual_inspection": false
+          }
+        ],
+        "expiry_prevention_revalidations": 0
+      },
+      "metrics": {
+        "run_id": "45859361103",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-26T16:30:28Z",
+        "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
+        "job_id": 140046034862,
+        "artifact_id": 15138335406,
+        "artifact_digest": "sha256:a6d49f94a64c562c680aa251b510333a343434742113756da8cc2c53a1aa5e63",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "observed_at": "2026-11-26T16:30:24.227904+00:00",
+        "records": [],
+        "due_count": 0,
+        "success_count": 0,
+        "new_observations": 0,
+        "new_observation_keys": [],
+        "total_observations": 173,
+        "new_evaluation_report_due": false,
+        "weights_unchanged": true,
+        "cached_artifact_rechecked_this_check": false
+      },
+      "recovery": {
+        "new_publication_this_check": false,
+        "new_posts": 0,
+        "maintenance_new_posts": 0,
+        "new_recovery_this_check": false,
+        "new_failure_this_check": false,
+        "reason": "86 complete verified publications, no pending or lease. All four existing future READY pass approved-body hash, nominal/full2h-window and candidate ranking checks. Current approved image bytes redownloaded and SHA matched; no new visual review. New metric run45859361103 actual job logs/artifact due0/empty.173 existing observations preserved. No other target run versions changed. No new failure, recovery, publication, draft, expiry renewal or evaluation. Latest complete source reverified from cached artifact. No queue mutation, draft, new model call, dispatch, rerun or POST."
+      },
+      "next_condition": "Nov27 08TEXT/P5,12IMAGE/P8,16TEXT/P2,20IMAGE/P6 approved unchanged. All4full2h windows covered; actual sender still must revalidate newest complete fresh source, current official changes and approved body/image/review hashes. Current19:36source is not assumed fresh at tomorrow20. Preserve resolved incidents; no past-slot recovery.",
+      "publication": {
+        "run_id": "45813297475",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-26T11:45:38Z",
+        "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
+        "job_id": 139886442079,
+        "artifact_id": 15114053116,
+        "artifact_digest": "sha256:de5cbd5955b80b864ba8bd278663347a316a8a5b5f50b9021b67d87017945c35",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 138,
+        "new_publication_this_run": false,
+        "main_id": "17920324434542831",
+        "url": "https://www.threads.com/@hid_1004/post/DgNBxH2FvW3",
+        "slot": "2026-11-26T20:00:00+09:00",
+        "receipt_at": "2026-11-26T20:45:30.2169967+09:00",
+        "receipt_time_basis": "Actual job receipt line; exact platform timestamp unavailable",
+        "ledger_published_at": "2026-11-26T20:44:45.378621+09:00",
+        "ledger_published_at_is_invocation_not_exact_platform_time": true,
+        "stage": "complete",
+        "verified": true,
+        "body_hash": "2f7d72975d781eff524355e30cdb5625f2b7e4d379a1d3a97a7e3cd684fc5074",
+        "content_hash": "4d2922e3754ed9fca05b75c38053e20226c7b70a49a43e648c2253b2414b8870",
+        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "media_turn": "IMAGE",
+        "pattern": "P1",
+        "char_count": 395,
+        "replies": 0,
+        "original_queue_body_asset_review_exact": true,
+        "previous85records_preserved": true,
+        "maintenance_post_calls": 0,
+        "delay_within_original_2h_window": true,
+        "actual_source_generation": "gov24-45801560315-1",
+        "latest_already_reported": true
+      },
+      "history_reconciliation": {
+        "previous85records_exact_preserved": true,
+        "new_complete_verified_records": 1,
+        "pending": null,
+        "lease": null,
+        "ambiguous_post_retry": false,
+        "new_publication_matches_original_scheduled_slot": true
+      },
+      "official_review_recovery": {
+        "new_official_page_review_this_check": false,
+        "new_Astra_calls": 0,
+        "existing_Astra_reviews_preserved": true,
+        "image_redownloaded_this_check": true,
+        "new_visual_inspection": false,
+        "previous_actual_profile_and_site_route_evidence_preserved": true
+      },
+      "main_head_observation": {
+        "latest_observed_target_run_head": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
+        "target_publisher_workflows_master_and_assets_blobs_unchanged": true,
+        "unrelated_changes_not_modified": true
+      },
+      "image_sha_comparisons": [
+        {
+          "path": "social/images/benefit-guide-1.png",
+          "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "actual_download_sha_matches_current_review": true,
+          "checked_at": "2026-11-27T02:19:05.898080+09:00",
+          "new_visual_inspection": false
+        },
+        {
+          "path": "social/images/benefit-guide-2.png",
+          "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "actual_download_sha_matches_current_review": true,
+          "checked_at": "2026-11-27T02:19:11.721385+09:00",
+          "new_visual_inspection": false
+        }
+      ],
+      "formal_evaluation": {
+        "policy_id": "supportpick-threads-reach-v1-20261109",
+        "window": "14d_evaluation",
+        "evaluated_at": "2026-11-24T17:20:07.451089+09:00",
+        "period_start": "2026-11-10T17:00:08.835254+09:00",
+        "period_end": "2026-11-24T17:00:08.835254+09:00",
+        "normal_verified_publications": 53,
+        "experiment_regular_slots": 57,
+        "unpublished_slots": [
+          {
+            "slot": "2026-11-16T16:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-18T12:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-23T20:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-24T16:00:00+09:00",
+            "classification": "unreserved_at_evaluation_cutoff_then_published_after_cutoff",
+            "subsequent_main_id": "17974331994194122",
+            "subsequent_receipt_at": "2026-11-24T17:21:06.769138+09:00"
+          }
+        ],
+        "missed_closed_slots": 3,
+        "partial_or_pending": 0,
+        "independent_full_public_rendering_recheck": false,
+        "publication_audit_scope": "76durablecompleteverifiedrecords; priorreceipts/body/media/artifacts retained. No newfull28dayremotequery; Nov24 16unreserved/latestpublisher12only,nofailure-runconfirmed.",
+        "24h_comparison_window_observations": 40,
+        "A_n": 20,
+        "B_n": 20,
+        "24h_comparable_matched_pairs": 0,
+        "24h_group_view_medians": {
+          "A": 62.0,
+          "B": 62.0
+        },
+        "24h_all_view_median": 62.0,
+        "actual_reactions": {
+          "A": {
+            "likes": 29,
+            "replies": 0,
+            "reposts": 6,
+            "shares": 1
+          },
+          "B": {
+            "likes": 27,
+            "replies": 0,
+            "reposts": 5,
+            "shares": 0
+          }
+        },
+        "reaction_rate_used": false,
+        "all_24h_observations_delayed": true,
+        "eligible_elapsed_hours_min": 24.317312148333336,
+        "eligible_elapsed_hours_max": 25.691108017222223,
+        "24h_unavailable_not_zero": [
+          "18117968657159347",
+          "17992859946026940",
+          "17913499947663769",
+          "18001464938830261"
+        ],
+        "24h_not_yet_due": [
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "24h_missing_after_due": [],
+        "7d_measured": 27,
+        "7d_not_yet_due": [
+          "18004106657810124",
+          "18155833435528730",
+          "18061699079561356",
+          "18075899267779249",
+          "18361336213223949",
+          "18100168118443439",
+          "17876108337601849",
+          "17954736195295664",
+          "18136261246743978",
+          "18029579210863916",
+          "18106611944009610",
+          "17995393143022353",
+          "18002356029029330",
+          "18098495828440255",
+          "18121994881961457",
+          "18093412586696162",
+          "18102899498408388",
+          "18214999999364836",
+          "18125366213319496",
+          "18149154712603236",
+          "17879078796637660",
+          "18388999600236313",
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "7d_group_medians": {
+          "A": 105,
+          "B": 87.5
+        },
+        "quotes": "not_provided",
+        "reader_only_replies": "unavailable",
+        "profile_clicks": "account_level_not_available; no_post_attribution",
+        "confounders": [
+          "Differentbusiness/region/readers/benefit/deadline/time/media/length; matchedsimilarpairs0",
+          "PreservedmovedexistingREADYcohorts differfromnewslots;excludeinsteadretroclassify",
+          "Newquestiontitlepolicy changesmorethanopeningalone;newAstrarevieweddraftsexcludedfrompureA/B"
+        ],
+        "minimum_24h_target_per_group": 8,
+        "raw_window_target_met": true,
+        "current_stratified_target_met": false,
+        "decision": "extend_comparison;maintainbalancedA/Bandexistingcontrols.No demonstratedrepeatedadvantage;noeditorialweightchange.",
+        "weight_changed": false,
+        "no_backcalculation": true,
+        "extension_next_condition": "Reassess in existingchecks when comparable similar-business strata have sufficient repeatedactual24hwindows; keep comparison group. No separate schedule.",
+        "reported_at": "2026-11-24T17:20:07.451089+09:00",
+        "evidence_latest_metric_run_id": "45351393999",
+        "24h_measured_but_excluded": [
+          {
+            "main_id": "18122947907049313",
+            "elapsed_hours": 52.64388394083333,
+            "reason": "late_beyond_26h_comparison_tolerance"
+          },
+          {
+            "main_id": "18061699079561356",
+            "elapsed_hours": 25.374772445277777,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18075899267779249",
+            "elapsed_hours": 24.65035752527778,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18361336213223949",
+            "elapsed_hours": 24.39045965972222,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18100168118443439",
+            "elapsed_hours": 24.6578044575,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "17876108337601849",
+            "elapsed_hours": 25.228189436944444,
+            "reason": "Previously written input preserved; no retrospective cohort assignment after failed preceding slot"
+          }
+        ],
+        "7d_group_n": {
+          "A": 13,
+          "B": 14
+        },
+        "7d_due_unmeasured": [
+          "18450932713126961"
+        ],
+        "publication_cutoff_note": "EvaluationperiodendsNov24 17:00:08.16slotwasunreservedatcutoff, laternaturallypublished17:21:06withinits2hwindow; excludedfrom53periodpublications becauseactualinvocation17:20aftercutoff. Notafourthmissedslot.",
+        "unreserved_at_period_end_slots": 1,
+        "currently_open_unreserved_slots_from_period": 0
+      },
+      "new_formal_evaluation_this_check": false,
+      "writer_final_edit_v3_status": {
+        "policy_id": "supportpick-threads-final-edit-v3-20261125",
+        "new_v3_READY": 0,
+        "previous_actual_v3_READY_preserved": 4,
+        "new_scores": 0,
+        "new_model_calls": 0
+      },
+      "workspace_preflight": {
+        "restored_prior_operational_root": "/workspace/scratch/50884abc8ecb/supportcheck",
+        "fresh_remote_blobs_exact_local_match": true,
+        "all_historical_records_preserved": true,
+        "local_check_assertion_adapted_to_current_slot_window": "planned_slots excludes nominally elapsed current slot while preview includes still-open2h slot. New preparation compares only future entries to planned_slots, protects open current entry; no production validator change or weakened guard."
+      },
+      "account_7d_30d_statistics": {
+        "official_post_windows_available": [
+          24,
+          72,
+          168
+        ],
+        "post_observations": 173,
+        "account_profile_home_followers_shares_30d_read_available": false,
+        "unavailable_not_zero": true,
+        "completion_dwell_cta_attribution_not_measured": true,
+        "no_inferred_performance": true,
+        "today_public_profile_followers": 2,
+        "public_profile_followers_not_7d_or_30d_growth": true,
+        "public_profile_followers_observation_is_historical": true,
+        "public_profile_followers_last_actual_check_date": "2026-11-26"
+      },
+      "regular_slot_observation": {
+        "slot": "2026-11-26T20:00:00+09:00",
+        "status": "published_verified_complete",
+        "run_id": "45813297475",
+        "main_id": "17920324434542831",
+        "receipt_at": "2026-11-26T20:45:30.2169967+09:00",
+        "original_two_hour_window_pass": true
+      },
+      "next_condition_previous": "Existing publisher consumes Nov26 12 IMAGE/P6,16 TEXT/P5,20 IMAGE/P1,Nov27 08 TEXT/P5. Sender must verify newest fresh complete source and exact approved hashes/reviews at actual send. Cached Nov26 07:22 source is not certified fresh for Nov27 08. Preserve daily4/rotation/CAS/pending controls; no past-slot dispatch/rerun/test posts.",
+      "expiry_prevention_revalidation": {
+        "checked_at": "2026-11-26T22:14:12.802098+09:00",
+        "status": "RESOLVED_ACTUAL_OFFICIAL_REREVIEW_FULL_WINDOW_COVERED",
+        "previous_entry": {
+          "slot": "2026-11-27T20:00:00+09:00",
+          "benefit_id": "999000000005",
+          "source_fingerprint": "86f0216017673d9dea82d52389f0cbe411cbd38a2d870ab7c6359b3184fd2e2f",
+          "source_generation": "gov24-45801560315-1",
+          "prepared_at": "2026-11-26T20:15:00.513417+09:00",
+          "expires_at": "2026-11-27T20:15:00.513417+09:00",
+          "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "writer": {
+            "schema_version": "supportpick.writer.v1",
+            "status": "READY",
+            "selected_program_id": "999000000005",
+            "post_text": "실업신고 후 아파서 구직활동을 못했다면, 상병급여는 언제 신청하나요?\n취업할 수 없던 사유가 없어진 날부터 14일 이내예요. 취업할 수 없던 기간 중 구직급여 수급기간이 끝났다면 종료 후 30일 이내가 기준이에요. 천재지변 등 부득이한 사유가 있다면 그 사유가 없어진 날부터 7일 이내예요.\n\n실업신고 이후 질병·부상으로 7일 이상 취업할 수 없어 실업인정을 받지 못한 수급자격자가 대상이에요. 구직급여일액과 같은 금액을 대신 지급하며, 남은 구직급여 지급일수가 한도예요.\n\n산재 휴업급여 등 법에서 정한 보상·급여를 받을 수 있는 경우나 구직급여 지급정지 기간에는 지급하지 않아요.\n\n청구서와 진단서 등 증명서류를 준비해 관할 고용센터에 신청해요. 실업신고 전부터 취업할 수 없었다면 수급기간 연장 대상인지 확인해요.\n\n프로필에서 ‘상병급여’를 찾으면 대상·구비서류·관할 고용센터 신청방법을 대조할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+            "draft_text": null,
+            "reply_texts": [],
+            "media": {
+              "turn": "IMAGE",
+              "asset_id": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+              "check": "MATCHED",
+              "image_copy": null,
+              "alt_text": "지원금픽 로고와 생활 혜택, 꼼꼼하게 문구 아래에 집, 체크 표시 방패, 체크리스트와 새싹이 있고, 하단에 자세한 사항은 프로필링크 확인 안내가 있는 정사각형 일러스트."
+            },
+            "review": {
+              "planned_at": "2026-11-27T20:00:00+09:00",
+              "application_status": "OPEN",
+              "reader": "실업신고후질병부상으로취업하지못한구직급여수급자격자",
+              "central_message": "신고후질병부상수급자의개인별14/30/7일청구기한과잔여일수·중복제외·증빙방문절차",
+              "pattern": "P6",
+              "selection_reason": "동일ID원본누적31746,상위공식검증보류사유보존.다자녀31806현재감면기준미확인HOLD추가.같은ID게시예약큐없음.고용분야신청기한의구체판단정보로순위범위안분야순환.",
+              "interest_basis": "OBSERVED_METRICS",
+              "duplicate_check": "CHECKED",
+              "evidence": [
+                {
+                  "source_id": "999000000005",
+                  "source_ref": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032427053",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-26T20:15:00.513417+09:00",
+                  "claims_supported": [
+                    "현행2026.9.18법63조22~28직접열람:실업신고후질병취업불가수급자격자,구직급여일액대체,잔여지급일수한도,지급정지와법정보상급여제외.개인별청구요건내현재신청가능."
+                  ]
+                },
+                {
+                  "source_id": "999000000005",
+                  "source_ref": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1021785653",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-26T20:15:00.513417+09:00",
+                  "claims_supported": [
+                    "현행2026.9.18시행령82조22~27직접열람:취업불가사유해소14일/그취업불가기간중수급기간종료면종료30일/불가항력해소7일/청구서와증명서/본인또는대리인제출.개인별법정기한내신청가능."
+                  ]
+                },
+                {
+                  "source_id": "999000000005",
+                  "source_ref": "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001204",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-26T20:15:00.513417+09:00",
+                  "claims_supported": [
+                    "고용부FAQ105~106행직접:7일이상질병부상,진단서소견서와고용센터방문,구직급여일액동일대체지급.2022작성은현행법/2026동일ID원본과대조."
+                  ]
+                },
+                {
+                  "source_id": "999000000005",
+                  "source_ref": "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001205",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-26T20:15:00.513417+09:00",
+                  "claims_supported": [
+                    "고용부105~106직접:7일이상기간상병급여,그외기간구직활동필요.질병부상으로범위한정."
+                  ]
+                },
+                {
+                  "source_id": "999000000005",
+                  "source_ref": "https://easylaw.go.kr/CSP/OnhunqueansInfoRetrieve.laf?onhunqnaAstSeq=82&onhunqueSeq=3866",
+                  "access_method": "OPENED_OFFICIAL",
+                  "verified_at": "2026-11-26T20:15:00.513417+09:00",
+                  "claims_supported": [
+                    "법제처141~152직접:신고전취업불가는상병급여아닌수급기간연장.2025기준자료는현행2026법과대조."
+                  ]
+                },
+                {
+                  "source_id": "999000000005",
+                  "source_ref": "https://raw.githubusercontent.com/kllollain-max/supportpick/main/social/images/benefit-guide-2.png",
+                  "access_method": "UPSTREAM_VERIFIED",
+                  "verified_at": "2026-11-26T20:15:00.513417+09:00",
+                  "claims_supported": [
+                    "현재main실제PNG GET/SHA와기존승인image-review일치. 부모와독립검수자가이번원본및360px실제열람:한글/대비/잘림/깨짐/본문일치/과밀/권리/공식홍보물오인PASS. 범용자체브랜드,금액날짜사업조건주장없음.혜택별승인자산없어기존_rotation사용."
+                  ]
+                }
+              ],
+              "checks": {
+                "facts": "PASS",
+                "current_status": "PASS",
+                "eligibility_and_units": "PASS",
+                "cta_and_no_links": "PASS",
+                "length": "PASS",
+                "media": "PASS"
+              },
+              "char_count": 472,
+              "count_method": "python_len_including_spaces_and_newlines",
+              "missing_info": [],
+              "hold_reasons": [],
+              "warnings": [
+                "출산특례45일은이글의질병부상범위밖,출산자에게일반화하지않음",
+                "개인별법정기한내청구제도이며모집마감/확정지급/전국민지급아님",
+                "실제발송시최신완전수집세대필수,현재19:36본을내일20시까지신선하다고가정하지않음",
+                "24시간상한으로내일20~22전체창미충족.오늘22시이후공식/현재청구상태/최신완전본/이미지SHA실재대조후CAS갱신필수",
+                "현재20시미예약이며아직실패확정아님.실제결과따라미예약미디어순서재검증필수"
+              ],
+              "reach_editorial": {
+                "policy_id": "supportpick-threads-reach-v1-20261109",
+                "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+                "core_question": "실업신고 후 아파서 구직활동을 못했다면, 상병급여는 언제 신청하나요?",
+                "reader_scope": "실업신고후질병부상으로취업하지못한구직급여수급자격자",
+                "angles": [
+                  "구직급여를못받을까걱정",
+                  "청구14일과30일예외계산",
+                  "증명서류와고용센터신청준비"
+                ],
+                "chosen_angle": "개인별청구기한과예외→대체급여조건→잔여일수/중복제외→서류와신청",
+                "opening_candidates": [
+                  "실업신고 후 아파서 구직활동을 못했다면, 상병급여는 언제 신청하나요?",
+                  "실업급여를 받다 입원했다면, 아픈 기간도 급여를 받을 수 있나요?",
+                  "상병급여 14일, 퇴원일과 수급기간 종료일 중 어느 날부터 셀까요?"
+                ],
+                "chosen_opening": "실업신고 후 아파서 구직활동을 못했다면, 상병급여는 언제 신청하나요?",
+                "opening_type": "신청기한질문형",
+                "cohort": null,
+                "comparison_eligible": false,
+                "comparison_exclusion": "v3질문·기한예외·절차동시편집으로순수A/B에소급배정않음",
+                "history_posts_checked": 20,
+                "selection_reason": "동일ID원본누적31746,상위공식검증보류사유보존.다자녀31806현재감면기준미확인HOLD추가.같은ID게시예약큐없음.고용분야신청기한의구체판단정보로순위범위안분야순환.",
+                "profile_route": {
+                  "profile": "https://www.threads.com/@hid_1004",
+                  "visible_link_target": "https://kllollain-max.github.io/supportpick/",
+                  "checks_completed_by": "2026-11-26T20:12:22+09:00",
+                  "individual_click_timestamp_retained": false,
+                  "home_search": "상병급여",
+                  "results": 1,
+                  "actual_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/999000000005/",
+                  "redirect_click_completed": false,
+                  "detail_claims_verified": [
+                    "대상",
+                    "구비서류",
+                    "관할고용센터방문"
+                  ],
+                  "limits": [
+                    "API18~44분류는법정자격나이제한으로사용하지않음",
+                    "사이트기본14일표시외예외는현재법령추가검증",
+                    "프로필목적지실제표시와홈검색상세클릭각각확인.중간리디렉션완료주장없음"
+                  ]
+                },
+                "search_evidence": "실제공식검색표현 상병급여/14일/7일/질병부상 확인,실측검색량없음.",
+                "observed_metrics_context": "85완료게시171공식실제관측,7/30계정프로필/홈/완독체류CTA미측정0아님.실험결론은기존표본한계로보류.",
+                "master_full_used": true
+              },
+              "astra_final_review": {
+                "requested_model": "gpt-6.2-astra",
+                "actual_model": "미확인",
+                "invoked_model_identifier": "gpt-6.2-astra",
+                "fallback_reason": null,
+                "version": "3.0",
+                "independent_agent": "/root/sickness_final_review",
+                "first_review": {
+                  "review_round": 1,
+                  "planned_slot": "2026-11-27T20:00:00+09:00",
+                  "benefit_id": "999000000005",
+                  "reviewed_at": "2026-11-26T20:12:18.286965+09:00",
+                  "reviewer": {
+                    "independent": true,
+                    "selected_model": "gpt-6.2-astra",
+                    "runtime_build_identifier": "미확인",
+                    "fallback": false
+                  },
+                  "review_policy": "지원금픽 Threads 최종 편집 v3.0",
+                  "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+                  "post_text_reviewed": "실업신고 후 아파서 구직활동을 못했다면, 상병급여는 언제 신청하나요?\n질병·부상으로 취업할 수 없던 사유가 없어진 날부터 14일 이내에 신청해요. 아픈 기간 중 구직급여 수급기간이 끝났다면, 수급기간 종료 후 30일 이내가 기준이에요.\n\n실업신고 이후 질병·부상으로 7일 이상 취업할 수 없어 실업인정을 받지 못한 수급자격자를 위한 제도예요. 구직급여일액과 같은 금액을 대신 지급하며, 두 급여를 같은 날에 겹쳐 받는 지원은 아니에요.\n\n청구서와 진단서 등 취업할 수 없었던 기간을 증명하는 서류를 준비해 관할 고용센터에 신청해요. 실업신고 전부터 아팠다면 상병급여 대신 수급기간 연장 대상인지 확인해야 해요.\n\n프로필에서 ‘상병급여’를 찾으면 대상·구비서류·관할 고용센터 신청방법을 대조할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+                  "body_sha256": "ad76ac495c60a40572810451417340298e128ea80639e521e84a884efda00373",
+                  "char_count": 411,
+                  "count_method": "공백·개행·CTA 포함 Unicode code point",
+                  "reply_texts": [],
+                  "media_turn": "IMAGE",
+                  "pattern": "P6",
+                  "source_context": {
+                    "generation": "gov24-45801560315-1",
+                    "observed_source_views": 31746,
+                    "search_volume": null,
+                    "history": "최근 원장 20개 본문과 큐 도입부 20개 대조. 같은 ID 없음. 당일 기존 P5/P8/P2.",
+                    "upstream_higher_candidate": "O00045400020 의료비 감면은 최신 기관별 세부 요건 미확인으로 보류.",
+                    "status": "ALWAYS",
+                    "status_scope": "법정 제도, 개인별 청구기한 적용"
+                  },
+                  "visual": {
+                    "inspect_method": "view_image 원본 및 실제 360px 렌더 모두 직접 육안 확인",
+                    "original": "social/images/benefit-guide-2.png",
+                    "original_size": [
+                      1254,
+                      1254
+                    ],
+                    "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                    "preview": "medical1312-mobile.png",
+                    "preview_size": [
+                      360,
+                      360
+                    ],
+                    "preview_sha256": "ea6f03f5401b91876c16b83c853433c177cacec2fe8715e510b817fad02c5a5f",
+                    "result": "PASS",
+                    "evidence": "지원금픽, 생활 혜택, 꼼꼼하게, 하단 프로필링크 안내. 집·체크판·방패 자체 브랜드 일러스트. 한글 깨짐·잘림·과밀·대비 문제 없음. 정부 문장·외부 로고·실존 인물·공식 기관 명의·금액·기한 등 제도 주장 없음. 기존 승인 로테이션 파일 SHA 일치, 새 권리 주장 없음. 승인된 브랜드 이미지 반복 사용."
+                  },
+                  "evidence": [
+                    {
+                      "name": "고용보험법 제63조 현행 2026-09-18",
+                      "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032427053",
+                      "method": "OPENED_OFFICIAL",
+                      "claims": "대체 급여·남은 일수·휴업급여 등 수급 가능 시 제외"
+                    },
+                    {
+                      "name": "고용보험법 시행령 제82조 현행 2026-09-18",
+                      "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1021785653",
+                      "method": "OPENED_OFFICIAL",
+                      "claims": "14일·30일·부득이한 사유 해소 후 7일 및 증명서·신청지 관할기관. 전달받은 변경조문 URL은 404로 이 현행 조문 본문을 직접 열었다."
+                    },
+                    {
+                      "name": "고용노동부 고객상담센터 FAQ 1000001204·1000001205",
+                      "urls": [
+                        "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001204",
+                        "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001205"
+                      ],
+                      "method": "OPENED_OFFICIAL",
+                      "claims": "질병·부상 7일 이상, 구직급여일액, 증명서, 치료 후 청구"
+                    },
+                    {
+                      "name": "법제처 찾기 쉬운 생활법령 상병급여 본문(2026-09-15 기준)",
+                      "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=5&cnpClsNo=1&csmSeq=722&menuType=cnpcls&popMenu=ov",
+                      "method": "OPENED_OFFICIAL",
+                      "claims": "실업신고 전에 취업 불가능한 경우 수급기간 연장 검토. 전달받은 Q&A는 메인으로 이동하여 동일 기관 주제 본문 이용."
+                    }
+                  ],
+                  "checks": {
+                    "facts_and_eligibility": "FAIL",
+                    "current_status": "PASS",
+                    "profile_path": "NOT_CHECKED",
+                    "no_url_domain_hashtag": "PASS",
+                    "last_cta_exact_once": "PASS",
+                    "length": "PASS",
+                    "media": "PASS",
+                    "one_post_no_replies": "PASS",
+                    "recent_history": "PASS"
+                  },
+                  "score_items": [
+                    {
+                      "item": "첫 문장",
+                      "score": 14,
+                      "max": 15,
+                      "reason": "실업신고 뒤 아파진 사람의 청구기한을 묻고 바로 다음 문장에서 답한다. 당일 아침 개별연장급여의 기한 질문과 형식이 비슷하다."
+                    },
+                    {
+                      "item": "관심/의도",
+                      "score": 15,
+                      "max": 15,
+                      "reason": "실업인정을 놓쳤을 때 행동을 결정하는 절차형 글이다. 수집 조회수 31,746은 원본 누적치이며 검색 수요나 게시 성과로 환산하지 않았다."
+                    },
+                    {
+                      "item": "정확성",
+                      "score": 15,
+                      "max": 20,
+                      "reason": "14일·30일, 7일 이상, 구직급여일액 대체, 증명서·고용센터는 대조됨. 잔여일수, 휴업급여 등 제외 및 기한 예외가 빠졌다. 신고 전 단순 질병과 취업불능도 구분해야 한다."
+                    },
+                    {
+                      "item": "완독 가능성",
+                      "score": 14,
+                      "max": 15,
+                      "reason": "첫 답과 구비서류·접수처가 분명하고 문단 경계가 보인다. 신고·질병 문구가 겹친다."
+                    },
+                    {
+                      "item": "공유/공감",
+                      "score": 9,
+                      "max": 10,
+                      "reason": "실업인정을 앞둔 수급자와 가족에게 전달할 수 있으며 신상 공개나 상호작용을 요구하지 않는다."
+                    },
+                    {
+                      "item": "가치/차별",
+                      "score": 9,
+                      "max": 10,
+                      "reason": "당일 08시 연장급여와 대상·법적 효과가 다르고 준비서류까지 안내한다."
+                    },
+                    {
+                      "item": "모바일",
+                      "score": 5,
+                      "max": 5,
+                      "reason": "411자. 짧은 질문과 문단 사이 여백, 360px에서 브랜드명과 하단 안내를 읽을 수 있다."
+                    },
+                    {
+                      "item": "이미지 완성도",
+                      "score": 5,
+                      "max": 5,
+                      "reason": "승인 파일 원본과 모바일 축소본을 직접 열어 브랜드명·한글·대비·여백을 확인했다."
+                    },
+                    {
+                      "item": "프로필 유도",
+                      "score": 4,
+                      "max": 5,
+                      "reason": "검색할 제도명과 자료를 적었다. 현행 프로필 경로의 실제 도달 여부는 검수 시점 증빙 대기."
+                    }
+                  ],
+                  "score_total": 90,
+                  "threshold": 95,
+                  "decision": "REVISE",
+                  "approved": false,
+                  "required_revisions": [
+                    "남은 구직급여 지급일수 한도와 산재 휴업급여 등을 받을 수 있는 경우의 제외를 명시.",
+                    "기한 중심 글이므로 천재지변 등 부득이한 사유가 없어진 날부터 7일의 특례를 간결히 표시.",
+                    "신고 전 단순 질병이 아닌 취업 불가능 상태로 안내 범위를 정확히 제한.",
+                    "프로필 사이트의 대상·서류·접수 경로가 실제 표시되는지 증빙 후 최종본 재검수."
+                  ]
+                },
+                "intermediate_review": {
+                  "review_round": 2,
+                  "planned_slot": "2026-11-27T20:00:00+09:00",
+                  "benefit_id": "999000000005",
+                  "reviewed_at": null,
+                  "reviewer": {
+                    "independent": true,
+                    "selected_model": "gpt-6.2-astra",
+                    "runtime_build_identifier": "미확인",
+                    "fallback": false
+                  },
+                  "review_policy": "지원금픽 Threads 최종 편집 v3.0",
+                  "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+                  "post_text_reviewed": "실업신고 후 아파서 구직활동을 못했다면, 상병급여는 언제 신청하나요?\n취업할 수 없던 사유가 없어진 날부터 14일 이내예요. 그 기간 중 구직급여 수급기간이 끝났다면 종료 후 30일 이내가 기준이에요. 천재지변 등 부득이한 사유가 있다면 그 사유가 없어진 날부터 7일 이내예요.\n\n실업신고 이후 질병·부상으로 7일 이상 취업할 수 없어 실업인정을 받지 못한 수급자격자가 대상이에요. 구직급여일액과 같은 금액을 대신 지급하며, 남은 구직급여 지급일수가 한도예요.\n\n산재 휴업급여 등 법에서 정한 보상·급여를 받을 수 있는 경우나 구직급여 지급정지 기간에는 지급하지 않아요.\n\n청구서와 진단서 등 증명서류를 준비해 관할 고용센터에 신청해요. 실업신고 전부터 취업할 수 없었다면 수급기간 연장 대상인지 확인해요.\n\n프로필에서 ‘상병급여’를 찾으면 대상·구비서류·관할 고용센터 신청방법을 대조할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+                  "body_sha256": "d90d608607285998197e6fb568009d5361afd5d8f4c75162b74d992b62275ddc",
+                  "char_count": 465,
+                  "count_method": "공백·개행·CTA 포함 Unicode code point",
+                  "reply_texts": [],
+                  "media_turn": "IMAGE",
+                  "pattern": "P6",
+                  "source_context": {
+                    "generation": "gov24-45801560315-1",
+                    "observed_source_views": 31746,
+                    "search_volume": null,
+                    "history": "최근 원장 20개 본문과 큐 도입부 20개 대조. 같은 ID 없음. 당일 기존 P5/P8/P2.",
+                    "upstream_higher_candidate": "O00045400020 의료비 감면은 최신 기관별 세부 요건 미확인으로 보류.",
+                    "status": "OPEN",
+                    "status_scope": "현행 개인별 법정 청구기간 내 신청 가능. 공통 모집 마감일 의미 아님."
+                  },
+                  "visual": {
+                    "inspect_method": "view_image 원본 및 실제 360px 렌더 모두 직접 육안 확인",
+                    "original": "social/images/benefit-guide-2.png",
+                    "original_size": [
+                      1254,
+                      1254
+                    ],
+                    "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                    "preview": "medical1312-mobile.png",
+                    "preview_size": [
+                      360,
+                      360
+                    ],
+                    "preview_sha256": "ea6f03f5401b91876c16b83c853433c177cacec2fe8715e510b817fad02c5a5f",
+                    "result": "PASS",
+                    "evidence": "지원금픽, 생활 혜택, 꼼꼼하게, 하단 프로필링크 안내. 집·체크판·방패 자체 브랜드 일러스트. 한글 깨짐·잘림·과밀·대비 문제 없음. 정부 문장·외부 로고·실존 인물·공식 기관 명의·금액·기한 등 제도 주장 없음. 기존 승인 로테이션 파일 SHA 일치, 새 권리 주장 없음. 승인된 브랜드 이미지 반복 사용."
+                  },
+                  "evidence": [
+                    {
+                      "name": "고용보험법 제63조 현행 2026-09-18",
+                      "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032427053",
+                      "method": "OPENED_OFFICIAL",
+                      "claims": "대체 급여·남은 일수·휴업급여 등 수급 가능 시 제외"
+                    },
+                    {
+                      "name": "고용보험법 시행령 제82조 현행 2026-09-18",
+                      "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1021785653",
+                      "method": "OPENED_OFFICIAL",
+                      "claims": "14일·30일·부득이한 사유 해소 후 7일 및 증명서·신청지 관할기관. 전달받은 변경조문 URL은 404로 이 현행 조문 본문을 직접 열었다."
+                    },
+                    {
+                      "name": "고용노동부 고객상담센터 FAQ 1000001204·1000001205",
+                      "urls": [
+                        "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001204",
+                        "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001205"
+                      ],
+                      "method": "OPENED_OFFICIAL",
+                      "claims": "질병·부상 7일 이상, 구직급여일액, 증명서, 치료 후 청구"
+                    },
+                    {
+                      "name": "법제처 찾기 쉬운 생활법령 상병급여 본문(2026-09-15 기준)",
+                      "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=5&cnpClsNo=1&csmSeq=722&menuType=cnpcls&popMenu=ov",
+                      "method": "OPENED_OFFICIAL",
+                      "claims": "실업신고 전에 취업 불가능한 경우 수급기간 연장 검토. 전달받은 Q&A는 메인으로 이동하여 동일 기관 주제 본문 이용."
+                    }
+                  ],
+                  "checks": {
+                    "facts_and_eligibility": "FAIL",
+                    "current_status": "PASS",
+                    "profile_path": "PASS",
+                    "no_url_domain_hashtag": "PASS",
+                    "last_cta_exact_once": "PASS",
+                    "length": "PASS",
+                    "media": "PASS",
+                    "one_post_no_replies": "PASS",
+                    "recent_history": "PASS"
+                  },
+                  "score_items": [
+                    {
+                      "item": "첫 문장",
+                      "score": 14,
+                      "max": 15,
+                      "reason": "상병급여 신청 시점을 묻고 다음 문장 첫머리에서 14일을 답한다. 08시 질문의 기한 중심 형식과 일부 겹친다."
+                    },
+                    {
+                      "item": "관심/의도",
+                      "score": 15,
+                      "max": 15,
+                      "reason": "실업신고 뒤 질병·부상 때문에 취업할 수 없었던 수급자격자가 신청 여부와 시기를 판단할 수 있다."
+                    },
+                    {
+                      "item": "정확성",
+                      "score": 17,
+                      "max": 20,
+                      "reason": "제63조 잔여일수·휴업급여 등 수급 가능 시 제외, 구직급여 지급정지, 시행령 제82조 불가항력 7일, 신고 전 취업불능 모두 반영. “그 기간 중”이 직전 14일을 가리킬 수 있어 30일 예외의 기준이 불명확하다."
+                    },
+                    {
+                      "item": "완독 가능성",
+                      "score": 14,
+                      "max": 15,
+                      "reason": "절차 중심으로 기한→대상·한도→제외→서류를 배열했다. 첫 답 문단의 세 기한을 함께 읽어야 한다."
+                    },
+                    {
+                      "item": "공유/공감",
+                      "score": 9,
+                      "max": 10,
+                      "reason": "가족이나 구직 중인 동료에게 전달할 실용성이 있고 개인 사정을 공개하도록 요구하지 않는다."
+                    },
+                    {
+                      "item": "가치/차별",
+                      "score": 10,
+                      "max": 10,
+                      "reason": "같은 날의 개별연장급여와 구별되며 기한 예외·지급 일수·중복 제한과 신청 경로가 구체적이다."
+                    },
+                    {
+                      "item": "모바일",
+                      "score": 5,
+                      "max": 5,
+                      "reason": "465자, 500자 이하. 편집 권장 범위 450자를 넘지만 필수 기한·제한을 유지하고 단락에 여백을 두었다."
+                    },
+                    {
+                      "item": "이미지 완성도",
+                      "score": 5,
+                      "max": 5,
+                      "reason": "프로필 안내 브랜드 카드 원본·360px와 고정 SHA 일치. 숫자·제도 세부 주장·기관 로고가 없고 한글, 잘림, 대비, 배치 PASS."
+                    },
+                    {
+                      "item": "프로필 유도",
+                      "score": 5,
+                      "max": 5,
+                      "reason": "검색어·상세 확인 내용과 상위 편집자가 직접 열어 확인한 검색 결과 및 상세 화면이 일치한다."
+                    }
+                  ],
+                  "score_total": 94,
+                  "threshold": 95,
+                  "decision": "REVISE",
+                  "approved": false,
+                  "required_revisions": [
+                    "30일 예외는 앞선 14일 청구기간이 아니라 취업할 수 없던 기간 중 수급기간이 끝날 때 적용됨을 명시."
+                  ],
+                  "clock_reference": "2026-11-26T20:12:49+09:00",
+                  "time_note": "중간검토는 이 시각 전에 수행, 독립된 정확한 완료시각 미보존.",
+                  "profile_route": {
+                    "method": "UPSTREAM_VERIFIED",
+                    "verified_by": "부모 편집자 공개 프로필 및 사이트 UI 직접 확인",
+                    "confirmed_by_kst": "2026-11-26T20:12:22+09:00",
+                    "direct_detail": "https://kllollain-max.github.io/supportpick/benefits/999000000005/",
+                    "evidence": "프로필 공개 링크 목적지와 홈페이지 일치. 홈 검색창 상병급여 입력→1건→상세 화면에서 대상·구비서류·관할 고용센터 신청 방식 확인. 개별 클릭 시각 미보존, 프로필 중간 리디렉션 클릭 경유 미검증. 집계 분류 18~44를 법적 제한으로 사용하지 않음."
+                  },
+                  "previous_body_sha256": "ad76ac495c60a40572810451417340298e128ea80639e521e84a884efda00373",
+                  "release_scope": "원고와 지정 이미지의 편집 판정. 실제 예약·발행을 뜻하지 않는다.",
+                  "publication_dependencies": [
+                    "11월 27일 20시 IMAGE는 앞 회차 발행·이미지 원장 대조가 필요함.",
+                    "이번 근거 24시간 유효기간은 다음 날 22시까지의 지연창 전체를 덮지 않음. 실제 게시 전 공식 근거·현재 신청 상태·최신 완전 수집·자산 SHA와 큐 승인본 일치 및 유효시간 재확인 필요."
+                  ]
+                },
+                "final_review": {
+                  "review_round": 3,
+                  "planned_slot": "2026-11-27T20:00:00+09:00",
+                  "benefit_id": "999000000005",
+                  "reviewed_at": "2026-11-26T20:13:23.127976+09:00",
+                  "reviewer": {
+                    "independent": true,
+                    "selected_model": "gpt-6.2-astra",
+                    "runtime_build_identifier": "미확인",
+                    "fallback": false
+                  },
+                  "review_policy": "지원금픽 Threads 최종 편집 v3.0",
+                  "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+                  "post_text_reviewed": "실업신고 후 아파서 구직활동을 못했다면, 상병급여는 언제 신청하나요?\n취업할 수 없던 사유가 없어진 날부터 14일 이내예요. 취업할 수 없던 기간 중 구직급여 수급기간이 끝났다면 종료 후 30일 이내가 기준이에요. 천재지변 등 부득이한 사유가 있다면 그 사유가 없어진 날부터 7일 이내예요.\n\n실업신고 이후 질병·부상으로 7일 이상 취업할 수 없어 실업인정을 받지 못한 수급자격자가 대상이에요. 구직급여일액과 같은 금액을 대신 지급하며, 남은 구직급여 지급일수가 한도예요.\n\n산재 휴업급여 등 법에서 정한 보상·급여를 받을 수 있는 경우나 구직급여 지급정지 기간에는 지급하지 않아요.\n\n청구서와 진단서 등 증명서류를 준비해 관할 고용센터에 신청해요. 실업신고 전부터 취업할 수 없었다면 수급기간 연장 대상인지 확인해요.\n\n프로필에서 ‘상병급여’를 찾으면 대상·구비서류·관할 고용센터 신청방법을 대조할 수 있어요.\n\n자세한 사항은 프로필링크 확인",
+                  "body_sha256": "dcaa883c004e76aab3670acb881253162540f92c9b009bdecd3b444e11b4a5eb",
+                  "char_count": 472,
+                  "count_method": "공백·개행·CTA 포함 Unicode code point",
+                  "reply_texts": [],
+                  "media_turn": "IMAGE",
+                  "pattern": "P6",
+                  "source_context": {
+                    "generation": "gov24-45801560315-1",
+                    "observed_source_views": 31746,
+                    "search_volume": null,
+                    "history": "최근 원장 20개 본문과 큐 도입부 20개 대조. 같은 ID 없음. 당일 기존 P5/P8/P2.",
+                    "upstream_higher_candidate": "O00045400020 의료비 감면은 최신 기관별 세부 요건 미확인으로 보류.",
+                    "status": "OPEN",
+                    "status_scope": "현행 개인별 법정 청구기간 내 신청 가능. 공통 모집 마감일 의미 아님."
+                  },
+                  "visual": {
+                    "inspect_method": "view_image 원본 및 실제 360px 렌더 모두 직접 육안 확인",
+                    "original": "social/images/benefit-guide-2.png",
+                    "original_size": [
+                      1254,
+                      1254
+                    ],
+                    "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                    "preview": "medical1312-mobile.png",
+                    "preview_size": [
+                      360,
+                      360
+                    ],
+                    "preview_sha256": "ea6f03f5401b91876c16b83c853433c177cacec2fe8715e510b817fad02c5a5f",
+                    "result": "PASS",
+                    "evidence": "지원금픽, 생활 혜택, 꼼꼼하게, 하단 프로필링크 안내. 집·체크판·방패 자체 브랜드 일러스트. 한글 깨짐·잘림·과밀·대비 문제 없음. 정부 문장·외부 로고·실존 인물·공식 기관 명의·금액·기한 등 제도 주장 없음. 기존 승인 로테이션 파일 SHA 일치, 새 권리 주장 없음. 승인된 브랜드 이미지 반복 사용."
+                  },
+                  "evidence": [
+                    {
+                      "name": "고용보험법 제63조 현행 2026-09-18",
+                      "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032427053",
+                      "method": "OPENED_OFFICIAL",
+                      "claims": "대체 급여·남은 일수·휴업급여 등 수급 가능 시 제외"
+                    },
+                    {
+                      "name": "고용보험법 시행령 제82조 현행 2026-09-18",
+                      "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1021785653",
+                      "method": "OPENED_OFFICIAL",
+                      "claims": "14일·30일·부득이한 사유 해소 후 7일 및 증명서·신청지 관할기관. 전달받은 변경조문 URL은 404로 이 현행 조문 본문을 직접 열었다."
+                    },
+                    {
+                      "name": "고용노동부 고객상담센터 FAQ 1000001204·1000001205",
+                      "urls": [
+                        "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001204",
+                        "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001205"
+                      ],
+                      "method": "OPENED_OFFICIAL",
+                      "claims": "질병·부상 7일 이상, 구직급여일액, 증명서, 치료 후 청구"
+                    },
+                    {
+                      "name": "법제처 찾기 쉬운 생활법령 상병급여 본문(2026-09-15 기준)",
+                      "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=5&cnpClsNo=1&csmSeq=722&menuType=cnpcls&popMenu=ov",
+                      "method": "OPENED_OFFICIAL",
+                      "claims": "실업신고 전에 취업 불가능한 경우 수급기간 연장 검토. 전달받은 Q&A는 메인으로 이동하여 동일 기관 주제 본문 이용."
+                    }
+                  ],
+                  "checks": {
+                    "facts_and_eligibility": "PASS",
+                    "current_status": "PASS",
+                    "profile_path": "PASS",
+                    "no_url_domain_hashtag": "PASS",
+                    "last_cta_exact_once": "PASS",
+                    "length": "PASS",
+                    "media": "PASS",
+                    "one_post_no_replies": "PASS",
+                    "recent_history": "PASS"
+                  },
+                  "score_items": [
+                    {
+                      "item": "첫 문장",
+                      "score": 14,
+                      "max": 15,
+                      "reason": "상병급여 신청 시점을 묻고 다음 문장 첫머리에서 14일을 답한다. 08시 질문의 기한 중심 형식과 일부 겹친다."
+                    },
+                    {
+                      "item": "관심/의도",
+                      "score": 15,
+                      "max": 15,
+                      "reason": "실업신고 뒤 질병·부상 때문에 취업할 수 없었던 수급자격자가 신청 여부와 시기를 판단할 수 있다."
+                    },
+                    {
+                      "item": "정확성",
+                      "score": 20,
+                      "max": 20,
+                      "reason": "제63조 잔여일수·휴업급여 등 수급 가능 시 제외, 구직급여 지급정지, 시행령 제82조 불가항력 7일, 신고 전 취업불능 모두 반영. 30일 예외의 적용 기간을 취업 불가능 기간으로 명시했다. 7일 이상 질병·부상 기준과 증명서·관할 고용센터 절차도 공식 문헌과 일치한다."
+                    },
+                    {
+                      "item": "완독 가능성",
+                      "score": 14,
+                      "max": 15,
+                      "reason": "절차 중심으로 기한→대상·한도→제외→서류를 배열했다. 첫 답 문단의 세 기한을 함께 읽어야 한다."
+                    },
+                    {
+                      "item": "공유/공감",
+                      "score": 9,
+                      "max": 10,
+                      "reason": "가족이나 구직 중인 동료에게 전달할 실용성이 있고 개인 사정을 공개하도록 요구하지 않는다."
+                    },
+                    {
+                      "item": "가치/차별",
+                      "score": 10,
+                      "max": 10,
+                      "reason": "같은 날의 개별연장급여와 구별되며 기한 예외·지급 일수·중복 제한과 신청 경로가 구체적이다."
+                    },
+                    {
+                      "item": "모바일",
+                      "score": 5,
+                      "max": 5,
+                      "reason": "472자, 500자 이하. 편집 권장 범위 450자를 넘지만 필수 기한·제한을 유지하고 단락에 여백을 두었다."
+                    },
+                    {
+                      "item": "이미지 완성도",
+                      "score": 5,
+                      "max": 5,
+                      "reason": "프로필 안내 브랜드 카드 원본·360px와 고정 SHA 일치. 숫자·제도 세부 주장·기관 로고가 없고 한글, 잘림, 대비, 배치 PASS."
+                    },
+                    {
+                      "item": "프로필 유도",
+                      "score": 5,
+                      "max": 5,
+                      "reason": "검색어·상세 확인 내용과 상위 편집자가 직접 열어 확인한 검색 결과 및 상세 화면이 일치한다."
+                    }
+                  ],
+                  "score_total": 97,
+                  "threshold": 95,
+                  "decision": "APPROVE",
+                  "approved": true,
+                  "required_revisions": [],
+                  "clock_reference": "2026-11-26T20:12:49+09:00",
+                  "time_note": "최종본 전문·원본·축소본 직접 열람 시각, reviewed_at은 최종 판정 기록 시각.",
+                  "profile_route": {
+                    "method": "UPSTREAM_VERIFIED",
+                    "verified_by": "부모 편집자 공개 프로필 및 사이트 UI 직접 확인",
+                    "confirmed_by_kst": "2026-11-26T20:12:22+09:00",
+                    "direct_detail": "https://kllollain-max.github.io/supportpick/benefits/999000000005/",
+                    "evidence": "프로필 공개 링크 목적지와 홈페이지 일치. 홈 검색창 상병급여 입력→1건→상세 화면에서 대상·구비서류·관할 고용센터 신청 방식 확인. 개별 클릭 시각 미보존, 프로필 중간 리디렉션 클릭 경유 미검증. 집계 분류 18~44를 법적 제한으로 사용하지 않음."
+                  },
+                  "previous_body_sha256": "d90d608607285998197e6fb568009d5361afd5d8f4c75162b74d992b62275ddc",
+                  "release_scope": "원고와 지정 이미지의 편집 판정. 실제 예약·발행을 뜻하지 않는다.",
+                  "publication_dependencies": [
+                    "11월 27일 20시 IMAGE는 앞 회차 발행·이미지 원장 대조가 필요함.",
+                    "이번 근거 24시간 유효기간은 다음 날 22시까지의 지연창 전체를 덮지 않음. 실제 게시 전 공식 근거·현재 신청 상태·최신 완전 수집·자산 SHA와 큐 승인본 일치 및 유효시간 재확인 필요."
+                  ]
+                },
+                "final_verdict": "PASS",
+                "body_sha256": "dcaa883c004e76aab3670acb881253162540f92c9b009bdecd3b444e11b4a5eb",
+                "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+                "score": 97,
+                "actual_review_calls": 3
+              }
+            },
+            "next_history_record": {
+              "program_id": "999000000005",
+              "notice_version": "2026-11-13",
+              "pattern": "P6",
+              "opening": "실업신고 후 아파서 구직활동을 못했다면, 상병급여는 언제 신청하나요?",
+              "structure": "청구기한질문즉답과예외→대상과급여→잔여일수중복제외→서류/방문→사이트실제확인항목",
+              "media_turn": "IMAGE"
+            }
+          },
+          "full_delay_window_covered": false,
+          "revalidate_after": "2026-11-26T22:00:00+09:00",
+          "revalidate_before": "2026-11-27T20:00:00+09:00"
+        },
+        "new_prepared_at": "2026-11-26T22:14:12.802098+09:00",
+        "new_expires_at": "2026-11-27T22:14:12.802098+09:00",
+        "source": {
+          "count": 10898,
+          "generation": "gov24-45801560315-1",
+          "lastSuccessAt": "2026-11-26T19:36:15.912377+09:00",
+          "manifestSha256": "1b4afd5cf431b50eedf054faea4a06b9edbac81f3ce4d35b2b0380ceb1c0b0a4",
+          "path": "snapshots/gov24-45801560315-1",
+          "version": 1
+        },
+        "source_fingerprint_unchanged": true,
+        "official_sources_reopened": [
+          {
+            "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032427053",
+            "ref": "turn633920281view0",
+            "claims": "현행2026.9.18법63조22~28:실업신고후취업불가,일액대체,남은일수한도,지급정지와보상급여제외.개인별요건내신청가능."
+          },
+          {
+            "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1021785653",
+            "ref": "turn633920281view1",
+            "claims": "현행2026.9.18시행령82조22~27:취업불가사유해소14일,취업불가기간중수급기간종료면종료30일,불가항력해소7일.청구서와증명서,관할기관제출.개인별법정기한내현재청구가능."
+          },
+          {
+            "url": "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001204",
+            "ref": "turn633920281view2",
+            "claims": "105~106직접열람:7일이상질병부상,진단서/소견서고용센터방문,구직급여일액대체.2022FAQ를현행법과대조."
+          },
+          {
+            "url": "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000001205",
+            "ref": "turn633920281view3",
+            "claims": "105~106직접열람:7일이상질병부상기간,그외구직활동원칙."
+          },
+          {
+            "url": "https://1350.moel.go.kr/home/hp/data/faqView.do?faq_idx=1000000747",
+            "ref": "turn591673396view0",
+            "claims": "105직접열람:이직후계속취업불가는수급기간연기,인정후발생질병은상병급여선택.신고전취업불가는연장확인이라는기존문장지지.2021FAQ를현행법과대조."
+          },
+          {
+            "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1029336825",
+            "ref": "turn591673396view1",
+            "claims": "현행2026.9.18법48조22~29직접열람:취업불가사유신고에따른수급기간연장.개인신청승인보장아님."
+          }
+        ],
+        "access_limits": [
+          "Original easylaw and one discovered variant redirect to main, no original article body read now. Historical evidence archived, current evidence replaced by actual opened labor FAQ747 and current law48; no new body needed.",
+          "No individual application transaction or payment guaranteed. No source collection time converted to current application proof."
+        ],
+        "asset_sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+        "new_visual_inspection": false,
+        "actual_image_GET_SHA_matches_review": true,
+        "body_media_pattern_and_independent_review_exact_preserved": true,
+        "new_model_calls": 0,
+        "new_scores": 0,
+        "actual_sender_latest_fresh_source_required": true,
+        "queue_commit": "02e6ff1df84d69780e2da6cb82edc7731415b230",
+        "queue_blob_sha": "b3c807fd779b7633aa7c5824de31ed5bc23070c7",
+        "queue_readback_verified": true
+      },
+      "queue_commit": "02e6ff1df84d69780e2da6cb82edc7731415b230"
     }
   },
   "last_reported_prepublication_repair": {
@@ -184331,7 +185658,7 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-27T01:19:59.298174+09:00",
+    "checked_at": "2026-11-27T02:18:59.479054+09:00",
     "ready": 4,
     "future24h_ready": 4,
     "new_drafts": 0,
@@ -184409,14 +185736,14 @@
         "path": "social/images/benefit-guide-1.png",
         "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
         "actual_download_sha_matches_current_review": true,
-        "checked_at": "2026-11-27T01:20:04.361573+09:00",
+        "checked_at": "2026-11-27T02:19:05.898080+09:00",
         "new_visual_inspection": false
       },
       {
         "path": "social/images/benefit-guide-2.png",
         "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
         "actual_download_sha_matches_current_review": true,
-        "checked_at": "2026-11-27T01:20:07.649808+09:00",
+        "checked_at": "2026-11-27T02:19:11.721385+09:00",
         "new_visual_inspection": false
       }
     ],
