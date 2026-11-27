@@ -16123,6 +16123,447 @@
       "revalidate_after": "2026-11-27T14:00:00+09:00",
       "revalidate_before": "2026-11-28T12:00:00+09:00",
       "expiry_revalidated_at": "2026-11-27T15:16:07.430887+09:00"
+    },
+    {
+      "slot": "2026-11-28T16:00:00+09:00",
+      "benefit_id": "B55370100013",
+      "source_fingerprint": "e09f6c9bb71c588a46213fdd173ff2b44b4c7a9f68dbead87522b7b28d9af860",
+      "source_generation": "gov24-45903616185-1",
+      "prepared_at": "2026-11-27T16:53:45.821568+09:00",
+      "expires_at": "2026-11-28T16:53:45.821568+09:00",
+      "asset_sha256": null,
+      "writer": {
+        "schema_version": "supportpick.writer.v1",
+        "status": "READY",
+        "selected_program_id": "B55370100013",
+        "post_text": "신용평점 하위 50%·연 소득 3,500만 원 이하면 생계자금 500만 원을 빌릴 수 있나요?\n그 조건만으로는 부족해요. 미소금융 금융취약계층 생계자금은 추가요건도 갖춰야 하고, 최종 대출 여부와 금액은 심사를 거쳐 결정돼요.\n\n추가요건의 예로는 미소금융 창업·운영·시설자금 12회차 이상 성실상환, 등록장애인, 전세사기피해자 등이 있어요. 이 소득·신용 기준과 해당 추가요건을 함께 충족해야 해요.\n\n지원금이 아니라 갚아야 하는 대출이에요. 한도는 최대 500만 원, 금리는 연 4.5% 이내예요. 원금과 이자를 나눠 갚으며, 거치 최대 1년을 포함해 최장 6년이에요.\n\n상시 신청 제도지만, 방문 전 1397에서 해당 요건·접수 가능 여부와 지점을 확인해요. 지원금픽에서 사업명을 검색하면 다른 자격 기준과 추가요건의 세부 대상, 방문 방법을 확인할 수 있어요.\n자세한 사항은 프로필링크 확인",
+        "draft_text": null,
+        "reply_texts": [],
+        "media": {
+          "turn": "TEXT",
+          "asset_id": null,
+          "check": "NOT_REQUIRED",
+          "image_copy": null,
+          "alt_text": null
+        },
+        "review": {
+          "planned_at": "2026-11-28T16:00:00+09:00",
+          "application_status": "ALWAYS",
+          "reader": "개인신용평점하위50%이고연소득3500만원이하로생계대출을검토하는성인",
+          "central_message": "소득신용기본갈래외추가요건필수,심사후최대액/상환의무·기간·상담신청",
+          "pattern": "P5",
+          "selection_reason": "동일ID원본누적30914,상위HOLD/SKIP기존출처/이유전부보존.현재미예약READY/기게시동일ID없음.순위안채무·생활자립분야순환.",
+          "interest_basis": "OBSERVED_METRICS",
+          "duplicate_check": "CHECKED",
+          "evidence": [
+            {
+              "source_id": "B55370100013",
+              "source_ref": "https://www.fsc.go.kr/no010101/86583",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-27T16:53:45.821568+09:00",
+              "claims_supported": [
+                "2026-03-30FSC공식실제본문332~349열람:해당생계자금신설3/31부터상담예약후전국미소지점신청.기본소득신용+추가요건중첩,최대500만원연4.5%,거치1/상환5최대6년,1397/미소지점.다른청년상품거치6년과섞지않음."
+              ]
+            },
+            {
+              "source_id": "B55370100013",
+              "source_ref": "https://www.mogef.go.kr/cs/opf/cs_opf_f043.do",
+              "access_method": "OPENED_OFFICIAL",
+              "verified_at": "2026-11-27T16:53:45.821568+09:00",
+              "claims_supported": [
+                "성평등가족부현재공식정책안내실제52~70열람:미소금융기본요건과추가요건함께필요,하위50%+연3500이하생계자금조건가능,생계자금500만표·연4.5이내·1397신청문의.자활창업최대7000과생계500구분."
+              ]
+            },
+            {
+              "source_id": "B55370100013",
+              "source_ref": "보조금24동일서비스IDB55370100013 최신완전세대 gov24-45903616185-1 원본",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-27T16:53:45.821568+09:00",
+              "claims_supported": [
+                "11/13수정동일ID원본지금실재대조:상시신청,4기본조건중1+4추가조건중1,최대500/4.5이내,방문/1397.원본수집07:22시각을현재접수검증으로변환안함.현재개별심사필요."
+              ]
+            }
+          ],
+          "checks": {
+            "facts": "PASS",
+            "current_status": "PASS",
+            "eligibility_and_units": "PASS",
+            "cta_and_no_links": "PASS",
+            "length": "PASS",
+            "media": "NOT_REQUIRED"
+          },
+          "char_count": 445,
+          "count_method": "python_len_including_spaces_and_newlines",
+          "missing_info": [],
+          "hold_reasons": [],
+          "warnings": [
+            "시행기관상품페이지web2회timeout중단,검색캐시내용을오늘직접열람이라고기록안함.정부24직접도구접근불가.실제FSC/성평등부공식열람+같은ID원본과독립검수기준충족범위만게시.",
+            "개별여신심사/추가요건·서류는지점상담,대출확정/중복가능/무서류보장아님",
+            "현재16시는미예약이며실패확정아님,자연게시결과에따라미예약미디어우선순위재검증.",
+            "실제발송시최신완전수집본필수,07:22세대를내일16시신선하다고가정않음.",
+            "최대24시간TTL로내일16~18전체창미충족.오늘18시이후공식/현재접수안내/최신완전본실재대조후CAS갱신필수.날짜만변경금지."
+          ],
+          "reach_editorial": {
+            "policy_id": "supportpick-threads-reach-v1-20261109",
+            "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
+            "core_question": "신용평점 하위 50%·연 소득 3,500만 원 이하면 생계자금 500만 원을 빌릴 수 있나요?",
+            "reader_scope": "개인신용평점하위50%이고연소득3500만원이하로생계대출을검토하는성인",
+            "angles": [
+              "생활비부족시대출/지원금구분",
+              "소득신용한갈래와추가요건동시충족",
+              "거치와원리금상환·상담방문준비"
+            ],
+            "chosen_angle": "신용소득충족시신청가능질문즉답→추가요건→갚는대출/금리/기간→상담과사이트세부대상",
+            "opening_candidates": [
+              "신용평점 하위 50%·연 소득 3,500만 원 이하면 생계자금 500만 원을 빌릴 수 있나요?",
+              "생활비가 부족할 때, 미소금융 생계자금은 지원금일까요, 갚는 대출일까요?",
+              "미소금융을 12회차 성실히 갚았다면 생계자금 500만 원을 더 빌릴 수 있나요?"
+            ],
+            "chosen_opening": "신용평점 하위 50%·연 소득 3,500만 원 이하면 생계자금 500만 원을 빌릴 수 있나요?",
+            "opening_type": "자격누락질문형",
+            "cohort": null,
+            "comparison_eligible": false,
+            "comparison_exclusion": "v3질문·자격중첩·상환조건동시편집,순수도입A/B소급배정안함",
+            "history_posts_checked": 20,
+            "comparison_file": "writer-input1645.json recent20_comparison",
+            "actual_applied_elements": [
+              "기존장애연금비교·K패스카드번호·장제비가족질문과다른소득신용AND추가요건",
+              "지원금/대출구분과최대/심사명확화",
+              "최초검수에서완제이용기간자료불일치발견,해당갈래단정삭제하고검증된추가요건예시로수정",
+              "서류해당없음을무서류대출로표현안함"
+            ],
+            "selection_reason": "동일ID원본누적30914,상위HOLD/SKIP기존출처/이유전부보존.현재미예약READY/기게시동일ID없음.순위안채무·생활자립분야순환.",
+            "profile_route": {
+              "profile": "https://www.threads.com/@hid_1004",
+              "visible_link_target": "https://kllollain-max.github.io/supportpick/",
+              "profile_target_checked_today_earlier": true,
+              "profile_redirect_click_completed": true,
+              "profile_redirect_method": "Actualvisibleprofilelinkhrefreadthennewtabnavigationthroughl.threadsredirect→home→search1result→detail; nativeclickstalenode,semanticclicknoobservablepopup",
+              "home_search": "금융취약계층 생계자금",
+              "results": 1,
+              "detail": "https://kllollain-max.github.io/supportpick/benefits/B55370100013/",
+              "actual_detail_clicked_this_check": true,
+              "verified": [
+                "다른기본자격기준",
+                "추가요건세부대상",
+                "방문신청",
+                "1397",
+                "정부24원문연결"
+              ],
+              "limitations": [
+                "프로필실제href리디렉션완료·홈검색상세접근확인.기관예약거래가용성확인아님",
+                "사이트서류해당없음을증빙없음보장으로전환안함"
+              ]
+            },
+            "search_evidence": "공식검색표현금융취약계층생계자금/500만원/추가요건/12회차확인,실측검색량미제공,누적조회수는검색수요실측아님.",
+            "observed_metrics_context": "88완료게시179공식관측,계정7/30프로필홈·완독체류CTA미제공0아님.공식측정후24h원시관측표본한계로판정유지.",
+            "master_full_used": true,
+            "candidate_comparison": {
+              "acceptance": "FSC출시후상담예약/방문경로와현재성평등부정책신청문의/동일ID상시안내대조,개별대출심사필수",
+              "audience": "하위50%AND3500이하한자격갈래로범위한정,다른기본조건제외주장없음",
+              "benefit": "원리금상환대출최대500만원,연4.5이내",
+              "deadline": "상시안내,마감/예산무제한/선착순주장없음",
+              "share_save_value": "추가요건누락/지원금오해방지",
+              "source_reliability": "금융위원회현재공개원문/성평등부현행안내/API11/13원본/독립검수",
+              "site_detail": "같은ID실제검색클릭",
+              "measured_search_volume": null
+            }
+          },
+          "astra_final_review": {
+            "requested_model": "gpt-6.2-astra",
+            "actual_model": "미확인",
+            "invoked_model_identifier": "gpt-6.2-astra",
+            "fallback_reason": null,
+            "version": "3.0",
+            "independent_agent": "/root/micro_final_review",
+            "first_review": {
+              "version": "3.0",
+              "round": "first",
+              "invoked_model_identifier": "gpt-6.2-astra",
+              "actual_model": "미확인",
+              "substitute_reason": null,
+              "reviewer_independent_from_writer": true,
+              "checked_at": "2026-11-27T16:49:52.294451+09:00",
+              "slot": "2026-11-28T16:00:00+09:00",
+              "benefit_id": "B55370100013",
+              "body_sha256": "44a10f9c3cbd91fec81797aef089710d17ab41ae603362075a311123468e6d2f",
+              "decision": "HOLD",
+              "total": 89,
+              "all_mandatory_checks_passed": false,
+              "scores": [
+                {
+                  "category": "첫 문장",
+                  "maximum": 15,
+                  "score": 14,
+                  "evidence": "소득과 신용의 동시 조건을 질문했고 바로 답했다. 500만 원은 첫 문장에서도 최대액으로 표현하면 선명하다."
+                },
+                {
+                  "category": "관심·의도",
+                  "maximum": 15,
+                  "score": 15,
+                  "evidence": "생계비가 필요한 독자의 신청 가능성을 초반 두 문장에서 바로 다룬다."
+                },
+                {
+                  "category": "정확성",
+                  "maximum": 20,
+                  "score": 16,
+                  "evidence": "원금·금리·기간과 신청 방법을 교차검증했다. 불법사금융예방대출 완제의 이용기간 표기가 금융위 4월 7일 자료와 11월 정부24 원문에서 다르다. 본문의 판단에서 제외하거나 개별 확인으로 제한한다."
+                },
+                {
+                  "category": "완독 가능성",
+                  "maximum": 15,
+                  "score": 13,
+                  "evidence": "결론과 신청 절차가 잘 나뉜다. 추가요건 나열과 긴 행정용어의 밀도가 높다."
+                },
+                {
+                  "category": "공유·공감",
+                  "maximum": 10,
+                  "score": 9,
+                  "evidence": "승인·한도 보장으로 오인할 수 있는 부분을 짚었다. 구체적 생활 사례가 행정적 분류명보다 쉽게 전달된다."
+                },
+                {
+                  "category": "가치·차별",
+                  "maximum": 10,
+                  "score": 10,
+                  "evidence": "최근 20건 및 예정 3건에서 같은 사업ID가 없고 신청 판단과 실제 상환 부담을 함께 설명한다."
+                },
+                {
+                  "category": "모바일",
+                  "maximum": 5,
+                  "score": 4,
+                  "evidence": "문단 간격은 적당하나 추가요건 나열을 한 문장에 담았다."
+                },
+                {
+                  "category": "텍스트 완성도",
+                  "maximum": 5,
+                  "score": 4,
+                  "evidence": "독립 본문과 한 줄 CTA는 적합하다. 현재 접수 상태를 정부24 표기에 근거해 짧게 표시할 여지가 있다."
+                },
+                {
+                  "category": "프로필 유도",
+                  "maximum": 5,
+                  "score": 4,
+                  "evidence": "사이트에서 확인할 세부 대상·방문 정보를 특정했다. 실제 프로필의 중간 링크로부터 홈페이지로 도착하는 단계가 아직 검증되지 않았다."
+                }
+              ],
+              "checks": {
+                "eligibility_and_units": "FAIL — 하나의 추가요건에 대한 상환기간 자료 불일치를 단정적으로 요약",
+                "current_status": "PASS — 동일 서비스의 정부24 공식 원자료 2026-11-13 갱신 상세·목록 모두 상시신청, 금융위·서금원 3/31 출시 이후 현재 성평등가족부 1397 신청문의 유지. 제도상 상시 신청을 확인하며 특정 지점 당일 접수나 잔여한도를 보증하지 않음. 07:22 수집시각은 접수 증거로 사용하지 않음.",
+                "official_terms": "PASS — 500만 원 최대/연 4.5% 이내/거치 1년·상환 5년 이내/분할·심사·방문/1397. 원고는 신청하면 받을 수 있다고 보증하지 않음.",
+                "early_answer": "PASS",
+                "profile_route": "NOT_CHECKED — 프로필의 홈 목적지 표시와 홈→검색→동일 상세는 작성자 확인. 프로필의 중간 링크를 경유한 홈 도착 미확인.",
+                "duplicate": "PASS — 최근 20 및 미래 3건 사업번호·도입어 비교, 동 일자 P1·P2와 별개 P5",
+                "text_and_format": {
+                  "status": "PASS",
+                  "one_body": true,
+                  "reply_count": 0,
+                  "char_count": 434,
+                  "char_limit": 500,
+                  "count_method": "Python len, Unicode code points including spaces and LF",
+                  "final_cta_matches": true,
+                  "url_or_hashtag": false,
+                  "media": "TEXT",
+                  "image": "NOT_REQUIRED"
+                }
+              },
+              "sources": [
+                {
+                  "url": "https://www.fsc.go.kr/no010101/86583",
+                  "access": "직접 열람",
+                  "supports": "금융위·서금원 공동 출시, 대상, 한도, 기간, 1397 및 지점 신청"
+                },
+                {
+                  "url": "https://fsc.go.kr/no040101/?cnId=3155&curPage=53&pastPage=53&srchKey=&srchText=",
+                  "access": "직접 열람",
+                  "supports": "2026-04-07 금융위 카드뉴스는 불법사금융예방대출 6개월 이상 이용 후 완제라고 적시. 그 밖에 12회차 성실상환 및 취약계층이라는 갈래 확인"
+                },
+                {
+                  "url": "https://www.mogef.go.kr/cs/opf/cs_opf_f043.do",
+                  "access": "직접 열람",
+                  "supports": "기본 및 추가요건, 하위50%+연소득 기준, 한도, 문의"
+                },
+                {
+                  "url": "https://www.kinfa.or.kr/financialProduct/financialGroupAid.do",
+                  "access": "공식 검색 색인(2개월), 직접 열람 아님",
+                  "supports": "추가요건·지원제한, 완제기간 명시 없음"
+                },
+                {
+                  "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000864&bnefType=all&svcId=B55370100013",
+                  "access": "제공된 정부24 공식 원자료 상세·목록 직접 대조, 원문웹 직접 열람 아님",
+                  "supports": "11/13 변경, 상시신청, 대출·금리·추가요건 및 방문 방식"
+                }
+              ],
+              "required_changes": [
+                "완제 자체에 관한 자료 간 차이를 독자에게 떠넘기지 않게 해당 갈래를 빼고 정확히 검증된 12회차 성실상환·정해진 취약계층을 예시로 소개. 네 갈래 전체를 나열한 인상은 피할 것.",
+                "공식 원자료에 귀속해 상시신청임을 알리고 방문 전 1397에서 지점·접수 가능 여부를 안내받는 방식으로 표현.",
+                "프로필의 링크 경유 후 운영 도메인 도착을 확인할 수 있는 실제 관측을 내부 기록. 보호된 화면 등으로 확인 불가하면 이 필수 항목을 명시하고 보류."
+              ],
+              "hold_reasons": [
+                "완제 경로 이용기간 자료 불일치",
+                "프로필 링크 경유 실제 도착 미확인"
+              ],
+              "unverified": [
+                "개별 지점 현재 잔여재원·영업 여부",
+                "실제 독자 클릭·성과",
+                "향후 게시 상태"
+              ],
+              "source_body_edited": false,
+              "externally_published": false
+            },
+            "final_review": {
+              "version": "3.0",
+              "invoked_model_identifier": "gpt-6.2-astra",
+              "actual_model": "미확인",
+              "substitute_reason": null,
+              "reviewer_independent_from_writer": true,
+              "slot": "2026-11-28T16:00:00+09:00",
+              "benefit_id": "B55370100013",
+              "sources": [
+                {
+                  "url": "https://www.fsc.go.kr/no010101/86583",
+                  "access": "직접 열람",
+                  "supports": "금융위·서금원 공동 출시, 대상, 한도, 기간, 1397 및 지점 신청"
+                },
+                {
+                  "url": "https://fsc.go.kr/no040101/?cnId=3155&curPage=53&pastPage=53&srchKey=&srchText=",
+                  "access": "직접 열람",
+                  "supports": "2026-04-07 금융위 카드뉴스는 불법사금융예방대출 6개월 이상 이용 후 완제라고 적시. 그 밖에 12회차 성실상환 및 취약계층이라는 갈래 확인"
+                },
+                {
+                  "url": "https://www.mogef.go.kr/cs/opf/cs_opf_f043.do",
+                  "access": "직접 열람",
+                  "supports": "기본 및 추가요건, 하위50%+연소득 기준, 한도, 문의"
+                },
+                {
+                  "url": "https://www.kinfa.or.kr/financialProduct/financialGroupAid.do",
+                  "access": "공식 검색 색인(2개월), 직접 열람 아님",
+                  "supports": "추가요건·지원제한, 완제기간 명시 없음"
+                },
+                {
+                  "url": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2000864&bnefType=all&svcId=B55370100013",
+                  "access": "제공된 정부24 공식 원자료 상세·목록 직접 대조, 원문웹 직접 열람 아님",
+                  "supports": "11/13 변경, 상시신청, 대출·금리·추가요건 및 방문 방식"
+                }
+              ],
+              "round": "final",
+              "checked_at": "2026-11-27T16:53:22.847338+09:00",
+              "body_sha256": "06759f6bbccf981f37c465c5df2f5d9e493903e0eb8978f4b6864ee398e3c5e3",
+              "previous_body_sha256": "44a10f9c3cbd91fec81797aef089710d17ab41ae603362075a311123468e6d2f",
+              "decision": "PASS",
+              "total": 96,
+              "all_mandatory_checks_passed": true,
+              "scores": [
+                {
+                  "category": "첫 문장",
+                  "maximum": 15,
+                  "score": 14,
+                  "evidence": "신용과 소득을 동시 충족한 독자가 500만 원을 빌릴 수 있는지 묻고 다음 문장이 즉답한다. 한도 표시는 뒤에서 나온다."
+                },
+                {
+                  "category": "관심·의도",
+                  "maximum": 15,
+                  "score": 15,
+                  "evidence": "생활비 대출이 필요한 독자가 기본 요건을 통과한 다음 무엇을 확인해야 할지 알려 준다."
+                },
+                {
+                  "category": "정확성",
+                  "maximum": 20,
+                  "score": 20,
+                  "evidence": "추가요건 예시인 12회차 성실상환·등록장애인·전세사기피해자를 대조했다. 논란이 있던 완제 이용기간 주장을 삭제했다. 최대 500만 원, 연 4.5% 이내, 거치 포함 6년 이내, 분할상환 및 심사와 지점별 접수 확인이 일치한다."
+                },
+                {
+                  "category": "완독 가능성",
+                  "maximum": 15,
+                  "score": 14,
+                  "evidence": "질문과 결론을 붙이고 조건·비용·방문을 문단별로 나눴다. 추가요건 문단에는 제도명이 다소 길다."
+                },
+                {
+                  "category": "공유·공감",
+                  "maximum": 10,
+                  "score": 9,
+                  "evidence": "등록장애인이나 전세사기피해자 등 가족·지인이 이해할 수 있는 구체적 사례를 실었다. 첫 질문은 수치 중심이다."
+                },
+                {
+                  "category": "가치·차별",
+                  "maximum": 10,
+                  "score": 10,
+                  "evidence": "신용·소득과 추가요건의 결합, 최대 금액과 상환기간을 한 번에 판단하게 한다. 최근 20건과 미래 승인 3건에 동일 사업이 없다."
+                },
+                {
+                  "category": "모바일",
+                  "maximum": 5,
+                  "score": 4,
+                  "evidence": "445자에 단락이 구분된다. 모바일에서 신청 절차와 사이트 안내가 담긴 마지막 단락은 상대적으로 길다."
+                },
+                {
+                  "category": "텍스트 완성도",
+                  "maximum": 5,
+                  "score": 5,
+                  "evidence": "후속 답글 없이 자격·비용·신청 절차를 이해할 수 있다. 고정 문구 및 게시기 검사 통과."
+                },
+                {
+                  "category": "프로필 유도",
+                  "maximum": 5,
+                  "score": 5,
+                  "evidence": "다른 자격과 방문 방법을 확인할 이유를 구체화했다. 공개 프로필에서 읽힌 실제 링크를 같은 브라우저에서 열어 리디렉션된 홈에서 검색 결과 한 건과 정확한 서비스ID 상세까지 확인한 작성자의 재검증 기록을 대조했다."
+                }
+              ],
+              "checks": {
+                "facts": "PASS — 공식 원자료의 다른 기본조건을 배제하지 않고 해당 소득·신용 경로로 독자 한정. 추가요건 비완전 예시, 심사·한도·금리·상환·거치·상시신청/방문 포함. 무서류·무조건 승인·당일 개점·재원 잔여 단정 없음.",
+                "current_status": "PASS — 동일 서비스의 정부24 공식 원자료 2026-11-13 갱신 상세·목록 모두 상시신청, 금융위·서금원 3/31 출시 이후 현재 성평등가족부 1397 신청문의 유지. 제도상 상시 신청을 확인하며 특정 지점 당일 접수나 잔여한도를 보증하지 않음. 07:22 수집시각은 접수 증거로 사용하지 않음.",
+                "eligibility_and_units": "PASS — 12회차 창업·운영·시설 미소금융 성실상환, 등록장애인, 전세사기피해자는 각각 공식 원자료에 기재됨. 소득·신용 기준 이외 추가요건 및 심사를 명시.",
+                "editorial": "PASS — 3개 도입 후보·생활 질문·각도를 prepare1645.py의 편집 기록과 대조, 최근20 및 예정글 중복 검사.",
+                "format": "PASS — 게시기 require_publication_text 통과. Unicode 길이 445(공백·개행 포함), 단독 본문, reply_texts=[], 마지막 줄 CTA 1회, 링크·도메인·우회주소·해시태그·추가 참여 요청 없음.",
+                "profile_route": "PASS — 작성자의 브라우저 관측과 writer-input1645.json profile_route_reverification 기록 대조. 실제 프로필의 외부 링크 href를 같은 브라우저의 새 탭에서 경유해 홈 도착, 사업검색 1건, B55370100013 상세 열람. 직접 프로필 클릭의 새 창 성공을 주장하지 않음.",
+                "media": "PASS — 검수자가 정상 preview_queue로 현재 열린 16시를 포함한 선행 4건 READY/TEXT→IMAGE→TEXT→IMAGE 확인. 원장88+투영4=92 다음 select_image는 None(TEXT). 순수 미래 4건 입력 전망의 IMAGE와 차이는 현재 16시 열린 슬롯 포함 여부. 이 큐 순서가 유지되는 경우 TEXT이며 이미지 파일 검사는 NOT_REQUIRED.",
+                "pattern": "PASS — 11/28 P1, P2에 이어 P5, KST 16:00.",
+                "recheck": "편집 검수 시점 PASS. 선행 회차 유실 시 발행 전 원장·교대·후보 재계산. 정상 발행 전 최신 원자료와 승인본 해시·TTL 확인은 별도 작업."
+              },
+              "char_count": 445,
+              "reply_texts": [],
+              "media_turn": "TEXT",
+              "asset_sha256": null,
+              "route_evidence": {
+                "profile": "https://www.threads.com/@hid_1004",
+                "actual_visible_profile_link_read": true,
+                "native_click_failed": "stale node",
+                "semantic_click_returned_no_new_tab": true,
+                "actual_observed_link_href_opened_samebrowser_newtab": true,
+                "redirect_lthreads_completed_to": "https://kllollain-max.github.io/supportpick/",
+                "home_search": "금융취약계층 생계자금",
+                "search_results": 1,
+                "actual_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/B55370100013/",
+                "source": "ParentactualCUAprofile7→observedhrefnewtab8→home→search→detail,withoutloginchange",
+                "checked_date": "2026-11-27"
+              },
+              "unverified": [
+                "특정 지점 당일 여신 가용액·대출 승인",
+                "향후 예약·실제 발행",
+                "프로필 원클릭 팝업 관측은 실패하였고 관측된 동일 href 경유로 검증함"
+              ],
+              "hold_reasons": [],
+              "source_body_edited": false,
+              "externally_published": false
+            },
+            "final_verdict": "PASS",
+            "body_sha256": "06759f6bbccf981f37c465c5df2f5d9e493903e0eb8978f4b6864ee398e3c5e3",
+            "asset_sha256": null,
+            "score": 96,
+            "actual_review_calls": 2
+          }
+        },
+        "next_history_record": {
+          "program_id": "B55370100013",
+          "notice_version": "2026-11-13",
+          "pattern": "P5",
+          "opening": "신용평점 하위 50%·연 소득 3,500만 원 이하면 생계자금 500만 원을 빌릴 수 있나요?",
+          "structure": "소득신용자격질문즉답→추가요건체크→상환/최대/금리/기간→상담방문·사이트세부대상",
+          "media_turn": "TEXT"
+        }
+      },
+      "full_delay_window_covered": false,
+      "revalidate_after": "2026-11-27T18:00:00+09:00",
+      "revalidate_before": "2026-11-28T16:00:00+09:00"
     }
   ]
 }
