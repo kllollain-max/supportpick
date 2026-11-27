@@ -15171,8 +15171,8 @@
       "benefit_id": "999000000040",
       "source_fingerprint": "7d9d213bf83c798c0682175bec19aa1f4a2fcd5c6e42b0a87e1d29db34f1afd8",
       "source_generation": "gov24-45903616185-1",
-      "prepared_at": "2026-11-27T08:42:53.141927+09:00",
-      "expires_at": "2026-11-28T08:42:53.141927+09:00",
+      "prepared_at": "2026-11-27T10:30:59.981706+09:00",
+      "expires_at": "2026-11-28T10:30:59.981706+09:00",
       "asset_sha256": null,
       "writer": {
         "schema_version": "supportpick.writer.v1",
@@ -15200,29 +15200,29 @@
           "evidence": [
             {
               "source_id": "999000000040",
-              "source_ref": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000892",
+              "source_ref": "https://welfare.dobong.go.kr/user/cmmn/file/fileDown.do?atchFileId=9a0852bd641d4209bf03cb32cc9c148a&fileSn=1",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-27T08:42:53.141927+09:00",
+              "verified_at": "2026-11-27T10:30:59.981706+09:00",
               "claims_supported": [
-                "2026기준 공식페이지 실제브라우저 지원대상/서비스내용/신청방법 탭 열람. 생계·의료·주거·시설 주지원가구구성원 사망,한명80만원1회현금,실제장례행한/행하는사람,지원요청후선지원결정전사망포함.시군구요청서제출과조사심사.전국국가형이고별도연령제한수치본문추가안함."
-              ]
-            },
-            {
-              "source_id": "999000000040",
-              "source_ref": "https://www.easylaw.go.kr/CSP/CnpClsMainBtr.laf?csmSeq=90&ccfNo=3&cciNo=1&cnpClsNo=5",
-              "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-27T08:42:53.141927+09:00",
-              "claims_supported": [
-                "실제공식본문69/87/107/109/118/129행:2026사업안내근거 주지원가구중필요인정,직접장례수행자,80만원1회,다른법률장제비받으면금액차감,시군구청에요청서제출."
+                "오늘10시이후실제재대조. 2026보건복지부사업안내 실제다운로드PDF77번째쪽(인쇄63쪽)6-3/각주38~40실제텍스트열람.주지원4종가구구성원사망,실제장례수행자,1명80만,요청후결정전사망포함,타법장제비차감,시군구요청서제출.개별필요인정요건내신청가능.일반모집마감/확정지급보장아님."
               ]
             },
             {
               "source_id": "999000000040",
               "source_ref": "https://www.gg.go.kr/welfarehotline/contents/contents.do?ciIdx=1422&menuId=3894",
               "access_method": "OPENED_OFFICIAL",
-              "verified_at": "2026-11-27T08:42:53.141927+09:00",
+              "verified_at": "2026-11-27T10:30:59.981706+09:00",
               "claims_supported": [
-                "최종수정2026-06-15 국가형긴급복지 현재안내 실제열람.장제비80만원각1회,시군구/읍면동상담접수.현행2026국가형제도에서지원필요요건을충족하면개별신청가능함을현재신청·접수문의안내로확인.고정모집일없음.개별요건조사·심사필요하며확정지급/선착순/예산무제한주장안함."
+                "오늘10시이후실제재대조. 2026-06-15수정국가형현재공식안내실제재열람.장제비80만원각1회,시군구/읍면동상담신청접수문의안내로개별요건내현재신청가능확인.필요성·소득재산·위기사유조사/심사,선착순/예산무제한주장없음."
+              ]
+            },
+            {
+              "source_id": "999000000040",
+              "source_ref": "보조금24 동일서비스ID999000000040 최신완전세대 gov24-45903616185-1 serviceDetail/supportConditions 원문",
+              "access_method": "UPSTREAM_VERIFIED",
+              "verified_at": "2026-11-27T10:30:59.981706+09:00",
+              "claims_supported": [
+                "이번회차load_feed/read_current/verify_snapshot10898건완전성·manifest해시와동일ID원문fingerprint실제대조일치.필요성인정,담당공무원상담필요증빙,보건복지부/129.수집시각07:22와공식원문재검수시각구분.기존프로필/사이트실제경로증거보존,이번새UI탐색주장없음."
               ]
             }
           ],
@@ -15242,7 +15242,7 @@
             "고정공모마감이아닌개별위기사유지원제도.개별접수기한·필요증빙은공무원상담,확정지급/선착순표현없음.",
             "정부24API옛서식번호와복지로2026서식번호차이내부보존·본문번호생략.",
             "실제발송시최신완전세대·원문·예약/이미지교대다시검증.현재07:22본을내일08시신선하다고가정안함.",
-            "현재24시간TTL은내일08~10전체창미충족.오늘10시이후원문/접수상태/완전수집본실재대조하고최대24hCAS갱신필수.날짜만변경금지."
+            "오늘10시이후실제공식PDF63쪽/현재국가형신청안내/최신완전세대대조후최대24시간CAS갱신.내일08~10전체허용창PASS.실제게시시최신완전세대신선도·공식변경·본문승인해시재검증필수."
           ],
           "reach_editorial": {
             "policy_id": "supportpick-threads-reach-v1-20261109",
@@ -15600,9 +15600,10 @@
           "media_turn": "TEXT"
         }
       },
-      "full_delay_window_covered": false,
+      "full_delay_window_covered": true,
       "revalidate_after": "2026-11-27T10:00:00+09:00",
-      "revalidate_before": "2026-11-28T08:00:00+09:00"
+      "revalidate_before": "2026-11-28T08:00:00+09:00",
+      "expiry_revalidated_at": "2026-11-27T10:30:59.981706+09:00"
     }
   ]
 }
