@@ -14,6 +14,7 @@
   },
   "lease": null,
   "last_observed_run_ids": [
+    "45924933852",
     "45913369408",
     "45910923302",
     "45904488566",
@@ -6082,18 +6083,35 @@
       "conclusion": "success",
       "updated_at": "2026-11-26T23:52:45Z",
       "head_sha": "ab82e22c0e6acfbb5a520c47d10cdc75e354d3db"
+    },
+    "45924933852": {
+      "run_id": "45924933852",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-11-27T01:51:36Z",
+      "head_sha": "ab82e22c0e6acfbb5a520c47d10cdc75e354d3db"
     }
   },
   "last_check": {
-    "checked_at": "2026-11-27T10:32:18.494443+09:00",
-    "result": "expiry_prevention_revalidated_no_new_publication",
-    "maintenance_previous_blob_sha": "834ca9938f1af588166b9e2d7cebf649c94e63b6",
+    "checked_at": "2026-11-27T11:37:43.001818+09:00",
+    "result": "no_new_failure_or_publication_metrics_ingested",
+    "maintenance_previous_blob_sha": "697e852a10a390a279c2aecfaddf020d6a71e85c",
     "current_main_sha": null,
     "all_local_inputs_match_fresh_remote_blobs": true,
     "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
     "publication_ledger_sha": "2b5e1d9b28d742d407d72d96defca99f350982be",
     "queue_blob_sha": "1f3e0d668f1e5942daa34cc5f679e89a6f963ee8",
-    "changed_run_versions": [],
+    "changed_run_versions": [
+      {
+        "run_id": "45924933852",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-27T01:51:36Z",
+        "head_sha": "ab82e22c0e6acfbb5a520c47d10cdc75e354d3db"
+      }
+    ],
     "active_target_runs": [],
     "run_pagination": {
       "per_page": 100,
@@ -6136,7 +6154,7 @@
       "complete": true,
       "actual_application_status_not_inferred_from_collection": true,
       "new_candidate_original_official_pages_read": false,
-      "original_notice_rereview_this_check": true,
+      "original_notice_rereview_this_check": false,
       "public_verification_artifact_id": 15157973664,
       "public_verification_digest": "sha256:6524c2fa1c3d95b8731074e20cae77ae5f338e5f47ce956fb9dd01987f8500b1",
       "public_verification": {
@@ -6171,7 +6189,11 @@
       }
     },
     "writer": {
-      "checked_at": "2026-11-27T10:30:59.981706+09:00",
+      "checked_at": "2026-11-27T11:37:43.001818+09:00",
+      "ready": 4,
+      "future24h_ready": 4,
+      "new_drafts": 0,
+      "existing_READY_reused": 4,
       "drafts": [
         {
           "slot": "2026-11-27T12:00:00+09:00",
@@ -6226,35 +6248,14 @@
         "path": "snapshots/gov24-45903616185-1",
         "version": 1
       },
-      "images": [
-        {
-          "path": "social/images/benefit-guide-1.png",
-          "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-          "actual_download_sha_matches_current_review": true,
-          "checked_at": "2026-11-27T10:31:07.202994+09:00",
-          "new_visual_inspection": false
-        },
-        {
-          "path": "social/images/benefit-guide-2.png",
-          "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-          "actual_download_sha_matches_current_review": true,
-          "checked_at": "2026-11-27T10:31:16.850049+09:00",
-          "new_visual_inspection": false
-        }
-      ],
-      "ready": 4,
-      "full2h_pass": 4,
-      "future24h_ready": 4,
-      "new_drafts": 0,
-      "existing_READY_reused": 4,
+      "source_count": 10898,
       "ledger_records": 87,
       "pending": null,
       "lease": null,
       "new_posts": 0,
-      "maintenance_new_posts": 0,
       "new_incidents": 0,
-      "new_metrics": 0,
-      "observations": 173,
+      "new_metrics": 3,
+      "observations": 176,
       "new_evaluation": false,
       "astra_review_invocations": 0,
       "existing_Astra_review_preserved": true,
@@ -6266,44 +6267,110 @@
           "path": "social/images/benefit-guide-1.png",
           "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
           "actual_download_sha_matches_current_review": true,
-          "checked_at": "2026-11-27T10:31:07.202994+09:00",
+          "checked_at": "2026-11-27T11:37:50.702660+09:00",
           "new_visual_inspection": false
         },
         {
           "path": "social/images/benefit-guide-2.png",
           "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
           "actual_download_sha_matches_current_review": true,
-          "checked_at": "2026-11-27T10:31:16.850049+09:00",
+          "checked_at": "2026-11-27T11:37:59.062767+09:00",
           "new_visual_inspection": false
         }
       ],
-      "expiry_prevention_revalidations": 1,
-      "full_delay_windows_pass": 4,
-      "full_delay_windows_requiring_after10_recheck": 0
+      "expiry_prevention_revalidations": 0
     },
     "metrics": {
-      "run_id": "45910923302",
+      "run_id": "45924933852",
       "run_attempt": 1,
       "status": "completed",
       "conclusion": "success",
-      "updated_at": "2026-11-26T23:26:17Z",
-      "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
-      "job_id": 140218803968,
-      "artifact_id": 15160111321,
-      "artifact_digest": "sha256:077db551ca3aa4139a3464ab2d88d3d253641511f327ab5e72fe7542d75951d2",
+      "updated_at": "2026-11-27T01:51:36Z",
+      "head_sha": "ab82e22c0e6acfbb5a520c47d10cdc75e354d3db",
+      "job_id": 140263941730,
+      "artifact_id": 15166450446,
+      "artifact_digest": "sha256:6e93ad013d8e9fb339ae18eb2e817c589743c8333452d0298ffca2d373c73fba",
       "artifact_digest_verified": true,
-      "artifact_redownloaded_this_check": false,
-      "job_logs_retrieved_this_check": false,
-      "observed_at": "2026-11-26T23:26:14.240137+00:00",
-      "records": [],
-      "due_count": 0,
-      "success_count": 0,
-      "new_observations": 0,
-      "new_observation_keys": [],
-      "total_observations": 173,
+      "artifact_redownloaded_this_check": true,
+      "job_logs_retrieved_this_check": true,
+      "observed_at": "2026-11-27T01:51:29.812203+00:00",
+      "records": [
+        {
+          "post_id": "18136261246743978",
+          "published_at": "2026-11-20T08:39:29.206531+09:00",
+          "observed_at": "2026-11-27T01:51:29.812203+00:00",
+          "window_hours": 168,
+          "elapsed_hours": 170.20016824222222,
+          "timing": "late_available_check",
+          "within_target_tolerance": false,
+          "not_backcalculated": true,
+          "metrics": {
+            "views": 120,
+            "likes": 2,
+            "comments": 0,
+            "reposts": 0,
+            "shares": 0,
+            "saves": null,
+            "profile_visits": null,
+            "new_followers": null,
+            "site_visits": null
+          }
+        },
+        {
+          "post_id": "18123605203752749",
+          "published_at": "2026-11-24T08:45:23.880530+09:00",
+          "observed_at": "2026-11-27T01:51:29.812203+00:00",
+          "window_hours": 72,
+          "elapsed_hours": 74.10164768694445,
+          "timing": "late_available_check",
+          "within_target_tolerance": false,
+          "not_backcalculated": true,
+          "metrics": {
+            "views": 29,
+            "likes": 2,
+            "comments": 0,
+            "reposts": 0,
+            "shares": 0,
+            "saves": null,
+            "profile_visits": null,
+            "new_followers": null,
+            "site_visits": null
+          }
+        },
+        {
+          "post_id": "18026493176944984",
+          "published_at": "2026-11-26T08:45:11.756993+09:00",
+          "observed_at": "2026-11-27T01:51:29.812203+00:00",
+          "window_hours": 24,
+          "elapsed_hours": 26.105015336111112,
+          "timing": "late_available_check",
+          "within_target_tolerance": false,
+          "not_backcalculated": true,
+          "metrics": {
+            "views": 2,
+            "likes": 1,
+            "comments": 0,
+            "reposts": 0,
+            "shares": 0,
+            "saves": null,
+            "profile_visits": null,
+            "new_followers": null,
+            "site_visits": null
+          }
+        }
+      ],
+      "due_count": 3,
+      "success_count": 3,
+      "new_observations": 3,
+      "new_observation_keys": [
+        "18136261246743978:168h",
+        "18123605203752749:72h",
+        "18026493176944984:24h"
+      ],
+      "total_observations": 176,
       "new_evaluation_report_due": false,
       "weights_unchanged": true,
-      "cached_artifact_rechecked_this_check": true
+      "cached_artifact_rechecked_this_check": false
     },
     "recovery": {
       "new_publication_this_check": false,
@@ -6311,9 +6378,9 @@
       "maintenance_new_posts": 0,
       "new_recovery_this_check": false,
       "new_failure_this_check": false,
-      "reason": "87complete verified publications,no pending/lease. After10actual2026ministryofficialPDF63 andcurrentnational-programapplicationguide rechecked,latestcomplete10898snapshotmanifest/load_feed andexistingIMAGEshaPASS. Nov28 08TEXT max24hCASrenewalcovers08-10entirewindow. Originalentry/body/media/pattern/independentreview97preserved, no newdraft/model/score. Other3futureREADYunchanged. All4nominal/full2h/ranking/hashchecksPASS. No newtargetrun/newmetrics:173observationspreserved. OfficialPDFfirstroute503retry1thenstop; validofficialDobongcopyactuallydownloadedSHAverified instead. No dispatch/rerun/POST/code/site/schedulechange."
+      "reason": "87 completeverifiedrecords,no pending/lease. All4existingREADY matchapprovedbody/fingerprint/ranking/nominal/full2h-window,actualexistingimageGETSHApass. Newofficialmetricrun45924933852actualartifact/logdue3success3:3late24/72/168h observations imported173→176withoutbackcalculation/nullconversion. Allpriorobservationsandcomparisondecisionpreserved,no newevaluationorweightschange. Latestcomplete10898sourcecachedactualmanifest/read_current/verify_snapshot/load_feedPASS. No queue/code/body/expiry/model/dispatch/rerun/POSTchanges."
     },
-    "next_condition": "Preserve Nov27 12IMAGE/P8,16TEXT/P2,20IMAGE/P6,Nov28 08TEXT/P1. All4full2h windowscovered. Actualsender must revalidate newestcompletefreshsource/currentofficialchanges/approvedbodyassetreviewhash. Current07:22source notassumedfreshnextday08. Keep resolvedincidentsclosed,nopastslotrecovery.",
+    "next_condition": "Keep Nov27 12IMAGE/P8,16TEXT/P2,20IMAGE/P6,Nov28 08TEXT/P1. Allnominal/full2h-windowchecksPASS. Actualpublishertime must revalidate newestcompletefreshsourceandapprovedhashes. Upcoming12notyetstarted,thischecknoactiontowritepublisherstate. Formalcomparisonevaluationunchanged;lateobservationsnot24hpointbackcalculated,unavailableaccount30d/profile/home/completion/dwell/CTAmetricsnotzero.",
     "publication": {
       "run_id": "45913369408",
       "run_attempt": 1,
@@ -6353,504 +6420,19 @@
       "latest_already_reported": true
     },
     "history_reconciliation": {
-      "previous86records_exact_preserved": true,
-      "new_complete_verified_records": 1,
+      "previous87records_preserved": true,
+      "new_complete_verified_records": 0,
       "pending": null,
       "lease": null,
-      "ambiguous_post_retry": false,
-      "new_publication_matches_original_scheduled_slot": true
+      "ambiguous_post_retry": false
     },
     "official_review_recovery": {
-      "new_official_page_review_this_check": true,
+      "new_official_page_review_this_check": false,
       "new_Astra_calls": 0,
       "existing_Astra_reviews_preserved": true,
       "image_redownloaded_this_check": true,
       "new_visual_inspection": false,
-      "previous_actual_profile_and_site_route_evidence_preserved": true,
-      "actual_expiry_recheck": {
-        "checked_at": "2026-11-27T10:30:59.981706+09:00",
-        "status": "RESOLVED_ACTUAL_OFFICIAL_REREVIEW_FULL_WINDOW_COVERED",
-        "previous_entry": {
-          "slot": "2026-11-28T08:00:00+09:00",
-          "benefit_id": "999000000040",
-          "source_fingerprint": "7d9d213bf83c798c0682175bec19aa1f4a2fcd5c6e42b0a87e1d29db34f1afd8",
-          "source_generation": "gov24-45903616185-1",
-          "prepared_at": "2026-11-27T08:42:53.141927+09:00",
-          "expires_at": "2026-11-28T08:42:53.141927+09:00",
-          "asset_sha256": null,
-          "writer": {
-            "schema_version": "supportpick.writer.v1",
-            "status": "READY",
-            "selected_program_id": "999000000040",
-            "post_text": "긴급복지 지원 중 가구원이 돌아가시면, 장제비 80만 원은 누가 신청하나요?\n실제로 장례를 치르는 분이나 치른 분이 신청할 수 있어요. 생계·의료·주거·사회복지시설 이용지원 중 하나를 받던 가구의 구성원이 돌아가시고 지원 필요성이 인정되면, 돌아가신 분 한 명당 80만 원을 한 번 지원해요.\n\n긴급지원 요청 뒤 지원 결정 전에 돌아가신 경우도 가능해요. 다른 법률에 따른 장제비를 받았다면 그 금액을 빼고 지급해요.\n\n지원 요청서는 시·군·구청에 제출하며, 필요한 증빙은 담당 공무원과 상담해 준비해요.\n\n프로필에서 보건복지부 ‘긴급복지 장제비 지원’을 찾으면 대상·신청방법·서류 상담 안내와 129 문의처를 확인할 수 있어요.\n자세한 사항은 프로필링크 확인",
-            "draft_text": null,
-            "reply_texts": [],
-            "media": {
-              "turn": "TEXT",
-              "asset_id": null,
-              "check": "NOT_REQUIRED",
-              "image_copy": null,
-              "alt_text": null
-            },
-            "review": {
-              "planned_at": "2026-11-28T08:00:00+09:00",
-              "application_status": "OPEN",
-              "reader": "국가형긴급복지주지원가구구성원장례를실제로치르는사람",
-              "central_message": "주지원가구구성원장례실제수행자·사망자1명80만원1회·결정전사망예외·타법차감",
-              "pattern": "P1",
-              "selection_reason": "동일서비스ID보조금24원본누적31493.상위HOLD/SKIP기존구체출처·이유전부보존.동일사업기게시/예약/READY없음.국가형생활지원·가족분야로순위안순환.",
-              "interest_basis": "OBSERVED_METRICS",
-              "duplicate_check": "CHECKED",
-              "evidence": [
-                {
-                  "source_id": "999000000040",
-                  "source_ref": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000892",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-27T08:42:53.141927+09:00",
-                  "claims_supported": [
-                    "2026기준 공식페이지 실제브라우저 지원대상/서비스내용/신청방법 탭 열람. 생계·의료·주거·시설 주지원가구구성원 사망,한명80만원1회현금,실제장례행한/행하는사람,지원요청후선지원결정전사망포함.시군구요청서제출과조사심사.전국국가형이고별도연령제한수치본문추가안함."
-                  ]
-                },
-                {
-                  "source_id": "999000000040",
-                  "source_ref": "https://www.easylaw.go.kr/CSP/CnpClsMainBtr.laf?csmSeq=90&ccfNo=3&cciNo=1&cnpClsNo=5",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-27T08:42:53.141927+09:00",
-                  "claims_supported": [
-                    "실제공식본문69/87/107/109/118/129행:2026사업안내근거 주지원가구중필요인정,직접장례수행자,80만원1회,다른법률장제비받으면금액차감,시군구청에요청서제출."
-                  ]
-                },
-                {
-                  "source_id": "999000000040",
-                  "source_ref": "https://www.gg.go.kr/welfarehotline/contents/contents.do?ciIdx=1422&menuId=3894",
-                  "access_method": "OPENED_OFFICIAL",
-                  "verified_at": "2026-11-27T08:42:53.141927+09:00",
-                  "claims_supported": [
-                    "최종수정2026-06-15 국가형긴급복지 현재안내 실제열람.장제비80만원각1회,시군구/읍면동상담접수.현행2026국가형제도에서지원필요요건을충족하면개별신청가능함을현재신청·접수문의안내로확인.고정모집일없음.개별요건조사·심사필요하며확정지급/선착순/예산무제한주장안함."
-                  ]
-                }
-              ],
-              "checks": {
-                "facts": "PASS",
-                "current_status": "PASS",
-                "eligibility_and_units": "PASS",
-                "cta_and_no_links": "PASS",
-                "length": "PASS",
-                "media": "NOT_REQUIRED"
-              },
-              "char_count": 369,
-              "count_method": "python_len_including_spaces_and_newlines",
-              "missing_info": [],
-              "hold_reasons": [],
-              "warnings": [
-                "고정공모마감이아닌개별위기사유지원제도.개별접수기한·필요증빙은공무원상담,확정지급/선착순표현없음.",
-                "정부24API옛서식번호와복지로2026서식번호차이내부보존·본문번호생략.",
-                "실제발송시최신완전세대·원문·예약/이미지교대다시검증.현재07:22본을내일08시신선하다고가정안함.",
-                "현재24시간TTL은내일08~10전체창미충족.오늘10시이후원문/접수상태/완전수집본실재대조하고최대24hCAS갱신필수.날짜만변경금지."
-              ],
-              "reach_editorial": {
-                "policy_id": "supportpick-threads-reach-v1-20261109",
-                "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
-                "core_question": "긴급복지 지원 중 가구원이 돌아가시면, 장제비 80만 원은 누가 신청하나요?",
-                "reader_scope": "국가형긴급복지주지원가구구성원장례를실제로치르는사람",
-                "angles": [
-                  "가족장례비부담과지급받는사람",
-                  "주지원중사망·결정전사망예외와자격",
-                  "다른법률장제비차감·서류상담신청준비"
-                ],
-                "chosen_angle": "장례수행자질문즉답→가구구성원/1인1회조건→결정전사망예외/차감→신청준비",
-                "opening_candidates": [
-                  "긴급복지 지원 중 가구원이 돌아가시면, 장제비 80만 원은 누가 신청하나요?",
-                  "장례비가 부담될 때, 긴급복지 장제비 80만 원을 받을 수 있는 가구는 어디일까요?",
-                  "긴급복지 신청 후 지원 결정 전에 가족이 돌아가셔도 장제비를 받을 수 있나요?"
-                ],
-                "chosen_opening": "긴급복지 지원 중 가구원이 돌아가시면, 장제비 80만 원은 누가 신청하나요?",
-                "opening_type": "가족·대상자격질문형",
-                "cohort": null,
-                "comparison_eligible": false,
-                "comparison_exclusion": "v3질문즉답·가구범위·지급단위동시개선,순수도입A/B소급배정안함",
-                "history_posts_checked": 20,
-                "comparison_file": "funeral0830-comparison.json",
-                "actual_applied_elements": [
-                  "기존장애수당연금비교/상병급여기한질문과달리실제장례수행자와가구범위판단",
-                  "장례상황배려한돌아가신표현",
-                  "한명당80만원한번/다른법률차감"
-                ],
-                "selection_reason": "동일서비스ID보조금24원본누적31493.상위HOLD/SKIP기존구체출처·이유전부보존.동일사업기게시/예약/READY없음.국가형생활지원·가족분야로순위안순환.",
-                "profile_route": {
-                  "profile": "https://www.threads.com/@hid_1004",
-                  "visible_link_target": "https://kllollain-max.github.io/supportpick/",
-                  "checked_on": "2026-11-27",
-                  "home_search": "긴급복지 장제비",
-                  "results": 3,
-                  "actual_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/999000000040/",
-                  "redirect_click_completed": false,
-                  "actual_detail_opened": true,
-                  "detail_claims_verified": [
-                    "주지원가구구성원·필요인정",
-                    "80만원",
-                    "시군구신청",
-                    "서류담당공무원상담",
-                    "129"
-                  ],
-                  "limits": [
-                    "프로필목적지표시와별도홈검색→동일ID상세클릭직접확인.프로필링크클릭은detached node후로그인권유modal로완료미확인.인증변경없음.",
-                    "사이트API옛서식3호와현재복지로7호차이는기록하고본문번호생략.",
-                    "API0~120나이분류/지역확인필요를법적자격범위로사용안함.",
-                    "사이트자체접수/증빙전체목록보장안함."
-                  ]
-                },
-                "search_evidence": "실제공식검색결과 긴급복지 장제비 지원/1인80만원/장제비중복표현확인,실측검색량미제공.원본조회수는누적지표이고검색량/신청자수아님.",
-                "observed_metrics_context": "86완료게시173공식실제관측.신규스냅샷2회due0records0은새0실적아님.7/30계정프로필홈공유추이·완독체류CTA미측정,실험가중치보존.",
-                "master_full_used": true,
-                "candidate_comparison": {
-                  "acceptance": "2026공식필요인정시요청가능,고정모집마감·선착순주장없음",
-                  "audience": "일반장례지원모두가아닌국가형주지원가구",
-                  "benefit": "사망자1명80만1회,타법장제금액차감",
-                  "deadline": "개별상담확인,미확인마감수치본문없음",
-                  "reader_interest": "장례실제수행자가대상인지즉답",
-                  "recent_duplicate": "최근20·전체예약·현재READY동일ID없음",
-                  "share_save_value": "가구범위·결정전사망예외·차감조건",
-                  "source_reliability": "복지로2026·법제처2026안내·경기도국가형현행안내",
-                  "site_detail": "동일ID3검색결과중정확사업직접클릭",
-                  "measured_search_volume": null
-                }
-              },
-              "astra_final_review": {
-                "requested_model": "gpt-6.2-astra",
-                "actual_model": "미확인",
-                "invoked_model_identifier": "gpt-6.2-astra",
-                "fallback_reason": null,
-                "version": "3.0",
-                "independent_agent": "/root/funeral_final_review",
-                "first_review": {
-                  "version": "supportpick-threads-final-edit-v3.0/first",
-                  "checked_at": "2026-11-27T08:39:44+09:00",
-                  "slot": "2026-11-28T08:00:00+09:00",
-                  "benefit_id": "999000000040",
-                  "requested_model": "gpt-6.2-astra",
-                  "invoked_model": "gpt-6.2-astra",
-                  "actual_model": "미확인",
-                  "actual_model_scope": "모델 호출 지정은 의뢰자가 확인했으며 독립 응답 환경에는 실제 모델 식별자가 노출되지 않음",
-                  "independent_review": true,
-                  "decision": "REVISE",
-                  "status": "REVISE",
-                  "body_sha256": "e052c0353e2557f11af1803faf552268bf953b2f5a925926537b293e1482a75f",
-                  "scores": [
-                    {
-                      "item": "첫 문장",
-                      "max": 15,
-                      "score": 13,
-                      "reason": "지원 경험과 장례비를 연결하지만 사망자가 직접 지원받았어야 한다는 인상을 준다. 금액보다 사람이 먼저 보이는 질문이 가능하다."
-                    },
-                    {
-                      "item": "관심/의도",
-                      "max": 15,
-                      "score": 15,
-                      "reason": "가구원의 사망 직후 실제로 지원을 요청할 수 있는지를 묻고 비용과 지급 대상을 설명한다."
-                    },
-                    {
-                      "item": "정확성",
-                      "max": 20,
-                      "score": 18,
-                      "reason": "주지원 유형, 필요 인정, 요청 후 결정 전 사망, 지급 대상, 차감과 제출처는 일치한다. 가족과 가구원을 구분해야 하고 1인당의 기준이 고인임을 분명히 할 여지가 있다."
-                    },
-                    {
-                      "item": "완독 가능성",
-                      "max": 15,
-                      "score": 14,
-                      "reason": "질문 다음 줄에 금액과 요건이 있지만 한 문장에 대상·상황·선정·금액·횟수가 겹친다."
-                    },
-                    {
-                      "item": "공유/공감",
-                      "max": 10,
-                      "score": 9,
-                      "reason": "유가족에게 필요할 수 있는 절차를 담고 전달 압박이 없다. 사망이라는 표현이 잇달아 나와 다소 딱딱하다."
-                    },
-                    {
-                      "item": "가치/차별",
-                      "max": 10,
-                      "score": 10,
-                      "reason": "결정 전에 돌아가신 경우와 다른 법률에 따른 장제비 차감이 실제 선택에 도움이 된다. 비교 자료에 같은 사업이 없다."
-                    },
-                    {
-                      "item": "모바일",
-                      "max": 5,
-                      "score": 4,
-                      "reason": "공백 줄로 문단이 분리되지만 긴 첫 답변을 두 문장으로 나누면 핵심을 더 쉽게 읽을 수 있다. 텍스트 구조 평가."
-                    },
-                    {
-                      "item": "텍스트 완성도",
-                      "max": 5,
-                      "score": 5,
-                      "reason": "355자의 단일 본문에서 상담과 제출까지 마치며 이미지나 답글이 필요하지 않다."
-                    },
-                    {
-                      "item": "프로필 유도",
-                      "max": 5,
-                      "score": 5,
-                      "reason": "보건복지부 사업명을 특정하고 사이트에 있는 서류 상담·문의처를 구체적으로 안내한다."
-                    }
-                  ],
-                  "total": 93,
-                  "format": {
-                    "char_count": 355,
-                    "char_limit": 500,
-                    "count_method": "공백과 줄바꿈 포함 Unicode code points",
-                    "body_count": 1,
-                    "reply_count": 0,
-                    "media": "TEXT",
-                    "asset_check": "NOT_REQUIRED",
-                    "exact_final_cta_once": true,
-                    "no_url_domain_disguised_url_or_hashtag": true
-                  },
-                  "source_check": [
-                    {
-                      "method": "OPENED_OFFICIAL_DOCUMENT",
-                      "source": "보건복지부 2026년 긴급복지지원사업 안내 63쪽, 부산광역시사회복지협의회 게시 사본",
-                      "ref": "turn565457073view2",
-                      "confirmed": "사망한 주지원 대상 가구원, 주지원 4종, 요청 뒤 선지원 결정 전 사망, 실제 장례 수행자, 금액, 타법 장제비 차감, 지원 요청서의 시·군·구 제출"
-                    },
-                    {
-                      "method": "OPENED_OFFICIAL",
-                      "source": "경기도 긴급복지(국가형), 2026-06-15 수정",
-                      "url": "https://www.gg.go.kr/welfarehotline/contents/contents.do?ciIdx=1422&menuId=3894",
-                      "ref": "turn554808783view0",
-                      "confirmed": "장제비 80만 원·1회, 관할 관청·읍면동 상담 안내"
-                    },
-                    {
-                      "method": "UPSTREAM_VERIFIED",
-                      "source": "복지로 WLF00000892 및 찾기쉬운 생활법령 2026 안내의 대상·요건",
-                      "scope": "의뢰자 실열람 기록. 독립 도구에서 복지로는 본문 미반환, 생활법령 Btr는 메인으로 이동하여 해당 화면을 독립 실열람했다고 판단하지 않음."
-                    },
-                    {
-                      "method": "PROVIDED_OFFICIAL_TEXT",
-                      "source": "보조금24 ID 999000000040 제공 원문",
-                      "confirmed": "필요성이 인정되는 주지원 가구, 실제 필요서류 담당공무원 상담, 129, 복지부 사업명. 신청서식 번호는 현행 2026 사업안내와 달라 본문에서 제외."
-                    }
-                  ],
-                  "status_check": "2026년 시행 중인 필요성 심사형 제도. 고정 모집기간 및 개인의 청구기한을 주장하지 않음.",
-                  "comparison": "최근 20건·기존 READY 4건과 같은 사업·문장 없음. 최근 의문형 ‘신청할 수 있나요?’ 반복이 있어 이번에는 누구에게 지급되는지 묻는 방식이 더 선명함.",
-                  "profile_check": "상위 실열람에서 공개 프로필의 홈 링크 목적지와 해당 홈 검색→동일 ID 상세·서류 상담·129를 분리 확인. 프로필 링크 클릭을 통한 전체 연속 이동은 확인하지 못함.",
-                  "required_fixes": [
-                    "사망한 사람의 개인 수급 여부 대신 주지원 대상 가구의 구성원임을 첫 문단에서 명확히 한다. 친족 일반이라는 의미로 넓어지지 않게 한다.",
-                    "80만 원이 고인 한 명 기준임을 명시하고 첫 답변의 조건을 짧게 나누어 읽기 쉽게 한다."
-                  ],
-                  "all_mandatory_checks_passed": false,
-                  "re_review_required": true
-                },
-                "final_review": {
-                  "version": "supportpick-threads-final-edit-v3.0/final",
-                  "checked_at": "2026-11-27T08:40:43+09:00",
-                  "slot": "2026-11-28T08:00:00+09:00",
-                  "benefit_id": "999000000040",
-                  "requested_model": "gpt-6.2-astra",
-                  "invoked_model": "gpt-6.2-astra",
-                  "actual_model": "미확인",
-                  "actual_model_scope": "모델 호출 지정은 의뢰자가 확인했으며 독립 응답 환경에는 실제 모델 식별자가 노출되지 않음",
-                  "independent_review": true,
-                  "decision": "APPROVE",
-                  "status": "APPROVED",
-                  "body_sha256": "ea06a8a3674d3b3bc37221083dd5343fed0e0c06c4b6e005bb7e95d28bcbc531",
-                  "scores": [
-                    {
-                      "item": "첫 문장",
-                      "max": 15,
-                      "score": 15,
-                      "reason": "사망한 가구원의 장례비를 누가 신청하는지 묻는다. 공식 용어와 금액으로 문제를 특정하며 다음 문장이 곧바로 답한다."
-                    },
-                    {
-                      "item": "관심/의도",
-                      "max": 15,
-                      "score": 15,
-                      "reason": "장례를 진행 중이거나 이미 치른 독자가 지급 대상과 다음 행동을 판단할 수 있다."
-                    },
-                    {
-                      "item": "정확성",
-                      "max": 20,
-                      "score": 20,
-                      "reason": "주지원 네 종류 중 하나, 가구원 사망, 필요 인정, 실제 장례 수행자, 고인 1명당 80만 원 한 번, 결정 전 사망과 타법 차감, 요청서 제출을 대조했다."
-                    },
-                    {
-                      "item": "완독 가능성",
-                      "max": 15,
-                      "score": 14,
-                      "reason": "누가·얼마·예외·어디로 순서가 분명하다. 주지원 네 종류를 열거한 한 문장은 다소 길다."
-                    },
-                    {
-                      "item": "공유/공감",
-                      "max": 10,
-                      "score": 9,
-                      "reason": "돌아가신 분을 존중하며 수령인과 담당자에게 물어볼 내용을 알려준다. 첫 문단에서 같은 완곡 표현이 반복된다."
-                    },
-                    {
-                      "item": "가치/차별",
-                      "max": 10,
-                      "score": 10,
-                      "reason": "최근 20건과 기존 준비 4건에 없는 주제로, 지급 대상뿐 아니라 결정 전 사망과 차감까지 전달한다."
-                    },
-                    {
-                      "item": "모바일",
-                      "max": 5,
-                      "score": 4,
-                      "reason": "짧은 도입과 문단 사이 빈 줄이 탐색을 돕는다. 첫 답변과 자격 설명이 한 문단이라 작은 화면에서는 다소 밀집한다. 텍스트 구조 평가."
-                    },
-                    {
-                      "item": "텍스트 완성도",
-                      "max": 5,
-                      "score": 5,
-                      "reason": "단일 본문 안에서 신청인과 신청 방법을 설명하고 고정 마무리를 유지한다."
-                    },
-                    {
-                      "item": "프로필 유도",
-                      "max": 5,
-                      "score": 5,
-                      "reason": "보건복지부 사업명을 정확히 제시하고 해당 상세 페이지에서 볼 수 있는 서류 상담 안내와 129를 구체적으로 언급한다."
-                    }
-                  ],
-                  "total": 97,
-                  "format": {
-                    "char_count": 369,
-                    "char_limit": 500,
-                    "count_method": "공백과 줄바꿈 포함 Unicode code points",
-                    "body_count": 1,
-                    "reply_count": 0,
-                    "media": "TEXT",
-                    "asset_check": "NOT_REQUIRED",
-                    "exact_final_cta_once": true,
-                    "no_url_domain_disguised_url_or_hashtag": true
-                  },
-                  "source_check": [
-                    {
-                      "method": "OPENED_OFFICIAL_DOCUMENT",
-                      "source": "보건복지부 2026년 긴급복지지원사업 안내, 발간등록번호 11-1352000-100397-10. bswin.net 공개 사본의 문서 본문 직접 확인.",
-                      "ref": "turn565457073view2",
-                      "confirmed": "사망한 주지원 대상 가구원, 주지원 4종, 요청 뒤 선지원 결정 전 사망, 실제 장례 수행자, 금액, 타법 장제비 차감, 지원 요청서의 시·군·구 제출",
-                      "printed_page": 63,
-                      "section": "6-3 장제비 및 각주 38~40",
-                      "web_lines": [
-                        1861,
-                        1892
-                      ],
-                      "gov_publication_listing": "https://www.gg.go.kr/welfarehotline/bbs/boardView.do?bIdx=110894014&bcIdx=&bsIdx=842&menuId=3911&page=1",
-                      "official_pdf_download": "https://www.gg.go.kr/welfarehotline/cmmn/download.do?idx=1041038",
-                      "pdf_sha256": null,
-                      "pdf_sha256_note": "웹 도구에서 추출 본문을 읽었고 관청의 PDF 다운로드 응답은 octet-stream으로 도구가 직접 표시하지 못해 원본 바이트 해시를 계산하지 않음.",
-                      "actual_pdf_view_url": "https://bswin.net/post_file_download.cm?c=YTo1OntzOjEwOiJib2FyZF9jb2RlIjtzOjIyOiJiMjAyNTAyMTkwNDgyNDI0YWZlM2Y5IjtzOjk6InBvc3RfY29kZSI7czoyMjoicDIwMjYwMTA2YmY5M2FkZmRlM2Y0NiI7czo5OiJmaWxlX2NvZGUiO3M6MjI6InAyMDI2MDEwNjM3YzVhMmZlZjAxYjIiO3M6MTk6InBvc3RfZG93bmxvYWRfdG9rZW4iO3M6MTM6IjY5ODg1M2M3NjUxMzgiO3M6MTE6Im1lbWJlcl9jb2RlIjtOO30%3D"
-                    },
-                    {
-                      "method": "OPENED_OFFICIAL",
-                      "source": "경기도 긴급복지(국가형), 2026-06-15 수정",
-                      "url": "https://www.gg.go.kr/welfarehotline/contents/contents.do?ciIdx=1422&menuId=3894",
-                      "ref": "turn554808783view0",
-                      "confirmed": "장제비 80만 원·1회, 관할 관청·읍면동 상담 안내"
-                    },
-                    {
-                      "method": "UPSTREAM_VERIFIED",
-                      "source": "복지로 WLF00000892 및 찾기쉬운 생활법령 2026 안내의 대상·요건",
-                      "scope": "의뢰자 실열람 기록. 독립 도구에서 복지로는 본문 미반환, 생활법령 Btr는 메인으로 이동하여 해당 화면을 독립 실열람했다고 판단하지 않음."
-                    },
-                    {
-                      "method": "PROVIDED_OFFICIAL_TEXT",
-                      "source": "보조금24 ID 999000000040 제공 원문",
-                      "confirmed": "필요성이 인정되는 주지원 가구, 실제 필요서류 담당공무원 상담, 129, 복지부 사업명. 신청서식 번호는 현행 2026 사업안내와 달라 본문에서 제외."
-                    }
-                  ],
-                  "status_check": "2026년 시행 중인 필요성 심사형 제도. 고정 모집기간 및 개인의 청구기한을 주장하지 않음.",
-                  "comparison": "최근 20건·기존 READY 4건과 같은 사업·문장 없음. 최근 의문형 ‘신청할 수 있나요?’ 반복이 있어 이번에는 누구에게 지급되는지 묻는 방식이 더 선명함.",
-                  "profile_check": "상위 실열람에서 공개 프로필의 홈 링크 목적지와 해당 홈 검색→동일 ID 상세·서류 상담·129를 분리 확인. 프로필 링크 클릭을 통한 전체 연속 이동은 확인하지 못함. 게시문에는 클릭 성공·직접신청을 약속하는 문장이 없으며 확인된 목적지와 상세 정보가 일치한다.",
-                  "required_fixes": [],
-                  "all_mandatory_checks_passed": true,
-                  "re_review_required": false,
-                  "review_round": "final",
-                  "previous_body_sha256": "e052c0353e2557f11af1803faf552268bf953b2f5a925926537b293e1482a75f",
-                  "post_text_reviewed": "긴급복지 지원 중 가구원이 돌아가시면, 장제비 80만 원은 누가 신청하나요?\n실제로 장례를 치르는 분이나 치른 분이 신청할 수 있어요. 생계·의료·주거·사회복지시설 이용지원 중 하나를 받던 가구의 구성원이 돌아가시고 지원 필요성이 인정되면, 돌아가신 분 한 명당 80만 원을 한 번 지원해요.\n\n긴급지원 요청 뒤 지원 결정 전에 돌아가신 경우도 가능해요. 다른 법률에 따른 장제비를 받았다면 그 금액을 빼고 지급해요.\n\n지원 요청서는 시·군·구청에 제출하며, 필요한 증빙은 담당 공무원과 상담해 준비해요.\n\n프로필에서 보건복지부 ‘긴급복지 장제비 지원’을 찾으면 대상·신청방법·서류 상담 안내와 129 문의처를 확인할 수 있어요.\n자세한 사항은 프로필링크 확인",
-                  "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-                  "char_count": 369,
-                  "media_turn": "TEXT",
-                  "reply_texts": [],
-                  "approved": true,
-                  "threshold": 95,
-                  "score_total": 97,
-                  "checks": {
-                    "source": "PASS",
-                    "amount_unit": "PASS",
-                    "eligibility": "PASS",
-                    "current_status": "PASS",
-                    "same_program_duplicate": "PASS",
-                    "question_immediate_answer": "PASS",
-                    "cta": "PASS",
-                    "link_domain_hashtag": "PASS",
-                    "limit": "PASS",
-                    "single_body_zero_replies": "PASS",
-                    "media": "NOT_REQUIRED",
-                    "profile_route": "PASS_BY_DESTINATION_AND_SITE_PATH"
-                  },
-                  "release_scope": "지정 슬롯의 본문에 대한 독립 편집 승인. 실제 큐 기록 및 발행을 수행하지 않음."
-                },
-                "final_verdict": "PASS",
-                "body_sha256": "ea06a8a3674d3b3bc37221083dd5343fed0e0c06c4b6e005bb7e95d28bcbc531",
-                "asset_sha256": null,
-                "score": 97,
-                "actual_review_calls": 2
-              }
-            },
-            "next_history_record": {
-              "program_id": "999000000040",
-              "notice_version": "2026-02-26",
-              "pattern": "P1",
-              "opening": "긴급복지 지원 중 가구원이 돌아가시면, 장제비 80만 원은 누가 신청하나요?",
-              "structure": "가족장례수행자질문즉답→주지원가구범위·단위→결정전예외·차감→제출·서류상담→사이트확인항목",
-              "media_turn": "TEXT"
-            }
-          },
-          "full_delay_window_covered": false,
-          "revalidate_after": "2026-11-27T10:00:00+09:00",
-          "revalidate_before": "2026-11-28T08:00:00+09:00"
-        },
-        "new_prepared_at": "2026-11-27T10:30:59.981706+09:00",
-        "new_expires_at": "2026-11-28T10:30:59.981706+09:00",
-        "source": {
-          "count": 10898,
-          "generation": "gov24-45903616185-1",
-          "lastSuccessAt": "2026-11-27T07:22:51.555263+09:00",
-          "manifestSha256": "bd5ef58548dc0834b56f65ea6e94404cab2b6e246ca15ca9b3105455349a3539",
-          "path": "snapshots/gov24-45903616185-1",
-          "version": 1
-        },
-        "source_fingerprint_unchanged": true,
-        "official_sources_reopened": [
-          {
-            "url": "https://welfare.dobong.go.kr/user/cmmn/file/fileDown.do?atchFileId=9a0852bd641d4209bf03cb32cc9c148a&fileSn=1",
-            "ref": "turn341364519view0;turn762724695view0",
-            "claims": "2026보건복지부사업안내 실제다운로드PDF77번째쪽(인쇄63쪽)6-3/각주38~40실제텍스트열람.주지원4종가구구성원사망,실제장례수행자,1명80만,요청후결정전사망포함,타법장제비차감,시군구요청서제출.개별필요인정요건내신청가능.일반모집마감/확정지급보장아님."
-          },
-          {
-            "url": "https://www.gg.go.kr/welfarehotline/contents/contents.do?ciIdx=1422&menuId=3894",
-            "ref": "turn997017919view1",
-            "claims": "2026-06-15수정국가형현재공식안내실제재열람.장제비80만원각1회,시군구/읍면동상담신청접수문의안내로개별요건내현재신청가능확인.필요성·소득재산·위기사유조사/심사,선착순/예산무제한주장없음."
-          }
-        ],
-        "official_pdf_sha256": "3b5f6a400b895022c54e59388aeebf54900411e51678aa9b4e79d64771623e1b",
-        "official_pdf_bytes": 5201832,
-        "access_limits": [
-          "경기도PDF다운로드5032회(최초1+재시도1)로추가재시도중단.도봉구공식공개동일보건복지부2026안내실제다운로드/웹본문/63쪽대조.",
-          "이전생활법령Btr URL은메인으로리디렉트되어이번본문미확인.복지로웹도구400본문미확인.기존실제검수원본보존하고현재근거는실제열람공식PDF와국가형현재안내로교체.",
-          "개별청구기한/서류/선정여부는담당자확인.새신청거래나확정지급주장없음."
-        ],
-        "asset_sha256": null,
-        "new_visual_inspection": false,
-        "actual_image_GET_SHA_matches_review": true,
-        "renewed_entry_media": "TEXT",
-        "image_check_scope": "Existing IMAGE queue assets only; newTEXTentry noimage.",
-        "body_media_pattern_and_independent_review_exact_preserved": true,
-        "new_model_calls": 0,
-        "new_scores": 0,
-        "actual_sender_latest_fresh_source_required": true,
-        "queue_commit": "4c6258ddb3f28a9dee18813d3e47cc20be812706",
-        "queue_blob_sha": "1f3e0d668f1e5942daa34cc5f679e89a6f963ee8",
-        "queue_readback_verified": true
-      }
+      "previous_actual_profile_and_site_route_evidence_preserved": true
     },
     "main_head_observation": {
       "latest_observed_target_run_head": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
@@ -6862,14 +6444,14 @@
         "path": "social/images/benefit-guide-1.png",
         "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
         "actual_download_sha_matches_current_review": true,
-        "checked_at": "2026-11-27T10:31:07.202994+09:00",
+        "checked_at": "2026-11-27T11:37:50.702660+09:00",
         "new_visual_inspection": false
       },
       {
         "path": "social/images/benefit-guide-2.png",
         "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
         "actual_download_sha_matches_current_review": true,
-        "checked_at": "2026-11-27T10:31:16.850049+09:00",
+        "checked_at": "2026-11-27T11:37:59.062767+09:00",
         "new_visual_inspection": false
       }
     ],
@@ -7055,507 +6637,30 @@
         72,
         168
       ],
-      "post_observations": 173,
+      "post_observations": 176,
       "account_profile_home_followers_shares_30d_read_available": false,
       "unavailable_not_zero": true,
       "completion_dwell_cta_attribution_not_measured": true,
       "no_inferred_performance": true,
       "today_public_profile_followers": 2,
       "public_profile_followers_observed_on": "2026-11-27",
-      "public_profile_followers_not_7d_or_30d_growth": true
+      "public_profile_followers_not_7d_or_30d_growth": true,
+      "public_profile_followers_observation_is_historical": true,
+      "public_profile_followers_last_actual_check_date": "2026-11-27"
     },
     "regular_slot_observation": {
-      "slot": "2026-11-27T08:00:00+09:00",
-      "status": "published_verified_complete",
-      "run_id": "45913369408",
-      "main_id": "17899427445654470",
-      "receipt_at": "2026-11-27T08:52:40.2902496+09:00",
-      "original_two_hour_window_pass": true
+      "slot": "2026-11-27T12:00:00+09:00",
+      "window_ends": "2026-11-27T14:00:00+09:00",
+      "status": "future_regular_slot_READY",
+      "slot_reserved": false,
+      "failure_confirmed": false,
+      "action": "Preserve approved IMAGEinput,awaitexistingnaturalpublisherfirstattempt. No dispatch."
     },
     "next_condition_previous": "Existing publisher consumes Nov26 12 IMAGE/P6,16 TEXT/P5,20 IMAGE/P1,Nov27 08 TEXT/P5. Sender must verify newest fresh complete source and exact approved hashes/reviews at actual send. Cached Nov26 07:22 source is not certified fresh for Nov27 08. Preserve daily4/rotation/CAS/pending controls; no past-slot dispatch/rerun/test posts.",
     "expiry_prevention_revalidation": {
-      "checked_at": "2026-11-27T10:30:59.981706+09:00",
-      "status": "RESOLVED_ACTUAL_OFFICIAL_REREVIEW_FULL_WINDOW_COVERED",
-      "previous_entry": {
-        "slot": "2026-11-28T08:00:00+09:00",
-        "benefit_id": "999000000040",
-        "source_fingerprint": "7d9d213bf83c798c0682175bec19aa1f4a2fcd5c6e42b0a87e1d29db34f1afd8",
-        "source_generation": "gov24-45903616185-1",
-        "prepared_at": "2026-11-27T08:42:53.141927+09:00",
-        "expires_at": "2026-11-28T08:42:53.141927+09:00",
-        "asset_sha256": null,
-        "writer": {
-          "schema_version": "supportpick.writer.v1",
-          "status": "READY",
-          "selected_program_id": "999000000040",
-          "post_text": "긴급복지 지원 중 가구원이 돌아가시면, 장제비 80만 원은 누가 신청하나요?\n실제로 장례를 치르는 분이나 치른 분이 신청할 수 있어요. 생계·의료·주거·사회복지시설 이용지원 중 하나를 받던 가구의 구성원이 돌아가시고 지원 필요성이 인정되면, 돌아가신 분 한 명당 80만 원을 한 번 지원해요.\n\n긴급지원 요청 뒤 지원 결정 전에 돌아가신 경우도 가능해요. 다른 법률에 따른 장제비를 받았다면 그 금액을 빼고 지급해요.\n\n지원 요청서는 시·군·구청에 제출하며, 필요한 증빙은 담당 공무원과 상담해 준비해요.\n\n프로필에서 보건복지부 ‘긴급복지 장제비 지원’을 찾으면 대상·신청방법·서류 상담 안내와 129 문의처를 확인할 수 있어요.\n자세한 사항은 프로필링크 확인",
-          "draft_text": null,
-          "reply_texts": [],
-          "media": {
-            "turn": "TEXT",
-            "asset_id": null,
-            "check": "NOT_REQUIRED",
-            "image_copy": null,
-            "alt_text": null
-          },
-          "review": {
-            "planned_at": "2026-11-28T08:00:00+09:00",
-            "application_status": "OPEN",
-            "reader": "국가형긴급복지주지원가구구성원장례를실제로치르는사람",
-            "central_message": "주지원가구구성원장례실제수행자·사망자1명80만원1회·결정전사망예외·타법차감",
-            "pattern": "P1",
-            "selection_reason": "동일서비스ID보조금24원본누적31493.상위HOLD/SKIP기존구체출처·이유전부보존.동일사업기게시/예약/READY없음.국가형생활지원·가족분야로순위안순환.",
-            "interest_basis": "OBSERVED_METRICS",
-            "duplicate_check": "CHECKED",
-            "evidence": [
-              {
-                "source_id": "999000000040",
-                "source_ref": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000892",
-                "access_method": "OPENED_OFFICIAL",
-                "verified_at": "2026-11-27T08:42:53.141927+09:00",
-                "claims_supported": [
-                  "2026기준 공식페이지 실제브라우저 지원대상/서비스내용/신청방법 탭 열람. 생계·의료·주거·시설 주지원가구구성원 사망,한명80만원1회현금,실제장례행한/행하는사람,지원요청후선지원결정전사망포함.시군구요청서제출과조사심사.전국국가형이고별도연령제한수치본문추가안함."
-                ]
-              },
-              {
-                "source_id": "999000000040",
-                "source_ref": "https://www.easylaw.go.kr/CSP/CnpClsMainBtr.laf?csmSeq=90&ccfNo=3&cciNo=1&cnpClsNo=5",
-                "access_method": "OPENED_OFFICIAL",
-                "verified_at": "2026-11-27T08:42:53.141927+09:00",
-                "claims_supported": [
-                  "실제공식본문69/87/107/109/118/129행:2026사업안내근거 주지원가구중필요인정,직접장례수행자,80만원1회,다른법률장제비받으면금액차감,시군구청에요청서제출."
-                ]
-              },
-              {
-                "source_id": "999000000040",
-                "source_ref": "https://www.gg.go.kr/welfarehotline/contents/contents.do?ciIdx=1422&menuId=3894",
-                "access_method": "OPENED_OFFICIAL",
-                "verified_at": "2026-11-27T08:42:53.141927+09:00",
-                "claims_supported": [
-                  "최종수정2026-06-15 국가형긴급복지 현재안내 실제열람.장제비80만원각1회,시군구/읍면동상담접수.현행2026국가형제도에서지원필요요건을충족하면개별신청가능함을현재신청·접수문의안내로확인.고정모집일없음.개별요건조사·심사필요하며확정지급/선착순/예산무제한주장안함."
-                ]
-              }
-            ],
-            "checks": {
-              "facts": "PASS",
-              "current_status": "PASS",
-              "eligibility_and_units": "PASS",
-              "cta_and_no_links": "PASS",
-              "length": "PASS",
-              "media": "NOT_REQUIRED"
-            },
-            "char_count": 369,
-            "count_method": "python_len_including_spaces_and_newlines",
-            "missing_info": [],
-            "hold_reasons": [],
-            "warnings": [
-              "고정공모마감이아닌개별위기사유지원제도.개별접수기한·필요증빙은공무원상담,확정지급/선착순표현없음.",
-              "정부24API옛서식번호와복지로2026서식번호차이내부보존·본문번호생략.",
-              "실제발송시최신완전세대·원문·예약/이미지교대다시검증.현재07:22본을내일08시신선하다고가정안함.",
-              "현재24시간TTL은내일08~10전체창미충족.오늘10시이후원문/접수상태/완전수집본실재대조하고최대24hCAS갱신필수.날짜만변경금지."
-            ],
-            "reach_editorial": {
-              "policy_id": "supportpick-threads-reach-v1-20261109",
-              "final_edit_policy_id": "supportpick-threads-final-edit-v3-20261125",
-              "core_question": "긴급복지 지원 중 가구원이 돌아가시면, 장제비 80만 원은 누가 신청하나요?",
-              "reader_scope": "국가형긴급복지주지원가구구성원장례를실제로치르는사람",
-              "angles": [
-                "가족장례비부담과지급받는사람",
-                "주지원중사망·결정전사망예외와자격",
-                "다른법률장제비차감·서류상담신청준비"
-              ],
-              "chosen_angle": "장례수행자질문즉답→가구구성원/1인1회조건→결정전사망예외/차감→신청준비",
-              "opening_candidates": [
-                "긴급복지 지원 중 가구원이 돌아가시면, 장제비 80만 원은 누가 신청하나요?",
-                "장례비가 부담될 때, 긴급복지 장제비 80만 원을 받을 수 있는 가구는 어디일까요?",
-                "긴급복지 신청 후 지원 결정 전에 가족이 돌아가셔도 장제비를 받을 수 있나요?"
-              ],
-              "chosen_opening": "긴급복지 지원 중 가구원이 돌아가시면, 장제비 80만 원은 누가 신청하나요?",
-              "opening_type": "가족·대상자격질문형",
-              "cohort": null,
-              "comparison_eligible": false,
-              "comparison_exclusion": "v3질문즉답·가구범위·지급단위동시개선,순수도입A/B소급배정안함",
-              "history_posts_checked": 20,
-              "comparison_file": "funeral0830-comparison.json",
-              "actual_applied_elements": [
-                "기존장애수당연금비교/상병급여기한질문과달리실제장례수행자와가구범위판단",
-                "장례상황배려한돌아가신표현",
-                "한명당80만원한번/다른법률차감"
-              ],
-              "selection_reason": "동일서비스ID보조금24원본누적31493.상위HOLD/SKIP기존구체출처·이유전부보존.동일사업기게시/예약/READY없음.국가형생활지원·가족분야로순위안순환.",
-              "profile_route": {
-                "profile": "https://www.threads.com/@hid_1004",
-                "visible_link_target": "https://kllollain-max.github.io/supportpick/",
-                "checked_on": "2026-11-27",
-                "home_search": "긴급복지 장제비",
-                "results": 3,
-                "actual_result_click_detail": "https://kllollain-max.github.io/supportpick/benefits/999000000040/",
-                "redirect_click_completed": false,
-                "actual_detail_opened": true,
-                "detail_claims_verified": [
-                  "주지원가구구성원·필요인정",
-                  "80만원",
-                  "시군구신청",
-                  "서류담당공무원상담",
-                  "129"
-                ],
-                "limits": [
-                  "프로필목적지표시와별도홈검색→동일ID상세클릭직접확인.프로필링크클릭은detached node후로그인권유modal로완료미확인.인증변경없음.",
-                  "사이트API옛서식3호와현재복지로7호차이는기록하고본문번호생략.",
-                  "API0~120나이분류/지역확인필요를법적자격범위로사용안함.",
-                  "사이트자체접수/증빙전체목록보장안함."
-                ]
-              },
-              "search_evidence": "실제공식검색결과 긴급복지 장제비 지원/1인80만원/장제비중복표현확인,실측검색량미제공.원본조회수는누적지표이고검색량/신청자수아님.",
-              "observed_metrics_context": "86완료게시173공식실제관측.신규스냅샷2회due0records0은새0실적아님.7/30계정프로필홈공유추이·완독체류CTA미측정,실험가중치보존.",
-              "master_full_used": true,
-              "candidate_comparison": {
-                "acceptance": "2026공식필요인정시요청가능,고정모집마감·선착순주장없음",
-                "audience": "일반장례지원모두가아닌국가형주지원가구",
-                "benefit": "사망자1명80만1회,타법장제금액차감",
-                "deadline": "개별상담확인,미확인마감수치본문없음",
-                "reader_interest": "장례실제수행자가대상인지즉답",
-                "recent_duplicate": "최근20·전체예약·현재READY동일ID없음",
-                "share_save_value": "가구범위·결정전사망예외·차감조건",
-                "source_reliability": "복지로2026·법제처2026안내·경기도국가형현행안내",
-                "site_detail": "동일ID3검색결과중정확사업직접클릭",
-                "measured_search_volume": null
-              }
-            },
-            "astra_final_review": {
-              "requested_model": "gpt-6.2-astra",
-              "actual_model": "미확인",
-              "invoked_model_identifier": "gpt-6.2-astra",
-              "fallback_reason": null,
-              "version": "3.0",
-              "independent_agent": "/root/funeral_final_review",
-              "first_review": {
-                "version": "supportpick-threads-final-edit-v3.0/first",
-                "checked_at": "2026-11-27T08:39:44+09:00",
-                "slot": "2026-11-28T08:00:00+09:00",
-                "benefit_id": "999000000040",
-                "requested_model": "gpt-6.2-astra",
-                "invoked_model": "gpt-6.2-astra",
-                "actual_model": "미확인",
-                "actual_model_scope": "모델 호출 지정은 의뢰자가 확인했으며 독립 응답 환경에는 실제 모델 식별자가 노출되지 않음",
-                "independent_review": true,
-                "decision": "REVISE",
-                "status": "REVISE",
-                "body_sha256": "e052c0353e2557f11af1803faf552268bf953b2f5a925926537b293e1482a75f",
-                "scores": [
-                  {
-                    "item": "첫 문장",
-                    "max": 15,
-                    "score": 13,
-                    "reason": "지원 경험과 장례비를 연결하지만 사망자가 직접 지원받았어야 한다는 인상을 준다. 금액보다 사람이 먼저 보이는 질문이 가능하다."
-                  },
-                  {
-                    "item": "관심/의도",
-                    "max": 15,
-                    "score": 15,
-                    "reason": "가구원의 사망 직후 실제로 지원을 요청할 수 있는지를 묻고 비용과 지급 대상을 설명한다."
-                  },
-                  {
-                    "item": "정확성",
-                    "max": 20,
-                    "score": 18,
-                    "reason": "주지원 유형, 필요 인정, 요청 후 결정 전 사망, 지급 대상, 차감과 제출처는 일치한다. 가족과 가구원을 구분해야 하고 1인당의 기준이 고인임을 분명히 할 여지가 있다."
-                  },
-                  {
-                    "item": "완독 가능성",
-                    "max": 15,
-                    "score": 14,
-                    "reason": "질문 다음 줄에 금액과 요건이 있지만 한 문장에 대상·상황·선정·금액·횟수가 겹친다."
-                  },
-                  {
-                    "item": "공유/공감",
-                    "max": 10,
-                    "score": 9,
-                    "reason": "유가족에게 필요할 수 있는 절차를 담고 전달 압박이 없다. 사망이라는 표현이 잇달아 나와 다소 딱딱하다."
-                  },
-                  {
-                    "item": "가치/차별",
-                    "max": 10,
-                    "score": 10,
-                    "reason": "결정 전에 돌아가신 경우와 다른 법률에 따른 장제비 차감이 실제 선택에 도움이 된다. 비교 자료에 같은 사업이 없다."
-                  },
-                  {
-                    "item": "모바일",
-                    "max": 5,
-                    "score": 4,
-                    "reason": "공백 줄로 문단이 분리되지만 긴 첫 답변을 두 문장으로 나누면 핵심을 더 쉽게 읽을 수 있다. 텍스트 구조 평가."
-                  },
-                  {
-                    "item": "텍스트 완성도",
-                    "max": 5,
-                    "score": 5,
-                    "reason": "355자의 단일 본문에서 상담과 제출까지 마치며 이미지나 답글이 필요하지 않다."
-                  },
-                  {
-                    "item": "프로필 유도",
-                    "max": 5,
-                    "score": 5,
-                    "reason": "보건복지부 사업명을 특정하고 사이트에 있는 서류 상담·문의처를 구체적으로 안내한다."
-                  }
-                ],
-                "total": 93,
-                "format": {
-                  "char_count": 355,
-                  "char_limit": 500,
-                  "count_method": "공백과 줄바꿈 포함 Unicode code points",
-                  "body_count": 1,
-                  "reply_count": 0,
-                  "media": "TEXT",
-                  "asset_check": "NOT_REQUIRED",
-                  "exact_final_cta_once": true,
-                  "no_url_domain_disguised_url_or_hashtag": true
-                },
-                "source_check": [
-                  {
-                    "method": "OPENED_OFFICIAL_DOCUMENT",
-                    "source": "보건복지부 2026년 긴급복지지원사업 안내 63쪽, 부산광역시사회복지협의회 게시 사본",
-                    "ref": "turn565457073view2",
-                    "confirmed": "사망한 주지원 대상 가구원, 주지원 4종, 요청 뒤 선지원 결정 전 사망, 실제 장례 수행자, 금액, 타법 장제비 차감, 지원 요청서의 시·군·구 제출"
-                  },
-                  {
-                    "method": "OPENED_OFFICIAL",
-                    "source": "경기도 긴급복지(국가형), 2026-06-15 수정",
-                    "url": "https://www.gg.go.kr/welfarehotline/contents/contents.do?ciIdx=1422&menuId=3894",
-                    "ref": "turn554808783view0",
-                    "confirmed": "장제비 80만 원·1회, 관할 관청·읍면동 상담 안내"
-                  },
-                  {
-                    "method": "UPSTREAM_VERIFIED",
-                    "source": "복지로 WLF00000892 및 찾기쉬운 생활법령 2026 안내의 대상·요건",
-                    "scope": "의뢰자 실열람 기록. 독립 도구에서 복지로는 본문 미반환, 생활법령 Btr는 메인으로 이동하여 해당 화면을 독립 실열람했다고 판단하지 않음."
-                  },
-                  {
-                    "method": "PROVIDED_OFFICIAL_TEXT",
-                    "source": "보조금24 ID 999000000040 제공 원문",
-                    "confirmed": "필요성이 인정되는 주지원 가구, 실제 필요서류 담당공무원 상담, 129, 복지부 사업명. 신청서식 번호는 현행 2026 사업안내와 달라 본문에서 제외."
-                  }
-                ],
-                "status_check": "2026년 시행 중인 필요성 심사형 제도. 고정 모집기간 및 개인의 청구기한을 주장하지 않음.",
-                "comparison": "최근 20건·기존 READY 4건과 같은 사업·문장 없음. 최근 의문형 ‘신청할 수 있나요?’ 반복이 있어 이번에는 누구에게 지급되는지 묻는 방식이 더 선명함.",
-                "profile_check": "상위 실열람에서 공개 프로필의 홈 링크 목적지와 해당 홈 검색→동일 ID 상세·서류 상담·129를 분리 확인. 프로필 링크 클릭을 통한 전체 연속 이동은 확인하지 못함.",
-                "required_fixes": [
-                  "사망한 사람의 개인 수급 여부 대신 주지원 대상 가구의 구성원임을 첫 문단에서 명확히 한다. 친족 일반이라는 의미로 넓어지지 않게 한다.",
-                  "80만 원이 고인 한 명 기준임을 명시하고 첫 답변의 조건을 짧게 나누어 읽기 쉽게 한다."
-                ],
-                "all_mandatory_checks_passed": false,
-                "re_review_required": true
-              },
-              "final_review": {
-                "version": "supportpick-threads-final-edit-v3.0/final",
-                "checked_at": "2026-11-27T08:40:43+09:00",
-                "slot": "2026-11-28T08:00:00+09:00",
-                "benefit_id": "999000000040",
-                "requested_model": "gpt-6.2-astra",
-                "invoked_model": "gpt-6.2-astra",
-                "actual_model": "미확인",
-                "actual_model_scope": "모델 호출 지정은 의뢰자가 확인했으며 독립 응답 환경에는 실제 모델 식별자가 노출되지 않음",
-                "independent_review": true,
-                "decision": "APPROVE",
-                "status": "APPROVED",
-                "body_sha256": "ea06a8a3674d3b3bc37221083dd5343fed0e0c06c4b6e005bb7e95d28bcbc531",
-                "scores": [
-                  {
-                    "item": "첫 문장",
-                    "max": 15,
-                    "score": 15,
-                    "reason": "사망한 가구원의 장례비를 누가 신청하는지 묻는다. 공식 용어와 금액으로 문제를 특정하며 다음 문장이 곧바로 답한다."
-                  },
-                  {
-                    "item": "관심/의도",
-                    "max": 15,
-                    "score": 15,
-                    "reason": "장례를 진행 중이거나 이미 치른 독자가 지급 대상과 다음 행동을 판단할 수 있다."
-                  },
-                  {
-                    "item": "정확성",
-                    "max": 20,
-                    "score": 20,
-                    "reason": "주지원 네 종류 중 하나, 가구원 사망, 필요 인정, 실제 장례 수행자, 고인 1명당 80만 원 한 번, 결정 전 사망과 타법 차감, 요청서 제출을 대조했다."
-                  },
-                  {
-                    "item": "완독 가능성",
-                    "max": 15,
-                    "score": 14,
-                    "reason": "누가·얼마·예외·어디로 순서가 분명하다. 주지원 네 종류를 열거한 한 문장은 다소 길다."
-                  },
-                  {
-                    "item": "공유/공감",
-                    "max": 10,
-                    "score": 9,
-                    "reason": "돌아가신 분을 존중하며 수령인과 담당자에게 물어볼 내용을 알려준다. 첫 문단에서 같은 완곡 표현이 반복된다."
-                  },
-                  {
-                    "item": "가치/차별",
-                    "max": 10,
-                    "score": 10,
-                    "reason": "최근 20건과 기존 준비 4건에 없는 주제로, 지급 대상뿐 아니라 결정 전 사망과 차감까지 전달한다."
-                  },
-                  {
-                    "item": "모바일",
-                    "max": 5,
-                    "score": 4,
-                    "reason": "짧은 도입과 문단 사이 빈 줄이 탐색을 돕는다. 첫 답변과 자격 설명이 한 문단이라 작은 화면에서는 다소 밀집한다. 텍스트 구조 평가."
-                  },
-                  {
-                    "item": "텍스트 완성도",
-                    "max": 5,
-                    "score": 5,
-                    "reason": "단일 본문 안에서 신청인과 신청 방법을 설명하고 고정 마무리를 유지한다."
-                  },
-                  {
-                    "item": "프로필 유도",
-                    "max": 5,
-                    "score": 5,
-                    "reason": "보건복지부 사업명을 정확히 제시하고 해당 상세 페이지에서 볼 수 있는 서류 상담 안내와 129를 구체적으로 언급한다."
-                  }
-                ],
-                "total": 97,
-                "format": {
-                  "char_count": 369,
-                  "char_limit": 500,
-                  "count_method": "공백과 줄바꿈 포함 Unicode code points",
-                  "body_count": 1,
-                  "reply_count": 0,
-                  "media": "TEXT",
-                  "asset_check": "NOT_REQUIRED",
-                  "exact_final_cta_once": true,
-                  "no_url_domain_disguised_url_or_hashtag": true
-                },
-                "source_check": [
-                  {
-                    "method": "OPENED_OFFICIAL_DOCUMENT",
-                    "source": "보건복지부 2026년 긴급복지지원사업 안내, 발간등록번호 11-1352000-100397-10. bswin.net 공개 사본의 문서 본문 직접 확인.",
-                    "ref": "turn565457073view2",
-                    "confirmed": "사망한 주지원 대상 가구원, 주지원 4종, 요청 뒤 선지원 결정 전 사망, 실제 장례 수행자, 금액, 타법 장제비 차감, 지원 요청서의 시·군·구 제출",
-                    "printed_page": 63,
-                    "section": "6-3 장제비 및 각주 38~40",
-                    "web_lines": [
-                      1861,
-                      1892
-                    ],
-                    "gov_publication_listing": "https://www.gg.go.kr/welfarehotline/bbs/boardView.do?bIdx=110894014&bcIdx=&bsIdx=842&menuId=3911&page=1",
-                    "official_pdf_download": "https://www.gg.go.kr/welfarehotline/cmmn/download.do?idx=1041038",
-                    "pdf_sha256": null,
-                    "pdf_sha256_note": "웹 도구에서 추출 본문을 읽었고 관청의 PDF 다운로드 응답은 octet-stream으로 도구가 직접 표시하지 못해 원본 바이트 해시를 계산하지 않음.",
-                    "actual_pdf_view_url": "https://bswin.net/post_file_download.cm?c=YTo1OntzOjEwOiJib2FyZF9jb2RlIjtzOjIyOiJiMjAyNTAyMTkwNDgyNDI0YWZlM2Y5IjtzOjk6InBvc3RfY29kZSI7czoyMjoicDIwMjYwMTA2YmY5M2FkZmRlM2Y0NiI7czo5OiJmaWxlX2NvZGUiO3M6MjI6InAyMDI2MDEwNjM3YzVhMmZlZjAxYjIiO3M6MTk6InBvc3RfZG93bmxvYWRfdG9rZW4iO3M6MTM6IjY5ODg1M2M3NjUxMzgiO3M6MTE6Im1lbWJlcl9jb2RlIjtOO30%3D"
-                  },
-                  {
-                    "method": "OPENED_OFFICIAL",
-                    "source": "경기도 긴급복지(국가형), 2026-06-15 수정",
-                    "url": "https://www.gg.go.kr/welfarehotline/contents/contents.do?ciIdx=1422&menuId=3894",
-                    "ref": "turn554808783view0",
-                    "confirmed": "장제비 80만 원·1회, 관할 관청·읍면동 상담 안내"
-                  },
-                  {
-                    "method": "UPSTREAM_VERIFIED",
-                    "source": "복지로 WLF00000892 및 찾기쉬운 생활법령 2026 안내의 대상·요건",
-                    "scope": "의뢰자 실열람 기록. 독립 도구에서 복지로는 본문 미반환, 생활법령 Btr는 메인으로 이동하여 해당 화면을 독립 실열람했다고 판단하지 않음."
-                  },
-                  {
-                    "method": "PROVIDED_OFFICIAL_TEXT",
-                    "source": "보조금24 ID 999000000040 제공 원문",
-                    "confirmed": "필요성이 인정되는 주지원 가구, 실제 필요서류 담당공무원 상담, 129, 복지부 사업명. 신청서식 번호는 현행 2026 사업안내와 달라 본문에서 제외."
-                  }
-                ],
-                "status_check": "2026년 시행 중인 필요성 심사형 제도. 고정 모집기간 및 개인의 청구기한을 주장하지 않음.",
-                "comparison": "최근 20건·기존 READY 4건과 같은 사업·문장 없음. 최근 의문형 ‘신청할 수 있나요?’ 반복이 있어 이번에는 누구에게 지급되는지 묻는 방식이 더 선명함.",
-                "profile_check": "상위 실열람에서 공개 프로필의 홈 링크 목적지와 해당 홈 검색→동일 ID 상세·서류 상담·129를 분리 확인. 프로필 링크 클릭을 통한 전체 연속 이동은 확인하지 못함. 게시문에는 클릭 성공·직접신청을 약속하는 문장이 없으며 확인된 목적지와 상세 정보가 일치한다.",
-                "required_fixes": [],
-                "all_mandatory_checks_passed": true,
-                "re_review_required": false,
-                "review_round": "final",
-                "previous_body_sha256": "e052c0353e2557f11af1803faf552268bf953b2f5a925926537b293e1482a75f",
-                "post_text_reviewed": "긴급복지 지원 중 가구원이 돌아가시면, 장제비 80만 원은 누가 신청하나요?\n실제로 장례를 치르는 분이나 치른 분이 신청할 수 있어요. 생계·의료·주거·사회복지시설 이용지원 중 하나를 받던 가구의 구성원이 돌아가시고 지원 필요성이 인정되면, 돌아가신 분 한 명당 80만 원을 한 번 지원해요.\n\n긴급지원 요청 뒤 지원 결정 전에 돌아가신 경우도 가능해요. 다른 법률에 따른 장제비를 받았다면 그 금액을 빼고 지급해요.\n\n지원 요청서는 시·군·구청에 제출하며, 필요한 증빙은 담당 공무원과 상담해 준비해요.\n\n프로필에서 보건복지부 ‘긴급복지 장제비 지원’을 찾으면 대상·신청방법·서류 상담 안내와 129 문의처를 확인할 수 있어요.\n자세한 사항은 프로필링크 확인",
-                "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
-                "char_count": 369,
-                "media_turn": "TEXT",
-                "reply_texts": [],
-                "approved": true,
-                "threshold": 95,
-                "score_total": 97,
-                "checks": {
-                  "source": "PASS",
-                  "amount_unit": "PASS",
-                  "eligibility": "PASS",
-                  "current_status": "PASS",
-                  "same_program_duplicate": "PASS",
-                  "question_immediate_answer": "PASS",
-                  "cta": "PASS",
-                  "link_domain_hashtag": "PASS",
-                  "limit": "PASS",
-                  "single_body_zero_replies": "PASS",
-                  "media": "NOT_REQUIRED",
-                  "profile_route": "PASS_BY_DESTINATION_AND_SITE_PATH"
-                },
-                "release_scope": "지정 슬롯의 본문에 대한 독립 편집 승인. 실제 큐 기록 및 발행을 수행하지 않음."
-              },
-              "final_verdict": "PASS",
-              "body_sha256": "ea06a8a3674d3b3bc37221083dd5343fed0e0c06c4b6e005bb7e95d28bcbc531",
-              "asset_sha256": null,
-              "score": 97,
-              "actual_review_calls": 2
-            }
-          },
-          "next_history_record": {
-            "program_id": "999000000040",
-            "notice_version": "2026-02-26",
-            "pattern": "P1",
-            "opening": "긴급복지 지원 중 가구원이 돌아가시면, 장제비 80만 원은 누가 신청하나요?",
-            "structure": "가족장례수행자질문즉답→주지원가구범위·단위→결정전예외·차감→제출·서류상담→사이트확인항목",
-            "media_turn": "TEXT"
-          }
-        },
-        "full_delay_window_covered": false,
-        "revalidate_after": "2026-11-27T10:00:00+09:00",
-        "revalidate_before": "2026-11-28T08:00:00+09:00"
-      },
-      "new_prepared_at": "2026-11-27T10:30:59.981706+09:00",
-      "new_expires_at": "2026-11-28T10:30:59.981706+09:00",
-      "source": {
-        "count": 10898,
-        "generation": "gov24-45903616185-1",
-        "lastSuccessAt": "2026-11-27T07:22:51.555263+09:00",
-        "manifestSha256": "bd5ef58548dc0834b56f65ea6e94404cab2b6e246ca15ca9b3105455349a3539",
-        "path": "snapshots/gov24-45903616185-1",
-        "version": 1
-      },
-      "source_fingerprint_unchanged": true,
-      "official_sources_reopened": [
-        {
-          "url": "https://welfare.dobong.go.kr/user/cmmn/file/fileDown.do?atchFileId=9a0852bd641d4209bf03cb32cc9c148a&fileSn=1",
-          "ref": "turn341364519view0;turn762724695view0",
-          "claims": "2026보건복지부사업안내 실제다운로드PDF77번째쪽(인쇄63쪽)6-3/각주38~40실제텍스트열람.주지원4종가구구성원사망,실제장례수행자,1명80만,요청후결정전사망포함,타법장제비차감,시군구요청서제출.개별필요인정요건내신청가능.일반모집마감/확정지급보장아님."
-        },
-        {
-          "url": "https://www.gg.go.kr/welfarehotline/contents/contents.do?ciIdx=1422&menuId=3894",
-          "ref": "turn997017919view1",
-          "claims": "2026-06-15수정국가형현재공식안내실제재열람.장제비80만원각1회,시군구/읍면동상담신청접수문의안내로개별요건내현재신청가능확인.필요성·소득재산·위기사유조사/심사,선착순/예산무제한주장없음."
-        }
-      ],
-      "official_pdf_sha256": "3b5f6a400b895022c54e59388aeebf54900411e51678aa9b4e79d64771623e1b",
-      "official_pdf_bytes": 5201832,
-      "access_limits": [
-        "경기도PDF다운로드5032회(최초1+재시도1)로추가재시도중단.도봉구공식공개동일보건복지부2026안내실제다운로드/웹본문/63쪽대조.",
-        "이전생활법령Btr URL은메인으로리디렉트되어이번본문미확인.복지로웹도구400본문미확인.기존실제검수원본보존하고현재근거는실제열람공식PDF와국가형현재안내로교체.",
-        "개별청구기한/서류/선정여부는담당자확인.새신청거래나확정지급주장없음."
-      ],
-      "asset_sha256": null,
-      "new_visual_inspection": false,
-      "actual_image_GET_SHA_matches_review": true,
-      "renewed_entry_media": "TEXT",
-      "image_check_scope": "Existing IMAGE queue assets only; newTEXTentry noimage.",
-      "body_media_pattern_and_independent_review_exact_preserved": true,
-      "new_model_calls": 0,
-      "new_scores": 0,
-      "actual_sender_latest_fresh_source_required": true,
-      "queue_commit": "4c6258ddb3f28a9dee18813d3e47cc20be812706",
-      "queue_blob_sha": "1f3e0d668f1e5942daa34cc5f679e89a6f963ee8",
-      "queue_readback_verified": true
+      "performed_this_check": false,
+      "previous_actual_records_preserved": true,
+      "current_queue_unresolved_dependency_count": 0
     },
     "queue_commit": "4c6258ddb3f28a9dee18813d3e47cc20be812706"
   },
@@ -7958,11 +7063,11 @@
     }
   },
   "last_no_update_check": {
-    "checked_at": "2026-11-27T07:22:21.697444+09:00",
+    "checked_at": "2026-11-27T11:37:43.001818+09:00",
     "new_publications": 0,
     "new_incidents": 0,
     "queue_ready": 4,
-    "new_metric_observations": 0,
+    "new_metric_observations": 3,
     "new_evaluation_due": false,
     "new_ready_drafts": 0,
     "existing_queue_preserved": true,
@@ -8038,7 +7143,7 @@
       "status": "official_milestone_observations_available",
       "reason": "Nov22 18:11KST official existing-read snapshot supplied3new ID/windows, actual elapsed25.171/72.947/169.286h retained. No new evaluation or weighting change.",
       "reference": "https://www.postman.com/meta/threads/request/34203612-385abc7d-b3cc-4e5d-9937-ebbe7174e041",
-      "observed_posts_with_metrics": 82,
+      "observed_posts_with_metrics": 83,
       "views_24h": null,
       "views_7d": null,
       "reactions": null,
@@ -9051,7 +8156,9 @@
             {
               "hours": 168,
               "due_at": "2026-11-27T08:39:29.206531+09:00",
-              "status": "awaiting_due_time"
+              "status": "measured_official_api",
+              "checked_at": "2026-11-27T01:51:29.812203+00:00",
+              "elapsed_hours": 170.20016824222222
             }
           ]
         },
@@ -9084,7 +8191,9 @@
             {
               "hours": 24,
               "due_at": "2026-11-27T08:45:11.756993+09:00",
-              "status": "awaiting_due_time"
+              "status": "measured_official_api",
+              "checked_at": "2026-11-27T01:51:29.812203+00:00",
+              "elapsed_hours": 26.105015336111112
             },
             {
               "hours": 168,
@@ -16169,9 +15278,120 @@
           "automatic_author_replies_in_original_record": 0,
           "not_backcalculated": true,
           "timestamp_basis": "Publisher invocation durable ledger, actual observed elapsed preserved."
+        },
+        "18136261246743978:168h": {
+          "main_id": "18136261246743978",
+          "window_hours": 168,
+          "scheduled_at": "2026-11-20T08:00:00+09:00",
+          "published_at": "2026-11-20T08:39:29.206531+09:00",
+          "benefit_id": "B55145700016",
+          "reader_scope": "코레일 회원이며 임산부 등록을 마친 임산부와 실제 함께 타는 동반 1명",
+          "opening_type": "생활 상황형",
+          "cohort": "A",
+          "pattern": "P1",
+          "char_count": 454,
+          "media_turn": "IMAGE",
+          "checked_at": "2026-11-27T01:51:29.812203+00:00",
+          "elapsed_hours": 170.20016824222222,
+          "due_at": "2026-11-27T08:39:29.206531+09:00",
+          "timing": "late_available_check",
+          "within_target_tolerance": false,
+          "status": "measured_official_api",
+          "views": 120,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "shares": 0,
+          "quotes": null,
+          "saves": null,
+          "profile_visits": null,
+          "new_followers": null,
+          "site_visits": null,
+          "source_run_id": "45924933852",
+          "artifact_id": 15166450446,
+          "artifact_digest": "sha256:6e93ad013d8e9fb339ae18eb2e817c589743c8333452d0298ffca2d373c73fba",
+          "comparison_eligible": true,
+          "comparison_exclusion": null,
+          "automatic_author_replies_in_original_record": 0,
+          "not_backcalculated": true,
+          "timestamp_basis": "Publisher invocation durable ledger, actual observed elapsed preserved."
+        },
+        "18123605203752749:72h": {
+          "main_id": "18123605203752749",
+          "window_hours": 72,
+          "scheduled_at": "2026-11-24T08:00:00+09:00",
+          "published_at": "2026-11-24T08:45:23.880530+09:00",
+          "benefit_id": "WII000000500",
+          "reader_scope": "만2세미만 영아를 양육하며 기저귀 구매 부담을 줄이려는 수급·차상위·법정한부모 또는 소득기준 충족 장애인·다자녀가구",
+          "opening_type": "생활 상황형",
+          "cohort": "A",
+          "pattern": "P8",
+          "char_count": 446,
+          "media_turn": "TEXT",
+          "checked_at": "2026-11-27T01:51:29.812203+00:00",
+          "elapsed_hours": 74.10164768694445,
+          "due_at": "2026-11-27T08:45:23.880530+09:00",
+          "timing": "late_available_check",
+          "within_target_tolerance": false,
+          "status": "measured_official_api",
+          "views": 29,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "shares": 0,
+          "quotes": null,
+          "saves": null,
+          "profile_visits": null,
+          "new_followers": null,
+          "site_visits": null,
+          "source_run_id": "45924933852",
+          "artifact_id": 15166450446,
+          "artifact_digest": "sha256:6e93ad013d8e9fb339ae18eb2e817c589743c8333452d0298ffca2d373c73fba",
+          "comparison_eligible": true,
+          "comparison_exclusion": null,
+          "automatic_author_replies_in_original_record": 0,
+          "not_backcalculated": true,
+          "timestamp_basis": "Publisher invocation durable ledger, actual observed elapsed preserved."
+        },
+        "18026493176944984:24h": {
+          "main_id": "18026493176944984",
+          "window_hours": 24,
+          "scheduled_at": "2026-11-26T08:00:00+09:00",
+          "published_at": "2026-11-26T08:45:11.756993+09:00",
+          "benefit_id": "611000000137",
+          "reader_scope": "서울 생계급여 또는 의료급여 수급가구·저소득보훈가구",
+          "opening_type": null,
+          "cohort": null,
+          "pattern": "P8",
+          "char_count": 351,
+          "media_turn": "TEXT",
+          "checked_at": "2026-11-27T01:51:29.812203+00:00",
+          "elapsed_hours": 26.105015336111112,
+          "due_at": "2026-11-27T08:45:11.756993+09:00",
+          "timing": "late_available_check",
+          "within_target_tolerance": false,
+          "status": "measured_official_api",
+          "views": 2,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "shares": 0,
+          "quotes": null,
+          "saves": null,
+          "profile_visits": null,
+          "new_followers": null,
+          "site_visits": null,
+          "source_run_id": "45924933852",
+          "artifact_id": 15166450446,
+          "artifact_digest": "sha256:6e93ad013d8e9fb339ae18eb2e817c589743c8333452d0298ffca2d373c73fba",
+          "comparison_eligible": false,
+          "comparison_exclusion": "신규v3질문형·본문동시개편,기존순수도입A/B비교와분리",
+          "automatic_author_replies_in_original_record": 0,
+          "not_backcalculated": true,
+          "timestamp_basis": "Publisher invocation durable ledger, actual observed elapsed preserved."
         }
       },
-      "last_availability_check_at": "2026-11-26T21:19:46.922342+00:00",
+      "last_availability_check_at": "2026-11-27T01:51:29.812203+00:00",
       "statistical_decision": "comparison_deferred_confounded_strata_and_no_repeated_advantage; extend matched samples, retain A/B weights",
       "diagnostic_observations_by_run_id": {
         "43163347739": {
@@ -24146,6 +23366,98 @@
           "total_observations": 173,
           "new_evaluation_report_due": false,
           "weights_unchanged": true
+        },
+        "45924933852": {
+          "run_id": "45924933852",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-27T01:51:36Z",
+          "head_sha": "ab82e22c0e6acfbb5a520c47d10cdc75e354d3db",
+          "job_id": 140263941730,
+          "artifact_id": 15166450446,
+          "artifact_digest": "sha256:6e93ad013d8e9fb339ae18eb2e817c589743c8333452d0298ffca2d373c73fba",
+          "artifact_digest_verified": true,
+          "artifact_redownloaded_this_check": true,
+          "job_logs_retrieved_this_check": true,
+          "observed_at": "2026-11-27T01:51:29.812203+00:00",
+          "records": [
+            {
+              "post_id": "18136261246743978",
+              "published_at": "2026-11-20T08:39:29.206531+09:00",
+              "observed_at": "2026-11-27T01:51:29.812203+00:00",
+              "window_hours": 168,
+              "elapsed_hours": 170.20016824222222,
+              "timing": "late_available_check",
+              "within_target_tolerance": false,
+              "not_backcalculated": true,
+              "metrics": {
+                "views": 120,
+                "likes": 2,
+                "comments": 0,
+                "reposts": 0,
+                "shares": 0,
+                "saves": null,
+                "profile_visits": null,
+                "new_followers": null,
+                "site_visits": null
+              }
+            },
+            {
+              "post_id": "18123605203752749",
+              "published_at": "2026-11-24T08:45:23.880530+09:00",
+              "observed_at": "2026-11-27T01:51:29.812203+00:00",
+              "window_hours": 72,
+              "elapsed_hours": 74.10164768694445,
+              "timing": "late_available_check",
+              "within_target_tolerance": false,
+              "not_backcalculated": true,
+              "metrics": {
+                "views": 29,
+                "likes": 2,
+                "comments": 0,
+                "reposts": 0,
+                "shares": 0,
+                "saves": null,
+                "profile_visits": null,
+                "new_followers": null,
+                "site_visits": null
+              }
+            },
+            {
+              "post_id": "18026493176944984",
+              "published_at": "2026-11-26T08:45:11.756993+09:00",
+              "observed_at": "2026-11-27T01:51:29.812203+00:00",
+              "window_hours": 24,
+              "elapsed_hours": 26.105015336111112,
+              "timing": "late_available_check",
+              "within_target_tolerance": false,
+              "not_backcalculated": true,
+              "metrics": {
+                "views": 2,
+                "likes": 1,
+                "comments": 0,
+                "reposts": 0,
+                "shares": 0,
+                "saves": null,
+                "profile_visits": null,
+                "new_followers": null,
+                "site_visits": null
+              }
+            }
+          ],
+          "due_count": 3,
+          "success_count": 3,
+          "new_observations": 3,
+          "new_observation_keys": [
+            "18136261246743978:168h",
+            "18123605203752749:72h",
+            "18026493176944984:24h"
+          ],
+          "total_observations": 176,
+          "new_evaluation_report_due": false,
+          "weights_unchanged": true,
+          "cached_artifact_rechecked_this_check": false
         }
       },
       "additional_connector_check": {
@@ -195498,6 +194810,577 @@
         "queue_readback_verified": true
       },
       "queue_commit": "4c6258ddb3f28a9dee18813d3e47cc20be812706"
+    },
+    "2026-11-27T11:37:43.001818+09:00": {
+      "checked_at": "2026-11-27T11:37:43.001818+09:00",
+      "result": "no_new_failure_or_publication_metrics_ingested",
+      "maintenance_previous_blob_sha": "697e852a10a390a279c2aecfaddf020d6a71e85c",
+      "current_main_sha": null,
+      "all_local_inputs_match_fresh_remote_blobs": true,
+      "master_prompt_sha256": "07db46fe40e3c392efe6810dc4909549643d6d615b2232270860ba5dec30a918",
+      "publication_ledger_sha": "2b5e1d9b28d742d407d72d96defca99f350982be",
+      "queue_blob_sha": "1f3e0d668f1e5942daa34cc5f679e89a6f963ee8",
+      "changed_run_versions": [
+        {
+          "run_id": "45924933852",
+          "run_attempt": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "updated_at": "2026-11-27T01:51:36Z",
+          "head_sha": "ab82e22c0e6acfbb5a520c47d10cdc75e354d3db"
+        }
+      ],
+      "active_target_runs": [],
+      "run_pagination": {
+        "per_page": 100,
+        "pages": [
+          1
+        ],
+        "checkpoint_run_id": "45913369408",
+        "checkpoint_version_unchanged": true,
+        "all_new_target_versions_observed": true,
+        "latest_completed_operations_run_id": "45903616185"
+      },
+      "publication_ledger_records": 87,
+      "complete_verified_records": 87,
+      "pending": null,
+      "lease": null,
+      "source": {
+        "run_id": "45903616185",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-26T22:42:52Z",
+        "head_sha": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
+        "job_id": 140195019043,
+        "artifact_id": 15156986979,
+        "artifact_digest": "sha256:9d286435fceb69da8b30db7b62ff73d226b2e546bef4d40324acfc5943efc63c",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 316,
+        "read_current_verify_snapshot_load_feed": true,
+        "manifest": {
+          "count": 10898,
+          "generation": "gov24-45903616185-1",
+          "lastSuccessAt": "2026-11-27T07:22:51.555263+09:00",
+          "manifestSha256": "bd5ef58548dc0834b56f65ea6e94404cab2b6e246ca15ca9b3105455349a3539",
+          "path": "snapshots/gov24-45903616185-1",
+          "version": 1
+        },
+        "source_count": 10898,
+        "complete": true,
+        "actual_application_status_not_inferred_from_collection": true,
+        "new_candidate_original_official_pages_read": false,
+        "original_notice_rereview_this_check": false,
+        "public_verification_artifact_id": 15157973664,
+        "public_verification_digest": "sha256:6524c2fa1c3d95b8731074e20cae77ae5f338e5f47ce956fb9dd01987f8500b1",
+        "public_verification": {
+          "publicHtmlChecked": 11166,
+          "sitemapUrls": 11038,
+          "generation": "gov24-45903616185-1",
+          "sourceRevision": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
+          "robots": {
+            "http": 200,
+            "crawlAllowed": true,
+            "scope": "host_root"
+          },
+          "missingUrlHttp": 404,
+          "passed": 11166,
+          "failed": 0,
+          "initialFailures": 1,
+          "maxRequestsPerSecond": 10,
+          "rateLimitEpisodes": 0,
+          "stoppedForRateLimit": false,
+          "recoveredAfterRetry": [
+            {
+              "url": "https://kllollain-max.github.io/supportpick/benefits/429000000758/",
+              "initialError": "HTTP Error 503: Service Unavailable",
+              "retryHttp": 200
+            }
+          ],
+          "failures": []
+        },
+        "job_insights_diagnostic": {
+          "actual_numeric_observations_not_imported_from_job_log": true,
+          "prior_run_diagnostic_not_reused_as_current": true
+        }
+      },
+      "writer": {
+        "checked_at": "2026-11-27T11:37:43.001818+09:00",
+        "ready": 4,
+        "future24h_ready": 4,
+        "new_drafts": 0,
+        "existing_READY_reused": 4,
+        "drafts": [
+          {
+            "slot": "2026-11-27T12:00:00+09:00",
+            "benefit_id": "GMW000000210",
+            "pattern": "P8",
+            "media_turn": "IMAGE",
+            "char_count": 433,
+            "expires_at": "2026-11-27T15:09:45.786887+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-27T16:00:00+09:00",
+            "benefit_id": "641000000164",
+            "pattern": "P2",
+            "media_turn": "TEXT",
+            "char_count": 428,
+            "expires_at": "2026-11-27T18:14:39.119648+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-27T20:00:00+09:00",
+            "benefit_id": "999000000005",
+            "pattern": "P6",
+            "media_turn": "IMAGE",
+            "char_count": 472,
+            "expires_at": "2026-11-27T22:14:12.802098+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": true,
+            "source_recheck_required_at_publish": true
+          },
+          {
+            "slot": "2026-11-28T08:00:00+09:00",
+            "benefit_id": "999000000040",
+            "pattern": "P1",
+            "media_turn": "TEXT",
+            "char_count": 369,
+            "expires_at": "2026-11-28T10:30:59.981706+09:00",
+            "full_delay_window_valid": true,
+            "source_fresh_at_slot": false,
+            "source_recheck_required_at_publish": true
+          }
+        ],
+        "source": {
+          "count": 10898,
+          "generation": "gov24-45903616185-1",
+          "lastSuccessAt": "2026-11-27T07:22:51.555263+09:00",
+          "manifestSha256": "bd5ef58548dc0834b56f65ea6e94404cab2b6e246ca15ca9b3105455349a3539",
+          "path": "snapshots/gov24-45903616185-1",
+          "version": 1
+        },
+        "source_count": 10898,
+        "ledger_records": 87,
+        "pending": null,
+        "lease": null,
+        "new_posts": 0,
+        "new_incidents": 0,
+        "new_metrics": 3,
+        "observations": 176,
+        "new_evaluation": false,
+        "astra_review_invocations": 0,
+        "existing_Astra_review_preserved": true,
+        "exact_approved_body_hashes_pass": true,
+        "new_visual_inspection": false,
+        "image_redownloaded_this_check": true,
+        "image_sha_comparisons": [
+          {
+            "path": "social/images/benefit-guide-1.png",
+            "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+            "actual_download_sha_matches_current_review": true,
+            "checked_at": "2026-11-27T11:37:50.702660+09:00",
+            "new_visual_inspection": false
+          },
+          {
+            "path": "social/images/benefit-guide-2.png",
+            "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+            "actual_download_sha_matches_current_review": true,
+            "checked_at": "2026-11-27T11:37:59.062767+09:00",
+            "new_visual_inspection": false
+          }
+        ],
+        "expiry_prevention_revalidations": 0
+      },
+      "metrics": {
+        "run_id": "45924933852",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-27T01:51:36Z",
+        "head_sha": "ab82e22c0e6acfbb5a520c47d10cdc75e354d3db",
+        "job_id": 140263941730,
+        "artifact_id": 15166450446,
+        "artifact_digest": "sha256:6e93ad013d8e9fb339ae18eb2e817c589743c8333452d0298ffca2d373c73fba",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": true,
+        "job_logs_retrieved_this_check": true,
+        "observed_at": "2026-11-27T01:51:29.812203+00:00",
+        "records": [
+          {
+            "post_id": "18136261246743978",
+            "published_at": "2026-11-20T08:39:29.206531+09:00",
+            "observed_at": "2026-11-27T01:51:29.812203+00:00",
+            "window_hours": 168,
+            "elapsed_hours": 170.20016824222222,
+            "timing": "late_available_check",
+            "within_target_tolerance": false,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 120,
+              "likes": 2,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          },
+          {
+            "post_id": "18123605203752749",
+            "published_at": "2026-11-24T08:45:23.880530+09:00",
+            "observed_at": "2026-11-27T01:51:29.812203+00:00",
+            "window_hours": 72,
+            "elapsed_hours": 74.10164768694445,
+            "timing": "late_available_check",
+            "within_target_tolerance": false,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 29,
+              "likes": 2,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          },
+          {
+            "post_id": "18026493176944984",
+            "published_at": "2026-11-26T08:45:11.756993+09:00",
+            "observed_at": "2026-11-27T01:51:29.812203+00:00",
+            "window_hours": 24,
+            "elapsed_hours": 26.105015336111112,
+            "timing": "late_available_check",
+            "within_target_tolerance": false,
+            "not_backcalculated": true,
+            "metrics": {
+              "views": 2,
+              "likes": 1,
+              "comments": 0,
+              "reposts": 0,
+              "shares": 0,
+              "saves": null,
+              "profile_visits": null,
+              "new_followers": null,
+              "site_visits": null
+            }
+          }
+        ],
+        "due_count": 3,
+        "success_count": 3,
+        "new_observations": 3,
+        "new_observation_keys": [
+          "18136261246743978:168h",
+          "18123605203752749:72h",
+          "18026493176944984:24h"
+        ],
+        "total_observations": 176,
+        "new_evaluation_report_due": false,
+        "weights_unchanged": true,
+        "cached_artifact_rechecked_this_check": false
+      },
+      "recovery": {
+        "new_publication_this_check": false,
+        "new_posts": 0,
+        "maintenance_new_posts": 0,
+        "new_recovery_this_check": false,
+        "new_failure_this_check": false,
+        "reason": "87 completeverifiedrecords,no pending/lease. All4existingREADY matchapprovedbody/fingerprint/ranking/nominal/full2h-window,actualexistingimageGETSHApass. Newofficialmetricrun45924933852actualartifact/logdue3success3:3late24/72/168h observations imported173→176withoutbackcalculation/nullconversion. Allpriorobservationsandcomparisondecisionpreserved,no newevaluationorweightschange. Latestcomplete10898sourcecachedactualmanifest/read_current/verify_snapshot/load_feedPASS. No queue/code/body/expiry/model/dispatch/rerun/POSTchanges."
+      },
+      "next_condition": "Keep Nov27 12IMAGE/P8,16TEXT/P2,20IMAGE/P6,Nov28 08TEXT/P1. Allnominal/full2h-windowchecksPASS. Actualpublishertime must revalidate newestcompletefreshsourceandapprovedhashes. Upcoming12notyetstarted,thischecknoactiontowritepublisherstate. Formalcomparisonevaluationunchanged;lateobservationsnot24hpointbackcalculated,unavailableaccount30d/profile/home/completion/dwell/CTAmetricsnotzero.",
+      "publication": {
+        "run_id": "45913369408",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "updated_at": "2026-11-26T23:52:45Z",
+        "head_sha": "ab82e22c0e6acfbb5a520c47d10cdc75e354d3db",
+        "job_id": 140226712999,
+        "artifact_id": 15160523592,
+        "artifact_digest": "sha256:bcf410397887fcc96a2e14bbf5db351208212c9d1d48c987428bf8dc467254f9",
+        "artifact_digest_verified": true,
+        "artifact_redownloaded_this_check": false,
+        "job_logs_retrieved_this_check": false,
+        "actual_tests_passed": 138,
+        "new_publication_this_run": false,
+        "main_id": "17899427445654470",
+        "url": "https://www.threads.com/@hid_1004/post/DgOU-UrDxK_",
+        "slot": "2026-11-27T08:00:00+09:00",
+        "receipt_at": "2026-11-27T08:52:40.2902496+09:00",
+        "receipt_time_basis": "Actual job receipt line; exact platform timestamp unavailable",
+        "ledger_published_at": "2026-11-27T08:51:48.735660+09:00",
+        "ledger_published_at_is_invocation_not_exact_platform_time": true,
+        "stage": "complete",
+        "verified": true,
+        "body_hash": "538ed5d76c00e9aca77aae6c880fd16982ecd83a6f03464c36a673f26924db91",
+        "content_hash": "b5673ffe5d064a242e969acb4a6a55c932e7accf71ede5a956311581ebece89e",
+        "asset_sha256": null,
+        "media_turn": "TEXT",
+        "pattern": "P5",
+        "char_count": 444,
+        "replies": 0,
+        "original_queue_body_asset_review_exact": true,
+        "previous86records_preserved": true,
+        "maintenance_post_calls": 0,
+        "delay_within_original_2h_window": true,
+        "actual_source_generation": "gov24-45903616185-1",
+        "latest_already_reported": true
+      },
+      "history_reconciliation": {
+        "previous87records_preserved": true,
+        "new_complete_verified_records": 0,
+        "pending": null,
+        "lease": null,
+        "ambiguous_post_retry": false
+      },
+      "official_review_recovery": {
+        "new_official_page_review_this_check": false,
+        "new_Astra_calls": 0,
+        "existing_Astra_reviews_preserved": true,
+        "image_redownloaded_this_check": true,
+        "new_visual_inspection": false,
+        "previous_actual_profile_and_site_route_evidence_preserved": true
+      },
+      "main_head_observation": {
+        "latest_observed_target_run_head": "deb4f60569b9b3633e8ea5cd916f7cdf2da04b2e",
+        "target_publisher_workflows_master_and_assets_blobs_unchanged": true,
+        "unrelated_changes_not_modified": true
+      },
+      "image_sha_comparisons": [
+        {
+          "path": "social/images/benefit-guide-1.png",
+          "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
+          "actual_download_sha_matches_current_review": true,
+          "checked_at": "2026-11-27T11:37:50.702660+09:00",
+          "new_visual_inspection": false
+        },
+        {
+          "path": "social/images/benefit-guide-2.png",
+          "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
+          "actual_download_sha_matches_current_review": true,
+          "checked_at": "2026-11-27T11:37:59.062767+09:00",
+          "new_visual_inspection": false
+        }
+      ],
+      "formal_evaluation": {
+        "policy_id": "supportpick-threads-reach-v1-20261109",
+        "window": "14d_evaluation",
+        "evaluated_at": "2026-11-24T17:20:07.451089+09:00",
+        "period_start": "2026-11-10T17:00:08.835254+09:00",
+        "period_end": "2026-11-24T17:00:08.835254+09:00",
+        "normal_verified_publications": 53,
+        "experiment_regular_slots": 57,
+        "unpublished_slots": [
+          {
+            "slot": "2026-11-16T16:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-18T12:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-23T20:00:00+09:00",
+            "classification": "missed_window_closed"
+          },
+          {
+            "slot": "2026-11-24T16:00:00+09:00",
+            "classification": "unreserved_at_evaluation_cutoff_then_published_after_cutoff",
+            "subsequent_main_id": "17974331994194122",
+            "subsequent_receipt_at": "2026-11-24T17:21:06.769138+09:00"
+          }
+        ],
+        "missed_closed_slots": 3,
+        "partial_or_pending": 0,
+        "independent_full_public_rendering_recheck": false,
+        "publication_audit_scope": "76durablecompleteverifiedrecords; priorreceipts/body/media/artifacts retained. No newfull28dayremotequery; Nov24 16unreserved/latestpublisher12only,nofailure-runconfirmed.",
+        "24h_comparison_window_observations": 40,
+        "A_n": 20,
+        "B_n": 20,
+        "24h_comparable_matched_pairs": 0,
+        "24h_group_view_medians": {
+          "A": 62.0,
+          "B": 62.0
+        },
+        "24h_all_view_median": 62.0,
+        "actual_reactions": {
+          "A": {
+            "likes": 29,
+            "replies": 0,
+            "reposts": 6,
+            "shares": 1
+          },
+          "B": {
+            "likes": 27,
+            "replies": 0,
+            "reposts": 5,
+            "shares": 0
+          }
+        },
+        "reaction_rate_used": false,
+        "all_24h_observations_delayed": true,
+        "eligible_elapsed_hours_min": 24.317312148333336,
+        "eligible_elapsed_hours_max": 25.691108017222223,
+        "24h_unavailable_not_zero": [
+          "18117968657159347",
+          "17992859946026940",
+          "17913499947663769",
+          "18001464938830261"
+        ],
+        "24h_not_yet_due": [
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "24h_missing_after_due": [],
+        "7d_measured": 27,
+        "7d_not_yet_due": [
+          "18004106657810124",
+          "18155833435528730",
+          "18061699079561356",
+          "18075899267779249",
+          "18361336213223949",
+          "18100168118443439",
+          "17876108337601849",
+          "17954736195295664",
+          "18136261246743978",
+          "18029579210863916",
+          "18106611944009610",
+          "17995393143022353",
+          "18002356029029330",
+          "18098495828440255",
+          "18121994881961457",
+          "18093412586696162",
+          "18102899498408388",
+          "18214999999364836",
+          "18125366213319496",
+          "18149154712603236",
+          "17879078796637660",
+          "18388999600236313",
+          "18129410933479829",
+          "18123605203752749",
+          "17897404392435204"
+        ],
+        "7d_group_medians": {
+          "A": 105,
+          "B": 87.5
+        },
+        "quotes": "not_provided",
+        "reader_only_replies": "unavailable",
+        "profile_clicks": "account_level_not_available; no_post_attribution",
+        "confounders": [
+          "Differentbusiness/region/readers/benefit/deadline/time/media/length; matchedsimilarpairs0",
+          "PreservedmovedexistingREADYcohorts differfromnewslots;excludeinsteadretroclassify",
+          "Newquestiontitlepolicy changesmorethanopeningalone;newAstrarevieweddraftsexcludedfrompureA/B"
+        ],
+        "minimum_24h_target_per_group": 8,
+        "raw_window_target_met": true,
+        "current_stratified_target_met": false,
+        "decision": "extend_comparison;maintainbalancedA/Bandexistingcontrols.No demonstratedrepeatedadvantage;noeditorialweightchange.",
+        "weight_changed": false,
+        "no_backcalculation": true,
+        "extension_next_condition": "Reassess in existingchecks when comparable similar-business strata have sufficient repeatedactual24hwindows; keep comparison group. No separate schedule.",
+        "reported_at": "2026-11-24T17:20:07.451089+09:00",
+        "evidence_latest_metric_run_id": "45351393999",
+        "24h_measured_but_excluded": [
+          {
+            "main_id": "18122947907049313",
+            "elapsed_hours": 52.64388394083333,
+            "reason": "late_beyond_26h_comparison_tolerance"
+          },
+          {
+            "main_id": "18061699079561356",
+            "elapsed_hours": 25.374772445277777,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18075899267779249",
+            "elapsed_hours": 24.65035752527778,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18361336213223949",
+            "elapsed_hours": 24.39045965972222,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "18100168118443439",
+            "elapsed_hours": 24.6578044575,
+            "reason": "already_written_input_preserved_after_failed_prior_slot; intended time/media cohort allocation changed; no retrospective cohort assignment"
+          },
+          {
+            "main_id": "17876108337601849",
+            "elapsed_hours": 25.228189436944444,
+            "reason": "Previously written input preserved; no retrospective cohort assignment after failed preceding slot"
+          }
+        ],
+        "7d_group_n": {
+          "A": 13,
+          "B": 14
+        },
+        "7d_due_unmeasured": [
+          "18450932713126961"
+        ],
+        "publication_cutoff_note": "EvaluationperiodendsNov24 17:00:08.16slotwasunreservedatcutoff, laternaturallypublished17:21:06withinits2hwindow; excludedfrom53periodpublications becauseactualinvocation17:20aftercutoff. Notafourthmissedslot.",
+        "unreserved_at_period_end_slots": 1,
+        "currently_open_unreserved_slots_from_period": 0
+      },
+      "new_formal_evaluation_this_check": false,
+      "writer_final_edit_v3_status": {
+        "policy_id": "supportpick-threads-final-edit-v3-20261125",
+        "new_v3_READY": 0,
+        "previous_actual_v3_READY_preserved": 4,
+        "new_scores": 0,
+        "new_model_calls": 0
+      },
+      "workspace_preflight": {
+        "fresh_remote_blobs_exact_local_match": true,
+        "all_historical_records_preserved": true,
+        "new_local_cache_failure_this_check": false
+      },
+      "account_7d_30d_statistics": {
+        "official_post_windows_available": [
+          24,
+          72,
+          168
+        ],
+        "post_observations": 176,
+        "account_profile_home_followers_shares_30d_read_available": false,
+        "unavailable_not_zero": true,
+        "completion_dwell_cta_attribution_not_measured": true,
+        "no_inferred_performance": true,
+        "today_public_profile_followers": 2,
+        "public_profile_followers_observed_on": "2026-11-27",
+        "public_profile_followers_not_7d_or_30d_growth": true,
+        "public_profile_followers_observation_is_historical": true,
+        "public_profile_followers_last_actual_check_date": "2026-11-27"
+      },
+      "regular_slot_observation": {
+        "slot": "2026-11-27T12:00:00+09:00",
+        "window_ends": "2026-11-27T14:00:00+09:00",
+        "status": "future_regular_slot_READY",
+        "slot_reserved": false,
+        "failure_confirmed": false,
+        "action": "Preserve approved IMAGEinput,awaitexistingnaturalpublisherfirstattempt. No dispatch."
+      },
+      "next_condition_previous": "Existing publisher consumes Nov26 12 IMAGE/P6,16 TEXT/P5,20 IMAGE/P1,Nov27 08 TEXT/P5. Sender must verify newest fresh complete source and exact approved hashes/reviews at actual send. Cached Nov26 07:22 source is not certified fresh for Nov27 08. Preserve daily4/rotation/CAS/pending controls; no past-slot dispatch/rerun/test posts.",
+      "expiry_prevention_revalidation": {
+        "performed_this_check": false,
+        "previous_actual_records_preserved": true,
+        "current_queue_unresolved_dependency_count": 0
+      },
+      "queue_commit": "4c6258ddb3f28a9dee18813d3e47cc20be812706"
     }
   },
   "last_reported_prepublication_repair": {
@@ -197896,7 +197779,11 @@
     }
   },
   "last_queue_validation": {
-    "checked_at": "2026-11-27T10:30:59.981706+09:00",
+    "checked_at": "2026-11-27T11:37:43.001818+09:00",
+    "ready": 4,
+    "future24h_ready": 4,
+    "new_drafts": 0,
+    "existing_READY_reused": 4,
     "drafts": [
       {
         "slot": "2026-11-27T12:00:00+09:00",
@@ -197951,35 +197838,14 @@
       "path": "snapshots/gov24-45903616185-1",
       "version": 1
     },
-    "images": [
-      {
-        "path": "social/images/benefit-guide-1.png",
-        "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
-        "actual_download_sha_matches_current_review": true,
-        "checked_at": "2026-11-27T10:31:07.202994+09:00",
-        "new_visual_inspection": false
-      },
-      {
-        "path": "social/images/benefit-guide-2.png",
-        "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
-        "actual_download_sha_matches_current_review": true,
-        "checked_at": "2026-11-27T10:31:16.850049+09:00",
-        "new_visual_inspection": false
-      }
-    ],
-    "ready": 4,
-    "full2h_pass": 4,
-    "future24h_ready": 4,
-    "new_drafts": 0,
-    "existing_READY_reused": 4,
+    "source_count": 10898,
     "ledger_records": 87,
     "pending": null,
     "lease": null,
     "new_posts": 0,
-    "maintenance_new_posts": 0,
     "new_incidents": 0,
-    "new_metrics": 0,
-    "observations": 173,
+    "new_metrics": 3,
+    "observations": 176,
     "new_evaluation": false,
     "astra_review_invocations": 0,
     "existing_Astra_review_preserved": true,
@@ -197991,20 +197857,18 @@
         "path": "social/images/benefit-guide-1.png",
         "sha256": "0977ce9abb899850ea302a3b61e858f0124dbe2b5b44632d697ce1ddee0cd6dd",
         "actual_download_sha_matches_current_review": true,
-        "checked_at": "2026-11-27T10:31:07.202994+09:00",
+        "checked_at": "2026-11-27T11:37:50.702660+09:00",
         "new_visual_inspection": false
       },
       {
         "path": "social/images/benefit-guide-2.png",
         "sha256": "a708234fefad277100eda60c75228120ced5f527ed4fd2530b20c1e6dda7517a",
         "actual_download_sha_matches_current_review": true,
-        "checked_at": "2026-11-27T10:31:16.850049+09:00",
+        "checked_at": "2026-11-27T11:37:59.062767+09:00",
         "new_visual_inspection": false
       }
     ],
-    "expiry_prevention_revalidations": 1,
-    "full_delay_windows_pass": 4,
-    "full_delay_windows_requiring_after10_recheck": 0
+    "expiry_prevention_revalidations": 0
   },
   "last_queue_review_refresh": {
     "checked_at": "2026-11-25T22:25:37.852042+09:00",
